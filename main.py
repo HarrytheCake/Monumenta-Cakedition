@@ -28,7 +28,7 @@ if __name__ == "__main__":
     
     @client.event
     async def on_ready():
-        await asyncio.sleep(60)
+        await asyncio.sleep(30)
         await quit()
         
     @client.event
@@ -40,7 +40,7 @@ if __name__ == "__main__":
         for items in messages:
                 f.write("%s\n" % items)
         f.close()
-
+        await quit()
     
     @client.event
     async def on_message(message):
