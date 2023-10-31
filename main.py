@@ -39,10 +39,10 @@ if __name__ == "__main__":
             if message.content == "!history":
                 messages = [message.content async for message in message.channel.history(limit=last_messages)]
 
-                await f = open("test.txt", "w")
-                await for items in messages
+                f = open("test.txt", "w")
+                for items in messages
                     f.write("%s\n" % item)
-                await f.close()
+                f.close()
 
     
     @client.event
