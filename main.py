@@ -33,16 +33,13 @@ if __name__ == "__main__":
         
     @client.event
     async def on_ready():
-        channels = ["general"]
+        channel = client.get_channel(1083995331844378637)
+        messages = [message.content async for message in channel.history(limit=last_messages)]
 
-        if str(message.channel) in channels:
-            if message.content == "!history":
-                messages = [message.content async for message in message.channel.history(limit=last_messages)]
-
-                f = open("test.txt", "w")
-                for items in messages:
-                    f.write("%s\n" % item)
-                f.close()
+        f = open("test.txt", "w")
+        for items in messages:
+                f.write("%s\n" % item)
+        f.close()
 
     
     @client.event
