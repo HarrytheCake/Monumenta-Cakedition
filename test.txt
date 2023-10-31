@@ -1,0 +1,5 @@
+['!history', '[\'!history\', "[\'!history\', \'!history\', \'Last 5 messages:\', \'!history\', \'1\']", \'Last 5 messages:\', \'!history\', \'!history\']', 'Last 5 messages:', '!history', "['!history', '!history', 'Last 5 messages:', '!history', '1']"]
+Last 5 messages:
+!history
+['!history', "['!history', '!history', 'Last 5 messages:', '!history', '1']", 'Last 5 messages:', '!history', '!history']
+Last 5 messages:
