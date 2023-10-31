@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
         f = open("test.txt", "w")
         for items in messages:
-                f.write("%s\n" % item)
+                f.write("%s\n" % items)
         f.close()
 
     
