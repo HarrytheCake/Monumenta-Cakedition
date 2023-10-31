@@ -30,7 +30,21 @@ if __name__ == "__main__":
     async def on_ready():
         await asyncio.sleep(60)
         await quit()
+        
+    @client.event
+    async def on_ready():
+        channels = ["general"]
 
+        if str(message.channel) in channels:
+            if message.content == "!history":
+                messages = [message.content async for message in message.channel.history(limit=last_messages)]
+
+                await f = open("test.txt", "w")
+                await for items in messages
+                    f.write("%s\n" % item)
+                await f.close()
+
+    
     @client.event
     async def on_message(message):
         channels = ["general"]
