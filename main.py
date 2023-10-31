@@ -25,6 +25,11 @@ if __name__ == "__main__":
     @client.event
     async def on_ready():
         print(f'We have logged in as {client.user}')
+    
+    @client.event
+    async def on_ready():
+        await asyncio.sleep(60)
+        await quit()
 
     @client.event
     async def on_message(message):
