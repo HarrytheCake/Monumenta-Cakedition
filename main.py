@@ -40,7 +40,7 @@ if __name__ == "__main__":
                 messages = [message.content async for message in message.channel.history(limit=last_messages)]
 
                 f = open("test.txt", "w")
-                for items in messages
+                for items in messages:
                     f.write("%s\n" % item)
                 f.close()
 
