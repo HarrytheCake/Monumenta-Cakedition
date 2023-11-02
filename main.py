@@ -2,6 +2,7 @@ import discord
 import time
 import asyncio
 import os
+import textwrap
 
 try:
     DISCORD_TOKEN = os.environ["DISCORD_TOKEN"]
@@ -38,7 +39,7 @@ if __name__ == "__main__":
 
         fa = open("announcement.txt", "w")
         for items in a_messages:
-                fa.write("%s\n" % items)
+                fa.write("%s\n" % textwrap.fill(items,64))
         fa.close()
         
         c_channel = client.get_channel(1168874628354158642)
@@ -46,7 +47,7 @@ if __name__ == "__main__":
 
         fc = open("change_logs.txt", "w")
         for items in c_messages:
-                fc.write("%s\n" % items)
+                fc.write("%s\n" % textwrap.fill(items,64))
         fc.close()
         
         await quit()
