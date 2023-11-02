@@ -17,7 +17,7 @@ if __name__ == "__main__":
     intents = discord.Intents.default()
     intents.message_content = True
 
-    last_messages = 5
+    last_messages = 1
     client = discord.Client(intents=intents)
 
 
@@ -33,13 +33,22 @@ if __name__ == "__main__":
         
     @client.event
     async def on_ready():
-        channel = client.get_channel(1083995331844378637)
-        messages = [message.content async for message in channel.history(limit=last_messages)]
+        a_channel = client.get_channel(1168874574134378618)
+        a_messages = [message.content async for message in a_channel.history(limit=last_messages)]
 
-        f = open("test.txt", "w")
-        for items in messages:
-                f.write("%s\n" % items)
-        f.close()
+        fa = open("announcement.txt", "w")
+        for items in a_messages:
+                fa.write("%s\n" % items)
+        fa.close()
+        
+        c_channel = client.get_channel(1168874628354158642)
+        c_messages = [message.content async for message in c_channel.history(limit=last_messages)]
+
+        fc = open("change_logs.txt", "w")
+        for items in c_messages:
+                fc.write("%s\n" % items)
+        fc.close()
+        
         await quit()
     
     @client.event
