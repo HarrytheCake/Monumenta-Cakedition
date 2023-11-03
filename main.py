@@ -38,18 +38,18 @@ if __name__ == "__main__":
         a_messages = [message.content async for message in a_channel.history(limit=last_messages)]
 
         fa = open("announcement.txt", "w")
-        await a_messages.reverse
+        await a_messages.reverse()
         for items in a_messages:
-                fa.write("%s\n" % textwrap.fill(items,64))
+                fa.write("%s\n" % textwrap.fill(items,128))
         fa.close()
         
         c_channel = client.get_channel(1168874628354158642)
         c_messages = [message.content async for message in c_channel.history(limit=last_messages)]
 
         fc = open("change_logs.txt", "w")
-        await c_messages.reverse 
+        await c_messages.reverse() 
         for items in c_messages:
-                fc.write("%s\n" % textwrap.fill(items,64))
+                fc.write("%s\n" % textwrap.fill(items,128))
         fc.close()
         
         await quit()
