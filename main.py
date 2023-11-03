@@ -18,7 +18,7 @@ if __name__ == "__main__":
     intents = discord.Intents.default()
     intents.message_content = True
 
-    last_messages = 1
+    last_messages = 10
     client = discord.Client(intents=intents)
 
 
