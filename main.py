@@ -40,7 +40,7 @@ if __name__ == "__main__":
         a_messages.reverse()
         fa = open("announcement.txt", "w")
         for items in a_messages:
-                fa.write("%s\n" % textwrap.fill(items,128))
+                fa.write("%s\n" % textwrap.fill(items,64))
         fa.close()
         
         c_channel = client.get_channel(1168874628354158642)
@@ -49,7 +49,9 @@ if __name__ == "__main__":
         c_messages.reverse()
         fc = open("change_logs.txt", "w") 
         for items in c_messages:
-                fc.write("%s\n" % textwrap.fill(items,128))
+                item = str(items)
+                item.replace(' \- ','\n')
+                fc.write("%s\n" % textwrap.fill(item,64))
         fc.close()
         
         await quit()
