@@ -18,10 +18,47 @@ if __name__ == "__main__":
     intents = discord.Intents.default()
     intents.message_content = True
 
-    last_messages = 10
+    last_messages = 12
     client = discord.Client(intents=intents)
 
+    def markdown(string):
+        t_string = string.replace('- ','• ')
 
+        string_list = t_string.split("**")
+        temp_string = ""
+        for i in range(len(string_list)):
+                if i == 0:
+                        temp_string += string_list[i]
+                elif i%2 != 0:
+                        temp_string += ("&b"+string_list[i]+"&r")
+                else :
+                        temp_string += string_list[i]
+        t_string = temp_string
+
+        string_list = t_string.split("*")
+        temp_string = ""
+        for i in range(len(string_list)):
+                if i == 0:
+                        temp_string += string_list[i]
+                elif i%2 != 0:
+                        temp_string += ("&o"+string_list[i]+"&r")
+                else :
+                        temp_string += string_list[i]
+        t_string = temp_string
+
+        string_list = t_string.split("__")
+        temp_string = ""
+        for i in range(len(string_list)):
+                if i == 0:
+                        temp_string += string_list[i]
+                elif i%2 != 0:
+                        temp_string += ("&n"+string_list[i]+"&r")
+                else :
+                        temp_string += string_list[i]
+        t_string = temp_string
+
+        print(t_string)
+        return t_string
 
     @client.event
     async def on_ready():
@@ -48,6 +85,7 @@ if __name__ == "__main__":
 
         c_messages.reverse()
         c_string = ''.join(map(str,c_messages))
+        c_string = markdown(c_string)
         c_messages = c_string.splitlines()
         fc = open("change_logs.txt", "w")
         for items in c_messages:
