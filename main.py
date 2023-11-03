@@ -46,7 +46,7 @@ if __name__ == "__main__":
         c_channel = client.get_channel(1168874628354158642)
         c_messages = [message.content async for message in c_channel.history(limit=last_messages)]
 
-
+        c_messages.reverse()
         c_string = ''.join(map(str,c_messages))
         c_messages = c_string.splitlines()
         fc = open("change_logs.txt", "w")
