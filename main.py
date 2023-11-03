@@ -47,11 +47,12 @@ if __name__ == "__main__":
         c_messages = [message.content async for message in c_channel.history(limit=last_messages)]
 
         c_messages.reverse()
-        fc = open("change_logs.txt", "w") 
+        c_string = ''.join(map(str,c_messages))
+        c_messages = c_string.splitlines()
+        fc = open("change_logs.txt", "w")
         for items in c_messages:
-                item = str(items)
-                item.replace(' \- ','\n')
-                fc.write("%s\n" % textwrap.fill(item,64))
+                for item in textwrap.wrap(items,64):
+                    fc.write("%s\n" % item)
         fc.close()
         
         await quit()
