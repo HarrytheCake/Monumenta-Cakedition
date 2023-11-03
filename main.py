@@ -38,7 +38,7 @@ if __name__ == "__main__":
         a_messages = [message.content async for message in a_channel.history(limit=last_messages)]
 
         fa = open("announcement.txt", "w")
-        for items in a_messages:
+        for items in a_messages.reverse:
                 fa.write("%s\n" % textwrap.fill(items,64))
         fa.close()
         
@@ -46,7 +46,7 @@ if __name__ == "__main__":
         c_messages = [message.content async for message in c_channel.history(limit=last_messages)]
 
         fc = open("change_logs.txt", "w")
-        for items in c_messages:
+        for items in c_messages.reverse:
                 fc.write("%s\n" % textwrap.fill(items,64))
         fc.close()
         
