@@ -93,7 +93,7 @@ if __name__ == "__main__":
                     fc.write("%s\n" % item)
         fc.close()
         
-        await quit()
+        quit()
     
     @client.event
     async def on_message(message):
