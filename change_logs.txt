@@ -1,8 +1,9 @@
 &bHotfix:&r Fixed Blue's Air Branch 2nd checkpoint not
-activating&bFixed at daily restart:&r
+activating
+&bFixed at daily restart:&r
 • Lightning totem no longer targets whatever it is thrown
-against, and now only targets hostiles that it's thrown
-against&b(10.9.0)&r
+against, and now only targets hostiles that it's thrown against
+&b(10.9.0)&r
 For the update on November 9, 2023
 &bExalted Malevolent Reverie&r
 • Exalted Malevolent Reverie has been added to the Exalted Hall.
@@ -70,7 +71,8 @@ existing storm
 • Explosive Charm of Thundering: +25% -> +20% Radius
 • Crumbling Effigy: +2 -> +1 Targets
 • Mist of Dawn: -35% -> -30% Duration, -35% -> -40% Cooldown
-• Silver Medallion: +50% -> +60% Radius&bMob Changes&r
+• Silver Medallion: +50% -> +60% Radius
+&bMob Changes&r
 • Bloodthirsty telegraph now causes the selected mobs to glow
 orange instead of red
 • Mobs launched by Bloodthirsty cannot be launched by another
@@ -148,12 +150,14 @@ following this week's update. In order to unlock your shop talk
 to the shop shulker and select `I want to unlock this shop`.
 The City of Shifting Waters is still bugged. Players are advised
 to complete the dungeon in a single sitting to avoid instance
-corruption.&bHotfix:&r Information presented at a certain NPC in
-the exalted hub has been corrected&bHotfix:&r Ex Reverie -_•
-bois will now allow you to re-enter open dungeonsReverie-1 has
-been restarted to fix a memory problem. It is coming back up now
-• apologies for the issues for those of you whose instance is on
-that shard&bHotfix:&r Exalted ||C'Axtal|| should not cause
-permanent tps drops when casting totems&bHotfix&r (at daily
-restart): Fixed immortal mounts getting vengeful modifier and
-becoming invincible.
+corruption.
+&bHotfix:&r Information presented at a certain NPC in the
+exalted hub has been corrected
+&bHotfix:&r Ex Reverie -_• bois will now allow you to re-enter
+open dungeonsReverie-1 has been restarted to fix a memory
+problem. It is coming back up now • apologies for the issues for
+those of you whose instance is on that shard
+&bHotfix:&r Exalted ||C'Axtal|| should not cause permanent tps
+drops when casting totems
+&bHotfix&r (at daily restart): Fixed immortal mounts getting
+vengeful modifier and becoming invincible.
