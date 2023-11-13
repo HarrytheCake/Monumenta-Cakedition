@@ -18,7 +18,7 @@ if __name__ == "__main__":
     intents = discord.Intents.default()
     intents.message_content = True
 
-    last_messages = 12
+    last_messages = 20
     client = discord.Client(intents=intents)
 
     def markdown(string):
@@ -86,7 +86,11 @@ if __name__ == "__main__":
         c_messages.reverse()
         c_string = ''.join(map(str,c_messages))
         c_string = markdown(c_string)
+        c_messages = c_string.split("Monumenta #change-logs")
+        c_messages.reverse()
+        c_string = "&lMonumenta #change-logs&r\n".join(map(str,c_messages))
         c_messages = c_string.splitlines()
+
         fc = open("change_logs.txt", "w")
         for items in c_messages:
                 for item in textwrap.wrap(items,64):
