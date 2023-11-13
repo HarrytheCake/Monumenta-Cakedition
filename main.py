@@ -87,7 +87,7 @@ if __name__ == "__main__":
         c_string = ''.join(map(str,c_messages))
         c_messages = c_string.split("Monumenta #change-logs")
         c_messages.reverse()
-        c_string = '&lMonumenta #change-logs&r\n'.join(map(str,c_messages))
+        c_string = '&lMonumenta #change-logs&r\n'.join(c_messages)
         c_string = markdown(c_string)
         c_messages = c_string.splitlines()
 
