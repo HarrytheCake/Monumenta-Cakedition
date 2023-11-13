@@ -1,5 +1,5 @@
-Monumenta #change-logs&bHotfix:&r Ring Around the Rose is no
-longer impossible to complete on isles and isle-2&b(10.8.0)&r
+&bHotfix:&r Ring Around the Rose is no longer impossible to
+complete on isles and isle-2&b(10.8.0)&r
 For the update on November 2, 2023
 &bMajor New Features:&r
 &bShaman: Region 3 Class Enhancements and Charms:&r
@@ -238,4 +238,163 @@ unlock this shop`.
 The Headless Horseman has been reopened.
 The City of Shifting Waters is still bugged. Players are advised
 to complete the dungeon in a single sitting to avoid instance
-corruption.
+corruption.&bHotfix:&r The "Shade" Shaman Charm trader now
+properly speaks to you.&bHotfix:&r Fixed Blue's Air Branch 2nd
+checkpoint not activating&bFixed at daily restart:&r
+• Lightning totem no longer targets whatever it is thrown
+against, and now only targets hostiles that it's thrown
+against&b(10.9.0)&r
+For the update on November 9, 2023
+&bExalted Malevolent Reverie&r
+• Exalted Malevolent Reverie has been added to the Exalted Hall.
+Take on brand new challenges in the reprised version of Region
+1’s capstone dungeon, and purchase remastered versions of iconic
+items from them!
+• Exalted Reverie will be made available this weekend, opening
+up at our usual launch window at <t:1699722000:F>.
+• As a reminder, Exalted Dungeons count as your instance of that
+dungeon for the week, so you cannot run a non-Exalted and an
+Exalted version of the same dungeon in one week. Additionally,
+Exalted Dungeons can be done to complete Season Pass objectives
+and Delve Bounties, and the leaderboard for completions is
+shared between Exalted and basic versions.
+&bMinor Changes:&r
+• The monuments now stay completed for anyone who has completed
+the monument. The wools will disappear if someone nearby has not
+completed the monument, or if a moderator is in creative mode in
+the area.
+• Cut particle count of Galactic Rain (Coup de Grace cosmetic)
+to reduce lag, no noticeable visual change
+• Updated the legacy Omnilockbox trade to display refunded
+materials
+• Creeperween 2023 has ended, and as such Creeper Fanatic Boris
+has ceased spreading his Bag o' Treats across Monumenta. If you
+have any remaining Creeper Delights from the event that you
+would like to use, they may be used on creepers for one more
+week before being disabled until next year's event.
+• The Monumenta Music Pack has been updated to version 2.2.0
+with music for the Alchemy Labs dungeon. Download it here –
+<https://files.playmonumenta.com/resource-
+packs/MonumentaMusicPack.zip>
+&bTrade GUI Changes:&r
+• Now shows the amount of currency in a wallet rather than from
+a wallet
+• Now works with trades intended to be used a limited amount of
+times
+&bWeek 1 R3 Shaman Balance Changes:&r
+• Chain Lightning Enhancement
+    • 60% damage totem efficiency -> 50%
+    • 25% efficiency for other totems -> 30%
+ • Cleansing Totem Enhancement: Now heals the shaman and players
+within 3 blocks of the summon location of the totem for 20% and
+cleanses
+ • Crystalline Combos:
+    • Sounds for strikes have been upgraded
+    • Threshold is now 12 for both level 1 and 2
+    • 2.5% speed per stack in the enhancement -> 4%
+ • Flame Totem Enhancement:
+    • Deals 2 extra magic damage over the base skill amount
+chosen
+    • Enhancement Radius 2.5 -> 3
+ • Lightning Totem Enhancement:
+    • Lightning rods changed to Lightning Storms
+    • Lightning Storms have a 100% chance of spawning
+    • New storms cannot be created within the radius of an
+existing storm
+ • Totemic Projection Enhancement
+    • 10% per totem damage increase -> 15%
+ • Decayed Totem slowness amplifier 40% -> 30%
+• Chain Healing Wave healing 20%/25% -> 25%/35%
+&bWeek 1 R3 Shaman Charm Balance Changes:&r
+• Unstable Reactor: +15% -> -10% Damage, -25% -> -30% Radius, 4
+-> 3 Charm Power
+• Explosive Charm of Thundering: +25% -> +20% Radius
+• Crumbling Effigy: +2 -> +1 Targets
+• Mist of Dawn: -35% -> -30% Duration, -35% -> -40% Cooldown
+• Silver Medallion: +50% -> +60% Radius&bMob Changes&r
+• Bloodthirsty telegraph now causes the selected mobs to glow
+orange instead of red
+• Mobs launched by Bloodthirsty cannot be launched by another
+Bloodthirsty mob for 1.5s
+&nValley of Forgotten Pharaohs&r
+• Desiccated Husk:
+  • Re-added worn armor that was mistakenly removed
+  • Removed passive Zombie vanilla armor
+&nThe Fallen Forum&r
+• Flame Spirit:
+  • Fireballs now apply 30% Slowness for 4 seconds instead of
+vanilla Slowness 2 for 4 seconds
+• Spirit Rider:
+  • 0.8 -> 0.7 Magic Arrow Projectile Speed
+  • Punch 2 -> Punch 1
+• Congress Sentinel:
+  • Removed vanilla attributes from held/worn items
+• Experiment Eighty-Three:
+  • 80 -> 60 Health
+  • Removed passive Zombie vanilla armor
+• Hushbringer:
+  • 0 -> 2 Size (Attack damage was reduced to keep the mob's
+total damage the same)
+• Malkus Abomination:
+  • 20 -> 30 tick Fuse
+  • 0.32 -> 0.3 Movement Speed
+&nRush of Dissonance&r
+• Tōshō:
+  • 0.5 -> 0.4 Movement Speed
+  • Fangs now apply 30% Slowness for 4 seconds instead of
+vanilla Slowness 2 for 4 seconds
+• Heightened Shower:
+  • 0.4 -> 0.35 Movement Speed
+• Dawn of Life:
+  • 25 -> 75 Rejuvenation Health Restored
+  • Rejuvenation can no longer overheal
+  • Rejuvenation only self-heals
+&nArchitect's Ring Overworld&r
+• Chanterelle Grenadier:
+  • Improved grenade explosion particles (previously only 1
+particle was summoned for the explosion)
+&nCradle of the Broken God&r
+• Copperfly:
+  • Significantly reduced passive particle spread
+• Plus/Minus Charged Engineer:
+  • Reduced the size and count of grenade explosion particles
+location)
+&nExalted Arcane Rivalry&r
+• Putrid Alchemist:
+  • Added potion landing particle effects and improved potion
+particle trail visibility
+• Magic-Touched Alchemist:
+  • Added potion landing particle effects
+  • 400% Speed to players hit for 1.5 seconds -> 200% Speed to
+players hit for 1.5 seconds
+  • 225% Speed to mobs hit for 1.5 seconds -> 75% Speed to mobs
+hit for 1.5 seconds
+&bMinor Bug Fixes:&r
+• Fixed the description of Inferno to match with its recent
+change
+• Fixed the wrong display of projectile weapons in the
+Mechanical Armory Item Shop
+• Fixed Stoneborn Tunic having not updated correctly last week
+• Fixed Razed Remnants increasing Panacea on-hit damage instead
+of damage over time
+• Fixed several issues with Elantia, Aradia Potionmaster's
+dialogue.
+• Gray Tess (u) now properly gives its cooldown message when
+used outside of the mainhand
+• Fixed Challenger's Emblem pulsating gold trade being locked
+• There is now a Shaman option in the Architect Token
+• There is now a respawning chest of bottles in the Orange
+Dungeon Quest's alchemy puzzleThe player market has been locked
+following this week's update. In order to unlock your shop talk
+to the shop shulker and select `I want to unlock this shop`.
+The City of Shifting Waters is still bugged. Players are advised
+to complete the dungeon in a single sitting to avoid instance
+corruption.&bHotfix:&r Information presented at a certain NPC in
+the exalted hub has been corrected&bHotfix:&r Ex Reverie -_•
+bois will now allow you to re-enter open dungeonsReverie-1 has
+been restarted to fix a memory problem. It is coming back up now
+• apologies for the issues for those of you whose instance is on
+that shard&bHotfix:&r Exalted ||C'Axtal|| should not cause
+permanent tps drops when casting totems&bHotfix&r (at daily
+restart): Fixed immortal mounts getting vengeful modifier and
+becoming invincible.
