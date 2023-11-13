@@ -18,7 +18,7 @@ if __name__ == "__main__":
     intents = discord.Intents.default()
     intents.message_content = True
 
-    last_messages = 15
+    last_messages = 10
     client = discord.Client(intents=intents)
 
     def markdown(string):
@@ -93,6 +93,7 @@ if __name__ == "__main__":
                     fc.write("%s\n" % item)
         fc.close()
         
+        await quit()
     @client.event
     async def on_message(message):
         channels = ["general"]
