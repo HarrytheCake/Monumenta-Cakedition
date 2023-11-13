@@ -3,6 +3,7 @@ import time
 import asyncio
 import os
 import textwrap
+import re
 
 try:
     DISCORD_TOKEN = os.environ["DISCORD_TOKEN"]
@@ -85,6 +86,7 @@ if __name__ == "__main__":
         c_messages.reverse()
         c_string = ''.join(map(str,c_messages))
         c_string = markdown(c_string)
+        c_string = c_string.replace("&b","\n&b")
         c_messages = c_string.splitlines()
 
         fc = open("change_logs.txt", "w")
