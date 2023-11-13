@@ -65,7 +65,7 @@ if __name__ == "__main__":
     
     @client.event
     async def on_ready():
-        await asyncio.sleep(30)
+        await asyncio.sleep(20)
         await quit()
         
     @client.event
@@ -93,8 +93,6 @@ if __name__ == "__main__":
                     fc.write("%s\n" % item)
         fc.close()
         
-        quit()
-    
     @client.event
     async def on_message(message):
         channels = ["general"]
