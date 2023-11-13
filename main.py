@@ -85,8 +85,8 @@ if __name__ == "__main__":
 
         c_messages.reverse()
         c_string = ''.join(map(str,c_messages))
-        c_string = c_string.replace("Monumenta #change-logs","&lMonumenta #change-logs&r\n")
         c_string = markdown(c_string)
+        c_string = c_string.replace("Monumenta #change-logs","&lMonumenta #change-logs&r\n")
         c_messages = c_string.splitlines()
 
         fc = open("change_logs.txt", "w")
