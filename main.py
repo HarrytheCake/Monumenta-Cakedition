@@ -57,7 +57,6 @@ if __name__ == "__main__":
                         temp_string += string_list[i]
         t_string = temp_string
 
-        print(t_string)
         return t_string
 
     @client.event
@@ -87,6 +86,7 @@ if __name__ == "__main__":
         c_string = ''.join(map(str,c_messages))
         c_string = markdown(c_string)
         c_string = c_string.replace("Monumenta #change-logs","&lMonumenta #change-logs&r\n")
+        print(c_string)
         c_messages = c_string.splitlines()
 
         fc = open("change_logs.txt", "w")
