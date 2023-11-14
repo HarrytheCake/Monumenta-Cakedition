@@ -17,11 +17,19 @@ jobs:
           # this will also include README.md
           echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
 
-      - uses: docker://pandoc/latex:2.9
+      - uses: docker://pandoc/core:2.9
         with:
           args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           
-      - uses: actions/upload-artifact@v3
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || (git commit -a -m "updated change-logs" --allow-empty)
+          
+      - name: push changes
+        uses: ad-m/github-push-action@v0.8.0
         with:
-          name: output
-          path: output
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main/wiki 
