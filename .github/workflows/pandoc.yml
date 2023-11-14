@@ -15,8 +15,10 @@ jobs:
         with:
           args: >-  # allows you to break string into multiple lines
             --standalone
-            --output=index.html
-            input.txt
+            -f mediawiki
+            -t json
+            --output=test.json
+            test.txt
           
       - name: commit files
         run: |
