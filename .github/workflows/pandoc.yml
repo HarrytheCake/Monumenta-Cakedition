@@ -1,4 +1,4 @@
-name: Advanced Usage
+name: pandoc
 
 on: 
   workflow_dispatch:
@@ -7,6 +7,9 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-22.04
     steps:
+      - name: checkout repo content
+        uses: actions/checkout@v4.1.1 # checkout the repository content to github runner
+
       - run: echo "foo" > input.txt  # create an example file
       - uses: docker://pandoc/core:2.9
         with:
