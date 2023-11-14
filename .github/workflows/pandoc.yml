@@ -1,0 +1,29 @@
+name: Advanced Usage
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo "foo" > input.txt  # create an example file
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: >-  # allows you to break string into multiple lines
+            --standalone
+            --output=index.html
+            input.txt
+          
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || (git commit -a -m "updated change-logs" --allow-empty)
+          
+      - name: push changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main/wiki 
