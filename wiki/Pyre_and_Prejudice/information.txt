@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Agricultural Engineer Nitreia Coords: -639, 14, -465
+ Celsian Isles Steelmeld

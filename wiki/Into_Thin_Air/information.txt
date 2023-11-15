@@ -1,0 +1,4 @@
+prerequisites = &3Starriest Night&r
+ NPC: Xenith Coords: -1609, 122, 17
+ King's Valley Oceangate
+related_poi=&3Cloud Piercer&r, &3Cathedral of the Deep&r

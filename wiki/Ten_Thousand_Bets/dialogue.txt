@@ -1,0 +1,93 @@
+ Table
+ James (Myriad)
+  Coordinates: [-1722, 140, -108]
+   Color|orange|[Myriad]
+ Greetings!
+  Color|purple|[Hello! I don't believe we've met. Who are you?]
+  Color|orange|[Myriad]
+ I am known by many names: Myriad, Ender, Alotta, The Myriad- someone even called me "Apple" once. I would prefer it if you just
+called me Myriad though.
+  Color|orange|[Myriad]
+ Tell me      Color|purple|[I gamble constantly.]
+  Color|orange|[Myriad]
+ I can't imagine that's gone to well for you without luck like mine!
+  Color|purple|[A bit, but not much.]
+  Color|orange|[Myriad]
+ Smart. Only someone with luck such as I could make it worthwhile.
+  Color|purple|[Luck like yours? Care to demonstrate?]
+  Color|orange|[Myriad]
+ Sure, we can head to the Casino. Just talk to me when you're ready.
+&o  C: Go with Myriad to the Casino. Table
+ Myriad
+  Color|orange|[Myriad]
+ Ready to go?
+  Color|purple|[Not right now.]
+  Color|orange|[Myriad]
+ Just let me know when!
+  Color|purple|[Sure!]
+  Color|gray|He nervously laughs.
+  Color|orange|[Myriad]
+ I guess I'm just... having an off day.
+  Color|orange|[Myriad]
+ Yeah those two were just a fluke... I'm just.. uh.. let me try again
+  Color|orange|[Myriad]
+ He- hey. Uh.. now that the machine is uh.. warmed up. How about you give it a try?
+  Color|gray|He hands you a chip.
+  Color|orange|[Myriad]
+ See! I uh- I told you! It's cause I warmed it up.
+  Color|gray|He swipes the gold bar.
+  Color|orange|[Myriad]
+ Oh who am I kidding...
+  Color|gray|He sighs.
+  Color|orange|[Myriad]
+ Take the gold. I don't deserve it. I lost my luck long ago.
+  Color|purple|[Myriad...]
+&o  C: Myriad seems pretty upset, I should go see if he is alright. Table
+ Myriad (James)
+  Color|orange|[Myriad]
+ I don't deserve that name...
+  Color|purple|[Are you alright?]
+  Color|orange|[Myriad]
+ Oh! [Player], you startled me. I would be if I still had my luck. I used to be renowned for it- I would win bets left and
+right. Ever since my last adventure though, I can't... use it. I've been as unlucky as everybody else.
+  Color|purple|[You were an adventurer?]
+  Color|orange|[Myraid]
+ One of the best, and one of the luckiest. "Dance in fire, bathe in gold" as I used to say. Those days are behind me however,
+I've long since lost or broken my equipment.
+  Color|purple|[What happened on your last adventure?]
+  Color|orange|[Myraid]
+ It got stolen. I didn't believe it when it happened.
+  Color|purple|[I'm sure you're still famous, Myriad.]
+  Color|orange|[James]
+ Not really, I've lost most of my fortune and popularity ever since I lost my luck, and stop calling me that stupid name. My
+name is James. Plain, old, boring, James.
+  Color|purple|[Alright "Apple", what can I do to help?]
+  Color|purple|[Is there anything I can do to help?]
+  Color|orange|[James]
+ Well, I lost my chestplate in a bet with the Casino owner a long time ago. I would love to get that back.
+  Color|purple|[That sounds illegal, I'm going to have to pass.]
+  Color|orange|[James]
+ Oh ok, nevermind then.
+  Color|purple|[I'll see what I can do.]
+  Color|gray|He hands you a intriguing looking casino chip.
+  Color|orange|[James]
+ Try looking around the Casino. The bouncer's got to be guarding something.
+&o  C: Myriad said the bouncer in the Casino was guarding "something" I should investigate.
+  The bouncer is guarding the painting. Go through the painting.
+  Link   Puzzle Solutions Guide/Ten Thousand Bets Puzzle_Solutions_Guide/Ten_Thousand_Bets wikilink
+  Solve the puzzle and retrieve Myriad's Chestplate, then return to Myriad. Table
+ Myriad (James)
+  Color|orange|[James]
+ Hello again. Were you successful?
+  Color|purple|[Sure was, James. (Show and give Chestplate)]
+  Color|orange|[Myriad]
+ Oh my goodness! My chestplate! Thank you so much [Player]! I can't believe it. Please, call me Myriad again.
+  Color|purple|[Glad you're feeling better. So uhm...]
+  Color|orange|[Myriad]
+ Oh yes of course, a reward. I should've known better- I would have asked the same. I'll tell you what, take this key and go use
+it on my treasure chest upstairs. I'm sure you'll find something up there worth your while. Oh, and I would be happy to make
+more rigged chips for you- not cheap, of course. I'm still a gambling man.
+  TEN THOUSAND BETS COMPLETE!
+  Awarded Access to rigged chips from Myriad, and his Safe Key!
+  The safe key is used on a chest in Myraid's upper floor. You need to right click the chest while holding it.
+ Link   Category:Quests Category:Quests wikilink

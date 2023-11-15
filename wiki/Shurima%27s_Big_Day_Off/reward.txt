@@ -1,0 +1,5 @@
+rewards =
+* Access to &3Forsworn Sanctum&r
+* 1 &3Forsworn Sanctum&r key
+* Usage of the &3Forsworn Sanctum&r teleporters in &3Ta'Eldim&r and &3Sierhaven&r
+* The ability to amplify &3Corrupted Caves&r

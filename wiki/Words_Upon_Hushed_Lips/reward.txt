@@ -1,0 +1,2 @@
+rewards = *16 Concentrated Experience 
+*2 Potions of Protection

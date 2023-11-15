@@ -1,0 +1,7 @@
+prerequisites = None
+ NPC: &3Vargos&r
+ &3King's Valley&r &3Sierhaven&r
+POI: * &3Mage Tower&r
+* &3Witch Village&r
+Difficulty = Easy
+Length = Long

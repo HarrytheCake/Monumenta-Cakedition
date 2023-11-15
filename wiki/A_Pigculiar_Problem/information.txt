@@ -1,0 +1,1 @@
+prerequisites = None King's Valleytown = Sierhavenstarting_npc_coordinates = -770, 107, 125rewards = Levyn Bacon Maskstarting_npc_coordinates = -770, 107, 125rewards = Levyn Bacon Mask King's Valleytown = Sierhavenstarting_npc_coordinates = -770, 107, 125rewards = Levyn Bacon Masktown = Sierhavenstarting_npc_coordinates = -770, 107, 125rewards = Levyn Bacon Mask

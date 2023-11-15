@@ -1,0 +1,99 @@
+  WorkInProgress|Out-of-date, gloop section doesn't exist instead sent to nyr
+&o  Head to the Mage Tower north of the city and look for some research notes.
+ From completing   Link   Prologue Prologue wikilink  : LineBreak &o  C: Vargos will want to speak to you. Ask him about the
+skull on his desk. Table
+ Vargos
+  Coordinates: [-735, 154, 117]
+   &6[Vargos]
+ Welcome to my office. Is there anything I can do for you?
+  &5[Just looking around]
+  &6[Vargos]
+ Well then, if you have not chosen your class I advise you to head downstairs and do so. Otherwise, I find the libraries to be
+quite enjoyable here.
+  &5[Learning about the academy]
+  &6[Vargos]
+ There is much to learn. It is a large and noble building, with a fascinating history.
+  &5[What can I do here?]
+  &6[Vargos]
+ Here in the Academy you may choose which path you will travel down: Warrior, Mage, Alchemist, Scout, Cleric, or Rogue, and
+learn techniques along your chosen path. Explore around and I'm sure you'll see what I mean.
+  &5[Who built it?]
+  &6[Vargos]
+ The Academy was the second major building constructed here, after Castle Narsen. King Johannes laid the first stone himself.
+  &5[Whose skull is that?]
+  &6[Vargos]
+ ... A bold question. It is a daily reminder, and not a pleasant one at that. I will tell you, but only if you do something for
+me as well.
+  &5[Agreed]
+  &6[Vargos]
+  Years ago, High Mage Ezariah was driven mad, and retreated to his Mage Tower northeast of Sierhaven, stealing important notes
+about the Blackroot Jungle. I would go myself, but... Anyway, when I read the notes, you will get answers.
+  &5[Never mind then]
+  &6[Vargos]
+ A wise choice. Chasing memories and ghosts is my folly, no sense in making it yours too.
+  &5[Who are you?]
+  &6[Vargos]
+ I am known as the Cerulean Blademind, Fourth Archmage of the Grand Council, and Dean of this Academy. But please, just call me
+Vargos; I dislike titles.
+&o  C: Climb the   Link   Mage Tower Mage_Tower wikilink in search of some old research notes. Be careful, Ezariah's apprentices
+were well-trained.
+ After killing the elite mob "Silent Master" and getting the research notes:
+&o  C: Once you find the research notes return to Vargos. Table
+ Vargos
+  &6[Vargos]
+ You found the notes? Tell me, is Ezariah... Never mind, I don't think I want to know.   &o  He flips through the notes. Of
+course, they're in Tlaxan. He did always love that language.
+  &6[Vargos]
+ You're going to have to find a translator. There was a skilled translator named Armece, although he left the city years ago. He
+was a bit reclusive, so perhaps he lives somewhere in the swamp?
+&o  C: Find a reclusive translator in the southern swamp to help. He may have some... odd requests. Table
+ Hermy the Hermit
+  Coordinates: [-321, 93, 340]
+   &6[Hermy the Hermit]
+ *sniff* I smell dat book, dat's in Tlaxan! I can translate it fer ya, fer a price. You go squish dem gloopadoops southwest o'
+here in dat witchy village and bring me a bit o' gloop and I'll do it!
+&o  C: The translator wants gloop, squish dem gloopadoops to find some.
+  Goto   Link   Witch Village Witch_Village wikilink southwest of Hermy the Hermit and kill some of the slimes in the center of
+the village. There is no need to break the slime spawners. Only one "Gloop" item is required.
+ &o  C: Once you have some gloop return to the translator. Table
+ Hermy the Hermit
+  Coordinates: [-321, 93, 340]
+   &6[Hermy the Hermit]
+ Mah gloop! I'll be eatin' good tonight. Here's yer book, all translated. Now get outta my tower!
+&o  [1/2]: Bring the Encrypted Notes back to Vargos in the academy and he'll tell you his story.
+&o  [2/2]: Should you lose the Encrypted Notes, speak to Hermy for another copy. Table
+ Vargos
+  &6[Vargos]
+ So he goes by Hermy now, interesting. That aside we can read this book now! Oh... with Ezariah and his spells, I should've
+known it wouldn't be this easy. The notes are encrypted when not in Tlaxan. Ezariah's old office is on the roof. If you can
+figure out which levers to pull and push the button on his desk, it should cast a decryption spell on the book. You should be
+able to find cluse in the library on the ground floor.
+  &6[Vargos]
+ I won't make you do that, however- I can handle it myself, but I will leave you with a copy of the encrypted notes if you would
+like to try to decrypt them yourself.
+  &5[Can you tell me about the skull now?]
+  &6[Vargos]
+ Of course, a deal is a deal... Allow me a moment to steel my mind, and then I will tell you about the skull.
+  &6[Vargos]
+ Twelve years ago, I was appointed to the High Council of Mages, granted this honor by my brother, Valgus, the Archmage. Those
+were exciting times, as we had very recently recovered and repaired an ancient spell brought with the Empire from the Abeliar
+Dominion.
+  &6[Vargos]
+ It was a spell that we were able to use to destroy a barrier, revealing a Monument for the Wools - magical artifacts of
+unimaginable power. Five years ago, we deciphered the spell, keeping it and its power secret, keeping the Monument disguised
+beyond the outpost of Highwatch.
+  &6[Vargos]
+ One of the Council members, Calder, believed we should share this knowledge, but it was too dangerous. The argument was heated,
+and we discussed booting Calder from the Council. But he struck first...
+  &6[Vargos]
+ Calder killed many of the Council that day, including Valgus, and escaped with a spell we'd found within the Monument... My
+brother's skull... sits here with me, making sure I forget neither him, nor the peril we all face with Calder still free. After
+his attack you see, he found a Wool for himself...
+  &5[Do we know where Calder is now?]
+  &6[Vargos]
+ We believe he escaped the Valley recently. We're keeping ears to the ground, but it will be difficult to track him down.
+  &6[Vargos]
+ Don't worry about Calder though [Player], we'll catch him soon enough. I think you deserve this for the assistance you've given
+me. You're certainly talented - perhaps you should seek out a fellow Councilmember, Bhairavi, in Nyr? She could use your help.
+I'll also put in a good word with the City Planners so you can get yourself a place to stay out at the Plot Island.
+   Color|teal|MAGE'S LEGACY COMPLETE! LineBreak    Awarded [[Morphic Shield]] and the ability to purchase a Plot!

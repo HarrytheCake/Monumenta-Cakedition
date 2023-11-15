@@ -1,0 +1,4 @@
+rewards =
+* access to &3Ephemeral Corridors&r Endless Mode
+* 12 Twisted ands
+* &3Silver Knight's Failure&r

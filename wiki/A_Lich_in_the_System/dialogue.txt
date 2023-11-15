@@ -1,0 +1,218 @@
+  WorkInProgress|Missing two dialogue branches
+&o  Go speak to Fred at his mobile research station in   Link   Breachpoint Breachpoint wikilink  . Table
+ Ancev
+  Coordinates: [-740, 4, -177]
+   Color|Orange|[Ancev]
+ Hello. Have you come to test the Doorway?
+  Color|Purple|[Do what now?]
+  Color|Orange|[Ancev]
+ Test the Doorway of course. Whatever this space before us is saps the light around it. It even steals your night vision if you
+use Sight-O-Tron over there! Something is... moving beyond this Doorway you see. I don't like it.
+  Color|Purple|[Not right now, no.]
+  Color|Orange|[Ancev]
+ That's a shame. Something is moving in there and we need more bodies to investigate.
+  Color|Purple|[What's that item next to you?]
+  Color|Orange|[Ancev]
+ I'm not really sure. It came from deep below the Breachpoints, and I've only just begun trying to use it. I'm not even sure how
+it was taken out of the Depths, honestly.
+  Color|Purple|[You know about Doorways?]
+  Color|Orange|[Ancev]
+ Of course, I'm a researcher of Steelmeld. I also know you, [Player]. Would you be available to help me out here? SoftBreak
+Color|Purple|[What do you need me to do?]
+  Color|Orange|[Ancev]
+ I've been working closely with an associate of yours. His name is Fred. I've been investigating this weird, blocked off Doorway
+here, while Fred has been examining the Veil itself. We believe something has been travelling through the Veil, and we fear that
+recent events are allowing whatever it is to emerge. Will you help us investigate?
+  Color|Purple|[I'm in.]
+  Color|Purple|[Sorry, I'm not available right now.]
+  Color|Orange|[Ancev]
+ When you are, we're going to need you, I fear.
+  Color|Orange|[Ancev]
+ Excellent. Fred has a small mobile research station set up upstairs, to the right. Go speak to him through it and he'll tell
+you more.
+&o  Speak to Fred at his mobile research station in   Link   Breachpoint Breachpoint wikilink  . Table
+ Fred
+  Coordinates: [-717, 9, -169]
+   Color|Grey|As you approach, the fish shivers weirdly, then lets out a... puff of steam?
+  Color|Orange|[Fred]
+ ...llo! Hello! Can you hear me [Player]?
+  Color|Purple|[Uh, yes? Fred? Is that you?]
+  Color|Orange|[Fred]
+ Yeah! I turned myself into a fish, [Player]! I'm Fishy Fred!
+  Color|Purple|[WHAT?!]
+  Color|Orange|[Fred]
+ I'm just joking! This is my mobile research station! This fish isn't real! I can communicate with the Breachpoint scientists
+remotely and continue working in my own labs. It's great!
+  Color|Purple|[Sounds like it.]
+  Color|Orange|[Fred]
+ So anyway, I hear you've spoken to Ancev and you're willing to help with our project. SoftBreak   Color|Purple|[That I am.]
+  Color|Orange|[Fred]
+ So let me run you through what I've been up to. After you found the Doorway inside the City of Shifting Waters, I began working
+intensely on studying the crystals inside. My research led me to discover other Doorways - breaches into the Veil itself -
+including one here at Breachpoint, where it turns out scientists were already studying!
+  Color|Purple|[That's convenient!]
+  Color|Orange|[Fred]
+ Not really - they have a whole other set of problems you might be able to help them with honestly. What I've seen though is
+that the Veil is immensely weak right now. It's like a shell around the world, and it seems to be falling apart, see. Something
+must have triggered this.
+  Color|Purple|[I have a few thoughts on the matter.]
+  Color|Orange|[Fred]
+ We'll chat later about those then, okay? Like I was saying, with the Veil starting to part, I noticed a weird resonance inside
+it, actively moving around through it. It's not quite like anything else I was getting readings on. More interestingly, it
+seemed to have originated FROM the City!
+  Color|Purple|[Oh no...]
+  Color|Orange|[Fred]
+ The Shifting Crystals you found definitely seem to be able to manipulate the movement of the Veil around the City of Shifting
+Waters. I think with the right tweaks, we might be able to adjust the movement of whatever is travelling around the Veil as
+well.
+  Color|Purple|[This sounds so dangerous Fred. We don't even know what it is!]
+  Color|Orange|[Fred]
+ Ah, that's where you're wrong, [Player]. I think I know exactly what's moving around in there. It's not what the other
+scientists are studying down at the Breachpoint source either. I think it's Hekawt, the former Vizier of Al Malakut.
+  Color|Purple|[Excuse me?]
+  Color|Orange|[Fred]
+ We've both seen the pages he left behind. The Vaults? He went somewhere, [Player], but there's no way someone that powerful
+died. He's a Lich, a powerful undead sorcerer. Where better to continue your search for power than the very fabric of the Veil?
+SoftBreak   Color|Purple|[You're not wrong. I just don't know what you expect me to do should we find him.]
+  Color|Orange|[Fred]
+ Kill him. Hopefully. If the Veil is breaking, he'll be free soon enough. We might as well take matters into our own hands.
+SoftBreak   Color|Purple|[This conversation is way less light-hearted than it was at the start.]
+  Color|Orange|[Fred]
+ I know, I know. It's a very heavy topic. The world is not okay right now though. I've got a contact for you to meet up with.
+You know him already I think; Sierhaven Smith? He'll meet you over in the Twilight Ruins. He thinks Hekawt might have left
+something important there.
+  Color|Purple|[I'll head right over.]
+  Color|Orange|[Fred]
+ Splendid.
+&o  Meet up with Fred's contact, Sierhaven Smith, in the   Link   Twilight Ruins Twilight_Ruins wikilink  . Table
+ Sierhaven Smith
+  Coordinates: [553, 72, -107]
+   Color|Orange|[Sierhaven Smith]
+ Oh, hello [Player]! Fancy running into you here.
+  Color|Purple|[Not particularly, I was sent here to find you.]
+  Color|Orange|[Sierhaven Smith]
+ Oh ho! That makes more sense. I found this place after a recent earthquake. I was worried you were working with some geologist
+or something! I take it you've been in contact with Fred then.
+  Color|Purple|[Indeed.]
+  Color|Orange|[Sierhaven Smith]
+ Well, I'm sure you're wondering why I left Al Malakut. It's simple really. During my time investigating I found evidence that
+led me to believe that the Grand Vizier, Hekawt, did not perish in the fall of the city, and instead stole power from the
+artifact held within to become a Lich.
+  Color|Purple|[Yeah, Fred and I found his journals in the City of Shifting Waters.]
+  Color|Orange|[Sierhaven Smith]
+ Indeed. Fred and I believe he is the presence moving through the Veil now. I've tracked power here, to where I believe Hekawt
+left his "Phylactery", a power source of magic that helps keep Hekawt alive. If I'm correct, it's in the room below, but it
+seems to be locked away.
+  Color|Purple|[Any idea how it's locked?]
+  Color|Orange|[Sierhaven Smith]
+ I'm not entirely sure. I fear it has something to do with the Gray Wool and its power over death.
+  Color|Purple|[I'm gonna go touch it.]
+  Color|Orange|[Sierhaven Smith]
+ Wait what? No! You can't just rush in there.
+  Color|Purple|[I've held the Gray Wool like Hekawt has. I'm going to go try it.]
+  Color|Orange|[Sierhaven Smith]
+ ...okay.
+  Color|Purple|[What should I do?]
+  Color|Orange|[Sierhaven Smith]
+ Well, it didn't kill me when I approached, but I didn't touch the glowing part...
+  Color|Purple|[Maybe I'll try approaching. I've held the Gray Wool like Hekawt has. Perhaps it will let me in.]
+  Color|Orange|[Sierhaven Smith]
+ (MISSING)
+&o  Investigate the Phylactery in   Link   Twilight Ruins Twilight_Ruins wikilink  .
+  Color|Grey|As you touch the glowing mass, a shimmering ripple spreads out, and it feels as if you've been transported
+somewhere else entirely...
+  Color|Orange|[Sierhaven Smith]
+ What did you do, [Player]? Wait, watch out, portals have opened in the floor around you! You're gonna have to hold off the
+creatures coming out while I try and figure a way out of here!
+  Color|Purple|
+WHO DARES THREATEN MY PHYLACTERY? MY LIFE? SUCH INSOLENCE...<br>
+CURIOUS... YOU ARE THE ONE WHO LET ME MOVE BEYOND THE CONFINES OF THE CITY. BEYOND THE CONFINES OF REALITY.<br>
+REGARDLESS, I CANNOT ALLOW YOU TO THREATEN MY SEARCH. I WILL BE RECLAIMING MY PHYLACTERY.<br>
+The phylactery sinks into the darkness and disappears.<br>
+DO NOT INTERRUPT ME AGAIN, OR THERE WILL BE CONSQUENCES.<br>
+As Hekawt sinks into the darkness as well, the room returns to normal.<br>
+  Color|Orange|[Sierhaven Smith]
+ Are you okay? It was so dark, I couldn't see much of what happened. Come up here and tell me! Table
+ Sierhaven Smith
+  Coordinates: [553, 72, -107]
+   Color|Orange|[Sierhaven Smith]
+ Are you okay? It was so dark, I couldn't see much of what happened. Come up here and tell me!
+  Color|Orange|[Sierhaven Smith]
+ Hey! You're back and not dead! ...Right?
+  Color|Purple|[Wooooo! I'm a ghost and I'm here to haunt you!]
+ *   Color|Orange|[Sierhaven Smith] AHHHHHH
+&o  Return to Fred at his mobile research station in Breachpoint. Table
+ Fred
+  Coordinates: [-717, 9, -169]
+   Color|Orange|[Fred]
+ ...a yes, welcome back [Player]. I got a message from Siery that you were on your way back. So it's time to burn the Lich then,
+yes?
+  Color|Purple|[Sounds like it. I found his Phylactery, but he showed up and took it.]
+  Color|Orange|[Fred]
+ Horrible. Well, I think it's time to request a meeting with the Pharaohs of Alnera. We need to find a place of significance to
+Hekawt to force him out of the Veil using our crystals. Perhaps they'll know the best place?
+  Color|Purple|[Sounds like a plan. Hopefully they'll still listen to me.]
+  Color|Orange|[Fred]
+ I'm sure they will! You're very convincing. Head on over and request a meeting.
+  Color|Purple|[So bear with me. Why is it so important that we take out Hekawt?]
+  Color|Orange|[Fred]
+ I'm not sure if you've read all of the journals we found inside the City, but I think it's a pretty simple prospect. He spent
+all that time searching for a wool. The Black Wool. He wants it to be able to reshape himself and the world around him in his
+image. That doesn't seem very reasonable, does it?
+  Color|Purple|[I think I get it. He's not exactly an ally against Calder then.]
+  Color|Orange|[Fred]
+ (MISSING dialogue if it exists at all)
+  Color|Orange|[Fred]
+ Head over to Alnera and meet with the Pharaohs. It's time to kill Hekawt.
+&o  Talk to the Pharaoh's Guards to request a meeting. Table
+ Pharaoh's Guard
+  Coordinates: [398, 7, 871]
+   Color|Orange|[Pharaoh's Guard]
+ Keep moving. The room must be cleared before the Pharaoh's return.
+  Color|Purple|[I need to meet with one of the Pharaohs. It's important.]
+  Color|Orange|[Pharaoh's Guard]
+ Wait here, War Ender. If the Pharaoh will speak with you, we will let you know.
+  Color|Grey|You nod and wait for an answer...
+  Color|Orange|[Pharaoh's Guard]
+ Pharaoh Tyro Syl will meet you, [Player]. But not here. Above the palace is a quiet balcony. You might find him there.
+&o  Go up to the balcony and meet with Pharaoh Tyro Syl. Table
+ Pharaoh Taro Syl
+  Coordinates: [399, 35, 831]
+   Color|Orange|[Pharaoh Tyro Syl]
+ I hear you come with dark tidings on the wind [Player]. A stirring in the shadows is never fortuitous.
+  Color|Purple|[Hekawt, the former vizier of Al Malakut stirs. He lives still, as a Lich.]
+  Color|Orange|[Pharaoh Tyro Syl]
+ A disgusting, vile beast. No wonder he has remained hidden for so long, doomed to the bowels of history. Still, this answers
+many questions my ancestors have wondered about the fall of Al Malakut.
+  Color|Grey|Tyro Syl spits onto the ground.
+  Color|Purple|[I am glad. I also need your help - we're trying to kill him and need a place connected to his mortal life to
+summon him from the Veil.]
+  Color|Orange|[Pharaoh Tyro Syl]
+ The Moltan Treasure Vault would do it. It was recently rediscovered where it had thought to be lost, but a bitter blight hangs
+over it. Hekawt used to oversee its operations back during the days of Al Malakut. Considering its current state, it may be the
+perfect place for you to call him forth.
+  Color|Purple|[Where can I find it?]
+  Color|Orange|[Pharaoh Tyro Syl]
+ Travel to the mining town of Molta and look for a passage through the mountains from within the town. It will lead you to its
+ruins.
+  Color|Purple|[Thank you.]
+  Color|Orange|[Pharaoh Tyro Syl]
+ May the blessings of Mauta be upon you.
+&o  Travel to the Moltan Treasure Vault, purchase a warped emblem from Ancev outside the Vault, slay Hekawt, then return to
+Ancev outside the vault.
+ After slaying   Link   Hekawt Hekawt wikilink  : Table
+ Ancev
+  Coordinates: [399, 35, 831]
+   Color|Orange|[Ancev]
+ You... you did it! Hekawt has been destroyed! I can't wait to see what this has done to the doorway! The Pharaohs will surely
+want to hear about this!
+&o  Return to Pharaoh Tyro Syl on the balcony in Alnera and give them the news of your success. Table
+ Pharaoh Taro Syl
+  Coordinates: [399, 35, 831]
+   Color|Orange|[Pharaoh Tyro Syl]
+ You return. Triumphant, I hope?
+  Color|Purple|[Triumphant. Hekawt is no more.]
+  Color|Orange|[Pharaoh Tyro Syl]
+ Then Ishnir is in your debt yet again [Player]. A nasty stain on our past has fallen for good.
+  Color|Cyan|'''A GLICH IN THE SYSTEM COMPLETE'''<br>
+Awarded access to the trades Pharaoh Tyro Syl provides and the ability for him to embalm your items!

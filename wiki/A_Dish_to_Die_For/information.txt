@@ -1,0 +1,4 @@
+prerequisites = None
+ NPC: Claude Coords: 734, 74, 459
+ King's Valley Lowtide
+related_poi=&3Abandoned Tunnels&r

@@ -1,0 +1,32 @@
+&o  Follow the race markers to beat Flashy's race! Table
+ Flashy
+  Coordinates: [-797, 101, 27]
+   &6[Flashy]
+ Hey mate! You look like the kind of guy that runs a lot, wanna race?
+  &5[What do you mean by 'race'?]
+  &6[Flashy]
+ You run, you TRY to beat my time, you win a prize if you succeed. Easy eh?
+  &5[Let's give it a go!]
+  &6[Flashy]
+ That's what I like to hear! Wanna rundown of the rules, or do you just wanna go?
+  &5[Let's go right now!]
+  &6[Flashy]
+ Here we go!
+  &5[Sure, I'll listen to the rules.]
+  &6[Flashy]
+ Pretty simple stuff. Run through the rings you see. Every time you pass through one, you'll get a bit more time to get to the
+next, and so on. You gotta reach the end with time still left, and if ya do, you beat my time!
+  &5[Okay then, let's go!]
+  &6[Flashy]
+ Here we go!
+  &5[I'm too tired of running...]
+  &6[Flashy]
+ You could have a future in racing, mate! Come back later for sure!
+ After you beat the race:
+  &6[Flashy]
+ Okay! That was definitely not supposed to happen! Ya did it though - Please, come back to me so I can give you a reward!
+&o  C: Speak to Flashy. Table
+ Flashy
+  Coordinates: [-797, 101, 27]
+   &6[Flashy]
+ You deserve a reward. Take this!

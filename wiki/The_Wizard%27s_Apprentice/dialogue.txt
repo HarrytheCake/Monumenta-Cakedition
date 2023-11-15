@@ -1,0 +1,205 @@
+ Table
+ Izzy
+  Color|orange|[Izzy]
+ Oh no,      Color|purple|[Alright. I'll go upstairs.]
+&o  Return to Izzy with the items you found at the crime scene. Table
+ Izzy
+  Color|orange|[Izzy]
+ ... I told you that you weren't going to like it.
+  Color|purple|[How did this happen? Who killed Vargos' apprentice?]
+  Color|orange|[Izzy]
+ Both perfectly valid questions that... that I wish I knew the answers to. Did you see anything up there that looked like it
+could be evidence?
+  Color|purple|[These were next to the body... Do you know what they are?]
+  Color|orange|[Izzy]
+ Oh my... This could complicate things quite a bit...
+  Color|gray|Izzy takes the items you found, and examines them.
+  Color|purple|[What's the matter?]
+  Color|orange|[Izzy]
+ Okay, focus... 
+  Color|orange|[Izzy]
+ Each of these are items that come from the upper echelons of the Celsian governments. A seal from the Pharaoh of Ishnir, and a
+totem from the Church of Chillwind... If Vargos' apprentice got himself on the wrong foot with either of these entities, we
+might be out of luck.
+  Color|purple|[So what do we do?]
+  Color|orange|[Izzy]
+ Well for starters, we are going to need some evidence. While these items may seem incriminating, I highly doubt the two
+governments would have put aside their differences just to kill a young man from the Valley. It's more than likely that only one
+is responsible, and one is being framed.
+  Color|purple|[Sounds like it's time for an investigation.]
+  Color|orange|[Izzy]
+ Indeed. I suggest that we put our focus on one kingdom at a time, however- which one do you think we should look into first?
+  Color|purple|[The Ishnir Empire.]
+  Color|purple|[The Church of Chillwind.]
+ You have a choice to pick either the Ishnir Empire or the Church of Chillwind. Header the_ishnir_empire_route  The Ishnir
+Empire Route Table
+ [Izzy] Very well then: we shall look into the Pharaoh's involvement first. If you wish to switch who we are investigating, you
+can talk to me later.
+ [Izzy] Now, the closest information we might be able to get on this Seal without looking too suspicious is with one of his
+Scribes. One can likely be found in the palace in Alnera, the capital city of Ishnir.
+&o  Seek out Scribe Shadah in Alnera's palace. Table
+ Scribe Shadah
+  Color|orange|[Scribe Shadah]
+ Good day to you. Sorry, I don't have too much time to talk right now- the Pharaoh has quite a few orders that need to be
+written and sent out. If you don't have anything imperative to ask me, I'm going to need to ask you to return later.
+  Color|purple|[Actually, I was looking to ask you about the Seal of the Pharaoh.]
+  Color|orange|[Scribe Shadah]
+ Um, okay? What about it?
+  Color|purple|[What are they used for?]
+  Color|orange|[Scribe Shadah]
+ Every record that we lower scribes produce must be reviewed by Head Scribe Rava; she ensures that all the words written are
+true to the wishes of the Pharaoh. When approved, they are taken to the records chamber to be given the Seal.
+  Color|purple|[Could I go into the records chamber?]
+  Color|orange|[Scribe Shadah]
+ Absolutely not. Access is forbidden to everyone, save the Pharaoh and Head Scribe Rava.
+  Color|gray|Shadah looks over towards the record's chamber nervously. You definitely need to find a way in there.
+&o  Enter the Sealed Record's chamber and see if you can find a way inside.
+ Solve the puzzle to unlock the chamber.
+&o  Approach Head Guard Obadiah about the book you discovered in the record's chamber Table
+&o  Head Guard Obadiah
+  Color|orange|[Head Guard Obadiah]
+ The palace may be open to the public, but it's not a place for dilly-dallying. Keep moving.
+  Color|purple|[Actually, I needed to discuss the death of a young man in Mistport with you.]
+  Color|orange|[Head Guard Obadiah]
+ Eh? Why would I know anything about something like that? When do you think the last time I went there was?
+  Color|purple|[Care to explain this unsealed note from you inside the record's chamber?]
+  Color|orange|[Head Guard Obadiah] What the- How did you get that?
+  Color|purple|[So you admit it then.]
+  Color|orange|[Head Guard Obadiah]
+ Wha- ugh, no. Listen, I don't know anything about a death. I was getting out of a bad situation with that demon Xeno; I've been
+stuck under his thumb for too long. I cut ties with them- all of them.
+  Color|purple|[Can you at least tell me what you know?]
+  Color|orange|[Head Guard Obadiah]
+ All I did was assist in smuggling his supplies into the city. The supplies are held in a bunker in Rahkeri until they are ready
+for transport, so if you are looking for any lead on Xeno's men, you should likely start there.
+&o  Search out the entrance to a supply bunker in Rahkeri owned by Xeno's men. Table
+ Crewman of Xeno
+  Color|orange|[Crewman of Xeno]
+ ...And that be the cap'in's plan. That be why it was so important fer' us to get that seal from Obadiah; now that he's quit, he
+be a dead man.
+  Color|orange|[Crewman of Xeno]
+ Wait, who be this lubber? Get out o' our bunker!
+&o  Return to Izzy with the information you found on the investigation. Table
+ Izzy
+  Color|orange|[Izzy]
+ Welcome back      Color|purple|[I learned the truth about the death of Vargos' apprentice.]
+  Color|orange|[Izzy]
+ Oh? Do tell.
+  Color|purple|[Xeno hired a man in Alnera to steal the Seal and frame Ishnir. He's behind this.]
+  Color|orange|[Izzy]
+ What?! What could Xeno be up to here? Is he trying to start a war between the Valley and the Isles? We need to find more
+information on what his endgame is here. Try sneaking aboard his ships on the dock and see if you can find anything.
+&o  1/2 - Sneak onto Xeno's ship and see if you can find anything of note.
+&o  2/2 - Return to Izzy with anything you find. Header the_church_of_chillwind_route  The Church of Chillwind Route Table
+  Color|orange|[Izzy]
+ Very well then, we shall look into the Church of Chillwind and the Queen's involvement first. If you wish to switch who we are
+investigating, you can talk to me later.
+  Color|orange|[Izzy]
+ Now, the closest information we might be able to get on this Totem without looking too suspicious is with one of lower members
+of the Church, such as a Deacon. One can likely be found in the cathedral in Frostgate, the capital city of the Chillwind.
+&o  Seek out Deacon Duncan in Frostgate's cathedral Table
+ Deacon Duncan
+  Color|orange|[Deacon Duncan]
+ Oh lord, who sits on high, we beg thee for thy mercy...
+  Color|gray|He seems to be very deep in prayer.
+  Color|purple|[Um, excuse me... Do you have a moment?]
+  Color|orange|[Deacon Duncan]
+ Huh? Oh, welcome child. How can I be of service to you and your place in life today?
+  Color|purple|[I was looking to ask you about a Holy Totem.]
+  Color|orange|[Deacon Duncan]
+ What of them?
+  Color|purple|[Could you tell me about what they are used for?]
+  Color|orange|[Deacon Duncan]
+ Yes, well-
+  Color|gray|A loud shriek comes from the back of the building, interrupting Deacon Duncan.
+  Color|orange|[Deacon Duncan]
+ Oh no, not again... My child, I must ask you for a favor. Could you go down to the catacombs below the cathedral and take care
+of the undead whoever-it-is this time? I will talk to you more about the Totem later.
+  Color|purple|[You are making this sound like it's a normal occurrence.]
+  Color|orange|[Deacon Duncan]
+ Far more frequent than I care to admit. As a word of advice: never perform an exorcism on a poultrygeist. You will never live
+it down.
+&o  Defeat the undeads in the catacombs and return to Deacon Duncan Table
+ Deacon Duncan
+  Color|orange|[Deacon Duncan]
+ Oh lord, who sits on high, we beg thee for thy mercy...
+  Color|gray|He seems to be very deep in prayer.
+  Color|purple|[Are you... already praying again?]
+  Color|orange|[Deacon Duncan]
+ Yes, well, a servant of the lord is always in prayer. I assume the undead creatures have been taken care of?
+  Color|purple|[They are.]
+  Color|orange|[Deacon Duncan]
+ Fantastic. Now what were we speaking of?
+  Color|purple|[The Holy Totem.]
+  Color|orange|[Deacon Duncan]
+ Ah, right. The Holy Chillwind Totems are possessions of the Holy Royal Advisor, Ridnan. As he travels the land, gaining
+experience in order to better service the Queen, he leaves them behind as blessings to the places he visits. They are mementos,
+if nothing else. If you have any specific questions about them, you could ask him directly. He's usually over in the castle,
+giving advice to the Queen.
+&o  Talk to Royal Advisor Ridnan Table
+ Royal Advisor Ridnan
+  Color|orange|[Royal Advisor Ridnan]
+ Hello there, young one. Beautiful day in the tundra, is it not?
+  Color|purple|[Who are you?]
+  Color|purple|[Actually, I needed to discuss the death of a young man in Mistport with you.]
+  Color|orange|[Royal Advisor Ridnan]
+ Oh my, that sounds horrid. Though, I know nothing of Mistport- I have not traveled to that region in many years.
+  Color|purple|[Care to explain why one of your Totems was found with the man's body then?]
+  Color|orange|[Royal Advisor Ridnan]
+ I'm sorry? Surely you must be mistaken. I just arrived back into town yesterday after a long journey from Nightroost. If you
+are searching for an alibi, you may go there and search near the Royal Reserve. There, you will truly see one of my totems as a
+sign that I was there.
+&o  Follow up on Ridnan's alibi at the Royal Reserve in Nightroost. Table
+ Reserve Clerk
+  Color|orange|[Reserve Clerk]
+ Hello! Welcome to the Royal Reserve! If you ever need to pay the Holy Tax, you can come speak with me.
+  Color|purple|[I don't think I want to give you my money...]
+  Color|purple|[Can anyone go down to the lower floors?]
+  Color|orange|[Reserve Clerk]
+ You're more than welcome to try, but good luck getting past the vault. We have some of the highest security money can buy.
+ Solve the puzzle to unlock the reserve vault.
+&o  Return to Izzy with the information you found on the investigation. Table
+ Izzy
+  Color|orange|[Izzy]
+ Welcome back      Color|purple|[I learned the truth about the death of Vargos' apprentice.]
+  Color|orange|[Izzy]
+ Oh? Do tell.
+  Color|purple|[Xeno hired a man in Nightroost to steal the Totem and frame Chillwind. He's behind this.]
+  Color|orange|[Izzy]
+ What?! What could Xeno be up to here? Is he trying to start a war between the Valley and the Isles? We need to find more
+information on what his endgame is here. Try sneaking aboard his ships on the dock and see if you can find anything.
+&o  1/2 - Sneak onto Xeno's ship and see if you can find anything of note.
+&o  2/2 - Return to Izzy with anything you find. Header after_investigations  After Investigations Table
+ Izzy
+  Color|orange|[Izzy]
+ Did you find anything?
+  Color|purple|[I only found this, whatever it is.]
+  Color|gray|Izzy takes the crystal and examines it a bit.
+  Color|orange|[Izzy]
+ What even is this thing? This was on his ship?
+  Color|purple|[It was in his captain's quarters, yes.]
+  Color|gray|Izzy taps on the crystal gently.
+  Color|orange|[Izzy]
+ Uh, what's happening?
+  Color|orange|[Izzy]
+ This can't be good...
+  Color|orange|[Xeno]
+ The sea... Isn't it beautiful from here? My own personal cove.
+  Color|orange|[Masked Saboteur]
+ Cut the small talk, Xeno. I know you didn't call me here just to watch the waves.
+  Color|orange|[Xeno]
+ No, I suppose not. I simply wanted to inform you that the deed is done. That wizard's little boy is gone, and all signs lead to
+the kingdoms.
+  Color|orange|[Masked Saboteur]
+ And that usurper,      Color|orange|[Xeno]
+ That's less of my concern, and more of yours. If      Color|orange|[Izzy]
+ Well that was... definitely something.
+  Color|purple|[I think that confirms our suspicions.]
+  Color|orange|[Izzy]
+ Definitely. Xeno is plotting something, and we need to figure out what.
+  Color|purple|[What do we do now?]
+  Color|orange|[Izzy]
+ My plan is to get this crystal into working order. If we can properly use it, it could help us get more insight into what he's
+up to. It's going to take some time though.
+ THE WIZARD'S APPRENTICE COMPLETE! SoftBreak  Awarded   Link   Vargos' Old Wand Vargos'_Old_Wand wikilink
+Link   Category:Quests Category:Quests wikilink

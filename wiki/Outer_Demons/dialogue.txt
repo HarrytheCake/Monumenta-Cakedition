@@ -1,0 +1,84 @@
+ Table
+ Helring SoftBreak  Coordinates: 722, 70, 523
+  Color|orange|[Helring]
+ Hi, I'm Helring. I curate the mystical and arcane section of the library. It can all be quite interesting knowledge when used
+in moderation.
+  Color|purple|[I am a great adventurer, do you have a quest for me?]
+  Color|purple|[Knowledge used in moderation?]
+  Color|purple|[Tell me about yourself.]
+  Color|orange|[Helring]
+ A quest? Well perhaps it wouldn't be that grand, but I lost my diary a few years back and haven't been able to bring myself to
+retrieve it. Could you do that for me?
+  Color|purple|[Sure, I can find your diary for you.]
+  Color|purple|[That sounds beneath me.]
+  Color|orange|[Helring]
+ Thank you so much. I left it in the study of an outpost I was stationed at. It lies down the stream that goes through the
+Cursed Forest. The journey should be simple and the monks there should help you find my old desk.
+&o  Retrieve Helring's diary at 1467, 174, 101 Table
+  Color|orange|[Ghostly Whisper]
+ You would be wise to go no further. Visitors aren't welcome. SoftBreak &o  After retrieving the diary.
+  Color|orange|[Ghost]
+ I thought I told you to stay away, but it seems the monk I spared has sent you to retrieve her diary.
+  Color|orange|[Ghost]
+ Here's your adventurer back. Do not return.
+  Color|orange|[Helring]
+ How could he still be around?
+  Color|purple|[Who was that?]
+  Color|orange|[Helring]
+ That... that was Azacor. But Aesir killed him... I don't understand.      Color|purple|[Stop him? What is he doing?]
+  Color|purple|[Well he seems angry, I probably shouldn't go back there.]
+  Color|orange|[Helring]
+ Azacor is a wicked summoner who... who did some terrible things in the past, It's why I was stationed in the Grove while I was
+with the Axtans.
+  Color|purple|[What can I do?]
+  Color|orange|[Helring]
+ We must investigate further. I need to know how he managed to cling on to this world. Furthermore, he still seems dangerous,
+even as a ghost. He had a mansion near the back of the grove where you may find out more.
+  Color|purple|[I'll go back and explore Azacor's mansion.]
+  Color|purple|[I really don't want to go back.]
+  Color|orange|[Helring]
+ Thank you so much. I'll need to prepare... mentally... before returning to that place.
+&o  1/2 - Find a way into Azacor's ritual room
+ 2/2 - Find a way to get past the barrier in Azacor's ritual room. Table
+  Color|orange|[Azacor]
+ Congratulations, you've gone from nuisance to problem. Looks like I'll need to deal with you more... personally.
+  Color|orange|[Azacor]
+ I'll show you just how much of a nightmare I can truly be.
+  Color|orange|[Azacor]
+ No no, your torment is not quite over yet.
+  Color|orange|[Azacor]
+ How about we clean you off a little.
+  Color|orange|[Azacor]
+ You are in my territory now.
+  Color|gray|As your vision goes black, you feel as if a hand is reaching out to you.
+  Color|orange|[Helring]
+ Oh thank goodness you are okay.
+  Color|orange|[Helring]
+ Thank goodness I found you      Color|purple|[Thank you for saving me!]
+  Color|purple|[You got here just in time!]
+  Color|purple|[This is getting serious, what's our next move?]
+  Color|orange|[Helring]
+ While looking for you I found Azacor's ritual room beneath the mansion as well, and it seems he was hiding the secret to his
+demise. We need to get to the Undergrowth to trap him in Ancient Wyrmwood.
+  Color|purple|[How does that work?]
+  Color|purple|[Alright let's go.]
+  Color|orange|[Helring]
+ I'll meet you there!
+&o  You need to trap Azacor in Ancient Wormwood in the Undergrowth. Get there and survive.
+ Click on the button at 1480, 42, 118. Table
+  Color|orange|{[Azacor]
+ I see you stumbled upon the source of the Wyrmwood. Of course, you don't really expect me to let you leave this location alive,
+do you?
+  Color|orange|[Helring]
+ Don't worry, I'm here to help! With the spell we found at his mansion we can bind Azacor to the Wyrmwood, and limit the damage
+he can bring to the Valley. Just keep him distracted for a little while!
+  Color|orange|[Helring]
+ I got him! The fiend is now bound to this sanctum!
+  Color|orange|[Azacor]
+ What foolish magic is this? No! You cannot keep me here forever! I will be unbound, and I shall destroy everything and everyone
+you care about! You will never rid the Valley of me!
+  Color|orange|[Helring]
+ We did it! Thank you for helping me put my past to rest. Azacor won't be able to cause trouble anymore, but he still isn't gone
+for good. Speak with me later and we can move forward with taking the fight to him.
+ Outer Demons Complete SoftBreak  Awarded access to the   Link   Azacor Azacor_the_Dark_Summoner wikilink boss fight and
+teleports in and out of the   Link   Grove Azacor’s_Grove wikilink via Helring.

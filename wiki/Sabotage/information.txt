@@ -1,0 +1,4 @@
+prerequisites = None
+ NPC: Lieutenant Aulber Coords: -142, 178, 467
+ Celsian Isles Rahkeri
+POI: &3Abandoned Lab&r

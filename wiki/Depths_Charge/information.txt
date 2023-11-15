@@ -1,0 +1,4 @@
+prerequisites = 
+*&3The End Chimes&r
+ NPC: Rhygfar Coords: -91, 96, 3328 (&3The Black Mist&r)
+ &3Celsian Isles&r Mistport

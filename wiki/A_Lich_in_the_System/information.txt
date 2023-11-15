@@ -1,0 +1,9 @@
+prerequisites = 
+* &3Fred's Bizarre Adventure&r
+* &3The Gem of Ishnir&r
+* &3Echoes of Oblivion&r completion.
+* &3City of Shifting Waters&r completion.
+ NPC: Ancev Coords: -740 4 -177
+ Celsian Isles Breachpoint
+Difficulty = Very Hard
+Length = Medium-Long

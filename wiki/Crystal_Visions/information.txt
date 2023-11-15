@@ -1,0 +1,8 @@
+prerequisites = *&3Shurima's Big Day Off&r
+*&3The Crystal Connection&r
+*defeated &3Kaul&r
+*&3Malevolent Reverie&r
+*&3Forsworn Sanctum&r
+ NPC: Nai Coords: 516, 23, 564
+In the Forsworn Sanctum Lobby
+ King's Valley Ta'Eldim

@@ -1,0 +1,12 @@
+  WorkInProgress|
+* Content Table
+ Fred
+  Color|orange|[Fred]
+ The assistant returns! I see you survived your "visit" to the city- unscathed, it appears.
+  Color|purple|[Actually, it was completely awful in there. I thought I was going to die at any moment.]
+ After speaking to Fred head to the doorway at the end of the Cave of Secrets Poi and right click with the item given
+ After defeating the enemies head back to Fred in the shifting lobby
+ Speak to researcher Dave at the Celesian Isles Monument in Steelmeld
+ Take the D.R.E.A.M catcher to Eldrask's Arena (gotten either from Dave or Fred?) You will receive an item there (either upon
+entering or using the rod)
+ Head back to Fred and he will send you to a fake black willows reward room. collect the willow strand. SoftBreak  The end.

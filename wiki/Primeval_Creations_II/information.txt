@@ -1,0 +1,3 @@
+prerequisites = &3Primeval Creations I&r
+ NPC: &3Abandoned LibraryThe Abandoned Library POI&r Coords: 
+ Celsian Isles Alnera

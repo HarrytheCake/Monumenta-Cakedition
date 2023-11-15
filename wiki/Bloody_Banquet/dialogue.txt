@@ -1,0 +1,548 @@
+ Header start_of_quest  Start of Quest
+&o  Talk to Guard Timmeh and attend Countess Corrine's exclusive banquet in place of Bethenny. Table
+ Bethenny
+  Coordinates: [-1489, 101, 923]
+   &6[Bethenny]
+ Ugh I feel terrible, why of all nights did I have to get sick…
+  &5[You should take some medicine...]
+  &6[Bethenny]
+ I should, shouldn't I?
+  &5[What's wrong?]
+  &6[Bethenny]
+ I was supposed to go to Countess Corinne's exclusive banquet, but I'm too ill to go. Hmm... could you go in my place?
+  &5[No thanks.]
+  &6[Bethenny]
+ Oh, okay.
+  &5[I'll go in your place.]
+  &6[Bethenny]
+ Take good care of that. I'll let Guard Timmeh know you're going for me. He will lead you to where the banquet is being held.
+Have a good time!
+&o  C: Talk to Guard Timmeh and enter the Banquet. Table
+ Guard Timmeh
+  Coordinates: [-494, 98, 943]
+   &6[Guard Timmeh]
+ Are you here for the banquet? I can lead you to the hall if you are ready.
+  &5[Give me some more time.]
+  &6[Guard Timmeh]
+ Alright.
+  &5[Yes, I'm ready.]
+  &6[Guard Timmeh]
+ Ok, here we go.
+ After entering the hall and before talking to the Countess: Table
+ Talking to the npcs in the dining area.
+  &6[Guard Timmeh]
+ Don't bother me further, I'm keeping an eye on everyone.
+  &6[Riley]
+ The bathroom is really nice, like even for a guest bathroom. It’s even nicer than my bathroom at home!
+  &6[Susan]
+ I hope that I dressed up enough, I don’t want to be made a laughing stock because of my clothes...
+  &6[Tirich]
+ I haven’t seen your face before, are you new to this kind of event?
+  &6[Jared]
+ Wow this juice is great. I hope I can control my intake, otherwise I’ll make a fool of myself.
+  &6[Catherine]
+ Oh gosh, Alyssa Alatriss is here… I can only imagine what decoration she’s going to complain about this time.
+  &6[Terry]
+ Those wall decorations look like they could be jumped on… I want to but I won’t.
+  &6[Jerry]
+ Goodness, I wanted to talk to the Countess but she’s so busy greeting people...
+  &6[Alyssa]
+ The details of the banquet hall are simply amazing! Cori has really outdone herself this time!
+  &6[Alex]
+ I came here with my friend but she left me alone to go talk to other people.  Table
+ Countess Corinne
+  Coordinates: [-4249, 135, 660]
+   &6[Countess Corinne]
+ Welcome to my banquet! I don’t believe we’ve met before. I am Corinne, the host of tonight’s event. I see you have Bethenny’s
+invitation. Could she not make it?
+  &5[Hello, I’m [Player]. Bethenny was sick so she told me to come in her stead.]
+  &6[Countess Corinne]
+ I see. Well it’s nice to meet you. I hope you enjoy your time here. Why don’t you acquaint yourself with the others? There is
+time before dinner.
+ After talking to Countess: Header first_talking_to_everyone  First talking to everyone Table
+ Riley
+  &6[Riley]
+ Countess Corinne really outdid herself this time. Did she install a new chandelier? I wonder how much she spends on decoration.
+  &5[Why is this banquet so grand?]
+  &6[Riley]
+ Well, even if she’s just a Countess, she’s ridiculously rich! This much is nothing to her.  Table
+ Susan
+  &6[Susan]
+ The Countess recently expanded her business to the Celsian Isles. She’s known for having multiple successful ventures. She's so
+impressive.
+  &5[What kind of business does she do?]
+  &6[Susan]
+ Oh, she does a variety of things like I said before. Science, art, weapons, food, construction… she’s a seriously wealthy
+woman. I'm not here for business though, the Countess asked me to come because I recently visited Lier...
+  &5[Lier? What's that?]
+  &6[Susan]
+ Oh... It's a country that's close to the Narsen Empire. It's lovely but dangerous.  Table
+ Tirich
+  &6[Tirich]
+ I was informed that there was an unexpected guest who came. I guess that’s you.
+  &5[Yep, that's me. ]
+  &6[Tirich]
+ The people attending today’s banquet are all from the upper class. Don't take anything mean they say to you to heart.
+  &5[Really? Everyone has been pretty nice so far.]
+  &6[Tirich]
+ Huh. Okay then. Continue to have a good time then.  Table
+ Alex
+  &6[Alex]
+ All of the people here tonight are some serious big shots… I feel kind of out of place right now…
+  &5[What do you mean?]
+  &6[Alex]
+ Don’t you know? Alyssa is a renowned artist that has done portraits for the Queen of Chillwind, Tirich is the owner of the
+biggest mines in Ishnir, Susan is a famous scholar who studied in the mountainous country of Lier, Jared used to be a personal
+designer for King Johannes III, and Jerry runs a successful ice cream- er I mean frozen custard shop in Frostgate.  Table
+ Jared
+  &6[Jared]
+ Oh hello there, I'm Jared. Have you tried the juice yet? Don't go too wild. I remember last time I had a glass too many. Ugh.
+Bad memories.
+  &5[Do you come to these parties often?]
+  &6[Jared]
+ I do! I try to come to every one I can since everything is so high class. The downside is that I gain weight every time...
+  &5[That sounds like a lot of fun.]
+  &6[Jared]
+ It is! If I see you next time I'll show you how to sneak food out without getting caught.  Table
+ Catherine
+  &6[Catherine]
+ I saw Lady Alatriss eyeing me earlier. I know for a fact she’s going to pull me aside to complain about something soon.
+  &5[Why don’t you hide or run away from her then?]
+  &6[Catherine]
+ It's not worth the effort. She will find you no matter where you hide and running will only give her another thing to complain
+about!  Table
+ Terry
+  &6[Terry]
+ I came here with my brother because he said he was nervous coming to tonight’s banquet. But as soon as we got here, he was
+drenching the Countess in compliments. I don’t know why he even asked me to come here.
+  &5[Who's your brother?]
+  &6[Terry]
+ Oh, sorry. I’m Terry. My brother is Jerry. We run a restaurant in Frostgate that specializes in frozen food, literally! We call
+it Terry and Jerry’s Frozen Custard Shop.
+  &5[Why sell cold food in a place that's always snowing?]
+  &6[Terry]
+ Well... You have a good point. We just wanted to open an ice cream store...  Table
+ Jerry
+  &6[Jerry]
+ The Countess is quite kind letting a stranger like you in. I hope you don’t cause any trouble and hurt someone.
+  &5[I'm here in place of Bethenny.]
+  &6[Jerry]
+ Bethenny! She’s practically begged for an invitation! How shameless could she get!
+  &5[How is she shameless? She was sick!]
+  &6[Jerry]
+ That was probably her guilty conscious finally getting to her! She begged the Countess for months to invite her to one of her
+functions.  Table
+ Alyssa
+  &6[Alyssa]
+ I don’t think we’ve met before. Aren’t you a pretty face. Are you a new business partner of Cori’s?
+  &5[Actually I got my invitation from Bethenny.]
+  &6[Alyssa]
+ Oh? So you're not here for business? I am Alyssa Alatriss. Even if you don't know my name, you’ve probably seen my work.
+  &5[What kind of work do you do?]
+  &6[Alyssa]
+ I see I've caught your attention! I'm a painter from the Narsen Empire, but I painted the portrait of the Queen of Chillwind!
+Since then, I've been quite popular in Chillwind!
+ After talking to everyone:
+&o  C: [1/2] Talk to Baroness Corinne.
+&o  C: [2/2] If you leave the party for any reason, you can return to it by talking to Guard Timmeh. Table
+ Countess Corinne
+  &6[Countess Corinne]
+ I see you’ve acquainted yourself with everyone.
+  &6[Countess Corinne]
+ It's actually quite refreshing to have a new face here. I can tell you're a good person.
+  &5[How would you know that?]
+  &6[Countess Corinne]
+ Haha, when you get to be my age, you get the hang of things like that…
+  &5[There were a lot of people who were surprised to see me here.]
+  &6[Countess Corinne]
+ Yes, they usually see the same people over and over again. A new face is welcome.
+  &5[All the people here seem to be here for business.]
+  &6[Countess Corinne]
+ I have been told I have an eye for potential. I've had immense success with all my businesses so many people flock to me in
+hopes they can also share that success. Not everyone here is like that though. Just some.
+  &6[Countess Corinne]
+ Well it’s about time for the banquet to start, so just get comfortable. I need to get something from my study. I’ll chat later.
+   Color|teal|After Baroness Corinne goes to her study, the lights suddenly cut out.
+&o  C: [1/2] Talk to Guard Timmeh to learn more about what happened. Table
+ Guard Timmeh (Banquet)
+  &6[Guard Timmeh]
+ [Player] right? It seems that the Countess was killed at her own banquet. I've heard a lot of good things about you so I kept
+an eye on you during the entire banquet.
+  &5[Keeping an eye on me?]
+  &6[Guard Timmeh]
+ And a good thing too. I think it's safe to say that you aren't the one who killed the Countess. You were out here where I could
+see you the whole time. The others however...
+  &5[What are you going to do then?]
+  &6[Guard Timmeh]
+ Nobody will be allowed to leave the banquet until we find the killer, I'm keeping an eye out on the crime scene so that nobody
+tampers with the evidence. I can't be two places at once, but if I stand here then I can't properly investigate the murder...
+Could you help me?
+  &5[Sorry, I don't think I'm cut out for this.]
+  &6[Guard Timmeh]
+ Alright then, just sit tight until we solve this then.
+  &5[Sure!]
+  &6[Guard Timmeh]
+ That would help a lot! You can start by examining the Countess's body. Let me know if you find anything.
+&o  C: [1/2] Take a look at the crime scene and find some clues.
+  Countess's dead body
+ The Countess lies on the ground, she is covered in blood.
+  &5[Check her back.]
+  There is a large wound on her back but the injury is too messy to determine what it was from.
+  &5[Check her hand.]
+  &5[Check her face.]
+ Hit the Countess's dead body and choose the option [Check her hand.] then talk to Guard Timmeh.
+  Guard Timmeh (Banquet)
+  &6[Guard Timmeh]
+ Did you find something? Let me have a look.
+  &5[The Countess was holding that cloth. Do you think it belongs to her killer?]
+  &6[Guard Timmeh]
+ I think so. We have ourselves a lead. Keep up the good work!
+  &6[Guard Timmeh]
+ We should look for the weapon that was used to kill the Countess. Find it and use this on it. It's a kit that will hopefully
+get a fingerprint from the weapon.
+  &6[Guard Timmeh]
+ We will need a fingerprint from the murder weapon. Oh- and if you can, go around and see if you can get some fingerprints from
+things that people have touched. If we find a match then it will be easier to narrow the suspect list down. Here, use this to
+write down any notes you think are important.  Header looking_for_clues_and_talking_to_everyone  Looking for clues and talking
+to everyone
+&o  [1/2] Look around and see if you can find objects to fingerprint using the kit. If you lose the kit, Guard Timmeh can give
+you another one.
+ Talking before all clues are found: Table
+ Alyssa
+  &6[Alyssa]
+ Oh no... this can't be... Cori...
+  &5[Were you close friends with the Countess?]
+  &6[Alyssa]
+ Close? No. We were best friends! Our parents introduced us to each other when we were children!
+  &5[Just stay put for now and we will do our best to find the one responsible for this.]
+  &6[Alyssa]
+ I hope you can...  Table
+ Riley
+  &6[Riley]
+ The lights went out and I tripped.
+  &5[Fix the chair then?]
+  &6[Riley]
+ Ehhh...I knocked it over, but it's too heavy to lift...  Table
+ Terry
+  &6[Terry]
+ What's going on?
+  &5[Something bad happened. We are trying to get things under control]
+  &6[Terry]
+ Oh dear... Where is my brother?  Table
+ Susan
+  Lady Susan looks like she's in distress.
+  &5[Are you okay?]
+  &6[Susan]
+ Wha- me? Yes I'm fine, but Cori... she's...
+  &5[Calm down. We will get to the bottom of this.]
+  &6[Susan]
+ Can we?  Table
+ Jared
+  &6[Jared]
+ Ugh, I think I'm gonna be sick...
+  &5[Are you okay?]
+  &6[Jared]
+ I don't think I will be okay... I think... I... ate too much...  Table
+ Tirich
+  &6[Tirich]
+ ...
+  &5[...]
+  &6[Tirich]
+ ... Can I help you?
+  &5[No?]
+  &6[Tirich]
+ Okay?  Table
+ Catherine
+  &6[Catherine]
+ There are a lot of people who are freaking out, oh dear...
+  &5[Don't worry. We will resolve the issue.]
+  &6[Catherine]
+ What issue? What happened?  Table
+ Alex
+  &6[Alex]
+ What's happening? Is everything okay?
+  &5[Everything is under control.]
+  &6[Alex]
+ Then why do you look like you saw someone die?  Table
+ Jerry
+  &6[Jerry]
+ What are you doing? If you're helping then you should do your work properly and find the killer!
+  &5[We are doing our best to solve the murder. Please be patient.]
+  &6[Jerry]
+ Hah, this is what's wrong with adventurers these days. They act like they're helping when in reality they just loaf around.
+  &5[Why are you so rude? You do realize you're a murder suspect, right?]
+  &6[Jerry]
+ Of course! But what should I fear if I'm innocent? If anything you're the most dangerous one here!  Header clue_section  Clue
+Section
+  Fingerprints:
+  Coordinates: [-4214, 121, 472]. On the floor by the countess's dead body.
+   Coordinates: [-4241, 122, 467]. Bathroom counter.
+   Coordinates: [-4233, 123, 523]. Window Ledge furthest from the entrance of the courtyard, on the courtyard side of the
+window.
+   Coordinates: [-4230, 122, 493]. Closest table as you enter the dining hall from the study.
+   Coordinates: [-4210, 122, 509]. Kitchen Counter, directly on your left as you enter.
+   Coordinates: [-4244, 123, 520]. Window Ledge closet to the courtyard entrance.
+  Not fingerprints. Left click to interact with:
+  Coordinates: [-4233, 125, 476]. In the bathroom as you walk in. Look up.
+ Description:     &5This pipe has a leak in it! Better tell someone to fix it quick!
+   Coordinates: [-4239, 123, 533]. On the further flowerbed edge in the courtyard.
+ Description:     &5A picked flower lies on the ground. Its still-fresh petals are beginning to wilt.
+   Coordinates: [-4243, 123, 488]. The painting of the man and fire. Called "Baroness Corinne von Chennel". Middle painting on
+the wall opposite of courtyard.
+ Description:     &5There is a thin film of dust on the painting except for a small spot at the bottom. It seems someone cleaned
+the painting.
+   After collecting all the Fingerprints and clues: Table
+ Guard Timmeh
+  &6[Guard Timmeh]
+ Wow you did an amazing job! Gathering all of these prints will help us tremendously! Let me take a look now...
+  &6[Guard Timmeh]
+ Aha! There is a match! Hmm... But we don't know who this print belongs to... Can you go talk to some people and find out? We
+should be trying to find out which item belonged to whom and maybe even look for a reason people might have wanted the Countess
+dead.  Header talking_to_everyone_to_find_the_killer  Talking to everyone to find the killer
+&o  C: [1/2]: Talk to the banquet attendees and find out who owned what item and where everyone was at the time of the murder.
+Once you think you know who the killer is, talk to Guard Timmeh. Table
+ Jerry
+  &6[Jerry]
+ I can’t believe the Countess is dead! This is unbelievable, the Countess and I were about to start a huge business together!
+  &5[Have you seen anyone suspicious?]
+  &6[Jerry]
+ Me? I think I saw Jared enter the Bathroom with a Glass of Wine. But guess what? He didn't come out with it! Can you believe
+that?! He didn’t even try to clean up after himself! Unbelievable!
+  &5[Where were you before the Countess was murdered?]
+  &6[Jerry]
+ Me? I went to the bathroom and there was a leaky pipe. I fixed it before coming out.
+  &5[What was your relationship with the Countess?]
+  &6[Jerry]
+ We were going to open a business together here in Chillwind. I recently took a trip to the Narsen Empire and discovered a
+delicious Tlaxan cuisine. They said they eat it during religious ceremonies but it's just too good to not have more often. They
+called it pizza?
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Jerry]
+ None that I know of. The Countess and I have been getting along quite well.  Table
+ Catherine
+  &6[Catherine]
+ Oh my god is that blood? I think I'm gonna be sick...
+  &5[Have you seen anyone suspicious?]
+  &6[Catherine]
+ Suspicious? No. But I saw something that will be a bigger scandal than this murder! I saw Susan and Tirich go into the garden
+together and guess what? Tirich's cravat is missing now! Can you believe that?!
+  &5[Where were you before the Countess was murdered?]
+  &6[Catherine]
+ Oh god. Alyssa was yapping my ear off about how the curtains were too yellow. I'm so glad that Riley came by and distracted her
+with something else. She complained for what seemed like hours!
+  &5[What was your relationship with the Countess?]
+  &6[Catherine]
+ The Countess is a famous businesswoman from the Narsen Empire, but has been expanding her business to the Celsian Isles. I was
+one of her first contacts. She sponsored my fishing business in Frostgate.
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Catherine]
+ Not in particular. Well... I once called her shoes clunky, but that's not really a dispute. Right?  Table
+ Alex
+  &6[Alex]
+ I can’t believe they’re making us all wait for this to be solved. I want to go home. It’s obviously not me so those stupid
+guards should just let me out.
+  &5[Have you seen anyone suspicious?]
+  &6[Alex]
+ Well, I did see Riley kick around a chair and try to play it off as an accident. Does that count?
+  &5[Where were you before the Countess was murdered?]
+  &6[Alex]
+ I was trying to talk to Catherine, but Alyssa came up to her and drowned me out with her obnoxious blabber about curtains.
+  &5[What was your relationship with the Countess?]
+  &6[Alex]
+ The Countess introduced me to Tirich, and I helped them with setting up their mining operation here.
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Alex]
+ We've never fought. I'm pretty good about keeping my business partners happy.  Table
+ Tirich
+  &6[Tirich]
+ Hello there, this party went from great to gruesome in a matter of minutes, huh? I just want to go home but the guards won’t
+let anyone go until this murder is solved…
+  &5[Have you seen anyone suspicious?]
+  &6[Tirich]
+ Well… I saw Alyssa in the Greenhouse earlier drawing with a beautiful Feather Quill. I was going to ask her why she would draw
+when she could socialize with everyone else in the Main Hall, but she disappeared.
+  &5[Where were you before the Countess was murdered?]
+  &6[Tirich]
+ Me? I was in the Main Hall admiring the paintings. There was a smudge on Lady Corinne’s portrait so I cleaned it.
+  &5[What was your relationship with the Countess?]
+  &6[Tirich]
+ She invested in my mining business. It used to be extremely successful but one of my mines shut down and I’ve been struggling a
+bit since then. The Countess has been very kind and understanding of my situation. I… am saddened by this loss because she was a
+very kind person. Many will miss her.
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Tirich]
+ It was less of a dispute and more of a worry of mine... You see, my father used to run an opal mining operation in King's
+Valley, but used them to practice black magic. The Countess is also a Narsen citizen so she knows of the crimes of my father...
+When she found out that my mining operation in Ishnir was mainly harvesting opals, I thought she was going to flip and stop
+supporting me. But... she simply accepted it and continued to support me...  Table
+ Jared
+  &6[Jared]
+ It’s such a tragedy that Countess Corinne was killed. I hope they find the killer soon… They’re among us and that’s so nerve
+wracking!
+  &5[Have you seen anyone suspicious?]
+  &6[Jared]
+ I saw Tirich in the Main Hall taking notes in a Well Worn Journal. I don’t know what he was writing but he was staring at each
+person and then writing some things. Honestly it was a bit concerning…
+  &5[Where were you before the Countess was murdered?]
+  &6[Jared]
+ I was in the Kitchen looking for a snack. I had one too many glasses of wine and was feeling peckish. I saw some deviled eggs
+on the counter and ate a good amount. Oh, I hope that there are enough for the rest...
+  &5[What was your relationship with the Countess?]
+  &6[Jared]
+ I'm a fairly popular designer that does work in the Isles as well as the Valley, even the late King Johannes III asked me to
+make some suits for him. While my designs are sought after by many, the Countess is probably my favorite patron because of her
+peculiar taste in clothes. She has a style that makes her stand out in the crowd. I was drawn to that so I offered to be her
+personal designer.
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Jared]
+ Recently the Countess has been complaining that my designs are too extravagant so I've been getting frustrated with her. The
+last time we spoke before today, she told me to not come back until I made something that didn't look like I had glued the royal
+treasury onto a dress. So today I came here with a bunch of designs to show her!  Table
+ Terry
+  &6[Terry]
+ Wow, the Countess is dead… I’m worried about my brother, he was going to start a business with her soon. But now that she’s
+dead, he has to do all of the work… I hope he will be okay…
+  &5[Have you seen anyone suspicious?]
+  &6[Terry]
+ I don't think it's related, but I saw Alex go into the Kitchen and come out with a huge plate of smoked fish. I can't believe
+he can eat during a time like this!
+  &5[Where were you before the Countess was murdered?]
+  &6[Terry]
+ I was chatting with Tirich and admiring the paintings.
+  &5[What was your relationship with the Countess?]
+  &6[Terry]
+ She sponsored the business that my brother and I run. Honestly I don't know why she did... Ice cream in Chillwind...
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Terry]
+ To my knowledge, nothing bad has happened. But... my brother has been a bit nervous since he introduced his most recent
+business proposal to the Countess. They were going to open a pizza parlor in Frostgate.  Table
+ Susan
+  &6[Susan]
+ It would be horrible if someone else were to get hurt… Someone should catch the killer soon and get justice for the Countess!
+  &5[Have you seen anyone suspicious?]
+  &6[Susan]
+ Earlier I saw Jerry drinking out of an Ornate Canteen. Honestly! They provide fine wine and he decides to drink something else!
+He went out of my sight for a while and didn’t have the canteen on him afterwards.
+  &5[Where were you before the Countess was murdered?]
+  &6[Susan]
+ I was in the Greenhouse admiring the lovely flowers that the Countess had grown. The begonias were so lovely I just had to pick
+a few--but don’t tell the gardener! He’ll definitely yell at me.
+  &5[What was your relationship with the Countess?]
+  &6[Susan]
+ She reached out to me because she was interested in taking a trip to the mountainous country Lier. I wasn't too keen on going
+back to Lier but eventually I agreed. I came here tonight because I wanted to plan the trip with her...
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Susan]
+ Not really? We haven't known each other for a long time like some of the other people here. She's been interested in making
+connections in a new country for a while so when she heard from my father that I studied in Lier, she jumped on that and has
+been inviting me to her banquets non-stop. It's been exhausting, but I'd rather have her bother me than be dead...  Table
+ Alyssa
+  &6[Alyssa]
+ Oh god... Cori....
+  &5[Have you seen anyone suspicious?]
+  &6[Alyssa]
+ Everyone here was personally invited by Cori, I can’t imagine anyone wanting her dead... But if I had to point out someone
+strange... Lady Susan was wearing a Gorgeous Brooch earlier but it was so last season… I mean---it was beautiful don’t get me
+wrong, but when Sir Jared told her that it was last season, she cried and left for a bit. When I saw her next, she wasn’t
+wearing the Gorgeous Brooch.
+  &5[Where were you before the Countess was murdered?]
+  &6[Alyssa]
+ I was talking to Lady Catherine about the curtains, they are an awful shade of mustard yellow and make the room feel more
+gaudy. I wish I could have told Cori that she needed to change the curtains before she...
+  &5[What was your relationship with the Countess?]
+  &6[Alyssa]
+ We were friends as children and she's been a good patron of mine ever since we became adults.
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Alyssa]
+ We had a bit of a falling out because she had hired that witch Morina to paint her official portrait but I wanted to make up
+with her tonight. I acted immaturely because Morina and I have a fairly heated rivalry and I was angry because Cori knew this,
+but I understand why she asked Morina to paint her portrait. Her late father had asked Morina in the past to paint his portrait
+so she must have done so to honor his memory...  Table
+ Riley
+  &6[Riley]
+ Oh. My. God. A dead body! Wait, this is totally going to make the newspaper.
+  &5[Have you seen anyone suspicious?]
+  &6[Riley]
+ I saw Terry shuffling around the room looking for his brother. He seemed pretty nervous.
+  &5[Where were you before the Countess was murdered?]
+  &6[Riley]
+ I was trying to sneak some snacks in before the banquet because I didn't know what they were going to serve. I'm not a picky
+eater but the last time I was at a banquet they served peacock. It was tasty but I lost my appetite thinking about it!
+  &5[What was your relationship with the Countess?]
+  &6[Riley]
+ When the Countess was still doing business in King's Valley, she hired me as her accountant. I moved from the Valley to
+Frostgate so that I could continue to assist her.
+  &5[Have you and the Countess had any disputes recently?]
+  &6[Riley]
+ The Countess recently hired an accountant from Ishnir to help with her businesses in the Isles, but he messed something up and
+blamed me. I cleared it up with her but man was she angry.
+ After talking to everyone:
+ NOTE: If you pick the wrong person there is no consequence. Table
+ Guard Timmeh
+  &6[Guard Timmeh]
+ Have you talked to everyone yet? What do you think? Do you want to make a decision now?
+  &5[I think I know who did it.]
+  &6[Guard Timmeh]
+ You do?
+  &6[Guard Timmeh]
+ Who do you think did it?
+  &5[Alyssa did it.]
+  &6[Guard Timmeh]
+  So you think Alyssa killed the Countess?
+  &6[Guard Timmeh]
+ Hmm... I don't think we have enough proof to say she's the killer. Look for some more clues.
+  &5[Susan did it.]
+  &6[Guard Timmeh]
+  &6[Guard Timmeh]
+ Do we have enough evidence to safely say she is the one responsible for the Countess's death? I think we should look for some
+more clues.
+  &5[Tirich did it.]
+  &6[Guard Timmeh]
+  &6[Guard Timmeh]
+ I don't think we have enough proof to make the decision. Let's find some more evidence first.
+  &5[Jared did it.]
+  &6[Guard Timmeh]
+  &6[Guard Timmeh]
+ I think that we need to find some more evidence first. Trust your gut.
+  &5[Jerry did it.]
+  &6[Guard Timmeh]
+  &6[Guard Timmeh]
+ It looks like he was the owner of the Ornate Canteen, whose fingerprint matched the print we found on the murder weapon. He
+also lied about his whereabouts at the time of the murder. And finally, if you look at his attire, the Scrap of Cloth we found
+in the hand of the Countess matches his jacket. Based on the evidence you found, he's definitely the killer. Excellent work.
+I'll detain him immediately!
+  &5[Catherine did it.]
+  &6[Guard Timmeh]
+  &6[Guard Timmeh]
+ I don't think you are right. None of the evidence we have so far leads us to believe she is involved.
+  &5[Riley did it.]
+  &6[Guard Timmeh]
+  &6[Guard Timmeh]
+ That sounds pretty far fetched. Maybe ask around some more...
+  &5[Terry did it.]
+  &6[Guard Timmeh]
+  &6[Guard Timmeh]
+ Hmm... You might be on to something, but I don't think you are on the right trail.
+  &5[Alex did it.]
+  &6[Guard Timmeh]
+  &6[Guard Timmeh]
+ Maybe we should retrace our steps. We seem to be a bit lost...
+  &5[Not yet, I need some more time.]
+  &6[Guard Timmeh]
+ Okay, think carefully. This is not easy.
+ After catching the killer:
+&o  C: Talk to Guard Timmeh. Table
+ Jerry (Prison)
+  &6[Jerry]
+ Grrr... If she hadn't found out, I wouldn't have had to kill her...
+  &5[Found out what?]
+  &6[Jerry]
+ ... I don't need to tell you anything.  Table
+ Guard Timmeh (Prison)
+  &6[Guard Timmeh]
+ Thank you once again for helping me with this case. You were a great help. We will make sure that Jerry pays for his crimes.
+  &5[I'm glad I could help catch the killer.]
+  &6[Guard Timmeh]
+ You did a great job. Thank you.
+ BLOODY BANQUET COMPLETE!
+ Awarded   Link   Nettlegold Shiv Nettlegold_Shiv wikilink and 1 HCS!

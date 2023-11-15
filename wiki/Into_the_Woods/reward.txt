@@ -1,0 +1,5 @@
+rewards =
+* Awarded a home base in Galengarde for your crew above the Food Shop
+* &3Shroombane&r 
+* 4 Mungfish
+* 1 Hyperchromatic Archos Ring

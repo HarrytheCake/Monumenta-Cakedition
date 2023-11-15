@@ -1,0 +1,335 @@
+&o  Speak to the Crimson King through Jeremiah Header start_of_quest  Start of Quest Table
+ Jeremiah
+  Coordinates: [-917, 91, -161]
+   &6[Jeremiah]
+ I'm sorry... I f-feel like I broke your trust.
+  &5[I feel like it's time we have a real talk with the Crimson King.]
+  &6[Jeremiah]
+ I have a sense you have much understanding now. The King is ready for you, as you are ready for him.  Table
+ Jeremiah
+  &6[Jeremiah]
+ He returns... I feel his presence on my skin.
+  &5[Wait, is he not inside your head?]
+  &6[The Crimson King]
+  I am not within his head. I am simply myself. I only speak through my herald when it is deemed necessary.
+  &5[Why don't you just speak to me and let Jeremiah go then?]
+  &6[The Crimson King]
+  Let him go? It is an honor to be my herald, [Player]. Sadly it is my curse that I can only speak directly when one is at their
+weakest. I do not sense that to be you to be weak right now, would you agree? Now, to business.
+  &5[Yes. To business. Why do you claim I owe you?]
+  &6[The Crimson King]
+  Of course I claim it. It is my right. Don't you know me [Player]? Do you not remember my caress as death approached?
+  &5[No, I don't.]
+  &6[The Crimson King]
+&o  C: Talk to the Crimson King. Table
+ Jeremiah
+  &6[The Crimson King]
+  &5[Why do you think that?]
+  &6[The Crimson King]
+  &5[Where is your home?]
+  &6[The Crimson King]
+  &5[I can't help you.]
+  &6[The Crimson King]
+  &5[I'll help you.]
+  &6[The Crimson King]
+  Color|red|Of course you will. It was not a request. Now, let us return to the Memory Vault, where we can begin...
+&o  C: Talk to the Crimson King. Table
+ Jeremiah
+  &6[The Crimson King]
+  &5[How does this work?]
+  &6[The Crimson King]
+  &5[Where do I begin?]
+  &6[The Crimson King]
+&o  C: Leave the Memory Vault.
+ After leaving the Memory Vault:
+&o  C: Interact with the western effigy closest to the Memory Vault. Table
+ Telsket Head
+  &5[This must be the effigy. The King said it would take me into the Ephemeral Corridors...]
+ ...yes... this place has power...
+  &5[Hello? Is someone there?]
+ ...we will find the way...
+&o  C: Explore the memory. Table
+ Tkisali
+  &6[Tkisali]
+ Lord Shaman. Greetings.
+  &5[Hello Tkisali. What have your men discovered?]
+  &6[Tkisali]
+ The resting place. It is here. Our time has come, C'Telsket. The Sons of the Forest will rise anew!  Table
+ Nukanm
+  &6[Nukanm]
+ Lord Shaman. Greetings.
+  &5[Hello Nukanm. I sense greatness. Is this so?]
+  &6[Nukanm]
+ It is, my Shaman. The resting place has been found. We have discovered what the rest of the Tlaxans have not! The Narsen Empire
+will finally end.  Table
+ Vikusk
+  &6[Vikusk]
+ Sir.
+  &5[Vikusk.]
+  &6[Vikusk]
+ Do you see it? The structure, jutting from this vile place? Myrahg would never even touch this vile infestation.
+  &5[I see it clearly.]
+  &6[Vikusk]
+ Then it is time, is it not? Let us descend within, and claim what should have been ours, Lord Shaman.  Header section
+'''SUBQUEST : A STUDY IN DISCOVERY''' Table
+ Jeremiah
+  &6[The Crimson King]
+  Greetings C’Telsket, first of the Soulseekers. Your journey has reached a vital moment.
+  &5[Excuse me?]
+  &6[The Crimson King]
+  &5[I've been here before.]
+  &6[The Crimson King]
+  &5[I am not, I need to prepare myself.]
+  &6[The Crimson King]
+  &5[I am.]
+  &6[The Crimson King]
+  Then enter the Corridors.
+&o  C: Delve into C'Telsket's memory of the Ephemeral Corridors.
+ This is a PoI:   Link   C'Telsket's Memory C'Telsket's_Memory wikilink
+  In the first room go out the North Exit. (Note: This is a room that has a disk in it in EC, but not here.)
+ In the second room go out the East Exit. (When you first enter go left, right, and down the ladder. Then go through the tunnel
+section in front of the ladder and up the next ladder.)
+ In the third room go out the East Exit.
+ In the fourth room go out the North Exit.
+ In the fifth room go out the East Exit. (Note: The Right Middle row cell has a Volcanic Panic Disk) (To reach the exit just
+follow the path through the Right Bottom cell.)
+ In the sixth room go out the East Exit. (Quick way is to just dig a few blocks behind the gravel pile directly across from the
+entrance.)
+ In the seventh room go out the South Exit. (Note: As you enter the room in front and to the right has a music disk.)
+ In the eighth room go out the West Exit.
+ In the ninth room go out the South Exit.
+ In the tenth room go out the West Exit.
+ In the eleventh room go out the South Exit.
+  Jeremiah (C'Telsket's Memory)
+  &6[The Crimson King]
+  &5[This isn’t inside the Corridors.]
+  &6[The Crimson King]
+  &5[Are you sure? This is the Arena of Terth in Sierhaven.]
+  &6[The Crimson King]
+  &5[I don’t know.]
+  &6[The Crimson King]
+  &5[Who is that?]
+  &6[The Crimson King]
+  &5[Who?]
+  &6[The Crimson King]
+&o  C: Destroy the Narsen invader.
+ After beating Callum Herring: Table
+ Jeremiah (C'Telsket's Memory)
+  &6[The Crimson King]
+  &5[Wait, that's what happened to Farr? The Sons of the Forest didn't just attack?]
+  &6[The Crimson King]
+  &5[What happened to C'Telsket - er, me?]
+  &6[The Crimson King]
+  &5[Wait, is C’Telsket still alive?]
+  &6[The Crimson King]
+&o  C: Talk to the Narsen invader child.
+  &6[The Crimson King]
+   Table
+ Max
+  &6[Max]
+ Hello savage.
+  &5[Hello invader’s spawn.]
+  &6[Max]
+ Why... Why did you do it? Do you have any idea of the damage you’ve caused? You murdered Cal! You... He’s gone because of you!
+WHY?!
+  &5[It’s the great cycle of things. Your people invaded my homeland, slaughtered my people. It’s only fitting that we are
+allotted the chance to return that favor. Again, and again, the cycle repeats until there is nothing left but bones and ash.]
+  &6[Max]
+ How DARE you talk to me about cycles, after everything you’ve put me through. You’re not human, you’re an animal. A monster
+that should be put down!
+  &5[I’m no monster. I’m a leader. A leader who had to make hard choices of his allies and his enemies alike. I made promises,
+child, and I intended to keep them.]
+  &6[Max]
+ ...Promises? You murdered Cal. You. He’s gone! You destroyed Farr! You killed dozens of people! You’re fit to lead nothing. You
+know only violence.
+  &5[...]
+  &5[That is how I have survived thus far.]
+  &6[Max]
+ Then maybe you shouldn’t survive any longer. Maybe I should end the cycle...
+  &6[The Crimson King]
+  You feel it. The pain in your chest. Blood. The beating of your heart, heavy in your ears. A whispering. The Veil... reaching
+out...
+  &6[The Crimson King]
+  &5[...]
+  &6[The Crimson King]
+  &5[...]
+  &6[The Crimson King]
+  &5[...]
+  &5[...]
+  &5[Yes.]
+&o  C: Talk to the Crimson King. Table
+ Jeremiah (Memory Vault)
+  &6[The Crimson King]
+  &5[Why do you need to see it?]
+  &6[The Crimson King]
+&o  C: Interact with the western effigy in the middle. Table
+ Callum's Head
+  &6[Herring]
+ Something isn't right here... Max?!
+  &5[Hello?]
+  &6[Herring]
+ Come see...
+&o  C: Speak to Max. Table
+ Max (Callum's Memory)
+  &6[Max]
+ ...Okay, but can't magic work the way I'm wanting it to Professor?
+  &5[Magic is very particular, Max. You can't just brute force it to be what you want. You must convince it. Weave the strands
+together like a beautiful tapestry and let the magics cross and form together.]
+  &6[Max]
+ So I'm just not convincing enough?
+  &5[Perhaps so.]
+  &6[Max]
+ I'll show it then! The magic will listen to me - it must! I need it to!
+  &5[Only when you truly do will you find what you seek.]
+  &6[Max]
+ ...I already do, Professor. I'm useless without it.
+  &5[Then do it! Use the magic as you require! Show me your strength.]
+  &6[Max]
+ Professor Herring? Who's that over there? Why didn't I notice him before?
+  Max suddenly looks up and seems to spot the Crimson King standing off to the side.
+  &5[What? Who's who?]
+  &6[Max]
+ That figure... In the corner there. Sir?
+  &5[I...]
+  &6[Max]
+ YOU! I know you! You took him from me! You took Professor Herring! Minerva was missing... We followed... YOU TOOK HIM!
+  &6[The Crimson King]
+  &5[What? I'm right here Max. What are you talking about?]
+  &6[The Crimson King]
+  &5[Okay.]
+  &6[Max]
+ NO. You will show me what you did!
+&o  C: Defend Farr from the invaders and collect four materials from them that might help track Minerva. Table
+ Max (Callum's Memory)
+  &6[Max]
+ Professor! I've tracked Minerva here, but I can't tell where that Shaman has taken her next. Something is really wrong though.
+Everyone's hiding. There's Beastmen swarming the streets! We have to help them!
+  &5[I'll start a spell to seek her out. Let's go fight and see if we can find more clues to where they took her!]
+  &6[Max]
+ Great idea Professor. Let me know what you find and we can track her down together. There seems to be four types of invaders to
+handle.
+  Note: It can take quite a few kills to get the item you need. (It is around 1/10 chance). The mobs spawn around magma blocks.
+ Depleted Crystal is dropped from Serpensia Knots which are located directly west of Max. (797, 195, 490).
+ Crimson Scraps is dropped from Invader of the Forest which are located in and around the North West corner of Farr. (795, 190,
+437)
+ Muddied Parchment is dropped from Serpensia Venomlords which are located directly East of Max. (881, 192, 508)
+ Bloodied Leathers is dropped from Serpensia Warriors which are located in the river area North East of Max. (863, 194, 462)
+  Max (Callum's Memory)
+  &6[Max]
+ Professor, I think we've found out where Minerva is! The clues you found helped narrow the spell. We'll need to head out into
+the forest...
+  Together, you and Max fled the besieged city. In the forest however, you were attacked by an acolyte of C'Telsket. You awoke
+within his lair...
+&o  C: Desperately try to defeat C'Telsket.
+ After defeating C'Telsket:
+&o  C: Talk to the Crimson King. Table
+ Jeremiah (Memory Vault)
+  &6[The Crimson King]
+  &5[Did we learn anything new?]
+  &6[The Crimson King]
+  &5[So what's next?]
+  &6[The Crimson King]
+  &5[C'Zanil?!]
+  &6[The Crimson King]
+  &5[His memory can refuse you?]
+  &6[The Crimson King]
+  '''SUBQUEST : A STUDY IN EXILE'''
+&o  C: Leave the Memory Vault.
+&o  C: Interact with the eastern effigy closest to the Memory Vault. Table
+ Zanil's Head
+  &6[Zanil]
+ It is time. I will embrace the great tapestry...
+&o  C: Talk to the Crimson King. Table
+ Jeremiah (Zanil's Memory)
+  &6[The Crimson King]
+  &5[What did you learn?]
+  &6[The Crimson King]
+  &5[Not a single one?]
+  &6[The Crimson King]
+  &5[Wait, have you never looked into his memories?]
+  &6[The Crimson King]
+  &5[I am.]
+  &6[The Crimson King]
+&o  C: Talk to Zanil. Table
+ Zanil (Zanil's Memory)
+  &6[Zanil]
+ Are you the Crimson King? Do you come to taunt me further with promises of freedom?
+  &5[I am not. My name is [Player], I have been sent here to speak to you.]
+  &6[Zanil]
+ Of course. He sends another to do his work. He wants what I know.
+  &5[And what do you know, Zanil?]
+  &6[Zanil]
+ I know where the Slumbering Knight lies. The King will need him to return home. I do not trust his motivations, however. If he
+finds the Slumbering Knight, he could kill him and be one step closer to being free forever. Spirits lie, [Player].
+  &5[How can I convince you?]
+  &6[Zanil]
+ You can't. The Crimson King is not what you think he is.
+  &5[I know what he is. He's a being that was trapped inside the Crimson Wool.]
+  &6[Zanil]
+ There is so much more to it than that. Let me show you something I have not shown the King. They whisper, you know. The Wool. I
+can feel their stain on your hands. Ixume chose its bearer when it was done with its previous one. I'm sure it chose you too.
+  &5[Then show me.]
+  &6[Zanil]
+ I shall.
+&o  C: Explore Zanil's memory. Table
+ C'Shura (Zanil's Memory)
+  &6[C'Shura]
+ You came, Zanil.
+  &5[I did.]
+  &6[C'Shura]
+ I have need of you.
+  &5[I know. That is why I came.]
+  &6[C'Shura]
+ I am being told to pay for my mistakes. I started this war. Now Axtal is gone and the city is sealed.
+  &5[I fear for you.]
+  &6[C'Shura]
+ I fear for me as well. When I open the fountain, I do not know if I can hold the corruption back. You will need to be far from
+here.
+  &5[But you needed me here first.]
+  &6[C'Shura]
+ I must give you Ixume. They cannot come with me. Should I fall to what Kaul has left behind, our people cannot afford to lose a
+God too.
+  &5[I will care for our God with my lifeblood, Shaman. The Elders are risking it all.]
+  &6[C'Shura]
+ I know. But I must do my duty and withstand what Kaul will show me. Now, take it. Leave this place.
+  &5[Thank you.]
+  &6[C'Shura]
+ Goodbye. Perhaps we will see each other again someday.
+  &5[Perhaps.]
+  &6[C'Shura]
+  &5[What?]
+  &6[C'Shura]
+ I didn't say anything. Leave here Shaman. Now. Don't let the whispers get too loud...
+&o  C: Speak to Zanil again. Table
+ Zanil (Zanil's Memory)
+  &6[Zanil]
+ You see. It spoke. It never stopped speaking. How C'Shura kept it suppressed I did not understand. Together with Quetzalcoatl,
+we did great things... Great and hideous things... But these spirits cannot be trusted. Now, I bid you leave. If you insist on
+helping him, find another way. I will not share.
+  &5[Farewell.]
+  &6[Zanil]
+ Goodbye woolbearer. Don't let the voices get too loud...
+&o  C: Talk to the Crimson King. Table
+ Jeremiah (Memory Vault)
+  &6[The Crimson King]
+  &5[Not entirely.]
+  &6[The Crimson King]
+  &5[He showed me when C'Shura granted him the Orange Wool. It spoke to him.]
+  &6[The Crimson King]
+  &5[Zanil also told me not to trust you.]
+  &6[The Crimson King]
+  &5[Then we need to find another way. Zanil says he knows where the â€œSlumbering Knightâ€? is.]
+  &6[The Crimson King]
+  &5[I'm sorry, I don't know.]
+  &6[The Crimson King]
+  &5[Is there anything else you can think of?]
+  &6[The Crimson King]
+  &5[Wait!]
+  &6[Jeremiah]
+ Ahh... the dream has ended. Hello again [Player]. I sense the King has stepped away for some time to think.
+  &5[I don't understand. This isn't the end. There's still more we can do!]
+  &6[Jeremiah]
+ When he is ready to share the darkness he has fostered with you, I am sure he will. For now, all you can do is wait. Thank you
+for your service. You will be required again.
+  '''A STUDY IN CRIMSON PART 1 COMPLETE!'''
+  Awarded the Crimson Contract and 5 Hyperexperience.

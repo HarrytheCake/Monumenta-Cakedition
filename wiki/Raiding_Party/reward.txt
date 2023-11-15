@@ -1,0 +1,3 @@
+rewards =
+* &3Pirate's Flintlock&r 
+* the ability to ferry from the &3Supply Fort&r and &3Charred Arcanery&r to Mistport on Lamis' ship

@@ -1,0 +1,2 @@
+rewards = *Opal Crown
+*32 CXP

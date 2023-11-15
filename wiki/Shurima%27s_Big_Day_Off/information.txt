@@ -1,0 +1,5 @@
+prerequisites =
+* &3Malevolent Reverie&r
+ NPC: Shurima Coords: 455, 192, -382
+ King's Valley Ta'Eldim
+related_poi=&3Corrupted Caves&r

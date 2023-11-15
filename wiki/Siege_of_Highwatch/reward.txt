@@ -1,0 +1,3 @@
+rewards = *&3Highstorm&r 
+*128 Enchanting Bottles.|prerequisites = *&3Sons of the Forest&r
+*&3The Plague&r|starting_npc_coordinates = 1195 131 -106

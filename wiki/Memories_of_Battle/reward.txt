@@ -1,0 +1,5 @@
+rewards =
+* &3Destroyed Ancient Blade&r
+* Full Access to the Roguelike Lobby Trader
+* A Normal Roguelike Key
+* Access to the underbelly of the Arena and the Memory Vault

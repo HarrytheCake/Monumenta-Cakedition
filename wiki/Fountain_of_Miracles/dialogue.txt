@@ -1,0 +1,55 @@
+ Table
+ Drake
+  Coordinates: [592, 97, 199]
+   &6[Drake]
+ Ah, I see it in your eyes, you're an adventurer. I used to be an adventurer like you, but then a cave spider crippled my leg.
+Stick around and talk for a bit and I'll buy you a drink.
+  &5[Some other time.]
+  &6[Drake]
+ Heh, your loss. You'll wish you listened to my tales when the Harpies of Tersata are tearing out your innards.
+  &5[Sure, I'll listen.]
+  &6[Drake]
+ Ha, good choice. And here's that drink I promised.
+  &6[Drake]
+ Now, I can tell you about my adventurers on the Air Rafts of Galos, Siege of Redstorm, or my search for the Fountain of
+Miracles.
+  &5[Air Rafts of Galos.]
+  &6[Drake]
+ Well you see, the Galos' lands have acid lakes that give off noxious fumes. So they've lashed giant wood platforms to ghasts
+and sail through the air. I was a sky pirate there, raiding and pillaging, but quit because the ghasts never shut up.
+  &5[Siege of Redstorm]
+  &6[Drake]
+ I was in the city of Redstorm when the Wheeler Legion put us to siege. Oh, the redstone cannons and poison launchers we had,
+technology you've never seen. After a year though they broke through the gates and started sacking the city, so I stole one of
+the uniforms and joined the party, ha!
+  &5[Fountain of Miracles]
+  &6[Drake]
+ Nearby, in the South of the Blackroot Jungle, the Tlaxani spoke of a magical Fountain. The waters from it could heal any wound.
+I spent years looking for it, but failed. You though, I think you've got a change, what do you say?
+  &5[I'll start my search.]
+  &6[Drake]
+ Haha, that's the spirit! Good luck out there, and watch out for spiders!
+  &5[Sounds too dangerous.]
+  &6[Drake]
+ The best things in life usually are dangerous.
+&o  Drake spoke of a mysterious fountain in the wilderness. Search the southern jungle for this legend.
+ Head to   Link   Corrupted Caves Corrupted_Caves wikilink  .
+ Once you reach the fountain:
+  &6[Spirit of the Fountain]
+ Hello? Is someone there? If you can hear me, the fountain's source is corrupted. Dark druids have summoned foul grove creatures
+to pollute the water in the eastern lake. Slay the foul beasts on the forsaken island so that the fountain can be pure again.
+&o  The fountain has been corrupted! The island to the east of it must be purified by slaying the venomous spiders that dwell
+there.
+ Head to   Link   Corrupted Island Corrupted_Island wikilink and kill spiders. (Note: Do not break all the spider spawners, you
+just need to kill spiders).
+ After killing enough spiders:
+&o  The beasts have been slain and the source purified! Return to the fountain in the caves for a blessing.
+  &6[Spirit of the Fountain]
+ Thank you hero, you have restored the healing magic of the fountain. Bathe in it to give yourself restorative powers. My magic
+cannot do much else, but thank you for your kindness, and beware the druids...
+&o  Return to Drake and tell him that the fountain ahs been purified. Table
+ Drake
+  &6[Drake]
+ You found it? Great job, I knew an adventurer like you could find it. I think it's time for me to hobble over there and dunk my
+leg in it.
+ FOUNTAIN OF MIRACLES COMPLETE! Awarded 4 Golden Apples and   Link   Water Robe Water_Robe wikilink  .

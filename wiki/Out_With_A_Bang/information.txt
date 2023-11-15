@@ -1,0 +1,4 @@
+prerequisites = None
+ NPC: Ebonee Coords: -1760, 132, -51
+ Celsian Isles Wispervale
+POI: &3Frigid Laboratory&r

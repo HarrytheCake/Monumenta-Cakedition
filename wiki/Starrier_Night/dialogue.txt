@@ -1,0 +1,277 @@
+  WorkInProgress|Missing Mayleen dia. for [Got it. I'll get to work.] and branches asking about Gaius. Final Montana choice is
+missing a branch. Gaius has different dialogue based on Bandit troubles. (only got the Bad route) (The whole other route with
+Gaius where you listen in and break his telescope) Table
+ Montana
+  Coordinates: [728, 106, 421]
+   &6[Montana]
+ Hello! Welcome to my tree fort, I always wanted a treehouse as a kid and I finally had a chance to make it a reality.
+  &5[This isn't much of a fort.]
+  &6[Montana]
+ Sadly trees have a weight limit and I was told that I could either have walls or a telescope. Perhaps my choice wasn't the
+wisest, but it is much more fun.
+  &5[That is a rather large telescope.]
+  &6[Montana]
+ It was my dream model. I have always been a fan of the stars. I have fond memories of looking out of my window for hours every
+night as a child. I don't know where I would be if I hadn't fallen in love with them.
+  &5[Who are you?]
+  &6[Montana]
+ I'm Montana, I'm a fan of the stars and a dreamer at heart. There isn't all that much about me that is special, I just like to
+be around the things that I love. Some would call me lazy, but I worked hard to get this far.
+  &5[What do you do for a living?]
+  &6[Montana]
+ Oh you know, things... Like a lot of people do... I'm rather good at doing things. Did you know that things make up nearly the
+entire natural world? It is quite a difficult job. Lots of paperwork to file.
+  &5[Do you need any help?]
+  &6[Montana]
+ Well it is a lot to ask of a stranger, but since you asked... My telescope broke in the move. A glass lens shattered and some
+of the other lenses are damaged beyond repair. I would get it repaired, but it would take ages for parts to arrive. Would you be
+wiling to help me?
+  &5[I can try to help you.]
+  &6[Montana]
+ Wonderful! The only person I know that might have extra parts is an associate of mine in Nyr. Mayleen tends to hang out near
+her telescope. She shares my love of stars and we have worked together on projects for years.
+  &5[I helped her fix her telescope recently.]
+  &6[Montana]
+ Wow, so this isn't the first time you have helped fix a telescope? That is oddly convenient.
+  &5[What type of projects?]
+  &6[Montana]
+ Nothing all that special really. In general we have done things since things are quite important. What is that look for? I gave
+you an answer. Fine... I occasionally do some glass blowing work with them. I'm a bit shy about it since I'm not that good at
+it. Actually, most of our interactions are glass themed now that I think about it.
+  &5[Do you need a list of parts?]
+  &6[Montana]
+ Oh right, you need that don't you? Um, I don't really have any paper on me, but I need a decorative lens, a concave lens, and a
+convex lens. Mayleen will know what they are so you don't need to worry about the details.
+  &5[I will head to Nyr as soon as possible.]
+  &6[Montana]
+ Stay safe, the wilderness can be dangerous and your life is more important than my silly dreams.
+  &5[This sounds like a lot of work, maybe later.]
+  &6[Montana]
+ That's a shame. If you get more time I'll be here looking for help.
+  &5[Sadly, I recently forgot how to agree to random requests from strange tree dwellers.]
+  &6[Montana]
+ Oh that's a shame! If you remember how to do that I will most likely still be waiting.
+&o  Visit Mayleen to see if she can help you assist Montana. Table
+ Mayleen
+  Coordinates: [-118, 110, -12]
+   &6[Mayleen]
+ Thank you for your help earlier! I can see a great many details now, a great many details indeed.
+  &5[I am glad that I could help, but I need your help this time.]
+  &6[Mayleen]
+ What seems to be the problem?
+  &5[I would like you to tell my fortune.]
+  &6[Mayleen]
+ I am a stargazer, not a fortune teller. While some stargazers believe they can tell the future. I do not have that gift, nor do
+I particularly believe in such things. I'm sorry I can't be of any help.
+  &5[I forgot what I was here for.]
+  &6[Mayleen]
+ Oh dear that is a problem, but not one I will likely be able to help with. Are you sure you don't remember?
+  &5[Montana needs help repairing her telescope.]
+  &6[Mayleen]
+ She moved it to the top of a tree didn't she. I told her she was going to break something, but she wasn't in the mood to
+listen. Oh well, do you know what parts she needs?
+  &5[How do you know Montana?]
+  &6[Mayleen]
+ We are old friends. We also do projects together at times. She has always been secretive around new people so I won't go into
+great detail, but I enjoy working with her even if she is a bit clumsy. We have a lot of paperwork though.
+  Color|purple|[She needs a decorative lens, a concave lens, and a convex lens.]
+  &6[Mayleen]
+ I need to stay here, but I can help you find them. There are some lenses in the basement, but I am unsure of the type. The door
+is locked behind a puzzle that I don't know how to solve, but I know it is similar to my telescope's gearing system.
+  &5[Got it, I'll get to work.]
+  &6[Mayleen]
+  &5[You can't get into your own storeroom?]
+  &6[Mayleen]
+ This tower used to be a watchtower long before I got here. I saw some lenses down there when I was given the tour, but I never
+did work out how to get in there myself. Make all the lights face towards you, and the storeroom should unlock. Come back to me
+once you get the lens.
+&o  Go to the basement and find the decorative lens. Remember to face all of the lights towards you.
+ Basement is on the Northside of the building.
+  Mayleen Basement Gear puzzle  Plain  press gear array 1 button three times. Plain  press gear array 2 button zero times. Plain
+press gear array 3 button two times. Plain  press gear array 4 button one time.
+ &o   Color|teal|You hear a lock opening. You should be able to get into the storeroom.
+&o  Grab the decorative lens from the storeroom of Mayleen's tower and bring it back to Mayleen. Table
+ Mayleen
+  &6[Mayleen]
+ Good, you have the lens, and more importantly you opened my storeroom for me. Looks like that was a decorative lens, so you
+still need the functional ones. Before the Blackroot War a lookout tower was built east of Sierhaven. Unfortunately, after a
+tragedy the tower was abandoned. There might still be some supplies there.
+  &5[Why would there be telescope parts there?]
+  &6[Mayleen]
+ They put a spyglass at the top in order to spot an advancing army in case Nyr was ever attacked by the Tlaxans. While that
+spyglass was removed, their extra supplies never were. Spyglasses use materials that are nearly identical to modern telescopes.
+  &5[Why would there be telescope parts there?]
+  &6[Mayleen]
+ The scouts in the tower failed to notice a Tlaxan Shaman approaching Sierhaven. That Tlaxan got into the capital, killed
+Fluospar, and got out without being caught or spotted. After such failure the tower was hut down for political reasons.
+  &5[Where is the tower?]
+  &6[Mayleen]
+ It is right outside of Sierhaven near a few fishing huts. If the plans I saw are to be believed, there is a secured bunker
+where they kept their extra supplies. Knowing the paranoia of the war they likely hid the entrance, and probably have some sort
+of lock on the bunker itself. I would check for an underwater entrance.
+  &5[I will head there right away.]
+  &6[Mayleen]
+ Hopefully everything she needs is there. I will have to make minor adjustments to anything you manage to find so come back here
+if you find anything.
+&o  Head to the   Link   Fishing Huts Fishing_Huts wikilink east of Sierhaven and search underwater around the watchtower for a
+way into the basement. Make any lights you find face you.
+  Fishing Hut Gear puzzle  Plain  press gear array 1 button two times. Plain  press gear array 2 button two times. Plain  press
+gear array 3 button three times. Plain  press gear array 4 button three times.
+ &o   Color|teal|You hear a door unlocking. You should be able to get into the bunker.
+&o  Grab the concave lens from the chest in the fishing huts' watchtower's bunker and bring it back to Mayleen. Table
+ Mayleen
+  &6[Mayleen]
+ I see you found a concave lens. I'll fix that up quickly... There that should work. So you had no luck finding a convex lens?
+  &5[The roof collapsed in on the bunker.]
+  &6[Mayleen]
+ So if there are any convex lens they are likely broken... Well that presents a slight problem. However it is possible that we
+can still get help. I recently spotted a telescope in a tower to the south. They might have extra supplies that could be used.
+It is a long shot, but might as well ask.
+  &5[So I need to talk to someone I don't know, that has no reason to help, that could try to kill me, and ask them for help?]
+  &6[Mayleen]
+ Yup!
+  &5[I'll get right on it then!]
+  &6[Mayleen]
+ Be careful, I don't know anything about the owner of that telescope. I have a bad feeling about them. If it gets dangerous,
+leave right away. I don't want to be responsible for your death.
+&o  Talk to the owner of the tower to the south of Nyr and ask for a convex lens. Header
+criminal_route_chose_octavius_in_bandit_troubles  Criminal Route (Chose Octavius in Bandit Troubles) Table
+ Gaius
+  Coordinates: [-109, 108, 76]
+   &6[Gaius]
+ Who are you and why are you here? Nevermind, I really don't care. Leave or I will have to make you leave.
+  &6[Gaius]
+ Wait, I think I recall hearing about you from someone. You helped him, didn't you? I am terribly sorry, I thought you were an
+intruder trying to mess with our plan.
+  &5[What plan?]
+  Color|orange|[Gaius]
+ You don't need to keep up that bluff here. I'm on your side. I don't know all of the details, but my role is to monitor the
+guards inside Nyr. I assume others will use that information for something. I had to take steps to make sure that telescope over
+there couldn't see me, but other than that it has gone smoothly so far.
+  &5[Him?]
+  Color|orange|[Gaius]
+ Yeah, the boss, you worked with him before.
+  &5[I'm trying to find a convex lens for a telescope I am trying to build.]
+  &6[Gaius]
+ Ah, so you got put on a similar mission. I have a bunch of spare parts. I don't know what any of them are, but if I have one
+you can have it.
+&o
+&o  You got a lens from Gaius. Bring it back to Mayleen. Talk to Mayleen even if things go wrong.
+ As you enter Mayleen's tower:
+  &6[Private Arnie]
+ Sorry, gotta check the supplies of everyone who comes into town... Aha! A convex lens! Sorry, gotta take this. Orders are
+orders. Other lenses are fine though.
+&o  Mayleen will want to hear about this. Go to her and come up with a plan. Table
+ Mayleen
+  &6[Mayleen]
+ You look upset, did something happen?
+  &5[The guard downstairs is going to be a problem.]
+  &6[Mayleen]
+ Things haven't been the same around here since they heightened security. What is it with Nyr guards and telescope parts? Are
+they trying to build one too? Things just got much more complicated for us, we need to think of something.
+  &5[I can't think of anything.]
+  &6[Mayleen]
+ I can't think of anything either, we don't even know where it is being kept.
+  &5[Gaius at the other telescope might be able to help.]
+  &6[Mayleen]
+ So his name is Gaius? Is he linked to the Nyr armory in some way?
+  &5[Something like that.]
+  &6[Mayleen]
+ This seems a bit shady, but it is likely the best chance we have at the moment. I trust your judgement, just be careful.
+  &5[They likely know some people there.]
+  &5[They would love to have him.]
+&o  Your convex lens was confiscated. Go back to Gaius to see if he can offer some assistance. Table
+ Gaius
+  &6[Gaius]
+ Hope your mission goes well, let me know if I can be of assistance.
+  &5[A Nyr guard isn't allowing me to get where I need to go with the lens.]
+  &6[Gaius]
+ Hopefully that wasn't due to my bribe... Well even if it was, I have been talking with some of our type of people in Nyr and
+might be able to help.
+  &5[Your bribe?]
+  Color|orange|[Gaius]
+ When I set up base here part of my mission was to go unnoticed by Nyr's security forces. Unfortunately, that telescope in the
+distance would have been able to see me. So I bribed a guard and got them to follow a "tip" to put it out of operation.
+  &5[Our type of people?]
+  Color|orange|[Gaius]
+ Criminals of course. Nyr has a surprisingly large criminal underground. Some really great people. Absolutely horrible people,
+but great people.
+  &5[Can't you just give me another lens?]
+  Color|orange|[Gaius]
+ I could, but what would stop them from confiscating that one? You need to get one from inside the city so they don't suspect
+anything.
+  &5[How can you help?]
+  Color|orange|[Gaius]
+ I was told by one of my sources that there is a secret passageway into the basement of the armory.
+  &5[Is it guarded?]
+  Color|orange|[Gaius]
+ Apparently they don't bother guarding it because they think you have to have a key to get down there. Maybe I should go there
+later as well, could be quite profitable.
+  &5[Why would the lens be there?]
+  Color|orange|[Gaius]
+ The armory recently had a break in. Somehow an item was taken from their "secure" contraband storage room. After that they
+moved new contraband into the basement, which apparently is just as easy to break into.
+  &5[What should I expect to find?]
+  Color|orange|[Gaius]
+ Apparently there is a puzzle down there that serves as a lock on the contraband room. I don't know how to solve it, but they
+probably have some type of clue down there.
+  &5[How do I get in?]
+  &6[Gaius]
+ The way in is marked by a button on the north side of the armory. If you press it hard enough you should be able to enter
+through the secret entrance.
+  &5[I will head there right away.]
+  &6[Gaius]
+ Be careful, if a guard comes in to deposit contraband while you are down there you might be in there for a while.
+&o  Break into the Nyr Armory basement and see if you can find the convex lens. Remember to not be seen.
+&o   You fall through a hidden trapdoor into the armory's basement.
+  Gaius's basement or Nyr's basement puzzle:  Plain  press gear array 1 button three times. Plain  press gear array 2 button
+five times. Plain  press gear array 3 button three times. Plain  press gear array 4 button two times. Plain  press gear array 5
+button one time.
+ &o
+&o  You opened the lock in the armory basement! Grab the convex lens and head back to Mayleen.
+ As you head into Mayleen's tower:
+  &6[Private Arnie]
+ Already checked your gear, so head on in! After all, not like we had any lenses lying around town you could smuggle in. Header
+lawful_route_chose_the_law_in_bandit_troubles  Lawful Route (Chose the Law in Bandit Troubles)
+ Missing Header end_of_quest  End of Quest Table
+ Mayleen
+  &6[Mayleen]
+ I am relieved that you got back safely. How did it go?
+  &5[I got the lens]
+  &6[Mayleen]
+ Marvelous! Let me modify it before any guards come around... Okay that should do it. I suppose all that is left is for you to
+head back to Montana. Tell her I said hi.
+&o  You have all three lenses! Bring them back to Montana. Table
+ Montana
+  &6[Montana]
+ Welcome Back! Have you had any luck finding any of the parts I need?
+  &5[I had a part but I lost it.]
+  &6[Montana]
+ Oh dear, you can likely find another wherever you originally found it.
+  &5[I found a decorative glass lens.]
+  &6[Montana]
+ Nice, I'll install it right away. While it is only decorative it just feels wrong using a telescope without it.
+  &6[Montana]
+ Have you found any of the other parts I need?
+  &5[I found a concave lens.]
+  &6[Montana]
+ The negative power of this lens should help balance color errors, well it will once paired with a convex lens at least.
+  &6[Montana]
+ Any chance you also have the last part I need?
+  &5[I found a convex lens.]
+  &6[Montana]
+ I'm positive that this will help counter the negativity of the concave lens.
+  &6[Montana]
+ Looks like that is all of them. I already configured the gears while I was waiting for you to get back so everything should be
+set up now. I can't thank you enough for what you have done for me. I will have to send Mayleen a thank you not as well.
+  &5[I can deliver it if you want.]
+  &6[Montana]
+ You have already done so much for me, I can at least handle that much. Oh right I prepared a bit of a reward for you while you
+were gone. I hope you like glowing things.
+  &5[So is there a reward for this?]
+  &6[Montana]
+ Oh wow, how rude of me I completely forgot. I prepared a reward for you while you were gone. I hope you like telescopes as much
+as me.
+ STARRIER NIGHT COMPLETE! Awarded 32 Concentrated Experience, 192 Spectral Arrows, and a   Link   Midnight Spyglass
+Midnight_Spyglass wikilink  .
+Link   Category:The Stars Category:The_Stars wikilink

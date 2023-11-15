@@ -1,0 +1,4 @@
+prerequisites = &3Bandit Troubles&r and reported to Captain Murano
+ NPC: Sergeant Sigrun Coords: -137, 100, -96
+ King's Valley Nyr
+POI: &3Southern Jaguar Village&r, &3Northern Jaguar Village&r

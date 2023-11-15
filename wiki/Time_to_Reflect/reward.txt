@@ -1,0 +1,3 @@
+rewards =
+* &3Sacred Herb Burner&r
+* Usage of the teleporter between &3Ta'Eldim&r and &3Kaul|Kaul's Arena&r

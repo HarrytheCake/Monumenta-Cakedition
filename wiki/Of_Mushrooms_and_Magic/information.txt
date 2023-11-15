@@ -1,0 +1,5 @@
+prerequisites = * &3Into the Woods&r
+ NPC: Primirium Verdanne Coords: -317 181 -663
+ Architect's Ring Galengarde
+Difficulty = Long
+Length = Hard

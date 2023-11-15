@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Miane Coords: 208, 101, 8
+ Celsian Isles Molta

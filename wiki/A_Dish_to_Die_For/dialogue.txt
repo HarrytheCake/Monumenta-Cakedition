@@ -1,0 +1,116 @@
+  WorkInProgress|Other Dialogue option at the end. Table
+ Claude
+  Coordinates: [734, 74, 459]
+   &6[Claude]
+ Bonsoir, are you a customer? I apologize, the restaurant is currently closed.
+  &6[Claude]
+ I 'ave been trying to create the perfect signature dish, but my mind, it is blocked! Are you of the... culinary persuasion? If
+so, could you assist me?
+  &5[I'm sorry, I'm not much of a chef.]
+  &6[Claude]
+ I should 'ave known. Your eyes do not 'ave the spark of culinary genius.
+  &5[Of course! How can I help?]
+  &6[Claude]
+ Marvelous! Fantastique! I 'ave some ideas, but we shall need the most exotic of ingredients.
+  &6[Claude]
+ I 'ave 'eard of an old Tlaxan farm, where the lava imparts the most wonderful flavor to the wheat there. Let us start by
+gathering that, and see what pairs with it, no?
+  &5[I've got something else to do first, but I'll be back!]
+  &6[Claude]
+ Very well, please return soon!
+  &5[I'm on it!]
+  &6[Claude]
+ Merci!
+&o  Harvest some Flame-Spiced Wheat for Claude.
+ Head to   Link   Abandoned Tunnels Abandoned_Tunnels wikilink  .
+&o  Bring back the Flame-Spiced Wheat to Claude. Table
+ Claude
+  &6[Claude]
+ I 'ave prepared the mirepoix. 'ave you gotten any flame-spiced wheat for me?
+  &5[Yep! Here.]
+&o  You hand Claude the wheat. He expertly grinds it and whips up a small pastry dish.
+  &6[Claude]
+ Mmm! The wheat is as wonderful as I 'ave been told, but we need more than just grains and vegetables.
+  &6[Claude]
+ Lowtide is known for its fish, but I think some beef of the 'ighest quality will pair better. The Korbaran beef of the Korbar
+'ighlands' cows is said to be fantastique, think you can 'unt one for the dish?
+  &5[Of course I can!]
+  &6[Claude]
+ Such spirit! Such zeal! I can only 'ope my dish will be as inspired as your confidence!
+&o  Hunt the Eastern Pass Cows to get some delicious High Quality Beef.
+ Kill some of the cows above   Link   Eastern Pass Eastern_Pass wikilink  . (Note: you do not actually need to enter the PoI.)
+&o  Bring back the High Quality Beef to Claude. Table
+ Claude
+  &6[Claude]
+ My palate cannot endure much more waiting... Do you 'ave any of the delicious beef for me?
+  &5[It was a long hunt, but I've got the Korbaran beef.]
+&o  You hand Claude the beef. He quickly sears it and bites into the barely rare steak.
+  &6[Claude]
+ Hm. For a normal dish, this would satisfy. 'owever, we are not making just any dish, but my chef's specialty. My masterpiece! I
+think we will need something even more esoteric.
+  &6[Claude]
+ I 'eard tales of a dangerous cave within the 'ighlands' lake, perhaps there will be some meat in there we can use.
+  &5[Fine, I shall investiage.]
+  &6[Claude]
+ Marvelous! Every time I see your vigor I am more and more inspired!
+  &6[Claude]
+ While you are out searching the cave, I might go 'unting for some game of my own. Be careful though, I also 'eard rumors of
+awful and 'orrid things occurring within.
+&o  According to Claude, some meat can be found in the   Link   Cave of Bones Cave_of_Bones wikilink near Highwatch, go get
+some.
+ After getting from ange Meat from   Link   Cave of Bones Cave_of_Bones wikilink  .
+&o  Bring this strange type of meat to Claude. Table
+ Claude
+  &6[Claude]
+ You return! Did you manage to find some usable meat?
+  &5[I... think so. This is what I could find.]
+&o  Claude bites directly into the raw meat you hand him. As he chews, a forlorn look comes across his face.
+  &6[Claude]
+ Alas, this meat is too old. Shame, I would 'ave loved it fresh.
+  &6[Claude]
+ It is okay though. While you were out, I... acquired some new meat. I would like you to do the 'onors of butchering it though,
+I think you will be pleasantly surprised. Please, 'ead upstairs.
+&o  Go to Claude's attic, and meet his new meatloaf. Table
+ Terry
+  &6[Terry]
+ Who's there?! Who are you?! Please, let me go! I have a family! That madman told me he needed a taste-tester, and that's the
+last I remember before I woke up in this room! Please, let me go...
+  &5[Sorry, but we need meat.]
+  &6[Terry]
+ Wait, wait! No don- ARGH!.. Plain &o  You take a nice slice out of Terry. He looks inconvenienced by this and will soon die.
+  &5[Don't worry, I'll set you free and stop Claude.]
+ If you choose to free:
+&o  Confront Claude. Table
+ Terry
+  &6[Terry]
+ Thank you so much! I'd be dead without you! You go downstairs first, I'll escape while Claude is distracted.  Table
+ Claude
+  &6[Claude]
+ Welcome back, mon ami. I 'eard screaming. Do you 'ave it? Do you 'ave the meat?!
+&o
+  &5[No. You're a monster!]
+  &6[Claude]
+ You... 'ow could you. You 'ad no problem with the meat from the cave. This is no different! I won't be denied! I must try it
+fresh!
+ ''Claude grabs a long, serrated knife and leaps over the counter towards you!
+ If you choose to cut some meat:
+&o  Bring Terry's meat back to Claude. Table
+ Claude
+  &6[Claude]
+ Welcome back, mon ami. I 'eard screaming. Do you 'ave it? Do you 'ave the meat?!
+&o
+  &5[Here it is.]
+&o  Claude greedily grabs the meat and bites into it raw, blood trickling from his mouth as he tears into it.
+  &6[Claude]
+ Ooohhh. It's... divine. It's so... fresh. Fantastique! But Terry, 'e was a weakling. I can only imagine what you can taste
+like. Although... I don't need to imagine, now do I?
+&o  Suddenly, Claude grabs a long, serrated knife and leaps over the counter towards you!
+ After you beat Claude:
+&o  After your last hit, Claude staggers back behind the counter, wounded and in no condition to fight. Table
+ Claude
+  &6[Claude]
+ Ah! I may 'ave bitten off more than I could chew there. I 'ope you bear me no ill will, I was merely... overcome with passion.
+  &6[Claude]
+ 'enceforth, my palate shall be 'uman-free. 'ere take these as thanks for knocking some sense back into me. I trust we can keep
+what 'appened 'ere our little secret, no?
+ A DISH TO DIE FOR COMPLETE! Awarded the   Link   Chef's Knife Chef's_Knife wikilink and 16 CXP!

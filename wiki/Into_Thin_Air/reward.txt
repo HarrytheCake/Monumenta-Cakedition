@@ -1,0 +1,4 @@
+rewards =
+* After talking to Xenith again:
+* &3Waterbound Medallion&r
+* 48 Cxp

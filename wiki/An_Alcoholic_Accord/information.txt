@@ -1,0 +1,1 @@
+prerequisites = &3Raiding Party&r NPC: Salty Bartender Celsian Islestown = Mistportstarting_npc_coordinates = -829, 87, 1367 NPC: Salty Bartender Celsian Islestown = Mistportstarting_npc_coordinates = -829, 87, 1367starting_npc_coordinates = -829, 87, 1367 Celsian Islestown = Mistportstarting_npc_coordinates = -829, 87, 1367town = Mistportstarting_npc_coordinates = -829, 87, 1367

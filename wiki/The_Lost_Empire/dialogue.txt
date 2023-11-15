@@ -1,0 +1,107 @@
+ Table
+ Historian Rhodes
+  Color|orange|[Historian Rhodes]
+ You're the adventurer from King's Valley, right?
+  Color|purple|[That's me!]
+  Color|purple|[Arrgh no I be a pirate arrgh.]
+  Color|orange|[Historian Rhodes]
+ Wonderful! You're just the person I've been looking for. Izzy has told me that you're much more civilized than these pirate-y
+folk.
+  Color|purple|[You know Izzy?]
+  Color|orange|[Historian Rhodes]
+ That I do! Izzy is just across the way after all- he seems to share a love of research that these otherwise vile pirates tend
+not to have. To the matter at hand though- tell me, have you heard of the Viridian Empire?
+  Color|purple|[Of course I have.]
+  Color|purple|[No, I haven't.]
+  Color|orange|[Historian Rhodes]
+ Perfect- then you know that remnants of it are scattered about these isles... and I think that there may be something to
+unearth below our very feet! So, tell me: would you like to go on an adventure with me to find it?
+  Color|purple|[Count me in.]
+  Color|purple|[My quest compass is pretty full right now, so I'll come back later.]
+  Color|orange|[Historian Rhodes]
+ Brilliant! We'd best get moving then. I'll need to gather some supplies, but you can get a head start by exploring the sewers
+for a way into the empire ruins. Izzy tells me a crewman of yours has been setting up camp down there; go check if he's seen
+anything.
+&o  Search out Samwell in the sewers. Table
+ Samwell
+  Color|orange|[Samwell]
+ Hi      Color|purple|[Have you seen any hints of some old ruins down here?]
+  Color|orange|[Samwell]
+ Ruins? In the sewers? Are you finally going on an adventure for treasure?!
+  Color|purple|[There will probably be treasure.]
+  Color|purple|[I don't think there will be any treasure.]
+  Color|orange|[Samwell]
+ FINALLY! Yeah, I saw something suspicious down this tunnel: an odd sort of whirlpool that goes down into a lit room. If you're
+brave enough to jump in, I'll follow you.
+&o  Head into the deeper parts of the sewers and search out an entrance to the old ruins. Table
+ Historian Rhodes
+  Color|orange|[Historian Rhodes]
+ Well done finding this place! You've already proven your value on this team. That room over there looks packed to the brim with
+books and knowledge- we just need to get in.
+ Solve the puzzle to access the room.
+   :Puzzle Solutions Guide/The Lost Empire
+   Color|orange|[Historian Rhodes]
+ This is amazing! Look at all of this knowledge collected in one place. We can learn so much about the Viridian Empire from it.
+  Color|orange|[Samwell]
+ And look at all of this treasure! All of the gold. Finally; we'll be rich!
+  Color|orange|[Historian Rhodes]
+ This chart here is quite interesting. It almost looks like... I think this is a map to the capital city of the empire!
+  Color|orange|[Samwell]
+ More treaure you say? Well, might as well take as much as we can from here before we set off for the capital.
+  Color|gray|Samwell starts pocketing some of the treasures in the room.
+  Color|red|INTRUDERS DETECTED! BARRIERS REACTIVATED!
+  Color|orange|[Historian Rhodes]
+ SAMWELL, WHAT DID YOU DO?!
+  Color|orange|[First Mate Jones]
+ Arrgh finally someone 'as managed to open this thing. We were startin' to think we would 'ave to blow the whole town up to get
+in.
+  Color|orange|[Historian Rhodes]
+ Blasted pirates. I should've known you would swoop in as soon as I found something.
+  Color|orange|[First Mate Jones]
+ Well, from what I overheard earlier, it sounds like this is only the tip of the iceberg. I'll tell you what: we'll get you out
+of there if you bring us to this Viridian capital. Deal?
+  Color|orange|[Historian Rhodes]
+ It's not like we have much of a choice. Deal.
+  Color|orange|[First Mate Jones]
+ Xeno will love this. Speak with me by our little expedition vessel and we'll set sail for the treasure trove. Yarharharg!
+  Color|orange|[Samwell]
+ This is beyond frustrating. I left my comfy life in Nyr with the promise of gold and riches, but every time we end up with
+nothing. We'd better find a way to make this next adventure worth it.
+&o  Find First Mate Jones's ship and talk to Jones. Table
+ First Mate Jones
+  Color|orange|[First Mate Jones]
+ Finally, ye 'ave shown up- I was about to send some men to bring ye here. Well, let's not dilly-dally- are ye ready to set sail
+to find a mountain of treasure? This ain't be a charity: ye will have to make your way back there yeself if you run away.
+  Color|purple|[Let's get this over with.]
+  Color|orange|[First Mate Jones]
+ Arrgh.
+  Color|orange|[Captain Xeno]
+ Ahoy      Color|purple|[We gave you want you wanted. Let us go.]
+  Color|orange|[Captain Xeno]
+ Let you go? Now why would I want to cut our partnership so short?
+  Color|purple|[Why would we be partners?]
+  Color|orange|[Captain Xeno]
+ I happen to know that there is an ancient relic in the depths of this city- one which you are after. It is the Lime wool.
+  Color|purple|[How do you know there's a wool in there?]
+  Color|orange|[Captain Xeno]
+ Let's just say I have my sources. But never mind that: I've come personally to offer it to you.
+  Color|purple|[What's the catch?]
+  Color|orange|[Captain Xeno]
+ The catch? It's nothing major, I promise you. I simply ask that you pave the way through the city and leave some spoils to us.
+We're just here for the treasure, nothing more.
+  Color|purple|[That sounds fair. Deal.]
+  Color|orange|[Samwell]
+ Seriously?! You're going to give up the treasure to him for some stupid wool?
+  Color|purple|[We have to. We need to retrieve the wool.]
+  Color|orange|[Samwell]
+ Well if that's your decision, then I'm out. I came here to get rich, not to do what's right. Xeno, do you have any room on your
+crew for one more?
+  Color|orange|[Captain Xeno]
+ There's always room for more.
+ Make your way down the Bastian to the dungeon entrance. Table
+ Second Mate Gary
+  Color|orange|[Second Mate Gary]
+ Arrgh ze Captain sayz that ze are to clear ze way for usz in zis dungeon. Ze best take zis here gear and keep movin'.
+ THE LOST EMPIRE COMPLETE! SoftBreak  Awarded a   Link   Lime Salazar's_Folly wikilink Key, a   Link   Seadiver's Shell
+Seadiver's_Shell wikilink  , and Access to the   Link   Lime Dungeon Salazar's_Folly wikilink Trader.
+Link   Category:Quests Category:Quests wikilink

@@ -1,0 +1,3 @@
+prerequisites = &3Mage's Legacy&r decryption puzzle Coords: 160, 123, -75
+ King's Valley
+POI: &3Mysterious Cenote&r

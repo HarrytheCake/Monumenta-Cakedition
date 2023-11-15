@@ -1,0 +1,2 @@
+rewards = *64 Experience Bottles
+*3 &3Healing Vial|Healing Vials&r

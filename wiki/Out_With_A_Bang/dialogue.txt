@@ -1,0 +1,81 @@
+&o  Find Ebonee's wand and learn more about today's plans. Table
+ Ebonee
+  Coordinates: [-1760, 132, -51]
+   &6[Ebonee]
+ Oh no, don't tell me I've lost my wand... This can't be happening right now, I need it for my plans later on!
+  &5[What'cha lookin' for?]
+  &6[Ebonee]
+ My wand! I can't believe I've been such an idiot as to misplace it today of all days!
+  &5[What's so special about today?]
+  &6[Ebonee]
+ Hm, how do I know you won't tell someone else? I can't exactly trust you at the moment.
+  &5[Can't you just magic your wand into your hand or something?]
+  &6[Ebonee]
+ I would need a wand to do that in the first place...
+  &5[Maybe I could help?]
+  &6[Ebonee]
+ Oh! That would be marvelous. Could you go check my quarters? I might've left it there.
+  &5[But I'm not a student, I don't think I can enter them...]
+  &6[Ebonee]
+ Oh, I'm sure there's a secret passage somewhere- an old academy like this has gotta have some!
+&o  C: Search for a way in to the quarters so you can find Ebonee's wand.
+  Go through the painting in the lowest floor of the academy at Coordinates: [-1812, 131, -65] then move and parkour through the
+quaters.
+&o  C: [1/2]: Return to Ebonee with the wand.
+&o  C: [2/2]: If you have misplaced Ebonee's wand you will need to get it back. Table
+ Ebonee
+  &6[Ebonee]
+ Oh thanks! You've found it!
+  &5[No problem! Now that I've done a favour for you, do you trust me enough?]
+  &6[Ebonee]
+ Well... yeah, I suppose I could let you in on it. So, a couple of us are planning on pranking the teachers by letting off a ton
+of fireworks in the academy!
+  &5[Sounds exciting!]
+  &6[Ebonee]
+ Yup! It'll be hilarious to see the looks on their faces! But, well... the problem is that we can't transfigure any fireworks at
+the moment.
+  &5[Why's that?]
+  &6[Ebonee]
+ Well, the supplies for that are locked away in a secure wing in the Academy. It's got tons of magical seals on it to repel
+students...
+  &6[Ebonee]
+ BUT! Perhaps you'll be able to access it since you're not a student! Have a look around the the lower floors, there might be an
+entrance there.
+&o  C: Search for the entrance to the confiscated storage wing and find the item for Ebonee inside it.
+  The confiscated storage wing is just at the very bottom of the Academy staircase.
+   Parkour your way across to the coords [-1794, 99, -100] and grab the firework star in the chest.
+ &o  C: Return to Ebonee once more. Table
+ Ebonee
+  &6[Ebonee]
+ Awesome! You've got it! Now, this stuff gives our fireworks their boom, but we'll still need one more ingredient so we can make
+this prank a reality.
+  &5[Which is?]
+  &6[Ebonee]
+ An Incendiary Charge so that we can give our fireworks a longer flight time!
+  &5[Where would I find that?]
+  &6[Ebonee]
+ Check the old   Link   Frigid Laboratory Frigid_Laboratory wikilink outside the city. This stuff sounds right up their alley!
+&o  C: [1/2] Search for the Incendiary Charge inside the   Link   Frigid Laboratory Frigid_Laboratory wikilink  .
+&o  C: [2/2] Once you have the Incendiary Charge return to Ebonee. Table
+ Ebonee
+  &6[Ebonee]
+ Oh, hey, you found some! Oh, this is gonna be soooo great! I can't wait to see the looks on their faces...
+  &5[Alright, so are we just about ready to get this prank rolling?]
+  She jumps up and down excitedly!
+  &6[Ebonee]
+ Yeah! Thankfully, because of magic, it makes setting up this whole thing real easy. I'll contact my friends really quickly, but
+let's make our way there right now!
+  &5[Give me a sec.]
+  &6[Ebonee]
+ Alright, let me know when you're ready then.
+  &5[Alright, let's go!]
+  &6[Ebonee]
+ Sweet, so I believe this is the right incantation... EXPECTO WARPONUS!
+&o  C: Talk with Ebonee about the prank you've just witnessed. Table
+ Ebonee
+  &6[Ebonee]
+ Oh my gosh, that was so good! That'll leave a few scorch marks in the lobby for sure! Hey, thanks for helping us out with this.
+Couldn't have done it without you!
+  &5[No problem!]
+  &6[Ebonee]
+ Here, take this... It's some Bewitched Fireworks we used in the prank. Have some fun with those!

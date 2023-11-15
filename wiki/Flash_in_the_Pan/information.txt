@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Flashy Coords: -797, 101, 27
+ &3King's Valley&r &3Sierhaven&r

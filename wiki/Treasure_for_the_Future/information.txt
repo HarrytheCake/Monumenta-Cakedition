@@ -1,0 +1,6 @@
+prerequisites = * Completion of &3Salazar's Folly&r
+* &3Treasure of the Past&r
+* &3Xenophobia&r
+ NPC: Zeroc Coords: -1475, 102, 932
+ Celsian Isles Frostgate
+Difficulty = Medium

@@ -1,0 +1,172 @@
+ Table
+ Issa SoftBreak  Coordinates: 273, 118, 79
+  Color|orange|[Issa]
+ What happened here...? Maybe... No, that can't be it... Someone must know something about this...
+  Color|gray|She seems too engrossed in whatever she is reading to notice you.
+  Color|purple|[Know what?]
+  Color|orange|[Issa]
+ Oh, uh, hello there! I, um, wasn't talking about anything in here. Head along...
+  Color|purple|[I could hear you talking to yourself.]
+  Color|purple|[Okay- have a nice day!]
+  Color|orange|[Issa]
+ ...Persistent, I see. Well, if you can keep a secret I'll let you in on something I've discovered.
+  Color|orange|[Issa]
+ You see, this seemingly innocent mining town is hiding something. No one will confirm anything, but you can tell by the way
+people carry themselves here, speaking of people who, as far as the official records show, never existed. If my hunch is
+correct, something is being covered up, something big that caused people to go missing.
+  Color|purple|[That's odd. Could you use any help?]
+  Color|orange|[Issa]
+ It is quite unnerving, yes. And yes, in fact, I think you could be useful.
+&o  1/3 - Search around Molta for clues about the disappearances. Governor Amarion might know something. Table
+ Governor Amarion SoftBreak  Coordinates: 245, 121, 67
+  Color|orange|[Governor Amarion]
+ Oh hello; name's Amarion. What can I do for you?
+  Color|purple|[How did you become governor of Molta?]
+  Color|purple|[What is Molta?]
+  Color|purple|[Anything you can tell me about the rumors of people going missing?]
+  Color|orange|[Governor Amarion]
+ Eh? You nuts or something? Don't come stomping into my office with such nonsense.
+  Color|purple|[Quite the reaction to a simple question.]
+  Color|orange|[Governor Amarion]
+ Who do you think you are? I oughta kick you out, you snooping weasel!
+  Color|gray|You definitely aren't going to be getting anything out of him.
+&o  2/3 - Search around Molta for clues about the disappearances. Foreman Boris could know something. Table
+ Foreman Boris SoftBreak  Coordinates: 184, 110, 43
+  Color|orange|[Foreman Boris]
+ Hello there! Welcome to Molta! I run the base mining operations here, but I still have to report to Amarion.
+  Color|purple|[I needed to ask you something, actually.]
+  Color|orange|[Foreman Boris]
+ What might that be?
+  Color|purple|[I've heard some rumors about people going missing. Any idea what that might be about?]
+  Color|orange|[Foreman Boris]
+ Well... I haven't the slightest, uh, idea where you got that information there, friend! Sounds like a bunch of hoopty to me!
+  Color|gray|He looks rather nervous.
+  Color|purple|[You don't seem to confident in that answer.]
+  Color|orange|[Foreman Boris]
+ Oh, I don't have to stand here and take questions from some outsider. Get out!
+  Color|gray|He gives you a stern look. You probably aren't going to get any more information out of him.
+&o  3/3 - Search around Molta for clues about the disappearances. Perhaps Record Keeper Shani knows something Table
+ Record Keeper Shani SoftBreak  Coordinates: 186, 98, 22
+  Color|orange|[Record Keeper Shani]
+ Hello! Welcome to the Molta Archives! Let me know if I can help you with anything.
+  Color|purple|[Actually, there is this one thing...]
+  Color|orange|[Record Keeper Shani]
+ Oh? What is it?
+  Color|purple|[Well, I came across a strange rumor that miners have seemingly gone missing, but there doesn't seem to be any
+record of that.]
+  Color|orange|[Record Keeper Shani]
+ Oh... Well, I...
+  Color|purple|[Anything to say on it?]
+  Color|orange|[Record Keeper Shani]
+ Listen, there is something to that story, but I can't say much or Amarion will have me sacked. The only thing I can do is give
+you this- but do not mention it to anyone, understand? Now please leave, I can't have you snooping around here or someone will
+notice.
+  Color|gray|She leans over to whisper to you.
+  Color|purple|[Oh! Thank you!]
+  Color|orange|[Record Keeper Shani]
+ Hurry along now... Don't let Amarion see you.
+&o  Return to Issa to tell her what you've found out around town Table
+ Issa
+  Color|orange|[Issa]
+ So have you found anything?
+  Color|purple|[Sort of, Amarion and Boris are silent and abrasive, but Shani gave me these records.]
+  Color|orange|[Issa]
+ Oh how interesting, let me look them over.
+  Color|gray|She reads the records trying to make sense of the censored words.
+  Color|purple|[So do those records help?]
+  Color|orange|[Issa]
+ They are hard to make out but... Wait, I think I know what they've censored!
+  Color|purple|[And? What is it?]
+  Color|orange|[Issa]
+ They are almost definitely mentioning the Basanite Bore! If memory serves, that used to be a mining operation site. Why don't
+you head over there and see if you can find anything relevant? I'll see what information I can dig up on the Bore while you are
+gone.
+&o  Investigate the Basanite Bore Table
+  Color|gray|You begin to feel lightheaded, and everything goes black.
+  Color|orange|[Basanite Miners]
+ HELP US!
+  Color|orange|[Basanite Miners]
+ PLEASE!
+  Color|orange|[Basanite Miners]
+ WE'RE BEGGING YOU!
+  Color|orange|[Basanite Miners]
+ FREE US!
+  Color|orange|[Basanite Miners]
+ LET US OUT!
+  Color|orange|[Basanite Miners]
+ SAVE US!
+  Color|orange|[Basanite Miners]
+   Color|orange|[Basanite Miners]
+ PLEASE!
+  Color|orange|[Basanite Miners]
+ SAVE US!
+  Color|orange|[Basanite Miners]
+ PLEASE!
+  Color|gray|You open your eyes and find yourself back in Basanite. Whatever just happened, Issa will probably want to know
+about it.
+&o  Return to Issa to tell her about your strange encounter Table
+ Issa
+  Color|orange|[Issa]
+ What's wrong? You look startled.
+  Color|purple|[Something... very weird happened...]
+  Color|orange|[Issa]
+ And? What was that?
+  Color|purple|[I had a... dream? Vision, maybe? There were these miners, begging to be rescued.]
+  Color|orange|[Issa]
+ What? Were they trapped somewhere? Held hostage?
+  Color|purple|[I don't know, they just kept begging for help.]
+  Color|orange|[Issa]
+ I suppose if they truly are alive somewhere and unable to escape, then the top priority should be to help them rather than
+debate details. Amarion isn't going to talk- he's a puppet of Alnera. Maybe with enough evidence though, we can swap the
+Foreman.
+  Color|orange|[Issa]
+ In the little amount of writing I was able to find about Basanite while you were gone, I noticed that it was an operation that
+occured in tandem to the Terracotta mining operation. There is a mining town out near Basanite that it took place in. Head there
+and see if you can find anything.
+&o  Head to the Terracotta Mining Town to retrieve some evidence in order to get the Foreman to talk. Table
+ Foreman Boris
+  Color|orange|[Foreman Boris]
+ Oh, it's you again... I thought I told you to get out.
+  Color|purple|[Yes, well, I've got some more questions for you.]
+  Color|orange|[Foreman Boris]
+ I told you before, whatever rumor you have heard is absurd. It's just a story.
+  Color|purple|[Then care to explain this?]
+  Color|orange|[Foreman Boris]
+ Where did you get that?
+  Color|gray|He suddenly looks very worried.
+  Color|purple|[I found it in an old mining camp. It mentions some very interesting things, namely "The Basanite Mission".]
+  Color|orange|[Foreman Boris]
+ ...
+  Color|purple|[Let's see, now. How about we start off with whatever "Cursestone" is?]
+  Color|orange|[Foreman Boris]
+ Okay, okay! Look, I'll talk. I can't keep this a secret forever- Amarion be damned!
+  Color|purple|[What happened here?]
+  Color|orange|[Foreman Boris]
+ Well, some years back, we lost miners- a lot of miners- to this cursed Basanite mission. If this had gotten out, our town would
+be out of business, and Alnera would have our heads. So we had to keep it a secret. Amarion came up with that idea, of course...
+  Color|purple|[I'm not entirely sure they are dead. I went to Basanite, and I think they somehow reached out to me, begging for
+help to escape.]
+  Color|orange|[Foreman Boris]
+ I... I don't understand how that could be. We saw them die... We... we collapsed the entrance and sealed it off because we knew
+they were gone... No, please don't tell me we trapped them inside of that place. Damn you Amarion!    &o  Return to the Basanite
+Bore and meet Boris at the bottom of the mine
+ Solve the Rubiks Cube to proceed to the next part. Table
+  Color|orange|[Disembodied Voice]
+ How pathetic you are, human. So easily swayed into my bidding by manipulating you with hopes of saving the dead.
+  Color|orange|[Disembodied Voice]
+ "Please      Color|orange|[Disembodied Voice]
+ Now, a path for me has been created to the surface; I shall once again be free. But you- you are no longer of service to me.
+Allow me to do the honors of splitting your mind in half before consuming it into my flesh.
+ Defeat the boss to proceed to the next part. Table
+ Foreman Boris
+  Color|orange|[Foreman Boris]
+ As I suspected, the seal is now broken, but there are no miners leaving the cave in freedom. I believe we may have been played.
+  Color|purple|[Something definitely wanted to be freed, but it wasn't the miners.]
+  Color|orange|[Foreman Boris]
+ Well, whatever it is that's down there, please be careful. I don't have a good feeling about this, but our town needs closure-
+please, do this for us. I'm... no, WE, are counting on you.
+  Color|purple|[I won't fail you, Boris.]
+  Color|orange|[Foreman Boris]
+ Godspeed     SECRETS BEST LEFT FORGOTTEN COMPLETE! SoftBreak  Awarded a   Link   Cyan Scourge_of_Lunacy wikilink Key,   Link
+Excavator's Hardlamp Excavator's_Hardlamp wikilink  , and access to the   Link   Cyan Scourge_of_Lunacy wikilink Dungeon
+Teleporter!

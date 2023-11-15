@@ -1,0 +1,86 @@
+&o  Get an arc-crystal for Cinevra from Vinny at the Apartments. Table
+ Cinevra
+  Coordinates: [-759, 126, 75]
+   &6[Cinevra]
+ Well hello there. Welcome to my office. Who are you?
+  &5[I'm [Player].]
+  &6[Cinevra]
+ Nice to meet you, [Player]! I'm Arcmage Cinevra. I'm a member of the Mage Council here in   Link   Sierhaven Sierhaven wikilink
+and was the creator of the teleporters found all across the Valley.
+  &5[Wow! How does it all work then?]
+  &6[Cinevra]
+ Ah, lovely! You really want to know? Well, it's pretty simple. Basically, you use an object's thaumic signature to transmute it
+through elemental phases, via the application of an arc-crystal. With a specific endpoint in mind, you encode that information
+in runes onto specific faces of the now-shaped object-crystal meld, and then...   &o  Your mind beings to wander...
+  &5[...Oh! Wow, yeah, that sounds so cool.]
+  &6[Cinevra]
+ Thanks, I'm glad you think so! I wasn't done yet, however. I have so much more I can tell you!
+  &5[Hehe.. Maybe some other time.]
+  &6[Cinevra]
+ Okay! Come back soon!
+  &5[I thought Vargos was the Archmage?]
+  &6[Cinevra]
+ Oh, no! You misheard me! I'm an ARCmage, not an Archmage! I never noticed the similarity before... how silly. I work with
+lightning in a magical way to create new things!
+  &5[So you made all these teleporters?]
+  &6[Cinevra]
+ I did! It was quite the undertaking and took lots of travel, but that's why I'm a trusted member of the Mage Council!
+  &5[Do you have any tasks for me?]
+  &6[Cinevra]
+ Oh, I'm so glad you asked! I actually do. See, recently, the Apartment complex just down the street was torn down and rebuilt.
+Anyway, the supervisor, Vinny, has a fantastic arc-crystal I've been wanting. It's the perfect piece of Magiscience out there!
+If you can go get it for me, I'll give you a nice reward and teach you more about the King's Station here, or as it's more
+casually known, the teleport hub!
+  &5[I'm in!]  Plain  (This starts/continues the quest.)
+  &5[Maybe later.]
+  &6[Cinevra]
+ So be it!
+&o  C: Go talk to Vinny in the Apartments Building. Table
+ Vinny
+  Coordinates: [-811, 102, 37]
+   &6[Vinny]
+ Well hey, how ya doin' there?
+  &5[Hi, I'm [Player]. What's this place?]
+  &6[Vinny]
+ This is the Apartment complex that I run. We remodeled due to a huge rat problem. We still have a few here and there though...
+  &6[Vinny]
+ Chat with my Manager over there for more details. We've got a nice new program in place.
+  &5[Hi, Cinevra sent me to ask you for an arc-crystal.]
+  &6[Vinny]
+ Ah, of course she did. Girl's been wanting that crystal for ages. Alright, fine, she can have it. I stuck it in one of the
+storage rooms downstairs. You'll have to work out my categorizing system and go fetch it yourself though, if you wanna get it.
+It's under magical science or something like that.
+  &5[How do I do that?]
+  &6[Vinny]
+ Have a look at this book, work out which block the arc-crystal would be in, then check the rows of categories down here to find
+the storage room you should visit. Talk to my storeroom manager down there if you need more help.
+  &5[Thank you!]
+  &6[Vinny]
+ Say nothin' of it. Hey, maybe come buy some Ender Chest Expansions from my Apartment Manager over there too, eh?
+&o  C [1/2]: Go talk to Vinny in the Apartments Building.
+&o  C [2/2]: Head to the basement. Find the correct Vincent Variable System room, then use the elevator to visit that apartment
+and find the arc-crystal.
+  Go to the basement via the door at [-821, 94, 27].
+ Talk to the Storeroom manager there if you need help or a new book.
+ Look through   Link   Vincent Variable System Vincent_Variable_System wikilink and on page 3 find that the 500's section holds
+the sciences. (We are looking for magical science).
+ The 4th spot down shows we need apartment 504.
+ Head to the elevator at [-2157, 140, 770] and input 504 into the key pad and grab the arc-crystal from the chest in the room at
+[-2171, 123, 781].
+ &o  C [1/2]: Head to the basement. Find the correct Vincent Variable System room, then use the elevator to visit that apartment
+and find the arc-crystal.
+&o  C [2/2]: Return to Cinevra with the arc-crystal.
+ After leaving the basement with an arc-crystal in your inventory:
+&o  C: Return to Cinevra with the arc-crystal. Table
+ Cinevra
+  Coordinates: [-759, 126, 75]
+   &6[Cinevra]
+ Amazing! Oh my goodness, this arc-crystal is just beautiful. Thank you so much! Let me help you out here. I'm gonna give you a
+little zap of this crystal, which should grant you right around 10 experience levels. With that, you can go buy that ender chest
+expansion Vinny's having his manager sell now!
+  &5[Thank you!]
+  &6[Cinevra
+ There you go! Now, about the King's Station here... It's pretty simple. You go somewhere, you find the teleporter there, you
+step on it - it brings you back here! Now you can always go back through to whichever location you teleported in from, as much
+as you'd like! I hope you use it well.
+   Awarded 10 levels and some knowledge about the King's Station.

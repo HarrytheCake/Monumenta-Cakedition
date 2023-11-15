@@ -1,0 +1,4 @@
+rewards =
+* 192 Xp bottles
+or
+* &3Hallowed Gladius&r

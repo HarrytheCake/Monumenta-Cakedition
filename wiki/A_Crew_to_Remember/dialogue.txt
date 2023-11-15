@@ -1,0 +1,187 @@
+  WorkInProgress|Levyn dialogue choice, Chief Editor Sumona dialogue choices, now starts at Levyn in Sierhaven Table
+ Captain Indigo
+  Coordinates: [683, 73, 491]
+   &6[Captain Indigo]
+ I'm looking for pirates, are you a pirate?
+  &5[Arrgh?]
+  &6[Captain Indigo]
+ Clearly not, at least not yet. Well do you happen to know any pirates?
+  &5[Arrgh! There be one lad I know in a pub in Sierhaven who plunders.]
+  &6[Captain Indigo]
+ Please don't try to speak like a pirate every again. You're awful at it. But any pirate would be better than you so maybe you
+can help me! I'm trying to put together a crew for my ship here, could you go speak to your friend about joining it?
+  &5[I'll go speak with my pirate friend.]
+  &6[Captain Indigo]
+ Wonderful!
+  &5[I am insulted and will not help you. ARRGH!]
+  &6[Captain Indigo]
+ Goodbye then.
+&o  Speak to a pirate in a Sierhaven pub. Table
+ Levyn
+  Coordinates: [-809, 101, 82]
+   &6[Levyn]
+ Ahoy [Player]! To what do I owe my favorite matey today?
+  &5[I've got a pirate job offer for you.]
+  &6[Levyn]
+ Shiver me timbers and call me a bosun, just tell me where to report to!
+  &5[Captain Indigo has a ship docked in Lowtide, you should go speak with her.]
+  &6[Levyn]
+ Aye I will! I expect I'll be seeing you over there as well?
+  &5[Sure I'll come visit.]
+  &6[Levyn]
+ (Missing)
+  &5[Of course, I need to claim my reward.]
+  &6[Levyn]
+ What's a pirate without their treasure!
+ If you talk to Indigo: SoftBreak   &6[Captain Indigo] You've done good, I think. Levyn is quite the character, but he seems
+very comfortable below deck. We're going to need more crew, but for now Levyn has a request of you.
+&o  Go below deck and speak to Levyn. Table
+ Levyn (Below Deck)
+  &6[Levyn]
+ This be quite the fine vessel. I can't wait to set sail.
+  &5[Indigo said you had a task for me?]
+  &6[Levyn]
+ Aye! I appear to have landed the position of Lookout. Likely cuz of my arrr-mazing eye. But in order to do the job right I'll
+be needing the perfect spyglass, matey.
+  &5[Where can I find you a spyglass?]
+  &6[Levyn]
+ Not just any spyglass, friend. I need the famed spyglass of Captain Bijou! Even my parrot doesn't know where to find it though.
+I saw a book house or whatever they're called on my way into this piratey town though! Maybe they know where Bijou's voyage
+ended!
+&o  Speak to Chief Editor Sumona. Table
+ Chief Editor Sumona
+  Coordinates: [691, 76, 539]
+   &6[Chief Editor Sumona]
+ Hi, welcome to the Library. I'm Sumona, the head of editing and curation here. Is there anything specific you're looking for?
+  &5[No, I'm just browsing.]
+  &6[Chief Editor Sumona]
+ Ah, well I hope you find something interesting. There's plenty here, from historical primers, to Walthan's exploration logs.
+Between you and I though, he's got a bit of an ego, so don't take him too seriously in person. Brilliant researcher though.
+  &5[I'm on a mission to find the spyglass of Captain Bijou.]
+  &6[Chief Editor Sumona]
+ Ah, now that's quite the story. Bijou was a pirate captain based out of Sierhaven who sailed under the Narsen banner.
+  &5[Narsen banner? But he was a pirate.]
+  &6[Chief Editor Sumona]
+ He may have been a pirate, but for a share of his plunder the Crown would leave him be.
+  &5[That sounds wrong.]
+  &5[That's a great deal.]
+  &6[Chief Editor Sumona]
+ I, well, um. I suppose so from one perspective.
+  &5[Ah, so he was a privateer.]
+  &6[Chief Editor Sumona]
+ Anyways, some other pirates weren't too happy about the deal Bijou had with the Crown, so one night they made their way to
+where his ship was tied down and cut it loose. Before anyone could flee, it went over the waterfall by Nyr and the wreckage
+floated down the river!
+  &5[That's Tragic!]
+  &6[Chief Editor Sumona]
+ Perhaps. But you were looking for his spyglass. If I were to bet I'd say it washed down the river all the way into the Grand
+Maw.
+  &5[He got what was coming to him.]
+  &5[Thank you. I'll go check that out.]
+  &6[Chief Editor Sumona]
+ Good luck!
+&o  Look for Captain Bijou's spyglass in the   Link   Grand Maw Grand_Maw wikilink  .
+ After collecting the Spyglass:
+&o  Once you have Captain Bijou's spyglass take it to Levyn. Table
+ Levyn (Below Deck)
+  &6[Levyn]
+ You've found Bijou's Spyglass! I'll be the most swashbuckling Lookout of all time with this! The captain told me we're looking
+for a Navigator though. I may know just where ya can find one! Arrr!
+  &6[Levyn]
+ Whoever wrote this message seems to have a grasp of traversing the sea, so go help them out!
+  &5[You haven't acted on this message for weeks?!]
+  &6[Levyn]
+ I thought it was pretty cool just having a Message in a Bottle.
+  &5[How do you suppose I'll be able to understand this?]
+  &6[Levyn]
+ It looks like coordinates! I've heard of a cartographer back in Sierhaven who has a place above the Alchemists. Maybe he'll
+know more for ye.
+&o  Take the Message From A Bottle to the Royal Cartographer in Sierhaven. Table
+ Royal Cartographer
+  Coordinates: [-797, 122, -43]
+   &6[Royal Cartographer]
+ Salutations citizen!
+  &5[I need help deciphering the coordinates in this message. They were written by a pirate.]
+  &6[Royal Cartographer]
+ Ooh a pirate! How thrilling, well if I had to take a guess then...
+  &6[Royal Cartographer]
+ Ahh yes these coordinates are nautical, you see .1 seaports is a block west and .1 seabows is a block north. It looks like the
+message is referring to the banner behind the Apartments, so you should set sail from there!
+&o  Follow the coordinates in the message to the stranded Navigator. Be ready for anything.
+  Start at the Sierhaven Flag and then go 270 blocks west and 90 blocks north.
+  Izzy
+  Coordinates: [-1306, 91, -12]
+   &6[Izzy]
+ Help! Get me out of here! Since we wrecked the ship Billam has gone mad. He has been eating all the crew and I'm next!
+  &5[How are you still alive if there hasn't been any food left?]
+  &6[Izzy]
+ I have my ways. Look, are you going to save me or not?
+ After you kill the Starved pirate:
+&o
+&o  Speak to Izzy Table
+ Izzy
+  &6[Izzy]
+ Oh thank the heavens you've found me. I've been trapped for weeks and was almost the next meal. Is there any way I can repay
+you?
+  &5[I'm looking for a Navigator for a pirate crew, would you be willing?]
+  &6[Izzy]
+ Well my last crew is long gone, so I suppose I am in need of a new ship to call home. I'll do it.
+  &5[Great, meet with Captain Indigo in Lowtide and I'll see you there.]
+  &6[Izzy]
+ Thank you again!
+&o  Go below deck and speak to Izzy. Table
+ Izzy (Below Deck)
+  &6[Izzy]
+ The captain let me know we still need a Quartermaster, I've had some dealings with a smuggler named Samwell based out of Nyr;
+best in the business. If you can get him on board then I think this ship will be in great shape.
+  &5[Where should I start looking for him?]
+  &6[Izzy]
+ Rummage around Scarface Ed's ware in Nyr, I've heard his guide to smuggling is quite enlightening.
+&o  Speak with Scarface Ed by speaking his language and buying the Beginner's Guide to Smuggling.
+ After buying the book:
+&o  The book is the key, the lock is the well.
+ After getting into the tunnels:
+&o  Navigate your way through the sewers until you find someone. Remember, the book is the key.
+ At the Shady Bouncer:
+&o  Get inside and talk to Samwell. Remember, the book is the key. Table
+ Samwell
+  &6[Samwell]
+ If you have no business here then beat it.
+  &5[I'm looking for a Quartermaster for a pirate ship, would you be interested?]
+  &6[Samwell]
+ A pirate ship eh? Can't say I've ever considered going legit.
+  &5[Legit? They're literal pirates.]
+  &6[Samwell]
+ And who do you think double-crosses the pirates? Look I'm interested but not sold, if I'm going to do this then I'm going to
+need one last shipment to carry me over 'til we start plundering on the high seas or however they put it.
+  &5[One last shipment? I don't know if I like the sound of that.]
+  &6[Samwell]
+ Look it's simple, the local guards are on high alert and know some of the familiar shifty faces, but they don't know you to
+have a bad reputation. Will you make the delivery?
+  &5[I suppose I have to.]
+  &6[Samwell]
+ Good now you need to go to the bottom of the waterfall outside Nyr and find a place called the   Link   Murky Maze Murky_Maze
+wikilink  . In there you'll se a veil of water, our drop-off point is behind it. Make sure you place the goods and only the
+goods in the chest. Now take this and scram.
+  &5[I'll think about it.]
+  &6[Samwell]
+ Thinking doesn't get you anywhere, acting does.
+&o  Enter the   Link   Murky Maze Murky_Maze wikilink  .
+ After entering   Link   Murky Maze Murky_Maze wikilink  :
+&o  Make your way to the drop-off point and put the goods, and only the goods, in the chest.
+ After dropping the goods in:
+&o
+&o  Return to Samwell. Remember, the book is the key, the lock is the well Table
+ Samwell
+  &6[Samwell]
+ I've gotten word that the goods were in the drop-off point in time. I'm ready to give this pirating stuff a go.
+  &5[Captain Indigo is waiting for you in Lowtide.]
+  &6[Samwell]
+ I'll see you there.
+&o  Return to Captain Indigo. Table
+ Captain Indigo
+  &6[Captain Indigo]
+ You did it! The crew is assembled thanks to you. I've been working on a deal with the Crown to get us permission to leave the
+Valley. Once we can you're more than welcome to join us on our expeditions. Until then I have a reward for you!
+ A CREW TO REMEMBER COMPLETE! Awarded:   Link   Sea Legs Sea_Legs wikilink  , Honorary Pirate Status, and 16 Concentrated
+Experience.

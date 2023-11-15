@@ -1,0 +1,3 @@
+rewards =
+* &3Tesseract of the Body&r
+* &3Tesseract of Pestilence&r

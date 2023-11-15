@@ -1,0 +1,158 @@
+  WorkInProgress|A line of Selholly first dialogue. Table
+ Selholly Sprignos
+  Coordinates: [-850, 101, 78]
+   &6[Selholly Sprignos]
+ Aaahhh! Who is it? Don't hurt me, I gave you everything I had!
+  &5[I don't have time for this.]
+  &6[Selholly Sprignos]
+ Not my precious clocks, at least let me keep them!
+  &5[Are you okay? What happened?]
+  &6[Selholly Sprignos]
+ Oh, it's just you... No, I am rightfully not! Some thugs broke in at night and demanded I give them all of my research on the
+mystical Snow Wool! I'm telling you, I was too close to the truth! Unfortunately, they took my plans for the prized Tesseract of
+Festivity as well, so I can't make any more to sell you either. Do not worry - I will continue my research, and I will solve the
+mystery of the Snow Wool!
+  &5[Oh no! Anyways…]
+  &6[Selholly Sprignos]
+ (Missing)
+  &5[I can help you out]
+  &6[Selholly Sprignos]
+ Oh, that would be just wonderful! While I was tidying up my lab from the ruckus, I found this receipt for The Blackroot Tavern
+in Nyr. One of those goons left behind a paper trail, a rookie mistake really. I’m sure they’re still there now, so head over
+and get my research back!
+&o  C: Look for a "goon" in the Blackroot Tavern in   Link   Nyr Nyr wikilink  . Table
+ Colder
+  Coordinates: [-122, 96, -109]
+   &6[Colder]
+ Ah, 'ello there. You's lookin' to indulge in some good ol' fashion festive cheer with me?
+  &5[I'm not in the mood, sorry]
+  &6[Colder]
+ 'ey, fair enough.
+  &5[What's the drink?]
+  &6[Colder]
+ Just some eggnog is all. Picked 'er up from the Snowman Embassy a few days back, strong stuff they've got. Still lookin' for a
+drink?
+  &5[I'm not in the mood, sorry]
+  &6[Colder]
+ 'ey, fair enough.
+  &5[Sure, I'll take a hit.]  Plain &o  You take a sip of the eggnog. Your vision goes woozy from the "festive cheer".
+  &5[Let's pretend I did, I don't like nausea.]  Plain &o  Despite not drinking the eggnog you feel woozy from the "festive
+cheer".
+  &6[Colder]
+ Ah, now that we're on the same playing field, let's really talk, shall we?
+  &6[Colder]
+ Let me introduce myself properly. My name is Colder. I am an ex-member of the Winter Council. You're here to get back
+Selholly's research on the Snow Wool, aren't you?
+  &5[How did you know?]
+  &6[Colder]
+ Let me introduce myself properly. My name is Colder. I am an ex-member of the Winter Council. You're here to get back
+Selholly's research on the Snow Wool, aren't you?
+  &5[How did you know?]
+  &6[Colder]
+ Let me introduce myself properly. My name is Colder. I am an ex-member of the Winter Council. You're here to get back
+Selholly's research on the Snow Wool, aren't you?
+  &5[How did you know?]
+  &6[Colder]
+ I've known them since I was a teenager, I know all his little tricks. I left that receipt in his lab to lead someone here to
+speak to me. I needed to warn his helpers about what he's doing. He's on a dangerous path, and someone needs to stop it.
+  &5[What do you mean?]
+  &6[Colder]
+ Selholly and I were researching the Snow Wool several years ago when we were on the Winter Council, but he was the more
+experimental of us. While I was happy just trying to find the Snow Wool, Selholly was busy shoving the primordial element of
+Festivity into glass boxes. A dangerous process, really. At some point he messed up, and I realized the dangers of what he had
+done.
+  &5[What dangers?]
+  &6[Colder]
+ The entire Winter Council froze over, bells rang out from mysterious places, and a jolly laugh belted through the halls. It was
+a sight to behold, but I knew it could do much more damage if it continued to be tampered with. I need to find the Snow Wool
+before Selholly. He can not be trusted with something that powerful. Will you help me?
+  &5[Of course! The world is in danger and I can't stop myself!]
+  &6[Colder]
+ Thank you. According to Selholly's notes, we need something called an " Link   Essence of Winter Essence_of_Winter wikilink
+"?. He has theories of it showing up when various locations around the world get frozen over. During this time of the year that
+is likely just about everywhere.
+&o  You feel a sudden burst of excitement upon realizing you get to try and save the world. You shake off the effects of the
+'nog! Maybe.
+&o  C: Locate an Essence of Winter, either from one of the cold amplified PoIs or from a chest during the winter event, and
+bring it to Colder.
+  The cold amplified PoIs that have an Essence of Winter are:  Plain Link   Fire Shrine Fire_Shrine wikilink Plain Link   Hawk
+Fortress Hawk_Fortress wikilink Plain Link   Litterbox Litterbox wikilink
+  After returning with an Essence of Winter: Table
+ Colder
+  &6[Colder]
+ Welcome back. Have you found that Essence of Winter?
+  &5[Yes, I have.]
+  &6[Colder]
+ Oh, this is just perfect! With this, we can find the Snow Wool! Come, let me take you to my laboratory. Just... uh... put this
+blindfold on. I can't reveal the location of my lab to anybody, not even you. I'm sure you understand.
+  &5[Why does it have to be a secret?]
+  &6[Colder]
+ When I'm not researching the Snow Wool, I'm researching other things. I have confidential data that I have promised to keep
+secret.
+  &5[Of course.]
+  &6[Colder]
+ Alright, then let's get going.
+&o  Colder puts a blindfold over your head, and begins escorting you to his lab. It feels... sticky?
+  &6[Colder]
+ Alright, we're here! You can take the blindfold off now.
+  &5[I can't. It feels like it's glued onto my head]
+  &6[Colder]
+ Oh no, I think I gave you the wrong blindfold. That one might be enchanted with a binding rune. No matter, that'll just serve
+as your eye protection in case anything goes wrong. I'll get it removed as soon as I can. Anyway, it is time to locate the Snow
+Wool!
+&o  Colder grunts as you hear the sound of cloth tearing. You feel a cold wind.
+&o  Suddenly, he screams as a bright light nearly blinds you through your blindfold.
+&o  A jolly laugh fills the room, and bells start ringing.
+&o  A loud crash is heard, as the laughing goes quiet.
+&o  You hear footsteps walking towards you, and a flash of purple light shines at you. The blindfold you were wearing falls to
+the ground.
+  &6[Colder]
+ Oh no, oh no no no. Something went wrong. I had no way to test my machine before today. Instead of finding the Snow Wool, a
+nasty spirit of the ice appeared. It fled deeper into my lab.
+  &5[What do we do?]
+  &6[Colder]
+ Me? I don't do anything, I'm not a fighter. You need to go in there and dispose of whatever it is. It left something behind
+when it fled, maybe it will help you.
+&o  C: Head further into Colder's Lab. Koal, Soul of the Jungle can sell you Souls of Winter if you need more.
+ NOTE: To return to Colder's Lab you can either talk to him in Nyr or the Snowman at (-873, 102, 67) in Sierhaven.
+ Use the   Link   Soul of Winter Soul_of_Winter wikilink to fight   Link   Snow Wool Spirit Snow_Wool_Spirit wikilink  . After
+beating the boss once:
+&o  C: Speak to Colder in his lab. Table
+ Colder (Lab)
+  &6[Colder]
+ You did it! You destroyed that festive menace! Thank you so much, [Player]. I suppose I'm not much better than Selholly when it
+comes down to it.
+  &5[What now?]
+  &6[Colder]
+ A promise is a promise. While I didn't manage to find the Snow Wool, you helped me try to find it. I'll return his notes to
+you, and you can give them back to him, alright?
+  &5[Alright.]
+&o  As Colder hands you back Selholly's notes, your vision goes woozy again. You wake up back in the Blackroot Tavern, with a
+pressure on your shoulder. You should talk to Colder.
+ ''C: Talk to Colder in the Blackroot Tavern. Table
+ Colder (Nyr Tavern)
+  &6[Colder]
+ 'ey buddy, you alright?
+  &5[What… what happened?]
+  &6[Colder]
+ Well, ya took a sip of this here eggnog I offered you, and you's started talking about some snowy wool or somethin'. Half way
+through your little rant, you's went and done passed out. Tried waking ya up, but you's was out cold.
+&o  As you continue to regain consciousness, you realize Selholly's research is missing.
+  &5[The notes, where are the notes?]
+  &6[Colder]
+ What notes? Ya came in 'ere empty handed. You's expectin' me to give you somethin'? Ya can't even handle your nog!
+  &5[But the experiment, and the spirit!]
+  &6[Colder]
+ I swear, even I don't get like this on my bad days. Why don't ya run back to where ya came from?
+&o  C: Return to Selholly empty handed. Table
+ Selholly Sprignos
+  &6[Selholly Sprignos]
+ Welcome back, [Player]. Did you get my research on the Snow Wool back?
+  &5[Well, I drank some eggnog and...]
+&o  You frantically explain what happened, complete with sound effects and lots of arm waving.
+  &6[Selholly Sprignos]
+ Oh dear, that sounds terrible, and also extremely unlikely. But, hey, at least you’re safe. We’ll find out where my research
+notes went eventually, don’t worry. Please take a model of what I think the Snow Wool would look like as payment for your help.
+ SNOW MAN LEFT BEHIND COMPLETE SoftBreak  Awarded the Replica Snow Wool, the ability to buy and upgrade the   Link   Tesseract
+of Festivity Tesseract_of_Festivity wikilink  , and the ability to drink more Eggnog with Colder for more interesting results...
+ NOTE: The Tesseract of Festivity trade and upgrade can only happen during the winter/christmas event time.

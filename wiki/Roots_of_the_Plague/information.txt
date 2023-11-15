@@ -1,0 +1,7 @@
+prerequisites = *&3Beasts of Men&r
+*&3The Plague&r
+*Completed the &3Fallen Menagerie NPC: Bhairavi King's Valleytown = Nyrstarting_npc_coordinates = -110 104 -155rewards = *&3Plagueroot TempleMagenta&r Key
+*Access to &3Plagueroot Templestarting_npc_coordinates = -110 104 -155rewards = *&3Plagueroot TempleMagenta&r Key
+*Access to &3Plagueroot Temple King's Valleytown = Nyrstarting_npc_coordinates = -110 104 -155rewards = *&3Plagueroot TempleMagenta&r Key
+*Access to &3Plagueroot Templetown = Nyrstarting_npc_coordinates = -110 104 -155rewards = *&3Plagueroot TempleMagenta&r Key
+*Access to &3Plagueroot Temple

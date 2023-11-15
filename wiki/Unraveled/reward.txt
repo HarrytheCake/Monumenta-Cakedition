@@ -1,0 +1,3 @@
+rewards =
+* further access to the Masqueraider's Ruin ike 
+* &3Blackblood Coagulant&r

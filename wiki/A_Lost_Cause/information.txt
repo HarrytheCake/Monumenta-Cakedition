@@ -1,0 +1,4 @@
+prerequisites = &3A Merchant's Woe&r and &3Dealbreaker&r
+ NPC: Amina Coords: 323, 47, 764
+ Celsian Isles Alnera
+POI: &3Crystal Haven&r, &3Warehouse Compound&r

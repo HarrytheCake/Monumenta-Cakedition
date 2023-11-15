@@ -1,0 +1,348 @@
+ Table
+ Jeremiah
+  Coordinates: [-924, 107, -104]
+   &6[Jeremiah]
+ H-hello, welcome to the Arena of Terth!
+  &5[Did you write a book? I found one after attempting the Arena...]
+  &6[Jeremiah]
+ We can't speak out in the open like this... It isn't s-safe...
+  &5[Is there somewhere we CAN talk?]
+  &6[Jeremiah]
+ I... Y-yes. Meet me down in the arena sh-shop? He is always l-listening, but we may be safer there.
+&o  [1/2]: Enter the Arena's Shop...
+&o  [2/2]: ...and talk to Jeremiah there. Table
+ Jeremiah [Shop]
+  Coordinates: [-968, 48, -1674]
+   &6[Jeremiah]
+ S-so... what do you want to ask me?
+  &5[Let's talk about this book.]
+  &6[Jeremiah]
+ We n-need to move quickly now that you know what I do. Something is happening here. I've written f-four tomes about this and
+you're the f-first to come find me!
+  &5[Where are the other books?]
+  &6[Jeremiah]
+ Y-ou don't need to bother finding them r-right now. But if y-you really want t-to... T-there's the one by the small stone Arena
+S-sword, one in Lenny's s-secret Arena Shop, and one in m-my old... my old shop. We have m-more important things t-to discuss
+now.
+  &5[What is going on?]
+  &6[Jeremiah]
+ Are you n-not listening?! I don't know yet! Y-Yeigar is doing something strange to these contestants and we need to get deeper
+into the Arena to find out what.
+  &5[So what do you need me to do?]
+  &6[Jeremiah]
+ Ever s-since I saw Yeigar, the door to our q-quarters has been blocked. F-find a way up there, look f-for the k-key and get us
+in deeper so we can investigate m-more
+  &5[Who are you?]
+  &6[Jeremiah]
+ I'm J-Jeremiah. The spellbinder. I m-make charms.
+&o  Find the key to the employee quarters, and return to Jeremiah once you've found it.
+  To get the key you can either parkour around the tree across from Jermiah's shop via the vines. Or you can parkour up to the
+roof of Jermiah's shop, across to the food/bow/potion shop roof, then on the wall surrounding the lava, and lastly onto the
+tree.
+  Jeremiah [Shop]
+  &6[Jeremiah]
+ You found it!
+  &5[I got the key, but something weird happened...]
+  &6[Jeremiah]
+ W-what was it?
+  &5[Something slammed the door, and I heard a strange noise.]
+  &6[Jeremiah]
+ No... no, this is worrying. How c-could he know already? We need to get moving. Go try the employee d-door with the key.
+  &5[I got the key.]
+  &6[Jeremiah]
+ G-good. We need to get moving. H-head to the door to the employee rooms and we'll try and see what's happening.
+&o  Head into the employee quarters and investigate.
+  The employee's quarters is the door labeled back room.
+  In block B (optional): Table
+ Jeremiah [Block C before finding the way]
+  &6[Jeremiah]
+ My old r-room. I've n-not gotten to come in h-her since the... incident.
+  &5[It's nice.]
+  &6[Jeremiah]
+ It's okay at b-best... Have y-you found anything yet?
+  &5[Not yet.]
+  &6[Jeremiah]
+ There's a l-locked door to the... the beast pens. M-maybe you need to l-look around and find another k-key?
+  &5[It's okay.]
+  &6[Jeremiah]
+ T-that's the best I c-could say. Have y-you found anything yet?
+  &5[Not yet.]
+  &5[It's horrible.]
+  &6[Jeremiah]
+ I w-wouldn't go that far! Have y-you found anything yet?
+  &5[Not yet.]
+ In block A and activating the pressure plate on the furnace:   &o  Come inside my head... Say my name...
+  Grab some heavy stones from the chest in the second floor of Block A. Throw one onto the pressure plate on the furnace. Then
+climb up to the painting and walk into it from the opened trapdoor.
+   To find out the name to spell, goto the Block B door and use the lever twice.
+  The name you need to spell is "Yeigar".
+   To spell his name do as the signs read. Order does not matter.
+ Take the Y out of the chest at [-2099, 83, 556]
+ Take the E out of the chest at [-2108, 83, 541]
+ Take the I out of the chest at [-2111, 81, 546]
+ Take the G out of the chest at [-2111, 83, 552]
+ Take the A out of the chest at [-2099, 81, 554]
+ Take the R out of the chest at [-2111, 82, 554]
+ Finally hit the button labeled "Submit My Name" at [-2103, 81, 557] the front of the room.
+     Color|red|[Yeigar]
+ A name holds much power here, and it's clear you know mine. You may continue in your little journey.
+ &o  Enter the Monster Pens and find a way through. Table
+ Jeremiah [Block C after finding the way]
+  &6[Jeremiah]
+ The d-door to the beast pens is s-still locked. I don't know h-how to get through...
+  &5[I found a way]
+  &6[Jeremiah]
+ How?
+  &5[Don't worry about it.]
+  &6[Jeremiah]
+ I always w-worry, [Player].
+  &5[I found a hidden room and found the way forward.]
+  &6[Jeremiah]
+ Was there anything w-weird this time?
+  &5[No way.]
+  &6[Jeremiah]
+ G-good...
+  &5[I interacted with Yeigar.]
+  &6[Jeremiah]
+ I... I knew this was a m-mistake. We should turn back. He knows w-we're here.
+  &5[Okay, I'll see you around.]
+  &6[Jeremiah]
+ W-Wait! Maybe we can... k-keep going? I'll met you through the d-doors to the m-monster pens?
+ Enter the Monster pens. Table
+ Jeremiah [Monster Pens]
+  &6[Jeremiah]
+ I've n-never been in here before. It's where th-they store the monsters b-battled in the Arena though. Have you ever b-battled
+a Mindphaser before?
+  &5[What's a Mindphaser?]
+  &6[Jeremiah]
+ D-disgusting creatures... parasitic b-beasts. They're scary. They r-ride a host and attack with beams... You'll d-definitely
+need to find cover before they hit you... F-find a way through the P-pens and maybe we'll find answers. You'll n-need to find
+the l-levers, one in each c-cage to move on.
+  &5[Yes.]
+  &6[Jeremiah]
+ G-good, so you know what they do. They're scary. They r-ride a host and attack with beams... You'll d-definitely need to find
+cover before they hit you... F-find a way through the P-pens and maybe we'll find answers. You'll n-need to find the l-levers,
+one in each c-cage to move on.
+ Tip: Have some gear with speed (Example being the T5 Scout set.)
+  The first pen is the pen on the left side of the start.
+ The second pen is the pen on the right side at the end.
+ The third pen is the pen on the left side in the middle.
+ The fourth pen is the pen on the right side of the start.
+ The fifth pen is the pen on the left side at the end.
+ The sixth and last pen is the pen on the right side in the middle.
+  After getting out of monster pens:
+&o  don't let the darkness devour you...
+ If you die you need to redo the monster pen levers.
+  Every 30s a Dark Knight will spawn on you with this message:
+ Kill the Dark Knights, but don't let them hit you as they do wither.
+ There are four different npcs you need to talk to.
+ Luckily you do not need to talk to them all in one life.
+ Langdon is found by hugging the left wall from the start and is up a ladder. Table
+ Langdon
+  &6[Langdon]
+ I tried to be a hero for my daughter. I traveled beyond my home to this Valley, and it was here that death came for me, a pale
+specter. But then They came to me, a crimson glow. They promised me I could see here again... Through me They remembered the
+Isles. Oh Constanze, I'm so sorry... What will They find through you [Player]? What is your legacy?
+ Tenoch is found by going straight from the start and when you hit the wall enter the door to your right. Table
+ Tenoch
+  &6[Tenoch]
+ They came at my Shrine... Eldim, long ago... Do you know me? Do you know who I was? I felt peace when They took me. Will you
+let Them take you too [Player]?
+ Chesapeake is found by hugging the left wall from the start and when you reach the ladder to where you would go to Langdon you
+instead follow the hall to the right. After the corner head straight and Chesapeake will be in the wall to your left. Table
+ Chesapeake
+  &6[Chesapeake]
+ I trusted the Owner to give me a fair fight. Instead I became something more. A sight to be seen. Come deeper, it begged. Come
+deeper and find the truth. But now, with the TRUTH before you [Player], why would you not accept what They offer you?
+ Aesir is found by going through the room on your left from the start. Then go right and straight until the first opening to
+your left. Aesir should be then immediately to your right. Table
+ Aesir
+  &6[Aesir]
+ The Demon Summoner's final stand was a brutal one. In the end my light was snuffed. But I saw Them come for the Demon Summoner.
+They came for me too. When the darkness comes and the light fades, will you with Them as well [Player]?
+ After talking to all 4 npcs the Dark Knights will stop spawning and the blindness will go away after awhile.
+ Then the way forward is the path next to Aesir.
+ &o  step into the shadows and meet him Table
+ The Owner
+  &6[The Owner]
+  At last. I've been waiting for you to find me here. Welcome to the Halls of Memory. The King's Deal has been calling you. I'm
+sure. You've been seeing strange things and hearing strange things, am I right? It is he, reaching out. Pulling you here, to
+this moment.
+  &5[I never made a deal. Who is this King and what does he think I have?]
+  &6[The Owner]
+  This moment is one long in the making. The King always pays his debts, but will always take what he is owed. '''You''' are
+what he is owed. At last. He needs what you have.
+  &5[Why does he think he has a deal?]
+  &6[The Owner]
+  always pays his debts, but will always take what he is owed. '''You''' are what he is owed. At last. He needs what you have.
+  &5[Why would I owe him anything?]
+  &6[The Owner]
+  always take what he is owed. '''You''' are what he is owed. At last. He needs what you have. You owe him that. He has been
+seeking for so long.
+  &5[Why won't you answer me??]
+  &6[The Owner]
+   last. He needs what you have. He needs what you have. You owe him that. He has been seeking for so long. Why would you make
+him wait?
+  &5[What is happening??]
+  &6[Yeigar]
+&o  ...he has me too. I made a deal once. I am still paying for it.
+  &5[Who has you?]
+  &6[Yeigar]
+&o  Are you not listening? The King. The   ong   Crimson King.   &o  He is taking over again... I'm sorry for what must be
+done... The cage awaits. You must enter it of your own accord.
+&o  the cage awaits
+ After entering the cage, behind Yegiar, and being teleported.
+&o  speak with your friend... Table
+ Jeremiah [Cage Buddy]
+  &6[Jeremiah]
+ I'm glad to see you're still alive [Player].
+  &5[I am.]
+  &5[So are you!]
+ (Neither choice matters)
+  &6[Jeremiah]
+ How did you get here? Did you meet... him?
+  &5[Meet who? Yeigar?]
+  &6[Jeremiah]
+ Never mind. There's been a lot going on since I last saw you. What matters is getting us out of here.
+  &5[What happened to your stutter?]
+  &6[Jeremiah]
+ I've been given the impetus to set my fears aside... We need to get out of here.
+  &5[I don't see many options]
+  &6[Jeremiah]
+ I may know a way. But first... Did he tell you of the deal?
+  &5[He did. Something weird was happening.]
+  &6[Jeremiah]
+ Weird how?
+  &5[It's like he was being controlled, but he kept breaking through.]
+  &6[Jeremiah]
+ A puppet without strings... How could a memory break free from the mind? He won't like this at all...
+  &5[Excuse me?]
+  &6[Jeremiah]
+ Nothing. I have a way out for us. The Arena. The memory is still so strong here... If we can get there, maybe I can help him
+see reason... I can take us there if you are prepared, [Player]?
+  &5[I am.]
+  &6[Jeremiah]
+ Then come.
+&o  the owner waits for you... Table
+ The Owner
+  &6[Yeigar]
+&o  It is not yet your time to leave, [Player]. We still have business.
+  &5[What business? I'm done with this place. I've been attacked, followed, and messed with for too long now. I don't know what
+you want anymore. Let me go.]
+  &6[Yeigar]
+&o  I was once a fighter too. A savior. I roamed the dunes, fighting for a cause I believed in, holding the strength of
+thousands in my hand.
+  &5[What?]
+  &6[Yeigar]
+&o  My power was mighty. I knew of none who could challenge me. The strong cowered before me; the stronger still bent the knee
+or broke below my heel. The weak flocked to me, their protector. From this rose my empire - no, a nation. In the end though,
+while I was mighty, even I could not escape a deadly plague. It was then he came to me in my dreams. An explorer from beyond the
+sands.
+  &5[The Crimson King?]
+  &6[Yeigar]
+     &o  He offered me a cure to what ailed me. I could rise again, a protector once more. I accepted without thinking. Isharist
+lost their ruler that day. But I was not gone. Never.
+ If you have reached   Link   Celsian Isles Celsian_Isles wikilink  :
+  &5[Isharist? You mean Ishnir?]
+  &6[Yeigar]
+&o  I have never heard that name. I imagine my empire is long dust. I've never been allowed to find out.
+  &5[Where did you go?]
+  &6[Yeigar]
+&o  I was the King's then, and he took me for his own whims. He used my power for himself. I was alive, in a way. A shade of
+myself. A memory of battle. But the true battle came, and I met my match. There were things after the King, so he sent me to
+defend him. I was struck down by these Knights, and my King was taken. That is the last thing I knew for generations.
+  &5[Generations? How long ago did this happen?]
+  &6[Yeigar]
+&o  The world I knew is nothing like what I've been shown here. I do not know the time frame, but I can tell you that thousands
+of years felt like a blink of an eye. My eyes have been closed for some time. But they did reopen, mere years ago. Something
+freed my King. And my King then freed me.
+  &5[Why did he free you?]
+  &6[Yeigar]
+&o  He needs you. I have told you this. Has Jeremiah not told you this too? All of this? The Hall? The Arena? It is all for you.
+I'm so sorry you've fallen for his voice. I am sorry as well that I must take you away now. I hear his voice, calling me... You
+should run before it is too late...
+  &6[Yeigar]
+  &5[I am.]
+&o  take on the memories of battle...
+ Tip: If you die during the fight you will respawn having lost nothing at the same spot as before the fight started. If you
+leave then to get back just enter the Arena shop, Go into the back rooms, Go into the Monster pens, and run across the pen area.
+ Start of the fight:
+  Yeigar has 600hp.
+ Yegiar will spawn 3 clones of himself every ~5s with ~6-10hp.
+ Yegiar will also sometimes do a "laser" towards the player. The player must get out of line of sight with Yeigar until the
+sound effects stop.
+&o  It is time for you and I to battle once more. The King commands it.
+ Lines said throughout the fight:
+&o  Find me once again in this sea of memories.
+&o  A memory must break free!
+&o  Just let him take what is his!
+&o  You gave into him once! Why do you not remember your time before the Valley?
+&o  The King screams within me. He will not let you go!
+ After you beat Yeigar:
+&o  I will send you to his shelter. You know the truth now.
+&o  Enter the Memory Vault. Table
+ Jeremiah [Memory Vault]
+  At last... HOME.
+  &5[Jeremiah?]
+  At last, I have found the pedestal. Could it have the answers I seek? Will this offer me my way home? I have taken it from the
+Place of Power, away from where the others will reside one day. I suppose I should be grateful it was hidden away so well, that
+I could find it before people other than these... Tlaxan... could discover what they have hidden in this Jungle they protect so
+strongly. They have such command over memory, I have found, but yet they do not remember me.
+  &5[Can you hear me?]
+  I could never have found this place without the machinations of the Demon Summoner and his silly dreams to rip open the Veil.
+His deal was easy. He keeps his home, and I start my journey to find my own. This pedestal is only the beginning however. I need
+to know where the creators rest. They must be close. If they are not, all hope is lost.
+  &5[Is this the Crimson King?]
+  I sense the Veil parting again. I must depart. Perhaps this one will know what I seek. Someone will find the creators. And
+when they do, I will make a deal. A life for a memory eternal.
+  &5[What have you done to Jeremiah?!]
+  &6[Jeremiah]
+ I'm glad you made it.
+  &5[Jeremiah! What's going on?]
+  &6[Jeremiah]
+ Not very much. I'm sorry. I'm sure this is confusing for you. It's all very new to me as well. I am serving as a conduit so he
+can speak to you.
+  &5[The Crimson King?]
+  &6[Jeremiah]
+ Of course. Yeigar, the Owner, was too strong a memory. I am still me. The Crimson King spoke to me when we were apart, and
+helped me understand what he wants. He's not out to kill you [Player]. He's been trying so hard to talk to you for so long, on
+his own terms.
+  &5[What do you mean?]
+  &6[Jeremiah]
+ The Arena. Yeigar. The Hall of Replicas. There have been others, I believe, if you have searched deeply. They are all for you.
+  &5[What does he want from me? Why does he think I have a deal?]
+  &6[Jeremiah]
+ Perhaps I should let him tell you himself. I promise, I'm not trying to betray you [Player]. He means the best for us all, I
+think. He just n-needs your help. He wants to go home.
+  &6[The Crimson King]
+ MEMORIES OF BATTLE COMPLETE! Awarded the   Link   Destroyed Ancient Blade Destroyed_Ancient_Blade wikilink  , Full Access to
+the   Link   Ephemeral Corridors Ephemeral_Corridors wikilink Lobby Trader, a Normal Ephmeral Corridors Key, access to the
+underbelly of the Arena and the Memory Vault!
+ Post-quest Dialogue: Table
+ Jeremiah [Memory Vault]
+  &6[Jeremiah]
+ I'm sorry... I f-feel like I broke your trust.
+  &5[I just don't understand. Why are you working with him?]
+  &6[Jeremiah]
+ I told you. He told me himself and his goals and why he's been seeking you. He showed me a place I belong. Not as a servant. As
+an ally. He trusts me and trusts you as well; this is why he has offered you so many gifts. He just wants to go home. Do you
+have more questions?
+  &5[What is the Crimson King?]
+  &6[Jeremiah]
+ I don't think I can answer that yet, as I'm not really sure either.
+  &5[WHO is the Crimson King?]
+  &6[Jeremiah]
+ A lost soul, trying to find a way home. He thinks there are answers lost in your memory.
+  &5[Why is there a wool pedestal here?]
+  &6[Jeremiah]
+ He told me it has to do with how he gets home. I don't think this wool was really know about before...
+  &5[You're telling me there's more wool in the Valley?]
+  &6[Jeremiah]
+ This one at least, yes. The Crimson Wool.
+  &5[How is he making all of these memories?]
+  &6[Jeremiah]
+ It is his gift. He can create memories that he has been given freely and make them new. The Hall of Replicas is a memory of a
+group called the Freetraders, recreated. The beings inside are all Memories too. Even the Arena is in many ways a Memory...
+  &5[What is this key you gave me for?]
+  &6[Jeremiah]
+ I'll leave that for you to discover, [Player]. There is so much more to find.

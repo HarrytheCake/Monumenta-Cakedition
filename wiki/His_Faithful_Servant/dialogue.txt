@@ -1,0 +1,188 @@
+  WorkInProgress|Missing dialogue at end. Could reword shrine part.
+&o  Search for Shrines across the Architect's Ring. Table
+ Cadeus
+  Coordinates: [-336 87 -719]
+   &6[Cadeus]
+ Ah, traveler. You're the newcomer the council has been meeting with.
+  &5[Yes.]
+  &6[Cadeus]
+ Their interest in you is well-earned. I sense power in you, like that of this shrine I tend to.
+  &5[The shrine - what is it?]
+  &6[Cadeus]
+ You truly have not been here long. These totems channel the gifts of Harrakfar. The pool grants us boons from him.
+  &5[Who is Harrakfar?]
+  &6[Cadeus]
+ God. After our people fled the ruin of the Silvari empire, those of the wood showed us the true path - that walked by the Great
+Wolf. Some more... primitive Dichen still follow the Gods of the Silvari, however.
+  &5[Ah. Tell me more about those boons you mentioned.]
+  &5[Who are the Gods of the Silvari?]
+  &6[Cadeus]
+ This is a holy place. We will not speak of such.
+  &5[Ah. Tell me more about those boons you mentioned.]
+  &6[Cadeus]
+ I am a purveyor of holy vessels, that capture the lifeblood of Harrakfar. Cast a vessel into the pool, along with materials
+tied to this land, and you will be given a gift - infused liquid, that can grant you greater power.
+  &5[Can I have some of those vessels?]
+  &6[Cadeus]
+ You seem pious enough, for a newcomer. You may have three, and one of the materials. Partake of the Wolf's power, and see for
+yourself that he is great.
+&o  C: Throw a Vessel of Boons and a Fenian Flower into the Shrine Pool to receive a blessing. You can purchase Vessels of Boons
+from Caedus, and obtain Fenian Flowers from   Link   Wolfswood Wolfswood wikilink Delve POIS.
+ After throwing in one Vessel of Boons and a Fenian Flower:
+&o  C: Partake of Harrakfar's power by drinking the blessing.
+ After drinking the blessing: Table
+ Cadeus
+  Coordinates: [-336 87 -719]
+   &6[Cadeus]
+ Ah, you've been granted His boon. Now, you see his majesty?
+  &5[Yes. Thank you, Cadeus.]
+  &6[Cadeus]
+ You're welcome newcomer. Oh - what is your name?
+  &5[Player]
+  &6[Cadeus]
+ Welcome, [Player]. To the fold of the Great Wolf.
+&o  C: There has to be more than one   Link   Shrine Shrines wikilink in the Region, find another and return to Cadeus.
+ (Boon of Silver Scales. Doesn't matter as it only changes the player's choice wording.) Table
+ Cadeus
+  Coordinates: [-336 87 -719]
+   &6[Cadeus]
+ Ah, [Player]. Now that you've received his boon, you should learn more about Harrakfar. His gifts only come to those who are
+worthy, yes? Come, I will teach you more.
+  &5[Yes, I'd like to learn more about Harrakfar.]
+  &6[Cadeus]
+ Good. Harrakfar, eons ago, brought life to this land. He created people, like you and me, and where he walked the trees of the
+wood sprouted up behind him.
+  &5[You said he was a wolf. How could a wolf do that?]
+  &6[Cadeus]
+ He showed himself to us, his people, as a wolf. But his form could shift. Either way, his body was massive, and taller than the
+treetops. And of course, he had great power.
+  &5[Is he still alive?]
+  &6[Cadeus]
+ Yes. While we believe his body was imprisoned, his formless spirit is all around us - the proof is in this pool. The totem
+draws his power to this place, as you experienced.
+  &5[Imprisoned? How'd that happen?]
+  &6[Cadeus]
+ Such theories are more... comparative, then you are like to understand. It combines some Silvari theology with that of the
+Aradia - the people of the wood. Perhaps return once you've visited those peoples, though I expect it will take you quite a
+while.
+  &5[I have some experience with imprisoned gods.]
+  &6[Cadeus]
+ Bah. You have power, but to have touched the soul of such an artifact... no, I refuse to believe you ever have.
+  &5[I found another shrine like this one.]
+  &6[Cadeus]
+ Oh? Hm, perhaps in the Fen, where the Coven live? Or their less... violent cousins, our friends the Aradia? They erect totems
+like these- taught us how to do so, in fact.
+  &5[No. Close to the black castle on the cliff. It had a statue of some sort of legged serpent on it.]
+  &6[Cadeus]
+ Hm? Are you sure you're recalling correctly? Harrakfar's power is the only power in these woods. All others are dead and gone.
+  &5[I am. I saw it with my own eyes.]
+  &6[Cadeus]
+ You seem so sure... yet I doubt you all the same. If these shrines exist, then where are their blessings? Bring back one to me,
+with those bottles I gave you earlier - then I may believe.
+  &5[I'm out of bottles.]
+  &6[Cadeus]
+ Fine. You may buy more from me if you wish - not even priests give everything for free.
+&o  C: Bring a Shrine Blessing to Cadeus. Table
+ Cadeus
+  Coordinates: [-336 87 -719]
+   &6[Cadeus]
+ [Player]. Have you brought a sample for me, of these supposed blessings?
+  &5[No. I'll get one.]
+  &6[Cadeus]
+ Make haste. I don't enjoy doubting you, but these other shrines seem so impossible.
+  &5[Yes - here it is.]
+  &6[Cadeus]
+ Oh Wolf... this liquid does pulse like that of my shrine. Yet its coloring is so different... could this truly be of another...
+one like you? Or something other?
+  &5[I can search for more blessings like this if you'd like.]
+  &6[Cadeus]
+ Yes... yes. I must know more. I will search the Dichen libraries, our books on theology should cover even these forgotten Gods.
+If you can seek out the shrines and describe them to me, I should be able to identify them. Will you help me in this?
+  &5[I can't right now, I'm sorry.]
+  &6[Cadeus]
+ Well. I'm disappointed, but if you change your mind, return to me. There's work that should be done here.
+  &5[Yes. I'll help you.]
+  &6[Cadeus]
+ Oh thank you. Now go, look for more shrines. You can buy additional bottles from me, if you need them. Religious curiosity is
+nice, but rings sustain the mind that thinks, yes? Now, hurry on.
+&o  C: Find   Link   Shrines Shrines wikilink in the Architect's Ring, then return to Cadeus.
+ (Dialogue after finding every shrine. You just need to find them, no need to get a boon.) Table
+ Cadeus
+  Coordinates: [-336 87 -719]
+   &6[Cadeus]
+ Ah, hello [Player]. Have you found any new shrines yet? My faith makes me wary, but my curiosity compels me to ask.
+  &5[No, I'd like to hear again about a shrine I already found.]  Plain  (Same dialogue as below, but for after you've already
+selected them.)
+  &5[Yes, I've found a new shrine.]
+  &6[Cadeus]
+ Ah! Thank you. Describe it to me, yes?
+  &5[It was on the far end of a broken bridge. It felt like the stars were everywhere...]
+  &6[Cadeus]
+ Ah. I know of this bridge. It was built by the ancient predecessors to the Silvari, and led to a grand fortress at the top of
+the Ring, between the Eastern and Western continents. The fortress has been empty for thousands of years, and the bridges were
+broken in a war. I don't know of these stars you speak of though. If a new power is emerging there I'd be quite interested. It's
+said that the fortress was the throne from which the gods of the Silvari controlled the entire Ring... heresy, of course, but
+such information is tantalizing.
+  &5[It was in a church next to the slums in the Keep, and in front of a knight statue.]
+  &6[Cadeus]
+ Mmm, yes, a known god. The Silver Knights. I do not wish to speak of them much. They are the gods of the Ashkii, and the
+Silvari before them. Beings clad in Iridium armor. Brutal and violent, the sworn enemy of Harrakfar. You may learn more about
+them from the Ashkii, if you wish, but I am sworn to the Great Wolf, and therefore must decline to teach you more.
+  &5[It was close to the black castle on the cliff. It had a statue of some sort of legged serpent on it.]
+  &6[Cadeus]
+ Ah, I need not look through books for this shrine. The Silver Knights are often associated with images of dragons, this must be
+a shrine to them. You likely know of them already if you've been on the Ring for long. Ancient beings, clad in suits of iridium
+armor. They occupied the forest eons ago, and the Ashkii still worship them. The true connection between the knights and dragons
+is unknown though. More study may be required here.
+  &5[It was secluded in a cave near the Mycelia camps, and was made of oily dark stone.]
+  &6[Cadeus]
+ Let me look through these papers for a moment...
+  &6[Cadeus]
+ Hmm. Yes. This ancient Coven tome seems to have some answers. This god is something more... otherworldly. A Coven leader was
+apparently entranced by this god, and departed with her sect of the Coven to find him. The text mentions the cultural
+implications more than the theology though. The nature of the god itself seems cryptic. If its power has begun to reemerge...
+that is most disturbing.
+  &5[It was near where the Coven live, but there was no totem - only a menacing red pit.]
+  &6[Cadeus]
+ Ah, this is a more modern, and dismissable, 'God'. Occasionally the Coven's great hex becomes... temperamental. It harnesses
+great energy, and when that discharges, it can create malignant life: growing from nothing, and subsisting off of pure mana.
+This... pit, was one of those creatures. But as for who would worship it, I know not. Perhaps some living on the fringes in the
+Fen. The Coven does not control all of that vile swamp.
+  &5[It was deep in a cave, surrounded by glowing crystals.]
+  &6[Cadeus]
+ Let me see...
+  &6[Cadeus]
+ Ah, the Mycelia. These observations the Aradia conducted on their religion are revealing. It seems these crystals are excellent
+at absorbing mana, which the Mycelia have great need of. They make pilgrimage to the caves to harvest the mana in the crystals,
+and to worship them it seems. Them, or some greater God of crystal they believe to be the source of their growth. As for what
+the Mycelia need so much distilled mana for, I do not know.
+  &5[It was underneath a stone structure in the Keep, and there was a strange, but friendly creature watching over it.]
+  &6[Cadeus]
+ Hm. Let me look at these papers...
+  &6[Cadeus]
+ There is no record of such a shrine here. Whatever God this is, it must be a more modern development. I have heard tales from
+across the Ring about similar creatures to those that you describe however. Perhaps once you explore those lands, you may figure
+out more.
+ After having visited and asked about every shrine: Table
+ Cadeus
+  Coordinates: [-336 87 -719]
+   &6[Cadeus]
+ [Player], I don't know whether to thank you or to denounce you. Harrakfar was the only God in these woods. The emergence of
+these other powers is distressing to say the least. But my faith is still strong.
+  &5[Why worship Harrakfar when there are so many other Gods like him?]
+  &6[Cadeus]
+ Has this journey taught you so little? I worship Harrakfar not because I do not know of any other, but because Harrakfar is my
+God. Just as he owns me, I own a bit of him. Harrakfar is alive in the stories I tell, in the forest I live in, and in the
+culture I am from. Other Gods may be reemerging, yes, but there is no other God who is mine.
+  &5[Hm. I feel that I can understand that.]
+  &6[Cadeus]
+ I'm glad. And thank you for your help. I'd offer you more vessels but... these do not come cheap! To hold the essence of a God,
+one needs quite strong materials, yes? Ha! {...}
+  &5[I don't see what you're saying, but thank you for your help.]  Plain  (Missing)
+  He pauses for a moment.
+ {...}
+  &6[Cadeus]
+ ... Ah, but I suppose your insight on these powers must be worth something. Hm... Very well. Just this once, I will give you
+these vessels as a gift. Use them well, friend.
+  '''HIS FAITHFUL SERVANT COMPLETE!'''
+LineBreak   Awarded [[Wolf's Rosary]] and 3 Vessels of Boons!

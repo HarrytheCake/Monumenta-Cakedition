@@ -1,0 +1,2 @@
+rewards = *&3Runner's Boots&r
+*Unlocks other town's &3races&r

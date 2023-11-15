@@ -1,0 +1,2 @@
+rewards =
+* 10 levels

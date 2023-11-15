@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Scout Laura Coords: -733, 129, -252
+ King's Valley Sierhaven

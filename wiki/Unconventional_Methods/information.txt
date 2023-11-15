@@ -1,0 +1,7 @@
+prerequisites = * &3Unraveled&r
+* &3Mechs Machina&r
+* and completion of the &3Cradle of the Broken God&r dungeon.
+ NPC: The High Priest Coords: -446 181 -86
+ Architect's Ring New Antium
+Difficulty = Hard
+Length = Long

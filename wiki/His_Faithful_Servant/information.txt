@@ -1,0 +1,5 @@
+prerequisites = * None
+ NPC: Cadeus Coords: -336 87 -719
+ Architect's Ring Galengarde
+Difficulty = Medium
+Length = Very long

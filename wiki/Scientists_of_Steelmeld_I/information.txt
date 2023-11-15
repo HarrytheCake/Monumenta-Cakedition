@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Professor Bermuda Coords: -541, 5, -476
+ Celsian Isles Steelmeld

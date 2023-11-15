@@ -1,0 +1,14 @@
+prerequisites = *&3Winds of War&r
+*&3Halls Of Wind And Blood NPC: Bhairavi King's Valleytown = Nyrstarting_npc_coordinates = -112 104 -154rewards = *&3Fallen MenagerieOrange Dungeon&r Key
+* &3Cyrar's Sight&r
+* 64 Arrows of Slowness
+* Full Access to the &3Fallen Menageriestarting_npc_coordinates = -112 104 -154rewards = *&3Fallen MenagerieOrange Dungeon&r Key
+* &3Cyrar's Sight&r
+* 64 Arrows of Slowness
+* Full Access to the &3Fallen Menagerie King's Valleytown = Nyrstarting_npc_coordinates = -112 104 -154rewards = *&3Fallen MenagerieOrange Dungeon&r Key
+* &3Cyrar's Sight&r
+* 64 Arrows of Slowness
+* Full Access to the &3Fallen Menagerietown = Nyrstarting_npc_coordinates = -112 104 -154rewards = *&3Fallen MenagerieOrange Dungeon&r Key
+* &3Cyrar's Sight&r
+* 64 Arrows of Slowness
+* Full Access to the &3Fallen Menagerie

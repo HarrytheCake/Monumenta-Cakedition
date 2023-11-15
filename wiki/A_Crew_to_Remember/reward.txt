@@ -1,0 +1,4 @@
+rewards =
+* &3Sea Legs&r
+* Honorary Pirate Status
+* 16 Concentrated Experience

@@ -1,0 +1,5 @@
+prerequisites=&3Praetorer ike&r
+starting_npc_name=The High Priest
+starting_npc_coordinates=-418 174 -129
+region=Architect's Ring
+town=New Antium

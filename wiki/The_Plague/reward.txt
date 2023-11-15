@@ -1,0 +1,2 @@
+rewards = *192 Enchanting Bottles
+*3 Potions of Restoration

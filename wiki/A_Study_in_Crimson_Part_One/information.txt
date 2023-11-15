@@ -1,0 +1,8 @@
+prerequisites = * &3Memories of Battle&r
+* &3Soul of the Forest&r
+* &3Unveiled&r
+* &3Shurima's Big Day Off&r
+* Completion of any difficulty of &3Ephemeral Corridors&r
+* Defeated &3Kaul&r
+ NPC: Jeremiah in the Memory Vault Coords: -917, 91, -161
+ King's Valley Sierhaven

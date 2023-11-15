@@ -1,0 +1,4 @@
+prerequisites = &3An Unlikely Partnership&r
+ NPC: Wilhelm Coords: -1295, 130, 467
+ Celsian Isles Nightroost/Rahkeri (depending on earlier quests)
+POI: &3Cliffside Ruins&r

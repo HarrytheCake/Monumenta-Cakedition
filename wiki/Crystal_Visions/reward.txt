@@ -1,0 +1,4 @@
+rewards =
+* &3Nai's Cube&r
+* the ability to start &3Malevolent Reverie&r &3Dungeon Delves|delve&rs
+* the ability to visit the dreamers in &3Velara&r

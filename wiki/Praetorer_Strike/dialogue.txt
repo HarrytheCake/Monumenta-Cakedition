@@ -1,0 +1,106 @@
+&o  Discuss how to handle Shades with the Praetor. Table
+ The Praetor SoftBreak  Coordinates: [-461 192 -64]
+  Color|orange|[The Praetor]
+ You! You there! Come forward. You're the one who helped Ephesus. You're not from New Antium, yes? Why do you walk among the
+Ashkii? What do you seek?
+  Color|purple|[I'm an adventurer from outside the Ring]
+  Color|orange|[The Praetor]
+ Surely you are sent to us by the Architect Himself. I claimed my first night of restful sleep in as many moons as I remember.
+You are to thank for this change, I hear.
+  Color|purple|[I'm glad I could help.]
+  Color|orange|[The Praetor]
+ There is much still you could help with, should you be open to a partnership. What is your name ?
+  Color|purple|[Player]
+  Color|orange|[The Praetor]
+ I welcome you to New Antium in full decorum, [Player]. Your arrival here is fortunate and surely a sign of things to come. My
+people have always been plagued by misfortune, I swear to you. First the collapse. The Empire squandered in a night. The shades
+devouring those left behind. Then these dreams that you have lessened now.
+  Color|purple|[Indeed. So what do you ask ? I'm interested.]
+  Color|orange|[The Praetor]
+ I am seeking the source of the Shades. It's been decades since they arrived, yet so many still remain, hungry as ever, seeking
+to be whole once more. They were once Ashkii like use, citizens of the Silvari Empire, but now they are nothing but Husks,
+fueled by power unknown.
+  Color|purple|[Have you tried killing them?]
+  Color|orange|[The Praetor]
+ Of course. They return, hungrier for being than before.
+  Color|purple|[So I take it you're not sending to kill them, specifically]
+  Color|orange|[The Praetor]
+ I am sure there will be killing, but that is not the end goal. The Shade Hunters and I seek the truth. No Praetor before me has
+sought the source, only tried to stymie the onslaught of Shades.
+  Color|purple|[What do you know?]
+  Color|orange|[The Praetor]
+ Decades ago, an Emperor named Pelias brought the Silvari Empire to a final ruin. He was falling deeper and deeper into madness,
+you understand, and was searching for a mythical source of power, said to be hidden by the ancient Emperor Uriddan, a Silver
+Knight.
+  Color|purple|[Did he find it?]
+  Color|orange|[The Praetor]
+ I don't know. Not a soul does. Everyone who would, and thousands of others living under Pelias vanished. In their place, the
+Shades.
+  Color|purple|[Sounds like he did find it and it didn't go well.]
+  Color|orange|[The Praetor]
+ Mayhaps. I want to find out for sure. There's two areas to the Keep I want to investigate fully as part of this process. You
+might have the strength New Antium does not in order to investigate them.
+  Color|purple|[Why me instead of your troops?]
+  Color|orange|[The Praetor]
+ You would not hear me say this openly, but I will confide in you as you have saves my dreams. New Antium is starving. The city
+is crumbling. We are confined to a tiny segment of what was once a majestic Keep. I cannot in good faith send my people alone.
+  Color|purple|[But you can send me.]
+  Color|orange|[The Praetor]
+ You are something else. Special. You broke the nightmares. You survived the brutality of the Coven and Mycelia in the woods
+below to reach these walls.
+  Color|purple|[You're not wrong... Okay. Where do you need me to go?]
+  Color|orange|[The Praetor]
+ The old   Link   Silvic Quarry Silvic_Quarry wikilink or the   Link   Doomed Encampment Doomed_Encampment wikilink near the
+former Silver Knight training grounds. Both have strong ties to Pelias' search for Uriddan's artifact. I trust you to pick the
+one that best suits you and seek information within.
+  Color|purple|[I'm on it.]
+  Color|orange|[The Praetor]
+ Thank you [Player]. Return to me when you find something. Or if you can only find the hunger of Shader, return as well. Even
+knowing there is nothing more valuable than not knowing at all
+&o  C: Travel into and Conquer the   Link   Silvic Quarry Silvic_Quarry wikilink  ... or....
+&o  C: Travel into and conquer the   Link   Doomed Encampment Doomed_Encampment wikilink instead. Table
+ The Praetor SoftBreak  Coordinates: [-461 192 -64]
+  Color|orange|[The Praetor]
+ If you have returned, I take it that you found something ?
+  Color|purple|[I got to the bottom of the tower in Doomed Encampment. The Shades there seemed different. Nastier.]
+  Color|orange|[The Praetor]
+ I agree. Our intelligence suggests something happened in that tower before the Keep-wide event. Pelias did something there that
+drove him deeper to madness.
+  Color|purple|[I agree. There is a darkness to that tower. I also found this log book.]
+  Color|orange|[The Praetor]
+ Let me page through that briefly... Ah Cleo. Still so young, yet so brave. One day she will learn the value of her allies. Not
+every excursion must be a chance for personal greatness, but instead a journey of greatness and safety for all. Did you find
+anything else?
+  Color|purple|[Just the aggressive Shades. Their loops seemed longer and more odd.]
+  Color|orange|[The Praetor]
+ I truly believe that citadel is where the first Shades emerged, but their behavior when compared to the Shades that roam the
+cobblestones of the Keep differs greatly. Perhaps the Encampment can give us insight, but I do not think it is the source...
+  Color|purple|[Indeed. So what do you ask? I'm interested.]
+  Color|orange|[The Praetor]
+ Now, Player. I thank you. I will summon you forth soon enough. I'd like to speak to Cleo about this. If you feel so inclined to
+go seek out answers at the Silvic Quarry as well, I will reward you richly for your troubles as well. Now though, please, take
+this for your mighty efforts.
+&o  Rewards : 2 Godtree Carvings and access to a further reward
+ If you complete the second POI : Table
+ The Praetor SoftBreak  Coordinates: [-461 192 -64]
+  Color|orange|[The Praetor]
+ Oh, let the Architect make thy path steady. I see you have investigated the darkness of the Silvic Quarry then?
+  Color|purple|[I did. I got pretty deep into the Quarry. Shades of all types were still digging into whatever project they'd
+been working on berfore they died.]
+  Color|orange|[The Praetor]
+ The Shades never died, but I see the point you are trying to make. The Shades just hade their being ripped from their body and
+that body never stopped existing. I am still yet unsure if they can ever stop.
+  Color|purple|[I see. Well, near the bottom a particularly powerful Shad came for me. I killed it and found this journal.]
+  Color|orange|[The Praetor]
+ Ah, Guintorius' logbook! What a splendid find. Guintorius is a truly gifted combatant and works very hard to keep New Antium
+safe. He lost this book before I was ever the Praetor of this bastion against the Shades. I'm stunned no other brave soul had
+found it before you. The contents are quite interesting. I see. The Shade he mentions...
+  Color|purple|[Indeed, I think that might have been what I killed.]
+  Color|orange|[The Praetor]
+ As before, the Shade is not dead, merely delayed. This is very interesting though. Guint may have found the end of Braccus'
+loop. Why did he vanish? I cannot say I've heard of that before with lesser Shades. But lesser Shades tend to not wander far...
+Where could this beast have gone ? Why ? Such fascinating questions. It is a shame the answers have not yet followed.
+  Color|purple|[I hope they do soon.]
+  Color|orange|[The Praetor]
+ Now, Player. I thank you. I will summon you forth soon enough. I'd like to speak to Guint about this. But as promised, a
+handsome reward.

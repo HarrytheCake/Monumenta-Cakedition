@@ -1,0 +1,5 @@
+prerequisites = * &3Scientists of Steelmeld II&r
+ NPC: Bermuda Coords: -229 44 -626
+ Architect's Ring Galengarde
+Difficulty = Hard
+Length = Medium

@@ -1,0 +1,1 @@
+ NPC: Dr. Qure Celsian Islestown = Mistportstarting_npc_coordinates = -758, 86, 1355starting_npc_coordinates = -758, 86, 1355 Celsian Islestown = Mistportstarting_npc_coordinates = -758, 86, 1355town = Mistportstarting_npc_coordinates = -758, 86, 1355

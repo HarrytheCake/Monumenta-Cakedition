@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Buildmaster Jr. Coords: -778, 106, 20
+ &3King's Valley&r &3Sierhaven&r

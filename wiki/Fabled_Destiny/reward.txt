@@ -1,0 +1,2 @@
+rewards = *&3Royal Shield&r
+*16 Compressed Crystalline Shards

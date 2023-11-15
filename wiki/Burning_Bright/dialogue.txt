@@ -1,0 +1,103 @@
+ Table
+ Suri
+  Coordinates: [-1580, 133, 134]
+   &6[Suri]
+ Perhaps if I reduce the input power by half and increase the speed of our cooling systems by 20%, we can save about 14% of the
+currently consumed coal... But if we do that, our systems will become unusable much faster and replacements will be required
+sooner... We might as well not even have a beacon at that point, huh?
+  &5[What's going on?]
+  &6[Suri]
+ Oh, nothing, just trying to keep my sanity with all these calculations I have to run. The stupid questions are helping much.
+  &5[Well, perhaps, I can help somehow?]
+  &6[Suri]
+ You? Help? Perhaps you can... see, the thing is, we're always running low on our coal supplies and it's hard to receive
+constant shipments from Sierhaven.
+  &5[And you suggest..?]
+  &6[Suri]
+ Well, I've heard the alchemists back into Sierhaven are, or at least were, looking into solving our problem here. Except I
+haven't heard back on their progress in some time now. If you could head back to the Alchemist's Workshop and make sure they
+aren't just twiddling their thumbs like morons, perhaps they can help with the reagent that's been worked on.
+  &5[What? Why?]
+  &6[Suri]
+ Well, if you hadn't noticed, there are bandits roaming the sea and heavens know when we will be able to put a stop to them. I
+even heard they took an outpost near Sierhaven.
+  &5[Who are you? What is this place?]
+  &6[Suri]
+ I'm Suri. I'm in charge of the light house. More questions?
+  &5[Yes, one more question, pretty please?]
+  &6[Suri]
+ Just make it quick.
+  &6[Suri]
+ Really? That's your question? I don't care and suggest you to leave me be this instant.
+  &6[Suri]
+ If only I knew that question coming, I'd dismiss you right away. I don't care about that, I should go back to my work.
+  &6[Suri]
+ Do you actually find it funny? Well, I don't and you just wasted my time. Happy now?
+  &5[No more questions.]
+  &6[Suri]
+ Off you go then.
+  &5[Alright... I won't distract you anymore then.]  Plain &o  She quickly loses interest in you.
+  &6[Suri]
+ Now, where was I...
+  &5[I'm sorry to interrupt your thinking genius, but...]
+  &6[Suri]
+ No buts! If you can't suggest anything useful or at least keep your silence, then you shouldn't interrupt me.
+  &5[On the other hand, if you add additional fuel control systems to your control panel, perhaps you can store the surplus and
+reuse it? According to my calculations, this should save up to 9% of the amount of coal used daily...]
+  &6[Suri]
+ You're talking nonsense, because, obviously, that'd require not just one qualified specialist who could modify our control
+system, but also a big amount of redstone sensors - observers. We simply don't have enough materials for that and even if we do,
+that'd decrease our working capability by almost 43%! No way we sacrifice that!
+&o  Head to the Alchemy Hub in Sierhaven and ask for details regarding a special reagent. Table
+ Head Alchemist
+  Coordinates: [-797, 115, -48]
+   &6[Head Alchemist]
+ Welcome to the Alchemical Workshop! My associates and I sell the finest potions in the empire!
+  &5[I'm searching for a reagent, one that'll make coal last longer.. Have anything like that?]
+  &6[Head Alchemist]
+ No, I'm not sure we have anything like that in stock.
+  &5[Perhaps you know where I can find it then?]
+  &6[Head Alchemist]
+ Well.. If you're not afraid of being withered, or poisoned, or poisoned and withered at the same time, then, I believe there
+should be something like that in the Toxin Lab. It's out in the sea, west of Sierhaven. I'm not sure what exactly happened
+there, but it was abandoned awhile back. Stay on your guard.
+&o  [1/2]: The reagent is sealed in the   Link   Toxin Lab Toxin_Lab wikilink  . Head there and find your way into the Reagent
+Vault.
+&o  [2/2]: Once you find the reagent, head back to Suri.
+ In Toxin Lab, get to the elevator at [-1194, 34, 126].
+  Note: You can hit submit as many times as you want and it won't penalize you.
+ Hit Change Color until the output color is Orange then press submit.
+ Hit Change Color until the output color is Green (Not Lime/Light Green) then press submit.
+ Hit Change Color until the output color is Purple (Not Magenta) then press submit.
+ Hit Change Color until the output color is Lime (Not Green) then press submit.
+ Hit Change Color until the output color is Brown then press submit.
+ &o  The door to sealed part of the vault is now open!
+ Enter and grab the quest item in the chest.
+&o  You grab the reagent and close the chest. Better get back to Suri. Table
+ Suri
+  &6[Suri]
+ Perhaps if I reduce the input power by half and increase the speed of our cooling systems by 20%, we can save about 14% of the
+currently consumed coal... But if we do that, our systems will become unusable much faster and replacements will be required
+sooner... We might as well not even have a beacon at that point, huh?
+  &5[About that reagent...]
+  &6[Suri]
+ Hm? What reagent? Oh, its you. Did you find it yet?
+  &5[I did. It was sealed in the Reagent Vault in the Toxin Lab.]
+  &6[Suri]
+ Well, cut to the chase. We have a work to do!
+  &5[*Give the reagent*]
+  &6[Suri]
+ Well, let's see...
+  &6[Suri]
+ Oh..!
+  &6[Suri]
+ It's... it's the exact thing I need! Finally, I can sleep well at night and not worry about another supply shortage or missing
+shipments!
+  &5[You seem to be very excited about that.]
+  &6[Suri]
+ Of course I am! Wouldn't you be as well? This may be a small step towards the safety of our vessels, but it's very important to
+our Empire.
+&o  She looks at the reagent once again.
+  &6[Suri]
+ Simply beautiful! I suppose you deserve this, whoever you are. We can certainly spare this coal now.
+ BURNING BRIGHT COMPLETE! Awarded Unstable Sparkler and 24 Coal Blocks!

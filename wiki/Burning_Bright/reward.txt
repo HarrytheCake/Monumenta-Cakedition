@@ -1,0 +1,3 @@
+rewards =
+* &3Unstable Sparkler&r
+* 24 Coal Blocks

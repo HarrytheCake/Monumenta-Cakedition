@@ -1,0 +1,7 @@
+prerequisites = * &3Clear as Glass&r
+* &3A Study in Crimson Part One&r
+* &3Time to Reflect&r
+* &3Shurima's Big Day Off&r
+* &3A Crew to Remember&r
+ NPC: Taymian in the Sierhaven apartments. Coords: -826, 102, 39
+ King's Valley Sierhaven

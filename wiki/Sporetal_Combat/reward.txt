@@ -1,0 +1,4 @@
+rewards =
+*Awarded access to &3Godspore&r materials trade
+*a &3Blighted Catalyst&r
+* 1 Hyperchromatic Archos Ring

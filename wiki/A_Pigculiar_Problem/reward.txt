@@ -1,0 +1,2 @@
+rewards = Levyn Bacon Mask|starting_npc_name = Walter Jr. 
+&o  Talk to Walter Jr. a few times until a different dialog pops up SoftBreak  mediawiki {{WorkInProgress

@@ -1,0 +1,65 @@
+  WorkInProgress|Poison Cypress Ending
+&o  Aggressively reclaim an overdue book for Archivist Saanavi.
+ Archivist Saanavi can be found in the library section of the Academy. The library section is at the bottom of the staircase.
+Table
+ Archivist Saanavi
+  Coordinates: [-1826, 127, -83]
+   &6[Archivist Saanavi]
+ Welcome, welcome to the grand library, the greatest archive of knowledge in all of the Isles. Is there anything I can help you
+with?
+  &5[I'm looking for adventure!]
+  &6[Archivist Saanavi]
+ I see. You are experienced in the arts of war and combat, correct?
+  &5[Not particularly.]
+  &6[Archivist Saanavi]
+ Ah. Such a shame.
+  &5[Very experienced, yes.]
+  &6[Archivist Saanavi]
+ Perfect. There is a student of the academy, as skilled as he is arrogant. His book is overdue. Kill him.
+ ...
+ ...
+ Or, just get the book back. Either way.
+  &5[This seems excessive. I'm out.]
+  &6[Archivist Saanavi]
+ Excessive!? Books are serious business.
+  &5[Get the book, maybe murder someone. Got it.]
+  &6[Archivist Saanavi]
+ I knew I could count on you. He goes by Cypress. Like most of the older, more arrogant students, you won't find him in either
+class or the library. Perhaps check the bar in town, that sounds precisely where book-hoarding scum would hang out.
+&o  C: Find Cypress at the bar and ask him where the book is. Table
+ Cypress
+  Coordinates: [-1784, 133, -20]
+   &6[Cypress]
+ Wha, whach you want?
+  &5[Who are you?]
+  &6[Cypress]
+ Meee? I'm Cypressssh, the soon to be most famous mage in the worlllddddd!
+  &5[Saanavi says you have an overdue book.]
+  &6[Cypress]
+ Book? Pshhhh, I lost that weeeeeks ago. Vanished while adventuring, true, true shhtory.
+  &6[Cypress]
+ I shupposeeee I could just tell you where the book isss, but I like games. If you can outdrink me, Cypresssh, the best mageee
+in the world, I'll tell you where. Deal?
+  &5[You're on!]  Plain  (Starts the Drinking Minigame)
+  &5[Or I could just kill you.]
+  &6[Cypress]
+ Heh, good luck. Whisshpervale's got the best wards around! No punchesss, magic, knives, nothin'! Can't even sshlap people. I'm
+completely immortallll! Unlesssh, like my drink is poisoned or ssshomething, heh...
+ The barkeeper has some hints and advice.
+ Link   Puzzle Solutions Guide/Overdoomed Puzzle_Solutions_Guide/Overdoomed wikilink
+   &6[Cypress]
+ *Hurkk* Alright, you win. I lossht the book in the Mountain Market, to the sshoutheassht. It'ss yours, jussht leave me to my
+hangover...
+&o  C: [1/2] Retrieve the book from the   Link   Mountain Market Mountain_Market wikilink  .
+&o  C: [2/2] Once you have the book take it to Saanavi. Table
+ Archivist Saanavi
+  &6[Archivist Saanavi]
+ Welcome, welcome to the grand library, the greatest archive of knowledge in all of the Isles. Is there anything I can help you
+with?
+  &5[I got the book.]
+  &6[Archivist Saanavi]
+ Wow! I knew I could count on you get the book! Shame you couldn't make an example of that scumbag though. Maybe someone else
+will be willing to help instill fear into the hearts of students...
+    Header if_you_poison_cypress  If you poison Cypress:
+ Cypress dies and drops the Market Flag. The book is still found at the Mountain Market. The reward is   Link   Tome of Lost
+Time Tome_of_Lost_Time wikilink and 96 Compressed Crystalline Shards.

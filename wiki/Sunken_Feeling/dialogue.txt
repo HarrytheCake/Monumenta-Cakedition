@@ -1,0 +1,110 @@
+ Table
+ Cropmaster Afondo
+  Coordinates: [-715, 95, 1439]
+   &6[Cropmaster Afondo]
+ Six hundred and eighty-six thousand gallons... Six months of crops lost... How are we- Oh hello. I didn't see you there.
+  &5[Are you okay?]
+  &6[Cropmaster Afondo]
+ Not in the slightest.
+  &5[Hi! How are you?]
+  &6[Cropmaster Afondo]
+ TERRIBLE.
+  &6[Cropmaster Afondo]
+ We have a saboteur in our midst!
+  &5[A saboteur? Oh no!]
+  &6[Cropmaster Afondo]
+ Oh no indeed. (Continues)
+  &5[Oh, that sucks.]
+  &6[Cropmaster Afondo]
+ It does! (Continues)
+  &5[Well, good luck dealing with that!]
+  &6[Cropmaster Afondo]
+ Luck has nothing to do with this! Useless wanderers.
+  &6[Cropmaster Afondo]
+ The farm that feeds Mistport has been completely flooded, and our crops have been ruined!
+  &5[I wish I could help, but I'm rather busy right now.]
+  &6[Cropmaster Afondo]
+ No, no, it's fine. It's just the main supply of food for Mistport. I've got this...
+  &5[Can I help?]
+&o  C: Talk to Cropmaster Afondo.
+  &6[Cropmaster Afondo]
+ Would you? I don't even know where to begin right now, but any help would be... it would be quite a weight off my back.  Table
+ Cropmaster Afondo
+  &6[Cropmaster Afondo]
+ I'll need to let you into the flooded farm, but you can't go in with any items. The water will destroy them entirely!
+  &5[Why?]
+  &6[Cropmaster Afondo]
+ The fertilizer down there really doesn't like most metals, see. Better safe than sorry, aye.
+  &5[What do I do while I'm down there?]
+  &6[Cropmaster Afondo]
+ There are three drains in the Farm that you'll need to find, and see what the damage is. There will also be three chests - they
+will have specific Coral Dissolvers in them. Whomever SABOTAGED the Farm used coral, so you'll need to use the Dissolvers to
+destroy the coral and let the Farm drain!
+  &5[What do I do with the Coral Dissolvers?]
+  &6[Cropmaster Afondo]
+ Look for a smaller block of coral floating near the drain. That'll be the brain. Use the Coral Dissolver on it and you'll begin
+the process!
+  &5[Where do I find the drains?]
+  &6[Cropmaster Afondo]
+ Along the bottom of the Farm of course. IT's rather large, so be on the look out for some bubble columns to give you air. I've
+also managed to get some of the protection magic functioning down there, but only near one of the Coral Dissolvers, I think.
+Maybe it'll come in handy if you are moving slow.
+  &5[I'm ready to go!]  Plain  (If you have anything in your inventory)
+  &6[Cropmaster Afondo]
+ Well, I'd take you down there, but you've still got stuff on you. Get rid of it and then we'll have a chat, eh?
+  &5[Yes, Cropmaster, Sir.]
+  &6[Cropmaster Afondo]
+ Splendid.
+  &6[Cropmaster Afondo]
+ Splendid, looks like you're all ready for a trip underwater to help me save this Farm! Any last questions before we go?
+  &5[Remind me again what to do?]
+  &6[Cropmaster Afondo]
+ Head inside, into the water. Find Coral Dissolvers for the specific coral you need to dissolve, blocking the three drains. Find
+the small floating coral, the brain, and use the dissolver on it. Once all three brains have been dissolved, return to me, and
+the Farm should begin draining.
+  &5[Nope, I'm ready to go.]
+  &6[Cropmaster Afondo]
+ Splendid, my friend. Let's get you in there and save this Farm!
+&o  C: Descend into the sunken Farm and find the Coral!
+  horn coral dissolver (-717, 42, 1499)
+ horn coral (-729, 26, 1519)
+ tube coral dissolver (-717, 42, 1564)
+ tube coral (-754, 22, 1536)
+ fire coral dissolver (-779, 46, 1509)
+ fire coral (-784, 36, 1543)
+  When you go to dissolve the fire coral: Table
+ Fire Coral
+  &6[Fire Coral]
+ Now listen here, I'm trying to take a nap.
+ &5[B-blubbb-AHH
+ After dissolving all the coral:
+ C:   &o  Tell Afondo the good news. Table
+ Cropmaster Afondo
+  &6[Cropmaster Afondo]
+ How did it go down there, [Player]?
+  &5[I've got all three coral brains dissolved, Cropmaster, Sir!]
+  &6[Cropmaster Afondo]
+ You're very right, you hero, you! The Farm has already begun draining! Now we begin the mystery of the saboteur...
+  &5[Actually, I've got an answer for that one as well.]
+  &6[Cropmaster Afondo]
+ Say what now?
+  &5[The Fire Coral blocking a drain down there turned out not to be a Coral at all. It was a trickster Nereid.]
+  &6[Cropmaster Afondo]
+ W-WHAT?! HOW DARE THEY! WE HAVE A TREATY WITH THOSE BASTARDS, YOU KNOW THAT? Why, I'll be taking this right up with the Pirate
+Council immediately... Crops ruined... gah!
+  &5[At least they're gone now.]
+  &6[Cropmaster Afondo]
+ That be true, they are gone. I'm STILL BRINGING THIS UP WITH THE COUNCIL THOUGH. Gah, blasted Nereids. Everyone thinks they're
+great, until they run a nasty trick on you. Seriously, [Player]. This is SIX MONTHS of crops wasted.
+  &5[That's a ton.]
+  &6[Cropmaster Afondo]
+ YES IT IS. GAH!
+  &5[Just six months?]
+  &6[Cropmaster Afondo]
+ JUST SIX MONTHS?! THAT'S DEVASTING! GAH!
+  &6[Cropmaster Afondo]
+ ...Well, any who. You did me a massive favor down there, friend. I think it's time I did one back for you. I've got this
+splendid item I want you to have, as thanks. Additionally, you can come check out the Farm as we recover whenever you like.
+How's that sound?
+ A SUNKEN FEELING COMPLETE! SoftBreak  Awarded a   Link   Shimmerscale Remnant Shimmerscale_Remnant wikilink and access to the
+Mistport Farm.

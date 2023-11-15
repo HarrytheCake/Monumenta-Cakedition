@@ -1,0 +1,3 @@
+rewards =
+* &3Tome of Lost Time&r
+* 48 or 96 Crystalline Shards

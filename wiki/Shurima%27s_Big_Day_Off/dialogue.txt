@@ -1,0 +1,407 @@
+  WorkInProgress|Missing two ending branches. Table
+ Shurima
+  Coordinates: [455, 192, -382]
+   &6[Shurima]
+ You are the one who restored the flow of magic? You haven't seen my daughter Midrey, have you? She's always getting into
+trouble... I have so much to do and so little time...
+  &5[I'm sorry to hear that.]
+  &6[Shurima]
+ It's fine. Anyway, I have a job for you. T'Xoc, our village leader, tells me you're doing jobs for people for goodwill or
+something.
+  &5[I guess that's a fair assessment.]
+  &6[Shurima]
+ Good. I need some weight taken off my shoulders. My wedding anniversary is tomorrow and both Arkhest and I are too busy to
+prepare like we ant to. We'll have been together for ten years now and it has to be special. It HAS to be.
+  &5[So what do you need me to do? Restore naturey marriage magic? Battle monsters?]
+  &6[Shurima]
+ What? No nothing like that. I have a few tasks that I don't have the time to do and I need your help.
+  &5[Oh. Okay I guess.]
+  &6[Shurima]
+ Excellent.
+  &6[Shurima]
+ Right, so first I need you to take some money over to the moneychanger at the bar. I'm sure he could use some business instead
+of spending all his time getting drunk. Plus, I need Narsen currency for whatever Arkhest has planned.
+  &5[I didn't know Tlaxans had different currency.]
+  &6[Shurima]
+ Of course we do. Do you think we didn't have money before the Nrasens invaded? Here, take this and change it for me.
+  &5[What is this? It looks like a plant.]
+  &6[Shurima]
+ It's money go and stop asking dumb questions.
+  &5[You got it.]
+  &6[Shurima]
+ Hurry along.
+&o  Head to Moneychanger Elgort in the Tipsy Tlaxan. Table
+ Moneychanger Elgort
+  Coordinates: [452, 196, -333]
+   &6[Moneychanger Elgort]
+ *Hic*-money makes the world go 'round they say... what can I *hic* do for you?
+  &5[Hi, I've been sent to change this Tlaxan money for Narsen money.]
+  &6[Moneychanger Elgort]
+ Change what now-*hic*?
+  &5[Tlaxan currency. I need it converted.]
+  &6[Moneychanger Elgort]
+ What the uh... what was the word again... Z'cur? I think that's right. Yeah what the Z'car is that?
+  &5[Uh... so can you convert it?]
+&o  He leans forward and seems to sober up
+  &6[Moneychanger Elgort]
+ I suppose I could try and cast the conversion spell the Goldmage taught us. No promises on what might happen though...
+  &5[Let's do it.]
+  &6[Moneychanger Elgort]
+ Here we go!
+  &6[Moneychange Elgort]
+   &eMONEY MAKES THE WORLD GO *ROUND!
+  &5[That's it? That's the whole spell?]
+  &6[Moneychanger Elgort]
+ Shh... Let's see if it worked!
+  &5[I don't think it did...]
+  &6[Moneychanger Elgort]
+ Well Z'cat. Sorry friend.
+  &5[I guess I'll head back to Shurima now.]
+  &6[Moneychanger Elgort]
+ Good luck! She scares me!
+&o  Return to Shurima... carefully. Table
+ Shurima
+  &6[Shurima]
+ Have you spoken to the Moneychanger yet?
+  &5[Yes, but you're not going to like the answer.]
+  &6[Shurima]
+ I hope this doesn't become a running theme... What is it?
+  &5[We couldn't figure out how to change the money.]
+  &6[Shurima]
+ What in C'Shura's name do you mean?
+  &5[It's not a simple process okay?]
+  &6[Shurima]
+ This is not okay! How could a moneychanger, whose only job is to change money, fail to change money?
+  &5[The magic didn't recognize whatever this stuff is!]
+  &6[Shurima]
+ That "STUFF" is our money! I cannot believe this. Fine, I have something else you can do instead.
+  &5[Great...]
+  &5[Sure thing!]
+  &6[Shurima]
+ So if changing money is too hard for you, why don't you head back to the bar and pick out a nice wine for the dinner? Keep the
+money - you'll need it with Murtag, the barkeep.
+&o  Murtag, back in the Tipsy Tlaxan, might have what we need. Table
+ Murtag
+  &6[Murtag]
+ Welcome to the Tipsy Tlaxan! Step right up, grab a beer, and relax! Let all your cares wash away.
+  &5[I'm actually after a nice wine.]
+  &6[Murtag]
+ Ah! Are you helping out Shurima and Arkhest? I hear their anniversary is coming up! What kind of wine are you after?
+  &5[What do you recommend? I'm not really the wine type.]
+  &6[Murtag]
+ That's right, you adventurers seem to like potions more than anything. Well, I've got a nice Tlaxan Wine in my stock. Just
+trade me and I'll sell it to ya for half a stack of Experience Bottles.
+  &5[Wait, do you not take Tlaxan Currency?]
+  &6[Murtag]
+ Oh goodness, no. Narsen money is the only thing a man like me needs. Elgot over there talked me into changing!
+  &5[Ugh... okay.]
+  &6[Murtag]
+ I hope she enjoys it!
+&o  [1/2]: Trade with Murtag and purchase Tlaxan Wine for Shurima.
+&o  [2/2]: Return to Shurima once you have Tlaxan Wine. Table
+ Shurima
+  &6[Shurima]
+ Any luck with the wine yet?
+  &5[I've got it right here!]
+  &6[Shurima]
+ Thank goodness. you CAN do simple tasks!
+  &5[Yeah but... Murtag isn't taking your... currency... anymore. I had to spend my own money on it.]
+  &6[Shurima]
+ You are just full of problems today! Ugh! Just keep the money I gave you. That should be more than enough! This is absurd.
+  &5[You're really overreacting.]
+  &6[Shurima]
+ You think?! My anniversary is TOMORROW and nothing is together. We have nothing prepared, the house is a mess, our daughter is
+hiding somewhere, and my husband is holed up in his little library. All of this is on me, and I just asked for a bit of help.
+  &5[...]
+  &6[Shurima]
+ Why don't you just see if Arkhest needs any help. I think I'll get more done here without you.
+&o  Be a good hero and head to Arkhest. Table
+ Arkhest
+  Coordinates: [480, 196, -350]
+   &6[Arkhest]
+ You're not a Son of the Forest after all? Thank Ixume... I'm Arkhest, the librarian. I've got lots of exciting volumes! My wife
+says I'm too stuck in my books, but I really love it here.
+  &5[I'm actually here because of your wife.]
+  &6[Arkhest]
+ OH NO! Did something happen?
+  &5[No, nothing like that. I'm helping her prepare for your anniversary.]
+  &6[Arkhest]
+ Z'Chun! That's tomorrow! I knew I was forgetting something! So what can I do for you?
+  &5[Actually I'm here to help you.]
+  &6[Arkhest]
+ Wow, that's sweet of Shuri. Se sent you to help me with my overdues I imagine. I'm glad she's got everything sorted at home
+then!
+  &5[About that...]
+  &6[Arkhest]
+ Right! So I've got one more overdue to handles today. Talisa, the Crafter owner? She's had a book overdue for MONTHS! She owes
+me a good bit of money and I really need the book back. It's called Of Shamans and Spells. It's a lovely book really, about a
+hero thwarting the wicked Siblings of the Trees and their attacks on an Abbey. You might really like it! But yeah, Macuniloh
+wants to read it, so I'll need it back along with her late fee. Should be 64 of our currency, but at this point I'll take
+anything. Thanks [Player]! You're a big help!
+&o  Chase down the vile book thief, Talisa. Table
+ Talisa
+  Coordinates: [498, 187, -371]
+   &6[Talisa]
+ I'm Talisa. T'Xoc says I am to let you use my crafter. There it is.
+  &5[I'm actually here on behalf of Arkhest.]
+  &6[Talisa]
+ Oh great. Not only do you waste my time but no you come hounding me about a trashy book?
+  &5[So you know what he needs?]
+  &6[Talisa]
+ Yes, he needs his book and his stupid late fee. I can't afford it. I didn't bring the book back cuz I didn't want to tell him.
+A'rexk! I didn't want to tell you either.
+  &5[I'm sorry. Maybe we can come to a deal?]
+  &6[Talisa]
+ What kind of deal?
+  &5[How much do you owe?]
+  &6[Talisa]
+ I owe... a stack of our currency.
+  &5[Lucky for you, I have a stack. Can you give me something else for it along with the book?]
+  &6[Talisa]
+ No.
+  &5[Well, good luck then.]
+  &6[Talisa]
+ WAIT! Okay then. Fine outsider. I'll tell you some recipes to use in this crafter and give the book back. How does that sound?
+  &5[That sounds fair.]
+  &6[Talisa]
+ Here's the stupid book. Now for your recipes. You can make three potions by putting a   Link   Pulsating Dust Pulsating_Dust
+wikilink surrounded by an ingredient for a cure for Marasmus Execratio into the crafter. They're worth it.
+&o  Return to Arkhest, victorious. At last, a win for us? Table
+ Arkhest
+  &6[Arkhest]
+ Is that my book I smell?
+  &5[...Yes? You can smell it?]
+  &6[Arkhest]
+ Of course. Every book here I can recognize instantly. They're like my children. Now, do you mind going and changing the late
+from Talisa over to Narsen currency? We'll definitely need some.
+  &5[I already that for Shurima. It didn't work.]
+  &6[Arkhest]
+ No, no. It definitely will work. I heard someone say it did. Go use Elgort in the bar. He's the best!
+&o  ...Go talk to Moneychanger Elgort. Ugh. Table
+ Moneychanger Elgort
+  &6[Moneychanger Elgort]
+ Money makes the world go 'round!
+  &5[Hi again, I've been sent to change this Tlaxan money for Narsen money again... Shurima's husband thinks it'll go
+differently.]
+  &6[Moneychanger Elgort]
+ Z'coop! I mean uh... oh no!
+  &5[Oh no indeed.]
+  &6[Moneychanger Elgort]
+ Well uh... What do we do?
+  &5[I thought you were the expert.]
+  &6[Moneychanger Elgort]
+ Not really. Training only took like a week. It was the background check that took forever.
+  &5[Oh.]
+  &6[Moneychanger Elgort]
+ Yeah. Really difficult that. Anyway, want me to try the spell again?
+  &5[Eh... why not?]
+  &6[Moneychanger Elgort]
+ Cool.
+  &6[Moneychange Elgort]
+   &eMONEY MAKES THE WORLD GO *ROUND!
+  &5[Does your tone matter? You sounded really unenthusiastic right there.]
+  &6[Moneychanger Elgort]
+ Hush, no it doesn't. Clearly, since it didn't work again. I hate this job!
+  &5[Me too buddy. Thanks for trying.]
+  &6[Moneychanger Elgort]
+ Good luck!
+&o  Go disappoint Arkhest... Table
+ Arkhest
+  &6[Arkhest]
+ How goes the changing of the money with Elgort?
+  &5[Like I told you, it didn't work. The spell he uses to transform money doesn't recognize this stuff.]
+  &6[Arkhest]
+ That doesn't make any sense! Have him try again!
+  &5[...Arkhest. I'm not going to do that.]
+  &6[Arkhest]
+ Why not?
+  &5[Because I've done it twice already and it didn't work either time. You'll have to find another way.]
+  &6[Arkhest]
+ Fine... I'll just take the money then. I've got another task for you while I research how to change money myself!
+  &5[What can I do?]
+  &6[Arkhest]
+ I mentioned that my books were like my children earlier but I ah... forgot my actual child. Can you hunt around Ta'Eldim and
+find Midrey for me? She's a small child and she likes to wander off...
+  &5[Any ideas where to start?]
+  &6[Arkhest]
+ She likes the sound of water! I'd start there.
+&o  Find Midrey. Table
+ Midrey
+  Coordinates: [476, 184, -357]
+   &6[Midrey]
+ ...
+  &5[Aha, I found you!]
+  &6[Midrey]
+ ...
+  &5[Midrey? Are you okay?]
+  &6[Midrey]
+ ...
+  &5[Midrey?]
+  &6[Midrey]
+&o   &eand so they seek the way... a Sanctum lost, a mind decayed.
+  &5[Excuse me?]
+  &6[Midrey]
+&o   &enowhere... nowhere left to stand... A binder of souls... lost, forsaken...
+  &5[Are you... talking about C'Shura?]
+  &6[Midrey]
+   &eC'SHURA LOST IN THE DEPTHS. C'AXTAL TAKEN BY THE JUNGLE. C'SHURA C'SHURA C'SHURA.
+  &5[Midrey? Hey! Wake up!]
+  &6[Midrey]
+   &eSHE LIVES. SHE SEES ALL.
+&o  Midrey slumps to the ground.
+  &5[Oh god, I need to go tell Arkhest.]
+  &6[Midrey]
+ ...
+&o  Hurry back to Arkhest. Table
+ Arkhest
+  &6[Arkhest]
+ Any luck fin-
+  &5[ARKHEST! I found Midrey. Something's wrong.]
+  &6[Arkhest]
+ What do you mean something's wrong?!
+  &5[She was unconscious and wouldn't wake. She kept saying strange things about C'Shura.]
+  &6[Arkhest]
+ She was unconscious? Oh no no no. No no this isn't okay oh no oh Ixume no. This is really bad. Where is she?!
+  &5[Under the waterfall.]
+  &6[Arkhest]
+ Oh Ixume. Go get Shurima. Please. Oh Ixume I don't know what to do. None of my books have ever said anything about this!
+&o  Hurrier back to Shurima. Table
+ Shurima
+  &6[Shurima]
+ I thought I told you to go help Arkhest.
+  &5[He needs you. Your daughter needs you.]
+  &6[Shurima]
+ Oh my god, what happened? Is something wrong?
+  &5[She is unconscious under the waterfall, saying very strange things.]
+  &6[Shurima]
+ WHAT?! My baby?! What happened? WHAT DID YOU DO? Did you do something? What do we do?! What was she saying?
+  &5[She was saying some strange things about C'Shura and a place.]
+  &6[Shurima]
+ T'Xoc. We need T'Xoc. This is not okay. Please go uh god, I'm so sorry I got you involved in this... Please get him. My baby...
+&o  Hurriest to T'Xoc. Table
+ T'Xoc
+  &6[T'Xoc]
+ Hello again [Player]. What can I do for you?
+  &5[I need your help.]
+  &6[T'Xoc]
+ What is it?
+  &5[I've been... trying... to help Shurima and Arkhest with some tasks, but something's wrong with their daughter, Midrey.]
+  &6[T'Xoc]
+ Wrong how?
+  &5[I found her unconscious and saying some weird things about C'Shura and a Sanctum.]
+  &6[T'Xoc]
+ ...
+  &5[T'Xoc?]
+  &6[T'Xoc]
+ It cannot be. Gods above. The legends are coming true...
+  &5[What legends?]
+  &6[T'Xoc]
+ I shouldn't be telling this to an outsider, but you have been such a help. I will share. Ever since the disappearance of
+C'Axtal 50 years ago, it has been said that a new Soulspeaker would rise. I did not believe, as I think C'Axtal still lives, but
+if what you say is true... He may be gone and their daughter, Midrey, may be inheriting these powers.
+  &5[If C'Axtal was the Soulspeaker, why would she be saying things about C'Shura?]
+  &6[T'Xoc]
+ C'Shura went in search of C'Axtal in what we now call the Forsworn Sanctum, Ta'Ferna. If Midrey is seeing her... she could
+still be there, trapped? It was a dangerous journey and far more dangerous inside...
+  &5[Is Midrey in danger?]
+  &6[T'Xoc]
+ Oh, goodness no. If anything, she has inherited great power. I will bring her to Barras, the shrinetender. He will take her on
+as a student and teach her to control these dreams.
+  &5[So what's next?]
+  &6[T'Xoc]
+ I shall go attend to Midrey. You should go speak to her parents. I'm sure they need some reassurance. Go to her mother first.
+I'm sure Arkhest will have returned home.
+&o  Calmly talk to Shurima. Table
+ Shurima
+  &6[Shurima]
+ What have you heard? Did T'Xoc say anything?
+  &5[Midrey is going to be okay. T'Xoc has some big news though.]
+  &6[Shurima]
+ What is it?
+  &6[Arkhest]
+ Is she going to be okay?
+  &5[She's going to be fine. T'Xoc believes she may become the next Soulspeaker.]
+  &6[Arkhest]
+ WHAT?!
+  &5[You both should go speak to him. He's going to make sure she's fine, he said.]
+  &6[Shurima]
+ This is not what I expected to hear today... Our little Midrey... A Shaman? We've raised her so well, my love.
+&o  She and Arkhest embrace.
+  &5[I'm going to head to T'Xoc and see what more I can do to help.]
+  &6[Shurima]
+ Thank you. I mean it.
+&o  Have a cryptic chat with T'Xoc. Table
+ T'Xoc
+  &6[T'Xoc]
+ Welcome back, [Player]. How did Shurima and Arkhest take the news?
+  &5[They seem relieved.]
+  &6[T'Xoc]
+ Wonderful. I paid a visit to Midrey. She is awake and recovering now, though I imagine she'll be back in that cave in mere
+minutes. I... have a bit of a task for you still, however.
+  &5[What's that?]
+  &6[T'Xoc]
+ Would you be willing to take on the journey to the Sanctum and see if what Midrey said of C'Shura is true? I know this is very
+different from doing simple tasks for townsfolk, but I trust you can handle it.
+  &5[I'm the hero for the job!]
+  &6[T'Xoc]
+ This is great news. Now, listen closely, and I will reveal the way into Ta'Ferna, the fallen Sanctum.
+  &6[T'Xoc]
+ Now, Ta'Ferna, yes. We Tlaxan were involved with the sealing of that forsaken place. Cursed by Kaul during the fall of C'Axtal,
+the Sanctum is horribly corrupted by nature. The only way there is through a fountain hidden underground beyond what you call
+"Farr".
+  &5[The Fountain of Miracles?]
+  &6[T'Xoc]
+ What? That is an absurd name. Is that what the Narsens call it? It's no miracle. It's a guardian. A spirit to ward off
+travelers who would be foolish enough to enter the Sanctum. But I will tell you how to enter. Quite near the hot springs below
+us is a hidden passage, leading to a rushing stream that feeds the Red Xekkj hotspring. That streams runs right to the Sanctum.
+You must purify the water within then return to me.
+  &5[Sounds easy enough.]
+  &6[T'Xoc]
+ Go to the stream and purify the water. Instructions are available there, for those in times of great need. Return to me if you
+succeed at this task, and I can then open the way for you.
+&o  Find the not so hidden passage near the hot springs and solve the puzzle within.
+  Pull levers in this order:  Plain  Top White Plain  Bottom Purple Plain  Top Orange Plain  Top Blue Plain  Bottom Yellow Plain
+Top Yellow Plain  Bottom Orange Plain  Bottom White Plain  Top Purple Plain  Bottom Blue
+  After solving the puzzle:
+&o  Remember to talk to T'Xoc before heading to The Fountain!
+ C:   &o  Back to T'Xoc we go. Table
+ T'Xoc
+  &6[T'Xoc]
+ I can feel it. The waters flow pure again... Are you ready to travel to Ta'Ferna?
+  &5[I am.]
+  &6[T'Xoc]
+ Then go. The way forward will be open to you now.
+&o  [1/4]: Hurriest-er to the Fountain of Miracles and explore within.
+&o  [2/4]: Once you have found your way through, speak to the one that is waiting on the other side.
+&o  [3/4]: If the path closes on you, repurify the stream by redoing the puzzle near the hot springs...
+&o  [4/4]: ...Then speak to T'Xoc to reopen the way once more.
+ Reaching the path:
+  &5As you go deeper through the cave, you being to feel at one with nature, and the world fades away. Table
+ Nai (Sanctum Lobby)
+  &6[Nai]
+ You... you are no Tlaxan. How have you reached Ta'Ferna?
+  &5[I have been sent here by the Tlaxan of Ta'Eldim to search for C'Shura.]
+  &6[Nai]
+ A humble place, grown, beyond simple roots. You have come to the right place, but I fear to allow you within. This place is
+overtaken by wild magics. I am here to guard this way. Why should I allow you within?
+  &5[I have claimed the Tlaxan gods - White, Orange, and Magenta. I can handle myself.]
+  &6[Nai]
+ You indeed have. If you truly believe you will not fall to the wild magics, I will let you pass, with my blessing.
+  &5[A child in Eldim has seen C'Shura alive inside this place.]
+  &6[Nai]
+ I too believe she is. But the wild magics here have tainted all they touch. Nothing within will be as you expect. Pass, with my
+blessing.
+  &5[I purified the spring to open the way, so I could investigate this place.]
+  &6[Nai]
+ Of course you had. There is no other way inside left. I trust my instructions were clear?
+  &5[Very.]
+  &6[Nai]
+ (MISSING)
+  &5[I suppose.]
+  &6[Nai]
+ (MISSING)
+  &5[Not particularly.]
+  &6[Nai]
+ You are here now, however. That's all that matters.
+ SHURIMA'S BIG DAY OFF COMPLETE! Awarded access to   Link   Forsworn Sanctum Forsworn_Sanctum wikilink ike, and a   Link
+Forsworn Sanctum Forsworn_Sanctum wikilink key.

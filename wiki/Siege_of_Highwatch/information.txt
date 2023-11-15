@@ -1,0 +1,5 @@
+prerequisites = *&3Sons of the Forest&r
+*&3The Plague&r NPC: Commander Haynes King's Valleytown = Highwatchrewards = *&3Highstorm&r 
+*128 Enchanting Bottles. King's Valleytown = Highwatchrewards = *&3Highstorm&r 
+*128 Enchanting Bottles.town = Highwatchrewards = *&3Highstorm&r 
+*128 Enchanting Bottles.

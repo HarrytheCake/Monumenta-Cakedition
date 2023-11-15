@@ -1,0 +1,4 @@
+prerequisites = None
+ NPC: Lincoln Coords: -798, 87, 1435
+ Celsian Isles Misport
+POI: &3Sunken Ship&r

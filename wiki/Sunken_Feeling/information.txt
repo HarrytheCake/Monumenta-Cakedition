@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Cropmaster Afondo Coords: -715, 95, 1439
+ Celsian Isles Misport

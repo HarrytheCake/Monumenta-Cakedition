@@ -1,0 +1,5 @@
+rewards=* &3Pelias' Last Step&r
+* a Brown Dungeon Key
+* Access to Brown Wool Teleporter
+* 1 &3Hyperchromatic Archos Ring&r
+* Access to a Shortcut to &3Arx Spirensis&r and &3Submerged Citadel&r

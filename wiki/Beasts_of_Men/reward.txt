@@ -1,0 +1,5 @@
+rewards = *&3Fallen Menagerie|Orange Dungeon&r Key
+* &3Cyrar's Sight&r
+* 64 Arrows of Slowness
+* Full Access to the &3Fallen Menagerie|Orange Dungeon&r Lobby Trader
+* 10 Anvils

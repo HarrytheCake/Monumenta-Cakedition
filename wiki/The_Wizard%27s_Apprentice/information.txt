@@ -1,0 +1,11 @@
+prerequisites = &3An Alcoholic Accord&r NPC: Izzy Celsian Islestown = Mistportstarting_npc_coordinates = -738, 83, 1334rewards = *&3Vargos' Old Wand&r}} Table     
+ Izzy  
+ mediawiki {{Color NPC: Izzy Celsian Islestown = Mistportstarting_npc_coordinates = -738, 83, 1334rewards = *&3Vargos' Old Wand&r}} Table     
+ Izzy  
+ mediawiki {{Colorstarting_npc_coordinates = -738, 83, 1334rewards = *&3Vargos' Old Wand&r}} Table     
+ Izzy  
+ mediawiki {{Color Celsian Islestown = Mistportstarting_npc_coordinates = -738, 83, 1334rewards = *&3Vargos' Old Wand&r}} Table     
+ Izzy  
+ mediawiki {{Colortown = Mistportstarting_npc_coordinates = -738, 83, 1334rewards = *&3Vargos' Old Wand&r}} Table     
+ Izzy  
+ mediawiki {{Color

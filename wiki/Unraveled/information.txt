@@ -1,0 +1,5 @@
+prerequisites = * &3A Wolf in Witch's Clothing&r
+ NPC: Bhairavi Coords: -279 867-652
+ Architect's Ring Galengarde
+Difficulty = Medium
+Length = Hard

@@ -1,0 +1,5 @@
+prerequisites = * &3Borrowed Time&r
+ NPC: Vargos Coords: -740 82 1337
+ Celsian Isles Mistport
+Difficulty = Very Hard
+Length = Very Long

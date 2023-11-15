@@ -1,0 +1,4 @@
+prerequisites = None
+ NPC: Suri Coords: -1580, 133, 134
+ King's Valley Oceangate
+POI: &3Toxin Lab&r

@@ -1,0 +1,16 @@
+ NPC: Private Matthias King's Valleytown = Nyrstarting_npc_coordinates = -135, 100, -108related_poi=&3Axtan Monastery&rrewards = &3Monk's Robe&r}} 
+&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same Table     
+ Captain Tobias  
+ mediawiki {{Colorstarting_npc_coordinates = -135, 100, -108related_poi=&3Axtan Monastery&rrewards = &3Monk's Robe&r}} 
+&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same Table     
+ Captain Tobias  
+ mediawiki {{Color King's Valleytown = Nyrstarting_npc_coordinates = -135, 100, -108related_poi=&3Axtan Monastery&rrewards = &3Monk's Robe&r}} 
+&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same Table     
+ Captain Tobias  
+ mediawiki {{Colortown = Nyrstarting_npc_coordinates = -135, 100, -108related_poi=&3Axtan Monastery&rrewards = &3Monk's Robe&r}} 
+&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same Table     
+ Captain Tobias  
+ mediawiki {{Colorrelated_poi=&3Axtan Monastery&rrewards = &3Monk's Robe&r}} 
+&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same Table     
+ Captain Tobias  
+ mediawiki {{Color

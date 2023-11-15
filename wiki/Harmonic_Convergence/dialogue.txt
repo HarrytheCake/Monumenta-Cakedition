@@ -1,0 +1,55 @@
+ Table
+ Harmonious Spirit
+  Color|orange|[Harmonious Spirit]
+ A utopia for but a few, or so they said. Yet here I am, stuck in my misery. Was I forsaken, or was I right all along?
+  Color|purple|[I'm sorry to interrupt your eternity of suffering, but what are you talking about?]
+  Color|purple|[Good luck with your problems, ghost.]
+  Color|orange|[Harmonious Spirit]
+ ...You can see me? No one has been able to see me before... which is largely why I don't have to pay rent.
+  Color|orange|[Harmonious Spirit]
+ Hm. Perhaps you have a strong connection to souls. My tale is long, do you wish for the entire story, or the short version?
+  Color|purple|[The short version.]
+  Color|purple|[The long version.]
+  Color|orange|[Harmonious Spirit]
+ Well, you are getting the long version- I need to vent.
+  Color|orange|[Harmonious Spirit]
+ My people lived in harmony with the world. We split into four groups, each aligned to a season. Part of our duty was to protect
+our greatest treasure, an item of immeasurable power.
+  Color|purple|[A wool?]
+  Color|purple|[What was it?]
+  Color|orange|[Harmonious Spirit]
+ I really don't remember- none of us on the outside did. However, those inside knew, and every year they chose one person from
+each of the four groups to join them inside. Once inside, they would grant their people all sorts of wonderful gifts and
+blessings. It was an honor to be chosen... for most, anyway.
+  Color|purple|[Most?]
+  Color|purple|[So you weren't happy.]
+  Color|orange|[Harmonious Spirit]
+ Indeed, I was happy in my village. I neither wanted to leave, nor did I trust those that had went before me. I can't really say
+why, but something felt off about the whole thing. There were too many unanswered questions. I fought against the system.
+&o  1/4 - Visit the Spring Shrine.
+&o  2/4 - Visit the Summer Shrine.
+&o  3/4 - Visit the Fall Shrine.
+&o  4/4 - Visit the Winter Shrine.
+ Once you completed all four shrines, return to the Harmonious Spirit. Table
+ Harmonious Spirit
+  Color|orange|[Harmonious Spirit]
+ You return. Have you had success?
+  Color|purple|[I have visited all four shrines.]
+  Color|orange|[Harmonious Spirit]
+ Yes, I detect the blessings upon you. You are now ready to enter the Arboretum. At one point, it served as a rite of passage
+for my people to travel to the Arboretum's doors, but I dare not guess what it is like now.
+  Color|purple|[Couldn't I have just broken inside?]
+  Color|orange|[Harmonious Spirit]
+ No... I mean technically? However, if something dangerous had been in there, it might have been able to escape if you had gone
+about it that way. In addition you wouldn't have been recognized by the magic of the area and would find it difficult to attune
+the teleporters to get back out. Regardless, you will need to head through the Sealed Descent to get to the Arboretum.
+&o  Go through the Sealed Descent to get to the Arboretum. Table
+ Harmonious Spirit
+  Color|orange|[Harmonious Spirit]
+ You have arrived. This is the entrance to our most sacred of sites- I have built this area to serve as a sort of lobby for you.
+Please, enter the Arboretum and take what lies within, whatever that might be. Be on your guard, however- I died in there, after
+all.
+ HARMONIC CONVERGENCE COMPLETE!
+ Awarded a   Link   Pink Harmonic_Arboretum wikilink Key, a Pink Shulker Box, and Full access to the   Link   Pink
+Harmonic_Arboretum wikilink Dungeon Trader.
+Link   Category:Quests Category:Quests wikilink

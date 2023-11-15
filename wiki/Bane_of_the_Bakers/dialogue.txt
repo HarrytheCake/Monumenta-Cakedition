@@ -1,0 +1,56 @@
+&o  Retrieve   Link   Stefan's Stefan wikilink pretzel recipe from the bakers in the bakery. LineBreak &o  Using the official
+Monumenta Resource Pack is highly recommended. Table
+ Stefan
+  Coordinates: [-865, 104, 31]
+   Color|orange|[Stefan]
+ You look like the kind of guy who likes pretzels. You know who makes pretzels? Me, Stefan, young pretzel maker extraordinaire.
+  Color|purple|[Aren't you a bit young to be running a business?]
+  Color|orange|[Stefan]
+ I don't need your sass. If you don't want a pretzel go buy some boring bread, I hear that's what all the boring old fogies eat.
+  Color|purple|[Where are your pretzels?]
+  Color|orange|[Stefan]
+ Well, I've had a bit of an issue. The bakers stole my recipe. Don't ask me why, they're just jerks and like taking things from
+little kids. If you could get my recipe back I'll give you all the pretzels you can eat and more. I'm almost out of stock to
+sell!
+  Color|purple|[I'll get the recipe.]
+  Color|orange|[Stefan]
+ Thanks! That baker will get what he deserves. You can find him in the bazaar along the eastern path from the plaza
+  Color|purple|[Maybe I'll have time later.]
+  Color|orange|[Stefan]
+ Fine, be that way. I'll just be here, young and sand, because some old person wouldn't help me.
+&o  C: Ask the Head Baker about his pretzel recipe Table
+ Head Baker
+  Coordinates: [-811, 102, 85]
+   Color|orange|[Head Baker]
+ Hello there! Is there any way I can help you?
+  Color|purple|[Do you have a pretzel recipe I could borrow?]
+  Color|orange|[Head Baker]
+ Gah! That dastardly kid must have sent you for it. No, we're not giving our recipe away, especially not to that kid. Go tell
+him he's out of luck
+&o  C: Tell   Link   Stefan Stefan wikilink about the Head Baker's unwillingness to give up the recipe Table
+ Stefan
+  Coordinates: [-865, 104, 31]
+   Color|orange|[Stefan]
+ I should have guessed they wouldn't give it up that easily. We're going to have to take it ourselves.
+  Color|orange|[Stefan]
+ So here's the plan. The bakers have a large kitchen below their shop. The entrance is right behind the shop and leads down to a
+trap filled baking and storage area. You're going to have to go in there and hunt for the recipe and then bring is back to me.
+I'd be careful, you have to jump around a bunch and I'm scared of heights, which is why I haven't gone down there myself. Good
+luck!
+&o  C: Break into the bakers' kitchen and steal the recipe!
+  Tip: This jumping puzzle (and jumping puzzles throughout Monumenta) uses redstone torches to mark where to go. OrderedList
+DefaultStyle DefaultDelim Plain  Enter the trapdoor by pressing the button at -805 98 107. Plain  Head to the north-west corner
+of the room (with furnaces). Jump on the lowest furnace, turn east and jump on that bar, and jump onto the ladder. Plain  Jump
+down from the raised quartz floor onto a crate with slime blocks. Open the two trapdoors beneath the ladder and climb up. Plain
+Jump off the ladder's top onto the quartz railing. Move to the elevated pumpkin crate. Plain  Climb up another ladder hidden
+near the pumpkins. Walk on the west-most fences to reach above the melon crate. Plain  Press the button at -708 82 139. Plain
+Use the stack of haybales on the ground near this room's entrance to jump atop crates. Use the newly blown up platform to climb
+up to where the recipe is held.
+  After retrieving the recipe:
+&o  C: You've got the recipe! Head back to   Link   Stefan Stefan wikilink  ! Table
+ Stefan
+  Coordinates: [-865, 104, 31]
+   Color|orange|[Stefan]
+ Awesome! This recipe is perfect! Here, I baked some pretzels just for you. These should keep you going for a while. Also,
+here's a fun little toy I use sometimes. It's really great for helping me focus and might help you too!
+ '''   Awarded Fidget Spinner and 32 Pretzels!

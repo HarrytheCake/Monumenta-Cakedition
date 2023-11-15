@@ -1,0 +1,6 @@
+prerequisites = &3The Lost Empire&r NPC: Harmonious Spirit Celsian Islestown = Frostgatestarting_npc_coordinates = -1560, 95, 952rewards = *Pink Shulker Box
+*&3Harmonic Arboretum NPC: Harmonious Spirit Celsian Islestown = Frostgatestarting_npc_coordinates = -1560, 95, 952rewards = *Pink Shulker Box
+*&3Harmonic Arboretumstarting_npc_coordinates = -1560, 95, 952rewards = *Pink Shulker Box
+*&3Harmonic Arboretum Celsian Islestown = Frostgatestarting_npc_coordinates = -1560, 95, 952rewards = *Pink Shulker Box
+*&3Harmonic Arboretumtown = Frostgatestarting_npc_coordinates = -1560, 95, 952rewards = *Pink Shulker Box
+*&3Harmonic Arboretum

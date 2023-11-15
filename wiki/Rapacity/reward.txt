@@ -1,0 +1,4 @@
+rewards = *&3Varcosa's Doublet&r
+*&3Grasp of Avarice|Purple&r Key
+*Full access to &3Grasp of Avarice|Purple Dungeon&r Trader
+*Access to &3Rush of Dissonance&r from &3Harmonic Arboretum|Pink&r Lobby

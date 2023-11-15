@@ -1,0 +1,251 @@
+ Table
+ Tiffy
+  Color|orange|[Tiffy]
+ I have been waiting for you,      Color|purple|[Do I know you?]
+  Color|orange|[Tiffy]
+ If you did, I might have reason to worry. I am here on behalf of the Glass. We have come across some intel that you need to
+know, but it is too sensitive to discuss here. Pirates have such bad manners at times.
+  Color|purple|[Where do I need to go?]
+  Color|orange|[Tiffy]
+ I have prepared a teleport there, just let me finish this cuppa first. Talk to me when you are ready to go.
+&o  Talk to Tiffy to go to the Glass Meeting. Try to act presentable and stay put when asked to. Table
+ Tiffy
+  Color|orange|[Tiffy]
+ Ah, always feel better after a good cuppa. Are you ready to go the the meeting?
+  Color|purple|[Yes, I am.]
+  Color|orange|[Tiffy]
+ Please make sure to listen to them carefully, our safety is at stake.
+  Color|orange|[Duchess Emmeline]
+ Ah,      Color|orange|[Octavius]
+ Why do I have to sit across from them? We have a huge table.
+  Color|orange|[Duchess Emmeline]
+ Are you questioning my judgement in front of our guest?
+  Color|orange|[Octavius]
+ N... No, I would never.
+  Color|orange|[Duchess Emmeline]
+ That is good to hear. To your seat,      Color|orange|[Duchess Emmeline]
+ Come now, don't be a stranger, help yourself to some tea.
+  Color|purple|[I take it that you're with the Glass?]
+  Color|orange|[Duchess Emmeline]
+ Oh dear, did they actually go with that one? I told them you wouldn't be foolish enough to think that a spy would risk
+revealing themselves, but I guess I was mistaken. That being said, I am a bit disappointed you don't remember me.
+  Color|purple|[What do you want with me? Why am I here?]
+  Color|orange|[Duchess Emmeline]
+ I merely wished to meet with the new leader of Mistport and ensure that our business agreements will continue moving forward.
+I'm sure you would have made an appointment to see me eventually, but I am very busy, so I decided to set up the meeting myself.
+  Color|orange|[Octavius]
+ You can't trust anything that adventurer says. They complicated our business in the valley and sent Murano after me. They will
+just end up betraying you!
+  Color|orange|[Duchess Emmeline]
+ Remind me again, Octavius... Who is in charge here?
+  Color|orange|[Octavius]
+ Y-you, but it is far too risky. We should just kill them now.
+  Color|orange|[Duchess Emmeline]
+ Hush, drink your tea, everything will be alright.
+  Color|orange|[Octavius]
+ Okay, if you say so... GAHHK
+  Color|orange|[Duchess Emmeline]
+ He'll live. Although, tongues and that toxin don't mix well. With any mercy, we'll never have to hear his blathering again.
+Where were we again? Oh right, our continuing partnership.
+  Color|purple|[A partnership? I'm listening.]
+  Color|orange|[Duchess Emmeline]
+ I'm glad you understand the value of your position. You seem much easier to work with than Xeno was. I should have gotten rid
+of him instead of waiting for him to get himself killed.
+  Color|orange|[Duchess Emmeline]
+ To get to the point. I have scheduled a meeting between you and the diplomats of Chillwind and Ishnir. You can thank me for
+advancing your cities relations with the kingdoms by spying on them for me. I don't want much, just a few pieces of blackmail
+that I can use against them later.
+  Color|purple|[Wouldn't they know who leaked the information?]
+  Color|orange|[Duchess Emmeline]
+ Perhaps, but what are they going to do about it? Blackmail has a way of keeping people quiet for quite a while, and they are
+easy enough to dispose of if it stops being effective.
+  Color|orange|[Duchess Emmeline]
+ The diplomats are already on their way, so I would advise getting ready to meet with them. You need to get your city in order,
+first impressions and all that. I expect results and can't guarantee your city will be happy should you fail.
+  Color|purple|[I assume that is a threat?]
+  Color|orange|[Duchess Emmeline]
+ Not at all, it is more common sense. Many of your citizens are fans of mine. I can't guarantee that they wouldn't react
+violently, or try to assassinate someone you care about. Trust me, if I was threatening you, it would be far more obvious. I
+want to build a good working relationship with you, and that requires you not being randomly murdered.
+  Color|orange|[Duchess Emmeline]
+ Salieri, please see our guest out when they are ready to depart.
+&o  Speak to Salieri. He will give you something and help you leave. Table
+ Salieri
+  Color|orange|[Salieri]
+ I will try to keep this short. You are too charismatic to be a spy on your own. So I was told to give you a communication
+device. With it, you will be able to both detect and listen into conversations. My employer would rather you keep our
+involvement a secret. Is that understood?
+  Color|purple|[I understand.]
+  Color|orange|[Salieri]
+ Good, here is the device.
+  Color|orange|[Salieri]
+ I assume you know what needs to be done. When you get back to Mistport, talk to the person that brought you here. Are you ready
+to go?
+  Color|purple|[I'm ready to leave.]
+  Color|orange|[Salieri]
+ Very well. Let me give you a one way trip back to that "agent".
+  Color|red|You wake up near Tiffy with a horrible headache. Salieri technically did what he said he would.
+  Color|orange|[Tiffy]
+ Oh, you are still alive. I’m glad, but I’m probably in a lot of trouble now.
+  Color|purple|[It isn’t smart to lie to the person in charge of a pirate city.]
+  Color|purple|[Diplomats are on their way, we have to get ready.]
+  Color|orange|[Tiffy]
+ The Duchess was going to kill me, as well as my family, I figured you would get bored after killing me if she let you live.
+  Color|purple|[I don’t have time for this, we have to get the city ready.]
+  Color|orange|[Tiffy]
+ You should probably speak to the Captain, I think her name is Indigo? She should be able to help coordinate everything. I'll
+try to help, but I probably won’t be trusted much, after what I did.
+&o  Speak to Indigo about the current situation with the diplomats. Table
+ Captain Indigo
+  Color|orange|[Captain Indigo]
+ Hello there Captain      Color|purple|[We have a situation.]
+  Color|orange|[Captain Indigo]
+ A situation? What is it this time?
+  Color|purple|[Diplomats from the two kingdoms are on their way.]
+  Color|orange|[Captain Indigo]
+ Why would they come here on such short notice, or here at all? Security is going to be needed to keep them safe, and we have no
+food, decorations, or housing ready. Can we tell them to wait?
+  Color|purple|[The Duchess invited them on our behalf.]
+  Color|orange|[Captain Indigo]
+ The Duchess?
+  Color|purple|[Yes the Duc...]
+  Color|gray|The communications device spontaneously starts to heat up
+  Color|purple|[...Never mind, we can't hold them off.]
+  Color|orange|[Captain Indigo]
+ You really do have odd associates, Captain      Color|orange|[Captain Indigo]
+ Alright, I'll take care of it. Just speak to me when you're ready to proceed
+&o  1/2 - Tell Indigo that you are ready to proceed.
+&o  2/2 - Once the diplomats arrive speak to either one of them. Table
+ Captain Indigo
+  Color|orange|[Captain Indigo]
+ Are you ready to go greet our guests?
+  Color|purple|[I am ready.]
+  Color|orange|[Captain Indigo]
+ We barely had enough time to make things presentable. Hopefully it is good enough. The diplomats should be here shortly.
+  Color|orange|[Captain Indigo]
+ Sounds like they’re here, it’s showtime, Captain      Color|orange|[Torren, Ishnir Diplomat]
+ Greetings, Captain      Color|orange|[Wilhelm, Chillwind Diplomat]
+ As does the Queen. I must say, Captain      Color|orange|[Torren, Ishnir Diplomat]
+ Speaking of walking the plank… You sure brought a big ship this time, Wilhelm.
+  Color|orange|[Wilhelm, Chillwind Diplomat]
+ They said something about needing to show our country’s power. Thank you again for having your ship moved out to sea so we
+could dock.
+  Color|orange|[Torren, Ishnir Diplomat]
+ As much as we’d like to stay and chat, we both need to check in with our advisors. We will speak soon, Captain
+Color|orange|[Captain Indigo]
+ Those two looked oddly comfortable with each other, considering their countries are on the brink of war. I'll go with them so
+they don't get lost.
+&o  Talk to Indigo and find out where some of your guests went. Table
+ Captain Indigo
+  Color|orange|[Captain Indigo]
+ Oh hey      Color|purple|[Have you seen where any of our guests went?]
+  Color|orange|[Captain Indigo]
+ An Ishnir Navigator went outside with some of the crew. Izzy went in that direction as well and might be able to help.
+&o  Speak to Izzy for help finding a way to spy on a group of party goers. Table
+ Izzy
+  Color|orange|[Izzy]
+ Hey      Color|purple|[Have you heard anything interesting, Izzy?]
+  Color|orange|[Izzy] Not entirel
+ y, these guys seem to be talking about the Ishnir Diplomat but I can’t hear them clearly. If you really wanted to listen to
+them for some reason you could probably use a communication device to do so. Not sure where one would find one of those though.
+  Color|purple|[They will stop talking if they notice me though.]
+  Color|orange|[Izzy]
+ Looks like you could get on the balcony of that house over there, the one the Chef's are in. You could likely listen in from
+there.
+&o  Use the Spymaster 9001 to listen from the balcony. Table
+ Spymaster 9001
+  Color|orange|[Ishnir Navigator]
+ Now get this, you’ve all seen how friendly the boss is with the Chillwind diplomat. The two have been friends for years, I tell
+you! At least, that’s what I heard from one of my sources.
+  Color|gray|You decide that you should return to Indigo. Maybe she has seen someone else.
+&o  Speak to Indigo to inquire about the Chillwind. Table
+ Captain Indigo
+  Color|orange|[Captain Indigo]
+ Did you find the crew you were looking for,      Color|purple|[More or less, did you happen to see any other groups, by
+chance?]
+  Color|orange|[Captain Indigo]
+ I saw some Chillwind crew going east toward the docks. Vargos went out that way as well, maybe he can help you.
+&o  Speak to Vargos for more information on the location of Chillwind Sailors. Table
+ Vargos
+  Color|orange|[Vargos]
+ Ah, good to finally get some fresh air. Oh, Captain      Color|purple|[Did you happen to see any Chillwind Crew come through
+here?]
+  Color|orange|[Vargos]
+ Yes, one of the crew members seemingly had gotten landsick. They took him aboard the ship for him to recover.
+&o  Use the Spymaster 9001 to listen on a ship. Table
+ Spymaster 9001
+  Color|orange|[Landsick Chillwind Sailor]
+ *HURF* The diplomat saw me and some glowy thing came out of his hands and I started feeling a bit better. It was magic I tell
+you. Our own diplomat was using magic!
+  Color|orange|[Chillwind Quartermaster]
+ You must be seeing things. I was there with you and I didn't see anything out of the ordinary. Perhaps your landsickness made
+you imagine it?
+  Color|orange|[Landsick Chillwind Sailor]
+ You are probably *URGH* right. I'll probably forget all about it when I'm feeling better. He isn't that type of person.
+  Color|gray|You decide that you should return to Indigo. Maybe she has seen someone else.
+&o  Speak to Indigo to inquire about the Ishnir. Table
+ Captain Indigo
+  Color|orange|[Captain Indigo]
+ Did you find whatever you were looking for,      Color|purple|[Yeah, while unlikely, have you seen a third group pass through
+here?]
+  Color|orange|[Captain Indigo]
+ Well, the Ishnir Adviser has been upstairs, though good luck getting up there without making a ruckus. Levyn was suppose to be
+pruning the vines outside, he might be able to help you.
+&o  Speak to Levyn about how to get upstairs. Also make sure he is okay. Table
+ Levyn
+  Color|gray|Levyn looks heavily dazed and battered.
+  Color|orange|[Levyn]
+ Uuuughghhhhh…..
+  Color|purple|[Are you ok?]
+  Color|orange|[Levyn]
+ Yaarrrrrr…. I’ll be fine, just fell off the building and hit me head.
+  Color|purple|[Well, do you happen to know a way to climb onto the balcony upstairs?]
+  Color|orange|[Levyn]
+ Aye, I didn’t trim back the vines before the party started, as you can see. You could use them to climb up. I think I'm going
+to rest here a bit longer.
+&o  Use the Spymaster 9001 to listen in from the balcony. Table
+ Spymaster 9001
+  Color|orange|[Ishnir Advisor]
+ I must say, the Frostgate monarchy is more hypocritical than I’d ever have imagined. They tout being able to do everything they
+have by the sheer will of their people; yet they have been using magic acquired from defectors to the sceptre...
+  Color|orange|[Unknown Voice]
+ Alright, this has gone far enough, coetus participes mentem!
+  Color|orange|[Torren, Ishnir Diplomat]
+ I did not expect to have to meet again under these circumstances, Captain      Color|orange|[Wilhelm, Chillwind Diplomat]
+ However, I dare say this was expected. I could see the distress in your eyes, and the entire affair reeks of Emmeline's
+handiwork. Although, the party was pretty well executed for the time you likely had. I don't want you breaking things within my
+mind, so I would like to ask you to stay still.
+  Color|purple|[Wait, you know the Duchess?]
+  Color|orange|[Torren, Ishnir Diplomat]
+ Yes, we both do. She's been a thorn in both of our sides for years, even before we both got our current positions.
+  Color|orange|[Wilhelm, Chillwind Diplomat]
+ She can't hear anything we say as long as we are talking to each other like this, however I can't maintain this link for much
+longer. Captain      Color|orange|[Torren, Ishnir Diplomat]
+ No, WE have a request. We cannot ask blood to be spilt, but for the good of the isles, we ask that, by some means, Emmeline is
+dealt with. She jeopardizes the stability of the region with every breath she takes. One way or another, she needs to be
+stopped.
+  Color|purple|[Why me?]
+  Color|orange|[Wilhelm, Chillwind Diplomat]
+ You are the Captain of Mistport. You are one of the easiest ways for her to spread her influence around.
+  Color|orange|[Torren, Ishnir Diplomat]
+ If we act like this talk never happened, she will surely contact you again. Eventually, she may even drop her guard...
+Wilhelm's focus is waning fast, thankfully it lasted long enough.
+  Color|orange|[Wilhelm, Chillwind Diplomat]
+ Yes, soon this link will break, and the party will come to an end. Once it does, we shall return to our own countries. To sate
+a portion of your probable curiosity, Captain    &o  Speak to Tiffy about what has happened. Table
+ Tiffy
+  Color|orange|[Tiffy]
+ Ello, ol’ chap, how did the mission go?
+  Color|purple|[She should have the information she requested. Here's the communicator back.]
+  Color|orange|[Tiffy]
+ Jolly good show that is. Here's your reward...
+  Color|purple|[You can cut out the accent, you have a lot to answer for.]
+  Color|orange|[Tiffy]
+ Indeed I do ol' chap, but so do you at this point. Neither of us chose to become employed by her. Also, I don't know what
+accent you mean. Anyway, here is your reward, a Spymaster 9001.
+  Color|purple|[What? That's it?]
+  Color|orange|[Tiffy]
+ What were you expecting? The Duchess doesn't pay easily, and that orb is worth more than all of your possessions put together.
+Besides, the advice from the guy on the other side is PRICELESS... Eh, take this too, it's not like I need it anymore.
+ AN UNLIKELY PARTNERSHIP COMPLETE! SoftBreak  Awarded   Link   Tiffy's Shield Tiffy's_Shield wikilink and a Spymaster 9001.
+Link   Category:Quests Category:Quests wikilink

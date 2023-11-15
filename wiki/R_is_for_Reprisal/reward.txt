@@ -1,0 +1,1 @@
+rewards = &3Crest of Celsia&r if &3Kingdom of Lies&r is already complete.

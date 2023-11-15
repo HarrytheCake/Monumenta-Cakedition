@@ -1,0 +1,2 @@
+rewards = *&3Silver Knight's Hammer&r
+*Unlocks &3Warlock&r Class

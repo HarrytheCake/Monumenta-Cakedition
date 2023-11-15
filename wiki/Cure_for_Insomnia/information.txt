@@ -1,0 +1,5 @@
+prerequisites = None
+ NPC: Ephesius Coords: -410 173 -123
+ Architect's Ring New Antium
+Difficulty = Hard
+Length = Long

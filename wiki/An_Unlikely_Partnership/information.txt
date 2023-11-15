@@ -1,0 +1,2 @@
+prerequisites = &3Vault of Glass&r
+&3The Foreign Soldier&r NPC: Tiffy Celsian Islestown = Mistportstarting_npc_coordinates = -817, 81, 1326starting_npc_coordinates = -817, 81, 1326 Celsian Islestown = Mistportstarting_npc_coordinates = -817, 81, 1326town = Mistportstarting_npc_coordinates = -817, 81, 1326

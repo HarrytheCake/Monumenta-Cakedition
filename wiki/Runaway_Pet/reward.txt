@@ -1,0 +1,4 @@
+rewards =
+* 64 Enchanting Bottles
+* &3Mr. Snuggles Doll&r
+* &3Tyrolean Boots&r

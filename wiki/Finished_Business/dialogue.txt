@@ -1,0 +1,205 @@
+&o  Complete an interview with your number one fan! Come on, you have a fan now! Table
+ Taymian
+  Coordinates: [-826, 102, 39]
+   &6[Taymian]
+ Oh my gods it's you! It's really you!
+  &5[Um, hello?]
+  &5[It's me! IT's really me!]
+  &6[Taymian
+ I've been basically living here for weeks hoping you'd finally make an appearance, [player]. I can't believe we've never met
+before!
+  &5[I can, there's a lot of people out there.]
+  &6[Taymian
+ I mean, yes, but I'm like, your biggest fan. Haven't you read my critically acclaimed novels?
+  &5[Novels? No, I prefer my lore books below 5 pages usually.]
+  &6[Taymian]
+ Oh, that's unfortunate. They're quite popular! Of Shamans and Spells is doing really well right now!
+  &5["Of Shamans and Spells"?]
+  &6[Taymian]
+ Look, I can't just write them exactly like you did them. It sounded way better than "Of Monks and Magic" as well. Say, Atess,
+can I do an interview with you?
+  &5[Um, Atess?]
+  &6[Taymian]
+ Oh uh, sorry. That's what I named the protagonist in the books. I didn't just want to use your name without your blessing, see.
+So, about that interview?
+  &5[I suppose.]  Header start_of_quest  Start of Quest
+&o  C: Speak with Taymian. Table
+ Taymian
+  &6[Taymian]
+ Hurrah! I'm working on a compendium of sequels to my latest, Ta'Eldim Ta'Encounters, and I hear from a reliable source that one
+of your adventures was uh... mostly in your head? What did they call it... Reflection Time? It's not a great name. I'm thinking
+"Adventure Time"!
+  &5[...It had a lot going on with mirrors and...]
+  &6[Taymian]
+ Anyway, I wanted to get the story straight from the horse's mouth about a couple of your quests. Adventure Time, Study in
+Scarlet, and Crewvengers Crewsemble are the working titles for the novels!
+  &5[I'm not even sure I know which of my adventures you're talking about anymore...]
+  &6[Taymian]
+ Don't worry about it! You don't have to know, I just have to root around and find out.
+  &5[What?]
+  &6[Taymian]
+ I followed up on one of your old adventures, Class Half Full, and found the ruins of Virus' machine that he'd kept Nellie in in
+real life! It was crazy seeing the story pop off the page. Anyway, I spent some time reworking it a bit to be safe and figured
+hey, I'll strap you in and I can check out your memories for inspiration!
+  &5[Um... I'm feeling less and less sure about this by the second.]
+  &6[Taymian]
+ Don't worry, it's totally safe, I promise! I'll mark where I'm renting space on your quest compass. I'm upstairs in Apartment
+230 upstairs. Come meet me there and we'll get started!
+&o  C: Speak to Taymian. They are upstairs in Apartment 230. Table
+ Taymian (Apt. 230)
+  Coordinates: [-820, 119, 28]
+   &6[Taymian]
+ Alright! Welcome to the Imaginarium Memorandum!
+  &5[Thank you for the uh, grand welcome... biggest fan.]
+  &6[Taymian]
+ Oh my gods, I never told you my name, did I? I'm Taymian. I'm a famous author, telling tales of adventure across the King's
+Valley and beyond! But you know all of that part. Sorry.
+  &5[It's fine. Definitely.]
+  &6[Taymian]
+ Right, you're going to pick which adventure you'd like to relive, I'll get it queued up in the system, and we'll send you in to
+scope it out and make sure the details all look correct! Once you're done with that, bam! We've interviewed and I can get back
+to writing your amazing adventures!
+  &5[If you insist.]
+  &6[Taymian]
+ Which memory would you like to visit?
+  &5["Adventure Time".]
+  &5["Study in Scarlet".]
+ Note: Either path can be taken. After completing either task you be teleported back to the apartment and asked to do the other.
+Header adventure_time  "Adventure Time" Table
+ Taymian (Adventure Time)
+  &6[Taymian]
+ So I understand that this adventures of yours was like, a recap episode, but with invisible jumping, right? I guess what I
+wanna see is your finishing of the last puzzle so I can really understand your psyche as you went through it! It's a great
+invisible parkour course, with the reflections showing where to jump! You got this, Atess!
+  &5[This isn't right at all. It had a light-based puzzle and the blocks would appear and...]
+  &6[Taymian]
+ Maybe I should put some lava under it in the novel!
+  &5[Please don't do that.]
+  &6[Taymian]
+ I've gotta spice this up a bit! It'll at least be a good entry point for new readers!
+&o  C: Complete the barrier parkour course.
+ Image   Orange squares = Barrier blocks. (Note some have height differences) Barrier_Parkour.png Orange squares = Barrier
+blocks. (Note some have height differences) LineBreak
+  Taymian (Study in Scarlet)
+  &6[Taymian]
+ Right, so in this one you went into a bunch of memories and tried to solve a mystery right? The big one was some attack on
+Farr? I tried to recreate Farr. Haven't finished the effects on the sky and the forest though, so I've left a green screen for
+now.
+  &5[A what? And wait, this is normal Farr... How do you even know all of this already?]
+  &6[Taymian]
+ I had to scan your memories a bit to start building these stages in the system!
+  &5[I really don't understand.]
+  &6[Taymian]
+ That's okay, I do! Now, go find the clues! You're entering the memories of... Watson? I think? Searching for what happened to
+the Herring, yes? Go find the clues left around and work out where to travel after!
+&o  C: [1/4]: Search for clues. You need to find the Herring.
+&o  C: [2/4]: Search for clues. You need to find the Herring.
+&o  C: [3/4]: Search for clues. You need to find the Herring.
+&o  C: [4/4]: Search for clues. You need to find the Herring.
+  Invader of the Forest (Head)
+  Coordinates: [-2715, 159, -91]
+   &6[Invader of the Forest]
+ How powerful you must be to defeat me. We shall have our revenge. Oh great conqueror, you have given me a noble death!
+  &5[They don't talk like that. Did you even try to be accurate?]
+  &6[Invader of the Forest]
+ You shall never find what you are looking for. You shall down before our forces.
+   Serpensia Knot (Head)
+  Coordinates: [-2730, 157, -43]
+   &6[Serpensia Knot]
+ HISS...meow.
+  &5[They are snake people. How did you get them confused with cats?]
+  &6[Serpensia Knot]
+ Purr...
+   Serpensia Venomlord (Head)
+  Coordinates: [-2632, 155, -29]
+   &6[Serpensia Venomlord]
+ Snake sounds.
+  &5[Did they just say "Snake sounds"? When has a Serpensia ever said that?]
+  &6[Serpensia Venomlord]
+ Sad defeated snake sounds.
+   Serpensia Warrior (Head)
+  Coordinates: [-2648, 156, -76]
+   &6[Serpensia Warrior]
+ ...
+  &5[Did you already run out of things for them to say?]
+  &6[Serpensia Warrior]
+ Yes.
+  After every head was talked to:
+  &5[Why would I decide to check there?]
+&o  C: Head into the Sewer, you need to find the Herring!
+ After clicking on the Sewer Grate:
+  &6[The Sewer Grate]
+ "You enter the sewers, following the trail of clues. Elementary!"
+&o  C: Find the Herring and save the day! Table
+ Taymian (Study in Scarlet Sewers)
+  &6[Taymian]
+ And thus, with all your hard detective work, you found the Herring!
+  &5[Look, Taymian. I don't know how to tell you this. This is all wrong. This isn't even Farr's sewers.]
+  &6[Taymian]
+ Wait really?
+  &5[Really. I *was* a man named Herring. I was looking for one of his Protegees, Minerva.]
+  &6[Taymian]
+ I'm sorry, this seems like a lot of backstory my readers aren't prepared for.
+  &5[It's already available in a comic form anyway.]
+  &6[Taymian]
+ Oh. I might skip writing this one then... Maybe once the second part is out! All done here!  Header after_both_paths  After
+Both Paths
+&o  C: Speak to Taymian. They are upstairs in Apartment 230. Table
+ Taymian (Apt. 230)
+  Coordinates: [-820, 119, 28]
+   &6[Taymian]
+ Which memory would you like to visit?
+  &5["Crewvengers Crewsemble".]  Header crewvengers_crewsemble  "Crewvengers Crewsemble" Table
+ Taymian (Crewvengers Crewsemble)
+  &6[Taymian]
+ Welcome! Now I believe in this one you were looking to chase the nefarious Calder to the Celsian Isles, so you gathered a crew!
+You navigated the shady underbelly of Nyr to get into the sewers.
+  &5[That's uh... actually pretty close. I wasn't chasing Calder, I was just helping my friend Levyn, however.]
+  &6[Taymian]
+ Awesome! Well, I hope this one gives you a real feeling of adventure. I made a few exciting changes.
+  &5[Taymian... Is that lava? Did you seriously actually put lava here?]
+  &6[Taymian]
+ It was a great idea and I'm sticking to it. Go find your crewmate!
+&o  C: Get to the bar and find your crewmate! Table
+ Taymian (Crewvengers Crewsemble at the Sewer Bar)
+  &6[Taymian]
+ You made it!
+  &5[This is the same sewer you showed me during the other memory.]
+  &6[Taymian]
+ Yeah, sorry... had some last minute budget cuts and... yeah. That's why the lava was here!
+  &5[I really don't understand why your memory machine isn't showing me my memories.]
+  &6[Taymian]
+ Because I made some adjustments! I have to visualize what I'm going to write and let's be real. Your memories? Not gonna cut
+it. But that's not why we're here.
+  &5[Why are we here?]
+  &6[Taymian]
+ This was all about your crew, right? With them through thick and thin! [Player], I want to join your crew.
+  &5[No.]
+  &6[Taymian]
+ But -
+  &5[No. Get me out of here.]  Header the_end  The End
+&o  C: Speak to Taymian. They are upstairs in Apartment 230. Table
+ Taymian (Apt. 230)
+  Coordinates: [-820, 119, 28]
+   &6[Taymian]
+ I don't understand. I tell your stories. Why can't I come along with you and live them up close?
+  &5[Taymian, you're not telling my stories. You're telling your own, but stealing from mine while you do.]
+  &6[Taymian]
+ What? No!
+  &5[I'm being serious. You've clearly got the drive to tell crazy stories, but you're holding yourself back. You're choosing to
+write fanfiction about... me... instead of letting your imagination do its best work.]
+  &6[Taymian]
+ I ... You... You might be right... Oh my gods... I could have been writing my real stories all along.
+  &5[Exactly!]
+  &6[Taymian]
+ I'll tell my publisher. She's going to be so confused. Oh gods, and my readers... I'll have to kill Atess in the books or
+something so people stop asking me about them... Goodness, you've made me feel so free, [Player]! Thank you!
+  &5[You're welcome.]
+  &6[Taymian]
+ Well uh, I guess you can go now. Thanks for your time. Most heroes wouldn't have even stopped to talk to me, yet here we are,
+in a weird machine in the hotel room I broke into.
+  &5[You what?! Actually, you know what? I don't care. This isn't my problem.]
+  &6[Taymian]
+ That's the spirit! I'll send you a copy of my next book, [Player]. Thanks for everything.
+  '''FINISHED BUSINESS COMPLETE!'''
+  Awarded a sense of satisfaction for helping that weird fanfiction author... Ugh.

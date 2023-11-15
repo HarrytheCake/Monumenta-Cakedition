@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Riaz Coords: -98, 154, 459
+ Celsian Isles Rahkeri

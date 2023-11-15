@@ -1,0 +1,227 @@
+ Table
+ Historian Rhodes SoftBreak  Coordinates: -757, 83, 1346
+  Color|orange|[Historian Rhodes]
+ Ah, hello there Captain      Color|purple|[Do you need me for something?]
+  Color|purple|[You don't have to call me captain, you know.]
+  Color|orange|[Historian Rhodes]
+ Oh I know, but where's the enjoyment in that? Let's have some fun with it! Besides, that scraggly jerk Jones constantly stands
+outside my window, and he might skin me like a cat if I don't show respect.
+  Color|orange|[Historian Rhodes]
+ Yes, in fact I do! Tell me, in your adventures through Viridia, did you ever come across the name "Salazar"?
+  Color|purple|[Can't say I know that name.]
+  Color|orange|[Historian Rhodes]
+ Shame, I'll give you brief history lesson then on what I was able to dig up. Salazar, it seems, was the original founder of the
+Viridian Empire.
+  Color|purple|[I may have once or twice.]
+  Color|orange|[Historian Rhodes]
+ Fantastic! From what I was able to dig up in my extensive research since your stride through Viridia, it seems that Salazar was
+the founder of the Viridian Empire.
+  Color|purple|[How does this concern me though?]
+  Color|orange|[Historian Rhodes]
+ Well you see, while I've been able to uncover quite a fair amount of information from the city, it seems all account of
+Salazar's whereabouts post-fall of Viridia... simply don't exist, at least that we have found.
+  Color|purple|[Perhaps he died?]
+  Color|orange|[Historian Rhodes]
+ While it is a possibility, something in my gut tells me that is incorrect. The ruler of one of the three great empires, the
+possessor of the wool of Knowledge, simply dropping dead due to unstable conditions and an experiment that seemingly went south?
+Something doesn't quite sit right with me there. So my question to you is, would you assist me and my team in trying to uncover
+the fate of Salazar?
+  Color|purple|[Sure, I've got the time.]
+  Color|purple|[Why are you so worried about this to begin with?]
+  Color|orange|[Historian Rhodes]
+ I'm a historian! Cataloging as much historical information as I possibly can is what I do best, and this gaping hole in history
+keeps me up at night.
+  Color|purple|[I can't right now, sorry.]
+  Color|orange|[Historian Rhodes]
+ Shame, perhaps if you get some time later.
+  Color|orange|[Historian Rhodes]
+ Fantastic! When you are prepared to head out, let me know.
+&o  Speak to Historian Rhodes about the place he wants to take you. Table
+ Historian Rhodes
+  Color|orange|[Historian Rhodes]
+ Are you ready to head out?
+  Color|purple|[Where are we going?]
+  Color|orange|[Historian Rhodes]
+ Oh, you'll see when we get there. My team has put in quite a bit of work since the last time you saw it.
+  Color|purple|[Yes, I'm ready.]
+  Color|orange|[Historian Rhodes]
+ Let's be going then.
+&o  Search around and see what you can find on Salazar. Return anything you find to Historian Rhodes. Table
+ Scraps of Paper Solution
+  :Puzzle_Solutions_Guide/Rapacity/Notes  Table
+ Historian Rhodes
+  Color|orange|[Historian Rhodes]
+ Did you manage to find anything?
+  Color|purple|[I found these hidden note scraps, but they aren't particularly legible like this.]
+  Color|orange|[Historian Rhodes]
+ Ahh! Let me see them right quick! Little glue here... little stitching there... carry the one... There we go! All patched up,
+and it's a letter written by Salazar himself! But... I don't understand... Give it a read, see if you can interpret anything
+from it.
+&o  Speak to Historian Rhodes about the book. Table
+ Historian Rhodes
+  Color|orange|[Historian Rhodes]
+ Can you make anything out about what is being said? An... arboretum? In the Chillwind? And something about giving gifts?
+  Color|purple|[There is an old Arboretum that fell a long while back. It's where I discovered the Pink wool.]
+  Color|orange|[Historian Rhodes]
+ You've found more wools beyond the Lime one held by Salazar?      Color|purple|[All of the members were killed by a demon from
+a dimension opposite of ours.]
+  Color|orange|[Historian Rhodes]
+ Oh that's... unfortunate... Perhaps I'm suddenly not envious of your journeys...
+  Color|purple|[There is a peaceful spirit that I know how to contact, however.]
+  Color|orange|[Historian Rhodes]
+ That's an odd source of information, but at this point, I'll take anything. If your ghost friend can provide any useful
+information, that would be of great use. Unfortunately, I must stay here with my team, but I wish you the best of luck.
+&o  Seek out the Harmonious Spirit in the Pink Lobby. Table
+ Harmonious Spirit SoftBreak  Coordinates: -980, 21, 643
+  Color|orange|[Harmonious Spirit]
+ Thank you for everything. I'm sure you have many questions about what you saw inside, and about my people.
+  Color|purple|[I need to ask you about someone who may have been a member in the Arboretum.]
+  Color|orange|[Harmonious Spirit]
+ My memory has been much more clear as of late, so I will give you any knowledge I am capable of passing on. Who do you wish to
+ask about?
+  Color|purple|[His name was Salazar.]
+  Color|orange|[Harmonious Spirit]
+ ...Careful, my friend. Names bear power, and that one is not a name to speak of lightly.
+  Color|purple|[I'm guessing that means you know him?]
+  Color|orange|[Harmonious Spirit]
+ Yes, I do know of Brother Salazar. Though it is not a story I recount with uplifting emotions. However, you have helped me more
+than I can repay, and I told you I would pass off the knowledge of which I was capable.
+  Color|purple|[Can you tell me what happened to him after the fall of Viridia?]
+  Color|orange|[Harmonious Spirit]
+ In a sense, yes. In a sense, no. I can merely guide you to where the information you seek lies. But first, you will need
+something.
+  Color|orange|[Harmonious Spirit]
+ In the rising tunnels above us - that which your people call the Sealed Descent - there lies a blessed shard of glass. Seek it
+out and return it here.
+&o  Journey back through the   Link   Sealed Descent Sealed_Descent wikilink to find the blessed glass for the Harmonious
+Spirit. Table
+ Harmonious Spirit
+  Color|orange|[Harmonious Spirit]
+ Yes, that is the glass I spoke of. I wish not for us to go down this path, but there are answers you seem determined to seek.
+  Color|purple|[How does the glass help us?]
+  Color|orange|[Harmonious Spirit]
+ I will use the glass to construct a tool that you will soon find helpful. But first, we must head within the Arboretum. Are you
+ready to go in?
+  Color|purple|[Yes, I'm ready.]
+  Color|purple|[Actually I need to take care of other stuff first.]
+  Color|orange|[Harmonious Spirit]
+ Very well, let's go.
+&o  Find your way into the Father's study.
+ Thank you for sjasogun for solving the puzzle. Table
+ Puzzle Solution
+  :Puzzle_Solutions_Guide/Rapacity/Study  Table
+ Harmonious Spirit
+  Color|orange|[Harmonious Spirit]
+ It seems you have managed to collect the log. Let us leave this place, I wish not to linger here for longer than we must. We
+will speak once we have exited the Arboretum.
+  Color|purple|[Talk about Rapacity]
+  Color|orange|[Harmonious Spirit]
+ I assume you have had time to ponder on the Father's log.
+  Color|purple|[Salazar... was he the one to break the Pink wool?]
+  Color|orange|[Harmonious Spirit]
+ You now understand the truth, and why his name brings me great pain. His actions directly led to the events that soon followed
+- the death of my people at the hands of a demon who tore into our world through the rift Brother Salazar caused.
+  Color|purple|[The book mentions someone named Varcosa.]
+  Color|orange|[Harmonious Spirit]
+ I was unaware of this fate, or I would have told you before. In my time, Varcosa was an infamous pirate, known for causing mass
+havoc even to the nations. He was known for showing no mercy, and that makes me doubtful that Brother Salazar survived much
+longer beyond that point.
+  Color|purple|[Is there anywhere I can get information on Varcosa?]
+  Color|orange|[Harmonious Spirit]
+ It is fairly likely that some historical records exist. If what I remember is correct, Varcosa was originally a citizen of
+Ishnir. If any documents remains, an archivist familiar with that nation's history will be your best bet. Alnera may be a good
+place to start looking.
+&o  Head to Alnera and seek out information once again from Archivist Nyra. Table
+ Archivist Nyra
+  Color|orange|[Archivist Nyra]
+ Hello there. What brings you to the pharaoh's library today?
+  Color|purple|[Do you have any records on a pirate named Varcosa?]
+  Color|orange|[Archivist Nyra]
+ Oh so you've stopped searching after fictional things like the Gem of Ishnir? Yes, of course we have records on the legendary
+pirate. Let's see, Varcosa was originally born in Ishnir, though gave up his birthright to pursue pirating roughly around 225
+CCE.
+  Color|orange|[Archivist Nyra]
+ Twenty five years later, in 250 CCE, Varcosa declared himself the king of the seas, and headed out for his final voyage. No
+records exist of him beyond that date, it is presumed he died at sea.
+  Color|purple|[His final voyage?]
+  Color|orange|[Archivist Nyra]
+ Yes, according to the public record, there is rumor that he discovered the location of a great treasure. However, there is no
+historical evidence to suggest that any ever existed at that point.
+  Color|purple|[Any idea where he went?]
+  Color|orange|[Archivist Nyra]
+ Yes and no. There is an old map that was found a few decades back, though it has suffered heavy damage over the centuries. It
+is currently on loan to the records holder in Molta for inspection. Shani, I believe is her name.
+&o  It seems Shani in Molta currently has Varcosa's map. Seek her out. Table
+ Record Keeper Shani
+  Color|orange|[Record Keeper Shani]
+ Hello! Welcome to the Molta Arch- AH!      Color|purple|[Yes, we exposed a cover up for a mining operation gone wrong.]
+  Color|orange|[Record Keeper Shani]
+ And you made quite a fuss among the government in doing so! Amarion will likely never hear the end of it, but I have faith that
+the government will reap the repercussions of their misdeeds in due time.
+  Color|purple|[I wanted to ask you about Varcosa's map.]
+  Color|orange|[Record Keeper Shani]
+ Ah, you heard of that? Yes, I'm currently in possession of it, though it's not nearly as helpful as I hoped it would be.
+  Color|purple|[What did you want it for?]
+  Color|orange|[Record Keeper Shani]
+ You see, I found a record a few weeks back that may have hinted at the final voyage of the infamous ruler of the waves. There
+was a mention of  "Corsair's Claw".
+  Color|purple|[Never heard of it.]
+  Color|orange|[Record Keeper Shani]
+ That's not entirely surprising, it doesn't exist. Or at least, I didn't believe so until I found this record. Corsair's Claw is
+a mythical island shrouded in legend, mostly used as a bedtime story to scare children. 
+  Color|orange|[Record Keeper Shani]
+ I hoped that, if I could possibly make something out of the map, it would lead me in the right direction - possibly even to the
+mythical island itself. Sadly, it is so worn down, its impossible to read it.
+  Color|purple|[Is there nothing that can be done?]
+  Color|orange|[Record Keeper Shani]
+ I wouldn't quite say nothing. In older times like this, pirates didn't have access to quills to write with, and thus they had
+to resort to using ship scraps in order to draw maps. Because of this, they needed special ink that would stick well. This sort
+of became tradition among pirates who sail the northern seas, even today, to continue to use this special ink. 
+  Color|orange|[Record Keeper Shani]
+ If you can manage to track some down and get some of it, I might be able to make an etching of the map. Be warned though,
+Northern pirates are much different from the ones you may be familiar with, Ocean's Reach is not kind, so they have to fight to
+survive. I have heard word that a certain crew is fighting off a sea monster attack. This may be the only chance we can get,
+while they are distracted.
+&o  You need some special mapping ink carried by Northern pirates. Search out a crew that is currently fighting off a sea
+monster attack and grab it while they are distracted.
+ The ink is located in the ship above the surface, inside a chest behind a dark oak trapdoor. Table
+ Record Keeper Shani
+  Color|orange|[Record Keeper Shani]
+ Ah, good good! You actually managed to get some! Alright, give me just a minute to get the etching done... careful now... apply
+slightly... Alright! I think that may actually have done the trick! It's rough, but I think it may be good enough. Here, have a
+look at it.
+ You've made a copy of Varcosa's map! Follow it to its destination!
+ (That is, the   Link   Corsair's Claw Corsair's_Claw wikilink POI) Table
+  Color|orange|[Historian Rhodes]
+ Isn't the undercity amazing? It's hard for me to remove my eyes from it. Anyway, have you had any luck searching for clues
+about Salazar around here?
+  Color|purple|[Rhodes? What am I doing back here?]
+  Color|orange|[Historian Rhodes]
+ Exactly what I asked you to come here for. I need your assistance in finding any information we can on Salazar.
+  Color|purple|[But... We already found his book here.]
+  Color|orange|[Historian Rhodes]
+ I have no idea what you're talking about      Color|orange|[Historian Sen]
+ You know, I love reading about history and all... But actually seeing history like this? This makes it all the more worth
+while.
+  Color|purple|[I don't understand what's happening.]
+  Color|orange|[Historian Sen]
+ Didn't you hear me? Enjoy this view. This is pure history in front of us.
+  Color|purple|[I've already been here! Tell me what's going on!]
+  Color|orange|[Historian Sen]
+ Oh come now      Color|orange|[Harmonious Spirit]
+ We meet again      Color|purple|[How am I here now? And what happened to this lobby?]
+  Color|orange|[Harmonious Spirit]
+ You seem upset      Color|orange|[Echoing Thoughts]
+  Color|purple|The will on this one is interesting. That pirate might finally have found his replacement. I will let my grip go.
+For now.
+ [Fading Spirit] Hmm... a new face? It's been... quite a while since I have seen one. How long now... decades? Centuries? I
+stopped counting a long time ago.
+  Color|purple|[Who are you?]
+  Color|orange|[Fading Spirit]
+ In life, I was... a ruler... one who fell from grace... My kingdom long since turned to folly...
+  Color|purple|[Wait... Are you Salazar?]
+  Color|orange|[Fading Spirit]
+ Mmm... It warms my spirit slightly to know that my name is still known... But... not quite enough to escape... not quite yet...
+ RAPACITY COMPLETE! SoftBreak  Awarded   Link   Varcosa's Doublet Varcosa's_Doublet wikilink  , a   Link   Purple
+Grasp_of_Avarice wikilink Wool Key, and Full access to the   Link   Purple Grasp_of_Avarice wikilink Wool Trader in Mistport.
+Link   Category:Quests Category:Quests wikilink

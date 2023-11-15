@@ -1,0 +1,69 @@
+&o  Assist in retrieving The Ishnir Trade's goods Table
+ Safar
+  Coordinates: [222, 95, 30]
+   &6[Safar]
+ Hmm... Are you, by any chance, [Player]?
+  &5[Uh, stranger danger!]
+  &6[Safar]
+ Fine, the Trade didn't need your help anyways...
+  &5[Yeah... How do you know my name?]
+  &6[Safar]
+ I have heard tale of your good deeds from Riaz in Rahkeri...
+  &5[Oh, it wasn't a big deal. Helping people is what I do.]
+  &6[Safar]
+ Good, good... Well, the Trade requires your assistance. In a matter of business...
+  He darts his eyes back and forth to make sure no-one is watching...
+  &5[I'm actually quite preoccupied at the moment.]
+  &6[Safar]
+ Figures...
+  &5[Okay...What do you guys need help with?]
+  &6[Safar]
+ Well you see, a client of ours is refusing to act on his end of a deal. We require you to retrieve our goods from him...
+&o  C: Ask Safar what The Trade wants with you. Table
+ Safar
+  &6[Safar]
+ Are you ready to begin?
+  &5[No, I'm busy at the moment.]
+  &6[Safar]
+ Return to me once you're free...
+  &5[Yes, where should I go to retrieve your items?]
+  &6[Safar]
+ A house towards the outskirts here has a basement, in that basement you should find our goods. Return them to us... Be careful
+[Player] - I am unsure what security measures the client has.
+  He gives you a swift nod.
+&o  C: Search for the client's house in Molta, once inside find the basement access hatch. Solve the puzzle and get the message
+inside.
+ Link   Puzzle Solutions Guide/Dealbreaker Puzzle_Solutions_Guide/Dealbreaker wikilink
+ &o  C: Return to Safar to see if he can decode the message. Table
+ Safar
+  &6[Safar]
+ Have you found the Ishnir Trade's goods?
+  &5[Unfortunately not - the client didn't have them in his basement. However, he did have this.]
+  &6[Safar]
+ Let me see that...
+  &5[So, does that help?]
+  &6[Safar]
+ Yes, it helps tremendously, actually. This is an encoded set of coordinates to a location where our client has hidden a stash
+of supplies.
+  Color|gray|He looks up from the book.
+  &5[Oh! So where do they lead?]
+  &6[Safar]
+ They appear to lead to an area named the "Magmashroom Mines". Look for some exposed stone bricks, which might indicate where
+the stash is.
+  &5[I'm on it!]
+  &6[Safar]
+ Good luck, [Player].
+&o  C: [1/2]: Travel to   Link   Magmashroom Mines Magmashroom_Mine wikilink in order to find the client's stash. Be on the
+lookout for stone bricks.
+&o  C: [2/2]: Once you have the stash return to Safar. Table
+ Safar
+  &6[Safar]
+ So, have you retrieved the items?
+  &5[You bet!]
+  &6[Safar]
+ Fantastic! [Player], you have been a great help to the Ishnir Trade. We will not forget what you have done to help us...
+  He smiles at you.
+  &5[No problem!]
+  &6[Safar]
+ We believe a reward is in order: here, take this... The Amulet here will allow you to be recognized by my superior.
+  '''DEALBREAKER COMPLETE!'''

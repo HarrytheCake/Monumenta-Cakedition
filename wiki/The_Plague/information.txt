@@ -1,0 +1,1 @@
+prerequisites = None NPC: Dr. Laurie King's Valleytown = Nyrstarting_npc_coordinates = -105 95 -115 NPC: Dr. Laurie King's Valleytown = Nyrstarting_npc_coordinates = -105 95 -115starting_npc_coordinates = -105 95 -115 King's Valleytown = Nyrstarting_npc_coordinates = -105 95 -115town = Nyrstarting_npc_coordinates = -105 95 -115

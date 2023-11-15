@@ -1,0 +1,5 @@
+rewards =
+* Access to Eldrask epic trades
+* Access to adding &3Reinforced&r to items
+|length = Medium
+|difficulty = Very Hard

@@ -1,0 +1,5 @@
+prerequisites = * &3Unveiled&r
+* &3The Crystal Connection&r
+* &3Malevolent Reverie&r
+ NPC: T'Xoc Coords: 473, 196, -355
+ King's Valley Ta'Eldim

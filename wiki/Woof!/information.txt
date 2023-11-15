@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Aquamarine Coords: 281, 121, 40
+ Celsian Isles Molta

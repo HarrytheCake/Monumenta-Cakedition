@@ -1,0 +1,9 @@
+prerequisites = * &3The Olive Branch (Quest)The Olive Branch&r
+* &3A Study in Crimson Part Two&r
+* &3Here There Be Dragons&r
+* &3Treasure for the Future&r
+* Completion of &3Celsian Isles&r monument
+ NPC: Vargos Coords: -740 82 1337
+ Celsian Isles Mistport
+Difficulty = Very Hard
+Length = Very Long

@@ -1,0 +1,4 @@
+rewards =
+* &3Fishing Trophy&r
+* &3Crushing Depths&r
+* 64 Enchanting Bottles

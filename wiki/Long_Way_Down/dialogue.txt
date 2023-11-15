@@ -1,0 +1,56 @@
+&o  Travel to the   Link   Cinder's Roost Cinder's_Roost wikilink and return with a Ponike feather Table
+ Guard Myra
+  Coordinates: [402, 75, 687]
+   &6[Guard Myra]
+ H-hello adventurer. Enjoy our beautiful c-city, but be careful not to f-fall. If you need h-help us guards are here to help
+you.
+  &5[I will return if I need anything.]
+  &6[Guard Myra]
+ P-please do.
+  &5[Is something wrong? You seem scared.]
+  &6[Guard Myra]
+ E-everything is fine.
+  &5[Are you sure?]
+  &6[Guard Myra]
+ W-who am I kidding? I never should have gotten myself in this situation.
+  &5[Hopefully things get better for you.]
+  &6[Guard Myra]
+ I'm sure I'll be f-fine.
+  &5[What type of situation?]
+  &6[Guard Myra]
+ I am from the nearby town of Molta. I worked there as a guard for several years without problems. Then, I learned that there
+was a position open here in Alnera. I jumped at the chance to move to the city, but when I got here I learned I had a fear of
+heights.
+  &5[Sadly that isn't something I can really help with.]
+  &6[Guard Myra]
+ Unfortunately not, but it also isn't your job to. I'll get used to my p-patrol route eventually.
+  &5[Is there anything I can do to help you?]
+  &6[Guard Myra]
+ You want to help me? Well I suppose there is one way... If I had the feather of a Ponike I could use the supplies I have on
+hand to create a pair of boots able to cushion myself from any unfortunate falls. They tend to nest at the top of the Cinders
+Roost. Their feathers are super light, so you shouldn't have trouble carrying them. I would go myself, but, you know- heights.
+  &5[That seems a bit too dangerous for me.]
+  &6[Guard Myra]
+ Understandable. I shouldn't have asked a civilian to do something that dangerous. I'll be f-fine, don't worry about me.
+  &5[I will set out as soon as I can.]
+  &6[Guard Myra]
+ Thank you! I will wait nervously for your return.
+ C:   &o  Find a Ponike feather high up on   Link   Cinder's Roost Cinder's_Roost wikilink  .
+ When you reach the peak:
+ C:   &o  Return to Guard Myra. Table
+ Guard Myra
+  &6[Guard Myra]
+ H-hello again! Have you had any luck finding a Ponike feather?
+  &5[I found one, but decided not to give it to you yet.]
+  &6[Guard Myra]
+ Wow. Just wow.
+  &5[I found one!]
+  &6[Guard Myra]
+ Wonderful! Just give me a minute... Part A goes in slot B... oh dear that doesn't look right.
+  &6[Guard Myra]
+ Oh wait I'm holding it upside down...
+  After a long series of errors, Guard Myra finishes creating his new boots. He immediately puts them on.
+  &6[Guard Myra]
+ I can't thank you enough. I can finally do my job without the fear of falling and the pain and the leg-breaking and the dying.
+As for your reward... My old boots were designed to resist fire. You can have them, along with this week's wages.
+  '''LONG WAY DOWN COMPLETE!'''

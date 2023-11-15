@@ -1,0 +1,121 @@
+  WorkInProgress|Missing a branch of the final choice. Table
+ Halid
+  Coordinates: [469, 180, -339]
+   &6[Halid]
+ Such misfortune...
+  &5[Excuse me?]
+  &6[Halid]
+ Ah, hello young one. Care to join me in the hot springs? Although Eldim has not been here forever, these springs have. This
+spring is said to be able to clear one's mind of stress, however I fear it might only be making my situation worse.
+  &5[Situation?]
+  &6[Halid]
+ Yes, a tragic one really. After the attack on Velara, I lost all of my musical ability. No matter how hard I try, all I can
+think of is that god-forsaken Anthill. I can't play, and thus I lost my title as Soulsinger.
+  &5[I could investigate the Anthill.]
+  &6[Halid]
+ Really? You mean it? You would help a poor old fool like myself? Thank you young one, you warm my old heart. If you find
+anything music related, bring it back to me.
+  &5[I've got other things to do right now.]
+  &6[Halid]
+ I hope you reconsider, child.
+&o  [1/2]: Investigate the   Link   Ephemeral Corridors Ephemeral_Corridors wikilink  , the entrance to which lies within the
+Link   Anthill Anthill wikilink  , for anything related to music.
+&o  [2/2]: Bring any record discs you find within back to Halid.
+ Link   Puzzle Solutions Guide#Roguelike Calibration Lock (Ephemeral Corridors dungeon puzzle)
+Puzzle_Solutions_Guide#Roguelike_Calibration_Lock_(Ephemeral_Corridors_dungeon_puzzle) wikilink
+   In Ephemeral Corridors. You have to go through 3 different floors, each floor having 2 different subsets. In each subset
+there are some rooms with disks. You must collect all 6, one from each subset, and bring them back to Halid.
+  Returning with nothing: Table
+ Halid
+  &6[Halid]
+ Young one, have you found anything within the Anthill yet?
+  &5[Not yet.]
+  &6[Halid]
+ That's a shame. Please tell me if anything turns up.
+ Bringing a Disk for the first time: Table
+ Halid
+  &6[Halid]
+ Young one, have you found anything within the Anthill yet?
+  &5[Well, not exactly the Anthill, but within the corridors beneath it. I found this.]
+  &6[Halid]
+ May I... see that?
+  &5[(Hand him the record you found)]
+&o  He taps the disc with his finger, and a red light ripples out.
+  &6[Halid]
+ I know not what magic you've found within the corridors you speak of, child... But this record... it calls out for me. Hold on
+to it for now and return when you're ready to begin. I require a moment myself.
+ Turning in a disk: Table
+ Halid
+  &6[Halid]
+ Young one, have you found anything within the Anthill yet?
+  &5[No, I didn't bring one.]  Plain  If you have a disk:
+  &6[Halid]
+ Have you a reason to lie to me, child? I can sense it on your person, screaming out for me. Return when you are ready to end
+this delaying. Plain  If you don't have a disk:
+  &6[Halid]
+ You speak the truth. Return to me with a record when you're ready to proceed.
+  &5[I have. I'm ready when you are.]
+ If you don't have a disk:
+  &6[Halid]
+ I may be old, but I am not senile, child. Come back when you have a record for me.
+ If you bring any disk:
+  &6[Halid]
+ Let us being then.
+&o  He taps the disc rhythmically, and suddenly it shatters into a green light, enveloping him!  Plain  If you bring "Web-
+covered Classics":
+  &6[Halid]
+ Lodestar's Folly... Do you know about Erix, the last beacon-bearer? His pride was his own downfall, and nearly the downfall of
+those he was appointed to guide. A story for another time, young one. Plain  If you bring "Ethereal Expressions":
+  &6[Halid]
+ Sanctity of Silence... I wrote this after the fall of Ta'Ferna - I am sure you've heard this story before and I am unwilling to
+tell it myself. The amount of loss... it is painful to even think about. Plain  If you bring "Embalmer's Mixtape":
+  &6[Halid]
+ ...I made this for my husband. He was an embalmer, and he was damn proud of it. I wasn't nearly as interested in his profession
+as he was, but I created this for him to listen to as he worked. A vile disease from the maw of Myrahg claimed his life over 20
+years ago now - I have heard that you contained the plague since then. Knowing that no one else will suffer to it anymore, I am
+grateful to you, young one. Plain  If you bring "Deepest Blues":
+  &6[Halid]
+ This... I never finished this song? How? Why? I... I was working on this before I lost my husband... It was a collection of my
+best memories, written into a song, but after his death I was overwhelmed with nightmares and failure, and I was never able to
+bring myself to finish it... Plain  If you bring "Sandy-Smooth Jazz":
+  &6[Halid]
+ I detest this song. I was pressured to write this one by my peers as a sign of respect towards the shamans and our elders. The
+same ones who led a futile war against the Narsens and paid with the lives of their own people. Immeasurable amounts of pain,
+created for nothing... I should not be speaking like this to you, young one. You are doing me a great service. Thank you. Plain
+If you bring "Obsidian Hits":
+  &6[Halid]
+ I never properly named this one. Created it during my earlier years, as a battle song of sorts. I used my status to avoid
+fighting in the war against the Narsens out of fear and selfishness, and to avoid being shamed by my people I wrote this to fill
+our warriors with the might of Ixume itself. Ironic how Zanil was using Ixume's vessel to transform warriors into beasts at the
+same time.
+ After turning in all 6 disks: Table
+ Halid
+  &6[Halid]
+ That... was the last record, child. I know it is so - I feel complete once again... It has been so long... I must be honest
+with you now, after all that you have done for me. I was not the Soulsinger. There is no such thing as a Soulsinger. I was
+ashamed of the true circumstances that brought me to this position, and I feared you would not have helped me should you have
+known the truth!
+  &5[But why? What did you do?]
+  &6[Halid]
+ I made a deal. I caught the same plague from my husband, and it nearly took my life. But then he came to me, and offered me
+life in exchange for song. He said it amused him, and I accepted, thinking he would save my husband's life. Instead, he saved my
+own, and I've been empty ever since, my talents taken away.
+  &5[You should've told the truth, I still would have helped you!]
+  &6[Halid]
+ You are much too kind young one. I must compensate you - the trouble you went through to help me was surely vast and I cannot
+let you walk away empty handed.
+  &5[Figured as much, explains why I've never heard of you before. Now what did you do exactly?]
+  &6[Halid]
+ I made a deal. I caught the same plague from my husband, and it nearly took my life. But then he came to me, and offered me
+life in exchange for song. He said it amused him, and I accepted, thinking he would save my husband's life. Instead, he saved my
+own, and I've been empty ever since, my talents taken away.
+  &5[Hey, all you had to do was promise a reward and I would've helped you anyways. Speaking of...]
+  &6[Halid]
+ Of course, you surely deserve compensation for all you must have went through to help this old fool.
+  &6[Halid]
+ Here, young one, for you - it is a Tlaxan record player. I have set it up for you so you can play the 6 songs you returned to
+my memories, along with a 7th song I wrote specifically for you. I also have a record disc version of that song for you to take
+as well. I simply cannot thank you enough for all you have done for me, I would be happy to set up the record player with any
+other songs you may find on your journey. I wish you good fortunes!
+ HALID'S SONG COMPLETE! SoftBreak  Awarded a   Link   Tlaxan Record Player Tlaxan_Record_Player wikilink  , the   Link   Ballad
+of a Hero Ballad_of_a_Hero wikilink  , and the ability to bring Halid more items to upgrade your Record Player with.

@@ -1,0 +1,7 @@
+prerequisites = * &3The Foreign Soldier&r
+* &3The Gem of Ishnir&r
+* &3Harmonic Convergence&r NPC: Issa Celsian Islestown = Moltastarting_npc_coordinates = 273, 118, 79rewards = *&3Excavator's Hardlamp&r
+*&3Scourge of Lunacystarting_npc_coordinates = 273, 118, 79rewards = *&3Excavator's Hardlamp&r
+*&3Scourge of Lunacy Celsian Islestown = Moltastarting_npc_coordinates = 273, 118, 79rewards = *&3Excavator's Hardlamp&r
+*&3Scourge of Lunacytown = Moltastarting_npc_coordinates = 273, 118, 79rewards = *&3Excavator's Hardlamp&r
+*&3Scourge of Lunacy

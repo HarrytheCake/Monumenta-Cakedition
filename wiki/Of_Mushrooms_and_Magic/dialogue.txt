@@ -1,0 +1,319 @@
+&o  Prepare for a diplomacy mission with the Primirium. Table
+ Primirium Verdanne
+  Coordinates: [-317 181 -663]
+   &6[Verdanne]
+ Thank you for your assistance thus far, [Player]. You've done well.
+  &5[Can I ask a few questions?]
+  &6[Verdanne]
+ Sure, what do you want to know?
+  &5[Can you tell me about the Favor of the Wolf?]
+  &6[Verdanne]
+ Like I mentioned earlier, we're not entirely sure what form it takes. Many centuries ago lived a mighty god, the wolf,
+Harrakfar. He roamed these lands, bringing life to all he touched, and death to those that deserved it. He died in a battle with
+the Silver Knights a very long time ago. The Coven claims they still hold his favor however, and the Hex they have cast lets
+them draw power from it.
+  &6[Verdanne]
+ Yes actually. We want you to go on an important mission for us - diplomacy.
+  &5[I'm usually more of the smash and fight kinda person.]
+  &6[Verdanne]
+ Diplomacy is not without its dangers. Trust us, you’re uniquely suited for this errand.
+  &5[Maybe later.]
+  &6[Verdanne]
+ Okay then.
+  &5[Alright, I'm listening.]
+  Prepare for a diplomacy mission with the Primirium.
+  &6[Verdanne]
+ We want to send you on a mission to the Mycelia village to try and make a positive contact with them. With them clearly having
+issues with the Coven right now, perhaps this is the best time to step in to try and make peace.
+  &5[That's an interesting proposal. Why don't they like you right now?]
+  &6[Verdanne]
+ I imagine you don't know much of how the Dichen arrived here. Around 70 years ago, we fled the Silvari castles further inland
+following a catastrophe. We were in danger and the Ashkii people who lived there did not welcome our presence any longer. We
+left for the safety of this coast, but our people knew little of the ways of the Wolfswood. We didn't realize that as we
+expanded, we were chopping down Mycelia shroomgardens.
+  &5[They hate your people because you cut down their garden?]
+  &6[Verdanne]
+ Not their garden. Them. Living Mycelia mushrooms, who walk and speak.
+  &5[Oh.]
+  &6[Verdanne]
+ Yes. As we cut down what turned out to be their developing newborns, they responded in turn. They used a fungal weapon to
+destroy one of our first villages. Since then we've made a tenuous peace, but our relations are still frosty at best.
+  &5[So I'm here to try and patch up a feud entirely because they hate someone else now?]
+  &6[Conquort]
+ Yes! Or die trying! We have some gifts for you to bring to them. Carved rifles, mana crystals.
+  &5[I'd rather not be dying for this.]
+  &6[Verdanne]
+ We'd rather that too, [Player]. Worry not. We've been making offers of peace to the Mycelia for years, but face to face
+meetings have never been possible. They refuse to leave their towns, and we refuse to walk into a trap. You seem to be tough
+enough to... deal with them, if they do try to take you captive.
+  &5[You want me to fight with these things? Their issues sound pretty fair.]
+  &6[Tybale]
+ Ah, don't worry. Mycelia regrow if cut down. They're an interesting species to say the least. Of course violence should be a
+last resort, but if you must defend yourself, you can do so without a guilty conscience.
+  &5[When do you want me to go?]
+  &6[Verdanne]
+ Now, if you're ready. We have the gifts in a cart, and a small group of pikemen to accompany you.
+  &5[I'd like to prepare for a bit.]
+  &6[Verdanne]
+ That's fine. Come back to me when you're ready to go.
+  &5[I'm ready. Let's go.]
+  &6[Conquort]
+ Of course you're ready! A good soldier is always ready. Good luck, we're depending on you.
+&o  C: Talk to Captain Lauden. Table
+ Captain Lauden
+  &6[Captain Lauden]
+ Ah, bonure! I have the gifts from the council for you to deliver initially. We're going to wait back here, guerre. The rest are
+in the cart.
+  He hands you one of the rifles and a crystal.
+  &5[What do you think of the Mycelia?]
+  &6[Captain Lauden]
+ Enn... not my place to say. You should go, they're waiting for you there I'm sure. They have scouts everywhere in this part of
+the woods.
+  &5[I insist.]
+  &6[Captain Lauden]
+ If I must... well, I think same as most really. Why give to them when they give nothing to us? We've been trying to make a real
+peace for years, ever since Verdanne rose to power. Nothing has worked.
+  &5[Verdanne seemed to think there was some progress. Peace even.]
+  &6[Captain Lauden]
+ Verdanne thinks too much of what's only words. Talks of outreach and such. All I know is, these things don't think like you and
+I. If they did, we wouldn't have that poor mess under our city.
+  &5[The infected village?]
+  &6[Captain Lauden]
+ Oue, though those are lighter words for it than I'd use. An abomination that is. You should probably go in now though. Wouldn't
+want to ruin your peace talk before it's even started.
+  &5[Yes, I'll go in now.]
+  &6[Captain Lauden]
+ Good luck to you then. If it goes sour, give a signal and we'll get the goods out. No point risking more lives.
+&o  C: Speak to the Voice of the Godspore (by smacking the giant Mushroom!) Table
+ Voice of the Godspore
+  &6[Voice of the Godspore]
+ Ah. New slave, Dichen have.
+  &5[I am not a slave.]
+  &6[Voice of the Godspore]
+ Mmm. Council, them you bow to, yes? All are slaves. All but those of nature.
+  &5[Do the other Mycelia not follow you?]
+  &6[Voice of the Godspore]
+ All free to act as wished. We guide, nudge. Not demand.
+  &5[I’m not here to talk philosophy.]
+  &6[Voice of the Godspore]
+ Ah, but here to bargain. Deal. Such is of the mind, no?
+  &5[Perhaps. Perhaps I just wanted to see you myself. I'm new to the area.]
+  &6[Voice of the Godspore]
+ Mmm. Crafty one. We watch. Everywhere, we are.
+  &5[Then you know we have gifts for you. The Dichen want to make peace.]
+  &6[Voice of the Godspore]
+ Ah, the latest bowing. What have you for me?
+  &5[Carved rifles and mana crystals.]
+  &6[Voice of the Godspore]
+ This is all? You come here for this?
+  &5[There are more in the cart outside.]
+  &6[Voice of the Godspore]
+ You fail language. Rifle, carved from wood. Wood born from trees. Trees born from lands that are ours. Mana crystals too,
+stolen from our caverns, our homes.
+  &5[All they did was cut down some plants decades ago. How can you hate them?]  Plain  (Missing)
+  &5[I know. They regret what they did, and they want to apologize.]
+  &6[Voice of the Godspore]
+ Too late to return. Too late for such. Seventy years too late.
+  &5[Then what do you want them to do?]
+  &6[Voice of the Godspore]
+ Oh we do not want from them. We have no need here. We thrive here. But these slaves, meetings… needed not. No changes to
+history can be. Your death, message it will send. Conkats, allender, por Mycelia!
+&o  C: Survive the Godspore's assault!
+  &6[Voice of the Godspore]
+ Hm, skill you have. Change fate, it will not. Rise, seeds!
+  You hear a woman's voice within your head.
+  &6[Mysterious Voice]
+ That fool Verdanne... your men are safe. Time to get you out of there! Get ready!
+  &6[Voice of the Godspore]
+ Qu magic... Aradia ferdus! Perde!
+ After surviving:
+&o  C: Speak to Elder Lytania. Table
+ Elder Lytania
+  &6[Elder Lytania]
+ Verdanne will never learn... She could settle for the Abello clans, but no, she must have the larger prize...
+  &5[Who are you? What's going on?]
+  &6[Elder Lytania]
+ Lytania, of course. We are both associates of the Primirium. I was watching your little meeting and while you seemed like you
+could handle yourself, I figured I'd bring you out before you had to... prune, more Mycelia. They don't tend to like that.
+  &5[Thank you.]
+  &6[Elder Lytania]
+ Yes, yes. Don't mention it. Though friendlier with my people than the Dichen, the Mycelia aren't fond of either. I took no
+great risk.
+  &5[Who are your people?]
+  &6[Elder Lytania]
+ The Aradia. You're one of Verdanne's, so it seems you can be trusted... We are a silent network within the Coven, working to
+undermine the strength of the Council that leads them. More recently, we have found common ground with your friends, the
+Primirium. We have mutual goals, one might say.
+  &5[Verdanne didn't tell me about you.]
+  &6[Elder Lytania]
+ She wouldn't. You haven't been with them long, or we would've caught wind of you already. The relationship between my people
+and the Dichen is not one the Ladies of the Council would be happy hearing of. Hence the sealed lips.
+  &5[But the Mycelia... they must know after that.]
+  &6[Elder Lytania]
+ Sure, they'll know. They've likely known for years, but the Mycelia and the Council have never been close friends. After that
+dreadful meeting between them and the Porphyry? No, our little secret will be perfectly safe.
+  &5[So why am I here, other than stopping me getting beaten up?]
+  &6[Elder Lytania]
+ I wanted to meet Verdanne's new pet soldier. Perhaps bring you into the fold of what we do here. The secrecy is oh so hard to
+hold on to. It's nice to share...
+  &5[Share what?]
+  &6[Elder Lytania]
+ The words of our goddess, Hycenea. You have heard her voice, yes? She is reaching out, at last. Breaking free from the chains
+of those TRAITORS. The Ladies of the Council have been lying for centuries.
+  &5[What do you mean?]
+  &6[Elder Lytania]
+ You're an outsider, so I imagine you don't know much of the Coven. Let me show you... Travel up the river, where you will find
+a watery cave. I will show you the history of our movement.
+&o  C: Travel up the river to discover the Aradian Covenstead. Interact with the 7 other Lystania's projections in the cave to
+learn the history of the Wolfswoods. Table
+ Lystania's Projection
+  &6[Lytania]
+ Welcome to the Covenstead of the Aradia. This is the original site at which we, the Aradia, offered worship to Hycenea and her
+love. Here we have crafted the history of the region and our Goddess, of which I would like you to visit each.  Table
+ Lystania's Projection
+  &6[Lytania]
+ Hycenea was the original witch, a dryad imbued with great gifts from the land and from Harrakfar, the great Wolf, himself. She
+became his lover and the two commanded these lands apart from the might of the Architect and the Silver Knights. She soon found
+her love being torn from her by the Silver Knights.
+  &5[And she got him back?]
+  &6[Lytania]
+ Following this event, she went on the warpath, forming the ancient Coven and launching attacks to reclaim the prison the Wolf
+was trapped inside. She succeeded, and retreated below the Wolfswoods to keep him safe. The Coven claimed she defends him
+against the Knights and their followers to this day, but the truth is more insidious.
+  &5[The Coven held her captive.]
+  &6[Lytania]
+ Indeed. The Coven decided they didn't want Harrakfar free again, and as we now know, Hycenea is held captive beneath the Tree
+of Life, left to rot, merely a length away from the prison that holds her Harrakfar.  Table
+ Lystania's Projection
+  &6[Lytania]
+ The Coven has set up a home in the Tree of Life towering over the Woods. This Tree is a mighty symbol of Harrakfar and they
+have perverted it into a sign of death instead. Many have sought its power over the centuries, but few have been able to find
+it. There is magic around the Ring that keeps many away, and the witches keep the rest from ever leaving. The Tree is a source
+of powerful magic, tapping into something primordial indeed.  Table
+ Lystania's Projection
+  &6[Lytania]
+ Harrakfar, the Blue Wolf. A being from beyond the annals of history, Harrakfar was attuned to the land and the cultivation of
+life itself. His presence in these woods caused great growth and flourishing. The Silver Knights, of course, could not let this
+stand. They are vile beings, tasked only with destruction for a purpose known only to themselves. They came for the Wolf. They
+imprisoned him in a mockery of his power. Hycenea reclaimed him, but was never able to set him free again. The Coven saw to
+that.  Table
+ Lystania's Projection
+  &6[Lytania]
+ The Coven was founded by the dryad Hycenea and her allies, impossibly long ago. She had a lover, Harrakfar, the Wolf of the
+Woods. Their futures were entwined, so when the Silver Knights took her love, she swore to never rest until he returned to her.
+  &5[Harrakfar is in a wool?]
+  &6[Lytania]
+ I'm not sure what that means, but he was imprisoned. She claimed his cage back, but could not free him. She granted 12 members
+of the Coven great power and assigned them as the Ladies of the ancient powers. They in turn betrayed her, imprisoned her deep
+below the Wolfswood, and used her and the power they could siphon from Harrakfar's prison to establish their strength.
+  &5[Who is the current Council?]
+  &6[Lytania]
+ Lady Nalatia is the mistress of air and night, with her adherents Isovel and Serafina. Grandmother Laurey is the mistress of
+morn and earth, with her adherents Voisin and Old Rosheen. Mad Molldyer is the mistress of noontime and the flames, with her
+adherents Ellyvere and Maddelena. The Vedha is the mistress of sundown and water, with her adherents Hecatie and Ensolla.
+Together they comprise the Council of the Coven.  Table
+ Lystania's Projection
+  &6[Lytania]
+ I don't know much of the Knights themselves, nor the Architect they serve. They are enforcers of his rule, but have been absent
+for many generations. Perhaps their goals have led their attention elsewhere. They rain down destruction wherever they tread and
+will not stop until their goal is met. There is no negotiation with a Silver Knight. Only their victory.  Table
+ Lystania's Projection
+  &6[Lytania]
+ It wasn't long ago that a few of our number received a vision from Hycenea. In it, she claimed she was reaching out at last -
+her chains had been loosened somehow by a burst of power. She was imprisoned by the Council and our worship had reached her
+ears. Our group's purpose shifted from adherents of Hycenea's ways to brewing a rebellion within the Coven. We want to overthrow
+the Council, free Hycenea from her chains, and create a peace across the Wolfswood.
+  &5[And the Primirium agree.]
+  &6[Lytania]
+ The Primirium agree. Our negotiations have succeeded, we are aligned, and soon the battle will begin. The Coven must fall,
+their control of the Tree of Life must end, and the Hex must be shattered.  Table
+ Lystania's Projection
+  &6[Lytania]
+ The Hex, cast above the Wolfswoods, was formed by the Coven and is, in part, used to keep Hycenea captive, we understand. We
+also believe it is draining the life from Harrakfar in his cell, and is being used to try and consolidate power and claim
+dominion over the entirety of the Woods.
+&o  C: Speak to any of Lystania's Projections now that you've heard all the history she has to tell. Table
+ Lystania's Projection
+  &6[Lytania]
+ Now you have seen our history. Return to me at the Village.
+&o  C: Speak to Elder Lytania again. Table
+ Elder Lytania
+  &6[Elder Lytania]
+ Thank you for joining me up there. I hope you see why this is so important.
+  &5[So what do you need me for?]
+  &6[Elder Lytania]
+ You have much power, all contained within a singular body. Our power is spread across many, yet what I hear of you is that you
+are a conqueror of might. You are the tool that will break the Council open, [Player]. Now, I have an ask of you.
+  &5[What can I do?]
+  &6[Elder Lytania]
+ We wish to commune with Hycenea one last time before we breach the Tree of Life and free her. The best way to do this is to
+step into the realm of Dreams and reach out. Could you travel back to the Amanita Colony from whence I saved you? A surprise
+attack will help your soldiers escape if they have not already. More importantly, I need several ingredients for this magic,
+found in their encampment. I seek Blue Lotus, Divinorum Extract, and Fanged Valerian. Gather these and return.
+  &5[You can count on me.]
+  &6[Elder Lytania]
+ Return when you have found them all.
+ Head back to   Link   Amanita Colony Amanita_Colony wikilink  .
+&o  C [1/3]: Find the Blue Lotus.
+&o  C [2/3]: Find the Fanged Valerian.
+&o  C [3/3]: Find the Divinorum Extract.
+ (Compass will lead you to each one.)
+ After collecting every ingredient:
+&o  C: Bring the ingredients back to Elder Lytania. Table
+ Elder Lytania
+  &6[Elder Lytania]
+ Ah, I can tell you have been successful. My thanks. I hear your Dichen associates got out safely as well. Do you wish to join
+the dream with me and my fellow Aradia?
+  &5[Yes.]
+  &6[Elder Lytania]
+ Splendid. Let me prepare these toxins then and off we shall go... {...}
+  &6[Hycenea]
+ Hail again, hero. I tried... to reach out... before. You have met... my kin. It soon will... be the hour of the witch. {...}
+  &6[Elder Lytania]
+ Hail, o queen of the woods. We have found a hero, a vessel of all ye stand for in thy light. {...}
+  &6[Hycenea]
+ I am familiar, Lady Lytania. I am preparing... for your arrival. At last, to be... reunited... with my Harrakfar. At last...
+{...}
+  &6[Elder Lytania]
+ My goddess, we cannot wait to at last prostrate in your presence and receive thy blessings. {...}
+  &6[Hycenea]
+ I hope your hero knows the consequences of their actions here.
+  &5[I do.]
+  You try to speak, but nothing comes out.
+  &5[I DO!]
+  Still nothing but silence. The darkness seems to be gazing at you, waiting for an answer. {...
+ }
+  &6[Elder Lytania]
+ Perhaps the dream is too heavy for them here. They know what must be done. The Coven, executed. The Hexes, destroyed. The
+Prison, a gift for you, my goddess. {...}
+  &6[Hycenea]
+ Excellent. Then the time of the Aradia approaches, my adherents. We will bring forth peace and Life, at last...
+&o  C: Speak to Elder Lytania. Table
+ Elder Lytania
+  &6[Elder Lytania]
+ Thank you for your time with us, [Player]. I am sure we will see you soon enough.
+  &5[Well, I should be going back to Verdanne. I doubt she'll be happy to hear the outcome of my meeting with the Mycelia...]
+  &6[Elder Lytania]
+ Hm. How sad. Well, I wouldn't want to have Verdanne too sullen. You should tell her this - the time is right, and the hour of
+our Lady is almost upon us. Goodbye.
+&o  C: Return to Primirium Verdanne. Table
+ Primirium Verdanne
+  Coordinates: [-317 181 -663]
+   &6[Verdanne]
+ Excellent, you return at last. The pikemen told me what happened and how you got magicked away. I assume... a mutual friend was
+involved?
+  &5[She was.]
+  &6[Verdanne]
+ I suppose that saves us sending you to meet them then. Are you still in? Did she send news?
+  &5[I'm still in. She said "The hour of our Lady is almost upon us".]
+  &6[Conquort]
+ Splendid! I'll ready the troops posthaste! {...}
+  &6[Verdanne]
+ "Almost", Conquort, "Almost". Prepare them, but do not assemble. The Coven will notice. We need to be prepared. [Player] here
+will be integral in helping us break down defenses and accessing the Tree of Life itself. I can barely believe it's all so
+close. I will await word from Lytania, and will call you when it is time to begin. {...}
+  &6[Tybale]
+ Thank you for all your assistance thus far. We're all very glad you didn't die. Take this, for your troubles. We'll talk soon!
+  &5[Thank you.]
+  '''OF MUSHROOMS AND MAGIC COMPLETE!'''
+  Awarded a Hyperchromatic Archos Ring, the Mycelian Crescent, and 4000 Archos Rings... of your debt removed. Only 2722 left!

@@ -1,0 +1,175 @@
+&o  Find the teachings of Oneiromancy in the Library of   Link   New Antium New_Antium wikilink  . Table
+ Ephesius
+  Coordinates: [-410 173 -123]
+   At the entrance to the church you meet a very old man. His hair is long and gray, and he himself is leaning on a cane.
+  &6[Ephesius]
+ O mighty Architect, wisest of all beings, why have we incurred Your wrath? Surely this is the retribution you bestow upon our
+poor souls, plagued by the shadows of the tyrant?
+  The man quitely murmurs to himself, yet you are still able to hear him.
+  &6[Ephesius]
+ Haven't we suffered enough already?
+  &5[Greetings, old man. What are you talking about?]
+  &6[Ephesius]
+ Oh! Who's there? Merrel? Is that you?
+  He turns towards you. Despite his advanced age, he seems quite alert.
+  &6[Ephesius]
+ You are not Merrel, I can tell that, young one. Who are you?
+  &5[I'm [Player].]
+  &6[Ephesius]
+ Ah, a name I haven't heard before. Must be a newcomer? In that case, welcome to New Antium, [Player]. I am Ephesius, nice to
+meet you.
+  He nods, a welcoming gesture.
+  &6[Ephesius]
+ What can I do for you, [Player]?
+  &5[I heard you mention divine punishment? What do you mean?]
+  &6[Ephesius]
+ The very punishment brought on us by The Architect, I tell you that.
+  He straightens his back, as if showing you his pride.
+  &6[Ephesius]
+ But we, Ashkii, will endure. We always do.
+  &5[I'm willing to help you, but I need to know exactly what I'm doing.]
+  &6[Ephesius]
+ Fine, young friend, I'll let you help. Listen closely.
+  He makes himself comfortable in his chair and leans on his cane.
+  &6[Ephesius]
+ For the past two months, people have been coming to me with the same complaint - their sleep is disturbed by nightmares,
+exhausting them and preventing them from getting a good night's rest. Initially it was just one person, but recently two more
+have come to me with the same problem.
+  &5[And you think it is Architect's punishment?]
+  &6[Ephesius]
+ One of them, surely. Please, do not interrupt me, young one. So, even though I'm a cleric, I'm not at all sure how to treat
+these things. However, throughout my life I have heard more than once about Oneiromancy, the art of interpreting dreams. If I
+can find a solution anywhere, it's in the treatises that exist. I'm sure I can find something like that in our library, but I'm
+old, and my legs aren't what they used to be. Please, young friend, could you go there and look for me?
+  &5[Sorry, but I have other concerns right now.]
+  &6[Ephesius]
+ Of course, of course. Let me know if you change your mind. But for now, I pray.
+  As you're about to leave, he puts the cane away and raises his hands. Then, he starts praying.
+  &5[I could do that.]
+  &6[Ephesius]
+ Oh thank goodness! I would advise you to ask the local librarian or my student, Merrel, regarding the book. He must be in the
+library right now.
+&o  C: Find the teachings of Oneiromancy in the Library of   Link   New Antium New_Antium wikilink  .
+ After retrieving the book:
+&o  C: Bring the book back to Ephesius. Table
+ Ephesius
+  Coordinates: [-410 173 -123]
+   &6[Ephesius]
+ What can I do for you, [Player]?
+  &5[I have found the book you seem to be looking for. It's old and some of the pages are missing.]
+  He takes the book from your hands and with unusual dexterity you wouldn't expect from a man his age. He quickly surfs through
+the pages.
+  &6[Ephesius]
+ A great study, indeed... but the book barely holds itself together! I also see a lot of torn pages, just as you said.
+  &5[But you still can get a hold on Oneiromancy, right?]
+  &6[Ephesius]
+ Considering how intermittent and incomplete the information is... I'm not so sure, my friend.
+  &5[There's nothing we can do?]
+  He hesitates for a few moments, and then answers.
+  &6[Ephesius]
+ We could, but the only other place that might contain something like this is Pelias' Manor. I would never send someone deep
+into the Keep for a book, especially such a specific book. I can see that you want to help, but is it truly worth the risk?
+  &5[I can handle myself. After all, I traversed the Wolfswoods.]
+  &6[Ephesius]
+ The Wolfswoods? Of course, you wouldn't get here otherwise. He is still hesitant.
+  &6[Ephesius]
+ Fine. This may be my only chance, might as well take the risk. Go to the cursed Pelias' mansion and try to find a book related
+to dreams. He had a huge collection of books; I wouldn't be surprised if you could find something like that. Most likely, such
+things were stored in the basement of the mansion, so start there.
+  &5[Forsaken Manor, the basement. Look for a book. Got it.]
+  &6[Ephesius]
+ Oh, and before you go, take these with you. He handles you a few potions. You'll surely need them.
+&o  C: Find another study of Oneiromancy inside the basement of the   Link   Forsaken Manor Forsaken_Manor wikilink  .
+ After retrieving the book:
+&o  C: Bring the book back to Ephesius. Table
+ Ephesius
+  Coordinates: [-410 173 -123]
+   &6[Ephesius]
+ Do you have any questions still, [Player]?
+  &5[I have found the book, Ephesius. It seems much better preserved than the previous one, but it has someone's notes in it.]
+  &6[Ephesius]
+ Thank goodness you came back, unharmed. Now, as for the book...
+  Again, he takes the book from you and examines it.
+  &6[Ephesius]
+ So many notes... Who... Who would've needed all of these? Did someone else try to study the art of Oneiromancy? But why?..
+  &5[Does it really matter? At least this book should have the answers you seek.]
+  &6[Ephesius]
+ You're right, young friend, it does not. While you were struggling looking for a book, I managed to learn enough from that
+tattered old tractate you brought me earlier. In order to keep nightmares at bay, we need to perform a special ritual. I am not,
+however, sure if this ritual will solve all our problems, but I want to hope. I have a suspicion we're on the right track.
+  &6[Ephesius]
+ So, [Player], would you help me once again?
+  &5[Yes, Ephesius, what's next?]
+  &6[Ephesius]
+ As I was saying, we need to perform a ritual. First, I need a catalyst. Any gem would do, and, luckily for you, I have that
+part covered. I would also need a special powder, Dusk Powder. And once again, I have all the components I need to make it,
+except one.
+  &5[What is it?]
+  &6[Ephesius]
+ It's a special honeycomb wax one can find in places exposed to magic for a very long time - the Dusk Wax. This is the key
+ingredient, because it is what gives the powder its orange glow when used, not to mention the fact that it has a number of
+magical effects on its own.
+  &5[Do you happen to know where I can find it?]
+  &6[Ephesius]
+ I am afraid not, young friend. It can be anywhere on the continent for all I know. Probably somewhere in this Wolfswood of
+yours. Actually, you could ask Merrel about it. He's been there way more times than I, he might know better.
+&o  C: Find the Dusk Honeycomb on the Architect's Ring. Merrel may know more. Table
+ Merrel
+  Coordinates: [-497 181 -115]
+   &6[Merrel]
+ Hm? Oh, [Player], it's you. Did Ephesius send you here again?
+  &5[Yes. I'm looking for Dusk Wax. Ephesius told me you may know where to find it.]
+  &6[Merrel]
+ Oh, that's quite the task... You won't find it anywhere in the Keep, I'm absolutely certain. The woods below The Keep is a
+different story, however... You surely saw the giant tree on your way up here? If only you could find a bee nest somewhere
+nearby... perhaps at the roots? Yes, that would be my best guess.
+  Coordinates: [-549 74 -485]
+ &o  C: Bring Dusk Honeycomb back to Ephesius. Table
+ Ephesius
+  Coordinates: [-410 173 -123]
+   &6[Ephesius]
+ Greetings, [Player]. What can I do for you?
+  &5[I brought you the honeycomb. I assume you can carve the wax yourself?]
+  &6[Ephesius]
+ Yes and thank you, young friend. Your help is truly appreciated. We are almost there. Now, give me some time to make the
+powder.
+  He takes the honeycomb from your hands and slowly reaches into the drawer and pulls out a mortar and a small bowl.
+  &6[Ephesius]
+ When I finish making the powder, you need to perform the ritual on your own. Wish I could help you, but I can't leave the city,
+nor do I wish to.
+  As you wait nearby, he starts talking again, still at work.
+  &5[What do I need to do, exactly?]
+  &6[Ephesius]
+ It's simple - just follow a list of instructions I'll give you. But please, pay attention. You have to do exactly as I say.
+Should you fail, I still have a bit of surplus of the powder left, but I hope it won't come to that.
+  He's almost done, it seems.
+  &6[Ephesius]
+ There we go, [Player]. Take the gem, powder and instructions. Remember - you must do exactly as I said at the middle of the
+lake just outside the city. I'll pray for your success.
+&o  C: Preform a ritual at the middle of the Lake in The Keep. Should you fail, talk with Ephesius.
+  Step 1: Stand on a boat at -425 174 77. LineBreak  Step 2: Hold the Twilight Amethyst given to you and click while looking up.
+Chose Spirits of bluest waves option. LineBreak  Step 3: Left-click with the powder and select to strew it over the gemstone.
+LineBreak  Step 4: Crouch and left click the Amethyst while looking down into the water. Offer the gemstone. LineBreak  Step 5:
+Then look up and click with the new item given to you. Select the Spirits of the night sky option. LineBreak  Step 6: Chose
+"bask in the glory of moonlight." LineBreak  Step 7: Again click with the new item given to you while looking at the moon
+(East). Select "I ask thee of your precious light, o divine!" LineBreak  Step 8: Click with the crystal and select these
+options: LineBreak  [O spirits of heaven and spirits of water, I offer thee the purest of light] LineBreak  [and bow before thee
+for the opportunity to adore the bright divine, illuminating this very earth.] LineBreak  [I beg thee, o spirits, clear the mind
+of thy humble servants.]
+  After completing the ritual:
+  And... Nothing.
+  You come to your senses. There is only darkness all around you, but you hear a barely discernible noise. It is everywhere and
+nowhere at the same time.
+  &5[What... Where am I? What's happening?]
+  The noise suddenly gets louder, almost deafening you. There is only noise all around, and nothing but noise. For some reason
+you're still holding the Stone Ephesius gave you.
+  Noise everywhere. Not just in the dark, but inside you. It's like it's ripping you apart from the inside. You fall to your
+knees. Before you pass out again, you see a silhouette. With the last of your strength, you're trying to keep your eyes open.
+  Whatever it is, it slowly turns its head toward you. However, you are unable to maintain eye contact anymore. A cacophony of
+sounds envelops you, and darkness covers your eyes. Then, just as suddenly, all the sounds stop and the light shines in.
+  You open your eyes and find yourself inside the... Gallery? Whatever happened just now, something tells you that wherever this
+place is, it's probably not real.
+  '''CURE FOR INSOMNIA COMPLETE!'''
+  Awarded [[Stone of Dreams]] and Access to the [[Gallery of Fear]]!
+ Note: Bring the Stone of Dream to Markus, the rogue charm trader, to unlock the   Link   Sanguine Halls Sanguine_Halls wikilink
+.

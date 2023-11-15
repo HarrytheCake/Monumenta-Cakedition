@@ -1,0 +1,18 @@
+  WorkInProgress|
+ C:   &o  You found an old journal in the Alnera Archives. See if you can follow up on it. You can always find it there again if
+you lose it. Table
+ Blacksmith Ghalla
+  Coordinates: 438 61 772
+   &6[Blacksmith Ghalla]
+ I don't really have much time to talk. Got a lot of orders to fill today.
+  &5[I found this book that mentions your name.]
+  &6[Blacksmith Ghalla]
+ Where did you find that? Actually, it doesn't matter, just leave it on the counter so it doesn't get lost.
+  &5[Do you know who it belongs to?]
+  &6[Blacksmith Ghalla]
+ Of course I do, it belongs to Selari. Can't you see his name etched on the spine? Anyway, he's not here right now. He left
+about a week ago, saying something about his research notes getting stolen. No clue when he will be back.
+ After you complete the tesseract puzzle:
+&o  The floor falls out from below you, and you make your way through a small passageway until you find a narrow hallway.
+ After you complete the soul puzzle:
+ PRIMEVAL CREATIONS I COMPLETE! SoftBreak  Awarded a   Link   Tesseract of the Soul Tesseract_of_the_Soul wikilink  .

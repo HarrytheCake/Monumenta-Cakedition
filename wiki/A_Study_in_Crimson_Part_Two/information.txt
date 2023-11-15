@@ -1,0 +1,9 @@
+prerequisites = * &3A Study in Crimson Part One&r
+* &3Outer Demons&r
+* Completion of &3Forsworn Sanctum&r
+* Completion of King's Valley Monument
+* &3Kaul&r
+ NPC: Jeremiah in the Memory Vault Coords: -917, 91, -161
+ King's Valley Sierhaven
+Difficulty = Hard
+Length = very Long

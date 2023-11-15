@@ -1,0 +1,3 @@
+rewards =
+* &3Amulet of the Trade&r
+* Trust of the Ishnir Trade

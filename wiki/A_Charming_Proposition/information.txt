@@ -1,0 +1,5 @@
+prerequisites = * None
+ NPC: Miroku Coords: -482 38 -816
+ Architect's Ring Port Manteau
+Difficulty = Easy
+Length = Short

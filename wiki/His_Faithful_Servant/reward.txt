@@ -1,0 +1,3 @@
+rewards =
+* &3Wolf's Rosary&r
+* 3x &3Vessel of Boons&r

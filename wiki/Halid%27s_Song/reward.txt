@@ -1,0 +1,4 @@
+rewards =
+* &3Tlaxan Record Player&r
+* &3Ballad of a Hero&r
+* the ability to add songs to your record player

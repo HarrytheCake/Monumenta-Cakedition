@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Bethenny Coords: -1489, 101, 923
+ Celsian Isles Frostgate

@@ -1,0 +1,2 @@
+rewards =
+* &3Boots of Cloud Nine&r

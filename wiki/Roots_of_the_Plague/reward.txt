@@ -1,0 +1,5 @@
+rewards = *&3Plagueroot Temple|Magenta&r Key
+*Access to &3Plagueroot Temple|Magenta&r Lobby Trader
+*Magenta Shulker Box
+*64 Poison Arrows
+*10 Anvils

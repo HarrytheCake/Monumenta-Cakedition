@@ -1,0 +1,3 @@
+prerequisites = None
+ NPC: Archivist Saanavi Coords: -1826, 127, -83
+ Celsian Isles Wispervale

@@ -1,0 +1,62 @@
+ Table
+ Lincoln
+  Coordinates: [-798, 87, 1435]
+ &o  He's talking to himself.
+  &6[Lincoln]
+ Ugh, this client again? Why does he always order so many rare fish? It's such a pain...
+  &5[Hello crazy person talking to himself!]
+  &6[Lincoln]
+ Well, there's no need to be rude.
+  &5[Hello!]
+  &6[Lincoln]
+ Are you here to order something annoying too?
+  &5[Yes, I'll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and
+a large soda.]
+  &6[Lincoln]
+ Go away. Plain  ''He gives you a stern look. That obviously wasn't on the menu.
+  &5[No, I was just stopping by to see if you needed anything.]
+  &6[Lincoln]
+ Oh, I see. Why yes- you see this client I have is looking for some pain-in-the-arse-to-fetch fish. And I know exactly where to
+find it...the Sunken Ship to the southwest. This species of Salmon love to hide in wrecks.
+ C:   &o  Travel to the   Link   Sunken Ship Sunken_Ship wikilink to obtain the Salmon for Lincoln's client.
+ After getting the Salmon:
+ C:   &o  [1/2]: Return to Lincoln with the Salmon.
+ C:   &o  [2/2]: If you lose the Salmon you can find another at the Sunken Ship. Table
+ Lincoln
+  &6[Lincoln]
+ Ah! You've found it. Perfect...
+  &5[You're acting pretty creepy about this.]
+  &6[Lincoln]
+ I'm sorry, I didn't mean to frighten you.
+  &5[It's okay. What do I need to do next?]
+  &6[Lincoln]
+ It's simple: just deliver the fish to my client! He should be in the park in front of the Brig.
+&o  He rubs his hands together excitedly.
+ C:   &o  [1/2]: Deliver the Salmon to the client by the Mistport Brig.
+ C:   &o  [2/2]: If you lose the Salmon you can find another at the Sunken Ship. Table
+ Alton
+  Coordinates: -808, 80, 1308
+   &6[Alton]
+ I hope my delivery comes soon- I was looking to cook up something fishy for dinner tonight...
+  &5[Why yes, your delivery has come!]
+  &6[Alton]
+ Ah! Perfect! I assume you've brought the fish?
+  &5[Yep, here it is.]
+  &6[Alton]
+ Hmm... It looks a little odd for a salmon, but I'm sure it'll taste just fine! I trust Lincoln. Give him my thanks!
+ C:   &o  Return to Lincoln Table
+ Lincoln
+  &6[Lincoln]
+ Have you delivered the fish?
+  &5[Yes, I have! Alton seems quite pleased- he was looking forward to having it for dinner.]
+  &6[Lincoln]
+ Perfect! Now I'll never have to deal with him again!
+&o  He looks at you nervously.
+  &5[Excuse me?]
+  &6[Lincoln]
+ Uh... did I say that out loud?
+  &5[What was that fish I gave him?]
+  &6[Lincoln]
+ Oh come on! Don't tell me you didn't notice: it was obviously a pufferfish! Look, how about I give you some compensation for
+your work and your silence...
+ FISHY BUSINESS COMPLETE! SoftBreak  Awarded 32 Crystalline Shards!

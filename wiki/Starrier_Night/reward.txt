@@ -1,0 +1,4 @@
+rewards =
+* 32 Concentrated Experience
+* 192 Spectral Arrows
+* &3Midnight Spyglass&r

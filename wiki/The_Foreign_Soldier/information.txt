@@ -1,0 +1,1 @@
+prerequisites = &3Xenophobia&r NPC: Vargos Celsian Islestown = Mistportstarting_npc_coordinates = -740, 83, 1337 NPC: Vargos Celsian Islestown = Mistportstarting_npc_coordinates = -740, 83, 1337starting_npc_coordinates = -740, 83, 1337 Celsian Islestown = Mistportstarting_npc_coordinates = -740, 83, 1337town = Mistportstarting_npc_coordinates = -740, 83, 1337

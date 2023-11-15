@@ -1,0 +1,3 @@
+rewards =
+* &3Nettlegold Shiv&r
+* 1 Hyper Crystalline Shard

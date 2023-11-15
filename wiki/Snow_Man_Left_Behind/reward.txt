@@ -1,0 +1,4 @@
+rewards =
+*Replica Snow Wool
+*Ability to buy and upgrade the &3Tesseract of Festivity&r
+*Ability to drink more Eggnog with Colder for more interesting results...
