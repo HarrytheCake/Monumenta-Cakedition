@@ -10,7 +10,7 @@ jobs:
       - name: checkout repo content
         uses: actions/checkout@v4.1.1 # checkout the repository content to github runner
 
-      - run: echo "foo" > input.txt  # create an example file
+      - run: pandoc works
       - uses: docker://pandoc/core:2.9
         with:
           args: >-  # allows you to break string into multiple lines
@@ -24,8 +24,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add ./wiki -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated quests" --allow-empty)
+          git add -A
+          git diff-index --quiet HEAD || (git commit -a -m "updated quests" --allow-empty ./wiki)
           
       - name: push changes
         uses: ad-m/github-push-action@v0.8.0
