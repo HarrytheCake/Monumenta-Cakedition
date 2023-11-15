@@ -10,7 +10,7 @@ jobs:
       - name: checkout repo content
         uses: actions/checkout@v4.1.1 # checkout the repository content to github runner
 
-      - run: pandoc works
+      - run: echo "foo" > input.txt
       - uses: docker://pandoc/core:2.9
         with:
           args: >-  # allows you to break string into multiple lines
