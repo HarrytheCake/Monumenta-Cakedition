@@ -19,6 +19,9 @@ jobs:
             -t json
             --output=./wiki/test.json
             test.txt
+      
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2.2.0
           
       - name: commit files
         run: |
