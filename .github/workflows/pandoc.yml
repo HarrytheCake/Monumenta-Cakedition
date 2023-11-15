@@ -17,7 +17,7 @@ jobs:
             --standalone
             -f mediawiki
             -t json
-            --output=test.json
+            --output=./wiki/test.json
             test.txt
           
       - name: commit files
@@ -25,7 +25,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated quests" --allow-empty ./wiki)
+          git diff-index --quiet HEAD || (git commit -a -m "updated quests" --allow-empty)
           
       - name: push changes
         uses: ad-m/github-push-action@v0.8.0
