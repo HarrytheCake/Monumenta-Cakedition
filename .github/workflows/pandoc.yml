@@ -9,16 +9,7 @@ jobs:
     steps:
       - name: checkout repo content
         uses: actions/checkout@v4.1.1 # checkout the repository content to github runner
-
-      - uses: docker://pandoc/core:2.9
-        with:
-          args: >-  # allows you to break string into multiple lines
-            --standalone
-            -f mediawiki
-            -t json
-            --output=./wiki/test.json
-            test.txt
-      
+        
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v2.2.0
         with:
@@ -26,7 +17,7 @@ jobs:
           
       - name: Bash
         shell: bash -el {0}
-        run: conda install -c conda-forge pandoc
+        run: conda install -c conda-forge pandoc=2.19.2
         
       - name: install python packages
         run: |
