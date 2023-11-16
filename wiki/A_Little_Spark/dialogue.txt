@@ -1,5 +1,5 @@
 &r
-&o  Get an arc-crystal for Cinevra from Vinny at the Apartments.
+&7&o  Get an arc-crystal for Cinevra from Vinny at the Apartments.
  Cinevra
   Coordinates: [-759, 126, 75]
    &6[Cinevra]&r
@@ -12,7 +12,7 @@ and was the creator of the teleporters found all across the Valley.
   &6[Cinevra]&r
  Ah, lovely! You really want to know? Well, it's pretty simple. Basically, you use an object's thaumic signature to transmute it
 through elemental phases, via the application of an arc-crystal. With a specific endpoint in mind, you encode that information
-in runes onto specific faces of the now-shaped object-crystal meld, and then...   &o  Your mind beings to wander...
+in runes onto specific faces of the now-shaped object-crystal meld, and then...   &7&o  Your mind beings to wander...
   &5[...Oh! Wow, yeah, that sounds so cool.]&r
   &6[Cinevra]&r
  Thanks, I'm glad you think so! I wasn't done yet, however. I have so much more I can tell you!
@@ -36,7 +36,7 @@ casually known, the teleport hub!
   &5[Maybe later.]&r
   &6[Cinevra]&r
  So be it!
-&o  C: Go talk to Vinny in the Apartments Building.
+&7&o  C: Go talk to Vinny in the Apartments Building.
  Vinny
   Coordinates: [-811, 102, 37]
    &6[Vinny]&r
@@ -58,9 +58,9 @@ the storage room you should visit. Talk to my storeroom manager down there if yo
   &5[Thank you!]&r
   &6[Vinny]&r
  Say nothin' of it. Hey, maybe come buy some Ender Chest Expansions from my Apartment Manager over there too, eh?
-&o  C [1/2]: Go talk to Vinny in the Apartments Building.
-&o  C [2/2]: Head to the basement. Find the correct Vincent Variable System room, then use the elevator to visit that apartment
-and find the arc-crystal.
+&7&o  C [1/2]: Go talk to Vinny in the Apartments Building.
+&7&o  C [2/2]: Head to the basement. Find the correct Vincent Variable System room, then use the elevator to visit that
+apartment and find the arc-crystal.
   Go to the basement via the door at [-821, 94, 27].
  Talk to the Storeroom manager there if you need help or a new book.
  Look through   Link   Vincent Variable System Vincent_Variable_System wikilink and on page 3 find that the 500's section holds
@@ -68,11 +68,11 @@ the sciences. (We are looking for magical science).
  The 4th spot down shows we need apartment 504.
  Head to the elevator at [-2157, 140, 770] and input 504 into the key pad and grab the arc-crystal from the chest in the room at
 [-2171, 123, 781].
- &o  C [1/2]: Head to the basement. Find the correct Vincent Variable System room, then use the elevator to visit that apartment
-and find the arc-crystal.
-&o  C [2/2]: Return to Cinevra with the arc-crystal.
+ &7&o  C [1/2]: Head to the basement. Find the correct Vincent Variable System room, then use the elevator to visit that
+apartment and find the arc-crystal.
+&7&o  C [2/2]: Return to Cinevra with the arc-crystal.
  After leaving the basement with an arc-crystal in your inventory:
-&o  C: Return to Cinevra with the arc-crystal.
+&7&o  C: Return to Cinevra with the arc-crystal.
  Cinevra
   Coordinates: [-759, 126, 75]
    &6[Cinevra]&r

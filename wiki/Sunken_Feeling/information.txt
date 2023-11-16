@@ -1,3 +1,3 @@
-prerequisites = None
- NPC: Cropmaster Afondo Coords: -715, 95, 1439
- Celsian Isles Misport
+Pre-req: None
+ NPC: Cropmaster Afondo &1Coords:&r -715, 95, 1439
+&2 Celsian Isles&r Misport

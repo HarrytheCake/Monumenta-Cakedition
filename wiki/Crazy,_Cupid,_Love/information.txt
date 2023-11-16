@@ -1,3 +1,3 @@
-prerequisites = None
- NPC: Psychie Coords: -751, 106, -26
- King's Valley Sierhaven
+Pre-req: None
+ NPC: Psychie &1Coords:&r -751, 106, -26
+&2 King's Valley&r Sierhaven

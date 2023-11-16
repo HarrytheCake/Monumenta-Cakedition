@@ -1,4 +1,4 @@
-prerequisites = None
- NPC: Guard Myra Coords: 402, 75, 687
- Celsian Isles Alnera
-POI: &3Cinder's Roost&r
+Pre-req: None
+ NPC: Guard Myra &1Coords:&r 402, 75, 687
+&2 Celsian Isles&r Alnera
+POI:  &3Cinder's Roost&r

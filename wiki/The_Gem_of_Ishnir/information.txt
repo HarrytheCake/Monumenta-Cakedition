@@ -1,10 +1,10 @@
-prerequisites = &3The Lost Empire&r NPC: Siehaven Smith Celsian Islestown = Alnerastarting_npc_coordinates = 340, 42, 721rewards = *&3Valley of Forgotten PharaohsGray&r Key
+Pre-req: &3The Lost Empire&r NPC: Siehaven Smith&2 Celsian Islestown = Alnerastarting_npc_coordinates = 340, 42, 721rewards = *&3Valley of Forgotten PharaohsGray&r Key
 *&3Embalmer's Trophy&r
-*Access to &3Valley of Forgotten Pharaohs NPC: Siehaven Smith Celsian Islestown = Alnerastarting_npc_coordinates = 340, 42, 721rewards = *&3Valley of Forgotten PharaohsGray&r Key
+*Access to &3Valley of Forgotten Pharaohs NPC: Siehaven Smith&2 Celsian Islestown = Alnerastarting_npc_coordinates = 340, 42, 721rewards = *&3Valley of Forgotten PharaohsGray&r Key
 *&3Embalmer's Trophy&r
 *Access to &3Valley of Forgotten Pharaohsstarting_npc_coordinates = 340, 42, 721rewards = *&3Valley of Forgotten PharaohsGray&r Key
 *&3Embalmer's Trophy&r
-*Access to &3Valley of Forgotten Pharaohs Celsian Islestown = Alnerastarting_npc_coordinates = 340, 42, 721rewards = *&3Valley of Forgotten PharaohsGray&r Key
+*Access to &3Valley of Forgotten Pharaohs&2 Celsian Islestown = Alnerastarting_npc_coordinates = 340, 42, 721rewards = *&3Valley of Forgotten PharaohsGray&r Key
 *&3Embalmer's Trophy&r
 *Access to &3Valley of Forgotten Pharaohstown = Alnerastarting_npc_coordinates = 340, 42, 721rewards = *&3Valley of Forgotten PharaohsGray&r Key
 *&3Embalmer's Trophy&r

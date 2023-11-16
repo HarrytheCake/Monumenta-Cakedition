@@ -20,7 +20,7 @@ to receive this gift. Do you wish to prove yourself?
 fragile, but getting hooked by them can prove deadly. Its ink is necessary for its special properties; I task you with killing 5
 of these beasts. Return when you are successful. Oh, and don't worry about harvesting the bodies or bringing them back- I need
 you only to prove you can kill them in the first place. I will use my own supply of materials.
-&o  Hunt down 5 Star Spitters in the waters around   Link   Aphelion Isle Aphelion_Isle wikilink  . Then return to Erwen in
+&7&o  Hunt down 5 Star Spitters in the waters around   Link   Aphelion Isle Aphelion_Isle wikilink  . Then return to Erwen in
 Farr.
  Erwen
   &6[Erwen]&r
@@ -33,7 +33,7 @@ Farr.
  I presume you are ready? Your second hunt will take you into the depths of the demon summoner's grove, to the great   Link
 Weeping Wormwood Weeping_Wormwood wikilink tree. You must slay 5 Weeping Barklings, for they will serve as the paper due to
 their latent magical properties.
-&o  Hunt down 5 Weeping Barklings at the   Link   Weeping Wormwood Weeping_Wormwood wikilink in   Link   Azacor’s Grove
+&7&o  Hunt down 5 Weeping Barklings at the   Link   Weeping Wormwood Weeping_Wormwood wikilink in   Link   Azacor’s Grove
 Azacor’s_Grove wikilink  . Then return to Erwen in Farr.
  Erwen
   &6[Erwen]&r
@@ -46,7 +46,7 @@ Azacor’s_Grove wikilink  . Then return to Erwen in Farr.
  For your third hunt, a feather for a quill is required. Only the finest will do, yet the finest was hunted to extinction. But
 it can be brought back. Seek out an altar hidden in the jungle, a dark pool of red. Slay 3 of the hateful demons that are
 evocated there, and their bodies can be fashioned into what we need.
-&o  Hunt down 3 Hate Knights in   Link   Altar of Evocation Altar_of_Evocation wikilink  . Then return to Erwen in Farr.
+&7&o  Hunt down 3 Hate Knights in   Link   Altar of Evocation Altar_of_Evocation wikilink  . Then return to Erwen in Farr.
  Erwen
   &6[Erwen]&r
  Have the Hate Knights been eradicated?
@@ -70,7 +70,7 @@ locating the damn thing in the first place.
 about it. It rarely even steps into the swamp at all. It's gotta be hiding somewhere, but Sierhaven is a big city. The Polling
 Place in Sierhaven would be a good place to start. It used to be a stable you know, and I'd reckon there's some old unused space
 that would make a good hiding spot, due to the likely leftover water and animal feed.
-&o  Search for the Questing Beast at the Polling Place in Sierhaven.
+&7&o  Search for the Questing Beast at the Polling Place in Sierhaven.
  When you find the Questing Beast:
   &5You smell it before you see it... it seems like there's something living down there.&r
  After defeating the Questing Beast:
@@ -89,12 +89,12 @@ trimmings from his horn.
  Do you really not know?! Quest compasses have to come from somewhere, and Hubert's horn trimmings make excellent needles and
 put the "Quest" in quest compass! Now off with you! I don't want to see you back here again, you can go mail in your vote or
 something if you need to vote...
-&o  Return to Erwen.
+&7&o  Return to Erwen.
  Erwen
   &6[Erwen]&r
  You return, hunter. Is the deed done?
   &5[Well...]&r
-&o  You explain how the Questing Beast was already captured and likely content not having to die repeatedly.
+&7&o  You explain how the Questing Beast was already captured and likely content not having to die repeatedly.
   &6[Erwen]&r
  Ah, can't say I'm upset to hear that. Much better than getting slaughtered over and over, I imagine. Still, did you get some
 flesh for the Soulleather?

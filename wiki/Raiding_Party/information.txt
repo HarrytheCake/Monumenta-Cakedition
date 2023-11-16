@@ -1,5 +1,5 @@
-prerequisites = *&3Voyage of Discovery&r 
+Pre-req: *&3Voyage of Discovery&r 
 *&3Unveiled&r
- NPC: Captain Lamis Coords: -746, 83, 1380
- Celsian Isles Misport
-POI: &3Barracks At Sea&r
+ NPC: Captain Lamis &1Coords:&r -746, 83, 1380
+&2 Celsian Isles&r Misport
+POI:  &3Barracks At Sea&r

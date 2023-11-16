@@ -1,3 +1,3 @@
-prerequisites = *&3A Crown of Majesty&r
+Pre-req: *&3A Crown of Majesty&r
 *&3Winds of War&r
-*&3Halls Of Wind And Blood NPC: Antoine King's Valleytown = Sierhavenstarting_npc_coordinates = -767, 107, 132starting_npc_coordinates = -767, 107, 132 King's Valleytown = Sierhavenstarting_npc_coordinates = -767, 107, 132town = Sierhavenstarting_npc_coordinates = -767, 107, 132
+*&3Halls Of Wind And Blood NPC: Antoine&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -767, 107, 132starting_npc_coordinates = -767, 107, 132&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -767, 107, 132town = Sierhavenstarting_npc_coordinates = -767, 107, 132

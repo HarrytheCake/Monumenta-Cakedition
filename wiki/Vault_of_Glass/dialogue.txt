@@ -12,7 +12,7 @@ needed.
   &6[Postman]&r
  Sounds great! After running all around the Valley looking for you I could use a break. I'll still be here when you want to pick
 those letters up.
-&o  The urgent letter said to climb the tower in Sierhaven with the purple and black banners.
+&7&o  The urgent letter said to climb the tower in Sierhaven with the purple and black banners.
  The Tower can be accessed via the south side of the second floor of the smithy.
  Argent
   Coordinates: [-685, 141, -3]
@@ -38,7 +38,7 @@ Carlton, ensure his safety, and learn what he knows.
   &5[Not interested.]&r
   &6[Argent]&r
  You seem to think you had a choice. We need you, and The Order of Glass gets what we need. Carlton lived in Farr, start there.
-&o  Look around Farr for clues to where Carlton fled to. Find him and talk to him.
+&7&o  Look around Farr for clues to where Carlton fled to. Find him and talk to him.
  Savannah
   Coordinates: [558, 100, 168]
    &6[Savannah]&r
@@ -56,11 +56,11 @@ highlands! Said he was goin to an old abandoned house there.
  Thank goodness, I was worried you were one of the Five Axes goons. Wait, you weren't followed right?
   &5[Of course not!]&r
   &5[Uhhhh...]&r
-&o   &3You hear footsteps from upstairs and a voice shouts:&r
+&7&o   &3You hear footsteps from upstairs and a voice shouts:&r
  Alright boys, search the place! Tear it apart until you found that bean counter!
-&o   &3Carlton squeaks and cowers in a corner&r
+&7&o   &3Carlton squeaks and cowers in a corner&r
  After killing all the thugs:
-&o   &3That should be all of them. I should talk to Carlton again.&r
+&7&o   &3That should be all of them. I should talk to Carlton again.&r
  Carlton
   &6[Carlton]&r
  T-thanks, I thought I was doomed there.
@@ -69,7 +69,7 @@ highlands! Said he was goin to an old abandoned house there.
  O-of course. All of his financial records are kept in a warehouse in Farr, that should tell you everything you need. There's a
 basement with a vault in it, but you have to solve a maze to get there. I don't know all the tricks, but I remember hearing to
 'follow the shadows'. I hope that helps you bring him in.
-&o  Find your way through the maze beneath the Five Axes Trading Co warehouse. You should start by following the shadows.
+&7&o  Find your way through the maze beneath the Five Axes Trading Co warehouse. You should start by following the shadows.
   When you get into the basement, to go through the maze follow the path without torches.
  Directions: S S W W N W W S S E E S W S W W N N.
  Enter the door and talk to the parrot.
@@ -78,7 +78,7 @@ basement with a vault in it, but you have to solve a maze to get there. I don't 
  Squawk! Polly want a beer! Squawk!
  Get Polly a beer from the bar.
  Polly
-&o   &3Polly takes a big glug from your mug of beer.&r
+&7&o   &3Polly takes a big glug from your mug of beer.&r
   &6[Polly]&r
  Squawwwk! When the dark isn't enough, follow the jungle! Squawk!
   As hinted, previously along the path you passed a branch that would have led you via jungle planks.
@@ -98,7 +98,7 @@ basement with a vault in it, but you have to solve a maze to get there. I don't 
   &3He throws you out with an annoyed grunt&r
   &5[Dennis.]&r
   &3He throws you out with an annoyed grunt&r
-&o  Grab the ledge and head back to Argent! He needs to see it ASAP.
+&7&o  Grab the ledge and head back to Argent! He needs to see it ASAP.
   &6[Duchess Emmeline]&r
  Behind you.
  Duchess Emmeline
@@ -112,7 +112,7 @@ basement with a vault in it, but you have to solve a maze to get there. I don't 
  Well thank you, I was worried there was going to be bloodshed but this was much simpler. If you're ever in the Celsian Isles,
 stop by. I think you, me, and Octavius need to have a little chat. Salieri, take us home.
   &5[No, I'm turning these in.]&r
-&o  The ledger is gone. Tell Argent what happened.
+&7&o  The ledger is gone. Tell Argent what happened.
  Argent
   &6[Argent]&r
  I heard a commotion. Is everything alright? Do you have the ledgers?

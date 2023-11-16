@@ -1,4 +1,4 @@
-prerequisites = &3The Lost Empire&r
- NPC: Zulumar Coords: 391, 57, 730
- Celsian Isles Alnera
+Pre-req: &3The Lost Empire&r
+ NPC: Zulumar &1Coords:&r 391, 57, 730
+&2 Celsian Isles&r Alnera
 related_poi=&3Sunken Tomb&r

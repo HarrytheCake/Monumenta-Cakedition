@@ -38,7 +38,7 @@ stuck here under orders, unable to leave. Would you be willing to return to Molt
  That is unfortunate, but I understand. Please return if you feel you are up for the task.
   &6[Torren]&r
  Wonderful. Please make your way to Molta and seek out Boris with haste.
-&o  Foreman Boris has been in contact with Torren. Seek him out in Molta.
+&7&o  Foreman Boris has been in contact with Torren. Seek him out in Molta.
  Foreman Boris
   Coordinates: [184, 110, 43]
    &6[Foreman Boris]&r
@@ -50,14 +50,14 @@ you here...
   &5What are you talking about...?&r
   &6[Alnera Guard]&r
  Don't move, (Player)! We have you surrounded!
-&o  Whelp... You got arrested. Guess you're on your own.
+&7&o  Whelp... You got arrested. Guess you're on your own.
   In order to escape the mineshaft, the following steps is required to get a key: OrderedList DefaultStyle DefaultDelim Plain
 Obtain around 4-5 Old Pickaxes from Sani and have them be stolen by Leeton. After the event with him, give the crystal obtained
 to Crispy Cal. He will then give you a minecart. Plain  Talk to the Wall Boy and believe him to get a small container. Then
 agree with Tiq, Tiq then Toq and right click with the Small Container to put the endermites in the container. Plain  Once you
 have both the container with endermites & a minecart, ask Sani to send the package up. Run up to where the guards are and pick
 up the key they will drop after the event. Plain  Head to the Cyan Wool lobby button and speak to Boris.
- &o  You managed to escape the mine! Might as well talk to Boris while you're in the Cyan lobby.
+ &7&o  You managed to escape the mine! Might as well talk to Boris while you're in the Cyan lobby.
  Foreman Boris
   Coordinates: [2, 44, 406]
    &6[Foreman Boris]&r
@@ -74,7 +74,7 @@ back into the mines to begin digging up Cursestone again.
   &6[Foreman Boris]&r
  That would be a good idea, and I'm sure your partners in Mistport would be interested in this, Vargos I believe was a name
 Torren mentioned to me.
-&o  Report what's happened to Vargos in Mistport.
+&7&o  Report what's happened to Vargos in Mistport.
  Vargos
   Coordinates: [-430, 83, 1337]
    &6[Vargos]&r
@@ -105,7 +105,7 @@ Rahkeri, where you can intercept him.
   &5Sounds like as good of a plan as any.&r
   &6[Vargos]&r
  Then we'll do it. I'll make contact with Torren, you start making your way to his home in Rahkeri.
-&o  Return to Torren in Rahkeri.
+&7&o  Return to Torren in Rahkeri.
  Torren, Ishnir Diplomat
   Coordinates: [-150, 167, 417]
    &6[Torren]&r
@@ -118,7 +118,7 @@ them to enter the town through the transporters at any point now.
  Oh come on, Torren. You didn't think I'd fall for your summons, did you? We've known you were working with this traitor for a
 while now, but thank you for giving us the proof needed to arrest you.
   &5You feel some power grab on to you and get teleported away.&r
-&o  Arrested again... Why does this keep happening?
+&7&o  Arrested again... Why does this keep happening?
  Head Guard Obadiah
   Coordinates: [-1531, 106, -1328]
    &6[Head Guard Obadiah]&r
@@ -234,7 +234,7 @@ questions, it's time I take care of you, once and for all.
  After defeating Pharaoh Nasha Ka:
   &6[Pharaoh Nasha Ka]&r
  I just... wanted to make a better world... but no matter... he already has what he needs...
-&o  Wrap things up with Obadiah.
+&7&o  Wrap things up with Obadiah.
  Head Guard Obadiah
   Coordinates: [-1531, 106, -1328]
    &6[Head Guard Obadiah]&r

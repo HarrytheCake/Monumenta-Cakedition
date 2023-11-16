@@ -29,28 +29,28 @@ missing.
  Before you go wandering the Valley searching, I'd like you to go meet with R'Tsiv yourself. I told him I'd be talking to you.
 Next to the Crafter Building is a sealed doorway. Press the button next to it and you'll be able to enter the Room of
 Projection. There you must project your spirit through the cosmos to the hidden ho
- C:   &o  [1/2]: Enter the Room of Projection.
- C:   &o  [2/2]: Approach the cracked mirror.
+ C:   &7&o  [1/2]: Enter the Room of Projection.
+ C:   &7&o  [2/2]: Approach the cracked mirror.
  After entering the Room of Projection:
- C:   &o  Approach the cracked mirror.
+ C:   &7&o  Approach the cracked mirror.
  When you get close to the mirror:
-&o  As you approach the strange mirror, it seems to shatter outward, pulling you inside.
- C:   &o  Guide your soul through the first puzzle.
+&7&o  As you approach the strange mirror, it seems to shatter outward, pulling you inside.
+ C:   &7&o  Guide your soul through the first puzzle.
   Puzzle Solution:
  Right, Up, LineBreak  Right, Up, LineBreak  Right, Down, LineBreak  Left, Down, LineBreak  Right, Down, LineBreak  Right, Up,
 LineBreak  Right, Down.
   After completing the first puzzle:
- C:   &o  Guide your soul through the second puzzle.
+ C:   &7&o  Guide your soul through the second puzzle.
   Puzzle Solution:
  Up, Right, Down, Right, Up, Left, Up, Right, Up, Right, Up, Left, Up, Left.
   After completing the second puzzle:
- C:   &o  Guide your soul through the third puzzle.
+ C:   &7&o  Guide your soul through the third puzzle.
   Puzzle Solution:
  Up, Right, Up, Right, Up, Left, Down, Right, Down, Right, Down, Right, Up, Left, Up, Right, Up, Left, Down, Left, Up, Right.
   After completing the third puzzle:
   &6[R'Tsiv]&r
  Welcome to Ta'Ksaav, outsider.
- C:   &o  Find and speak to R'Tsiv.
+ C:   &7&o  Find and speak to R'Tsiv.
  R'Tsiv
   Coordinates: [433, 167, -651]
    &6[R'Tsiv]&r
@@ -89,7 +89,7 @@ life upon doing so. It is the last escape for an Elder to keep the deepest secre
 follow. Your first step will be gathering wheat and grinding it down in the mill into an infused flour. Next, pull a dream from
 the lake with a fishing rod and cook them in R'Tanaa's kitchen in her Akkotl Cooking Oven barrel. They will be combined to
 create the Akkotl. Go forth now.
- C:   &o  Look for Mountainous Wheat to grind down at the Mill and fish up a dream. Combine them in an Elder's kitchen space,
+ C:   &7&o  Look for Mountainous Wheat to grind down at the Mill and fish up a dream. Combine them in an Elder's kitchen space,
 then return to R'Tsiv.
   To get "dream" cast a fishing rod, which you can buy for 16 xp from R'Tsiv, from the fishing dock at [476, 165, -665] and you
 will immediately be given the item   Link   Figment of Dreaming Figment_of_Dreaming wikilink  , but you need 5 of them.
@@ -103,7 +103,7 @@ Ground Flour and 5 Figment of Dreaming for a   Link   Akkotl Akkotl wikilink  .
  Yes, this Akkotl hits the spot.... Now, give me a moment to let the dreams you captured guide me.
   &5[Okay.]&r
   &6[R'Tsiv]&r
-&o  Oh... Why would you turn around so close to your goal? Such a mistake my friend... There is no trap here. At least there
+&7&o  Oh... Why would you turn around so close to your goal? Such a mistake my friend... There is no trap here. At least there
 wasn't meant to be...
   &5[What is it? Did you see something?]&r
   &6[R'Tsiv]&r
@@ -111,17 +111,17 @@ wasn't meant to be...
 You must start at these small ruins. If R'Kitxet did what he was supposed to, he would have left a detailed scroll in his wake.
 Find it and you may be able to follow in his footsteps. Please, find our fellow Elder. There is much at stake beyond even your
 understanding. Now, if you step into the fire in the meditation hut, you will return to Ta'Eldim.
- C:   &o  Leave Ta'Ksaav.
+ C:   &7&o  Leave Ta'Ksaav.
  You can leave by left-clicking on the campfire at [470, 169, -621].
  After leaving Ta'Ksaav:
- C:   &o  Find a trace of R'Kitxet in the   Link   Tiny Jungle Ruin Tiny_Jungle_Ruin wikilink
+ C:   &7&o  Find a trace of R'Kitxet in the   Link   Tiny Jungle Ruin Tiny_Jungle_Ruin wikilink
  After grabbing the book from the barrel inside Tiny Jungle Ruins:
- C:   &o  Find R'Kitxet's path in the ruins of Ta'Nkuu, the   Link   Crossroad Ruins Crossroad_Ruins wikilink
+ C:   &7&o  Find R'Kitxet's path in the ruins of Ta'Nkuu, the   Link   Crossroad Ruins Crossroad_Ruins wikilink
  After grabbing the book from the barrel inside Crossroad Ruins:
- C:   &o  Follow R'Kitxet's path to the   Link   Inner Sanctum Inner_Sanctum wikilink of the   Link   Verdant Fortress
+ C:   &7&o  Follow R'Kitxet's path to the   Link   Inner Sanctum Inner_Sanctum wikilink of the   Link   Verdant Fortress
 Verdant_Fortress wikilink  .
  After stepping on the pressure plates:
- C:   &o  Talk to your ally Kathryn.
+ C:   &7&o  Talk to your ally Kathryn.
  Kathryn
   Coordinates: [1052, 72, 296]
    &6[Kathryn]&r

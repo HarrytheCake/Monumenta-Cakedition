@@ -38,36 +38,36 @@ artifacts, yet he was afraid to use them.
  I digress. As it turns out, one of those artifacts is hidden deep underground, under the Sunken Tomb to the northwest. I don't
 know what dangers lie within, but be careful! Once you're inside, seek out a hidden door; it should open up to a secret chamber
 that holds great treasure. Good luck!
- C:   &o  Head to the   Link   Sunken Tomb Sunken_Tomb wikilink and search for a hidden chamber.  Plain  The hidden chamber can
-be entered by pressing a button on the back wall inside the tomb. There is a creeper spawner next to the button, so be wary that
-it may be destroyed by a creeper explosion.
-&o  You press the button. There is a loud banging sound right next to your ears. You start to lose consciousness.
-&o  Suddenly, you find yourself inside a large structure with a high ceiling.
- C:   &o  Find a way to retrieve the cursed artifact from the temple.
-&o  As you move inside the temple, you notice a large eye looking directly at you
-&o  A magical barrier blocks your way. Perhaps you should examine this room?
+ C:   &7&o  Head to the   Link   Sunken Tomb Sunken_Tomb wikilink and search for a hidden chamber.  Plain  The hidden chamber
+can be entered by pressing a button on the back wall inside the tomb. There is a creeper spawner next to the button, so be wary
+that it may be destroyed by a creeper explosion.
+&7&o  You press the button. There is a loud banging sound right next to your ears. You start to lose consciousness.
+&7&o  Suddenly, you find yourself inside a large structure with a high ceiling.
+ C:   &7&o  Find a way to retrieve the cursed artifact from the temple.
+&7&o  As you move inside the temple, you notice a large eye looking directly at you
+&7&o  A magical barrier blocks your way. Perhaps you should examine this room?
   &6[???]&r
  Prove yourself worthy to possess this sacred relic or begone!  Plain  The button to progress is located under the bridge on the
 wall toward the entrance of the room. Plain  After pressing the button, a second button will appear inside the drain pipe in the
 back left corner of the room. Swim inside the pipe and press the button to remove the magic barrier.
  If you try to enter without removing the barrier:
-&o  A magical barrier restrains you from entering...
-&o  You hear a crackling sound
-&o  After a moment, a splash of water is heard at the other end of the room
+&7&o  A magical barrier restrains you from entering...
+&7&o  You hear a crackling sound
+&7&o  After a moment, a splash of water is heard at the other end of the room
  After pressing the button:
-&o  Echoes are heard all over the hall. It seems that barrier has been broken!
+&7&o  Echoes are heard all over the hall. It seems that barrier has been broken!
   &6[Menacing Voice]&r
  You did it, mortal. Maybe you're not so hopeless...
- C:   &o  [1/2]: Return to Zulamar in Alnera.
- C:   &o  [2/2]: If you lose the artifact you can get it back from the hidden chamber.
+ C:   &7&o  [1/2]: Return to Zulamar in Alnera.
+ C:   &7&o  [2/2]: If you lose the artifact you can get it back from the hidden chamber.
  Zulumar
   &6[Zulamar]&r
  You got it? Well, show it to me, quickly!
-&o  He seems both a little bit nervous and excited at the same time.
+&7&o  He seems both a little bit nervous and excited at the same time.
   &5[I have it right here.]&r
   &6[Zulamar]&r
- Yes, just like he said! Legends don't lie, truly! Plain &o  He takes the artifact from your hands and you notice a gleam in his
-eyes.
+ Yes, just like he said! Legends don't lie, truly! Plain &7&o  He takes the artifact from your hands and you notice a gleam in
+his eyes.
   &5[Excuse me- care to tell me what this is all for?]&r
   &6[Zulamar]&r
  Well, I guess I can tell you. The artifact you retrieved from the sunken tomb is not a simple relic of the past, but is instead
@@ -76,7 +76,7 @@ details- I'm not sure of them myself- but my employer will surely be able to ans
 His name is Zeroc- I'll let him know you helped me here. Now, where was I...
   &5[In a hurry? You look nervous...]&r
   &6[Zulamar]&r
- Huh? What? Why does it bother you so much? Plain &o  He looks away from you and tries to examine the artifact.
+ Huh? What? Why does it bother you so much? Plain &7&o  He looks away from you and tries to examine the artifact.
   &5[You send me after a relic you aren't sure exists, refuse to tell me about yourself, and now you try to ignore me. I need
 answers.]&r
   &6[Zulamar]&r
@@ -89,7 +89,7 @@ helped me here. Now, where was I...
   &5[I see. Let's talk about my reward now...]&r
   &6[Zulamar]&r
  Ah, yes! Reward, indeed... You see, I have nothing but these shiny crystals- er, crystalline shards...
-&o  He frowns a bit and thinks for a second.
+&7&o  He frowns a bit and thinks for a second.
   &6[Zulamar]&r
  Although... I can make a replica of this spear and imbue it with either the power of lightning, fire, or ice- whichever one you
 want. But choose wisely- once you pick one, there is no going back.

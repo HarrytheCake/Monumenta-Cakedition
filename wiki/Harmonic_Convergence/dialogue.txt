@@ -26,10 +26,10 @@ blessings. It was an honor to be chosen... for most, anyway.
   &6[Harmonious Spirit]&r
  Indeed, I was happy in my village. I neither wanted to leave, nor did I trust those that had went before me. I can't really say
 why, but something felt off about the whole thing. There were too many unanswered questions. I fought against the system.
-&o  1/4 - Visit the Spring Shrine.
-&o  2/4 - Visit the Summer Shrine.
-&o  3/4 - Visit the Fall Shrine.
-&o  4/4 - Visit the Winter Shrine.
+&7&o  1/4 - Visit the Spring Shrine.
+&7&o  2/4 - Visit the Summer Shrine.
+&7&o  3/4 - Visit the Fall Shrine.
+&7&o  4/4 - Visit the Winter Shrine.
  Once you completed all four shrines, return to the Harmonious Spirit.
  Harmonious Spirit
   &6[Harmonious Spirit]&r
@@ -43,7 +43,7 @@ for my people to travel to the Arboretum's doors, but I dare not guess what it i
  No... I mean technically? However, if something dangerous had been in there, it might have been able to escape if you had gone
 about it that way. In addition you wouldn't have been recognized by the magic of the area and would find it difficult to attune
 the teleporters to get back out. Regardless, you will need to head through the Sealed Descent to get to the Arboretum.
-&o  Go through the Sealed Descent to get to the Arboretum.
+&7&o  Go through the Sealed Descent to get to the Arboretum.
  Harmonious Spirit
   &6[Harmonious Spirit]&r
  You have arrived. This is the entrance to our most sacred of sites- I have built this area to serve as a sort of lobby for you.

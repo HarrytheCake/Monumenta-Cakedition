@@ -1,5 +1,5 @@
 &r
-&o  Locate the destined blade for Herriot.
+&7&o  Locate the destined blade for Herriot.
  Herriot the Loyal
   Coordinates: [-1531 101 997]
    &6[Herriot the Loyal]&r
@@ -20,7 +20,7 @@
   &6[Herriot the Loyal]&r
  Not exactly but I have an idea of who might be gifted with this information! Have a look in the Bazaar for Anette, she should
 know more!
-&o  C: Visit Anette in the Bazaar and ask her where the fabled blade might be.
+&7&o  C: Visit Anette in the Bazaar and ask her where the fabled blade might be.
  Anette
   Coordinates: [-1472, 94, 901]
    &6[Anette]&r
@@ -36,10 +36,10 @@ know more!
  Alright, here it is: "Tall doth stand the glowing trunks bending slight the bolete trove. On snow-strewn plains the crystal
 grove do hide the blade, of power drunk. Beware the crystals, oft attuned to icy grasps in the hidden shrine. But folly to the
 weak aligned 'tis sinister, destiny is hewn."
-&o  C: Solve the riddle and travel to where it's leading you. (Anette can always tell you the riddle again).
+&7&o  C: Solve the riddle and travel to where it's leading you. (Anette can always tell you the riddle again).
   The riddle is leading you to the PoI   Link   Crystal Forest Grove Crystal_Forest_Grove wikilink  .
- &o  C: [1/2]: Return to Herriot with the blade once you have retrieved it.
-&o  C: [2/2]: If you have lost the Blade of Destiny, you can find it in a cave in the PoI.
+ &7&o  C: [1/2]: Return to Herriot with the blade once you have retrieved it.
+&7&o  C: [2/2]: If you have lost the Blade of Destiny, you can find it in a cave in the PoI.
  Herriot the Loyal
   &6[Herriot the Loyal]&r
  Have you located the blade?
@@ -54,8 +54,8 @@ weak aligned 'tis sinister, destiny is hewn."
   &4Be ready for a fight!&r
   &6[Herriot the Loyal]&r
  And you... will be the first to yield to its power
-&o    &4''Herriot drops the sword and stumbles over by his desk.''&r
-&o  C:  Speak with Herriot to see if he is ok.''
+&7&o    &4''Herriot drops the sword and stumbles over by his desk.''&r
+&7&o  C:  Speak with Herriot to see if he is ok.''
  Herriot the Loyal
   &6[Herriot the Loyal]&r
  I'm... not worthy... what... happened to me? I'm no knight. I do not deserve this title...

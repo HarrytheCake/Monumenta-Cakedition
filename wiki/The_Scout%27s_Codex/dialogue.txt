@@ -1,6 +1,6 @@
 &r
-&o  Find Laura's Scout's log near the   Link   Bandit onghold Bandit_onghold wikilink  .
-  Scout Laura SoftBreak  Coordinates:   &o  -733, 129, -252
+&7&o  Find Laura's Scout's log near the   Link   Bandit onghold Bandit_onghold wikilink  .
+  Scout Laura SoftBreak  Coordinates:   &7&o  -733, 129, -252
   &6[Scout Laura]&r
  Are you about to leave town? Let me give you some advice. If you are looking for an old mine, just follow the signs. I wouldn't
 suggest going too far without proper gear, it may be really dangerous...
@@ -21,10 +21,10 @@ is still there.
   &5[Sorry, I've got a lot going on right now.]&r
   &6[Scout Laura]&r
  That's alright.
-&o  [1/2]: Head to the isle near the   Link   Bandit onghold Bandit_onghold wikilink and find Laura's Log.
-&o  [2/2]: Once you've found the log, return it to Laura.
- &o  Go to [-950, 103, -355] and retrieve   Link   Scout's Log: Laura Scout's_Log:_Laura wikilink and return to Scout Laura.
- ong  Scout Laura SoftBreak  Coordinates:   &o  -732, 129, -251
+&7&o  [1/2]: Head to the isle near the   Link   Bandit onghold Bandit_onghold wikilink and find Laura's Log.
+&7&o  [2/2]: Once you've found the log, return it to Laura.
+ &7&o  Go to [-950, 103, -355] and retrieve   Link   Scout's Log: Laura Scout's_Log:_Laura wikilink and return to Scout Laura.
+ ong  Scout Laura SoftBreak  Coordinates:   &7&o  -732, 129, -251
   &6[Scout Laura]&r
  Hey, it's you again! Glad to see you alive!
   &5[Thanks. I think I found your book! Take a look.]&r
@@ -61,8 +61,8 @@ them and blow them up. Then run for your life! Still game?
  That's the spirit! here you go; these should be enough. And remember - you need to blow up the main support beams. They are
 usually made out of wood and look very thick. If you lose them, I have a few extra and can resupply you. Please don't, though.
 You can find the entrance north of the   Link   Bandit's onghold Bandit_onghold wikilink  , by the water.
-&o  [1/2]: Find a way into the warehouse beneath the   Link   Bandit's onghold Bandit_onghold wikilink  .
-&o  [2/2]: Once inside the warehouse, set three High-Density TNT charges at three different support beams.
+&7&o  [1/2]: Find a way into the warehouse beneath the   Link   Bandit's onghold Bandit_onghold wikilink  .
+&7&o  [2/2]: Once inside the warehouse, set three High-Density TNT charges at three different support beams.
   Warehouse location: SoftBreak  [-904, 91, -464]
   When you try to enter warehouse: SoftBreak   &8Before you lies the entrance to the bandit's warehouse.&r LineBreak   &5[Enter
 the warehouse.]&r LineBreak   &5[Leave.]&r
@@ -79,14 +79,14 @@ the warehouse.&r
   &8You decide to leave for now.&r
   Beam spots: SoftBreak  [-902, 98, -539] SoftBreak  [-884, 102, -539] SoftBreak  [-905, 103, -560]
   After placing all three: LineBreak   &8All charges have been set! Hurry to the exit before they detonate!&r
-&o  C: Escape the warehouse!
+&7&o  C: Escape the warehouse!
  When you go to leave the warehouse:
   &8The dark tunnel looms over you. Do you wish to leave?&r
   &5[Leave.]&r
   &5[Stay.]&r
  If you leave after placing the 3 charges: SoftBreak   &8You hear loud explosions deep in the cavern behind you. If there was
 anything worth salvaging - it's gone now. Time to return back to Laura.&r
-&o  C: Return to Laura with good news.
+&7&o  C: Return to Laura with good news.
  Scout Laura
   &6[Scout Laura]&r
  Well? How'd it go? Do tell!

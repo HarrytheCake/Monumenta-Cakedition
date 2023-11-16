@@ -44,14 +44,14 @@ into the corner.
   &5[Do you mind if I see that book?]&r
   &6[Nelfine]&r
  Sure, I have no use for it. I feel like it's about me but none of it makes much sense.
-&o  Search out clues as to why Nelfine is trapped underground with no memory
+&7&o  Search out clues as to why Nelfine is trapped underground with no memory
   Coordinates: [336, 75, 309]
   Head to the lab.
  At the lab solve the   Link   puzzle Puzzle_Solutions_Guide#Nelfine's_Curse wikilink  .
  After completing the puzzle:
   &6[Mysterious Voice]&r
  This configuration... It didn't work last time. Did I do something wrong? This requires further research...
-&o  You broke the device and received a configured sample! Return it to Nelfine.
+&7&o  You broke the device and received a configured sample! Return it to Nelfine.
  Nelfine
   &6[Nelfine]&r
  Have you found anything?

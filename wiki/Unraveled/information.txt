@@ -1,5 +1,5 @@
-prerequisites = * &3A Wolf in Witch's Clothing&r
- NPC: Bhairavi Coords: -279 867-652
- Architect's Ring Galengarde
+Pre-req: * &3A Wolf in Witch's Clothing&r
+ NPC: Bhairavi &1Coords:&r -279 867-652
+&2 Architect's Ring&r Galengarde
 Difficulty = Medium
 Length = Hard

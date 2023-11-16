@@ -2,7 +2,7 @@
  Commander Haynes
   &6[Commander Haynes]&r
  Welcome, Vargos told me you were coming. We've also been preparing for an assault on the Sons of the Forest and our prepa-
-SoftBreak &o  You hear ghasts and screaming from outside
+SoftBreak &7&o  You hear ghasts and screaming from outside
   &6[Commander Haynes]&r
  Damn! They're coming again! We could use your help, any chance you're good with a bow?
   &4Make sure you are fully geared with a bow and ready to fight before accepting&r
@@ -10,7 +10,7 @@ SoftBreak &o  You hear ghasts and screaming from outside
   &5[No, I have to go]&r
   &6[Commander Haynes]&r
  That's what I like to hear! Now get to a tower and get ready for a fight.
-&o  Help defend Highwatch against the horde of mobs then break the Sons of the Forest's summoning stone
+&7&o  Help defend Highwatch against the horde of mobs then break the Sons of the Forest's summoning stone
  During the Siege:
   &6[Commander Haynes]&r
  We just need to hold the ghasts off for a few minutes while Josiah gets the wards up, then we can take the fight to them. Hold
@@ -26,17 +26,17 @@ fast!
 it!
   &6[Commander Haynes]&r
  Haha, great job! That should stop the attack. Come to my office, I've got some good news!
-&o  Speak with Commander Haynes in his office
+&7&o  Speak with Commander Haynes in his office
  Commander Haynes
   &6[Commander Haynes]&r
  Hahaha! Great job, Highwatch might've fallen without you. More good news, Ursan and his scouts captured one of their Wardens.
 He's down in the cells right now. Their fortress is protected with magic, so see if you can get him to tell us how to get past
 it.
-&o  Speak with the Sons of the Forest's Warden. Leave the holding cells by talking with the guard. Speak with C'Taz about making
-a Truth Serum
-&o  The Collect the Fire Fish in the   Link   Southern Cenote Southern_Cenote wikilink
+&7&o  Speak with the Sons of the Forest's Warden. Leave the holding cells by talking with the guard. Speak with C'Taz about
+making a Truth Serum
+&7&o  The Collect the Fire Fish in the   Link   Southern Cenote Southern_Cenote wikilink
   [Spoiler]   Link   How to make the Truth Serum Puzzle_Solutions_Guide/Siege_of_Highwatch wikilink
-&o  Head back to the holding cells in the Highwatch and speak with the Warden with the Truth Serum
+&7&o  Head back to the holding cells in the Highwatch and speak with the Warden with the Truth Serum
  Warden
   &6[Warden]&r
  You may have entombed me here, but it is pointless. Our magic is mightier than ever, far beyond when we clashed with your
@@ -54,5 +54,5 @@ and the insects rend the flesh from your bones.
   &6[Warden]&r
  The barrier within the Verdant Fortress repels anyone not wearing a shroud made of woven mistleaves and sanctified with blood
 magic. Wearing this will let you through the barrier and make you all but invisible to the wardens patrolling the inner sanctum.
-&o  This should be enough information to get in when the time is right.
-&o  SIEGE OF HIGHWATCH COMPLETED Awarded   Link   Highstorm Highstorm wikilink and 128 Enchanting Bottles.
+&7&o  This should be enough information to get in when the time is right.
+&7&o  SIEGE OF HIGHWATCH COMPLETED Awarded   Link   Highstorm Highstorm wikilink and 128 Enchanting Bottles.

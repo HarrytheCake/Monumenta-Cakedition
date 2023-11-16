@@ -17,46 +17,46 @@ make it myself.
   &5[Yep, I'm dying *cough cough*]&r
   &6[Dr. Laurie]&r
  Your pupils aren't even dilated and your eyes aren't oozing pus. Stop joking around, stop wasting my time.
-&o  Meet C'Taz in the jungle at 240, 78, 315
+&7&o  Meet C'Taz in the jungle at 240, 78, 315
  C'Taz
   &6[C'Taz]&r
  The plague has come again. I can make the medicine you seek. First, we need twelve golden stones, darkened with fear. Twelve
 treasures of winged foes, from their fortress of leaves and sky. Bring them to me. Behind me is a totem of sky. You may use it
 to come and go here freely, if your intentions are true. SoftBreak   &6[C'Taz]&r To make the medicine you seek, I need twelve
 Dark Amber, plucked from a fortress of leaves and sky. This is the first step of three.
-&o  Dark Amber: Hawk Fortress 445, 124, 105
+&7&o  Dark Amber: Hawk Fortress 445, 124, 105
   &6[C'Taz]&r
  Perfect. Dark Amber, to be ground into a powder as fine as the smoothest sand. Next, we need sixteen Spirit Flowers, plucked
 from an island deep in the jungle. Their ancient oils banish the foul spirits afflicting Nyr.
   &6[C'Taz]&r
  Now, you must bring me sixteen Spirit Flowers, plucked from an island deep within the jungle. Their oils are essential for the
 medicine.
- Spirit Flower &o  : Hallowed Pond 450, 71, 245
+ Spirit Flower &7&o  : Hallowed Pond 450, 71, 245
   &6[C'Taz]&r
  Wonderful. Pungent and rich, these flowers will banish the evil spirits who have blighted Nyr. Their oils form the base of the
 medicine. Finally, bring ten pieces of Haunted Earth, reclaimed from my people's ancient home to the North. Then they shall
 live.
-&o  Haunted Earth: Ancient Ruins 320, 73, -75
+&7&o  Haunted Earth: Ancient Ruins 320, 73, -75
   &6[C'Taz]&r
  The ingredients are gathered. I shall invoke the spirits of earth and health and blood, and then the medicine will be yours.
   &6[C'Taz]&r
  The medicine is done. There are four souls who must drink this, but I have more ingredients. I sense great hardship in your
 future, and can make you two powerful elixirs to aid you. Or, I can make another dose of medicine. Choose.
-&o  When presented the option to take some potions or an extra dose of medicine, its optimal to choose the extra medicine
+&7&o  When presented the option to take some potions or an extra dose of medicine, its optimal to choose the extra medicine
 otherwise you will need to re-gather the ingredients again in   Link   Roots of the Plague Roots_of_the_Plague wikilink
-&o  This ending dialog is from choosing to take potions instead of the extra medicine
+&7&o  This ending dialog is from choosing to take potions instead of the extra medicine
  Dr. Laurie
   &6[Dr. Laurie] &r
  You actually found that medicine? SoftBreak   &5[Yes, but only four doses]&r
   &6[Dr. Laurie] &r
  Well I can't make my own, but that's still enough to save everyone. Let's see if this works...
   &6[Dr. Laurie] &r
- &o  COMPLETED THE PLAGUE  Awarded 192 Enchanting Bottles and 3 Potions of Restoration!
-&o  This ending dialog is from choosing to take the extra medicine.
+ &7&o  COMPLETED THE PLAGUE  Awarded 192 Enchanting Bottles and 3 Potions of Restoration!
+&7&o  This ending dialog is from choosing to take the extra medicine.
  Dr. Laurie
   &6[Dr. Laurie] &r
  You actually found that medicine? SoftBreak   &5[Yes! All five doses]&r
   &6[Dr. Laurie] &r
  Well, I'll set this one aside for later, and let's see if this works...
   &6[Dr. Laurie] &r
- &o  THE PLAGUE COMPLETE!  Awarded 192 Enchanting Bottles and 3 Potions of Restoration! LineBreak
+ &7&o  THE PLAGUE COMPLETE!  Awarded 192 Enchanting Bottles and 3 Potions of Restoration! LineBreak

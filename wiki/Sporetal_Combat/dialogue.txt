@@ -1,5 +1,5 @@
 &r
-&o  Speak with the Galengarde Aboreal Society representatives for Primirium Tybale.
+&7&o  Speak with the Galengarde Aboreal Society representatives for Primirium Tybale.
  Primirium Tybale
   Coordinates: [-316 182 -672]
    &6[Tybale]&r
@@ -20,7 +20,7 @@ with them involved.
   &5[I'll get right on it.]&r
   &6[Tybale]&r
  Thank you so much. You're a true friend.
-&o  C: Speak with the Galengarde Aboreal Society representatives for Primirium Tybale.
+&7&o  C: Speak with the Galengarde Aboreal Society representatives for Primirium Tybale.
  Martine
   Coordinates: [-307 76 -608]
    &6[Martine]&r
@@ -53,13 +53,13 @@ enough, the fungicide distributor should give you a little ping.
   &5[I'll get right on it!]&r
   &6[Martine]&r
  The Galengarde Arboreal Society appreciates your efforts!
-&o  C: Help the Galengarde Aboreal Society by finding the 3 Spyshrooms using the fungicide! If you lost it, Martine will surely
-have more.
+&7&o  C: Help the Galengarde Aboreal Society by finding the 3 Spyshrooms using the fungicide! If you lost it, Martine will
+surely have more.
   Bottom Spyshroom is at [-312 87 -668]
  Middle Spyshroom is at [-326 144 -652] (Right outside library)
  Top Spyshroom is at [-311 183 -649]
- &o  That should be all of the Spyshrooms. Head back to Martine.
-&o  C: Return to Martine with the news.
+ &7&o  That should be all of the Spyshrooms. Head back to Martine.
+&7&o  C: Return to Martine with the news.
  Martine
   Coordinates: [-307 76 -608]
    &6[Martine]&r
@@ -72,7 +72,7 @@ have more.
  I feel that they were a hostile force like all prior known Mycelia. Anyway, the funeral for Primirium Conquort may progress at
 this time. Thank you for your service to the Galengarde Arboreal Society. May he rest well in the roots of Chenmai. Go and
 inform his associates that the funeral proceedings will be underway shortly.
-&o  C: Return to Tybale after having murdered innocent(...?) mushrooms.
+&7&o  C: Return to Tybale after having murdered innocent(...?) mushrooms.
  Primirium Tybale
   Coordinates: [-316 182 -672]
    &6[Tybale]&r
@@ -85,7 +85,7 @@ have been getting bolder. I hope this doesn't spell trouble for the event. Bring
   &6[Tybale]&r
  Excellent. I'll send invitations to your crew down in the market then. We'll be gathering in a few hours. Please speak with the
 Funeral Organizer at the base of the tree and they'll let you into the chambers.
-&o  C: Enter the Funeral by speaking to the Organizer at the base of the tree, then speak to Tybale.
+&7&o  C: Enter the Funeral by speaking to the Organizer at the base of the tree, then speak to Tybale.
  Funeral Organizer
   Coordinates: [-304 78 -625]
    &6[Funeral Organizer]&r
@@ -119,7 +119,7 @@ in the air before reaching slowly toward the roots. &r
 hands and-- {...}
   &6[Alle Abello]&r
  Ah, hullu, people conn se Galengarde. Please no do paniq, come in peaceful, akku se
-&o  C: Meet Tybale in his office.
+&7&o  C: Meet Tybale in his office.
  Primirium Tybale
   Coordinates: [-316 182 -672]
    &6[Tybale]&r
@@ -139,7 +139,7 @@ case you need backup.
   &5[Thanks. Where do I need to go, Alle?]&r
   &6[Alle Abello]&r
  Go caves below Chanterelle. Find Abello village. Talk elder there. You help, yes. Thank.
-&o  C: Talk to Elder Yuti in the Abello Village in the Crystal Caves.
+&7&o  C: Talk to Elder Yuti in the Abello Village in the Crystal Caves.
  Elder Yuti
   Coordinates: [-261 58 -440]
    &6[Elder Yuti Abello]&r
@@ -156,7 +156,7 @@ Galengarde to want peace.]&r
   &5[Do I need to do anything special?]&r
   &6[Elder Yuti Abello]&r
  Conquer Chanterelle. Do not burn. Do not destroy. Let them regrow. Just take what we need, come back.
-&o  C: Retrieve the Festering Toxin by conquering   Link   Chanterelle Village Chanterelle_Village wikilink  , and bring it to
+&7&o  C: Retrieve the Festering Toxin by conquering   Link   Chanterelle Village Chanterelle_Village wikilink  , and bring it to
 Yuti.
  Elder Yuti
   Coordinates: [-261 58 -440]
@@ -166,7 +166,7 @@ Yuti.
   &6[Elder Yuti Abello]&r
  Yahh, the Toxin, good. Go down to doorway further down. Alle Abello let you in to the deep, deep, deep place. Speak if you wish
 to be transported.
-&o  C: Enter the Godspore's Domain, and speak to Alle Abello. Elder Yuti Abello may teleport you there.
+&7&o  C: Enter the Godspore's Domain, and speak to Alle Abello. Elder Yuti Abello may teleport you there.
  Alle Abello ( Link   Godspore Godspore wikilink Lobby)
   &6[Alle Abello]&r
  Bonnet, asi [Player]! You come help kill God? Yahh, yes. You have key to ancient place. The coremounds, spore-fill caverns.

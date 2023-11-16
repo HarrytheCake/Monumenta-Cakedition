@@ -1,6 +1,6 @@
 &r
   WorkInProgress|Double check, entire branch with Ishnir alliance, missing dialogue&r
-&o  Investigate the Ruined Congress with Izzy. Header start_of_quest  Start of Quest
+&7&o  Investigate the Ruined Congress with Izzy. Header start_of_quest  Start of Quest
  Wilhelm, Chillwind Diplomat
   &6[Wilhelm]&r
  Ah, Captain      &5[Good to see you again after that mess of a party.]&r
@@ -42,14 +42,14 @@ investigating, and I'd like your help. Are you in?
   &6[Izzy]&r
  Fantastic! The Congress is situated in the ocean, right between the two nations. According to my map, it's just north of that
 Bastion where we found the entrance to Viridia.
-&o  Seek out the ruins of the Congress and investigate around.
+&7&o  Seek out the ruins of the Congress and investigate around.
  When you find Izzy:
   &4[Hooded Assassin]&r
  So, the rumors of a survivor are true, I see. I knew you would eventually come back here, though I never imagined there would
 be two of you. Regardless, there's an order on your head, so it's time you say goodnight.
   &5The man falls over as you deal the finishing blow&r
   The passage is at -1018, 120, 2277, behind a wall of trapdoors.
- &o  Look for a passage way out.
+ &7&o  Look for a passage way out.
  Izzy
   &6[Izzy]&r
  Wow, that tunnel definitely took us a long way out from the crater, I believe that's Frostgate that I see just over the hill.
@@ -62,7 +62,7 @@ escape the wreckage, it stands to reason that they would have sought help in Fro
   &6[Izzy]&r
  When we allied with the Chillwind, I was given the contact of Advisor Ridnan, and we have talked a few times since. He resides
 in the castle most of the time with the Queen, so he would definitely be my first instinct to ask.
-&o  Search out the advisor to the queen.
+&7&o  Search out the advisor to the queen.
  Royal Advisor Ridnan
   &5[I need to ask you something regarding the Congress.]&r
   &6[Royal Advisor Ridnan]&r
@@ -96,7 +96,7 @@ have parted with that information as easily otherwise.
   &5[Seems like our next destination is Wispervale.]&r
   &6[Izzy]&r
  Quite. Let's get to Wispervale and put that detector to good use.
-&o  Make your way to Wispervale and seek out the survivor using the Energy Detector.
+&7&o  Make your way to Wispervale and seek out the survivor using the Energy Detector.
  After finding the first circle of purple particles:
   &6[Izzy]&r
  Looks like Ridnan's intel was correct. The survivor definitely escaped to Wispervale. Let's keep following the trail, they must
@@ -112,7 +112,7 @@ desperate need of some money. Let's keep searching.
   &6[Izzy]&r
  Seems like the device is telling us this is the end of the road. What is this place though, the Soul Forge? And why does the
 trail end here? Surely someone here has some information we can go off of.
-&o  The detector led you to the Soul Forge. What could this mean?
+&7&o  The detector led you to the Soul Forge. What could this mean?
  After entering the Soul Forge and talking to Johei:
  Johei
   &6[Johei]&r
@@ -136,8 +136,8 @@ don't know its history seem to just call it the Cliffside Ruins.
   &5[Seems like its worth checking out.]&r
   &6[Izzy]&r
  Well, it's the only lead we have, so I would say so.
-&o  Search around the Cliffside Ruins for some Blessed Wisp Oil.
-&o  You poured the oil into the Soul Forge waters. Has anything changed?
+&7&o  Search around the Cliffside Ruins for some Blessed Wisp Oil.
+&7&o  You poured the oil into the Soul Forge waters. Has anything changed?
  Spirit of the Forge
   &6[Spirit of the Forge]&r
  Welcome child, I feel you are the one who offered to me the sacred oil of this land. What is it you wish to ask of me?
@@ -155,7 +155,7 @@ face at this time.
   &5[I'm looking for someone who may have talked to you.]&r
   &6[Spirit of the Forge]&r
  I see. Tell me child, who is this soul that you wish to find?
-&o  You explain the situation with the spirit.
+&7&o  You explain the situation with the spirit.
   &6[Spirit of the Forge]&r
  What a tragic existence this person has held... I do believe that I know the one of which you speak, but it is beyond my morals
 to reveal the identity of those who seek a new life with me.
@@ -167,7 +167,7 @@ long to find, then I shall light the path towards them.
   &6[Spirit of the Forge]&r
  Very well, my child. Come, accompany me to my Realm of Faces.
   Pick the fourth one from the left, "On the run from sea to snow, he saw that which he should not know."
- &o  The Mother of Faces lit the way towards the survivor. Use the updated detector to find him!
+ &7&o  The Mother of Faces lit the way towards the survivor. Use the updated detector to find him!
  After finding the survivor:
  Professor Lyson
   &6[Professor Lyson&r
@@ -212,7 +212,7 @@ trusted in this case, I must turn to yours.
  I see no immediate issues with that. This might be our chance to finally settle the differences between the nations.
   &6[Wilhelm]&r
  Thank you, my friend.      &5You open your eyes and find yourself back in Wispervale.&r
-&o  Head to Alnera Palace for a meeting with the Pharaoh.
+&7&o  Head to Alnera Palace for a meeting with the Pharaoh.
   &6[Pharaoh's Guard]&r
  Under request from Diplomat Torren, we present her majesty, blood of Saia, goddess of the sun, Pharaoh of the Northern Sands,
 Nasha Ka.
@@ -253,13 +253,13 @@ matters.
  I have not seen Alnera since I was a child. I'm sure I'm going to enjoy the time here while I can.
   &6[Alnera Guard]&r
  Oh we're sure you will too, you bastard traitor.
-&o  The guard swings his blade, cutting off Lyson's head.
+&7&o  The guard swings his blade, cutting off Lyson's head.
   &6[Izzy]&r
  LYSON!
   &6[Alnera Guard]&r
  Silence, you trash.
-&o  The guard hits you over the head with the hilt of his weapon, and you black out.
-&o  Talk to Izzy.
+&7&o  The guard hits you over the head with the hilt of his weapon, and you black out.
+&7&o  Talk to Izzy.
  Izzy
   &6[Izzy]&r
  Before you even ask... Lyson's dead, you got knocked out, I teleported us to safety before they got me...

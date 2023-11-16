@@ -8,7 +8,7 @@ know, but it is too sensitive to discuss here. Pirates have such bad manners at 
   &5[Where do I need to go?]&r
   &6[Tiffy]&r
  I have prepared a teleport there, just let me finish this cuppa first. Talk to me when you are ready to go.
-&o  Talk to Tiffy to go to the Glass Meeting. Try to act presentable and stay put when asked to.
+&7&o  Talk to Tiffy to go to the Glass Meeting. Try to act presentable and stay put when asked to.
  Tiffy
   &6[Tiffy]&r
  Ah, always feel better after a good cuppa. Are you ready to go the the meeting?
@@ -69,7 +69,7 @@ violently, or try to assassinate someone you care about. Trust me, if I was thre
 want to build a good working relationship with you, and that requires you not being randomly murdered.
   &6[Duchess Emmeline]&r
  Salieri, please see our guest out when they are ready to depart.
-&o  Speak to Salieri. He will give you something and help you leave.
+&7&o  Speak to Salieri. He will give you something and help you leave.
  Salieri
   &6[Salieri]&r
  I will try to keep this short. You are too charismatic to be a spy on your own. So I was told to give you a communication
@@ -95,7 +95,7 @@ to go?
   &6[Tiffy]&r
  You should probably speak to the Captain, I think her name is Indigo? She should be able to help coordinate everything. I'll
 try to help, but I probably won’t be trusted much, after what I did.
-&o  Speak to Indigo about the current situation with the diplomats.
+&7&o  Speak to Indigo about the current situation with the diplomats.
  Captain Indigo
   &6[Captain Indigo]&r
  Hello there Captain      &5[We have a situation.]&r
@@ -114,8 +114,8 @@ food, decorations, or housing ready. Can we tell them to wait?
   &6[Captain Indigo]&r
  You really do have odd associates, Captain      &6[Captain Indigo]&r
  Alright, I'll take care of it. Just speak to me when you're ready to proceed
-&o  1/2 - Tell Indigo that you are ready to proceed.
-&o  2/2 - Once the diplomats arrive speak to either one of them.
+&7&o  1/2 - Tell Indigo that you are ready to proceed.
+&7&o  2/2 - Once the diplomats arrive speak to either one of them.
  Captain Indigo
   &6[Captain Indigo]&r
  Are you ready to go greet our guests?
@@ -135,13 +135,13 @@ could dock.
 Indigo]&r
  Those two looked oddly comfortable with each other, considering their countries are on the brink of war. I'll go with them so
 they don't get lost.
-&o  Talk to Indigo and find out where some of your guests went.
+&7&o  Talk to Indigo and find out where some of your guests went.
  Captain Indigo
   &6[Captain Indigo]&r
  Oh hey      &5[Have you seen where any of our guests went?]&r
   &6[Captain Indigo]&r
  An Ishnir Navigator went outside with some of the crew. Izzy went in that direction as well and might be able to help.
-&o  Speak to Izzy for help finding a way to spy on a group of party goers.
+&7&o  Speak to Izzy for help finding a way to spy on a group of party goers.
  Izzy
   &6[Izzy]&r
  Hey      &5[Have you heard anything interesting, Izzy?]&r
@@ -152,25 +152,25 @@ them for some reason you could probably use a communication device to do so. Not
   &6[Izzy]&r
  Looks like you could get on the balcony of that house over there, the one the Chef's are in. You could likely listen in from
 there.
-&o  Use the Spymaster 9001 to listen from the balcony.
+&7&o  Use the Spymaster 9001 to listen from the balcony.
  Spymaster 9001
   &6[Ishnir Navigator]&r
  Now get this, you’ve all seen how friendly the boss is with the Chillwind diplomat. The two have been friends for years, I tell
 you! At least, that’s what I heard from one of my sources.
   &8You decide that you should return to Indigo. Maybe she has seen someone else.&r
-&o  Speak to Indigo to inquire about the Chillwind.
+&7&o  Speak to Indigo to inquire about the Chillwind.
  Captain Indigo
   &6[Captain Indigo]&r
  Did you find the crew you were looking for,      &5[More or less, did you happen to see any other groups, by chance?]&r
   &6[Captain Indigo]&r
  I saw some Chillwind crew going east toward the docks. Vargos went out that way as well, maybe he can help you.
-&o  Speak to Vargos for more information on the location of Chillwind Sailors.
+&7&o  Speak to Vargos for more information on the location of Chillwind Sailors.
  Vargos
   &6[Vargos]&r
  Ah, good to finally get some fresh air. Oh, Captain      &5[Did you happen to see any Chillwind Crew come through here?]&r
   &6[Vargos]&r
  Yes, one of the crew members seemingly had gotten landsick. They took him aboard the ship for him to recover.
-&o  Use the Spymaster 9001 to listen on a ship.
+&7&o  Use the Spymaster 9001 to listen on a ship.
  Spymaster 9001
   &6[Landsick Chillwind Sailor]&r
  *HURF* The diplomat saw me and some glowy thing came out of his hands and I started feeling a bit better. It was magic I tell
@@ -181,14 +181,14 @@ you imagine it?
   &6[Landsick Chillwind Sailor]&r
  You are probably *URGH* right. I'll probably forget all about it when I'm feeling better. He isn't that type of person.
   &8You decide that you should return to Indigo. Maybe she has seen someone else.&r
-&o  Speak to Indigo to inquire about the Ishnir.
+&7&o  Speak to Indigo to inquire about the Ishnir.
  Captain Indigo
   &6[Captain Indigo]&r
  Did you find whatever you were looking for,      &5[Yeah, while unlikely, have you seen a third group pass through here?]&r
   &6[Captain Indigo]&r
  Well, the Ishnir Adviser has been upstairs, though good luck getting up there without making a ruckus. Levyn was suppose to be
 pruning the vines outside, he might be able to help you.
-&o  Speak to Levyn about how to get upstairs. Also make sure he is okay.
+&7&o  Speak to Levyn about how to get upstairs. Also make sure he is okay.
  Levyn
   &8Levyn looks heavily dazed and battered.&r
   &6[Levyn]&r
@@ -200,7 +200,7 @@ pruning the vines outside, he might be able to help you.
   &6[Levyn]&r
  Aye, I didn’t trim back the vines before the party started, as you can see. You could use them to climb up. I think I'm going
 to rest here a bit longer.
-&o  Use the Spymaster 9001 to listen in from the balcony.
+&7&o  Use the Spymaster 9001 to listen in from the balcony.
  Spymaster 9001
   &6[Ishnir Advisor]&r
  I must say, the Frostgate monarchy is more hypocritical than I’d ever have imagined. They tout being able to do everything they
@@ -229,7 +229,7 @@ stopped.
 Wilhelm's focus is waning fast, thankfully it lasted long enough.
   &6[Wilhelm, Chillwind Diplomat]&r
  Yes, soon this link will break, and the party will come to an end. Once it does, we shall return to our own countries. To sate
-a portion of your probable curiosity, Captain    &o  Speak to Tiffy about what has happened.
+a portion of your probable curiosity, Captain    &7&o  Speak to Tiffy about what has happened.
  Tiffy
   &6[Tiffy]&r
  Ello, ol’ chap, how did the mission go?

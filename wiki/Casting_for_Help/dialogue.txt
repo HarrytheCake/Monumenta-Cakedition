@@ -1,5 +1,5 @@
 &r
-&o  Visit Nurse Deidre to find a way to help Melinda's leg
+&7&o  Visit Nurse Deidre to find a way to help Melinda's leg
  Melinda
   Coordinates: [-614, 96, 12]
    &6[Melinda]&r
@@ -26,7 +26,7 @@ trip.
   &5[You don't have anything worth stealing anyway.]&r
   &6[Melinda]&r
  I'm not sure if I should be happy or very sad.
-&o  C: Visit Nurse Deidre to find a way to help mend Melinda's leg.
+&7&o  C: Visit Nurse Deidre to find a way to help mend Melinda's leg.
  Nurse Deidre
   Coordinates: [-754, 107, -8], Tower Entrance: [-715, 108, -11]
    &6[Nurse Deidre]&r
@@ -49,8 +49,8 @@ wikilink I should be able to weave it into a cast for her to wear, but it will b
   &5 [Hopefully you get supplies in soon.]&r
   &6 [Nurse Deidre]&r
  I'm sure Lowtide will send a shipment soon, but I worry about her leg setting wrong in the meantime.
-&o  C [1/2]: Collect 15 Spider Silk from the   Link   Swamp Sinkhole Swamp_Sinkhole wikilink
-&o  C [2/2]: Once you have 15 Spider Silk return to Nurse Deidre.
+&7&o  C [1/2]: Collect 15 Spider Silk from the   Link   Swamp Sinkhole Swamp_Sinkhole wikilink
+&7&o  C [2/2]: Once you have 15 Spider Silk return to Nurse Deidre.
  Nurse Deidre
   &6[Nurse Deidre]&r
  If you're not feeling well, feel free to rest for a bit in one of the beds.
@@ -59,7 +59,7 @@ wikilink I should be able to weave it into a cast for her to wear, but it will b
  Wonderful! This goes here and that goes there... Okay it should be ready to go. I'll have to do the final fitting myself
 obviously, but I will have to grab some equipment before I head over. Take this cast and these crutches to her, and I'll meet up
 with her as soon as I can.
-&o  C: Take the Cast and the Crutches back to Melinda
+&7&o  C: Take the Cast and the Crutches back to Melinda
  Melinda
   &6[Melinda]&r
  Have you spoken to Nurse Deidre yet?
@@ -70,11 +70,11 @@ with her as soon as I can.
   &5[Not right now.]&r
   &6[Melinda]&r
  Let me know when you are ready.
-&o  C [1/2]: Talk to Melinda, go to her basement, and open the chests.
-&o  C [2/2]: If you forget where to find Melinda, you can find her here.
+&7&o  C [1/2]: Talk to Melinda, go to her basement, and open the chests.
+&7&o  C [2/2]: If you forget where to find Melinda, you can find her here.
  After opening the chest:
-&o  There is nothing in this chest. You should go talk to Melinda
-&o  C: Talk to Melinda.
+&7&o  There is nothing in this chest. You should go talk to Melinda
+&7&o  C: Talk to Melinda.
  Melinda
   &6[Melinda]&r
  I'm feeling so much better now. Deidre came by while you were down there. Did you find any money down there?

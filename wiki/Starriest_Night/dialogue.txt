@@ -9,15 +9,15 @@
 is all sorts of broken.
   &5[Your telescope is broken? Mind if I take a look? I have quite a history with these devices.]&r
   &6[Maywitch]&r
- I... wow, yeah, you seem like someone who knows what they're doing. Actually... Plain &o  She gazes towards the sky for a short
-moment, before looking back at you. She continues with a slight hesitance..
+ I... wow, yeah, you seem like someone who knows what they're doing. Actually... Plain &7&o  She gazes towards the sky for a
+short moment, before looking back at you. She continues with a slight hesitance..
   &6[Maywitch]&r
  I think I wouldn't mind if you help me a little. See, I need calibration tools. Rather unusual calibration tools, found in
 unusual places.
   &5[I'm all ears.]&r
   &6[Maywitch]&r
  Alright, good. Glad I didn't scare you off. So, first I'll need a Cloudpiercer Fork from   Link   Cloud Piercer Cloud_Piercer
-wikilink  , then I'll need... Plain &o  A sudden numbness overwhelms you, your vision clouds up, and a sinister sound rings in
+wikilink  , then I'll need... Plain &7&o  A sudden numbness overwhelms you, your vision clouds up, and a sinister sound rings in
 your head.
   &6[Maywitch]&r
  ...Starblight Diagonal from   Link   Bastion of Spires Bastion_of_Spires wikilink  , and an Andromeda Clamp from   Link
@@ -34,10 +34,10 @@ Aphelion Isle Aphelion_Isle wikilink  . Those'll be enough.
   &5[I wandered up here by accident, I'll be going now.]&r
   &6[Maywitch]&r
  Okay then...
-&o  [1/4]: Find a Cloudpiercer Fork at   Link   Cloud Piercer Cloud_Piercer wikilink  .
-&o  [2/4]: Find a Starblight Diagonal at   Link   Bastion of Spires Bastion_of_Spires wikilink  .
-&o  [3/4]: Find an Andromeda Clamp on   Link   Aphelion Isle Aphelion_Isle wikilink  .
-&o  [4/4]: Once you found all items, return to Maywitch in Oceangate.
+&7&o  [1/4]: Find a Cloudpiercer Fork at   Link   Cloud Piercer Cloud_Piercer wikilink  .
+&7&o  [2/4]: Find a Starblight Diagonal at   Link   Bastion of Spires Bastion_of_Spires wikilink  .
+&7&o  [3/4]: Find an Andromeda Clamp on   Link   Aphelion Isle Aphelion_Isle wikilink  .
+&7&o  [4/4]: Once you found all items, return to Maywitch in Oceangate.
   Cloudpiercer Fork can be found at [-1538, 133, -266].
  Starblight Diagonal can be found at [-1366, 140, -261].
  Andromeda Clamp can be found at [-1518, 106, 399].
@@ -48,18 +48,18 @@ Aphelion Isle Aphelion_Isle wikilink  . Those'll be enough.
   &6[Maywitch]&r
  At least your sense of humor is still alive and well. Anyway, thanks for bringing these to me. Now, I just need to stitch them
 together...
-&o  She reaches her hand into her pocket, searching for something.
+&7&o  She reaches her hand into her pocket, searching for something.
   &6[Maywitch]&r
  Just a moment, please...
-&o  Moments later, she pulls a strange blue adhesive out of her pocket.
+&7&o  Moments later, she pulls a strange blue adhesive out of her pocket.
   &6[Maywitch]&r
  There it is! Now, put some around the base... like that... yes, then another round...
-&o  That clearly is not the way it should look.
+&7&o  That clearly is not the way it should look.
   &6[Maywitch]&r
  Damn it. I can't do this. I can't leave the telescope either. Sorry, but I must ask for your help again. Please, I need you to
 go to Orion. He is a... friend of mine, so to speak. Seek out a spire near an abandoned laboratory filled with toxins, he should
 be at the top.
-&o  Find Orion at the top of a strange spire-like structure near the   Link   Toxin Lab Toxin_Lab wikilink  .
+&7&o  Find Orion at the top of a strange spire-like structure near the   Link   Toxin Lab Toxin_Lab wikilink  .
  Orion
   Coordinates: [-1188, 120, 179]
    &6[Orion]&r
@@ -71,22 +71,22 @@ be at the top.
   &6[Orion]&r
  The sky yearns to be set free. You will come back...
   &5[(Give him the parts)]&r
-&o  He takes the parts from your hands. With an unbelievable subtlety, he pieces them together, forming a strange device and
+&7&o  He takes the parts from your hands. With an unbelievable subtlety, he pieces them together, forming a strange device and
 gives it back to you.
   &6[Orion]&r
  Now, go forth and behold the depths.
-&o  Return to Maywitch with the device.
+&7&o  Return to Maywitch with the device.
  Maywitch
   &6[Maywitch]&r
  Hello! I assume you've visited Orion?
   &5[That I did. Here's your mechanism, repaired.]]&r
-&o  She puts the mechanism into a side panel of the telescope.
+&7&o  She puts the mechanism into a side panel of the telescope.
   &6[Maywitch]&r
  Finally! I'm able to stargaze once again! Let me fix it real quick.
   &5[Is it working?]]&r
   &6[Maywitch]&r
  Yes, indeed!
-&o  She moves over to the telescope and peeks through it.
+&7&o  She moves over to the telescope and peeks through it.
   &6[Maywitch]&r
  And the beacon has been lit. Aurora is close, I can almost feel it.
   &5[What? Aurora? I... Mind if I look too?]]&r
@@ -125,22 +125,22 @@ ominous things.]&r
   &6[Maywitch]&r
  This is... not something to be taken lightly. You need to see it yourself. The beacon has been lit, I can finally see. Head
 towards its fumes northeast of here, this is a sign [Player]
-&o  She sighs.
+&7&o  She sighs.
   &5[Where exactly am I heading?]&r
   &6[Maywitch]&r
  A lone isle north-west of Sierhaven. I heard the King sent an expedition there... I don't know what to expect, but stay on your
 guard.
-&o  Head towards the strange island in the northern parts of Narsen Sea.
+&7&o  Head towards the strange island in the northern parts of Narsen Sea.
  Professor Marl
   Coordinates: [-1077, 83, -353]
    &6[Professor Marl]&r
  Hm... the door looks very old... it seems that this crypt was built way before our expedition to this land... I wonder how long
 it has been here...
-&o  He seems to ignore your presence.
+&7&o  He seems to ignore your presence.
   &5[You must be Professor Marl, right?]&r
   &6[Professor Marl]&r
  Why is it still standing with all those bandits around... perhaps it's something else?
-&o  He continues to ignore you.
+&7&o  He continues to ignore you.
   &5[*Snap your fingers to get his attention*]&r
   &6[Professor Marl]&r
  Why is it still standing with all those bandits around... perhaps it's something else?
@@ -167,7 +167,7 @@ yet, but I'm sure it's just a matter of time. I'm already developing a solution.
  I'm afraid I can't be much of a help there, young one. Not only do we not know how to open it, but the King has also given
 clear orders - do not let anyone inside.
   &5[Excuse me, Professor, but I really ne--]&r
-&o  Suddenly, you hear a ringing in your head and a bright light envelops you. After a few moments, you find yourself in a
+&7&o  Suddenly, you hear a ringing in your head and a bright light envelops you. After a few moments, you find yourself in a
 strange room.
   &6[???]&r
  I...     &3can...&r see you...
@@ -177,14 +177,14 @@ strange room.
   &3Broken...&r beyond repair...
   &6[???]&r
  Sent there...     &3From outside...&r the realm...
-&o  [1/2]: Head towards the strange island in the northern parts of Narsen Sea.
-&o  [2/2]:     spoiler|What Lies Beneath.&r
+&7&o  [1/2]: Head towards the strange island in the northern parts of Narsen Sea.
+&7&o  [2/2]:     spoiler|What Lies Beneath.&r
   &6[???]&r
  She is seeking to widen the Crack in the Sky and bring the Stars to Land. In their wake, this world will collapse and be no
 more...
   &6[???]&r
  Aurora...
-&o  Return to Maywitch with the Shard of Andromeda.
+&7&o  Return to Maywitch with the Shard of Andromeda.
  Maywitch
   &6[Maywitch]&r
  Oh, it's you, [Player]. Did you find anything?

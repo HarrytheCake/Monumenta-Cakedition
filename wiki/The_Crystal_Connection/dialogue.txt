@@ -25,8 +25,8 @@ a benefit, some say... You have connection with their King, yes? Maybe we could 
   &5[Who is that?]&r
   &6[Macuniloh]&r
  Follow the stairs to the East, and look behind the flowers. A path awaits you there.
-&o  [1/2]: Find the path.
-&o  [2/2]: Follow the path.
+&7&o  [1/2]: Find the path.
+&7&o  [2/2]: Follow the path.
  T'Lm (Ta'Eldim's Magneta)
   &6[T'Lm]&r
  Hello again [Player]. I knew one day we would meet here. You really made sure this place was well lit, I see.
@@ -67,7 +67,7 @@ swiftly.
   &6[T'Lm]&r
  There are those who seek ways past the magic of Ta'Eldim. An untethered crystal is a risk I hope none will exploit. Claim the
 crystal, and get it safely to the capital. Now, return to Macuniloh. He waits for you.
-&o  Return to Macuniloh.
+&7&o  Return to Macuniloh.
  Macuniloh
   &6[Macuniloh]&r
  Have you followed the path?
@@ -84,7 +84,7 @@ what is going on.
   &5[I need to go prepare first.]&r
   &6[Macuniloh]&r
  Hurry yourself.
-&o  Talk to the Ta'Eldim Guard.
+&7&o  Talk to the Ta'Eldim Guard.
  Ta'Eldim Guard
   Coordinates: [481, 181, -388]
    &6[Ta'Eldim Guard]&r
@@ -115,7 +115,7 @@ He is the way now.
   &6[Ta'Eldim Guard]&r
  Of course. We must be protected. The Sons will never relent. You know the path you must walk, do you not? Return to Macuniloh
 and help this town.
-&o  Return to Macuniloh now that the sons are defeated.
+&7&o  Return to Macuniloh now that the sons are defeated.
  Macuniloh
   &6[Macuniloh]&r
  Sons of the Forest attack again! This is dire, [Player]. T'Xoc cannot hate us now. You must go to Velara and retrieve the
@@ -127,10 +127,10 @@ into Velara correctly? It's not well attuned. Now go, outsider. Be safe.
   &5[Got it. I'll head there now.]&r
   &6[Macuniloh]&r
  Go, outsider. Be safe.
-&o  [1/2]: Head into Velara.
-&o  [2/2]: Once inside Velara, find the crystal.
+&7&o  [1/2]: Head into Velara.
+&7&o  [2/2]: Once inside Velara, find the crystal.
  After getting the crystal:
-&o  Now that you have the crystal, return to Macuniloh.
+&7&o  Now that you have the crystal, return to Macuniloh.
  Macuniloh
   &6[Macuniloh]&r
  Outsider! Is that the crystal I feel? You have done it!
@@ -141,7 +141,7 @@ into Velara correctly? It's not well attuned. Now go, outsider. Be safe.
   &6[Macuniloh]&r
  The alarm... Something's happening. I must be taking you to safety. Come.
   &5[I'm coming.]&r
-&o  Talk to T'Xoc.
+&7&o  Talk to T'Xoc.
  T'Xoc (Bunker)
   &6[T'Xoc]&r
  I know what you've done, [Player]. All I can ask you is why.
@@ -168,11 +168,11 @@ planned.
   &6[T'Xoc]&r
  Do I have any other choice, [Player]? Do what I ask, and then I will demand a meeting with your Archmage. Now go, bring your
 crystal to whomever is in charge of teleporting in Sierhaven. This is your disaster to clean up this time.
-  &5[I'm ready to do my duty.]&r  Plain &o  Initiates fight with T'Calin
+  &5[I'm ready to do my duty.]&r  Plain &7&o  Initiates fight with T'Calin
   &5[I need time to prepare.]&r
   &6[T'Xoc]&r
  You best be swift.
-&o  Head into Ta'Eldim and clean up your mess.
+&7&o  Head into Ta'Eldim and clean up your mess.
  NOTE: The boss fight that is about to happen is pretty tough solo. The boss [T'Calin] has 512hp. Has 3 different spells and
 will summon Sons of the Forest throughout the fight.
  The first spell he likes to use is similar to a death beam spell. He will target the player then after a few seconds launch an
@@ -189,7 +189,7 @@ attack that will deal decent damage twice. If you are fast enough you can dodge 
  I am defeated... Nature will have its revenge.
   &6[T'Xoc]&r
  The teleporter to Velara has been reopened! Go now to Cinevra, young here of the Tlaxani.
-&o  Find the mage in charge of Sierhaven's teleporters.
+&7&o  Find the mage in charge of Sierhaven's teleporters.
  Cinevra
   &6[Cinevra]&r
  I sense a strong magic bound to you. A Tlaxan magic, is it?! What's a good little hero doing carrying around Tlaxan magics?
@@ -213,7 +213,7 @@ not?]&r
   &6[Cinevra]&r
  I'd say it worked! Why don't you go give the new teleporter a try? See how your Tlaxan friends are holding up. I ahve to speak
 to Vargos. We're going to need to have a meeting with the Tlaxans of Ta'Eldim...
-&o  Return to Ta'Eldim through the brand new teleporter! Then talk to Macuniloh.
+&7&o  Return to Ta'Eldim through the brand new teleporter! Then talk to Macuniloh.
  Macuniloh
   &6[Macuniloh]&r
  Z'Tkik! You scared me, [Player]! Is the teleporter working?
@@ -242,7 +242,7 @@ to Vargos. We're going to need to have a meeting with the Tlaxans of Ta'Eldim...
   &6[Macuniloh]&r
  Why would Sierhaven send a nobody? Well, they are waiting in the bunker for you. Shall I take you there?
   &5[Yes please.]&r
-&o  Speak with T'Xoc.
+&7&o  Speak with T'Xoc.
  T'Xoc (Bunker)
   &6[T'Xoc]&r
  Hello [Player]. We've been having quite a conversation about you. I knew you were well involved, but you've undergone quite a
@@ -253,7 +253,7 @@ Archmage here, I think perhaps this linking may truly be of benefit.
  For real. I believe you were correct. But you will NEVER mess with the magic of this town again. We cannot risk more attacks on
 our home. But at least we have the potential for a deep alliance with Sierhaven, unbelievably. He would like to speak with you
 too.
-&o  Chat with Vargos.
+&7&o  Chat with Vargos.
  Vargos (Bunker)
   &6[Vargos]&r
  Yes, hello [Player]. You've made quite the name for yourself out here. First you're out working with Bhairavi gathering wool,
@@ -264,7 +264,7 @@ tendencies, I think we're one step closer to some sort of peace in this realm. T
   &6[Vargos]&r
  You've done... interesting work here. I shall await more news on your work, and work with the rest of the council - and the
 King too, of course, yes - on the nature of this alliance. T'Xoc has something for you now. Good seeing you again.
-&o  Warp up with T'Xoc.
+&7&o  Warp up with T'Xoc.
  T'Xoc (Bunker)
   &6[T'Xoc]&r
  I would like to give you something as thanks for cleaning up your mess today. You caused chaos, but you fixed it, and in the

@@ -1,5 +1,5 @@
 &r
-&o  Discuss how to handle Shades with the Praetor.
+&7&o  Discuss how to handle Shades with the Praetor.
  The Praetor SoftBreak  Coordinates: [-461 192 -64]
   &6[The Praetor]&r
  You! You there! Come forward. You're the one who helped Ephesus. You're not from New Antium, yes? Why do you walk among the
@@ -58,8 +58,8 @@ one that best suits you and seek information within.
   &6[The Praetor]&r
  Thank you [Player]. Return to me when you find something. Or if you can only find the hunger of Shader, return as well. Even
 knowing there is nothing more valuable than not knowing at all
-&o  C: Travel into and Conquer the   Link   Silvic Quarry Silvic_Quarry wikilink  ... or....
-&o  C: Travel into and conquer the   Link   Doomed Encampment Doomed_Encampment wikilink instead.
+&7&o  C: Travel into and Conquer the   Link   Silvic Quarry Silvic_Quarry wikilink  ... or....
+&7&o  C: Travel into and conquer the   Link   Doomed Encampment Doomed_Encampment wikilink instead.
  The Praetor SoftBreak  Coordinates: [-461 192 -64]
   &6[The Praetor]&r
  If you have returned, I take it that you found something ?
@@ -81,7 +81,7 @@ cobblestones of the Keep differs greatly. Perhaps the Encampment can give us ins
  Now, Player. I thank you. I will summon you forth soon enough. I'd like to speak to Cleo about this. If you feel so inclined to
 go seek out answers at the Silvic Quarry as well, I will reward you richly for your troubles as well. Now though, please, take
 this for your mighty efforts.
-&o  Rewards : 2 Godtree Carvings and access to a further reward
+&7&o  Rewards : 2 Godtree Carvings and access to a further reward
  If you complete the second POI :
  The Praetor SoftBreak  Coordinates: [-461 192 -64]
   &6[The Praetor]&r

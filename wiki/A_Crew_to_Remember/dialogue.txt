@@ -17,7 +17,7 @@ can help me! I'm trying to put together a crew for my ship here, could you go sp
   &5[I am insulted and will not help you. ARRGH!]&r
   &6[Captain Indigo]&r
  Goodbye then.
-&o  Speak to a pirate in a Sierhaven pub.
+&7&o  Speak to a pirate in a Sierhaven pub.
  Levyn
   Coordinates: [-809, 101, 82]
    &6[Levyn]&r
@@ -36,7 +36,7 @@ can help me! I'm trying to put together a crew for my ship here, could you go sp
  What's a pirate without their treasure!
  If you talk to Indigo: SoftBreak   &6[Captain Indigo]&r You've done good, I think. Levyn is quite the character, but he seems
 very comfortable below deck. We're going to need more crew, but for now Levyn has a request of you.
-&o  Go below deck and speak to Levyn.
+&7&o  Go below deck and speak to Levyn.
  Levyn (Below Deck)
   &6[Levyn]&r
  This be quite the fine vessel. I can't wait to set sail.
@@ -49,7 +49,7 @@ be needing the perfect spyglass, matey.
  Not just any spyglass, friend. I need the famed spyglass of Captain Bijou! Even my parrot doesn't know where to find it though.
 I saw a book house or whatever they're called on my way into this piratey town though! Maybe they know where Bijou's voyage
 ended!
-&o  Speak to Chief Editor Sumona.
+&7&o  Speak to Chief Editor Sumona.
  Chief Editor Sumona
   Coordinates: [691, 76, 539]
    &6[Chief Editor Sumona]&r
@@ -81,9 +81,9 @@ Maw.
   &5[Thank you. I'll go check that out.]&r
   &6[Chief Editor Sumona]&r
  Good luck!
-&o  Look for Captain Bijou's spyglass in the   Link   Grand Maw Grand_Maw wikilink  .
+&7&o  Look for Captain Bijou's spyglass in the   Link   Grand Maw Grand_Maw wikilink  .
  After collecting the Spyglass:
-&o  Once you have Captain Bijou's spyglass take it to Levyn.
+&7&o  Once you have Captain Bijou's spyglass take it to Levyn.
  Levyn (Below Deck)
   &6[Levyn]&r
  You've found Bijou's Spyglass! I'll be the most swashbuckling Lookout of all time with this! The captain told me we're looking
@@ -97,7 +97,7 @@ for a Navigator though. I may know just where ya can find one! Arrr!
   &6[Levyn]&r
  It looks like coordinates! I've heard of a cartographer back in Sierhaven who has a place above the Alchemists. Maybe he'll
 know more for ye.
-&o  Take the Message From A Bottle to the Royal Cartographer in Sierhaven.
+&7&o  Take the Message From A Bottle to the Royal Cartographer in Sierhaven.
  Royal Cartographer
   Coordinates: [-797, 122, -43]
    &6[Royal Cartographer]&r
@@ -108,7 +108,7 @@ know more for ye.
   &6[Royal Cartographer]&r
  Ahh yes these coordinates are nautical, you see .1 seaports is a block west and .1 seabows is a block north. It looks like the
 message is referring to the banner behind the Apartments, so you should set sail from there!
-&o  Follow the coordinates in the message to the stranded Navigator. Be ready for anything.
+&7&o  Follow the coordinates in the message to the stranded Navigator. Be ready for anything.
   Start at the Sierhaven Flag and then go 270 blocks west and 90 blocks north.
   Izzy
   Coordinates: [-1306, 91, -12]
@@ -118,9 +118,9 @@ message is referring to the banner behind the Apartments, so you should set sail
   &6[Izzy]&r
  I have my ways. Look, are you going to save me or not?
  After you kill the Starved pirate:
-&o   &3After the pirate falls in battle, you find a tiny key on his body and take it. It's so small it takes up no room in your
-inventory.&r
-&o  Speak to Izzy
+&7&o   &3After the pirate falls in battle, you find a tiny key on his body and take it. It's so small it takes up no room in
+your inventory.&r
+&7&o  Speak to Izzy
  Izzy
   &6[Izzy]&r
  Oh thank the heavens you've found me. I've been trapped for weeks and was almost the next meal. Is there any way I can repay
@@ -131,7 +131,7 @@ you?
   &5[Great, meet with Captain Indigo in Lowtide and I'll see you there.]&r
   &6[Izzy]&r
  Thank you again!
-&o  Go below deck and speak to Izzy.
+&7&o  Go below deck and speak to Izzy.
  Izzy (Below Deck)
   &6[Izzy]&r
  The captain let me know we still need a Quartermaster, I've had some dealings with a smuggler named Samwell based out of Nyr;
@@ -139,15 +139,15 @@ best in the business. If you can get him on board then I think this ship will be
   &5[Where should I start looking for him?]&r
   &6[Izzy]&r
  Rummage around Scarface Ed's ware in Nyr, I've heard his guide to smuggling is quite enlightening.
-&o  Speak with Scarface Ed by speaking his language and buying the Beginner's Guide to Smuggling.
+&7&o  Speak with Scarface Ed by speaking his language and buying the Beginner's Guide to Smuggling.
  After buying the book:
-&o  The book is the key, the lock is the well.
+&7&o  The book is the key, the lock is the well.
  After getting into the tunnels:
   &3The bottom of the well opens up and you are pulled into a secret tunnel. Your Beginner's Guide to Smuggling has taken some
 water damage.&r
-&o  Navigate your way through the sewers until you find someone. Remember, the book is the key.
+&7&o  Navigate your way through the sewers until you find someone. Remember, the book is the key.
  At the Shady Bouncer:
-&o  Get inside and talk to Samwell. Remember, the book is the key.
+&7&o  Get inside and talk to Samwell. Remember, the book is the key.
  Samwell
   &6[Samwell]&r
  If you have no business here then beat it.
@@ -170,19 +170,19 @@ goods in the chest. Now take this and scram.
   &5[I'll think about it.]&r
   &6[Samwell]&r
  Thinking doesn't get you anywhere, acting does.
-&o  Enter the   Link   Murky Maze Murky_Maze wikilink  .
+&7&o  Enter the   Link   Murky Maze Murky_Maze wikilink  .
  After entering   Link   Murky Maze Murky_Maze wikilink  :
-&o  Make your way to the drop-off point and put the goods, and only the goods, in the chest.
+&7&o  Make your way to the drop-off point and put the goods, and only the goods, in the chest.
  After dropping the goods in:
-&o   &3Looks like the goods are in place, I should return to Samwell.&r
-&o  Return to Samwell. Remember, the book is the key, the lock is the well
+&7&o   &3Looks like the goods are in place, I should return to Samwell.&r
+&7&o  Return to Samwell. Remember, the book is the key, the lock is the well
  Samwell
   &6[Samwell]&r
  I've gotten word that the goods were in the drop-off point in time. I'm ready to give this pirating stuff a go.
   &5[Captain Indigo is waiting for you in Lowtide.]&r
   &6[Samwell]&r
  I'll see you there.
-&o  Return to Captain Indigo.
+&7&o  Return to Captain Indigo.
  Captain Indigo
   &6[Captain Indigo]&r
  You did it! The crew is assembled thanks to you. I've been working on a deal with the Crown to get us permission to leave the

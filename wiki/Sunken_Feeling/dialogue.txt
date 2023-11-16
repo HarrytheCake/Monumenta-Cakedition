@@ -26,7 +26,7 @@
   &6[Cropmaster Afondo]&r
  No, no, it's fine. It's just the main supply of food for Mistport. I've got this...
   &5[Can I help?]&r
-&o  C: Talk to Cropmaster Afondo.
+&7&o  C: Talk to Cropmaster Afondo.
   &6[Cropmaster Afondo]&r
  Would you? I don't even know where to begin right now, but any help would be... it would be quite a weight off my back.
  Cropmaster Afondo
@@ -65,7 +65,7 @@ the Farm should begin draining.
   &5[Nope, I'm ready to go.]&r
   &6[Cropmaster Afondo]&r
  Splendid, my friend. Let's get you in there and save this Farm!
-&o  C: Descend into the sunken Farm and find the Coral!
+&7&o  C: Descend into the sunken Farm and find the Coral!
   horn coral dissolver (-717, 42, 1499)
  horn coral (-729, 26, 1519)
  tube coral dissolver (-717, 42, 1564)
@@ -78,7 +78,7 @@ the Farm should begin draining.
  Now listen here, I'm trying to take a nap.
  &5[B-blubbb-AHH
  After dissolving all the coral:
- C:   &o  Tell Afondo the good news.
+ C:   &7&o  Tell Afondo the good news.
  Cropmaster Afondo
   &6[Cropmaster Afondo]&r
  How did it go down there, [Player]?

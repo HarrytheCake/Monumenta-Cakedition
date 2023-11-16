@@ -1,4 +1,4 @@
-prerequisites = None
- NPC: Drake Coords: 592, 97, 199
- King's Valley Farr
-POI: &3Corrupted Caves&r, &3Corrupted Island&r
+Pre-req: None
+ NPC: Drake &1Coords:&r 592, 97, 199
+&2 King's Valley&r Farr
+POI:  &3Corrupted Caves&r, &3Corrupted Island&r

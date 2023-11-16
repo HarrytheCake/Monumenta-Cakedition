@@ -22,14 +22,14 @@ gathering that, and see what pairs with it, no?
   &5[I'm on it!]&r
   &6[Claude]&r
  Merci!
-&o  Harvest some Flame-Spiced Wheat for Claude.
+&7&o  Harvest some Flame-Spiced Wheat for Claude.
  Head to   Link   Abandoned Tunnels Abandoned_Tunnels wikilink  .
-&o  Bring back the Flame-Spiced Wheat to Claude.
+&7&o  Bring back the Flame-Spiced Wheat to Claude.
  Claude
   &6[Claude]&r
  I 'ave prepared the mirepoix. 'ave you gotten any flame-spiced wheat for me?
   &5[Yep! Here.]&r
-&o  You hand Claude the wheat. He expertly grinds it and whips up a small pastry dish.
+&7&o  You hand Claude the wheat. He expertly grinds it and whips up a small pastry dish.
   &6[Claude]&r
  Mmm! The wheat is as wonderful as I 'ave been told, but we need more than just grains and vegetables.
   &6[Claude]&r
@@ -38,14 +38,14 @@ gathering that, and see what pairs with it, no?
   &5[Of course I can!]&r
   &6[Claude]&r
  Such spirit! Such zeal! I can only 'ope my dish will be as inspired as your confidence!
-&o  Hunt the Eastern Pass Cows to get some delicious High Quality Beef.
+&7&o  Hunt the Eastern Pass Cows to get some delicious High Quality Beef.
  Kill some of the cows above   Link   Eastern Pass Eastern_Pass wikilink  . (Note: you do not actually need to enter the PoI.)
-&o  Bring back the High Quality Beef to Claude.
+&7&o  Bring back the High Quality Beef to Claude.
  Claude
   &6[Claude]&r
  My palate cannot endure much more waiting... Do you 'ave any of the delicious beef for me?
   &5[It was a long hunt, but I've got the Korbaran beef.]&r
-&o  You hand Claude the beef. He quickly sears it and bites into the barely rare steak.
+&7&o  You hand Claude the beef. He quickly sears it and bites into the barely rare steak.
   &6[Claude]&r
  Hm. For a normal dish, this would satisfy. 'owever, we are not making just any dish, but my chef's specialty. My masterpiece! I
 think we will need something even more esoteric.
@@ -57,57 +57,57 @@ think we will need something even more esoteric.
   &6[Claude]&r
  While you are out searching the cave, I might go 'unting for some game of my own. Be careful though, I also 'eard rumors of
 awful and 'orrid things occurring within.
-&o  According to Claude, some meat can be found in the   Link   Cave of Bones Cave_of_Bones wikilink near Highwatch, go get
+&7&o  According to Claude, some meat can be found in the   Link   Cave of Bones Cave_of_Bones wikilink near Highwatch, go get
 some.
  After getting from ange Meat from   Link   Cave of Bones Cave_of_Bones wikilink  .
-&o  Bring this strange type of meat to Claude.
+&7&o  Bring this strange type of meat to Claude.
  Claude
   &6[Claude]&r
  You return! Did you manage to find some usable meat?
   &5[I... think so. This is what I could find.]&r
-&o  Claude bites directly into the raw meat you hand him. As he chews, a forlorn look comes across his face.
+&7&o  Claude bites directly into the raw meat you hand him. As he chews, a forlorn look comes across his face.
   &6[Claude]&r
  Alas, this meat is too old. Shame, I would 'ave loved it fresh.
   &6[Claude]&r
  It is okay though. While you were out, I... acquired some new meat. I would like you to do the 'onors of butchering it though,
 I think you will be pleasantly surprised. Please, 'ead upstairs.
-&o  Go to Claude's attic, and meet his new meatloaf.
+&7&o  Go to Claude's attic, and meet his new meatloaf.
  Terry
   &6[Terry]&r
  Who's there?! Who are you?! Please, let me go! I have a family! That madman told me he needed a taste-tester, and that's the
 last I remember before I woke up in this room! Please, let me go...
   &5[Sorry, but we need meat.]&r
   &6[Terry]&r
- Wait, wait! No don- ARGH!.. Plain &o  You take a nice slice out of Terry. He looks inconvenienced by this and will soon die.
+ Wait, wait! No don- ARGH!.. Plain &7&o  You take a nice slice out of Terry. He looks inconvenienced by this and will soon die.
   &5[Don't worry, I'll set you free and stop Claude.]&r
  If you choose to free:
-&o  Confront Claude.
+&7&o  Confront Claude.
  Terry
   &6[Terry]&r
  Thank you so much! I'd be dead without you! You go downstairs first, I'll escape while Claude is distracted.
  Claude
   &6[Claude]&r
  Welcome back, mon ami. I 'eard screaming. Do you 'ave it? Do you 'ave the meat?!
-&o   &4Make sure you are ready for a fight before you confront Claude!&r
+&7&o   &4Make sure you are ready for a fight before you confront Claude!&r
   &5[No. You're a monster!]&r
   &6[Claude]&r
  You... 'ow could you. You 'ad no problem with the meat from the cave. This is no different! I won't be denied! I must try it
 fresh!
  ''Claude grabs a long, serrated knife and leaps over the counter towards you!
  If you choose to cut some meat:
-&o  Bring Terry's meat back to Claude.
+&7&o  Bring Terry's meat back to Claude.
  Claude
   &6[Claude]&r
  Welcome back, mon ami. I 'eard screaming. Do you 'ave it? Do you 'ave the meat?!
-&o   &4Make sure you are ready for a fight before giving Claude Terry's meat!&r
+&7&o   &4Make sure you are ready for a fight before giving Claude Terry's meat!&r
   &5[Here it is.]&r
-&o  Claude greedily grabs the meat and bites into it raw, blood trickling from his mouth as he tears into it.
+&7&o  Claude greedily grabs the meat and bites into it raw, blood trickling from his mouth as he tears into it.
   &6[Claude]&r
  Ooohhh. It's... divine. It's so... fresh. Fantastique! But Terry, 'e was a weakling. I can only imagine what you can taste
 like. Although... I don't need to imagine, now do I?
-&o  Suddenly, Claude grabs a long, serrated knife and leaps over the counter towards you!
+&7&o  Suddenly, Claude grabs a long, serrated knife and leaps over the counter towards you!
  After you beat Claude:
-&o  After your last hit, Claude staggers back behind the counter, wounded and in no condition to fight.
+&7&o  After your last hit, Claude staggers back behind the counter, wounded and in no condition to fight.
  Claude
   &6[Claude]&r
  Ah! I may 'ave bitten off more than I could chew there. I 'ope you bear me no ill will, I was merely... overcome with passion.

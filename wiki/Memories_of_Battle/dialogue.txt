@@ -9,8 +9,8 @@
   &5[Is there somewhere we CAN talk?]&r
   &6[Jeremiah]&r
  I... Y-yes. Meet me down in the arena sh-shop? He is always l-listening, but we may be safer there.
-&o  [1/2]: Enter the Arena's Shop...
-&o  [2/2]: ...and talk to Jeremiah there.
+&7&o  [1/2]: Enter the Arena's Shop...
+&7&o  [2/2]: ...and talk to Jeremiah there.
  Jeremiah [Shop]
   Coordinates: [-968, 48, -1674]
    &6[Jeremiah]&r
@@ -35,7 +35,7 @@ in deeper so we can investigate m-more
   &5[Who are you?]&r
   &6[Jeremiah]&r
  I'm J-Jeremiah. The spellbinder. I m-make charms.
-&o  Find the key to the employee quarters, and return to Jeremiah once you've found it.
+&7&o  Find the key to the employee quarters, and return to Jeremiah once you've found it.
   To get the key you can either parkour around the tree across from Jermiah's shop via the vines. Or you can parkour up to the
 roof of Jermiah's shop, across to the food/bow/potion shop roof, then on the wall surrounding the lava, and lastly onto the
 tree.
@@ -51,7 +51,7 @@ tree.
   &5[I got the key.]&r
   &6[Jeremiah]&r
  G-good. We need to get moving. H-head to the door to the employee rooms and we'll try and see what's happening.
-&o  Head into the employee quarters and investigate.
+&7&o  Head into the employee quarters and investigate.
   The employee's quarters is the door labeled back room.
   In block B (optional):
  Jeremiah [Block C before finding the way]
@@ -71,7 +71,7 @@ tree.
   &6[Jeremiah]&r
  I w-wouldn't go that far! Have y-you found anything yet?
   &5[Not yet.]&r
- In block A and activating the pressure plate on the furnace:   &o  Come inside my head... Say my name...
+ In block A and activating the pressure plate on the furnace:   &7&o  Come inside my head... Say my name...
   Grab some heavy stones from the chest in the second floor of Block A. Throw one onto the pressure plate on the furnace. Then
 climb up to the painting and walk into it from the opened trapdoor.
    To find out the name to spell, goto the Block B door and use the lever twice.
@@ -86,7 +86,7 @@ climb up to the painting and walk into it from the opened trapdoor.
  Finally hit the button labeled "Submit My Name" at [-2103, 81, 557] the front of the room.
      &4[Yeigar]&r
  A name holds much power here, and it's clear you know mine. You may continue in your little journey.
- &o  Enter the Monster Pens and find a way through.
+ &7&o  Enter the Monster Pens and find a way through.
  Jeremiah [Block C after finding the way]
   &6[Jeremiah]&r
  The d-door to the beast pens is s-still locked. I don't know h-how to get through...
@@ -131,7 +131,7 @@ one in each c-cage to move on.
  The fifth pen is the pen on the left side at the end.
  The sixth and last pen is the pen on the right side in the middle.
   After getting out of monster pens:
-&o  don't let the darkness devour you...
+&7&o  don't let the darkness devour you...
  If you die you need to redo the monster pen levers.
   Every 30s a Dark Knight will spawn on you with this message:
   &4[?] Something is chasing you... There are four you must speak to if you wish to escape...&r
@@ -163,7 +163,7 @@ your left. Aesir should be then immediately to your right.
 They came for me too. When the darkness comes and the light fades, will you with Them as well [Player]?
  After talking to all 4 npcs the Dark Knights will stop spawning and the blindness will go away after awhile.
  Then the way forward is the path next to Aesir.
- &o  step into the shadows and meet him
+ &7&o  step into the shadows and meet him
  The Owner
   &6[The Owner]&r
   &4At last. I've been waiting for you to find me here. Welcome to the Halls of Memory. The King's Deal has been calling you.
@@ -175,28 +175,28 @@ this moment.&r
 what he is owed. At last. He needs what you have.&r
   &5[Why does he think he has a deal?]&r
   &6[The Owner]&r
-  &4This moment is one long in the making. The King&r   &o  run now     &4always pays his debts, but will always take what he is
-owed. '''You''' are what he is owed. At last. He needs what you have.&r
+  &4This moment is one long in the making. The King&r   &7&o  run now     &4always pays his debts, but will always take what he
+is owed. '''You''' are what he is owed. At last. He needs what you have.&r
   &5[Why would I owe him anything?]&r
   &6[The Owner]&r
-  &4This moment is one long in the making. The King always pays his debts, but will &r   &o  hurry before it is too late
+  &4This moment is one long in the making. The King always pays his debts, but will &r   &7&o  hurry before it is too late
 &4always take what he is owed. '''You''' are what he is owed. At last. He needs what you have. You owe him that. He has been
 seeking for so long.&r
   &5[Why won't you answer me??]&r
   &6[The Owner]&r
   &4This moment is one long in the making. The King always pays his debts, but will always take what he is owed. '''You''' are
-what he is owed. At&r   &o  I am taken too     &4 last. He needs what you have. He needs what you have. You owe him that. He has
-been seeking for so long. Why would you make him wait?&r
+what he is owed. At&r   &7&o  I am taken too     &4 last. He needs what you have. He needs what you have. You owe him that. He
+has been seeking for so long. Why would you make him wait?&r
   &5[What is happening??]&r
   &6[Yeigar]&r
-&o  ...he has me too. I made a deal once. I am still paying for it.
+&7&o  ...he has me too. I made a deal once. I am still paying for it.
   &5[Who has you?]&r
   &6[Yeigar]&r
-&o  Are you not listening? The King. The   ong   &4Crimson King.&r   &o  He is taking over again... I'm sorry for what must be
-done... The cage awaits. You must enter it of your own accord.
-&o  the cage awaits
+&7&o  Are you not listening? The King. The   ong   &4Crimson King.&r   &7&o  He is taking over again... I'm sorry for what must
+be done... The cage awaits. You must enter it of your own accord.
+&7&o  the cage awaits
  After entering the cage, behind Yegiar, and being teleported.
-&o  speak with your friend...
+&7&o  speak with your friend...
  Jeremiah [Cage Buddy]
   &6[Jeremiah]&r
  I'm glad to see you're still alive [Player].
@@ -227,48 +227,48 @@ see reason... I can take us there if you are prepared, [Player]?
   &5[I am.]&r
   &6[Jeremiah]&r
  Then come.
-&o  the owner waits for you...
+&7&o  the owner waits for you...
  The Owner
   &6[Yeigar]&r
-&o  It is not yet your time to leave, [Player]. We still have business.
+&7&o  It is not yet your time to leave, [Player]. We still have business.
   &5[What business? I'm done with this place. I've been attacked, followed, and messed with for too long now. I don't know what
 you want anymore. Let me go.]&r
   &6[Yeigar]&r
-&o  I was once a fighter too. A savior. I roamed the dunes, fighting for a cause I believed in, holding the strength of
+&7&o  I was once a fighter too. A savior. I roamed the dunes, fighting for a cause I believed in, holding the strength of
 thousands in my hand.
   &5[What?]&r
   &6[Yeigar]&r
-&o  My power was mighty. I knew of none who could challenge me. The strong cowered before me; the stronger still bent the knee
+&7&o  My power was mighty. I knew of none who could challenge me. The strong cowered before me; the stronger still bent the knee
 or broke below my heel. The weak flocked to me, their protector. From this rose my empire - no, a nation. In the end though,
 while I was mighty, even I could not escape a deadly plague. It was then he came to me in my dreams. An explorer from beyond the
 sands.
   &5[The Crimson King?]&r
   &6[Yeigar]&r
-  &4The Crimson King.&r   &o  He offered me a cure to what ailed me. I could rise again, a protector once more. I accepted
+  &4The Crimson King.&r   &7&o  He offered me a cure to what ailed me. I could rise again, a protector once more. I accepted
 without thinking. Isharist lost their ruler that day. But I was not gone. Never.
  If you have reached   Link   Celsian Isles Celsian_Isles wikilink  :
   &5[Isharist? You mean Ishnir?]&r
   &6[Yeigar]&r
-&o  I have never heard that name. I imagine my empire is long dust. I've never been allowed to find out.
+&7&o  I have never heard that name. I imagine my empire is long dust. I've never been allowed to find out.
   &5[Where did you go?]&r
   &6[Yeigar]&r
-&o  I was the King's then, and he took me for his own whims. He used my power for himself. I was alive, in a way. A shade of
+&7&o  I was the King's then, and he took me for his own whims. He used my power for himself. I was alive, in a way. A shade of
 myself. A memory of battle. But the true battle came, and I met my match. There were things after the King, so he sent me to
 defend him. I was struck down by these Knights, and my King was taken. That is the last thing I knew for generations.
   &5[Generations? How long ago did this happen?]&r
   &6[Yeigar]&r
-&o  The world I knew is nothing like what I've been shown here. I do not know the time frame, but I can tell you that thousands
-of years felt like a blink of an eye. My eyes have been closed for some time. But they did reopen, mere years ago. Something
-freed my King. And my King then freed me.
+&7&o  The world I knew is nothing like what I've been shown here. I do not know the time frame, but I can tell you that
+thousands of years felt like a blink of an eye. My eyes have been closed for some time. But they did reopen, mere years ago.
+Something freed my King. And my King then freed me.
   &5[Why did he free you?]&r
   &6[Yeigar]&r
-&o  He needs you. I have told you this. Has Jeremiah not told you this too? All of this? The Hall? The Arena? It is all for you.
-I'm so sorry you've fallen for his voice. I am sorry as well that I must take you away now. I hear his voice, calling me... You
-should run before it is too late...     &4You must be taken. I am his and you will be as well. Step into the Arena.&r
+&7&o  He needs you. I have told you this. Has Jeremiah not told you this too? All of this? The Hall? The Arena? It is all for
+you. I'm so sorry you've fallen for his voice. I am sorry as well that I must take you away now. I hear his voice, calling me...
+You should run before it is too late...     &4You must be taken. I am his and you will be as well. Step into the Arena.&r
   &6[Yeigar]&r
   &4Are you ready?&r
   &5[I am.]&r
-&o  take on the memories of battle...
+&7&o  take on the memories of battle...
  Tip: If you die during the fight you will respawn having lost nothing at the same spot as before the fight started. If you
 leave then to get back just enter the Arena shop, Go into the back rooms, Go into the Monster pens, and run across the pen area.
  Start of the fight:
@@ -277,22 +277,22 @@ leave then to get back just enter the Arena shop, Go into the back rooms, Go int
  Yegiar will also sometimes do a "laser" towards the player. The player must get out of line of sight with Yeigar until the
 sound effects stop.
    &4[Yeigar]&r
-&o  It is time for you and I to battle once more. The King commands it.
+&7&o  It is time for you and I to battle once more. The King commands it.
  Lines said throughout the fight:
   &4[Yeigar]&r
-&o  Find me once again in this sea of memories.
+&7&o  Find me once again in this sea of memories.
   &4[Yeigar]&r
-&o  A memory must break free!
+&7&o  A memory must break free!
   &4[Yeigar]&r
-&o  Just let him take what is his!
+&7&o  Just let him take what is his!
   &4[Yeigar]&r
-&o  You gave into him once! Why do you not remember your time before the Valley?
+&7&o  You gave into him once! Why do you not remember your time before the Valley?
   &4[Yeigar]&r
-&o  The King screams within me. He will not let you go!
+&7&o  The King screams within me. He will not let you go!
  After you beat Yeigar:
   &4[Yeigar]&r
-&o  I will send you to his shelter. You know the truth now.
-&o  Enter the Memory Vault.
+&7&o  I will send you to his shelter. You know the truth now.
+&7&o  Enter the Memory Vault.
  Jeremiah [Memory Vault]
   &4At last... HOME.&r
   &5[Jeremiah?]&r

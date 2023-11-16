@@ -1,5 +1,5 @@
 &r
-&o  Travel to the   Link   Shadowcast Bastille Shadowcast_Bastille wikilink and find evidence of Masked occupancy.
+&7&o  Travel to the   Link   Shadowcast Bastille Shadowcast_Bastille wikilink and find evidence of Masked occupancy.
  Bhairavi
   Coordinates: [-279 867-652]
    &6[Bhairavi]&r
@@ -26,9 +26,9 @@ again.]&r
   &5[Let's get started.]&r
   &6[Bhairavi]&r
  We'll meet you in the Bastille then. Good luck.
-&o  C: Find a way deeper into the Shadowcast Bastille.
+&7&o  C: Find a way deeper into the Shadowcast Bastille.
  After reaching   Link   Masquerader's Ruin Masquerader's_Ruin wikilink lobby:
-&o  C: Talk with your allies.
+&7&o  C: Talk with your allies.
  Bhairavi (MR Lobby)
   &6[Bhairavi]&r
  Yep, looks like Calder and his crew have been setting up here. We’re in the right place.
@@ -41,9 +41,9 @@ safeguards; shoulda figured the Behemoth wouldn’t be enough for you lot on the
   &5[Samwell??]&r
   &6[Levyn]&r
  Why… ye traitorous scum! Get ye gone
-&o  C: Enter the   Link   Masquerader's Ruin Masquerader's_Ruin wikilink  .
+&7&o  C: Enter the   Link   Masquerader's Ruin Masquerader's_Ruin wikilink  .
  After beating the strike:
-&o  C: Speak with your allies following Samwell's defeat.
+&7&o  C: Speak with your allies following Samwell's defeat.
  Bhairavi (MR Lobby)
   &6[Bhairavi]&r
  It’s over. We’ve got the wool back. I feel like we’re gonna be finding little shards of it all over the fortress for weeks, but

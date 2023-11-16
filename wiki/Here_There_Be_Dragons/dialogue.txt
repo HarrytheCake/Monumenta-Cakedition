@@ -1,6 +1,6 @@
 &r
  Completing this quest requires 5 Bone Shards and 1 Gold Ingot which are recommended before beginning the quest.
-&o  Accompany Izzy on a voyage to investigate traces of the Teal Spirit.
+&7&o  Accompany Izzy on a voyage to investigate traces of the Teal Spirit.
  Izzy
   &6[Izzy]&r
  Ahh [Player], what impeccable timing you always have.
@@ -19,7 +19,7 @@ case of emergency!
   &6[Izzy]&r
  Wonderful. I’d be remiss not to employ Indigo for this expedition, so go let her know the good news and meet me in the Mistport
 Pub basement. We’ve got to carry the supplies I purchased over to her ship.
-&o  C: Talk to Captain Indigo.
+&7&o  C: Talk to Captain Indigo.
  Captain Indigo
   &6[Captain Indigo]&r
  Ahoy [Player], to what do I owe the pleasure today?
@@ -30,7 +30,7 @@ pretty sparse. When do we set sail?
   &5[Izzy needed my help grabbing supplies out of the Pub basement. We set sail when we return.]&r
   &6[Captain Indigo]&r
  I’ll ready the ship then. See you in a jiffy.
-&o  C: Meet Izzy in the Salty Seaswindler basement.
+&7&o  C: Meet Izzy in the Salty Seaswindler basement.
  Izzy
   &6[Izzy]&r
  Took you long enough. I was starting to get unwelcome looks from the pirates upstairs. It’s like they can sense I’ve got a
@@ -53,9 +53,9 @@ that cash ye have to make this trip run ship shape.
  Supplies we’ll get to, but first we be missin’ a quartermaster. Ever since Samwell went rotten, me crew has never been the
 same. But we’ll fix that promptly, eh. Go on and take yer supplies to the ship. Return when yer done and I’ll have a
 quartermaster sorted out. Now make haste.
-&o  C [1/3]: Leave the basement.
-&o  C [2/3]: Go back to Indigo's Ship.
-&o  C [3/3]: Talk to Izzy belowdecks.
+&7&o  C [1/3]: Leave the basement.
+&7&o  C [2/3]: Go back to Indigo's Ship.
+&7&o  C [3/3]: Talk to Izzy belowdecks.
  Izzy
   &6[Izzy]&r
  I thought Levyn was doing okay, but living under the pub must be rough. I suppose he can come along. And if finishing off a
@@ -65,7 +65,7 @@ having someone care for my equipment.
   &8You can hear Captain Indigo shouting faintly from above.&r
   &6[Captain Indigo]&r
  Don’t dilly dally, we’re ready to set off.
-&o  C: Go retrieve Levyn from the Mistport Pub Basement.
+&7&o  C: Go retrieve Levyn from the Mistport Pub Basement.
  Assorted Dialogue when talking to the npcs in the pub basement:
   &6[Clarence]&r
  My chance is finally here! Pick me!
@@ -75,7 +75,7 @@ having someone care for my equipment.
  Ye har har har!
   &6[Samuel]&r
  Where is my food? How did I get down here?
-&o  C: Listen to Levyn's magnificent proposal.
+&7&o  C: Listen to Levyn's magnificent proposal.
  Levyn
   &6[Levyn]&r
  Yer in for quite the treat matey, for we have options for our new quartermaster!
@@ -158,10 +158,10 @@ it, I’ll swab ze decks like the best of ‘em.
  I knew ye would come around! Let's head back ta Indigo's ship!
   &6[Not Samwell]&r
  Thank you very much for the opportunity, I won’t let you down.
-&o  C:: Head back to the Ship.
+&7&o  C:: Head back to the Ship.
   &6[Captain Indigo]&r
  Back at last, I see. Izzy'll be doing the introductions, I imagine. Go chat with them belowdecks.
-&o  C: Talk to Izzy.
+&7&o  C: Talk to Izzy.
  Izzy
   &6[Levyn]&r
  Ahhh, the sweet sea air!
@@ -180,7 +180,7 @@ it, I’ll swab ze decks like the best of ‘em.
  I imagine it will be, yeah. Hurry up mate!
   &6[Izzy]&r
  Aye aye!
-&o  C: Chat with your Crew.
+&7&o  C: Chat with your Crew.
  Izzy
   &6[Izzy]&r
  We’re arriving at the location and there appears to be an island ahead. How’s the crew doing?
@@ -203,13 +203,13 @@ ladder and get going!
 seasick!
   &6[Clarence]&r
  Look, Levyn said he was feeling "briney" and I gave him what I had! How was I supposed to know the bottles were rum?!
-&o  C: [1/2]: Leave the Ship.
-&o  C: [2/2]: Venture into the   Link   City Of Bones City_Of_Bones wikilink  .
+&7&o  C: [1/2]: Leave the Ship.
+&7&o  C: [2/2]: Venture into the   Link   City Of Bones City_Of_Bones wikilink  .
   In the   Link   City Of Bones City_Of_Bones wikilink there are 3 chests that contain etched bones, located at [-2063, 93,
 -436] (Nitigskild), [-2046, 130, -456] (Inskywing), [-2048, 148, -457] (Aanbiddij). Upon gathering these, head to the bottom
 section of the POI and step on the pressure plate to be teleported to the next part of the quest. Proceed to the Sealed Remorse
 lobby past [-2042, 90, -468] and speak to Izzy on the left side to complete the quest.
- LineBreak &o  C: Chat with Izzy in this strange tunnel.
+ LineBreak &7&o  C: Chat with Izzy in this strange tunnel.
  Izzy
   &6[Levyn]&r
  *Hic* Ye best be careful. Lookin’ dangerous here mate. Me head hurts too much ta help...
@@ -224,9 +224,9 @@ lobby past [-2042, 90, -468] and speak to Izzy on the left side to complete the 
   &8As he lands, a deep rumble sounds... and the bone collapses under him.&r
   &6[Not Samwell]&r
  AHHHHHHHHH
-&o  C: Find a way through the ruins.
-&o  C [1/2]: Find your way back into the depths of the City of Bones.
-&o  C [2/2]: Find and talk to Izzy.
+&7&o  C: Find a way through the ruins.
+&7&o  C [1/2]: Find your way back into the depths of the City of Bones.
+&7&o  C [2/2]: Find and talk to Izzy.
  Bonafide Gatekeeper
   &6[Bonafide Gatekeeper]&r
  H-hey, you! How did you get past all the guards and traps outside?!
@@ -273,8 +273,8 @@ help us understand how to move deeper into this area.
   &6[Izzy]&r
  I once courted a lovely archaeologist named Rosetta. We still stay in contact. I bet she’d love this - and might like me more
 if I named it after her.
-&o  C [1/2]: Leave the Rosetta Bone and head back into the City of Bones to find three Bone Carvings.
-&o  C [2/2]: Show Izzy the Bone Carvings.
+&7&o  C [1/2]: Leave the Rosetta Bone and head back into the City of Bones to find three Bone Carvings.
+&7&o  C [2/2]: Show Izzy the Bone Carvings.
  Izzy
  If no carvings in inventory:
   &6[Izzy]&r
@@ -339,7 +339,7 @@ their vigil”. I have no idea what any of that means, honestly.
  It looks like that’s all three carvings mentioned on the Rosetta Bone. We’ll need a lot of crystalline shards, some gold bars,
 and some magic channeled into them. Bring them to me and give them to me, and I’ll make it happen. Just trade me when you’re
 ready!
-&o  C: Gather five Bone Shards and one Gold Ingot and bring them back to Izzy.
+&7&o  C: Gather five Bone Shards and one Gold Ingot and bring them back to Izzy.
  Izzy
   &6[Izzy]&r
  Woah! You okay over there [Player]? I think it's time we go discover what's going on inside.

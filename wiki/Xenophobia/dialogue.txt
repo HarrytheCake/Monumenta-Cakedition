@@ -9,7 +9,7 @@ we might finally have a breakthrough.
   &6[Izzy]&r
  I believe so. I've managed to get it to emit the same energy that it did the first time we used it. I believe it might actually
 be able to take us somewhere again. Let me know when you are ready; we need to hurry and discover what Xeno's plans are.
-&o  1/2 - Speak to Izzy when you're ready.
+&7&o  1/2 - Speak to Izzy when you're ready.
  Izzy
   &6[Izzy]&r
  Are you ready to go? We need to find out where this crystal is going to take us.
@@ -21,7 +21,7 @@ be able to take us somewhere again. Let me know when you are ready; we need to h
   &6[Izzy]&r
  Regardless, it took us here, so that mean that this place is one Xeno finds important. We must search around and seek for
 clues.
-&o  2/2 - Search out clues in the hideout.
+&7&o  2/2 - Search out clues in the hideout.
  ong  Clue 1: (garden in main room) The clue is in the main room. LineBreak  There is a stone button at (-738, 39, 1398) which
 opens the green_stained_glass floor in center of room at (-734, 35, 1392) which has the chest with the clue (-735, 27, 1395).
 LineBreak  To exit use the button on the west wall (-737, 28, 1391) LineBreak ong  Clue 2: (coal ore in left room) Unpower the
@@ -44,7 +44,7 @@ to head back to Mistport?
   &5[No, I want to look around a little longer.]&r
   &6[Izzy]&r
  Alright, switching the crystal to return mode.
-&o  Speak to Captain Indigo
+&7&o  Speak to Captain Indigo
  Captain Indigo
   &6[Captain Indigo]&r
  Hello      &5[Izzy and I found some information on Xeno and the man who attacked us. ]&r
@@ -58,7 +58,7 @@ to head back to Mistport?
  *sigh* We picked a real crew there, didn't we. I suppose we can forget about Samwell then, but we need Levyn, especially if you
 aren't entirely sure where we are heading in the south west. If there's anyone who can get information out of pirates, it's him.
 While I prep the ship, try to go talk some sense into him.
-&o  Speak with Levyn in the bar
+&7&o  Speak with Levyn in the bar
  Levyn
   &6[Levyn]&r
  *hic* Well, if it ittn ma ol' frin      &5[Levyn, please tell me you aren't drunk.]&r
@@ -92,7 +92,7 @@ even though he tric- *hic* tricked us. He was juss mentionin deliverin some swil
   &5[How is a drinking contest fair? He's already drunk!]&r
   &6[Levyn]&r
  [Salty Bartender] Zehahaha! That hardly be me problem, laddy. A pirate deal be a pirate deal. Ye can't cross us now.
-&o  Help Levyn win the drinking contest.
+&7&o  Help Levyn win the drinking contest.
   &6[Salty Bartender]&r
  I er... I call...
   &6[Levyn]&r
@@ -109,7 +109,7 @@ even though he tric- *hic* tricked us. He was juss mentionin deliverin some swil
  Bah... he be 'eading 324 notches south, 125 notches west... please don't tell 'im I told ye... I beg o' ye...
   &5[Let's go Levyn. Indigo is waiting on us.]&r
  [Levyn] ARRGH!
-&o  1/2 - Speak to Captain Indigo
+&7&o  1/2 - Speak to Captain Indigo
  Captain Indigo
   &6[Captain Indigo]&r
  I'm going to take Levyn losing his lunch over the side of the dock just now as a good sign.
@@ -124,7 +124,7 @@ we should be all set and can voyage out as soon as you are ready.
   &6[I'm not quite ready.]&r
   &6[Captain Indigo]&r
  As I figured, nothing seems to be around here. If Xeno really is here, they likely have an underwater base somewhere. It's
-probably best for you to scout ahead    &o  2/2 - Search out Xeno's underwater hideout
+probably best for you to scout ahead    &7&o  2/2 - Search out Xeno's underwater hideout
   &6[Captain Xeno]&r
  Now there, what seems to have gotten you in such a fuss?
   &6[Masked Saboteur]&r
@@ -138,7 +138,7 @@ true power in this world- opportunity. Your balls of sheep hair mean nothing to 
  You! I thought I would have to hunt you down like the vermin you are, but you've just come right to me. This time, I'm going to
 finish you off!
   &6[Indigo]&r
- &o  Defeat the Masked Saboteur
+ &7&o  Defeat the Masked Saboteur
   &6[Captain Xeno]&r
  Well, I seem to be trapped now, don't I? I suppose you'll have to take me in, hold me hostage.
   &5[You aren't leaving here without us.]&r
@@ -177,7 +177,7 @@ suppose we wait.
   &5[I suppose so.]&r
   &6[Vargos]&r
  In the meantime, your pirate friend Levyn went screaming into the bar. You might wanna go check that he's okay.
-&o  Speak with Levyn in the bar
+&7&o  Speak with Levyn in the bar
  Levyn
   &6[Levyn]&r
  Arrgh!      &5[What can we do about it?]&r

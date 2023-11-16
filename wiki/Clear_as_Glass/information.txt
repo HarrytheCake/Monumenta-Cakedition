@@ -1,5 +1,5 @@
-prerequisites = 
+Pre-req: 
 * &3Nelfine's Curse&r
- NPC: Nelfine Coords: -774, 100, -5
+ NPC: Nelfine &1Coords:&r -774, 100, -5
 Press a button in the Jeweler and Buildmaster's house to open the secret passage to Nelfine's room.
- King's Valley Sierhaven
+&2 King's Valley&r Sierhaven

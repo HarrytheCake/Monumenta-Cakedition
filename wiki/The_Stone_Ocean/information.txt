@@ -1,4 +1,4 @@
-prerequisites = Completion of &3City of Shifting WatersThe City of Shifting Waters&r AND &3The Black Willows&r dungeons
- NPC: Fred Coords: -480, 10, -496
+Pre-req: Completion of &3City of Shifting WatersThe City of Shifting Waters&r AND &3The Black Willows&r dungeons
+ NPC: Fred &1Coords:&r -480, 10, -496
 In the Shifting lobby.
- Celsian Isles Steelmeld
+&2 Celsian Isles&r Steelmeld

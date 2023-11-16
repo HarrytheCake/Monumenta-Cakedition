@@ -32,7 +32,7 @@ though not many people are brave enough to attempt to enter.
   &6[Fred]&r
  Yes, us! Why would I not come with you? Have your previous employers sent you off to dangerous places on your own? How
 careless!
-&o  Head to the Crystalline Vault with Fred.
+&7&o  Head to the Crystalline Vault with Fred.
  Retrieve the Silvic Crystal and talk to Fred.
  Fred
   &6[Fred]&r
@@ -47,7 +47,7 @@ Luckily, I have just the device to do so!
   &5[Of course...]&r
   &6[Fred]&r
  To the Stone Fred!
-&o  Help Fred attune the crystal.
+&7&o  Help Fred attune the crystal.
  Solve the puzzle by getting the water into the 4 exits and holding the pressure plate down for 10 seconds.
  Fred
   &6[Fred]&r

@@ -1,10 +1,10 @@
-prerequisites = &3The Wizard's Apprentice&r NPC: Historian Rhodes Celsian Islestown = Mistportstarting_npc_coordinates = -756, 83, 1346rewards = *&3Salazar's FollyLime&r Key
+Pre-req: &3The Wizard's Apprentice&r NPC: Historian Rhodes&2 Celsian Islestown = Mistportstarting_npc_coordinates = -756, 83, 1346rewards = *&3Salazar's FollyLime&r Key
 *&3Seadiver's Shell&r
-*Access to &3Salazar's Folly NPC: Historian Rhodes Celsian Islestown = Mistportstarting_npc_coordinates = -756, 83, 1346rewards = *&3Salazar's FollyLime&r Key
+*Access to &3Salazar's Folly NPC: Historian Rhodes&2 Celsian Islestown = Mistportstarting_npc_coordinates = -756, 83, 1346rewards = *&3Salazar's FollyLime&r Key
 *&3Seadiver's Shell&r
 *Access to &3Salazar's Follystarting_npc_coordinates = -756, 83, 1346rewards = *&3Salazar's FollyLime&r Key
 *&3Seadiver's Shell&r
-*Access to &3Salazar's Folly Celsian Islestown = Mistportstarting_npc_coordinates = -756, 83, 1346rewards = *&3Salazar's FollyLime&r Key
+*Access to &3Salazar's Folly&2 Celsian Islestown = Mistportstarting_npc_coordinates = -756, 83, 1346rewards = *&3Salazar's FollyLime&r Key
 *&3Seadiver's Shell&r
 *Access to &3Salazar's Follytown = Mistportstarting_npc_coordinates = -756, 83, 1346rewards = *&3Salazar's FollyLime&r Key
 *&3Seadiver's Shell&r

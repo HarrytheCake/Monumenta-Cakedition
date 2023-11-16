@@ -16,13 +16,13 @@ chum, think you could dig up three fresh magma samples?
   &6[Carbocius]&r
  Ah ha, I think I just heard an enthusiastic "yes"! Brilliant, old chap, it's great to see that passion for geology still runs
 rampant! Three magma samples from three different geologic features. Bring them here quick before they harden, chop chop.
-&o  [1/4]: Carbocius needs magma samples. Retrieve one from the Blackroot Jungle's   Link   Molten Chasm Molten_Chasm wikilink
+&7&o  [1/4]: Carbocius needs magma samples. Retrieve one from the Blackroot Jungle's   Link   Molten Chasm Molten_Chasm wikilink
 , just east of Farr.
-&o  [2/4]: Carbocius needs magma samples. Retrieve one from the Jaguar Tooth Mountains'   Link   Fire Cave Fire_Cave wikilink  ,
-north of Farr.
-&o  [3/4]: Carbocius needs magma samples. Retrieve one from the Korbar Highlands'   Link   Volcano Volcano wikilink  , just west
-of Highwatch.
-&o  [4/4]: Return to Carbocius once you have all three magma samples.
+&7&o  [2/4]: Carbocius needs magma samples. Retrieve one from the Jaguar Tooth Mountains'   Link   Fire Cave Fire_Cave wikilink
+, north of Farr.
+&7&o  [3/4]: Carbocius needs magma samples. Retrieve one from the Korbar Highlands'   Link   Volcano Volcano wikilink  , just
+west of Highwatch.
+&7&o  [4/4]: Return to Carbocius once you have all three magma samples.
  After gathering all three magma samples:
  Carbocius
   &6[Carbocius]&r

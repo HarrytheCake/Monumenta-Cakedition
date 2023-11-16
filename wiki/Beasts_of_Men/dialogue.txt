@@ -66,7 +66,7 @@ cliff, just outside the ancient ruins. My lead excavator's name is Pten, speak t
   &6[Bhairavi]&r
  Let me know when you've found something important! I'll be continuing my research here. I'm trying to find out more about
 Tlaxan culture.
-&o  Meet Bhairavi's assistant, Pten, outside the Ancient Ruins, east of the Tlaxan Ziggurat 360 72 -128
+&7&o  Meet Bhairavi's assistant, Pten, outside the Ancient Ruins, east of the Tlaxan Ziggurat 360 72 -128
  Pten
   &6[Pten]&r
  Hello? Who are you and why are you here? SoftBreak   &5[I'm __. Bhairavi sent me here to assist your excavation.]&r
@@ -122,9 +122,9 @@ Blood below.
   &5[Thanks. I'll get on it now!]&r
   &6[Pten]&r
  Return to me when you have both keys!
-&o  [1/3]: Get the Hawk key from the   Link   Hawk Village Point_of_Interest wikilink  .
-&o  [2/3]: Get the Serpentsia key from the   Link   Serpent Ruins Point_of_Interest wikilink high on the clifftop.
-&o  [3/3]: Talk to Pten near the   Link   Ancient Ruins Point_of_Interest wikilink once you find both keys.
+&7&o  [1/3]: Get the Hawk key from the   Link   Hawk Village Point_of_Interest wikilink  .
+&7&o  [2/3]: Get the Serpentsia key from the   Link   Serpent Ruins Point_of_Interest wikilink high on the clifftop.
+&7&o  [3/3]: Talk to Pten near the   Link   Ancient Ruins Point_of_Interest wikilink once you find both keys.
  Pten
   &6[Pten]&r
  You found them both! You're really serious about this adventuring thing. Let me place the keys in their slots then, and we'll
@@ -134,9 +134,9 @@ send some people inside. Would you like to do the honors and enter first?
   &5[I need to go prepare first. Who knows what's inside?]&r
   &6[Pten]&r
  This is so exciting! Bhairavi will be so pleased.
-&o  Enter the crypt and complete the 4 challenges
-&o ong  [Spoiler]   Link   Answer to the alchemy puzzle Puzzle_solutions wikilink
-&o  After talking to the Pten and obtaining the book, head to the   Link   Abandoned Tunnels Abandoned_Tunnels wikilink and
+&7&o  Enter the crypt and complete the 4 challenges
+&7&o ong  [Spoiler]   Link   Answer to the alchemy puzzle Puzzle_solutions wikilink
+&7&o  After talking to the Pten and obtaining the book, head to the   Link   Abandoned Tunnels Abandoned_Tunnels wikilink and
 access the Orange Wool Dungeon Lobby to speak with Wexley
  Wexley
   &6[Wexley]&r
@@ -151,5 +151,5 @@ supplies as well as a reward for discovering this place. This is really amazing.
   &6[Wexley]&r
  Anyway, I found a really interesting item back in the tomb that I wanted to give to you. Also, I have a key for you to access
 this place. They call it the Fallen Menagerie. Good luck in there. I hope you can find the wool!
-&o  BEASTS OF MEN COMPLETE ! Awarded   Link   Orange Dungeon Fallen_Menagerie wikilink Key, Cyrar's Sight, 64 Arrows of
+&7&o  BEASTS OF MEN COMPLETE ! Awarded   Link   Orange Dungeon Fallen_Menagerie wikilink Key, Cyrar's Sight, 64 Arrows of
 Slowness, 10 Anvils, and Full Access to   Link   Orange Dungeon Fallen_Menagerie wikilink Lobby Trader!

@@ -23,7 +23,7 @@ publicly known. How does that sound to you?
   &6[Vargos]&r
  Fantastic! I've had our sources compile a list of people who might be the best targets. Seek them out, and see what information
 you can extract from them.
-&o  Seek out the people Vargos has suggested you find. Header general_arne  General Arne
+&7&o  Seek out the people Vargos has suggested you find. Header general_arne  General Arne
  General Arne SoftBreak  -1499, 95, 1031
   &6[General Arne]&r
  Good day! The firing range is quite nice today!
@@ -40,7 +40,7 @@ could really use some help with setup.
 as someone needs to stand up here and check all the moving parts as they are manually adjusted. So, if you could go down into
 the panel room and fix the situation, I would highly appreciate your services.
   &5[I think I can manage that.]&r
-&o  Head down to the control room below the catapult.
+&7&o  Head down to the control room below the catapult.
  General Arne
   &6[General Arne]&r
  Ah, lovely! Everything is working smoothly now! This will be perfect for our tests!
@@ -75,7 +75,7 @@ they are free.
   &5[Uh.. right... I'll get on that.]&r
   &6[Ivon the Lazy]&r
  Zzzzzz... ZzzZZzzzz...
-&o  Head towards the Sunken Tower and seek out some aged alcohol.
+&7&o  Head towards the Sunken Tower and seek out some aged alcohol.
  Ivon the Lazy
   &8Ivon opens his mouth as you pour the drink down his throat.&r
   &6[Ivon the Lazy] Zzzzzz.... yum.... zzzzz....&r
@@ -106,7 +106,7 @@ there.
   &6[Kugo]&r
  Really?! That would be fantastic! Thank you so much! I hear of such wonders in the Crystal Forest Grove, I can't wait to see
 what you return with!
-&o  Head towards the Crystal Forest Grove for a fungal sample.
+&7&o  Head towards the Crystal Forest Grove for a fungal sample.
  Kugo
   &6[Kugo]&r
  It's... it's beautiful! Look at the mycelium threads! Is this really a fungus? How fascinating, I can't... I can't...
@@ -143,7 +143,7 @@ leaves, and I would very much appreciate you bringing some here so I can brew so
   &5[I think I can handle that.]&r
   &6[Ambassador Matori]&r
  Thank you so kindly!
-&o  Head to Rehkeri and find the tea seller Surya.
+&7&o  Head to Rehkeri and find the tea seller Surya.
  Ambassador Matori
   &6[Ambassador Matori]&r
  Ah, fantastic! They smell wonderful! I'll get the pot going now. You don't know how much this helps me. My thoughts can finally
@@ -194,7 +194,7 @@ you have made a decision, I doubt the other side will be very forgiving.
   &6[Izzy]&r
  You'll find the emissaries near Xeno's old ship. They are stationed out on the docks there.
   &4Make your decision carefully before speaking to the emissary of your choice, as it might affect future outcomes.&r
-&o  Head to the docks in front of Xeno's ship and decide which kingdom you will be siding with. Header
+&7&o  Head to the docks in front of Xeno's ship and decide which kingdom you will be siding with. Header
 allying_with_the_ishnir_kingdom  Allying with the Ishnir Kingdom
  Emissary of Ishnir
   &6[Emissary of Ishnir]&r

@@ -1,7 +1,7 @@
-prerequisites = *&3Scars of Magic&r
+Pre-req: *&3Scars of Magic&r
 *&3Siege of Highwatch&r
-*Completed the &3Arcane Rivalry NPC: Bhairavi King's Valleytown = Nyrstarting_npc_coordinates = -110, 104, -150rewards = *&3Vernal NightmareYellow&r Key
+*Completed the &3Arcane Rivalry NPC: Bhairavi&2 King's Valleytown = Nyrstarting_npc_coordinates = -110, 104, -150rewards = *&3Vernal NightmareYellow&r Key
 *Full Access to the &3Vernal Nightmarestarting_npc_coordinates = -110, 104, -150rewards = *&3Vernal NightmareYellow&r Key
-*Full Access to the &3Vernal Nightmare King's Valleytown = Nyrstarting_npc_coordinates = -110, 104, -150rewards = *&3Vernal NightmareYellow&r Key
+*Full Access to the &3Vernal Nightmare&2 King's Valleytown = Nyrstarting_npc_coordinates = -110, 104, -150rewards = *&3Vernal NightmareYellow&r Key
 *Full Access to the &3Vernal Nightmaretown = Nyrstarting_npc_coordinates = -110, 104, -150rewards = *&3Vernal NightmareYellow&r Key
 *Full Access to the &3Vernal Nightmare

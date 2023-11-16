@@ -4,15 +4,15 @@ farr&r
  Decryption of   Link   Mage's Legacy Mage's_Legacy wikilink  's Encrypted Notes is required to start this quest.
   Head to the room atop the Sierhaven Academy at [-713, 167, 128]. SoftBreak  Follow   Link   Puzzle Solutions Guide/Mage's
 Legacy Puzzle_Solutions_Guide/Mage's_Legacy wikilink  .
- &o  Head down the   Link   Mysterious Cenote Mysterious_Cenote wikilink and retrieve the Carved Staff and the Source of All
+ &7&o  Head down the   Link   Mysterious Cenote Mysterious_Cenote wikilink and retrieve the Carved Staff and the Source of All
 Things to start the quest. Header from_nothing_to_water  From Nothing to Water
-&o  Head to -262, 93, -35 in the   Link   Water Shrine Water_Shrine wikilink and step on the pressure plate.
+&7&o  Head to -262, 93, -35 in the   Link   Water Shrine Water_Shrine wikilink and step on the pressure plate.
   Color|blue|The power of water pours into your staff!&r  Header from_water_to_mud  From Water to Mud
-&o  Head to 284, 64, 220 in the   Link   Earth Shrine Earth_Shrine wikilink and step on the pressure plate (284,64,219).
+&7&o  Head to 284, 64, 220 in the   Link   Earth Shrine Earth_Shrine wikilink and step on the pressure plate (284,64,219).
   Color|green|The power of earth rumbles into your staff!&r  Header from_mud_to_clay  From Mud to Clay
-&o  Head to -254, 93, 134 in the   Link   Fire Shrine Fire_Shrine wikilink and step on the pressure plate.
+&7&o  Head to -254, 93, 134 in the   Link   Fire Shrine Fire_Shrine wikilink and step on the pressure plate.
   &4The power of fire arcs into your staff!&r  Header from_clay_to_life  From Clay to Life
-&o  Head to 484, 139, -4 in the   Link   Air Shrine Air_Shrine wikilink and step on the pressure plate.
+&7&o  Head to 484, 139, -4 in the   Link   Air Shrine Air_Shrine wikilink and step on the pressure plate.
   Color|magenta|The power of air soars into your staff, completing it with a bright flash!&r  Header
 unlock_the_black_willows_dungeon  Unlock the Black Willows Dungeon
  Head over to the   Link   Cave of Secrets Cave_of_Secrets wikilink (coords at 458 74 -103) with the Elemental Staff in hand.

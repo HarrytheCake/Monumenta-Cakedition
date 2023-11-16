@@ -1,4 +1,4 @@
-prerequisites = None
- NPC: Carbocius Coords: 608, 101, 156
- King's Valley Farr
-POI: &3Molten Chasm&r, &3Fire Cave&r, &3Volcano&r
+Pre-req: None
+ NPC: Carbocius &1Coords:&r 608, 101, 156
+&2 King's Valley&r Farr
+POI:  &3Molten Chasm&r, &3Fire Cave&r, &3Volcano&r

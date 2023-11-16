@@ -1,5 +1,5 @@
 &r
-&o  Meet with the Celsian representatives. Header start_of_quest  Start of Quest
+&7&o  Meet with the Celsian representatives. Header start_of_quest  Start of Quest
  Vargos
   Coordinates: [-917, 91, -161]
    &6[Vargos]&r
@@ -24,7 +24,7 @@ order to deal with the Teal spirit. We were hoping to have you join us.
   &5[Yes, please]&r
   &6[Vargos]&r
  Right away.
- &o  C: Talk to Bhairavi - and the other guests - to discuss the plan to handle Teal.
+ &7&o  C: Talk to Bhairavi - and the other guests - to discuss the plan to handle Teal.
  Pre-Meeting dialogue:
   Levyn
   Coordinates: [-1423 119 2910]
@@ -327,7 +327,7 @@ until...&r
  Talking to Vargos after the meeting:
   &6[Vargos]&r
  Hi [Player]. Go meet with your Wool Spirit, wherever he is. No time to waste.
-&o  C: Travel to the King's Valley and meet with the Crimson King. Header meeting_crimson_king  Meeting Crimson King
+&7&o  C: Travel to the King's Valley and meet with the Crimson King. Header meeting_crimson_king  Meeting Crimson King
  The Crimson King
   Coordinates: [-917 91 -161 (KV)]
    &6[The Crimson King]&r
@@ -351,7 +351,7 @@ two of us, following the same path once again... Can we visit this Monument then
   &6[The Crimson King]&r
   &4That will work. Let me reach out to Jeremiah to get him out of our Monument first. I would rather not leave him trapped in
 there unexpectedly. Feel free to begin your travels. I will catch up.&r
-&o  C: Travel to the Steelmeld Monument.
+&7&o  C: Travel to the Steelmeld Monument.
  The Crimson King
   Coordinates: [-1334 109 2814 (CI)]
    &6[The Crimson King]&r
@@ -371,7 +371,7 @@ around the environment.&r
   &5[Then let's go.]&r
   &6[The Crimson King]&r
   &4Let's. We'll need to move quickly though. This is not a quiet magic.&r
-&o  C: Talk to the Crimson King.
+&7&o  C: Talk to the Crimson King.
  Crimson King
   Coordinates: [-2613 163 2607 (Veil)]
    &6[The Crimson King]&r
@@ -388,7 +388,7 @@ his pedestal. Someone moved the rest of them.&r
   &4We start by finding him.&r
   &6[The Crimson King]&r
   &4Or perhaps he finds us. We need to get out of here.&r
-&o  C: Talk to the Crimson King... and Teal.
+&7&o  C: Talk to the Crimson King... and Teal.
  The Crimson King
   Coordinates: [-1334 109 2814 (CI)]
    &6[The Malefactor]&r
@@ -413,9 +413,9 @@ fellow wool do not belong here. they cannot rest... let me show them what it is 
   &6[The Malefactor]&r
   &3but there is not harmony between them. the Architect cannot hold us all forever. let me be the first to free the others. we
 will not be contained any longer!&r
-&o  C: Battle back the broken Wool!
+&7&o  C: Battle back the broken Wool!
   You must survive for 3 minutes. Every time the next wool is broken then mobs from that dungeon will start spawning.
- &o  C: Talk to the Crimson King.
+ &7&o  C: Talk to the Crimson King.
  The Crimson King
   Coordinates: [-1334 109 2814 (CI)]
    &5[What... what just happened?]&r
@@ -469,7 +469,7 @@ cause of much more beforehand as well.&r
   &6[The Crimson King]&r
   &4Show us then. You have a deal. A memory for a single thought.&r
   &5[I'm ready.]&r
-&o  C: Speak to the Silver Knight and learn the past...
+&7&o  C: Speak to the Silver Knight and learn the past...
   &6[The Malefactor]&r
   &3gaze upon history, seen during my journeys through the threads of time.&r
  The Malefactor
@@ -500,7 +500,7 @@ empty and cold. I feel for thee, puppet. How did thee enter these sacred halls? 
  After beating Silver Knight Daarken:
   &6[Silver Knight Daarken]&r
  How...? I feel...... him calling...................... Header post_silver_knight  Post Silver Knight
-&o  C: Talk to the Crimson King... and Teal.
+&7&o  C: Talk to the Crimson King... and Teal.
  The Crimson King
   Coordinates: [-1334 109 2814 (CI)]
    &6[The Crimson King]&r
@@ -536,11 +536,11 @@ to meet a living Knight...&r
   &5[I have so many more questions about what we've learned...]&r
   &6[The Crimson King]&r
   &4And no time to ask them. Go, find your crew. Discuss your next moves.&r
-&o  C [1/2]: Leave the Monument.
-&o  C [2/2]: Talk to Vargos.
+&7&o  C [1/2]: Leave the Monument.
+&7&o  C [2/2]: Talk to Vargos.
  After hitting Vargos and getting sent to the dialogue area:
-&o  C [1/2]: Talk to Vargos.
-&o  C [2/2]: Talk to Bhairavi and Vargos.
+&7&o  C [1/2]: Talk to Vargos.
+&7&o  C [2/2]: Talk to Bhairavi and Vargos.
  Zarek
   &6[Zarek]&r
  Hey [Player]! Vargos is waiting to chat with ya.

@@ -1,4 +1,4 @@
 rewards = &3Monk's Robe&r 
-&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same 
+&7&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same 
  Captain Tobias  
  mediawiki {{&6[Captain Tobias]

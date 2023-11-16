@@ -1,5 +1,5 @@
 &r
-&o  Recover 8 lots of the Infused Gunpowder stolen from the Fist of Turaal.
+&7&o  Recover 8 lots of the Infused Gunpowder stolen from the Fist of Turaal.
  Lieutenant Aulber
   Coordinates: [-142, 178, 467]
    &6[Lieutenant Aulber]&r
@@ -27,8 +27,8 @@ Military!
   &6[Lieutenant Aulber]&r
  Glad to hear it. Infiltrate that laboratory, reclaim the gunpowder, and good luck.
   &8Lieutenant Aulber gives you a sharp salute.&r
-&o  C: [1/2]: Find 8 Infused Gunpowder in the   Link   Abandoned Lab Abandoned_Lab wikilink  .
-&o  C: [2/2]: Once you have the infused Gunpowder return to Lieutenant Aulber.
+&7&o  C: [1/2]: Find 8 Infused Gunpowder in the   Link   Abandoned Lab Abandoned_Lab wikilink  .
+&7&o  C: [2/2]: Once you have the infused Gunpowder return to Lieutenant Aulber.
  Lieutenant Aulber
   &6[Lieutenant Aulber]&r
  That's more than enough gunpowder to restock the Fist. Fantastic job, soldier! You have the thanks of the Ishniran Military,

@@ -1,7 +1,7 @@
 &r
   WorkInProgress|Out-of-date, gloop section doesn't exist instead sent to nyr&r
-&o  Head to the Mage Tower north of the city and look for some research notes.
- From completing   Link   Prologue Prologue wikilink  : LineBreak &o  C: Vargos will want to speak to you. Ask him about the
+&7&o  Head to the Mage Tower north of the city and look for some research notes.
+ From completing   Link   Prologue Prologue wikilink  : LineBreak &7&o  C: Vargos will want to speak to you. Ask him about the
 skull on his desk.
  Vargos
   Coordinates: [-735, 154, 117]
@@ -36,34 +36,34 @@ about the Blackroot Jungle. I would go myself, but... Anyway, when I read the no
   &6[Vargos]&r
  I am known as the Cerulean Blademind, Fourth Archmage of the Grand Council, and Dean of this Academy. But please, just call me
 Vargos; I dislike titles.
-&o  C: Climb the   Link   Mage Tower Mage_Tower wikilink in search of some old research notes. Be careful, Ezariah's apprentices
-were well-trained.
+&7&o  C: Climb the   Link   Mage Tower Mage_Tower wikilink in search of some old research notes. Be careful, Ezariah's
+apprentices were well-trained.
  After killing the elite mob "Silent Master" and getting the research notes:
-&o  C: Once you find the research notes return to Vargos.
+&7&o  C: Once you find the research notes return to Vargos.
  Vargos
   &6[Vargos]&r
- You found the notes? Tell me, is Ezariah... Never mind, I don't think I want to know.   &o  He flips through the notes. Of
+ You found the notes? Tell me, is Ezariah... Never mind, I don't think I want to know.   &7&o  He flips through the notes. Of
 course, they're in Tlaxan. He did always love that language.
   &6[Vargos]&r
  You're going to have to find a translator. There was a skilled translator named Armece, although he left the city years ago. He
 was a bit reclusive, so perhaps he lives somewhere in the swamp?
-&o  C: Find a reclusive translator in the southern swamp to help. He may have some... odd requests.
+&7&o  C: Find a reclusive translator in the southern swamp to help. He may have some... odd requests.
  Hermy the Hermit
   Coordinates: [-321, 93, 340]
    &6[Hermy the Hermit]&r
  *sniff* I smell dat book, dat's in Tlaxan! I can translate it fer ya, fer a price. You go squish dem gloopadoops southwest o'
 here in dat witchy village and bring me a bit o' gloop and I'll do it!
-&o  C: The translator wants gloop, squish dem gloopadoops to find some.
+&7&o  C: The translator wants gloop, squish dem gloopadoops to find some.
   Goto   Link   Witch Village Witch_Village wikilink southwest of Hermy the Hermit and kill some of the slimes in the center of
 the village. There is no need to break the slime spawners. Only one "Gloop" item is required.
- &o  C: Once you have some gloop return to the translator.
+ &7&o  C: Once you have some gloop return to the translator.
  Hermy the Hermit
   Coordinates: [-321, 93, 340]
    &6[Hermy the Hermit]&r
  Mah gloop! I'll be eatin' good tonight. Here's yer book, all translated. Now get outta my tower!
   &3Recieved Encrypted Notes&r
-&o  [1/2]: Bring the Encrypted Notes back to Vargos in the academy and he'll tell you his story.
-&o  [2/2]: Should you lose the Encrypted Notes, speak to Hermy for another copy.
+&7&o  [1/2]: Bring the Encrypted Notes back to Vargos in the academy and he'll tell you his story.
+&7&o  [2/2]: Should you lose the Encrypted Notes, speak to Hermy for another copy.
  Vargos
   &6[Vargos]&r
  So he goes by Hermy now, interesting. That aside we can read this book now! Oh... with Ezariah and his spells, I should've

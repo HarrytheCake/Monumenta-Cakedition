@@ -28,14 +28,14 @@ NOISE! THE ENDLESS CLUCKING!?
   &5[Not now.]&r
   &6[Master of Clucks]&r
  INSANITY! Once you do, I will be here!
-&o  Speak to the MASTER OF CLUCKS!
+&7&o  Speak to the MASTER OF CLUCKS!
  Master of Clucks
   &6[Master of Clucks]&r
  Now then! Next to me here you will see a POULTRYGEIST (ahh!)! You will not know true terror until you've tried to handle one of
 theses beasts.
   &5[I HAVE SEEN TRUE TERROR!]&r
  **   &6[Master of Clucks]&r THEN YOU KNOW WHAT WE MUST DO
-&o  Speak to the Baron of All Bunnies, the Bunny Baron.
+&7&o  Speak to the Baron of All Bunnies, the Bunny Baron.
  The Bunny Baron
   Coordinates: [-131, 90, -121]
    &6[The Bunny Baron]&r
@@ -57,7 +57,7 @@ be granted... AN EASTER EGG!
   &5[You know, you two sound rather alike!]&r
   &6[The Bunny Baron]&r
  HOW DARE YOU! Comparing the CLORIOUS ME to that circus dwelling no good CHICKEN?! BEGONE!
-&o  Defeat the BEAST in the Bunny Barron's Warren to get an Egg from the Baron!
+&7&o  Defeat the BEAST in the Bunny Barron's Warren to get an Egg from the Baron!
   Don't worry about the fight at all. The Pig God is just a literal health stick. None of the attacks do damage.
  Start of fight:
   &4OINK OINK!!! OINK OINK, OINK OINK, OINK!?!?&r
@@ -81,7 +81,7 @@ be granted... AN EASTER EGG!
   &6[The Bunny Baron]&r
  IT IS DONE! I heard the dreadful SCREAMS as you took down the BEAST! No more shall that horrible CREATURE in the form of one so
 porcine HAUNT US! Now quickly, take this Easter Egg and be on your way!
-&o  Return to the MASTER OF CLUCKS with the Easter Egg.
+&7&o  Return to the MASTER OF CLUCKS with the Easter Egg.
  Master of Clucks
   &6[Master of Clucks]&r
  You did it! Excellent. I'll just take that then... and we can head into the LAIR and begin the interrogation!
@@ -94,7 +94,7 @@ porcine HAUNT US! Now quickly, take this Easter Egg and be on your way!
   &5[Not yet.]&r
   &6[Master of Clucks]&r
  Let me know when you are and we can begin!
-&o  Speak to the MASTER OF CLUCKS to head to his supercool secret lair!
+&7&o  Speak to the MASTER OF CLUCKS to head to his supercool secret lair!
  Master of Clucks [Lair]
   &6[Master of Clucks]&r
  Welcome to the LAIR [Player]! I think it is time to begin the interrogation!
@@ -108,12 +108,12 @@ porcine HAUNT US! Now quickly, take this Easter Egg and be on your way!
   &6[Master of Clucks]&r
  He says "You must travel atop the greatest tree in the forest and steal the Decluckifier from the Motherclucker herself!"
  **   &6[Terrified Poultrygeist]&r BWAWKKK
-&o  Speak with your fellow prisoner to try and escape the Motherclucker.
+&7&o  Speak with your fellow prisoner to try and escape the Motherclucker.
  Imprisoned Poultrygeist
   &6[Imprisoned Poultrygeist]&r
  I can't believe the Motherclucker! She's going to De-Geist me! This is ABSURD
  After you finish the race:
-&o  Return to the MASTER OF CLUCKS with your new knowledge!
+&7&o  Return to the MASTER OF CLUCKS with your new knowledge!
  Master of Clucks
   &6[Master of Clucks]&r
  You survived! I can't believe you've made it back!

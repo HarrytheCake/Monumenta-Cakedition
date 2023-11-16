@@ -1,5 +1,5 @@
 &r
-&o  Go find the tools in... some random scientist's lab.
+&7&o  Go find the tools in... some random scientist's lab.
  Bermuda
   Coordinates: [-229 44 -626]
    &6[Bermuda]&r
@@ -23,9 +23,9 @@ they got back.
   &6[Bermuda]&r
  Don't think you can keep fooling me! Just, go down there and get the tools will you. I'll tell you more once you have them...
 it's clear I can't keep you in the dark for long.
-&o  C: Head into Bermuda's old lab and retrieve her tools.
+&7&o  C: Head into Bermuda's old lab and retrieve her tools.
  After beating the two mini bosses:
-&o  C: You got the tools. Now let Bermuda explain what's going on this time.
+&7&o  C: You got the tools. Now let Bermuda explain what's going on this time.
  Bermuda
   Coordinates: [-229 44 -626]
    &6[Bermuda]&r
@@ -71,7 +71,7 @@ memory core. If you can get her... it... out, I'd be forever grateful.
   &5[I'll try. See you soon, Bermuda.]&r
   &6[Bermuda]&r
  Thank you, and good luck.
-&o  C: Head to Bermuda's other lab and retrieve IOTA's core. You should probably deliver that letter first, though.
+&7&o  C: Head to Bermuda's other lab and retrieve IOTA's core. You should probably deliver that letter first, though.
  Entrance is through underwater river at -399 109 -197
  Dialogue for when you have completed or have not started Of Mushrooms and magic:
  Elder Lytania
@@ -113,7 +113,7 @@ doing the trap and not having beaten   Link   Coven's Gambit Coven's_Gambit wiki
  ... {...}
   &8Lytania isn't responding. You furtively take what looks to be a key to Bermuda's Lab from her pocket when Maruae isn't
 looking and replace it with Bermuda's apology note. Hey, if she's still trapped, you can tell the guards whatever you want...&r
-&o  C: Head into Bermuda's lab and retrieve IOTA's core.
+&7&o  C: Head into Bermuda's lab and retrieve IOTA's core.
  After returning to IOTA to Bermuda:
  Bermuda
   Coordinates: [-229 44 -626]

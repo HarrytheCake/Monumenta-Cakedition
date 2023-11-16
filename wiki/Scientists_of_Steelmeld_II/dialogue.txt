@@ -9,7 +9,7 @@
   &5[Not right now.]&r
   &6[Professor Bermuda]&r
  Don't keep me waiting.
- C:   &o  Talk to Professor Bermuda and aid her in her lab.
+ C:   &7&o  Talk to Professor Bermuda and aid her in her lab.
  Professor Bermuda
   &6[Professor Bermuda]&r
  Hello [Player], do you want to go to my lab?     &4You need to make sure you have nothing on you for me to take you there.&r

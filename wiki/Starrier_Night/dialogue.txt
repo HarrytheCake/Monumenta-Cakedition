@@ -52,7 +52,7 @@ convex lens. Mayleen will know what they are so you don't need to worry about th
   &5[Sadly, I recently forgot how to agree to random requests from strange tree dwellers.]&r
   &6[Montana]&r
  Oh that's a shame! If you remember how to do that I will most likely still be waiting.
-&o  Visit Mayleen to see if she can help you assist Montana.
+&7&o  Visit Mayleen to see if she can help you assist Montana.
  Mayleen
   Coordinates: [-118, 110, -12]
    &6[Mayleen]&r
@@ -86,12 +86,12 @@ is locked behind a puzzle that I don't know how to solve, but I know it is simil
  This tower used to be a watchtower long before I got here. I saw some lenses down there when I was given the tour, but I never
 did work out how to get in there myself. Make all the lights face towards you, and the storeroom should unlock. Come back to me
 once you get the lens.
-&o  Go to the basement and find the decorative lens. Remember to face all of the lights towards you.
+&7&o  Go to the basement and find the decorative lens. Remember to face all of the lights towards you.
  Basement is on the Northside of the building.
   Mayleen Basement Gear puzzle  Plain  press gear array 1 button three times. Plain  press gear array 2 button zero times. Plain
 press gear array 3 button two times. Plain  press gear array 4 button one time.
- &o   &3You hear a lock opening. You should be able to get into the storeroom.&r
-&o  Grab the decorative lens from the storeroom of Mayleen's tower and bring it back to Mayleen.
+ &7&o   &3You hear a lock opening. You should be able to get into the storeroom.&r
+&7&o  Grab the decorative lens from the storeroom of Mayleen's tower and bring it back to Mayleen.
  Mayleen
   &6[Mayleen]&r
  Good, you have the lens, and more importantly you opened my storeroom for me. Looks like that was a decorative lens, so you
@@ -114,12 +114,12 @@ of lock on the bunker itself. I would check for an underwater entrance.
   &6[Mayleen]&r
  Hopefully everything she needs is there. I will have to make minor adjustments to anything you manage to find so come back here
 if you find anything.
-&o  Head to the   Link   Fishing Huts Fishing_Huts wikilink east of Sierhaven and search underwater around the watchtower for a
-way into the basement. Make any lights you find face you.
+&7&o  Head to the   Link   Fishing Huts Fishing_Huts wikilink east of Sierhaven and search underwater around the watchtower for
+a way into the basement. Make any lights you find face you.
   Fishing Hut Gear puzzle  Plain  press gear array 1 button two times. Plain  press gear array 2 button two times. Plain  press
 gear array 3 button three times. Plain  press gear array 4 button three times.
- &o   &3You hear a door unlocking. You should be able to get into the bunker.&r
-&o  Grab the concave lens from the chest in the fishing huts' watchtower's bunker and bring it back to Mayleen.
+ &7&o   &3You hear a door unlocking. You should be able to get into the bunker.&r
+&7&o  Grab the concave lens from the chest in the fishing huts' watchtower's bunker and bring it back to Mayleen.
  Mayleen
   &6[Mayleen]&r
  I see you found a concave lens. I'll fix that up quickly... There that should work. So you had no luck finding a convex lens?
@@ -135,7 +135,7 @@ It is a long shot, but might as well ask.
   &6[Mayleen]&r
  Be careful, I don't know anything about the owner of that telescope. I have a bad feeling about them. If it gets dangerous,
 leave right away. I don't want to be responsible for your death.
-&o  Talk to the owner of the tower to the south of Nyr and ask for a convex lens. Header
+&7&o  Talk to the owner of the tower to the south of Nyr and ask for a convex lens. Header
 criminal_route_chose_octavius_in_bandit_troubles  Criminal Route (Chose Octavius in Bandit Troubles)
  Gaius
   Coordinates: [-109, 108, 76]
@@ -156,13 +156,13 @@ there couldn't see me, but other than that it has gone smoothly so far.
   &6[Gaius]&r
  Ah, so you got put on a similar mission. I have a bunch of spare parts. I don't know what any of them are, but if I have one
 you can have it.
-&o   &3You are given a convex lens.&r
-&o  You got a lens from Gaius. Bring it back to Mayleen. Talk to Mayleen even if things go wrong.
+&7&o   &3You are given a convex lens.&r
+&7&o  You got a lens from Gaius. Bring it back to Mayleen. Talk to Mayleen even if things go wrong.
  As you enter Mayleen's tower:
   &6[Private Arnie]&r
  Sorry, gotta check the supplies of everyone who comes into town... Aha! A convex lens! Sorry, gotta take this. Orders are
 orders. Other lenses are fine though.
-&o  Mayleen will want to hear about this. Go to her and come up with a plan.
+&7&o  Mayleen will want to hear about this. Go to her and come up with a plan.
  Mayleen
   &6[Mayleen]&r
  You look upset, did something happen?
@@ -181,7 +181,7 @@ they trying to build one too? Things just got much more complicated for us, we n
  This seems a bit shady, but it is likely the best chance we have at the moment. I trust your judgement, just be careful.
   &5[They likely know some people there.]&r
   &5[They would love to have him.]&r
-&o  Your convex lens was confiscated. Go back to Gaius to see if he can offer some assistance.
+&7&o  Your convex lens was confiscated. Go back to Gaius to see if he can offer some assistance.
  Gaius
   &6[Gaius]&r
  Hope your mission goes well, let me know if I can be of assistance.
@@ -223,13 +223,13 @@ through the secret entrance.
   &5[I will head there right away.]&r
   &6[Gaius]&r
  Be careful, if a guard comes in to deposit contraband while you are down there you might be in there for a while.
-&o  Break into the Nyr Armory basement and see if you can find the convex lens. Remember to not be seen.
-&o   &3You fall through a hidden trapdoor into the armory's basement.&r
+&7&o  Break into the Nyr Armory basement and see if you can find the convex lens. Remember to not be seen.
+&7&o   &3You fall through a hidden trapdoor into the armory's basement.&r
   Gaius's basement or Nyr's basement puzzle:  Plain  press gear array 1 button three times. Plain  press gear array 2 button
 five times. Plain  press gear array 3 button three times. Plain  press gear array 4 button two times. Plain  press gear array 5
 button one time.
- &o   &3You hear a lock opening. This is your chance to get the lens.&r
-&o  You opened the lock in the armory basement! Grab the convex lens and head back to Mayleen.
+ &7&o   &3You hear a lock opening. This is your chance to get the lens.&r
+&7&o  You opened the lock in the armory basement! Grab the convex lens and head back to Mayleen.
  As you head into Mayleen's tower:
   &6[Private Arnie]&r
  Already checked your gear, so head on in! After all, not like we had any lenses lying around town you could smuggle in. Header
@@ -242,7 +242,7 @@ lawful_route_chose_the_law_in_bandit_troubles  Lawful Route (Chose the Law in Ba
   &6[Mayleen]&r
  Marvelous! Let me modify it before any guards come around... Okay that should do it. I suppose all that is left is for you to
 head back to Montana. Tell her I said hi.
-&o  You have all three lenses! Bring them back to Montana.
+&7&o  You have all three lenses! Bring them back to Montana.
  Montana
   &6[Montana]&r
  Welcome Back! Have you had any luck finding any of the parts I need?

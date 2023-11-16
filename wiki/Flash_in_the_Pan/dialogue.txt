@@ -1,5 +1,5 @@
 &r
-&o  Follow the race markers to beat Flashy's race!
+&7&o  Follow the race markers to beat Flashy's race!
  Flashy
   Coordinates: [-797, 101, 27]
    &6[Flashy]&r
@@ -26,7 +26,7 @@ next, and so on. You gotta reach the end with time still left, and if ya do, you
  After you beat the race:
   &6[Flashy]&r
  Okay! That was definitely not supposed to happen! Ya did it though - Please, come back to me so I can give you a reward!
-&o  C: Speak to Flashy.
+&7&o  C: Speak to Flashy.
  Flashy
   Coordinates: [-797, 101, 27]
    &6[Flashy]&r

@@ -1,5 +1,5 @@
 &r
-&o  Meet with the High Priest and the Praetor to discuss destroying Shades for good.
+&7&o  Meet with the High Priest and the Praetor to discuss destroying Shades for good.
  The High Priest
   Coordinates: [-446 181 -86]
    &6[The High Priest]&r
@@ -87,14 +87,14 @@ involvement. {...}
   &6[The Praetor]&r
  Be safe in your journey, [Player]. The Quelled Convent is a dangerous place. I've lost several Shade Hunters to the
 monstrosities lurking within. The catacombs below are even worse. We believe in your will and your might.
-&o  C: Find Emperor Uriddan's tomb within the crypts of The Quelled Convent.
+&7&o  C: Find Emperor Uriddan's tomb within the crypts of The Quelled Convent.
   Coordinates: [-319, 146, -48]
   Reaching the tomb:
   &8Pray to the shrine?&r
   &5[Yes.]&r
   &8You feel a dark force pulling you in... Will you let it? You may not be able to return.&r
   &5[Yes.]&r
-&o  C: Let the Darkness guide you.
+&7&o  C: Let the Darkness guide you.
  Darkness (First Tomb)
   &6[Darkness]&r
  You intrude upon one of my emperor's tombs. {...}
@@ -102,7 +102,7 @@ monstrosities lurking within. The catacombs below are even worse. We believe in 
  I know why you are here. Only Emptiness can disrupt what Energy has wrought. {...}
   &6[Darkness]&r
  You may take the Spear. You must find that Emptiness yourself. I have no time for foolish quests. Leave.
-&o  C: Return to the Praetor, the High Priest, and Bhairavi with the spear.
+&7&o  C: Return to the Praetor, the High Priest, and Bhairavi with the spear.
  The High Priest
   Coordinates: [-446 181 -86]
    &6[The Praetor]&r
@@ -150,11 +150,11 @@ outside our walls. Perhaps you can search there?
   &6[The Praetor]&r
  I'm not completely certain how you'd get deeper inside. Much of the place has collapsed. Searching through rubble might be your
 best chance.
-&o  C: Search the Bewitched Dominion for deeper passages... Be sure to bring the spear, and be prepared to have to dig through
+&7&o  C: Search the Bewitched Dominion for deeper passages... Be sure to bring the spear, and be prepared to have to dig through
 some rubble.
   Dig through the gravel at Coordinates: [-757, 83, -136]
   After reaching the tomb:
-&o  C: Explore the deeper Darkness.
+&7&o  C: Explore the deeper Darkness.
  Darkness (Second Tomb)
   &6[Darkness]&r
  Again, the hero rides forth, spear in hand, seeking promised Emptiness, defiling my Emperor's tombs yet again. {...}
@@ -169,7 +169,7 @@ some rubble.
   &6[Darkness]&r
  Open your mind to Nihilo...
   &8The spear in your inventory completely fills with Void.&r
-&o  C: Return to the Praetor, the High Priest, and Bhairavi with the Void-filled spear.
+&7&o  C: Return to the Praetor, the High Priest, and Bhairavi with the Void-filled spear.
  The High Priest
   Coordinates: [-446 181 -86]
    &6[The Praetor]&r
@@ -202,7 +202,7 @@ take kindly to us visiting him again.]&r
  May the Architect bless you. {...}
   &6[Bhairavi]&r
  I'll be eagerly waiting for the results of your experimentation!
-&o  C: Meet Brayllur in the Brown Dungeon lobby to travel back into Neo Antium. Be sure to bring the Void-filled spear.
+&7&o  C: Meet Brayllur in the Brown Dungeon lobby to travel back into Neo Antium. Be sure to bring the Void-filled spear.
  Brayllur (Brown Lobby)
   &6[Brayllur]&r
  Greetings again puny-friend! You ready for going?
@@ -220,7 +220,7 @@ take kindly to us visiting him again.]&r
  Brayllur (Puzzle Area 2)
   &6[Brayllur]&r
  Guhh
-&o  C: Pelias stands before you. Take the spear and end him once and for all.
+&7&o  C: Pelias stands before you. Take the spear and end him once and for all.
  Brayllur (Puzzle Area 3)
   &6[Brayllur]&r
  More wires... GRUHH! Power up. After, take spear. Place into king man's heart. Emptiness. Nothingness...
@@ -233,9 +233,9 @@ take kindly to us visiting him again.]&r
   &8The Void within the spear drains...&r
   &6[Brayllur]&r
  Over. He gone. Do not like that feeling. Remind me of Congress... Now. Go back. I stay. I watch.
-&o  C: Leave Brayllur be and return to the church later to meet with the High Priest and others.
+&7&o  C: Leave Brayllur be and return to the church later to meet with the High Priest and others.
  After leaving:
-&o  C: Return to the Praetor, the High Priest, Bhairavi, and Brayllur.
+&7&o  C: Return to the Praetor, the High Priest, Bhairavi, and Brayllur.
  The High Priest
   Coordinates: [-446 181 -86]
    &6[Bhairavi]&r
@@ -284,7 +284,7 @@ make us all safe at last. Now, we wish to- {...}
   &6[The High Priest]&r
  Benedictus sanctissimus... We've woken the Knights... This cannot be a good sign, brothers and sisters. There is power
 radiating from outside. We must go to them, lest they raze the city in their anger...
-&o  C: Go to New Antium's gate to confront the being in Silver Knight armor.
+&7&o  C: Go to New Antium's gate to confront the being in Silver Knight armor.
  Dialogue before you leave
   &6[Brayllur]&r
  Knight? Exciting!
@@ -318,7 +318,7 @@ only he might set things right. A strange blight emanates from the stones beyond
   &6[Silver Knight Tuulen]&r
  Thank you for granting me new purpose. I offer you this Helm as a mark of my gratitude. Perhaps I will stumble once more onto
 your path should you walk the bridge I step toward. Farewell to you all. May the Architect guide thee.
-&o  C: Speak to your allies following Tuulen's revelations.
+&7&o  C: Speak to your allies following Tuulen's revelations.
  The High Priest
   Coordinates: [-384, 157, -166]
    &6[Bhairavi]&r

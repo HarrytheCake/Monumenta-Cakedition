@@ -1,5 +1,5 @@
 &r
-&o  Find Ebonee's wand and learn more about today's plans.
+&7&o  Find Ebonee's wand and learn more about today's plans.
  Ebonee
   Coordinates: [-1760, 132, -51]
    &6[Ebonee]&r
@@ -19,12 +19,12 @@
   &5[But I'm not a student, I don't think I can enter them...]&r
   &6[Ebonee]&r
  Oh, I'm sure there's a secret passage somewhere- an old academy like this has gotta have some!
-&o  C: Search for a way in to the quarters so you can find Ebonee's wand.
+&7&o  C: Search for a way in to the quarters so you can find Ebonee's wand.
   Go through the painting in the lowest floor of the academy at Coordinates: [-1812, 131, -65] then move and parkour through the
 quaters.
    &3You've found the wand! Head back to Ebonee now.&r
-&o  C: [1/2]: Return to Ebonee with the wand.
-&o  C: [2/2]: If you have misplaced Ebonee's wand you will need to get it back.
+&7&o  C: [1/2]: Return to Ebonee with the wand.
+&7&o  C: [2/2]: If you have misplaced Ebonee's wand you will need to get it back.
  Ebonee
   &6[Ebonee]&r
  Oh thanks! You've found it!
@@ -43,10 +43,10 @@ students...
   &6[Ebonee]&r
  BUT! Perhaps you'll be able to access it since you're not a student! Have a look around the the lower floors, there might be an
 entrance there.
-&o  C: Search for the entrance to the confiscated storage wing and find the item for Ebonee inside it.
+&7&o  C: Search for the entrance to the confiscated storage wing and find the item for Ebonee inside it.
   The confiscated storage wing is just at the very bottom of the Academy staircase.
    Parkour your way across to the coords [-1794, 99, -100] and grab the firework star in the chest.
- &o  C: Return to Ebonee once more.
+ &7&o  C: Return to Ebonee once more.
  Ebonee
   &6[Ebonee]&r
  Awesome! You've got it! Now, this stuff gives our fireworks their boom, but we'll still need one more ingredient so we can make
@@ -57,8 +57,8 @@ this prank a reality.
   &5[Where would I find that?]&r
   &6[Ebonee]&r
  Check the old   Link   Frigid Laboratory Frigid_Laboratory wikilink outside the city. This stuff sounds right up their alley!
-&o  C: [1/2] Search for the Incendiary Charge inside the   Link   Frigid Laboratory Frigid_Laboratory wikilink  .
-&o  C: [2/2] Once you have the Incendiary Charge return to Ebonee.
+&7&o  C: [1/2] Search for the Incendiary Charge inside the   Link   Frigid Laboratory Frigid_Laboratory wikilink  .
+&7&o  C: [2/2] Once you have the Incendiary Charge return to Ebonee.
  Ebonee
   &6[Ebonee]&r
  Oh, hey, you found some! Oh, this is gonna be soooo great! I can't wait to see the looks on their faces...
@@ -76,7 +76,7 @@ let's make our way there right now!
   &8You feel a rush of wind around you as the world falls away and goes dark...&r
   &3Ebonee and her friends cast a few incantations and the room is filled with fireworks!&r
   &3As the students finish their prank you feel the same sensation as before. You open your eyes next to Ebonee.&r
-&o  C: Talk with Ebonee about the prank you've just witnessed.
+&7&o  C: Talk with Ebonee about the prank you've just witnessed.
  Ebonee
   &6[Ebonee]&r
  Oh my gosh, that was so good! That'll leave a few scorch marks in the lobby for sure! Hey, thanks for helping us out with this.

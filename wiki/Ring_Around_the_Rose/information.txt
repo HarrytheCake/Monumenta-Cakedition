@@ -1,5 +1,5 @@
-prerequisites = * &3Voyage of Discovery&r
- NPC: Researcher Jennis Coords: -820 97 1332
- Celsian Isles Mistport
+Pre-req: * &3Voyage of Discovery&r
+ NPC: Researcher Jennis &1Coords:&r -820 97 1332
+&2 Celsian Isles&r Mistport
 Difficulty = Medium
 Length = Short

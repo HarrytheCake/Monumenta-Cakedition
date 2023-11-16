@@ -1,1 +1,1 @@
- NPC: James (Myriad) Celsian Islestown = Whispervalestarting_npc_coordinates = -1722, 140, -108starting_npc_coordinates = -1722, 140, -108 Celsian Islestown = Whispervalestarting_npc_coordinates = -1722, 140, -108town = Whispervalestarting_npc_coordinates = -1722, 140, -108
+ NPC: James (Myriad)&2 Celsian Islestown = Whispervalestarting_npc_coordinates = -1722, 140, -108starting_npc_coordinates = -1722, 140, -108&2 Celsian Islestown = Whispervalestarting_npc_coordinates = -1722, 140, -108town = Whispervalestarting_npc_coordinates = -1722, 140, -108

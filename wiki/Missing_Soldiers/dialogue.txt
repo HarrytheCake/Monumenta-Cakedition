@@ -1,7 +1,7 @@
 &r
   WorkInProgress|Missing compass content&r
- NOTE: If the player has accepted Octavius's bribe in   &o Link   Bandit Troubles Bandit_Troubles wikilink  , this quest will be
-considered non-canon to the playthrough, and no rewards will be given. A warning issues as follows:
+ NOTE: If the player has accepted Octavius's bribe in   &7&o Link   Bandit Troubles Bandit_Troubles wikilink  , this quest will
+be considered non-canon to the playthrough, and no rewards will be given. A warning issues as follows:
   &r
  Sergeant Sigrun
   Coordinates: [-137, 100, -96]
@@ -21,7 +21,7 @@ out...
   Redmond's Cap can be found in the furnaces at [14, 88, 94]
  Davis's Cloak can be found in the furnaces at [45, 83, 95]
   Once you have gotten the items return to Sergeant Sigrun.
- If the quest is non-canon, the quest compass will only read " &o  Do you really expect a compass to assist you with a
+ If the quest is non-canon, the quest compass will only read " &7&o  Do you really expect a compass to assist you with a
 hallucination?  "
  Sergeant Sigrun
   &6[Sergeant Sigrun]&r

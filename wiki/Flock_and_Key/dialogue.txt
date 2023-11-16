@@ -14,12 +14,12 @@ there too, so we'll have to act fast. Can I count on you?     &4(Make sure to ha
   &5[Of course.]&r
   &6[Akema]&r
  Good luck on your journey. Fly high.
- C:   &o  Follow the map to the find the stronghold.
+ C:   &7&o  Follow the map to the find the stronghold.
   Coordinates: -822, 82, 520
   Once you reach the stronghold:
- C:   &o  Find a way into the inner chamber.
+ C:   &7&o  Find a way into the inner chamber.
   Hit the 3 buttons until the handle is Bone + Blackstone + lapis, the blade is Ice, and the pedestal is Ice+Stone.
-  C:   &o  Find the artifact.
+  C:   &7&o  Find the artifact.
  Loot a recoil crossbow from the Dead Adventurer.
   &6[Leon]&r
  Looks like it's time to put your recoil skills to the test! I'll see you on the other side [Player]!
@@ -37,7 +37,7 @@ via the honeycomb blocks.
    Finally you have another iron block section where you need to use the recoil bow to jump around the lava and get back onto
 the platforms.
   After you open the chest that has the artifact you get launched out of the volcano.
- C:   &o  Return to Akema with the artifact.
+ C:   &7&o  Return to Akema with the artifact.
  Akema (Rooster Den)
   &6[Akema]&r
  Welcome back, [Player]. How did the mission go?

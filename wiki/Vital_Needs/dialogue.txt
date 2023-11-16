@@ -20,8 +20,8 @@ you could fetch me some of those I could apply it to you for your travels too!
   &5[I'm in. Where should I start?]&r
   &6[Dr. Qure]&r
  Well, first of all, I require a Tenebre Mushroom from some fungal caves in the nearby islands.
-&o  1/2 - Travel to   Link   Fungus Thorn Cave Fungus_Thorn_Cave wikilink in order to obtain a Tenebre Mushroom
-&o  2/2 - Once you have a Tenebre Mushroom return to Dr. Qure
+&7&o  1/2 - Travel to   Link   Fungus Thorn Cave Fungus_Thorn_Cave wikilink in order to obtain a Tenebre Mushroom
+&7&o  2/2 - Once you have a Tenebre Mushroom return to Dr. Qure
  Dr. Qure
   &6[Dr. Qure]&r
  Ah perfect! You found one! 
@@ -29,8 +29,8 @@ you could fetch me some of those I could apply it to you for your travels too!
   &5[Alright then, what's next?]&r
   &6[Dr. Qure]&r
  Hmm, a fresh Saragundi Sapling from a nearby forest. I'd say the Feyrune Forest would have an ample supply.
-&o  1/2 - Travel to   Link   Feyrune Forest Feyrune_Forest wikilink and retrieve a Saragundi Sapling
-&o  2/2 - Once you have a Saragundi Sapling, return to Dr. Qure
+&7&o  1/2 - Travel to   Link   Feyrune Forest Feyrune_Forest wikilink and retrieve a Saragundi Sapling
+&7&o  2/2 - Once you have a Saragundi Sapling, return to Dr. Qure
  Dr. Qure
   &6[Dr. Qure]&r
  Fantastic, it looks to be in perfect health!
@@ -42,8 +42,8 @@ they've gone back to their base camp in the Spiral Island.
   &5[Lovely...]&r
   &6[Dr. Qure]&r
  Yes, well I suppose it shouldn't be too much harder than fetching the other supplies.
-&o  1/2 - Travel to   Link   Spiral Island Spiral_Island wikilink to retrieve some Kelp Oil
-&o  2/2 - Once you have some Kelp Oil, return to Dr. Qure
+&7&o  1/2 - Travel to   Link   Spiral Island Spiral_Island wikilink to retrieve some Kelp Oil
+&7&o  2/2 - Once you have some Kelp Oil, return to Dr. Qure
  Dr. Qure
   &6[Dr. Qure]&r
  Great work! That's the final ingredient!

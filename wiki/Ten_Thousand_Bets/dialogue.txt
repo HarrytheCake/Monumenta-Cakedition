@@ -18,7 +18,7 @@ called me Myriad though.
   &5[Luck like yours? Care to demonstrate?]&r
   &6[Myriad]&r
  Sure, we can head to the Casino. Just talk to me when you're ready.
-&o  C: Go with Myriad to the Casino.
+&7&o  C: Go with Myriad to the Casino.
  Myriad
   &6[Myriad]&r
  Ready to go?
@@ -43,7 +43,7 @@ called me Myriad though.
   &6[Myriad]&r
  Take the gold. I don't deserve it. I lost my luck long ago.
   &5[Myriad...]&r
-&o  C: Myriad seems pretty upset, I should go see if he is alright.
+&7&o  C: Myriad seems pretty upset, I should go see if he is alright.
  Myriad (James)
   &6[Myriad]&r
  I don't deserve that name...
@@ -75,7 +75,7 @@ name is James. Plain, old, boring, James.
   &8He hands you a intriguing looking casino chip.&r
   &6[James]&r
  Try looking around the Casino. The bouncer's got to be guarding something.
-&o  C: Myriad said the bouncer in the Casino was guarding "something" I should investigate.
+&7&o  C: Myriad said the bouncer in the Casino was guarding "something" I should investigate.
   The bouncer is guarding the painting. Go through the painting.
   Link   Puzzle Solutions Guide/Ten Thousand Bets Puzzle_Solutions_Guide/Ten_Thousand_Bets wikilink
   Solve the puzzle and retrieve Myriad's Chestplate, then return to Myriad.

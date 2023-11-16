@@ -14,9 +14,9 @@ retrieve it. Could you do that for me?
   &6[Helring]&r
  Thank you so much. I left it in the study of an outpost I was stationed at. It lies down the stream that goes through the
 Cursed Forest. The journey should be simple and the monks there should help you find my old desk.
-&o  Retrieve Helring's diary at 1467, 174, 101
+&7&o  Retrieve Helring's diary at 1467, 174, 101
   &6[Ghostly Whisper]&r
- You would be wise to go no further. Visitors aren't welcome. SoftBreak &o  After retrieving the diary.
+ You would be wise to go no further. Visitors aren't welcome. SoftBreak &7&o  After retrieving the diary.
   &6[Ghost]&r
  I thought I told you to stay away, but it seems the monk I spared has sent you to retrieve her diary.
   &6[Ghost]&r
@@ -38,7 +38,7 @@ even as a ghost. He had a mansion near the back of the grove where you may find 
   &5[I really don't want to go back.]&r
   &6[Helring]&r
  Thank you so much. I'll need to prepare... mentally... before returning to that place.
-&o  1/2 - Find a way into Azacor's ritual room
+&7&o  1/2 - Find a way into Azacor's ritual room
  2/2 - Find a way to get past the barrier in Azacor's ritual room.
   &6[Azacor]&r
  Congratulations, you've gone from nuisance to problem. Looks like I'll need to deal with you more... personally.
@@ -64,7 +64,7 @@ demise. We need to get to the Undergrowth to trap him in Ancient Wyrmwood.
   &5[Alright let's go.]&r
   &6[Helring]&r
  I'll meet you there!
-&o  You need to trap Azacor in Ancient Wormwood in the Undergrowth. Get there and survive.
+&7&o  You need to trap Azacor in Ancient Wormwood in the Undergrowth. Get there and survive.
  Click on the button at 1480, 42, 118.
   &6{[Azacor]&r
  I see you stumbled upon the source of the Wyrmwood. Of course, you don't really expect me to let you leave this location alive,

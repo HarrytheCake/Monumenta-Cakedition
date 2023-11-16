@@ -2,9 +2,9 @@
   WorkInProgress|Exact book coords, puzzle solutions, and double checking&r
  Puzzle Solutions:   Link   https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_VI
 https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_VI
- C:   &o  [1/2]: You found another one of Selari's journals. Journey back into his workshop and see what you can find. Remember
-to bring some uncharged tesseracts with you.
- C:   &o  [2/2]: If you lost the journal from the Alnera Archives, you can find another one there.
+ C:   &7&o  [1/2]: You found another one of Selari's journals. Journey back into his workshop and see what you can find.
+Remember to bring some uncharged tesseracts with you.
+ C:   &7&o  [2/2]: If you lost the journal from the Alnera Archives, you can find another one there.
  After you enter the cyan room:
  Distant Voice
   &6[Distant Voice]&r

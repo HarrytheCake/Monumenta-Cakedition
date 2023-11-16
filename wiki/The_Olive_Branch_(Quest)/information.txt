@@ -1,3 +1,3 @@
-prerequisites = &3Unmasked&r
- NPC: Bhairavi Coords: -543, 6, -528
- Celsian Isles &3Steelmeld&r
+Pre-req: &3Unmasked&r
+ NPC: Bhairavi &1Coords:&r -543, 6, -528
+&2 Celsian Isles&r &3Steelmeld&r

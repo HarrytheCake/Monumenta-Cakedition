@@ -2,7 +2,7 @@
   WorkInProgress|Content&r
  The Staff? Start: Go to the   Link   Mysterious Cenote Mysterious_Cenote wikilink and pick up a staff from the chest after
 doing   Link   The Staff The_Staff wikilink Quest.
- &o  Warning: If you haven't completed the Black Willows (delve completion also counts as a completion) at least once, this
+ &7&o  Warning: If you haven't completed the Black Willows (delve completion also counts as a completion) at least once, this
 quest will silently fail to start.
  First, go to   Link   Southern Village Southern_Village wikilink south of Sierhaven and pick up the Whirlpool coin from the
 fountain. Then, go behind the   Link   Lighthouse Lighthouse wikilink and there is an underwater grate in the water with stone

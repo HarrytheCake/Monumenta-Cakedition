@@ -1,6 +1,6 @@
-prerequisites = * &3Of Mushrooms and Magic&r
+Pre-req: * &3Of Mushrooms and Magic&r
 * &3The Tomb of Time&r
- NPC: Primirium Conquort Coords: -311 181 -663
- Architect's Ring Galengarde
+ NPC: Primirium Conquort &1Coords:&r -311 181 -663
+&2 Architect's Ring&r Galengarde
 Difficulty = Hard
 Length = Very long

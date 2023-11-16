@@ -1,5 +1,5 @@
 &r
-&o  Speak with Bhairavi in   Link   Nyr Nyr wikilink
+&7&o  Speak with Bhairavi in   Link   Nyr Nyr wikilink
  Bhairavi
   &5[I was actually wondering what we were doing next.]&r
   &6[Bhairavi]&r
@@ -33,9 +33,9 @@ Temple seems dangerous.
   &6[Bhairavi]&r
  Oh! I didn't even consider you didn't know of it. Head out of Nyr to the river, and follow it into the jungle. The river itself
 pours into the Maw. You can't miss it.
-&o  Explore the   Link   Grand Maw Grand_Maw wikilink and try to find something to bring back to Bhairavi.
- &o  Head to the Grand Maw at 350, 71, 82. On the upper floors there's a structure with a magma block inside, break the block to
-progress the quest. It is recommended to have a couple Antidotes on you or some way to prevent poison.
+&7&o  Explore the   Link   Grand Maw Grand_Maw wikilink and try to find something to bring back to Bhairavi.
+ &7&o  Head to the Grand Maw at 350, 71, 82. On the upper floors there's a structure with a magma block inside, break the block
+to progress the quest. It is recommended to have a couple Antidotes on you or some way to prevent poison.
   Bhairavi
   &6[Bhairavi]&r
  This is bad... this is so so bad. [Player], what happened?
@@ -50,7 +50,7 @@ what I get for being so overeager... This is my fault... I thought we could be m
   &5[So now what?]&r
   &6[Bhairavi]&r
  We can fix this. I know we can. Go talk to Dr. Laurie. She's going to need all the help she can get.
-&o  Talk to Dr. Laurie, she likely has her hands full and will need help.
+&7&o  Talk to Dr. Laurie, she likely has her hands full and will need help.
   Head to Dr. Laurie in her house at -107, 95, -113.
   Dr. Laurie
   &6[Dr. Laurie]&r
@@ -80,7 +80,7 @@ hidden nearby.
   &5[Thank you.]&r
   &6[Dr. Laurie]&r
  Good luck
-&o  Look for a sewer entrance into Farr near the Hallowed Pond.
+&7&o  Look for a sewer entrance into Farr near the Hallowed Pond.
   Head into the sewers by Farr at 493, 71, 131. Sneak through quarantined Farr to talk with T'Lm
   T'Lm
   &6[T'Lm]&r
@@ -104,7 +104,7 @@ Myragh.
  Below the city are sewers. One such door within there leads to the ruins of the Tlaxan settlement known as Velara, hidden below
 this place. Velara's magic is strong, and grew crystals that could be infused with magic. Go within. Get a crystal. Return to
 me.
-&o  Find the door that leads to the ruins of Velara within the sewers.
+&7&o  Find the door that leads to the ruins of Velara within the sewers.
  T'Lm
   &6[T'Lm]&r
  The hero returns. Successful, I feel. What did you find?
@@ -116,7 +116,7 @@ Be warned though, getting to Eris' will require some serious sneaking. The guard
   &5[I'll head there right away.]&r
   &6[T'Lm]&r
  We will speak again, this I know.
-&o  Sneak to Nurse Eris's hospital in Farr. (The house with the cross banners)
+&7&o  Sneak to Nurse Eris's hospital in Farr. (The house with the cross banners)
  Nurse Eris
   &6[Nurse Eris]&r
  Whoa! How did you get in here? GUARDS!
@@ -127,18 +127,18 @@ Be warned though, getting to Eris' will require some serious sneaking. The guard
   &6[Nurse Eris]&r
  Oh, well in that case, hello. What can I do for you?
   &5[I need you to take this crystal and infuse it with the cure from C'Taz.]&r
-&o  If you did the Good Route on   Link   The Plague The_Plague wikilink
+&7&o  If you did the Good Route on   Link   The Plague The_Plague wikilink
   &6[Nurse Eris]&r
  Sure! Thanks to the adventurer who brought Dr. Laurie the medicine, I have just enough extra to do that. Here you go!
   &5[Wonderful, dear.]&r
-&o  If you did the Bad Route on   Link   The Plague The_Plague wikilink
+&7&o  If you did the Bad Route on   Link   The Plague The_Plague wikilink
   &6[Nurse Eris]&r
  I'm sorry, I don't have enough of the full cure to do that. If you were to bring me one Spirit Flower, one Haunted Earth, and
 one Dark Amber though, I could happily do what you want.
   &5[I'll go get those then.]&r
   &6[Nurse Eris]&r
  Thank you!
-&o  Collect one of each ingredient you gathered in the The Plague
+&7&o  Collect one of each ingredient you gathered in the The Plague
   &6[Nurse Eris]&r
  Ah, you got the ingredients! Excellent. Let me mix these in real quick and I'll have your crystal momentarily.
   &5[Thank you. Now I need to bring this back to the Maw...]&r
@@ -147,7 +147,7 @@ one Dark Amber though, I could happily do what you want.
   &5[Nothing! Thanks for your help. Everything should be back to normal shortly.]&r
   &6[Nurse Eris]&r
  Wonderful, dear.
-&o  Head back to the Grand Maw and stay around the entrance with the crystal until dialog appears. Head down into the Maw to
+&7&o  Head back to the Grand Maw and stay around the entrance with the crystal until dialog appears. Head down into the Maw to
 find the entrance of the Magenta Dungeon to speak with T'Lm
  T'Lm
   &6[T'Lm]&r
@@ -157,6 +157,6 @@ find the entrance of the Magenta Dungeon to speak with T'Lm
  I was once a guardian for Velara, and by extension the Plagueroot Temple. When I met you I knew it was time to allow a hero
 inside. Perhaps you could free the Maw from this curse forever. Claim the wool within. Now I believe you've earned a reward
 before you enter...
-&o  COMPLETED ROOTS OF THE PLAGUE Awarded a   Link   Magenta Plagueroot_Temple wikilink Key, a Magenta Shulker Box, 64 Poison
+&7&o  COMPLETED ROOTS OF THE PLAGUE Awarded a   Link   Magenta Plagueroot_Temple wikilink Key, a Magenta Shulker Box, 64 Poison
 Arrows, 10 Anvils, and Full Access to the   Link   Magenta Plagueroot_Temple wikilink Lobby Trader!
 Link   Category:Quests Category:Quests wikilink

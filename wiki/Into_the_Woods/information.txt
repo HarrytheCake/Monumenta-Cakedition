@@ -1,6 +1,6 @@
-prerequisites = * Either &3Ring Around the Rose&r
+Pre-req: * Either &3Ring Around the Rose&r
 * or &3The Tomb of Time&r
- NPC: Dockmaster Hromae Coords: -471 40 -802
- Architect's Ring Port Manteau
+ NPC: Dockmaster Hromae &1Coords:&r -471 40 -802
+&2 Architect's Ring&r Port Manteau
 Difficulty = Medium
 Length = Long

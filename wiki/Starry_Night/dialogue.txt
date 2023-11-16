@@ -21,10 +21,10 @@ into the armory?
   &5[Some other time.]&r
   &6[Mayleen]&r
  I see. That is most alright. Perhaps I will seek out a Star Acolyte to assist me.
-&o  [1/3]: Mayleen's telescope lens was taken, but a man named Ed might know a way to get it back. Look for him on the south
+&7&o  [1/3]: Mayleen's telescope lens was taken, but a man named Ed might know a way to get it back. Look for him on the south
 side of Nyr.
-&o  [2/3]: Use the Thief's Guide: Nyr to find a way into the Nyr Armory.
-&o  [3/3]: Return to Mayleen once you have the lens.
+&7&o  [2/3]: Use the Thief's Guide: Nyr to find a way into the Nyr Armory.
+&7&o  [3/3]: Return to Mayleen once you have the lens.
  NOTE: It is optional to buy the Thief's Guide: Nyr from Scarface Ed [-137, 91, -1]. Costs 12 Xp.
  To get into the armory.
   Press the stone button near the Tavern at at [-124, 96, -116] to open the Armory door.
@@ -32,7 +32,7 @@ side of Nyr.
   &6[Mayleen]&r
  This is splendid! You got my lens! I will start repairing the main body while you head downstairs to fix the gearing! When all
 the lights face towards you, the telescope will be ready.
-&o  Mayleen's telescope just needs to be turned now. Align all the lights in her tower to fix the telescope. Header
+&7&o  Mayleen's telescope just needs to be turned now. Align all the lights in her tower to fix the telescope. Header
 solution_to_the_gear_puzzle  Solution to the gear puzzle
    Mayleen
   &6[Mayleen]&r

@@ -1,13 +1,13 @@
 &r
   WorkInProgress|First Choice&r
-&o  Help the High Priest of New Antium seek out a saboteur.
+&7&o  Help the High Priest of New Antium seek out a saboteur.
   The High Priest
   Coordinates: [-418 174 -129]
    &8The man stands behind the altar, slowly looking through the pages of an old tome.&r
   &5[Uh... hello ?]&r
   &6[The High Priest]&r
  Hm? Ah, forgive me, I didn't notice your entrance. I was engrossed in the holy texts.
-&o  He adjusts his glasses, and squints as he scans your face.
+&7&o  He adjusts his glasses, and squints as he scans your face.
   &6[The High Priest]&r
  A newcomer, are you? I don't recognize your look. Tell me, what is your name?
   &5[ [Player], sir]&r
@@ -69,7 +69,7 @@ with our sources.
   &6[The High Priest]&r
  Ah, the Doctor. Their office should be in a small building to the North-West. I deeply admire their work ethic, though they
 don't often come to pray...
-&o  C: Investigate the saboteur of the food stores with the High Priest of New Antium. Speak to him for further details on the
+&7&o  C: Investigate the saboteur of the food stores with the High Priest of New Antium. Speak to him for further details on the
 suspects and where you might find them.
   Lanora
   Coordinates: [-443 183 -51]
@@ -159,7 +159,7 @@ the same.
   &6[Garmon]&r
  I dare not accuse my neighbor of misdeeds, lest my judgement be poor. Only the Architect has divine insight.
   &8That's everyone, time to report back to the High Priest.&r
-&o  C: Return to the High Priest empty handed, perhaps he can offer further insight.
+&7&o  C: Return to the High Priest empty handed, perhaps he can offer further insight.
   The High Priest
   Coordinates: [-418 174 -129]
    &6[The High Priest]&r
@@ -173,17 +173,17 @@ the same.
   &6[The High Priest]&r
  O sanctissime architecte, mentem meam ac voluntatem dirige. Quid faciam ut populum meum defendam? Demitte me viam salutis ad
 honestatem...
-&o   &8The High Priest kneels, face down, hands clasped in prayer. He begins to murmur...&r
+&7&o   &8The High Priest kneels, face down, hands clasped in prayer. He begins to murmur...&r
   &5[What does that mean?]&r
   &6[The High Priest]&r
  I was praying to the great Architect, seeking guidance. I believe it I have found it. A being from a time long ago.
-&o   &8He rises slowly, his age forcing him to grasp on to the nearby pulpit.&r
+&7&o   &8He rises slowly, his age forcing him to grasp on to the nearby pulpit.&r
   &6[The High Priest]&r
  Perhaps she is, but she is a human like you and I... I think. In the far flung reaches of the Keep is a tavern, nested in the
 remnants of the Emperor's racetrack. Within you will find the Proprietor. I would like for you to pay her a visit and seek her
 wisdom on the Shades of the Keep and how they might be involved... If it is not man attacking us, perhaps it could be what is
 left behind...
-&o  C:Seek the Proprietor by the Emperor's racetrack for their wisdom and knowledge of Shades, and how they might be involved.
+&7&o  C:Seek the Proprietor by the Emperor's racetrack for their wisdom and knowledge of Shades, and how they might be involved.
   The Proprietor
   Coordinates: [-309, 168, 143]
    &6[The Proprietor]&r
@@ -219,7 +219,7 @@ be again, as soon as that Praetor hoists himself off his little seat and goes fi
 era... things haven't panned out quite so well.
   &5[This...era?]&r
   &6[The Proprietor]&r
- Nevermind that, child. The ramblings of an old woman. A   &o  very old woman.
+ Nevermind that, child. The ramblings of an old woman. A   &7&o  very old woman.
   &5[Who are all these... people? Shades?]&r
   &6[The Proprietor]&r
  My staff. Impressively loyal, aren't they? I was... away, in those years. Missed the main event, Pelias' big show-stopper. And
@@ -285,7 +285,7 @@ need. If you're not what you claim to be, however... We won't be speaking again.
   &5[Thank you]&r
   &6[The Proprietor]&r
  Don't thank me. Prove yourself. Go.
-&o  C: Investigate the throne of the racetrack in hopes of... finding a way up into the attic? Then find what is needed there.
+&7&o  C: Investigate the throne of the racetrack in hopes of... finding a way up into the attic? Then find what is needed there.
  Once you got the Utopia Synthesis at [-316 195 145] go back to the Proprietor.
   The Proprietor
   Coordinates: [-309, 168, 143]
@@ -301,7 +301,7 @@ potion pouch hanging off her shoulder. Her voice creaks like the casino floorbor
   &5[I've found the Utopia Synthesis in your attic.]&r
   &6[The Proprietor]&r
  Curious, so you have. Do what you will, and I wish you luck in whatever is to come of it.
-&o  C:Return to the High Priest with the strange tool in hand... Perhaps it can help?
+&7&o  C:Return to the High Priest with the strange tool in hand... Perhaps it can help?
   The High Priest
   Coordinates: [-418 174 -129]
    &6[The High Priest]&r
@@ -312,7 +312,7 @@ potion pouch hanging off her shoulder. Her voice creaks like the casino floorbor
   &5[I can do that. Where is the food storage?]&r
   &6[The High Priest]&r
  Across the street, on the upper floor. Look for a man named Finnlay. He works for the Codex and is on guard post currently.
-&o  C: Speak with Finnlay and attune the device to the food stores across the street.
+&7&o  C: Speak with Finnlay and attune the device to the food stores across the street.
   Finnlay
   Coordinates : [-433 480 -100]
    &6[Finnlay]&r
@@ -325,7 +325,7 @@ potion pouch hanging off her shoulder. Her voice creaks like the casino floorbor
 ground, it whirrs to life.&r
   &8After a moment, it seems to focus on the mysterious mechanism on the ground. There is a moment of silence, then it quite
 suddenly... explodes! You should return to the High Priest with this information!&r
-&o  C: Report back to the High Priest after witnessing the unusual sequence of events in the food stores.
+&7&o  C: Report back to the High Priest after witnessing the unusual sequence of events in the food stores.
   The High Priest
   Coordinates : [-418 174 -129]
    &6[The High Priest]&r
@@ -334,7 +334,7 @@ suddenly... explodes! You should return to the High Priest with this information
   &6[The High Priest]&r
  Ahh, that seems helpful. Perhaps you could go speak to each of our suspects again. It sounds like we might have some...
 leverage now. Bless you, friend.
-&o  C: Investigate the suspects once again, this time with the strange device in hand. If you cannot fin one of them, it might
+&7&o  C: Investigate the suspects once again, this time with the strange device in hand. If you cannot fin one of them, it might
 be best to move on to the next. You can ask the High Priest for directions.
   Doctor Cairn
   Coordinates : [-481 175 -133]
@@ -348,7 +348,7 @@ interrogated have all vanished entirely... Y-you're not going to make me d-disap
  {...}
   &6[Doctor Cairn]&r
  Wh-What's going on? What's that strange artifact? Why do I hear ringing? W-why do I feel so dizzy?
-&o  C: Talk to... Neo Cairn?! Listen to what they have to say.
+&7&o  C: Talk to... Neo Cairn?! Listen to what they have to say.
   Neo Cairn
   Coordinates : [-481 175 -133]
    &6[Neo Cairn]&r
@@ -360,7 +360,7 @@ interrogated have all vanished entirely... Y-you're not going to make me d-disap
 be oiled, and our food must have NUTRITIONAL VALUE.
   &6[Neo Cairn]&r
  Being of FLESH, you are not welcome in our NEW WORLD. UTOPIA is COMING.
-&o  C: Return to the High Priest and tell him of the shocking scene in the Doctor's Office.
+&7&o  C: Return to the High Priest and tell him of the shocking scene in the Doctor's Office.
   The High Priest
   Coordinates : [-418 174 -129]
    &6[The High Priest]&r

@@ -17,14 +17,14 @@ they're both killed, and do what you can to make them suffer.
   &5[Not interested.]&r
   &6[Octavius]&r
  Alas, I suppose I shall have to find someone more mercenary to assist me.
-&o  Assassinate two Bandit Leaders at their camps North of the city. Bring back proof once they're both dead.
-&o  1/3 - Slay a Bandit Leader in their   Link   northwestern stronghold Bandit_onghold wikilink for Octavius. They should drop
-evidence of your victory. 
+&7&o  Assassinate two Bandit Leaders at their camps North of the city. Bring back proof once they're both dead.
+&7&o  1/3 - Slay a Bandit Leader in their   Link   northwestern stronghold Bandit_onghold wikilink for Octavius. They should
+drop evidence of your victory. 
   Coordinates: [-900, 115, -434]
- &o  2/3 - Slay a Bandit Leader in their   Link   hilltop fortress Bandit_Camp wikilink  , southeast of the mage tower. They
+ &7&o  2/3 - Slay a Bandit Leader in their   Link   hilltop fortress Bandit_Camp wikilink  , southeast of the mage tower. They
 should drop evidence of your victory.
   Coordinates: [-390, 113, -339]
- &o  3/3 - Once you have the Cargo Manifests and the Suspicious Note return to Octavius.
+ &7&o  3/3 - Once you have the Cargo Manifests and the Suspicious Note return to Octavius.
  Octavius
   &6[Octavius]&r
  Well done indeed! Those bandits won't be harrassing anyone any more. What do you think, a stack of enchanting bottles for your
@@ -41,7 +41,7 @@ who occasionally needs someone with your... scruples.
   &6[Octavius]&r
  Alas. You had such promise, and threw it away for the possibility of praise and promotion. Go, and know that if you meddle in
 my affairs there will be consequences.
-&o  Bring Captain Murano the two suspicious books
+&7&o  Bring Captain Murano the two suspicious books
  Captain Murano
   Coordinates: [-759, 125, -132]
    &6[Captain Murano]&r

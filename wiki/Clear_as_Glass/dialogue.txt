@@ -21,7 +21,7 @@ must have been in for the last few weeks, with my disappearance and all.
   &5[I'll head there now and ask him.]&r
   &6[Nelfine]&r
  Thank you so much!
-&o  Head to Arian's office on the second floor of the northwest tower in Highwatch.
+&7&o  Head to Arian's office on the second floor of the northwest tower in Highwatch.
  Scoutmaster Ursan
   Coordinates: [1141, 132, -130]
    &6[Scoutmaster Ursan]&r
@@ -40,7 +40,7 @@ where he was going. He didn't even take the time to pack up his office.
  Well, it's on the ground floor, but he sealed it off as he left. Arian has always been very secretive about his work. Only the
 higher ups here were allowed to know what he was doing. Knowing him, though, I can't imagine that he left himself with no way
 in.
-&o  Find a way into Arian's office in the Highwatch Keep and see what you can find.
+&7&o  Find a way into Arian's office in the Highwatch Keep and see what you can find.
   To get into Arian's office. Press the button near the top of the stairs at [1180, 145, -128].
  Then a piston door will open up in the bookshelf at [1189, 136, -136].
   After you enter the office:
@@ -48,11 +48,11 @@ in.
  ...finally, the old man's secrets will belong to... Wait, who are you? How did you get in here? It doesn't matter, no one can
 know of my presence here. Die!
  After you beat the Shady Thief:
-&o   &3As you deal the final blow, the thief's body bursts into flames from some foul magic!&r
-&o  Find what the thief was looking for.
+&7&o   &3As you deal the final blow, the thief's body bursts into flames from some foul magic!&r
+&7&o  Find what the thief was looking for.
   Step onto the pressure plate on the desk and it will open a hole in the wall next to the chair allowing access to a chest
 holding "Elegy of my Dearest Friend".
- &o  Find Arian in Farr.
+ &7&o  Find Arian in Farr.
  Arian "Lonely anger"
   Coordinates: [587, 97, 207]
    &6[Lonely anger]&r
@@ -61,14 +61,14 @@ holding "Elegy of my Dearest Friend".
   &6[Lonely anger]&r
  What does it matter to you?
   &5[Nelfine had me track you down.]&r
-&o   &3Arian stares at you for a moment&r
+&7&o   &3Arian stares at you for a moment&r
   &6[Arian]&r
  You... You're the one that sent that damn letter, aren't you? Who are you? What have I done to make you want to torture me like
 this?
   &5[No, Nelfine sent me that letter. I came because you never responded.]&r
   &6[Arian]&r
  NELFINE IS DEAD!
-&o   &3Arian slumps back in his seat&r
+&7&o   &3Arian slumps back in his seat&r
   &6[Arian]&r
  I don't know who you are, or where you heard that name from, but the woman you speak of has been dead for 30 years. Go take a
 look at the memorial if you don't believe me.
@@ -82,8 +82,8 @@ your facts.
   &5[I don't understand...]&r
   &6[Arian]&r
  Nor do I.
-&o   &3You don't think you will be able to get Arian to listen to you anymore, you should return to Nelfine&r
-&o  Arian doesn't seem to believe you. You should probably return to Nelfine.
+&7&o   &3You don't think you will be able to get Arian to listen to you anymore, you should return to Nelfine&r
+&7&o  Arian doesn't seem to believe you. You should probably return to Nelfine.
  Nelfine
   &6[Nelfine]&r
  Uh... hello?
@@ -102,7 +102,7 @@ your facts.
   &5[I need to go back to Arian. Something is really wrong here.]&r
   &6[Nelfine]&r
  Arian, you say? I don't know who that is, but there was this note lying at my feet with that name on it. Perhaps it is for him?
-&o  Nelfine has no memory of you! Return to Arian with the note she gave you.
+&7&o  Nelfine has no memory of you! Return to Arian with the note she gave you.
  Arian "Lonely anger"
   &6[Arian]&r
  Back already? Haven't you caused me enough suffering today?
@@ -112,10 +112,10 @@ your facts.
   &5[It looks like she wrote this for you before that happened though.]&r
   &6[Arian]&r
  Here we go again..
-&o   &3Arian takes the note&r
+&7&o   &3Arian takes the note&r
   &6[Arian]&r
  As clear as...
-&o   &3Arian looks at you befuddled&r
+&7&o   &3Arian looks at you befuddled&r
   &6[Arian]&r
  How do you know this sign off line?
   &5[Arian, something is wrong. Nelfine seems to have lost her memory again.]&r
@@ -127,9 +127,9 @@ your facts.
   &5[I restored her memory with a device I found. It seems the effects were only temporary.]&r
   &6[Arian]&r
  Well then. Go use that device again. Restore her memory again, and then bring me to her.
-&o  Find your way back to the Overgrown Laboratory and see if you can restore Nelfine's memories once again.
+&7&o  Find your way back to the Overgrown Laboratory and see if you can restore Nelfine's memories once again.
   Coordinates: [336, 75, 309]
- &o  The old lab has been destroyed! Follow the clues in the strange book you found to see where its creator might have gone.
+ &7&o  The old lab has been destroyed! Follow the clues in the strange book you found to see where its creator might have gone.
  Link   Moist Ruins Moist_Ruins wikilink then go down the ladders and enter the stone brick tunnel at the lowest wood platform.
   Nelfine (Caged)
   &6[Nelfine]&r
@@ -214,14 +214,14 @@ comfortably.
   &4You are not meant to see the events that occur on this day.&r
   &5[Nelfine, are you okay?]&r
   &6[Nelfine]&r
-&o   &4Upon the ancient powers creep, they forced him to the eternal sleep.&r
+&7&o   &4Upon the ancient powers creep, they forced him to the eternal sleep.&r
   &5[What?]&r
   &6[Nelfine]&r
-&o   &4A lust for might they did not earn, children weep and cities burn.&r
+&7&o   &4A lust for might they did not earn, children weep and cities burn.&r
   &5[...]&r
   &6[Nelfine]&r
-&o   &4Parting the veil, he rose to sing; 'I am reborn, the Crimson King'&r
-&o   &3You are forcefully kicked from the memory.&r
+&7&o   &4Parting the veil, he rose to sing; 'I am reborn, the Crimson King'&r
+&7&o   &3You are forcefully kicked from the memory.&r
  Virius
   &6[Virius]&r
  No, not now. Blasted machine, we were so close. You... You are to blame for this.
@@ -243,7 +243,7 @@ it is your doing. So to hell with all of this, if I am going to die, you are goi
   &6[Nelfine]&r
  Mind if I see those for a second?
   &5[Sure.]&r
-&o   &3Nelfine takes the Memory ands, and they disappear in her hand&r
+&7&o   &3Nelfine takes the Memory ands, and they disappear in her hand&r
   &6[Nelfine]&r
  ...[Player]? Is that you?
   &5[What happened?]&r

@@ -24,10 +24,10 @@ return there anymore. It just hurts too much. I miss him [Player]...
   &5[I'll be back to help later.]&r
   &6[Eowen]&r
  Okay.
-&o  Enter Kurtis's bunker, find evidence that he is alive, and return to Eowen.
+&7&o  Enter Kurtis's bunker, find evidence that he is alive, and return to Eowen.
   Coordinates: [580, 101, 253]
   After you enter the Bunker:
-&o  This looks new - but somehow familiar?
+&7&o  This looks new - but somehow familiar?
  Explore the house for a Clue to get into the safe room.
   On the second floor in the "Pantry" there is a chest with a book.   Link   Safe Room Key Safe_Room_Key wikilink
    The first lever is in the right bedroom on the second floor, it is above the door.
@@ -39,7 +39,7 @@ return there anymore. It just hurts too much. I miss him [Player]...
  The seventh lever is same as the second and requires both the First and Fourth pulled aswell.
  The exit is in the middle of the front wall of the basement.
   Grab the book   Link   A Deal A_Deal wikilink and return to Eowen.
-&o  Did I enter this ladder? I don't remember...
+&7&o  Did I enter this ladder? I don't remember...
  Eowen
   &6[Eowen]&r
  You've come back. Is it wrong of me to be surprised? Have you found anything?
@@ -63,12 +63,12 @@ them in the past. But they broke up before the attack, so why would their banner
   &5[I'll go poke around. Here's hoping it works.]&r
   &6[Eowen]&r
  I'm really hoping so.
-&o  Try and find Kurtis; the Shady Trader might be able to lead you to him.
+&7&o  Try and find Kurtis; the Shady Trader might be able to lead you to him.
  Shady Trader
   Coordinates: [-837, 101, 84]
    &6[Shady Trader]&r
  H-hello there!
-&o  The man struggles to smile, but his eyes start back and fourth.
+&7&o  The man struggles to smile, but his eyes start back and fourth.
   &5[Hello.]&r
   &6[Shady Trader]&r
  Would you like to purchase some spectacular items?
@@ -110,15 +110,15 @@ saved my life. I owe him the chance to keep living his, not hunting for me.
 sell.. They told me... Quickly, take this, before I forget again. Memory is tough here...
   &6[Kurtis]&r
  Please buy from me? I was the first, why can I not leave yet?
-&o  Take   Link   Kurtis' Journal Kurtis'_Journal wikilink back to Eowen.
+&7&o  Take   Link   Kurtis' Journal Kurtis'_Journal wikilink back to Eowen.
  Eowen
   &6[Eowen]&r
  You are back! Do you have any news? Why are you looking at me like that? Is something wrong?
   &5[I found him. He gave me his journal to give you. It isn't an easy read.]&r
   &6[Eowen]&r
- You actually found him? Let me see that! Plain &o  Eowen looks at the journal, his eyes full of hope and optimism. As he flips
-through the pages his eyes begin to dim. As he reaches the last page his eyes are like the void, absent of the light he started
-with.
+ You actually found him? Let me see that! Plain &7&o  Eowen looks at the journal, his eyes full of hope and optimism. As he
+flips through the pages his eyes begin to dim. As he reaches the last page his eyes are like the void, absent of the light he
+started with.
   &6[Eowen]&r
  He... is in this much pain? He felt that much guilt? He is the only reason I'm alive today, my home was leveled to the ground.
 I only survived since I ran and hid like a coward. I should be the one with guilt for leaving the town to die, not him.

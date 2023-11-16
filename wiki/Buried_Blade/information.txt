@@ -1,4 +1,4 @@
-prerequisites = &3Bandit Troubles&r and took the bribe from Octavius
- NPC: Blackjack Stan Coords: -103, 96, -88
- King's Valley Nyr
-POI: &3Overgrown Cave&r
+Pre-req: &3Bandit Troubles&r and took the bribe from Octavius
+ NPC: Blackjack Stan &1Coords:&r -103, 96, -88
+&2 King's Valley&r Nyr
+POI:  &3Overgrown Cave&r

@@ -25,7 +25,7 @@ Tell the beautiful lady that Wilhelm will bring her a big bouquet of roses soon.
  ''Investigate the academy library in Wispervale and try to decipher the hint Wilhelm gave you.'
  After finding the book   Link   Belladonna Belladonna wikilink  :
   Color|Grey|You recognize this name! Belladonna - she helped you during your adventure to find the Palace of Mirrors!&r
-&o  Find Wilhelm's contact and your ally, Belladonna, in her house in Wispervale.
+&7&o  Find Wilhelm's contact and your ally, Belladonna, in her house in Wispervale.
  Belladonna
   Coordinates: [-1720, 135, -77]
    &6[Belladonna]&r
@@ -51,7 +51,7 @@ four points in the town?
  I know it's risky. Let me know if you change your mind.
   &6[Belladonna]&r
  I knew I could count on you! We only have a small window of time to get this right so let me know when you're ready!
-&o  R is for Reprisal: Talk to Belladonna and find out what help she needs.
+&7&o  R is for Reprisal: Talk to Belladonna and find out what help she needs.
  Belladonna
   Coordinates: [-1720, 135, -77]
    &6[Belladonna]&r
@@ -62,8 +62,8 @@ four points in the town?
  Alright, let me know when you are ready.
   &6[Belladonna]&r
  Very well, let's go.
-&o  Find the 4 locations in Wispervale and place the crystals.
-&o  Place down the 4 crystals across Wispervale. Belladonna can give you more if you lose them.
+&7&o  Find the 4 locations in Wispervale and place the crystals.
+&7&o  Place down the 4 crystals across Wispervale. Belladonna can give you more if you lose them.
   - By fountain [-4441, 132, 628]
  - By southern gate [-4433 140 700]
  - Campfire on ridge [-4374 138 612]
@@ -101,7 +101,7 @@ Hunter.
  Hmm... We should try to infiltrate this meeting that is going to be held. I'll try to find out more about it, and you should
 put together a disguise. Your face is too recognizable though... Can you find a way to change your face? I'll take care of the
 rest, meet back here when you've got a disguise for your face.
-&o  Figure out a way to change your face - again. The Mother of Faces did predict your return...
+&7&o  Figure out a way to change your face - again. The Mother of Faces did predict your return...
  Spirit of the Forge
   Coordinates: [-4517, 177, 433]
    &6[Spirit of the Forge]&r
@@ -123,7 +123,7 @@ of faces grows large. Help me organize them and I'll grant you what you ask.
   &5[Thank you.]&r
   &6[Spirit of the Forge]&r
  Don't. Not yet at least. Now go.
-&o  With your new disguise, return to Belladonna.
+&7&o  With your new disguise, return to Belladonna.
  Belladonna
   Coordinates: [-1720, 135, -77]
    &6[Belladonna]&r
@@ -133,10 +133,10 @@ get in.
   &5[Got it. What do I do if they don't let me in?]&r
   &6[Belladonna]&r
  Well... You will probably have to find an alternative way in then. Do your best and I'll meet you there!
-&o  Find a way into the Frostgate cathedral to infiltrate the meeting.
+&7&o  Find a way into the Frostgate cathedral to infiltrate the meeting.
   Enter the sewers at the broken sewer grate at [-1487, 95, 978] Swim through the exit hole marked with two redstone torches at
 [-4351, 147, 433]. Exit the sewers at waters at [-4375, 146, 430] by swimming up.
- &o  Now that you've infiltrated the meeting, listen in and try to blend in.
+ &7&o  Now that you've infiltrated the meeting, listen in and try to blend in.
  Belladonna
   Coordinates: ???
    &6[Belladonna]&r
@@ -197,15 +197,15 @@ mages- their mere existence is a plague upon these lands!
   &6[Grand Hunter Ridnan]&r
  Calder’s power is simply a means to an end. The path I walk will be covered in blood, and allying myself with him will simply
 speed up the time it takes to fulfill my god-given duty. Now, get out of my way!
-&o  (Missing - fight compass message)
+&7&o  (Missing - fight compass message)
   &5Ridnan's eyes roll back before collapsing. You hear a commotion outside the room.&r
-&o  Return to Wilhelm and check in.
+&7&o  Return to Wilhelm and check in.
  Wilhelm, Chillwind Diplomat
   Coordinates: [-4334, 178, 331]
    &6[Wilhelm]&r
  (Player), thank goodness you're alright. I heard everything from Belladonna. I arranged a meeting with the Queen immediately.
 Go on, speak to her.
-&o  Talk to the Queen and tell her what happened.
+&7&o  Talk to the Queen and tell her what happened.
  Synnove Obregson
   Coordinates: [-4339, 179, 329]
    &6[Synnove Obregson]&r

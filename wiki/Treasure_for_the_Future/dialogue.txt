@@ -1,6 +1,6 @@
 &r
   WorkInProgress&r
-&o  Travel to Mistport and seek out Zeroc's missing associate.
+&7&o  Travel to Mistport and seek out Zeroc's missing associate.
  Zeroc
   Coordinates: [-1475, 102, 932]
    &6[Zeroc]&r
@@ -47,7 +47,7 @@ of course.
   &6[Zeroc]&r
  Excellent. Your first step will be to locate my associate, and retrieve whatever information they managed to gather before we
 lost contact. Their name is Zyon, I trust you'll be able to find what happened.
-&o  Search Mistport for any sign of Zeroc's missing associate, Zyon. Maybe someone knows what happened?
+&7&o  Search Mistport for any sign of Zeroc's missing associate, Zyon. Maybe someone knows what happened?
   Boatswain Baxter
   Coordinates: [-801, 81, 1339]
    &5[Hello Boatswain. Would you happen to know the whereabouts of a person called Zyon?]&r
@@ -131,7 +131,7 @@ someone locked up in prison?! It's ridiculous, really...
   &5[As Captain of Mistport, I order you to release the prisoner.]&r
   &6[Prison Guard]&r
  Aye aye, Cap'n! Less work fer me to do!
-&o  Speak to First Mate Jones to travel to the Viridian Vault.
+&7&o  Speak to First Mate Jones to travel to the Viridian Vault.
  First Mate Jones
   Coordinates: [-761, 81, 1344]
    &6[First Mate Jones]&r
@@ -167,7 +167,7 @@ be too dangerous to loot then, and left it fer later.
   &5[I'm ready to go.]&r
   &6[First Mate Jones]&r
  Arr! Let's get that treasure, Captain!
- &o  Attempt to open the Viridian Vault.
+ &7&o  Attempt to open the Viridian Vault.
   &6[Second Mate Gary]&r
  Arrgh. Ze treasure is zis way, Cap'n.
   &6[Third Mate Stevens]&r
@@ -182,7 +182,7 @@ be too dangerous to loot then, and left it fer later.
  After defeating the guardian:
   &6[Echoing Voice]&r
  Very well... You have proven your strength, as you proved your will before. Come forth... Reclaim this sacred relic.
-&o  Speak to the spirit within the vault.
+&7&o  Speak to the spirit within the vault.
  Izumur
   &6[???]&r
  You are... [Player]. Yes, I remember your work in the city... So you have now claimed all three of Salazar's great treasures,
@@ -226,7 +226,7 @@ domain... It comforts me, to know some may find value in such remnants.
  Arrgh. Ze treasure is ourz now, Cap'n.
   &6[Third Mate Stevens]&r
  Excellent work out there, Cap'n. Time to go get us our treasure, eh?
-&o  Speak to First Mate Jones to return to Mistport.
+&7&o  Speak to First Mate Jones to return to Mistport.
  First Mate Jones (Vault)
   Coordinates: []
    &6[First Mate Jones]&r
@@ -234,8 +234,8 @@ domain... It comforts me, to know some may find value in such remnants.
   &5[The treasure's all yours, Jones. I need to get back to Mistport.]&r
   &6[First Mate Jones]&r
  Arr! I'll bring ye back, Captain. The crew will get goin' while yer gone!
-&o  [1/2]: Return to Zeroc in Frostgate with the artifact.
-&o  [2/2]: If you lost the artifact, you can speak to First Mate Jones to return to the vault.
+&7&o  [1/2]: Return to Zeroc in Frostgate with the artifact.
+&7&o  [2/2]: If you lost the artifact, you can speak to First Mate Jones to return to the vault.
  Zeroc
   Coordinates: [-1475, 102, 932]
    &6[Zeroc]&r
@@ -270,10 +270,10 @@ these texts which Zulumar has accessed from Alnera's archives, but we haven't qu
  Aha! Here we are. From what I can gather, it's a section of a journal written by the King of his travels before he ruled
 Viridia. While you discern where we need to travel to use these artifacts, I'll attempt to contact Zulumar so we can meet you
 there.
-&o  Find the location of the mechanism based on Salazar's journal. Zeroc can provide another copy if necessary.
+&7&o  Find the location of the mechanism based on Salazar's journal. Zeroc can provide another copy if necessary.
   The place the diary is referencing is   Link   Silver Tower Silver_Tower wikilink  's basement.
   After entering:
-&o  Search the ruins beneath the Silver Tower for any signs of the mechanism.
+&7&o  Search the ruins beneath the Silver Tower for any signs of the mechanism.
   &6[Zeroc]&r
  Now, this... This is remarkable. I would have never guessed that something this expansive could be hiding just beneath the
 surface! We're close, I can feel it.
@@ -321,7 +321,7 @@ the helmet.&r
  After beating the waves of defenders:
   &8You manage to break past the defenses, and escape the chamber. The passage collapses behind you.&r
   &8The cavern is still shaking... You need to find Zeroc and Zulamar and get out of this place, quickly.&r
-&o  Find Zeroc and Zulamar and escape the ruins.
+&7&o  Find Zeroc and Zulamar and escape the ruins.
   &6[Zeroc]&r
  ...yes, Zulamar, I understand! But I can't get this open if you keep-
   &6[Zulamar]&r
@@ -339,7 +339,7 @@ not-
  Zeroc, we don't have time for such questions! We can discuss later, for now we have to...
   &6[Zulamar]&r
  Aha! There we are! Now, let's get out of here before it's too late, yes?
-&o  Speak to Zeroc.
+&7&o  Speak to Zeroc.
  Zeroc
   &6[Zeroc]&r
  What was that? That was the mechanism, yes? Did you place the relics properly? How could it have possibly failed?
@@ -349,7 +349,7 @@ not-
   &5[Zulamar's right. We can't stay here.]&r
   &6[Zeroc]&r
  You're right... You're right, of course. Let us go.
-&o  Speak to Zeroc in the Frostgate Inn.
+&7&o  Speak to Zeroc in the Frostgate Inn.
  Zeroc
   &6[Zeroc]&r
  This expedition was a disaster... We've lost both relics, and the mechanism to restore the empire failed.

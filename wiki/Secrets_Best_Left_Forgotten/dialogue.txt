@@ -17,7 +17,7 @@ correct, something is being covered up, something big that caused people to go m
   &5[That's odd. Could you use any help?]&r
   &6[Issa]&r
  It is quite unnerving, yes. And yes, in fact, I think you could be useful.
-&o  1/3 - Search around Molta for clues about the disappearances. Governor Amarion might know something.
+&7&o  1/3 - Search around Molta for clues about the disappearances. Governor Amarion might know something.
  Governor Amarion SoftBreak  Coordinates: 245, 121, 67
   &6[Governor Amarion]&r
  Oh hello; name's Amarion. What can I do for you?
@@ -30,7 +30,7 @@ correct, something is being covered up, something big that caused people to go m
   &6[Governor Amarion]&r
  Who do you think you are? I oughta kick you out, you snooping weasel!
   &8You definitely aren't going to be getting anything out of him.&r
-&o  2/3 - Search around Molta for clues about the disappearances. Foreman Boris could know something.
+&7&o  2/3 - Search around Molta for clues about the disappearances. Foreman Boris could know something.
  Foreman Boris SoftBreak  Coordinates: 184, 110, 43
   &6[Foreman Boris]&r
  Hello there! Welcome to Molta! I run the base mining operations here, but I still have to report to Amarion.
@@ -45,7 +45,7 @@ correct, something is being covered up, something big that caused people to go m
   &6[Foreman Boris]&r
  Oh, I don't have to stand here and take questions from some outsider. Get out!
   &8He gives you a stern look. You probably aren't going to get any more information out of him.&r
-&o  3/3 - Search around Molta for clues about the disappearances. Perhaps Record Keeper Shani knows something
+&7&o  3/3 - Search around Molta for clues about the disappearances. Perhaps Record Keeper Shani knows something
  Record Keeper Shani SoftBreak  Coordinates: 186, 98, 22
   &6[Record Keeper Shani]&r
  Hello! Welcome to the Molta Archives! Let me know if I can help you with anything.
@@ -65,7 +65,7 @@ notice.
   &5[Oh! Thank you!]&r
   &6[Record Keeper Shani]&r
  Hurry along now... Don't let Amarion see you.
-&o  Return to Issa to tell her what you've found out around town
+&7&o  Return to Issa to tell her what you've found out around town
  Issa
   &6[Issa]&r
  So have you found anything?
@@ -81,7 +81,7 @@ notice.
  They are almost definitely mentioning the Basanite Bore! If memory serves, that used to be a mining operation site. Why don't
 you head over there and see if you can find anything relevant? I'll see what information I can dig up on the Bore while you are
 gone.
-&o  Investigate the Basanite Bore
+&7&o  Investigate the Basanite Bore
   &8You begin to feel lightheaded, and everything goes black.&r
   &6[Basanite Miners]&r
  HELP US!
@@ -103,7 +103,7 @@ gone.
   &6[Basanite Miners]&r
  PLEASE!
   &8You open your eyes and find yourself back in Basanite. Whatever just happened, Issa will probably want to know about it.&r
-&o  Return to Issa to tell her about your strange encounter
+&7&o  Return to Issa to tell her about your strange encounter
  Issa
   &6[Issa]&r
  What's wrong? You look startled.
@@ -122,7 +122,7 @@ Foreman.
  In the little amount of writing I was able to find about Basanite while you were gone, I noticed that it was an operation that
 occured in tandem to the Terracotta mining operation. There is a mining town out near Basanite that it took place in. Head there
 and see if you can find anything.
-&o  Head to the Terracotta Mining Town to retrieve some evidence in order to get the Foreman to talk.
+&7&o  Head to the Terracotta Mining Town to retrieve some evidence in order to get the Foreman to talk.
  Foreman Boris
   &6[Foreman Boris]&r
  Oh, it's you again... I thought I told you to get out.
@@ -147,8 +147,8 @@ be out of business, and Alnera would have our heads. So we had to keep it a secr
 escape.]&r
   &6[Foreman Boris]&r
  I... I don't understand how that could be. We saw them die... We... we collapsed the entrance and sealed it off because we knew
-they were gone... No, please don't tell me we trapped them inside of that place. Damn you Amarion!    &o  Return to the Basanite
-Bore and meet Boris at the bottom of the mine
+they were gone... No, please don't tell me we trapped them inside of that place. Damn you Amarion!    &7&o  Return to the
+Basanite Bore and meet Boris at the bottom of the mine
  Solve the Rubiks Cube to proceed to the next part.
   &6[Disembodied Voice]&r
  How pathetic you are, human. So easily swayed into my bidding by manipulating you with hopes of saving the dead.

@@ -39,7 +39,7 @@ even heard they took an outpost near Sierhaven.
   &5[No more questions.]&r
   &6[Suri]&r
  Off you go then.
-  &5[Alright... I won't distract you anymore then.]&r  Plain &o  She quickly loses interest in you.
+  &5[Alright... I won't distract you anymore then.]&r  Plain &7&o  She quickly loses interest in you.
   &6[Suri]&r
  Now, where was I...
   &5[I'm sorry to interrupt your thinking genius, but...]&r
@@ -51,7 +51,7 @@ reuse it? According to my calculations, this should save up to 9% of the amount 
  You're talking nonsense, because, obviously, that'd require not just one qualified specialist who could modify our control
 system, but also a big amount of redstone sensors - observers. We simply don't have enough materials for that and even if we do,
 that'd decrease our working capability by almost 43%! No way we sacrifice that!
-&o  Head to the Alchemy Hub in Sierhaven and ask for details regarding a special reagent.
+&7&o  Head to the Alchemy Hub in Sierhaven and ask for details regarding a special reagent.
  Head Alchemist
   Coordinates: [-797, 115, -48]
    &6[Head Alchemist]&r
@@ -64,9 +64,9 @@ that'd decrease our working capability by almost 43%! No way we sacrifice that!
  Well.. If you're not afraid of being withered, or poisoned, or poisoned and withered at the same time, then, I believe there
 should be something like that in the Toxin Lab. It's out in the sea, west of Sierhaven. I'm not sure what exactly happened
 there, but it was abandoned awhile back. Stay on your guard.
-&o  [1/2]: The reagent is sealed in the   Link   Toxin Lab Toxin_Lab wikilink  . Head there and find your way into the Reagent
+&7&o  [1/2]: The reagent is sealed in the   Link   Toxin Lab Toxin_Lab wikilink  . Head there and find your way into the Reagent
 Vault.
-&o  [2/2]: Once you find the reagent, head back to Suri.
+&7&o  [2/2]: Once you find the reagent, head back to Suri.
  In Toxin Lab, get to the elevator at [-1194, 34, 126].
   Note: You can hit submit as many times as you want and it won't penalize you.
  Hit Change Color until the output color is Orange then press submit.
@@ -74,9 +74,9 @@ Vault.
  Hit Change Color until the output color is Purple (Not Magenta) then press submit.
  Hit Change Color until the output color is Lime (Not Green) then press submit.
  Hit Change Color until the output color is Brown then press submit.
- &o  The door to sealed part of the vault is now open!
+ &7&o  The door to sealed part of the vault is now open!
  Enter and grab the quest item in the chest.
-&o  You grab the reagent and close the chest. Better get back to Suri.
+&7&o  You grab the reagent and close the chest. Better get back to Suri.
  Suri
   &6[Suri]&r
  Perhaps if I reduce the input power by half and increase the speed of our cooling systems by 20%, we can save about 14% of the
@@ -100,7 +100,7 @@ shipments!
   &6[Suri]&r
  Of course I am! Wouldn't you be as well? This may be a small step towards the safety of our vessels, but it's very important to
 our Empire.
-&o  She looks at the reagent once again.
+&7&o  She looks at the reagent once again.
   &6[Suri]&r
  Simply beautiful! I suppose you deserve this, whoever you are. We can certainly spare this coal now.
  BURNING BRIGHT COMPLETE! Awarded Unstable Sparkler and 24 Coal Blocks!

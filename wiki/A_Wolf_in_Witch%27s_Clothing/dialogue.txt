@@ -1,5 +1,5 @@
 &r
-&o  Go inform the Aradia that the Dichen are ready to attack the Coven.
+&7&o  Go inform the Aradia that the Dichen are ready to attack the Coven.
  Primirium Conquort
   Coordinates: [-311 181 -663]
    &6[Conquort]&r
@@ -17,7 +17,7 @@ coordinate a time for the attack to officially begin.
   &5[I'm on it.]&r
   &6[Conquort]&r
  There is glory waiting for us to earn it!
-&o  C: Go inform Lytania and the Aradia that the Dichen are ready to attack.
+&7&o  C: Go inform Lytania and the Aradia that the Dichen are ready to attack.
  Elder Lytania
   &6[Elder Lytania]&r
  Hello again, [Player]. Don't forget to tell Verdanne - the time is right, and the hour of our Lady is almost upon us.
@@ -87,7 +87,7 @@ over the entire sigil, then we can trap the Adherents inside long enough for thi
   &6[Elder Lytania]&r
  I'll let them know it's time to meet, then. I hope you can pull this off. I look forward to gazing upon you with newly opened
 eyes, if this all goes well.
-&o  C: Speak to Lytania when you are ready to battle the Coven Adherents, then use their magic to paint the Sigil red.
+&7&o  C: Speak to Lytania when you are ready to battle the Coven Adherents, then use their magic to paint the Sigil red.
  Elder Lytania
   &6[Elder Lytania]&r
  Welcome to the Voidgarden, a place deep within the threads of Magic itself. The Adherents are on their way now. Are you ready
@@ -103,19 +103,19 @@ Shall we begin?
   Invokers when killed will change nearby blue glass into red glass. LineBreak  Convokers when killed will change nearby red
 glass into blue glass. LineBreak
   After painting the Sigil red:
-&o  C: It's time to begin the assault on the Tree of Life and the   Link   Coven Fortress Coven_Fortress wikilink  ! Travel to
+&7&o  C: It's time to begin the assault on the Tree of Life and the   Link   Coven Fortress Coven_Fortress wikilink  ! Travel to
 the top and find a way to their Covensteads.
  Clear and beat the miniboss at the very top of   Link   Coven Fortress Coven_Fortress wikilink to reach   Link   Coven's Gambit
 Coven's_Gambit wikilink lobby.
-&o  C: Enter the Coven's Gambit.
+&7&o  C: Enter the Coven's Gambit.
  Talk to Jehenne and go through the dungeon.
   &6[Jehenne]&r
  [Player]! Quickly, over here! It's time to get you inside Ravenna. I've got a key for you. Meet me inside. We have much to
 discuss.
  After beating the dungeon:
-&o  C: Return to the Primirium with the Favor of the Wolf!
+&7&o  C: Return to the Primirium with the Favor of the Wolf!
  After entering the Primirium room:
-&o  C: Speak to the Primirium.
+&7&o  C: Speak to the Primirium.
  Primirium Tybale
   &6[Conquort]&r
  It's over! The Coven is surrendering to the Aradia! [Player], you're a marvel! Not that our troops weren't impeccable of

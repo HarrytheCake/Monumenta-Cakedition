@@ -1,3 +1,3 @@
-prerequisites = &3Starry Night&r
- NPC: Montana Coords: 728, 106, 421
- King's Valley Lowtide
+Pre-req: &3Starry Night&r
+ NPC: Montana &1Coords:&r 728, 106, 421
+&2 King's Valley&r Lowtide

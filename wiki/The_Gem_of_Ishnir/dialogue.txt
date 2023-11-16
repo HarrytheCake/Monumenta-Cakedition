@@ -1,6 +1,6 @@
 &r
  Sierhaven Smith
-&o  The man seems to be mumbling to himself while looking over a map.
+&7&o  The man seems to be mumbling to himself while looking over a map.
   &6[Sierhaven Smith]&r
  Just past the ruins of... No, that tomb was empty...
   &5[Looking for something specific on that map?]&r
@@ -32,7 +32,7 @@ advisors always lead to nervous sweats and short answers. Would you be intereste
 the Gem, following his tracks will be our best hope. I'll look over my information here- you go and speak to Nyra. She's the
 Royal Archivist to the Pharaoh. We have a... tangled past, so she won't speak much to me. Perhaps she'll give you some more
 information?
-&o  Seek out Archivist Nyra in the Pharaoh's palace.
+&7&o  Seek out Archivist Nyra in the Pharaoh's palace.
  Archivist Nyra
   &6[Archivist Nyra]&r
  Hello there. What brings you to the pharaoh's library today?
@@ -51,7 +51,7 @@ has ever been found to corroborate those claims. Seems like that's all the infor
 fall into the 200 year "blank" period in our history: the years between 53 CCE to 248 CCE. We are lucky we have as much
 information on him as we do.
   &8It doesn't seem like she has any more information she can give you on the subject. Best report back to Sierhaven Smith.&r
-&o  Return to Sierhaven Smith with the information you learned from Nyra.
+&7&o  Return to Sierhaven Smith with the information you learned from Nyra.
  Sierhaven Smith
   &6[Sierhaven Smith]&r
  Welcome back. Did you get any information out of Nyra?
@@ -63,11 +63,11 @@ pyramid. I've never seen signs that there is a tomb anywhere in there, though.
   &6[Sierhaven Smith]&r
  A fair idea- some fresh eyes are never a bad thing. Leave no stone unpressed! While you're gone, I'm going to pull out my notes
 from that expedition, and see if there was anything I had logged but didn't take to relevance.
-&o  Enter the Dehydrated Oasis and search out clues for Tehkma Ka's tomb. Leave no stone unpressed.
+&7&o  Enter the Dehydrated Oasis and search out clues for Tehkma Ka's tomb. Leave no stone unpressed.
   &6[Tehkma Ka]&r
  You fool... What have you done...?
   &8A mysterious force kicks you out of the tomb, and you find yourself back outside the pyramid.&r
-&o  You stumbled on the tomb of Tehkma Ka. Report this back to Sierhaven Smith.
+&7&o  You stumbled on the tomb of Tehkma Ka. Report this back to Sierhaven Smith.
  Sierhaven Smith
   &6[Sierhaven Smith]&r
  That was a quick trip. Find anything of note?
@@ -88,13 +88,13 @@ don't think this is a good idea.]&r
   &6[Sierhaven Smith]&r
  Oh, don't chicken out on me now! The discovery of a lifetime awaits us! You go on ahead over to the Lost Sands ruins. I'll meet
 you there.
-&o  Meet Sierhaven Smith over in the Lost Sands City ruins.
+&7&o  Meet Sierhaven Smith over in the Lost Sands City ruins.
  Sierhaven Smith
   &6[Sierhaven Smith]&r
  Over here! This is the entrance to the underground. If we are to find anything, it will be here.
   &6[Sierhaven Smith]&r
  Let's head in. I'll follow you through- you seem much more capable at taking out enemies.
-&o  Enter the Lost Sands City undergrounds.
+&7&o  Enter the Lost Sands City undergrounds.
  Sierhaven Smith
   &6[Sierhaven Smith]&r
  I... I don't believe it. Is this... a city? The tales of the Gem, they must have been warped over time. How incredible: an

@@ -1,8 +1,8 @@
-prerequisites = *&3Xenophobia&r
+Pre-req: *&3Xenophobia&r
 *&3Mirrored Egos&r
 *&3Secrets Best Left Forgotten&r
-*Completed &3Salazar's Folly NPC: Historian Rhodes Celsian Islestown = Mistportstarting_npc_coordinates = -757, 83, 1346rewards = *&3Varcosa's Doublet&r
+*Completed &3Salazar's Folly NPC: Historian Rhodes&2 Celsian Islestown = Mistportstarting_npc_coordinates = -757, 83, 1346rewards = *&3Varcosa's Doublet&r
 *&3Grasp of Avaricestarting_npc_coordinates = -757, 83, 1346rewards = *&3Varcosa's Doublet&r
-*&3Grasp of Avarice Celsian Islestown = Mistportstarting_npc_coordinates = -757, 83, 1346rewards = *&3Varcosa's Doublet&r
+*&3Grasp of Avarice&2 Celsian Islestown = Mistportstarting_npc_coordinates = -757, 83, 1346rewards = *&3Varcosa's Doublet&r
 *&3Grasp of Avaricetown = Mistportstarting_npc_coordinates = -757, 83, 1346rewards = *&3Varcosa's Doublet&r
 *&3Grasp of Avarice

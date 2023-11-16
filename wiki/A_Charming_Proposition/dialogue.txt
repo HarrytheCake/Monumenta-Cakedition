@@ -1,6 +1,6 @@
 &r
-&o  Get a charm from Miroku, and then conquer   Link   Vibrant Hollow Vibrant_Hollow wikilink  .
-&o  C: You feel a strange power emanating from the docks of Port Manteau...
+&7&o  Get a charm from Miroku, and then conquer   Link   Vibrant Hollow Vibrant_Hollow wikilink  .
+&7&o  C: You feel a strange power emanating from the docks of Port Manteau...
  Miroku
   Coordinates: [-482 38 -816]
    &6[Miroku]&r
@@ -55,7 +55,7 @@ conquer it, I will have another reward for you.
   &5[I accept]&r
   &6[Miroku]&r
  Speak with me again when you are ready to select your charm.
-&o  C: Get a Charm from Miroku.
+&7&o  C: Get a Charm from Miroku.
  Miroku
   Coordinates: [-482 38 -816]
    &6[Miroku]&r
@@ -78,13 +78,13 @@ Hollow are dealt with.
  (Class) it is then. Here is a trinket and a charm to use with it.
  Receive a Charms Trinket and a charm depending on the class you pick.
   Warrior -   Link   Bronze Spikes Bronze_Spikes wikilink
- &o  C: Conquer   Link   Vibrant Hollow Vibrant_Hollow wikilink by defeating the Mushroom Archmage, then return to Miroku.
+ &7&o  C: Conquer   Link   Vibrant Hollow Vibrant_Hollow wikilink by defeating the Mushroom Archmage, then return to Miroku.
  How to reach Mushroom Archmage:
   Clear enough of the PoI to get a message of the miniboss being spawned.
-&o  You feel mana flowing from the Village's Fortress. Whatever cursed this place - it's still here.
+&7&o  You feel mana flowing from the Village's Fortress. Whatever cursed this place - it's still here.
  Then go to [-575 10 -640] in the PoI. (Basement of the large house.)
   After beating the miniboss:
-&o  C: Return to Miroku and claim your reward.
+&7&o  C: Return to Miroku and claim your reward.
  Miroku
   Coordinates: [-482 38 -816]
    &6[Miroku]&r

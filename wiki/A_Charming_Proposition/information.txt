@@ -1,5 +1,5 @@
-prerequisites = * None
- NPC: Miroku Coords: -482 38 -816
- Architect's Ring Port Manteau
+Pre-req: * None
+ NPC: Miroku &1Coords:&r -482 38 -816
+&2 Architect's Ring&r Port Manteau
 Difficulty = Easy
 Length = Short

@@ -1,5 +1,5 @@
 &r
-&o  Assist the Teacher in rebuilding the school of Mistport.
+&7&o  Assist the Teacher in rebuilding the school of Mistport.
  The Teacher SoftBreak  Coordinates: -1829, 127, 2431
   &6[The Teacher]&r
  Well hello, you must be      &5[You have?]&r
@@ -16,7 +16,7 @@ and hone their skills to new heights. I wish to rebuild that school, but I requi
  Let's start with some rather... hard-to-come-by materials. In Alnera, there is a blacksmith who is famous across the world as
 the only able to create creating Crystallized Iron. Likewise, in Frostgate, an expert artisan is the only known crafter of
 Wisperwood Stakes. I require you to fetch these for me- they are of the utmost importance to my task.
-&o  1/2 - Search out a blacksmith in Alerna that can produce crystallized iron.
+&7&o  1/2 - Search out a blacksmith in Alerna that can produce crystallized iron.
  Blacksmith Ghalla SoftBreak  Coordinates: 438, 61, 770
   &6[Blacksmith Ghalla]&r
  I don't really have much time to talk. Got a lot of orders to fill today.
@@ -30,7 +30,7 @@ requests.
   &5[I'm not here with-]&r
   &6[Blacksmith Ghalla]&r
  You know what, I don't have time to stress about this. Here, take some that was just made, and get out.
-&o  2/2 - You also need to find an artisan in Frostgate who can provide wisperwood stakes.
+&7&o  2/2 - You also need to find an artisan in Frostgate who can provide wisperwood stakes.
  Artisan Angra SoftBreak  Coordinates: -1500, 98, 938
   &6[Artisan Angra]&r
  Hello there, are you looking for anything specific today? Some crafted displays, or maybe a polished table?
@@ -45,7 +45,7 @@ that can even still make them, though I won't hurt that species any more than I 
   &5[I'm not going to hurt-]&r
   &6[Artisan Angra]&r
  Here look, I have a single one still in my drawer that I keep to remember the old days. You can take it, but please just leave.
-&o  Return to The Teacher when you have both the crystallized iron and whisperwood stake.
+&7&o  Return to The Teacher when you have both the crystallized iron and whisperwood stake.
  The Teacher SoftBreak  Coordinates: -1829, 127, 2431
   &6[The Teacher]&r
  Ahh yes, both of these are perfect. They will do just nicely.
@@ -65,7 +65,7 @@ individuals who are masters in their trades.
  The line doesn't draw there though. No, far from it. There are people who take their skills even higher: Specialists, you might
 say. And this is the crown jewel of knowledge: getting one of them to share their experience with you. So, for your final task,
 go find one of these specialists. Do what it takes to learn about their skills, and return to me with the knowledge you gained.
-&o  Go out into the world and find a specialization master, and then return to the Teacher with the knowledge you learn from
+&7&o  Go out into the world and find a specialization master, and then return to the Teacher with the knowledge you learn from
 them.
  Each   Link   class specialization Class_Specializations wikilink has its own quest. Complete the one of your choosing and
 return to The Teacher.
@@ -126,7 +126,7 @@ Link   A Shaman's Lament A_Shaman's_Lament wikilink
 Link   Hexbreaker Shaman#Hexbreaker wikilink
  (-1248 90 1306)
 Link   A oke of Genius A_oke_of_Genius wikilink
-&o  You should probably head back to the Teacher in Mistport to tell him of the knowledge you've learned here.
+&7&o  You should probably head back to the Teacher in Mistport to tell him of the knowledge you've learned here.
  The Teacher SoftBreak  Coordinates: -1829, 127, 2431
   &5[The Teacher]&r
  Ahh, I sense you are much wiser than the last time we spoke! You found a master, didn't you? Please, tell me about your time

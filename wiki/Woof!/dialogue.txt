@@ -1,6 +1,6 @@
 &r
   WorkInProgress|Some Dog Tasks.&r
-&o  Woof woof woof, woof! Wooooof.
+&7&o  Woof woof woof, woof! Wooooof.
  Aquamarine
   Coordinates: [281, 121, 40]
    &6[Aquamarine]&r
@@ -17,7 +17,7 @@
   &5[Do you... want something?]&r
   &6[Aquamarine]&r
  Woof!
-&o  C: Woof!
+&7&o  C: Woof!
  Aquamarine
   &6[Aquamarine]&r
  Awooooof!

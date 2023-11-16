@@ -36,7 +36,7 @@ keeps me up at night.
  Shame, perhaps if you get some time later.
   &6[Historian Rhodes]&r
  Fantastic! When you are prepared to head out, let me know.
-&o  Speak to Historian Rhodes about the place he wants to take you.
+&7&o  Speak to Historian Rhodes about the place he wants to take you.
  Historian Rhodes
   &6[Historian Rhodes]&r
  Are you ready to head out?
@@ -46,7 +46,7 @@ keeps me up at night.
   &5[Yes, I'm ready.]&r
   &6[Historian Rhodes]&r
  Let's be going then.
-&o  Search around and see what you can find on Salazar. Return anything you find to Historian Rhodes.
+&7&o  Search around and see what you can find on Salazar. Return anything you find to Historian Rhodes.
  Scraps of Paper Solution
   :Puzzle_Solutions_Guide/Rapacity/Notes&r
  Historian Rhodes
@@ -57,7 +57,7 @@ keeps me up at night.
  Ahh! Let me see them right quick! Little glue here... little stitching there... carry the one... There we go! All patched up,
 and it's a letter written by Salazar himself! But... I don't understand... Give it a read, see if you can interpret anything
 from it.
-&o  Speak to Historian Rhodes about the book.
+&7&o  Speak to Historian Rhodes about the book.
  Historian Rhodes
   &6[Historian Rhodes]&r
  Can you make anything out about what is being said? An... arboretum? In the Chillwind? And something about giving gifts?
@@ -71,7 +71,7 @@ opposite of ours.]&r
   &6[Historian Rhodes]&r
  That's an odd source of information, but at this point, I'll take anything. If your ghost friend can provide any useful
 information, that would be of great use. Unfortunately, I must stay here with my team, but I wish you the best of luck.
-&o  Seek out the Harmonious Spirit in the Pink Lobby.
+&7&o  Seek out the Harmonious Spirit in the Pink Lobby.
  Harmonious Spirit SoftBreak  Coordinates: -980, 21, 643
   &6[Harmonious Spirit]&r
  Thank you for everything. I'm sure you have many questions about what you saw inside, and about my people.
@@ -93,7 +93,7 @@ something.
   &6[Harmonious Spirit]&r
  In the rising tunnels above us - that which your people call the Sealed Descent - there lies a blessed shard of glass. Seek it
 out and return it here.
-&o  Journey back through the   Link   Sealed Descent Sealed_Descent wikilink to find the blessed glass for the Harmonious
+&7&o  Journey back through the   Link   Sealed Descent Sealed_Descent wikilink to find the blessed glass for the Harmonious
 Spirit.
  Harmonious Spirit
   &6[Harmonious Spirit]&r
@@ -106,7 +106,7 @@ ready to go in?
   &5[Actually I need to take care of other stuff first.]&r
   &6[Harmonious Spirit]&r
  Very well, let's go.
-&o  Find your way into the Father's study.
+&7&o  Find your way into the Father's study.
  Thank you for sjasogun for solving the puzzle.
  Puzzle Solution
   :Puzzle_Solutions_Guide/Rapacity/Study&r
@@ -131,7 +131,7 @@ longer beyond that point.
  It is fairly likely that some historical records exist. If what I remember is correct, Varcosa was originally a citizen of
 Ishnir. If any documents remains, an archivist familiar with that nation's history will be your best bet. Alnera may be a good
 place to start looking.
-&o  Head to Alnera and seek out information once again from Archivist Nyra.
+&7&o  Head to Alnera and seek out information once again from Archivist Nyra.
  Archivist Nyra
   &6[Archivist Nyra]&r
  Hello there. What brings you to the pharaoh's library today?
@@ -151,7 +151,7 @@ historical evidence to suggest that any ever existed at that point.
   &6[Archivist Nyra]&r
  Yes and no. There is an old map that was found a few decades back, though it has suffered heavy damage over the centuries. It
 is currently on loan to the records holder in Molta for inspection. Shani, I believe is her name.
-&o  It seems Shani in Molta currently has Varcosa's map. Seek her out.
+&7&o  It seems Shani in Molta currently has Varcosa's map. Seek her out.
  Record Keeper Shani
   &6[Record Keeper Shani]&r
  Hello! Welcome to the Molta Arch- AH!      &5[Yes, we exposed a cover up for a mining operation gone wrong.]&r
@@ -182,7 +182,7 @@ of became tradition among pirates who sail the northern seas, even today, to con
 Northern pirates are much different from the ones you may be familiar with, Ocean's Reach is not kind, so they have to fight to
 survive. I have heard word that a certain crew is fighting off a sea monster attack. This may be the only chance we can get,
 while they are distracted.
-&o  You need some special mapping ink carried by Northern pirates. Search out a crew that is currently fighting off a sea
+&7&o  You need some special mapping ink carried by Northern pirates. Search out a crew that is currently fighting off a sea
 monster attack and grab it while they are distracted.
  The ink is located in the ship above the surface, inside a chest behind a dark oak trapdoor.
  Record Keeper Shani

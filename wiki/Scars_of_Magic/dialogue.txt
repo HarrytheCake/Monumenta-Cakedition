@@ -1,5 +1,5 @@
 &r
-&o  Speak with Dimitri in the Alchemy Workshop in Sierhaven
+&7&o  Speak with Dimitri in the Alchemy Workshop in Sierhaven
  Dimitri
   &6[Dimitri]&r
  Oh uh... Hello there ___. Could... Could I ask something of you? SoftBreak   &5[What is it?]&r
@@ -14,7 +14,7 @@ if you can get some information? Maybe he knows something...
   &5[I'm in.]&r
   &6[Dimitri]&r
  Thank you ___... Your help means a lot to me.
-&o  Head to the first floor and speak with the Deranged Alchemist
+&7&o  Head to the first floor and speak with the Deranged Alchemist
  Deranged Alchemist
   &6[Deranged Alchemist]&r
  Hmm... yes yes... the Axtans... SoftBreak   &5[Hi, did you say Axtans?]&r
@@ -36,7 +36,7 @@ turned him away as well, but he has the pieces. He knows more than he thinks he 
   &5[Alright I'll see what I can find out.]&r
   &6[Deranged Alchemist]&r
  Splendid. Safe travels.
-&o  Speak with Keller near the   Link   Collapsing Tower Collapsing_Tower wikilink at 885 90 -265
+&7&o  Speak with Keller near the   Link   Collapsing Tower Collapsing_Tower wikilink at 885 90 -265
  Keller
   &6[Keller]&r
  I'm much too busy here to chat... Oh hello ___, it's been a while since we last spoke. What brings you to the Highlands?
@@ -52,7 +52,7 @@ guarded by the Axtans under this tower, but so far after scouring it top to bott
  Could you explore the Collapsed Tower for me? Maybe a second set of eyes could find something I did not. It's rather dangerous
 in there and I've never been much of a fighter. Hopefully there is a document or a book lying around that could help us better
 understand it's history. If only Brayllur wasn't busy...
-&o  Go to the   Link   Collapsing Tower Collapsing_Tower wikilink and retrieve the book
+&7&o  Go to the   Link   Collapsing Tower Collapsing_Tower wikilink and retrieve the book
  Keller
   &6[Keller]&r
  This is brilliant! Right beneath our feet there's something, we need to pursue this further. SoftBreak   &5[What should we do
@@ -64,7 +64,7 @@ falling into place. I'll start researching what's in this book and I should have
   &5[I'll be on my way!]&r
   &6[Keller]&r
  Thank you!
-&o  Go into the Farr Sewers and retrieve the crystal
+&7&o  Go into the Farr Sewers and retrieve the crystal
  Keller
   &6[Keller]&r
  Look at this! This crystal is exactly what Siershen described in his notes. If my hypothesis is right, this will open up a
@@ -83,9 +83,9 @@ ready?
   &5[Yes.]&r
   &6[Keller]&r
  The tower is preparing to change. Be ready for it.
-&o  You are about to amplify the Collapsing Tower PoI. Once your time has expired, you must return to Velara and recieve another
-charge. Are you prepared?
-&o  Enter the basement of the amplified Collapsing Tower and complete the   Link   puzzle Puzzle_solutions wikilink
+&7&o  You are about to amplify the Collapsing Tower PoI. Once your time has expired, you must return to Velara and recieve
+another charge. Are you prepared?
+&7&o  Enter the basement of the amplified Collapsing Tower and complete the   Link   puzzle Puzzle_solutions wikilink
  Abbot Johann
   &6[Abbot Johann]&r
  Hello again ___. For a long time we have been waiting to see if someone would get past Siershen's seal. I am not surprised it
@@ -102,12 +102,12 @@ together the trail you left behind and figured it out.",
  As I'm sure you read back there, Siershen was aware that someday someone would get past his safeguards. His plan was to enlist
 that person in his fight. I think you may be our best hope here.
   &4Be prepared for a fight!&r
-&o  Defeat the boss then head down into the   Link   Creeper Farm Creeper_Farm wikilink to access the dungeon lobby
+&7&o  Defeat the boss then head down into the   Link   Creeper Farm Creeper_Farm wikilink to access the dungeon lobby
  Brother Selim
   &6[Brother Selim]&r
  You've made it! Wonderful! I've quite honestly always wondered what's inside this place. Perhaps these can be of use to you
 inside. Good luck!
-&o  SCARS OF MAGIC COMPLETE! Awarded 1 Light Blue Dungeon Key, 64 Arrows of Slowness,   Link   Siershen's Caster
+&7&o  SCARS OF MAGIC COMPLETE! Awarded 1 Light Blue Dungeon Key, 64 Arrows of Slowness,   Link   Siershen's Caster
 Siershen's_Caster wikilink  , Full Access to the Light Blue Lobby Trader, 10 Anvils, and the ability to re-amplify the
 Collapsing Tower PoI!
 Link   Category:Quests Category:Quests wikilink

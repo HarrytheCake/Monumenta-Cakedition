@@ -1,5 +1,5 @@
 &r
-&o  Continue your journey with the Crimson King Header start_of_quest  Start of Quest
+&7&o  Continue your journey with the Crimson King Header start_of_quest  Start of Quest
  Jeremiah
   Coordinates: [-917, 91, -161]
    &6[Jeremiah]&r
@@ -17,7 +17,7 @@ claimed the pedestal for my Wool. Perhaps this can guide us as we resume our que
   &6[The Crimson King]&r
   &4The very same. He was the only way in. Go speak to his visage outside this room, to the east, in the middle. I will show you
 my greatest folly.&r
-&o  C: Interact with Azacor's Effigy.
+&7&o  C: Interact with Azacor's Effigy.
   &6[Helring]&r
  Farewell Aesir... Your sacrifice will not be in vain.
   &6[Aesir]&r
@@ -68,7 +68,7 @@ creature.]&r
   &5[The summoning is complete. The Veil will tear. Enter and find your journey easy.]&r
   &6[The Crimson King]&r
   &4Your memory is granted anew. Goodbye.&r
-&o  C: Speak to the Crimson King to begin the battle.
+&7&o  C: Speak to the Crimson King to begin the battle.
  The Crimson King
   &6[The Crimson King]&r
   &4Azacor held up his end of our bargain, but not without an attempt at betrayal. I entered the tear in the Veil his demons
@@ -87,7 +87,7 @@ He is immune to damage unlike the others, but you can use him... Far above us is
   &5[I am.]&r
   You need to kill the first 3 quickly and then use Zirin'kel's levitation arrows to climb up. Or you can use recoil bows from
 R2. Keep going either way till you reach the top layer of glass then go up the stairs.
- &o  Escape the Veil.
+ &7&o  Escape the Veil.
  The Crimson King
   &6[The Crimson King]&r
   &4The Veil continued on, past Azacor's ambush. It was here I could see the scars the wool had left reflected onto the Veil.
@@ -98,7 +98,7 @@ But they were not in harmony. I had to find a way to shift them to their proper 
 me. What I do know is that you touch each of my fellow prisoners, you will receive a spark of knowledge. Collect them each by
 interacting with the crystals themselves and place them back by holding what you receive as you do so.&r
  Link   Puzzle Solutions Guide/A Study in Crimson Part 2 Puzzle_Solutions_Guide/A_Study_in_Crimson_Part_2 wikilink
- &o  Speak to the Crimson King.
+ &7&o  Speak to the Crimson King.
  The Crimson King
   &6[The Crimson King]&r
   &4With the Veil finally in order, a door burst open. As I stepped through into the Monument, darkness surrounded me. It was
@@ -139,7 +139,7 @@ I have sought you after your revival. Even with that knowledge lost, I feel clos
   &5[What more is there to show me here?]&r
   &6[The Crimson King]&r
   &4I'm not sure I have any more to show you at all. I've seen much with you as a conduit. Let us return to the Vault.&r
-&o  Speak to the Crimson King.
+&7&o  Speak to the Crimson King.
  The Crimson King
   &6[The Crimson King]&r
   &4So, we stand at a crossroads.&r
@@ -164,12 +164,12 @@ Is she dead too?&r
   &4That could be true. I don't know if you or I have another choice if Kaul is as dangerous to wake as you claim. Go, [Player].
 You are still bound by your deal. Find C'Shura and seek her visions.&r  Header subquest_a_study_in_memories  SUBQUEST : A STUDY
 IN MEMORIES
-&o  C: [1/2]: Leave the Memory Vault.
-&o  C: [2/2]: Travel to Ta'Eldim.
+&7&o  C: [1/2]: Leave the Memory Vault.
+&7&o  C: [2/2]: Travel to Ta'Eldim.
  After reaching Ta'Eldim:
-&o  C: Enter C'Shura's Shrine.
+&7&o  C: Enter C'Shura's Shrine.
  In C'Shura's Shrine:
-&o  C: Speak to C'Shura.
+&7&o  C: Speak to C'Shura.
  C'Shura
   &6[C'Shura]&r
  This world has changed greatly in my absence.
@@ -289,7 +289,7 @@ this... friend of yours will be locked away again.
   &5[I swear it. Take us there please.]&r
   &6[The Crimson King]&r
   &4It shall be done.&r
-&o  C: Speak to Zanil.
+&7&o  C: Speak to Zanil.
  Zanil
   &6[Zanil]&r
  I see you've returned with a frien- C'Shura?!
@@ -323,7 +323,7 @@ even understand what I have done and what has been done to me?
  What?!
   &6[Zanil]&r
  Let me show you...
-&o  C: Speak to R'Kitxet.
+&7&o  C: Speak to R'Kitxet.
  R'Kitxet
   &6[R'Kitxet]&r
  Your judgement has been decreed, Zanil. Your title has been stripped. Your wool has been taken.
@@ -343,7 +343,7 @@ alone, have now lost? This is us being merciful.
   &6[R'Kitxet]&r
  Goodbye, Zanil. Your name will forever be a stain upon our people. C'Tnet, if you will...
  After defeating C'Tnet:
-&o  C: Speak to Zanil.
+&7&o  C: Speak to Zanil.
  Zanil
   &6[Zanil]&r
  Now you see. I slaughtered their champion. He was intended to replace me. In the chaos, covered in the blood of a Shaman only
@@ -360,11 +360,11 @@ Help us help the world heal from the aftermath of the Blackroot War   &4.&r
   &6[Zanil]&r
  Fine. For you and you alone. Now listen.
   &6[Zanil]&r
-&o  Deep in Kaulslund, a temple was constructed. The Knights stood guard over the wool. In time, many were called away and many
-more were destroyed, until there was just one left. A lone guardian, slumbering in the darkness. It was here that the Jungle saw
-an opportunity to protect. Kaul wove a powerful enhancement and cast it upon their temple, hiding it away. Even once that
-enchantment was destroyed, the lone guardian remained. He stood guard below the Monument, waiting for the day he would be needed
-once more.
+&7&o  Deep in Kaulslund, a temple was constructed. The Knights stood guard over the wool. In time, many were called away and
+many more were destroyed, until there was just one left. A lone guardian, slumbering in the darkness. It was here that the
+Jungle saw an opportunity to protect. Kaul wove a powerful enhancement and cast it upon their temple, hiding it away. Even once
+that enchantment was destroyed, the lone guardian remained. He stood guard below the Monument, waiting for the day he would be
+needed once more.
   &5[The Monument? It's been there the entire time?]&r
   &6[Zanil]&r
  Yes.
@@ -379,7 +379,7 @@ ruin this.
   &5[We won't.]&r
   &6[Zanil]&r
  Now, leave me to my memories. Goodbye, Shaman. Goodbye woolbearer.
-&o  C: Speak to C'Shura.
+&7&o  C: Speak to C'Shura.
  C'Shura
   &6[C'Shura]&r
  So, you have what you need. Both of you. Remind your creature to release his hold on me, [Player].
@@ -390,9 +390,9 @@ not ruin this. Put the spirit back into his wool and end this. Do not let him st
   &5[I will. It's what we all want.]&r
   &6[C'Shura]&r
  Now go. Return with your spirit and his thrall and plan your steps wisely. Goodbye.
-&o  C: Return to the Memory Vault.
+&7&o  C: Return to the Memory Vault.
  After returning to the Memory Vault:
-&o  C: Speak to the Crimson King. Header subquest_a_study_in_silver  SUBQUEST : A STUDY IN SILVER
+&7&o  C: Speak to the Crimson King. Header subquest_a_study_in_silver  SUBQUEST : A STUDY IN SILVER
  The Crimson King
   &6[The Crimson King]&r
   &4The end is near. But before us lies a final impossibility. My home itself is the missing link to return me to my home.&r
@@ -418,8 +418,8 @@ Good luck.&r
   &5[To you as well.]&r
   &6[The Crimson King]&r
   &4I can only hope my emergence does not call anything malicious here...&r
-&o  C: Leave the Memory Vault.
-&o  C: Travel to the King's Valley Monument and enter the hidden path.
+&7&o  C: Leave the Memory Vault.
+&7&o  C: Travel to the King's Valley Monument and enter the hidden path.
  Jeremiah (Hidden Path)
   &6[Jeremiah]&r
  Hello [Player]. The Crimson King is reaching out into my mind. He is delighted to hear this has worked, but he cannot step off
@@ -447,8 +447,8 @@ C'Telsket have attacked the Knight instead?&r
   &4There is still power here. A connection to others. It's not dead. Just... inactive? Damaged? I do not know how we would fix
 it. I am not sure that we can. Come back to me in the Memory Vault. We must try to delve into the final effigy. Jeremiah will
 remain at the Monument while I remain upon my Pedestal. We will seek answers.&r
-&o  C: [1/2]: Return to the Memory Vault and interact with the Silver Knight effigy.
-&o  C: [2/2]: Exit the Silver Knight's Sanctum.
+&7&o  C: [1/2]: Return to the Memory Vault and interact with the Silver Knight effigy.
+&7&o  C: [2/2]: Exit the Silver Knight's Sanctum.
  After interacting with the Silver Knight effigy:
   Silver Knight?
   &6[The Crimson King]&r

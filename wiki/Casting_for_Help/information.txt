@@ -1,7 +1,7 @@
-prerequisites = *&3Supply and Demand&r NPC: Melinda King's Valleytown = Sierhavenstarting_npc_coordinates = -614, 96, 12POI: &3Swamp Sinkhole&rrewards = *64 Experience Bottles
-*3 &3Healing Vial NPC: Melinda King's Valleytown = Sierhavenstarting_npc_coordinates = -614, 96, 12POI: &3Swamp Sinkhole&rrewards = *64 Experience Bottles
-*3 &3Healing Vialstarting_npc_coordinates = -614, 96, 12POI: &3Swamp Sinkhole&rrewards = *64 Experience Bottles
-*3 &3Healing Vial King's Valleytown = Sierhavenstarting_npc_coordinates = -614, 96, 12POI: &3Swamp Sinkhole&rrewards = *64 Experience Bottles
-*3 &3Healing Vialtown = Sierhavenstarting_npc_coordinates = -614, 96, 12POI: &3Swamp Sinkhole&rrewards = *64 Experience Bottles
-*3 &3Healing VialPOI: &3Swamp Sinkhole&rrewards = *64 Experience Bottles
+Pre-req: *&3Supply and Demand&r NPC: Melinda&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -614, 96, 12POI:  &3Swamp Sinkhole&rrewards = *64 Experience Bottles
+*3 &3Healing Vial NPC: Melinda&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -614, 96, 12POI:  &3Swamp Sinkhole&rrewards = *64 Experience Bottles
+*3 &3Healing Vialstarting_npc_coordinates = -614, 96, 12POI:  &3Swamp Sinkhole&rrewards = *64 Experience Bottles
+*3 &3Healing Vial&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -614, 96, 12POI:  &3Swamp Sinkhole&rrewards = *64 Experience Bottles
+*3 &3Healing Vialtown = Sierhavenstarting_npc_coordinates = -614, 96, 12POI:  &3Swamp Sinkhole&rrewards = *64 Experience Bottles
+*3 &3Healing VialPOI:  &3Swamp Sinkhole&rrewards = *64 Experience Bottles
 *3 &3Healing Vial

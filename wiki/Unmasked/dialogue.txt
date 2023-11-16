@@ -14,8 +14,8 @@ Would you care to join us?
   &5[I've been looking forward to this.]&r
   &6[Vargos]&r
  Then let us travel there post haste.
- C:   &o  [1/2]: Talk to Vargos in the Jail.
- C:   &o  [2/2]: If you're not in the Jail, speak to Vargos to return to it.
+ C:   &7&o  [1/2]: Talk to Vargos in the Jail.
+ C:   &7&o  [2/2]: If you're not in the Jail, speak to Vargos to return to it.
  Other Jail Npc Dialogue:
  Brandy (Jail)
   &6[Brandy]&r
@@ -71,7 +71,7 @@ like Calder would cause trouble.
  Seems like he's decided not to talk anymore. Let me handle this.
   &6[Vargos]&r
  Go ahead, talk to Ridnan.
-&o  A loud cracking noise reverberates around the room.
+&7&o  A loud cracking noise reverberates around the room.
   &6[Ridnan]&r
  GAHH!
   &6[Brandy]&r
@@ -89,12 +89,12 @@ you've been alive, boy. He won't come for you. You've served your purpose.
  ...
   &6[Brandy]&r
  Perhaps you need some more encouragement. You don't like magic, no? Let's see how much you like this.
-&o  Blades of air dance in the palm of Brandy's hand
+&7&o  Blades of air dance in the palm of Brandy's hand
   &6[Ridnan]&r
  O-only some of them! We only managed to put together a few verses. He said it was enough.
   &6[Brandy]&r
  Only some hmm? Well maybe some more prodding will let you remember what was on those scr-
-&o  An explosion rocks the room
+&7&o  An explosion rocks the room
   &6[Vargos]&r
  What was that?
   &6[Ridnan]&r
@@ -114,8 +114,8 @@ you've been alive, boy. He won't come for you. You've served your purpose.
 yet.
   &6[Levyn]&r
  Need any backup Cap'n? I can take 'im!
- C:   &o  [1/2]: Follow Ridnan into the sewers.
- C:   &o  [2/2]: If you leave the sewers at any time, return through the sewer entrance.
+ C:   &7&o  [1/2]: Follow Ridnan into the sewers.
+ C:   &7&o  [2/2]: If you leave the sewers at any time, return through the sewer entrance.
  After you enter after Ridnan:
   &6[Masked Figure]&r
  Don't follow us, [Player]. This won't end well.
@@ -124,7 +124,7 @@ yet.
  This isn't your concern. Just let us leave and I won't be forced to hurt you.
   &6[Masked Figure]&r
  Fine, I'll do this myself. I was hoping not to have to. Come here [Player]!
- C:   &o  Defeat the Masked Figure.
+ C:   &7&o  Defeat the Masked Figure.
  After beating the Masked Figure:
  Samwell (Sewer)
   &6[Samwell]&r
@@ -143,7 +143,7 @@ already spilled the beans.
   &5[What?]&r
   &6[Ridnan]&r
  No! I've served Lord Calder well!
-&o  Samwell spits.
+&7&o  Samwell spits.
   &6[Samwell]&r
  As if. You failed his most delicate mission and have put pressure on him when he needed the most space. With the failures of
 you and the Pharaoh, he might not even get the wool in time, you fool.
@@ -153,11 +153,11 @@ you and the Pharaoh, he might not even get the wool in time, you fool.
 never have to see you again.
   &6[Ridnan]&r
  NO! Listen to me! The scriptures speak of the lost Monument. The statues speak of the power of time! Go to -
-&o  Ridnan gasps as Samwell leaps forward, stabbing him in the throat.
+&7&o  Ridnan gasps as Samwell leaps forward, stabbing him in the throat.
   &5[Samwell!]&r
-&o  Samwell leaps into the sewer tunnel, silently, leaving you alone, with a corpse. You choose to flee back to Mistport. You've
-seen enough.
- C:   &o  Return to Vargos in Mistport to tell him what happened.
+&7&o  Samwell leaps into the sewer tunnel, silently, leaving you alone, with a corpse. You choose to flee back to Mistport.
+You've seen enough.
+ C:   &7&o  Return to Vargos in Mistport to tell him what happened.
  Vargos
   &6[Vargos]&r
  You've returned. Good news, I hope.
@@ -173,7 +173,7 @@ I suppose.
  Fascinating! We need to move quickly. I'll send for Bhairavi immediately. She knows more about these wool than anyone else.
 I've been ensuring your discoveries with this region's wool made their way to her. Go meet her at the Steelmeld Monument
 immediately.
- C:   &o  Meet Bhairavi at the Steelmeld Monument.
+ C:   &7&o  Meet Bhairavi at the Steelmeld Monument.
  Bhairavi
   Coordinates: [-542, 6, -527]
    &6[Bhairavi]&r
@@ -219,7 +219,7 @@ finish it, maybe it could tell us more...
   &6[Bhairavi]&r
  Fantastic. Here's a copy, then! Once you work out where it's sending you, I'll send an assistant to join you there. Just head
 there and maybe you can work out what Calder is doing with this wool... Gods, I hope you're fast enough.
- C:   &o  Translate the notes to find out where to go next. Speak to Bhairavi if you need a replacement book.
+ C:   &7&o  Translate the notes to find out where to go next. Speak to Bhairavi if you need a replacement book.
  Bhairavi
   &6[Bhairavi]&r
  Once you've worked out what this says, I'll send an assistant to meet you at that spot! Just head there and maybe you can work
@@ -237,7 +237,7 @@ artifact of Time hidden to the "West of the Monument". If you can finish it, may
  sacrarium found
  Head to   Link   Sacrarium of Aeons Sacrarium_of_Aeons wikilink  .
   When you try to go down the stairs:
-&o  Reality warps before you, time gets reversed and you find yourself moving backwards, stopping at the top of the staircase.
+&7&o  Reality warps before you, time gets reversed and you find yourself moving backwards, stopping at the top of the staircase.
  Max
   &6[???]&r
  Hey, are you [Player]? You showed up at the perfect time, some masked guy attacked me as I got here but it seems your arrival
@@ -261,7 +261,7 @@ Iâ–’ve been sitting here reading it and I think I deciphered most of it.
  Of course. It’s quite ancient, but I’m very good with old languages. This seems to predate the Ishnir and Chillwind societies,
 but I’ve not the foggiest what those people called themselves. They seem to mention this being a way to house their home, and
 a... Teal Wool? Can you step back for a bit?
-&o  Max mutters a few words under his breath, and you hear a shattering noise as the nearby crystal breaks. The runes glow a
+&7&o  Max mutters a few words under his breath, and you hear a shattering noise as the nearby crystal breaks. The runes glow a
 faint blue hue as the barrier around the stairs fade.
   &6[Max]&r
  Excellent. The spell I crafted seemed to work. I’ll see you inside?
@@ -269,12 +269,12 @@ faint blue hue as the barrier around the stairs fade.
   &6[Max]&r
  Whatever these ancient folks didn’t want us to see of course. I hope it’s as big as you say. Take this, by the way. You'll need
 it. See you down there!
- C:   &o  [1/2]: Follow Max down the stairs...
- C:   &o  [2/2]: ...and enter the   Link   Echoes of Oblivion Echoes_of_Oblivion wikilink  .
-&o  Reality warps before you, time speeds up and you find youself moving faster than expected, stopping in a room somewhere
+ C:   &7&o  [1/2]: Follow Max down the stairs...
+ C:   &7&o  [2/2]: ...and enter the   Link   Echoes of Oblivion Echoes_of_Oblivion wikilink  .
+&7&o  Reality warps before you, time speeds up and you find youself moving faster than expected, stopping in a room somewhere
 below the Sacrarium.
  After beating   Link   Echoes of Oblivion Echoes_of_Oblivion wikilink  :
- C:   &o  Return to Bhairavi, defeated.
+ C:   &7&o  Return to Bhairavi, defeated.
  Bhairavi
   &6[Bhairavi]&r
  Welcome back [Player]. I'm so happy to see you alive still. What happened? Did you see Calder? Did you get the wool? Was Barte

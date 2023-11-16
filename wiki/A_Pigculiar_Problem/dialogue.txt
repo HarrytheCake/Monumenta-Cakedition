@@ -1,5 +1,5 @@
 &r
-&o  Talk to Walter Jr. a few times until a different dialog pops up SoftBreak   WorkInProgress&r
+&7&o  Talk to Walter Jr. a few times until a different dialog pops up SoftBreak   WorkInProgress&r
  Walter Jr. SoftBreak  Coordinates: -770, 107, 125
   &6[Walter Jr.]&r
  Now look here, hitting such a valuable test subject is quite rude, I say!
@@ -25,8 +25,8 @@
   &6[Walter Jr.]&r
  You would think, but he likes to hide away at the top of the tower. The Isle is all the way west, across the ocean. Go sail!
 Image  width 297 height 297  2020-02-29_15.27.43.png 2020-02-29_15.27.43.png fig:2020-02-29_15.27.43.png
-&o  Go to the tower in the ocean (-1380, 91, 190) and talk to Percy. Header section
- Percy SoftBreak  Coordinates:   &o  -1380, 91, 190
+&7&o  Go to the tower in the ocean (-1380, 91, 190) and talk to Percy. Header section
+ Percy SoftBreak  Coordinates:   &7&o  -1380, 91, 190
   &6[Percy]&r
  Oink?
   &5[You're Percy, right? I've been sent by Walter Jr. to find you.]&r
@@ -50,7 +50,7 @@ arrivals go! Just find the little trapdoor and head down it.
   &5[Then what?]&r
   &6[Percy]&r
  I'm sure my agent, Peppa, will happily give it to you!
-Image  width 302 height 302  2020-02-29_15.44.40.png 2020-02-29_15.44.40.png 2020-02-29_15.44.40.png &o  Go to the workshop in
+Image  width 302 height 302  2020-02-29_15.44.40.png 2020-02-29_15.44.40.png 2020-02-29_15.44.40.png &7&o  Go to the workshop in
 Link   Sierhaven Sierhaven wikilink (-725, 106, 16) and press the button on the work stations to access the basement. Once
 inside, grab a Beetroot (Beetroot is on a chest near 341 ,176, 570) and guide the pig to the other set of doors. Once you get
 the potion in the chest, head back to Walter Jr. to finish the quest. Header section_1
@@ -98,6 +98,6 @@ ___. Let me reward you for your help before I return to who I once was...
   &5[Ooh, rewards!]&r
   &6[Walter Jr.]&r
  Thank you again. I offer you my commemorative mask of Levyn Bacon for your help.
-&o  A PIGCULIAR PROBLEM COMPLETE! Awarded   Link   Levyn Bacon Mask Levyn_Bacon_Mask wikilink Header tips  Tips  Plain
+&7&o  A PIGCULIAR PROBLEM COMPLETE! Awarded   Link   Levyn Bacon Mask Levyn_Bacon_Mask wikilink Header tips  Tips  Plain
 Pigculiar Problem does not show up in the quest list when talking to a town guide. However if you speak with Walter Jr. once, it
 will show up. Plain  You can get another Levyn Bacon Mask for free by speaking to Walter Jr. again after completing the quest.

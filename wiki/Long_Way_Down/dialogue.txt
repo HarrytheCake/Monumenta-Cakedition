@@ -1,5 +1,5 @@
 &r
-&o  Travel to the   Link   Cinder's Roost Cinder's_Roost wikilink and return with a Ponike feather
+&7&o  Travel to the   Link   Cinder's Roost Cinder's_Roost wikilink and return with a Ponike feather
  Guard Myra
   Coordinates: [402, 75, 687]
    &6[Guard Myra]&r
@@ -37,12 +37,12 @@ Roost. Their feathers are super light, so you shouldn't have trouble carrying th
   &5[I will set out as soon as I can.]&r
   &6[Guard Myra]&r
  Thank you! I will wait nervously for your return.
- C:   &o  Find a Ponike feather high up on   Link   Cinder's Roost Cinder's_Roost wikilink  .
+ C:   &7&o  Find a Ponike feather high up on   Link   Cinder's Roost Cinder's_Roost wikilink  .
  When you reach the peak:
   &8As you approach the summit you notice a Ponike, and it notices you. You are going to have to defeat it to get a feather.&r
   &3''After the bird falls in battle you pluck a feather from its body. Somehow it is lighter than a feather and also takes up
 almost no room.''&r
- C:   &o  Return to Guard Myra.
+ C:   &7&o  Return to Guard Myra.
  Guard Myra
   &6[Guard Myra]&r
  H-hello again! Have you had any luck finding a Ponike feather?

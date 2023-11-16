@@ -11,19 +11,19 @@ careful... If only...
 Please, you should leave.
   &5[Sorry for disturbing you, then.]&r
   &6[Xenith]&r
- I am so sorry, I couldn't save you all... Meredith... Ogden... Yolen... Plain &o  A small tear rolls down his cheek, falling on
-the wooden floor.
+ I am so sorry, I couldn't save you all... Meredith... Ogden... Yolen... Plain &7&o  A small tear rolls down his cheek, falling
+on the wooden floor.
   &5[Spire? Do you mean [[Cloud Piercer]]?]&r
   &6[Xenith]&r
  You... you know of it? You've been there?! But... you're still alive...
   &5[I am, and I know how dangerous it can be. Let me help you.]&r
-&o  The man visibly hesitates, but after a few moments he decides to answer you.
+&7&o  The man visibly hesitates, but after a few moments he decides to answer you.
   &6[Xenith]&r
  Can you go there once more, please? And... I... Oh, goodness, am I really asking this..? C-could you, perhaps, recover their
 bodes? The bodies of my team? Or... whatever's left of them...
   &5[Sorry, but I am quite busy right now.]&r
   &6[Xenith]&r
- Just when I thought I finally had hope... Nevermind... Plain &o  The man looks towards the north-east, on the brink of tears
+ Just when I thought I finally had hope... Nevermind... Plain &7&o  The man looks towards the north-east, on the brink of tears
 yet again.
   &5[I will help you.]&r
   &6[Xenith]&r
@@ -38,7 +38,7 @@ it.
   &6[Xenith]&r
  We... We were on a small expedition. A self-appointed expedition. We were foolish enough to think that the fortress was long
 abandoned. We... I... I paid the price for that mistake. And so did my crew...
-&o  Search for Xenith's crew beneath the Cloud Piercer.
+&7&o  Search for Xenith's crew beneath the Cloud Piercer.
  When you find their bodies:
   &6[Nightseer]&r
  Just what do you think you're doing?
@@ -52,11 +52,11 @@ soul!
   &6[Nightseer]&r
  I... am... Defeated by a mere peasant?.. But... How?.. Stars, have you... given up on me? Given up... on your loyal...
 servant...
-&o  It seems that you have fatally wounded him.
+&7&o  It seems that you have fatally wounded him.
   &6[Nightseer]&r
  Forgive me... Aurora... for I... have failed... you...
-&o  A moment later, he collapses to the ground, dead.
-&o  As you're about to exit the sacrificial chamber, a white flash blinds you...
+&7&o  A moment later, he collapses to the ground, dead.
+&7&o  As you're about to exit the sacrificial chamber, a white flash blinds you...
   &6[Andromeda]&r
  What a fool..     &3his blind... worship&r was his... downfall...
   &6[Andromeda]&r
@@ -65,15 +65,15 @@ servant...
   &3Come find me...&r I... am dying beneath... the waves...
   &6[Andromeda]&r
  Then... I shall..     &3grant you... enlightenment...&r
-&o  You've seen horrible things beneath the Spire. Xenith may not enjoy hearing about what you found...
- C:   &o  Return to Xenith and tell him the news. He probably won't like it...
+&7&o  You've seen horrible things beneath the Spire. Xenith may not enjoy hearing about what you found...
+ C:   &7&o  Return to Xenith and tell him the news. He probably won't like it...
  Xenith
   &6[Xenith]&r
  Y-you came back! Did you find... did you find them? What's left... of them..?
-&o  No matter how harsh your answer is, you are sure he will be strong enough to endure it.
+&7&o  No matter how harsh your answer is, you are sure he will be strong enough to endure it.
   &5[I'm sorry, Xenith, but they're dead and I'm afraid we can't bury them properly either. Not in their... state.]&r
   &6[Xenith]&r
- N-no... Damn it! Damn it, damn it! I... Plain &o  He closes his eyes, as if trying to escape the visions of his crew.
+ N-no... Damn it! Damn it, damn it! I... Plain &7&o  He closes his eyes, as if trying to escape the visions of his crew.
   &5[They were... were be- Sorry, Xenith, I can't say it. They are dead.]&r
   &6[Xenith]&r
  (MISSING)
@@ -84,7 +84,7 @@ servant...
  W-what a fool I am...
   &6[Xenith]&r
  Please, tell me the whole story. I must know what happened.
-&o  He opens his eyes, his gaze set directly at you.
+&7&o  He opens his eyes, his gaze set directly at you.
   &5[(Tell him about Sacrificial Chamber, the battle with the Nightseer, and the visions of a comet.)]&r
   &6[Xenith]&r
  So that's it... Crazy lunar fanatics, sacrifices, stars... and for what? Why would they do that?..
@@ -93,12 +93,12 @@ servant...
  You're right, I hope we will. You... you mentioned a comet, right? Like a fallen star? Before we ventured in that damnable
 place, my crew and I sailed south and saw a giant hole beneath the water... If the stories are true, something strange lies
 beneath   Link   Aphelion Isle Aphelion_Isle wikilink  . Perhaps, you should seek answers there?
-&o  Find   Link   Andromeda Andromeda wikilink in   Link   Cathedral of the Deep Cathedral_of_the_Deep wikilink beneath   Link
+&7&o  Find   Link   Andromeda Andromeda wikilink in   Link   Cathedral of the Deep Cathedral_of_the_Deep wikilink beneath   Link
 Aphelion Isle Aphelion_Isle wikilink  .
  After reaching the comet:
   &6[Andromeda]&r
  Come...     &3Talk... to me...&r
-&o  Talk with Andromeda.
+&7&o  Talk with Andromeda.
  Andromeda
   &6[Andromeda]&r
  Greetings...     &3[Player]...&r
@@ -184,7 +184,7 @@ my brethren can...   ong   &4feast...&r
  You say this... but when the... time comes... will you think... the... same?... When... you took... a part of me...     &3The
 last... of my... essence...&r I felt... hope... But... would... hope alone... be enough...     &3Find her...&r See... for
 yourself... I shall... light... your way...     &3for the last... time...&r
-&o  Another vision flashes in your mind. You can see the door and the familiar face of Professor Marl. You instantly recognize
+&7&o  Another vision flashes in your mind. You can see the door and the familiar face of Professor Marl. You instantly recognize
 this place. You've been there before.
   &5[This... door. I recalled it being on a small isle near Sierhaven... What would I find there?]&r
   &6[Andromeda]&r
@@ -193,8 +193,8 @@ seal for you... now... I fade...
   &5[Thank you for helping me... even if I won't give you what you want.]&r
   &6[Andromeda]&r
  Remember... [Player]...     &3Nothing... lasts forever... Even The Stars... can't be... eternal...&r
-&o  A faint white light envelops you again, carrying you away from the Star...
- C:   &o  Head towards the beacon island and talk with Professor Marl.
+&7&o  A faint white light envelops you again, carrying you away from the Star...
+ C:   &7&o  Head towards the beacon island and talk with Professor Marl.
  Professor Marl
   &6[Professor Marl]&r
  Ah, it is you again, young one. I'm afraid we've been here far too long... And still not achieved anything. I think it's time
@@ -203,7 +203,7 @@ for us to depart and tell The King that our research failed.
   &6[Professor Marl]&r
  Hm? Why would you be able to? We have been trying for weeks!
   &5[(Tell him about your conversation with Andromeda)]&r
-&o  He listens to you carefully, hanging on to every detail. As you end your speech, he looks at the door and then at you.
+&7&o  He listens to you carefully, hanging on to every detail. As you end your speech, he looks at the door and then at you.
   &6[Professor Marl]&r
  This is, for the lack of proper words, bizarre... Dying comet? The seal? I doubt anyone could make that up, even if they
 wanted. That changes things, young one. What do we do?
@@ -212,8 +212,8 @@ it.]&r
   &6[Professor Marl]&r
  Fine, young one. Have it your way. We'll be here for a while if you change your mind.
   &5[I'm not sure, Professor, perhaps I should bring the Shard of Andromeda the-]&r
-&o  You both hear a sound of circling gears coming from inside the door.
-&o  The door opens before you. You can see a long staircase down.
+&7&o  You both hear a sound of circling gears coming from inside the door.
+&7&o  The door opens before you. You can see a long staircase down.
   &6[Professor Marl]&r
  How... What happened? Is this... real? I can't believe my eyes! I don't know what you did, but we finally made progress!
 Quickly, let's head down and see what we can find there!
@@ -226,7 +226,7 @@ Quickly, let's head down and see what we can find there!
   &5[If you say so...]&r
   &6[Professor Marl]&r
  Let's go!
-&o  Talk with Professor Marl.
+&7&o  Talk with Professor Marl.
  Professor Marl (Tomb)
   &6[Professor Marl]&r
  This place is magnificent! I can't believe it has been under our noses for so many years!
@@ -234,7 +234,7 @@ Quickly, let's head down and see what we can find there!
   &6[Professor Marl]&r
  If I had to guess, young one, I would say this is the tomb. Given your speech earlier, I assume this tomb belongs... to Aurora.
 There seems to be another door in this room. We should examine it...
-&o  A loud voice echoes through the room. The air around you gets cold.
+&7&o  A loud voice echoes through the room. The air around you gets cold.
   &6[Starseeker]&r
  ...Long time ago, a seal was created to contain what we thought was our greatest treasure. We fought so hard to keep it
 contained. Countless lives were lost, and a seemingly endless war grew fiercer...
@@ -249,7 +249,7 @@ end, we did what we must to ensure our safety...
   &6[Starseeker]&r
  ...She claimed the shard of a fallen comet and soon it was time for us to depart. She picked the most devoted of us to follow
 her there, to her Tomb. Ever since then, we have guarded our prophet's resting place...
-&o  The air in the room gets even colder.
+&7&o  The air in the room gets even colder.
   &6[Starseeker]&r
  ...Yet, as time goes on, people like you keep coming to this island. You can't just turn back, can you? Always so eager, always
 needing to seek the truth. Decide who's right and who's wrong...
@@ -261,18 +261,18 @@ this little island, just so her sleep remains undisturbed. This is the end of th
  ENOUGH!!! I will NOT allow you to go any further! YOU WILL DIE HERE! I swear on the name of OUR PROPHET! This is the last time
 you see the light of day! STARS! Lend me your strength and watch as I destroy this FOOL!
  After beating Starseeker a second time:
-&o  He falls to the ground, blood trickling down his chest.
+&7&o  He falls to the ground, blood trickling down his chest.
   &6[Starseeker]&r
  Was this all for nothing?.. Aurora... I am sorry... I couldn't keep my promise... I am... Useless...
-&o  As the Starseeker's body is consumed by darkness, the vision dissipates around you and once again you find yourself in
+&7&o  As the Starseeker's body is consumed by darkness, the vision dissipates around you and once again you find yourself in
 Aurora's Tomb.
   &6[Starseeker]&r
  I... shall finally see... the... great... broken... beyond...
- C:   &o  Examine the Tomb.
+ C:   &7&o  Examine the Tomb.
  After grabbing the book from the chest:
  INTO THIN AIR COMPLETE! Xenith may want to hear your revelations regarding the cult.
  After leaving the tomb:
-&o  It seems that this nightmare is over. Now, you can return to Xenith and tell him everything you learned.
+&7&o  It seems that this nightmare is over. Now, you can return to Xenith and tell him everything you learned.
  Xenith
   &6[Xenith]&r
  Please, if you ever figure it out, let me know. I must know what my crew... my friends... died for. Until then, I'll remain
@@ -281,7 +281,7 @@ here.
   &6[Xenith]&r
  You have? Please, do tell.
   &5[Let me start with the husk of a dead star beneath Aphelion Isle...]&r
-&o  You tell him about your meeting with Andromeda, about a tomb, hidden behind the seal and Aurora herself.
+&7&o  You tell him about your meeting with Andromeda, about a tomb, hidden behind the seal and Aurora herself.
   &6[Xenith]&r
  So this is it. My friends died because of some power hungry monster...
   &5[I am very sorry for your loss, Xenith. I can only hope they're at peace now.]&r

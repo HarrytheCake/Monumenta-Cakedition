@@ -1,5 +1,5 @@
 &r
-&o  Speak with Bhairavi in   Link   Nyr Nyr wikilink
+&7&o  Speak with Bhairavi in   Link   Nyr Nyr wikilink
  Bhairavi
   &6[Bhairavi]&r
  Welcome back, ___. I've been investigating into Kaul and the Yellow Wool with my team. Do you have any questions for me?
@@ -13,7 +13,7 @@ made some very interesting statements under the effects of a truth serum, accord
   &5[I'd love to.]&r
   &6[Bhairavi]&r
  I'll see you in Highwatch then, __.
-&o  Meet Bhairavi in the   Link   Highwatch Highwatch wikilink Jail to interrogate the Captured Warden
+&7&o  Meet Bhairavi in the   Link   Highwatch Highwatch wikilink Jail to interrogate the Captured Warden
  Bhairavi
   &6[Bhairavi]&r
  Hi there ___! Glad to see you made it. I've been doing some work trying to interrogate your friend here while my assistant
@@ -36,7 +36,7 @@ the relic the Sons of the Forest have could allow them to locate him - and maybe
 seeking is guarded in the basement of the fortress. Please avoid the main fortress. It is far too dangerous. Fortunately, our
 prisoner mentioned an old ruined tunnel north of the fort that may lead down there. Be quick and show no mercy. The Sons are a
 stain on the Valley.
-&o  Head into the tunnel at 955 105 120 to gather the artifact. Report back to Bhairavi on what you find
+&7&o  Head into the tunnel at 955 105 120 to gather the artifact. Report back to Bhairavi on what you find
  Bhairavi
   &5[I don't know how it works, but I've seen it before.]&r
   &6[Bhairavi]&r
@@ -48,7 +48,7 @@ stain on the Valley.
   &6[Bhairavi]&r
  So you were attacked by a man, this relic was taken from you, and you woke up in Sierhaven? I wonder how you got there... Who
 were you, ___? Who found you? I think we need to go talk to Commander Haynes upstairs. Maybe she will know more.
-&o  Speak with Commander Haynes
+&7&o  Speak with Commander Haynes
  Commander Haynes
   &6[Bhairavi]&r
  Thank you, Commander. We are here seeking information about the Sons of the Forest and ___ themself... Did any of the King’s
@@ -67,7 +67,7 @@ they were found in a small ruin overlooking the large pit with a 'shrine' inside
  Thanks for your help Haynes.
   &6[Commander Haynes]&r
  Of course. It is my honor.
-&o  Investigate the ruins overlooking the pit near   Link   Farr Farr wikilink  . Click the button on the bedrock under the
+&7&o  Investigate the ruins overlooking the pit near   Link   Farr Farr wikilink  . Click the button on the bedrock under the
 Link   Kaul Kaul wikilink altar and make your way through the ruins. Upon completing the puzzles, avoid the mobs until Bhairavi
 teleports you away. Speak with Commander Haynes
  Bhairavi
@@ -88,17 +88,17 @@ can hope!
   &6[Bhairavi]&r
  If I had to guess, I’d say it’s pulling you toward the Cursed Forest. I don’t know what you’ll find in there, so be careful.
 I’ll send Starn and Brayllur after you to help and hopefully everything will work out. Good luck and be safe.
-&o  Make your way through the cursed forest until you find the yellow lobby teleporter at 1200 71 110
+&7&o  Make your way through the cursed forest until you find the yellow lobby teleporter at 1200 71 110
  Brayllur
   &6[Starn]&r
  Wait what? What's going on here? The constructural magic should have finished the lobby by now. And what are these giant
 spikes. SoftBreak   &6[Brayllur]&r Dark magic in air. Can smell it. It stink.
   Color|grey|[ange Figures]&r
  You will go no futher!
-&o  One of the warriors fires a blast directly at Starn, killing him.
+&7&o  One of the warriors fires a blast directly at Starn, killing him.
   &6[Brayllur]&r
  STARN! HOW COULD YOU! DIE YOU SCUM!
-&o  As you finish off the last of the warriors, the large spikes begin to disappear and the constructural magic resumes. The
+&7&o  As you finish off the last of the warriors, the large spikes begin to disappear and the constructural magic resumes. The
 lobby quickly finishes building itself.
   &6[Brayllur]&r
  Starn gone... How?
@@ -110,6 +110,6 @@ lobby quickly finishes building itself.
  Right, yes. You are. But he is gone. Must get wool... For Starn.
   &6[Brayllur]&r
  Found this on floor after Sons ran scared. You need reward before fight for wool...
-&o  SOUL OF THE FOREST COMPLETE! Awarded a   Link   Yellow Vernal_Nightmare wikilink Key, Full Access to the   Link   Yellow
+&7&o  SOUL OF THE FOREST COMPLETE! Awarded a   Link   Yellow Vernal_Nightmare wikilink Key, Full Access to the   Link   Yellow
 Dungeon Vernal_Nightmare wikilink Lobby Trader, 2   Link   Totem of the Forest Totem_of_the_Forest wikilink  , 10 Anvils, and 64
 Arrows of Weakness

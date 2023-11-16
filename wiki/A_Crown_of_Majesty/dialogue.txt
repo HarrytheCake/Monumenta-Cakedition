@@ -22,8 +22,8 @@ the swamp, and they're not the best but I do have some maps that should help if 
   &6[Aimee]&r
  Aww, I was hoping I could count on you. I didn't want to ask anyone else because it's supposed to be a secret project.  Header
 section
-&o  Head back to Aimee once you grab the garnet from the   Link   Eastern Mineshaft Eastern_Mineshaft wikilink  , malachite from
-the   Link   Southeastern Mineshaft Southeastern_Mineshaft wikilink  , and onyx from the   Link   Southern Mineshaft
+&7&o  Head back to Aimee once you grab the garnet from the   Link   Eastern Mineshaft Eastern_Mineshaft wikilink  , malachite
+from the   Link   Southeastern Mineshaft Southeastern_Mineshaft wikilink  , and onyx from the   Link   Southern Mineshaft
 Southern_Mineshaft wikilink  . Header section_1
  Aimee SoftBreak  Coordinates: -760, 106, 19
   &6[Aimee]&r
@@ -32,5 +32,5 @@ like the last one! I'll get working on the crown right away!
   &5[Be careful, I think that Onyx might be cursed]&r
   &6[Aimee]&r
  Cursed? Don't be silly, there's no such thing as curses. They're a legend, like dragons and Septum.
-&o  A CROWN OF MAJESTY COMPLETE! Awarded Jeweled Tiara and 128 Enchanting Bottles.
+&7&o  A CROWN OF MAJESTY COMPLETE! Awarded Jeweled Tiara and 128 Enchanting Bottles.
 Link   Category:Quests Category:Quests wikilink

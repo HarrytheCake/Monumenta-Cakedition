@@ -2,7 +2,7 @@
   WorkInProgress|Coordinates, puzzle solutions, and double checking.&r
  Solution to puzzles:   Link   https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_III
 https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_III
- C:   &o  You found another one of Selari's journals. Journey back into his workshop and see what you can find. Remember to
+ C:   &7&o  You found another one of Selari's journals. Journey back into his workshop and see what you can find. Remember to
 bring some uncharged tesseracts with you.
  After entering the light blue room:
   &3THE POWER OF MAGIC&r

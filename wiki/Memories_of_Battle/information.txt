@@ -1,3 +1,3 @@
-prerequisites = &3Lost in My Mind&r, Completion of Wave 10 of the &3Arena of TerthArena&r
- NPC: Jeremiah Coords: -924, 107, -104
- King's Valley Sierhaven
+Pre-req: &3Lost in My Mind&r, Completion of Wave 10 of the &3Arena of TerthArena&r
+ NPC: Jeremiah &1Coords:&r -924, 107, -104
+&2 King's Valley&r Sierhaven

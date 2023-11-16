@@ -19,9 +19,9 @@ anything music related, bring it back to me.
   &5[I've got other things to do right now.]&r
   &6[Halid]&r
  I hope you reconsider, child.
-&o  [1/2]: Investigate the   Link   Ephemeral Corridors Ephemeral_Corridors wikilink  , the entrance to which lies within the
+&7&o  [1/2]: Investigate the   Link   Ephemeral Corridors Ephemeral_Corridors wikilink  , the entrance to which lies within the
 Link   Anthill Anthill wikilink  , for anything related to music.
-&o  [2/2]: Bring any record discs you find within back to Halid.
+&7&o  [2/2]: Bring any record discs you find within back to Halid.
  Link   Puzzle Solutions Guide#Roguelike Calibration Lock (Ephemeral Corridors dungeon puzzle)
 Puzzle_Solutions_Guide#Roguelike_Calibration_Lock_(Ephemeral_Corridors_dungeon_puzzle) wikilink
    In Ephemeral Corridors. You have to go through 3 different floors, each floor having 2 different subsets. In each subset
@@ -41,7 +41,7 @@ there are some rooms with disks. You must collect all 6, one from each subset, a
   &6[Halid]&r
  May I... see that?
   &5[(Hand him the record you found)]&r
-&o  He taps the disc with his finger, and a red light ripples out.
+&7&o  He taps the disc with his finger, and a red light ripples out.
   &6[Halid]&r
  I know not what magic you've found within the corridors you speak of, child... But this record... it calls out for me. Hold on
 to it for now and return when you're ready to begin. I require a moment myself.
@@ -62,7 +62,7 @@ this delaying. Plain  If you don't have a disk:
  If you bring any disk:
   &6[Halid]&r
  Let us being then.
-&o  He taps the disc rhythmically, and suddenly it shatters into a green light, enveloping him!  Plain  If you bring "Web-
+&7&o  He taps the disc rhythmically, and suddenly it shatters into a green light, enveloping him!  Plain  If you bring "Web-
 covered Classics":
   &6[Halid]&r
  Lodestar's Folly... Do you know about Erix, the last beacon-bearer? His pride was his own downfall, and nearly the downfall of

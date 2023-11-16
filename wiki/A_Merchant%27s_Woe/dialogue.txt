@@ -1,5 +1,5 @@
 &r
-&o  Talk to Riaz's supplier to see where his goods are.
+&7&o  Talk to Riaz's supplier to see where his goods are.
  Riaz
   Coordinates: [-98, 154, 459]
    &6[Riaz]&r
@@ -15,7 +15,7 @@ canyon by now. Ask him if he has my goods!
   &5[Sure, I'd be happy to help!]&r
   &6[Riaz]&r
  Fantastic! Be sure to bring the goods back to me!
-&o  C: Go check on Riaz's supplier at the outpost. You can not get to it from   Link   Cinder's Roost Cinder's_Roost wikilink
+&7&o  C: Go check on Riaz's supplier at the outpost. You can not get to it from   Link   Cinder's Roost Cinder's_Roost wikilink
 directly, but the entrance is in the valley below it.
  Supplier Anebos
   Coordinates: For house: [116, 79, 639] For Npc: [127, 77, 632]
@@ -32,8 +32,8 @@ directly, but the entrance is in the valley below it.
   &5[Alright. Thank you for your help!]&r
   &6[Supplier Anebos]&r
  I hope you find them!
-&o  C: [1/2]: Retrieve the supplies from   Link   Rockspider Cavern Rockspider_Cavern wikilink  .
-&o  C: [2/2]: Once you have the supplies return to Riaz.
+&7&o  C: [1/2]: Retrieve the supplies from   Link   Rockspider Cavern Rockspider_Cavern wikilink  .
+&7&o  C: [2/2]: Once you have the supplies return to Riaz.
  Riaz
   &6[Riaz]&r
  By Ishnir! You did it! You've retrieved them!

@@ -1,5 +1,5 @@
 &r Header start_of_quest  Start of Quest
-&o  Talk to Guard Timmeh and attend Countess Corrine's exclusive banquet in place of Bethenny.
+&7&o  Talk to Guard Timmeh and attend Countess Corrine's exclusive banquet in place of Bethenny.
  Bethenny
   Coordinates: [-1489, 101, 923]
    &6[Bethenny]&r
@@ -17,7 +17,7 @@
   &6[Bethenny]&r
  Take good care of that. I'll let Guard Timmeh know you're going for me. He will lead you to where the banquet is being held.
 Have a good time!
-&o  C: Talk to Guard Timmeh and enter the Banquet.
+&7&o  C: Talk to Guard Timmeh and enter the Banquet.
  Guard Timmeh
   Coordinates: [-494, 98, 943]
    &6[Guard Timmeh]&r
@@ -143,8 +143,8 @@ functions.
  I see I've caught your attention! I'm a painter from the Narsen Empire, but I painted the portrait of the Queen of Chillwind!
 Since then, I've been quite popular in Chillwind!
  After talking to everyone:
-&o  C: [1/2] Talk to Baroness Corinne.
-&o  C: [2/2] If you leave the party for any reason, you can return to it by talking to Guard Timmeh.
+&7&o  C: [1/2] Talk to Baroness Corinne.
+&7&o  C: [2/2] If you leave the party for any reason, you can return to it by talking to Guard Timmeh.
  Countess Corinne
   &6[Countess Corinne]&r
  I see you’ve acquainted yourself with everyone.
@@ -163,7 +163,7 @@ hopes they can also share that success. Not everyone here is like that though. J
   &6[Countess Corinne]&r
  Well it’s about time for the banquet to start, so just get comfortable. I need to get something from my study. I’ll chat later.
    &3After Baroness Corinne goes to her study, the lights suddenly cut out.&r
-&o  C: [1/2] Talk to Guard Timmeh to learn more about what happened.
+&7&o  C: [1/2] Talk to Guard Timmeh to learn more about what happened.
  Guard Timmeh (Banquet)
   &6[Guard Timmeh]&r
  [Player] right? It seems that the Countess was killed at her own banquet. I've heard a lot of good things about you so I kept
@@ -183,7 +183,7 @@ Could you help me?
   &5[Sure!]&r
   &6[Guard Timmeh]&r
  That would help a lot! You can start by examining the Countess's body. Let me know if you find anything.
-&o  C: [1/2] Take a look at the crime scene and find some clues.
+&7&o  C: [1/2] Take a look at the crime scene and find some clues.
   Countess's dead body
  The Countess lies on the ground, she is covered in blood.
   &5[Check her back.]&r
@@ -207,7 +207,7 @@ get a fingerprint from the weapon.
 things that people have touched. If we find a match then it will be easier to narrow the suspect list down. Here, use this to
 write down any notes you think are important.  Header looking_for_clues_and_talking_to_everyone  Looking for clues and talking
 to everyone
-&o  [1/2] Look around and see if you can find objects to fingerprint using the kit. If you lose the kit, Guard Timmeh can give
+&7&o  [1/2] Look around and see if you can find objects to fingerprint using the kit. If you lose the kit, Guard Timmeh can give
 you another one.
  Talking before all clues are found:
  Alyssa
@@ -301,7 +301,7 @@ the painting.&r
  Aha! There is a match! Hmm... But we don't know who this print belongs to... Can you go talk to some people and find out? We
 should be trying to find out which item belonged to whom and maybe even look for a reason people might have wanted the Countess
 dead.  Header talking_to_everyone_to_find_the_killer  Talking to everyone to find the killer
-&o  C: [1/2]: Talk to the banquet attendees and find out who owned what item and where everyone was at the time of the murder.
+&7&o  C: [1/2]: Talk to the banquet attendees and find out who owned what item and where everyone was at the time of the murder.
 Once you think you know who the killer is, talk to Guard Timmeh.
  Jerry
   &6[Jerry]&r
@@ -541,7 +541,7 @@ I'll detain him immediately!
   &6[Guard Timmeh]&r
  Okay, think carefully. This is not easy.
  After catching the killer:
-&o  C: Talk to Guard Timmeh.
+&7&o  C: Talk to Guard Timmeh.
  Jerry (Prison)
   &6[Jerry]&r
  Grrr... If she hadn't found out, I wouldn't have had to kill her...

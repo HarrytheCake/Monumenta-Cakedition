@@ -1,6 +1,6 @@
 &r
   WorkInProgress|Missing a line of dialogue of asking Sam Ludvic to repeat.&r
-&o  Destroy Marshall Ludvic's coffee so he'll finally sleep.
+&7&o  Destroy Marshall Ludvic's coffee so he'll finally sleep.
  Sam Ludvic
   Coordinates: [-1599, 106, 1007]
    &6[Sam Ludvic]&r
@@ -18,19 +18,19 @@ bought that barrel of it from the isles, he's been running around the city worki
  Y'know, I'm disappointed, but I've got to respect that level of caring about a beverage.
   &5[This seems like a bad idea.]&r
   &6[Sam Ludvic]&r
- I- Bu- Wh- Plain &o  He sighs.
+ I- Bu- Wh- Plain &7&o  He sighs.
   &6[Sam Ludvic]&r
  Yeah, probably. Guess I'll just wait until four in the morning, when he finally comes back and stays for an hour...
   &5[I'm in; sounds like you need the help.]&r
   &6[Sam Ludvic]&r
  Y'know, I knew I could count on you. Let's start with the easy approach. You look soldiery- go see if his squire will let you
 into his office.
-&o  C: See if Squire Tano will let you into the Marshall's office.
+&7&o  C: See if Squire Tano will let you into the Marshall's office.
  Squire Tano
   Coordinates: [-1604, 106, 1016]
    &6[Squire Tano]&r
  Sorry, I saw you talking to Sam over there. I know he misses the Marshall, but I still can't let either of you into his office.
-&o  C: Talk to Sam to see what he needs for his plan to destroy the Marshall's coffee.
+&7&o  C: Talk to Sam to see what he needs for his plan to destroy the Marshall's coffee.
  Sam Ludvic
   &6[Sam Ludvic]&r
  Y'know, I saw that coming. Alright, easy plan didn't work, so on to the ridiculous plan. I need you to gather some materials: a
@@ -55,11 +55,11 @@ lucky and he'll just give you one.
  Y'know, gloop. A bouncy, slimy kind of thing. There's some cracks in the floor nearby, and, while we wouldn't be able to put a
 whole chunk of slime there, we could pour gloop into the cracks! Not sure I've ever heard of that anywhere in the Isles though-
 seems like it's more of a swampy kind of thing.
-&o  C: [1/4] Sam needs a   Link   Steel Woodcutter Steel_Woodcutter wikilink for his plan. If you don't already have one,
+&7&o  C: [1/4] Sam needs a   Link   Steel Woodcutter Steel_Woodcutter wikilink for his plan. If you don't already have one,
 perhaps one is lying around somewhere.
   Clear the local PoIs till you loot one from a chest. Or follow the compass to   Link   Smuggler's Cabin Smuggler's_Cabin
 wikilink  , it has a chest that will always have a Steel Woodcutter.
- &o  C: [2/4] Sam needs a Trebuchet Stone for his plan. Perhaps Bombardier Marty can give you one?
+ &7&o  C: [2/4] Sam needs a Trebuchet Stone for his plan. Perhaps Bombardier Marty can give you one?
   Talk to the Bombardier.
  Bombardier Marty
   Coordinates: [-1536, 94, 1023]
@@ -73,7 +73,7 @@ Deal?
   &5[Deal]&r
   &6[Bombardier Marty]&r
  Alright, here it is!
-&o Code  A tomb's one of these, then add an "L". LineBreak &o Code  You won't find it up high, 'cause it certainly fell.
+&7&o Code  A tomb's one of these, then add an "L". LineBreak &7&o Code  You won't find it up high, 'cause it certainly fell.
 LineBreak Code  Bring me one of those and a boulder's all yours!
   A tomb's one of these - Grave.
  Add an "L" - Grave + L = Gravel.
@@ -82,9 +82,9 @@ LineBreak Code  Bring me one of those and a boulder's all yours!
   Bombardier Marty
   &6[Bombardier Marty]&r
  Yep, that's the block! With a head that good on your shoulders, I know I can trust you with this.
- &o  C: [3/4] Sam needs Gloop? That sounds familiar. Perhaps a boat trip is in order.
+ &7&o  C: [3/4] Sam needs Gloop? That sounds familiar. Perhaps a boat trip is in order.
   Gloop can be found in the R1 PoI   Link   Witch Village Witch_Village wikilink  . Gotten by killing a slime there.
- &o  C: [4/4] Once you have all three items bring them back to Sam Ludvic.
+ &7&o  C: [4/4] Once you have all three items bring them back to Sam Ludvic.
  Sam Ludvic
   &6[Sam Ludvic]&r
  Now that you've found everything so quickly, we're good to go! Let me know when you're ready, and then we'll enact my perfect
@@ -92,7 +92,7 @@ plan. You, uh, came armed, right?
   &5[I'm ready.]&r
   &6[Sam Ludvic]&r
  Great! Follow me!
-&o  C: Work with Sam to enact his ridiculous Scheme.
+&7&o  C: Work with Sam to enact his ridiculous Scheme.
  Sam Ludvic (Quest Area)
   &6[Sam Ludvic]&r
  First up, let's pour the gloop here and...
@@ -125,7 +125,7 @@ into that hole near his office, roll across the shelf, and then fall off and cru
  ... Y'know. That could've gone better.
   &6[Squire Tano]&r
  Okay, this is ridiculous. I'll let you into the office- just... just never do anything this ridiculous again.
-&o  C: Run into the Marshall's office and pour out his coffee.
+&7&o  C: Run into the Marshall's office and pour out his coffee.
  Sam Ludvic (Upstairs Quest Area)
   &6[Squire Tano]&r
  Glad this farce is over with. The Marshall will be furious about his table; at least he'll probably forget about the coffee.

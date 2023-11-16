@@ -22,7 +22,7 @@ unearth below our very feet! So, tell me: would you like to go on an adventure w
  Brilliant! We'd best get moving then. I'll need to gather some supplies, but you can get a head start by exploring the sewers
 for a way into the empire ruins. Izzy tells me a crewman of yours has been setting up camp down there; go check if he's seen
 anything.
-&o  Search out Samwell in the sewers.
+&7&o  Search out Samwell in the sewers.
  Samwell
   &6[Samwell]&r
  Hi      &5[Have you seen any hints of some old ruins down here?]&r
@@ -33,7 +33,7 @@ anything.
   &6[Samwell]&r
  FINALLY! Yeah, I saw something suspicious down this tunnel: an odd sort of whirlpool that goes down into a lit room. If you're
 brave enough to jump in, I'll follow you.
-&o  Head into the deeper parts of the sewers and search out an entrance to the old ruins.
+&7&o  Head into the deeper parts of the sewers and search out an entrance to the old ruins.
  Historian Rhodes
   &6[Historian Rhodes]&r
  Well done finding this place! You've already proven your value on this team. That room over there looks packed to the brim with
@@ -67,7 +67,7 @@ of there if you bring us to this Viridian capital. Deal?
   &6[Samwell]&r
  This is beyond frustrating. I left my comfy life in Nyr with the promise of gold and riches, but every time we end up with
 nothing. We'd better find a way to make this next adventure worth it.
-&o  Find First Mate Jones's ship and talk to Jones.
+&7&o  Find First Mate Jones's ship and talk to Jones.
  First Mate Jones
   &6[First Mate Jones]&r
  Finally, ye 'ave shown up- I was about to send some men to bring ye here. Well, let's not dilly-dally- are ye ready to set sail

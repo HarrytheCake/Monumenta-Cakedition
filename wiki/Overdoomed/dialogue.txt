@@ -1,6 +1,6 @@
 &r
   WorkInProgress|Poison Cypress Ending&r
-&o  Aggressively reclaim an overdue book for Archivist Saanavi.
+&7&o  Aggressively reclaim an overdue book for Archivist Saanavi.
  Archivist Saanavi can be found in the library section of the Academy. The library section is at the bottom of the staircase.
  Archivist Saanavi
   Coordinates: [-1826, 127, -83]
@@ -27,7 +27,7 @@ with?
   &6[Archivist Saanavi]&r
  I knew I could count on you. He goes by Cypress. Like most of the older, more arrogant students, you won't find him in either
 class or the library. Perhaps check the bar in town, that sounds precisely where book-hoarding scum would hang out.
-&o  C: Find Cypress at the bar and ask him where the book is.
+&7&o  C: Find Cypress at the bar and ask him where the book is.
  Cypress
   Coordinates: [-1784, 133, -20]
    &6[Cypress]&r
@@ -52,8 +52,8 @@ completely immortallll! Unlesssh, like my drink is poisoned or ssshomething, heh
    &6[Cypress]&r
  *Hurkk* Alright, you win. I lossht the book in the Mountain Market, to the sshoutheassht. It'ss yours, jussht leave me to my
 hangover...
-&o  C: [1/2] Retrieve the book from the   Link   Mountain Market Mountain_Market wikilink  .
-&o  C: [2/2] Once you have the book take it to Saanavi.
+&7&o  C: [1/2] Retrieve the book from the   Link   Mountain Market Mountain_Market wikilink  .
+&7&o  C: [2/2] Once you have the book take it to Saanavi.
  Archivist Saanavi
   &6[Archivist Saanavi]&r
  Welcome, welcome to the grand library, the greatest archive of knowledge in all of the Isles. Is there anything I can help you

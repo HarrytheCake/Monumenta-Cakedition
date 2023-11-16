@@ -1,7 +1,7 @@
 &r
   WorkInProgress|Missing pre-Xenophobia dialog&r
-&o  Help the Steelmeld researchers find a way to the   Link   Architect's Ring Architect's_Ring wikilink  .
-&o  C: Speak to Jennis.
+&7&o  Help the Steelmeld researchers find a way to the   Link   Architect's Ring Architect's_Ring wikilink  .
+&7&o  C: Speak to Jennis.
  Researcher Jennis
   Coordinates: [-820 97 1332]
    &6[Researcher Jennis]&r
@@ -37,7 +37,7 @@ adventuring type, so if you're willing to help us out where needed, you could jo
   &5[The possibility of exciting new adventures in a far off land? Count me in!]&r
   &6[Researcher Jennis]&r
  Wonderful! We've got one thing left to see in this town before we head out, so let's head over to the teleporter hub!
-&o  C: Speak to Keilick.
+&7&o  C: Speak to Keilick.
  Researcher Keilick
   &6[Researcher Keilick]&r
  I suppose I should inform you of why we came to this town.
@@ -83,7 +83,7 @@ risk of maybe losing a limb or two. Or getting lost somewhere between dimensions
   &8Keilick smashes a small stone at his feet, causing a sudden flash of light.&r
   &6[Researcher Keilick]&r
  Well this definitely is not the Ring. I'll need some time to recalibrate the runes and- OH MY GOD SHUT THESE GHASTS UP!
-&o  C: Find a way to quite the ghasts.
+&7&o  C: Find a way to quite the ghasts.
  Researcher Jennis (Galos)
   &6[Researcher Jennis]&r
  Hm... I've read about a place like this before. I think we somehow landed in Galos, a country known for its swamps so toxic
@@ -97,7 +97,7 @@ more quiet approach...
   &6[Researcher Keilick]&r
  THAT'S IT! I'VE HAD ENOUGH!
   &8Keilick smashes a small stone at his feet, causing a sudden flash of light.&r
-&o  C: Explore around the hellish island and keep guard from any hostile enemies.
+&7&o  C: Explore around the hellish island and keep guard from any hostile enemies.
   &6[Researcher Jennis]&r
  Oh my... What is this hellish place? And are those islands... floating?!
   &6[Researcher Keilick]&r
@@ -120,7 +120,7 @@ keep guard until I can make another batch of aportation runes. QUIETLY THIS TIME
   &6[Researcher Keilick]&r
  WHAT?!?! How are we back here?! This definitely makes no sense anymore. Plus I'm quickly running out of rune supplies... The
 next one MUST be correct, we can't afford to waste any more.
-&o  C: Speak to Jennis.
+&7&o  C: Speak to Jennis.
  Researcher Jennis
   Coordinates: [-820 97 1332]
    &6[Researcher Jennis]&r
@@ -140,7 +140,7 @@ could ask anyone in the Congress anymore about his whereabouts...
   &5[What are you talking about? He heads a library in Lowtide, over in the Valley.]&r
   &6[Researcher Jennis]&r
  Are you kidding?! You mean you already knew of him AND his location? That's wonderful news! Let's go ask him then!
-&o  C: Head to the Lowtide Library in the King's Valley to seek out Professor Walthan.
+&7&o  C: Head to the Lowtide Library in the King's Valley to seek out Professor Walthan.
  Professor Walthan
   Coordinates: [703 75 539]
    &6[Walthan]&r
@@ -173,7 +173,7 @@ books sold!
   &5[They're even botanists like you - kinda... Just think of all the fame and glory you could gain from this opportunity!]&r
   &6[Walthan]&r
  Okay fine, I'll break my silence just this one more time. Just lead me to your researcher friends, and I'll help you out.
-&o  C: Return back to Mistport to see the researchers.
+&7&o  C: Return back to Mistport to see the researchers.
   &6[Researcher Keilick]&r
  So I hear you signed away part of our publishing credit... I don't exactly like it, but if it gets us to the Ring, I guess I
 can swallow my pride a bit.
@@ -234,7 +234,7 @@ of... Nevermind, I'm trailing off.
   &5[So by combining the power of aportation with a compass that can never be wrong...]&r
   &6[Professor Walthan]&r
  You have yourself a one way ticket to the Ring!
-&o  C: Speak to Keilick.
+&7&o  C: Speak to Keilick.
  Researcher Keilick (Mistport)
   &6[Researcher Keilick]&r
  Alright, so we have the secret ingredient now, so to say. Are you ready to give this one more go?

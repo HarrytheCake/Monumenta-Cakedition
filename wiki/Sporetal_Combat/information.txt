@@ -1,5 +1,5 @@
-prerequisites = * &3Unraveled&r
- NPC: Primirium Tybale Coords: -316 182 -672
- Architect's Ring Galengarde
+Pre-req: * &3Unraveled&r
+ NPC: Primirium Tybale &1Coords:&r -316 182 -672
+&2 Architect's Ring&r Galengarde
 Difficulty = Medium
 Length = Medium

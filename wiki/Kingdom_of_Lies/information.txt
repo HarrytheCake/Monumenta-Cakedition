@@ -1,4 +1,4 @@
-prerequisites = &3Bleeding Proof&r
+Pre-req: &3Bleeding Proof&r
 &3Rapacity&r
- NPC: Torren Coords: -150, 167, 417
- Celsian Isles Rahkeri
+ NPC: Torren &1Coords:&r -150, 167, 417
+&2 Celsian Isles&r Rahkeri

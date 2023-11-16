@@ -1,6 +1,6 @@
 &r
   WorkInProgress|Missing two dialogue branches&r
-&o  Go speak to Fred at his mobile research station in   Link   Breachpoint Breachpoint wikilink  .
+&7&o  Go speak to Fred at his mobile research station in   Link   Breachpoint Breachpoint wikilink  .
  Ancev
   Coordinates: [-740, 4, -177]
    &6[Ancev]&r
@@ -31,7 +31,7 @@ recent events are allowing whatever it is to emerge. Will you help us investigat
   &6[Ancev]&r
  Excellent. Fred has a small mobile research station set up upstairs, to the right. Go speak to him through it and he'll tell
 you more.
-&o  Speak to Fred at his mobile research station in   Link   Breachpoint Breachpoint wikilink  .
+&7&o  Speak to Fred at his mobile research station in   Link   Breachpoint Breachpoint wikilink  .
  Fred
   Coordinates: [-717, 9, -169]
    Color|Grey|As you approach, the fish shivers weirdly, then lets out a... puff of steam?&r
@@ -85,7 +85,7 @@ something important there.
   &5[I'll head right over.]&r
   &6[Fred]&r
  Splendid.
-&o  Meet up with Fred's contact, Sierhaven Smith, in the   Link   Twilight Ruins Twilight_Ruins wikilink  .
+&7&o  Meet up with Fred's contact, Sierhaven Smith, in the   Link   Twilight Ruins Twilight_Ruins wikilink  .
  Sierhaven Smith
   Coordinates: [553, 72, -107]
    &6[Sierhaven Smith]&r
@@ -119,7 +119,7 @@ seems to be locked away.
   &5[Maybe I'll try approaching. I've held the Gray Wool like Hekawt has. Perhaps it will let me in.]&r
   &6[Sierhaven Smith]&r
  (MISSING)
-&o  Investigate the Phylactery in   Link   Twilight Ruins Twilight_Ruins wikilink  .
+&7&o  Investigate the Phylactery in   Link   Twilight Ruins Twilight_Ruins wikilink  .
   Color|Grey|As you touch the glowing mass, a shimmering ripple spreads out, and it feels as if you've been transported
 somewhere else entirely...&r
   &6[Sierhaven Smith]&r
@@ -142,7 +142,7 @@ As Hekawt sinks into the darkness as well, the room returns to normal.<br>&r
  Hey! You're back and not dead! ...Right?
   &5[Wooooo! I'm a ghost and I'm here to haunt you!]&r
  *   &6[Sierhaven Smith]&r AHHHHHH
-&o  Return to Fred at his mobile research station in Breachpoint.
+&7&o  Return to Fred at his mobile research station in Breachpoint.
  Fred
   Coordinates: [-717, 9, -169]
    &6[Fred]&r
@@ -165,7 +165,7 @@ image. That doesn't seem very reasonable, does it?
  (MISSING dialogue if it exists at all)
   &6[Fred]&r
  Head over to Alnera and meet with the Pharaohs. It's time to kill Hekawt.
-&o  Talk to the Pharaoh's Guards to request a meeting.
+&7&o  Talk to the Pharaoh's Guards to request a meeting.
  Pharaoh's Guard
   Coordinates: [398, 7, 871]
    &6[Pharaoh's Guard]&r
@@ -176,7 +176,7 @@ image. That doesn't seem very reasonable, does it?
   Color|Grey|You nod and wait for an answer...&r
   &6[Pharaoh's Guard]&r
  Pharaoh Tyro Syl will meet you, [Player]. But not here. Above the palace is a quiet balcony. You might find him there.
-&o  Go up to the balcony and meet with Pharaoh Tyro Syl.
+&7&o  Go up to the balcony and meet with Pharaoh Tyro Syl.
  Pharaoh Taro Syl
   Coordinates: [399, 35, 831]
    &6[Pharaoh Tyro Syl]&r
@@ -199,7 +199,7 @@ ruins.
   &5[Thank you.]&r
   &6[Pharaoh Tyro Syl]&r
  May the blessings of Mauta be upon you.
-&o  Travel to the Moltan Treasure Vault, purchase a warped emblem from Ancev outside the Vault, slay Hekawt, then return to
+&7&o  Travel to the Moltan Treasure Vault, purchase a warped emblem from Ancev outside the Vault, slay Hekawt, then return to
 Ancev outside the vault.
  After slaying   Link   Hekawt Hekawt wikilink  :
  Ancev
@@ -207,7 +207,7 @@ Ancev outside the vault.
    &6[Ancev]&r
  You... you did it! Hekawt has been destroyed! I can't wait to see what this has done to the doorway! The Pharaohs will surely
 want to hear about this!
-&o  Return to Pharaoh Tyro Syl on the balcony in Alnera and give them the news of your success.
+&7&o  Return to Pharaoh Tyro Syl on the balcony in Alnera and give them the news of your success.
  Pharaoh Taro Syl
   Coordinates: [399, 35, 831]
    &6[Pharaoh Tyro Syl]&r

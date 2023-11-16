@@ -1,6 +1,6 @@
 &r
-&o  Listen to the instructions to find   Link   Galengarde Galengarde wikilink  .
-&o  C: What a beautiful port town! There has to be a dockmaster or someone who can help you figure out where to go next.
+&7&o  Listen to the instructions to find   Link   Galengarde Galengarde wikilink  .
+&7&o  C: What a beautiful port town! There has to be a dockmaster or someone who can help you figure out where to go next.
  Dockmaster Hromae
   Coordinates: [-471 40 -802]
    &6[Dockmaster Hromae]&r
@@ -28,7 +28,7 @@ hill to the Dichen capital of Galengarde.
   &6[Dockmaster Hromae]&r
  Wild. Well, head along the path then. When you get to Galengarde, it's going to be a bit overwhelming. Feel free to wander
 around, but you're going to need to find the Customs Office at some point. They'll set you straight. Nice meeting you.
-&o  C: Head to the Customs Office and find someone to help you.
+&7&o  C: Head to the Customs Office and find someone to help you.
  Customs Officer Linea
   Coordinates: [-374 79 -728]
    &6[Customs Officer Linea]&r
@@ -48,7 +48,7 @@ around, but you're going to need to find the Customs Office at some point. They'
   &5[Ugh... Bureaucrats...]&r
   &6[Customs Officer Linea]&r
  Enjoy your wait. There's some seats you can wait in nearby. Just swing at them and they'll let you sit...
-&o  C: Take a seat and... wait?
+&7&o  C: Take a seat and... wait?
   &8You sit down to wait. Too much time starts to pass and you begin to doze off... {...&r
  }
   Hail, hero... Pray thee hear me. I have been... trying so hard... to reach out... Harrakfar is... in... danger... and so... am
@@ -93,7 +93,7 @@ windlaunchers. They'll have some work for you and your little crew and perhaps c
   &5[Thank you?]&r
   &6[Customs Officer Linea]&r
  Welcome to Galengarde, 90451.
-&o  C: Head to the Centralized Contract Office to start working off your debt.
+&7&o  C: Head to the Centralized Contract Office to start working off your debt.
  Agent Naomi
   Coordinates: [-319 91 -633] (Way up is by TP Hub. [-307 81 -644])
    &6[Agent Naomi]&r
@@ -114,7 +114,7 @@ with one of our farmers, Abell.
   &5[I am on it.]&r
   &6[Agent Naomi]&r
  Return to me when you're all done.
-&o  C: Head to The Joure Barns and assist Abell.
+&7&o  C: Head to The Joure Barns and assist Abell.
  Abell
   Coordinates: [-257 73 -691]
    &6[Abell]&r
@@ -132,7 +132,7 @@ Wolfswood.
   &6[Abell]&r
  Ay, you've done it! Hourrah, merce! I'll send word to Naomi, with my thanks. Just press that button by the ladder to open the
 trapdoor.
-&o  C: Head back to Naomi for your reward!
+&7&o  C: Head back to Naomi for your reward!
  Agent Naomi
   Coordinates: [-319 91 -633] (Way up is by TP Hub. [-307 81 -644])
    &6[Agent Naomi]&r
@@ -141,7 +141,7 @@ trapdoor.
   &6[Agent Naomi]&r
  Ha! No. There's plenty more to be done, ami. Warden Dredsen in the Marketplace needs some help making some deliveries next.
 Could you go meet him there please?
-&o  C: Help Dredsen make deliveries in the Galengarde Marketplace.
+&7&o  C: Help Dredsen make deliveries in the Galengarde Marketplace.
  Warden Dredsen
   Coordinates: [-292 83 -659]
    &6[Warden Dredsen]&r
@@ -172,7 +172,7 @@ Crate - [-291 90 -687] LineBreak  Magic Supplies Crate - [-280 89 -678] LineBrea
   Coordinates: [-292 83 -659]
    &6[Warden Dredsen]&r
  Alos, there we are then. All done. Will let Naomi know you did your job well.
-&o  C: Head back to Naomi for your reward?
+&7&o  C: Head back to Naomi for your reward?
  Agent Naomi
   Coordinates: [-319 91 -633] (Way up is by TP Hub. [-307 81 -644])
    &6[Agent Naomi]&r
@@ -193,8 +193,8 @@ efficiently!
  After completing the race:
   &6[Agent Naomi]&r
  YOU DID IT! HOP BACK DOWN AND LET'S CHAT!
-&o  C [1/2]: That must be enough work by now. Go ask Naomi for your reward.
-&o  C [2/2]: Well, at least Naomi said that was the last task. It's time to talk to the Primirium.
+&7&o  C [1/2]: That must be enough work by now. Go ask Naomi for your reward.
+&7&o  C [2/2]: Well, at least Naomi said that was the last task. It's time to talk to the Primirium.
  Agent Naomi
   Coordinates: [-319 91 -633] (Way up is by TP Hub. [-307 81 -644])
    &6[Agent Naomi]&r
@@ -260,7 +260,7 @@ I'll be heading back to Manteau until your return. The waters are inviting today
   &5[Will do. I don't usually get fed on these missions!]&r
   &6[Verdanne]&r
  Good luck, [Player]. Go now, with the blessing of the Primirium at your back.
-&o  C: Infiltrate   Link   Locum Vernantia Locum_Vernantia wikilink so you can spy on the meeting between the Coven's Prophyry
+&7&o  C: Infiltrate   Link   Locum Vernantia Locum_Vernantia wikilink so you can spy on the meeting between the Coven's Prophyry
 sect and the Mycelia.
  Quorent
   Coordinates: [-747 35 -540]
@@ -296,7 +296,7 @@ is their right. I am theirs to take...
   &8There is no reply. The Porphyry witch is clearly dead. His corpse has begun to rot - small mushrooms creeping up his legs
 and arms...&r
   &5[I'll leave you to the darkness then [Let him die from his injuries]]&r   Plain  (Missing)
-&o  C: Report back to the Primirium with what you have learned... for your reward???
+&7&o  C: Report back to the Primirium with what you have learned... for your reward???
  Primirium Tybale
   Coordinates: [-316 181 -672]
    &6[Verdanne]&r

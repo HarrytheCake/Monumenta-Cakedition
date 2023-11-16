@@ -1,5 +1,5 @@
 &r
-&o  Complete an interview with your number one fan! Come on, you have a fan now!
+&7&o  Complete an interview with your number one fan! Come on, you have a fan now!
  Taymian
   Coordinates: [-826, 102, 39]
    &6[Taymian]&r
@@ -24,7 +24,7 @@ can I do an interview with you?
  Oh uh, sorry. That's what I named the protagonist in the books. I didn't just want to use your name without your blessing, see.
 So, about that interview?
   &5[I suppose.]&r  Header start_of_quest  Start of Quest
-&o  C: Speak with Taymian.
+&7&o  C: Speak with Taymian.
  Taymian
   &6[Taymian]&r
  Hurrah! I'm working on a compendium of sequels to my latest, Ta'Eldim Ta'Encounters, and I hear from a reliable source that one
@@ -46,7 +46,7 @@ hey, I'll strap you in and I can check out your memories for inspiration!
   &6[Taymian]&r
  Don't worry, it's totally safe, I promise! I'll mark where I'm renting space on your quest compass. I'm upstairs in Apartment
 230 upstairs. Come meet me there and we'll get started!
-&o  C: Speak to Taymian. They are upstairs in Apartment 230.
+&7&o  C: Speak to Taymian. They are upstairs in Apartment 230.
  Taymian (Apt. 230)
   Coordinates: [-820, 119, 28]
    &6[Taymian]&r
@@ -78,7 +78,7 @@ invisible parkour course, with the reflections showing where to jump! You got th
   &5[Please don't do that.]&r
   &6[Taymian]&r
  I've gotta spice this up a bit! It'll at least be a good entry point for new readers!
-&o  C: Complete the barrier parkour course.
+&7&o  C: Complete the barrier parkour course.
  Image   Orange squares = Barrier blocks. (Note some have height differences) Barrier_Parkour.png Orange squares = Barrier
 blocks. (Note some have height differences) LineBreak
   Taymian (Study in Scarlet)
@@ -93,10 +93,10 @@ now.
   &6[Taymian]&r
  That's okay, I do! Now, go find the clues! You're entering the memories of... Watson? I think? Searching for what happened to
 the Herring, yes? Go find the clues left around and work out where to travel after!
-&o  C: [1/4]: Search for clues. You need to find the Herring.
-&o  C: [2/4]: Search for clues. You need to find the Herring.
-&o  C: [3/4]: Search for clues. You need to find the Herring.
-&o  C: [4/4]: Search for clues. You need to find the Herring.
+&7&o  C: [1/4]: Search for clues. You need to find the Herring.
+&7&o  C: [2/4]: Search for clues. You need to find the Herring.
+&7&o  C: [3/4]: Search for clues. You need to find the Herring.
+&7&o  C: [4/4]: Search for clues. You need to find the Herring.
   Invader of the Forest (Head)
   Coordinates: [-2715, 159, -91]
    &6[Invader of the Forest]&r
@@ -133,11 +133,11 @@ the Herring, yes? Go find the clues left around and work out where to travel aft
   &8Perhaps you should check the sewers.&r
   &5[Why would I decide to check there?]&r
   &8Just go with it okay?&r
-&o  C: Head into the Sewer, you need to find the Herring!
+&7&o  C: Head into the Sewer, you need to find the Herring!
  After clicking on the Sewer Grate:
   &6[The Sewer Grate]&r
  "You enter the sewers, following the trail of clues. Elementary!"
-&o  C: Find the Herring and save the day!
+&7&o  C: Find the Herring and save the day!
  Taymian (Study in Scarlet Sewers)
   &6[Taymian]&r
  And thus, with all your hard detective work, you found the Herring!
@@ -151,7 +151,7 @@ the Herring, yes? Go find the clues left around and work out where to travel aft
   &6[Taymian]&r
  Oh. I might skip writing this one then... Maybe once the second part is out! All done here!  Header after_both_paths  After
 Both Paths
-&o  C: Speak to Taymian. They are upstairs in Apartment 230.
+&7&o  C: Speak to Taymian. They are upstairs in Apartment 230.
  Taymian (Apt. 230)
   Coordinates: [-820, 119, 28]
    &6[Taymian]&r
@@ -167,7 +167,7 @@ You navigated the shady underbelly of Nyr to get into the sewers.
   &5[Taymian... Is that lava? Did you seriously actually put lava here?]&r
   &6[Taymian]&r
  It was a great idea and I'm sticking to it. Go find your crewmate!
-&o  C: Get to the bar and find your crewmate!
+&7&o  C: Get to the bar and find your crewmate!
  Taymian (Crewvengers Crewsemble at the Sewer Bar)
   &6[Taymian]&r
  You made it!
@@ -185,7 +185,7 @@ it. But that's not why we're here.
   &6[Taymian]&r
  But -
   &5[No. Get me out of here.]&r  Header the_end  The End
-&o  C: Speak to Taymian. They are upstairs in Apartment 230.
+&7&o  C: Speak to Taymian. They are upstairs in Apartment 230.
  Taymian (Apt. 230)
   Coordinates: [-820, 119, 28]
    &6[Taymian]&r

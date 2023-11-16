@@ -15,8 +15,8 @@ it. Maybe you should look there?
   &5[No, I'm bad with animals]&r
   &6[Leonard&r
  *sob* Tha-that's okay. I'm su-sure Mr. Snuggles is f-f-fine. *sobs*
-&o  [1/2]: Find 'Mr. Snuggles' in a tower near Farr.
-&o  [2/2]: Once you find Mr. Snuggles bring him back to Leonard.
+&7&o  [1/2]: Find 'Mr. Snuggles' in a tower near Farr.
+&7&o  [2/2]: Once you find Mr. Snuggles bring him back to Leonard.
   &6[Leonard]&r
  You found him, you found him! I'll hug him and squeeze him and we'll play outside and have so much fun! Here you take these and
 I'll go play with Mr. Snuggles!

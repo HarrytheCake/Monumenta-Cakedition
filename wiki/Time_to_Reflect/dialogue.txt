@@ -39,32 +39,32 @@ reflection.
   &5[Maybe later...]&r
   &6[Barras]&r
  I did not think you were ready. Go.
-&o  Enter the door in the shrine. Solve the puzzle within.
+&7&o  Enter the door in the shrine. Solve the puzzle within.
   Puzzle 1:   Link   Puzzle Solutions Guide/Time to Reflect Puzzle_Solutions_Guide/Time_to_Reflect wikilink
   After solving the Puzzle:
-&o  [1/2]: If you leave the trials of reflection for any reason you can continue where you left off by entering the door in the
-shrine room.
-&o  [2/2]: Hit the button. If the button is not there, open the chest in the room to make it appear. Then make your way through
-the next room. Reflect on your journey.
+&7&o  [1/2]: If you leave the trials of reflection for any reason you can continue where you left off by entering the door in
+the shrine room.
+&7&o  [2/2]: Hit the button. If the button is not there, open the chest in the room to make it appear. Then make your way
+through the next room. Reflect on your journey.
  When you open the chest:
-&o   &4The Tlaxans fought for what they believed in - their home. The Narsens invaded their homes, stole their land, and went to
-war. It all started with the Narsens. Is it their fault the Tlaxans turned to dark magic? What does that make the Empire?&r
+&7&o   &4The Tlaxans fought for what they believed in - their home. The Narsens invaded their homes, stole their land, and went
+to war. It all started with the Narsens. Is it their fault the Tlaxans turned to dark magic? What does that make the Empire?&r
  After hitting the button:
-&o   &4What does that make me?&r
+&7&o   &4What does that make me?&r
   Puzzle 2:   Link   Puzzle Solutions Guide/Time to Reflect Puzzle_Solutions_Guide/Time_to_Reflect wikilink
   After beating the parkour and opening the chest in the next room:
-&o   &4Even C'Zanil discovered regret. Yet decades later, after he is gone, his people he sacrificed it all for revile him.
+&7&o   &4Even C'Zanil discovered regret. Yet decades later, after he is gone, his people he sacrificed it all for revile him.
 Barras curses his name within this very temple. But he did it all for the Tlaxan way of life. Was it worth it for him to do what
 he did?&r
  After entering the cage:
-&o  Find a way up the ladder. Reflect upon what it means to be an adventurer. Show your courage, but never rush in without
+&7&o  Find a way up the ladder. Reflect upon what it means to be an adventurer. Show your courage, but never rush in without
 thinking.
   Puzzle 3:   Link   Puzzle Solutions Guide/Time to Reflect Puzzle_Solutions_Guide/Time_to_Reflect wikilink
   After climbing the ladder and opening the chest:
-&o   &4What happened last though. The Plague... So many warnings to be safe. Was Bhairavi's recklessness due to her eagerness
+&7&o   &4What happened last though. The Plague... So many warnings to be safe. Was Bhairavi's recklessness due to her eagerness
 for knowledge? Or is it something more? She so desperately wants me to gather the wools... Is it wrong to doubt her motives, or
 is that the very purpose of reflection?&r
-&o  Seek out the light of reflection to leave Velara then return to Barras.
+&7&o  Seek out the light of reflection to leave Velara then return to Barras.
  Barras
   &6[Barras]&r
  You return. Have you reflected?

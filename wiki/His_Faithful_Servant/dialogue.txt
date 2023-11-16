@@ -1,6 +1,6 @@
 &r
   WorkInProgress|Missing dialogue at end. Could reword shrine part.&r
-&o  Search for Shrines across the Architect's Ring.
+&7&o  Search for Shrines across the Architect's Ring.
  Cadeus
   Coordinates: [-336 87 -719]
    &6[Cadeus]&r
@@ -27,10 +27,10 @@ tied to this land, and you will be given a gift - infused liquid, that can grant
   &6[Cadeus]&r
  You seem pious enough, for a newcomer. You may have three, and one of the materials. Partake of the Wolf's power, and see for
 yourself that he is great.
-&o  C: Throw a Vessel of Boons and a Fenian Flower into the Shrine Pool to receive a blessing. You can purchase Vessels of Boons
-from Caedus, and obtain Fenian Flowers from   Link   Wolfswood Wolfswood wikilink Delve POIS.
+&7&o  C: Throw a Vessel of Boons and a Fenian Flower into the Shrine Pool to receive a blessing. You can purchase Vessels of
+Boons from Caedus, and obtain Fenian Flowers from   Link   Wolfswood Wolfswood wikilink Delve POIS.
  After throwing in one Vessel of Boons and a Fenian Flower:
-&o  C: Partake of Harrakfar's power by drinking the blessing.
+&7&o  C: Partake of Harrakfar's power by drinking the blessing.
  After drinking the blessing:
  Cadeus
   Coordinates: [-336 87 -719]
@@ -42,7 +42,7 @@ from Caedus, and obtain Fenian Flowers from   Link   Wolfswood Wolfswood wikilin
   &5[Player]&r
   &6[Cadeus]&r
  Welcome, [Player]. To the fold of the Great Wolf.
-&o  C: There has to be more than one   Link   Shrine Shrines wikilink in the Region, find another and return to Cadeus.
+&7&o  C: There has to be more than one   Link   Shrine Shrines wikilink in the Region, find another and return to Cadeus.
  (Boon of Silver Scales. Doesn't matter as it only changes the player's choice wording.)
  Cadeus
   Coordinates: [-336 87 -719]
@@ -83,7 +83,7 @@ with those bottles I gave you earlier - then I may believe.
   &5[I'm out of bottles.]&r
   &6[Cadeus]&r
  Fine. You may buy more from me if you wish - not even priests give everything for free.
-&o  C: Bring a Shrine Blessing to Cadeus.
+&7&o  C: Bring a Shrine Blessing to Cadeus.
  Cadeus
   Coordinates: [-336 87 -719]
    &6[Cadeus]&r
@@ -106,7 +106,7 @@ If you can seek out the shrines and describe them to me, I should be able to ide
   &6[Cadeus]&r
  Oh thank you. Now go, look for more shrines. You can buy additional bottles from me, if you need them. Religious curiosity is
 nice, but rings sustain the mind that thinks, yes? Now, hurry on.
-&o  C: Find   Link   Shrines Shrines wikilink in the Architect's Ring, then return to Cadeus.
+&7&o  C: Find   Link   Shrines Shrines wikilink in the Architect's Ring, then return to Cadeus.
  (Dialogue after finding every shrine. You just need to find them, no need to get a boon.)
  Cadeus
   Coordinates: [-336 87 -719]

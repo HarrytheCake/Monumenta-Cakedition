@@ -1,7 +1,7 @@
 &r
  Lincoln
   Coordinates: [-798, 87, 1435]
- &o  He's talking to himself.
+ &7&o  He's talking to himself.
   &6[Lincoln]&r
  Ugh, this client again? Why does he always order so many rare fish? It's such a pain...
   &5[Hello crazy person talking to himself!]&r
@@ -18,10 +18,10 @@ a large soda.]&r
   &6[Lincoln]&r
  Oh, I see. Why yes- you see this client I have is looking for some pain-in-the-arse-to-fetch fish. And I know exactly where to
 find it...the Sunken Ship to the southwest. This species of Salmon love to hide in wrecks.
- C:   &o  Travel to the   Link   Sunken Ship Sunken_Ship wikilink to obtain the Salmon for Lincoln's client.
+ C:   &7&o  Travel to the   Link   Sunken Ship Sunken_Ship wikilink to obtain the Salmon for Lincoln's client.
  After getting the Salmon:
- C:   &o  [1/2]: Return to Lincoln with the Salmon.
- C:   &o  [2/2]: If you lose the Salmon you can find another at the Sunken Ship.
+ C:   &7&o  [1/2]: Return to Lincoln with the Salmon.
+ C:   &7&o  [2/2]: If you lose the Salmon you can find another at the Sunken Ship.
  Lincoln
   &6[Lincoln]&r
  Ah! You've found it. Perfect...
@@ -31,9 +31,9 @@ find it...the Sunken Ship to the southwest. This species of Salmon love to hide 
   &5[It's okay. What do I need to do next?]&r
   &6[Lincoln]&r
  It's simple: just deliver the fish to my client! He should be in the park in front of the Brig.
-&o  He rubs his hands together excitedly.
- C:   &o  [1/2]: Deliver the Salmon to the client by the Mistport Brig.
- C:   &o  [2/2]: If you lose the Salmon you can find another at the Sunken Ship.
+&7&o  He rubs his hands together excitedly.
+ C:   &7&o  [1/2]: Deliver the Salmon to the client by the Mistport Brig.
+ C:   &7&o  [2/2]: If you lose the Salmon you can find another at the Sunken Ship.
  Alton
   Coordinates: -808, 80, 1308
    &6[Alton]&r
@@ -44,14 +44,14 @@ find it...the Sunken Ship to the southwest. This species of Salmon love to hide 
   &5[Yep, here it is.]&r
   &6[Alton]&r
  Hmm... It looks a little odd for a salmon, but I'm sure it'll taste just fine! I trust Lincoln. Give him my thanks!
- C:   &o  Return to Lincoln
+ C:   &7&o  Return to Lincoln
  Lincoln
   &6[Lincoln]&r
  Have you delivered the fish?
   &5[Yes, I have! Alton seems quite pleased- he was looking forward to having it for dinner.]&r
   &6[Lincoln]&r
  Perfect! Now I'll never have to deal with him again!
-&o  He looks at you nervously.
+&7&o  He looks at you nervously.
   &5[Excuse me?]&r
   &6[Lincoln]&r
  Uh... did I say that out loud?

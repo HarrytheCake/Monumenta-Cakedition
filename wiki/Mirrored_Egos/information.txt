@@ -1,7 +1,7 @@
-prerequisites = * &3The Foreign Soldier&r
+Pre-req: * &3The Foreign Soldier&r
 * &3The Gem of Ishnir&r
-* &3Harmonic Convergence&r NPC: Luc Celsian Islestown = Whispervalestarting_npc_coordinates = -1814, 161, -34rewards = *&3Freezeflame&r
+* &3Harmonic Convergence&r NPC: Luc&2 Celsian Islestown = Whispervalestarting_npc_coordinates = -1814, 161, -34rewards = *&3Freezeflame&r
 *&3Palace Of Mirrorsstarting_npc_coordinates = -1814, 161, -34rewards = *&3Freezeflame&r
-*&3Palace Of Mirrors Celsian Islestown = Whispervalestarting_npc_coordinates = -1814, 161, -34rewards = *&3Freezeflame&r
+*&3Palace Of Mirrors&2 Celsian Islestown = Whispervalestarting_npc_coordinates = -1814, 161, -34rewards = *&3Freezeflame&r
 *&3Palace Of Mirrorstown = Whispervalestarting_npc_coordinates = -1814, 161, -34rewards = *&3Freezeflame&r
 *&3Palace Of Mirrors

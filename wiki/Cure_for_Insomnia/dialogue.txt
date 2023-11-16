@@ -1,5 +1,5 @@
 &r
-&o  Find the teachings of Oneiromancy in the Library of   Link   New Antium New_Antium wikilink  .
+&7&o  Find the teachings of Oneiromancy in the Library of   Link   New Antium New_Antium wikilink  .
  Ephesius
   Coordinates: [-410 173 -123]
    &8At the entrance to the church you meet a very old man. His hair is long and gray, and he himself is leaning on a cane. &r
@@ -50,9 +50,9 @@ old, and my legs aren't what they used to be. Please, young friend, could you go
   &6[Ephesius]&r
  Oh thank goodness! I would advise you to ask the local librarian or my student, Merrel, regarding the book. He must be in the
 library right now.
-&o  C: Find the teachings of Oneiromancy in the Library of   Link   New Antium New_Antium wikilink  .
+&7&o  C: Find the teachings of Oneiromancy in the Library of   Link   New Antium New_Antium wikilink  .
  After retrieving the book:
-&o  C: Bring the book back to Ephesius.
+&7&o  C: Bring the book back to Ephesius.
  Ephesius
   Coordinates: [-410 173 -123]
    &6[Ephesius]&r
@@ -80,9 +80,9 @@ things were stored in the basement of the mansion, so start there.
   &5[Forsaken Manor, the basement. Look for a book. Got it.]&r
   &6[Ephesius]&r
  Oh, and before you go, take these with you. He handles you a few potions. You'll surely need them.
-&o  C: Find another study of Oneiromancy inside the basement of the   Link   Forsaken Manor Forsaken_Manor wikilink  .
+&7&o  C: Find another study of Oneiromancy inside the basement of the   Link   Forsaken Manor Forsaken_Manor wikilink  .
  After retrieving the book:
-&o  C: Bring the book back to Ephesius.
+&7&o  C: Bring the book back to Ephesius.
  Ephesius
   Coordinates: [-410 173 -123]
    &6[Ephesius]&r
@@ -114,7 +114,7 @@ magical effects on its own.
   &6[Ephesius]&r
  I am afraid not, young friend. It can be anywhere on the continent for all I know. Probably somewhere in this Wolfswood of
 yours. Actually, you could ask Merrel about it. He's been there way more times than I, he might know better.
-&o  C: Find the Dusk Honeycomb on the Architect's Ring. Merrel may know more.
+&7&o  C: Find the Dusk Honeycomb on the Architect's Ring. Merrel may know more.
  Merrel
   Coordinates: [-497 181 -115]
    &6[Merrel]&r
@@ -125,7 +125,7 @@ yours. Actually, you could ask Merrel about it. He's been there way more times t
 different story, however... You surely saw the giant tree on your way up here? If only you could find a bee nest somewhere
 nearby... perhaps at the roots? Yes, that would be my best guess.
   Coordinates: [-549 74 -485]
- &o  C: Bring Dusk Honeycomb back to Ephesius.
+ &7&o  C: Bring Dusk Honeycomb back to Ephesius.
  Ephesius
   Coordinates: [-410 173 -123]
    &6[Ephesius]&r
@@ -147,7 +147,7 @@ Should you fail, I still have a bit of surplus of the powder left, but I hope it
   &6[Ephesius]&r
  There we go, [Player]. Take the gem, powder and instructions. Remember - you must do exactly as I said at the middle of the
 lake just outside the city. I'll pray for your success.
-&o  C: Preform a ritual at the middle of the Lake in The Keep. Should you fail, talk with Ephesius.
+&7&o  C: Preform a ritual at the middle of the Lake in The Keep. Should you fail, talk with Ephesius.
   Step 1: Stand on a boat at -425 174 77. LineBreak  Step 2: Hold the Twilight Amethyst given to you and click while looking up.
 Chose Spirits of bluest waves option. LineBreak  Step 3: Left-click with the powder and select to strew it over the gemstone.
 LineBreak  Step 4: Crouch and left click the Amethyst while looking down into the water. Offer the gemstone. LineBreak  Step 5:

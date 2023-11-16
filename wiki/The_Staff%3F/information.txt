@@ -1,4 +1,4 @@
-prerequisites = &3The Staff&r
+Pre-req: &3The Staff&r
 Completion of a normal instance of &3the Black Willows&r dungeon
- NPC: The &3Mysterious Cenote&r POI Coords: 
- King's Valley 
+ NPC: The &3Mysterious Cenote&r POI &1Coords:&r 
+&2 King's Valley&r 

@@ -1,5 +1,5 @@
 &r
-&o  Go tell the Praetor and the High Priest about the Machine God's Herald
+&7&o  Go tell the Praetor and the High Priest about the Machine God's Herald
  Machine God's Herald
   &6[Machine God's Herald]&r
  Behold citizen. I am the Herald. I am here to announce perfection.
@@ -26,8 +26,8 @@ you all. Accept Its gift. Tell your leaders immediately to prepare for Its great
   &5[I guess I will then...]&r
   &6[Machine God's Herald]&r
  At last. Tell them Neo Antium is coming. The Emperor waits for your surrender at the Tree of Life.
-&o  C [1/2]: Go tell the Praetor about the Machine God Herald's arrival in New Antium...
-&o  C [2/2]: ... Or speak with the High Priest first instead.
+&7&o  C [1/2]: Go tell the Praetor about the Machine God Herald's arrival in New Antium...
+&7&o  C [2/2]: ... Or speak with the High Priest first instead.
  The Praetor
   &6[The Praetor]&r
  You ! My friend, oh hero ! Come forth. I am quite pleased to see you, [Player]. What brings you back to my humble office?
@@ -137,7 +137,7 @@ not in the Keep at all.]&r
   &6[The High Priest]&r
  If the Architect wills you be there. I suggest you travel there. There are no mistakes, only ways to be more prepared. Travel
 well, prepare for a trap. I fear we cannot trust anyone.
-&o  C: Visit the Tree of Life in the Wolfswood and search the roots to investigate this so called return of the Emperor
+&7&o  C: Visit the Tree of Life in the Wolfswood and search the roots to investigate this so called return of the Emperor
  Ageratina
   Hint : Under the Entrance of Cover Fortress LineBreak  Coordinates: [-539, 109, -376]
    &6[Ageratina]&r
@@ -180,7 +180,7 @@ playground, another one sprouts...
 yes. Next time the cost will be greater. A thread might be needed then, yes. A whole fate even...
   &6[The Saothraiche]&r
  Now go. Leave me with these reaching roots. Find your shriveling tree and your Emperor in the place called Arx.
-&o  C: Return to the Keep, find the Tree of Life within   Link   Arx Spirensis Arx_Spirensis wikilink and look around for the
+&7&o  C: Return to the Keep, find the Tree of Life within   Link   Arx Spirensis Arx_Spirensis wikilink and look around for the
 Emperor.
  After conquering   Link   Arx Spirensis Arx_Spirensis wikilink  :
  Machine God's Herald
@@ -233,9 +233,9 @@ event.
  Mm... defeat this unearthly mechanism then I'll guide.
   &6[Neo Garmon]&r
  If you truly wish to delve deeper, I will not stop you. Please be careful, and for the sake of New Antium, good luck.
-&o  C: Solve the strange mechanism on the floor to hopefully find an escape for your allies and a way forward for yourself.
+&7&o  C: Solve the strange mechanism on the floor to hopefully find an escape for your allies and a way forward for yourself.
  After completing the puzzle and going forwards:
-&o  C: Talk to Neo Gorm.
+&7&o  C: Talk to Neo Gorm.
  Neo Gorm (Brown Lobby)
   &6[Neo Gorm]&r
  Mm... You did it, Gorm is impressed. Let's meet a little further ahead, I'll catch up.

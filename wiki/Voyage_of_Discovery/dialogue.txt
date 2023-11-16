@@ -22,7 +22,7 @@ such... unsavory characters. You've helped her out before, would you vouch for h
   &6[Captain Argoun]&r
  I was starting to lean that way as well. Alright, I'm convinced! You can go let Captain Indigo know she is all set to sail
 through the Seagate.
-&o  Tell Indigo she has been cleared to pass through the seagate.
+&7&o  Tell Indigo she has been cleared to pass through the seagate.
  Captain Indigo
   &6[Captain Indigo]&r
  Ahoy [Player]! We're all itching to set sail soon. Hopefully our permit will be approved soon.
@@ -43,7 +43,7 @@ galore in the Viridian region!
   &5[Arrgh!]&r
   &6[Captain Indigo]&r
  ARRGH!
- C:   &o  Talk to Captain Indigo.
+ C:   &7&o  Talk to Captain Indigo.
  Captain Indigo
   &6[Captain Indigo]&r
  Ahoy [Player]! The sea is beautiful today, don't you think so?
@@ -53,7 +53,7 @@ galore in the Viridian region!
   &5[We should just stay on the sea forever.]&r
   &6[Captain Indigo]&r
  Well, we'll need to reach port eventually, so why don't you go check with Izzy to see where we are.
- C:   &o  Talk to Izzy.
+ C:   &7&o  Talk to Izzy.
  Izzy
   &6[Izzy]&r
  We should be close, but we'll need to spot some landmarks to know exactly where we are. Could you please ask Levyn if he can
@@ -64,7 +64,7 @@ see anything on the horizon?
   &5[Sounds like effort.]&r
   &6[Captain Indigo]&r
  Alright, never mind.
- C:   &o  Talk to Levyn.
+ C:   &7&o  Talk to Levyn.
  Levyn
   &6[Levyn]&r
  Hello... [Player]... I'm not feeling too good.
@@ -77,35 +77,35 @@ see anything on the horizon?
   &5[Sure I'll be right back.]&r
   &6[Levyn]&r
  Thank... you.
- C:   &o  Talk to Samwell.
+ C:   &7&o  Talk to Samwell.
  Samwell
   &6[Samwell]&r
  Hello [Player], is there anything you need from the stores?
   &5[I need a sea sickness cure, Levyn isn't doing too well.]&r
   &6[Samwell]&r
  Ha! I knew that guy was all talk. Here, we have plenty stocked up. I can't wait to finally get my hands on some treasure.
-&o  Samwell's eyes glisten at the thought of treasure.
+&7&o  Samwell's eyes glisten at the thought of treasure.
  Head back to Levyn.
  Levyn
-&o  Levyn grabs the cure and drinks it all
+&7&o  Levyn grabs the cure and drinks it all
   &6[Levyn]&r
  Arrgh, thank you matey! I've never felt more swashbuckling before. Now, about that view: I be seeing land in the distance - an
 island! It be about 40 seaports away. ARRGH!
- C:   &o  Talk to Izzy.
+ C:   &7&o  Talk to Izzy.
  Izzy
   &6[Izzy]&r
  Have you found out what Levyn can see yet?
   &5[He said he could see an island about 40 seaports from here.]&r
   &6[Izzy]&r
  Wonderful, I'll steer us that way now. You should go speak with the Captain.
- C:   &o  Talk to Captain Indigo.
+ C:   &7&o  Talk to Captain Indigo.
  Captain Indigo
   &6[Captain Indigo]&r
  So you've finally checked in with Izzy. Took you long enough. Looks like we'll arrive shortly.
   &5[Arrgh.]&r
   &6[Izzy]&r
  PIRATE BOAT INCOMING! EVERYONE TO THE DECK!
- C:   &o  The ship is under attack, get outside quickly!
+ C:   &7&o  The ship is under attack, get outside quickly!
   &6[Captain Xeno]&r
  You have entered the waters of Mistport - my waters - without permission! Prepare to be boarded!
   &6[Izzy]&r
@@ -116,9 +116,9 @@ island! It be about 40 seaports away. ARRGH!
  If the rumors are true, it's an island ruled over entirely by pirates. We need to find a way to esca-
   &6[Captain Xeno]&r
  FIRE!
-&o  The blasts of the ship make your ears ring, and everything goes black.
-&o  You wake up and find yourself in what seems to be a prison.
- C:   &o  You've been imprisoned! Find a way out, and find Izzy and Samwell!!!
+&7&o  The blasts of the ship make your ears ring, and everything goes black.
+&7&o  You wake up and find yourself in what seems to be a prison.
+ C:   &7&o  You've been imprisoned! Find a way out, and find Izzy and Samwell!!!
  After getting into the sewer:
   &6[Samwell]&r
  This trip has sucked so far! We've been captured, imprisoned, and are now wading through a sewer. And we still have no
@@ -147,7 +147,7 @@ we organize a rescue.
   &5[I'd better go look for him in a pub then.]&r
   &6[Izzy]&r
  Sounds good. We'll be hiding out here.
- C: &o  Search out Levyn in the Mistport pub.
+ C: &7&o  Search out Levyn in the Mistport pub.
  Levyn
   Coordinates: [-823, 88, 1367]
    &6[Levyn]&r

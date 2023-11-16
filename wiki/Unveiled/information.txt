@@ -1,5 +1,5 @@
-prerequisites = 
+Pre-req: 
 *&3Pyromania&r
 *&3Soul of the Forest&r
-*completed the &3Vernal Nightmare NPC: Josiah Coords: 1175, 143, -120
- King's Valley Highwatch
+*completed the &3Vernal Nightmare NPC: Josiah &1Coords:&r 1175, 143, -120
+&2 King's Valley&r Highwatch

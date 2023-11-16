@@ -15,9 +15,9 @@ there. Bring me that sword back and there's a bag o' loot in it for ya. Here, ta
   &5[Not now, I'm busy.]&r
   &6[Blackjack Stan]&r
  Then quit wasting my time and go bother someone else! I'm a busy man.
-&o  [1/3]: Head to the   Link   Overgrown Cave Overgrown_Cave wikilink to being your search.
-&o  [2/3]: A cave-in caused gravel to block the way. Clear it out and find the sword. [158, 76, -29]
-&o  [3/3]: Once you find the blade return it to Blackjack Stan for your reward. There might also be an alternative NPC that
+&7&o  [1/3]: Head to the   Link   Overgrown Cave Overgrown_Cave wikilink to being your search.
+&7&o  [2/3]: A cave-in caused gravel to block the way. Clear it out and find the sword. [158, 76, -29]
+&7&o  [3/3]: Once you find the blade return it to Blackjack Stan for your reward. There might also be an alternative NPC that
 would love to see it.
  If you return to Blackjack Stan:
  Blackjack Stan

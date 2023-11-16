@@ -1,6 +1,6 @@
 &r
   WorkInProgress|Missing a few compasses and coords&r
-&o  Venture into the Ruins of the Congress with Bhairavi's team.
+&7&o  Venture into the Ruins of the Congress with Bhairavi's team.
  Bhairavi
   Coordinates: [-543, 6, -528]
    &6[Bhairavi]&r
@@ -42,7 +42,7 @@ there's wool magic radiating from it like crazy.
  Of course it is. But I'm tired of sending you into danger alone. This is a unique situation      &6[Bhairavi]&r
  Head over to the Congress and see what you can find. I'll be sending Wexley to meet you this time. No more vagueness - that
 didn't go well before.
-&o  Find Wexley at the Ruins of the Congress.
+&7&o  Find Wexley at the Ruins of the Congress.
  Wexley
   Coordinates: [-622, 25, 557]
    &6[Wexley]&r
@@ -64,18 +64,18 @@ long.
   Color|Grey|He speaks some... words. They make your brain hurt and you can't seem to remember them.&r
   &6[Wexley]&r
  Okay, try punching the door again.
-&o  Back to the door! Give it a whack!
+&7&o  Back to the door! Give it a whack!
   Color|Grey|You punch the door again. It quivers, but remains in place.&r
-&o  Complain to Wexley.
+&7&o  Complain to Wexley.
  Wexley
   Coordinates: [-622, 25, 557]
    &6[Wexley]&r
  No, I think I did that a bit wrong... Let me try again. Once again, as soon as I cast this, quickly, hit the door.
   &5[You must be joking.]&r
   Color|Grey|He speaks some noises more emphatically this time. They melt out of your head almost as quickly as you hear them.&r
-&o  It'll definitely work this time. Break down the door!
+&7&o  It'll definitely work this time. Break down the door!
   Color|Grey|You punch the door again. It remains closed. Like it's taunting you.&r
-&o  Tell Wexley you've given up on breaking down doors.
+&7&o  Tell Wexley you've given up on breaking down doors.
  Wexley
   Coordinates: [-622, 25, 557]
    &6[Wexley]&r
@@ -90,7 +90,7 @@ long.
  What's the password?
   &6[Wexley]&r
  Oh, hey, I know this one. It's in the book in front of me. Check it out.
-&o  Find the password in the nearby book.
+&7&o  Find the password in the nearby book.
  Door
   Coordinates: [-621, 25, 560]
    &6[Unknown Voice]&r
@@ -104,7 +104,7 @@ long.
   &5[Branch of the Grand Olive Tree]&r  Plain  [Branch of the Grand Olive Tree]&r
   &6[Unknown Voice]&r
  Yeah, that's the one. Come on in.
-&o  Talk to Hargraves, the man behind the door.
+&7&o  Talk to Hargraves, the man behind the door.
  Hargraves
   Coordinates: [-1021, 122, 2186]
    &6[Hargraves]&r
@@ -131,8 +131,8 @@ You should be able to get into the main Forum and deliver this to Professor Mari
   &5[Not yet. I was uh, supposed to get one though.]&r
   &6[Hargraves]&r
  That's fine, I'll cast it onto you. Here you go then and thanks for your help.
-&o  Leave the reagents room with your report!
-&o  Deliver your report to Professor Marin.
+&7&o  Leave the reagents room with your report!
+&7&o  Deliver your report to Professor Marin.
  Professor Martin
   Coordinates: [???, ???, ???]
    &6[Professor Marin]&r
@@ -148,8 +148,8 @@ You can get some refreshments before you head back to work.
 you should not be here.<br>
 i am doing what i must.<br>
 leave. do not return.&r
-&o  You have found the Fallen Forum. When ready, take a key and enter the dungeon.
-&o  Complete the Fallen Forum dungeon {Coordinates do not point to your next objective}.
+&7&o  You have found the Fallen Forum. When ready, take a key and enter the dungeon.
+&7&o  Complete the Fallen Forum dungeon {Coordinates do not point to your next objective}.
  Upon dungeon completion:
   &6[Margaret]&r
  I think it’s done folks.

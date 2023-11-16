@@ -1,1 +1,1 @@
-prerequisites = &3Of Monks and Magic&r NPC: Captain Tobias King's Valleytown = Farr NPC: Captain Tobias King's Valleytown = Farr King's Valleytown = Farrtown = Farr
+Pre-req: &3Of Monks and Magic&r NPC: Captain Tobias&2 King's Valleytown = Farr NPC: Captain Tobias&2 King's Valleytown = Farr&2 King's Valleytown = Farrtown = Farr

@@ -1,6 +1,6 @@
 &r
-&o  Retrieve   Link   Stefan's Stefan wikilink pretzel recipe from the bakers in the bakery. LineBreak &o  Using the official
-Monumenta Resource Pack is highly recommended.
+&7&o  Retrieve   Link   Stefan's Stefan wikilink pretzel recipe from the bakers in the bakery. LineBreak &7&o  Using the
+official Monumenta Resource Pack is highly recommended.
  Stefan
   Coordinates: [-865, 104, 31]
    &6[Stefan]&r
@@ -19,7 +19,7 @@ sell!
   &5[Maybe I'll have time later.]&r
   &6[Stefan]&r
  Fine, be that way. I'll just be here, young and sand, because some old person wouldn't help me.
-&o  C: Ask the Head Baker about his pretzel recipe
+&7&o  C: Ask the Head Baker about his pretzel recipe
  Head Baker
   Coordinates: [-811, 102, 85]
    &6[Head Baker]&r
@@ -28,7 +28,7 @@ sell!
   &6[Head Baker]&r
  Gah! That dastardly kid must have sent you for it. No, we're not giving our recipe away, especially not to that kid. Go tell
 him he's out of luck
-&o  C: Tell   Link   Stefan Stefan wikilink about the Head Baker's unwillingness to give up the recipe
+&7&o  C: Tell   Link   Stefan Stefan wikilink about the Head Baker's unwillingness to give up the recipe
  Stefan
   Coordinates: [-865, 104, 31]
    &6[Stefan]&r
@@ -38,7 +38,7 @@ him he's out of luck
 trap filled baking and storage area. You're going to have to go in there and hunt for the recipe and then bring is back to me.
 I'd be careful, you have to jump around a bunch and I'm scared of heights, which is why I haven't gone down there myself. Good
 luck!
-&o  C: Break into the bakers' kitchen and steal the recipe!
+&7&o  C: Break into the bakers' kitchen and steal the recipe!
   Tip: This jumping puzzle (and jumping puzzles throughout Monumenta) uses redstone torches to mark where to go. OrderedList
 DefaultStyle DefaultDelim Plain  Enter the trapdoor by pressing the button at -805 98 107. Plain  Head to the north-west corner
 of the room (with furnaces). Jump on the lowest furnace, turn east and jump on that bar, and jump onto the ladder. Plain  Jump
@@ -48,7 +48,7 @@ near the pumpkins. Walk on the west-most fences to reach above the melon crate. 
 Use the stack of haybales on the ground near this room's entrance to jump atop crates. Use the newly blown up platform to climb
 up to where the recipe is held.
   After retrieving the recipe:
-&o  C: You've got the recipe! Head back to   Link   Stefan Stefan wikilink  !
+&7&o  C: You've got the recipe! Head back to   Link   Stefan Stefan wikilink  !
  Stefan
   Coordinates: [-865, 104, 31]
    &6[Stefan]&r

@@ -1,13 +1,13 @@
-prerequisites = *&3Words Upon Hushed Lips&r
+Pre-req: *&3Words Upon Hushed Lips&r
 *&3Roots of the Plague&r
 *&3Of Monks and Magic&r
-*Completed the &3Plagueroot Temple NPC: Dimitri King's Valleytown = Sierhavenstarting_npc_coordinates = -800 116 -45rewards = *&3Arcane RivalryLight Blue Dungeon&r Key
+*Completed the &3Plagueroot Temple NPC: Dimitri&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -800 116 -45rewards = *&3Arcane RivalryLight Blue Dungeon&r Key
 *&3Siershen's Caster&r
 *64 Arrows of Slowness
 *Full Access to the &3Arcane Rivalrystarting_npc_coordinates = -800 116 -45rewards = *&3Arcane RivalryLight Blue Dungeon&r Key
 *&3Siershen's Caster&r
 *64 Arrows of Slowness
-*Full Access to the &3Arcane Rivalry King's Valleytown = Sierhavenstarting_npc_coordinates = -800 116 -45rewards = *&3Arcane RivalryLight Blue Dungeon&r Key
+*Full Access to the &3Arcane Rivalry&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -800 116 -45rewards = *&3Arcane RivalryLight Blue Dungeon&r Key
 *&3Siershen's Caster&r
 *64 Arrows of Slowness
 *Full Access to the &3Arcane Rivalrytown = Sierhavenstarting_npc_coordinates = -800 116 -45rewards = *&3Arcane RivalryLight Blue Dungeon&r Key

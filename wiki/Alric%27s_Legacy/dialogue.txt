@@ -22,10 +22,10 @@ where Alric, the human king, stood against the waking Giants and destroyed their
  Time is short, traveler. We may not have time later…
   &6[Listener]&r
  Go, traveler. Find Alric’s Rift at the end of the nearby river. Learn the past so you may preserve the future.
-&o  Enter Alric's Rift and solve the puzzle.
+&7&o  Enter Alric's Rift and solve the puzzle.
   Head under the Eldrask arena at [-1486 <50 143].
   :Puzzle Solutions Guide/Alric's Legacy&r
- &o  Missing Compass(?)
+ &7&o  Missing Compass(?)
   &6[Voice on the Wind]&r
  The Wakers among Frost Giants fell that day to my sword. Man’s luck persevered, and the song continued...
  After solving the puzzle:
@@ -93,8 +93,8 @@ great power, akin to Alei, on the move. It cannot be left to wander. Now, take t
   &6[Alric]&r
  No, thank you, for being willing to preserve these lands. Now go, do glorious battle and drink in the magnificence of the song.
  Note: The Eldrask completion can be from before the quest.
-&o  Talk to Alric after beating Eldrask, the Waking Giant, and claim your reward. You can return to the rift by falling into the
-void below Eldrask's Arena.
+&7&o  Talk to Alric after beating Eldrask, the Waking Giant, and claim your reward. You can return to the rift by falling into
+the void below Eldrask's Arena.
  Alric
   Coordinates: [-4203 120 358]
    &6[Alric]&r

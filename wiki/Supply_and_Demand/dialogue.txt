@@ -8,7 +8,7 @@
 |rewards =
 * 96 Bottles of Experience
 &r
-&o  Help Buildmaster Jr. with a supply package for the neighboring town of Nyr.
+&7&o  Help Buildmaster Jr. with a supply package for the neighboring town of Nyr.
  Buildmaster Jr.
   Coordinates: [-778, 106, 20]
    &6[Buildmaster Jr.]&r
@@ -45,10 +45,10 @@ outside. If you check check your quest compass, it should point there!
   &6[Buildmaster Jr.&r
  Head west from the town square, then take the second right. Take the right immediately after that and be on the lookout for
 meat and leather. If you check your quest compass, it should point there!
-&o  C [1/4]: Buy some glass from the   Link   Block Sellers Block_Supplier wikilink  . Coords: [-675, 108, -56]
-&o  C [2/4]: Buy some arrows from the   Link   Rangers Ranger_(NPC) wikilink  . Coords: [-854, 104, 30]
-&o  C [3/4]: Buy some cooked chicken from the   Link   Butchers Butcher wikilink  . Coords: [-819, 103, 22]
-&o  C [4/4]: Once you have all three items, bring them all back to Buildmaster Jr.!
+&7&o  C [1/4]: Buy some glass from the   Link   Block Sellers Block_Supplier wikilink  . Coords: [-675, 108, -56]
+&7&o  C [2/4]: Buy some arrows from the   Link   Rangers Ranger_(NPC) wikilink  . Coords: [-854, 104, 30]
+&7&o  C [3/4]: Buy some cooked chicken from the   Link   Butchers Butcher wikilink  . Coords: [-819, 103, 22]
+&7&o  C [4/4]: Once you have all three items, bring them all back to Buildmaster Jr.!
  Buildmaster jr.
   Coordinates: [-778, 106, 20]
    &6[Buildmaster Jr.]&r
@@ -63,7 +63,7 @@ East of   Link   Sierhaven Sierhaven wikilink  . It's quite nearby and you'll be
  Splendid, my friend. Here's your Supply Package. I need you to take it to my friend Pauline. She lives in a very bookish little
 house near the Nyr docks. She says she loves being near the Nyr River! She'll take care of the rest and give you a receipt. Come
 back to me when you're done!
-&o  C: Bring the supplies to Pauline in   Link   Nyr Nyr wikilink  .
+&7&o  C: Bring the supplies to Pauline in   Link   Nyr Nyr wikilink  .
  Pauline
   Coordinates: [-157, 93, -17]
    &6[Pauline]&r
@@ -73,8 +73,8 @@ back to me when you're done!
  Amazing! He really pulled through! Here's a signed receipt for him. I know how much he loves being official like that. If
 you're going to head back to him now, I really suggest taking the     &3teleporter&r  . It's just a few houses down, near the
 middle of town, and offers     &3fast travel&r between here and the capital.
-&o  C [1/2]: It's time to head back. Use the Teleporter Hub in Nyr to quick-travel back to Sierhaven!
-&o  C [2/2]: Once back in Sierhaven, return the receipt to Buildmaster Jr.
+&7&o  C [1/2]: It's time to head back. Use the Teleporter Hub in Nyr to quick-travel back to Sierhaven!
+&7&o  C [2/2]: Once back in Sierhaven, return the receipt to Buildmaster Jr.
  Buildmaster jr.
   Coordinates: [-778, 106, 20]
    &6[Buildmaster Jr.]&r

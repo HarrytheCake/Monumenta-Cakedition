@@ -30,7 +30,7 @@ quite dangerous.
   &5[Booooooooooring.]&r
   &6[Antoine]&r
  Hmph! Maybe you're not the wise adventurer that aided   Link   Bhairavi Bhairavi wikilink after all.
-&o  Check on Aimee the Jeweler to see if the onyx you brought her was cursed. [-760, 106, 20]
+&7&o  Check on Aimee the Jeweler to see if the onyx you brought her was cursed. [-760, 106, 20]
  Aimee
   &6[Aimee]&r
  The night is dark and full of stars... dark as onyx, gleaming like gems... SoftBreak   &5[Aimee are you okay?]&r
@@ -42,7 +42,7 @@ quite dangerous.
   &5[It's too late. I need to tell Antoine you've been cursed.]&r
   &6[Aimee]&r
  I am one with the soul of the jungle...
-&o  Report back to Antoine in the Academy about Aimee's condition
+&7&o  Report back to Antoine in the Academy about Aimee's condition
  Antoine
   &6[Antoine]&r
  How was the Jeweler? Is she okay?
@@ -62,7 +62,7 @@ completely.
   &6[Antoine]&r
  What do I look like? An atlas? I don't know! You should go ask the Royal Cartographer about the opal mine. He would know better
 than I. You can find him at the top of the alchemy building. Now go, and go quickly!
-&o  Speak with the Royal Cartographer on the roof of the alchemy building at -795 122 -40
+&7&o  Speak with the Royal Cartographer on the roof of the alchemy building at -795 122 -40
  Royal Cartographer
   &6[Royal Cartographer]&r
  Salutations citizen! It is rare I find myself with company! How can I be of service? SoftBreak   &5[I'm looking for the old
@@ -73,13 +73,13 @@ opal mine.]&r
 collapsed partially. A number of miners were killed in the collapse and their spirits are said to roam the dark shafts still.
 They call it the Haunted Mine now. The shaft down to the Opal Mine can be found at the end of a path of red and white-spotted
 mushrooms. Be careful and watch out for spirits!
-&o  Head to the Haunted Mine at -650 120 535. Follow the red mushrooms until you reach a gravel wall. Mine through the wall to
+&7&o  Head to the Haunted Mine at -650 120 535. Follow the red mushrooms until you reach a gravel wall. Mine through the wall to
 reach an elevator. Inside, complete the minecart puzzle to collect the Opal. Head back to Antoine.
  Antoine
   &6[Antoine]&r
  It feels like you've been gone for ages! Now we need to make a crown out of this gem, but since our local jeweler is out of
 commission we're going to use the next best thing, the blacksmith. Find Orson at the forge and get him to make us an opal crown.
-&o  Meet Orson the blacksmith in his shop at -720 108 23
+&7&o  Meet Orson the blacksmith in his shop at -720 108 23
  Orson
   &6[Orson]&r
  A true master of the forge knows the ancient patterns by heart. SoftBreak   &5[I need a crown made with this opal.]&r
@@ -89,9 +89,9 @@ commission we're going to use the next best thing, the blacksmith. Find Orson at
   &5[She's cursed right now! This is urgent!]&r
   &6[Orson]&r
  Well that does sound like a good reason. Alright, I'll see what I can do.
-&o  Orson snatches up the opal and chisels it down, then adds it to a fresh-out-of-the-furnace helmet. He lobs off the top of
+&7&o  Orson snatches up the opal and chisels it down, then adds it to a fresh-out-of-the-furnace helmet. He lobs off the top of
 the helmet, and you receive an Ugly Opal Crown.
-&o  Speak with Aimee
+&7&o  Speak with Aimee
  Aimee
   &6[Aimee]&r
  The skies are dark. It is too quiet... It's gone. My crown is gone! SoftBreak   &5[Aimee put this crown on.]&r
@@ -100,7 +100,7 @@ the helmet, and you receive an Ugly Opal Crown.
   &5[This crown will bring back the one you lost!]&r
   &6[Aimee]&r
  Give it here! Help me find it!
-&o  Aimee scrambles to get the Ugly Opal Crown on and is almost instantly noticeably cured.
+&7&o  Aimee scrambles to get the Ugly Opal Crown on and is almost instantly noticeably cured.
   &6[Aimee]&r
  ___? Why are you here? Everything feels like a blur...
   &5[The crown you made with the Onyx cursed you. Where is it now?]&r
@@ -111,21 +111,21 @@ took it!
   &5[We need to get that crown back!]&r
   &6[Aimee]&r
  Yes we do! Hurry to the King, ___! He has to have been heading there.
-&o  Head to the throne room at -720 123 -105 and defeat the Crown Bearer
+&7&o  Head to the throne room at -720 123 -105 and defeat the Crown Bearer
  Royal Translator
   &6[Royal Translator]&r
  What in good heavens was that? SoftBreak   &5[That was me saving the day.]&r
   &5[That was an assassination attempt on the King.]&r
-&o  The King mumbles a few words.
+&7&o  The King mumbles a few words.
   &6[Royal Translator]&r
  The King agrees with you there. Thank you for your services to the empire!
-  &5[Aren't you going to reward me?]&r  Plain &o  The King mumbles a few more words.
+  &5[Aren't you going to reward me?]&r  Plain &7&o  The King mumbles a few more words.
   &6[Royal Translator]&r
  Well that's not really in the budget you see. You would best look for a reward elsewhere.
-  &5[I'd best report back to Aimee.]&r  Plain &o  The King mumbles a few more words.
+  &5[I'd best report back to Aimee.]&r  Plain &7&o  The King mumbles a few more words.
   &6[Royal Translator]&r
  We do not know what the jeweler has to do with any of this but if that's where you need to be then safe travels.
-&o  Let Aimee know what happened at the Castle
+&7&o  Let Aimee know what happened at the Castle
  Aimee
   &6[Aimee]&r
  ___ I can't thank you enough for saving me. SoftBreak   &5[I'm just glad you're okay.]&r

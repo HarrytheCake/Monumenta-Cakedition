@@ -1,5 +1,5 @@
 &r
-&o  Speak to the Crimson King through Jeremiah Header start_of_quest  Start of Quest
+&7&o  Speak to the Crimson King through Jeremiah Header start_of_quest  Start of Quest
  Jeremiah
   Coordinates: [-917, 91, -161]
    &6[Jeremiah]&r
@@ -23,7 +23,7 @@ their weakest. I do not sense that to be you to be weak right now, would you agr
   &5[No, I don't.]&r
   &6[The Crimson King]&r
   &4Then perhaps it's time I help you remember.&r
-&o  C: Talk to the Crimson King.
+&7&o  C: Talk to the Crimson King.
  Jeremiah
   &6[The Crimson King]&r
   &4This place. This shrine to Kaul, the Genius Loci. Cazol, the Masked of Calder seeking the Yellow Wool. I know of all these
@@ -45,7 +45,7 @@ arrival in this Valley, if you visit the memories I offer. Your questions will b
   &5[I'll help you.]&r
   &6[The Crimson King]&r
   &4Of course you will. It was not a request. Now, let us return to the Memory Vault, where we can begin...&r
-&o  C: Talk to the Crimson King.
+&7&o  C: Talk to the Crimson King.
  Jeremiah
   &6[The Crimson King]&r
   &4Outside this room are pedestals with the face of a significant memory. I will send you to one and have you commune with
@@ -57,15 +57,15 @@ their memory.&r
   &6[The Crimson King]&r
   &4To the west, closest to the Vault is the effigy of the being who claimed me and destroyed my prison. They entered the
 Ephemeral Corridors with their armies. You will be them. See what they saw. Do what they did. I leave you to speak to it.&r
-&o  C: Leave the Memory Vault.
+&7&o  C: Leave the Memory Vault.
  After leaving the Memory Vault:
-&o  C: Interact with the western effigy closest to the Memory Vault.
+&7&o  C: Interact with the western effigy closest to the Memory Vault.
  Telsket Head
   &5[This must be the effigy. The King said it would take me into the Ephemeral Corridors...]&r
  ...yes... this place has power...
   &5[Hello? Is someone there?]&r
  ...we will find the way...
-&o  C: Explore the memory.
+&7&o  C: Explore the memory.
  Tkisali
   &6[Tkisali]&r
  Lord Shaman. Greetings.
@@ -108,7 +108,7 @@ enter the Corridors? Great danger lurks below. You must be prepared to fight.&r
   &5[I am.]&r
   &6[The Crimson King]&r
   &4Then enter the Corridors.&r
-&o  C: Delve into C'Telsket's memory of the Ephemeral Corridors.
+&7&o  C: Delve into C'Telsket's memory of the Ephemeral Corridors.
  This is a PoI:   Link   C'Telsket's Memory C'Telsket's_Memory wikilink
   In the first room go out the North Exit. (Note: This is a room that has a disk in it in EC, but not here.)
  In the second room go out the East Exit. (When you first enter go left, right, and down the ladder. Then go through the tunnel
@@ -146,7 +146,7 @@ succeeded and took the girl, Minerva, to your hideout. But then they arrived.&r
   &5[Who?]&r
   &6[The Crimson King]&r
   &4Them.&r
-&o  C: Destroy the Narsen invader.
+&7&o  C: Destroy the Narsen invader.
  After beating Callum Herring:
  Jeremiah (C'Telsket's Memory)
   &6[The Crimson King]&r
@@ -165,7 +165,7 @@ They took You in. Left you to rot in the darkest dungeons.&r
   &5[Wait, is C’Telsket still alive?]&r
   &6[The Crimson King]&r
   &4Of course not. How would you be seeing this if You were? Let me show you what that innocent boy you saw did next...&r
-&o  C: Talk to the Narsen invader child.
+&7&o  C: Talk to the Narsen invader child.
   &6[The Crimson King]&r
   &4Speak to the boy, C'Telsket.&r
  Max
@@ -206,7 +206,7 @@ continue in your absence and I will allow you to see it. All you must do is come
   &5[...]&r
   &5[...]&r
   &5[Yes.]&r
-&o  C: Talk to the Crimson King.
+&7&o  C: Talk to the Crimson King.
  Jeremiah (Memory Vault)
   &6[The Crimson King]&r
   &4Still the fullness of these memories elude me. The darkness looming over this Valley - nay, this world - still lurks beyond
@@ -217,14 +217,14 @@ my sight.&r
 memories of the first person I dealt with upon awakening in this Valley. The man C'Telsket killed. His name is Callum Herring.
 He was once a powerful member of the Mage Council and mentor to that young boy with a role to play. Go. Seek what I need. His
 pedestal rests next to C'Telsket's.&r  Header section_1   &3'''SUBQUEST : A STUDY IN FREEDOM'''&r
-&o  C: Interact with the western effigy in the middle.
+&7&o  C: Interact with the western effigy in the middle.
  Callum's Head
   &6[Herring]&r
  Something isn't right here... Max?!
   &5[Hello?]&r
   &6[Herring]&r
  Come see...
-&o  C: Speak to Max.
+&7&o  C: Speak to Max.
  Max (Callum's Memory)
   &6[Max]&r
  ...Okay, but can't magic work the way I'm wanting it to Professor?
@@ -257,7 +257,7 @@ will!&r
   &5[Okay.]&r
   &6[Max]&r
  NO. You will show me what you did!
-&o  C: Defend Farr from the invaders and collect four materials from them that might help track Minerva.
+&7&o  C: Defend Farr from the invaders and collect four materials from them that might help track Minerva.
  Max (Callum's Memory)
   &6[Max]&r
  Professor! I've tracked Minerva here, but I can't tell where that Shaman has taken her next. Something is really wrong though.
@@ -278,9 +278,9 @@ handle.
 the forest...
   &8Together, you and Max fled the besieged city. In the forest however, you were attacked by an acolyte of C'Telsket. You awoke
 within his lair...&r
-&o  C: Desperately try to defeat C'Telsket.
+&7&o  C: Desperately try to defeat C'Telsket.
  After defeating C'Telsket:
-&o  C: Talk to the Crimson King.
+&7&o  C: Talk to the Crimson King.
  Jeremiah (Memory Vault)
   &6[The Crimson King]&r
   &4I was reborn. The Wool that contained me was shattered by that foolish Shaman. I took Callum Herring as he died as my first
@@ -303,12 +303,12 @@ however. I leave that to you.&r
   &4Do you think I take their freedom? They are still themselves, just a memory of the lives they lived. I am not that cruel.
 Now go. Speak with him. He is the face to the east, closest to this room.&r  Header section_2   &3'''SUBQUEST : A STUDY IN
 EXILE'''&r
-&o  C: Leave the Memory Vault.
-&o  C: Interact with the eastern effigy closest to the Memory Vault.
+&7&o  C: Leave the Memory Vault.
+&7&o  C: Interact with the eastern effigy closest to the Memory Vault.
  Zanil's Head
   &6[Zanil]&r
  It is time. I will embrace the great tapestry...
-&o  C: Talk to the Crimson King.
+&7&o  C: Talk to the Crimson King.
  Jeremiah (Zanil's Memory)
   &6[The Crimson King]&r
   &4C'Zanil was one of my earliest claims. He lingered longer than any man exiled to die ever should. I could sense his power
@@ -330,7 +330,7 @@ sent you here. I want you to convince him that the time to share is at hand. Are
   &5[I am.]&r
   &6[The Crimson King]&r
   &4Then he arrives.&r
-&o  C: Talk to Zanil.
+&7&o  C: Talk to Zanil.
  Zanil (Zanil's Memory)
   &6[Zanil]&r
  Are you the Crimson King? Do you come to taunt me further with promises of freedom?
@@ -351,7 +351,7 @@ can feel their stain on your hands. Ixume chose its bearer when it was done with
   &5[Then show me.]&r
   &6[Zanil]&r
  I shall.
-&o  C: Explore Zanil's memory.
+&7&o  C: Explore Zanil's memory.
  C'Shura (Zanil's Memory)
   &6[C'Shura]&r
  You came, Zanil.
@@ -381,7 +381,7 @@ God too.
   &5[What?]&r
   &6[C'Shura]&r
  I didn't say anything. Leave here Shaman. Now. Don't let the whispers get too loud...
-&o  C: Speak to Zanil again.
+&7&o  C: Speak to Zanil again.
  Zanil (Zanil's Memory)
   &6[Zanil]&r
  You see. It spoke. It never stopped speaking. How C'Shura kept it suppressed I did not understand. Together with Quetzalcoatl,
@@ -390,7 +390,7 @@ helping him, find another way. I will not share.
   &5[Farewell.]&r
   &6[Zanil]&r
  Goodbye woolbearer. Don't let the voices get too loud...
-&o  C: Talk to the Crimson King.
+&7&o  C: Talk to the Crimson King.
  Jeremiah (Memory Vault)
   &6[The Crimson King]&r
   &4So he rejected you as well.&r

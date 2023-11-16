@@ -37,25 +37,25 @@ restored.
   &6[T'Lm]&r
  Now, head back within the ruins of Velara. There is a side passage containing a cauldron. If you place water into the Cauldron,
 you will find the sacred herbs. Each time you add water, you will receive one herb. Be sure to bring water with you!
-&o  [1/2]: Return to Velara by going through Farr's sewers. Bring Water Bottles.
-&o  [2/2]: Fill the cauldron in Velara with water. You will need three Sacred Herbs.
+&7&o  [1/2]: Return to Velara by going through Farr's sewers. Bring Water Bottles.
+&7&o  [2/2]: Fill the cauldron in Velara with water. You will need three Sacred Herbs.
  After getting the three herbs:
-&o  [1/2]: If you need more Sacred Herbs, you can get them by returning to Velara and filing the cauldron with water from a
+&7&o  [1/2]: If you need more Sacred Herbs, you can get them by returning to Velara and filing the cauldron with water from a
 Water Bottle.
-&o  [2/2]: Once you have the three Sacred Herbs from filling the cauldron, head to the first Totem.
+&7&o  [2/2]: Once you have the three Sacred Herbs from filling the cauldron, head to the first Totem.
   Coordinates: [132, 99, 76]
   After reaching the first Totem:
   &3As the totem powers, the wind seems to pull you north and a vision of the Ziggurat drifts into your head.&r
-&o  [2/2]: Follow the vision of the Ziggurat to the second Totem.
+&7&o  [2/2]: Follow the vision of the Ziggurat to the second Totem.
   Coordinates: [311, 122, -166]
   After reaching the second Totem:
   &3As the totem powers, the wind seems to pick up and pull you violently toward the Air Shrine.&r
-&o  [2/2]: Follow the pull of the wind to the Air Shrine to find the third Totem.
+&7&o  [2/2]: Follow the pull of the wind to the Air Shrine to find the third Totem.
   Coordinates: [474, 127, -51]
   After reaching the third Totem:
   &3As the totem powers, the wind roars, and figures materialize around you.&r
  After defeating or fleeing the Sons of the Forest:
-&o  Return to T'Lm in the Magenta Lobby.
+&7&o  Return to T'Lm in the Magenta Lobby.
  T'Lm (Magenta Lobby)
   &6[T'Lm]&r
  You return alive. This is wonderful news. I feel the jungle's magic flowing freely again. Tell me, what happened at the last
@@ -83,8 +83,8 @@ Forest and their evil. Now, let me cast a Blessing of Passage upon you. They wil
   &5[Go ahead.]&r
   &6[T'Lm]&r
  It is done. Go now and meet T'Xoc, the village elder. My brother.
-&o  [1/2]: Find the entrance to the city of Ta'Eldim.
-&o  [2/2]: Once inside Ta'Eldim talk to T'Xoc.
+&7&o  [1/2]: Find the entrance to the city of Ta'Eldim.
+&7&o  [2/2]: Once inside Ta'Eldim talk to T'Xoc.
   Coordinates: [472, 83, -218]
   After Entering:
  Ta'Eldim Gatekeeper
@@ -93,7 +93,7 @@ Forest and their evil. Now, let me cast a Blessing of Passage upon you. They wil
   &5[I was sent by T'Lm. I have the Blessing of Passage.]&r
   &6[Ta'Eldim Gatekeeper]&r
  Very well then. Follow me.
-&o  He looks like he doesn't believe you for a moment, he then sighs.
+&7&o  He looks like he doesn't believe you for a moment, he then sighs.
   &5[Lead the way.]&r
  Head to T'Xoc:
  T'Xoc

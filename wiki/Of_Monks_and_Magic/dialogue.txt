@@ -1,5 +1,5 @@
 &r
-&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same
+&7&o  Note: The quest has been reworked to start with Private Matthias but the overall approach remains the same
  Captain Tobias
   &6[Captain Tobias]&r
  Hello there, welcome to Farr. Keep an eye out while you're here; rogues and monsters surround this town, but we'll keep you
@@ -17,19 +17,19 @@ tools. We haven't seen them in twelve days. I've heard some bad rumors that make
   &5[Not right now]&r
   &6[Captain Tobias]&r
  Splendid. Head up north, make sure the monks are fine and assist if they are not, and then report back.
-&o  The Axtan Monks haven't been heard from lately. Captain Tobias asks that you see if they're alright. Head to the   Link
+&7&o  The Axtan Monks haven't been heard from lately. Captain Tobias asks that you see if they're alright. Head to the   Link
 Axtan Monastery Axtan_Monastery wikilink at 665 121 -265
-&o  When entering the basement of the monastery, dialog should pop up in chat. Otherwise go into the basement and speak with
+&7&o  When entering the basement of the monastery, dialog should pop up in chat. Otherwise go into the basement and speak with
 Abbott Johann
  Abbot Johann
   &6[Abbot Johann]&r
  Help! Druids are attacking our monastery and are casting a dark spell! Please slay the Sons of the Forest before they can
 finish their ritual!
-&o  Slay the druids until dialog appears in chat:  You feel the dark magic of the Sons of the Forest lift from the monastery!
-&o  Speak with Abbott Johann
+&7&o  Slay the druids until dialog appears in chat:  You feel the dark magic of the Sons of the Forest lift from the monastery!
+&7&o  Speak with Abbott Johann
   &6[Abbot Johann]&r
  Bless you warrior! I felt the influence of that shadowy spell lift from us. Now go, hurry back to Farr and warn Captain Tobias
 that the Sons of the Forest have risen again and are trying to steal secrets most ancient.
  COMPLETED OF MONKS AND MAGIC! Awarded   Link   Monk's Robe Monk's_Robe wikilink  .
-&o  Note: Your quest compass will say that the quest isn't completed yet and to speak with Captain Tobias. This starts the next
-quest in the chain:   Link   Sons of the Forest Sons_of_the_Forest wikilink
+&7&o  Note: Your quest compass will say that the quest isn't completed yet and to speak with Captain Tobias. This starts the
+next quest in the chain:   Link   Sons of the Forest Sons_of_the_Forest wikilink

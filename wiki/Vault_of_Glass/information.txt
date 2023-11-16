@@ -1,6 +1,6 @@
-prerequisites = 
+Pre-req: 
 * &3Bandit Troubles&r
 * &3A Crown of Madness&r
- NPC: Postman Coords: 1150, 125, -129
- King's Valley Highwatch
-POI: &3Infested House&r
+ NPC: Postman &1Coords:&r 1150, 125, -129
+&2 King's Valley&r Highwatch
+POI:  &3Infested House&r

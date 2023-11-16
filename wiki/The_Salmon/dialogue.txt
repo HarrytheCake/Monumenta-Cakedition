@@ -21,7 +21,7 @@
  Haha, clad to hear it! At this point the only thing that can beat Roger's 58 inch trout is the legendary Regal Salmon. Quentin
 always claims he knows how to find it, but never says anything specific. Might want to talk to him. He'll be in the cafe, like
 always. Good luck!
-&o  Talk to Quentin in the cafe and convince him to tell you about the Regal Salmon.
+&7&o  Talk to Quentin in the cafe and convince him to tell you about the Regal Salmon.
  Quentin
   Coordinates: [728, 68, 453]
    &6[Quentin]&r
@@ -31,14 +31,14 @@ always. Good luck!
  Nothing you'd like to hear. Seeking the Salmon is not worth it. If you're stupid enough to really want to know, bring me an
 Axtan Ale. This stupid place only serves coffee. Coffee! After what I've fished up, I need a stiff drink, and those monks make
 the best around!
-&o  [1/2]: Find an Axtan Ale in the   Link   Axtan Monastery Axtan_Monastery wikilink  's basement.
-&o  [2/2]: Once you have the Axtan Ale, bring it back to Quentin in Lowtide's cafe. He'll tell you the salmon's secret!
+&7&o  [1/2]: Find an Axtan Ale in the   Link   Axtan Monastery Axtan_Monastery wikilink  's basement.
+&7&o  [2/2]: Once you have the Axtan Ale, bring it back to Quentin in Lowtide's cafe. He'll tell you the salmon's secret!
  Quentin
-&o   &3He hastily chugs the ale&r
+&7&o   &3He hastily chugs the ale&r
   &6[Quentin]&r
  Ah! Thhat's the shtuff. Soo.. If you want to catch that shtupid fish you need to be reallllly unlucky. It'sh cursed, so it only
 shows when you're unlu*hic*cky. Then jusht go hang out near that big cat thing across the lake. But beware! It's curshed!
-&o  Quentin said you'll need to be unlucky and go hang out around a 'big cat thing' to find the Regal Salmon.
+&7&o  Quentin said you'll need to be unlucky and go hang out around a 'big cat thing' to find the Regal Salmon.
   Purchase a Fisherman's Folly from the Alchemist at the Lowtide market.
  Travel to the nearby cat statue [613, 72, 358] and drink the Fisherman's Folly. Instantly 3 Vex's will spawn and the Regal
 Salmon will be in your inventory.
@@ -48,8 +48,8 @@ Salmon will be in your inventory.
  Poacher! Cur! Lemuria will not forget this theft of our glorious fish! Get them!
   &3You detect a curse on the Regal Salmon, defeat the Lemurian Knights to lift it.&r
  After beating the Knights:
-&o  You feel the curse lifting from the Regal Salmon.
-&o  Bring the Regal Salmon to the dockmaster so you can win the contest! If you lose the Regal Salmon, the dockmaster might
+&7&o  You feel the curse lifting from the Regal Salmon.
+&7&o  Bring the Regal Salmon to the dockmaster so you can win the contest! If you lose the Regal Salmon, the dockmaster might
 manage to find it.
  Dockmaster
   &6[Dockmaster]&r

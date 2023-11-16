@@ -31,7 +31,7 @@ of spending all his time getting drunk. Plus, I need Narsen currency for whateve
   &5[You got it.]&r
   &6[Shurima]&r
  Hurry along.
-&o  Head to Moneychanger Elgort in the Tipsy Tlaxan.
+&7&o  Head to Moneychanger Elgort in the Tipsy Tlaxan.
  Moneychanger Elgort
   Coordinates: [452, 196, -333]
    &6[Moneychanger Elgort]&r
@@ -43,7 +43,7 @@ of spending all his time getting drunk. Plus, I need Narsen currency for whateve
   &6[Moneychanger Elgort]&r
  What the uh... what was the word again... Z'cur? I think that's right. Yeah what the Z'car is that?
   &5[Uh... so can you convert it?]&r
-&o  He leans forward and seems to sober up
+&7&o  He leans forward and seems to sober up
   &6[Moneychanger Elgort]&r
  I suppose I could try and cast the conversion spell the Goldmage taught us. No promises on what might happen though...
   &5[Let's do it.]&r
@@ -60,7 +60,7 @@ of spending all his time getting drunk. Plus, I need Narsen currency for whateve
   &5[I guess I'll head back to Shurima now.]&r
   &6[Moneychanger Elgort]&r
  Good luck! She scares me!
-&o  Return to Shurima... carefully.
+&7&o  Return to Shurima... carefully.
  Shurima
   &6[Shurima]&r
  Have you spoken to the Moneychanger yet?
@@ -81,7 +81,7 @@ of spending all his time getting drunk. Plus, I need Narsen currency for whateve
   &6[Shurima]&r
  So if changing money is too hard for you, why don't you head back to the bar and pick out a nice wine for the dinner? Keep the
 money - you'll need it with Murtag, the barkeep.
-&o  Murtag, back in the Tipsy Tlaxan, might have what we need.
+&7&o  Murtag, back in the Tipsy Tlaxan, might have what we need.
  Murtag
   &6[Murtag]&r
  Welcome to the Tipsy Tlaxan! Step right up, grab a beer, and relax! Let all your cares wash away.
@@ -98,8 +98,8 @@ trade me and I'll sell it to ya for half a stack of Experience Bottles.
   &5[Ugh... okay.]&r
   &6[Murtag]&r
  I hope she enjoys it!
-&o  [1/2]: Trade with Murtag and purchase Tlaxan Wine for Shurima.
-&o  [2/2]: Return to Shurima once you have Tlaxan Wine.
+&7&o  [1/2]: Trade with Murtag and purchase Tlaxan Wine for Shurima.
+&7&o  [2/2]: Return to Shurima once you have Tlaxan Wine.
  Shurima
   &6[Shurima]&r
  Any luck with the wine yet?
@@ -116,7 +116,7 @@ hiding somewhere, and my husband is holed up in his little library. All of this 
   &5[...]&r
   &6[Shurima]&r
  Why don't you just see if Arkhest needs any help. I think I'll get more done here without you.
-&o  Be a good hero and head to Arkhest.
+&7&o  Be a good hero and head to Arkhest.
  Arkhest
   Coordinates: [480, 196, -350]
    &6[Arkhest]&r
@@ -139,7 +139,7 @@ me a good bit of money and I really need the book back. It's called Of Shamans a
 hero thwarting the wicked Siblings of the Trees and their attacks on an Abbey. You might really like it! But yeah, Macuniloh
 wants to read it, so I'll need it back along with her late fee. Should be 64 of our currency, but at this point I'll take
 anything. Thanks [Player]! You're a big help!
-&o  Chase down the vile book thief, Talisa.
+&7&o  Chase down the vile book thief, Talisa.
  Talisa
   Coordinates: [498, 187, -371]
    &6[Talisa]&r
@@ -167,7 +167,7 @@ A'rexk! I didn't want to tell you either.
   &6[Talisa]&r
  Here's the stupid book. Now for your recipes. You can make three potions by putting a   Link   Pulsating Dust Pulsating_Dust
 wikilink surrounded by an ingredient for a cure for Marasmus Execratio into the crafter. They're worth it.
-&o  Return to Arkhest, victorious. At last, a win for us?
+&7&o  Return to Arkhest, victorious. At last, a win for us?
  Arkhest
   &6[Arkhest]&r
  Is that my book I smell?
@@ -178,7 +178,7 @@ from Talisa over to Narsen currency? We'll definitely need some.
   &5[I already that for Shurima. It didn't work.]&r
   &6[Arkhest]&r
  No, no. It definitely will work. I heard someone say it did. Go use Elgort in the bar. He's the best!
-&o  ...Go talk to Moneychanger Elgort. Ugh.
+&7&o  ...Go talk to Moneychanger Elgort. Ugh.
  Moneychanger Elgort
   &6[Moneychanger Elgort]&r
  Money makes the world go 'round!
@@ -206,7 +206,7 @@ differently.]&r
   &5[Me too buddy. Thanks for trying.]&r
   &6[Moneychanger Elgort]&r
  Good luck!
-&o  Go disappoint Arkhest...
+&7&o  Go disappoint Arkhest...
  Arkhest
   &6[Arkhest]&r
  How goes the changing of the money with Elgort?
@@ -226,7 +226,7 @@ find Midrey for me? She's a small child and she likes to wander off...
   &5[Any ideas where to start?]&r
   &6[Arkhest]&r
  She likes the sound of water! I'd start there.
-&o  Find Midrey.
+&7&o  Find Midrey.
  Midrey
   Coordinates: [476, 184, -357]
    &6[Midrey]&r
@@ -239,21 +239,21 @@ find Midrey for me? She's a small child and she likes to wander off...
  ...
   &5[Midrey?]&r
   &6[Midrey]&r
-&o   &eand so they seek the way... a Sanctum lost, a mind decayed.&r
+&7&o   &eand so they seek the way... a Sanctum lost, a mind decayed.&r
   &5[Excuse me?]&r
   &6[Midrey]&r
-&o   &enowhere... nowhere left to stand... A binder of souls... lost, forsaken...&r
+&7&o   &enowhere... nowhere left to stand... A binder of souls... lost, forsaken...&r
   &5[Are you... talking about C'Shura?]&r
   &6[Midrey]&r
    &eC'SHURA LOST IN THE DEPTHS. C'AXTAL TAKEN BY THE JUNGLE. C'SHURA C'SHURA C'SHURA.&r
   &5[Midrey? Hey! Wake up!]&r
   &6[Midrey]&r
    &eSHE LIVES. SHE SEES ALL.&r
-&o  Midrey slumps to the ground.
+&7&o  Midrey slumps to the ground.
   &5[Oh god, I need to go tell Arkhest.]&r
   &6[Midrey]&r
  ...
-&o  Hurry back to Arkhest.
+&7&o  Hurry back to Arkhest.
  Arkhest
   &6[Arkhest]&r
  Any luck fin-
@@ -266,7 +266,7 @@ find Midrey for me? She's a small child and she likes to wander off...
   &5[Under the waterfall.]&r
   &6[Arkhest]&r
  Oh Ixume. Go get Shurima. Please. Oh Ixume I don't know what to do. None of my books have ever said anything about this!
-&o  Hurrier back to Shurima.
+&7&o  Hurrier back to Shurima.
  Shurima
   &6[Shurima]&r
  I thought I told you to go help Arkhest.
@@ -279,7 +279,7 @@ find Midrey for me? She's a small child and she likes to wander off...
   &5[She was saying some strange things about C'Shura and a place.]&r
   &6[Shurima]&r
  T'Xoc. We need T'Xoc. This is not okay. Please go uh god, I'm so sorry I got you involved in this... Please get him. My baby...
-&o  Hurriest to T'Xoc.
+&7&o  Hurriest to T'Xoc.
  T'Xoc
   &6[T'Xoc]&r
  Hello again [Player]. What can I do for you?
@@ -312,7 +312,7 @@ as a student and teach her to control these dreams.
   &6[T'Xoc]&r
  I shall go attend to Midrey. You should go speak to her parents. I'm sure they need some reassurance. Go to her mother first.
 I'm sure Arkhest will have returned home.
-&o  Calmly talk to Shurima.
+&7&o  Calmly talk to Shurima.
  Shurima
   &6[Shurima]&r
  What have you heard? Did T'Xoc say anything?
@@ -327,11 +327,11 @@ I'm sure Arkhest will have returned home.
   &5[You both should go speak to him. He's going to make sure she's fine, he said.]&r
   &6[Shurima]&r
  This is not what I expected to hear today... Our little Midrey... A Shaman? We've raised her so well, my love.
-&o  She and Arkhest embrace.
+&7&o  She and Arkhest embrace.
   &5[I'm going to head to T'Xoc and see what more I can do to help.]&r
   &6[Shurima]&r
  Thank you. I mean it.
-&o  Have a cryptic chat with T'Xoc.
+&7&o  Have a cryptic chat with T'Xoc.
  T'Xoc
   &6[T'Xoc]&r
  Welcome back, [Player]. How did Shurima and Arkhest take the news?
@@ -360,13 +360,13 @@ You must purify the water within then return to me.
   &6[T'Xoc]&r
  Go to the stream and purify the water. Instructions are available there, for those in times of great need. Return to me if you
 succeed at this task, and I can then open the way for you.
-&o  Find the not so hidden passage near the hot springs and solve the puzzle within.
+&7&o  Find the not so hidden passage near the hot springs and solve the puzzle within.
   Pull levers in this order:  Plain  Top White Plain  Bottom Purple Plain  Top Orange Plain  Top Blue Plain  Bottom Yellow Plain
 Top Yellow Plain  Bottom Orange Plain  Bottom White Plain  Top Purple Plain  Bottom Blue
   After solving the puzzle:
   &3The waters seem to glow, pure once more.&r
-&o  Remember to talk to T'Xoc before heading to The Fountain!
- C:   &o  Back to T'Xoc we go.
+&7&o  Remember to talk to T'Xoc before heading to The Fountain!
+ C:   &7&o  Back to T'Xoc we go.
  T'Xoc
   &6[T'Xoc]&r
  I can feel it. The waters flow pure again... Are you ready to travel to Ta'Ferna?
@@ -374,10 +374,10 @@ Top Yellow Plain  Bottom Orange Plain  Bottom White Plain  Top Purple Plain  Bot
   &6[T'Xoc]&r
  Then go. The way forward will be open to you now.
   &3You have amplified the [[Corrupted Caves]]. Go and seek out the Fountain of Miracles once more.&r
-&o  [1/4]: Hurriest-er to the Fountain of Miracles and explore within.
-&o  [2/4]: Once you have found your way through, speak to the one that is waiting on the other side.
-&o  [3/4]: If the path closes on you, repurify the stream by redoing the puzzle near the hot springs...
-&o  [4/4]: ...Then speak to T'Xoc to reopen the way once more.
+&7&o  [1/4]: Hurriest-er to the Fountain of Miracles and explore within.
+&7&o  [2/4]: Once you have found your way through, speak to the one that is waiting on the other side.
+&7&o  [3/4]: If the path closes on you, repurify the stream by redoing the puzzle near the hot springs...
+&7&o  [4/4]: ...Then speak to T'Xoc to reopen the way once more.
  Reaching the path:
   &5As you go deeper through the cave, you being to feel at one with nature, and the world fades away.&r
  Nai (Sanctum Lobby)

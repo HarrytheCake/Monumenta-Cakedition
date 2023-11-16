@@ -1,5 +1,5 @@
- NPC: Helring King's Valleytown = Lowtidestarting_npc_coordinates = 722, 70, 523rewards=*Access to the &3Azacor the Dark SummonerAzacor&r boss fight
+ NPC: Helring&2 King's Valleytown = Lowtidestarting_npc_coordinates = 722, 70, 523rewards=*Access to the &3Azacor the Dark SummonerAzacor&r boss fight
 *Teleports in and out of the &3Azacor’s Grovestarting_npc_coordinates = 722, 70, 523rewards=*Access to the &3Azacor the Dark SummonerAzacor&r boss fight
-*Teleports in and out of the &3Azacor’s Grove King's Valleytown = Lowtidestarting_npc_coordinates = 722, 70, 523rewards=*Access to the &3Azacor the Dark SummonerAzacor&r boss fight
+*Teleports in and out of the &3Azacor’s Grove&2 King's Valleytown = Lowtidestarting_npc_coordinates = 722, 70, 523rewards=*Access to the &3Azacor the Dark SummonerAzacor&r boss fight
 *Teleports in and out of the &3Azacor’s Grovetown = Lowtidestarting_npc_coordinates = 722, 70, 523rewards=*Access to the &3Azacor the Dark SummonerAzacor&r boss fight
 *Teleports in and out of the &3Azacor’s Grove

@@ -27,7 +27,7 @@ power. Do you know of the Frost Moon Knights?
 a mysterious people that create great monuments in the mountains. I believe I have a book detailing what we know of their
 history in my family home in the city. My younger sister, Belladonna, should know about it, please bring me that book.
   &5[Will do.]&r
-&o  Speak to Belladonna about the book Luc requested
+&7&o  Speak to Belladonna about the book Luc requested
  Belladonna SoftBreak  Coordinates: -1720, 135, -77
   &8She practically ignores you, lost in a book...&r
   &5[Are you Belladonna?]&r
@@ -51,8 +51,8 @@ Luc the book. It's not like he'd be able to figure it out anyways.
   &6[Belladonna]&r
  The Grim Towers are a nearby stronghold of the Frost Moon Knights. The book talks about rumors of a magic relic hidden as close
 to the moon as possible. It's got to be there. If you find anything, bring it back here and we can make the trade.
-&o  1/2 - Fetch the magic relic hiding within the Grim Towers
-&o  2/2 - Once you find the magic relic return to Belladonna with it
+&7&o  1/2 - Fetch the magic relic hiding within the Grim Towers
+&7&o  2/2 - Once you find the magic relic return to Belladonna with it
  Belladonna
   &6[Belladonna]&r
  Back already?
@@ -60,7 +60,7 @@ to the moon as possible. It's got to be there. If you find anything, bring it ba
   &6[Belladonna]&r
  Incredible. It actually exists. Next time Luc shows up, he'll see what true magic is. Anyways, here's his book. Just because
 I'm a tenebrist doesn't mean I'm evil.
-&o  Head back to Luc and give him the book Belladonna gave you
+&7&o  Head back to Luc and give him the book Belladonna gave you
  Luc
   &6[Luc]&r
  Ah! You've returned. Please tell me you've got the book!
@@ -78,9 +78,9 @@ to the northeast of here. It must be in her divine image, standing tall with win
  Ha. As if a novice could unlock her secrets. I'll be investigating later, but feel free to bask in her image. It's not like
 you'll even appreciate it.
   &8You decide to check it out&r
-&o  Seek out the statue of Alutana and discover its secrets
+&7&o  Seek out the statue of Alutana and discover its secrets
  Solve the puzzle and retrieve the ice and book.
-&o  Return to Luc with the book you found at the statue of Alutana
+&7&o  Return to Luc with the book you found at the statue of Alutana
  Luc
   &6[Luc]&r
  I told you, I'll visit Alutana's shrine later. Pay her homage if you must.
@@ -117,7 +117,7 @@ me at the portal inside of Whitecliffe. I'll need the power of that artifact to 
   &6[Belladonna]&r
  What are you waiting for? Meet me at the portal inside of Whitecliffe Citadel. It's rumored to be a large mirror deep inside
 the mountain.
-&o  Head to the Palace of Mirrors
+&7&o  Head to the Palace of Mirrors
   &6[Belladonna]&r
    &6[Player]&r
  I thought you were trying to save Luc!

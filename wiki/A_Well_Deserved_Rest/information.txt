@@ -1,3 +1,3 @@
-prerequisites = None
- NPC: Sam Ludvic Coords: -1599, 106, 1007
- Celsian Isles Frostgate
+Pre-req: None
+ NPC: Sam Ludvic &1Coords:&r -1599, 106, 1007
+&2 Celsian Isles&r Frostgate

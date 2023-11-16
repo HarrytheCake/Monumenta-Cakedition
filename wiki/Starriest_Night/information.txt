@@ -1,4 +1,4 @@
-prerequisites = &3Starrier Night&r
- NPC: Maywitch Coords: -1630, 143, -2
- King's Valley Ocean Gate
-POI: &3Bastion of Spires&r, &3Cloud Piercer&r, and &3Aphelion Isle&r
+Pre-req: &3Starrier Night&r
+ NPC: Maywitch &1Coords:&r -1630, 143, -2
+&2 King's Valley&r Ocean Gate
+POI:  &3Bastion of Spires&r, &3Cloud Piercer&r, and &3Aphelion Isle&r

@@ -47,7 +47,7 @@ hapless Chillwind ships.
   &6[Captain Lamis]&r
  Arrgh indeed. It was quite the sight, although no one quite believes I saw it. The rest of the crew was lookin' the other way.
 I do hope that someday I can see him again.
- C:   &o  Travel to the   Link   Barracks At Sea Barracks_At_Sea wikilink and find Levyn to get a supply cache for Captain
+ C:   &7&o  Travel to the   Link   Barracks At Sea Barracks_At_Sea wikilink and find Levyn to get a supply cache for Captain
 Lamis. You will have to go down a ladder to find him.
  Levyn ( Link   Barracks At Sea Barracks_At_Sea wikilink  )
   Coordinates: (Missing)
@@ -61,14 +61,14 @@ some lying around. There must be more!
   &5[Aye aye.]&r
   &6[Levyn]&r
  Arrgh! I'll be here waitin' for ye.
- C:   &o  [1/2]: Find the Best TNT Ever!
- C:   &o  [2/2]: Talk to Levyn at the Barracks at Sea once you have the Best TNT Ever.
+ C:   &7&o  [1/2]: Find the Best TNT Ever!
+ C:   &7&o  [2/2]: Talk to Levyn at the Barracks at Sea once you have the Best TNT Ever.
  Levyn ( Link   Barracks At Sea Barracks_At_Sea wikilink  )
   &6[Levyn]&r
  Arrgh you've done it! Now stand back.
   &5[Stand back from what?]&r
- C:   &o  [1/2]: Grab the supply cache from inside the vault near Levyn at the Barracks at Sea.
- C:   &o  [2/2]: Return the cache to Captain Lamis.
+ C:   &7&o  [1/2]: Grab the supply cache from inside the vault near Levyn at the Barracks at Sea.
+ C:   &7&o  [2/2]: Return the cache to Captain Lamis.
  Captain Lamis
   &6[Captain Lamis]&r
  Arrgh next ye need to take yer crew to the Skull Island, just to the east of here. There be two caches there, but me mateys
@@ -88,11 +88,11 @@ crew and influence. What I wouldn't give to see him thrown overboard.
   &6[Captain Lamis]&r
  There be a series of forts and I think there be a big underground section. Ye can stay outta there - me mates won't go too
 deep.
- C:   &o  [1/3]: Head to   Link   Skull Island Skull_Island wikilink and find Samwell to aid the search for one of the two
+ C:   &7&o  [1/3]: Head to   Link   Skull Island Skull_Island wikilink and find Samwell to aid the search for one of the two
 caches for Captain Lamis. Watch out for trouble. You will have to go down a ladder to find him.
- C:   &o  [2/3]: Head to   Link   Skull Island Skull_Island wikilink and find Izzy to aid the search for one of the two caches
+ C:   &7&o  [2/3]: Head to   Link   Skull Island Skull_Island wikilink and find Izzy to aid the search for one of the two caches
 for Captain Lamis. You will have to go down a ladder to find him.
- C:   &o  [3/3]: Once you have the caches, return to Captain Lamis.
+ C:   &7&o  [3/3]: Once you have the caches, return to Captain Lamis.
  Samwell ( Link   Skull Island Skull_Island wikilink  )
   [-93, 92, 1400]
    &6[Samwell]&r
@@ -127,8 +127,8 @@ the lamps. Give it a shot.
   &5[Y'Arrgh.]&r
   &6[Captain Lamis]&r
  Arrgh!
- C:   &o  [1/2]: Enjoy the party, in your crew's honor! When you're all partied out, chat with Captain Indigo.
- C:   &o  [2/2]: Should you somehow leave the party early talk to Captain Lamis to return to it.
+ C:   &7&o  [1/2]: Enjoy the party, in your crew's honor! When you're all partied out, chat with Captain Indigo.
+ C:   &7&o  [2/2]: Should you somehow leave the party early talk to Captain Lamis to return to it.
  Talking to the npcs at the party:
   &6[Izzy]&r
  Well done [Player], but, to be honest, I don't know how much pirating I want to do anymore. I'm getting a bit tired of it.

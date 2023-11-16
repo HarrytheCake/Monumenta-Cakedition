@@ -1,6 +1,6 @@
-prerequisites = None NPC: Nelfine King's Valleytown = Sierhavenstarting_npc_coordinates = -774, 100, -5
-Press a button in the Jeweler and Buildmaster's house to open the secret passage to Nelfine's room NPC: Nelfine King's Valleytown = Sierhavenstarting_npc_coordinates = -774, 100, -5
+Pre-req: None NPC: Nelfine&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -774, 100, -5
+Press a button in the Jeweler and Buildmaster's house to open the secret passage to Nelfine's room NPC: Nelfine&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -774, 100, -5
 Press a button in the Jeweler and Buildmaster's house to open the secret passage to Nelfine's roomstarting_npc_coordinates = -774, 100, -5
-Press a button in the Jeweler and Buildmaster's house to open the secret passage to Nelfine's room King's Valleytown = Sierhavenstarting_npc_coordinates = -774, 100, -5
+Press a button in the Jeweler and Buildmaster's house to open the secret passage to Nelfine's room&2 King's Valleytown = Sierhavenstarting_npc_coordinates = -774, 100, -5
 Press a button in the Jeweler and Buildmaster's house to open the secret passage to Nelfine's roomtown = Sierhavenstarting_npc_coordinates = -774, 100, -5
 Press a button in the Jeweler and Buildmaster's house to open the secret passage to Nelfine's room

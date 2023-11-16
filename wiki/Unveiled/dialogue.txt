@@ -30,7 +30,7 @@ best shot, but be wary, it's a dangerous place. Twelve should be enough to weave
   &6[Josiah]&r
  Maybe you could find such a wand in the graveyard? I've heard that a powerful sorcerer was buried down there, perhaps such a
 foul wand would be inside his tomb?
-&o  Work with Josiah on the magic to learn how to infiltrate the Sons of the Forest's fortress.
+&7&o  Work with Josiah on the magic to learn how to infiltrate the Sons of the Forest's fortress.
  The 12 Mistleaves can be found in   Link   Cursed Forest Cursed_Forest wikilink  .
  The Staff can be found in the depths of the   Link   Graveyard Graveyard wikilink  .
  Josiah
@@ -38,7 +38,7 @@ foul wand would be inside his tomb?
  Mistleaves and a Wand of Blood! Just what I needed. Now... the thing with a Mistleaf Key is that they're very vulnerable to
 powerful magic. I'll make a few and send them ahead to Hayne's explosive general, and hang onto one to give to you directly.
 Until then, you should check back in with Haynes, I think she has a plan.
-&o  Talk to Haynes and get her plan of attack on the fortress.
+&7&o  Talk to Haynes and get her plan of attack on the fortress.
  Commander Haynes
   &6[Commander Haynes]&r
  Excellent, it sounds like Josiah's ready to go. But invisibility alone won't be enough; any disturbance in the Sons of the
@@ -55,8 +55,8 @@ Forest's inner sanctum and their full force will come running. Which means we'll
   &6[Commander Haynes]&r
  Lieutenant Kathryn, my chief bombardier, is in position setting up her cannons. Look to the treetops near their Verdant
 Fortress and see what she needs for the assault.
-&o  Haynes smiles.
-&o  Meet with Kathryn in the treetops near the fortress and help her prepare the bombardment.
+&7&o  Haynes smiles.
+&7&o  Meet with Kathryn in the treetops near the fortress and help her prepare the bombardment.
  Kathryn
   Coordinates: [884, 132, 195]
    &6[Kathryn]&r
@@ -76,7 +76,7 @@ tried.
   &6[Kathryn]&r
  I need stronger explosives. Find me an expert on fire. Explosives. Lava. Anything! As long as I can get something better than
 regular TNT, we can blow this fortress into rubble! Try asking around Farr, I've heard there's an old alchemist who lives there.
-&o  Search for an alchemist who can teach you how to make stronger explosives.
+&7&o  Search for an alchemist who can teach you how to make stronger explosives.
  Carbocius
   Coordinates: [608, 102, 157]
    &6[Carbocius]&r
@@ -89,7 +89,7 @@ What did you want?
   &6[Carbocius]&r
  I... uh.... um... Just, just forget I mentioned it. I developed it back while working in the old Alchemy Labs, before the spill
 happened, but it's entirely too dangerous for anyone to use!
-&o   &3Perhaps another line of questioning will work better...&r
+&7&o   &3Perhaps another line of questioning will work better...&r
   &6[Carbocius]&r
  Good evening, what did you need? Please don't tell me you were still going to ask about that hyper TNT again.
   &5[Sooo... Hyper TNT?]&r
@@ -112,17 +112,17 @@ always got unwelcome guests.
   &6[Carbocius]&r
  Well, they didn't totally shut down the alchemy labs. One wing of it got converted into an underground bunker for testing. We
 had to keep a huge water vat right above it though, so we could flood it in case anything got out of control.
-&o  Find Carbocius's old laboratory and use it to make the Hyper TNT!
+&7&o  Find Carbocius's old laboratory and use it to make the Hyper TNT!
   The Lab is reached via the water vat in front of Sierhaven castle [-750, 106, -71].
  To get into the water vat you can either enter the Arcane Emporium, climb up the ladder at [-774, 108, -54] and swim along the
 channel to get into the water vat or you can go up to the third floor of the castle and bounce via the slimes into
   Link   Puzzle Solutions Guide/Unveiled Puzzle_Solutions_Guide/Unveiled wikilink
- &o  Bring the Hyper TNT to Kathryn so she can ready the cannons!
+ &7&o  Bring the Hyper TNT to Kathryn so she can ready the cannons!
  Kathryn
   &6[Kathryn]&r
  That... that TNT! It's so unstable! Dangerous! Destructive! It's absolutely perfect. I'll prep the cannons, go pick up the
 Mistleaf Key Josiah was crafting and we'll get to it!
-&o  Grab your Mistleaf-crafted Key from Josiah and charge into the   Link   Verdant Fortress Verdant_Fortress wikilink  !
+&7&o  Grab your Mistleaf-crafted Key from Josiah and charge into the   Link   Verdant Fortress Verdant_Fortress wikilink  !
 Destroy their shield spell so Kathryn can attack!
  After entering the   Link   Inner Sanctum Inner_Sanctum wikilink lobby:
  Talking to Kathryn in the lobby:
@@ -136,10 +136,10 @@ spell?
   &6[Kathryn]&r
  Great. Do you still have the key Josiah gave you? If you need another one or lost the one he gave you, I can sell you one.
 They're not easy to make, ya know. Good luck in there!
-&o  [1/2] Infiltrate the Inner Sanctum and destroy whatever foes and spells stand in your way!
-&o  [2/2] Enter the Inner Sanctum Story ike to defeat the Sons of the Forest.
+&7&o  [1/2] Infiltrate the Inner Sanctum and destroy whatever foes and spells stand in your way!
+&7&o  [2/2] Enter the Inner Sanctum Story ike to defeat the Sons of the Forest.
  After you break the magical spell crystal:
-&o  '   &r
+&7&o  '   &r
  After you enter the innermost part of the sanctum and touch the shard:
   &6[Masked Man]&r
  Beautiful, isn't it. A Black Shard, shorn from the Black Wool itself. I don't know how you survived me once, but I am
@@ -152,11 +152,11 @@ impressed.
  After killing the Masked Man:
   &6[Masked Man]&r
  Hah... My death won't stop the shard... We will not fail... We will not fail Lord Calder...
-&o  You pick up the shard and examine it. Power radiates from it. You stop to put it in your pocket...
-&o  You start to feel dizzy...
+&7&o  You pick up the shard and examine it. Power radiates from it. You stop to put it in your pocket...
+&7&o  You start to feel dizzy...
  UNVEILED COMPLETE! Awarded access to the   Link   Inner Sanctum Inner_Sanctum wikilink Story ike, access to   Link   Malevolent
 Reverie Malevolent_Reverie wikilink  , and Full Access to the   Link   Reverie Malevolent_Reverie wikilink Lobby Trader.
- C:   &o  Speak to Josiah about what happened.
+ C:   &7&o  Speak to Josiah about what happened.
  Josiah
   &6[Josiah]&r
  You vanished right after you touched the Black Shard! What happened in there!? Did you get the Shard?
@@ -168,7 +168,7 @@ pleasant - thoughts of nature and life. They must have been corrupted by the rit
   &6[Josiah]&r
  Wild, I can still feel the trace of power it left on you. I'm not sure how we'll get it out of the Inner Sanctum. Try talking
 to Antonio downstairs, he makes all the armor here and might be able to channel that power into something productive.
- C:   &o  Work with Mastersmith Antonio to imbue an item with the Black Shard's power.
+ C:   &7&o  Work with Mastersmith Antonio to imbue an item with the Black Shard's power.
  Mastersmith Antonio
   Coordinates: [1186, 124, -106]
    &6[Mastersmith Antonio]&r
