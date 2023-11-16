@@ -1,5 +1,5 @@
-name: run main.py
-
+name: mirror to gitea
+  
 on:
   workflow_dispatch:
 
