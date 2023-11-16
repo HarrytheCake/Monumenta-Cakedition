@@ -1,21 +1,26 @@
-name: " ⏳  Gitea Mirror Setup"
+name: run main.py
 
 on:
   workflow_dispatch:
-  
-  push:
-    branches:
-      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: varunsridharan/action-gitea-mirror@main
-        name: " ⏳ Setting Up Mirror"
+
+      - name: checkout repo content
+        uses: actions/checkout@v4.1.1 # checkout the repository content to github runner
+          
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || (git commit -a -m "Mirror to gitea" --allow-empty)
+          
+      - name: push changes
+        uses: ad-m/github-push-action@v0.8.0
         with:
-          gh_username: ${{ secrets.GH_USERNAME }}
-          gh_accesstoken: ${{ secrets.GH_TOKEN }}
-          gitea_host: ${{ secrets.GITEA_HOST }}
-          gitea_username: ${{ secrets.GITEA_USERNAME }}
-          gitea_accesstoken: ${{ secrets.GITEA_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main 
+          repository: https://gitea.com/HarrytheCake/Monumenta-Cakedition.git
