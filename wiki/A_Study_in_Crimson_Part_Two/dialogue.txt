@@ -1,349 +1,471 @@
-&o  Continue your journey with the Crimson King Header start_of_quest  Start of Quest Table
+&r
+&o  Continue your journey with the Crimson King Header start_of_quest  Start of Quest
  Jeremiah
   Coordinates: [-917, 91, -161]
-   &6[Jeremiah]
+   &6[Jeremiah]&r
  You're back! What c-can I do for you?
-  &5[Jeremiah, surely it's been enough time?]
-  &6[Jeremiah]
+  &5[Jeremiah, surely it's been enough time?]&r
+  &6[Jeremiah]&r
  He moves. Something is changi-
-  &5[Jeremiah?]  Header subquest_a_study_in_home  SUBQUEST: A STUDY IN HOME Table
+  &5[Jeremiah?]&r  Header subquest_a_study_in_home  SUBQUEST: A STUDY IN HOME
  The Crimson King
-  &6[The Crimson King]
-  &5[The demon summoner?!]
-  &6[The Crimson King]
+  &6[The Crimson King]&r
+  &4I've made my choice. Let me show you what happened when I made a mistake. I restored a monster to power to get what I
+wanted. You've seen what I've done when I was kind, now you should see my selfishness. Let me show you how I saved Azacor and
+claimed the pedestal for my Wool. Perhaps this can guide us as we resume our quest.&r
+  &5[The demon summoner?!]&r
+  &6[The Crimson King]&r
+  &4The very same. He was the only way in. Go speak to his visage outside this room, to the east, in the middle. I will show you
+my greatest folly.&r
 &o  C: Interact with Azacor's Effigy.
-  &6[Helring]
+  &6[Helring]&r
  Farewell Aesir... Your sacrifice will not be in vain.
-  &6[Aesir]
+  &6[Aesir]&r
  Evil... dies...
-  &6[The Crimson King]
-  &6[Aesir]
+  &6[The Crimson King]&r
+  &4You can live on, dear Aesir.&r
+  &6[Aesir]&r
  Who are... you? Another of the summoner's tricks?
-  &6[The Crimson King]
-  &6[Aesir]
+  &6[The Crimson King]&r
+  &4Nay. I come to you with a deal. Come with me. Grant me your memories of this encounter and I will give you what you desire.
+You will not die for nothing.&r
+  &6[Aesir]&r
  I... You really know what I seek?
-  &6[The Crimson King]
-  &6[Aesir]
+  &6[The Crimson King]&r
+  &4You seek victory for the Axtan Protectors. You shall have it. You seek freedom for the people you love. You want knowledge.
+That I can give you too. All you ever wished to know.&r
+  &6[Aesir]&r
  You... know of the Tree? Can you tell me what it offers?
-  &6[The Crimson King]
-  &6[Aesir]
- I... I shall... I accept your deal... Table
+  &6[The Crimson King]&r
+  &4I will seek for you, Aesir. Come with me.&r
+  &6[Aesir]&r
+ I... I shall... I accept your deal...
  The Crimson King
-  &6[The Crimson King]
-  &5[You know my name, demon?]
-  &6[The Crimson King]
-  &5[Yet you feel so familiar. The Veil flows through you.]
-  &6[The Crimson King]
-  &5[To the Monument? None have been there within my lifetime.]
-  &6[The Crimson King]
-  &5[What will you offer me?]
-  &6[The Crimson King]
-  &5[I have no eternity left. Lightbringer pierces my heart. I am dying.]
-  &6[The Crimson King]
+  &6[The Crimson King]&r
+  &4Now... As for you, Azacor.&r
+  &5[You know my name, demon?]&r
+  &6[The Crimson King]&r
+  &4I am no demon, summoner. You cannot hope to know me.&r
+  &5[Yet you feel so familiar. The Veil flows through you.]&r
+  &6[The Crimson King]&r
+  &4Still, it rejects me. I have need of you. I offer you a choice, one that perhaps is not a choice at all. Get me through the
+Veil, Azacor. Take me to where the Jungle blocks all beings. My home is locked within.&r
+  &5[To the Monument? None have been there within my lifetime.]&r
+  &6[The Crimson King]&r
+  &4You can tear the Veil. I know you can - I have watched you. I have seen your Veil-Rippers in action. You can take me
+through.&r
+  &5[What will you offer me?]&r
+  &6[The Crimson King]&r
+  &4An eternity.&r
+  &5[I have no eternity left. Lightbringer pierces my heart. I am dying.]&r
+  &6[The Crimson King]&r
+  &4Your memories can still linger. Do what I ask, and I will leave your memory here to rule as you desire until such time you
+fall again.&r
   &5[...You are right. That is not a choice. I a ccept. My kingdom for passage through the Veil. You make a good bargain,
-creature.]
-  &6[The Crimson King]
-  &5[The summoning is complete. The Veil will tear. Enter and find your journey easy.]
-  &6[The Crimson King]
-&o  C: Speak to the Crimson King to begin the battle. Table
+creature.]&r
+  &6[The Crimson King]&r
+  &4Your eternity is granted, Azacor. I shall take your memory and together we must travel.&r
+  &5[The summoning is complete. The Veil will tear. Enter and find your journey easy.]&r
+  &6[The Crimson King]&r
+  &4Your memory is granted anew. Goodbye.&r
+&o  C: Speak to the Crimson King to begin the battle.
  The Crimson King
-  &6[The Crimson King]
-  &5[Why did you let Azacor remain, instead of taking him as you have the others?]
-  &6[The Crimson King]
-  &5[What do I need to know for this battle?]
-  &6[The Crimson King]
-  &5[I am.]
+  &6[The Crimson King]&r
+  &4Azacor held up his end of our bargain, but not without an attempt at betrayal. I entered the tear in the Veil his demons
+created. Inside I found a path, but also found his creatures ready to rip me apart forever. Yet in their violence I found a way
+forward. You must as well. When you are ready summon them and strike back as I did.&r
+  &5[Why did you let Azacor remain, instead of taking him as you have the others?]&r
+  &6[The Crimson King]&r
+  &4If I am to be honest... his power is great. He used to be a human, but he is no longer. His many excursions into the Veil
+and his ripping into Void have left him something darker. I wanted his memories, but I did not want to deal with the revenant he
+would leave. So I let him keep that part, rather than allowing it to fade into the Veil.&r
+  &5[What do I need to know for this battle?]&r
+  &6[The Crimson King]&r
+  &4Three of Azacor's demons are closely related. If they are not all defeated at similar times, they will bring the others back
+from the fragments of the Veil. The fourth is much sneakier. He waits for his allies to fall, then will spring from the shadows.
+He is immune to damage unlike the others, but you can use him... Far above us is the way forward. Are you ready?&r
+  &5[I am.]&r
   You need to kill the first 3 quickly and then use Zirin'kel's levitation arrows to climb up. Or you can use recoil bows from
 R2. Keep going either way till you reach the top layer of glass then go up the stairs.
- &o  Escape the Veil. Table
+ &o  Escape the Veil.
  The Crimson King
-  &6[The Crimson King]
-  &5[What was the alignment?]
-  &6[The Crimson King]
+  &6[The Crimson King]&r
+  &4The Veil continued on, past Azacor's ambush. It was here I could see the scars the wool had left reflected onto the Veil.
+But they were not in harmony. I had to find a way to shift them to their proper alignment so that the way forward would open.&r
+  &5[What was the alignment?]&r
+  &6[The Crimson King]&r
+  &4I cannot just tell you. The memory is... empty here. I know what I did, but I cannot pluck at the threads that should tell
+me. What I do know is that you touch each of my fellow prisoners, you will receive a spark of knowledge. Collect them each by
+interacting with the crystals themselves and place them back by holding what you receive as you do so.&r
  Link   Puzzle Solutions Guide/A Study in Crimson Part 2 Puzzle_Solutions_Guide/A_Study_in_Crimson_Part_2 wikilink
- &o  Speak to the Crimson King. Table
+ &o  Speak to the Crimson King.
  The Crimson King
-  &6[The Crimson King]
-  &5[You damaged reality to come here?]
-  &6[The Crimson King]
-  &5[Why at all? The Monument was just beyond Highwatch the whole time.]
-  &6[The Crimson King]
-  &5[The Pedestal.]
-  &6[The Crimson King]
-  &5[What does it do, really? I've used them for the other Wool I've found, but nobody seems quite sure why they're here.]
-  &6[The Crimson King]
-  &5[So what happened next?]
-  &6[The Crimson King]
-  &5[What is so special about me?]
-  &6[The Crimson King]
-  &5[Why didn't I?]
-  &6[The Crimson King]
-  &5[What more is there to show me here?]
-  &6[The Crimson King]
-&o  Speak to the Crimson King. Table
+  &6[The Crimson King]&r
+  &4With the Veil finally in order, a door burst open. As I stepped through into the Monument, darkness surrounded me. It was
+not a trap, as I had expected, but Void. When the Veil is torn, there is a darkness that oozes forth, leaking into reality.&r
+  &5[You damaged reality to come here?]&r
+  &6[The Crimson King]&r
+  &4Not enough to cause serious harm.&r
+  &5[Why at all? The Monument was just beyond Highwatch the whole time.]&r
+  &6[The Crimson King]&r
+  &4Ah, no. It was not. There was a barrier cloaking this place and the Narsens did not yet have access. This Void ripped into
+the barriers surrounding the Monument, which had been generated by the Genius Loci who controls this Valley, Kaul. It weakened
+him. In time, the Mage Council would find a spell to unravel it fully. For now, it was weak enough that I was able to take what
+I wanted.&r
+  &5[The Pedestal.]&r
+  &6[The Crimson King]&r
+  &4Yes. The last remnant of my home. The Wool Pedestal upon which I should rest.&r
+  &5[What does it do, really? I've used them for the other Wool I've found, but nobody seems quite sure why they're here.]&r
+  &6[The Crimson King]&r
+  &4I do not know their true purpose. I know they can hold a Wool in stasis, but once placed, I do not feel a Wool can be
+removed. Perhaps it is a protective measure? There is more to it, however. Even now, as Jeremiah stands upon the Pedestal I
+took, I can feel a deeper purpose, tugging deeply at my spirit, like a lock without a fully completed key. There must be a
+reason the other Wool were not left here and were instead guarded in treacherous dungeons. I just don't have answers for you.&r
+  &5[So what happened next?]&r
+  &6[The Crimson King]&r
+  &4I searched for home. I took the Pedestal, believing I could be repaired upon it and return to my home, the Crimson Wool.
+Instead I found nothing but dead ends - until you.&r
+  &5[What is so special about me?]&r
+  &6[The Crimson King]&r
+  &4That's what I don't understand either. Your memories are lost, [Player]. Based on what I've seen with you now, they may be
+lost forever. I don't know why you were in that Temple, nor do I know where you came from before. You should have died when the
+Masked man, Cazol, attacked you.&r
+  &5[Why didn't I?]&r
+  &6[The Crimson King]&r
+  &4Something about you screamed through the Veil to me, and when I arrived, we made a deal. Then you woke up instead. I could
+not take you as the Veil had refused to part for you. You were rejected by the afterlife leaving you and I in limbo. Perhaps the
+Veil did not want me seeing what you had seen. Perhaps the Veil knew you were more needed while alive. I don't know. This is why
+I have sought you after your revival. Even with that knowledge lost, I feel closer than ever to finding my way home.&r
+  &5[What more is there to show me here?]&r
+  &6[The Crimson King]&r
+  &4I'm not sure I have any more to show you at all. I've seen much with you as a conduit. Let us return to the Vault.&r
+&o  Speak to the Crimson King.
  The Crimson King
-  &6[The Crimson King]
-  &5[Do we?]
-  &6[The Crimson King]
-  &5[Clearly. We hadn't last time either, before you fled. Now we're playing games and fighting battles you already won.]
-  &6[The Crimson King]
+  &6[The Crimson King]&r
+  &4So, we stand at a crossroads.&r
+  &5[Do we?]&r
+  &6[The Crimson King]&r
+  &4I don't feel we have reached the conclusion I seek.&r
+  &5[Clearly. We hadn't last time either, before you fled. Now we're playing games and fighting battles you already won.]&r
+  &6[The Crimson King]&r
+  &4It is not for fun. It is for understanding. Moreso it is to see if the memories we share still ring true when I view them
+through you. Now, Zanil seems to know what I want. We need to find his knowledge. This is the only way forward. I want to talk
+to Kaul. He is connected, just as he was with the Monument.&r
   &5[I'm not sure we can do that. He's sleeping, and waking him up isn't exactly safe either. I've tried. C'Axtal, his
-Soulspeaker, is dead, and the new one isn't ready yet.]
-  &6[The Crimson King]
-  &5[C'Shura? Shockingly, no. She's alive and is in Ta'Eldim now.]
-  &6[The Crimson King]
-  &5[I feel like she'll be as hard to convince as Zanil.]
-  &6[The Crimson King]
-    Header subquest_a_study_in_memories  SUBQUEST : A STUDY IN MEMORIES
+Soulspeaker, is dead, and the new one isn't ready yet.]&r
+  &6[The Crimson King]&r
+  &4Is there another choice? Zanil won't talk to me and he won't talk to you either. What of the other Shaman in Zanil's vision?
+Is she dead too?&r
+  &5[C'Shura? Shockingly, no. She's alive and is in Ta'Eldim now.]&r
+  &6[The Crimson King]&r
+  &4Then perhaps that is where we should go.&r
+  &5[I feel like she'll be as hard to convince as Zanil.]&r
+  &6[The Crimson King]&r
+  &4That could be true. I don't know if you or I have another choice if Kaul is as dangerous to wake as you claim. Go, [Player].
+You are still bound by your deal. Find C'Shura and seek her visions.&r  Header subquest_a_study_in_memories  SUBQUEST : A STUDY
+IN MEMORIES
 &o  C: [1/2]: Leave the Memory Vault.
 &o  C: [2/2]: Travel to Ta'Eldim.
  After reaching Ta'Eldim:
 &o  C: Enter C'Shura's Shrine.
  In C'Shura's Shrine:
-&o  C: Speak to C'Shura. Table
+&o  C: Speak to C'Shura.
  C'Shura
-  &6[C'Shura]
+  &6[C'Shura]&r
  This world has changed greatly in my absence.
-  &5[I need to ask you something important.]
-  &6[C'Shura]
+  &5[I need to ask you something important.]&r
+  &6[C'Shura]&r
  Ask then.
-  &5[During your time as a Shaman, did you ever share visions with Kaul?]
-  &6[C'Shura]
+  &5[During your time as a Shaman, did you ever share visions with Kaul?]&r
+  &6[C'Shura]&r
  I did. Why do you need to know this?
-  &5[I'm searching for an answer I'm not sure anyone else living knows.]
-  &6[C'Shura]
+  &5[I'm searching for an answer I'm not sure anyone else living knows.]&r
+  &6[C'Shura]&r
  Who is seeking this knowledge other than you?
-  &5[...Oh, A friend.]
-  &6[C'Shura]
+  &5[...Oh, A friend.]&r
+  &6[C'Shura]&r
  ...The wool should not be asking questions of you, [Player]. You should not be following their requests. C'Zanil did. It broke
 him.
-  &5[It's not like that.]
-  &6[C'Shura]
+  &5[It's not like that.]&r
+  &6[C'Shura]&r
  Of course it's not. It never is. I feel the energy on you. The shape, following you... Did... Did you free one of them? I am
 not comfortable continuing this line of conversation.
-  &5[Wait, C'Shura, I didn't free anything. I'm trying to put something back into a wool.]
-  &6[C'Shura]
+  &5[Wait, C'Shura, I didn't free anything. I'm trying to put something back into a wool.]&r
+  &6[C'Shura]&r
  Are you now? Is that what it told you? You would not have that power alone, friend.
-  &5[I've seen what he's seen. It's real. He's not trying to hurt anyone.]
-  &6[C'Shura]
+  &5[I've seen what he's seen. It's real. He's not trying to hurt anyone.]&r
+  &6[C'Shura]&r
  Which wool do you refer to? Is it Myrahg? It never did mean any harm...
-  &5[Crimson.]
-  &6[C'Shura]
+  &5[Crimson.]&r
+  &6[C'Shura]&r
  ...
-  &6[C'Shura]
+  &6[C'Shura]&r
  How?
-  &5[What do you mean?]
-  &6[C'Shura]
+  &5[What do you mean?]&r
+  &6[C'Shura]&r
  How did it break? The traitorous one, father of the Sons of the Forest, Telsket, took my sister, Shuli, from me. He claimed he
 was a Shaman. He claimed he would find a beautiful Crimson. It was all fantasy.
-  &5[It wasn't. I've seen what C'Telsket did. He found the Wool and attacked Farr with it, but it broke during the attack.]
-  &6[C'Shura]
+  &5[It wasn't. I've seen what C'Telsket did. He found the Wool and attacked Farr with it, but it broke during the attack.]&r
+  &6[C'Shura]&r
  And now the being from the wool has come to you. You think you can trust it. I'm sure it whispers in your ear still... Is it
 here? The spirit?
-  &5[No. He's waiting back in Sierhaven.]
-  &6[C'Shura]
+  &5[No. He's waiting back in Sierhaven.]&r
+  &6[C'Shura]&r
  Take me with you. We can try to destroy it together.
-  &6[Jeremiah]
+  &6[Jeremiah]&r
  Enough! The Crimson King has been listening through me quietly, but he cannot take it any more. I must speak. C'Shura, [Player]
 speaks the truth. I hold within me the creature freed from the Crimson Wool. I voluntarily serve as his conduit and speak his
 words by choice. He wishes to tell you: "I was placed within wool for my sins and I wish only to return to my prison from which
 I was freed by force. I offer no harm to this world."
-  &6[C'Shura]
+  &6[C'Shura]&r
  Creature, you have no right to enter the halls of Memory. Be. Thee. Gone.
-  &6[Jeremiah]
+  &6[Jeremiah]&r
  No right? From where do you think these halls were born? His power echoes through your people's history! These halls are like
 home to him!
-  &6[C'Shura]
+  &6[C'Shura]&r
  There is no truth in which you know the old ways, creature. Speak to me directly or not at all!
-  &6[The Crimson King]
-  &6[C'Shura]
+  &6[The Crimson King]&r
+  &4So be it, C'Shura. Now, be silent and listen to me. Your anger goes too far. I am tired of watching and waiting and seeking
+but finding nothing but dead ends. I have been patient. I have been benevolent. I have chosen to hold back the power I hold
+because I speak true and am begging for help. No longer.&r
+  &6[C'Shura]&r
  You... you have no right. This place is protected... You cannot BE here.
-  &6[The Crimson King]
-  &5[What are you doing?]
-  &6[The Crimson King]
-  &6[C'Shura]
- Ahhhhh!
-  &6[The Crimson King]
-  &6[C'Shura]
- I have seen them... In the
+  &6[The Crimson King]&r
+  &4Protected by whom? Your sleeping creature? He will not stir. He did not so much as shake when I was freed. Your gods are
+held by [Player]. They will not help you. They know upon which side they stand. Cooperate, or you will be my conduit, C'Shura,
+last of the Soulbinders.&r
+  &5[What are you doing?]&r
+  &6[The Crimson King]&r
+  &4I am Vaessini, Mind of the Void. I am the endless memory. I am the forgotten shadows in the shattered ruins of the world,
+and I will not be hindered any further!&r
+  &6[C'Shura]&r
+ Ahhhhh!     &4What is it you seek?&r
+  &6[The Crimson King]&r
+  &4I seek the ones who made the Wool. I know them only by their armor, made from the finest silver. C'Zanil spoke of the Knight
+but has refused to share where he rests. Have you seen where he is? I must seek him out to be restored. To go home.&r
+  &6[C'Shura]&r
+ I have seen them... In the     &4visions...&r The     &4madness brought on by Kaul. He showed me things I should not have
+seen...&r
   &5[STOP! This isn't okay. If this doesn't stop, now, I'm leaving. I don't owe you anything anymore, and you will not use other
-people like this.]
-  &6[The Crimson King]
-  &6[C'Shura]
-   Oh... the weight. It is gone... No. I cannot let you see... I will succumb anew to his... madness... I will tell you the
-words he spoke. Just leave my mind... alone. Never again.
-  &5[Never again.]
-  &6[C'Shura]
+people like this.]&r
+  &6[The Crimson King]&r
+  &4No, you... you cannot. The contract, [Player]. We have a deal, do we not...? No. No, I do not need a deal. I trust you.
+Because you are my ally... You are right. This is not the way to reach my goals. Jeremiah has shown me a better way. Can you
+show us, C'Shura? Please?&r
+  &6[C'Shura]&r
+  &4NO! I...&r Oh... the weight. It is gone... No. I cannot let you see... I will succumb anew to his... madness... I will tell
+you the words he spoke. Just leave my mind... alone. Never again.
+  &5[Never again.]&r
+  &6[C'Shura]&r
  "Beings formed with vibrant colors once roamed this land. With them came power. In their wake came destruction. These beings
 roamed the world and the world was brought to its knees..."
-  &6[C'Shura]
+  &6[C'Shura]&r
  "Eyes fell upon the world and the beings that threatened to end it. Soon, soldiers in shining silver armor emerged, charging
 into the fray to match the power of these beings. One by one the beings fell, trapped in prisons matching their being. You know
 them as wool."
-  &6[C'Shura]
+  &6[C'Shura]&r
  "Deep in Kaulslund, a temple was constructed. The Knights stood guard over the wool. In time, many were called away and many
 more were destroyed, until there was just one left. A lone guardian, slumbering in the darkness."
-  &5[Where is the temple?]
-  &6[C'Shura]
+  &5[Where is the temple?]&r
+  &6[C'Shura]&r
  I don't know. Time has left that knowledge to rot. Zanil is dead. He knew the truth.
-  &5[What if you could speak to him?]
-  &6[C'Shura]
+  &5[What if you could speak to him?]&r
+  &6[C'Shura]&r
  I cannot speak to him. He is dead.
-  &5[C'Zanil made a deal with the Crimson King. You can talk to him. Convince him to show us what he knows.]
-  &6[C'Shura]
+  &5[C'Zanil made a deal with the Crimson King. You can talk to him. Convince him to show us what he knows.]&r
+  &6[C'Shura]&r
  ...That is disgusting. First you break into my mind, now you offer to puppet the corpse of the disgraced?
-  &6[The Crimson King]
-  &6[C'Shura]
+  &6[The Crimson King]&r
+  &4I offer no such thing. Zanil made a deal with me as he approached the Veil. His memory lives on under my power, entirely by
+his own choice. He has also chosen not to speak to me. He took my deal, but that is as far as the trust went. Now you will
+change this for me.&r
+  &6[C'Shura]&r
  So this is why you have come to me. This is why you threaten me in my own shrine.
-  &5[If you can't help us, Zanil might be our last chance, and he won't talk. He doesn't trust the Crimson King.]
-  &6[C'Shura]
+  &5[If you can't help us, Zanil might be our last chance, and he won't talk. He doesn't trust the Crimson King.]&r
+  &6[C'Shura]&r
  Clearly Zanil has reason not to trust you. I never want to have my mind violated like this again. But... perhaps Zanil does
 still trust me, like I trusted him with Ixume before I left. Fine. Let me see him, so long as you swear by your life that
 this... friend of yours will be locked away again.
-  &5[I swear it. Take us there please.]
-  &6[The Crimson King]
-&o  C: Speak to Zanil. Table
+  &5[I swear it. Take us there please.]&r
+  &6[The Crimson King]&r
+  &4It shall be done.&r
+&o  C: Speak to Zanil.
  Zanil
-  &6[Zanil]
+  &6[Zanil]&r
  I see you've returned with a frien- C'Shura?!
-  &5[Hello again, Zanil.]
-  &6[Zanil]
+  &5[Hello again, Zanil.]&r
+  &6[Zanil]&r
  How are you here? I thought you were dead in the capital.
-  &6[C'Shura]
+  &6[C'Shura]&r
  You fool. You ignored me. You destroyed our people. You slaughtered thousands and destroyed your very future. Before I came
 here I told myself I wouldn't grow angry with you. I was wrong. I am furious, Zanil. You did not listen to me and listened to
 the whispers of cruel gods instead. How dare you.
-  &6[Zanil]
+  &6[Zanil]&r
  How dare I? You gave me Ixume. I did what felt right! I did what had to be done to keep our people alive, while you vanished
 into the same corruption that took C'Axtal. It was your war, and I was left alone to lose it.
-  &6[C'Shura]
+  &6[C'Shura]&r
  You fell for their whispers. Sacrificing souls? Warping bodies? You did evil, Zanil.
-  &6[Zanil]
+  &6[Zanil]&r
  I know. I know why I came here. I could never be disturbed again. Now leave me to suffer my destruction.
-  &5[We can not.]
-  &6[C'Shura]
+  &5[We can not.]&r
+  &6[C'Shura]&r
  We will not.
-  &6[Zanil]
+  &6[Zanil]&r
  You must and you will.
-  &5[You owe us answers Zanil. Where is the Knight?]
-  &6[Zanil]
+  &5[You owe us answers Zanil. Where is the Knight?]&r
+  &6[Zanil]&r
  You've dragged C'Shura into your delusions? Right after she dares call me out for listening to the whispers of gods?! Do you
 even understand what I have done and what has been done to me?
-  &5[I know your story. I've followed your path.]
-  &6[Zanil]
+  &5[I know your story. I've followed your path.]&r
+  &6[Zanil]&r
  Do you? Truly? How the Elders tried to kill me? My exile was not their first choice.
-  &6[C'Shura]
+  &6[C'Shura]&r
  What?!
-  &6[Zanil]
+  &6[Zanil]&r
  Let me show you...
-&o  C: Speak to R'Kitxet. Table
+&o  C: Speak to R'Kitxet.
  R'Kitxet
-  &6[R'Kitxet]
+  &6[R'Kitxet]&r
  Your judgement has been decreed, Zanil. Your title has been stripped. Your wool has been taken.
-  &5[I accept your judgement, Elder.]
-  &6[R'Kitxet]
+  &5[I accept your judgement, Elder.]&r
+  &6[R'Kitxet]&r
  Then it shall be delivered.
-  &5[Exile. I know what I deserve.]
-  &6[R'Kitxet]
+  &5[Exile. I know what I deserve.]&r
+  &6[R'Kitxet]&r
  Nay, Zanil. Death. Stand forth, newly anointed, C'Tnet, and deliver the blow.
-  &6[C'Tnet]
+  &6[C'Tnet]&r
  I will do as the Elders command.
-  &5[I... I cannot accept this, Elder. This is not the way.]
-  &6[R'Kitxet]
+  &5[I... I cannot accept this, Elder. This is not the way.]&r
+  &6[R'Kitxet]&r
  Do you understand what you have done, Zanil? The pain you have caused? The deaths you have reveled in? The war you, and you
 alone, have now lost? This is us being merciful.
-  &5[No. I cannot. I have so many plans...]
-  &6[R'Kitxet]
+  &5[No. I cannot. I have so many plans...]&r
+  &6[R'Kitxet]&r
  Goodbye, Zanil. Your name will forever be a stain upon our people. C'Tnet, if you will...
  After defeating C'Tnet:
-&o  C: Speak to Zanil. Table
+&o  C: Speak to Zanil.
  Zanil
-  &6[Zanil]
+  &6[Zanil]&r
  Now you see. I slaughtered their champion. He was intended to replace me. In the chaos, covered in the blood of a Shaman only
 trying to protect his people, I fled, my generals at my side. We escaped into a sealed off segment of my Halls and I was
 determined that would be my end, exiled.
-  &5[You're lucky.]
-  &6[Zanil]
+  &5[You're lucky.]&r
+  &6[Zanil]&r
  It was not luck. It was fate. Quetzalcoatl and Ixume granting my generals and I one last boon in departure. Or perhaps cursing
 me in my leaving.
-  &6[C'Shura]
- Enough stalling
-  &6[Zanil]
+  &6[C'Shura]&r
+ Enough stalling   &4.&r Zanil, you need to show us what Kaul showed you   &4.&r I have placed my trust into [Player], as
+tenuous as it feels   &4.&r The Crimson Wool seeks to be reimprisoned   &4.&r We will not let the sleeping knight fall   &4.&r
+Help us help the world heal from the aftermath of the Blackroot War   &4.&r
+  &6[Zanil]&r
  Fine. For you and you alone. Now listen.
-  &6[Zanil]
+  &6[Zanil]&r
 &o  Deep in Kaulslund, a temple was constructed. The Knights stood guard over the wool. In time, many were called away and many
 more were destroyed, until there was just one left. A lone guardian, slumbering in the darkness. It was here that the Jungle saw
 an opportunity to protect. Kaul wove a powerful enhancement and cast it upon their temple, hiding it away. Even once that
 enchantment was destroyed, the lone guardian remained. He stood guard below the Monument, waiting for the day he would be needed
 once more.
-  &5[The Monument? It's been there the entire time?]
-  &6[Zanil]
+  &5[The Monument? It's been there the entire time?]&r
+  &6[Zanil]&r
  Yes.
-  &5[The Crimson King took his wool pedestal from the Monument. He was so close, decades ago.]
-  &6[Zanil]
+  &5[The Crimson King took his wool pedestal from the Monument. He was so close, decades ago.]&r
+  &6[Zanil]&r
  He could not have entered. Kaul sealed the door so that it would only open when all the wools were contained. You might enter
 below where the wools might rest if somehow you have safely placed each wool.
-  &5[But how? Crimson is destroyed. The others have been placed there, but surely this is impossible.]
-  &6[Zanil]
+  &5[But how? Crimson is destroyed. The others have been placed there, but surely this is impossible.]&r
+  &6[Zanil]&r
  Perhaps not. Perhaps your whispering one may still be the key. Be warned. The way to the Slumbering Knight is perilous. Do not
 ruin this.
-  &5[We won't.]
-  &6[Zanil]
+  &5[We won't.]&r
+  &6[Zanil]&r
  Now, leave me to my memories. Goodbye, Shaman. Goodbye woolbearer.
-&o  C: Speak to C'Shura. Table
+&o  C: Speak to C'Shura.
  C'Shura
-  &6[C'Shura]
+  &6[C'Shura]&r
  So, you have what you need. Both of you. Remind your creature to release his hold on me, [Player].
-  &5[What do you mean? Has he not yet?]
-  &6[C'Shura]
+  &5[What do you mean? Has he not yet?]&r
+  &6[C'Shura]&r
  I still feel his attack rattling around my head. Little brushes of memory I should not have. I will echo what Zanil said. Do
 not ruin this. Put the spirit back into his wool and end this. Do not let him stop you.
-  &5[I will. It's what we all want.]
-  &6[C'Shura]
+  &5[I will. It's what we all want.]&r
+  &6[C'Shura]&r
  Now go. Return with your spirit and his thrall and plan your steps wisely. Goodbye.
 &o  C: Return to the Memory Vault.
  After returning to the Memory Vault:
-&o  C: Speak to the Crimson King. Header subquest_a_study_in_silver  SUBQUEST : A STUDY IN SILVER Table
+&o  C: Speak to the Crimson King. Header subquest_a_study_in_silver  SUBQUEST : A STUDY IN SILVER
  The Crimson King
-  &6[The Crimson King]
-  &5[First we need to discuss C'Shura.]
-  &6[The Crimson King]
-  &5[That's not what I mean. Why did you keep manipulating here still? We talked about this.]
-  &6[The Crimson King]
-  &5[We have your pedestal and we have you. Could you step onto it for real, outside of Jeremiah?]
-  &6[The Crimson King]
-  &5[What greater purpose is there to risk it all for?]
-  &6[The Crimson King]
-  &5[To you as well.]
-  &6[The Crimson King]
+  &6[The Crimson King]&r
+  &4The end is near. But before us lies a final impossibility. My home itself is the missing link to return me to my home.&r
+  &5[First we need to discuss C'Shura.]&r
+  &6[The Crimson King]&r
+  &4What of her? She offered us what we needed.&r
+  &5[That's not what I mean. Why did you keep manipulating here still? We talked about this.]&r
+  &6[The Crimson King]&r
+  &4[Player]. I had to keep her from acting futher. Her anger was immense, and much of it was my fault. But she could have
+destroyed what little was left of Zanil. I am sorry for my actions, but I need to at least ensure we could continue on
+correctly. I promise you, she is free. I promise you I will not touch another. My time with Jeremiah and my time with you has
+shown me there are other ways than dominating will and abusing memory. I lost myself briefly. I remembered what I once was and
+let it return. I will not again.&r
+  &5[We have your pedestal and we have you. Could you step onto it for real, outside of Jeremiah?]&r
+  &6[The Crimson King]&r
+  &4I could, but the risk is high. When I am myself, I cannot be protected from those that seek to cause me harm... This is why
+I have always operated at the edges of the Veil.&r
+  &5[What greater purpose is there to risk it all for?]&r
+  &6[The Crimson King]&r
+  &4You are, of course, correct. Leave me be. I will send Jeremiah with you to the Monument of the Valley. I will emerge and
+stand in my full power upon this Pedestal. Perhaps then the doorway will open. I can only hope I can move from it afterward.
+Good luck.&r
+  &5[To you as well.]&r
+  &6[The Crimson King]&r
+  &4I can only hope my emergence does not call anything malicious here...&r
 &o  C: Leave the Memory Vault.
-&o  C: Travel to the King's Valley Monument and enter the hidden path. Table
+&o  C: Travel to the King's Valley Monument and enter the hidden path.
  Jeremiah (Hidden Path)
-  &6[Jeremiah]
+  &6[Jeremiah]&r
  Hello [Player]. The Crimson King is reaching out into my mind. He is delighted to hear this has worked, but he cannot step off
 the Pedestal, as he feared, so long as this place is to remain open. You must approach the Silver Knight alone.
-  &5[I am prepared.]
-  &6[Jeremiah]
+  &5[I am prepared.]&r
+  &6[Jeremiah]&r
  Be safe, be prepared. I do not know what lies ahead in this maze. I hope we find all the King needs. This has been such a long
 time coming.
- After making your way through the maze: Table
+ After making your way through the maze:
  Silver Knight?
-  &5[Hello? Are you... a Silver Knight?]
-  &6[The Crimson King]
-  &5[Yes, if you promise not to do what you did to C'Shura.]
-  &6[The Crimson King]
-  &5[I don't know how to say this... I think the Silver Knight is dead.]
-  &6[The Crimson King]
-  &5[I don't know. What do we do now?]
-  &6[The Crimson King]
+  &5[Hello? Are you... a Silver Knight?]&r
+  &6[The Crimson King]&r
+  &4[Player]... You are there? You have found him? May I see through your eyes?&r
+  &5[Yes, if you promise not to do what you did to C'Shura.]&r
+  &6[The Crimson King]&r
+  &4We are well past that... What has happened here?!&r
+  &5[I don't know how to say this... I think the Silver Knight is dead.]&r
+  &6[The Crimson King]&r
+  &4How?! Wait - That face. I know this face. The final effigy in the Vault. I never knew how it ended up in my care, but I knew
+it had to be important. This room we stand in also is familiar. The Arena of Terth you saw in C'Telsket's memory... I think what
+it was hiding was this very room. Was this where I was imprisoned? Has the Silver Knight been dead all this time? Could
+C'Telsket have attacked the Knight instead?&r
+  &5[I don't know. What do we do now?]&r
+  &6[The Crimson King]&r
+  &4There is still power here. A connection to others. It's not dead. Just... inactive? Damaged? I do not know how we would fix
+it. I am not sure that we can. Come back to me in the Memory Vault. We must try to delve into the final effigy. Jeremiah will
+remain at the Monument while I remain upon my Pedestal. We will seek answers.&r
 &o  C: [1/2]: Return to the Memory Vault and interact with the Silver Knight effigy.
 &o  C: [2/2]: Exit the Silver Knight's Sanctum.
  After interacting with the Silver Knight effigy:
   Silver Knight?
-  &6[The Crimson King]
-  &5[We'll discover it. We'll dig through my memories if we have to. I want to know how I got to Kaul's Temple.]
-  &6[The Crimson King]
-  &5[Oh...]
-  &6[The Crimson King]
-  &5[Excuse me?]
-  &6[The Crimson King]
+  &6[The Crimson King]&r
+  &4No... There is no memory here. Just more lies. This Silver Knight is beyond my reach. Even I cannot find a way through. What
+is this?!&r
+  &5[We'll discover it. We'll dig through my memories if we have to. I want to know how I got to Kaul's Temple.]&r
+  &6[The Crimson King]&r
+  &4I don't think you understand, [Player]. It is lost. In the moments before you died, your contract with me would have bound
+your memories to me. But you woke. You did not die. You did not join my memories. What I had collected is gone. Forever. We will
+have to find another way. Another Knight. Another place.&r
+  &5[Oh...]&r
+  &6[The Crimson King]&r
+  &4...We were so close [Player]. I can almost feel it. Home... Thank you for your service.&r
+  &3you were not meant to see this, watcher. this is not your time...&r
+  &5[Excuse me?]&r
+  &6[The Crimson King]&r
+  &4Are you hearing voices? Do you not remember what the Shamans said? That is never a good sign, [Player]... Be safe. Return to
+me in the Memory Vault when you find something that can help us unravel this mystery.&r
+  &3'''A STUDY IN CRIMSON PART 2 COMPLETE!'''<br>Awarded access to [[Ephemeral Corridors]] Endless Mode, 12 Twisted ands, and
+the [[Silver Knight's Failure]].&r

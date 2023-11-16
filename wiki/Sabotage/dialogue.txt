@@ -1,35 +1,38 @@
-&o  Recover 8 lots of the Infused Gunpowder stolen from the Fist of Turaal. Table
+&r
+&o  Recover 8 lots of the Infused Gunpowder stolen from the Fist of Turaal.
  Lieutenant Aulber
   Coordinates: [-142, 178, 467]
-   &6[Lieutenant Aulber]
+   &6[Lieutenant Aulber]&r
  Beautiful, isn't it?
-  &5[Sure, but who are you?]
-  &6[Lieutenant Aulber]
+  &5[Sure, but who are you?]&r
+  &6[Lieutenant Aulber]&r
  I suppose my question was a bit ahead of itself. First Lieutenant Muat Aulber, ranking officer here in Rahkeri, and overseer of
 the construction of the Fist of Turaal. Nice to meet you.
-  &5[What?]
-  &6[Lieutenant Aulber]
+  &5[What?]&r
+  &6[Lieutenant Aulber]&r
  The Fist of Turaal, the greatest airship ever built. Eight cannons, dozens of arrow batteries, and enough armor to shrug off
 anything Chillwind can throw at us. And those wretches had the gall to sabotage it!
-  &5[Oh. Too bad.]
-  &6[Lieutenant Aulber]
+  &5[Oh. Too bad.]&r
+  &6[Lieutenant Aulber]&r
  Too bad? Too bad!? We are at war! Were you under my command, I'd punish your glibness with a year of latrine duty!
-  &5[Sabotage?]
-  &6[Lieutenant Aulber]
+  &5[Sabotage?]&r
+  &6[Lieutenant Aulber]&r
  Yes! Behind the temple to the southeast is an old alchemist's lab; the potionmakers had been asking to trade for our infused
 gunpowder. We refused. They stole it. Bring eight lots of gunpowder back and you will have the gratitude of the Ishniran
 Military!
-  &5[Sorry, I'm busy.]
-  &6[Lieutenant Aulber]
+  &5[Sorry, I'm busy.]&r
+  &6[Lieutenant Aulber]&r
  Pah! Of course you are. I knew asking a civilian was futile.
-  &5[You can count on me.]
-  &6[Lieutenant Aulber]
+  &5[You can count on me.]&r
+  &6[Lieutenant Aulber]&r
  Glad to hear it. Infiltrate that laboratory, reclaim the gunpowder, and good luck.
-  Lieutenant Aulber gives you a sharp salute.
+  &8Lieutenant Aulber gives you a sharp salute.&r
 &o  C: [1/2]: Find 8 Infused Gunpowder in the   Link   Abandoned Lab Abandoned_Lab wikilink  .
-&o  C: [2/2]: Once you have the infused Gunpowder return to Lieutenant Aulber. Table
+&o  C: [2/2]: Once you have the infused Gunpowder return to Lieutenant Aulber.
  Lieutenant Aulber
-  &6[Lieutenant Aulber]
+  &6[Lieutenant Aulber]&r
  That's more than enough gunpowder to restock the Fist. Fantastic job, soldier! You have the thanks of the Ishniran Military,
 and, in case that's not enough, I have an ancient bow for you that my men recovered from some ruins. May your aim be true.
-  Awarded [[Thousand Fists of Turaal]] and 32 Crystalline Shards!
+  &8Aulber gives you another salute, his face beaming with pride&r
+  &3'''SABOTAGE COMPLETE!'''&r
+  &3Awarded [[Thousand Fists of Turaal]] and 32 Crystalline Shards!&r

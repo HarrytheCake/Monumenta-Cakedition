@@ -1,271 +1,291 @@
-  WorkInProgress|Maybe missing some Xenith dialogue after you return from Cloud Piercer,  Table
+&r
+  WorkInProgress|Maybe missing some Xenith dialogue after you return from Cloud Piercer, &r
  Xenith
   Coordinates: [-1609, 122, 17]
-   &6[Xenith]
+   &6[Xenith]&r
  If only we knew how dangerous this place was... Then, perhaps, I wouldn't be the only survivor... If only we were more
 careful... If only...
-  &5[What happened? Can I help you?]
-  &6[Xenith]
+  &5[What happened? Can I help you?]&r
+  &6[Xenith]&r
  I... I am sorry, I don't want to talk about it and I can't let another soul go to that wretched place, the damned Spire.
 Please, you should leave.
-  &5[Sorry for disturbing you, then.]
-  &6[Xenith]
+  &5[Sorry for disturbing you, then.]&r
+  &6[Xenith]&r
  I am so sorry, I couldn't save you all... Meredith... Ogden... Yolen... Plain &o  A small tear rolls down his cheek, falling on
 the wooden floor.
-  &5[Spire? Do you mean [[Cloud Piercer]]?]
-  &6[Xenith]
+  &5[Spire? Do you mean [[Cloud Piercer]]?]&r
+  &6[Xenith]&r
  You... you know of it? You've been there?! But... you're still alive...
-  &5[I am, and I know how dangerous it can be. Let me help you.]
+  &5[I am, and I know how dangerous it can be. Let me help you.]&r
 &o  The man visibly hesitates, but after a few moments he decides to answer you.
-  &6[Xenith]
+  &6[Xenith]&r
  Can you go there once more, please? And... I... Oh, goodness, am I really asking this..? C-could you, perhaps, recover their
 bodes? The bodies of my team? Or... whatever's left of them...
-  &5[Sorry, but I am quite busy right now.]
-  &6[Xenith]
+  &5[Sorry, but I am quite busy right now.]&r
+  &6[Xenith]&r
  Just when I thought I finally had hope... Nevermind... Plain &o  The man looks towards the north-east, on the brink of tears
 yet again.
-  &5[I will help you.]
-  &6[Xenith]
+  &5[I will help you.]&r
+  &6[Xenith]&r
  Really? You... you will? Oh, thank you! Thank you so much! Please, let me know when you're done, we... we can bury them
 together afterwards...
- If you talk to Xenith again: Table
+ If you talk to Xenith again:
  Xenith
-  &6[Xenith]
+  &6[Xenith]&r
  When I sailed away from the island, I noticed a strange cave beneath the Spire... They have to be there... Some where... Damn
 it.
-  &5[What were you and your team doing there in the first place?]
-  &6[Xenith]
+  &5[What were you and your team doing there in the first place?]&r
+  &6[Xenith]&r
  We... We were on a small expedition. A self-appointed expedition. We were foolish enough to think that the fortress was long
 abandoned. We... I... I paid the price for that mistake. And so did my crew...
 &o  Search for Xenith's crew beneath the Cloud Piercer.
  When you find their bodies:
-  &6[Nightseer]
+  &6[Nightseer]&r
  Just what do you think you're doing?
-  &6[Nightseer]
+  &6[Nightseer]&r
  You, peasant, dare to enter this sacred place! Just your presence is enough to desecrate it, fill it with filth. I can not
 allow you to leave, nor can I allow you to live. This was your last mistake!
-  &6[Nightseer]
+  &6[Nightseer]&r
  Accept death! Your body will server a great purpose. Stars! Lend me your strength, for your champion shall end this miserable
 soul!
  After you beat Nightseer:
-  &6[Nightseer]
+  &6[Nightseer]&r
  I... am... Defeated by a mere peasant?.. But... How?.. Stars, have you... given up on me? Given up... on your loyal...
 servant...
 &o  It seems that you have fatally wounded him.
-  &6[Nightseer]
+  &6[Nightseer]&r
  Forgive me... Aurora... for I... have failed... you...
 &o  A moment later, he collapses to the ground, dead.
 &o  As you're about to exit the sacrificial chamber, a white flash blinds you...
-  &6[Andromeda]
- What a fool..      was his... downfall...
-  &6[Andromeda]
- They... tore me apart...      And you... did the same...
-  &6[Andromeda]
-   I... am dying beneath... the waves...
-  &6[Andromeda]
- Then... I shall..
+  &6[Andromeda]&r
+ What a fool..     &3his blind... worship&r was his... downfall...
+  &6[Andromeda]&r
+ They... tore me apart...     &3Piece by piece...&r And you... did the same...
+  &6[Andromeda]&r
+  &3Come find me...&r I... am dying beneath... the waves...
+  &6[Andromeda]&r
+ Then... I shall..     &3grant you... enlightenment...&r
 &o  You've seen horrible things beneath the Spire. Xenith may not enjoy hearing about what you found...
- C:   &o  Return to Xenith and tell him the news. He probably won't like it... Table
+ C:   &o  Return to Xenith and tell him the news. He probably won't like it...
  Xenith
-  &6[Xenith]
+  &6[Xenith]&r
  Y-you came back! Did you find... did you find them? What's left... of them..?
 &o  No matter how harsh your answer is, you are sure he will be strong enough to endure it.
-  &5[I'm sorry, Xenith, but they're dead and I'm afraid we can't bury them properly either. Not in their... state.]
-  &6[Xenith]
+  &5[I'm sorry, Xenith, but they're dead and I'm afraid we can't bury them properly either. Not in their... state.]&r
+  &6[Xenith]&r
  N-no... Damn it! Damn it, damn it! I... Plain &o  He closes his eyes, as if trying to escape the visions of his crew.
-  &5[They were... were be- Sorry, Xenith, I can't say it. They are dead.]
-  &6[Xenith]
+  &5[They were... were be- Sorry, Xenith, I can't say it. They are dead.]&r
+  &6[Xenith]&r
  (MISSING)
-  &5[They were... beheaded. I found what's left of them in a sacrificial chamber beneath the spire.]
-  &6[Xenith]
+  &5[They were... beheaded. I found what's left of them in a sacrificial chamber beneath the spire.]&r
+  &6[Xenith]&r
  (MISSING)
-  &6[Xenith]
+  &6[Xenith]&r
  W-what a fool I am...
-  &6[Xenith]
+  &6[Xenith]&r
  Please, tell me the whole story. I must know what happened.
 &o  He opens his eyes, his gaze set directly at you.
-  &5[(Tell him about Sacrificial Chamber, the battle with the Nightseer, and the visions of a comet.)]
-  &6[Xenith]
+  &5[(Tell him about Sacrificial Chamber, the battle with the Nightseer, and the visions of a comet.)]&r
+  &6[Xenith]&r
  So that's it... Crazy lunar fanatics, sacrifices, stars... and for what? Why would they do that?..
-  &5[I don't know, Xenith, but I do hope we'll find answers soon.]
-  &6[Xenith]
+  &5[I don't know, Xenith, but I do hope we'll find answers soon.]&r
+  &6[Xenith]&r
  You're right, I hope we will. You... you mentioned a comet, right? Like a fallen star? Before we ventured in that damnable
 place, my crew and I sailed south and saw a giant hole beneath the water... If the stories are true, something strange lies
 beneath   Link   Aphelion Isle Aphelion_Isle wikilink  . Perhaps, you should seek answers there?
 &o  Find   Link   Andromeda Andromeda wikilink in   Link   Cathedral of the Deep Cathedral_of_the_Deep wikilink beneath   Link
 Aphelion Isle Aphelion_Isle wikilink  .
  After reaching the comet:
-  &6[Andromeda]
- Come...
-&o  Talk with Andromeda. Table
+  &6[Andromeda]&r
+ Come...     &3Talk... to me...&r
+&o  Talk with Andromeda.
  Andromeda
-  &6[Andromeda]
- Greetings...
-  &5[You spoke to me before. You're Andromeda, right?]
-  &6[Andromeda]
-   Your... cruel kind... gave me...
-  &5[Cruel? What do you mean?]
-  &6[Andromeda]
- Cruel... and hateful...
-  &5[I didn't mean to take the shard.]
-  &6[Andromeda]
- Not the... shard...      you had... no choice...
-  &5[You're talking about the shard? I can return it!]
-  &6[Andromeda]
-   But you do not... need... to worry...
-  &5[Beyond... repair?]
-  &6[Andromeda]
- I am...
-  &5[Do you mean to imply I'm not the first to talk to you?]
-  &6[Andromeda]
- Not the first...
-  &5[What is this place? Where am I?]
-  &6[Andromeda]
- This is...
-  &5[Sent there? It... It was you who destroyed Aphelion Isle?]
-  &6[Andromeda]
- I... Answered...
-  &5[The source of life? An entire island is gone because of you!]
-  &6[Andromeda]
-  &5[What can you tell me about your kin?]
-  &6[Andromeda]
- We are... the beings...      in the... endless... broken... beyond...
-  &5[I've seen the blood on the way up here. I'm not the first to talk to you, am I?]
-  &6[Andromeda]
- You... are not... a      Each one... took a part... of me...
-  &5[Who?]
-  &6[Andromeda]
- They were... of your... kind
-  &5[Tell me about the one who bled.]
-  &6[Andromeda]
- The very...
-  &5[Aphelios? He and his people lived on the Isle you destroyed.]
-  &6[Andromeda]
- I... just... answered... the call...      I... felt... sorrow... in his... soul...
-  &5[Tell me about the marked one.]
-  &6[Andromeda]
-  &5[How can I stop the Star Blight?]
-  &6[Andromeda]
-   my gift... to this... realm...
-  &5[It is not a gift Andromeda. The Star Blight is corrupting life!]
-  &6[Andromeda]
- You think... wrong... But you... don't need...
-  &5[Essence. Your essence. The Shards.]
-  &6[Andromeda]
- You...
-  &5[You were summoned from above. How could someone do that?]
-  &6[Andromeda]
- Those... bearing the...
-  &5[So... Why am I here? You wanted us to talk?]
-  &6[Andromeda]
- Us... there is...     My light... is... fading... and so... does... my life...
-  &5[There is absolutely nothing I can do?]
-  &6[Andromeda]
- You... can...
-  &5[I am not going to do that, Andromeda.]
-  &6[Andromeda]
- You say this... but when the... time comes... will you think... the... same?... When... you took... a part of me...
+  &6[Andromeda]&r
+ Greetings...     &3[Player]...&r
+  &5[You spoke to me before. You're Andromeda, right?]&r
+  &6[Andromeda]&r
+  &3That is the name...&r Your... cruel kind... gave me...
+  &5[Cruel? What do you mean?]&r
+  &6[Andromeda]&r
+ Cruel... and hateful...     &3You take what does not belong to you...&r
+  &5[I didn't mean to take the shard.]&r
+  &6[Andromeda]&r
+ Not the... shard...     &3A shard...&r you had... no choice...
+  &5[You're talking about the shard? I can return it!]&r
+  &6[Andromeda]&r
+  &3A part... of me... yes...&r but... It is too late...     &3I am beyond... repair...&r But you do not... need... to worry...
+  &5[Beyond... repair?]&r
+  &6[Andromeda]&r
+ I am...     &3dying...&r Nothing can save me... but...     &3I appreciate... you trying... to help...&r You are... better...
+than other...     &3two...&r
+  &5[Do you mean to imply I'm not the first to talk to you?]&r
+  &6[Andromeda]&r
+ Not the first...     &3Not the second...&r
+  &5[What is this place? Where am I?]&r
+  &6[Andromeda]&r
+ This is...     &3my domain...&r I rest... with my... kin... It brings...     &3back... memories..&r of times... before I...
+&3was sent... there...&r
+  &5[Sent there? It... It was you who destroyed Aphelion Isle?]&r
+  &6[Andromeda]&r
+ I... Answered...     &3The call...&r They... Showed me... the way... I...     &3followed...&r And... became... the source...
+&3of life...&r
+  &5[The source of life? An entire island is gone because of you!]&r
+  &6[Andromeda]&r
+  &3Do not... dare...&r to blame me... this is just... the way... I am...     &3Some... of you... are just.. as violent...&r
+Some... of you... are just... as broken inside...     &3careless... in their endless... search... for power...&r Who... are
+you... to...     &3judge me...&r
+  &5[What can you tell me about your kin?]&r
+  &6[Andromeda]&r
+ We are... the beings...     &3of pure... light...&r We are... the myriad of     &3glimmering... gems...&r in the... endless...
+broken... beyond...
+  &5[I've seen the blood on the way up here. I'm not the first to talk to you, am I?]&r
+  &6[Andromeda]&r
+ You... are not... a     &3long time... ago... two souls... visited... me...&r Each one... took a part... of me...
+  &5[Who?]&r
+  &6[Andromeda]&r
+ They were... of your... kind     &3One bled... clinging... to life...&r the other...     &3Marked... by my... kin... Angry...
+Determined...&r
+  &5[Tell me about the one who bled.]&r
+  &6[Andromeda]&r
+ The very...     &3first... soul...&r I met... in this... realm... he is known... by the name of...     &3Aphelios...&r
+  &5[Aphelios? He and his people lived on the Isle you destroyed.]&r
+  &6[Andromeda]&r
+ I... just... answered... the call...     &3He... was desperate...&r on the... brink... of life... and death...     &3He was...
+the first... to tear me... apart...&r I... felt... sorrow... in his... soul...
+  &5[Tell me about the marked one.]&r
+  &6[Andromeda]&r
+  &3She came... after...&r Took another... part... of me... I felt fury... and...     &3resolve...&r in her... soul...
+&3Aurora...&r
+  &5[How can I stop the Star Blight?]&r
+  &6[Andromeda]&r
+  &3Why would... you stop... my essence...&r my gift... to this... realm...
+  &5[It is not a gift Andromeda. The Star Blight is corrupting life!]&r
+  &6[Andromeda]&r
+ You think... wrong... But you... don't need...     &3to worry... about... my gift... anymore...&r As you... took... the last
+of... me...     &3I can not... bestow... life... without my... essence anymore...&r
+  &5[Essence. Your essence. The Shards.]&r
+  &6[Andromeda]&r
+ You...     &3are... correct...&r Parts of... me... still can...     &3grant life...&r one... still... spreads...
+&3across... this world...&r
+  &5[You were summoned from above. How could someone do that?]&r
+  &6[Andromeda]&r
+ Those... bearing the...     &3mark... of The Stars...&r can... commune... we...     &3encourage... loyalty&r Enough... life
+force... gathered... and granted... to us... we... answered...     &3the call...&r
+  &5[So... Why am I here? You wanted us to talk?]&r
+  &6[Andromeda]&r
+ Us... there is...     &3no us...&r Only... you... I am... on the verge... of oblivion...     &3My light... is... fading...&r
+and so... does... my life...
+  &5[There is absolutely nothing I can do?]&r
+  &6[Andromeda]&r
+ You... can...     &3Find... her...&r the one... marked... by Stars... Let her...     &3widen... the crack... in the sky...&r so
+my brethren can...   ong   &4feast...&r
+  &5[I am not going to do that, Andromeda.]&r
+  &6[Andromeda]&r
+ You say this... but when the... time comes... will you think... the... same?... When... you took... a part of me...     &3The
+last... of my... essence...&r I felt... hope... But... would... hope alone... be enough...     &3Find her...&r See... for
+yourself... I shall... light... your way...     &3for the last... time...&r
 &o  Another vision flashes in your mind. You can see the door and the familiar face of Professor Marl. You instantly recognize
 this place. You've been there before.
-  &5[This... door. I recalled it being on a small isle near Sierhaven... What would I find there?]
-  &6[Andromeda]
- Time... will tell... you the... truth... of what she did...      and break... the seal for you... now... I fade...
-  &5[Thank you for helping me... even if I won't give you what you want.]
-  &6[Andromeda]
- Remember... [Player]...
+  &5[This... door. I recalled it being on a small isle near Sierhaven... What would I find there?]&r
+  &6[Andromeda]&r
+ Time... will tell... you the... truth... of what she did...     &3I shall... grant you... the knowledge...&r and break... the
+seal for you... now... I fade...
+  &5[Thank you for helping me... even if I won't give you what you want.]&r
+  &6[Andromeda]&r
+ Remember... [Player]...     &3Nothing... lasts forever... Even The Stars... can't be... eternal...&r
 &o  A faint white light envelops you again, carrying you away from the Star...
- C:   &o  Head towards the beacon island and talk with Professor Marl. Table
+ C:   &o  Head towards the beacon island and talk with Professor Marl.
  Professor Marl
-  &6[Professor Marl]
+  &6[Professor Marl]&r
  Ah, it is you again, young one. I'm afraid we've been here far too long... And still not achieved anything. I think it's time
 for us to depart and tell The King that our research failed.
-  &5[Professor, I think... I think I can open the door. This time, for real.]
-  &6[Professor Marl]
+  &5[Professor, I think... I think I can open the door. This time, for real.]&r
+  &6[Professor Marl]&r
  Hm? Why would you be able to? We have been trying for weeks!
-  &5[(Tell him about your conversation with Andromeda)]
+  &5[(Tell him about your conversation with Andromeda)]&r
 &o  He listens to you carefully, hanging on to every detail. As you end your speech, he looks at the door and then at you.
-  &6[Professor Marl]
+  &6[Professor Marl]&r
  This is, for the lack of proper words, bizarre... Dying comet? The seal? I doubt anyone could make that up, even if they
 wanted. That changes things, young one. What do we do?
   &5[On the other hand, I don't think we should ever open that door. Please, just move on with this expedition. It is not worth
-it.]
-  &6[Professor Marl]
+it.]&r
+  &6[Professor Marl]&r
  Fine, young one. Have it your way. We'll be here for a while if you change your mind.
-  &5[I'm not sure, Professor, perhaps I should bring the Shard of Andromeda the-]
+  &5[I'm not sure, Professor, perhaps I should bring the Shard of Andromeda the-]&r
 &o  You both hear a sound of circling gears coming from inside the door.
 &o  The door opens before you. You can see a long staircase down.
-  &6[Professor Marl]
+  &6[Professor Marl]&r
  How... What happened? Is this... real? I can't believe my eyes! I don't know what you did, but we finally made progress!
 Quickly, let's head down and see what we can find there!
-  &5[Maybe we should tell the others first? We don't know what to expect down there.]
-  &6[Professor Marl]
+  &5[Maybe we should tell the others first? We don't know what to expect down there.]&r
+  &6[Professor Marl]&r
  Ah, come on, I've waited long enough! I'm sure the others heard us and will follow us down there.
-  &5[Wait a bit, I just need to check something really quick.]
-  &6[Professor Marl]
+  &5[Wait a bit, I just need to check something really quick.]&r
+  &6[Professor Marl]&r
  Fine, young one. In the meantime, I'll make a winch, just so we can manipulate the door at will. Don't take too long!
-  &5[If you say so...]
-  &6[Professor Marl]
+  &5[If you say so...]&r
+  &6[Professor Marl]&r
  Let's go!
-&o  Talk with Professor Marl. Table
+&o  Talk with Professor Marl.
  Professor Marl (Tomb)
-  &6[Professor Marl]
+  &6[Professor Marl]&r
  This place is magnificent! I can't believe it has been under our noses for so many years!
-  &5[Where are we?]
-  &6[Professor Marl]
+  &5[Where are we?]&r
+  &6[Professor Marl]&r
  If I had to guess, young one, I would say this is the tomb. Given your speech earlier, I assume this tomb belongs... to Aurora.
 There seems to be another door in this room. We should examine it...
 &o  A loud voice echoes through the room. The air around you gets cold.
-  &6[Starseeker]
+  &6[Starseeker]&r
  ...Long time ago, a seal was created to contain what we thought was our greatest treasure. We fought so hard to keep it
 contained. Countless lives were lost, and a seemingly endless war grew fiercer...
-  &6[Starseeker]
+  &6[Starseeker]&r
  ...but we found our salvation in the hand s of our prophet - Aurora. She spoke to the stars themselves. No longer would we need
 to sacrifice our lives, sealed away from the world outside of time. She led us behind the seal, to a brighter future...
-  &6[Starseeker]
+  &6[Starseeker]&r
  ...We survived many hardships on our way home. Through the Jungle and Swamplands, through betrayal of our own kin. But in the
 end, we did what we must to ensure our safety...
-  &6[Professor Marl]
+  &6[Professor Marl]&r
  [Player], hold them off while I go back to the surface for help!
-  &6[Starseeker]
+  &6[Starseeker]&r
  ...She claimed the shard of a fallen comet and soon it was time for us to depart. She picked the most devoted of us to follow
 her there, to her Tomb. Ever since then, we have guarded our prophet's resting place...
 &o  The air in the room gets even colder.
-  &6[Starseeker]
+  &6[Starseeker]&r
  ...Yet, as time goes on, people like you keep coming to this island. You can't just turn back, can you? Always so eager, always
 needing to seek the truth. Decide who's right and who's wrong...
-  &6[Starseeker]
+  &6[Starseeker]&r
  But right now, it doesn't matter. I can not allow you to disturb the plans of our prophet. I will cut down every living soul on
 this little island, just so her sleep remains undisturbed. This is the end of the line for all of you. Prepare to die.
  After beating Starseeker the first time:
-  &6[Starseeker]
+  &6[Starseeker]&r
  ENOUGH!!! I will NOT allow you to go any further! YOU WILL DIE HERE! I swear on the name of OUR PROPHET! This is the last time
 you see the light of day! STARS! Lend me your strength and watch as I destroy this FOOL!
  After beating Starseeker a second time:
 &o  He falls to the ground, blood trickling down his chest.
-  &6[Starseeker]
+  &6[Starseeker]&r
  Was this all for nothing?.. Aurora... I am sorry... I couldn't keep my promise... I am... Useless...
 &o  As the Starseeker's body is consumed by darkness, the vision dissipates around you and once again you find yourself in
 Aurora's Tomb.
-  &6[Starseeker]
+  &6[Starseeker]&r
  I... shall finally see... the... great... broken... beyond...
  C:   &o  Examine the Tomb.
  After grabbing the book from the chest:
  INTO THIN AIR COMPLETE! Xenith may want to hear your revelations regarding the cult.
  After leaving the tomb:
-&o  It seems that this nightmare is over. Now, you can return to Xenith and tell him everything you learned. Table
+&o  It seems that this nightmare is over. Now, you can return to Xenith and tell him everything you learned.
  Xenith
-  &6[Xenith]
+  &6[Xenith]&r
  Please, if you ever figure it out, let me know. I must know what my crew... my friends... died for. Until then, I'll remain
 here.
-  &5[I've learned a lot about these fanatics actually.]
-  &6[Xenith]
+  &5[I've learned a lot about these fanatics actually.]&r
+  &6[Xenith]&r
  You have? Please, do tell.
-  &5[Let me start with the husk of a dead star beneath Aphelion Isle...]
+  &5[Let me start with the husk of a dead star beneath Aphelion Isle...]&r
 &o  You tell him about your meeting with Andromeda, about a tomb, hidden behind the seal and Aurora herself.
-  &6[Xenith]
+  &6[Xenith]&r
  So this is it. My friends died because of some power hungry monster...
-  &5[I am very sorry for your loss, Xenith. I can only hope they're at peace now.]
-  &6[Xenith]
+  &5[I am very sorry for your loss, Xenith. I can only hope they're at peace now.]&r
+  &6[Xenith]&r
  *sigh* Thank you. I'm eternally grateful for your help. Please, take this. I know, it isn't much, but you went through a lot to
 help me... I know Meredith wouldn't object... That I know...
  You are given:   Link   Waterbound Medallion Waterbound_Medallion wikilink and 48 CXP.

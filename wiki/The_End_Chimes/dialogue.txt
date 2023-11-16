@@ -1,26 +1,27 @@
- Find the Black Mist. Table
+&r
+ Find the Black Mist.
  Drunken Sailor
  The man takes a large swig, then turns towards you.
-  Color|orange|[Drunken Sailor]
+  &6[Drunken Sailor]&r
  Have you heaaard the legend of the Black Missst?
-  Color|purple|[Hm, no I haven't.]
-  Color|orange|[Drunken Sailor]
+  &5[Hm, no I haven't.]&r
+  &6[Drunken Sailor]&r
  Its darrrk sails stalk the edddges of ocean, bringing a cooonstant ssstormmm in its wake. It was leddd by the MIGHTY Captain
 Varrrcosa.
  He gestures dramatically as he speaks, mug sloshing in hand.
-  Color|orange|[Drunken Sailor]
+  &6[Drunken Sailor]&r
  They saaay the ship'sss bells can sti- *hic* still be h-heard, looking fffor their lost master... SoftBreak  The man has
 clearly had too much to drink. He is hard to understand.
-  Color|purple|[Hey, stay with me now. How could I find it?]
-  Color|orange|[Drunken Sailor]
+  &5[Hey, stay with me now. How could I find it?]&r
+  &6[Drunken Sailor]&r
  Hah! As if. The lllast set of FOOLS that wenttt looking for it crashed and SUNK innnto a small cove just w-wwwest of here.
-  Color|orange|[Drunken Sailor]
+  &6[Drunken Sailor]&r
  *hic* But they were the lassst one to have a "pppristine" bell from the ship. So! I'm sure aaany dreams of finding the Blackkk
 Mist lie at the b-bottom of the ssszzz...
  He finally drifts off as his head hits the table, toppling his mug.
-  Color|purple|[I have to find this...]
-  Color|purple|[Okay, well I'm gonna ignore that...]
-  Color|red|IT IS HIGHLY RECOMMENDED TO HAVE PLAYED OR ACCESSED 'THE GRASP OF AVARICE' DUNGEON BEFORE STARTING THIS QUEST!
+  &5[I have to find this...]&r
+  &5[Okay, well I'm gonna ignore that...]&r
+  &4IT IS HIGHLY RECOMMENDED TO HAVE PLAYED OR ACCESSED 'THE GRASP OF AVARICE' DUNGEON BEFORE STARTING THIS QUEST!&r
 &o  Find the "pppristine bell" in the shipwreck west of Mistport.
   Locate the Hollow Chime within the   Link   Sunken Ship Sunken_Ship wikilink [-1131, 57, 1601].
  &o  Follow the instructions on the Hollow Chime. Find the Grasp and seek out the Captain?
@@ -37,15 +38,15 @@ compass do not reflect where you need to go within this dungeon.}
 need to go within this dungeon.}
  In the Celsian Isles:
 &o  Ring the bell at the edge of the world. Any edge will do. One has been handily provided to you on your compass.
-  Color|orange|[Rhygfar]
+  &6[Rhygfar]&r
  Who... dares approach the Black Mist? Come aboard and find me on the bow of the ship... or be smitten by the storm!
-&o  Speak to Rhygfar. Table
+&o  Speak to Rhygfar.
  Rhygfar
-  Color|orange|[Rhygfar]
+  &6[Rhygfar]&r
  The living... Aboard the Black Mist...? This be not one of the signs...
-  Color|purple|[Um, hello?]
-  Color|orange|[Rhygfar]
+  &5[Um, hello?]&r
+  &6[Rhygfar]&r
  I do not understand. She did not speak of you. You be a piece from some other board. This is not right...
-  Color|purple|[I don't understand.]
-  Color|orange|[Rhygfar]
+  &5[I don't understand.]&r
+  &6[Rhygfar]&r
  No, I suppose ye wouldn't. Take this. You may remain. Her eyes be upon you now. Yes, truly...

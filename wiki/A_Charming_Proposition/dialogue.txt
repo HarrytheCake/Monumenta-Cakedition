@@ -1,79 +1,80 @@
+&r
 &o  Get a charm from Miroku, and then conquer   Link   Vibrant Hollow Vibrant_Hollow wikilink  .
-&o  C: You feel a strange power emanating from the docks of Port Manteau... Table
+&o  C: You feel a strange power emanating from the docks of Port Manteau...
  Miroku
   Coordinates: [-482 38 -816]
-   &6[Miroku]
+   &6[Miroku]&r
  I am not familiar with your ship. Is this your first time visiting these lands?
-  &5[It is.]
-  &6[Miroku]
+  &5[It is.]&r
+  &6[Miroku]&r
  I will not trouble you for why you are here, but are you aware of charms?
-  &5[I have been here before.]
-  &6[Miroku]
+  &5[I have been here before.]&r
+  &6[Miroku]&r
  Interesting. Are you already familiar with our charms?
  Next Choice:
-  &5[Yes, I know about charms.]  Plain  (Missing)
-  &5[Which type of charm are you referring to?]
-  &6[Miroku]
+  &5[Yes, I know about charms.]&r  Plain  (Missing)
+  &5[Which type of charm are you referring to?]&r
+  &6[Miroku]&r
  I suppose a lot of things are called charms...but I'm referring to Charms, a type of item fairly common around these parts that
 can be used to strengthen you. Shall I tell you more?
-  &5[Maybe later.]
-  &6[Miroku]
+  &5[Maybe later.]&r
+  &6[Miroku]&r
  I understand. I do hope that you return.
-  &5[Please do.]
-  &6[Miroku]
+  &5[Please do.]&r
+  &6[Miroku]&r
  Charms are a powerful type of item commonly found in the Architect Ring. They require between one and five charm slots to
 equip. Typically stronger charms require more slots, but a "weaker" charm might be better for your build, so there is a lot of
 room for customization.
-  &6[Miroku]
+  &6[Miroku]&r
  A trained adventurer like yourself would probably be able to use about 9 charm slots. You will gain the ability to use more as
 you progress through our lands.
-  &6[Miroku]
+  &6[Miroku]&r
  Charms can be generic, but most of them revolve around a certain class or specialization.
-  &6[Miroku]
+  &6[Miroku]&r
  Charms tend to be combat oriented, although non-combatants have at times had ones custom made to help around the house.
-  &6[Miroku]
+  &6[Miroku]&r
  You can manage your currently equipped charms with a trinket. Just about everyone around here has one. We pretty much just give
 them away.
-  &5[So what do you want me to do?]
-  &6[Miroku]
+  &5[So what do you want me to do?]&r
+  &6[Miroku]&r
  I didn't intend for you to do anything, but I suppose I could come up with something if you are interested.
-  &5[Thank you for the information.]
-  &6[Miroku]
+  &5[Thank you for the information.]&r
+  &6[Miroku]&r
  I do have a proposal for you, if you are interested.
  Next Choice:
-  &5[I want to look around more first.]
-  &6[Miroku]
+  &5[I want to look around more first.]&r
+  &6[Miroku]&r
  Hopefully you will return shortly. I will give you a charm just for accepting my request.
-  &5[What do I need to do?]
-  &6[Miroku]
+  &5[What do I need to do?]&r
+  &6[Miroku]&r
  I want to give you a charm, and the trinket to use it. In return, I ask that you conquer Vibrant Hollow. Obviously, if you do
 conquer it, I will have another reward for you.
-  &5[That sounds like too much work.]
-  &6[Miroku]
+  &5[That sounds like too much work.]&r
+  &6[Miroku]&r
  Perhaps, but you could take the charm and just ignore the rest of the quest. I wouldn't get mad or anything.
-  &5[I accept]
-  &6[Miroku]
+  &5[I accept]&r
+  &6[Miroku]&r
  Speak with me again when you are ready to select your charm.
-&o  C: Get a Charm from Miroku. Table
+&o  C: Get a Charm from Miroku.
  Miroku
   Coordinates: [-482 38 -816]
-   &6[Miroku]
+   &6[Miroku]&r
  The time has come for you to make a choice. This isn't a tricky choice so don't worry too much. All I need to know is which
 class you intend to conquer the Vibrant Hollow with. I will be more than happy to sell any of them to you once the Vibrant
 Hollow are dealt with.
-  &5[Mage]
-  &5[Warrior]
-  &5[Cleric]
-  &5[Rogue]
-  &5[Alchemist]
-  &5[Scout]
-  &5[Warlock.]
+  &5[Mage]&r
+  &5[Warrior]&r
+  &5[Cleric]&r
+  &5[Rogue]&r
+  &5[Alchemist]&r
+  &5[Scout]&r
+  &5[Warlock.]&r
  Whichever class you pick:
-  &6[Miroku]
+  &6[Miroku]&r
  (Class)? Are you sure?
-  &5[I would rather pick a different class.]  Plain  (Just re-asks what class)
-  &5[I am.]
-  &6[Miroku]
+  &5[I would rather pick a different class.]&r  Plain  (Just re-asks what class)
+  &5[I am.]&r
+  &6[Miroku]&r
  (Class) it is then. Here is a trinket and a charm to use with it.
  Receive a Charms Trinket and a charm depending on the class you pick.
   Warrior -   Link   Bronze Spikes Bronze_Spikes wikilink
@@ -83,10 +84,10 @@ Hollow are dealt with.
 &o  You feel mana flowing from the Village's Fortress. Whatever cursed this place - it's still here.
  Then go to [-575 10 -640] in the PoI. (Basement of the large house.)
   After beating the miniboss:
-&o  C: Return to Miroku and claim your reward. Table
+&o  C: Return to Miroku and claim your reward.
  Miroku
   Coordinates: [-482 38 -816]
-   &6[Miroku]
+   &6[Miroku]&r
  You return victorious! Wonderful job. As promised I have a reward for you.
-  '''A CHARMING PROPOSITION COMPLETE!'''
-  Awarded 16 Archos Rings
+  &3'''A CHARMING PROPOSITION COMPLETE!'''&r
+  &3Awarded 16 Archos Rings&r

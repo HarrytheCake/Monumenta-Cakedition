@@ -1,56 +1,57 @@
-&o  Speak with the Galengarde Aboreal Society representatives for Primirium Tybale. Table
+&r
+&o  Speak with the Galengarde Aboreal Society representatives for Primirium Tybale.
  Primirium Tybale
   Coordinates: [-316 182 -672]
-   &6[Tybale]
+   &6[Tybale]&r
  Hey there [Player]. It's good to see you here. I was actually going to reach out to you and your crew, so it's good you stopped
 by.
-  &5[What's going on?]
-  &6[Tybale]
+  &5[What's going on?]&r
+  &6[Tybale]&r
  Verdanne and I would like to formally invite you and your associates to Conquort's funeral. We've been planning the ceremony
 for a few weeks and believe it's important you be able to attend, if you can, and witness the Dichen way of honoring the dead.
-  &5[We would be honored to attend.]
-  &6[Tybale]
+  &5[We would be honored to attend.]&r
+  &6[Tybale]&r
  Wonderful. Could I ask you a favor while you're here, about Conquort?
-  &5[Sure thing.]
-  &6[Tybale]
+  &5[Sure thing.]&r
+  &6[Tybale]&r
  Could you stop by the Galengarde Aboreal Society offices and speak to them about the arrangements for Conquort? They oversee
 any special interactions with our home tree, and returning Conquort's remains to it has been a bit of a logistical challenge
 with them involved.
-  &5[I'll get right on it.]
-  &6[Tybale]
+  &5[I'll get right on it.]&r
+  &6[Tybale]&r
  Thank you so much. You're a true friend.
-&o  C: Speak with the Galengarde Aboreal Society representatives for Primirium Tybale. Table
+&o  C: Speak with the Galengarde Aboreal Society representatives for Primirium Tybale.
  Martine
   Coordinates: [-307 76 -608]
-   &6[Martine]
+   &6[Martine]&r
  Salu! Welcome to the Galengarde Arboreal Society! How might I serve you today?
-  &5[Hi, I was sent by Primirium Tybale. He said there's been some issues with Conquort's funeral?]
-  &6[Martine]
+  &5[Hi, I was sent by Primirium Tybale. He said there's been some issues with Conquort's funeral?]&r
+  &6[Martine]&r
  Oh. Yes. That. You see, we at the Galengarde Arboreal Society have strict laws to follow, even when a member of state is to be
 interred.
-  &5[So what's causing the issues?]
-  &6[Martine]
+  &5[So what's causing the issues?]&r
+  &6[Martine]&r
  Well, the Galengarde Arboreal Society can't allow one to cultivate the great tree, Chenmai, when the tree is being invaded, now
 can we?
-  &5[I'm sorry, what do you mean "being invaded"?]
-  &6[Martine]
+  &5[I'm sorry, what do you mean "being invaded"?]&r
+  &6[Martine]&r
  The Galengarde Arboreal Society has detected multiple Mycelian spies. We're not sure quite where they are, but in the wake of
 Primirium Conquort's death, the Tree has been sprouting telltale signs of Interceptor Mushrooms. They're watching us.
-  &5[Of course... so, what can I do to help ensure this funeral goes smoothly?]
-  &6[Martine]
+  &5[Of course... so, what can I do to help ensure this funeral goes smoothly?]&r
+  &6[Martine]&r
  You'll help then? Splendid. The Galengarde Arboreal Society won't forget your generosity. You can track down the implanted
 spies and weed them out.
-  &5[Just pick them, or do I need a special material?]
-  &6[Martine]
+  &5[Just pick them, or do I need a special material?]&r
+  &6[Martine]&r
  Any garden variety fungicide should do. The Galengarde Arboreal Society patented one should really do the trick. Here, why
 don't you take some?
-  &5[Thanks. Now, how do I find these Spyshrooms?]
-  &6[Martine]
+  &5[Thanks. Now, how do I find these Spyshrooms?]&r
+  &6[Martine]&r
  Ooh, Spyshrooms. I'll note that down for the Galengarde Arboreal Society records. That's a great name. As for finding them, we
 know of three Spyshrooms. There's one on the ground level, one midway up the Tree, and one at the very top. If you get near
 enough, the fungicide distributor should give you a little ping.
-  &5[I'll get right on it!]
-  &6[Martine]
+  &5[I'll get right on it!]&r
+  &6[Martine]&r
  The Galengarde Arboreal Society appreciates your efforts!
 &o  C: Help the Galengarde Aboreal Society by finding the 3 Spyshrooms using the fungicide! If you lost it, Martine will surely
 have more.
@@ -58,120 +59,120 @@ have more.
  Middle Spyshroom is at [-326 144 -652] (Right outside library)
  Top Spyshroom is at [-311 183 -649]
  &o  That should be all of the Spyshrooms. Head back to Martine.
-&o  C: Return to Martine with the news. Table
+&o  C: Return to Martine with the news.
  Martine
   Coordinates: [-307 76 -608]
-   &6[Martine]
+   &6[Martine]&r
  Welcome back to the Galengarde Arboreal Society. Did you find all the Spyshrooms?
-  &5[I believe so. It was a bit weird though. Are you sure they're spies?]
-  &6[Martine]
+  &5[I believe so. It was a bit weird though. Are you sure they're spies?]&r
+  &6[Martine]&r
  According to all Galengarde Arboreal Society records, no known Mycelia are anything but hostile so... yes. We feel sure.
-  &5[But do YOU feel sure?]
-  &6[Martine]
+  &5[But do YOU feel sure?]&r
+  &6[Martine]&r
  I feel that they were a hostile force like all prior known Mycelia. Anyway, the funeral for Primirium Conquort may progress at
 this time. Thank you for your service to the Galengarde Arboreal Society. May he rest well in the roots of Chenmai. Go and
 inform his associates that the funeral proceedings will be underway shortly.
-&o  C: Return to Tybale after having murdered innocent(...?) mushrooms. Table
+&o  C: Return to Tybale after having murdered innocent(...?) mushrooms.
  Primirium Tybale
   Coordinates: [-316 182 -672]
-   &6[Tybale]
+   &6[Tybale]&r
  Hello again [Player]. How did it go with the weirdos at the Galengarde Arboreal Society?
-  &5[The funeral is cleared to go ahead. There's Mycelian spies sprouting on the tree though. I helped clear some.]
-  &6[Tybale]
+  &5[The funeral is cleared to go ahead. There's Mycelian spies sprouting on the tree though. I helped clear some.]&r
+  &6[Tybale]&r
  Oh. It's actually serious. Hmm, okay. I didn't expect them to have a good reason this time. With Conquort gone, the Mycelia
 have been getting bolder. I hope this doesn't spell trouble for the event. Bring your weapons just in case, if you don't mind?
-  &5[I will.]
-  &6[Tybale]
+  &5[I will.]&r
+  &6[Tybale]&r
  Excellent. I'll send invitations to your crew down in the market then. We'll be gathering in a few hours. Please speak with the
 Funeral Organizer at the base of the tree and they'll let you into the chambers.
-&o  C: Enter the Funeral by speaking to the Organizer at the base of the tree, then speak to Tybale. Table
+&o  C: Enter the Funeral by speaking to the Organizer at the base of the tree, then speak to Tybale.
  Funeral Organizer
   Coordinates: [-304 78 -625]
-   &6[Funeral Organizer]
+   &6[Funeral Organizer]&r
  Ah splendid. [Player], with your fellow attendants. Welcome. Please find a seat once inside. Are you ready to enter?
-  &5[I am.]
-  &6[Funeral Organizer]
- It's an honor to have you here.  Table
+  &5[I am.]&r
+  &6[Funeral Organizer]&r
+ It's an honor to have you here.
  Tybale (Funeral)
-  &6[Tybale]
+  &6[Tybale]&r
  Welcome [Player]. The ceremony is about to begin.
-  &5[Thank you.]
-  An old woman approaches the stand.
+  &5[Thank you.]&r
+  &8An old woman approaches the stand.&r
  {...}
-  &6[Rootchanter Ophelie]
+  &6[Rootchanter Ophelie]&r
  Hello all, and thank you for gracing this chamber with your presence. Tonight, we honor a leader, fallen in the service of
 unity. {...}
-  &6[Rootchanter Ophelie]
+  &6[Rootchanter Ophelie]&r
  While in life, Primirium Conquort oversaw the mobilization of troops and the tactics of war, he was a kind man and respected
 leader, who's decisive action has helped lead to a future in unity with the Wolfswood. His legacy will be one of peace. His role
 will not be easy to fill and his spirit will be missed in Galengarde. {...}
-  &6[Rootchanter Ophelie]
+  &6[Rootchanter Ophelie]&r
  Today, I will be granting him a place eternal in this great city by binding his mortal remains with the great tree that fuels
 our continued survival. From nothing we all have come, but into something he will be returned. {...}
-  &6[Rootchanter Ophelie]
+  &6[Rootchanter Ophelie]&r
  Now, I will take his ashes and begin the ceremony that will bind him into the deepest of Chenmai's roots. {...}
-  Rootchanter Ophelie begins a complex series of motions as magic begins to swirl. Ashes flow from the nearby urn and glisten in
-the air before reaching slowly toward the roots.
+  &8Rootchanter Ophelie begins a complex series of motions as magic begins to swirl. Ashes flow from the nearby urn and glisten
+in the air before reaching slowly toward the roots. &r
  {...}
-  &6[Rootchanter Ophelie]
+  &6[Rootchanter Ophelie]&r
  Now, he will lay eternal with the myriad of others who have fallen in service of our great home, Galengarde. Now, let us join
 hands and-- {...}
-  &6[Alle Abello]
+  &6[Alle Abello]&r
  Ah, hullu, people conn se Galengarde. Please no do paniq, come in peaceful, akku se
-&o  C: Meet Tybale in his office. Table
+&o  C: Meet Tybale in his office.
  Primirium Tybale
   Coordinates: [-316 182 -672]
-   &6[Tybale]
+   &6[Tybale]&r
  Thank you for calming that down. Let's speak with Alle Abello here.
-  &5[Yes indeed. You say you need help, Alle Abello. What is happening?]
-  &6[Alle Abello]
+  &5[Yes indeed. You say you need help, Alle Abello. What is happening?]&r
+  &6[Alle Abello]&r
  Elder no reach out, but Godspore expand. Elder scared of Dichen, but Udake say no. Say they help. With warmonger Conquort gone,
 Godspore want strike. Destroy Dichen.
-  &5[What's stopping it?]
-  &6[Alle Abello]
+  &5[What's stopping it?]&r
+  &6[Alle Abello]&r
  Godspore make combine mind of all Mycelia. It not have Abello and Udake. More power need. We no want. Be alone? Yes. Be part of
 Godspore attack? No. You help. Come to home. Talk to Elder. Help him fight back.
-  &5[I can come with you and meet with your Elder.]
-  &6[Tybale]
+  &5[I can come with you and meet with your Elder.]&r
+  &6[Tybale]&r
  Excellent, this seems prudent. You're the perfect person to go. While you do that, I'll coordinate with your ally, Bhairavi, in
 case you need backup.
-  &5[Thanks. Where do I need to go, Alle?]
-  &6[Alle Abello]
+  &5[Thanks. Where do I need to go, Alle?]&r
+  &6[Alle Abello]&r
  Go caves below Chanterelle. Find Abello village. Talk elder there. You help, yes. Thank.
-&o  C: Talk to Elder Yuti in the Abello Village in the Crystal Caves. Table
+&o  C: Talk to Elder Yuti in the Abello Village in the Crystal Caves.
  Elder Yuti
   Coordinates: [-261 58 -440]
-   &6[Elder Yuti Abello]
+   &6[Elder Yuti Abello]&r
  Mmm. Pale one. New face. Ashkii, are you? Or... easterner... what do you want?
-  &5[I'm here to help with the Godspore. Alle Abello sent me.]
-  &6[Elder Yuti Abello]
+  &5[I'm here to help with the Godspore. Alle Abello sent me.]&r
+  &6[Elder Yuti Abello]&r
  Alienahh! Curses on child. She stick her hyphae into business beyond her self. Yet you are here, hnn. Yah. You must know I not
 want kill Godspore. We trim. Kill edges. Kill Godspore parts. It no die. Don't think it can. But it not use Abello for war. Nor
 Udake. That is not way we follow. Just need help keep it back. Stop from strike Dichen home too. Both gain, yah?
   &5[I'm down to help. I understand your desires. Stay safe, but don't kill your God. You don't have to be friends with
-Galengarde to want peace.]
-  &6[Elder Yuti Abello]
+Galengarde to want peace.]&r
+  &6[Elder Yuti Abello]&r
  You right. Now, go get Festering Toxin from Chanterelle high above. Bring to me, I let you in to core, deep, deep deep below.
-  &5[Do I need to do anything special?]
-  &6[Elder Yuti Abello]
+  &5[Do I need to do anything special?]&r
+  &6[Elder Yuti Abello]&r
  Conquer Chanterelle. Do not burn. Do not destroy. Let them regrow. Just take what we need, come back.
 &o  C: Retrieve the Festering Toxin by conquering   Link   Chanterelle Village Chanterelle_Village wikilink  , and bring it to
-Yuti. Table
+Yuti.
  Elder Yuti
   Coordinates: [-261 58 -440]
-   &6[Elder Yuti Abello]
+   &6[Elder Yuti Abello]&r
  You return. Have you conquered Chanterelle and found what we need?
-  &5[I've obtained the Toxin.]
-  &6[Elder Yuti Abello]
+  &5[I've obtained the Toxin.]&r
+  &6[Elder Yuti Abello]&r
  Yahh, the Toxin, good. Go down to doorway further down. Alle Abello let you in to the deep, deep, deep place. Speak if you wish
 to be transported.
-&o  C: Enter the Godspore's Domain, and speak to Alle Abello. Elder Yuti Abello may teleport you there. Table
+&o  C: Enter the Godspore's Domain, and speak to Alle Abello. Elder Yuti Abello may teleport you there.
  Alle Abello ( Link   Godspore Godspore wikilink Lobby)
-  &6[Alle Abello]
+  &6[Alle Abello]&r
  Bonnet, asi [Player]! You come help kill God? Yahh, yes. You have key to ancient place. The coremounds, spore-fill caverns.
 Perhaps it time to battle.
-  &5[I'll get right on it.]
-  &6[Alle Abello]
+  &5[I'll get right on it.]&r
+  &6[Alle Abello]&r
  You save Abello and Udake. You do good for us all.
-  '''SPORETAL COMBAT COMPLETE!'''
-  Awarded access to [[Godspore]] materials trade, a [[Blighted Catalyst]], and 1 Hyperchromatic Archos Ring.
+  &3'''SPORETAL COMBAT COMPLETE!'''&r
+  &3Awarded access to [[Godspore]] materials trade, a [[Blighted Catalyst]], and 1 Hyperchromatic Archos Ring.&r

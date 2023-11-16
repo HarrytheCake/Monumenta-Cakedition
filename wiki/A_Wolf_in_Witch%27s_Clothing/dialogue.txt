@@ -1,101 +1,102 @@
-&o  Go inform the Aradia that the Dichen are ready to attack the Coven. Table
+&r
+&o  Go inform the Aradia that the Dichen are ready to attack the Coven.
  Primirium Conquort
   Coordinates: [-311 181 -663]
-   &6[Conquort]
+   &6[Conquort]&r
  I feel I must offer you thanks for your work so far! Well done soldier!
-  &5[How are the attack preparations coming?]
-  &6[Conquort]
+  &5[How are the attack preparations coming?]&r
+  &6[Conquort]&r
  It's a beautiful day today! The assault begins soon.
-  &5[It's time?]
-  &6[Conquort]
+  &5[It's time?]&r
+  &6[Conquort]&r
  It's time. Your task, should you choose to accept it, is to let Lytania and her Aradia troops know we are prepared and
 coordinate a time for the attack to officially begin.
-  &5[That's it? No complex task? No spy network? No gifts? Just "Let's go fight"?]
-  &6[Conquort]
+  &5[That's it? No complex task? No spy network? No gifts? Just "Let's go fight"?]&r
+  &6[Conquort]&r
  Yes indeed, that's the spirit! Go! Get it done!
-  &5[I'm on it.]
-  &6[Conquort]
+  &5[I'm on it.]&r
+  &6[Conquort]&r
  There is glory waiting for us to earn it!
-&o  C: Go inform Lytania and the Aradia that the Dichen are ready to attack. Table
+&o  C: Go inform Lytania and the Aradia that the Dichen are ready to attack.
  Elder Lytania
-  &6[Elder Lytania]
+  &6[Elder Lytania]&r
  Hello again, [Player]. Don't forget to tell Verdanne - the time is right, and the hour of our Lady is almost upon us.
-  &5[I've gotten word from the Dichen. It's time.]
-  &6[Elder Lytania]
+  &5[I've gotten word from the Dichen. It's time.]&r
+  &6[Elder Lytania]&r
  Good. There's a few preparations we must still make before the attack can begin. There's also a few tasks you must execute once
 the assault has begun should we have any hope of victory.
-  &5[What are they?]
-  &6[Elder Lytania]
+  &5[What are they?]&r
+  &6[Elder Lytania]&r
  First, there's the matter of the Council. Molldyer, Laurey, Nalatia, and the Vedha will be facing our troops directly, of this
 I'm sure. This will give you an opportunity none have ever had before - to get into the personal covensteads and destroy their
 ties to the Hex and the Tree of Life.
-  &5[Why do I need to do that?]
-  &6[Elder Lytania]
+  &5[Why do I need to do that?]&r
+  &6[Elder Lytania]&r
  Unless you can sever their connections to the Tree, they cannot be destroyed and Hycenea cannot be freed. Their connections are
 what keeps her chains intact.
-  &5[So how do I do that?]
-  &6[Elder Lytania]
+  &5[So how do I do that?]&r
+  &6[Elder Lytania]&r
  Inside the Tree of Life is the Coven's central village, Ravenna. If you speak to Jehenne inside, you'll find an ally. He will
 be able to conjure forth the Tower of the Coven, which will offer you transport safely into the covensteads of the Council. Once
 inside though, you would be on your own.
-  &5[What exactly is a covenstead, Lytania?]
-  &6[Elder Lytania]
+  &5[What exactly is a covenstead, Lytania?]&r
+  &6[Elder Lytania]&r
  Oh, I did not even consider your ignorance of the language here. A covenstead is a place where a coven has its greatest power.
 As a large and diverse coven of many powers, instead the Coven has four covensteads, one for each branch of elemental power.
 Molldyer's is in the Jaguartooth Mountains of Kaulslund. Laurey's is resting on the crags of the Altaer Mesa. Nalatia's soars
 above the earth near the lands of Galos. The Vedha's covenstead is suspended above the endless expanse of the Arunara Ocean.
-  &5[I see. So I'll be traveling around the world to destroy these bindings? How long will it take?]
-  &6[Elder Lytania]
+  &5[I see. So I'll be traveling around the world to destroy these bindings? How long will it take?]&r
+  &6[Elder Lytania]&r
  It's supposed to be difficult to find them all for an outsider. Outsiders don't tend to have friends in the Coven, I would
 imagine. There's no travel time for you, so long as we can keep the Coven distracted.
-  &5[So that's all? Will we be ready to start?]
-  &6[Elder Lytania]
+  &5[So that's all? Will we be ready to start?]&r
+  &6[Elder Lytania]&r
  Oh no, there's something important we must do first. As you may well remember, Laurey, Molldyer, The Vedha, and Nalatia aren't
 the only threats on the Council. There are eight more members, each an Adherent of one of the leaders. We need to handle them
 before the attack ends.
-  &5[Do I have to go assassinate them or something?]
-  &6[Elder Lytania]
+  &5[Do I have to go assassinate them or something?]&r
+  &6[Elder Lytania]&r
  Oh stars no. We're about to handle them right now, in one fell swoop. I'm going to arrange a meeting with them so I can betray
 you and the Dichen.
-  &5[Come again?]
-  &6[Elder Lytania]
+  &5[Come again?]&r
+  &6[Elder Lytania]&r
  Not for real. But they know me. I've been with the Coven for far too long. If I have information, they'll come. And then you're
 going to help me trap us inside our meeting place.
-  &5[Trap... us? Like you and the Council members?]
-  &6[Elder Lytania]
+  &5[Trap... us? Like you and the Council members?]&r
+  &6[Elder Lytania]&r
  Exactly that, yes.
-  &5[...Won't they kill you?]
-  &6[Elder Lytania]
+  &5[...Won't they kill you?]&r
+  &6[Elder Lytania]&r
  I can handle myself.
-  &5[But -]
-  &6[Elder Lytania]
+  &5[But -]&r
+  &6[Elder Lytania]&r
  No. We're doing this. I'll survive their wrath, I am certain. They need to be handled. This is how we can.
-  &5[...If you say so.]
-  &6[Elder Lytania]
+  &5[...If you say so.]&r
+  &6[Elder Lytania]&r
  I do.
-  &5[So what do I have to do?]
-  &6[Elder Lytania]
+  &5[So what do I have to do?]&r
+  &6[Elder Lytania]&r
  Once the spell begins casting, enter our minds and try to assert control of the magic. You have the power of the Aradia behind
 you. Now, I will reach out and wait for a reply. It shouldn't take long...
-  Several hours pass. At last, a flurry of movement from the Aradia let you know something is happening.
-  &6[Elder Lytania]
+  &8Several hours pass. At last, a flurry of movement from the Aradia let you know something is happening.&r
+  &6[Elder Lytania]&r
  They're coming. Together we will leap into the fabric of magic. The Adherents will have defenders also patrolling the fabric of
 the magic we cast. If you can defeat them, my Aradia can use their deaths to change the power flow to our side. If we can take
 over the entire sigil, then we can trap the Adherents inside long enough for this all to be successful.
-  &5[Got it.]
-  &6[Elder Lytania]
+  &5[Got it.]&r
+  &6[Elder Lytania]&r
  I'll let them know it's time to meet, then. I hope you can pull this off. I look forward to gazing upon you with newly opened
 eyes, if this all goes well.
-&o  C: Speak to Lytania when you are ready to battle the Coven Adherents, then use their magic to paint the Sigil red. Table
+&o  C: Speak to Lytania when you are ready to battle the Coven Adherents, then use their magic to paint the Sigil red.
  Elder Lytania
-  &6[Elder Lytania]
+  &6[Elder Lytania]&r
  Welcome to the Voidgarden, a place deep within the threads of Magic itself. The Adherents are on their way now. Are you ready
 to trap them? You'll need to be ready for combat.
-  &5[I'm not, can I leave?]
-  &6[Elder Lytania]
+  &5[I'm not, can I leave?]&r
+  &6[Elder Lytania]&r
  You can.
-  &5[I am.]
-  &6[Elder Lytania]
+  &5[I am.]&r
+  &6[Elder Lytania]&r
  Then I will summon them to enter the circle. Below us is another circle. As the Adherents summon their allies, you will defeat
 them to transform the circle red. Once the entire circle is red, they will be trapped, while you will be sent back to Rowantree.
 Shall we begin?
@@ -108,93 +109,93 @@ the top and find a way to their Covensteads.
 Coven's_Gambit wikilink lobby.
 &o  C: Enter the Coven's Gambit.
  Talk to Jehenne and go through the dungeon.
-  &6[Jehenne]
+  &6[Jehenne]&r
  [Player]! Quickly, over here! It's time to get you inside Ravenna. I've got a key for you. Meet me inside. We have much to
 discuss.
  After beating the dungeon:
 &o  C: Return to the Primirium with the Favor of the Wolf!
  After entering the Primirium room:
-&o  C: Speak to the Primirium. Table
+&o  C: Speak to the Primirium.
  Primirium Tybale
-  &6[Conquort]
+  &6[Conquort]&r
  It's over! The Coven is surrendering to the Aradia! [Player], you're a marvel! Not that our troops weren't impeccable of
 course, the battle was truly one for the ages.
-  &5[I can't believe we all did it. The Aradia did so much as well.]
-  &6[Conquort]
+  &5[I can't believe we all did it. The Aradia did so much as well.]&r
+  &6[Conquort]&r
  Yeah sure, they did great. Victory and glory are ours!
-  &6[Verdanne]
+  &6[Verdanne]&r
  I sense power on you. If that isn't the Favor of the Wolf, I need you to know you'd be in violation of Clause 18.06b of
 Galengarde's powered magic and weapons laws.
-  &5[Luckily, it is. I've claimed the Blue Wool.]
-  A knock rings out at the threshold of the council room.
-  &6[Conquort]
+  &5[Luckily, it is. I've claimed the Blue Wool.]&r
+  &8A knock rings out at the threshold of the council room.&r
+  &6[Conquort]&r
  Not now! We're in a meeting!
-  &6[Calder]
+  &6[Calder]&r
  There is no better time than now, Conquort.
-  &6[Conquort]
+  &6[Conquort]&r
  Sir Maxwell? Why are you here now?
-  &6[Calder]
+  &6[Calder]&r
  I have business with [Player].
-  &5[...Calder?! How are you here?]
-  &6[Calder]
+  &5[...Calder?! How are you here?]&r
+  &6[Calder]&r
  Don't even think about moving. I've been here for months while you chased down the spirit inside the Teal Wool. Thank you for
 cleaning up that mess, by the way. It sounds like you did some excellent work there.
-  &5[Not that you helped.]
-  &6[Calder]
+  &5[Not that you helped.]&r
+  &6[Calder]&r
  Of course not. I had more important work to prepare for. I've been visiting the lovely people of the Architect's Ring. The
 Dichen, the Coven, the Ashkii. There's so much to do here, yet somehow, like a bloodhound, you went right to the Wool again.
 Enough is enough. I can't let you continue to scoop them up. I don't get why you think they're the real goal.
-  &5[You couldn't stop me if you tried.]
-  &6[Calder]
+  &5[You couldn't stop me if you tried.]&r
+  &6[Calder]&r
  Of course I can. What do you think I'm doing right now?
-  &6[Conquort]
+  &6[Conquort]&r
  Leaving our chambe-
-  &6[Calder]
+  &6[Calder]&r
  Silence, pawn. No more speaking. Give me the Blue Wool. I have work to do and little time to waste on your high and mighty
 attitude. Let me find a way to destroy these hideous mistakes, this time without unleashing a blight on the land.
-  &5[No. You don't have a plan. You didn't last time either. You're just going to cause more deaths.]
-  &6[Calder]
+  &5[No. You don't have a plan. You didn't last time either. You're just going to cause more deaths.]&r
+  &6[Calder]&r
  Okay then. I didn't think you'd work with me, but I wanted to give you one more chance. My Masked are already here in the Ring
 and we will continue to expand our influence. The Primarium here were even kind enough to give us a place to stay. Not that they
 knew who I am, but still. So open and welcoming. I appreciate it. Now, back to the issue at hand. I am going to take the wool
 and leave. If you do anything to try and stop me, I'll kill the Primirium. Conquort first.
-  &6[Calder]
+  &6[Calder]&r
  Then Tybale.
-  &6[Calder]
+  &6[Calder]&r
  Then Verdanne. Understood?
-  &5[...No.]
-  &6[Calder]
+  &5[...No.]&r
+  &6[Calder]&r
  Fine. You made me do this. Conquort. You always were obnoxious. Goodbye.
-  &6[Conquort]
+  &6[Conquort]&r
  What no-AHHHHH!
-  &6[Calder]
+  &6[Calder]&r
  Now, I said, bring it here! Or I will continue to kill until it's just you left, [Player].
-  &6[Calder]
+  &6[Calder]&r
  You don't have a choice now. I'll be taking that. Thank you. I'll be seeing you around, [Player]. Perhaps if this experiment
 works, you'll reconsider your position on joining me.
-  &6[Tybale]
+  &6[Tybale]&r
  CONQUORT?! NO! That man lied to us, Verdanne. He's no knight! He's a murderer!
-  &5[That was Maxwell Calder, a violent mage with the power of the Black Wool.]
-  &6[Verdanne]
+  &5[That was Maxwell Calder, a violent mage with the power of the Black Wool.]&r
+  &6[Verdanne]&r
  I'm gathering that now... This is an emergency.
-  &6[Tybale]
+  &6[Tybale]&r
  I don't know what to do... Why would he do that? Why would he even need the Favor of the Wolf?!
-  &6[Verdanne]
+  &6[Verdanne]&r
  Power, Tybale. It's always about... power. We must honor Conquort's legacy. We cannot let his death be in vain. Clearly
 [Player] has experience dealing with that man... We must give him all the support we can. Calder must pay.
   &5[I have quite a bit of experience with him. With your support and my team, we'll get the wool back. Where are they holed up,
-Verdanne?]
-  &6[Verdanne]
+Verdanne?]&r
+  &6[Verdanne]&r
  We tasked him to clear out the Shadowcast Bastille and he never came back. Clearly he did as asked and set up there.
-  &5[I'll need to prepare, but that seems like the next step then.]
-  &6[Tybale]
+  &5[I'll need to prepare, but that seems like the next step then.]&r
+  &6[Tybale]&r
  Indeed. Make him pay, [Player].
-  &6[Tybale]
+  &6[Tybale]&r
  Before you go... Thank you. We'd like to offer you a reward for your help, and to prepare you for the future conflict ahead.
-  &6[Verdanne]
+  &6[Verdanne]&r
  I'm not sure the Aradia are going to be happy that the Favor of the Wolf is gone either. Perhaps they can spare some forces to
 help on the attack against Calder as well. But yes, some items to help you. We need all the help we can get...
-  &5[Thank you.]
-  A WITCH IN WOLF'S CLOTHING COMPLETE...
-  Awarded a Hycenea's Vinelash, 2 Hyperchromatic Archos Rings, access to Coven's Gambit delves, and... the remaining 2722 Archos
-Rings of your debt removed!
+  &5[Thank you.]&r
+  &8A WITCH IN WOLF'S CLOTHING COMPLETE...&r
+  &3Awarded a Hycenea's Vinelash, 2 Hyperchromatic Archos Rings, access to Coven's Gambit delves, and... the remaining 2722
+Archos Rings of your debt removed!&r

@@ -1,9 +1,10 @@
+&r
   WorkInProgress|
-* Content Table
+* Content&r
  Fred
-  Color|orange|[Fred]
+  &6[Fred]&r
  The assistant returns! I see you survived your "visit" to the city- unscathed, it appears.
-  Color|purple|[Actually, it was completely awful in there. I thought I was going to die at any moment.]
+  &5[Actually, it was completely awful in there. I thought I was going to die at any moment.]&r
  After speaking to Fred head to the doorway at the end of the Cave of Secrets Poi and right click with the item given
  After defeating the enemies head back to Fred in the shifting lobby
  Speak to researcher Dave at the Celesian Isles Monument in Steelmeld

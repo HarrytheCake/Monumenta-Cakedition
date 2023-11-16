@@ -1,11 +1,28 @@
-  WorkInProgress|Coordinates, puzzle solution, and double check.
+&r
+  WorkInProgress|Coordinates, puzzle solution, and double check.&r
  Puzzle Solutions:   Link   https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_V
 https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_V
  C:   &o  You found another one of Selari's journals. Journey back into his workshop and see what you can find. Remember to
 bring some uncharged tesseracts with you.
  After entering the gray room:
+  &3THE POWER OF DEATH&r
+  &8Death... The looming inevitability that threatens all who dwell in the world. I know its effects far too well. That said,
+what power can death itself generate? Does more death produce a higher energy output? The fact that I must ask these questions
+bothers me greatly, but I believe if I can direct a beam of energy into a block of obsidian, I can generate the answers I
+require.&r
  After completing the puzzle:
+  &8My knees buckle slightly at the thought of what I just did, killing a man for my own research and advantage. Would the old
+me have done that? In my heart, I do not know, but in my mind, I see the bigger significance. The ability to sever metaphysical
+connections and retool them to your whim - this is true power of the Aspect of Death. How astonishing...&r
  After entering the light gray room:
+  &3THE POWER OF LIGHT&r
+  &8In contrast to a power like Balance, the power of Light is the very definition of visualizable. It is something we interact
+with daily, for if we did not, we could never see the path ahead of us. By compressing light and dispersing it, I believe I can
+form the power I need with relative ease.&r
  After completing the puzzle:
+  &8The ability to see, to observe the world around us. This is but a trivial application of this power. No, what lies here is
+the ability to see further than that - the ability to look beyond what is physical, to pierce into the darkness of fate itself.
+This is the true power of the Aspect of Light. I must admit, I've not felt as if I was this close to an answer in a very long
+time...&r
  PRIMEVAL CREATIONS V COMPLETE! SoftBreak  Awarded the   Link   Tesseract of Death Tesseract_of_Death wikilink and   Link
 Tesseract of Light Tesseract_of_Light wikilink  .

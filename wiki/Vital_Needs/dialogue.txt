@@ -1,55 +1,55 @@
- Table
+&r
  Dr. Qure
-  Color|orange|[Dr. Qure]
+  &6[Dr. Qure]&r
  Hmm... Now where did I put that...?
-  Color|purple|[Hello?]
-  Color|gray|He's deep in thought while trying to find something in his office.
-  Color|orange|[Dr. Qure]
+  &5[Hello?]&r
+  &8He's deep in thought while trying to find something in his office.&r
+  &6[Dr. Qure]&r
  Oh! I'm terribly sorry, I didn't notice you come in. What can I do for you?
-  Color|purple|[I was wondering more what I could do for you.]
-  Color|purple|[How about some medical jokes?]
-  Color|orange|[Dr. Qure]
+  &5[I was wondering more what I could do for you.]&r
+  &5[How about some medical jokes?]&r
+  &6[Dr. Qure]&r
  Oh, really now? Well I suppose there is this one thing...
-  Color|orange|[Dr. Qure]
+  &6[Dr. Qure]&r
  You see, I've lost the ingredients to make a special vitality remedy commonly used in these parts, quite a marvelous elixir! If
 you could fetch me some of those I could apply it to you for your travels too!
-  Color|purple|[I'll pass for now. They might still be in your office anyway!]
-  Color|orange|[Dr. Qure]
+  &5[I'll pass for now. They might still be in your office anyway!]&r
+  &6[Dr. Qure]&r
  You know what? You could be right!
-  Color|gray|He goes back to searching through his desk...
-  Color|purple|[I'm in. Where should I start?]
-  Color|orange|[Dr. Qure]
+  &8He goes back to searching through his desk...&r
+  &5[I'm in. Where should I start?]&r
+  &6[Dr. Qure]&r
  Well, first of all, I require a Tenebre Mushroom from some fungal caves in the nearby islands.
 &o  1/2 - Travel to   Link   Fungus Thorn Cave Fungus_Thorn_Cave wikilink in order to obtain a Tenebre Mushroom
-&o  2/2 - Once you have a Tenebre Mushroom return to Dr. Qure Table
+&o  2/2 - Once you have a Tenebre Mushroom return to Dr. Qure
  Dr. Qure
-  Color|orange|[Dr. Qure]
+  &6[Dr. Qure]&r
  Ah perfect! You found one! 
-  Color|gray|The Doctor chucks some of the mushroom into a mortar and begins to grind it into a fine paste.
-  Color|purple|[Alright then, what's next?]
-  Color|orange|[Dr. Qure]
+  &8The Doctor chucks some of the mushroom into a mortar and begins to grind it into a fine paste.&r
+  &5[Alright then, what's next?]&r
+  &6[Dr. Qure]&r
  Hmm, a fresh Saragundi Sapling from a nearby forest. I'd say the Feyrune Forest would have an ample supply.
 &o  1/2 - Travel to   Link   Feyrune Forest Feyrune_Forest wikilink and retrieve a Saragundi Sapling
-&o  2/2 - Once you have a Saragundi Sapling, return to Dr. Qure Table
+&o  2/2 - Once you have a Saragundi Sapling, return to Dr. Qure
  Dr. Qure
-  Color|orange|[Dr. Qure]
+  &6[Dr. Qure]&r
  Fantastic, it looks to be in perfect health!
-  Color|gray|The Doctor throws some leaves of the sapling into the mortar.
-  Color|purple|[What's the final ingredient?]
-  Color|orange|[Dr. Qure]
+  &8The Doctor throws some leaves of the sapling into the mortar.&r
+  &5[What's the final ingredient?]&r
+  &6[Dr. Qure]&r
  So, finally, I require a bottle of Kelp Oil. Unfortunately, some pirates had stolen the last bottle I had from me... I believe
 they've gone back to their base camp in the Spiral Island.
-  Color|purple|[Lovely...]
-  Color|orange|[Dr. Qure]
+  &5[Lovely...]&r
+  &6[Dr. Qure]&r
  Yes, well I suppose it shouldn't be too much harder than fetching the other supplies.
 &o  1/2 - Travel to   Link   Spiral Island Spiral_Island wikilink to retrieve some Kelp Oil
-&o  2/2 - Once you have some Kelp Oil, return to Dr. Qure Table
+&o  2/2 - Once you have some Kelp Oil, return to Dr. Qure
  Dr. Qure
-  Color|orange|[Dr. Qure]
+  &6[Dr. Qure]&r
  Great work! That's the final ingredient!
-  Color|gray|He pours a drop of the oil into the mortar, and then puts the mixture into a vial.
-  Color|purple|[So, does the medicine work?]
-  Color|orange|[Dr. Qure]
+  &8He pours a drop of the oil into the mortar, and then puts the mixture into a vial.&r
+  &5[So, does the medicine work?]&r
+  &6[Dr. Qure]&r
  Of course it does! Applying it should give the person great vitality for a good while! With this fresh supply, I should have
 enough for weeks! Take this for your troubles.
  VITAL NEEDS COMPLETE!

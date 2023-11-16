@@ -1,214 +1,215 @@
-  WorkInProgress|Some Dog Tasks.
-&o  Woof woof woof, woof! Wooooof. Table
+&r
+  WorkInProgress|Some Dog Tasks.&r
+&o  Woof woof woof, woof! Wooooof.
  Aquamarine
   Coordinates: [281, 121, 40]
-   &6[Aquamarine]
+   &6[Aquamarine]&r
  Woof!
-  &5[Good... boy?]
-  &6[Aquamarine]
-    !
-  &5[Good girl, good girl!]
-  &6[Aquamarine]
+  &5[Good... boy?]&r
+  &6[Aquamarine]&r
+  &4Wroof&r  !
+  &5[Good girl, good girl!]&r
+  &6[Aquamarine]&r
  Woof!
-  &5[(Back away slowly)]
-  &6[Aquamarine]
-    !
-  &5[Do you... want something?]
-  &6[Aquamarine]
+  &5[(Back away slowly)]&r
+  &6[Aquamarine]&r
+  &4Wroof&r  !
+  &5[Do you... want something?]&r
+  &6[Aquamarine]&r
  Woof!
-&o  C: Woof! Table
+&o  C: Woof!
  Aquamarine
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Awooooof!
-  &5[Oh okay, okay! What do you want?]  Header possible_tasks  Possible Tasks Table  Plain  Possible Missions
+  &5[Oh okay, okay! What do you want?]&r  Header possible_tasks  Possible Tasks Table  Plain  Possible Missions
  Start dialogue
  How to complete
  End Dialogue
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[You have a secret mission for me? I'm all ears!]
-  &6[Aquamarine]
+  &5[You have a secret mission for me? I'm all ears!]&r
+  &6[Aquamarine]&r
  Aruff!
-  &5[...Okay. Tell Moonstone in [[Frostgate]] you said hello. Got it.]
-  &6[Aquamarine]
+  &5[...Okay. Tell Moonstone in [[Frostgate]] you said hello. Got it.]&r
+  &6[Aquamarine]&r
  Woof! Woof!
  Talk to the dog called Moonstone in   Link   Frostgate Frostgate wikilink at [-1592, 113, 1004] (This is the second floor of
 the castle building where the queen and guards are).
-  &5[So I'm done with your quest, right? Moonstone says "Arf!" back.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? Moonstone says "Arf!" back.]&r
+  &6[Aquamarine]&r
  Grrrrrr... Woof!
-  &5[You want a big stick?]
-  &6[Aquamarine]
+  &5[You want a big stick?]&r
+  &6[Aquamarine]&r
  Woof! Woof! Rrrrruff!
-  &5[How big are we talking? A normal sized one?]
-  &6[Aquamarine]
+  &5[How big are we talking? A normal sized one?]&r
+  &6[Aquamarine]&r
  Awoof!
  Talk to Aquamarine with a vanilla stick in your inventory.
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[So I'm done with your quest, right? You got your stick.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? You got your stick.]&r
+  &6[Aquamarine]&r
  Grr... Woof!
   &5[An evil man! In [[Highwatch]]? Oh goodness, I must go find them and yell at them for you! You say he has lots of mail,
-huh?]
-  &6[Aquamarine]
+huh?]&r
+  &6[Aquamarine]&r
  Grrrrrr! Woofwoof!
  Head to   Link   Highwatch Highwatch wikilink and talk to the Postman [1150, 125, -129].
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Awoof!
-  &5[So I'm done with your quest, right? The Postman seemed really confused.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? The Postman seemed really confused.]&r
+  &6[Aquamarine]&r
  Grr... Woof!
-  &5[You want me to find a kitten and say... what to it?]
-  &6[Aquamarine]
+  &5[You want me to find a kitten and say... what to it?]&r
+  &6[Aquamarine]&r
  Aruff! Grrrrrr.
-  &5[Where even is that? The basement of the pet shop in [[Sierhaven]]?]
-  &6[Aquamarine]
+  &5[Where even is that? The basement of the pet shop in [[Sierhaven]]?]&r
+  &6[Aquamarine]&r
  Woof!
  Enter the Iron door in   Link   Sierhaven Sierhaven wikilink Pet Shop at [-825, 102, 99] and right click the chests until you
 get the cat, then, talk to the cat.
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[So I'm done with your quest, right? That was really strange.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? That was really strange.]&r
+  &6[Aquamarine]&r
  Grrrrrr... Woof!
-  &5[Surely you don't need me to do your socializing, Aquamarine.]
-  &6[Aquamarine]
+  &5[Surely you don't need me to do your socializing, Aquamarine.]&r
+  &6[Aquamarine]&r
  Awoo!
-  &5[...Okay. Celeste. In [[Wispervale]]. Got it.]
-  &6[Aquamarine]
+  &5[...Okay. Celeste. In [[Wispervale]]. Got it.]&r
+  &6[Aquamarine]&r
  Yip! Yip!
  Talk to the dog Celeste in   Link   Wispervale Wispervale wikilink at the Academy. [-1808, 163, -95].
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Awoof!
-  &5[So I'm done with your quest, right? Celeste says "Bark!" back!]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? Celeste says "Bark!" back!]&r
+  &6[Aquamarine]&r
  Grrrrrr... Woof!
-  &5[Aww good doggie! do you want a treat?]
-  &6[Aquamarine]
+  &5[Aww good doggie! do you want a treat?]&r
+  &6[Aquamarine]&r
  Yip! Yip!
-  &5[Now where would I get one... is there a butcher around here?]
-  &6[Aquamarine]
+  &5[Now where would I get one... is there a butcher around here?]&r
+  &6[Aquamarine]&r
  Woof!
  In   Link   Molta Molta wikilink go to the Butcher at [222, 92, 50] and trade 4 cs for a dog treat.
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[So I'm done with your quest, right? Your treat is eaten.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? Your treat is eaten.]&r
+  &6[Aquamarine]&r
  Grrrrrr! Woof!
-  &5[Did you just say "Yarr"?]
-  &6[Aquamarine]
+  &5[Did you just say "Yarr"?]&r
+  &6[Aquamarine]&r
  Woof!
-  &5[Oh, I need to run an errand! Say hello to Verdgris in Mistport for you. Sure.]
-  &6[Aquamarine]
+  &5[Oh, I need to run an errand! Say hello to Verdgris in Mistport for you. Sure.]&r
+  &6[Aquamarine]&r
  Yip! Woof!
  Talk to the dog Verdgris in the building above Izzy and Vargos in   Link   Mistport Mistport wikilink  . [-734, 87, 1333]
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[So I'm done with your quest, right? Verdgris says "Yarf!" back.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? Verdgris says "Yarf!" back.]&r
+  &6[Aquamarine]&r
  Grrrrrr... Woof!
-  &5[You need me to chase a Minecart for you?]
-  &6[Aquamarine]
+  &5[You need me to chase a Minecart for you?]&r
+  &6[Aquamarine]&r
  Awoof! Aroooo!
-  &5[Maybe I can find a race on the Minecart tracks?]
-  &6[Aquamarine]
+  &5[Maybe I can find a race on the Minecart tracks?]&r
+  &6[Aquamarine]&r
  Woof!
  In   Link   Molta Molta wikilink complete the race   Link   Trackmaster Trackmaster wikilink with a bronze or better score.
 Race starts at [238, 120, 58].
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[So I'm done with your quest, right? That was super tiring.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? That was super tiring.]&r
+  &6[Aquamarine]&r
  Grrrrrr! Woof!
-  &5[You lost your ball? Where?]
-  &6[Aquamarine]
+  &5[You lost your ball? Where?]&r
+  &6[Aquamarine]&r
  Woof!
-  &5[In [[Molta]]... hmm...]
-  &6[Aquamarine]
+  &5[In [[Molta]]... hmm...]&r
+  &6[Aquamarine]&r
  Awoof!
  In   Link   Molta Molta wikilink left click the ball head on top of the teleport building. [212, 115, 73]
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Awoof! Woof!
-  &5[So I'm done with your quest, right? Your ball has been returned!]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? Your ball has been returned!]&r
+  &6[Aquamarine]&r
  Grr... Woof!
-  &5[Really? An actual paying courier job? No way!]
-  &6[Aquamarine]
+  &5[Really? An actual paying courier job? No way!]&r
+  &6[Aquamarine]&r
  Awoof!
-  &5[Paying in exposure doesn't count... But fine, I'll go tell Tiffany in [[Rahkeri]] you said hello.]
-  &6[Aquamarine]
+  &5[Paying in exposure doesn't count... But fine, I'll go tell Tiffany in [[Rahkeri]] you said hello.]&r
+  &6[Aquamarine]&r
  Awoof!
  Talk to the dog Tiffany in   Link   Rahkeri Rahkeri wikilink on the Airship by the steering wheel. [-192, 166, 451]
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Awoof! Woof!
-  &5[So I'm done with your quest, right? Tiffany says "Woof!" back.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? Tiffany says "Woof!" back.]&r
+  &6[Aquamarine]&r
  Grr... Woof!
-  &5[You want me to... get on the bed? What? Why? Cuddles? I'm so confused.]
-  &6[Aquamarine]
+  &5[You want me to... get on the bed? What? Why? Cuddles? I'm so confused.]&r
+  &6[Aquamarine]&r
  Woof!
  Just climb the ladder in the house.
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Wooooof!
-  &5[So I'm done with your quest, right? That was a nice nap.]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? That was a nice nap.]&r
+  &6[Aquamarine]&r
  Grrrrrr. Woof!
-  &5[What's that? You want pets? Oh, okay.]
-  &6[Aquamarine]
+  &5[What's that? You want pets? Oh, okay.]&r
+  &6[Aquamarine]&r
  Woof!
  Just talk to Aquamarine again.
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Awooo
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Grrrrrrr! Woof!
-  &5[What? Bark?]
-  &6[Aquamarine]
+  &5[What? Bark?]&r
+  &6[Aquamarine]&r
  Bark!
-  &5[I need to show you something that makes barking noises??]
-  &6[Aquamarine]
+  &5[I need to show you something that makes barking noises??]&r
+  &6[Aquamarine]&r
  Bark! Bark!
  Talk to Aquamarine with something that has the barking enchant. To get the barking enchant talk to Woody the dog in   Link
 Sierhaven Sierhaven wikilink in the park, [-726, 106, -31], with an axe in your hand and select [BARK] to get Barking 2 on the
 axe.
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Yip! Yip!
-  &5[So I'm done with your quest, right? Bark!]
-  &5[What, someone's fallen in the Molta well? I've gotta go save them!]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? Bark!]&r
+  &5[What, someone's fallen in the Molta well? I've gotta go save them!]&r
+  &6[Aquamarine]&r
  Aruff!
  Go down the well in Molta at [252, 109, 104].
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[So I'm done with your quest, right? There was nobody there.]
-  &5[You... need a new red bed?]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? There was nobody there.]&r
+  &5[You... need a new red bed?]&r
+  &6[Aquamarine]&r
  Woof!
  A way to get a red bed outside making it is stealing one from the R1 PoI   Link   Bandit onghold Bandit_onghold wikilink at
 [-898, 114, -403].
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[So I'm done with your quest, right? I got you your new bed.]
-  &5[What? You need money? Why? Are you starting a "Dogcoin"?]
-  &6[Aquamarine]
+  &5[So I'm done with your quest, right? I got you your new bed.]&r
+  &5[What? You need money? Why? Are you starting a "Dogcoin"?]&r
+  &6[Aquamarine]&r
  Woof!
-  &5[I hope one crystalline shard is enough...]
-  &6[Aquamarine]
+  &5[I hope one crystalline shard is enough...]&r
+  &6[Aquamarine]&r
  Awoooo!
  Talk to Aquamarine while holding 1 CS.
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[You want a pet? Like, I pet you?]
-  &6[Aquamarine]
+  &5[You want a pet? Like, I pet you?]&r
+  &6[Aquamarine]&r
  Rrrrrr
-  &5[Like... another dog? Uh, okay.]
-  &6[Aquamarine]
+  &5[Like... another dog? Uh, okay.]&r
+  &6[Aquamarine]&r
  Awoo! Woof!
  Bring Aquamarine a Wolf spawn egg, which can be purchased outside of   Link   Highwatch Highwatch wikilink at [1134, 124, -126]
 for 12 CXP.
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof!
-  &5[So I'm done with your quest, right? You have your pupper friend.]
+  &5[So I'm done with your quest, right? You have your pupper friend.]&r
  Micha the cat - Sierhaven - Teleport hub top floor, ~(-777, 133, 73)
  Skobeloff - Steelmeld - (-625, 16, -509), dog up the water shaft on the way to monument
  A fallen comrade's grave in Nightroost - Puffles's resting place (-1403, 127, 541)
@@ -216,5 +217,7 @@ for 12 CXP.
   You can't understand dog. Just go under the mine tracks behind Aquamarines house and grab the dog bone item in the chest under
 the stair block at [280, 125, 29] and return to Aquamarine.
   Aquamarine
-  &6[Aquamarine]
+  &6[Aquamarine]&r
  Woof! Woof! Woof!
+  &3'''WOOF! COMPLETE!!'''&r
+  &3Awarded [[Bark!]], and 20 good dog points!&r

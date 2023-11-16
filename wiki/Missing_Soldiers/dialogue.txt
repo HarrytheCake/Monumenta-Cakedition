@@ -1,19 +1,20 @@
-  WorkInProgress|Missing compass content Table
+&r
+  WorkInProgress|Missing compass content&r
  NOTE: If the player has accepted Octavius's bribe in   &o Link   Bandit Troubles Bandit_Troubles wikilink  , this quest will be
 considered non-canon to the playthrough, and no rewards will be given. A warning issues as follows:
-    Table
+  &r
  Sergeant Sigrun
   Coordinates: [-137, 100, -96]
-   &6[Sergeant Sigrun]
+   &6[Sergeant Sigrun]&r
  Hello adventurer, Captain Murano told me to keep an eye out for you. For good reasons of course; he called you a 'paragon of
 virtue.' Care to put that virtuousness to good use?
-  &5[What do you need help with?]
-  &6[Sergeant Sigrun]
+  &5[What do you need help with?]&r
+  &6[Sergeant Sigrun]&r
  Scout Corporals Davis and Redmond were spying on the Jaguar Warrior village across the river, southeast of here. They can
 handle themselves, but should be back by now. If you could head over there and make sure they're... doing well, it would put me
 at ease.
-  &5[Sorry, I need to get going]
-  &6[Sergeant Sigrun]
+  &5[Sorry, I need to get going]&r
+  &6[Sergeant Sigrun]&r
  Alright, that's no problem. You're not a soldier, you have no obligation to help. Perhaps one of the local hunters will help
 out...
  Head to   Link   Southern Jaguar Village Southern_Jaguar_Village wikilink  .
@@ -21,25 +22,25 @@ out...
  Davis's Cloak can be found in the furnaces at [45, 83, 95]
   Once you have gotten the items return to Sergeant Sigrun.
  If the quest is non-canon, the quest compass will only read " &o  Do you really expect a compass to assist you with a
-hallucination?  " Table
+hallucination?  "
  Sergeant Sigrun
-  &6[Sergeant Sigrun]
+  &6[Sergeant Sigrun]&r
  ...Yep, that's their gear. Damn it, what happened?
-  &5[They were eaten.]
-  &6[Sergeant Sigrun]
+  &5[They were eaten.]&r
+  &6[Sergeant Sigrun]&r
  ... Well. I think I'll call in the cavalry and burn that entire village to the ground
-  &5[I, um, I'm not sure...]
-  &6[Sergeant Sigrun]
+  &5[I, um, I'm not sure...]&r
+  &6[Sergeant Sigrun]&r
  *sigh* You're an awful liar. I guess I'll find out when we go and burn that village to the ground.
-  &6[Sergeant Sigrun]
+  &6[Sergeant Sigrun]&r
  I'll start seeing how many troops we have available, but while I do that, there's another jaguar warrior village we had under
 surveillance to the east. Sergeant Kim was observing it, see if she's still alive.
  Head to   Link   Northern Jaguar Village Northern_Jaguar_Village wikilink  .
   Kim's Sword can be found in the furnaces at [336, 103, 32].
   Sergeant Sigrun
-  &6[Sergeant Sigrun]
+  &6[Sergeant Sigrun]&r
  ...I guess I'm writing three letters tonight. Here, this bow was Kim's. Take it, and kill any of those jaguar curs you run
 into.
-  &6[Sergeant Sigrun]
+  &6[Sergeant Sigrun]&r
  I can't say I'm happy about what you found, but thank you for your help.
  MISSING SOLDIERS COMPLETE! Awarded   Link   Steelsiege Steelsiege wikilink  .

@@ -1,125 +1,125 @@
- Header quest_content  Quest Content Table
+&r Header quest_content  Quest Content
  Professor Bermuda
   Coordinates: [-514, 5, -476]
-   &6[Professor Bermuda]
+   &6[Professor Bermuda]&r
  Hello [Player], I've got a new set of tests for you! Are you ready for the challenge?
-  &5[I'm ready!]
-  &6[Professor Bermuda]
+  &5[I'm ready!]&r
+  &6[Professor Bermuda]&r
  Wonderful! Talk to me when you’re ready to come to my lab.
-  &5[Not right now.]
-  &6[Professor Bermuda]
+  &5[Not right now.]&r
+  &6[Professor Bermuda]&r
  Don't keep me waiting.
- C:   &o  Talk to Professor Bermuda and aid her in her lab. Table
+ C:   &o  Talk to Professor Bermuda and aid her in her lab.
  Professor Bermuda
-  &6[Professor Bermuda]
- Hello [Player], do you want to go to my lab?
-  &5[I want to go to the lab for our second adventure.]  Table
+  &6[Professor Bermuda]&r
+ Hello [Player], do you want to go to my lab?     &4You need to make sure you have nothing on you for me to take you there.&r
+  &5[I want to go to the lab for our second adventure.]&r
  Professor Bermuda (Start Test Area)
   Coordinates: [-4366, 142, -51]
-   &6[Professor Bermuda]
+   &6[Professor Bermuda]&r
  Welcome back! Step through the door to begin our next test suite, or pick up where you left off.  Header room_1  Room 1
  After stepping through the door:
-  &6[Console]
+  &6[Console]&r
   NEW ENTITY DETECTED: SCANNING ENTITY...
-  &6[Console]
+  &6[Console]&r
   SCANNING ENTITY: HEIGHT: [Scrambled Text]
-  &6[Console]
+  &6[Console]&r
   SCANNING ENTITY: AGE: [Scrambled Text]
-  &6[Console]
+  &6[Console]&r
   SCANNING ENTITY: HAIR COLOR: [Scrambled Text]
-  &6[Console]
+  &6[Console]&r
   SCANNING ENTITY: EYE COLOR: [Scrambled Text]
-  &6[Console]
+  &6[Console]&r
   NEW ENTITY SCANNED: REGISTERING ENTITY
-  &6[Console]
+  &6[Console]&r
   ENTITY REGISTERED: WELCOME [Player]
-  &6[Professor Bermuda]
+  &6[Professor Bermuda]&r
  Welcome back, [Player]. Can you hear me?
-  &5[Loud and clear!]
-  &6[Professor Bermuda]
+  &5[Loud and clear!]&r
+  &6[Professor Bermuda]&r
  Excellent. Once again, I’ll be communicating with you through this intercom. Given your demonstrated ability as one of my top
 performing test subjects, we'll be ramping things up today with some new technology right off the bat. Remember, if you get
 stuck, the info boxes can give you a hint, and you can take a break at any time!
  Note: Portals can only be placed on smoothstone slab blocks. Left-click for Blue portal, Right-click for Orange portal.
  Pressing the button under the info box by the door:
-   &5Launch pads on green blocks will launch you in the direction you are facing!
+   &5Launch pads on green blocks will launch you in the direction you are facing!&r
   Pressing the button under the info box on the third level area left of exit:
-   &5Summon a companion cube from its tube by pressing the button. Sneak next to one to pick up or drop it!
+   &5Summon a companion cube from its tube by pressing the button. Sneak next to one to pick up or drop it!&r
   Solution to Room 1:
-  #ev:youtube|AulrWwZi7G0
-   &6[Professor Bermuda]
+  #ev:youtube|AulrWwZi7G0&r
+   &6[Professor Bermuda]&r
  Well done. I hope that launch pad didn't make you too dizzy- there are plenty more in the course. This next level should
 require a bit more thinking.
  Pressing the button under the info box right of the exit door:
    &5Remember that you can shoot portals through purple glass as long as they are in the direction you are facing! Some plates
-may convert other glass colors to purple while activated.
+may convert other glass colors to purple while activated.&r
   Pressing the button under the info box left of the exit door:
-   &5When a cube falls on nether wart blocks, it is destroyed. You'll have to find a way to grab it before it falls!
+   &5When a cube falls on nether wart blocks, it is destroyed. You'll have to find a way to grab it before it falls!&r
   Solution:
-  #ev:youtube|SotHXSqOC-c
-   &6[Professor Bermuda]
+  #ev:youtube|SotHXSqOC-c&r
+   &6[Professor Bermuda]&r
  Nice solve. You don't even want to know what my tech engineers had to go through to make that cube a reality. Anyway, hope you
 didn't forget about timers!
  Pressing the button under the info box at start:
-   &5Some pressure plates activate timers for purple glass. Make sure to go fast if you're on the clock!
+   &5Some pressure plates activate timers for purple glass. Make sure to go fast if you're on the clock!&r
   Solution:
-  #ev:youtube|TfV_2vMM_UI
-   &6[Professor Bermuda]
+  #ev:youtube|TfV_2vMM_UI&r
+   &6[Professor Bermuda]&r
  Impressive speed! For this next level, you'll need to keep your head up.
  Solution:
-  #ev:youtube|T2og6FJq3Bk
-   &6[Professor Bermuda]
+  #ev:youtube|T2og6FJq3Bk&r
+   &6[Professor Bermuda]&r
  Awesome work! It's great seeing you fly through the air from those portals.
  Solution:
-  #ev:youtube|JyGEPGlflOk
-   &6[Professor Bermuda]
+  #ev:youtube|JyGEPGlflOk&r
+   &6[Professor Bermuda]&r
  Halfway there! I wasn't kidding about the launch pads.
  Solution:
-  #ev:youtube|nByGpiR2ogk
-   &6[Professor Bermuda]
+  #ev:youtube|nByGpiR2ogk&r
+   &6[Professor Bermuda]&r
  You really are quite the specimen with that cube. Keep up the good work, and I'll make sure you're rewarded handsomely.
  Pressing the button under the info box by the grid of particles:
-   &5Emancipation grids clear all your portals when you come into contact with them.
+   &5Emancipation grids clear all your portals when you come into contact with them.&r
   Solution:
-  #ev:youtube|CY3-Urm4y4s
-   &6[Professor Bermuda]
+  #ev:youtube|CY3-Urm4y4s&r
+   &6[Professor Bermuda]&r
  Well done. Back to basics here while I prepare our new tech for the next level.
  Solution:
-  #ev:youtube|-xA8pa-DS0U
-   &6[Professor Bermuda]
+  #ev:youtube|-xA8pa-DS0U&r
+   &6[Professor Bermuda]&r
  Still hanging in there? You're almost done with my latest challenge!
  Pressing the button under the info box:
-   &5Cubes are also usable on pistons!
+   &5Cubes are also usable on pistons!&r
   Solution:
-  #ev:youtube|05Gyu7bF2Cs
-   &6[Professor Bermuda]
+  #ev:youtube|05Gyu7bF2Cs&r
+   &6[Professor Bermuda]&r
  Amazing job! As you can see, if you can figure this one out I've prepared you a delicious reward!
  Solution:
   Just press the button multiple times.
-  After completing all rooms: Table
+  After completing all rooms:
  Professor Bermuda (Start Test Area)
   Coordinates: [-4366, 142, -51]
-   &6[Professor Bermuda]
+   &6[Professor Bermuda]&r
  Uh oh! Looks like you managed to break one of our test chambers. Luckily I managed to pull you out and freeze the chamber just
 in time! What could you possibly be thinking doing something like that? Oh well, looks like no dessert for you again. Still,
 excellent job passing the tests.
-  &5[What do we do now?]
-  &6[Professor Bermuda]
+  &5[What do we do now?]&r
+  &6[Professor Bermuda]&r
  I'll try to repair that broken test room and get back to you when I have a new assignment for you.
-  &5[Does that mean I should wait?]
-  &6[Professor Bermuda]
+  &5[Does that mean I should wait?]&r
+  &6[Professor Bermuda]&r
  Oh no, you can go and I'll call for you when I have more tests for you to run.
-  &5[Can I keep the wand?]
-  &6[Professor Bermuda]
+  &5[Can I keep the wand?]&r
+  &6[Professor Bermuda]&r
  Unfortunately no, but I'll give you another toy to play with instead. Good work!
  SCIENTISTS OF STEELMELD II COMPLETE! SoftBreak  Awarded a   Link   Totem of Transposing Totem_of_Transposing wikilink and 2
 HCS! Header trivia  Trivia
  The unscrambled text is:
-  &6[Console]
+  &6[Console]&r
   SCANNING ENTITY: HEIGHT: FIVE
-  &6[Console]
+  &6[Console]&r
   SCANNING ENTITY: AGE: UNKNOWN
-  &6[Console]
+  &6[Console]&r
   SCANNING ENTITY: HAIR COLOR: BROWN
-  &6[Console]
+  &6[Console]&r
   SCANNING ENTITY: EYE COLOR: BROWN

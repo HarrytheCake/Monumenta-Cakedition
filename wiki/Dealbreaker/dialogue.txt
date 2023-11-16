@@ -1,69 +1,72 @@
-&o  Assist in retrieving The Ishnir Trade's goods Table
+&r
+&o  Assist in retrieving The Ishnir Trade's goods
  Safar
   Coordinates: [222, 95, 30]
-   &6[Safar]
+   &6[Safar]&r
  Hmm... Are you, by any chance, [Player]?
-  &5[Uh, stranger danger!]
-  &6[Safar]
+  &5[Uh, stranger danger!]&r
+  &6[Safar]&r
  Fine, the Trade didn't need your help anyways...
-  &5[Yeah... How do you know my name?]
-  &6[Safar]
+  &5[Yeah... How do you know my name?]&r
+  &6[Safar]&r
  I have heard tale of your good deeds from Riaz in Rahkeri...
-  &5[Oh, it wasn't a big deal. Helping people is what I do.]
-  &6[Safar]
+  &5[Oh, it wasn't a big deal. Helping people is what I do.]&r
+  &6[Safar]&r
  Good, good... Well, the Trade requires your assistance. In a matter of business...
-  He darts his eyes back and forth to make sure no-one is watching...
-  &5[I'm actually quite preoccupied at the moment.]
-  &6[Safar]
+  &8He darts his eyes back and forth to make sure no-one is watching...&r
+  &5[I'm actually quite preoccupied at the moment.]&r
+  &6[Safar]&r
  Figures...
-  &5[Okay...What do you guys need help with?]
-  &6[Safar]
+  &5[Okay...What do you guys need help with?]&r
+  &6[Safar]&r
  Well you see, a client of ours is refusing to act on his end of a deal. We require you to retrieve our goods from him...
-&o  C: Ask Safar what The Trade wants with you. Table
+&o  C: Ask Safar what The Trade wants with you.
  Safar
-  &6[Safar]
+  &6[Safar]&r
  Are you ready to begin?
-  &5[No, I'm busy at the moment.]
-  &6[Safar]
+  &5[No, I'm busy at the moment.]&r
+  &6[Safar]&r
  Return to me once you're free...
-  &5[Yes, where should I go to retrieve your items?]
-  &6[Safar]
+  &5[Yes, where should I go to retrieve your items?]&r
+  &6[Safar]&r
  A house towards the outskirts here has a basement, in that basement you should find our goods. Return them to us... Be careful
 [Player] - I am unsure what security measures the client has.
-  He gives you a swift nod.
+  &8He gives you a swift nod.&r
 &o  C: Search for the client's house in Molta, once inside find the basement access hatch. Solve the puzzle and get the message
 inside.
  Link   Puzzle Solutions Guide/Dealbreaker Puzzle_Solutions_Guide/Dealbreaker wikilink
- &o  C: Return to Safar to see if he can decode the message. Table
+ &o  C: Return to Safar to see if he can decode the message.
  Safar
-  &6[Safar]
+  &6[Safar]&r
  Have you found the Ishnir Trade's goods?
-  &5[Unfortunately not - the client didn't have them in his basement. However, he did have this.]
-  &6[Safar]
+  &5[Unfortunately not - the client didn't have them in his basement. However, he did have this.]&r
+  &6[Safar]&r
  Let me see that...
-  &5[So, does that help?]
-  &6[Safar]
+  &r
+  &5[So, does that help?]&r
+  &6[Safar]&r
  Yes, it helps tremendously, actually. This is an encoded set of coordinates to a location where our client has hidden a stash
 of supplies.
-  Color|gray|He looks up from the book.
-  &5[Oh! So where do they lead?]
-  &6[Safar]
+  &8He looks up from the book.&r
+  &5[Oh! So where do they lead?]&r
+  &6[Safar]&r
  They appear to lead to an area named the "Magmashroom Mines". Look for some exposed stone bricks, which might indicate where
 the stash is.
-  &5[I'm on it!]
-  &6[Safar]
+  &5[I'm on it!]&r
+  &6[Safar]&r
  Good luck, [Player].
 &o  C: [1/2]: Travel to   Link   Magmashroom Mines Magmashroom_Mine wikilink in order to find the client's stash. Be on the
 lookout for stone bricks.
-&o  C: [2/2]: Once you have the stash return to Safar. Table
+&o  C: [2/2]: Once you have the stash return to Safar.
  Safar
-  &6[Safar]
+  &6[Safar]&r
  So, have you retrieved the items?
-  &5[You bet!]
-  &6[Safar]
+  &5[You bet!]&r
+  &6[Safar]&r
  Fantastic! [Player], you have been a great help to the Ishnir Trade. We will not forget what you have done to help us...
-  He smiles at you.
-  &5[No problem!]
-  &6[Safar]
+  &8He smiles at you.&r
+  &5[No problem!]&r
+  &6[Safar]&r
  We believe a reward is in order: here, take this... The Amulet here will allow you to be recognized by my superior.
-  '''DEALBREAKER COMPLETE!'''
+  &3'''DEALBREAKER COMPLETE!'''&r
+  &3Awarded the [[Amulet of the Trade]] and the trust of the Ishnir Trade!&r

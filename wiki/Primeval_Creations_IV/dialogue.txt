@@ -1,11 +1,27 @@
-  WorkInProgress|Coordinates, puzzle solutions, and double check.
+&r
+  WorkInProgress|Coordinates, puzzle solutions, and double check.&r
  Puzzle Solution:   Link   https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_IV
 https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_IV
  C:   &o  You found another one of Selari's journals. Journey back into his workshop and see what you can find. Remember to
 bring some uncharged tesseracts with you.
  After entering the lime room:
+  &3THE POWER OF KNOWLEDGE&r
+  &8Knowledge is a power that interests me greatly, for its use forged the very foundations of Viridia. What could this power
+imply, aside from the information one simply has learned? I feel as though this power will be difficult to manifest, though
+through similar methods I applied with my last experiment, I feel it might be possible.&r
  After completing the puzzle:
+  &8The ability to see the world for its deeper intricacies, and the wisdom needed to understand those connections, this is the
+power provided by the Aspect of Knowledge. While this power is not suited well for my path on its own, I highly anticipate it to
+play a pivotal role.&r
  After entering the pink room:
+  &3THE POWER OF BALANCE&r
+  &8Balance is likely the most abstract power I've come across so far in my studies. The texts lead me to believe it is
+something more akin to spiritual balance, rather than physical. I believe if I take creatures that are naturally very
+unbalanced, and force them into a balanced state, perhaps I can generate the power I seek.&r
  After completing the puzzle:
+  &8I believe I've made sense of it. The harmony that keeps all things in order, and the dissonance which thrives to tear that
+order apart - these two powers are bound together by an intangible thread, the natural balance of the universe. This is the true
+power of the Aspect of Balance. Now, I hold the power to balance forces which seek to tear each other apart, and the knowledge
+required to keep that balance. This has truly been quite the successful endeavor.&r
  PRIMEVAL CREATIONS IV COMPLETE! SoftBreak  Awarded the   Link   Tesseract of Knowledge Tesseract_of_Knowledge wikilink and
 Link   Tesseract of Balance Tesseract_of_Balance wikilink  .

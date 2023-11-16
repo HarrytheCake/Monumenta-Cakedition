@@ -1,36 +1,37 @@
+&r
   WorkInProgress|
-* Missing the other end path (Corporal Rose can allegedly repair it) Table
+* Missing the other end path (Corporal Rose can allegedly repair it)&r
  Blackjack Stan
   Coordinates: [-103, 96, -88]
-   &6[Blackjack Stan]
+   &6[Blackjack Stan]&r
  Ahh, Octavius told me 'bout ya. Said you'd do just 'bout anything for the right price. Well, I've got somethings what need
 doin' and some coin, whadda ya say?
-  &5[Make it a lot of coin.]
-  &6[BlackJack Stan]
+  &5[Make it a lot of coin.]&r
+  &6[BlackJack Stan]&r
  Hah, well said. There's a cave in the nearby mesa where I keep my, ah, 'legally acquired' goods. But a gravel cave-in buried my
 goods and there's too many spiders down there! By now, most of my goods have rotted, but there's an antique sword still in
 there. Bring me that sword back and there's a bag o' loot in it for ya. Here, take this key, you'll need it to get in.
-  &5[Take Key]
-  &5[Not now, I'm busy.]
-  &6[Blackjack Stan]
+  &5[Take Key]&r
+  &5[Not now, I'm busy.]&r
+  &6[Blackjack Stan]&r
  Then quit wasting my time and go bother someone else! I'm a busy man.
 &o  [1/3]: Head to the   Link   Overgrown Cave Overgrown_Cave wikilink to being your search.
 &o  [2/3]: A cave-in caused gravel to block the way. Clear it out and find the sword. [158, 76, -29]
 &o  [3/3]: Once you find the blade return it to Blackjack Stan for your reward. There might also be an alternative NPC that
 would love to see it.
- If you return to Blackjack Stan: Table
+ If you return to Blackjack Stan:
  Blackjack Stan
-  &6[Blackjack Stan]|[Corporal Rosie]
+  &6[Blackjack Stan]|[Corporal Rosie]&r
  Ha, ya found it! Guess they don't call you buggers adventurers for nuthin! Here ya go, some bags o' loot, just as promised.
  BURIED BLADE COMPLETE! Awarded 192 Xp bottles.
- If you return to Corporal Rosie: Table
+ If you return to Corporal Rosie:
  Corporal Rosie
-  &6[Corporal Rosie]
+  &6[Corporal Rosie]&r
  Sorry, I'm a bit busy. Have to get these swords finished before tomorrow. Unless you've found something interesting I can work
 on...
-  &5[Will you fix this old sword?]
-  &6[Corporal Rosie]
+  &5[Will you fix this old sword?]&r
+  &6[Corporal Rosie]&r
  Yes, absolutely! This should be amazing polished up. Give me a second...
-  &6[Corporal Rosie]
+  &6[Corporal Rosie]&r
  Tada! It's a beautiful sword, just like I thought, and well balanced. Use it well!
  BURIED BLADE COMPLETE! Awarded the   Link   Hallowed Gladius Hallowed_Gladius wikilink  !

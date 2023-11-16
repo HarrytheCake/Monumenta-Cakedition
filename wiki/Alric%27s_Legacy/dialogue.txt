@@ -1,102 +1,102 @@
+&r
   WorkInProgress|
 * 2 dialogue branches with Alric
-* Missing compass entry Table
-  Color|Lightblue|Listener
+* Missing compass entry&r
+  Color|Lightblue|Listener&r
   Coordinates: [-1265 103 536]
-   Color|Orange|[Listener]
+   &6[Listener]&r
  The song intensifies... The doors in the depths hold secrets, but the Sleeper... He is not there. Tell me, traveler, what do
 you know of the disturbance sweeping these lands? Something is waking the last of the Frost Giants, Eldrask.
-  Color|Purple|[What are the Frost Giants and how are they waking?]
-  Color|Orange|[Listener]
+  &5[What are the Frost Giants and how are they waking?]&r
+  &6[Listener]&r
  I hear it in the song. Do you hear it too? The Giants made these lands, and their slumbering song sustains it. Yet now time is
 twisting, and Eldrask wakes. This cannot be allowed to happen, else the song may end and these Isles will be no more. I beseech
 you. Learn their past by entering Alric’s Rift.
-  Color|Purple|[What do I need to do?]
-  Color|Orange|[Listener]
+  &5[What do I need to do?]&r
+  &6[Listener]&r
  Follow the river outside this crumbling town to its end. Descend down the falls into the darkness. It is there you will find
 where Alric, the human king, stood against the waking Giants and destroyed their wickedness. It is there he preserved the song.
-  Color|Purple|[I’m in.]
-  Color|Purple|[Sorry, not now.]
-  Color|Orange|[Listener]
+  &5[I’m in.]&r
+  &5[Sorry, not now.]&r
+  &6[Listener]&r
  Time is short, traveler. We may not have time later…
-  Color|Orange|[Listener]
+  &6[Listener]&r
  Go, traveler. Find Alric’s Rift at the end of the nearby river. Learn the past so you may preserve the future.
 &o  Enter Alric's Rift and solve the puzzle.
   Head under the Eldrask arena at [-1486 <50 143].
-  :Puzzle Solutions Guide/Alric's Legacy
+  :Puzzle Solutions Guide/Alric's Legacy&r
  &o  Missing Compass(?)
-  Color|Orange|[Voice on the Wind]
+  &6[Voice on the Wind]&r
  The Wakers among Frost Giants fell that day to my sword. Man’s luck persevered, and the song continued...
  After solving the puzzle:
-  Color|Cyan|The spirit on top of the crown starts to glow brighter, signaling for your attention. Table
+  Color|Cyan|The spirit on top of the crown starts to glow brighter, signaling for your attention.&r
  Alric
   Coordinates: [-4203 120 358]
-   Color|Orange|[Alric]
+   &6[Alric]&r
  ...the spirit whispers through time, echoes reverberating through my very bones. Things are changing, hero. Things that have
 never been. Eldrask has always slumbered. He was always meant to. He is the Sleeper, meant to outlast them all.
-  Color|Purple|[What do you mean?]
-  Color|Orange|[Alric]
+  &5[What do you mean?]&r
+  &6[Alric]&r
  There is a being twisting the nature of time. It has disturbed the Sleeper, and now he wakes to seek fury for my actions,
 millennia ago.
-  Color|Purple|[What did you do?]
-  Color|Orange|[Alric]
+  &5[What did you do?]&r
+  &6[Alric]&r
  Do they no longer sing songs of me? How long has it been since my name was known? Alric, Lord of Chilled Winds?
-  Color|Purple|[They still sing of you.]  Plain  (MISSING)
-  Color|Purple|[I’m sorry, I don’t know you. I’m not from around here.]  Plain  (MISSING)
-  Color|Purple|[I don’t think anyone knows you anymore.]
-  Color|Orange|[Alric]
+  &5[They still sing of you.]&r  Plain  (MISSING)
+  &5[I’m sorry, I don’t know you. I’m not from around here.]&r  Plain  (MISSING)
+  &5[I don’t think anyone knows you anymore.]&r
+  &6[Alric]&r
  I am saddened that my actions have been lost to time, but I do not revel in that glory. I offer you instead understanding for
 what you must do.
-  Color|Purple|[What is it that I have to do?]
-  Color|Orange|[Alric]
+  &5[What is it that I have to do?]&r
+  &6[Alric]&r
  Let me tell you a story.
-  Color|Orange|[Alric]
+  &6[Alric]&r
  When I lived, these lands were new. Forged at the hands of the Frost Giants who slumbered deeply below them, we were naive and
 settled them, thinking we had found a paradise. Instead, we were intruders.
-  Color|Purple|[Somehow this seems to be a common problem.]
-  Color|Orange|[Alric]
+  &5[Somehow this seems to be a common problem.]&r
+  &6[Alric]&r
  The most sensitive among my people began to perceive a... song, for lack of a better term. A humming below the ground that
 somehow conveyed a story of the creation of the Isles, in the aftermath of a devastation. From that ruin, the Isles were born.
 But they are held together by the song itself. Without it, the magic woven into it would crumble and the land would soon follow.
-  Color|Purple|[This seems bad.]
-  Color|Orange|[Alric]
+  &5[This seems bad.]&r
+  &6[Alric]&r
  Yes. Even more horrifying was that the song told of my people. The beings singing it had noticed us, and many were not happy.
 They planned to wake from their slumber, cut off their song, and destroy us all.
-  Color|Purple|[And the Isles.]
-  Color|Orange|[Alric]
+  &5[And the Isles.]&r
+  &6[Alric]&r
  Indeed. Of course, I could not have that. I sought out these beings, and met with an avatar of one called Hrimnir. He gave me a
 gift, both of knowledge and power. He told me there were Frost Giants yet who would not wake and who would carry on the song,
 but those who were waking fully must be destroyed. And for that, his gift of power would be needed. It was a power source,
 fueled entirely by Lightness. It was called Alei.
-  Color|Purple|[Was it a wool?]
-  Color|Orange|[Alric]
+  &5[Was it a wool?]&r
+  &6[Alric]&r
  A wool? I am unsure. I could never look directly at it, due to the powerful Light that emitted from it whenever I held it.
-  Color|Purple|[What did you do next?]
-  Color|Orange|[Alric]
+  &5[What did you do next?]&r
+  &6[Alric]&r
  I fought the Wakers, of course. I took Alei and my very best armaments and entered this Rift, where they schemed. I slew them
 all, somehow. Amid this all, Alei was lost. These millenia later, after I passed, I have come here to watch the last Frost
 Giant, and ensure the song is never disrupted. This is why you have come here.
-  Color|Purple|[I see. So I need to find a way to help Eldrask sleep again? I’ve done that before with Kaul in the King’s
-Valley.]
-  Color|Orange|[Alric]
+  &5[I see. So I need to find a way to help Eldrask sleep again? I’ve done that before with Kaul in the King’s Valley.]&r
+  &6[Alric]&r
  I don’t know who that is, but you’re not quite correct. Eldrask still sleeps, but his spirit is stirring. His Avatar will
 appear, and he will recognize that he is alone. You must destroy it, and only then he will be cast back into stillness, and his
 song will remain.
-  Color|Purple|[Seems simple enough.]
-  Color|Orange|[Alric]
+  &5[Seems simple enough.]&r
+  &6[Alric]&r
  You will soon find the might of a Frost Giant is not one to take lightly.
-  Color|Purple|[We’ll see about that.]
-  Color|Orange|[Alric]
+  &5[We’ll see about that.]&r
+  &6[Alric]&r
  You have more work to do beyond Eldrask though, hero. The cause of his stirring is one you cannot leave alone either. I sense a
 great power, akin to Alei, on the move. It cannot be left to wander. Now, take this. You will need it to confront Eldrask.
-  Color|Purple|[Thank you.]
-  Color|Orange|[Alric]
+  &5[Thank you.]&r
+  &6[Alric]&r
  No, thank you, for being willing to preserve these lands. Now go, do glorious battle and drink in the magnificence of the song.
  Note: The Eldrask completion can be from before the quest.
 &o  Talk to Alric after beating Eldrask, the Waking Giant, and claim your reward. You can return to the rift by falling into the
-void below Eldrask's Arena. Table
+void below Eldrask's Arena.
  Alric
   Coordinates: [-4203 120 358]
-   Color|Orange|[Alric]
+   &6[Alric]&r
  Hello again hero. I sense Eldrask’s slumber deepening once more. I am proud that you have intervened to preserve the song.
 Thank you.

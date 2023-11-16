@@ -1,11 +1,26 @@
-  WorkInProgress|Coordinates, puzzle solutions, and double checking.
+&r
+  WorkInProgress|Coordinates, puzzle solutions, and double checking.&r
  Solution to puzzles:   Link   https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_II
 https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_II
  C:   &o  You found another one of Selari's journals. Journey back into his workshop and see what you can find. Remember to
 bring some uncharged tesseracts with you.
  After entering the orange room:
+  &3THE POWER OF BODY&r
+  &8After Soul comes Body, the physical manifestation of everything that we are, the shell with which we interact with the
+world. And like the soul, all bodies are different, each harboring its own strengths and weaknesses. Through a unique formation
+of various creatures, one may concentrate the very power of Body itself.&r
  After completing the puzzle:
+  &8With the body comes fortitude, and through fortitude comes strength. The absolute and total control over the physical self -
+this is the true power of the Aspect of Body. However, this experiment was ultimately a failure. The power of Body alone was not
+what I required, thus it was time to progress onwards.&r
  After entering the Magenta room:
+  &3THE POWER OF PESTILENCE&r
+  &8And after Body comes Pestilence, the corruption that engulfs the body and shifts it away from equilibrium. All diseases
+carry with them a small portion of that power and, through infecting isolated creatures with exactly one disease, that power can
+be collected.&r
  After completing the puzzle:
+  &8Pestilence spreads relentlessly, rooting its corruption to the core of that which it has infected until it ceases to exist.
+That is the true power of the Aspect of Pestilence. As before though, this experiment has resulted in failure. The power of
+Pestilence alone is not what I require, thus it is time to progress onwards.&r
  PRIMEVAL CREATIONS II COMPLETE! SoftBreak  Awarded a   Link   Tesseract of the Body Tesseract_of_the_Body wikilink and a   Link
 Tesseract of Pestilence Tesseract_of_Pestilence wikilink  .

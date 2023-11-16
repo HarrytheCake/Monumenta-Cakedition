@@ -1,24 +1,24 @@
- Table
+&r
  Izzy
-  Color|orange|[Izzy]
- Hello again      Color|purple|[Well, I found the Lime wool, but Samwell... he's joined Xeno.]
-  Color|orange|[Izzy]
+  &6[Izzy]&r
+ Hello again      &5[Well, I found the Lime wool, but Samwell... he's joined Xeno.]&r
+  &6[Izzy]&r
  Samwell abandoned us? That money-grubbing swine. And Xeno... he just continues to pose more and more of a threat. Thankfully,
 we might finally have a breakthrough.
-  Color|purple|[You got the crystal to work?]
-  Color|orange|[Izzy]
+  &5[You got the crystal to work?]&r
+  &6[Izzy]&r
  I believe so. I've managed to get it to emit the same energy that it did the first time we used it. I believe it might actually
 be able to take us somewhere again. Let me know when you are ready; we need to hurry and discover what Xeno's plans are.
-&o  1/2 - Speak to Izzy when you're ready. Table
+&o  1/2 - Speak to Izzy when you're ready.
  Izzy
-  Color|orange|[Izzy]
+  &6[Izzy]&r
  Are you ready to go? We need to find out where this crystal is going to take us.
-  Color|purple|[I'm ready]
-  Color|orange|[Izzy]
+  &5[I'm ready]&r
+  &6[Izzy]&r
  Good. Let's hope for the best.
-  Color|orange|[Izzy]
+  &6[Izzy]&r
  I wonder where we are now? This is definitely not the cove we saw before.
-  Color|orange|[Izzy]
+  &6[Izzy]&r
  Regardless, it took us here, so that mean that this place is one Xeno finds important. We must search around and seek for
 clues.
 &o  2/2 - Search out clues in the hideout.
@@ -30,171 +30,171 @@ right lever (-730, 36, 1403) and power the left lever (-730, 36, 1408). LineBrea
 35, 1391) LineBreak ong  Clue 4: (chest in support structure in right room) Parkour up to the top of the noteblocks and open
 spurce trapdoors above you. LineBreak  The chest is located inside (-744, 44, 1408)
   Izzy
-  Color|orange|[Izzy]
+  &6[Izzy]&r
  Find anything of interest?
-  Color|purple|[This is definitely one of Xeno's hideouts, and he plans to meet with the man who attacked us again.]
-  Color|orange|[Izzy]
+  &5[This is definitely one of Xeno's hideouts, and he plans to meet with the man who attacked us again.]&r
+  &6[Izzy]&r
  I figured such a thing was inevitable- they seem to be working quite closely together. Any idea where they might be meeting?
-  Color|purple|[In the south west slime ocean. They must have a meeting location there.]
-  Color|orange|[Izzy]
+  &5[In the south west slime ocean. They must have a meeting location there.]&r
+  &6[Izzy]&r
  Interesting... I seem to remember that portion of the ocean being particularly islandless, if the maps are correct. I can't
 imagine where they could be meeting. That said, we should probably get our crew into full order before barging in. Are you ready
 to head back to Mistport?
-  Color|purple|[Let's go.]
-  Color|purple|[No, I want to look around a little longer.]
-  Color|orange|[Izzy]
+  &5[Let's go.]&r
+  &5[No, I want to look around a little longer.]&r
+  &6[Izzy]&r
  Alright, switching the crystal to return mode.
-&o  Speak to Captain Indigo Table
+&o  Speak to Captain Indigo
  Captain Indigo
-  Color|orange|[Captain Indigo]
- Hello      Color|purple|[Izzy and I found some information on Xeno and the man who attacked us. ]
-  Color|orange|[Captain Indigo]
+  &6[Captain Indigo]&r
+ Hello      &5[Izzy and I found some information on Xeno and the man who attacked us. ]&r
+  &6[Captain Indigo]&r
  Oh? Well that is news. Is there any action we can take?
-  Color|purple|[We need to sail into the south western region of the ocean, they are meeting there.]
-  Color|orange|[Captain Indigo]
+  &5[We need to sail into the south western region of the ocean, they are meeting there.]&r
+  &6[Captain Indigo]&r
  I see, I'll make the necessary preparations, then. But what of Samwell and Levyn? I've not heard from them in some time.
-  Color|purple|[Samwell left the crew to join Xeno. Last I saw Levyn, he was down and believed he's not fit to be a pirate.]
-  Color|orange|[Captain Indigo]
+  &5[Samwell left the crew to join Xeno. Last I saw Levyn, he was down and believed he's not fit to be a pirate.]&r
+  &6[Captain Indigo]&r
  *sigh* We picked a real crew there, didn't we. I suppose we can forget about Samwell then, but we need Levyn, especially if you
 aren't entirely sure where we are heading in the south west. If there's anyone who can get information out of pirates, it's him.
 While I prep the ship, try to go talk some sense into him.
-&o  Speak with Levyn in the bar Table
+&o  Speak with Levyn in the bar
  Levyn
-  Color|orange|[Levyn]
- *hic* Well, if it ittn ma ol' frin      Color|purple|[Levyn, please tell me you aren't drunk.]
-  Color|orange|[Salty Bartender]
+  &6[Levyn]&r
+ *hic* Well, if it ittn ma ol' frin      &5[Levyn, please tell me you aren't drunk.]&r
+  &6[Salty Bartender]&r
  Zehahaha! He be drinkin' too much o' me booze. Lubber can't even keep 'is 'ead up. Though this be better than when he were
 wallerin in ze corner like er child.
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  *hic* No I'm... I'm totally sob- *hic* sober!
-  Color|purple|[Levyn, snap out of it!]
-  Color|orange|[Levyn]
+  &5[Levyn, snap out of it!]&r
+  &6[Levyn]&r
  Lissen... lissen *hic* I was juss about to get info on the Xeno dude from my bess friend here *hic* he's a good guy, ya know,
 even though he tric- *hic* tricked us. He was juss mentionin deliverin some swill to the south *hic* southwest.
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Zehahaha! Overhearin' me buserness dealins, eh boy? That be some fine ears ye got over teh buzz.
-  Color|purple|[Southwest? You know where Xeno is heading!]
-  Color|orange|[Salty Bartender]
+  &5[Southwest? You know where Xeno is heading!]&r
+  &6[Salty Bartender]&r
  Zehahaha! It be possible, laddy. But ye'll never get teh infer out o me. I be loyal to Cap'in Xeno til me death.
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  *hic* What about... about a drinking contest? You and *hic* you and me. Whoever loses their gut first *hic* loses the contest.
-  Color|purple|[Levyn, hold on-]
-  Color|orange|[Salty Bartender]
+  &5[Levyn, hold on-]&r
+  &6[Salty Bartender]&r
  That be mighty high talk ferm a man who already half legged in teh bucket, if ye catch mer drift.
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  If I win *hic* if I win, you give us the location.
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  And iffer I win? I don't be seeing the upside fer me.
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  I'll join *hic* I'll join... Xeno's crew with you... make your beer for him *hic* or whatever...
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Zehahaha! Well, that be er deal I can't be passing up! Ye gotcher self a pirate deal, lubber.
-  Color|purple|[How is a drinking contest fair? He's already drunk!]
-  Color|orange|[Levyn]
+  &5[How is a drinking contest fair? He's already drunk!]&r
+  &6[Levyn]&r
  [Salty Bartender] Zehahaha! That hardly be me problem, laddy. A pirate deal be a pirate deal. Ye can't cross us now.
-&o  Help Levyn win the drinking contest. Table
-  Color|orange|[Salty Bartender]
+&o  Help Levyn win the drinking contest.
+  &6[Salty Bartender]&r
  I er... I call...
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrrghhh! And that's how a pirate drinks!
-  Color|purple|[I... can't believe it. Levyn, you actually did it.]
-  Color|orange|[Levyn]
+  &5[I... can't believe it. Levyn, you actually did it.]&r
+  &6[Levyn]&r
  Arrgh! I feel the pirate spirit returning to me! I can do this!
-  Color|purple|[Now, for the information.]
-  Color|orange|[Salty Bartender]
+  &5[Now, for the information.]&r
+  &6[Salty Bartender]&r
  I er... I can't... Cap'in Xeno will 'ave me 'ead.
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh! You will, or the beer you drank won't be the only thing lose.
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Bah... he be 'eading 324 notches south, 125 notches west... please don't tell 'im I told ye... I beg o' ye...
-  Color|purple|[Let's go Levyn. Indigo is waiting on us.]
+  &5[Let's go Levyn. Indigo is waiting on us.]&r
  [Levyn] ARRGH!
-&o  1/2 - Speak to Captain Indigo Table
+&o  1/2 - Speak to Captain Indigo
  Captain Indigo
-  Color|orange|[Captain Indigo]
+  &6[Captain Indigo]&r
  I'm going to take Levyn losing his lunch over the side of the dock just now as a good sign.
-  Color|purple|[He seems to be back in working order, and we got some exact coordinates.]
-  Color|orange|[Captain Indigo]
+  &5[He seems to be back in working order, and we got some exact coordinates.]&r
+  &6[Captain Indigo]&r
  Fantastic! Where are we heading?
-  Color|purple|[324 notches south, 125 notches west]
-  Color|orange|[Captain Indigo]
+  &5[324 notches south, 125 notches west]&r
+  &6[Captain Indigo]&r
  That sounds doable. I'm all prepared and Izzy is communicating with someone below deck using some magic doohickey. That said,
 we should be all set and can voyage out as soon as you are ready.
-  Color|purple|[Let's go!]
-  Color|orange|[I'm not quite ready.]
-  Color|orange|[Captain Indigo]
+  &5[Let's go!]&r
+  &6[I'm not quite ready.]&r
+  &6[Captain Indigo]&r
  As I figured, nothing seems to be around here. If Xeno really is here, they likely have an underwater base somewhere. It's
-probably best for you to scout ahead    &o  2/2 - Search out Xeno's underwater hideout Table
-  Color|orange|[Captain Xeno]
+probably best for you to scout ahead    &o  2/2 - Search out Xeno's underwater hideout
+  &6[Captain Xeno]&r
  Now there, what seems to have gotten you in such a fuss?
-  Color|orange|[Masked Saboteur]
+  &6[Masked Saboteur]&r
  You are well aware of the issue. We gave you the information on the city so that you could find the Wool, not sell it out to
-that wretch,      Color|orange|[Captain Xeno]
+that wretch,      &6[Captain Xeno]&r
  Oh come now, you've known since the start of our business agreement that I've only ever been out for wealth. That is the only
 true power in this world- opportunity. Your balls of sheep hair mean nothing to me.
-  Color|orange|[Masked Saboteur]
+  &6[Masked Saboteur]&r
  You ignorant fool, you have no idea of the repercussions of your act-
-  Color|orange|[Masked Saboteur]
+  &6[Masked Saboteur]&r
  You! I thought I would have to hunt you down like the vermin you are, but you've just come right to me. This time, I'm going to
 finish you off!
-  Color|orange|[Indigo]
- &o  Defeat the Masked Saboteur Table
-  Color|orange|[Captain Xeno]
+  &6[Indigo]&r
+ &o  Defeat the Masked Saboteur
+  &6[Captain Xeno]&r
  Well, I seem to be trapped now, don't I? I suppose you'll have to take me in, hold me hostage.
-  Color|purple|[You aren't leaving here without us.]
-  Color|orange|[Captain Xeno]
- Oh, I'm sure of that. But tell me,      Color|purple|[We'll figure something out. We can--]
-  Color|orange|[Mysterious Man]
+  &5[You aren't leaving here without us.]&r
+  &6[Captain Xeno]&r
+ Oh, I'm sure of that. But tell me,      &5[We'll figure something out. We can--]&r
+  &6[Mysterious Man]&r
  Oh, I'm sure you probably could. You are a constant pain, after all.
-  Color|purple|[Who are...]
-  Color|orange|[Mysterious Man]
+  &5[Who are...]&r
+  &6[Mysterious Man]&r
  Xeno, I believe we had a deal, didn't we?
-  Color|orange|[Captain Xeno]
+  &6[Captain Xeno]&r
  I... No, you can't be... You're...
-  Color|orange|[Mysterious Man]
+  &6[Mysterious Man]&r
  There's nothing I hate more than those who betray me.
-  Color|orange|[Captain Xeno]
+  &6[Captain Xeno]&r
  No, wait... please- AAGH!
-  Color|orange|[Mysterious Man]
- And now there's you. I can't allow you to get in my way, I have too much at stake. Give Xeno my regards,
-Color|orange|[Voice from Above]
- I've got you,      Color|orange|[Vargos]
+  &6[Mysterious Man]&r
+ And now there's you. I can't allow you to get in my way, I have too much at stake. Give Xeno my regards,      &6[Voice from
+Above]&r
+ I've got you,      &6[Vargos]&r
  Well, that was a close one. If Izzy hadn't have contacted me, you guys would have been goners for sure.
-  Color|purple|[Vargos?!]
-  Color|orange|[Vargos]
- It's good to see you again,      Color|purple|[What just happened?]
-  Color|orange|[Vargos]
+  &5[Vargos?!]&r
+  &6[Vargos]&r
+ It's good to see you again,      &5[What just happened?]&r
+  &6[Vargos]&r
  You were about to be killed, that's what. He's finally made his move. I knew he was here in the Isles somewhere, but finding
 him was almost impossible. Especially after he had my apprentice killed.
-  Color|purple|[Wait, so that man... He was...]
-  Color|orange|[Vargos]
+  &5[Wait, so that man... He was...]&r
+  &6[Vargos]&r
  Yes; the man you saw- that was Calder. He's the one Xeno has been working with. And, from what Izzy told me, he was attempting
 to get the kingdoms into a political war with the Valley.
-  Color|purple|[What do we do now?]
-  Color|orange|[Vargos]
+  &5[What do we do now?]&r
+  &6[Vargos]&r
  Honestly, I'm not entirely sure. Calder is calculating and cunning- it will be hard to predict his next move. For now, I
 suppose we wait.
-  Color|purple|[I suppose so.]
-  Color|orange|[Vargos]
+  &5[I suppose so.]&r
+  &6[Vargos]&r
  In the meantime, your pirate friend Levyn went screaming into the bar. You might wanna go check that he's okay.
-&o  Speak with Levyn in the bar Table
+&o  Speak with Levyn in the bar
  Levyn
-  Color|orange|[Levyn]
- Arrgh!      Color|purple|[What can we do about it?]
-  Color|orange|[Salty Bartender]
+  &6[Levyn]&r
+ Arrgh!      &5[What can we do about it?]&r
+  &6[Salty Bartender]&r
  Zehahaha! What can ye do abert it, ye say? Any crew be in an uproar when ther cap'in be gone. A new cap'in need to rise in to
 fill teh slot.
-  Color|orange|[Levyn]
- Arrgh! The town needs a new captain.      Color|purple|[Why me?]
-  Color|orange|[Levyn]
+  &6[Levyn]&r
+ Arrgh! The town needs a new captain.      &5[Why me?]&r
+  &6[Levyn]&r
  Arrgh! Because you're the best pirate that ever sailed! You took care of that masked guy, twice! Let me spread the word for
 you! I can talk these pirates into it.
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Zehahaha! And while we be startin' on the wrong foot back wit me booze machine, ye did a wonderful job makin' it. Me swill 'as
 been the best booze I ever did drink. Ye also 'ad me back after I ratted Xeno. I er ye one. I 'ave yer back as well. And since I
 be a high rankin' pirate in Xeno's crew, ther'll listen to me sayins on ye.
-  Color|purple|[Okay then, I'm on board.]
-  Color|orange|[Levyn and Salty Bartender]
+  &5[Okay then, I'm on board.]&r
+  &6[Levyn and Salty Bartender]&r
  Aye aye, cap'in!
  XENOPHOBIA COMPLETE! SoftBreak  Awarded 2   Link   Salty Swills Salty_Swills wikilink  , 32 CCS,   Link   Xeno's Pirate Hat
 Xeno's_Pirate_Hat wikilink  , Access to the Mistport Black Market, and a crew of Mistport pirates!

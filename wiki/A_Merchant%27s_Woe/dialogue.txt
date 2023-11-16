@@ -1,43 +1,46 @@
-&o  Talk to Riaz's supplier to see where his goods are. Table
+&r
+&o  Talk to Riaz's supplier to see where his goods are.
  Riaz
   Coordinates: [-98, 154, 459]
-   &6[Riaz]
+   &6[Riaz]&r
  Oh dear me.... I still haven't received my supply package yet! It's been days!
-  &5[Hello! Is there anything I can do to help?]
-  The man seems quite worried...
-  &6[Riaz]
+  &5[Hello! Is there anything I can do to help?]&r
+  &8The man seems quite worried...&r
+  &6[Riaz]&r
  Why yes! Say... Could you check on my supplier? He has probably arrived and is at a small, spruce outpost overlooking the
 canyon by now. Ask him if he has my goods!
-  &5[Actually, there's something that came up...]
-  &6[Riaz]
+  &5[Actually, there's something that came up...]&r
+  &6[Riaz]&r
  Oh darn it. Well, I guess I'll have to wait on him then.
-  &5[Sure, I'd be happy to help!]
-  &6[Riaz]
+  &5[Sure, I'd be happy to help!]&r
+  &6[Riaz]&r
  Fantastic! Be sure to bring the goods back to me!
 &o  C: Go check on Riaz's supplier at the outpost. You can not get to it from   Link   Cinder's Roost Cinder's_Roost wikilink
-directly, but the entrance is in the valley below it. Table
+directly, but the entrance is in the valley below it.
  Supplier Anebos
   Coordinates: For house: [116, 79, 639] For Npc: [127, 77, 632]
-   The man seems to be very stressed... He looks like the right guy!
-  &5[Hello? Are you Riaz's supplier?]
-  &6[Supplier Anebos]
+   &8The man seems to be very stressed... He looks like the right guy!&r
+  &5[Hello? Are you Riaz's supplier?]&r
+  &6[Supplier Anebos]&r
  Oh no! Has he found out already? I'm in so much trouble!
-  &5[Why? What happened?]
-  &6[Supplier Anebos]
+  &5[Why? What happened?]&r
+  &6[Supplier Anebos]&r
  Well, you see, I've... lost the goods that I was supposed to have delivered to him a couple days ago!
-  &5[Any idea where you lost them?]
-  &6[Supplier Anebos]
+  &5[Any idea where you lost them?]&r
+  &6[Supplier Anebos]&r
  Perhaps in Rockspider Cavern? My cart felt a lot lighter after I left there...
-  &5[Alright. Thank you for your help!]
-  &6[Supplier Anebos]
+  &5[Alright. Thank you for your help!]&r
+  &6[Supplier Anebos]&r
  I hope you find them!
 &o  C: [1/2]: Retrieve the supplies from   Link   Rockspider Cavern Rockspider_Cavern wikilink  .
-&o  C: [2/2]: Once you have the supplies return to Riaz. Table
+&o  C: [2/2]: Once you have the supplies return to Riaz.
  Riaz
-  &6[Riaz]
+  &6[Riaz]&r
  By Ishnir! You did it! You've retrieved them!
-  &5[All in a days work!]
-  &6[Riaz]
+  &5[All in a days work!]&r
+  &6[Riaz]&r
  Thank you so much! Now I'll be able to run my business again! Here, take this as a thank you from me.
-  &6[Riaz]
+  &6[Riaz]&r
  What did you say your name was? [Player]? Thank you again- you're welcome here anytime!
+  &3'''A MERCHANT'S WOE COMPLETE!'''&r
+  &3Awarded [[Merchant's Curio]] and 10 Compressed Crystalline Shards!&r

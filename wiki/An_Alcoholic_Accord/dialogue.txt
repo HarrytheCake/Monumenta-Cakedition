@@ -1,99 +1,99 @@
- Table
+&r
  Salty Bartender
   Coordinates: [-829, 87, 1367]
-   Color|orange|[Salty Bartender]
+   &6[Salty Bartender]&r
  We be servin' only te' best grog in te' lands! Have yer self- Wait 'er minute ther'. You be that lubber Levyn be speakin' of;
 part o' his crew.
-  Color|purple|[No idea who Levyn is, sorry.]
-  Color|orange|[Salty Bartender]
+  &5[No idea who Levyn is, sorry.]&r
+  &6[Salty Bartender]&r
  Zehahaha, my sencer'st apolergies ther' laddy. I be mistaken ye' for another lubber.
-  Color|purple|[That I am.]
-  Color|orange|[Salty Bartender]
+  &5[That I am.]&r
+  &6[Salty Bartender]&r
  Zehahaha! Excellent me hardy! How'd ye' like to help in a lil' deal we be talkin' bout?
-  Color|purple|[What's the deal?]
-  Color|orange|[Salty Bartender]
+  &5[What's the deal?]&r
+  &6[Salty Bartender]&r
  This 'ere pub o' mine be flounderin' in recent days. I be in need o' a new recipe- one that will put me pub back in the shanty,
 so 'ter speak.
-  Color|purple|[And how does that involve me?]
-  Color|orange|[Salty Bartender]
+  &5[And how does that involve me?]&r
+  &6[Salty Bartender]&r
  Zehahaha! Well yer' see, me hardy, I 'eard that ye be in need o' some infermation about a Masked fella that I 'appen to be in
 possession of. So 'yer crewman and I came to 'er deal: you lubbers 'elp me, and I slip ye some info under ther' table. What do
 'yer say, laddy?
-  Color|purple|[No deal.]
-  Color|orange|[Salty Bartender]
+  &5[No deal.]&r
+  &6[Salty Bartender]&r
  Well, then ye won't be getting that infermation ye lubber.
-  Color|purple|[Sounds like a deal!]
-  Color|orange|[Salty Bartender]
+  &5[Sounds like a deal!]&r
+  &6[Salty Bartender]&r
  Zehahaha! Excellent, me hardy! So first thing be first: I be in need o' a distillation collerm. There be an old winery off in
 ther' tundra- I need ye to ransack it and bring me back the booty.
 &o  1/2 - Search out a Distillation Column in the   Link   Abandoned Winery Abandoned_Winery wikilink in the tundra.
-&o  2/2 - Once you have the Distillation Column return to the Salty Bartender. Table
+&o  2/2 - Once you have the Distillation Column return to the Salty Bartender.
  Salty Bartender
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Zehahaha! That be perfect me hardy! Now that we 'ave ther' collerm, I be in need o' ingredients! Me booze must be made 'ith
 Viridian Hops, which can be found 'here in the archipelago, on a isle be named Garden at De' Sea.
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Second, I be in need o' the POP, ther' thing that makes ye weezy. There be an abandoned town in ther' oasis region o' Ishnir
 where ye can find some cactus water.
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Me booze must be made 'ith Viridian Hops, which can be found 'here in the archipelago, on a isle be named Garden at De' Sea.
 Second, I be in need o' the POP, ther' thing that makes ye weezy. There be an oasis in Ishnir where ye can find some cactus
 water.
 &o  1/3 - Search out Viridian Hops at the   Link   Garden At Sea Garden_At_Sea wikilink
 &o  2/3 - Search out Cactus Water in the   Link   Oasis Town Oasis_Town wikilink
-&o  3/3 - Once you have both items return to the Salty Bartender Table
+&o  3/3 - Once you have both items return to the Salty Bartender
  Salty Bartender
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Zehahaha! Perfect, perfect me hardy! These be exactly what me booze be needin'! Now we be needin' ter' make ther' stuff. Yer'
 crewman and I made ther' machine while ye were out searchin' fer' the ingredients. 'Ead down ter' me celler and he will guide
 ye!
-&o  Head down to the basement and help Levyn brew the beer. Once it is brewed give it to the Salty Bartender Table
+&o  Head down to the basement and help Levyn brew the beer. Once it is brewed give it to the Salty Bartender
  Levyn (Pub Basement)
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh! This here be the distillation machine we made from the column you brought. These buttons on the side are the controls.
 I'm going to call out to you which button needs to be hit, and you need to do it quickly! Think you can handle it matey?
-  Color|purple|[Not now.]
-  Color|orange|[Levyn]
+  &5[Not now.]&r
+  &6[Levyn]&r
  Arrgh! Hurry back then. We need that information!
-  Color|purple|[Let's do it.]
-  Color|orange|[Levyn]
+  &5[Let's do it.]&r
+  &6[Levyn]&r
  Arrgh! Then we begin.
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh! Middle!
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh! Right!
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh! Middle!
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh! Left!
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh! Left again!
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh! Now flip the switch!
-  Color|orange|[Levyn]
- Arrgh! Nice work matey! Now bring this up to the bartender, or talk to me if you wanna make some more.  Table
+  &6[Levyn]&r
+ Arrgh! Nice work matey! Now bring this up to the bartender, or talk to me if you wanna make some more.
  Salty Bartender
-  Color|orange|[Salty Bartender]
+  &6[Salty Bartender]&r
  Zehahaha! That be some fine booze ther' laddy! I half expected ye lubbers ter' make somethin' horrid. 
-  Color|purple|[So about that information we discussed on the man who attacked us.]
-  Color|orange|[Salty Bartender]
+  &5[So about that information we discussed on the man who attacked us.]&r
+  &6[Salty Bartender]&r
  Zehahaha! Yer' gonna learn a valuable lesson her' terday laddy, yer can never trust a pirate! That infermation ye wanted? Ha! I
 don't 'ave it! That Levyn fella were runnin' 'is mouth 'bout how epic your arch-nemesis were that I saw an oppoetunity and took
 it.
-  Color|purple|[You lied to us?]
-  Color|orange|[Salty Bartender]
+  &5[You lied to us?]&r
+  &6[Salty Bartender]&r
  Think o' it mer o' a... buserness agreement gern sour. Zehahaha! Cap'in Xeno will love ye booze ye made ther', so I do thank
-ye! Now if ye'd be ser kind, get ye lubber hindquarters out o' me pub!  Table
+ye! Now if ye'd be ser kind, get ye lubber hindquarters out o' me pub!
  Levyn
-  Color|orange|[Levyn]
+  &6[Levyn]&r
  Arrgh...
-  Color|purple|[I'm guessing you overheard that?]
-  Color|orange|[Levyn]
+  &5[I'm guessing you overheard that?]&r
+  &6[Levyn]&r
  That I did, matey... We're in some bad shape...
-  Color|purple|[It's okay, we'll get that information some other way]
-  Color|orange|[Levyn]
- No      Color|purple|[Levyn?]
-  Color|orange|[Levyn]
+  &5[It's okay, we'll get that information some other way]&r
+  &6[Levyn]&r
+ No      &5[Levyn?]&r
+  &6[Levyn]&r
  Please just... leave me to drink... Go bother Izzy. He's actually doing something worthwhile.
  AN ALCOHOLIC ACCORD COMPLETE!
  Awarded   Link   Levyn's Pirate Hat Levyn's_Pirate_Hat wikilink and a very sad Levyn...

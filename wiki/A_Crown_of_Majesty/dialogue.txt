@@ -1,35 +1,36 @@
+&r
   Quest|title1 = A Crown of Majesty|prerequisites = [[A Crown of Topaz]]|starting_npc_name = Aimee|region = King's Valley|town =
 Sierhaven|starting_npc_coordinates = -760, 106, 19|rewards = *[[Jeweled Tiara]]
-*128 Enchanting Bottles Table
+*128 Enchanting Bottles&r
  Aimee SoftBreak  Coordinates: -760, 106, 19
-  Color|orange|[Aimee]
+  &6[Aimee]&r
  Thanks again for all your help! I think Sybil has something else for you now. But if you want, I have another job I need help
 with. A big, exciting one this time!
-  Color|purple|[I'm in. What do you need?]
-  Color|orange|[Aimee]
+  &5[I'm in. What do you need?]&r
+  &6[Aimee]&r
  Alright, so. I don't know if you've ever seen the King's crown, but it looks ridiculous! his birthday is coming up so I've been
 commissioned to make a new one. I need three gems to do it, from more dangerous mines outside the city this time, think you can
 handle it?
-  Color|PURPLE|[I'm in, where should I look?]
-  Color|orange|[Aimee]
+  &5[I'm in, where should I look?]&r
+  &6[Aimee]&r
  Yay, thank you so much! I need a garnet, malachite, and an onyx from three other mines. They're on the east and south parts of
 the swamp, and they're not the best but I do have some maps that should help if you want.
-  Color|PURPLE|[Nah, I like the silly crown]
-  &6[Aimee]
+  &5[Nah, I like the silly crown]&r
+  &6[Aimee]&r
  Really? He can't even see out of it!
-  Color|purple|[No, I'm sick of the mines.]
-  &6[Aimee]
+  &5[No, I'm sick of the mines.]&r
+  &6[Aimee]&r
  Aww, I was hoping I could count on you. I didn't want to ask anyone else because it's supposed to be a secret project.  Header
 section
 &o  Head back to Aimee once you grab the garnet from the   Link   Eastern Mineshaft Eastern_Mineshaft wikilink  , malachite from
 the   Link   Southeastern Mineshaft Southeastern_Mineshaft wikilink  , and onyx from the   Link   Southern Mineshaft
-Southern_Mineshaft wikilink  . Header section_1 Table
+Southern_Mineshaft wikilink  . Header section_1
  Aimee SoftBreak  Coordinates: -760, 106, 19
-  Color|orange|[Aimee]
+  &6[Aimee]&r
  Wow, that was fast! I'll have plenty of time to finish this crown! Here, I have a tiara for you that makes you more healthy
 like the last one! I'll get working on the crown right away!
-  [Be careful, I think that Onyx might be cursed]
-  &6[Aimee]
+  &5[Be careful, I think that Onyx might be cursed]&r
+  &6[Aimee]&r
  Cursed? Don't be silly, there's no such thing as curses. They're a legend, like dragons and Septum.
 &o  A CROWN OF MAJESTY COMPLETE! Awarded Jeweled Tiara and 128 Enchanting Bottles.
 Link   Category:Quests Category:Quests wikilink

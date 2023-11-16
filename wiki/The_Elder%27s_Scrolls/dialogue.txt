@@ -1,31 +1,31 @@
- Table
+&r
  T'Xoc
   Coordinates: [473, 196, -355]
-   &6[T'Xoc]
+   &6[T'Xoc]&r
  Hello [Player]. I sense you have ventured within Ta'Ferna... C'Shura has been here. What can I do for you?
-  &5[How are things going with the connection to Sierhaven?]
-  &6[T'Xoc]
+  &5[How are things going with the connection to Sierhaven?]&r
+  &6[T'Xoc]&r
  The connection is stable and the Narsens are offering us support. However, I may have need of you one more time.
-  &5[What can I do?]
-  &6[T'Xoc]
+  &5[What can I do?]&r
+  &6[T'Xoc]&r
  One of the Elders has gone missing.
-  &5[Could they just have wandered off in the night? I hear cats do that when they get old.]
-  &6[T'Xoc]
+  &5[Could they just have wandered off in the night? I hear cats do that when they get old.]&r
+  &6[T'Xoc]&r
  You misunderstand. This is not an elderly cat - or Tlaxan for that matter. The council of Tlaxan Elders are tenured former
 Shamans, Leaders, and respected heroes.
-  &5[That makes more sense.]
-  &6[T'Xoc]
+  &5[That makes more sense.]&r
+  &6[T'Xoc]&r
  We were informed that one, called R'Kitxet, would be coming for a visit right after the city was connected to Sierhaven.
 Yesterday, I was contacted by R'Tsiv, another elder, asking if we had heard from him. The other Elders are worried he has gone
 missing.
-  &5[And you want me to go hunting for him?]
-  &6[T'Xoc]
+  &5[And you want me to go hunting for him?]&r
+  &6[T'Xoc]&r
  Well, yes. Will you help us?
-  &5[Not right now, sorry.]
-  &6[T'Xoc]
+  &5[Not right now, sorry.]&r
+  &6[T'Xoc]&r
  If you become available, please return.
-  &5[Sure, I'm happy to help.]
-  &6[T'Xoc]
+  &5[Sure, I'm happy to help.]&r
+  &6[T'Xoc]&r
  Before you go wandering the Valley searching, I'd like you to go meet with R'Tsiv yourself. I told him I'd be talking to you.
 Next to the Crafter Building is a sealed doorway. Press the button next to it and you'll be able to enter the Room of
 Projection. There you must project your spirit through the cosmos to the hidden ho
@@ -48,43 +48,43 @@ LineBreak  Right, Down.
   Puzzle Solution:
  Up, Right, Up, Right, Up, Left, Down, Right, Down, Right, Down, Right, Up, Left, Up, Right, Up, Left, Down, Left, Up, Right.
   After completing the third puzzle:
-  &6[R'Tsiv]
+  &6[R'Tsiv]&r
  Welcome to Ta'Ksaav, outsider.
- C:   &o  Find and speak to R'Tsiv. Table
+ C:   &o  Find and speak to R'Tsiv.
  R'Tsiv
   Coordinates: [433, 167, -651]
-   &6[R'Tsiv]
+   &6[R'Tsiv]&r
  Hello. You must be [Player]. You walk a strange path, friend. Outsiders do not dreamwalk to Ta'Ksaav. Yet our friend T'Xoc
 spoke highly of you. You saved his people. Now you can help me save mine.
-  &5[That's what T'Xoc said. A missing Elder?]
-  &6[R'Tsiv]
+  &5[That's what T'Xoc said. A missing Elder?]&r
+  &6[R'Tsiv]&r
  Yes, one of my fellows. There are many of us here in this village.
-  &5[Where is everyone else?]
-  &6[R'Tsiv]
+  &5[Where is everyone else?]&r
+  &6[R'Tsiv]&r
  ...Can you not see them? How curious...
-  &5[Where are we?]
-  &6[R'Tsiv]
+  &5[Where are we?]&r
+  &6[R'Tsiv]&r
  I am deep in the Jaguar Tooth Mountains, as it is called by the Narsens. You are in Ta'Eldim still, resting in the Shrine of
 Projection, safely, I hope. Now, on to business.
-  &5[Indeed. What can I do to help?]
-  &6[R'Tsiv]
+  &5[Indeed. What can I do to help?]&r
+  &6[R'Tsiv]&r
  As T'Xoc said, a fellow Elder has gone missing. He is called R'Kitxet. He was sent in the wake of the fall of the Verdant
 Fortress controlled by the brutal Sons of the Forest. I hear you had a hand in this. With knowledge that a fragment of the
 Darkest God was present, he was to visit Ta'Eldim, then go in search of any lingering power that it had left.
-  &5[But he never arrived in Ta'Eldim.]
-  &6[R'Tsiv]
+  &5[But he never arrived in Ta'Eldim.]&r
+  &6[R'Tsiv]&r
  I fear R'Kitxet was drawn by the lingering power we feared and found himself ensorcelled by something stronger than he could
 handle. There has been no sign that his Xkelaq was used to end his own life, which makes us here fearful.
-  &5[What's a Skelack?]
-  &6[R'Tsiv]
+  &5[What's a Skelack?]&r
+  &6[R'Tsiv]&r
  I appreciate your attempt; that is not an easy word. A Xkelaq is a deeply enchanted dagger used by only the Elders. It is tied
 to the pool before us and can cut through any enchantment or force known to man, but only if the bearer intends to end their own
 life upon doing so. It is the last escape for an Elder to keep the deepest secrets of the Tlaxan people.
-  &5[So where will I go to find R'Kitxet?]
-  &6[R'Tsiv]
+  &5[So where will I go to find R'Kitxet?]&r
+  &6[R'Tsiv]&r
  He was to first travel to Ta'Eldim. Clearly something drew him away. I'd like to you create a Akkotl for me.
-  &5[What's that?]
-  &6[R'Tsiv]
+  &5[What's that?]&r
+  &6[R'Tsiv]&r
  It is a special food. This will allow me to divine R'Kitxet's path. Perhaps he did as he should and left scrolls behind to
 follow. Your first step will be gathering wheat and grinding it down in the mill into an infused flour. Next, pull a dream from
 the lake with a fishing rod and cook them in R'Tanaa's kitchen in her Akkotl Cooking Oven barrel. They will be combined to
@@ -99,14 +99,14 @@ from the hopper in the middle of the floor of the mill. [513, 170, -658]
    Finally goto the house at [439, 170, -623] and right click the barrel inside and to the right [433, 171, -620] to trade 1
 Ground Flour and 5 Figment of Dreaming for a   Link   Akkotl Akkotl wikilink  .
   R'Tsiv
-  &6[R'Tsiv]
+  &6[R'Tsiv]&r
  Yes, this Akkotl hits the spot.... Now, give me a moment to let the dreams you captured guide me.
-  &5[Okay.]
-  &6[R'Tsiv]
+  &5[Okay.]&r
+  &6[R'Tsiv]&r
 &o  Oh... Why would you turn around so close to your goal? Such a mistake my friend... There is no trap here. At least there
 wasn't meant to be...
-  &5[What is it? Did you see something?]
-  &6[R'Tsiv]
+  &5[What is it? Did you see something?]&r
+  &6[R'Tsiv]&r
  I did. Outside the city is a small set of ruins. When he reached them, he turned and entered them, leaving the city behind him.
 You must start at these small ruins. If R'Kitxet did what he was supposed to, he would have left a detailed scroll in his wake.
 Find it and you may be able to follow in his footsteps. Please, find our fellow Elder. There is much at stake beyond even your
@@ -121,31 +121,31 @@ understanding. Now, if you step into the fire in the meditation hut, you will re
  C:   &o  Follow R'Kitxet's path to the   Link   Inner Sanctum Inner_Sanctum wikilink of the   Link   Verdant Fortress
 Verdant_Fortress wikilink  .
  After stepping on the pressure plates:
- C:   &o  Talk to your ally Kathryn. Table
+ C:   &o  Talk to your ally Kathryn.
  Kathryn
   Coordinates: [1052, 72, 296]
-   &6[Kathryn]
+   &6[Kathryn]&r
  Halt! Oh wait, thank the King, it's you [Player]. What are you doing back here?
-  &5[I'm looking for a powerful Tlaxan. Have you seen anyone?]
-  &6[Kathryn]
+  &5[I'm looking for a powerful Tlaxan. Have you seen anyone?]&r
+  &6[Kathryn]&r
  Seen? I almost got killed by one. There was something seriously wrong with him. A strange magic was flowing around him. He
 entered, screaming that he didn’t want to do this, nearly took my head off with an EXPLOSIVE blast of magic, almost took my knee
 out with an arrow, and then ran into the remnants of the Sanctum. (I need to get his explosives formula...)
-  &5[I need to go after him. That’s R’Kitxet!]
-  &6[Kathryn]
+  &5[I need to go after him. That’s R’Kitxet!]&r
+  &6[Kathryn]&r
  I mean you really shouldn’t. There’s something dangerous happening inside. That’s why I’ve been setting up here anyway. I
 wanted to blow this place to hell once I worked out how to make like, UltraTNT or something.
-  &5[There already WAS something dangerous happening inside. I handled it.]
-  &6[Kathryn]
+  &5[There already WAS something dangerous happening inside. I handled it.]&r
+  &6[Kathryn]&r
  No, you don’t understand. After you beat up the Sons and the Masked guy in there and vanished, the whole place... warped. I
 don’t think anyone should go in there, especially not you.
-  &5[I have to. This is very important to the Tlaxans. I’ll be extra safe.]
-  &6[Kathryn]
+  &5[I have to. This is very important to the Tlaxans. I’ll be extra safe.]&r
+  &6[Kathryn]&r
  I... Okay. Fine. I don’t like this, but I also trust you. There's a weird dampening magic over the area again. I imagine you'll
 need to break more crystals - but you risk angering Kaul again! You'll also need to destroy as many spawners as you can if you
 want to really proceed. Good luck. Don’t get killed.
-  &5[If you insist!]
-  &6[Kathryn]
+  &5[If you insist!]&r
+  &6[Kathryn]&r
  I just want you to know I feel some really oppressive magic in there. Go stop it.
  THE ELDER'S SCROLLS COMPLETE! SoftBreak  Awarded access to the   Link   Verdant Remnants Verdant_Remnants wikilink ike and a
 Link   Verdant Remnants Key Verdant_Remnants_Key wikilink  .

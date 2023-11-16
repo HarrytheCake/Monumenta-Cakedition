@@ -1,231 +1,231 @@
- Table
+&r
  Vargos
   Coordinates: [-740, 83, 1337]
-   &6[Vargos]
+   &6[Vargos]&r
  It feels almost like dumb luck that we've routed Calder's Masked. You should be very proud of your work. We have more work left
 though... it will never end until we take down the man himself.
-  &5[What can I do to help?]
-  &6[Vargos]
+  &5[What can I do to help?]&r
+  &6[Vargos]&r
  As you know, we've taken the former Holy Advisor, Ridnan, into custody. We've been trying to crack him and gather information.
 Would you care to join us?
-  &5[Later, when I have the time.]
-  &6[Vargos]
+  &5[Later, when I have the time.]&r
+  &6[Vargos]&r
  Time is of the essence, you know.
-  &5[I've been looking forward to this.]
-  &6[Vargos]
+  &5[I've been looking forward to this.]&r
+  &6[Vargos]&r
  Then let us travel there post haste.
  C:   &o  [1/2]: Talk to Vargos in the Jail.
  C:   &o  [2/2]: If you're not in the Jail, speak to Vargos to return to it.
- Other Jail Npc Dialogue: Table
+ Other Jail Npc Dialogue:
  Brandy (Jail)
-  &6[Brandy]
+  &6[Brandy]&r
  Hello there [Player]. I've heard great things about you from Vargos and my daughter.
-  &5[Your daughter?]
-  &6[Brandy]
+  &5[Your daughter?]&r
+  &6[Brandy]&r
  Oh of course. Cinevra is my daughter. She's quite the powerful little arcmage!
-  &5[Well, it's nice to meet you Brandy. What have you gotten out of Ridnan so far?]
-  &5[Nice to meet you Brandy. What have you gotten out of Ridnan so far?]
-  &6[Brandy]
+  &5[Well, it's nice to meet you Brandy. What have you gotten out of Ridnan so far?]&r
+  &5[Nice to meet you Brandy. What have you gotten out of Ridnan so far?]&r
+  &6[Brandy]&r
  Not much, he's been spouting out fanatical nonsense, but nothing that will help us find Calder.
-  &5[Can I try talking to him?]
-  &6[Brandy]
- Sure. I'll be monitoring him, so no need to be afraid.  Table
+  &5[Can I try talking to him?]&r
+  &6[Brandy]&r
+ Sure. I'll be monitoring him, so no need to be afraid.
  Aimos (Jail)
-  &6[Aimos]
+  &6[Aimos]&r
  Ahoy Cap'n [Player].
-  &5[Ahoy. Who are you?]
-  &6[Aimos]
+  &5[Ahoy. Who are you?]&r
+  &6[Aimos]&r
  I'm Aimos. Yer mates pawned me off fer guard duty of this scum 'ere. If ye wanna know what he did, I wrote ya a log in ta chest
 over there.
-  &5[You can write?]
-  &6[Aimos]
- Jus' cuz I'm a pirate don't mean I ain't literate, mate.  Table
+  &5[You can write?]&r
+  &6[Aimos]&r
+ Jus' cuz I'm a pirate don't mean I ain't literate, mate.
  Levyn (Jail)
-  &6[Levyn]
+  &6[Levyn]&r
  Ahoy [Player]! We get ta pick the brains o' some scum today, aye?
-  &5[Yes indeed.]
-  &6[Levyn]
- Let me at 'im! I'll learn all there be ta know!  Table
+  &5[Yes indeed.]&r
+  &6[Levyn]&r
+ Let me at 'im! I'll learn all there be ta know!
  Ridan (Jail)
-  &6[Ridnan]
+  &6[Ridnan]&r
  [Player]... Have you come to gloat at your victory? Even if you get rid of me, there are many who share my sentiment. You mages
 are a scourge upon the earth.
-  &5[Do you hate mages that much?]
-  &6[Ridnan]
+  &5[Do you hate mages that much?]&r
+  &6[Ridnan]&r
  Of course I do! They should never have existed at all! I was so close... I should have realized that working for a filthy mage
 like Calder would cause trouble.
-  &5[Why did Calder want you to work for him in the first place?]
-  &6[Ridnan]
+  &5[Why did Calder want you to work for him in the first place?]&r
+  &6[Ridnan]&r
  Hah... He never told me what exactly, but he said he was searching for the resting place of ancient power.
-  &5[Did you find it?]
-  &6[Ridnan]
+  &5[Did you find it?]&r
+  &6[Ridnan]&r
  We didn't, but we found an old scripture that hinted to its location.
-  &5[Is this scripture in Calder's hands?]
-  &6[Ridnan]
+  &5[Is this scripture in Calder's hands?]&r
+  &6[Ridnan]&r
  ...
-  &5[Is it?]
-  &6[Ridnan]
- ...  Table
+  &5[Is it?]&r
+  &6[Ridnan]&r
+ ...
  Vargos (Jail)
-  &6[Brandy]
+  &6[Brandy]&r
  Seems like he's decided not to talk anymore. Let me handle this.
-  &6[Vargos]
+  &6[Vargos]&r
  Go ahead, talk to Ridnan.
 &o  A loud cracking noise reverberates around the room.
-  &6[Ridnan]
+  &6[Ridnan]&r
  GAHH!
-  &6[Brandy]
+  &6[Brandy]&r
  Does Calder have the scriptures?
-  &6[Ridnan]
+  &6[Ridnan]&r
  ...
-  &6[Brandy]
+  &6[Brandy]&r
  Why do you continue to stay silent? Do you believe someone will come for you?
-  &6[Ridnan]
+  &6[Ridnan]&r
  ...
-  &6[Brandy]
+  &6[Brandy]&r
  Your country has forsaken you. Your followers have been detained. And your master? Calder? I've known him far longer than
 you've been alive, boy. He won't come for you. You've served your purpose.
-  &6[Ridnan]
+  &6[Ridnan]&r
  ...
-  &6[Brandy]
+  &6[Brandy]&r
  Perhaps you need some more encouragement. You don't like magic, no? Let's see how much you like this.
 &o  Blades of air dance in the palm of Brandy's hand
-  &6[Ridnan]
+  &6[Ridnan]&r
  O-only some of them! We only managed to put together a few verses. He said it was enough.
-  &6[Brandy]
+  &6[Brandy]&r
  Only some hmm? Well maybe some more prodding will let you remember what was on those scr-
 &o  An explosion rocks the room
-  &6[Vargos]
+  &6[Vargos]&r
  What was that?
-  &6[Ridnan]
+  &6[Ridnan]&r
  I knew it! He would never forsake me!
-  &6[Brandy]
+  &6[Brandy]&r
  That monster... Calder is far too bold. Go get him, [Player].
-  &6[Vargos]
+  &6[Vargos]&r
  After him!
-  &6[Izzy]
+  &6[Izzy]&r
  Oh no... did we never seal the hole into the sewer?
-  &5[What hole?]
-  &6[Izzy]
+  &5[What hole?]&r
+  &6[Izzy]&r
  The one you escaped into, back when we made it to Mistport! Ridnan must have fled down it!
-  &5[I'll go after him.]
-  &6[Vargos]
+  &5[I'll go after him.]&r
+  &6[Vargos]&r
  Be careful, I sense some seriously powerful magic afoot. Someone is down there with him. I fear the Masked aren't done with us
 yet.
-  &6[Levyn]
+  &6[Levyn]&r
  Need any backup Cap'n? I can take 'im!
  C:   &o  [1/2]: Follow Ridnan into the sewers.
  C:   &o  [2/2]: If you leave the sewers at any time, return through the sewer entrance.
  After you enter after Ridnan:
-  &6[Masked Figure]
+  &6[Masked Figure]&r
  Don't follow us, [Player]. This won't end well.
-  &5[Who are you? Where are you taking Ridnan?]
-  &6[Masked Figure]
+  &5[Who are you? Where are you taking Ridnan?]&r
+  &6[Masked Figure]&r
  This isn't your concern. Just let us leave and I won't be forced to hurt you.
-  &6[Masked Figure]
+  &6[Masked Figure]&r
  Fine, I'll do this myself. I was hoping not to have to. Come here [Player]!
  C:   &o  Defeat the Masked Figure.
- After beating the Masked Figure: Table
+ After beating the Masked Figure:
  Samwell (Sewer)
-  &6[Samwell]
+  &6[Samwell]&r
  I told you not to follow me.
-  &5[Samwell? What are you doing here?]
-  &6[Samwell]
+  &5[Samwell? What are you doing here?]&r
+  &6[Samwell]&r
  I told you, I would be finding the highest bidder. It turns out the Masked offer quite the compensation. Power.
-  &5[After all we saw, you really joined Calder? Why?]
-  &6[Samwell]
+  &5[After all we saw, you really joined Calder? Why?]&r
+  &6[Samwell]&r
  Of course I did, after all we saw. I'm throwing my hat in the ring with the winner. Lord Calder has power beyond your
 imagination. He is so close to having even more. The scriptures will be the way. I'm sure Ridnan, the little traitor, has
 already spilled the beans.
-  &5[Wouldn't you like to know.]
-  &6[Samwell]
+  &5[Wouldn't you like to know.]&r
+  &6[Samwell]&r
  I don't really care. I'm not here to rescue Ridnan anyway.
-  &5[What?]
-  &6[Ridnan]
+  &5[What?]&r
+  &6[Ridnan]&r
  No! I've served Lord Calder well!
 &o  Samwell spits.
-  &6[Samwell]
+  &6[Samwell]&r
  As if. You failed his most delicate mission and have put pressure on him when he needed the most space. With the failures of
 you and the Pharaoh, he might not even get the wool in time, you fool.
-  &5[Wool?!]
-  &6[Samwell]
+  &5[Wool?!]&r
+  &6[Samwell]&r
  Yes, what else would Ridnan's precious scriptures be pointing to?? Gods, you truly are hopeless. Goodbye [Player]. I hope I
 never have to see you again.
-  &6[Ridnan]
+  &6[Ridnan]&r
  NO! Listen to me! The scriptures speak of the lost Monument. The statues speak of the power of time! Go to -
 &o  Ridnan gasps as Samwell leaps forward, stabbing him in the throat.
-  &5[Samwell!]
+  &5[Samwell!]&r
 &o  Samwell leaps into the sewer tunnel, silently, leaving you alone, with a corpse. You choose to flee back to Mistport. You've
 seen enough.
- C:   &o  Return to Vargos in Mistport to tell him what happened. Table
+ C:   &o  Return to Vargos in Mistport to tell him what happened.
  Vargos
-  &6[Vargos]
+  &6[Vargos]&r
  You've returned. Good news, I hope.
-  &5[Ridnan is dead, killed by Samwell. He's joined Calder.]
-  &6[Vargos]
+  &5[Ridnan is dead, killed by Samwell. He's joined Calder.]&r
+  &6[Vargos]&r
  Of course... Those who hunger for power are always drawn to those with it. It will be Samwell's downfall. He's made his choice,
 I suppose.
-  &5[I found something important out. Calder is after a Wool.]
-  &6[Vargos]
+  &5[I found something important out. Calder is after a Wool.]&r
+  &6[Vargos]&r
  A wool? The council didn't think there were any left in the Region. What do we know?
-  &5[I know that the Monument seems to be involved, and something about statues speaking of time?]
-  &6[Vargos]
+  &5[I know that the Monument seems to be involved, and something about statues speaking of time?]&r
+  &6[Vargos]&r
  Fascinating! We need to move quickly. I'll send for Bhairavi immediately. She knows more about these wool than anyone else.
 I've been ensuring your discoveries with this region's wool made their way to her. Go meet her at the Steelmeld Monument
 immediately.
- C:   &o  Meet Bhairavi at the Steelmeld Monument. Table
+ C:   &o  Meet Bhairavi at the Steelmeld Monument.
  Bhairavi
   Coordinates: [-542, 6, -527]
-   &6[Bhairavi]
+   &6[Bhairavi]&r
  [Player]! You're here!
-  &5[It's been too long since the party at Mistport!]
-  &6[Bhairavi]
+  &5[It's been too long since the party at Mistport!]&r
+  &6[Bhairavi]&r
  It has indeed! Now, the research I've done in the Valley made me believe that the last wool in the Isles was the Purple Wool.
 Now I'm beginning to think that the Blue Wool is in play here as well.
-  &5[The Blue Wool? How do you know?]
-  &6[Bhairavi]
+  &5[The Blue Wool? How do you know?]&r
+  &6[Bhairavi]&r
  Has nobody told you about the Council's experience with the Wools? It's quite a long story, but I can summarize if you'd like.
-  &5[Please do (Short option).]  Plain  (MISSING)
-  &5[I'm happy to listen (Long option).]
-  &6[Bhairavi]
+  &5[Please do (Short option).]&r  Plain  (MISSING)
+  &5[I'm happy to listen (Long option).]&r
+  &6[Bhairavi]&r
  After many adventures and discoveries, the Mage Council discovered how to enter the Monument in the King's Valley. It was there
 we were greeted by a vision... or a memory? Something. In it, we were shown sixteen wool of power. The ones you know, white,
 orange, magenta, and so on.
-  &5[What's left to find then?]
-  &6[Bhairavi]
+  &5[What's left to find then?]&r
+  &6[Bhairavi]&r
  Next would be Blue, Brown, Green, and Red. We began to investigate back then, and determined that White through Yellow were in
 the Valley, and that they seemed to be in groups. We were fairly sure that Lime through Purple would be together, then Blue
 through Black would be grouped. We began to investigate a lead into what we thought would be a higher wool, far from the Valley.
-  &5[But Calder got it first?]
-  &6[Bhairavi]
+  &5[But Calder got it first?]&r
+  &6[Bhairavi]&r
  Exactly. He had been off searching with his partner, on Council orders. We have no idea how he found the wool, but on his
 return, he revealed it, and slaughtered the Council. His partner hasn't been seen since. She's likely dead as well, damn him.
-  &5[That's horrible.]
-  &6[Bhairavi]
+  &5[That's horrible.]&r
+  &6[Bhairavi]&r
  Isn't it? Calder really seems to have a gift for this sort of miracle though, finding Wool where they don't belong. If this is
 even the Blue Wool at all...
-  &5[So what do we know? Is there anywhere I can go to find him?]
-  &6[Bhairavi]
+  &5[So what do we know? Is there anywhere I can go to find him?]&r
+  &6[Bhairavi]&r
  I think so. I've had some notes on a wool with time powers for a few months now. I keep finding references to the "Silver
 Knights", all over the Isles. If that name sounds familiar, it's because we also found an ancient Hammer with ties to them in
 Highwatch.
-  &5[Fascinating. But what about them and this wool?]
-  &6[Bhairavi]
+  &5[Fascinating. But what about them and this wool?]&r
+  &6[Bhairavi]&r
  Well, the researchers here in Steelmeld have found artifacts relating to them in this place. Additionally, I found the
 crumbling ruins of what seems to be a Silver Knight statue in Ishnir. Inside a hidden compartment, I found what seems to be a
 scripture. I've partially deciphered it, and it mentions an artifact of Time hidden to the "West of the Monument". If you can
 finish it, maybe it could tell us more...
-  &5[I'm on it.]
-  &6[Bhairavi]
+  &5[I'm on it.]&r
+  &6[Bhairavi]&r
  Fantastic. Here's a copy, then! Once you work out where it's sending you, I'll send an assistant to join you there. Just head
 there and maybe you can work out what Calder is doing with this wool... Gods, I hope you're fast enough.
- C:   &o  Translate the notes to find out where to go next. Speak to Bhairavi if you need a replacement book. Table
+ C:   &o  Translate the notes to find out where to go next. Speak to Bhairavi if you need a replacement book.
  Bhairavi
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  Once you've worked out what this says, I'll send an assistant to meet you at that spot! Just head there and maybe you can work
 out what Calder is doing with this wool... Gods, I hope you're fast enough.
-  &5[Can I have another copy of the book?]
-  &6[Bhairavi]
+  &5[Can I have another copy of the book?]&r
+  &6[Bhairavi]&r
  Of course. I'm used to you losing my research by now. I found the crumbling ruins of what seems to be a Silver Knight statue in
 Ishnir. Inside a hidden compartment, I found what seems to be a scripture. I've partially deciphered it, and it mentions an
 artifact of Time hidden to the "West of the Monument". If you can finish it, maybe it could tell us more...
@@ -238,36 +238,35 @@ artifact of Time hidden to the "West of the Monument". If you can finish it, may
  Head to   Link   Sacrarium of Aeons Sacrarium_of_Aeons wikilink  .
   When you try to go down the stairs:
 &o  Reality warps before you, time gets reversed and you find yourself moving backwards, stopping at the top of the staircase.
-Table
  Max
-  &6[???]
+  &6[???]&r
  Hey, are you [Player]? You showed up at the perfect time, some masked guy attacked me as I got here but it seems your arrival
 scared him off.
-  &5[Who are you?]
-  &6[Max]
+  &5[Who are you?]&r
+  &6[Max]&r
  I'm Max, I know Bhairavi. I have a fair idea on the current situation you're in, but I'd appreciate it if you filled me in.
-  &5[Sure.]
- You recount the past events and actions leading up to now. SoftBreak   &6[Max] ...I see. That's pretty rough. I've heard of
+  &5[Sure.]&r
+ You recount the past events and actions leading up to now. SoftBreak   &6[Max]&r ...I see. That's pretty rough. I've heard of
 this Calder guy but I didn't expect that I might be confronting him directly.
-  &5[He's dangerous, but we need to stop him.]
-  &6[Max]
+  &5[He's dangerous, but we need to stop him.]&r
+  &6[Max]&r
  Thankfully, I'm not a wimp. Anyway, have you seen this gateway? This magical barrier is inlaid in the stone here, you can see
 the small scriptures on the border of the stonework.
-  &5[I never noticed that.]
-  &6[Max]
+  &5[I never noticed that.]&r
+  &6[Max]&r
  It’s not something a lot of people notice, don’t worry. I do a lot of rune work so I tend to notice those things. Anyways!
 Iâ–’ve been sitting here reading it and I think I deciphered most of it.
-  &5[You can read this?]
-  &6[Max]
+  &5[You can read this?]&r
+  &6[Max]&r
  Of course. It’s quite ancient, but I’m very good with old languages. This seems to predate the Ishnir and Chillwind societies,
 but I’ve not the foggiest what those people called themselves. They seem to mention this being a way to house their home, and
 a... Teal Wool? Can you step back for a bit?
 &o  Max mutters a few words under his breath, and you hear a shattering noise as the nearby crystal breaks. The runes glow a
 faint blue hue as the barrier around the stairs fade.
-  &6[Max]
+  &6[Max]&r
  Excellent. The spell I crafted seemed to work. I’ll see you inside?
-  &5[Inside where?]
-  &6[Max]
+  &5[Inside where?]&r
+  &6[Max]&r
  Whatever these ancient folks didn’t want us to see of course. I hope it’s as big as you say. Take this, by the way. You'll need
 it. See you down there!
  C:   &o  [1/2]: Follow Max down the stairs...
@@ -275,34 +274,34 @@ it. See you down there!
 &o  Reality warps before you, time speeds up and you find youself moving faster than expected, stopping in a room somewhere
 below the Sacrarium.
  After beating   Link   Echoes of Oblivion Echoes_of_Oblivion wikilink  :
- C:   &o  Return to Bhairavi, defeated. Table
+ C:   &o  Return to Bhairavi, defeated.
  Bhairavi
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  Welcome back [Player]. I'm so happy to see you alive still. What happened? Did you see Calder? Did you get the wool? Was Barte
 any help?
-  &5[I don't think things could have gone worse.]
-  &6[Bhairavi]
+  &5[I don't think things could have gone worse.]&r
+  &6[Bhairavi]&r
  Um...
-  &5[I never met a Barte. I met a Max.]
-  &6[Bhairavi]
+  &5[I never met a Barte. I met a Max.]&r
+  &6[Bhairavi]&r
  Oh... no...
-  &5[We explored what was hidden below the Sacrarium of Aeons. A whole kingdom, warped through time.]
-  &6[Bhairavi]
+  &5[We explored what was hidden below the Sacrarium of Aeons. A whole kingdom, warped through time.]&r
+  &6[Bhairavi]&r
  And the blue wool?
-  &5[The TEAL wool. Destroyed. By Maxwell Calder.]
-  &6[Bhairavi]
+  &5[The TEAL wool. Destroyed. By Maxwell Calder.]&r
+  &6[Bhairavi]&r
  But... how?
-  &5[The Black Wool. It gets worse though.]
-  &6[Bhairavi]
+  &5[The Black Wool. It gets worse though.]&r
+  &6[Bhairavi]&r
  What could be worse than the loss of a wool?
-  &5[The wool had something inside. A being. It destroyed the place around us.]
-  &6[Bhairavi]
+  &5[The wool had something inside. A being. It destroyed the place around us.]&r
+  &6[Bhairavi]&r
  Why did Calder destroy the wool at all?
-  &5[He claims this has always been his goal.]
-  &6[Bhairavi]
+  &5[He claims this has always been his goal.]&r
+  &6[Bhairavi]&r
  Insanity...
-  &5[What do we do, Bhairavi?]
-  &6[Bhairavi]
+  &5[What do we do, Bhairavi?]&r
+  &6[Bhairavi]&r
  I have no idea, [Player]. I'm sorry. I'll need to meet with the rest of the Council. We have far too much to discuss. Nothing
 we thought we knew seems to be true. New wool, destroyed? Calder's goals? This is disastrous... We need to locate the being that
 was inside that wool. We'll talk soon, okay? For now, take these, please.

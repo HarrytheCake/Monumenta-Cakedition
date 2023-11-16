@@ -1,54 +1,55 @@
+&r
 &o  After completing   Link   Of Monks and Magic Of_Monks_and_Magic wikilink  , you quest compass tells you to speak with
-Captain Tobias Table
+Captain Tobias
  Captain Tobias
-  Color|ORANGE|[Captain Tobias]
+  &6[Captain Tobias] &r
  I'm glad the monks are alive, but if the Sons of the Forest are back we may be in danger. Well, more danger than usual.
-  Color|PURPLE|[Who are the Sons of the Forest?]
-  Color|ORANGE|[Captain Tobias]
+  &5[Who are the Sons of the Forest?]&r
+  &6[Captain Tobias] &r
  They're a group of dark druids and Tlaxan blood priests. After the Blackroot Wars they vowed to destroy the Narsen Empire and
 spent decades attacking our towns. They vanished thirty years ago, but there's always been rumors that they still lived.
-  Color|PURPLE|[What are they up to?]
-  Color|ORANGE|[Captain Tobias]
+  &5[What are they up to?]&r
+  &6[Captain Tobias] &r
  No doubt something sinister and deadly. In their last major attack thirty years ago, they tried to unleash a curse within Farr
 to turn the inhabitants into mindless monsters under their control.
-  Color|purple|[Where are they located?]
-  Color|ORANGE|[Captain Tobias]
+  &5[Where are they located?]&r
+  &6[Captain Tobias] &r
  They mostly hide within the forests of the Korbar Highlands. However, there's an encampment north-east of here which I suspect
 is their forward base. Think you could infiltrate it and look for anything suspicious?
-  Color|purple|[Of course, they must be stopped]
-  Color|purple|[I'm not quite ready yet]
-  Color|ORANGE|[Captain Tobias]
+  &5[Of course, they must be stopped]&r
+  &5[I'm not quite ready yet]&r
+  &6[Captain Tobias] &r
  Good luck.
 &o  Enter the   Link   Suspicious Village Suspicious_Village wikilink 760, 75, -85, and head to the basement. Inside there will
 be a magma block covered in glass.
  Once you break the glass and "pick up" the spell:
-&o   &5A powerful surge of magic bursts from the spellbook as you approach! A mysterious spell has seared itself into your mind!
-  &6[Screeching Voice]
+&o   &5A powerful surge of magic bursts from the spellbook as you approach! A mysterious spell has seared itself into your
+mind!&r
+  &6[Screeching Voice]&r
  They have the spell! Kill them before they take it to the archmage!
-  &6[Screeching Voice]
+  &6[Screeching Voice]&r
  Assassins of the Howling Wind, emerge from the shadows and slay them before they reach the archmage!
  C:   &o  A dark curse has been placed upon you and assassins are tracking your every move! Hurry to the capital, Vargos can
 remove the spell!
 &o  Upon breaking the glass, every minute or so, skeleton 'assassins' will appear and will attempt to kill you. Your goal is to
 reach   Link   Sierhaven Sierhaven wikilink to break the curse. Note that you can not use any teleporters during the chase.
-Table
  Vargos
-  Color|orange|[Vargos]
+  &6[Vargos]&r
  ... That's a lot of dark magic. Don't move, it looks like it's based on a Hazdremar Anchor, which means you're lucky you
-haven't exploded. And... SoftBreak   Color|orange|[Vargos] Disjuctus Facultsar
+haven't exploded. And... SoftBreak   &6[Vargos]&r Disjuctus Facultsar
 &o  You feel the dark magic pull away from you and it is captured by Vargos
-  Color|orange|[Vargos]
+  &6[Vargos]&r
  The dark magic that chained itself to you was a complex spell, designed to summon something and then bind it to the casters
 will. A troubling development indeed.
-  Color|purple|[Is that bad?]
-  Color|orange|[Vargos]
+  &5[Is that bad?]&r
+  &6[Vargos]&r
  There was enough power in that spell to summon a full-fledged Genius Loci - guardian spirits with the strength to crush cities.
 Even worse, I don't think the Sons of the Forest could make this spell alone. Someone is helping them...
-  Color|orange|[Vargos]
+  &6[Vargos]&r
  The dark magic that chained itself to you was a complex spell, designed to summon something and then bind it to the casters
 will. A troubling development indeed.
-  Color|purple|[So, now what?]
-  Color|orange|[Vargos]
+  &5[So, now what?]&r
+  &6[Vargos]&r
  We attack. The Sons of the Forest cannot be allowed to cast this spell, especially if they have access to a Wool. Gather your
 strength, go to Highwatch, and talk to Commander Haynes. Be wary; this will not be easy.
 &o  SONS OF THE FOREST COMPLETE! Awarded   Link   Silver Knight's Hammer Silver_Knight's_Hammer wikilink  . You may now use the

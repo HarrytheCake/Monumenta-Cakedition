@@ -1,61 +1,62 @@
- Table
+&r
  Nai (Sanctum Lobby)
-  &6[Nai]
+  &6[Nai]&r
  I heard a great cry from the depths. Have you found truth within?
-  &5[Is there anything else I can do to help?]
-  &6[Nai]
+  &5[Is there anything else I can do to help?]&r
+  &6[Nai]&r
  ...Yes. You have more experience with Kaul, yes? Perhaps even more than C'Axtal himself. You have quelled his rage time and
 time again, yet it still burns hot within him. I fear he poses a threat still, not just to the Valley, but to the other Loci.
-  &5[How could he affect the other Loci?]
-  &6[Nai]
+  &5[How could he affect the other Loci?]&r
+  &6[Nai]&r
  The Loci are the Dreamers. You have certainly heard them called that before. However, they do not dream alone. The dream is
 shared amongst them all, a web of life over the Jungle. Kaul dreams the loudest. I believe his dream has filled this web,
 suffocating the other dreamers. But if we can enter the dream through the lesser dreamers, perhaps we can find the source of his
 rage undetected by him.
-  &5[How am I going to enter the dream?]
-  &6[Nai]
+  &5[How am I going to enter the dream?]&r
+  &6[Nai]&r
  Take this, and return to Velara. Within lies two Dreamers, strong enough to be communed with. Drink it, slowly, and you will be
 capable. Enter the dream.
  C:   &o  Drink the Blood of the Forest. Speak to Nai if you misplace it. You must drink it normally, quick drinking it will not
 work.
 &o  As you take a drink from the bottle, you momentarily black out, and wake up feeling nauseated, but... different.
- C:   &o  Speak to Xolotl. Table
+ C:   &o  Speak to Xolotl.
  Xolotl ( Link   Velara Velara wikilink  )
   Coordinates: [1000, 174, 754]. After you enter Velara, go straight and through the water puzzle room, then go to the left and
 through the water bridge room, and in the water-filled tunnel is Xolotl.
-   &6[Xolotl]
+   &6[Xolotl]&r
  i am they
-  &6[Xolotl]
+  &6[Xolotl]&r
  can you dream
-  &5[Uh... yes?]
-  &6[Xolotl]
+  &5[Uh... yes?]&r
+  &6[Xolotl]&r
  sleep
  C:   &o  [1/2]: Enter Velara.
- C:   &o  [2/2]: Explore the Dream. Table
+ C:   &o  [2/2]: Explore the Dream.
  Mictlan (Dream)
   Coordinates: [-2377, 129, 433]
-   &6[Mictlan]
+   &6[Mictlan]&r
  he will not like you here
-  &6[Mictlan]
+  &6[Mictlan]&r
  so close to his rage
-  &5[Excuse me?]
-  &6[Mictlan]
+  &5[Excuse me?]&r
+  &6[Mictlan]&r
  let me show you...
  C:   &o  [2/2]: Open the chest.
+  &r
   Easiest and most consistent way I've found to beat Rage Incarnate is just circle bow strafing. This is due to every hit from
 it being like a wrecking ball.
   After beating Rage Incarnate:
-  &5The being falls to the ground, shattering. You feel the world fading around you, and your pockets feel heavier...
- C:   &o  Return to Nai with the rage. Table
+  &5The being falls to the ground, shattering. You feel the world fading around you, and your pockets feel heavier...&r
+ C:   &o  Return to Nai with the rage.
  Nai (Sanctum Lobby)
-  &6[Nai]
+  &6[Nai]&r
  You're back. I feel you've entered the dream, and brought something back. May I see it?
-  &5[Sure, here you go.]
-  &6[Nai]
+  &5[Sure, here you go.]&r
+  &6[Nai]&r
  Pure, focused rage, pulled straight out of a dream... If you return to Kaul's nightmare, the reverie... I believe I could
 channel its power. But be warned - this is true anger. Returning into the nightmare with this channeled power would certainly
 anger Kaul even more, so be careful...
-  &6[Nai]
+  &6[Nai]&r
  Thank you, [Player]. Here - as a token of my appreciation. My time grows shorter and I need it no longer. Perhaps it will be of
 help conquering the nightmare again.
  CRYSTAL VISIONS COMPLETE! Awarded   Link   Nai's Cube Nai's_Cube wikilink and access to   Link   Malevolent Reverie

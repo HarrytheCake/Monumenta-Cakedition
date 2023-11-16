@@ -1,181 +1,182 @@
-  WorkInProgress|Missing a few compasses and coords
-&o  Venture into the Ruins of the Congress with Bhairavi's team. Table
+&r
+  WorkInProgress|Missing a few compasses and coords&r
+&o  Venture into the Ruins of the Congress with Bhairavi's team.
  Bhairavi
   Coordinates: [-543, 6, -528]
-   Color|Orange|[Bhairavi]
-   Color|Purple|[You do?]
-  Color|Purple|[Can you help me understand what happened inside Isharist?]
-  Color|Orange|[Bhairavi]
+   &6[Bhairavi]&r
+   &5[You do?]&r
+  &5[Can you help me understand what happened inside Isharist?]&r
+  &6[Bhairavi]&r
  I can try at least. You were not in Isharist. Not the majority of the time at least. For most of your time with Calder, you
 were in echoes of that empire's collapse, not reality. Until the end. You were travelling through echoes, searching for the
 source of the noise, so to say. Then, once you found the source, Calder silenced it. Now we have to clean up the screams. Now,
 about the spirit.
-  Color|Purple|[Yes! What have you found?]
-  Color|Orange|[Bhairavi]
+  &5[Yes! What have you found?]&r
+  &6[Bhairavi]&r
  Vargos and I called a meeting of the Mage Council and began an intense magic search across the region. I called in a few of my
 assistants, and I believe we’ve found things.
-  Color|Purple|[Can I have another copy of your research?]
-  Color|Orange|[Bhairavi]
+  &5[Can I have another copy of your research?]&r
+  &6[Bhairavi]&r
  Um, I suppose, sure.
-  Color|Purple|[Like what?]
-  Color|Orange|[Bhairavi]
+  &5[Like what?]&r
+  &6[Bhairavi]&r
  Well, firstly, there’s a strange disturbance of magic going on under the town of Nightroost. Wexley said it was like… a song?
 Anyway, the spirit was absolutely involved, but is gone.
-  Color|Purple|[That's all? Want me to go check it out?]
-  Color|Orange|[Bhairavi]
+  &5[That's all? Want me to go check it out?]&r
+  &6[Bhairavi]&r
  Oh, not at all. It's worse. The spirit has been active almost everywhere. We've been finding little time anomalies breaking
 through and creating some strangeness. But it's all been leading right to the center of the isles, to the ruins of the Congress.
-  Color|Purple|[Oh no. That can't be good.]
-  Color|Orange|[Bhairavi]
+  &5[Oh no. That can't be good.]&r
+  &6[Bhairavi]&r
  No, it cannot. The Council is well aware of the Congress, you see. We've exchanged research with them before, and they were
 known to have the most extensive magical research on any topic, ever. Their exhibits were unrivaled. And according to Antigone,
 there's wool magic radiating from it like crazy.
-  Color|Purple|[So you want me to go inside again?]
-  Color|Orange|[Bhairavi]
+  &5[So you want me to go inside again?]&r
+  &6[Bhairavi]&r
  Yes I do. Into the real Congress, not just a collapsing room, as well. Also, we're coming with you. Are you in?
-  Color|Purple|[I'm in. Also what? You're coming with me? Bhairavi, it's dangerous.]
-  Color|Purple|[I'm not sure I'm ready for this right now.]
-  Color|Orange|[Bhairavi]
+  &5[I'm in. Also what? You're coming with me? Bhairavi, it's dangerous.]&r
+  &5[I'm not sure I'm ready for this right now.]&r
+  &6[Bhairavi]&r
  I... understand. We need you when you're ready.
-  Color|Orange|[Bhairavi]
- Of course it is. But I'm tired of sending you into danger alone. This is a unique situation      Color|Orange|[Bhairavi]
+  &6[Bhairavi]&r
+ Of course it is. But I'm tired of sending you into danger alone. This is a unique situation      &6[Bhairavi]&r
  Head over to the Congress and see what you can find. I'll be sending Wexley to meet you this time. No more vagueness - that
 didn't go well before.
-&o  Find Wexley at the Ruins of the Congress. Table
+&o  Find Wexley at the Ruins of the Congress.
  Wexley
   Coordinates: [-622, 25, 557]
-   Color|Orange|[Wexley]
- Hello      Color|Purple|[I see that. It looks... pristine here. So, do you have any idea how to get in? Or should we just go
-down the shaft in the center?]
-  Color|Orange|[Wexley]
+   &6[Wexley]&r
+ Hello      &5[I see that. It looks... pristine here. So, do you have any idea how to get in? Or should we just go down the
+shaft in the center?]&r
+  &6[Wexley]&r
  I've already checked out that other path and didn't see any way to get further yet. There's a weird misty barrier I can't pass,
 so this door seems to be our best bet. It looks very out of place! Maybe we can break it down?
-  Color|Purple|[I don't know about that.]
-  Color|Orange|[Wexley]
+  &5[I don't know about that.]&r
+  &6[Wexley]&r
  Come on, you're strong! Brayllur says so! Give it a shot.
-  Color|Orange|[Wexley]
+  &6[Wexley]&r
  Go on! Punch the door!
  (Missing Compass)
-  Color|Grey|You punch the door. It doesn't seem to do much, other than hurt your hand.
-  Color|Orange|[Wexley]
+  Color|Grey|You punch the door. It doesn't seem to do much, other than hurt your hand.&r
+  &6[Wexley]&r
  Hmm, that didn't work. Let me see if I can do this correctly... Once I'm done, quickly turn and hit the door. It won't last
 long.
-  Color|Grey|He speaks some... words. They make your brain hurt and you can't seem to remember them.
-  Color|Orange|[Wexley]
+  Color|Grey|He speaks some... words. They make your brain hurt and you can't seem to remember them.&r
+  &6[Wexley]&r
  Okay, try punching the door again.
 &o  Back to the door! Give it a whack!
-  Color|Grey|You punch the door again. It quivers, but remains in place.
-&o  Complain to Wexley. Table
+  Color|Grey|You punch the door again. It quivers, but remains in place.&r
+&o  Complain to Wexley.
  Wexley
   Coordinates: [-622, 25, 557]
-   Color|Orange|[Wexley]
+   &6[Wexley]&r
  No, I think I did that a bit wrong... Let me try again. Once again, as soon as I cast this, quickly, hit the door.
-  Color|Purple|[You must be joking.]
-  Color|Grey|He speaks some noises more emphatically this time. They melt out of your head almost as quickly as you hear them.
+  &5[You must be joking.]&r
+  Color|Grey|He speaks some noises more emphatically this time. They melt out of your head almost as quickly as you hear them.&r
 &o  It'll definitely work this time. Break down the door!
-  Color|Grey|You punch the door again. It remains closed. Like it's taunting you.
-&o  Tell Wexley you've given up on breaking down doors. Table
+  Color|Grey|You punch the door again. It remains closed. Like it's taunting you.&r
+&o  Tell Wexley you've given up on breaking down doors.
  Wexley
   Coordinates: [-622, 25, 557]
-   Color|Orange|[Wexley]
+   &6[Wexley]&r
  Well, so much for that. I hoped this strength spell would be more powerfu-
-  Color|Orange|[Unknown Voice]
+  &6[Unknown Voice]&r
  Hello? Is someone out there?
-  Color|Purple|[Um... yes?]
-  Color|Orange|[Unknown Voice]
+  &5[Um... yes?]&r
+  &6[Unknown Voice]&r
  Did you knock?
-  Color|Purple|[...Yes, definitely! Can we uh... come in?]
-  Color|Orange|[Unknown Voice]
+  &5[...Yes, definitely! Can we uh... come in?]&r
+  &6[Unknown Voice]&r
  What's the password?
-  Color|Orange|[Wexley]
+  &6[Wexley]&r
  Oh, hey, I know this one. It's in the book in front of me. Check it out.
-&o  Find the password in the nearby book. Table
+&o  Find the password in the nearby book.
  Door
   Coordinates: [-621, 25, 560]
-   Color|Orange|[Unknown Voice]
+   &6[Unknown Voice]&r
  What's the password?
-  Color|Purple|[Sorrows of Phyrrys]
-  Color|Orange|[Unknown Voice]
+  &5[Sorrows of Phyrrys]&r
+  &6[Unknown Voice]&r
  Mate that's ancient. No way.
-  Color|Purple|[The Last False Heart]
-  Color|Orange|[Unknown Voice]
+  &5[The Last False Heart]&r
+  &6[Unknown Voice]&r
  That was last week's!
-  Color|Purple|[Branch of the Grand Olive Tree]  Plain  [Branch of the Grand Olive Tree]
-  Color|Orange|[Unknown Voice]
+  &5[Branch of the Grand Olive Tree]&r  Plain  [Branch of the Grand Olive Tree]&r
+  &6[Unknown Voice]&r
  Yeah, that's the one. Come on in.
-&o  Talk to Hargraves, the man behind the door. Table
+&o  Talk to Hargraves, the man behind the door.
  Hargraves
   Coordinates: [-1021, 122, 2186]
-   Color|Orange|[Hargraves]
+   &6[Hargraves]&r
  Well hello. I don't recognize you. New to the Congress?
-  Color|Purple|[Let's say that.]
-  Color|Orange|[Hargraves]
+  &5[Let's say that.]&r
+  &6[Hargraves]&r
  Excellent, always nice to have a new face around. Look, I'm supposed to organize the test tubes in the walls around us, but
 damn, it's proper tough this time. If you can do it for me, I'll send you off to the Forum to deliver the reports and you can
 have the rest of the day off. Sound good?
-  Color|Purple|[I'm in. How does this work?]
-  Color|Orange|[Hargraves]
+  &5[I'm in. How does this work?]&r
+  &6[Hargraves]&r
  Okay, so in these eight tubes are a number of reagent blocks. You can take the top block, one at a time, and put them into any
 other tube. However, the block can only go into a tube if the next block down shares a color with it, or the tube is completely
 empty. Your goal is to get all seven colors into their own tubes, four blocks of a color per tube.
-  Color|Purple|[Sounds complicated. I'll give it a go.]
-  Color|Orange|[Hargraves]
+  &5[Sounds complicated. I'll give it a go.]&r
+  &6[Hargraves]&r
  Great! Thank goodness, I wasn't looking forward to leaving my desk.
   Use the buttons with arrows to select a block. Group the blocks into same color groups, rinse and repeat and you're done.
   Hargraves
   Coordinates: [-1021, 122, 2186]
-   Color|Orange|[Hargraves]
+   &6[Hargraves]&r
  Hey! You did it! Let me write up a report real quick... Head back out this door and down the spiral staircase into the Labs.
 You should be able to get into the main Forum and deliver this to Professor Marin. Do you have an access pass?
-  Color|Purple|[Not yet. I was uh, supposed to get one though.]
-  Color|Orange|[Hargraves]
+  &5[Not yet. I was uh, supposed to get one though.]&r
+  &6[Hargraves]&r
  That's fine, I'll cast it onto you. Here you go then and thanks for your help.
 &o  Leave the reagents room with your report!
-&o  Deliver your report to Professor Marin. Table
+&o  Deliver your report to Professor Marin.
  Professor Martin
   Coordinates: [???, ???, ???]
-   Color|Orange|[Professor Marin]
+   &6[Professor Marin]&r
  Hello, who are you?
-  Color|Purple|[Um... hello. I'm <Player>. I've got a delivery for you, from Hargraves.]
-  Color|Orange|[Professor Marin]
+  &5[Um... hello. I'm <Player>. I've got a delivery for you, from Hargraves.]&r
+  &6[Professor Marin]&r
  Oh wonderful. I've been waiting for these reagent logs all week. Here, take this key. It should get you further into the Forum.
 You can get some refreshments before you head back to work.
-  Color|Purple|[Thank you.]
-  Color|Orange|[Professor Marin]
+  &5[Thank you.]&r
+  &6[Professor Marin]&r
  Anyway-
-  Color|Teal|you. i know you.<br>
+  &3you. i know you.<br>
 you should not be here.<br>
 i am doing what i must.<br>
-leave. do not return.
+leave. do not return.&r
 &o  You have found the Fallen Forum. When ready, take a key and enter the dungeon.
 &o  Complete the Fallen Forum dungeon {Coordinates do not point to your next objective}.
  Upon dungeon completion:
-  Color|Orange|[Margaret]
+  &6[Margaret]&r
  I think it’s done folks.
-  Color|Orange|[Aurielle]
+  &6[Aurielle]&r
  That’s it? That’s all the fanfare we get?
-  Color|Orange|[Margaret]
+  &6[Margaret]&r
  Oh come on Auri, did you expect streamers and a party? We’ve just made a wool. This is massive. No longer do we need to worry
 about those ancient artifacts turning up and changing the course of history. We can change them ourselves.
-  Color|Orange|[Orcard]
+  &6[Orcard]&r
  So what’s next? Do we use the Olive Wool to find the Tree of Life for real, and make more?
-  Color|Orange|[Margaret]
+  &6[Margaret]&r
  For now, I think we test this one out, for real. I’m going to focus a lot of Malkus and Daath energy into this thing.
-  Color|Orange|[Bhairavi]
+  &6[Bhairavi]&r
  Do you think that’s what Lyson meant by “Death” energy? Of course, it has to be. How else would the False Spirit have been
 active? This means it really was just an accident!
-  Color|Teal| you again. the watcher.
-LineBreak   Color|Gray|You feel as if the voice is speaking directly to you. LineBreak   Color|Teal| you may bear witness to
-what i must do, if you must. time must flow this way. i must see it does so we may be truly free.
-  Color|Orange|[Bhairavi]
- That was intense.      Color|Purple|[We’re no closer to catching Teal though.]
-  Color|Orange|[Bhairavi]
+  &3 you again. the watcher.&r
+LineBreak   &8You feel as if the voice is speaking directly to you.&r LineBreak   &3 you may bear witness to what i must do, if
+you must. time must flow this way. i must see it does so we may be truly free.&r
+  &6[Bhairavi]&r
+ That was intense.      &5[We’re no closer to catching Teal though.]&r
+  &6[Bhairavi]&r
  We’re not, but we know something now. The spirit is ensuring it is destroyed by Maxwell Calder. You heard what it said. It’s
 meddling with time now. How many events has it been playing with over the years? Is this the first, or just one of many? I must
 begin researching; this is a lot to take in.
-  Color|Purple|[Can I help?]
-  Color|Orange|[Bhairavi]
+  &5[Can I help?]&r
+  &6[Bhairavi]&r
  As soon as I know more, you’ll be the first person I call. Incredible work in there.
   Color|Cyan|THE OLIVE BRANCH COMPLETE!<br>
 Awarded access to [[The Fallen Forum]], its Delves (once R2 Monument is completed), Full Access to the Forum Lobby Trader, and
-[[The Olive Branch (item)|The Olive Branch]]!
+[[The Olive Branch (item)|The Olive Branch]]!&r

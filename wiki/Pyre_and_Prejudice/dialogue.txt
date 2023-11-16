@@ -1,4 +1,5 @@
-  WorkInProgress|Content
+&r
+  WorkInProgress|Content&r
  Find fresh hot dirt (Sulfuric Ash) down in the   Link   Scorch Valley Scorch_Valley wikilink and bring it back to the starting
 NPC.
  Now, find Bloodmeal Ash in the   Link   Charn Charn wikilink and bring it back to the starting NPC.

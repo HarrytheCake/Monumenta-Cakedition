@@ -1,69 +1,72 @@
-&o  Locate the destined blade for Herriot. Table
+&r
+&o  Locate the destined blade for Herriot.
  Herriot the Loyal
   Coordinates: [-1531 101 997]
-   Color|orange|[Herriot the Loyal]
+   &6[Herriot the Loyal]&r
  Good day sir! How are you faring today?
-  Color|purple|[Pretty well!]
-  Color|orange|[Herriot the Loyal]
+  &5[Pretty well!]&r
+  &6[Herriot the Loyal]&r
  That's good to hear! I, personally, have been waiting for destiny- destiny of the greatest legends!
-  Color|purple|[What kind of destiny are you, uh... destined for?]
-  Color|orange|[Herriot the Loyal]
+  &5[What kind of destiny are you, uh... destined for?]&r
+  &6[Herriot the Loyal]&r
  I am destined to wield a great blade in order to protect our Queen, Synnove Obregson, from the most dangerous of threats!
-  Color|purple|[Sounds like a worthy destiny that will eventually come!]
-  Color|orange|[Herriot the Loyal]
+  &5[Sounds like a worthy destiny that will eventually come!]&r
+  &6[Herriot the Loyal]&r
  Absolutely!
-  Color|purple|[Could I perhaps help to quicken the arrival of that destiny?]
-  Color|orange|[Herriot the Loyal]
+  &5[Could I perhaps help to quicken the arrival of that destiny?]&r
+  &6[Herriot the Loyal]&r
  Well, I suppose you could assist in locating the fabled blade!
-  Color|purple|[So do you know where this blade is located?]
-  Color|orange|[Herriot the Loyal]
+  &5[So do you know where this blade is located?]&r
+  &6[Herriot the Loyal]&r
  Not exactly but I have an idea of who might be gifted with this information! Have a look in the Bazaar for Anette, she should
 know more!
-&o  C: Visit Anette in the Bazaar and ask her where the fabled blade might be. Table
+&o  C: Visit Anette in the Bazaar and ask her where the fabled blade might be.
  Anette
   Coordinates: [-1472, 94, 901]
-   Color|orange|[Anette]
+   &6[Anette]&r
  Greetings! Welcome to the Frostgate Bazaar. I'm in charge of the traders that enter this place.
-  Color|purple|[Herriot said you know about a destined blade?]
-  Color|orange|[Anette]
+  &5[Herriot said you know about a destined blade?]&r
+  &6[Anette]&r
  Ach, is he going on about his destiny again? I guess, if you do find it, it might shut him up for once.
-  Color|purple|[So do you know where it is?]
-  Color|orange|[Anette]
+  &5[So do you know where it is?]&r
+  &6[Anette]&r
  Yes but, well, from all of the ancient scrolls I've read, the only thing that tells of this sword's location is a riddle...
-  Color|purple|[Hit me with it!]
-  Color|orange|[Anette]
+  &5[Hit me with it!]&r
+  &6[Anette]&r
  Alright, here it is: "Tall doth stand the glowing trunks bending slight the bolete trove. On snow-strewn plains the crystal
 grove do hide the blade, of power drunk. Beware the crystals, oft attuned to icy grasps in the hidden shrine. But folly to the
 weak aligned 'tis sinister, destiny is hewn."
 &o  C: Solve the riddle and travel to where it's leading you. (Anette can always tell you the riddle again).
   The riddle is leading you to the PoI   Link   Crystal Forest Grove Crystal_Forest_Grove wikilink  .
  &o  C: [1/2]: Return to Herriot with the blade once you have retrieved it.
-&o  C: [2/2]: If you have lost the Blade of Destiny, you can find it in a cave in the PoI. Table
+&o  C: [2/2]: If you have lost the Blade of Destiny, you can find it in a cave in the PoI.
  Herriot the Loyal
-  Color|orange|[Herriot the Loyal]
+  &6[Herriot the Loyal]&r
  Have you located the blade?
-  Color|purple|[Why yes I have!]
-  Color|orange|[Herriot the Loyal]
+  &5[Why yes I have!]&r
+  &6[Herriot the Loyal]&r
  Perfect! My destiny, it is being fulfilled at last! I feel the blade's power in my hand... So... magnificient...
-  He gazes in awe at the sword.
-  Color|purple|[Herriot? Are you ok?]
-  Color|orange|[Herriot the Loyal]
+  &8He gazes in awe at the sword.&r
+  &5[Herriot? Are you ok?]&r
+  &6[Herriot the Loyal]&r
  With all of this power... I feel UNSTOPPABLE!
-  Color|purple|[Herriot?!]
-  Color|red|Be ready for a fight!
-  Color|orange|[Herriot the Loyal]
+  &5[Herriot?!]&r
+  &4Be ready for a fight!&r
+  &6[Herriot the Loyal]&r
  And you... will be the first to yield to its power
-&o    ''Herriot drops the sword and stumbles over by his desk.''
-&o  C:  Speak with Herriot to see if he is ok.'' Table
+&o    &4''Herriot drops the sword and stumbles over by his desk.''&r
+&o  C:  Speak with Herriot to see if he is ok.''
  Herriot the Loyal
-  Color|orange|[Herriot the Loyal]
+  &6[Herriot the Loyal]&r
  I'm... not worthy... what... happened to me? I'm no knight. I do not deserve this title...
-  Color|purple|[Herriot, are you alright?]
-  Color|orange|[Herriot the Loyal]
+  &5[Herriot, are you alright?]&r
+  &6[Herriot the Loyal]&r
  Yes, I believe so. That blade is too powerful for a mortal to wield- it's a good thing it broke in our scrap. I also may have
 forgotten that we're both protected in the city, so both of our blows wouldn't have done anything anyways.
-  Color|PURPLE|[Are you gonna be ok?]
-  Color|orange|[Herriot the Loyal]
+  &5[Are you gonna be ok?]&r
+  &6[Herriot the Loyal]&r
  Yes, it appears my destiny has changed... Thank you again friend, you've made me see that.
+  &3'''FABLED DESTINY COMPLETE!'''&r
+  &3Awarded 16 Compressed Crystalline Shards, and a [[Royal Shield]]!&r
 Link   Category:Quests Category:Quests wikilink   Link   Category:Pages with broken file links
 Category:Pages_with_broken_file_links wikilink

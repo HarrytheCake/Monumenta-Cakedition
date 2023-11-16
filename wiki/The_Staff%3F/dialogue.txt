@@ -1,4 +1,5 @@
-  WorkInProgress|Content
+&r
+  WorkInProgress|Content&r
  The Staff? Start: Go to the   Link   Mysterious Cenote Mysterious_Cenote wikilink and pick up a staff from the chest after
 doing   Link   The Staff The_Staff wikilink Quest.
  &o  Warning: If you haven't completed the Black Willows (delve completion also counts as a completion) at least once, this

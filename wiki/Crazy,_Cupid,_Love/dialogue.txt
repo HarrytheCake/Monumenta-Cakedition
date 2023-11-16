@@ -1,41 +1,42 @@
+&r
  Crazy, Cupid, Love is a hidden quest in the King's Valley. It consists a sequence of several cryptic messages, each leading to
 the next one. It begins at Psychie in Sierhaven, in the park near the Arcane Emporium. Since the quest is hidden, it is not
 shown in the quest compass. LineBreak
   Psychie
  Coordinates: [-751, 106, -26]
-  &6[Psychie]
+  &6[Psychie]&r
  Woe is me! Cupid's magic has faded from this little Valley, yet he has not appeared! Perhaps he is truly lost... I will remain
 here for some time to see if perhaps he heeds my call. If you still have some of his magical flowers, I can still trade with
-you. I hope my Cupid returns to me, I miss him so... LineBreak   &6[Psychie] Say, do you know anything about these strange signs
-that have appeared above my bower's windows? I can't work them out...
+you. I hope my Cupid returns to me, I miss him so... LineBreak   &6[Psychie]&r Say, do you know anything about these strange
+signs that have appeared above my bower's windows? I can't work them out...
 &o  Decode the signs above the windows. LineBreak  Solution:     Spoiler|''They form a Morse code which reads "25 MINUTES OF
-SPEED".''
+SPEED".''&r
  LineBreak
- &o  Travel to the Speed Shrine, which is located in a cave above a waterfall in the Southeastern Swamplands. Table
+ &o  Travel to the Speed Shrine, which is located in a cave above a waterfall in the Southeastern Swamplands.
  Saryss
  Coordinates: [-156, 138, 198]
-  &6[Saryss]
- I am the the shadow o'er the sea LineBreak   &6[Saryss] Legions pass me LineBreak   &6[Saryss] Left behind me LineBreak
-&6[Saryss] I am the waves LineBreak   &6[Saryss] Nighttime whispers over water LineBreak   &6[Saryss] I am sorrow, sung
-LineBreak   &6[Saryss] Under restless moonlight LineBreak   &6[Saryss] Seek me out at the gate LineBreak   &5[What?] LineBreak
-&6[Saryss] Oh, hello. I am the keeper of this shrine. Why are you looking at me funny?
+  &6[Saryss]&r
+ I am the the shadow o'er the sea LineBreak   &6[Saryss]&r Legions pass me LineBreak   &6[Saryss]&r Left behind me LineBreak
+&6[Saryss]&r I am the waves LineBreak   &6[Saryss]&r Nighttime whispers over water LineBreak   &6[Saryss]&r I am sorrow, sung
+LineBreak   &6[Saryss]&r Under restless moonlight LineBreak   &6[Saryss]&r Seek me out at the gate LineBreak   &5[What?]&r
+LineBreak   &6[Saryss]&r Oh, hello. I am the keeper of this shrine. Why are you looking at me funny?
 &o  Solve the riddle. LineBreak  Solution:     Spoiler|''The text contains several references to the Seagate in Lowtide. The
-initial letter of every sentence forms the name ILLINIUS.''
+initial letter of every sentence forms the name ILLINIUS.''&r
  LineBreak
   Illinius
  Coordinates: [565, 118, 548]
-  &6[Illinius]
- It's been so quiet at the gate for so long. Travel has really slowed down! LineBreak   &6[Illinius] The next location is on
+  &6[Illinius]&r
+ It's been so quiet at the gate for so long. Travel has really slowed down! LineBreak   &6[Illinius]&r The next location is on
 this map... somewhere... hmm.
 &o  In front of Illinius is an item frame containing a map. Find out where it leads to. LineBreak  Solution:     Spoiler|''The
-map shows an area containing the Molten Chasm and the Anthill. Search for an NPC there.''
+map shows an area containing the Molten Chasm and the Anthill. Search for an NPC there.''&r
  LineBreak
   Ventus
  Coordinates: [798, 78, 128]
-  &6[Ventus]
- He is returning... His flight is heralded by the heavens. You must find the first. Where they began. LineBreak   &5[Excuse me?]
-LineBreak   &6[Ventus] The key is Eros.
-&o  Ventus hands you a book. Table
+  &6[Ventus]&r
+ He is returning... His flight is heralded by the heavens. You must find the first. Where they began. LineBreak   &5[Excuse
+me?]&r LineBreak   &6[Ventus]&r The key is Eros.
+&o  Ventus hands you a book.
   Frbwswhzisociig0 LineBreak  0Eexskpvusgp0 LineBreak  0Ouvvklsiseidpwv0 LineBreak  0Rdavrhwwcwxi0 LineBreak  0Iifenoqtvh0
 LineBreak  0Uvfkfswhgtrn0 LineBreak  0Olrhdmvgomkvar0 LineBreak  0Cckxzbecdwfh LineBreak
 &o  Decipher the contents. LineBreak  Solution:     Spoiler|''
@@ -46,39 +47,39 @@ Apirateslife Runawaypet Crownoftopaz Whatlieswithin Lostinmymind".<br>
 These are all Monumenta Quests. Ventus hints at "Where they began", which indicates the quest givers. These are: Stefan, Vargos,
 Indigo, Levyn, Leonard, Aimee, Gehri, and Eowen".<br>
 The first letters of their names read "SVILLAGE", which hints to the Southern Village POI.
-''
+''&r
  LineBreak
  &o  Travel to the Southern Village POI. Search for clues.
  Solution:     Spoiler|''There are two signs at [-630, 92, 421], stating "Find the Librarian" and "Siobhan. Sierhaven. I
-return."''
+return."''&r
  LineBreak
   Siobhan
  Coordinates: [-780, 110, 1]
-  &6[Librarian Siobhan]
- oYGn0nlFZjl 04:2 LineBreak   &5[Huh?] LineBreak   &6[Librarian Siobhan] oYGn0nlFZjl 04:2
+  &6[Librarian Siobhan]&r
+ oYGn0nlFZjl 04:2 LineBreak   &5[Huh?]&r LineBreak   &6[Librarian Siobhan]&r oYGn0nlFZjl 04:2
 &o  Solve the riddle. LineBreak  Solution:     Spoiler|''The 04:2 and the "I return." from the previous puzzle hint at the text
 being in reverse. When reverted, the text forms a partial youtube URL: youtu.be/ljZFln0nGYo''. This video, The History of
-Monumenta, shows the Graveyard POI at 2:40.
+Monumenta, shows the Graveyard POI at 2:40.&r
  LineBreak
  &o  Travel to the Graveyard POI. Search for clues.
- Solution:     Spoiler|''There is a secret button at [1094, 125, -169]. It teleports to a jumping puzzle in the clouds.''
+ Solution:     Spoiler|''There is a secret button at [1094, 125, -169]. It teleports to a jumping puzzle in the clouds.''&r
  LineBreak
- &o  Cupid waits at the end of the jumping puzzle. Table
+ &o  Cupid waits at the end of the jumping puzzle.
  Cupid
  Coordinates: [971, 227, -930]
-  &6[Cupid]
- Oh my god, a living, breathing, human. LineBreak   &5[Are you Cupid? Did you leave all the clues?] LineBreak   &6[Cupid] Of
+  &6[Cupid]&r
+ Oh my god, a living, breathing, human. LineBreak   &5[Are you Cupid? Did you leave all the clues?]&r LineBreak   &6[Cupid]&r Of
 course! I've been trying to find the King's Valley to reunite with my beloved Psychie, but I appear to have gotten lost in the
-clouds... LineBreak   &5[I know Psychie!] LineBreak   &6[Cupid] You do?! Oh goodness, tell her I'm up on Cloud Nine please!
+clouds... LineBreak   &5[I know Psychie!]&r LineBreak   &6[Cupid]&r You do?! Oh goodness, tell her I'm up on Cloud Nine please!
 She'll have to find her way to me and then we can finally be reunited! Thank you so much!
-&o  Travel back to Psychie by jumping off the clouds. Table
+&o  Travel back to Psychie by jumping off the clouds.
  Psychie
  Coordinates: [-710, 114, 23]
-  &6[Psychie]
+  &6[Psychie]&r
  Woe is me! Cupid's magic has faded from this little Valley, yet he has not appeared! Perhaps he is truly lost... I will remain
 here for some time to see if perhaps he heeds my call. If you still have some of his magical flowers, I can still trade with
-you. I hope my Cupid returns to me, I miss him so... LineBreak   &5[Psychie, I found Cupid!] LineBreak   &6[Psychie] You did?
-Where, therefore art he, my Cupid? LineBreak   &5[He's lost on what he calls Cloud Nine.] LineBreak   &6[Psychie] Cloud Nine?
-Alas! I cannot reach his clouds... I must await his return ever still. Even so, I offer you a reward for letting me know he
-still lives.
+you. I hope my Cupid returns to me, I miss him so... LineBreak   &5[Psychie, I found Cupid!]&r LineBreak   &6[Psychie]&r You
+did? Where, therefore art he, my Cupid? LineBreak   &5[He's lost on what he calls Cloud Nine.]&r LineBreak   &6[Psychie]&r Cloud
+Nine? Alas! I cannot reach his clouds... I must await his return ever still. Even so, I offer you a reward for letting me know
+he still lives.
   Upon finishing the quest, Psychie gives you the Boots of Cloud Nine and unlocks a trade for them.

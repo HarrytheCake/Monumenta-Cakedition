@@ -1,31 +1,32 @@
-&o  Find different horse breeds for Miane's stable. Table
+&r
+&o  Find different horse breeds for Miane's stable.
  Miane
   Coordinates: [208, 101, 8]
-   &6[Miane]
+   &6[Miane]&r
  Howdy! What brings you to these parts?
-  &5[Just visiting the town for the moment.]
-  &6[Miane]
+  &5[Just visiting the town for the moment.]&r
+  &6[Miane]&r
  Ah! Well I hope you enjoy your stay! Ol' Miane here knows just about any place in these here parts.
-  &5[This stable seems a bit empty, partner.]
-  &6[Miane]
+  &5[This stable seems a bit empty, partner.]&r
+  &6[Miane]&r
  Are you mocking my dialect,   &o  partner  ?
-  &5[No, I didn't mean to! I was just trying to say that you seem to be lacking horses.. partner.]
-  &6[Miane]
+  &5[No, I didn't mean to! I was just trying to say that you seem to be lacking horses.. partner.]&r
+  &6[Miane]&r
  Well you'd be right... Say, would you be into helping me gather some horse breeds for here stable?
-  &5[I've actually got little time at the moment.]
-  &6[Miane]
+  &5[I've actually got little time at the moment.]&r
+  &6[Miane]&r
  Oh! Well, when you do have time, y'all let me know now!
-  &5[Sure! where should I go?]
-  &6[Miane]
+  &5[Sure! where should I go?]&r
+  &6[Miane]&r
  Alright so, the first breed should be found near the outskirts of this Mesa, southeast of the   Link   Crystal Crown
 Crystal_Crown wikilink  . At least, that's what my handbook tells me!
- Talking to her again: Table
+ Talking to her again:
  Miane
-  &6[Miane]
+  &6[Miane]&r
  The first horse breed should be near the outskirts of the Mesa just past the   Link   Crystal Crown Crystal_Crown wikilink  !
 They like to live fairly high up Bring one back to my stable for me!
-  &5[Where would I get a saddle for the horse?]
-  &6[Miane]
+  &5[Where would I get a saddle for the horse?]&r
+  &6[Miane]&r
  Oh, of course you'd need that wouldn't ya? Well, my assistant here should be able to help a bit!
   Buy one from Trevor at [204, 96, 7].
  &o  C: [1/2] Follow Miane's directions to the first horse breed in the outskirts of the Mesa, southeast of the   Link   Crystal
@@ -33,12 +34,13 @@ Crown Crystal_Crown wikilink  .
 &o  C: [2/2] Once you have the horse bring it back to Miane.
   On the hill at [397, 142, 283].
   After bringing back the first breed (Make sure get off it.):
-&o  C: Talk to Miane. Table
+&o  C: Talk to Miane.
  Miane
-  &6[Miane]
+  &6[Miane]&r
  Ah! You've brought back the horse- great work! Now on to the next breed...
-  &5[Where can I find it?]
-  &6[Miane]
+  &5[Where can I find it?]&r
+  &r
+  &6[Miane]&r
  These next horses love to live in caverns. I think they should reside somewhere in the Canyonlands, under the   Link
 Abandoned Library Abandoned_Library wikilink seems to fit the description!
 &o  C: [1/2] Follow Miane's directions once more to find the second horse breed in the Canyonlands, in the caverns under the
@@ -46,24 +48,27 @@ Link   Abandoned Library Abandoned_Library wikilink  .
 &o  C: [2/2] Once you have the horse bring it back to Miane.
   Under   Link   Abandoned Library Abandoned_Library wikilink at [-2, 67, 591].
   After bringing back the second breed (Make sure get off it.):
-&o  C: Talk to Miane. Table
+&o  C: Talk to Miane.
  Miane
-  &6[Miane]
+  &6[Miane]&r
  Yeehaw! Two down, one to go! The final horse breed, if this book is correct, should reside in an area with large amounts of
 water. Sounds like the Oasis to me! It also mentions a spring sandwiched between the   Link   Charred Arcanery Charred_Arcanery
 wikilink and   Link   Palm Tree Paradise Palm_Tree_Paradise wikilink  .
-  &5[Okay, I'll head there next!]
-  &6[Miane]
+  &5[Okay, I'll head there next!]&r
+  &6[Miane]&r
  Alrighty!
 &o  C: [1/2] Follow Miane's directions once last time to find the final horse breed in the Oasis, near a spring sandwiched
 between the   Link   Charred Arcanery Charred_Arcanery wikilink and   Link   Palm Tree Paradise Palm_Tree_Paradise wikilink  .
 &o  C: [2/2] Once you have the horse bring it back to Miane.
   [-1, 100, 939].
   After bringing back the final breed (Make sure get off it.):
-&o  C: Talk to Miane. Table
+&o  C: Talk to Miane.
  Miane
-  &6[Miane]
+  &6[Miane]&r
  You've done it! Now my stables are full of life once more! I can't thank you enough!
-  &5[You are most very welcome! Now, how about a reward?]
-  &6[Miane]
+  &r
+  &5[You are most very welcome! Now, how about a reward?]&r
+  &6[Miane]&r
  Ah yes! Here, take this. I believe it should cover your troubles! Take care partner!
+  &3'''STABLEMASTER'S REQUEST COMPLETE!'''&r
+  &3Awarded [[Stablemaster's Prod]] and 20 Compressed Crystalline Shards!&r

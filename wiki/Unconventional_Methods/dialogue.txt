@@ -1,361 +1,362 @@
-&o  Meet with the High Priest and the Praetor to discuss destroying Shades for good. Table
+&r
+&o  Meet with the High Priest and the Praetor to discuss destroying Shades for good.
  The High Priest
   Coordinates: [-446 181 -86]
-   &6[The High Priest]
+   &6[The High Priest]&r
  The Architect's blessings upon you [Player]. What can I do for you?
-  &5[I've found Neo Antium and stopped the Machine God.]
-  &6[The High Priest]
+  &5[I've found Neo Antium and stopped the Machine God.]&r
+  &6[The High Priest]&r
  Praytell, you've done what?!
-  &5[* You tell the High Priest about your journey in the Cradle of the Broken God *]
-  &6[The High Priest]
+  &5[* You tell the High Priest about your journey in the Cradle of the Broken God *]&r
+  &6[The High Priest]&r
  Amazing. So the Machine God was one of these wools? This is what Pelias was searching for, all those decades ago? And the
 Shades were caused by him?
-  &5[Yes, to all of that. With the Wool under my protection, no more Machines should take over citizens.]
-  &6[The High Priest]
+  &5[Yes, to all of that. With the Wool under my protection, no more Machines should take over citizens.]&r
+  &6[The High Priest]&r
  The Architect will surely bless you. After all of these disasters, it is truly special to get such good news. Perhaps soon the
 Shades will vanish? {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  I'll invite the Praetor here immediately to discuss this matter. Will you attend?
-  &5[Of course.]
-  &6[The High Priest]
+  &5[Of course.]&r
+  &6[The High Priest]&r
  Excellent news. I'm sure he shan't be long. {...}
-  &6[The Praetor]
+  &6[The Praetor]&r
  Hello Grigor. Hello [Player]. Your messenger informed me you seek information in the conquest of Shades. I believe I need to be
 a part of this mission, so here I am. {...}
-  &6[The Praetor]
+  &6[The Praetor]&r
  I must say though, I am shocked I’ve not burst into flames stepping foot in this chapel, for all the evil you claim I’ve done,
 father. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  It seems the Architect hasn't given up on you yet, Nacreus. We'll see how long that lasts. We have much to discuss. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  [Player] has claimed the heart of the Machine, the very artifact Pelias sought before he vanished. The Brown Wool. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  With it taken, the Machine creatures cannot be reformed, but the Shades still seem to carry on forever. We search for a way to
 destroy them.
-  &5[How do we even go about that?]
-  &6[The Praetor]
+  &5[How do we even go about that?]&r
+  &6[The Praetor]&r
  We use the Machine of course. The Brown Wool? You've claimed such a powerful relic; it only stands to reason to bring forth its
 power onto the monstrosities it created, yes?
-  &5[I'm not so sure that's a good idea...]
-  &6[Bhairavi]
+  &5[I'm not so sure that's a good idea...]&r
+  &6[Bhairavi]&r
  That's definitely not a good idea. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  Excuse me? Who are you, barging into this closed meeting?
-  &5[Bhairavi! What are you doing here?]
-  &6[Bhairavi]
+  &5[Bhairavi! What are you doing here?]&r
+  &6[Bhairavi]&r
  I came to find you after hearing you went wool hunting without us again!
-  &5[Sorry. They just keep popping up unexpectedly.]
-  &6[Bhairavi]
+  &5[Sorry. They just keep popping up unexpectedly.]&r
+  &6[Bhairavi]&r
  Just don't leave me out of the next one, okay? Anyway, hello. You must be the leaders of New Antium. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  One of them, yes. The Praetor over there is the other. You know [Player] then?
-  &5[She's part of my team that helps seek out and contain wool and other threats. This is Bhairavi.]
-  &6[The Praetor]
+  &5[She's part of my team that helps seek out and contain wool and other threats. This is Bhairavi.]&r
+  &6[The Praetor]&r
  I welcome you to New Antium on behalf of the true leadership. Now, why can we not use the artifact? {...}
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  The short of it is that the wool are dangerous. Even with enough skill to direct their power, these wool have a mind of their
 own.
-  &5[Everyone we're aware of who have used wool don't end up well... Many died.]
-  &6[Bhairavi]
+  &5[Everyone we're aware of who have used wool don't end up well... Many died.]&r
+  &6[Bhairavi]&r
  We've yet to try using them ourselves. [Player] has gained magical power from collecting them, but if we can avoid it, it seems
 best to keep them safe and unused.
-  &5[If the Brown Wool could create Neo Antium while contained, I don't want to take any risks.]
-  &6[The High Priest]
+  &5[If the Brown Wool could create Neo Antium while contained, I don't want to take any risks.]&r
+  &6[The High Priest]&r
  What they say rings true to the Codex, Nacreus. These artifacts are dangerous and should never be touched. They were sealed
 away by the Architect's divine truth. Who are we to question God?
-  &5[Is there another way we could approach the Shades now that we have Brown ourselves?]
-  &6[The High Priest]
+  &5[Is there another way we could approach the Shades now that we have Brown ourselves?]&r
+  &6[The High Priest]&r
  I have one other thought. This isn't a guarantee, mind you, but as the High Priest of New Antium and the de facto head of the
 Silver Codex, I'm supposed to have access to the Silver Cathedral's knowledge. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  Instead, a wealth of ancient texts and knowledge are lost, contained by the dangers of the Shades that lurk inside. Deep below,
 ancient Emperors of the Silvari are honored in sacred tombs. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  In my authority, I can request that one tomb be opened to seek their wisdom from generations past, in situations of great need.
-  &5[Any Emperor in particular I should seek, then?]
-  &6[The High Priest]
+  &5[Any Emperor in particular I should seek, then?]&r
+  &6[The High Priest]&r
  The original. Uriddan, our Silver Protector. His body is not there, but there is said to be an honorary tomb for him, created
 after he... ascended. I would not ask this of you if we were not desperate, but I think you should enter this place. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  Search for something that might help. See if his holiness left something for future generations. Surely he knew of the wool you
 found if he created the barrier that contained it.
-  &5[I'll get right on it.]
-  &6[Bhairavi]
+  &5[I'll get right on it.]&r
+  &6[Bhairavi]&r
  While you're gone [Player], I'll spend some time with the Praetor and the High Priest and discuss further plans for our
 involvement. {...}
-  &6[The Praetor]
+  &6[The Praetor]&r
  Be safe in your journey, [Player]. The Quelled Convent is a dangerous place. I've lost several Shade Hunters to the
 monstrosities lurking within. The catacombs below are even worse. We believe in your will and your might.
 &o  C: Find Emperor Uriddan's tomb within the crypts of The Quelled Convent.
   Coordinates: [-319, 146, -48]
   Reaching the tomb:
-  Pray to the shrine?
-  &5[Yes.]
-  You feel a dark force pulling you in... Will you let it? You may not be able to return.
-  &5[Yes.]
-&o  C: Let the Darkness guide you. Table
+  &8Pray to the shrine?&r
+  &5[Yes.]&r
+  &8You feel a dark force pulling you in... Will you let it? You may not be able to return.&r
+  &5[Yes.]&r
+&o  C: Let the Darkness guide you.
  Darkness (First Tomb)
-  &6[Darkness]
+  &6[Darkness]&r
  You intrude upon one of my emperor's tombs. {...}
-  &6[Darkness]
+  &6[Darkness]&r
  I know why you are here. Only Emptiness can disrupt what Energy has wrought. {...}
-  &6[Darkness]
+  &6[Darkness]&r
  You may take the Spear. You must find that Emptiness yourself. I have no time for foolish quests. Leave.
-&o  C: Return to the Praetor, the High Priest, and Bhairavi with the spear. Table
+&o  C: Return to the Praetor, the High Priest, and Bhairavi with the spear.
  The High Priest
   Coordinates: [-446 181 -86]
-   &6[The Praetor]
+   &6[The Praetor]&r
  Our mightiest of warriors returns, living still, I presume? What did you find?
-  &5[I met some sort of... darkness? It spoke to me and gave me this spear. It also implied using Void can destroy Shades.]
-  &6[The High Priest]
+  &5[I met some sort of... darkness? It spoke to me and gave me this spear. It also implied using Void can destroy Shades.]&r
+  &6[The High Priest]&r
  What is Void? {...}
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  Void is a by-product of the Veil being destroyed. It hangs, separate from the material protecting our world. If it ever touches
 reality again, it becomes a corrosive blackened goop. It's incredibly dangerous. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  ... What is the Veil?
   &5[Don't worry about it for now. We should find some Void goop that this spear might be able to channel. Do we have any left
-from the Congress, Bhairavi?]
-  &6[Bhairavi]
+from the Congress, Bhairavi?]&r
+  &6[Bhairavi]&r
  None that we can transport across an ocean. It doesn't last long once you start messing with it.
   &5[So we need to find some here. The Darkness wouldn't let me take any from the tomb, but suggested there was more. Do you
-have any ideas, father?]
-  &6[The High Priest]
+have any ideas, father?]&r
+  &6[The High Priest]&r
  I do not. {...}
-  &6[The Praetor]
+  &6[The Praetor]&r
  I'm not sure how a spear helps us kill shades. We do that all the time.
-  &5[No, like, for good. Void is a foundational material of the universe. It could end this.]
-  &6[The Praetor]
+  &5[No, like, for good. Void is a foundational material of the universe. It could end this.]&r
+  &6[The Praetor]&r
  Praytell, what does that mean for us then? How do we find it? {...}
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  Emptiness is associated with Void itself. Perhaps that emptiness would destroy these Shades for good?
   &5[Have you or your Shade Hunters ever seen anything like that? Or maybe just any other tombs for Uriddan? The Darkness
-implied there are others.]
-  &6[The Praetor]
+implied there are others.]&r
+  &6[The Praetor]&r
  Other tombs? What possibly could Emperor Uriddan need with more tombs? We have no true evidence that he ever died in the first
 place. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  Surely he did not. These tombs are honorary. If there is another, it must be somewhere that felt the need to honor his legacy
 as well.
-  &5[Is there such a place?]
-  &6[The Praetor]
+  &5[Is there such a place?]&r
+  &6[The Praetor]&r
  There was once much more to that Dominion outside our walls. Before the furious grasp of the Coven took hold, it was once a
 grand site of worship for the Architect and his Silver Knights. It's since been perverted into a ritual site for dark magics.
 {...}
-  &6[The Praetor]
+  &6[The Praetor]&r
  The Shade Hunters have never been able to delve into the deeper sections of that place. The Coven doesn't allow much travel
 outside our walls. Perhaps you can search there?
-  &5[That sounds perfect.]
-  &6[The Praetor]
+  &5[That sounds perfect.]&r
+  &6[The Praetor]&r
  I'm not completely certain how you'd get deeper inside. Much of the place has collapsed. Searching through rubble might be your
 best chance.
 &o  C: Search the Bewitched Dominion for deeper passages... Be sure to bring the spear, and be prepared to have to dig through
 some rubble.
   Dig through the gravel at Coordinates: [-757, 83, -136]
   After reaching the tomb:
-&o  C: Explore the deeper Darkness. Table
+&o  C: Explore the deeper Darkness.
  Darkness (Second Tomb)
-  &6[Darkness]
+  &6[Darkness]&r
  Again, the hero rides forth, spear in hand, seeking promised Emptiness, defiling my Emperor's tombs yet again. {...}
-  &6[Darkness]
+  &6[Darkness]&r
  Emptiness is a valuable commodity. Most of what is left belongs to me. {...}
-  &6[Darkness]
+  &6[Darkness]&r
  You were told to find your own source.
- After beating Darkness: Table
+ After beating Darkness:
  Darkness (Second Tomb)
-  &6[Darkness]
+  &6[Darkness]&r
  I see. You seek to stand against this Darkness. Perhaps a proof of power is needed. Do not seek me again. {...}
-  &6[Darkness]
+  &6[Darkness]&r
  Open your mind to Nihilo...
-  The spear in your inventory completely fills with Void.
-&o  C: Return to the Praetor, the High Priest, and Bhairavi with the Void-filled spear. Table
+  &8The spear in your inventory completely fills with Void.&r
+&o  C: Return to the Praetor, the High Priest, and Bhairavi with the Void-filled spear.
  The High Priest
   Coordinates: [-446 181 -86]
-   &6[The Praetor]
+   &6[The Praetor]&r
  The hero returns once more. I sense a strange darkness clinging to you. What did you find?
   &5[I found the Darkness again. It said Void is rare here, but filled my Spear to "prove" that it works. I don't think he'd
-take kindly to us visiting him again.]
-  &6[Brayllur]
+take kindly to us visiting him again.]&r
+  &6[Brayllur]&r
  Great see you again [Player]! We discuss with Praetor here. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  To test this on a shade... Ah, I know. Not just any Shade... {...}
-  &6[The Praetor]
+  &6[The Praetor]&r
  Indeed. If we're going to permanently end a Shade, there is only one such being we should end. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  Pelias.
-  &5[But I killed him in the Machine to get the Wool.]
-  &6[The High Priest]
+  &5[But I killed him in the Machine to get the Wool.]&r
+  &6[The High Priest]&r
  He reformed, as do all Shades. Your friend Brayllur here has said so. {...}
-  &6[Brayllur]
+  &6[Brayllur]&r
  Hail-hi little fighter. They say true, metal king reform in shiny city. I try fight but just clangs and bruising!
-  &5[Hi Brayllur! Sounds like Pelias is the perfect target then. Did he say anything?]
-  &6[Brayllur]
+  &5[Hi Brayllur! Sounds like Pelias is the perfect target then. Did he say anything?]&r
+  &6[Brayllur]&r
  No words, only standing. Seems not breakable.
-  &5[Oh. That's new.]
-  &6[Brayllur]
+  &5[Oh. That's new.]&r
+  &6[Brayllur]&r
  I meet you friend down at city start, yes?
-  &5[That sounds like a plan. We'll be back once we have news.]
-  &6[The Praetor]
+  &5[That sounds like a plan. We'll be back once we have news.]&r
+  &6[The Praetor]&r
  Swift travels. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  May the Architect bless you. {...}
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  I'll be eagerly waiting for the results of your experimentation!
-&o  C: Meet Brayllur in the Brown Dungeon lobby to travel back into Neo Antium. Be sure to bring the Void-filled spear. Table
+&o  C: Meet Brayllur in the Brown Dungeon lobby to travel back into Neo Antium. Be sure to bring the Void-filled spear.
  Brayllur (Brown Lobby)
-  &6[Brayllur]
+  &6[Brayllur]&r
  Greetings again puny-friend! You ready for going?
-  &5[I am!]
-  &6[Brayllur]
+  &5[I am!]&r
+  &6[Brayllur]&r
  Yes then go we do. Come come.
  ''C: Neo Antium is in lockdown! Work with Brayllur to break through security.'
   The puzzles are randomized, but you use the maps to connect all the gears without any loose ends.
   Brayllur (Puzzle Area 1)
-  &6[Brayllur]
+  &6[Brayllur]&r
  Humph! They want no Brayllur back to bang and clang, see. Lock!
-  &5[Any idea how to unlock it?]
-  &6[Brayllur]
- Found these nearby.  Table
+  &5[Any idea how to unlock it?]&r
+  &6[Brayllur]&r
+ Found these nearby.
  Brayllur (Puzzle Area 2)
-  &6[Brayllur]
+  &6[Brayllur]&r
  Guhh
-&o  C: Pelias stands before you. Take the spear and end him once and for all. Table
+&o  C: Pelias stands before you. Take the spear and end him once and for all.
  Brayllur (Puzzle Area 3)
-  &6[Brayllur]
+  &6[Brayllur]&r
  More wires... GRUHH! Power up. After, take spear. Place into king man's heart. Emptiness. Nothingness...
-  &5[I need some wires, right?]
-  &6[Brayllur]
+  &5[I need some wires, right?]&r
+  &6[Brayllur]&r
  Yuh, have here.
- If you try to hurt Pelias without the spear: LineBreak   Nothing happens. You need the Spear to damage him.
- If you try to hurt Pelias with the security system up: LineBreak   Nothing happens. The security system remains active.
+ If you try to hurt Pelias without the spear: LineBreak   &8Nothing happens. You need the Spear to damage him.&r
+ If you try to hurt Pelias with the security system up: LineBreak   &8Nothing happens. The security system remains active.&r
  After taking the security system down:
-  The Void within the spear drains...
-  &6[Brayllur]
+  &8The Void within the spear drains...&r
+  &6[Brayllur]&r
  Over. He gone. Do not like that feeling. Remind me of Congress... Now. Go back. I stay. I watch.
 &o  C: Leave Brayllur be and return to the church later to meet with the High Priest and others.
  After leaving:
-&o  C: Return to the Praetor, the High Priest, Bhairavi, and Brayllur. Table
+&o  C: Return to the Praetor, the High Priest, Bhairavi, and Brayllur.
  The High Priest
   Coordinates: [-446 181 -86]
-   &6[Bhairavi]
+   &6[Bhairavi]&r
  Thank you all for reconvening here. It's been about a week since [Player] went back into Neo Antium to test the Void Spear on
 Pelias' Shade. {...}
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  My associate, Brayllur, has been standing guard for all this time and has wonderful news. Pelias is gone. The spear worked!
 {...}
-  &6[Brayllur]
+  &6[Brayllur]&r
  Yes yes. King-man-shade gone forever. Only nothing where he was.
-  &5[This is fantastic news!]
-  &6[Bhairavi]
+  &5[This is fantastic news!]&r
+  &6[Bhairavi]&r
  Thank you all for reconvening here. It's been about a week since [Player] went back into Neo Antium to test the Void Spear on
 Pelias' Shade. {...}
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  My associate, Brayllur, has been standing guard for all this time and has wonderful news. Pelias is gone. The spear worked!
 {...}
-  &6[Brayllur]
+  &6[Brayllur]&r
  Yes yes. King-man-shade gone forever. Only nothing where he was.
-  &5[This is fantastic news!]
-  &6[The Praetor]
+  &5[This is fantastic news!]&r
+  &6[The Praetor]&r
  I can barely believe it! How do we begin the process of gathering and spreading the Void matter so we can continue to finish
 off Shades? {...}
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  Right now, we're still not sure. I want to coordinate with you and the High Priest now that we know for sure Pelias is gone to
 try and find another source of Void that we can use. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  You mean we can't kill more yet?
-  &5[No. The spear emptied the moment I stabbed Pelias.]
-  &6[The High Priest]
+  &5[No. The spear emptied the moment I stabbed Pelias.]&r
+  &6[The High Priest]&r
  And you can't transport more from that Congress place Bhairavi mentioned? {...}
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  I don't think so. It doesn't take well to being moved, normally.
-  &5[We'll have to seek it out somewhere in the Ring.]
-  &6[Bhairavi]
+  &5[We'll have to seek it out somewhere in the Ring.]&r
+  &6[Bhairavi]&r
  That's where you each come in. As you send out forces, seek out pockets of Void. We will leave the Spear with the Praetor, and
 once you've located material, use the Spear to absorb it and then to destroy another Shade. This will not be a fast journey.
-  &5[Oh, yeah, I guess we can leave the spear here...]
-  &6[The Praetor]
+  &5[Oh, yeah, I guess we can leave the spear here...]&r
+  &6[The Praetor]&r
  Yet this grants us real hope. A goal. An ending that leaves New Antium safe. I trust that this city can work together to truly
 make us all safe at last. Now, we wish to- {...}
-  &6[New Antium Gate Sentinel]
+  &6[New Antium Gate Sentinel]&r
  Excuse me, I'm sorry to interrupt. There's... there's someone at the gate wearing the armor of a Silver Knight. {...}
-  &6[The Praetor]
+  &6[The Praetor]&r
  That cannot possibly be. The Knights are long gone. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  Benedictus sanctissimus... We've woken the Knights... This cannot be a good sign, brothers and sisters. There is power
 radiating from outside. We must go to them, lest they raze the city in their anger...
-&o  C: Go to New Antium's gate to confront the being in Silver Knight armor. Table
+&o  C: Go to New Antium's gate to confront the being in Silver Knight armor.
  Dialogue before you leave
-  &6[Brayllur]
+  &6[Brayllur]&r
  Knight? Exciting!
-  &6[The High Priest]
+  &6[The High Priest]&r
  O' Architect, ye who protect us mightily, grant us strength in what is to come...
-  &6[The Praetor]
+  &6[The Praetor]&r
  What nonsense. I won't believe a Knight could still walk amongst us until I see it with my own eyes, let's embark, [Player].
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  The Knights... Here...? I fear I'm out of the loop here [Player]. None of this is making any sense. Let's meet by the gate
 immediately.
-  &6[New Antium Gate Sentinel]
- You must hurry at once, I speak no lies, see for yourself at the gates.  Table
+  &6[New Antium Gate Sentinel]&r
+ You must hurry at once, I speak no lies, see for yourself at the gates.
  Silver Knight Tuulen
   Coordinates: [-384, 157, -164]
-   &6[Silver Knight Tuulen]
+   &6[Silver Knight Tuulen]&r
  Stand firm, dost thou Antium? Such a shock in a search of Emperor Uriddan. Now... what be this? Hail [Player], I see thee
 there. Ye walk clean much as I do now, with my thanks.
   &5[Tuulen! What are you doing here? I wondered where you got to after the Crimson King was resealed. I couldn't get back into
-the underground.]
-  &6[Silver Knight Tuulen]
+the underground.]&r
+  &6[Silver Knight Tuulen]&r
  Journey has brought me home to the Ring itself. But I arrive seeking you. News comes from the land of Snowblossom, beyond the
 rootways and the wash of waves. {...}
-  &6[Silver Knight Tuulen]
+  &6[Silver Knight Tuulen]&r
  He of the Viridescent, once contained in the cell of Green, has been slain in single combat by the bearer of Black. The Dichen
 that stood with it have been scattered. The land itself lies in devastation.
-  &5[The Green Wool? Or the Spirit inside?]
-  &6[Silver Knight Tuulen]
+  &5[The Green Wool? Or the Spirit inside?]&r
+  &6[Silver Knight Tuulen]&r
  That which was once contained, [Player]. He is dead, but word has spread that his attacker has been wounded greatly. I now
 travel to the Serebrium Citadel, walking the path Uriddan once tread to find where he has gone. Things have changed much and
 only he might set things right. A strange blight emanates from the stones beyond. {...}
-  &6[Silver Knight Tuulen]
+  &6[Silver Knight Tuulen]&r
  Thank you for granting me new purpose. I offer you this Helm as a mark of my gratitude. Perhaps I will stumble once more onto
 your path should you walk the bridge I step toward. Farewell to you all. May the Architect guide thee.
-&o  C: Speak to your allies following Tuulen's revelations. Table
+&o  C: Speak to your allies following Tuulen's revelations.
  The High Priest
   Coordinates: [-384, 157, -166]
-   &6[Bhairavi]
+   &6[Bhairavi]&r
  ... What. Just... happened?
-  &5[A lot... Calder is up to something, I think.]
-  &6[The Praetor]
+  &5[A lot... Calder is up to something, I think.]&r
+  &6[The Praetor]&r
  Impossible...
-  &6[The High Priest]
+  &6[The High Priest]&r
  ... I... need a moment... to compose my thoughts.
-  &6[Brayllur]
+  &6[Brayllur]&r
  Wow. A lot to take in.
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  ... What. Just... happened?
-  &5[A lot... Calder is up to something, I think.]
-  &6[The Praetor]
+  &5[A lot... Calder is up to something, I think.]&r
+  &6[The Praetor]&r
  That was... that was a real Silver Knight. They walk once more.... But she stepped through our humble city, without anger,
 without destruction? Perhaps they are mollified at last? Perhaps they do not seek retribution? {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  Beati sumus in hac die, indeed we are blessed. Perhaps our purge of the heretic has brought forth forgiveness? And one of the
 Architect's hands walks again... {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  They knew you, did they not [Player]? Truly you are a chosen of the Architect as well. I knew it when we first spoke. Your
 holiness is true. This is why you are here to help.
-  &5[This isn't the first I've met. They're still very real. Something is happening out there.]
-  &6[Bhairavi]
+  &5[This isn't the first I've met. They're still very real. Something is happening out there.]&r
+  &6[Bhairavi]&r
  It never stops, does it?
-  &5[We'll need to be ready to follow then.]
-  &6[Bhairavi]
+  &5[We'll need to be ready to follow then.]&r
+  &6[Bhairavi]&r
  Indeed we do. I'll set up here at the local lodging in the Gray Fox Tavern and begin preparations. Please visit if you need
 anything. {...}
-  &6[The Praetor]
+  &6[The Praetor]&r
  Thank you for what you've done. New Antium will not forget your help. We have much work ahead, and I feel you do too... I must
 go grapple with meeting a God, if you don't mind. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  Indeed. My clergy's prayers will be stronger on this day, truly. Nacreus, you and I should speak again soon. There is progress
 to be made in this city. This holy moment should be the first step to uniting our guidance of New Antium, I pray. {...}
-  &6[The High Priest]
+  &6[The High Priest]&r
  I will consider this offer. Something momentous has happened in this last month, and you, [Player], are the locus of that
 change. Go forth with this city's gratitude eternal.
-  '''UNCONVENTIONAL METHODS COMPLETE!'''
-LineBreak   Awarded Uriddan's Legacy and 2 Hyperchromatic Archos Rings!
+  &3'''UNCONVENTIONAL METHODS COMPLETE!'''&r
+LineBreak   &3Awarded Uriddan's Legacy and 2 Hyperchromatic Archos Rings!&r

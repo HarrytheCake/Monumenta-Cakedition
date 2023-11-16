@@ -1,28 +1,28 @@
- Table
+&r
  Eowen
   Coordinates: [601, 97, 181]
-   &6[Eowen]
+   &6[Eowen]&r
  This memorial should be beautiful. It's a lie...
-  &5[Excuse me?]
-  &6[Eowen]
+  &5[Excuse me?]&r
+  &6[Eowen]&r
  The attack on Farr 30 years ago. It killed so many. This memorial is a beautiful reminder of those who lost their lives. But
 it's a lie. My brother is still alive.
-  &5[Who is your brother?]
-  &6[Eowen]
+  &5[Who is your brother?]&r
+  &6[Eowen]&r
  His name is Kurtis. It's right there on the memorial. I just have this overwhelming feeling he's still with us. He lived in a
 bunker outside town. He was sure something bad was coming. He prepared. There's no way he died.
-  &5[Could I help you find him?]
-  &6[Eowen]
+  &5[Could I help you find him?]&r
+  &6[Eowen]&r
  You could help, I suppose. I've been searching for him for 30 years though. Maybe some fresh eyes could find something I
 didn't, I guess. It's been so long...
-  &5[Where is his bunker? I'm ready to go.]
-  &6[Eowen]
+  &5[Where is his bunker? I'm ready to go.]&r
+  &6[Eowen]&r
  You're serious about helping? I'll have to scrounge something up to pay you if you find something. Thank you.
-  &6[Eowen]
+  &6[Eowen]&r
  His bunker is just outside the southern city gate, down a trapdoor. It should be unlocked. I'd go with you, but I can't bear to
 return there anymore. It just hurts too much. I miss him [Player]...
-  &5[I'll be back to help later.]
-  &6[Eowen]
+  &5[I'll be back to help later.]&r
+  &6[Eowen]&r
  Okay.
 &o  Enter Kurtis's bunker, find evidence that he is alive, and return to Eowen.
   Coordinates: [580, 101, 253]
@@ -39,94 +39,94 @@ return there anymore. It just hurts too much. I miss him [Player]...
  The seventh lever is same as the second and requires both the First and Fourth pulled aswell.
  The exit is in the middle of the front wall of the basement.
   Grab the book   Link   A Deal A_Deal wikilink and return to Eowen.
-&o  Did I enter this ladder? I don't remember... Table
+&o  Did I enter this ladder? I don't remember...
  Eowen
-  &6[Eowen]
+  &6[Eowen]&r
  You've come back. Is it wrong of me to be surprised? Have you found anything?
-  &5[I think I have. I found this book inside a hidden Safe Room.]
-  &6[Eowen]
+  &5[I think I have. I found this book inside a hidden Safe Room.]&r
+  &6[Eowen]&r
  Let me see it... Hm... I... I don't know what to say. This is real? For real? He's really alive?
-  &5[That's what it seems.]
-  &6[Eowen]
+  &5[That's what it seems.]&r
+  &6[Eowen]&r
  Where is this warehouse? Who did he make a deal with? I don't understand.
-  &5[I have the same questions. Do you have any ideas about the warehouse?]
-  &6[Eowen]
+  &5[I have the same questions. Do you have any ideas about the warehouse?]&r
+  &6[Eowen]&r
  Not off the top of my head. Did you see anything that might help?
-  &5[There was a banner in the safe room all over. It was brown, with a white stripe and a red circle in the center.]
-  &6[Eowen]
+  &5[There was a banner in the safe room all over. It was brown, with a white stripe and a red circle in the center.]&r
+  &6[Eowen]&r
  ...The Freetraders' banner? What was it down down there?
-  &5[The Freetraders?]
-  &6[Eowen]
+  &5[The Freetraders?]&r
+  &6[Eowen]&r
  They were a group of mercenaries operating out of Sierhaven's now defunct Apartments before the attack. Kurtis did work for
 them in the past. But they broke up before the attack, so why would their banner be in this safe room? And he mentions Maren,
 'The Shady Trader'... Could something be going on in Sierhaven? This seems like a long shot though...
-  &5[I'll go poke around. Here's hoping it works.]
-  &6[Eowen]
+  &5[I'll go poke around. Here's hoping it works.]&r
+  &6[Eowen]&r
  I'm really hoping so.
-&o  Try and find Kurtis; the Shady Trader might be able to lead you to him. Table
+&o  Try and find Kurtis; the Shady Trader might be able to lead you to him.
  Shady Trader
   Coordinates: [-837, 101, 84]
-   &6[Shady Trader]
+   &6[Shady Trader]&r
  H-hello there!
 &o  The man struggles to smile, but his eyes start back and fourth.
-  &5[Hello.]
-  &6[Shady Trader]
+  &5[Hello.]&r
+  &6[Shady Trader]&r
  Would you like to purchase some spectacular items?
-  &6[Shady Trader]
+  &6[Shady Trader]&r
  They asked me to sell to you, and I'm sure you'd love our amazing replicas.
-  &5[Replicas?]
-  &6[Shady Trader]
+  &5[Replicas?]&r
+  &6[Shady Trader]&r
  Yes, Replicas of items you've found on your travels! They are the finest money can buy, they told me to tell you.
-  &5[Sure, I'm interested.]
-  &5[I'm not interested.]
-  &5[I'm not interested.]
-  &6[Shady Trader]
- I hope you'll come back soon.  Table
+  &5[Sure, I'm interested.]&r
+  &5[I'm not interested.]&r
+  &5[I'm not interested.]&r
+  &6[Shady Trader]&r
+ I hope you'll come back soon.
  Kurtis
   Coordinates: [-2102, 74, 619]
-   &6[Kurtis]
+   &6[Kurtis]&r
  Please buy from me? I was the first, why can I not leave yet?
-  &5[You're Kurtis, aren't you?]
-  &6[Kurtis]
+  &5[You're Kurtis, aren't you?]&r
+  &6[Kurtis]&r
  Yes! Are you here to buy from me?
-  &5[No, I'm here because your brother has been searching for you. For 30 years.]
-  &6[Kurtis]
+  &5[No, I'm here because your brother has been searching for you. For 30 years.]&r
+  &6[Kurtis]&r
  I don't have a brother. I don't have a life beyond my sales. Not until I have finished.
   &5[Are you sure? Eowen said a man named Kurtis used to live in Farr, in a bunker, before a massive attack on the city. He
-thought you were dead.]
-  &6[Kurtis]
+thought you were dead.]&r
+  &6[Kurtis]&r
  Eowen...? My... brother? He... he's been trying to find me?
-  &5[Yes. He's not given up for decades. He knew you were alive.]
-  &6[Kurtis]
+  &5[Yes. He's not given up for decades. He knew you were alive.]&r
+  &6[Kurtis]&r
  They came to me... I was trapped... I was offered a deal...
-  &5[And you took it. But we found you!]
-  &6[Kurtis]
+  &5[And you took it. But we found you!]&r
+  &6[Kurtis]&r
  I can't leave. I'm trapped. But Eowen isn't. He can live his life still. I still remember when we were just boys, playing by
 the banks of the river outside Farr. I fell in. I couldn't swim. He jumped in and save me, nearly drowning in the process. He
 saved my life. I owe him the chance to keep living his, not hunting for me.
-  &5[I...]
-  &6[Kurtis]
+  &5[I...]&r
+  &6[Kurtis]&r
  Here. I've spent a long time writing down what happened the day of the attack. Eowen needs to know. I can't stay though. I must
 sell.. They told me... Quickly, take this, before I forget again. Memory is tough here...
-  &6[Kurtis]
+  &6[Kurtis]&r
  Please buy from me? I was the first, why can I not leave yet?
-&o  Take   Link   Kurtis' Journal Kurtis'_Journal wikilink back to Eowen. Table
+&o  Take   Link   Kurtis' Journal Kurtis'_Journal wikilink back to Eowen.
  Eowen
-  &6[Eowen]
+  &6[Eowen]&r
  You are back! Do you have any news? Why are you looking at me like that? Is something wrong?
-  &5[I found him. He gave me his journal to give you. It isn't an easy read.]
-  &6[Eowen]
+  &5[I found him. He gave me his journal to give you. It isn't an easy read.]&r
+  &6[Eowen]&r
  You actually found him? Let me see that! Plain &o  Eowen looks at the journal, his eyes full of hope and optimism. As he flips
 through the pages his eyes begin to dim. As he reaches the last page his eyes are like the void, absent of the light he started
 with.
-  &6[Eowen]
+  &6[Eowen]&r
  He... is in this much pain? He felt that much guilt? He is the only reason I'm alive today, my home was leveled to the ground.
 I only survived since I ran and hid like a coward. I should be the one with guilt for leaving the town to die, not him.
-  &6[Eowen]
+  &6[Eowen]&r
  Sadly I can't honor his request. He doesn't deserve this fate, no one does. I have much research to do.
-  &6[Eowen]
+  &6[Eowen]&r
  In the mean time though have the reward I promised you. Thank you for showing me the path I must take.
-  &5[I haven't managed to find your brother yet.]
-  &6[Eowen]
+  &5[I haven't managed to find your brother yet.]&r
+  &6[Eowen]&r
  There is something you are keeping from me and I don't know why. Please let me know if you find out anything.
  LOST IN MY MIND COMPLETE! Awarded 2   Link   Royal Crystals Royal_Crystals wikilink

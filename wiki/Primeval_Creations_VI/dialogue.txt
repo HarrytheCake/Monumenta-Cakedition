@@ -1,22 +1,27 @@
-  WorkInProgress|Exact book coords, puzzle solutions, and double checking
+&r
+  WorkInProgress|Exact book coords, puzzle solutions, and double checking&r
  Puzzle Solutions:   Link   https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_VI
 https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_VI
  C:   &o  [1/2]: You found another one of Selari's journals. Journey back into his workshop and see what you can find. Remember
 to bring some uncharged tesseracts with you.
  C:   &o  [2/2]: If you lost the journal from the Alnera Archives, you can find another one there.
- After you enter the cyan room: Table
+ After you enter the cyan room:
  Distant Voice
-  &6[Distant Voice]
+  &6[Distant Voice]&r
  Welcome back, Selari. It has been some time.
-  &6[Distant Voice]
+  &6[Distant Voice]&r
  Would you like to play a game?
-  &5[Who's speaking?]
-  &6[Distant Voice]
+  &5[Who's speaking?]&r
+  &6[Distant Voice]&r
  Have you forgotten me already?
-  &6[Distant Voice]
+  &6[Distant Voice]&r
  I am an artificial mind, created by your hand.
-  &5[Uh... right. And why did I do that again?]
-  &6[Artificial Mind]
+  &5[Uh... right. And why did I do that again?]&r
+  &3THE POWER OF MIND&r
+  &8Mind... A power one would assume is related to Knowledge, yet its applications do not lie in simply wisdom. Mind is the
+inherent root of reason, and without reason, one would simply lose their sanity. This machine must push the limits that reason
+in order to truly concentrate this power...&r
+  &6[Artificial Mind]&r
  To unlock the power of Mind, we shall face off in a battle of will. As such, these shall be the rules for our game:  Plain
 Turns shall be taken one at a time. I shall make the first move, followed by your's, and so on. Plain  A piece shall be moved
 across this screen by turns, and can never return to a position it has already held. Plain  Position changes can only be made in
@@ -24,23 +29,29 @@ L-shaped movements. That is, in movements of 2x1 or 1x2. Plain  The loser of a r
 made. If you are trapped and cannot progress, you have lost. Plain  You must defeat me in this game 3 consecutive times. Only
 then will the power of Mind be unlocked.
  After beating the AI:
+  &8I was incorrect, reason is not the underlying nature of Mind, but merely a part. The ability to clearly perceive the world,
+the true nature of all things around you, and the reason by which to put that understanding into perspective - that is the true
+power of the Aspect of Mind. However, it is an unstable power, difficult to control. It's usefulness is yet to be seen.&r
  After entering the purple room:
-   Table
+  &3THE POWER OF EMOTION&r
+  &8Another aspect that seemingly draws from human nature, though Emotion would not have been a power I would have expected
+previously. I was hoping that I would be able to continue on without more test subjects, but it seems I will need them. I must
+create a way to force emotion upon them...&r
  Caged Citizen
-  &6[Caged Citizen]
+  &6[Caged Citizen]&r
  Hey, you! Get me out of here! Please!
-  &5[How did you get here?]
-  &6[Caged Citizen]
+  &5[How did you get here?]&r
+  &6[Caged Citizen]&r
  I... I don't know! I went to sleep one night, and when I woke up, I was here. There was this strange man, as well. Kept
 mumbling something about emotions. Proper creep.
-  &5[This cage doesn't seem to have a gate. Do you know of any way I can get you out?]
-  &6[Caged Citizen]
+  &5[This cage doesn't seem to have a gate. Do you know of any way I can get you out?]&r
+  &6[Caged Citizen]&r
  No idea. This machine may have something to do with it. Maybe if you fire it up, it'll open?
-  &5[The configuration it wants doesn't seem mathematically possible.]
-  &6[Caged Citizen]
+  &5[The configuration it wants doesn't seem mathematically possible.]&r
+  &6[Caged Citizen]&r
  Gah, are you saying I'm stuck here?!
-  &5[Do you happen to know anything about this machine?]
-  &6[Caged Citizen]
+  &5[Do you happen to know anything about this machine?]&r
+  &6[Caged Citizen]&r
  Not really, it seemed liked that guy was pretty much done with it, so I've never seen it used... OH, I do remember him saying
 something though... It was a number... What was it... 102? Yeah that sounds right. Maybe that means something?
  Rules of the puzzle:  Plain  Two vessels for energy exist in this room - one can hold 5 units, the other, 3 units. Plain  In
@@ -48,5 +59,8 @@ order to properly send energy to the subject, exactly 4 units of power must be t
 is unable to submit power to the subject, so all 4 units must come from the lager vessel. Plain  5 chages of power exist within
 the system for consumption.
  After completing the puzzle:
+  &8I understand it now, 'emotion' is simply a poetic term. The ability to take that which lies within, that which is
+intangible, and bring it to the surface, manifested into our realm of existence. That is the true power of the Aspect of
+Emotion. Only one more power now lies ahead of me...&r
  PRIMEVAL CREATIONS VI COMPLETE! SoftBreak  Awarded   Link   Tesseract of the Mind Tesseract_of_the_Mind wikilink and   Link
 Tesseract of Emotions Tesseract_of_Emotions wikilink  .

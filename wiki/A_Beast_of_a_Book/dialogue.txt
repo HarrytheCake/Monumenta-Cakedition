@@ -1,105 +1,105 @@
- Table
+&r
  Erwen
   Coordinates: [600, 99, 115]
-   &6[Erwen]
+   &6[Erwen]&r
  Hail, adventurer. I'm Erwen, the Animal Hunter. Have you come to prove yourself and earn the Bestiary?
-  &5[The Bestiary?]
-  &6[Erwen]
+  &5[The Bestiary?]&r
+  &6[Erwen]&r
  Yes! The culmination of my life's work hunting the various beasts and monsters of this world. With my time hunting finished, I
 seek to help others become possibly even greater than I, and what better way to do so than to share my knowledge with the world?
-  &5[What's the catch?]
-  &6[Erwen]
+  &5[What's the catch?]&r
+  &6[Erwen]&r
  Is it not clear? I can't share this with simply just anyone, no! Only those who can prove their prowess of the hunt are worthy
 to receive this gift. Do you wish to prove yourself?
-  &5[I'm in.]
-  &6[Erwen]
- Good. Let me know when you're ready and we will being the first hunt.  Table
+  &5[I'm in.]&r
+  &6[Erwen]&r
+ Good. Let me know when you're ready and we will being the first hunt.
  Erwen
-  &6[Erwen]
+  &6[Erwen]&r
  Your first hunt is the deadly Star Spitter. It lurks on the shores of a blighted island, south of the Oceangate. They are
 fragile, but getting hooked by them can prove deadly. Its ink is necessary for its special properties; I task you with killing 5
 of these beasts. Return when you are successful. Oh, and don't worry about harvesting the bodies or bringing them back- I need
 you only to prove you can kill them in the first place. I will use my own supply of materials.
 &o  Hunt down 5 Star Spitters in the waters around   Link   Aphelion Isle Aphelion_Isle wikilink  . Then return to Erwen in
-Farr. Table
+Farr.
  Erwen
-  &6[Erwen]
+  &6[Erwen]&r
  Have you killed five Star Spitters?
-  &5[Yes, I have killed 5 Star Spitters.]
-  &6[Erwen]
- Excellent. Take a rest, and return when you are ready to being the second hunt.  Table
+  &5[Yes, I have killed 5 Star Spitters.]&r
+  &6[Erwen]&r
+ Excellent. Take a rest, and return when you are ready to being the second hunt.
  Erwen
-  &6[Erwen]
+  &6[Erwen]&r
  I presume you are ready? Your second hunt will take you into the depths of the demon summoner's grove, to the great   Link
 Weeping Wormwood Weeping_Wormwood wikilink tree. You must slay 5 Weeping Barklings, for they will serve as the paper due to
 their latent magical properties.
 &o  Hunt down 5 Weeping Barklings at the   Link   Weeping Wormwood Weeping_Wormwood wikilink in   Link   Azacor’s Grove
-Azacor’s_Grove wikilink  . Then return to Erwen in Farr. Table
+Azacor’s_Grove wikilink  . Then return to Erwen in Farr.
  Erwen
-  &6[Erwen]
+  &6[Erwen]&r
  Have you killed five Weeping Barklings?
-  &5[Yes, I have killed 5 Weeping Barklings.]
-  &6[Erwen]
- Good, good. Already you've made it farther than most who think they can become a hunter like me. Rest, and return again.  Table
+  &5[Yes, I have killed 5 Weeping Barklings.]&r
+  &6[Erwen]&r
+ Good, good. Already you've made it farther than most who think they can become a hunter like me. Rest, and return again.
  Erwen
-  &6[Erwen]
+  &6[Erwen]&r
  For your third hunt, a feather for a quill is required. Only the finest will do, yet the finest was hunted to extinction. But
 it can be brought back. Seek out an altar hidden in the jungle, a dark pool of red. Slay 3 of the hateful demons that are
 evocated there, and their bodies can be fashioned into what we need.
-&o  Hunt down 3 Hate Knights in   Link   Altar of Evocation Altar_of_Evocation wikilink  . Then return to Erwen in Farr. Table
+&o  Hunt down 3 Hate Knights in   Link   Altar of Evocation Altar_of_Evocation wikilink  . Then return to Erwen in Farr.
  Erwen
-  &6[Erwen]
+  &6[Erwen]&r
  Have the Hate Knights been eradicated?
-  &5[The demons have been slain.]
-  &6[Erwen]
+  &5[The demons have been slain.]&r
+  &6[Erwen]&r
  I am impressed, young adventurer. Now with their remains, I can form a memory of what once was. A feather from the once
 elusive, now extinct, Chromatic Crane. You've certainly earned your rest this time. Take it, for the final hunt is the most
-difficult yet.  Table
+difficult yet.
  Erwen
-  &6[Erwen]
+  &6[Erwen]&r
  The final hunt. You will need Soulleather, which is made from the flesh of the legendary Questing Beast, to bind the Bestiary
 with. This is a special beast- to put it frankly, I don't think you can kill it.
-  &5[I have heard that one before; they were proven wrong.]
-  &6[Erwen]
+  &5[I have heard that one before; they were proven wrong.]&r
+  &6[Erwen]&r
  I do not mean to insult your skill. I meant it literally, it has powerful regenerative properties. It'll heal from a wound
 faster than you can make another. All you need is a cut of its flesh for the soulleather, which makes the real hunt actually
 locating the damn thing in the first place.
-  &5[Any idea where I should start looking?]
-  &6[Erwen]
+  &5[Any idea where I should start looking?]&r
+  &6[Erwen]&r
  Luckily for you, I've already handled most of that. I last tracked it to somewhere in Sierhaven, which is odd now that I think
 about it. It rarely even steps into the swamp at all. It's gotta be hiding somewhere, but Sierhaven is a big city. The Polling
 Place in Sierhaven would be a good place to start. It used to be a stable you know, and I'd reckon there's some old unused space
 that would make a good hiding spot, due to the likely leftover water and animal feed.
 &o  Search for the Questing Beast at the Polling Place in Sierhaven.
  When you find the Questing Beast:
-  &5You smell it before you see it... it seems like there's something living down there.
+  &5You smell it before you see it... it seems like there's something living down there.&r
  After defeating the Questing Beast:
-  &6[Donkey Attendant]
- What's going on down here? Oh my god, Hubert, did this person hurt you? You! Get out, right now! Table
+  &6[Donkey Attendant]&r
+ What's going on down here? Oh my god, Hubert, did this person hurt you? You! Get out, right now!
  Donkey Attendant
-  &6[Donkey Attendant]
+  &6[Donkey Attendant]&r
  What do you think you were doing? Breaking and entering, attacking my poor Hubert!
-  &5[Hubert? That's the Questing Beast!]
-  &6[Donkey Attendant]
+  &5[Hubert? That's the Questing Beast!]&r
+  &6[Donkey Attendant]&r
  You think I don't know that? I captured him and took him down here to take care of him! He's happy here, not having to get
 slaughtered out in the wild for people to make clothes with his flesh! I treat him like royalty and in exchange, he lets me take
 trimmings from his horn.
-  &5[What do you need the horn trimmings for?]
-  &6[Donkey Attendant]
+  &5[What do you need the horn trimmings for?]&r
+  &6[Donkey Attendant]&r
  Do you really not know?! Quest compasses have to come from somewhere, and Hubert's horn trimmings make excellent needles and
 put the "Quest" in quest compass! Now off with you! I don't want to see you back here again, you can go mail in your vote or
 something if you need to vote...
-&o  Return to Erwen. Table
+&o  Return to Erwen.
  Erwen
-  &6[Erwen]
+  &6[Erwen]&r
  You return, hunter. Is the deed done?
-  &5[Well...]
+  &5[Well...]&r
 &o  You explain how the Questing Beast was already captured and likely content not having to die repeatedly.
-  &6[Erwen]
+  &6[Erwen]&r
  Ah, can't say I'm upset to hear that. Much better than getting slaughtered over and over, I imagine. Still, did you get some
 flesh for the Soulleather?
-  &5[I did.]
-  &6[Erwen]
+  &5[I did.]&r
+  &6[Erwen]&r
  You have done an outstanding job. I was starting to fear that maybe there really was no one worthy of receiving my gift, yet
 here you are. I am proud. Here is your very own Bestiary, handcrafted by me with the spoils of your hunts. May it treat you
 well.

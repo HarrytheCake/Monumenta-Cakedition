@@ -1,25 +1,26 @@
-  WorkInProgress|Dialogue, Double check, add puzzle and more context. Table
+&r
+  WorkInProgress|Dialogue, Double check, add puzzle and more context.&r
  Amina
   Coordinates: [323, 47, 764]
-   &6[Amina]
+   &6[Amina]&r
  Safar, my right-hand man, informed me of an adventurer who has helped the Trade a great deal. Tell me, is that you?
-  &5[Yes, and here is the Amulet to prove it.]
+  &5[Yes, and here is the Amulet to prove it.]&r
 &o  She looks at the amulet in acknowledgement.
-  &6[Amina]
+  &6[Amina]&r
  Hmm... so it seems you are. I believe a greeting is in order then. My name is Amina, and I am the head of the Ishnir Trade.
 You, [Player], have shown the Trade your loyalty.
-  &5[So why did you want to see me?]
-  &6[Amina]
+  &5[So why did you want to see me?]&r
+  &6[Amina]&r
  You see, a rather perplexing issue has recently emerged. Many of our outposts among the Trade Route have fallen silent- one of
 the larger and more important outposts being the Crystal Haven.
-  &6[Amina]
+  &6[Amina]&r
  If we were to lose contact for a prolonged period of time, the Ishnir Trade would have a much harder time moving valuables
 between cities.
-  &5[That sounds like a real issue... but I have something else to do.]
-  &6[Amina]
+  &5[That sounds like a real issue... but I have something else to do.]&r
+  &6[Amina]&r
  (MISSING)
-  &5[So I should check that out?]
-  &6[Amina]
+  &5[So I should check that out?]&r
+  &6[Amina]&r
  Precisely.
  C:   &o  See why the   Link   Crystal Haven Crystal_Haven wikilink lost contact with Amina and The Trade.
  When you enter the storage area:
@@ -27,94 +28,94 @@ between cities.
  After you solve one side:
 &o  A click reverberates from the mechanism...
  After you solve both:
-&o  The vault door slowly swings open as the last mechanism is activated! Table
+&o  The vault door slowly swings open as the last mechanism is activated!
  Hassan
-  &6[Hassan]
+  &6[Hassan]&r
  Please don't harm me!
 &o  He flinches and looks away from you.
-  &5[I'm not here to harm you! I was sent by Amina.]
-  &6[Hassan]
+  &5[I'm not here to harm you! I was sent by Amina.]&r
+  &6[Hassan]&r
  Amina? Oh, thank goodness! You've got to tell her what happened here! Raiders have slaughtered everyone!
-  &5[Yeah, I saw that. They seem to be overrunning the upper levels...]
-  &6[Hassan]
+  &5[Yeah, I saw that. They seem to be overrunning the upper levels...]&r
+  &6[Hassan]&r
  I had to hide in the vault- luckily, they were too stupid to figure out the locking mechanism... Wait- oh no, I think they're
 coming back!
  C:   &o  Save Hassan from the ambush!
- After saving Hassan: Table
+ After saving Hassan:
  Hassan
-  &6[Hassan]
+  &6[Hassan]&r
  Thank goodness you defeated them! Now go warn Amina about what has happened here!
-  &5[What about you?]
-  &6[Hassan]
+  &5[What about you?]&r
+  &6[Hassan]&r
  I'll be fine, just go!
- C:   &o  Warn Amina of what has happened at the   Link   Crystal Haven Crystal_Haven wikilink  . Table
+ C:   &o  Warn Amina of what has happened at the   Link   Crystal Haven Crystal_Haven wikilink  .
  Amina
-  &6[Amina]
+  &6[Amina]&r
  So? Have you scouted out the outpost?
-  &5[Yes. Most of the men stationed there were killed... Hassan was the only survivor.]
-  &6[Amina]
+  &5[Yes. Most of the men stationed there were killed... Hassan was the only survivor.]&r
+  &6[Amina]&r
  What?! How could this be? What happened?
-  &5[Raiders took over the outpost. They nearly killed Hassan too!]
-  &6[Amina]
+  &5[Raiders took over the outpost. They nearly killed Hassan too!]&r
+  &6[Amina]&r
  Oh, this is awful, just awful! You need to warn Riaz about this. He controls the base of operations for Rahkeri- hopefully he
 can come up with a plan to help.
- C:   &o  Travel to Rahkeri to meet Riaz to tell him about the situation. Table
+ C:   &o  Travel to Rahkeri to meet Riaz to tell him about the situation.
  Riaz
   Coordinates: [MISSING]
-   &6[Riaz]
+   &6[Riaz]&r
  Hello again, [Player]! How are you doing?
-  &5[Amina sent me. The Trade's outpost in Crystal Haven has been overrun with raiders.]
-  &6[Riaz]
+  &5[Amina sent me. The Trade's outpost in Crystal Haven has been overrun with raiders.]&r
+  &6[Riaz]&r
  What?! How could this be? The Trade Route was always a secure means of travelling...
-  &5[She's asking you for a plan. Got any ideas?]
-  &6[Riaz]
+  &5[She's asking you for a plan. Got any ideas?]&r
+  &6[Riaz]&r
  Well, we'd probably need to scout out a new location to build an outpost... However, to do so, we should ask for help in one of
 our other outposts, namely the Warehouse Compound. Have a look around there for mapping supplies.
  C:   &o  [1/2]: Seek mapping supplies from the   Link   Warehouse Compound Warehouse_Compound wikilink  .
- C:   &o  [2/2]: Return to Riaz once you have found them. Table
+ C:   &o  [2/2]: Return to Riaz once you have found them.
  Riaz
-  &6[Riaz]
+  &6[Riaz]&r
  Did you find any maps?
-  &5[Yes, but the camp was also overrun with raiders... I was lucky I even got these.]
-  &6[Riaz]
+  &5[Yes, but the camp was also overrun with raiders... I was lucky I even got these.]&r
+  &6[Riaz]&r
  What? The warehouse, too? This can't be true! SoftBreak  He looks at you in disbelief.
-  &5[What should we do next?]
-  &6[Riaz]
+  &5[What should we do next?]&r
+  &6[Riaz]&r
  Thankfully, the maps you've retrieved are usable; I'll let Amina know when I've scouted out a location. You should go tell her
 about the warehouse though... I doubt she'll be pleased.
- C:   &o  Let Amina know that the Warehouse Compound was also overrun... Table
+ C:   &o  Let Amina know that the Warehouse Compound was also overrun...
  Amina
-  &6[Amina]
+  &6[Amina]&r
  So has Riaz devised a solution?
-  &5[Yes, I've helped him retrieve some mapping supplies from the warehouse, but...]
-  &6[Amina]
+  &5[Yes, I've helped him retrieve some mapping supplies from the warehouse, but...]&r
+  &6[Amina]&r
  But? What's the but?
-  &5[It was overrun, too...]
-  &6[Amina]
+  &5[It was overrun, too...]&r
+  &6[Amina]&r
  By Ishnir, are you serious? How could this happen? The Trade seems to be falling apart...
 &o  She looks completely distressed.
-  &5[Maybe I could help you guys reclaim what's yours?]
-  &6[Amina]
+  &5[Maybe I could help you guys reclaim what's yours?]&r
+  &6[Amina]&r
  Hmm, now that's an idea. The raiders are powerful though... Traveling to the Bandit Hideaway Hill on the Trade Route and
 stealing some of their food reserves might slow them down enough for us to take over again! Don't worry about getting all of it,
 about ten should be enough. Don't want them to starve to death, that would make us no better than them.
  C:   &o  [1/2]: Raid the   Link   Bandit Hideaway Hill Bandit_Hideaway_Hill wikilink for their food rations. (You need 10 food
 supplies).
- C:   &o  [2/2]: Return to Amina with the raider's food reserves. Table
+ C:   &o  [2/2]: Return to Amina with the raider's food reserves.
  Amina
-  &6[Amina]
+  &6[Amina]&r
  Perfect! That looks like quite a bit of their food- let's see how well they raid without anything to eat.
-  &5[Hopefully that helps the Trade out! Should give you guys a window of opportunity to recover.]
-  &6[Amina]
+  &5[Hopefully that helps the Trade out! Should give you guys a window of opportunity to recover.]&r
+  &6[Amina]&r
  It might, it might not. No way of telling really... The Ishnir Trade has suffered a great deal today. Thankfully, with your
 help, the pain has been somewhat remedied.
  A LOST CAUSE COMPLETE! SoftBreak  Awarded   Link   Amina's Axe Amina's_Axe wikilink and 28 Compressed Crystalline Shards!
- Post quest dialogue: Table
+ Post quest dialogue:
  Amina
-  &6[Amina]
+  &6[Amina]&r
  Hello again [Player]. I bear some great news: Riaz successfully scouted out a prime location for our new outpost. Setting up
 has gone quite well.
-  &5[That's good to hear! Say... Mind if I check it out?]
-  &6[Amina]
+  &5[That's good to hear! Say... Mind if I check it out?]&r
+  &6[Amina]&r
  I don't see why not! You've helped us a great deal. The entrance is quite hidden, but it lies in the stretch of desert between
 the Terracotta Mining Town and the Lost Sands City. I hope to see you there soon.

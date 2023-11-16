@@ -1,42 +1,42 @@
- Table
+&r
  Nelfine
   Coordinates: [-774, 100, -5]
-   &6[Nelfine]
+   &6[Nelfine]&r
  Hey there, [Player]! Nice to see you again.
-  &5[How have you been doing?]
-  &6[Nelfine]
+  &5[How have you been doing?]&r
+  &6[Nelfine]&r
  Just fine! My memories are still kinda fuzzy in some areas, but they are slowly coming back to me. I just wish Arian would
 finally write me back. I hope he hasn't gotten himself into too much trouble looking for me.
-  &5[Do you happen to have another copy of that book?]
-  &5[Why are you still here, Nelfine?]
-  &6[Nelfine]
+  &5[Do you happen to have another copy of that book?]&r
+  &5[Why are you still here, Nelfine?]&r
+  &6[Nelfine]&r
  I didn't want to move too far until I got my response from Arian.
-  &5[He still hasn't sent a response?]
-  &6[Nelfine]
+  &5[He still hasn't sent a response?]&r
+  &6[Nelfine]&r
  No. I'm getting slightly worried. I hope he hasn't gotten himself into too much trouble. I can't imagine how much stress he
 must have been in for the last few weeks, with my disappearance and all.
-  &5[Where did you say he was located?]
-  &6[Nelfine]
+  &5[Where did you say he was located?]&r
+  &6[Nelfine]&r
  He is stationed at Highwatch. His office is located in the tower directly north of the entrance, second floor, I believe.
-  &5[I'll head there now and ask him.]
-  &6[Nelfine]
+  &5[I'll head there now and ask him.]&r
+  &6[Nelfine]&r
  Thank you so much!
-&o  Head to Arian's office on the second floor of the northwest tower in Highwatch. Table
+&o  Head to Arian's office on the second floor of the northwest tower in Highwatch.
  Scoutmaster Ursan
   Coordinates: [1141, 132, -130]
-   &6[Scoutmaster Ursan]
+   &6[Scoutmaster Ursan]&r
  Only those with eagles eyes tend to come up and see me. If you're a scout through and through, I've got equipment that might
 interest you, if you've got the right coin.
-  &5[I was told that this was Arian's office]
-  &6[Scoutmaster Ursan]
+  &5[I was told that this was Arian's office]&r
+  &6[Scoutmaster Ursan]&r
  Arian? Now, who could have told you that? This hasn't been his office in the better part of 15 years. They moved his office to
 the keep, and that's where he remained until he resigned.
-  &5[Resigned?]
-  &6[Scoutmaster Ursan]
+  &5[Resigned?]&r
+  &6[Scoutmaster Ursan]&r
  Yeah, just about a week ago. No warning or anything. Told everyone he could no longer be here, and left without telling us
 where he was going. He didn't even take the time to pack up his office.
-  &5[Which office is his?]
-  &6[Scoutmaster Ursan]
+  &5[Which office is his?]&r
+  &6[Scoutmaster Ursan]&r
  Well, it's on the ground floor, but he sealed it off as he left. Arian has always been very secretive about his work. Only the
 higher ups here were allowed to know what he was doing. Knowing him, though, I can't imagine that he left himself with no way
 in.
@@ -44,216 +44,225 @@ in.
   To get into Arian's office. Press the button near the top of the stairs at [1180, 145, -128].
  Then a piston door will open up in the bookshelf at [1189, 136, -136].
   After you enter the office:
-  &6[Shady Thief]
+  &6[Shady Thief]&r
  ...finally, the old man's secrets will belong to... Wait, who are you? How did you get in here? It doesn't matter, no one can
 know of my presence here. Die!
  After you beat the Shady Thief:
-&o   As you deal the final blow, the thief's body bursts into flames from some foul magic!
+&o   &3As you deal the final blow, the thief's body bursts into flames from some foul magic!&r
 &o  Find what the thief was looking for.
   Step onto the pressure plate on the desk and it will open a hole in the wall next to the chair allowing access to a chest
 holding "Elegy of my Dearest Friend".
- &o  Find Arian in Farr. Table
+ &o  Find Arian in Farr.
  Arian "Lonely anger"
   Coordinates: [587, 97, 207]
-   &6[Lonely anger]
+   &6[Lonely anger]&r
  What do you want?
-  &5[Are you Arian?]
-  &6[Lonely anger]
+  &5[Are you Arian?]&r
+  &6[Lonely anger]&r
  What does it matter to you?
-  &5[Nelfine had me track you down.]
-&o
-  &6[Arian]
+  &5[Nelfine had me track you down.]&r
+&o   &3Arian stares at you for a moment&r
+  &6[Arian]&r
  You... You're the one that sent that damn letter, aren't you? Who are you? What have I done to make you want to torture me like
 this?
-  &5[No, Nelfine sent me that letter. I came because you never responded.]
-  &6[Arian]
+  &5[No, Nelfine sent me that letter. I came because you never responded.]&r
+  &6[Arian]&r
  NELFINE IS DEAD!
-&o
-  &6[Arian]
+&o   &3Arian slumps back in his seat&r
+  &6[Arian]&r
  I don't know who you are, or where you heard that name from, but the woman you speak of has been dead for 30 years. Go take a
 look at the memorial if you don't believe me.
-  &5[She isn't dead. She's been stuck in a holding cell under Sierhaven for a few weeks.]
-  &6[Arian]
+  &5[She isn't dead. She's been stuck in a holding cell under Sierhaven for a few weeks.]&r
+  &6[Arian]&r
  A few weeks? Then explain to me where she's been for the rest of the 30 years. If you are going to lie to me, at least know
 your facts.
-  &5[I'm... I'm not lying to you Arian. She specifically told me it had only been a few weeks.]
-  &6[Arian]
+  &5[I'm... I'm not lying to you Arian. She specifically told me it had only been a few weeks.]&r
+  &6[Arian]&r
  Please. Please quit making me suffer like this.
-  &5[I don't understand...]
-  &6[Arian]
+  &5[I don't understand...]&r
+  &6[Arian]&r
  Nor do I.
-&o
-&o  Arian doesn't seem to believe you. You should probably return to Nelfine. Table
+&o   &3You don't think you will be able to get Arian to listen to you anymore, you should return to Nelfine&r
+&o  Arian doesn't seem to believe you. You should probably return to Nelfine.
  Nelfine
-  &6[Nelfine]
+  &6[Nelfine]&r
  Uh... hello?
-  &5[Hey Nelfine, what's with that face?]
-  &6[Nelfine]
+  &5[Hey Nelfine, what's with that face?]&r
+  &6[Nelfine]&r
  How did you get in here?
-  &5[The same way I have been coming in, why?]
-  &6[Nelfine]
+  &5[The same way I have been coming in, why?]&r
+  &6[Nelfine]&r
  ...They told me nobody could ever get in here.
-  &5[Nelfine, are you okay? It's me, [Player].]
-  &6[Nelfine]
+  &5[Nelfine, are you okay? It's me, [Player].]&r
+  &6[Nelfine]&r
  I'm sorry, but I never get visitors here. Every now and then, I'll hear a voice in here, proper creepy-like.
-  &5[Something is wrong. Why do you not remember who I am?]
-  &6[Nelfine]
+  &5[Something is wrong. Why do you not remember who I am?]&r
+  &6[Nelfine]&r
  If I had to guess, it's likely because we've never met.
-  &5[I need to go back to Arian. Something is really wrong here.]
-  &6[Nelfine]
+  &5[I need to go back to Arian. Something is really wrong here.]&r
+  &6[Nelfine]&r
  Arian, you say? I don't know who that is, but there was this note lying at my feet with that name on it. Perhaps it is for him?
-&o  Nelfine has no memory of you! Return to Arian with the note she gave you. Table
+&o  Nelfine has no memory of you! Return to Arian with the note she gave you.
  Arian "Lonely anger"
-  &6[Arian]
+  &6[Arian]&r
  Back already? Haven't you caused me enough suffering today?
-  &5[Arian, something is wrong. Nelfine seems to have lost her memory again.]
-  &6[Arian]
+  &5[Arian, something is wrong. Nelfine seems to have lost her memory again.]&r
+  &6[Arian]&r
  Another story about memory loss, eh? You could at least try to be creative.
-  &5[It looks like she wrote this for you before that happened though.]
-  &6[Arian]
+  &5[It looks like she wrote this for you before that happened though.]&r
+  &6[Arian]&r
  Here we go again..
-&o   Color|teal|Arian takes the note
-  &6[Arian]
+&o   &3Arian takes the note&r
+  &6[Arian]&r
  As clear as...
-&o   Color|teal|Arian looks at you befuddled
-  &6[Arian]
+&o   &3Arian looks at you befuddled&r
+  &6[Arian]&r
  How do you know this sign off line?
-  &5[Arian, something is wrong. Nelfine seems to have lost her memory again.]
-  &6[Arian]
+  &5[Arian, something is wrong. Nelfine seems to have lost her memory again.]&r
+  &6[Arian]&r
  But...
-  &5[She really is alive Arian. She just can't remember anything.]
-  &6[Arian]
+  &5[She really is alive Arian. She just can't remember anything.]&r
+  &6[Arian]&r
  How did she remember enough to write me a letter then?
-  &5[I restored her memory with a device I found. It seems the effects were only temporary.]
-  &6[Arian]
+  &5[I restored her memory with a device I found. It seems the effects were only temporary.]&r
+  &6[Arian]&r
  Well then. Go use that device again. Restore her memory again, and then bring me to her.
 &o  Find your way back to the Overgrown Laboratory and see if you can restore Nelfine's memories once again.
   Coordinates: [336, 75, 309]
  &o  The old lab has been destroyed! Follow the clues in the strange book you found to see where its creator might have gone.
  Link   Moist Ruins Moist_Ruins wikilink then go down the ladders and enter the stone brick tunnel at the lowest wood platform.
   Nelfine (Caged)
-  &6[Nelfine]
+  &6[Nelfine]&r
  Oh, you're that guy from earlier.
-  &5[Nelfine are you alright?]
-  &6[Virius]
+  &5[Nelfine are you alright?]&r
+  &6[Virius]&r
  You just don't know when to give up, do you? Well, she's quite fine. I wouldn't dare hurt her... yet...
-  &5[Who are you?]
-  &6[Virius]
+  &5[Who are you?]&r
+  &6[Virius]&r
  I am a researcher of certain... magical phenomena. But for all intents and purposes, I am known as Virius.
-  &5[What do you want with Nelfine?]
-  &6[Virius]
+  &5[What do you want with Nelfine?]&r
+  &6[Virius]&r
  Isn't it obvious? I want what she can no longer remember. I need her memories.
-  &5[Why would you need her memories?]
-  &6[Virius]
+  &5[Why would you need her memories?]&r
+  &6[Virius]&r
  Because she was there on that day, the day Farr was attacked. She was present during the explosion, and more importantly, she
 survived, meaning she saw what occurred afterwards. But none of this is your concern for the moment. My new device will be able
 to extract everything I need.
-  &5[You aren't going to do anything to her.]
-  &6[Virius]
+  &5[You aren't going to do anything to her.]&r
+  &6[Virius]&r
  Oh, you're quite right. I'm not, you are. This machine requires two people, one person whose mind is being probed, and one who
 is doing the probing. Obviously I can't risk my own life with something as dangerous as this.
-  &5[What makes you think I'm going to do that?]
-  &6[Virius]
+  &5[What makes you think I'm going to do that?]&r
+  &6[Virius]&r
  What makes you believe you have a choice? Now you get to do as all good adventurers do, meddle in other people's lives. Good
-luck.  Table
+luck.
  Nelfine (Memories Part 1)
-  &6[Nelfine]
+  &6[Nelfine]&r
  Hello there, you must be Arian.
-  &6[Arian]
+  &6[Arian]&r
  That I am! That means you must be Nelfine.
-  &6[Nelfine]
+  &6[Nelfine]&r
  Yep! I just landed on the docks a few days ago! The Kings Valley is so much different than the Celsian Isles.
-  &6[Nelfine]
+  &6[Nelfine]&r
  Quite! I've been to the Chillwind before, I hear that's your home. Hopefully we can make you acquainted with this area just as
 comfortably.
-  &5[Blossomed]
-  &5[Failed]
-  &5[Staggered]
+  &3Keep the memory on track. Their relationship from here:&r
+  &5[Blossomed]&r
+  &5[Failed]&r
+  &5[Staggered]&r
   Blossomed
-  &6[Virius]
-   Table
+   &r
+  &6[Virius]&r
+  &r
  Nelfine (Memories Part 2)
-  &6[Arian]
+  &6[Arian]&r
  What's the matter Nelfine?
-  &6[Nelfine]
+  &6[Nelfine]&r
  Arian, I... I need to ask a favor of you...
-  &6[Arian]
+  &6[Arian]&r
  What is it? Why do you seem so upset?
-  &6[Nelfine]
+  &6[Nelfine]&r
  I... I would like to be transferred... to my home... I wish to return to the tundra...
-  &6[Arian]
+  &6[Arian]&r
  I see...
-  &5[Forces her to stay]
-  &5[Lets her leave]
-  &5[Does not give her an answer]
+  &3Keep the memory on track. What is Arian's Decision?&r
+  &5[Forces her to stay]&r
+  &5[Lets her leave]&r
+  &5[Does not give her an answer]&r
   Lets her leave
-  &6[Virius]
-   Table
+   &r
+  &6[Virius]&r
+  &r
  Nelfine (Memories Part 3)
-  &6[Nelfine]
+  &6[Nelfine]&r
  What will he say to me? How much has he changed? Will he even recognize me anymore?
-  Color|purple|[Nelfine? Can you hear me?]
-  &6[Nelfine]
+  &5[Nelfine? Can you hear me?]&r
+  &6[Nelfine]&r
  What if he hates me? I probably deserve that, after all. I left without even asking how he felt.
-  Color|purple|[He doesn't hate you.]
-  &6[Nelfine]
+  &5[He doesn't hate you.]&r
+  &6[Nelfine]&r
  I wonder if this was a mistake, volunteering for this meeting. Perhaps it was best that we didn't see each other for so long.
-  &5[Wait for Arian]
-  &5[Leave before he shows up]
+  &3Keep the memory on track. What does Nelfine do?&r
+  &5[Wait for Arian]&r
+  &5[Leave before he shows up]&r
   Wait for Arian
-  &6[Nelfine]
-  &5[You can see me now?]
-  &6[Nelfine]
-  &5[Nelfine, are you okay?]
-  &6[Nelfine]
-&o
-  &5[What?]
-  &6[Nelfine]
-&o
-  &5[...]
-  &6[Nelfine]
-&o
-&o    Table
+   &r
+  &6[Nelfine]&r
+  &4You. You are not meant to be here.&r
+  &5[You can see me now?]&r
+  &6[Nelfine]&r
+  &4You are not meant to see the events that occur on this day.&r
+  &5[Nelfine, are you okay?]&r
+  &6[Nelfine]&r
+&o   &4Upon the ancient powers creep, they forced him to the eternal sleep.&r
+  &5[What?]&r
+  &6[Nelfine]&r
+&o   &4A lust for might they did not earn, children weep and cities burn.&r
+  &5[...]&r
+  &6[Nelfine]&r
+&o   &4Parting the veil, he rose to sing; 'I am reborn, the Crimson King'&r
+&o   &3You are forcefully kicked from the memory.&r
  Virius
-  &6[Virius]
+  &6[Virius]&r
  No, not now. Blasted machine, we were so close. You... You are to blame for this.
-  &5[Nelfine! Why is she inside the machine?]
-  &6[Virius]
+  &5[Nelfine! Why is she inside the machine?]&r
+  &6[Virius]&r
  Screw your questions. I have no results to show, and no longer have time to fix things. He is going to kill me for failing, and
 it is your doing. So to hell with all of this, if I am going to die, you are going with me. Say goodbye, adventurer!
  After beating Virius:
-  &6[Virius]
- Ha... Dying here means he will blame my failure on you... You do not see the damage your meddling has wrought... Table
+  &r
+  &6[Virius]&r
+ Ha... Dying here means he will blame my failure on you... You do not see the damage your meddling has wrought...
  Nelfine (UnCaged)
-  &6[Nelfine]
+  &6[Nelfine]&r
  Thank you for saving me... [Player], was it?
-  &5[These things I found in your memories, somehow they stayed with me.]
-  &6[Nelfine]
+  &5[These things I found in your memories, somehow they stayed with me.]&r
+  &6[Nelfine]&r
  How odd. What did you see in there?
-  &5[Some memories of your old life.]
-  &6[Nelfine]
+  &5[Some memories of your old life.]&r
+  &6[Nelfine]&r
  Mind if I see those for a second?
-  &5[Sure.]
-&o   Color|teal|Nelfine takes the Memory ands, and they disappear in her hand
-  &6[Nelfine]
+  &5[Sure.]&r
+&o   &3Nelfine takes the Memory ands, and they disappear in her hand&r
+  &6[Nelfine]&r
  ...[Player]? Is that you?
-  &5[What happened?]
-  &6[Nelfine]
+  &5[What happened?]&r
+  &6[Nelfine]&r
  I... I remember everything... More than last time, even. Everything. My trip to Farr, the attack, wandering around the jungle
 aimlessly for years on end. Arian...
-  &5[The incident in Farr occurred 30 years ago.]
-  &6[Nelfine]
+  &5[The incident in Farr occurred 30 years ago.]&r
+  &6[Nelfine]&r
  I figured as much. Arian, I've hurt him so much, haven't I? Where is he now?
-  &5[He has retired to Farr.]
-  &6[Nelfine]
+  &5[He has retired to Farr.]&r
+  &6[Nelfine]&r
  I see, then I shall go see him there. I'm sure he hates me for being gone for so long, but I can't let him go another day
 believing I'm dead.
-  &5[Should I come with you?]
-  &6[Nelfine]
+  &5[Should I come with you?]&r
+  &6[Nelfine]&r
  Actually, no. I believe this is a matter between the two of us. We need to discuss things alone, if you would be so kind.
 Please feel free to come visit in a few days though, once the air has been cleared!
-  &5[Of course.]
-  &6[Nelfine]
+  &5[Of course.]&r
+  &6[Nelfine]&r
  Oh, and I almost forgot. That idiot Virius had a few valuable things lying around here. Feel free to take them as payment for
 everything you have done for us!
  CLEAR AS GLASS COMPLETE! Awarded 16 Concentrated Experience and a   Link   Glass Dagger Glass_Dagger wikilink  .

@@ -1,158 +1,159 @@
-&o  Speak with Bhairavi in   Link   Nyr Nyr wikilink Table
+&r
+&o  Speak with Bhairavi in   Link   Nyr Nyr wikilink
  Bhairavi
-  Color|purple|[I was actually wondering what we were doing next.]
-  Color|orange|[Bhairavi]
+  &5[I was actually wondering what we were doing next.]&r
+  &6[Bhairavi]&r
  Next? We have plenty of work to do, [Player]. Antigone and Keller have been hard at work trying to find out more on the Tlaxan
 god Myragh, while Pten, Brayllur, Wexley, and Starn continue to explore the Fallen Menagerie.
-  Color|purple|[What can I do?]
-  Color|orange|[Bhairavi]
+  &5[What can I do?]&r
+  &6[Bhairavi]&r
  I think we'd be best served having you assist with the Myragh research. We've made some major breakthroughs on that front and
 are working on finding the Plagueroot Temple mentioned in Selxem's tomb.
-  Color|PURPLE|[Where is it?]
-  Color|orange|[Bhairavi]
+  &5[Where is it?]&r
+  &6[Bhairavi]&r
  Ah, well there's the kicker. We have reason to believe it is within the Grand Maw, one of the most dangerous places in the
 King's Valley.
-  Color|PURPLE|[Oh...]
-  Color|orange|[Bhairavi]
+  &5[Oh...]&r
+  &6[Bhairavi]&r
  It's a bit of an undertaking. I understand. So you're in right?
-  Color|purple|[I'm not sure...]
-  Color|orange|[Bhairavi]
+  &5[I'm not sure...]&r
+  &6[Bhairavi]&r
  It's okay to have reservations. We'll be working with you every step of the way.
-  Color|purple|[Alright then. I'm in.]
-  Color|orange|[Bhairavi]
+  &5[Alright then. I'm in.]&r
+  &6[Bhairavi]&r
  Splendid.
-  Color|purple|[I can handle it.]
-  Color|orange|[Bhairavi]
+  &5[I can handle it.]&r
+  &6[Bhairavi]&r
  Splendid. Let's get started then!
-  Color|orange|[Bhairavi]
+  &6[Bhairavi]&r
  I know it's a bit of an open prompt, but just explore around the Maw. Perhaps we'll find a book, maybe more graves. Anything
 could help. If you can bring back what you find, even better. Please be careful though. The book we found seems ominous and the
 Temple seems dangerous.
-  Color|purple|[Where is the Grand Maw?]
-  Color|orange|[Bhairavi]
+  &5[Where is the Grand Maw?]&r
+  &6[Bhairavi]&r
  Oh! I didn't even consider you didn't know of it. Head out of Nyr to the river, and follow it into the jungle. The river itself
 pours into the Maw. You can't miss it.
 &o  Explore the   Link   Grand Maw Grand_Maw wikilink and try to find something to bring back to Bhairavi.
  &o  Head to the Grand Maw at 350, 71, 82. On the upper floors there's a structure with a magma block inside, break the block to
 progress the quest. It is recommended to have a couple Antidotes on you or some way to prevent poison.
   Bhairavi
-  Color|orange|[Bhairavi]
+  &6[Bhairavi]&r
  This is bad... this is so so bad. [Player], what happened?
-  &5[What's going on?]
-  Color|orange|[Bhairavi]
+  &5[What's going on?]&r
+  &6[Bhairavi]&r
  We just heard from Farr. The entire town is in lockdown. There's seventeen with the Plague and counting out! I sent you looking
 for a temple housing a god of sickness. So... What. Did. You. Do?
-  &5[I just found a statue, and took a gemstone inside.]
-  Color|orange|[Bhairavi]
+  &5[I just found a statue, and took a gemstone inside.]&r
+  &6[Bhairavi]&r
  Oh. That... could be a pretty major problem, [Player]. I've made a terrible mistake. WE'VE made a terrible mistake. This is
 what I get for being so overeager... This is my fault... I thought we could be more aggressive.
-  &5[So now what?]
-  Color|orange|[Bhairavi]
+  &5[So now what?]&r
+  &6[Bhairavi]&r
  We can fix this. I know we can. Go talk to Dr. Laurie. She's going to need all the help she can get.
 &o  Talk to Dr. Laurie, she likely has her hands full and will need help.
   Head to Dr. Laurie in her house at -107, 95, -113.
   Dr. Laurie
-  Color|orange|[Dr. Laurie]
+  &6[Dr. Laurie]&r
  Oh, thank goodness, it's you. Things are really bad. I've been in contact with Bhairavi and she told me you should be able to
 help. I have no idea how this outbreak happened and the medicine you helped me get isn't working at all, according to Nurse
 Eris.
-  Color|purple|[Actually, I know why it happened.]
-  Color|orange|[Dr. Laurie]
+  &5[Actually, I know why it happened.]&r
+  &6[Dr. Laurie]&r
  Don't worry about it right now. We can discuss that when people aren't dying. We need to find a new cure, and I think I have a
 contact we can get some help from. There's a bit of a problem though...
-  &5[We're clueless as to why the Plague happened as well.]
-  Color|orange|[Dr. Laurie]
+  &5[We're clueless as to why the Plague happened as well.]&r
+  &6[Dr. Laurie]&r
  That's what Bhairavi said too. We need to find a new cure, and I think I have a contact we can get some help from. There's a
 bit of a problem though...
-  Color|purple|[What's the problem?]
-  Color|orange|[Dr. Laurie]
+  &5[What's the problem?]&r
+  &6[Dr. Laurie]&r
  He lives in Farr. If we want to get in contact with him, you'll have to sneak into Farr. It's going to be dangerous. The crown
 has set up a full quarantine and has guards stationed across the city. If you get caught, you're going to be in serious trouble.
-  Color|purple|[This sounds like my kind of challenge.]
-  Color|orange|[Dr. Laurie]
+  &5[This sounds like my kind of challenge.]&r
+  &6[Dr. Laurie]&r
  Good. My contact's name is T'Lm - he's an ex-village leader of the Tlaxans. He lives with his son, Haotl, on the west side of
 the town, near the armory. I hope he's not sick or trapped outside the city.
-  Color|purple|[How am I going to get into Farr?]
-  Color|orange|[Dr. Laurie]
+  &5[How am I going to get into Farr?]&r
+  &6[Dr. Laurie]&r
  The city has to drain water somewhere, right? I'd check on the west side, by the Hallowed Pond. Maybe there is a sewer entrance
 hidden nearby.
-  Color|purple|[Thank you.]
-  Color|orange|[Dr. Laurie]
+  &5[Thank you.]&r
+  &6[Dr. Laurie]&r
  Good luck
 &o  Look for a sewer entrance into Farr near the Hallowed Pond.
   Head into the sewers by Farr at 493, 71, 131. Sneak through quarantined Farr to talk with T'Lm
   T'Lm
-  Color|orange|[T'Lm]
+  &6[T'Lm]&r
  Hello? How did you know I was here?
-  Color|purple|[Are you T'Lm? I was sent here to find him.]
-  Color|orange|[T'Lm]
+  &5[Are you T'Lm? I was sent here to find him.]&r
+  &6[T'Lm]&r
  I... I am. Are you here to take me away like my son?
-  Color|purple|[No, I was sent by Bhairavi and Dr. Laurie. They said you might be able to help me.]
-  Color|orange|[T'Lm]
+  &5[No, I was sent by Bhairavi and Dr. Laurie. They said you might be able to help me.]&r
+  &6[T'Lm]&r
  Help you? I've not heard from Bhairavi in quite awhile. Did they send you to help with Marasmus Execratio?
-  Color|purple|[Yes. I found a crystal in the Grand Maw, and when I took it, all this happened.]
-  Color|orange|[T'Lm]
+  &5[Yes. I found a crystal in the Grand Maw, and when I took it, all this happened.]&r
+  &6[T'Lm]&r
  You took one of the sacred binding crystals? No wonder Myragh has been unleashed. You must be fixing this mistake quickly, ___.
-  Color|purple|[How do you know my name?]
-  Color|orange|[T'Lm]
+  &5[How do you know my name?]&r
+  &6[T'Lm]&r
  There is much I know. I know of Velara below. I know of the Shamans before. I know of villages hidden away. I know of other
 wool, out of time and place. There is much you want to know. There is much you will learn, in time. For now though, you must fix
 Myragh.
-  Color|purple|[How do I fix this?]
-  Color|orange|[T'Lm]
+  &5[How do I fix this?]&r
+  &6[T'Lm]&r
  Below the city are sewers. One such door within there leads to the ruins of the Tlaxan settlement known as Velara, hidden below
 this place. Velara's magic is strong, and grew crystals that could be infused with magic. Go within. Get a crystal. Return to
 me.
-&o  Find the door that leads to the ruins of Velara within the sewers. Table
+&o  Find the door that leads to the ruins of Velara within the sewers.
  T'Lm
-  Color|orange|[T'Lm]
+  &6[T'Lm]&r
  The hero returns. Successful, I feel. What did you find?
-  Color|purple|[I got a Pure Crystal.]
-  Color|orange|[T'Lm]
+  &5[I got a Pure Crystal.]&r
+  &6[T'Lm]&r
  Excellent. Your work is not yet done though. Nurse Eris has been slaving away over a cure. Bring her this crystal. Ask her to
 anoint it with C'Taz's cure. Then, bring the crystal to the Grand Maw. Myragh will be contained again. My son will be saved...
 Be warned though, getting to Eris' will require some serious sneaking. The guards are carefully stationed...
-  Color|purple|[I'll head there right away.]
-  Color|orange|[T'Lm]
+  &5[I'll head there right away.]&r
+  &6[T'Lm]&r
  We will speak again, this I know.
-&o  Sneak to Nurse Eris's hospital in Farr. (The house with the cross banners) Table
+&o  Sneak to Nurse Eris's hospital in Farr. (The house with the cross banners)
  Nurse Eris
-  Color|orange|[Nurse Eris]
+  &6[Nurse Eris]&r
  Whoa! How did you get in here? GUARDS!
-  Color|purple|[WAIT! Wait! I was sent here to help you find a cure!]
-  Color|orange|[Nurse Eris]
+  &5[WAIT! Wait! I was sent here to help you find a cure!]&r
+  &6[Nurse Eris]&r
  By whom?!
-  Color|purple|[Dr. Laurie! She sent me to find a way to fix all this.]
-  Color|orange|[Nurse Eris]
+  &5[Dr. Laurie! She sent me to find a way to fix all this.]&r
+  &6[Nurse Eris]&r
  Oh, well in that case, hello. What can I do for you?
-  Color|purple|[I need you to take this crystal and infuse it with the cure from C'Taz.]
+  &5[I need you to take this crystal and infuse it with the cure from C'Taz.]&r
 &o  If you did the Good Route on   Link   The Plague The_Plague wikilink
-  Color|orange|[Nurse Eris]
+  &6[Nurse Eris]&r
  Sure! Thanks to the adventurer who brought Dr. Laurie the medicine, I have just enough extra to do that. Here you go!
-  Color|purple|[Wonderful, dear.]
+  &5[Wonderful, dear.]&r
 &o  If you did the Bad Route on   Link   The Plague The_Plague wikilink
-  Color|orange|[Nurse Eris]
+  &6[Nurse Eris]&r
  I'm sorry, I don't have enough of the full cure to do that. If you were to bring me one Spirit Flower, one Haunted Earth, and
 one Dark Amber though, I could happily do what you want.
-  Color|purple|[I'll go get those then.]
-  Color|orange|[Nurse Eris]
+  &5[I'll go get those then.]&r
+  &6[Nurse Eris]&r
  Thank you!
 &o  Collect one of each ingredient you gathered in the The Plague
-  Color|orange|[Nurse Eris]
+  &6[Nurse Eris]&r
  Ah, you got the ingredients! Excellent. Let me mix these in real quick and I'll have your crystal momentarily.
-  Color|purple|[Thank you. Now I need to bring this back to the Maw...]
-  Color|orange|[Nurse Eris]
+  &5[Thank you. Now I need to bring this back to the Maw...]&r
+  &6[Nurse Eris]&r
  What's that sweetie?
-  Color|purple|[Nothing! Thanks for your help. Everything should be back to normal shortly.]
-  Color|orange|[Nurse Eris]
+  &5[Nothing! Thanks for your help. Everything should be back to normal shortly.]&r
+  &6[Nurse Eris]&r
  Wonderful, dear.
 &o  Head back to the Grand Maw and stay around the entrance with the crystal until dialog appears. Head down into the Maw to
-find the entrance of the Magenta Dungeon to speak with T'Lm Table
+find the entrance of the Magenta Dungeon to speak with T'Lm
  T'Lm
-  Color|orange|[T'Lm]
+  &6[T'Lm]&r
  Hello [Player]. I told you we would speak again.
-  Color|PURPLE|[T'Lm! How did you get here?]
-  Color|orange|[T'Lm]
+  &5[T'Lm! How did you get here?]&r
+  &6[T'Lm]&r
  I was once a guardian for Velara, and by extension the Plagueroot Temple. When I met you I knew it was time to allow a hero
 inside. Perhaps you could free the Maw from this curse forever. Claim the wool within. Now I believe you've earned a reward
 before you enter...

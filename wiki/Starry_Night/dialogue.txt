@@ -1,23 +1,25 @@
-  WorkInProgress|Double check "Sure, I love telescopes" branch and full reward maybe Table
+&r
+  WorkInProgress|Double check "Sure, I love telescopes" branch and full reward maybe&r
  Mayleen
   Coordinates: [-118, 110, -12]
-   Color|Orange|[Mayleen]
+   &6[Mayleen]&r
  Hi, do you have some free time? My telescope has broken and I have need of assistance. Of course, I will be compensating you
 for your time.
-  Color|Purple|[Sure, I love telescopes!]
-  Color|Orange|[Mayleen]
+  &5[Sure, I love telescopes!]&r
+  &6[Mayleen]&r
  Thank you for helping! And here, a fellow lover of the skies deserves these to keep seeing things in the distance!
-  Color|teal|Receive 32 spectral arrows
-  Color|Purple|[Sure, I love compensation!]
-  &6[Mayleen]
+  &3Receive 32 spectral arrows&r
+  &5[Sure, I love compensation!]&r
+  &6[Mayleen]&r
  Thank you for helping! And here, if it is compensation you like, have an advance.
-  &5[Thank you very much.]
-  &6[Mayleen]
+  &3Received 16 enchanting bottles&r
+  &5[Thank you very much.]&r
+  &6[Mayleen]&r
  Anyway, I am not from around here and so the guard thought I was a spy and took my telescope lens! A man named Ed offered to
 get it back, but I could not afford his price. He was down in an alley by the river, would you please talk to him and find a way
 into the armory?
-  Color|Purple|[Some other time.]
-  &6[Mayleen]
+  &5[Some other time.]&r
+  &6[Mayleen]&r
  I see. That is most alright. Perhaps I will seek out a Star Acolyte to assist me.
 &o  [1/3]: Mayleen's telescope lens was taken, but a man named Ed might know a way to get it back. Look for him on the south
 side of Nyr.
@@ -27,13 +29,13 @@ side of Nyr.
  To get into the armory.
   Press the stone button near the Tavern at at [-124, 96, -116] to open the Armory door.
   Mayleen
-  &6[Mayleen]
+  &6[Mayleen]&r
  This is splendid! You got my lens! I will start repairing the main body while you head downstairs to fix the gearing! When all
 the lights face towards you, the telescope will be ready.
 &o  Mayleen's telescope just needs to be turned now. Align all the lights in her tower to fix the telescope. Header
 solution_to_the_gear_puzzle  Solution to the gear puzzle
    Mayleen
-  &6[Mayleen]
+  &6[Mayleen]&r
  Thank you so much! I am eternally grateful for your help, I can now get an excellent view of the skies! As was promised, here
 is your compensation; spend it wisely.
  STARRY NIGHT COMPLETE! Awarded 96 Enchanting Bottles.

@@ -1,89 +1,90 @@
-&o  Visit Nurse Deidre to find a way to help Melinda's leg Table
+&r
+&o  Visit Nurse Deidre to find a way to help Melinda's leg
  Melinda
   Coordinates: [-614, 96, 12]
-   Color|ORANGE|[Melinda]
+   &6[Melinda]&r
  Hello there, you caught me at a bad time. I normally would be happy to talk to you and try to figure out why you broke into my
 house, but I'm a bit preoccupied with my leg.
-  Color|purple|[What happened to your leg?]
-  Color|ORANGE|[Melinda]
+  &5[What happened to your leg?]&r
+  &6[Melinda]&r
  I was putting the finishing touches on my roof and fell off. My leg is surely broken now. I managed to make it to this chair
 after much struggling, but that is about all I have been able to do.
-  Color|purple|[So you need a doctor?]
-  Color|ORANGE|[Melinda]
+  &5[So you need a doctor?]&r
+  &6[Melinda]&r
  I do, but Deidre would never let me hear the end of it. We were friends until she beat me in a baking contest. Her bragging got
 on my nerves and I haven't spoken to her since. I will have to give in and crawl over there later, it won't be a very pleasant
 trip.
-  Color|purple|[I could go see Nurse Deidre for you.]
-  Color|ORANGE|[Melinda]
+  &5[I could go see Nurse Deidre for you.]&r
+  &6[Melinda]&r
  You would do that for me? Thank you. I will have to think of a way to thank you for your kindness.
-  Color|PURPLE|[Have fun with that!]
-  Color|Orange|[Melinda]
+  &5[Have fun with that!]&r
+  &6[Melinda]&r
  I promise you I won't.
-  Color|purple|[So you need a healing potion?]
-  Color|orange|[Melinda]
+  &5[So you need a healing potion?]&r
+  &6[Melinda]&r
  Sadly I have always been allergic to those. They don't heal me, and they make swell up a bit.
-  Color|purple|[You don't have anything worth stealing anyway.]
-  &6[Melinda]
+  &5[You don't have anything worth stealing anyway.]&r
+  &6[Melinda]&r
  I'm not sure if I should be happy or very sad.
-&o  C: Visit Nurse Deidre to find a way to help mend Melinda's leg. Table
+&o  C: Visit Nurse Deidre to find a way to help mend Melinda's leg.
  Nurse Deidre
   Coordinates: [-754, 107, -8], Tower Entrance: [-715, 108, -11]
-   Color|orange|[Nurse Deidre]
+   &6[Nurse Deidre]&r
  If you're not feeling well, feel free to rest for a bit in one of the beds.
-  Color|purple|[A woman named Melinda fell off her roof and broke her leg.]
-  Color|orange|[Nurse Deidre]
+  &5[A woman named Melinda fell off her roof and broke her leg.]&r
+  &6[Nurse Deidre]&r
  Melinda? I haven't spoken to her in years. Well obviously she needs to be taken care of immediately. Unfortunately we are
 running a bit low on supplies at the moment due to the bandits.
-  Color|purple|[What do you need?]
-  Color|orange|[Nurse Deidre]
+  &5[What do you need?]&r
+  &6[Nurse Deidre]&r
  I have most of the things she will need, but we are out of materials to make casts. If her leg keeps moving it will never heal,
 so that is rather important.
-  Color|purple|[Can I help?]
-  Color|orange|[Nurse Deidre]
+  &5[Can I help?]&r
+  &6[Nurse Deidre]&r
  If you could get 15 Spider Silk from the   Link   Swamp Sinkhole Swamp_Sinkhole wikilink north of   Link   Sierhaven Sierhaven
 wikilink I should be able to weave it into a cast for her to wear, but it will be very dangerous.
-  Color|purple|[I will head right there.]
-  Color|orange|[Nurse Deidre]
+  &5[I will head right there.]&r
+  &6[Nurse Deidre]&r
  Good luck, retreat if you get into trouble. Last thing we need is another person getting hurt.
-  Color|purple| [Hopefully you get supplies in soon.]
-  Color|orange| [Nurse Deidre]
+  &5 [Hopefully you get supplies in soon.]&r
+  &6 [Nurse Deidre]&r
  I'm sure Lowtide will send a shipment soon, but I worry about her leg setting wrong in the meantime.
 &o  C [1/2]: Collect 15 Spider Silk from the   Link   Swamp Sinkhole Swamp_Sinkhole wikilink
-&o  C [2/2]: Once you have 15 Spider Silk return to Nurse Deidre. Table
+&o  C [2/2]: Once you have 15 Spider Silk return to Nurse Deidre.
  Nurse Deidre
-  Color|orange|[Nurse Deidre]
+  &6[Nurse Deidre]&r
  If you're not feeling well, feel free to rest for a bit in one of the beds.
-  Color|purple| [I have the Spider Silk.]
-  Color|orange|[Nurse Deidre]
+  &5 [I have the Spider Silk.]&r
+  &6[Nurse Deidre]&r
  Wonderful! This goes here and that goes there... Okay it should be ready to go. I'll have to do the final fitting myself
 obviously, but I will have to grab some equipment before I head over. Take this cast and these crutches to her, and I'll meet up
 with her as soon as I can.
-&o  C: Take the Cast and the Crutches back to Melinda Table
+&o  C: Take the Cast and the Crutches back to Melinda
  Melinda
-  Color|ORANGE|[Melinda]
+  &6[Melinda]&r
  Have you spoken to Nurse Deidre yet?
-  Color|purple|[I did. She gave me this cast and these crutches for you. She promised to come by in person as soon as she can.]
-  Color|ORANGE|[Melinda]
+  &5[I did. She gave me this cast and these crutches for you. She promised to come by in person as soon as she can.]&r
+  &6[Melinda]&r
  I can't thank you enough. My mind is clouded by pain, but I think I left some money in my basement. Would you like to go check?
-  Color|purple|[Yes.]
-  Color|purple|[Not right now.]
-  &6[Melinda]
+  &5[Yes.]&r
+  &5[Not right now.]&r
+  &6[Melinda]&r
  Let me know when you are ready.
 &o  C [1/2]: Talk to Melinda, go to her basement, and open the chests.
 &o  C [2/2]: If you forget where to find Melinda, you can find her here.
  After opening the chest:
 &o  There is nothing in this chest. You should go talk to Melinda
-&o  C: Talk to Melinda. Table
+&o  C: Talk to Melinda.
  Melinda
-  Color|ORANGE|[Melinda]
+  &6[Melinda]&r
  I'm feeling so much better now. Deidre came by while you were down there. Did you find any money down there?
-  Color|purple|[No, the chest was empty.]
-  Color|ORANGE|[Melinda]
+  &5[No, the chest was empty.]&r
+  &6[Melinda]&r
  Oh dear, I completely forgot that I took my money with me when I bought building blocks. Sorry about making you go down there.
 Here is your reward. I'll throw in a few healing potions since I'm allergic to them anyway.
-  Color|purple|[No, but I found a strange book.]
-  Color|orange|[Melinda]
+  &5[No, but I found a strange book.]&r
+  &6[Melinda]&r
  Umm... Don't worry about that. Oh I had my money on me all along, silly me. Here is your reward, plus a few health potions to
 help you forget about what you saw.
-   Healing Vials]]!
+   &3CASTING FOR HELP COMPLETE!&r SoftBreak   &3Awarded 64 Experience Bottles and 3 [[Healing Vial|Healing Vials]]!&r
 Link   Category:Quests Category:Quests wikilink

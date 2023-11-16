@@ -1,52 +1,53 @@
-&o  Speak with Dimitri on the second floor of the Alchemy Workshop at -800 116 -45 Table
+&r
+&o  Speak with Dimitri on the second floor of the Alchemy Workshop at -800 116 -45
  Dmitri
-  Color|orange|[Dimitri]
- Ex... excuse me... Could I perhaps ask you something?" SoftBreak   Color|purple|[Sure, what is it?]
-  Color|orange|[Dimitri]
+  &6[Dimitri]&r
+ Ex... excuse me... Could I perhaps ask you something?" SoftBreak   &5[Sure, what is it?]&r
+  &6[Dimitri]&r
  In your journeys, have you perhaps heard tale of the researcher Ignos?
-  Color|PURPLE|[I don't believe so. Who is he?]
-  Color|orange|[Dimitri]
+  &5[I don't believe so. Who is he?]&r
+  &6[Dimitri]&r
  He... He was the head of Magical Physics for this lab, as well my mentor. About 2 years ago, I was hired as his apprentice, and
 his work fascinated me to no end.
-  Color|purple|[What happened to him?]
-  Color|orange|[Dimitri]
+  &5[What happened to him?]&r
+  &6[Dimitri]&r
  About 8 months ago, he left to meet with the Axtan Monks, claiming there was something there that was worth researching.
 Although, no matter how much I asked him, he refused to tell me what had piqued his interest.
-  Color|PURPLE|[You haven't seen him in 8 months?]
-  Color|orange|[Dimitri]
+  &5[You haven't seen him in 8 months?]&r
+  &6[Dimitri]&r
  Well, about 2 months later, he returned. He was no stranger to long journeys, but this one had taken him the longest to return.
 Something was different about him as well, something about the way he carried himself. He spoke to me about the success of the
 trip, but was short on details.
-  Color|PURPLE|[Then what happened?]
-  Color|orange|[Dimitri]
+  &5[Then what happened?]&r
+  &6[Dimitri]&r
  The next morning, I woke up, and he was gone again. He left without saying a word to me or anyone else in the lab. We haven't
 seen or heard from him since that day.
-  Color|purple|[Would you like me to investigate?]
-  Color|orange|[Dimitri]
+  &5[Would you like me to investigate?]&r
+  &6[Dimitri]&r
  W...would you actually do that? I don't have much in way of payment for such a service.
-  Color|purple|[Sure, I'll see what I can dig up on him.]
-  Color|orange|[Dimitri]
+  &5[Sure, I'll see what I can dig up on him.]&r
+  &6[Dimitri]&r
  Please, see what you can find out.
 &o  [1/2] Head to the   Link   Axtan Monastery Axtan_Monastery wikilink to search for a clue as to Ignos' whereabouts.
 &o  [2/2] Once you find any clues you can return to Dimitri with them to update your quest compass. You will need all of the
-clues on you to complete the quest if you don't return to him between PoIs. Table
+clues on you to complete the quest if you don't return to him between PoIs.
  Dimitri
-  Color|orange|[Dimitri]
+  &6[Dimitri]&r
  The Anthill? That's all the way by Farr. What could he have been searching for over there?
 &o  Head to the   Link   Anthill Anthill wikilink at 820 110 210 and find his old labs. This is the same location for the
 entrance to   Link   Ephemeral Corridors Ephemeral_Corridors wikilink  . His workstation is beneath the puzzle. Speak with
-Dimitri after you retrieve the book Table
+Dimitri after you retrieve the book
  Dimitri
-  Color|orange|[Dimitri]
- His old lab? He hasn't been over there in years. SoftBreak   Color|purple|[Do you know where it is?]
-  Color|orange|[Dimitri]
+  &6[Dimitri]&r
+ His old lab? He hasn't been over there in years. SoftBreak   &5[Do you know where it is?]&r
+  &6[Dimitri]&r
  Sure, the entrance is connected to a ruined structure on the battlefield by Nyr.
-  Color|purple|[Why did he have another lab in Nyr?]
-  Color|orange|[Dimitri]
+  &5[Why did he have another lab in Nyr?]&r
+  &6[Dimitri]&r
  When I first started working, he had been contracted to do some research in that area, but under Nyr law, he wasn't allowed to
 make a lab within the town limits. Once he was done with the work though, he never went back to that lab, so it sat abandoned.
 &o  Go to Ignos's old labs near Nyr -83 72 -45 and retrieve his reports. Open the door by removing the potatoes from the
-dispencer. Table
+dispencer.
  Dimitri
 &o  [Dimitri stares at the pages of the book. The small sliver of hope fades from his eyes, and words fall silent upon his
 mouth. Without making the slightest sound, he reaches in his pocket and hands you payment for your efforts.]

@@ -1,384 +1,387 @@
-  WorkInProgress|First Choice
-&o  Help the High Priest of New Antium seek out a saboteur. Table
+&r
+  WorkInProgress|First Choice&r
+&o  Help the High Priest of New Antium seek out a saboteur.
   The High Priest
   Coordinates: [-418 174 -129]
-   The man stands behind the altar, slowly looking through the pages of an old tome.
-  Color|purple|[Uh... hello ?]
-  Color|orange|[The High Priest]
+   &8The man stands behind the altar, slowly looking through the pages of an old tome.&r
+  &5[Uh... hello ?]&r
+  &6[The High Priest]&r
  Hm? Ah, forgive me, I didn't notice your entrance. I was engrossed in the holy texts.
 &o  He adjusts his glasses, and squints as he scans your face.
-  Color|orange|[The High Priest]
+  &6[The High Priest]&r
  A newcomer, are you? I don't recognize your look. Tell me, what is your name?
-  Color|purple|[ [Player], sir]
-  Color|orange|[The High Priest]
+  &5[ [Player], sir]&r
+  &6[The High Priest]&r
  Ah. You are the one Ephesius spoke of, then. And I hear you have worked with the Praetor as well ?
-  Color|purple|[I have, yes.]
-  Color|orange|[The High Priest]
+  &5[I have, yes.]&r
+  &6[The High Priest]&r
  Hm... It is a shame you went to him first.
-  Color|purple|[Why is that ?]
-  Color|orange|[The High Priest]
+  &5[Why is that ?]&r
+  &6[The High Priest]&r
  He is insufferable. No respect for the needs of New Antium, only the vengeful destruction of the Shades. Meanwhile this whole
 city falls to ruin. New Antium is lucky th church is in charge of the food stores. Or, they would be perhaps, si vult
 Architectus.
-  Color|purple|[What's wrong?]
-  Color|orange|[The High Priest]
+  &5[What's wrong?]&r
+  &6[The High Priest]&r
  Someone from within the city is sabotaging the food stores. Say, you seem to have the good of the city in your heart. Will you
 help me ?
-  Color|purple|[Yes sir, I can help.]
-  Color|orange|[The High Priest]
+  &5[Yes sir, I can help.]&r
+  &6[The High Priest]&r
  (Missing)
-  Color|purple|[Sorry, I'm busy right now.]
-  Color|orange|[The High Priest]
+  &5[Sorry, I'm busy right now.]&r
+  &6[The High Priest]&r
  I insist, you must help, these are urgent matters.
-  Color|orange|[The High Priest]
+  &6[The High Priest]&r
  Thank you for your understanding. You will not regret assisting the Silver Codex. Now to business.
-  &5[Let's get started.]
-  &6[The High Priest]
+  &5[Let's get started.]&r
+  &6[The High Priest]&r
  I have my eye on four citizens as of now. Each have been spotted in the area during the sabotage of the food stores, according
 to confessions of other citizens when I sent out a call.
-  &5[First, what happened to the food itself?]
-  &6[The High Priest]
+  &5[First, what happened to the food itself?]&r
+  &6[The High Priest]&r
  Oh, it is clearly malicious. There were strange mechanical orbs tossed into the food, leaking a viscous black liquid into the
 wheat. Now, the suspects.
-  &5[Indeed.]
-  &5[Wait, what? I'm sorry, I'm kinda busy right now...]
-  &6[The High Priest]
+  &5[Indeed.]&r
+  &5[Wait, what? I'm sorry, I'm kinda busy right now...]&r
+  &6[The High Priest]&r
  We don't have time for your excuses, hero. I have my eye on four citizens as of now. Each have been spotted in the area during
 the sabotage of the food stores, according to confessions of other citizens when I sent out a call.
-  &5[...Fine. First, what happened to the food itself?]
-  &6[The High Priest]
+  &5[...Fine. First, what happened to the food itself?]&r
+  &6[The High Priest]&r
  Oh, it is clearly malicious. There were strange mechanical orbs tossed into the food, leaking a viscous black liquid into the
 wheat. Now, the suspects.
-  &5[Yeah, that sounds suspicious alright.]
-  &6[The High Priest]
+  &5[Yeah, that sounds suspicious alright.]&r
+  &6[The High Priest]&r
  Lanora the fruits merchant, Gorm the armor salesman, Cairn, the doctor, and the beggar Garmon... They were all spotted in the
 area late at night. Go investigate them, please. Benedictiones in te.
-  Color|purple|[Where can I find Lanora?]
-  Color|orange|[The High Priest]
+  &5[Where can I find Lanora?]&r
+  &6[The High Priest]&r
  Lanora would be to the South of New Antium, I suppose. To my understanding, she runs a stall selling fresh produce, I hear
 little of its success though.
-  Color|purple|[Where can I find Gorm?]
-  Color|orange|[The High Priest]
+  &5[Where can I find Gorm?]&r
+  &6[The High Priest]&r
  Gorm works day and night in the general market area. I trust the boy really, and admire his devotion, but we must be thorough
 with our sources.
-  Color|purple|[Where can I find Garmon?]
-  Color|orange|[The High Priest]
+  &5[Where can I find Garmon?]&r
+  &6[The High Priest]&r
  Garmon... I would hazard a guess he's by the front gates. His frailty concerns me, but we must investigate as necessary.
-  Color|purple|[Where can I find Cairn?]
-  Color|orange|[The High Priest]
+  &5[Where can I find Cairn?]&r
+  &6[The High Priest]&r
  Ah, the Doctor. Their office should be in a small building to the North-West. I deeply admire their work ethic, though they
 don't often come to pray...
 &o  C: Investigate the saboteur of the food stores with the High Priest of New Antium. Speak to him for further details on the
-suspects and where you might find them. Table
+suspects and where you might find them.
   Lanora
   Coordinates: [-443 183 -51]
-   Color|orange|[Lanora]
+   &6[Lanora]&r
  Welcome, welcome dear traveler! If you're here to buy fresh fruits and vegetables, I can provide you some, should you have the
 money of course.
-  Color|purple|[I thought you barely had enough food for yourselves ?]
-  Color|orange|[Lanora]
+  &5[I thought you barely had enough food for yourselves ?]&r
+  &6[Lanora]&r
  That's true, but we have to make money somehow too. Even if no one here will admit that we're forced to trade with our lowland
 "partners", the Dichen, a fact is still a fact, no matter how you look at it. Unified currency helps too, I suppose.
-  Color|purple|[Who are you ?]
-  Color|orange|[Lanora]
+  &5[Who are you ?]&r
+  &6[Lanora]&r
  I'm Lanora and before you ask - no, I'm in no way related to that bartender gal in the tavern. Just a coincidence.
-  Color|purple|[And you... run this bakery ?]
-  Color|orange|[Lanora]
+  &5[And you... run this bakery ?]&r
+  &6[Lanora]&r
  Precisely. Not alone, of course. Sammi's been a great help ever since we started.
-  Color|orange|[Sammi]
+  &6[Sammi]&r
  Thanks, Lan, dear!
-  Color|orange|[Lanora]
+  &6[Lanora]&r
  Anyway, if I satisfied your curiosity, would you like to but anything now?
-  Color|purple|[You don't like the bartender?]
-  &6[Lanora]
+  &5[You don't like the bartender?]&r
+  &6[Lanora]&r
  It's not that I dislike her... She just strikes me as odd, is all. Sorry, didn't mean to come out as rude. Let's see if you
 want to buy anything?
-  Color|purple|[Do you know anything about spoiled food in the supplies?]
-  Color|orange|[Lanora]
+  &5[Do you know anything about spoiled food in the supplies?]&r
+  &6[Lanora]&r
  Wha-what?! Is this some sort of accusation? Listen, I know my business isn't doing so well, but I - I would never stoop so low
 as to sabotage what remains of our city! I DO have standards.
-  Color|purple|[Why were you around the church so late at night then?]
-  Color|orange|[Lanora]
+  &5[Why were you around the church so late at night then?]&r
+  &6[Lanora]&r
  Well, I had heard a loud noise so I went to investigate, I was concerned dear. I too rely on the general food storage, we can't
 live on just fruit and vegetables, no matter how fresh ours are! Nothing seemed out of the ordinary when I got there though. I
 suppose it was dark so I couldn't see much.
-  Color|purple|[Do you have any leads as to who might be then?]
-  Color|orange|[Lanora]
- I...Wouldn't say so... I mean... No... I'm sorry, but I can't help your more, dearie.  Table
+  &5[Do you have any leads as to who might be then?]&r
+  &6[Lanora]&r
+ I...Wouldn't say so... I mean... No... I'm sorry, but I can't help your more, dearie.
   Gorm
   Coordinates: [-473 181 -74]
-   Color|orange|[Gorm]
+   &6[Gorm]&r
  Mm, I am Gorm. I sell armor here. ong Ashkii.
-  Color|purple|[Have you been sabotaging food from the city's storage?]
-  Color|orange|[Gorm]
+  &5[Have you been sabotaging food from the city's storage?]&r
+  &6[Gorm]&r
  Mm... such actions... do not fit Gorm. Powerful Ashkii never betray Architect. Gorm despaired with lack of vision, but
 Architect's light saved Gorm. I have no vision still, but I trust in the Architect that my future will be bright.
-  Color|purple|[Why were you near the church so late then?]
-  Color|orange|[Gorm]
+  &5[Why were you near the church so late then?]&r
+  &6[Gorm]&r
  Ashkii proud. Gorm works hard. I seek Architect every night for boundless wisdom.
-  Color|purple|[Do you have any leads on who might be doing so?]
-  Color|orange|[Gorm]
- I hear footsteps. Heavy footsteps around the church at night. I know no more.  Table
+  &5[Do you have any leads on who might be doing so?]&r
+  &6[Gorm]&r
+ I hear footsteps. Heavy footsteps around the church at night. I know no more.
   Doctor Cairn
   Coordinates: [-481 175 -133]
-   Color|orange|[Doctor Cairn]
+   &6[Doctor Cairn]&r
  Ah, welcome. Are you here for an appointment?
-  Color|purple|[Just passing through.]
-  Color|orange|[Doctor Cairn]
+  &5[Just passing through.]&r
+  &6[Doctor Cairn]&r
  Oh. Feel free to come again if you're feeling unwell. My assistant can help too, they're just next door.
-  Color|purple|[I'm surprised New Antium has a doctor.]
-  Color|orange|[Doctor Cairn]
+  &5[I'm surprised New Antium has a doctor.]&r
+  &6[Doctor Cairn]&r
  We may be struggling but we're not yet on our last legs, and if we were, I'd still be here to fix them up.
-  Color|purple|[What do you know about the spoiled food store?]
-  Color|orange|[Doctor Cairn]
+  &5[What do you know about the spoiled food store?]&r
+  &6[Doctor Cairn]&r
  It's spoiled? Oh dear... Will I be expecting patients with stomach problems soon?
-  Color|purple|[Don't play dumb, why were you at the church last night ?]
-  Color|orange|[Doctor Cairn]
+  &5[Don't play dumb, why were you at the church last night ?]&r
+  &6[Doctor Cairn]&r
  At the church? I've been indoors all last night sound asleep, I don't understand where this accusation is coming from.
-  Color|purple|[So you know nothing at all then?]
-  Color|orange|[Doctor Cairn]
- Not a clue, I'm afraid.  Table
+  &5[So you know nothing at all then?]&r
+  &6[Doctor Cairn]&r
+ Not a clue, I'm afraid.
   Garmon
   Coordinates: [-385 171 -127]
-   Color|orange|[Garmon]
+   &6[Garmon]&r
  Traveler, welcome to New Antium, apologies if the guards were rough with you.
-  Color|purple|[Who are you?]
-  Color|orange|[Garmon]
+  &5[Who are you?]&r
+  &6[Garmon]&r
  The name's Garmon, it shames me to say this but I can no longer afford a roof my head. I must have faith in the Architect
 through these trying times. If you wish to make it easier, could you perhaps donate to the food stores at the church? I do not
 like to beg, but well, times are desperate.
-  Color|purple|[Have you been near the food supplies lately in the church?]
-  Color|orange|[Garmon]
+  &5[Have you been near the food supplies lately in the church?]&r
+  &6[Garmon]&r
  We are all starving, why should I steal from my brethren? The Architect gives, the Architect takes, it is not my right to do
 the same.
-  Color|purple|[I didn't mention anything about theft, why were you at the church?]
-  Color|orange|[Garmon]
+  &5[I didn't mention anything about theft, why were you at the church?]&r
+  &6[Garmon]&r
  It is a common assumption that I would thieve. No, I was merely at the church expressing my reverence.
-  Color|purple|[I see. Do you have any leads then?!]
-  Color|orange|[Garmon]
+  &5[I see. Do you have any leads then?!]&r
+  &6[Garmon]&r
  I dare not accuse my neighbor of misdeeds, lest my judgement be poor. Only the Architect has divine insight.
-  That's everyone, time to report back to the High Priest.
-&o  C: Return to the High Priest empty handed, perhaps he can offer further insight. Table
+  &8That's everyone, time to report back to the High Priest.&r
+&o  C: Return to the High Priest empty handed, perhaps he can offer further insight.
   The High Priest
   Coordinates: [-418 174 -129]
-   Color|orange|[The High Priest]
+   &6[The High Priest]&r
  Ah, spiritus sancti be, you have returned. Have you caught the saboteur?
-  Color|purple|[I...have not. All four of your suspects rebuked my questioning.]
-  Color|orange|[The High Priest]
+  &5[I...have not. All four of your suspects rebuked my questioning.]&r
+  &6[The High Priest]&r
  Did they have alibis?
-  Color|purple|[They at least made claims to me.]
-  Color|orange|[The High Priest]
+  &5[They at least made claims to me.]&r
+  &6[The High Priest]&r
  Hmm. Frustrating. I had hoped they would cave under the pressure. Give me a moment... let me pray...
-  Color|orange|[The High Priest]
+  &6[The High Priest]&r
  O sanctissime architecte, mentem meam ac voluntatem dirige. Quid faciam ut populum meum defendam? Demitte me viam salutis ad
 honestatem...
-&o   The High Priest kneels, face down, hands clasped in prayer. He begins to murmur...
-  Color|purple|[What does that mean?]
-  Color|orange|[The High Priest]
+&o   &8The High Priest kneels, face down, hands clasped in prayer. He begins to murmur...&r
+  &5[What does that mean?]&r
+  &6[The High Priest]&r
  I was praying to the great Architect, seeking guidance. I believe it I have found it. A being from a time long ago.
-&o   He rises slowly, his age forcing him to grasp on to the nearby pulpit.
-  Color|orange|[The High Priest]
+&o   &8He rises slowly, his age forcing him to grasp on to the nearby pulpit.&r
+  &6[The High Priest]&r
  Perhaps she is, but she is a human like you and I... I think. In the far flung reaches of the Keep is a tavern, nested in the
 remnants of the Emperor's racetrack. Within you will find the Proprietor. I would like for you to pay her a visit and seek her
 wisdom on the Shades of the Keep and how they might be involved... If it is not man attacking us, perhaps it could be what is
 left behind...
 &o  C:Seek the Proprietor by the Emperor's racetrack for their wisdom and knowledge of Shades, and how they might be involved.
-Table
   The Proprietor
   Coordinates: [-309, 168, 143]
-   Color|orange|[The Proprietor]
+   &6[The Proprietor]&r
  Hello, traveler. Come, sit down. Have a drink.
-  The woman hunched before you seems impossibly ancient. Every part of her skin is traced with deep wrinkles. She wears a straw
-hat of a design you don't recognize, and is otherwise garbed in an adventuring outfit - belts, boiled leather armor, and a
-potion pouch hanging off her shoulder. Her voice creaks like the casino floorboards, but is laced with a sickly sweetness.
-  Color|purple|[Who... are you?]
-  Color|orange|[The Proprietor]
+  &8The woman hunched before you seems impossibly ancient. Every part of her skin is traced with deep wrinkles. She wears a
+straw hat of a design you don't recognize, and is otherwise garbed in an adventuring outfit - belts, boiled leather armor, and a
+potion pouch hanging off her shoulder. Her voice creaks like the casino floorboards, but is laced with a sickly sweetness.&r
+  &5[Who... are you?]&r
+  &6[The Proprietor]&r
  I, child, am the Proprietor. Whatever real name I had, I forgot a few decades back. Must not have been all that worth
 remembering.
-  Color|purple|[What do you do here?]
-  Color|orange|[The Proprietor]
+  &5[What do you do here?]&r
+  &6[The Proprietor]&r
  Run shop. Acquire new flavors for my customers. Keep things in order.
-  Color|purple|[Things don't seem very... orderly.]
-  Color|orange|[The Proprietor]
+  &5[Things don't seem very... orderly.]&r
+  &6[The Proprietor]&r
  Oh, since that fool Pelias had his... excursion, businees has been slow. It picked up about two score years ago, but, good time
 come and go. And my workers all grew rather... dead.
-  Color|purple|[How long... How long have you been here?]
-  She shifts her head. With her eyes now shaded from the lantern light by her hat, you notice a bright glint in them you hadn't
-seen before. It shifts from one color to the next without warning. You feel entranced. Trapped.
+  &5[How long... How long have you been here?]&r
+  &8She shifts her head. With her eyes now shaded from the lantern light by her hat, you notice a bright glint in them you
+hadn't seen before. It shifts from one color to the next without warning. You feel entranced. Trapped. &r
  {...}
-  Color|orange|[The Proprietor]
+  &6[The Proprietor]&r
  Oh, honey. It's rude to ask a woman her age, isn't it?
-  And then, just as suddenly as the feeling began - it stops.
-  Color|purple|[What is this place?]
-  Color|orange|[The Proprietor]
+  &8And then, just as suddenly as the feeling began - it stops.&r
+  &5[What is this place?]&r
+  &6[The Proprietor]&r
  My little abode, humble as it is. A home for all sorts - the gambler, the miser, the lord and the beggar. Or, it was. And will
 be again, as soon as that Praetor hoists himself off his little seat and goes fix this mess
-  Color|purple|[What do you know about all this? The shade infection, and Pelias?]
-  Color|orange|[The Proprietor]
+  &5[What do you know about all this? The shade infection, and Pelias?]&r
+  &6[The Proprietor]&r
  I know that it's poor for business. The Shade Hunter's Draught was a top seller, but, as for all my other endeavors in this
 era... things haven't panned out quite so well.
-  Color|purple|[This...era?]
-  Color|orange|[The Proprietor]
+  &5[This...era?]&r
+  &6[The Proprietor]&r
  Nevermind that, child. The ramblings of an old woman. A   &o  very old woman.
-  Color|purple|[Who are all these... people? Shades?]
-  Color|orange|[The Proprietor]
+  &5[Who are all these... people? Shades?]&r
+  &6[The Proprietor]&r
  My staff. Impressively loyal, aren't they? I was... away, in those years. Missed the main event, Pelias' big show-stopper. And
 boy did it stop the show alright. The whole empire. East to West - though the lifts has stopped running... when, eight score
 ago? Nine? Time is harder lately. Most days bleed together. I should get out from behind the bar, but, everwhere seems to keep
 changing
-  Color|purple|[Who are all these... people? Shades?]
-  Color|orange|[The Proprietor]
+  &5[Who are all these... people? Shades?]&r
+  &6[The Proprietor]&r
  Rude! My staff have always been plenty docile. Just, give one the stink eye, and they'll leave you well enough alone.
-  A glimmer seems to shine behind her eyes. Dangerous and intoxication, all at once.
-  Color|purple|[Can I buy anything here ?]
-  Color|orange|[The Proprietor]
+  &8A glimmer seems to shine behind her eyes. Dangerous and intoxication, all at once.&r
+  &5[Can I buy anything here ?]&r
+  &6[The Proprietor]&r
  Oh, child, child. There is always, of course... something to buy.
-  She grins. A wide, horrible smile showing crooked, decaying teeth. She's been waiting for you to ask.
-  Color|purple|[What sort of things are there?]
-  Color|orange|[The Proprietor]
+  &8She grins. A wide, horrible smile showing crooked, decaying teeth. She's been waiting for you to ask.&r
+  &5[What sort of things are there?]&r
+  &6[The Proprietor]&r
  Well, this is a bar, isn't it? Food, drink, whatever your heart desires. Brews brought from distant lands. Your mother's old
 recipe, or the liquor your father drank himself to death with. Your grandfather was a fisherman? We have his freshest catch.
 Your ancestor drank from the fermented pools, the mana-laden sap at the base of the world - I'll cough it up. Anything. Anything
 for rings, my friend. Anything for rings.
-  Color|purple|[How do I... buy for those things?]
-  Color|orange|[The Proprietor]
+  &5[How do I... buy for those things?]&r
+  &6[The Proprietor]&r
  Oh you didn't thik it'd be just a one time purchase, did you? No, no no. The slots it is for you my friend. I have tokens for
 you, you have rings for me. Now go - win that jackpot. Taste the world. Fund my excursion to Celsia - I've always wanted to go,
 you see. Just, be sure you don't leave early. I wouldn't want you to go without having your fill.
-  Color|purple|[Excuse me. I've been sent here by the High Priest of New Antium.]
-  Color|orange|[The Proprietor]
+  &5[Excuse me. I've been sent here by the High Priest of New Antium.]&r
+  &6[The Proprietor]&r
  Ah, is he finally prepared to pay his tab?
-  Color|purple|[Not as far as I know. It's about Shades actually.]
-  Color|orange|[The Proprietor]
+  &5[Not as far as I know. It's about Shades actually.]&r
+  &6[The Proprietor]&r
  My staff are perfectly behaved. I won't have you coming in here attacking their performance.
-  Her eyes seem to steel with a danger that causes you to quickly clarify.
-  Color|purple|[No, no! It's nothing like that! I'm seeking an expert.]
-  Color|orange|[The Proprietor]
+  &8Her eyes seem to steel with a danger that causes you to quickly clarify.&r
+  &5[No, no! It's nothing like that! I'm seeking an expert.]&r
+  &6[The Proprietor]&r
  Ah, yes traveler, that I can help you with. What do you need to know about the Shades?
-  She seems to calm, the pressure you had felt slipping away.
-  Color|purple|[Someone has been sabotaging the food stocks in New Antium]
-  Color|orange|[The Proprietor]
+  &8She seems to calm, the pressure you had felt slipping away.&r
+  &5[Someone has been sabotaging the food stocks in New Antium]&r
+  &6[The Proprietor]&r
  Well that couldn't be your traditional Shade, now could it? They don't change their path, after all. It's how this lovely
 tavern continues to run each passing moment. They are loyal and they are consistent - as long as you lot don't anger them.
-  Color|purple|[That's why I came here. We want to know how the Shades really came to be.]
-  Color|orange|[The Proprietor]
+  &5[That's why I came here. We want to know how the Shades really came to be.]&r
+  &6[The Proprietor]&r
  I'm not sure that I'm at liberty to share that with you. That is a path you and your friends in the crumbling Keep need to walk
 by yourselves.
-  Color|purple|[Then can you tell me if the Shades could be evolving?]
-  Color|orange|[The Proprietor]
+  &5[Then can you tell me if the Shades could be evolving?]&r
+  &6[The Proprietor]&r
  Ahhh, now that sounds far more likely doesn't it? They'd be far harder to control, and far more aware wouldn't they? Don't you
 wonder where the rest of an Ashkii goes when they become a Shade?
-  Color|purple|[I do.]
-  Color|orange|[The Proprietor]
+  &5[I do.]&r
+  &6[The Proprietor]&r
  What if that place could haverst the entire Ashkii instead? What could be left behind? What would remain?
-  Color|purple|[A ghost?]
-  Color|orange|[The Proprietor]
+  &5[A ghost?]&r
+  &6[The Proprietor]&r
  Or a replacement.
-  Color|purple|[So you're telling me that someone in New Antium has been replaced?]
-  Color|orange|[The Proprietor]
+  &5[So you're telling me that someone in New Antium has been replaced?]&r
+  &6[The Proprietor]&r
  I am not telling you anything hero. I'm speculating, the same as you. There must be more evidence, yes?
-  Color|purple|[I'm not sure how to gather it.]
-  Color|orange|[The Proprietor]
+  &5[I'm not sure how to gather it.]&r
+  &6[The Proprietor]&r
  Perhaps that I can help with, but be warned. It will only make it easier for It to take what it wants... Go, become the guest
 of honor at the racetrack of the Emperor. If you are truly worthy, perhaps you'll fin a way into my attic and find what you
 need. If you're not what you claim to be, however... We won't be speaking again.
-  Color|purple|[Thank you]
-  Color|orange|[The Proprietor]
+  &5[Thank you]&r
+  &6[The Proprietor]&r
  Don't thank me. Prove yourself. Go.
 &o  C: Investigate the throne of the racetrack in hopes of... finding a way up into the attic? Then find what is needed there.
- Once you got the Utopia Synthesis at [-316 195 145] go back to the Proprietor. Table
+ Once you got the Utopia Synthesis at [-316 195 145] go back to the Proprietor.
   The Proprietor
   Coordinates: [-309, 168, 143]
-   Color|orange|[The Proprietor]
+   &6[The Proprietor]&r
  Hello, traveler. Come, sit down. Have a drink.
-  Color|purple|[Who... are you?]
-  Color|purple|[What is this place?]
-  Color|purple|[Who are all these... people? Shades?]
-  Color|purple|[Can I buy anything here ?]
-  Color|purple|[I've found the Utopia Synthesis in your attic.]
-  Color|orange|[The Proprietor]
+  &8The woman hunched before you seems impossibly ancient. Every part of her skin is traced with deep wrinkles. She wears a
+straw hat of a design you don't recognize, and is otherwise garbed in an adventuring outfit - belts, boiled leather armor, and a
+potion pouch hanging off her shoulder. Her voice creaks like the casino floorborads, but is laced with a sickly sweetness.&r
+  &5[Who... are you?]&r
+  &5[What is this place?]&r
+  &5[Who are all these... people? Shades?]&r
+  &5[Can I buy anything here ?]&r
+  &5[I've found the Utopia Synthesis in your attic.]&r
+  &6[The Proprietor]&r
  Curious, so you have. Do what you will, and I wish you luck in whatever is to come of it.
-&o  C:Return to the High Priest with the strange tool in hand... Perhaps it can help? Table
+&o  C:Return to the High Priest with the strange tool in hand... Perhaps it can help?
   The High Priest
   Coordinates: [-418 174 -129]
-   Color|orange|[The High Priest]
+   &6[The High Priest]&r
  You return. Something about you feels different. Have found us an answer?
-  Color|purple|[I... think so? The Proprietor let me into her attic and I found this item there.]
-  Color|orange|[The High Priest]
+  &5[I... think so? The Proprietor let me into her attic and I found this item there.]&r
+  &6[The High Priest]&r
  Then we must test it on the food stores. Perhaps this can attune us to the culprit or track down the Shade involved?
-  Color|purple|[I can do that. Where is the food storage?]
-  Color|orange|[The High Priest]
+  &5[I can do that. Where is the food storage?]&r
+  &6[The High Priest]&r
  Across the street, on the upper floor. Look for a man named Finnlay. He works for the Codex and is on guard post currently.
-&o  C: Speak with Finnlay and attune the device to the food stores across the street. Table
+&o  C: Speak with Finnlay and attune the device to the food stores across the street.
   Finnlay
   Coordinates : [-433 480 -100]
-   Color|orange|[Finnlay]
+   &6[Finnlay]&r
  Stay back! Nobody's touching this food 'less the High Priest himself says so!
-  Color|purple|[The High Priest himself has said so. I need to inspect the sabotaged food.]
-  Color|orange|[Finnlay]
+  &5[The High Priest himself has said so. I need to inspect the sabotaged food.]&r
+  &6[Finnlay]&r
  Oh uh... They didn't tell me whatta say if that happens. Um, go 'head I guess?
-  Color|purple|[Thanks Finnlay.]
-  You approach the food and hold out the Utopia Synthesizer. After a few uncertain waves around the strange contraption on the
-ground, it whirrs to life.
-  After a moment, it seems to focus on the mysterious mechanism on the ground. There is a moment of silence, then it quite
-suddenly... explodes! You should return to the High Priest with this information!
-&o  C: Report back to the High Priest after witnessing the unusual sequence of events in the food stores. Table
+  &5[Thanks Finnlay.]&r
+  &8You approach the food and hold out the Utopia Synthesizer. After a few uncertain waves around the strange contraption on the
+ground, it whirrs to life.&r
+  &8After a moment, it seems to focus on the mysterious mechanism on the ground. There is a moment of silence, then it quite
+suddenly... explodes! You should return to the High Priest with this information!&r
+&o  C: Report back to the High Priest after witnessing the unusual sequence of events in the food stores.
   The High Priest
   Coordinates : [-418 174 -129]
-   Color|orange|[The High Priest]
+   &6[The High Priest]&r
  Welcome back, [Player]. How did it go with the device?
-  Color|purple|[It reacted intesnsely, and then the mechanism there exploded!]
-  Color|orange|[The High Priest]
+  &5[It reacted intesnsely, and then the mechanism there exploded!]&r
+  &6[The High Priest]&r
  Ahh, that seems helpful. Perhaps you could go speak to each of our suspects again. It sounds like we might have some...
 leverage now. Bless you, friend.
 &o  C: Investigate the suspects once again, this time with the strange device in hand. If you cannot fin one of them, it might
-be best to move on to the next. You can ask the High Priest for directions. Table
+be best to move on to the next. You can ask the High Priest for directions.
   Doctor Cairn
   Coordinates : [-481 175 -133]
-   Color|orange|[Doctor Cairn]
+   &6[Doctor Cairn]&r
  Oh, y-you're back. You know, I'm becoming increasingly more worried about these disappearances, rumor has it the others you
 interrogated have all vanished entirely... Y-you're not going to make me d-disappear to, right?
-  Color|purple|[You know nothing of their disappearances yourself?]
-  Color|orange|[Doctor Cairn]
+  &5[You know nothing of their disappearances yourself?]&r
+  &6[Doctor Cairn]&r
  Of course not! I pray to the Architect I'm not the next in line. I must pray until I can take no more.
-  The Utopia Synthesis starts to react violently, rattling intensely and angling towards Cairn.
+  &8The Utopia Synthesis starts to react violently, rattling intensely and angling towards Cairn.&r
  {...}
-  Color|orange|[Doctor Cairn]
+  &6[Doctor Cairn]&r
  Wh-What's going on? What's that strange artifact? Why do I hear ringing? W-why do I feel so dizzy?
-&o  C: Talk to... Neo Cairn?! Listen to what they have to say. Table
+&o  C: Talk to... Neo Cairn?! Listen to what they have to say.
   Neo Cairn
   Coordinates : [-481 175 -133]
-   Color|orange|[Neo Cairn]
+   &6[Neo Cairn]&r
  Booting...
-  Color|orange|[Neo Cairn]
+  &6[Neo Cairn]&r
  THE MACHINE GOD's hour is... NIGH.
-  Color|orange|[Neo Cairn]
+  &6[Neo Cairn]&r
  The Lord Pelias will soon be returning, bringing with him GREATNESS and GLORY GLORY GLORY. Gifts must be prepared, flowers must
 be oiled, and our food must have NUTRITIONAL VALUE.
-  Color|orange|[Neo Cairn]
+  &6[Neo Cairn]&r
  Being of FLESH, you are not welcome in our NEW WORLD. UTOPIA is COMING.
-&o  C: Return to the High Priest and tell him of the shocking scene in the Doctor's Office. Table
+&o  C: Return to the High Priest and tell him of the shocking scene in the Doctor's Office.
   The High Priest
   Coordinates : [-418 174 -129]
-   Color|orange|[The High Priest]
+   &6[The High Priest]&r
  Have you spoken to the suspects yet?
-  Color|purple|[One of them, yest. The rest have vanished. The only one left, Doctor Cairn, turned out to be a... machine thing
-in disguise?]
-  Color|orange|[The High Priest]
+  &5[One of them, yest. The rest have vanished. The only one left, Doctor Cairn, turned out to be a... machine thing in
+disguise?]&r
+  &6[The High Priest]&r
  In eius nomine... What ever do you mean?
-  Color|purple|[I mean he exploded after telling me the "Machine God" is nigh. What is happening?]
-  Color|orange|[The High Priest]
+  &5[I mean he exploded after telling me the "Machine God" is nigh. What is happening?]&r
+  &6[The High Priest]&r
  What indeed?! First the Shades devour the weak, scouring the shadows of our lands, having themselves been reduced to near
 nothing. Now there are mechanical creatures taking over our citizens? This will not be the end of this, in the name of the
 Architect, I swear it. We will keep New Antium safe!
-  Color|purple|[Yes we will!]
-  Color|orange|[The High Priest]
+  &5[Yes we will!]&r
+  &6[The High Priest]&r
  YES we will! This place is protected by the might of the Architect and his mighty Silver. We shall not allow such darkness
 envelop us! We will fight back! Our prayers will be heard!
-  The old Priest's passion cuts deeply to your core, inspiring you deeply.
-  Color|purple|[I won't let New Antium fall!]
-  Color|orange|[The High Priest]
+  &8The old Priest's passion cuts deeply to your core, inspiring you deeply.&r
+  &5[I won't let New Antium fall!]&r
+  &6[The High Priest]&r
  Nor I! Thank you for all you have done, [Player]. This isn't over!
-  KEEPER AGENTS COMPLETE
-LineBreak   Awarded [[Will of the Codex]], 1 Hyperchromatic Archos Ring, and access to a secret teleporter to the [[Sticks and
-Stones Tavern]]!
+  &3KEEPER AGENTS COMPLETE&r
+LineBreak   &3Awarded [[Will of the Codex]], 1 Hyperchromatic Archos Ring, and access to a secret teleporter to the [[Sticks and
+Stones Tavern]]!&r

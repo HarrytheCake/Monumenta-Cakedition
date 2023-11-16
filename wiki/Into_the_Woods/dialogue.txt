@@ -1,331 +1,332 @@
+&r
 &o  Listen to the instructions to find   Link   Galengarde Galengarde wikilink  .
-&o  C: What a beautiful port town! There has to be a dockmaster or someone who can help you figure out where to go next. Table
+&o  C: What a beautiful port town! There has to be a dockmaster or someone who can help you figure out where to go next.
  Dockmaster Hromae
   Coordinates: [-471 40 -802]
-   &6[Dockmaster Hromae]
+   &6[Dockmaster Hromae]&r
  Salu! You seem like a fresh face around here. Who are you?
-  &5[I'm [Player]. Where exactly am I?]
-  &6[Dockmaster Hromae]
+  &5[I'm [Player]. Where exactly am I?]&r
+  &6[Dockmaster Hromae]&r
  You're in Port Manteau, the gateway to the Architect's Ring. How exactly did you come to be here?
-  &5[I stepped through a strange portal I found under the Celsian Isles and found myself in a cave nearby.]
-  &6[Dockmaster Hromae]
+  &5[I stepped through a strange portal I found under the Celsian Isles and found myself in a cave nearby.]&r
+  &6[Dockmaster Hromae]&r
  Oh, the usual magic stuff then. I assume you found another of the old Silvergates then. Seems to be how a lot of folks get
 here. Anyway, welcome. I suppose I could send you in the right direction to get acquainted with the area then.
-  &5[My crewmates and I traveled here following a lead from a professor named Walthan.]
-  &6[Dockmaster Hromae]
+  &5[My crewmates and I traveled here following a lead from a professor named Walthan.]&r
+  &6[Dockmaster Hromae]&r
  Oh... Yeah, I know that name. He didn't come with you, did he? Caused quite a ruckus the last time he was around... Anyway,
 welcome. I suppose I could send you in the right direction to get acquainted with the area then.
-  &5[That would be lovely.]
-  &6[Dockmaster Hromae]
+  &5[That would be lovely.]&r
+  &6[Dockmaster Hromae]&r
  You're free to spend some time in the Port here, but we don't get too many ships. We do plenty of fishing though, if that's
 something you're into. More importantly though, if you follow the dirt path along the coast to the west, it'll lead you up the
 hill to the Dichen capital of Galengarde.
-  &5[Dichen?]
-  &6[Dockmaster Hromae]
+  &5[Dichen?]&r
+  &6[Dockmaster Hromae]&r
  Unn... Yes, Dichen. That is what we are. Do you really know nothing of this place?
-  &5[Not a thing.]
-  &6[Dockmaster Hromae]
+  &5[Not a thing.]&r
+  &6[Dockmaster Hromae]&r
  Wild. Well, head along the path then. When you get to Galengarde, it's going to be a bit overwhelming. Feel free to wander
 around, but you're going to need to find the Customs Office at some point. They'll set you straight. Nice meeting you.
-&o  C: Head to the Customs Office and find someone to help you. Table
+&o  C: Head to the Customs Office and find someone to help you.
  Customs Officer Linea
   Coordinates: [-374 79 -728]
-   &6[Customs Officer Linea]
+   &6[Customs Officer Linea]&r
  Take a number.
-  &5[What?]
-  &6[Customs Officer Linea]
+  &5[What?]&r
+  &6[Customs Officer Linea]&r
  From the dispenser. Take a number and wait your turn.
-  &5[Um okay... I guess I've got number 90451.]
-  &6[Customs Officer Linea]
+  &5[Um okay... I guess I've got number 90451.]&r
+  &6[Customs Officer Linea]&r
  Great.
-  &5[How long will this take?]
-  &6[Customs Officer Linea]
+  &5[How long will this take?]&r
+  &6[Customs Officer Linea]&r
  Couldn't tell you. We're very busy.
-  &5[So am I! Don't you know who I am?]
-  &6[Customs Officer Linea]
+  &5[So am I! Don't you know who I am?]&r
+  &6[Customs Officer Linea]&r
  I do. You're ticket number 90451.
-  &5[Ugh... Bureaucrats...]
-  &6[Customs Officer Linea]
+  &5[Ugh... Bureaucrats...]&r
+  &6[Customs Officer Linea]&r
  Enjoy your wait. There's some seats you can wait in nearby. Just swing at them and they'll let you sit...
 &o  C: Take a seat and... wait?
-  You sit down to wait. Too much time starts to pass and you begin to doze off... {...
+  &8You sit down to wait. Too much time starts to pass and you begin to doze off... {...&r
  }
   Hail, hero... Pray thee hear me. I have been... trying so hard... to reach out... Harrakfar is... in... danger... and so... am
-I...
-  {...  } Table
+I... &r
+  &3{...&r  }
  Customs Officer Linea
   Coordinates: [-374 79 -728]
-   &6[Customs Officer Linea]
+   &6[Customs Officer Linea]&r
  Number 90451! Number 90451!
-  &5[That's me!]
-  &6[Customs Officer Linea]
+  &5[That's me!]&r
+  &6[Customs Officer Linea]&r
  Step up please. State your business.
-  &5[I was sent up here by Dockmaster Hromae in what I'm starting to think was an elaborate joke.]
-  &6[Customs Officer Linea]
+  &5[I was sent up here by Dockmaster Hromae in what I'm starting to think was an elaborate joke.]&r
+  &6[Customs Officer Linea]&r
  It was not a joke. All newcomers to Galengarde are required to present at the Customs Office. Again, what is your business
 here?
-  &5[I came through a portal in the Celsian Isles and wound up here.]
-  &6[Customs Officer Linea]
+  &5[I came through a portal in the Celsian Isles and wound up here.]&r
+  &6[Customs Officer Linea]&r
  I see. What do you intend to do here?
-  &5[I came here following a potential lead from a Professor called Walthan.]  Plain  (Missing)
-  &5[Hopefully find somewhere to set up with my crew and begin exploring the area.]
-  &6[Customs Officer Linea]
+  &5[I came here following a potential lead from a Professor called Walthan.]&r  Plain  (Missing)
+  &5[Hopefully find somewhere to set up with my crew and begin exploring the area.]&r
+  &6[Customs Officer Linea]&r
  This seems acceptable to me. You need space for your crew you said? And who exactly are you?
-  &5[Wait, I thought you said you knew who I was.]
-  &6[Customs Officer Linea]
+  &5[Wait, I thought you said you knew who I was.]&r
+  &6[Customs Officer Linea]&r
  I was being facetious. Who are you?
   &5[My name is [Player]. I've been gathering Wool from across the world and have been involved in major events in the King's
-Valley and the Celsian Isles in various ways.]
-  &6[Customs Officer Linea]
+Valley and the Celsian Isles in various ways.]&r
+  &6[Customs Officer Linea]&r
  Oh, you're a hero. I see. It's concerning to hear mention of Wool, but perhaps you can be of help to the Primirium eventually.
 I accept your application to enter the Architect's Ring. That will be 8722 Archos Rings.
-  &5[Excuse me? What are those?]
-  &6[Customs Officer Linea]
+  &5[Excuse me? What are those?]&r
+  &6[Customs Officer Linea]&r
  Oh my stars, you don't even have currency?
-  &5[Do you accept Hyperexperience or Hyper Crystalline Shards?]
-  &6[Customs Officer Linea]
+  &5[Do you accept Hyperexperience or Hyper Crystalline Shards?]&r
+  &6[Customs Officer Linea]&r
  No.
-  &5[Oh.]
-  &6[Customs Officer Linea]
+  &5[Oh.]&r
+  &6[Customs Officer Linea]&r
  You can work your debt off. Head to the center of the city and find the Centralized Contract Office up one of the
 windlaunchers. They'll have some work for you and your little crew and perhaps can help you set up a base of operations as well.
-  &5[Thank you?]
-  &6[Customs Officer Linea]
+  &5[Thank you?]&r
+  &6[Customs Officer Linea]&r
  Welcome to Galengarde, 90451.
-&o  C: Head to the Centralized Contract Office to start working off your debt. Table
+&o  C: Head to the Centralized Contract Office to start working off your debt.
  Agent Naomi
   Coordinates: [-319 91 -633] (Way up is by TP Hub. [-307 81 -644])
-   &6[Agent Naomi]
+   &6[Agent Naomi]&r
  Welcome to the Centralized Contract Office in the great city of Galengarde. How may I be of assistance?
   &5[Hi, I'm [Player]. I was sent here by Linea with the intent of finding a base of operations for my crew... and paying off
-some debt?]
-  &6[Agent Naomi]
+some debt?]&r
+  &6[Agent Naomi]&r
  Wonderful, I can do both of those things for you. I received word from Linea while you were on your way here. Why don't I get
 you started on some work around town while I negotiate a place for your team and a meeting with the Primirium for you?
-  &5[Oh, yes. That is way easier than I was expecting it to be.]
-  &6[Agent Naomi]
+  &5[Oh, yes. That is way easier than I was expecting it to be.]&r
+  &6[Agent Naomi]&r
  Linea has a lot going on, I know. Feel free to look around the Central Plaza here if you'd like. It should have plenty of
 resources desired by anyone known for heroics. However, once done, I'd like you to head to the outskirts of the city to meet
 with one of our farmers, Abell.
-  &5[What can I do for him?]
-  &6[Agent Naomi]
+  &5[What can I do for him?]&r
+  &6[Agent Naomi]&r
  He's been having trouble with his farming storage operation, The Joure Barns. He needs some help with his sorting mechanism.
-  &5[I am on it.]
-  &6[Agent Naomi]
+  &5[I am on it.]&r
+  &6[Agent Naomi]&r
  Return to me when you're all done.
-&o  C: Head to The Joure Barns and assist Abell. Table
+&o  C: Head to The Joure Barns and assist Abell.
  Abell
   Coordinates: [-257 73 -691]
-   &6[Abell]
+   &6[Abell]&r
  Salu friend! You must be from the Contract Office! I'm Abell, a farmer for Galengarde. This area of the city grows crops and
 helps distribute them to the inhabitants to keep this place running. Without us, we'd be fending for scraps in the depths of the
 Wolfswood.
-  &5[Hi Abell. I'm [player]. Naomi sent me over.]
-  &6[Abell]
+  &5[Hi Abell. I'm [player]. Naomi sent me over.]&r
+  &6[Abell]&r
  Indeed! I need help getting my sorting machines functioning properly.
-  &5[Happy to help. Let's get started.]
-  &6[Abell]
+  &5[Happy to help. Let's get started.]&r
+  &6[Abell]&r
  Thank you!
   Sort 15 items. Just hit left or middle if it matches left or middle. Otherwise hit right.
   After finishing:
-  &6[Abell]
+  &6[Abell]&r
  Ay, you've done it! Hourrah, merce! I'll send word to Naomi, with my thanks. Just press that button by the ladder to open the
 trapdoor.
-&o  C: Head back to Naomi for your reward! Table
+&o  C: Head back to Naomi for your reward!
  Agent Naomi
   Coordinates: [-319 91 -633] (Way up is by TP Hub. [-307 81 -644])
-   &6[Agent Naomi]
+   &6[Agent Naomi]&r
  I hear you were a great help to Abell. Wonderful.
-  &5[So, does that pay off my debt?]
-  &6[Agent Naomi]
+  &5[So, does that pay off my debt?]&r
+  &6[Agent Naomi]&r
  Ha! No. There's plenty more to be done, ami. Warden Dredsen in the Marketplace needs some help making some deliveries next.
 Could you go meet him there please?
-&o  C: Help Dredsen make deliveries in the Galengarde Marketplace. Table
+&o  C: Help Dredsen make deliveries in the Galengarde Marketplace.
  Warden Dredsen
   Coordinates: [-292 83 -659]
-   &6[Warden Dredsen]
+   &6[Warden Dredsen]&r
  Greetings. You must be the grunt sent to help me with today's deliveries. I need a hand getting packages to the various shops.
 I'm working a solo today and can't leave the crates here to go bring them to the merchants.
-  &5[So this is where I come in?]
-  &6[Warden Dredsen]
+  &5[So this is where I come in?]&r
+  &6[Warden Dredsen]&r
  This is where you come in. I hand you the packages, you bring them to the merchants. You come back once you're all done. Ready
 to work?
-  &5[I am.]
-  &6[Warden Dredsen]
+  &5[I am.]&r
+  &6[Warden Dredsen]&r
  Bein. Let's do it.
- Talking again: Table
+ Talking again:
  Warden Dredsen
   Coordinates: [-292 83 -659]
-   &6[Warden Dredsen]
+   &6[Warden Dredsen]&r
  Did you lose the packages?
-  &5[Yes.]
-  &6[Warden Dredsen]
+  &5[Yes.]&r
+  &6[Warden Dredsen]&r
  Worry not, I have extra.
-  &5[No.]
-  &6[Warden Dredsen]
+  &5[No.]&r
+  &6[Warden Dredsen]&r
  Then hurry and deliver them! The merchants are waiting for their goods.
   Weapons Crate - [-264 78 -648] LineBreak  Food Crate - [-272 80 -656] LineBreak  Block Crate - [-252 83 -674] LineBreak  Arrow
 Crate - [-291 90 -687] LineBreak  Magic Supplies Crate - [-280 89 -678] LineBreak
-  After completing deliveries: Table
+  After completing deliveries:
  Warden Dredsen
   Coordinates: [-292 83 -659]
-   &6[Warden Dredsen]
+   &6[Warden Dredsen]&r
  Alos, there we are then. All done. Will let Naomi know you did your job well.
-&o  C: Head back to Naomi for your reward? Table
+&o  C: Head back to Naomi for your reward?
  Agent Naomi
   Coordinates: [-319 91 -633] (Way up is by TP Hub. [-307 81 -644])
-   &6[Agent Naomi]
+   &6[Agent Naomi]&r
  Great work out there [Player]. I've nearly got a place secured for you, I think. For now, I think I've got one last major task
 for you. It's a bit of an ask, but I think you can handle it.
-  &5[What is it?]
-  &6[Agent Naomi]
+  &5[What is it?]&r
+  &6[Agent Naomi]&r
  I'm sure you've noticed the windlaunchers around the city. There's one leading to my office! However, the central windlauncher
 that leads to the upper reaches of the tree isn't functioning, and the air current at the top needs a refresh. The windjar I'll
 be giving you won't stay contained for long though. You'll have to get to the top quickly. Plan out a route and move
 efficiently!
-  &5[I'll need a bit to plan a route.]
-  &6[Agent Naomi]
+  &5[I'll need a bit to plan a route.]&r
+  &6[Agent Naomi]&r
  That's okay. Let me know when you're ready.
-  &5[I'm ready.]
-  &6[Agent Naomi]
+  &5[I'm ready.]&r
+  &6[Agent Naomi]&r
  Alright, here's your windjar. May the winds be with you!
  After completing the race:
-  &6[Agent Naomi]
+  &6[Agent Naomi]&r
  YOU DID IT! HOP BACK DOWN AND LET'S CHAT!
 &o  C [1/2]: That must be enough work by now. Go ask Naomi for your reward.
-&o  C [2/2]: Well, at least Naomi said that was the last task. It's time to talk to the Primirium. Table
+&o  C [2/2]: Well, at least Naomi said that was the last task. It's time to talk to the Primirium.
  Agent Naomi
   Coordinates: [-319 91 -633] (Way up is by TP Hub. [-307 81 -644])
-   &6[Agent Naomi]
+   &6[Agent Naomi]&r
  You did it, wonderful. I think it's about time you got to talk with the Primirium. If you jump back up the windlauncher you
-just activated, their office is ahead. You've earned your meeting for sure.  Table
+just activated, their office is ahead. You've earned your meeting for sure.
  Primirium Tybale
   Coordinates: [-316 181 -672]
-   &6[Tybale]
+   &6[Tybale]&r
  Welcome, traveler. We've heard of your arrival and believe this meeting will be fruitful. I'm Tybale, Master of Economy.
-  &5[Hello, I'm [Player]. You three must be in charge of this island?]
-  &6[Conquort]
+  &5[Hello, I'm [Player]. You three must be in charge of this island?]&r
+  &6[Conquort]&r
  Not the entirety of the Ring, no. Just Galengarde at the moment. I'm Conquort, Master of Defense. And Offense. Battle, really.
 I'm particularly good at planning the movement of the troops, so perhaps Master of Troops? {...}
-  &6[Verdanne]
+  &6[Verdanne]&r
  You're the Master of Defense, Conquort. No need to add more titles. I am Verdanne, Master of Policy. According to substatute
 103.55d of Galengarde common law, I will now recite the traditional welcoming dirge of the Dichen people— {...}
-  &6[Tybale]
+  &6[Tybale]&r
  Thank you, Verdanne. You can do that when we're finished with our current business. We brought you here to discuss what role
 you and your crew will play in the Architect's Ring.
-  &5[I'm not really sure of that myself.]
-  &6[Verdanne]
+  &5[I'm not really sure of that myself.]&r
+  &6[Verdanne]&r
  We understand that you've arrived here less by purpose and more by chance, but based on your history in the Celsian Isles and
 the Kaulsland, you seem to have at least some parting knowledge of the Silver Knights and their prisoners.
-  &5[Um, yes. What do you know?]
-  &6[Verdanne]
+  &5[Um, yes. What do you know?]&r
+  &6[Verdanne]&r
  This area is steeped in the history of the Silver Knights. We don't really have all day for a history lesson, but just know
 that the people of the Architect's Ring are well familiar with the damage the Silver Knights and the prisoners can do. {...}
-  &6[Conquort]
+  &6[Conquort]&r
  Now, we have a task we'd like to propose to you. You can do it for the goodwill and partnership we offer here, but we'll also
 pay you for this task to lower your debt to the city, which I'm sure will help sweeten the deal, right? You hero types tend to
 be very money focused...
-  &5[What's the task?]
-  &6[Conquort]
+  &5[What's the task?]&r
+  &6[Conquort]&r
  I've received intel that the Coven has requested a meeting with the Mycelia.
-  &5[Huh?]
-  &6[Conquort]
+  &5[Huh?]&r
+  &6[Conquort]&r
  The Coven are our primary enemies here in the Wolfswood. They are vile witches, casting a mighty curse on these lands. We seek
 to destroy them, take the Favor of the Wolf, and claim dominion over their home base, the Tree of Life. The Mycelia are, for
 lack of a better descriptor, mushroom people. {...}
-  &6[Tybale]
+  &6[Tybale]&r
  They're incredibly dangerous and have no allies in these lands, rejecting any who seek them. Intel pointing us to a meeting
 between our greatest enemy and the nastiest group in the Wolfswood is not exactly good news.
-  &5[I see. What's the Favor of the Wolf?]
-  &6[Verdanne]
+  &5[I see. What's the Favor of the Wolf?]&r
+  &6[Verdanne]&r
  The Favor though... We're not entirely sure what form it takes. Many centuries ago lived a mighty god, the wolf, Harrakfar. He
 roamed these lands, bringing life to all he touched, and death to those that deserved it. It is where the name Wolfswoods came
 from.
-  &5[So where is he?]
-  &6[Verdanne]
+  &5[So where is he?]&r
+  &6[Verdanne]&r
  Harrakfar died in a great battle with the Silver Knights that freed these Woods from their control. The Coven claims they still
 hold his favor however, and the Hex they have cast lets them draw power from it.
-  &5[So what do you need me to do?]
-  &6[Conquort]
+  &5[So what do you need me to do?]&r
+  &6[Conquort]&r
  As much as I'd love for you to go rain down hellfire on this meeting, we'd like you instead to travel to the area known as
 Locum Vernantia and spy on this meeting.
-  &5[I'm in. Anything I need to know?]
-  &6[Verdanne]
+  &5[I'm in. Anything I need to know?]&r
+  &6[Verdanne]&r
  Yes. Locum Vernantia is home to a cult of sorts, the Porphyry. They are male members of the Coven, gifted in darker, more
 earthen magics than the women that run the Coven. They will be dangerous foes as you infiltrate its deepest reaches. {...}
-  &6[Tybale]
+  &6[Tybale]&r
  Return to us with any information you can gather. Should you be successful, perhaps I'll cook some nice fish for us to enjoy.
 I'll be heading back to Manteau until your return. The waters are inviting today...
-  &5[Will do. I don't usually get fed on these missions!]
-  &6[Verdanne]
+  &5[Will do. I don't usually get fed on these missions!]&r
+  &6[Verdanne]&r
  Good luck, [Player]. Go now, with the blessing of the Primirium at your back.
 &o  C: Infiltrate   Link   Locum Vernantia Locum_Vernantia wikilink so you can spy on the meeting between the Coven's Prophyry
-sect and the Mycelia. Table
+sect and the Mycelia.
  Quorent
   Coordinates: [-747 35 -540]
-   &6[Quorent]
+   &6[Quorent]&r
  Balsalm, is that you?
-  &5[No, sorry. I'm [Player]. What happened to you?]
-  &6[Quorent]
+  &5[No, sorry. I'm [Player]. What happened to you?]&r
+  &6[Quorent]&r
  The Mycelia... poison... It's always poison with them.
-  &5[Why did they poison you? How did they get here?]
-  &6[Quorent]
+  &5[Why did they poison you? How did they get here?]&r
+  &6[Quorent]&r
  Were you... not at the meeting? It should have gone well... We gave them what they asked for...
-  &5[What do you mean?]
-  &6[Quorent]
+  &5[What do you mean?]&r
+  &6[Quorent]&r
  By the Tree, you must be low ranking Porphyry. I'm blind, you fool. The talks went south and the cursed mushrooms attacked us.
 They spewed poison into our ranks and killed our negotiators.
-  &5[What were... we... meeting with them for?]
-  &6[Quorent]
+  &5[What were... we... meeting with them for?]&r
+  &6[Quorent]&r
  The Ladies of the Council have need of a mighty extract only the Mycelia control. The Great Hex draws ever closer. There is so
 much power in the Tree of Life, and only Hycenea herself can claim it all for her great purpose.
-  &5[So we failed? The meeting was useless?]
-  &6[Quorent]
+  &5[So we failed? The meeting was useless?]&r
+  &6[Quorent]&r
  Ha! Hahaha! Of course not. You think me weak? The fools brought some with them though. I got some. I got it! I, Quorent, did
 what none of the others could. I grabbed some, and before those beasts could stop me, I smashed the phial into my face. I feel
 it still, mixing deep into the humour of my eyes. Once the Council reaches me, they may take my eyes to get what they need. It
 is their right. I am theirs to take...
-  &5[I see.]
-  &6[Quorent]
+  &5[I see.]&r
+  &6[Quorent]&r
  Even in this eternal darkness, I see more than ever before. It is my purpose to serve!
-  &5[Perhaps your purpose should end here [Kill him now]]
-  &6[Quorent]
+  &5[Perhaps your purpose should end here [Kill him now]]&r
+  &6[Quorent]&r
  Yes... You do that, outsider. I know what you are. But you cannot stop the inevitable...
-  You run the Porphyry through, leaving him to perish.
-  There is no reply. The Porphyry witch is clearly dead. His corpse has begun to rot - small mushrooms creeping up his legs and
-arms...
-  &5[I'll leave you to the darkness then [Let him die from his injuries]]   Plain  (Missing)
-&o  C: Report back to the Primirium with what you have learned... for your reward??? Table
+  &8You run the Porphyry through, leaving him to perish.&r
+  &8There is no reply. The Porphyry witch is clearly dead. His corpse has begun to rot - small mushrooms creeping up his legs
+and arms...&r
+  &5[I'll leave you to the darkness then [Let him die from his injuries]]&r   Plain  (Missing)
+&o  C: Report back to the Primirium with what you have learned... for your reward???
  Primirium Tybale
   Coordinates: [-316 181 -672]
-   &6[Verdanne]
+   &6[Verdanne]&r
  The hero returns!
-  &5[Hello, Primirium. I'm back with news.]
-  &6[Conquort]
+  &5[Hello, Primirium. I'm back with news.]&r
+  &6[Conquort]&r
  What did you find? Did you manage to thin the Porphyry troops as well? How many are surviving? I need to update my numbers.
-  &5[I have no idea... I found the aftermath of the meeting and managed to get information from a dying cultist.]
-  &6[Tybale]
+  &5[I have no idea... I found the aftermath of the meeting and managed to get information from a dying cultist.]&r
+  &6[Tybale]&r
  So, what did you find?
-  &5[First - did you bring fish?]
-  &6[Tybale]
+  &5[First - did you bring fish?]&r
+  &6[Tybale]&r
  ...Yes.
   &5[Okay, so I was told they were meeting with the Mycelia to obtain an extract, but the talks dissolved, the Mycelia poisoned
-and attacked them, and most of the cultists died.]
-  &6[Conquort]
+and attacked them, and most of the cultists died.]&r
+  &6[Conquort]&r
  This is excellent news!
-  &5[But the dying cultist preserved some of the extract in his eyes, blinding himself...]
-  &6[Conquort]
+  &5[But the dying cultist preserved some of the extract in his eyes, blinding himself...]&r
+  &6[Conquort]&r
  Oh lovely. Did you bring them?
-  &5[I... what?!]
-  &6[Conquort]
+  &5[I... what?!]&r
+  &6[Conquort]&r
  You just left him where the Coven could find him?! This is a disaster, [Player]. They will find the corpse. They will find the
 extract. They WILL continue their Hex to drain the Tree of Life and they WILL use the power of Harrakfar to destroy us.
-  &5[And they're DRAINING the Tree of Life? No wonder you guys are at war. My crew and I are here to help in any way we can.]
-  &6[Verdanne]
+  &5[And they're DRAINING the Tree of Life? No wonder you guys are at war. My crew and I are here to help in any way we can.]&r
+  &6[Verdanne]&r
  Thank you for your pledge, [Player]. We need all the help we can get. Let us sit on the news you've brought us and we shall
 contact you when we have a plan. Thank you for all you have done. Your permit for a home base has been granted. Now, for the
 ceremonial Pledge of Thanks for your assistance to Galengarde, as dictated by the Law per subheader Gratitude Payments. Let's
 see here... Aha!
-  '''INTO THE WOODS COMPLETE!'''
-  Awarded a home base in Galengarde for your crew above the Food Shop, Shroombane, 4 Mungfish, 1 Hyperchromatic Archos Ring, and
-2000 Archos Rings... of your debt removed. Only 6722 left!
+  &3'''INTO THE WOODS COMPLETE!'''&r
+  &3Awarded a home base in Galengarde for your crew above the Food Shop, Shroombane, 4 Mungfish, 1 Hyperchromatic Archos Ring,
+and 2000 Archos Rings... of your debt removed. Only 6722 left!&r

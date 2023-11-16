@@ -1,106 +1,104 @@
- Table
+&r
  Sierhaven Smith
 &o  The man seems to be mumbling to himself while looking over a map.
-  Color|orange|[Sierhaven Smith]
+  &6[Sierhaven Smith]&r
  Just past the ruins of... No, that tomb was empty...
-  Color|purple|[Looking for something specific on that map?]
-  Color|orange|[Sierhaven Smith]
+  &5[Looking for something specific on that map?]&r
+  &6[Sierhaven Smith]&r
  Huh? Oh, my apologies- I didn't hear you come in. But yes, well, I'm a bit focused on my work at the moment. I don't believe
 we've met before- the name's Sierhaven Smith!
-  Color|purple|[Your name is... Sierhaven?]
-  &6[Sierhaven Smith]
+  &5[Your name is... Sierhaven?]&r
+  &6[Sierhaven Smith]&r
  That it is, though I'm more often referred to as "Siery" for short.
-  Color|purple|[What is your work here?]
-  Color|orange|[Sierhaven Smith]
+  &5[What is your work here?]&r
+  &6[Sierhaven Smith]&r
  I'm an... archaeologist, of sorts. I explore the lands in search of secrets left by our ancestors that have been long forgotten
 to time: tombs of lost pharaohs, sunken temples, you get the picture. But, right now, I'm in search of the desert's greatest
 treasure.
-  Color|purple|[Which would be what?]
-  Color|orange|[Sierhaven Smith]
+  &5[Which would be what?]&r
+  &6[Sierhaven Smith]&r
  The Gem of Ishnir- a fabled diamond said to be so large that it dwarfs dunes in comparison. Myths say it was last in the
 possession of the Pharaoh Tehkma Ka, the second-to-last pharaoh of the Ka dynasty.
-  Color|orange|[Sierhaven Smith]
+  &6[Sierhaven Smith]&r
  Unfortunately, we have very little in the way of written records of that time- anything during that era is scarce to find
 information on. It's unknown why, exactly, but, for some reason, any accounts from then simply don't exist.
-  Color|purple|[So you don't actually know if it exists?]
-  Color|orange|[Sierhaven Smith]
+  &5[So you don't actually know if it exists?]&r
+  &6[Sierhaven Smith]&r
  Technically, no, though I have a suspicion that it does; reason being that any questions on it that I ask the Pharaoh's
 advisors always lead to nervous sweats and short answers. Would you be interested in helping me settle this?
-  Color|purple|[Sure.]
-  Color|orange|[Sierhaven Smith]
+  &5[Sure.]&r
+  &6[Sierhaven Smith]&r
  Fantastic! I suppose the first place for us to start is research into Tehkma Ka. If he really was the last one in possession of
 the Gem, following his tracks will be our best hope. I'll look over my information here- you go and speak to Nyra. She's the
 Royal Archivist to the Pharaoh. We have a... tangled past, so she won't speak much to me. Perhaps she'll give you some more
 information?
-&o  Seek out Archivist Nyra in the Pharaoh's palace. Table
+&o  Seek out Archivist Nyra in the Pharaoh's palace.
  Archivist Nyra
-  Color|orange|[Archivist Nyra]
+  &6[Archivist Nyra]&r
  Hello there. What brings you to the pharaoh's library today?
-  Color|purple|[Who are you?]
-  Color|purple|[The pharaoh's library is open to the public?]
-  Color|purple|[What can you tell me about Alnera?]
-  Color|purple|[Can you tell me anything about Pharaoh Tehkma Ka?]
-  Color|purple|[Can you tell me anything about the Gem of Ishnir?]
-  Color|orange|[Archivist Nyra]
+  &5[Who are you?]&r
+  &5[The pharaoh's library is open to the public?]&r
+  &5[What can you tell me about Alnera?]&r
+  &5[Can you tell me anything about Pharaoh Tehkma Ka?]&r
+  &5[Can you tell me anything about the Gem of Ishnir?]&r
+  &6[Archivist Nyra]&r
  Let's see what we have on him here. Okay, Tehkma Ka, second to last pharaoh of the Ka dynasty. Born 169 CCE, died at the age of
 70 in 239 CCE. Was supposedly laid to rest in the pyramid Jaldeshret, colloquially known as the Dehydrated Oasis, though no tomb
 has ever been found to corroborate those claims. Seems like that's all the information we have on him.
-  Color|purple|[His tomb has never been found?]
-  Color|orange|[Archivist Nyra]
+  &5[His tomb has never been found?]&r
+  &6[Archivist Nyra]&r
  It's honestly not all that surprising- this was about 600 years ago, after all. This period of time also just so happens to
 fall into the 200 year "blank" period in our history: the years between 53 CCE to 248 CCE. We are lucky we have as much
 information on him as we do.
-  Color|gray|It doesn't seem like she has any more information she can give you on the subject. Best report back to Sierhaven
-Smith.
-&o  Return to Sierhaven Smith with the information you learned from Nyra. Table
+  &8It doesn't seem like she has any more information she can give you on the subject. Best report back to Sierhaven Smith.&r
+&o  Return to Sierhaven Smith with the information you learned from Nyra.
  Sierhaven Smith
-  Color|orange|[Sierhaven Smith]
+  &6[Sierhaven Smith]&r
  Welcome back. Did you get any information out of Nyra?
-  Color|purple|[It seems like all she knew was where he was supposedly buried: the Dehydrated Oasis.]
-  Color|orange|[Sierhaven Smith]
+  &5[It seems like all she knew was where he was supposedly buried: the Dehydrated Oasis.]&r
+  &6[Sierhaven Smith]&r
  Jaldeshret, huh? I've been there countless times- in fact, I'm the one who uncovered the entrance to the tunnels underneath the
 pyramid. I've never seen signs that there is a tomb anywhere in there, though.
-  Color|purple|[Perhaps I should go see if you missed anything?]
-  Color|orange|[Sierhaven Smith]
+  &5[Perhaps I should go see if you missed anything?]&r
+  &6[Sierhaven Smith]&r
  A fair idea- some fresh eyes are never a bad thing. Leave no stone unpressed! While you're gone, I'm going to pull out my notes
 from that expedition, and see if there was anything I had logged but didn't take to relevance.
-&o  Enter the Dehydrated Oasis and search out clues for Tehkma Ka's tomb. Leave no stone unpressed. Table
-  Color|orange|[Tehkma Ka]
+&o  Enter the Dehydrated Oasis and search out clues for Tehkma Ka's tomb. Leave no stone unpressed.
+  &6[Tehkma Ka]&r
  You fool... What have you done...?
-  Color|gray|A mysterious force kicks you out of the tomb, and you find yourself back outside the pyramid.
-&o  You stumbled on the tomb of Tehkma Ka. Report this back to Sierhaven Smith. Table
+  &8A mysterious force kicks you out of the tomb, and you find yourself back outside the pyramid.&r
+&o  You stumbled on the tomb of Tehkma Ka. Report this back to Sierhaven Smith.
  Sierhaven Smith
-  Color|orange|[Sierhaven Smith]
+  &6[Sierhaven Smith]&r
  That was a quick trip. Find anything of note?
-  Color|purple|[I found the tomb of Tehkma Ka.]
-  Color|orange|[Sierhaven Smith]
+  &5[I found the tomb of Tehkma Ka.]&r
+  &6[Sierhaven Smith]&r
  Really now?! What did you find?
-  Color|purple|[Tehkma Ka's journal and a locking device.]
-  Color|orange|[Sierhaven Smith]
+  &5[Tehkma Ka's journal and a locking device.]&r
+  &6[Sierhaven Smith]&r
  Mind if I see the book?
-  Color|gray|You hand Siery the book, and he reads through the pages slowly.
-  Color|orange|[Sierhaven Smith]
+  &8You hand Siery the book, and he reads through the pages slowly.&r
+  &6[Sierhaven Smith]&r
  I can't believe it! He actually mentions the Gem in here! The locking mechanism you mentioned, I assume this is the "key" he
 references. I assume you managed to get past it; what was it like?
-  Color|purple|[It looked like a stylized ankh, but something really bad seemed to happen when I activated it.]
-  Color|orange|[Sierhaven Smith]
- A stylized ankh? Wait... do you mean the symbol of the Lost Sands? What a fantastic lead,      Color|purple|[Were you
-listening? I really don't think this is a good idea.]
-  Color|orange|[Sierhaven Smith]
+  &5[It looked like a stylized ankh, but something really bad seemed to happen when I activated it.]&r
+  &6[Sierhaven Smith]&r
+ A stylized ankh? Wait... do you mean the symbol of the Lost Sands? What a fantastic lead,      &5[Were you listening? I really
+don't think this is a good idea.]&r
+  &6[Sierhaven Smith]&r
  Oh, don't chicken out on me now! The discovery of a lifetime awaits us! You go on ahead over to the Lost Sands ruins. I'll meet
 you there.
-&o  Meet Sierhaven Smith over in the Lost Sands City ruins. Table
+&o  Meet Sierhaven Smith over in the Lost Sands City ruins.
  Sierhaven Smith
-  Color|orange|[Sierhaven Smith]
+  &6[Sierhaven Smith]&r
  Over here! This is the entrance to the underground. If we are to find anything, it will be here.
-  Color|orange|[Sierhaven Smith]
+  &6[Sierhaven Smith]&r
  Let's head in. I'll follow you through- you seem much more capable at taking out enemies.
-&o  Enter the Lost Sands City undergrounds. Table
+&o  Enter the Lost Sands City undergrounds.
  Sierhaven Smith
-  Color|orange|[Sierhaven Smith]
+  &6[Sierhaven Smith]&r
  I... I don't believe it. Is this... a city? The tales of the Gem, they must have been warped over time. How incredible: an
-entire city, lost to time, and right under our noses! I can't thank you enough for your help,      Color|orange|[Sierhaven
-Smith]
+entire city, lost to time, and right under our noses! I can't thank you enough for your help,      &6[Sierhaven Smith]&r
  I can't thank you enough for all your help. All this time, and an ancient city was sitting right under our noses! I had my
 excavating crew set up a lobby for you to safely enter and exit, as the foundation is a bit unstable.
  THE GEM OF ISHNIR COMPLETE! SoftBreak  Awarded a   Link   Gray Valley_of_Forgotten_Pharaohs wikilink Key, an   Link

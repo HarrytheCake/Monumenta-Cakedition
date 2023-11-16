@@ -1,71 +1,71 @@
- Table
+&r
  Fred
-  Color|orange|[Fred]
+  &6[Fred]&r
  Oh hello there. Sorry, I don't have much time to talk right now, I'm pretty busy.
-  Color|purple|[Where does this passage way lead?]
-  Color|purple|[Who are you?]
-  Color|orange|[Fred]
+  &5[Where does this passage way lead?]&r
+  &5[Who are you?]&r
+  &6[Fred]&r
  Well, that's the question, now isn't it! You don't seem like you're from around here, mind if I ask who you are?
-  Color|purple|[My name is Player.]
-  Color|purple|[I do mind actually!]
-  Color|orange|[Fred]
-   Color|purple|[Is there something preventing you from going forward?]
-  Color|orange|[Fred]
+  &5[My name is Player.]&r
+  &5[I do mind actually!]&r
+  &6[Fred]&r
+   &5[Is there something preventing you from going forward?]&r
+  &6[Fred]&r
  You mean besides the large iron bars and the obvious signs of structural foundation erosion? Yes actually, there's also a
 powerful seal keeping the area inaccessible.
-  Color|purple|[Would you like some help?]
-  Color|orange|[Fred]
+  &5[Would you like some help?]&r
+  &6[Fred]&r
  Hmm, I've not hired an assistant in a while... not since the accident that, uh... terminated my last one... So sure, why not!
 You're hired!
-  Color|purple|[So what's the plan?]
-  Color|orange|[Fred]
+  &5[So what's the plan?]&r
+  &6[Fred]&r
  Here's a little catch up on my research so far. After some careful study on the seal that prevents forward progress, I have
 found that it might be possible to counter the magical frequency using a Silvic Crystal.
-  Color|orange|[Fred]
+  &6[Fred]&r
  Since I'm sure you've brushed up on your geology like all good assistants do, you likely know that Silvic Crystals are
 exceedingly rare. In fact, the only place I even know they can be found is an area in the west known as the Crystalline Vault,
 though not many people are brave enough to attempt to enter.
-  Color|purple|[So in short, find the magic crystal in the dangerous vault?]
-  Color|orange|[Fred]
+  &5[So in short, find the magic crystal in the dangerous vault?]&r
+  &6[Fred]&r
  As sharp as I would expect! Let us head there forthwith!
-  Color|purple|[Us?]
-  Color|orange|[Fred]
+  &5[Us?]&r
+  &6[Fred]&r
  Yes, us! Why would I not come with you? Have your previous employers sent you off to dangerous places on your own? How
 careless!
 &o  Head to the Crystalline Vault with Fred.
- Retrieve the Silvic Crystal and talk to Fred. Table
+ Retrieve the Silvic Crystal and talk to Fred.
  Fred
-  Color|orange|[Fred]
+  &6[Fred]&r
  Fantastic, this is just what we need! Kinda...
-  Color|purple|[What do you mean 'kinda'?]
-  Color|orange|[Fred]
+  &5[What do you mean 'kinda'?]&r
+  &6[Fred]&r
  Well, there's a catch. The Silvic Crystal is gonna need a bit of tuning before it can properly negate the magic from the seal.
 Luckily, I have just the device to do so!
-  Color|purple|[Well, that's eas-]
-  Color|orange|[Fred]
+  &5[Well, that's eas-]&r
+  &6[Fred]&r
  That you are going to have to get working in dramatic fashion!
-  Color|purple|[Of course...]
-  Color|orange|[Fred]
+  &5[Of course...]&r
+  &6[Fred]&r
  To the Stone Fred!
 &o  Help Fred attune the crystal.
- Solve the puzzle by getting the water into the 4 exits and holding the pressure plate down for 10 seconds. Table
+ Solve the puzzle by getting the water into the 4 exits and holding the pressure plate down for 10 seconds.
  Fred
-  Color|orange|[Fred]
+  &6[Fred]&r
  Fantastic! The crystal is ready, go grab it and we can head out!
-  Color|orange|[Fred]
+  &6[Fred]&r
  Are you ready to head back to the structure?
-  Color|purple|[Yes, let's go.]
-  Color|orange|[Fred]
+  &5[Yes, let's go.]&r
+  &6[Fred]&r
  Well, it's the moment of truth. We've got a perfect crystal, a ruined structure, and a whole lot of anxiet- I mean, luck. Go
 and place the crystal on the pedestal and let's see what happens.
  Place the new crystal on the pedestal.
- Proceed through the POI and enter the dungeon entrance. Table
+ Proceed through the POI and enter the dungeon entrance.
  Fred
-  Color|orange|[Fred]
+  &6[Fred]&r
  Whew! What a journey! It seems like we've reached a safe point before the passage continues onward. I am so eager to find out
 what lies below here.
-  Color|purple|[What do we do now?]
-  Color|orange|[Fred]
+  &5[What do we do now?]&r
+  &6[Fred]&r
  I've called in some assistance from some other researchers in Steelmeld. I'm sure they will be thrilled to see what we've
 discovered! But now, we only look forward, my faithful assistant. We've only just begun this bizarre adventure! 
  FRED'S BIZARRE ADVENTURE COMPLETE! SoftBreak  Awarded a   Link   Shifting Waters City_of_Shifting_Waters wikilink key, and

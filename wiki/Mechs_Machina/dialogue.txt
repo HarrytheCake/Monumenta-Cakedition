@@ -1,249 +1,248 @@
-&o  Go tell the Praetor and the High Priest about the Machine God's Herald Table
+&r
+&o  Go tell the Praetor and the High Priest about the Machine God's Herald
  Machine God's Herald
-  Color|orange|[Machine God's Herald]
+  &6[Machine God's Herald]&r
  Behold citizen. I am the Herald. I am here to announce perfection.
-  Color|purple|[Excuse me... Who are you and where is the Quest Guide ?]
-  Color|orange|[Machine God's Herald]
+  &5[Excuse me... Who are you and where is the Quest Guide ?]&r
+  &6[Machine God's Herald]&r
  You stand in the presence of the Herald of the Machine God . In his mighty benevolence, It has sent me to foretell Its coming
 and prepare the inhabitants of this weak city city that their Emperor shall soon return.
-  Color|purple|[What are you talking about ? Are you another one of those machines ?]
-  Color|orange|[Machine God's Herald]
+  &5[What are you talking about ? Are you another one of those machines ?]&r
+  &6[Machine God's Herald]&r
  I am crafted flesh, given my form by the Machine God itself. I have told you why I am here. Hear ye this : If you join the
 Machine in peace, it will be far easier for you all. Tell your leaders to lay down their arms. Neo Antium is nearly here. Utopia
 is coming.
-  Color|purple|[So you're the ones who have been sabotaging New Antium. Where do you come from ?]
-  Color|orange|[Machine God's Herald]
+  &5[So you're the ones who have been sabotaging New Antium. Where do you come from ?]&r
+  &6[Machine God's Herald]&r
  I have told you. Neo Antium. I will tell you again if I must.
-  Color|purple|[Less cryptically, please.]
-  Color|orange|[Machine God's Herald]
+  &5[Less cryptically, please.]&r
+  &6[Machine God's Herald]&r
  The Machine God has decreed me here. It is coming, and Neo Antium comes with it. The Emperor will soon return and reclaim his
 throne. Lay down your arms and accept our power.
-  Color|purple|[Pelias is back ? I thought he vanished.]
-  Color|orange|[Machine God's Herald]
+  &5[Pelias is back ? I thought he vanished.]&r
+  &6[Machine God's Herald]&r
  The former war was flawed. The Machine God know| this now. It has found a greater purpose and is ready to unveil its Utopia for
 you all. Accept Its gift. Tell your leaders immediately to prepare for Its great arrival.
-  Color|purple|[I guess I will then...]
-  Color|orange|[Machine God's Herald]
+  &5[I guess I will then...]&r
+  &6[Machine God's Herald]&r
  At last. Tell them Neo Antium is coming. The Emperor waits for your surrender at the Tree of Life.
 &o  C [1/2]: Go tell the Praetor about the Machine God Herald's arrival in New Antium...
-&o  C [2/2]: ... Or speak with the High Priest first instead. Table
+&o  C [2/2]: ... Or speak with the High Priest first instead.
  The Praetor
-  Color|orange|[The Praetor]
+  &6[The Praetor]&r
  You ! My friend, oh hero ! Come forth. I am quite pleased to see you, [Player]. What brings you back to my humble office?
-  Color|purple|[I'm wandering around at the moment, seeking more battles.]
-  &6[The Praetor]
+  &5[I'm wandering around at the moment, seeking more battles.]&r
+  &6[The Praetor]&r
  Surely you are sent to us by the Architect Himself. My nights remain relatively restful; for that you deserve eternal
 graciousness.
-  &5[I'm glad I could help.]
-  &6[The Praetor]
+  &5[I'm glad I could help.]&r
+  &6[The Praetor]&r
  Soon, I hope, we will find answers together and you can help even further.
-  &5[I hope so.]
-  &6[The Praetor]
+  &5[I hope so.]&r
+  &6[The Praetor]&r
  You are always welcome in New Antium, celebrated in full decorum, [Player]. Your arrival here is fortunate and surely a sign of
 things to come. My people have always been plagued by misfortune, I swear to you. First the collapse. The Empire squandered in a
 night. The shades devouring those left behind. Then these dreams that you have lessened now. Now you've given us hope. A source
 to the Shades could be what we need. Thank you for your help thus far.
-  Color|purple|[Praetor, I think New Antium is under attack.]
- (If you speak to the Praetor first) LineBreak   Color|purple|[Praetor, I think New Antium is under attack. The High Priest sent
-me to speak to you.] (If you speak to High Priest first.)
-  Color|orange|[The Praetor]
+  &5[Praetor, I think New Antium is under attack.]&r
+ (If you speak to the Praetor first) LineBreak   &5[Praetor, I think New Antium is under attack. The High Priest sent me to
+speak to you.]&r (If you speak to High Priest first.)
+  &6[The Praetor]&r
  Under attack? Where? I hear no clash.
-  Color|purple|[The Guide has vanished and has been replaced by a mechanical being and the High Priest and I discovered another
-replacement a few days ago.]
-  Color|orange|[The Praetor]
+  &5[The Guide has vanished and has been replaced by a mechanical being and the High Priest and I discovered another replacement
+a few days ago.]&r
+  &6[The Praetor]&r
  Shades?
-  Color|purple|[No, machines. Several other citizens have gone missing with no replacement as well.]
-  Color|orange|[The Praetor]
+  &5[No, machines. Several other citizens have gone missing with no replacement as well.]&r
+  &6[The Praetor]&r
  Who then could be striking such attacks at the heart of this city? Who is responsible?
-  Color|purple|[The Herald called it the 'Machine God' said the Shades were a flawed attempt at what it's doing now, and that
-the Emperor is returning.]
-  Color|orange|[The Praetor]
+  &5[The Herald called it the 'Machine God' said the Shades were a flawed attempt at what it's doing now, and that the Emperor
+is returning.]&r
+  &6[The Praetor]&r
  I apologize, but whatever does any of that mean ?
-  Color|purple|[That's exactly how I felt. It doesn't make any sense.]
-  Color|orange|[The Praetor]
+  &5[That's exactly how I felt. It doesn't make any sense.]&r
+  &6[The Praetor]&r
  When you and I last spoke. I told you of the fall of Antium, yes ? How Pelias' madness and endless search for an ancient
 Serebrian artifact caused the vanishing of thousands ?
-  Color|purple|[You did, perhaps not in the same words. What does Serebrian mean ?]
-  Color|orange|[The Praetor]
+  &5[You did, perhaps not in the same words. What does Serebrian mean ?]&r
+  &6[The Praetor]&r
  I apologize, that is theway that we Ashkii describe that of the ancient Silver-clad Emperor who served the Lord Architect. Now,
 as I had been saying, Pelias wanted an artifact. It has been long assumed he failed to overcome its defenses and some vile trap
 had caused the Shades. But should what this Herald is saying be true, we must confront the possibility that Pelias found what he
 was seeking. It could even be that he was involved.
-  Color|purple|[The Herald did say that 'Neo Antium' is coming and that a Utopia was coming as well.]
-  Color|orange|[The Praetor]
+  &5[The Herald did say that 'Neo Antium' is coming and that a Utopia was coming as well.]&r
+  &6[The Praetor]&r
  We will not take this sitting down. Nay, I ask you to begin searching for solutions. Did you get any further information ?
-  Color|purple|[That the Emperor will be waiting at the Tree of Life. I don't get why though. That's all the way in the
-Wolfswood.]
-  Color|orange|[The Praetor]
+  &5[That the Emperor will be waiting at the Tree of Life. I don't get why though. That's all the way in the Wolfswood.]&r
+  &6[The Praetor]&r
  Indeed it is. The garrison site of those nasty Coven witches. While I should ask you to travel there post haste and seek the
 veracity of claims of the Emperor lurking again, instead. I posit I must extend the branch to my fellow advisor of New Antium.
 Please visit the High Priest and ascertain his thoughts as well.
  (Continuation if you spoke to the High Priest first)
-  &5[I'll travel to the Tree immediately then. Any idea where I should look?]
-  &6[The Praetor]
- I'd start below the roots. Pelias always was one to dig to the depths.  Table
+  &5[I'll travel to the Tree immediately then. Any idea where I should look?]&r
+  &6[The Praetor]&r
+ I'd start below the roots. Pelias always was one to dig to the depths.
  The High Priest
-  Color|orange|[The High Priest]
+  &6[The High Priest]&r
  The Architect's blessings upon you Player. What can I do for you ?
-  Color|purple|[Have you discovered anything about more imposters among us?]
-  &6[The High Priest]
+  &5[Have you discovered anything about more imposters among us?]&r
+  &6[The High Priest]&r
  I have not. Have you?
-  &5[Not yet anyway.]
-  &6[The High Priest]
+  &5[Not yet anyway.]&r
+  &6[The High Priest]&r
  My eyes and my prayers are at the ready. If this Machine God is truly imminent, we must be prepared.
-  Color|purple|[Anything interesting happening?]
-  &6[The High Priest]
+  &5[Anything interesting happening?]&r
+  &6[The High Priest]&r
  I did receive a message from the Proprietor. She said she was glad to hear you survived her challenge and that you were welcome
 back. Also that she's opened a "Way" back if you jump at the painting behind me. I've tried and it didn't work, so I imagine an
 old man like me isn't welcome.
-  Color|purple|[High Priest, I think New Antium is under attack.]
- (If you speak to the High Priest first.) LineBreak   Color|purple|[High Priest, I think New Antium is under attack. The Praetor
-sent me to speak to you.] (If you speak to Praetor first.)
-  Color|orange|[The High Priest]
+  &5[High Priest, I think New Antium is under attack.]&r
+ (If you speak to the High Priest first.) LineBreak   &5[High Priest, I think New Antium is under attack. The Praetor sent me to
+speak to you.]&r (If you speak to Praetor first.)
+  &6[The High Priest]&r
  Oh holy Architect, lend me your divine insight... Child, I must pray to the Lord Architect. I know your words to be true after
 the discovery of the mechanical one. What has happened thus?
-  Color|purple|[The Guide has been taken and replaced with someone calling themself the Herald of the Machine God.]
-  Color|orange|[The High Priest]
+  &5[The Guide has been taken and replaced with someone calling themself the Herald of the Machine God.]&r
+  &6[The High Priest]&r
  Truly a folly. The Guide is invaluable for new travelers to our city.
-  Color|purple|[It also said the Emperor is returning, a "Neo Antium" is coming, the Machine God is coming too, and New Antium
-needs to lay down arms and welcome it all. Insanity.]
-  Color|orange|[The High Priest]
+  &5[It also said the Emperor is returning, a "Neo Antium" is coming, the Machine God is coming too, and New Antium needs to lay
+down arms and welcome it all. Insanity.]&r
+  &6[The High Priest]&r
  Truly it is. The Architect must interced if his divine servants are to continue their goals. Perhaps... perhaps you are his
 intervention, Player? You have come to me with a warning. I would be a fool not to heed it.
-  Color|purple|[I don't think I'm that important.]
-  Color|orange|[The High Priest]
+  &5[I don't think I'm that important.]&r
+  &6[The High Priest]&r
  Humility is a virtue my dear friend. One deserving of such praise. Now, tell me. We've found these machines taking my people.
 Out in the wilds of the Keep we have Shades taking lives. What more folly could befall us ?
-  Color|purple|[I think actually those two are connected.]
-  Color|orange|[The High Priest]
+  &5[I think actually those two are connected.]&r
+  &6[The High Priest]&r
  Hmm? Why do you say such things ?
-  Color|purple|[The Herald said something to that effect.]
-  Color|orange|[The High Priest]
+  &5[The Herald said something to that effect.]&r
+  &6[The High Priest]&r
  Fascianting... I can see the connections, I suppose. The taking of the soul alone could be quite troublesome. I cannot imagine
 what this Machine God wants with us.
-  Color|purple|[Utopia. Neo Antium. Total domination ?]
+  &5[Utopia. Neo Antium. Total domination ?]&r
  (Continuation if you speak to the High Priest first.)
-  &6[The High Priest]
+  &6[The High Priest]&r
  I think you need to visit the Praetor. He commands the strike force of our nation. I hate to say this, but I do not feel like I
 alone will be enough to handle this situation. Perhaps it's time to set aside our conflicts as Dux Civitatis of New Antium and
 unite to stand firm against this Machine God.
  (Continuation if you speak to the Praetor first.)
-  Color|orange|[The High Priest]
+  &6[The High Priest]&r
  Something nefarious, that has been brewing for many years, it would seem. You said you've spoken to the Praetor already? Good.
 He commands the strike force of our nation. While he and I, as Dux Civitatis of New Antium, disagree much, we must be united
 here. Do we have any actionable plan, from him ?
-  Color|purple|[We spoke of trying to find where Pelias supposedly is. The Herald said at the Tree of Life, but that's in the
-Wolfswood, not in the Keep at all.]
-  Color|orange|[The High Priest]
+  &5[We spoke of trying to find where Pelias supposedly is. The Herald said at the Tree of Life, but that's in the Wolfswood,
+not in the Keep at all.]&r
+  &6[The High Priest]&r
  If the Architect wills you be there. I suggest you travel there. There are no mistakes, only ways to be more prepared. Travel
 well, prepare for a trap. I fear we cannot trust anyone.
-&o  C: Visit the Tree of Life in the Wolfswood and search the roots to investigate this so called return of the Emperor Table
+&o  C: Visit the Tree of Life in the Wolfswood and search the roots to investigate this so called return of the Emperor
  Ageratina
   Hint : Under the Entrance of Cover Fortress LineBreak  Coordinates: [-539, 109, -376]
-   Color|orange|[Ageratina]
+   &6[Ageratina]&r
  You have been within Ravenna, yes. You have seen the Covensteads. You have seen the fall of the chains. You, I will commune
 with. Bring me remnants of the Coven's failure and I will offer you power beyond words.
-  Color|purple|[I'm actually looking for someone. Has anyone been around the Tree of Life recently ?]
-  Color|orange|[Ageratina]
+  &5[I'm actually looking for someone. Has anyone been around the Tree of Life recently ?]&r
+  &6[Ageratina]&r
  The majority of the Coven lives through here. Of course there have been beings traveling this great tree.
-  Color|purple|[I was told an Emperor was waiting at the Tree of Life by a herald of the 'Machine God'.]
-  Color|orange|[Ageratina]
+  &5[I was told an Emperor was waiting at the Tree of Life by a herald of the 'Machine God'.]&r
+  &6[Ageratina]&r
  You're at the wrong Tree of Life, you ignorant child. You have seen much of the Wood, but not much of the world, I find.
-  Color|purple|[I'm sorry, what do you mean wrong Tree of Life ? Isn't there just one ?]
-  Color|orange|[Ageratina]
+  &5[I'm sorry, what do you mean wrong Tree of Life ? Isn't there just one ?]&r
+  &6[Ageratina]&r
  The Tree of Life is far too large to sprout in just one place. This entire Ring contains her roots. This very Tree is merely a
 sapling, growing from the great mother Tree below the Mountain. No Machine God lurks here. We serve no Emperor here. You are not
 in the right place.
-  Color|purple|[Then where do I go ?]
-  Color|orange|[Ageratina]
+  &5[Then where do I go ?]&r
+  &6[Ageratina]&r
  How would I be expected to know that? Though I suppose I could offer you passage in this dark place to somewhere darker still.
 The depths of the earth hold the darkest secret. The roots tell stories, yes.
-  Color|purple|[I need to hear these stories then.]
-  Color|orange|[Ageratina]
+  &5[I need to hear these stories then.]&r
+  &6[Ageratina]&r
  Yes you do, outsider. Perhaps you should visit the roots yourself and learn of the magic that flows beneath this land... Let me
 show you.
-  Color|purple|[Okay.]
-  Color|orange|[Ageratina]
- Yes... Come, meet he of the roots.  Table
+  &5[Okay.]&r
+  &6[Ageratina]&r
+ Yes... Come, meet he of the roots.
  The Saothraiche
-  Color|orange|[The Saothraiche]
+  &6[The Saothraiche]&r
  Oh my. It is you. The storied. Dancing in the darkness of the roots, with me ? Incredible. Don't you see?
-  Color|orange|[The Saothraiche]
+  &6[The Saothraiche]&r
  This darkness below it all... nothingness... becomes something else when give the right influence.
-  Color|orange|[The Saothraiche]
+  &6[The Saothraiche]&r
  But there is not just one more Tree. There are many more. For each power that has taken up residence in the Architect's
 playground, another one sprouts...
-  Color|orange|[The Saothraiche]
+  &6[The Saothraiche]&r
  Follow them if you must. But know that the power is not easily trifled with.
-  Color|orange|[The Saothraiche]
+  &6[The Saothraiche]&r
  Find your Emperor. This knowledge should not come so freely in the future, child. I will let you walk the right path this time,
 yes. Next time the cost will be greater. A thread might be needed then, yes. A whole fate even...
-  Color|orange|[The Saothraiche]
+  &6[The Saothraiche]&r
  Now go. Leave me with these reaching roots. Find your shriveling tree and your Emperor in the place called Arx.
 &o  C: Return to the Keep, find the Tree of Life within   Link   Arx Spirensis Arx_Spirensis wikilink and look around for the
 Emperor.
- After conquering   Link   Arx Spirensis Arx_Spirensis wikilink  : Table
+ After conquering   Link   Arx Spirensis Arx_Spirensis wikilink  :
  Machine God's Herald
-  Color|orange|[Machine God's Herald]
- Greetings fleshling! You have st|pped your first step into the sacred Utopia of Neo Antium! SoftBreak   Color|purple|[Um,
-hello? Why are you here ? I thought you were heralding over in New Antium.]
-  Color|orange|[Machine God's Herald]
+  &6[Machine God's Herald]&r
+ Greetings fleshling! You have st|pped your first step into the sacred Utopia of Neo Antium! SoftBreak   &5[Um, hello? Why are
+you here ? I thought you were heralding over in New Antium.]&r
+  &6[Machine God's Herald]&r
  I am everywhere I must be! You are a guest of honor , Player. Are you here to accept the gifts of the Neo Architect?
-  Color|purple|[The Neo Architect? Is that what the Machine God is named ?]
-  Color|orange|[Machine God's Herald]
+  &5[The Neo Architect? Is that what the Machine God is named ?]&r
+  &6[Machine God's Herald]&r
  That is not Its name, but that is Its title now. As It rises from the depths of the Cradle, It shall usurp the Architect and
 become the worshiped one across the Ring.
-  Color|purple|[I'm not sure I want that to happen. Doesn't seem like a good thing.]
-  Color|orange|[Machine God's Herald]
+  &5[I'm not sure I want that to happen. Doesn't seem like a good thing.]&r
+  &6[Machine God's Herald]&r
  Did you not travel here to join the Emperor and receive Utopia ?
-  Color|purple|[No I traveled here to stop you. Where is the Emperor ?]
-  Color|orange|[Machine God's Herald]
+  &5[No I traveled here to stop you. Where is the Emperor ?]&r
+  &6[Machine God's Herald]&r
  He is busy preparing Utopia. This place was only made possible due to the glorious Emperor Pelias disrupting the cruel barrier
 the Silver Emperor placed around our God.
-  Color|purple|[You're not bothered by me wanting to stop you ?]
-  Color|orange|[Machine God's Herald]
+  &5[You're not bothered by me wanting to stop you ?]&r
+  &6[Machine God's Herald]&r
  There is no way you can, fleshling. Emperor Pelias found the Silver Barrier and disrupted it with hiw weak flesh, pressing the
 power of the Tree of Life from outside, in. This granted the Neo Architect newfound power. It took the Keep entirely. It has
 been seeking to take the rest of the Ring and turn it into a beautiful Utopia. Flesh is weak. The Machine is forever. Now, your
 last chance. Join the Utopia, Player. Decline and you wille be forcibly assimilated
-  Color|purple|[That doesn't dound like Utopia to me.]
-  Color|orange|[Machine God's Herald]
+  &5[That doesn't dound like Utopia to me.]&r
+  &6[Machine God's Herald]&r
  Utopia must be made absolute. Do you accept our offer?
-  Color|purple|[No.]
-  Color|orange|[Machine God's Herald]
- Then I must take you to be processed. I will see you soon enough, when you have joined the great Machine.  Table
+  &5[No.]&r
+  &6[Machine God's Herald]&r
+ Then I must take you to be processed. I will see you soon enough, when you have joined the great Machine.
  Neo Garmon
-  Color|orange|[Neo Garmon]
- You! You were the one investigating the food stores. I didn't get your name before, what was it ? SoftBreak
-Color|purple|[Player]
-  Color|orange|[Neo Garmon]
+  &6[Neo Garmon]&r
+ You! You were the one investigating the food stores. I didn't get your name before, what was it ? SoftBreak   &5[Player]&r
+  &6[Neo Garmon]&r
  Player! As you can see, the situation is dire, we are trapped here, and our bodies... are no longer what they once were.
-  Color|orange|[Neo Lanora]
+  &6[Neo Lanora]&r
  We've been left here land have yet to be fully "processed". The guards are in a frenzy, seemingly in preparation for some grand
 event.
-  Color|orange|[Neo Gorm]
+  &6[Neo Gorm]&r
  We've all maintained a sens of self... but others who feel prey are beyond saving. Vile contraptions.
-  Color|orange|[Neo Garmon]
+  &6[Neo Garmon]&r
  Surely you don't seek to venture further? We were fortunate, but you Player, may not be.
-  Color|purple|[I do.]
-  Color|orange|[Neo Garmon]
+  &5[I do.]&r
+  &6[Neo Garmon]&r
  Regardless, the door is sealed shut...
-  Color|orange|[Neo Garmon]
+  &6[Neo Garmon]&r
  Perhaps this device on the floor could be used to gain access? The panels look like they can be rotated.
-  Color|orange|[Neo Garmon]
+  &6[Neo Garmon]&r
  Mm... defeat this unearthly mechanism then I'll guide.
-  Color|orange|[Neo Garmon]
+  &6[Neo Garmon]&r
  If you truly wish to delve deeper, I will not stop you. Please be careful, and for the sake of New Antium, good luck.
 &o  C: Solve the strange mechanism on the floor to hopefully find an escape for your allies and a way forward for yourself.
  After completing the puzzle and going forwards:
-&o  C: Talk to Neo Gorm. Table
+&o  C: Talk to Neo Gorm.
  Neo Gorm (Brown Lobby)
-  Color|orange|[Neo Gorm]
+  &6[Neo Gorm]&r
  Mm... You did it, Gorm is impressed. Let's meet a little further ahead, I'll catch up.
-  Color|orange|[Neo Gorm]
+  &6[Neo Gorm]&r
  This is the place. Others have left for New Antium already, I will catch up to them shortly. Good luck, you have support of the
 Ashkii.
-  Color|purple|[Thank you Gorm.]
-  Color|Teal|'''MECHS MACHINA COMPLETE !'''<br>
+  &5[Thank you Gorm.]&r
+  &3'''MECHS MACHINA COMPLETE !'''<br>
 Awarded [[Pelias' Last Step]], a Brown Wool Key, 1 [[Hyperchromatic Archos Ring]], and access to the shortcut to [[Arx
-Spirensis]] and [[Submerged Citadel]]!
+Spirensis]] and [[Submerged Citadel]]!&r

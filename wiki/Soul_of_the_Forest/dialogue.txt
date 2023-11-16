@@ -1,113 +1,114 @@
-&o  Speak with Bhairavi in   Link   Nyr Nyr wikilink Table
+&r
+&o  Speak with Bhairavi in   Link   Nyr Nyr wikilink
  Bhairavi
-  Color|orange|[Bhairavi]
+  &6[Bhairavi]&r
  Welcome back, ___. I've been investigating into Kaul and the Yellow Wool with my team. Do you have any questions for me?
-SoftBreak   Color|purple|[What have you found on the Yellow Wool?]
-  Color|orange|[Bhairavi]
+SoftBreak   &5[What have you found on the Yellow Wool?]&r
+  &6[Bhairavi]&r
  Brayllur and Starn have been working on a lead. The Commander in Highwatch seems to have captured a Son of the Forest who has
 made some very interesting statements under the effects of a truth serum, according to Starn's interview.
-  Color|purple|[Oh, that sounds interesting.]
-  Color|orange|[Bhairavi]
+  &5[Oh, that sounds interesting.]&r
+  &6[Bhairavi]&r
  It does indeed. I'll be heading over to Highwatch to follow up if you'd care to meet me there.
-  Color|purple|[I'd love to.]
-  Color|orange|[Bhairavi]
+  &5[I'd love to.]&r
+  &6[Bhairavi]&r
  I'll see you in Highwatch then, __.
-&o  Meet Bhairavi in the   Link   Highwatch Highwatch wikilink Jail to interrogate the Captured Warden Table
+&o  Meet Bhairavi in the   Link   Highwatch Highwatch wikilink Jail to interrogate the Captured Warden
  Bhairavi
-  Color|orange|[Bhairavi]
+  &6[Bhairavi]&r
  Hi there ___! Glad to see you made it. I've been doing some work trying to interrogate your friend here while my assistant
 Starn is upstairs speaking to the Commander. It's not exactly easy, but I've been able to coerce out the slightest details
-thanks to your work with the Truth Serum. Thank you for that. SoftBreak   Color|purple|[What kind of details?]
-  Color|orange|[Bhairavi]
+thanks to your work with the Truth Serum. Thank you for that. SoftBreak   &5[What kind of details?]&r
+  &6[Bhairavi]&r
  He mentioned the Verdant Fortress and a relic given to them that “seeks the Soulspeaker”, now hidden in its basement.
-  Color|purple|[What is the Verdant Fortress?]
-  Color|orange|[Bhairavi]
+  &5[What is the Verdant Fortress?]&r
+  &6[Bhairavi]&r
  It is the main base of the Sons of the Forest, located not far from here. Highwatch has been looking for ways to attack it for
 months, but it is heavily fortified and wildly dangerous... but I must ask you to go there. This relic sounds very important in
 the hunt for the Yellow Wool.
-  Color|purple|[Who is the Soulspeaker?]
-  Color|orange|[Bhairavi]
+  &5[Who is the Soulspeaker?]&r
+  &6[Bhairavi]&r
  You should know this one! The Soulspeaker is C'Axtal, the speaker to Kaul. He went missing during the Blackroot War. It seems
 the relic the Sons of the Forest have could allow them to locate him - and maybe Kaul and his wool too.
-  Color|purple|[What do I need to do?]
-  Color|orange|[Bhairavi]
+  &5[What do I need to do?]&r
+  &6[Bhairavi]&r
  I hate to ask this, but I must send you into the Verdant Fortress. Be very careful. This Warden has said the relic we're
 seeking is guarded in the basement of the fortress. Please avoid the main fortress. It is far too dangerous. Fortunately, our
 prisoner mentioned an old ruined tunnel north of the fort that may lead down there. Be quick and show no mercy. The Sons are a
 stain on the Valley.
-&o  Head into the tunnel at 955 105 120 to gather the artifact. Report back to Bhairavi on what you find Table
+&o  Head into the tunnel at 955 105 120 to gather the artifact. Report back to Bhairavi on what you find
  Bhairavi
-  Color|purple|[I don't know how it works, but I've seen it before.]
-  Color|orange|[Bhairavi]
+  &5[I don't know how it works, but I've seen it before.]&r
+  &6[Bhairavi]&r
  You have? Where?
-  Color|purple|[My first adventure in the Valley. I don't remember anything before it though...]
-  Color|orange|[Bhairavi]
+  &5[My first adventure in the Valley. I don't remember anything before it though...]&r
+  &6[Bhairavi]&r
  Tell me about it.
-  Color|purple|[Alright.]
-  Color|orange|[Bhairavi]
+  &5[Alright.]&r
+  &6[Bhairavi]&r
  So you were attacked by a man, this relic was taken from you, and you woke up in Sierhaven? I wonder how you got there... Who
 were you, ___? Who found you? I think we need to go talk to Commander Haynes upstairs. Maybe she will know more.
-&o  Speak with Commander Haynes Table
+&o  Speak with Commander Haynes
  Commander Haynes
-  Color|orange|[Bhairavi]
+  &6[Bhairavi]&r
  Thank you, Commander. We are here seeking information about the Sons of the Forest and ___ themself... Did any of the King’s
-Guard find a near-dead adventurer recently and deliver them to Nurse Diedre in the capital? SoftBreak   Color|orange|[Commander
-Haynes] I'd honestly have to check our records... Give me a minute here. The paperwork is so messy. Starn and I had no time to
-go through it.
-  Color|orange|[Commander Haynes]
+Guard find a near-dead adventurer recently and deliver them to Nurse Diedre in the capital? SoftBreak   &6[Commander Haynes]&r
+I'd honestly have to check our records... Give me a minute here. The paperwork is so messy. Starn and I had no time to go
+through it.
+  &6[Commander Haynes]&r
  The only record I can find of a body found that wasn’t dead recently was of a person found north east of Farr. It says here
 they were found in a small ruin overlooking the large pit with a 'shrine' inside. Maybe that was you ___?
-  Color|purple|[Maybe it was. I’ve never found it again during my adventures.]
-  Color|purple|[It could be. I never bothered to look for it again.]
-  Color|orange|[Bhairavi]
+  &5[Maybe it was. I’ve never found it again during my adventures.]&r
+  &5[It could be. I never bothered to look for it again.]&r
+  &6[Bhairavi]&r
  This seems worth investigating… Perhaps you can find out more about the artifact and how we can use it there.
-  Color|purple|[Sounds like these ruins outside the pit are my next stop then.]
-  Color|orange|[Bhairavi]
+  &5[Sounds like these ruins outside the pit are my next stop then.]&r
+  &6[Bhairavi]&r
  Thanks for your help Haynes.
-  Color|orange|[Commander Haynes]
+  &6[Commander Haynes]&r
  Of course. It is my honor.
 &o  Investigate the ruins overlooking the pit near   Link   Farr Farr wikilink  . Click the button on the bedrock under the
 Link   Kaul Kaul wikilink altar and make your way through the ruins. Upon completing the puzzles, avoid the mobs until Bhairavi
-teleports you away. Speak with Commander Haynes Table
+teleports you away. Speak with Commander Haynes
  Bhairavi
-  Color|orange|[Bhairavi]
- Thank goodness that worked in time. You’re alive! What did you find in there? SoftBreak   Color|purple|[We found this book,
-hidden behind a magical lock]
-  Color|orange|[Bhairavi]
+  &6[Bhairavi]&r
+ Thank goodness that worked in time. You’re alive! What did you find in there? SoftBreak   &5[We found this book, hidden behind
+a magical lock]&r
+  &6[Bhairavi]&r
  Let me look over this...
-  Color|orange|[Bhairavi]
+  &6[Bhairavi]&r
  Hmm, it seems to help explain how this relic works. I’ve gotten it active while you were gone, but couldn’t figure out how to
 lock on to anything. This should work...
-  Color|purple|[I wonder if the Sons and the Masked Man ever worked out where it was pointing.]
-  Color|orange|[Bhairavi]
+  &5[I wonder if the Sons and the Masked Man ever worked out where it was pointing.]&r
+  &6[Bhairavi]&r
  I guess we’ll have to see. It seems to be drawing us south. Let me sync your Quest Compass up to it and we’ll see where it
 leads. If C’Axtal is somehow still alive, maybe it can take us to him. If not... maybe we’ll find Kaul itself. And the wool? One
 can hope!
-  Color|PURPLE|[So where exactly am I going?]
-  Color|orange|[Bhairavi]
+  &5[So where exactly am I going?]&r
+  &6[Bhairavi]&r
  If I had to guess, I’d say it’s pulling you toward the Cursed Forest. I don’t know what you’ll find in there, so be careful.
 I’ll send Starn and Brayllur after you to help and hopefully everything will work out. Good luck and be safe.
-&o  Make your way through the cursed forest until you find the yellow lobby teleporter at 1200 71 110 Table
+&o  Make your way through the cursed forest until you find the yellow lobby teleporter at 1200 71 110
  Brayllur
-  Color|orange|[Starn]
+  &6[Starn]&r
  Wait what? What's going on here? The constructural magic should have finished the lobby by now. And what are these giant
-spikes. SoftBreak   Color|orange|[Brayllur] Dark magic in air. Can smell it. It stink.
-  Color|grey|[ange Figures]
+spikes. SoftBreak   &6[Brayllur]&r Dark magic in air. Can smell it. It stink.
+  Color|grey|[ange Figures]&r
  You will go no futher!
 &o  One of the warriors fires a blast directly at Starn, killing him.
-  Color|orange|[Brayllur]
+  &6[Brayllur]&r
  STARN! HOW COULD YOU! DIE YOU SCUM!
 &o  As you finish off the last of the warriors, the large spikes begin to disappear and the constructural magic resumes. The
 lobby quickly finishes building itself.
-  Color|orange|[Brayllur]
+  &6[Brayllur]&r
  Starn gone... How?
-  Color|purple|[I'm so sorry.]
-  Color|orange|[Brayllur]
+  &5[I'm so sorry.]&r
+  &6[Brayllur]&r
  We lost much for wool. You must get last one... For Starn.
-  Color|purple|[We made it through. The dungeon is all that's left.]
-  Color|orange|[Brayllur]
+  &5[We made it through. The dungeon is all that's left.]&r
+  &6[Brayllur]&r
  Right, yes. You are. But he is gone. Must get wool... For Starn.
-  Color|orange|[Brayllur]
+  &6[Brayllur]&r
  Found this on floor after Sons ran scared. You need reward before fight for wool...
 &o  SOUL OF THE FOREST COMPLETE! Awarded a   Link   Yellow Vernal_Nightmare wikilink Key, Full Access to the   Link   Yellow
 Dungeon Vernal_Nightmare wikilink Lobby Trader, 2   Link   Totem of the Forest Totem_of_the_Forest wikilink  , 10 Anvils, and 64

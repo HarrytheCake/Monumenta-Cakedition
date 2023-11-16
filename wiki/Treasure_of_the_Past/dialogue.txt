@@ -1,39 +1,40 @@
-  WorkInProgress|Double check, fill out more Table
+&r
+  WorkInProgress|Double check, fill out more&r
  Zulumar
   Coordinates: [391, 57, 730]
-   &6[Zulamar]
+   &6[Zulamar]&r
  Oh, you've finally come! It feels like I'd been waiting forever for you.
-  &5[I should probably go... ]
-  &6[Zulamar]
+  &5[I should probably go... ]&r
+  &6[Zulamar]&r
  You may leave now, but sooner or later you'll come back. Think about it!
-  &5[Who are you, and why were you waiting for me?]
-  &6[Zulamar]
+  &5[Who are you, and why were you waiting for me?]&r
+  &6[Zulamar]&r
  My name is Zulamar. But my name won't tell you much about me- I'm here to make a deal.
-  &5[All of this looks very suspicious... I think I'll go...]
-  &6[Zulamar]
+  &5[All of this looks very suspicious... I think I'll go...]&r
+  &6[Zulamar]&r
  You may leave now, but sooner or later you'll come back here. Think about what you can achieve!
-  &5[A deal? I'm interested...]
-  &6[Zulamar]
+  &5[A deal? I'm interested...]&r
+  &6[Zulamar]&r
  Good. You don't ask troublesome questions like the others, and you don't back down either.
-  &5[Wait! I changed my mind... I think I'll refrain from your offer.]
-  &6[Zulamar]
+  &5[Wait! I changed my mind... I think I'll refrain from your offer.]&r
+  &6[Zulamar]&r
  You may leave now, but sooner or later you'll come back here. Think about what you can achieve!
-  &5[...]
-  &6[Zulamar]
+  &5[...]&r
+  &6[Zulamar]&r
  Well, let's get to the point.
-  &6[Zulamar]
+  &6[Zulamar]&r
  According to ancient legends, there used to be a prosperous empire with a king that was very greedy for knowledge. The only
 legacy left of this empire are ruins, proudly towering over the ocean.
-  &6[Zulamar]
+  &6[Zulamar]&r
  All kingdoms have their secrets, and the Viridian Empire was no exception. Ancient texts say that King Salazar had two cursed
 artifacts, yet he was afraid to use them.
-  &5[Sounds like a fairy-tale. Wait, are you trying to make a fool of me?]
-  &6[Zulamar]
+  &5[Sounds like a fairy-tale. Wait, are you trying to make a fool of me?]&r
+  &6[Zulamar]&r
  (Missing)
-  &5[Afraid? Why?]
-  &6[Zulamar]
+  &5[Afraid? Why?]&r
+  &6[Zulamar]&r
  That's none of your concern right now. But, I might tell you once you've helped me.
-  &6[Zulamar]
+  &6[Zulamar]&r
  I digress. As it turns out, one of those artifacts is hidden deep underground, under the Sunken Tomb to the northwest. I don't
 know what dangers lie within, but be careful! Once you're inside, seek out a hidden door; it should open up to a secret chamber
 that holds great treasure. Good luck!
@@ -45,7 +46,7 @@ it may be destroyed by a creeper explosion.
  C:   &o  Find a way to retrieve the cursed artifact from the temple.
 &o  As you move inside the temple, you notice a large eye looking directly at you
 &o  A magical barrier blocks your way. Perhaps you should examine this room?
-  &6[???]
+  &6[???]&r
  Prove yourself worthy to possess this sacred relic or begone!  Plain  The button to progress is located under the bridge on the
 wall toward the entrance of the room. Plain  After pressing the button, a second button will appear inside the drain pipe in the
 back left corner of the room. Swim inside the pipe and press the button to remove the magic barrier.
@@ -55,47 +56,47 @@ back left corner of the room. Swim inside the pipe and press the button to remov
 &o  After a moment, a splash of water is heard at the other end of the room
  After pressing the button:
 &o  Echoes are heard all over the hall. It seems that barrier has been broken!
-  &6[Menacing Voice]
+  &6[Menacing Voice]&r
  You did it, mortal. Maybe you're not so hopeless...
  C:   &o  [1/2]: Return to Zulamar in Alnera.
- C:   &o  [2/2]: If you lose the artifact you can get it back from the hidden chamber. Table
+ C:   &o  [2/2]: If you lose the artifact you can get it back from the hidden chamber.
  Zulumar
-  &6[Zulamar]
+  &6[Zulamar]&r
  You got it? Well, show it to me, quickly!
 &o  He seems both a little bit nervous and excited at the same time.
-  &5[I have it right here.]
-  &6[Zulamar]
+  &5[I have it right here.]&r
+  &6[Zulamar]&r
  Yes, just like he said! Legends don't lie, truly! Plain &o  He takes the artifact from your hands and you notice a gleam in his
 eyes.
-  &5[Excuse me- care to tell me what this is all for?]
-  &6[Zulamar]
+  &5[Excuse me- care to tell me what this is all for?]&r
+  &6[Zulamar]&r
  Well, I guess I can tell you. The artifact you retrieved from the sunken tomb is not a simple relic of the past, but is instead
 a part of a mechanism that potentially could be used to restore the Viridian Empire to its former glory. I can't tell you the
 details- I'm not sure of them myself- but my employer will surely be able to answer your questions. He should be in Frostgate.
 His name is Zeroc- I'll let him know you helped me here. Now, where was I...
-  &5[In a hurry? You look nervous...]
-  &6[Zulamar]
+  &5[In a hurry? You look nervous...]&r
+  &6[Zulamar]&r
  Huh? What? Why does it bother you so much? Plain &o  He looks away from you and tries to examine the artifact.
   &5[You send me after a relic you aren't sure exists, refuse to tell me about yourself, and now you try to ignore me. I need
-answers.]
-  &6[Zulamar]
+answers.]&r
+  &6[Zulamar]&r
  FINE! Fine! Calm down! I'll tell you what you want to know, just- calm down.
-  &6[Zulamar]
+  &6[Zulamar]&r
  The artifact you retrieved from the sunken tomb is not a simple relic of the past, but is instead a part of a mechanism that
 can be used to restore the Viridian Empire to its former glory. I can't tell you the details- I'm not sure of them myself- but
 my employer will surely be able to answer your questions. He should be in Frostgate. His name is Zeroc- I'll let him know you
 helped me here. Now, where was I...
-  &5[I see. Let's talk about my reward now...]
-  &6[Zulamar]
+  &5[I see. Let's talk about my reward now...]&r
+  &6[Zulamar]&r
  Ah, yes! Reward, indeed... You see, I have nothing but these shiny crystals- er, crystalline shards...
 &o  He frowns a bit and thinks for a second.
-  &6[Zulamar]
+  &6[Zulamar]&r
  Although... I can make a replica of this spear and imbue it with either the power of lightning, fire, or ice- whichever one you
 want. But choose wisely- once you pick one, there is no going back.
-  &5[A little thunder and lightning never hurt anyone except my enemies.]
-  &5[Carving a flaming path of fire through my opposition. I like the sound of that.]
-  &5[A slow enemy is a vulnerable enemy. I think I'll freeze my targets with ice.]
-  &6[Zulamar]
+  &5[A little thunder and lightning never hurt anyone except my enemies.]&r
+  &5[Carving a flaming path of fire through my opposition. I like the sound of that.]&r
+  &5[A slow enemy is a vulnerable enemy. I think I'll freeze my targets with ice.]&r
+  &6[Zulamar]&r
  Here you are. Leave me be- I have an artifact to examine.
  TREASURES OF THE PAST COMPLETE! SoftBreak  Awarded   Link   Apotheosis Spear Apotheosis_Spear wikilink  , 28 Compressed
 Crystalline Shards!

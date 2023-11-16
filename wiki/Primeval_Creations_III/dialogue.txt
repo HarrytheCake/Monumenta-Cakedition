@@ -1,11 +1,29 @@
-  WorkInProgress|Coordinates, puzzle solutions, and double checking.
+&r
+  WorkInProgress|Coordinates, puzzle solutions, and double checking.&r
  Solution to puzzles:   Link   https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_III
 https://monumenta.wiki.gg/wiki/Puzzle_Solutions_Guide/Primeval_Creations_III
  C:   &o  You found another one of Selari's journals. Journey back into his workshop and see what you can find. Remember to
 bring some uncharged tesseracts with you.
  After entering the light blue room:
+  &3THE POWER OF MAGIC&r
+  &8Magic, that engrossing ecstasy that fills the veins of all those who dare seek its power. The aspect that is most commonly
+familiar, and yet it is so vastly misunderstood. However my experience with it can guide me, and through a specific encoding of
+various magic properties, I believe I can concentrate it with ease.&r
  After completing the puzzle:
+  &8Potential, the ability the imagine and therefore be. The endless possibilities to change the world around you, to manipulate
+it to your liking, with only the requirement of dreaming of something bigger. This is the true power of the Aspect of Magic.
+However, while this experiment has proven fruitful, the power of Magic alone is not what I need. I shall continue pushing
+forward with my research.&r
  After entering the yellow room:
+  &3THE POWER OF THE ELEMENTS&r
+  &8Of all the aspects I have studied, the Elements seems to be the most vague. What is an Element? The water that brings us
+life? The air that fills our lungs? Are these truly the primordal powers that create life? This is the answer I wish to seek. I
+believe that by creating a single-width node string for each element that connects 2 designated points, where no node strings
+cross eachother, I can harness this power.&r
  After completing the puzzle:
+  &8A clarity has washed over me, a realization that I had not previously seen. The world is more than a collection of elements,
+together they form more than the sum of their parts. They wrap and connect, and it the manipulation of this connection that
+forms the basis of the Aspect of the Elements. I am grateful for this experiment's informity, however the power of the Elements
+alone is not what I require. My research now enters a new realm.&r
  PRIMEVAL CREATIONS III COMPLETE! SoftBreak  Awarded a   Link   Tesseract of Magic Tesseract_of_Magic wikilink and a   Link
 Tesseract of the Elements Tesseract_of_the_Elements wikilink  .

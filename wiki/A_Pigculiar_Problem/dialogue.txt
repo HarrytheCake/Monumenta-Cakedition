@@ -1,101 +1,102 @@
-&o  Talk to Walter Jr. a few times until a different dialog pops up SoftBreak   WorkInProgress Table
+&r
+&o  Talk to Walter Jr. a few times until a different dialog pops up SoftBreak   WorkInProgress&r
  Walter Jr. SoftBreak  Coordinates: -770, 107, 125
-  Color|orange|[Walter Jr.]
+  &6[Walter Jr.]&r
  Now look here, hitting such a valuable test subject is quite rude, I say!
-  Color|purple|[Oh my goodness! A talking pig!]
-  Color|orange|[Walter Jr.]
+  &5[Oh my goodness! A talking pig!]&r
+  &6[Walter Jr.]&r
  Uh... Oink?
-  Color|purple|[Stop that! I heard you talk. How are you doing that?!]
-  Color|purple|[Oh, thank goodness. I thought I was crazy.]
-  Color|orange|[Walter Jr.]
+  &5[Stop that! I heard you talk. How are you doing that?!]&r
+  &5[Oh, thank goodness. I thought I was crazy.]&r
+  &6[Walter Jr.]&r
  This is what I get for showing off... fine... I'll tell you!
-  Color|purple|[Yay!]
-  Color|orange|[Walter Jr.]
+  &5[Yay!]&r
+  &6[Walter Jr.]&r
  If you do me a favor!
-  Color|purple|[Oh... Okay.]
-  Color|purple|[Hmph. Not now.]
-  Color|orange|[Walter Jr.]
+  &5[Oh... Okay.]&r
+  &5[Hmph. Not now.]&r
+  &6[Walter Jr.]&r
  Now, for your task. In this very valley is a wondrous place called Crescent Isle, where Pigkind lavish in beauty and luxury.
-  Color|purple|[That sounds majestic.]
-  Color|purple|[I don't believe that.]
-  Color|orange|[Walter Jr.]
+  &5[That sounds majestic.]&r
+  &5[I don't believe that.]&r
+  &6[Walter Jr.]&r
  It truly is! I want you to go there and speak to Percy. He's the massage therapist there. He's got a special potion I want.
-  Color|purple|[Sounds easy enough.]
-  Color|orange|[Walter Jr.]
+  &5[Sounds easy enough.]&r
+  &6[Walter Jr.]&r
  You would think, but he likes to hide away at the top of the tower. The Isle is all the way west, across the ocean. Go sail!
 Image  width 297 height 297  2020-02-29_15.27.43.png 2020-02-29_15.27.43.png fig:2020-02-29_15.27.43.png
-&o  Go to the tower in the ocean (-1380, 91, 190) and talk to Percy. Header section Table
+&o  Go to the tower in the ocean (-1380, 91, 190) and talk to Percy. Header section
  Percy SoftBreak  Coordinates:   &o  -1380, 91, 190
-  Color|Orange|[Percy]
+  &6[Percy]&r
  Oink?
-  Color|Purple|[You're Percy, right? I've been sent by Walter Jr. to find you.]
-  Color|Orange|[Percy]
+  &5[You're Percy, right? I've been sent by Walter Jr. to find you.]&r
+  &6[Percy]&r
  Oh? You of humankind know of Walter Jr.? How is that fine chap?
-  Color|Purple|[AH! A talking pig again!]
-  Color|Orange|[Percy]
+  &5[AH! A talking pig again!]&r
+  &6[Percy]&r
  ...You spoke to me in your tongue first, good sir. Now what can I do for thee?
-  Color|purple|[I'm sorry. I'm still not used to this... He sent me to ask about a potion?]
-  Color|purple|[YOU'RE A TALKING PIG!]
-  Color|Orange|[Percy]
+  &5[I'm sorry. I'm still not used to this... He sent me to ask about a potion?]&r
+  &5[YOU'RE A TALKING PIG!]&r
+  &6[Percy]&r
  Ah yes. The Pig Potion of Porcine Perfection and Peculiarity. I'm afraid I've not got it any longer.
-  Color|purple|[WHAT?!]
-  Color|purple|[Uhhhhh... huh?]
-  Color|Orange|[Percy]
+  &5[WHAT?!]&r
+  &5[Uhhhhh... huh?]&r
+  &6[Percy]&r
  What are you shouting for, chap? This is a place of sanctity!
-  Color|purple|[I went through all that trouble swimming and/or boating here and you've not even got the potion?]
-  Color|Orange|[Percy]
+  &5[I went through all that trouble swimming and/or boating here and you've not even got the potion?]&r
+  &6[Percy]&r
  I'm afraid not. I've shipped it to the capital, Sierhaven. It should be in the basement of the Workshop. It's where all new
 arrivals go! Just find the little trapdoor and head down it.
-  Color|purple|[Then what?]
-  Color|Orange|[Percy]
+  &5[Then what?]&r
+  &6[Percy]&r
  I'm sure my agent, Peppa, will happily give it to you!
 Image  width 302 height 302  2020-02-29_15.44.40.png 2020-02-29_15.44.40.png 2020-02-29_15.44.40.png &o  Go to the workshop in
 Link   Sierhaven Sierhaven wikilink (-725, 106, 16) and press the button on the work stations to access the basement. Once
 inside, grab a Beetroot (Beetroot is on a chest near 341 ,176, 570) and guide the pig to the other set of doors. Once you get
-the potion in the chest, head back to Walter Jr. to finish the quest. Header section_1 Table
+the potion in the chest, head back to Walter Jr. to finish the quest. Header section_1
  Walter Jr. SoftBreak  Coordinates: -770, 107, 125
-  Color|orange|[Walter Jr.]
+  &6[Walter Jr.]&r
  You got it! You got the potion! Amazing! May I have it?
-  Color|purple|[Of course.]
-  Color|purple|[Never! It's mine!]
-  Color|purple|[OH GOD, A TALKING PIG!]
-  Color|orange|[Walter Jr.]
+  &5[Of course.]&r
+  &5[Never! It's mine!]&r
+  &5[OH GOD, A TALKING PIG!]&r
+  &6[Walter Jr.]&r
  I appreciate your time so much. Now let me share the secret I have promised you... how pigkind can speak!
-  Color|purple|[I can't wait!]
-  Color|orange|[Walter Jr.]
+  &5[I can't wait!]&r
+  &6[Walter Jr.]&r
  Are you truly prepared to know this mighty secret?
-  Color|purple|[I am!]
-  Color|purple|[Give me a moment to brace myself.]
-  Color|purple|[I might need to sit down. Hold tight.]
-  Color|orange|[Walter Jr.]
+  &5[I am!]&r
+  &5[Give me a moment to brace myself.]&r
+  &5[I might need to sit down. Hold tight.]&r
+  &6[Walter Jr.]&r
  Are you truly sure? You may want to take a seat or something.
-  Color|purple|[No, I am ready.]
-  Color|purple|[You might be right. Let me take a seat.]
-  Color|orange|[Walter Jr.]
+  &5[No, I am ready.]&r
+  &5[You might be right. Let me take a seat.]&r
+  &6[Walter Jr.]&r
  Excellent. So, the secret as to why Pigkind can speak is...
-  Color|purple|[Spit it out!]
-  Color|orange|[Walter Jr.]
+  &5[Spit it out!]&r
+  &6[Walter Jr.]&r
  Well, it's all because of Mawrmoch.
-  Color|purple|[Who?]
-  Color|orange|[Walter Jr.]
+  &5[Who?]&r
+  &6[Walter Jr.]&r
  He was a member of the Mage Council! He really liked animals, see, and decided one day to try and make his pet pig, Levyn
 Bacon, talk.
-  Color|purple|[Then what?]
-  Color|purple|[Levyn Bacon?]
-  Color|orange|[Walter Jr.]
+  &5[Then what?]&r
+  &5[Levyn Bacon?]&r
+  &6[Walter Jr.]&r
  Well, Levyn Bacon was able to talk after the spell resolved. But so could all other pigs. Mawrmoch really porked up.
-  Color|purple|[I can tell!]
-  Color|orange|[Walter Jr.]
+  &5[I can tell!]&r
+  &6[Walter Jr.]&r
  Thankfully you've brought me this potion. At last, I can be rid of this awful sentience. I've had my fun, but I feel so...
 responsible... as a talking pig. I just want to go back to the old days, before this mess.
-  Color|purple|[Wait, what?]
-  Color|purple|[What happened to Mawrmoch?]
-  Color|orange|[Walter Jr.]
+  &5[Wait, what?]&r
+  &5[What happened to Mawrmoch?]&r
+  &6[Walter Jr.]&r
  Percy has been seeking a way back to normalcy for Pigkind. This is the solution. I am ready to return. Thank you for your help,
 ___. Let me reward you for your help before I return to who I once was...
-  Color|purple|[If you must.]
-  Color|purple|[Ooh, rewards!]
-  Color|orange|[Walter Jr.]
+  &5[If you must.]&r
+  &5[Ooh, rewards!]&r
+  &6[Walter Jr.]&r
  Thank you again. I offer you my commemorative mask of Levyn Bacon for your help.
 &o  A PIGCULIAR PROBLEM COMPLETE! Awarded   Link   Levyn Bacon Mask Levyn_Bacon_Mask wikilink Header tips  Tips  Plain
 Pigculiar Problem does not show up in the quest list when talking to a town guide. However if you speak with Walter Jr. once, it

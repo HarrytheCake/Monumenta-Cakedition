@@ -1,32 +1,35 @@
-&o  Follow the race markers to beat Flashy's race! Table
+&r
+&o  Follow the race markers to beat Flashy's race!
  Flashy
   Coordinates: [-797, 101, 27]
-   &6[Flashy]
+   &6[Flashy]&r
  Hey mate! You look like the kind of guy that runs a lot, wanna race?
-  &5[What do you mean by 'race'?]
-  &6[Flashy]
+  &5[What do you mean by 'race'?]&r
+  &6[Flashy]&r
  You run, you TRY to beat my time, you win a prize if you succeed. Easy eh?
-  &5[Let's give it a go!]
-  &6[Flashy]
+  &5[Let's give it a go!]&r
+  &6[Flashy]&r
  That's what I like to hear! Wanna rundown of the rules, or do you just wanna go?
-  &5[Let's go right now!]
-  &6[Flashy]
+  &5[Let's go right now!]&r
+  &6[Flashy]&r
  Here we go!
-  &5[Sure, I'll listen to the rules.]
-  &6[Flashy]
+  &5[Sure, I'll listen to the rules.]&r
+  &6[Flashy]&r
  Pretty simple stuff. Run through the rings you see. Every time you pass through one, you'll get a bit more time to get to the
 next, and so on. You gotta reach the end with time still left, and if ya do, you beat my time!
-  &5[Okay then, let's go!]
-  &6[Flashy]
+  &5[Okay then, let's go!]&r
+  &6[Flashy]&r
  Here we go!
-  &5[I'm too tired of running...]
-  &6[Flashy]
+  &5[I'm too tired of running...]&r
+  &6[Flashy]&r
  You could have a future in racing, mate! Come back later for sure!
  After you beat the race:
-  &6[Flashy]
+  &6[Flashy]&r
  Okay! That was definitely not supposed to happen! Ya did it though - Please, come back to me so I can give you a reward!
-&o  C: Speak to Flashy. Table
+&o  C: Speak to Flashy.
  Flashy
   Coordinates: [-797, 101, 27]
-   &6[Flashy]
+   &6[Flashy]&r
  You deserve a reward. Take this!
+   &3FLASH IN THE PAN COMPLETE!&r LineBreak   &3Awarded [[Runner's Boots]] and access to all other [[Races]] across the King's
+Valley.&r

@@ -1,65 +1,66 @@
-  WorkInProgress|make puzzle solutions look right, missing npc coord, missing compass line Table
+&r
+  WorkInProgress|make puzzle solutions look right, missing npc coord, missing compass line&r
  Wilhelm, Diplomat of Chillwind
   Coordinates: [-1295, 130, 467]
-   Color|Orange|[Wilhelm]
+   &6[Wilhelm]&r
  (Player)! There is trouble brewing. Have you noticed there are more mage hunters around?
-  Color|Purple|[I have. What's wrong?]
-  Color|Purple|[Their patrols seem normal to me, even if they are more frequent.]
-  Color|Orange|[Wilhelm]
+  &5[I have. What's wrong?]&r
+  &5[Their patrols seem normal to me, even if they are more frequent.]&r
+  &6[Wilhelm]&r
  Their frequency is what is causing the people to worry. I wish for this place to be peaceful again, and ridding the town of all
 of these hunters is the fastest way to do so. But if you think that those patrols seem normal I will not bother you further.
-  Color|Orange|[Wilhelm]
+  &6[Wilhelm]&r
  There have been whispers that mage hunters have found a way to infiltrate Wispervale.
-  Color|Purple|[Oh, that's not good.]
-  Color|Orange|[Wilhelm]
+  &5[Oh, that's not good.]&r
+  &6[Wilhelm]&r
  It isn't. Listen carefully, I have a contact in Wispervale that I'm worried about. I can't tell you who they are right now, but
 I want to make sure they're alive. The hunters seem to be keeping a close eye on me. If you can confirm that they are okay...
 Tell the beautiful lady that Wilhelm will bring her a big bouquet of roses soon.
-  Color|Purple|[Leave it to me.]
-  Color|Purple|[I don't think I can...]
-  Color|Orange|[Wilhelm]
+  &5[Leave it to me.]&r
+  &5[I don't think I can...]&r
+  &6[Wilhelm]&r
  I understand that it is dangerous. I'm sorry for asking you to do something so risky.
-  Color|Orange|[Wilhelm]
+  &6[Wilhelm]&r
  I knew I could count on you.
  ''Investigate the academy library in Wispervale and try to decipher the hint Wilhelm gave you.'
  After finding the book   Link   Belladonna Belladonna wikilink  :
-  Color|Grey|You recognize this name! Belladonna - she helped you during your adventure to find the Palace of Mirrors!
-&o  Find Wilhelm's contact and your ally, Belladonna, in her house in Wispervale. Table
+  Color|Grey|You recognize this name! Belladonna - she helped you during your adventure to find the Palace of Mirrors!&r
+&o  Find Wilhelm's contact and your ally, Belladonna, in her house in Wispervale.
  Belladonna
   Coordinates: [-1720, 135, -77]
-   Color|Orange|[Belladonna]
+   &6[Belladonna]&r
  (Player)? What brings you here?
-  Color|Purple|[Wilhelm said he would bring you a big bouquet of roses soon.]
-  Color|Orange|[Belladonna]
+  &5[Wilhelm said he would bring you a big bouquet of roses soon.]&r
+  &6[Belladonna]&r
  ...He told you then? I suppose we need all the help we can get. Though, if it's you, then I'm sure we will succeed.
-  Color|Purple|[How can I help?]
-  Color|Orange|[Belladonna]
+  &5[How can I help?]&r
+  &6[Belladonna]&r
  Let me bring you up to speed on the current situation. Somehow, mage hunters have brute forced their way into the town. I don't
 know who they are, but it's making things difficult for me...
-  Color|Purple|[Why?]
-  Color|Orange|[Belladonna]
+  &5[Why?]&r
+  &6[Belladonna]&r
  I've been trying to strengthen the magical barrier that surrounds Wispervale but I'm afraid of getting caught by a hidden mage
 hunter. If I don't do it soon, the barrier protecting this city will disappear. But it's too risky to do anything right now.
-  Color|Purple|[What should we do then?]
-  Color|Orange|[Belladonna]
+  &5[What should we do then?]&r
+  &6[Belladonna]&r
  I don't think I can easily sneak around at night without getting caught. Could you take these magic crystals and set them at
 four points in the town?
-  Color|Purple|[Okay, leave it to me!]
-  Color|Purple|[I don't think I can do it.]
-  Color|Orange|[Belladonna]
+  &5[Okay, leave it to me!]&r
+  &5[I don't think I can do it.]&r
+  &6[Belladonna]&r
  I know it's risky. Let me know if you change your mind.
-  Color|Orange|[Belladonna]
+  &6[Belladonna]&r
  I knew I could count on you! We only have a small window of time to get this right so let me know when you're ready!
-&o  R is for Reprisal: Talk to Belladonna and find out what help she needs. Table
+&o  R is for Reprisal: Talk to Belladonna and find out what help she needs.
  Belladonna
   Coordinates: [-1720, 135, -77]
-   Color|Orange|[Belladonna]
+   &6[Belladonna]&r
  Are you ready to help me?
-  Color|Purple|[Yeah! Let's do it!]
-  Color|Purple|[I need some more time...]
-  Color|Orange|[Belladonna]
+  &5[Yeah! Let's do it!]&r
+  &5[I need some more time...]&r
+  &6[Belladonna]&r
  Alright, let me know when you are ready.
-  Color|Orange|[Belladonna]
+  &6[Belladonna]&r
  Very well, let's go.
 &o  Find the 4 locations in Wispervale and place the crystals.
 &o  Place down the 4 crystals across Wispervale. Belladonna can give you more if you lose them.
@@ -68,163 +69,163 @@ four points in the town?
  - Campfire on ridge [-4374 138 612]
  - By Wispleaf tree [-4430 139 567]
   After placing the crystal on the fountain:
-  Color|Cyan|You place the crystal on the edge of the fountain. It hums quietly.
-  Color|Cyan|You hear some Mage Hunters talking loudly in the house nearby...
-  Color|Orange|[Mage Hunter Kyle]
+  Color|Cyan|You place the crystal on the edge of the fountain. It hums quietly.&r
+  Color|Cyan|You hear some Mage Hunters talking loudly in the house nearby...&r
+  &6[Mage Hunter Kyle]&r
  Man, this is so boring! I can't see any mana threads and everyone is so scared of us. It's impossible to pinpoint who is a mage
 and who isn't!
-  Color|Orange|[Mage Hunter Amanda]
+  &6[Mage Hunter Amanda]&r
  Don't worry, the Grand Hunter himself said the barrier around this town was weakening. Those scummy mages will eventually have
 to come out of their hiding place to restore the barrier or it will fade away.
-  Color|Orange|[Mage Hunter Kyle]
+  &6[Mage Hunter Kyle]&r
  Really? Then we can strike when the opportunity arises! Do you think we can catch them before the meeting?
-  Color|Orange|[Mage Hunter Amanda]
+  &6[Mage Hunter Amanda]&r
  Shhh! Don't talk about the meeting! It's supposed to be a secret, what are you going to do if someone hears us and finds out!
-  Color|Orange|[Mage Hunter Kyle]
+  &6[Mage Hunter Kyle]&r
  What's the worry? Everyone here knows about the curfew. How would they be able to get to Frostgate without us knowing anyways?
-  Color|Orange|[Mage Hunter Amanda]
- I guess... Table
+  &6[Mage Hunter Amanda]&r
+ I guess...
  Belladonna
   Coordinates: [-4390, 135, -581]
-   Color|Orange|[Belladonna]
+   &6[Belladonna]&r
  Excellent work, I'll quickly restore the barrier. We should be safe for now.
-  Color|Purple|[I found out something that I think you should know.]
-  Color|Orange|[Belladonna]
+  &5[I found out something that I think you should know.]&r
+  &6[Belladonna]&r
  Oh? Did you learn something?
-  Color|Purple|[The mage hunters were ordered by someone called the Grand Hunter. They're holding a meeting in Frostgate soon.]
-  Color|Orange|[Belladonna]
+  &5[The mage hunters were ordered by someone called the Grand Hunter. They're holding a meeting in Frostgate soon.]&r
+  &6[Belladonna]&r
  This is definitely helpful information, thank you. Hmm... I think that we need to find out more about this mysterious Grand
 Hunter.
-  Color|Purple|[How should we go about that?]
-  Color|Orange|[Belladonna]
+  &5[How should we go about that?]&r
+  &6[Belladonna]&r
  Hmm... We should try to infiltrate this meeting that is going to be held. I'll try to find out more about it, and you should
 put together a disguise. Your face is too recognizable though... Can you find a way to change your face? I'll take care of the
 rest, meet back here when you've got a disguise for your face.
-&o  Figure out a way to change your face - again. The Mother of Faces did predict your return... Table
+&o  Figure out a way to change your face - again. The Mother of Faces did predict your return...
  Spirit of the Forge
   Coordinates: [-4517, 177, 433]
-   Color|Orange|[Spirit of the Forge]
+   &6[Spirit of the Forge]&r
  I knew you'd return to me. I have an idea of what you need from me, but humor me. How may I help you?
-  Color|Purple|[I need a disguise so I can enter a meeting secretly.]
-  Color|Orange|[Spirit of the Forge]
+  &5[I need a disguise so I can enter a meeting secretly.]&r
+  &6[Spirit of the Forge]&r
  Already? You must hurry back when you can. Go.
-  Color|Purple|[I need to leave.]
-  Color|Orange|[Spirit of the Forge]
+  &5[I need to leave.]&r
+  &6[Spirit of the Forge]&r
  Ho ho, you enjoy meddling in affairs that are far bigger than all of us don't you? Help me, and I will help you. My collection
 of faces grows large. Help me organize them and I'll grant you what you ask.
-   :Puzzle_Solutions_Guide/R_is_for_Reprisal
-   Color|Lime|You hear mechanical grinding in the distance as the configuration becomes complete. Table
+   :Puzzle_Solutions_Guide/R_is_for_Reprisal&r
+   Color|Lime|You hear mechanical grinding in the distance as the configuration becomes complete.&r
  Spirit of the Forge
   Coordinates: [-4517, 177, 433]
   You feel your face tingle.
-  Color|Orange|[Spirit of the Forge]
+  &6[Spirit of the Forge]&r
  Excellent work. I've given you a face that many will see, but none will remember.
-  Color|Purple|[Thank you.]
-  Color|Orange|[Spirit of the Forge]
+  &5[Thank you.]&r
+  &6[Spirit of the Forge]&r
  Don't. Not yet at least. Now go.
-&o  With your new disguise, return to Belladonna. Table
+&o  With your new disguise, return to Belladonna.
  Belladonna
   Coordinates: [-1720, 135, -77]
-   Color|Orange|[Belladonna]
+   &6[Belladonna]&r
  (Player)? Judging by your face, you were successful. Here are robes I stole from a mage hunter. I cleaned them for you. I did
 some more digging and found out the meeting will be held at the Frostgate cathedral. With your disguise you should be able to
 get in.
-  Color|Purple|[Got it. What do I do if they don't let me in?]
-  Color|Orange|[Belladonna]
+  &5[Got it. What do I do if they don't let me in?]&r
+  &6[Belladonna]&r
  Well... You will probably have to find an alternative way in then. Do your best and I'll meet you there!
 &o  Find a way into the Frostgate cathedral to infiltrate the meeting.
   Enter the sewers at the broken sewer grate at [-1487, 95, 978] Swim through the exit hole marked with two redstone torches at
 [-4351, 147, 433]. Exit the sewers at waters at [-4375, 146, 430] by swimming up.
- &o  Now that you've infiltrated the meeting, listen in and try to blend in. Table
+ &o  Now that you've infiltrated the meeting, listen in and try to blend in.
  Belladonna
   Coordinates: ???
-   Color|Orange|[Belladonna]
+   &6[Belladonna]&r
  (Player)! You made it! Thank god, I was worried about you. Shhh! We aren't alone. Let's go in now.
-  Color|Orange|[Belladonna]
+  &6[Belladonna]&r
  Look- the Grand Hunter!
-  Color|Orange|[Elite Hunter ???]
+  &6[Elite Hunter ???]&r
  Nashor! You haven't kicked the bucket it seems.
-  Color|Orange|[Elite Hunter Nashor]
+  &6[Elite Hunter Nashor]&r
  I see you're still as insufferable as ever Edlynn.
-  Color|Orange|[Elite Hunter Edlynn]
+  &6[Elite Hunter Edlynn]&r
  If I wasn't, you'd be too lonely dealing with the rest of these boring bookends. Anyways, how goes the hunting?
-  Color|Orange|[Elite Hunter Nashor]
+  &6[Elite Hunter Nashor]&r
  Hunting is as good as always. Mages can't hide their mana trails. It's like tracking a bleeding deer on a snowy day—too easy.
-  Color|Orange|[Elite Hunter Edlynn]
+  &6[Elite Hunter Edlynn]&r
  Just don't hog all of the good ones, okay? I haven't had any mages put up a good fight yet. Most of them just cry and beg for
 mercy before they die.
-  Color|Orange|[Elite Hunter Shirley]
+  &6[Elite Hunter Shirley]&r
  Most of them don't even know they're sinners. It's normal for them to be like that. The ones you need to be wary of are the
 ones who know what they are.
  The Grand Hunter removes his hood.
-  Color|Orange|[Belladonna]
+  &6[Belladonna]&r
  *Gasp* Is that- the Royal Advisor?!
-  Color|Orange|[Grand Hunter Ridnan]
+  &6[Grand Hunter Ridnan]&r
  My comrades, we are close to cleansing this country of the filth that is magic. It is thanks to your efforts, and your
 sacrifice, that we were able to rid the land of so many mages. But we have one final hurdle to overcome before we can celebrate.
 Ashton, tell them what you have discovered.
-  Color|Orange|[Elite Hunter Ashton]
+  &6[Elite Hunter Ashton]&r
  There are a great number of mages hiding in Wispervale. But a magical barrier stops us from seeing the mana trails we would
 normally be able to see. I have an inkling of who is responsible for this, so soon we will go and slaughter the rat that has
 turned that lovely town into a dirty sanctuary for sinners.
-  Color|Orange|[Grand Hunter Ridnan]
+  &6[Grand Hunter Ridnan]&r
  Well said Ashton. Once we take that barrier down, we will be able to find all of those abominations and make an example for all
 to see what happens when you try to hide from a hunter.
-  Color|Cyan|You hear Belladonna whimper next to you.
-  Color|Orange|[Grand Hunter Ridnan]
+  Color|Cyan|You hear Belladonna whimper next to you.&r
+  &6[Grand Hunter Ridnan]&r
  Let us move on to our next point of discussion. There has been a pain in our side that has been killing our hunters, and they
 haven't been quiet about their identity. That exiled mage from the Vall-
-  Color|Red|Ridnan's pendant glows. You feel a strange ripple, as if Reality has shifted around you. All eyes turn to you as the
-magic on your face melts off.
-  Color|Orange|[Belladonna]
+  &4Ridnan's pendant glows. You feel a strange ripple, as if Reality has shifted around you. All eyes turn to you as the magic
+on your face melts off.&r
+  &6[Belladonna]&r
  Wha-
-  Color|Orange|[Grand Hunter Ridnan]
+  &6[Grand Hunter Ridnan]&r
  (Player)?! You-
-  Color|Purple|[Advisor Ridnan! You're the Grand Hunter?!]
-  Color|Orange|[Grand Hunter Ridnan]
+  &5[Advisor Ridnan! You're the Grand Hunter?!]&r
+  &6[Grand Hunter Ridnan]&r
  I am. It is a great honor to serve her Majesty as both the Royal Advisor and the Grand Hunter.
-  Color|Purple|[You're the member of the Masked hiding in Chillwind!]
-  Color|Orange|[Grand Hunter Ridnan]
+  &5[You're the member of the Masked hiding in Chillwind!]&r
+  &6[Grand Hunter Ridnan]&r
  And? Even if I must use unsavory methods, everything I do is for the future of our country.
-  Color|Purple|[Why would you work for a murderer like Calder?!]
-  Color|Orange|[Grand Hunter Ridnan]
+  &5[Why would you work for a murderer like Calder?!]&r
+  &6[Grand Hunter Ridnan]&r
  Why not? Aren't you a murderer as well? What makes the life you took different from the life he took? In the end we are all
 killers. But mages, they are far worse than that. To steal the mana, the lifeblood of nature, from the earth itself and use it
 for their own selfish purposes. They eat away at the land and make it harder for the rest of us! Even if they don't know they're
 mages- their mere existence is a plague upon these lands!
-  Color|Purple|[Then why are you working with Calder?! He's a mage as well!]
-  Color|Orange|[Grand Hunter Ridnan]
+  &5[Then why are you working with Calder?! He's a mage as well!]&r
+  &6[Grand Hunter Ridnan]&r
  Calder’s power is simply a means to an end. The path I walk will be covered in blood, and allying myself with him will simply
 speed up the time it takes to fulfill my god-given duty. Now, get out of my way!
 &o  (Missing - fight compass message)
-  Color|Purple|Ridnan's eyes roll back before collapsing. You hear a commotion outside the room.
-&o  Return to Wilhelm and check in. Table
+  &5Ridnan's eyes roll back before collapsing. You hear a commotion outside the room.&r
+&o  Return to Wilhelm and check in.
  Wilhelm, Chillwind Diplomat
   Coordinates: [-4334, 178, 331]
-   Color|Orange|[Wilhelm]
+   &6[Wilhelm]&r
  (Player), thank goodness you're alright. I heard everything from Belladonna. I arranged a meeting with the Queen immediately.
 Go on, speak to her.
-&o  Talk to the Queen and tell her what happened. Table
+&o  Talk to the Queen and tell her what happened.
  Synnove Obregson
   Coordinates: [-4339, 179, 329]
-   Color|Orange|[Synnove Obregson]
+   &6[Synnove Obregson]&r
  (Player), I have been informed of the Grand Hunter’s betrayal. I believe that I owe you an apology for your troubles. To think
 that Calder had someone planted within our government without our knowing...
-  Color|Purple|You couldn’t have anticipated that this would happen.]
-  Color|Orange|[Synnove Obregson]
+  &5You couldn’t have anticipated that this would happen.]&r
+  &6[Synnove Obregson]&r
  We will have to do a thorough investigation to ensure there are not more... But in the meantime, I thank you for discovering
 the truth.
-  Color|Purple|I’m glad I could stop them.]
-  Color|Orange|[Synnove Obregson]
+  &5I’m glad I could stop them.]&r
+  &6[Synnove Obregson]&r
  Yes. The Masked and Calder have done enough damage; the mage hunters will be under my control for now. I will cooperate in your
 efforts to reconcile with Ishnir and stop the persecution of mages. I look forward to seeing what you do in the future. I must
-attend to some other business now, but Wilhelm looks like he wishes to speak to you.  Table
+attend to some other business now, but Wilhelm looks like he wishes to speak to you.
  Wilhelm, Chillwind Diplomat
   Coordinates: [-4334, 178, 331]
-   Color|Orange|[Wilhelm]
+   &6[Wilhelm]&r
  (Player), thank you so much for all you've done. Now that we are on the track to restoring relations between Chillwind and
 Ishnir, the future is looking so much brighter.
-  Color|Purple|Yeah, let's hope it gets easier from here on out.]
-  Color|Orange|[Wilhelm]
+  &5Yeah, let's hope it gets easier from here on out.]&r
+  &6[Wilhelm]&r
  Haha, wishful thinking my friend. I'll call for you when I need your help again.
-  Color|Cyan|R IS FOR REPRISAL COMPLETE!
+  Color|Cyan|R IS FOR REPRISAL COMPLETE!&r

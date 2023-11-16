@@ -1,62 +1,62 @@
- Table
+&r
  Dr. Laurie
-  Color|orange|[Dr. Laurie]
+  &6[Dr. Laurie] &r
  Oh no, please tell me you're not infected too?
-  Color|purple|[I'm fine. What's wrong with them?]
-  Color|orange|[Dr. Laurie]
+  &5[I'm fine. What's wrong with them?]&r
+  &6[Dr. Laurie] &r
  An out break of Marasmus Execratio, or the 'Blackroot Plague' as it's colloquially known. I won't go into the details, but it
 is both resoundingly unpleasant and fatal to two-thirds of the infected. Worst of all, none of my drugs work against it.
-  Color|purple| [Can anything be done?]
-  Color|orange|[Dr. Laurie]
+  &5 [Can anything be done?]&r
+  &6[Dr. Laurie] &r
  Some Tlaxani say their shamans could brew medicine that can cure it. It's a longshot, but there's four lives on the line. If
 you can find a shaman who can make that medicine, bring me back five doses; four for them, and one more so I can learn how to
 make it myself.
-  Color|purple|[Wow, that sounds nasty]
-  Color|orange|[Dr. Laurie]
+  &5[Wow, that sounds nasty]&r
+  &6[Dr. Laurie]&r
  Extremely. Now, if you're done being flippant I have some lives to save.
-  Color|purple|[Yep, I'm dying *cough cough*]
-  &6[Dr. Laurie]
+  &5[Yep, I'm dying *cough cough*]&r
+  &6[Dr. Laurie]&r
  Your pupils aren't even dilated and your eyes aren't oozing pus. Stop joking around, stop wasting my time.
-&o  Meet C'Taz in the jungle at 240, 78, 315 Table
+&o  Meet C'Taz in the jungle at 240, 78, 315
  C'Taz
-  Color|orange|[C'Taz]
+  &6[C'Taz]&r
  The plague has come again. I can make the medicine you seek. First, we need twelve golden stones, darkened with fear. Twelve
 treasures of winged foes, from their fortress of leaves and sky. Bring them to me. Behind me is a totem of sky. You may use it
-to come and go here freely, if your intentions are true. SoftBreak   Color|orange|[C'Taz] To make the medicine you seek, I need
-twelve Dark Amber, plucked from a fortress of leaves and sky. This is the first step of three.
+to come and go here freely, if your intentions are true. SoftBreak   &6[C'Taz]&r To make the medicine you seek, I need twelve
+Dark Amber, plucked from a fortress of leaves and sky. This is the first step of three.
 &o  Dark Amber: Hawk Fortress 445, 124, 105
-  Color|orange|[C'Taz]
+  &6[C'Taz]&r
  Perfect. Dark Amber, to be ground into a powder as fine as the smoothest sand. Next, we need sixteen Spirit Flowers, plucked
 from an island deep in the jungle. Their ancient oils banish the foul spirits afflicting Nyr.
-  Color|orange|[C'Taz]
+  &6[C'Taz]&r
  Now, you must bring me sixteen Spirit Flowers, plucked from an island deep within the jungle. Their oils are essential for the
 medicine.
  Spirit Flower &o  : Hallowed Pond 450, 71, 245
-  Color|orange|[C'Taz]
+  &6[C'Taz]&r
  Wonderful. Pungent and rich, these flowers will banish the evil spirits who have blighted Nyr. Their oils form the base of the
 medicine. Finally, bring ten pieces of Haunted Earth, reclaimed from my people's ancient home to the North. Then they shall
 live.
 &o  Haunted Earth: Ancient Ruins 320, 73, -75
-  Color|orange|[C'Taz]
+  &6[C'Taz]&r
  The ingredients are gathered. I shall invoke the spirits of earth and health and blood, and then the medicine will be yours.
-  Color|orange|[C'Taz]
+  &6[C'Taz]&r
  The medicine is done. There are four souls who must drink this, but I have more ingredients. I sense great hardship in your
 future, and can make you two powerful elixirs to aid you. Or, I can make another dose of medicine. Choose.
 &o  When presented the option to take some potions or an extra dose of medicine, its optimal to choose the extra medicine
 otherwise you will need to re-gather the ingredients again in   Link   Roots of the Plague Roots_of_the_Plague wikilink
-&o  This ending dialog is from choosing to take potions instead of the extra medicine Table
+&o  This ending dialog is from choosing to take potions instead of the extra medicine
  Dr. Laurie
-  Color|orange|[Dr. Laurie]
- You actually found that medicine? SoftBreak   Color|purple|[Yes, but only four doses]
-  Color|orange|[Dr. Laurie]
+  &6[Dr. Laurie] &r
+ You actually found that medicine? SoftBreak   &5[Yes, but only four doses]&r
+  &6[Dr. Laurie] &r
  Well I can't make my own, but that's still enough to save everyone. Let's see if this works...
-  Color|orange|[Dr. Laurie]
+  &6[Dr. Laurie] &r
  &o  COMPLETED THE PLAGUE  Awarded 192 Enchanting Bottles and 3 Potions of Restoration!
-&o  This ending dialog is from choosing to take the extra medicine. Table
+&o  This ending dialog is from choosing to take the extra medicine.
  Dr. Laurie
-  Color|orange|[Dr. Laurie]
- You actually found that medicine? SoftBreak   Color|purple|[Yes! All five doses]
-  Color|orange|[Dr. Laurie]
+  &6[Dr. Laurie] &r
+ You actually found that medicine? SoftBreak   &5[Yes! All five doses]&r
+  &6[Dr. Laurie] &r
  Well, I'll set this one aside for later, and let's see if this works...
-  Color|orange|[Dr. Laurie]
+  &6[Dr. Laurie] &r
  &o  THE PLAGUE COMPLETE!  Awarded 192 Enchanting Bottles and 3 Potions of Restoration! LineBreak

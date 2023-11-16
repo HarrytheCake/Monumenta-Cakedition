@@ -1,21 +1,21 @@
- Table
+&r
  Octavius
   Coordinates: [-672,107,70]
-   &6[Octavius]
+   &6[Octavius]&r
  Ah, you there! You look quite skilled, tell me, do you have any compunctions about killing thieves and ruffians?
-  &5[None whatsoever]
-  &6[Octavius]
+  &5[None whatsoever]&r
+  &6[Octavius]&r
  Wonderful! I am Octavius, head of the Five Axes Trading Company. Bandits have been harassing my caravans for a while now, and
 the City Guard is completely inept! Kill their leaders - of the bandits, not of the Guard, haha - and I will greatly reward you.
-  &5[I'll do what I can]
-  &6[Octavius]
+  &5[I'll do what I can]&r
+  &6[Octavius]&r
  Simply Wonderful! The leaders are in two camps north of the city and fly black and brown banners. Bring back some proof when
 they're both killed, and do what you can to make them suffer.
-  &5[Not interested.]
-  &6[Octavius]
+  &5[Not interested.]&r
+  &6[Octavius]&r
  Alas, I suppose I shall have to find someone more mercenary to assist me.
-  &5[Not interested.]
-  &6[Octavius]
+  &5[Not interested.]&r
+  &6[Octavius]&r
  Alas, I suppose I shall have to find someone more mercenary to assist me.
 &o  Assassinate two Bandit Leaders at their camps North of the city. Bring back proof once they're both dead.
 &o  1/3 - Slay a Bandit Leader in their   Link   northwestern stronghold Bandit_onghold wikilink for Octavius. They should drop
@@ -24,30 +24,30 @@ evidence of your victory. 
  &o  2/3 - Slay a Bandit Leader in their   Link   hilltop fortress Bandit_Camp wikilink  , southeast of the mage tower. They
 should drop evidence of your victory.
   Coordinates: [-390, 113, -339]
- &o  3/3 - Once you have the Cargo Manifests and the Suspicious Note return to Octavius. Table
+ &o  3/3 - Once you have the Cargo Manifests and the Suspicious Note return to Octavius.
  Octavius
-  &6[Octavius]
+  &6[Octavius]&r
  Well done indeed! Those bandits won't be harrassing anyone any more. What do you think, a stack of enchanting bottles for your
 trouble?
-  &5[This book the bandit had said insurance...]
-  &6[Octavius]
+  &5[This book the bandit had said insurance...]&r
+  &6[Octavius]&r
  Hah, you're smarter than you look. Yes, there's something questionably legal here, but keep your mouth shut and don't tell the
 guards and there's an extra stack of bottles in it for you. LineBreak ong  Note: This decision will change future quest lines!
-  &5[Make it three stacks and you've got a deal.]
-  &6[Octavius]
+  &5[Make it three stacks and you've got a deal.]&r
+  &6[Octavius]&r
  Haha, a shrewd negotiator. Three it is. Glad to see you know which way the wind blows. I'll mention your name to an associate
 who occasionally needs someone with your... scruples.
-  &5[Your bribery won't work. I'm going to Captain Murano!]
-  &6[Octavius]
+  &5[Your bribery won't work. I'm going to Captain Murano!]&r
+  &6[Octavius]&r
  Alas. You had such promise, and threw it away for the possibility of praise and promotion. Go, and know that if you meddle in
 my affairs there will be consequences.
-&o  Bring Captain Murano the two suspicious books Table
+&o  Bring Captain Murano the two suspicious books
  Captain Murano
   Coordinates: [-759, 125, -132]
-   &6[Captain Murano]
+   &6[Captain Murano]&r
  Let me know if there's anything that I, or the rest of the city guard, can do for you.
-  &5[You might be interested in these papers.]
-  &6[Captain Murano]
+  &5[You might be interested in these papers.]&r
+  &6[Captain Murano]&r
  *reads documents* That cur! We've been suspicious of Octavius for a while but had no evidence. With this we can start building
 a case. I can't offer much by way of reward, but take this blade in case he sends his thugs. Thank you, and I shall tell the
 other guards of your honor and trustworthiness.

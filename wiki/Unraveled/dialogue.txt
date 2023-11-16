@@ -1,67 +1,68 @@
-&o  Travel to the   Link   Shadowcast Bastille Shadowcast_Bastille wikilink and find evidence of Masked occupancy. Table
+&r
+&o  Travel to the   Link   Shadowcast Bastille Shadowcast_Bastille wikilink and find evidence of Masked occupancy.
  Bhairavi
   Coordinates: [-279 867-652]
-   &6[Bhairavi]
+   &6[Bhairavi]&r
  So, what have you been doing since we got set up, [Player]?
-  &5[A lot. I started a war, won a war, got the Blue Wool, and had it stolen by Calder.]
-  &6[Bhairavi]
+  &5[A lot. I started a war, won a war, got the Blue Wool, and had it stolen by Calder.]&r
+  &6[Bhairavi]&r
  Excuse me? He's here for sure? He took a wool from you?
-  &5[I'm sorry I've been running solo recently. Just a lot happening at once and a lot of trust to win.]
-  &6[Bhairavi]
+  &5[I'm sorry I've been running solo recently. Just a lot happening at once and a lot of trust to win.]&r
+  &6[Bhairavi]&r
  That's okay, we just need to get on this now. Do you have any leads?
-  &5[The Shadowcast Bastille, not far from Galengarde.]
-  &6[Izzy]
+  &5[The Shadowcast Bastille, not far from Galengarde.]&r
+  &6[Izzy]&r
  Sorry to interrupt, but why there?
   &5[The Galengarde Primarium said Calder had met with them in disguise. They tasked him to clear it out and then never saw him
-again.]
-  &6[Bhairavi]
+again.]&r
+  &6[Bhairavi]&r
  That seems as good a place as ever to start then. Are we expecting Masked resistance?
-  &5[I sure am. And I'm ready.]
-  &6[Levyn]
+  &5[I sure am. And I'm ready.]&r
+  &6[Levyn]&r
  ...Do ye think Samwell'll be there?
-  &5[I don't know. He could be anywhere by now.]
-  &6[Levyn]
+  &5[I don't know. He could be anywhere by now.]&r
+  &6[Levyn]&r
  I be hopin' that bastard be. He needs ta pay...!
-  &5[Let's get started.]
-  &6[Bhairavi]
+  &5[Let's get started.]&r
+  &6[Bhairavi]&r
  We'll meet you in the Bastille then. Good luck.
 &o  C: Find a way deeper into the Shadowcast Bastille.
  After reaching   Link   Masquerader's Ruin Masquerader's_Ruin wikilink lobby:
-&o  C: Talk with your allies. Table
+&o  C: Talk with your allies.
  Bhairavi (MR Lobby)
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  Yep, looks like Calder and his crew have been setting up here. We’re in the right place.
-  &5[Do you think they’re keeping the wool here though?]
-  &6[Izzy]
+  &5[Do you think they’re keeping the wool here though?]&r
+  &6[Izzy]&r
  Yeah this place is really close to Galengarde. That seems reckless.
-  &6[Samwell]
+  &6[Samwell]&r
  Sorry for the disappointment, mates. It was the best place we could get. Spent ages clearing this place out and setting up
 safeguards; shoulda figured the Behemoth wouldn’t be enough for you lot on the warpath.
-  &5[Samwell??]
-  &6[Levyn]
+  &5[Samwell??]&r
+  &6[Levyn]&r
  Why… ye traitorous scum! Get ye gone
 &o  C: Enter the   Link   Masquerader's Ruin Masquerader's_Ruin wikilink  .
  After beating the strike:
-&o  C: Speak with your allies following Samwell's defeat. Table
+&o  C: Speak with your allies following Samwell's defeat.
  Bhairavi (MR Lobby)
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  It’s over. We’ve got the wool back. I feel like we’re gonna be finding little shards of it all over the fortress for weeks, but
 I’ll organize a team to get it done. The wool will be complete again in no time.
-  &5[What were they even doing down there with it?]
-  &6[Bhairavi]
+  &5[What were they even doing down there with it?]&r
+  &6[Bhairavi]&r
  The same thing Calder’s been doing to the Black wool. Sharding it. They were trying to use magic to split it into tiny pieces
 to distribute its power.
-  &5[To power up his Masked even more?]
-  &6[Bhairavi]
+  &5[To power up his Masked even more?]&r
+  &6[Bhairavi]&r
  No, I think he was going to share the wool into little bits and then destroy the bits. See if that didn’t let a full spirit out
 or something.
-  &5[Would it… would it work?]
-  &6[Bhairavi]
+  &5[Would it… would it work?]&r
+  &6[Bhairavi]&r
  Somehow, I doubt it. Teal and Crimson were spirits. I don’t think releasing the spirit a bit at a time would have stopped the
 spirit from reforming as more and more got out. But I can’t say for sure.
-  &5[We might never know… So how do we keep the wool safe?]
-  &6[Bhairavi]
+  &5[We might never know… So how do we keep the wool safe?]&r
+  &6[Bhairavi]&r
  Hang onto it for now. Try not to get jumped again? Once we figure out where the Monument is in the Ring, we should be able to
 store it there... I hope.
-  '''UNRAVELED COMPLETE!'''
-  Awarded further access to the Masqueraider's Ruin ike and the Blackblood Coagulant!
+  &3'''UNRAVELED COMPLETE!'''&r
+  &3Awarded further access to the Masqueraider's Ruin ike and the Blackblood Coagulant!&r

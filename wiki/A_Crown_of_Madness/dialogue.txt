@@ -1,135 +1,135 @@
- Table
+&r
  Antoine
-  Color|orange|[Antoine]
+  &6[Antoine]&r
  I'm quite busy so ... OH IT'S YOU!
-  Color|purple|[Me? Do you know me?]
-  Color|purple|[Of course it's me!]
-  Color|orange|[Antoine]
+  &5[Me? Do you know me?]&r
+  &5[Of course it's me!]&r
+  &6[Antoine]&r
  I've read of you in Bhairavi's notes to Vargos! You helped uncover that Spirit curse near Nyr.
-  Color|purple|[Nope that was someone else.]
-  &6[Antoine]
+  &5[Nope that was someone else.]&r
+  &6[Antoine]&r
  Oh, sorry then. I'm far too busy to deal with you in that case.
-  &5[Ah yes, that was me]
-  Color|orange|[Antoine]
+  &5[Ah yes, that was me]&r
+  &6[Antoine]&r
  Welcome to the Official Center of Curse Research and Prevention for King's Valley! Thanks to your work with Bhairavi, the King
 has funded research into uncovering other curses that could still threaten the empire.
-  Color|purple|[That's neat! Find any curses lately?]
-  Color|orange|[Antoine]
+  &5[That's neat! Find any curses lately?]&r
+  &6[Antoine]&r
  Well... no. It turns out we've been pretty good at containing and removing them in the past. There was a large ban on dark
 magic trinkets during the war like hex stones and onyxes.
-  Color|purple|[Onyxes were banned?]
-  Color|orange|[Antoine]
+  &5[Onyxes were banned?]&r
+  &6[Antoine]&r
  Yes. Didn't you know? They are extremely susceptible to the dark magics the Tlaxans would make their curses out of. They are
 quite dangerous.
-  Color|purple|[I may have retrieved an onyx for Aimee, the local jeweler.]
-  Color|orange|[Antoine]
+  &5[I may have retrieved an onyx for Aimee, the local jeweler.]&r
+  &6[Antoine]&r
  Say what now? Where did you even find one? You need to go check on your Jeweler friend; she could be in danger!
-  Color|purple|[Well keep up the good work!]
-  &6[Antoine]
+  &5[Well keep up the good work!]&r
+  &6[Antoine]&r
  Thank you. Have a good day.
-  Color|purple|[Booooooooooring.]
-  &6[Antoine]
+  &5[Booooooooooring.]&r
+  &6[Antoine]&r
  Hmph! Maybe you're not the wise adventurer that aided   Link   Bhairavi Bhairavi wikilink after all.
-&o  Check on Aimee the Jeweler to see if the onyx you brought her was cursed. [-760, 106, 20] Table
+&o  Check on Aimee the Jeweler to see if the onyx you brought her was cursed. [-760, 106, 20]
  Aimee
-  Color|orange|[Aimee]
- The night is dark and full of stars... dark as onyx, gleaming like gems... SoftBreak   Color|purple|[Aimee are you okay?]
-  Color|orange|[Aimee]
+  &6[Aimee]&r
+ The night is dark and full of stars... dark as onyx, gleaming like gems... SoftBreak   &5[Aimee are you okay?]&r
+  &6[Aimee]&r
  The onyx, ___?! I can see the universe within that precious stone you gathered just for me.
-  Color|purple|[I thought that was for the King's Crown?]
-  Color|orange|[Aimee]
+  &5[I thought that was for the King's Crown?]&r
+  &6[Aimee]&r
  So precious... So beautiful.
-  Color|purple|[It's too late. I need to tell Antoine you've been cursed.]
-  Color|orange|[Aimee]
+  &5[It's too late. I need to tell Antoine you've been cursed.]&r
+  &6[Aimee]&r
  I am one with the soul of the jungle...
-&o  Report back to Antoine in the Academy about Aimee's condition Table
+&o  Report back to Antoine in the Academy about Aimee's condition
  Antoine
-  Color|orange|[Antoine]
+  &6[Antoine]&r
  How was the Jeweler? Is she okay?
-  Color|purple|[I don't think so... she seems to have gone mad.]
-  Color|orange|[Antoine]
+  &5[I don't think so... she seems to have gone mad.]&r
+  &6[Antoine]&r
  Hopefully it doesn't spread... Well now it's up to you to fix this. I need you to go retrieve an opal to help her.
-  Color|purple|[Why an opal?]
-  Color|orange|[Antoine]
+  &5[Why an opal?]&r
+  &6[Antoine]&r
  Opals are the opposite of onyxes. Instead of fueling and amplifying a curse, the opal will negate one.
-  &5[Sounds easy enough.]
-  Color|purple|[Sounds easy enough.]
-  Color|orange|[Antoine]
+  &5[Sounds easy enough.]&r
+  &5[Sounds easy enough.]&r
+  &6[Antoine]&r
  You would think, but opals have been out of style for decades. After onyxes were rounded up and destroyed, merchants stopped
 selling 'protective amulets' and other junk and soon the demand died down completely. Last I checked, the opal mines were closed
 completely.
-  Color|purple|[Where was the mine?]
-  Color|orange|[Antoine]
+  &5[Where was the mine?]&r
+  &6[Antoine]&r
  What do I look like? An atlas? I don't know! You should go ask the Royal Cartographer about the opal mine. He would know better
 than I. You can find him at the top of the alchemy building. Now go, and go quickly!
-&o  Speak with the Royal Cartographer on the roof of the alchemy building at -795 122 -40 Table
+&o  Speak with the Royal Cartographer on the roof of the alchemy building at -795 122 -40
  Royal Cartographer
-  Color|orange|[Royal Cartographer]
- Salutations citizen! It is rare I find myself with company! How can I be of service? SoftBreak   Color|purple|[I'm looking for
-the old opal mine.]
-  Color|PURPLE|[Do you have any maps of the Valley I can see?]
-  Color|orange|[Royal Cartographer]
+  &6[Royal Cartographer]&r
+ Salutations citizen! It is rare I find myself with company! How can I be of service? SoftBreak   &5[I'm looking for the old
+opal mine.]&r
+  &5[Do you have any maps of the Valley I can see?]&r
+  &6[Royal Cartographer]&r
  An old opal mine eh? I think I know just the spot. It was closed in the aftermath of the war but... oh dear. Yes. That mine
 collapsed partially. A number of miners were killed in the collapse and their spirits are said to roam the dark shafts still.
 They call it the Haunted Mine now. The shaft down to the Opal Mine can be found at the end of a path of red and white-spotted
 mushrooms. Be careful and watch out for spirits!
 &o  Head to the Haunted Mine at -650 120 535. Follow the red mushrooms until you reach a gravel wall. Mine through the wall to
-reach an elevator. Inside, complete the minecart puzzle to collect the Opal. Head back to Antoine. Table
+reach an elevator. Inside, complete the minecart puzzle to collect the Opal. Head back to Antoine.
  Antoine
-  Color|orange|[Antoine]
+  &6[Antoine]&r
  It feels like you've been gone for ages! Now we need to make a crown out of this gem, but since our local jeweler is out of
 commission we're going to use the next best thing, the blacksmith. Find Orson at the forge and get him to make us an opal crown.
-&o  Meet Orson the blacksmith in his shop at -720 108 23 Table
+&o  Meet Orson the blacksmith in his shop at -720 108 23
  Orson
-  Color|ORANGE|[Orson]
- A true master of the forge knows the ancient patterns by heart. SoftBreak   Color|Purple|[I need a crown made with this opal.]
-  Color|purple|[I want to learn to make something!]
-  Color|ORANGE|[Orson]
+  &6[Orson]&r
+ A true master of the forge knows the ancient patterns by heart. SoftBreak   &5[I need a crown made with this opal.]&r
+  &5[I want to learn to make something!]&r
+  &6[Orson]&r
  That is a strange request. Don't we have a local Jeweler to do fine delicates work like that?
-  Color|purple|[She's cursed right now! This is urgent!]
-  Color|ORANGE|[Orson]
+  &5[She's cursed right now! This is urgent!]&r
+  &6[Orson]&r
  Well that does sound like a good reason. Alright, I'll see what I can do.
 &o  Orson snatches up the opal and chisels it down, then adds it to a fresh-out-of-the-furnace helmet. He lobs off the top of
 the helmet, and you receive an Ugly Opal Crown.
-&o  Speak with Aimee Table
+&o  Speak with Aimee
  Aimee
-  Color|orange|[Aimee]
- The skies are dark. It is too quiet... It's gone. My crown is gone! SoftBreak   Color|purple|[Aimee put this crown on.]
-  Color|orange|[Aimee]
+  &6[Aimee]&r
+ The skies are dark. It is too quiet... It's gone. My crown is gone! SoftBreak   &5[Aimee put this crown on.]&r
+  &6[Aimee]&r
  That's not it! Not it! Not it!
-  Color|purple|[This crown will bring back the one you lost!]
-  Color|orange|[Aimee]
+  &5[This crown will bring back the one you lost!]&r
+  &6[Aimee]&r
  Give it here! Help me find it!
 &o  Aimee scrambles to get the Ugly Opal Crown on and is almost instantly noticeably cured.
-  Color|orange|[Aimee]
+  &6[Aimee]&r
  ___? Why are you here? Everything feels like a blur...
-  Color|purple|[The crown you made with the Onyx cursed you. Where is it now?]
-  Color|orange|[Aimee]
+  &5[The crown you made with the Onyx cursed you. Where is it now?]&r
+  &6[Aimee]&r
  I... I think someone came in and took it from me... He said something... something about being a Crown bear? No that's not
 right... the Crown BEARER! He was the one who commissioned the crown originally. He told me this was all according to plan, and
 took it!
-  Color|purple|[We need to get that crown back!]
-  Color|orange|[Aimee]
+  &5[We need to get that crown back!]&r
+  &6[Aimee]&r
  Yes we do! Hurry to the King, ___! He has to have been heading there.
-&o  Head to the throne room at -720 123 -105 and defeat the Crown Bearer Table
+&o  Head to the throne room at -720 123 -105 and defeat the Crown Bearer
  Royal Translator
-  Color|orange|[Royal Translator]
- What in good heavens was that? SoftBreak   Color|purple|[That was me saving the day.]
-  Color|purple|[That was an assassination attempt on the King.]
+  &6[Royal Translator]&r
+ What in good heavens was that? SoftBreak   &5[That was me saving the day.]&r
+  &5[That was an assassination attempt on the King.]&r
 &o  The King mumbles a few words.
-  Color|orange|[Royal Translator]
+  &6[Royal Translator]&r
  The King agrees with you there. Thank you for your services to the empire!
-  Color|purple|[Aren't you going to reward me?]  Plain &o  The King mumbles a few more words.
-  Color|orange|[Royal Translator]
+  &5[Aren't you going to reward me?]&r  Plain &o  The King mumbles a few more words.
+  &6[Royal Translator]&r
  Well that's not really in the budget you see. You would best look for a reward elsewhere.
-  Color|purple|[I'd best report back to Aimee.]  Plain &o  The King mumbles a few more words.
-  Color|Orange|[Royal Translator]
+  &5[I'd best report back to Aimee.]&r  Plain &o  The King mumbles a few more words.
+  &6[Royal Translator]&r
  We do not know what the jeweler has to do with any of this but if that's where you need to be then safe travels.
-&o  Let Aimee know what happened at the Castle Table
+&o  Let Aimee know what happened at the Castle
  Aimee
-  Color|orange|[Aimee]
- ___ I can't thank you enough for saving me. SoftBreak   Color|purple|[I'm just glad you're okay.]
-  Color|orange|[Aimee]
+  &6[Aimee]&r
+ ___ I can't thank you enough for saving me. SoftBreak   &5[I'm just glad you're okay.]&r
+  &6[Aimee]&r
  Well I think you're well due a reward so I've fixed up this opal crown for you. Thank you again. You should also talk to the
 King again, he will most likely want to speak with you. They probably managed to find room in the budget to reward you.
  A CROWN OF MADNESS COMPLETE! Awarded 32 CXP, and an   Link   Opal Crown Opal_Crown wikilink

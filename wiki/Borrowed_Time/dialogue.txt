@@ -1,505 +1,577 @@
-&o  Meet with the Celsian representatives. Header start_of_quest  Start of Quest Table
+&r
+&o  Meet with the Celsian representatives. Header start_of_quest  Start of Quest
  Vargos
   Coordinates: [-917, 91, -161]
-   &6[Vargos]
+   &6[Vargos]&r
  Hello [Player]. It’s good that you’re here, we were looking to get a hold of you.
-  &5[I’m pretty busy right now, I’ll have to come back later.]
-  &6[Vargos]
+  &5[I’m pretty busy right now, I’ll have to come back later.]&r
+  &6[Vargos]&r
  Very well, but come back quick. Time is, very literally, of the essence.
-  &5[What’s going on?]
-  &6[Vargos]
+  &5[What’s going on?]&r
+  &6[Vargos]&r
  Bhairavi and her team have arrived at Mistport, and we were preparing to hold a council to determine what our next steps are in
 order to deal with the Teal spirit. We were hoping to have you join us.
-  &5[Sounds important. I’m ready to go now.]
-  &6[Vargos]
+  &5[Sounds important. I’m ready to go now.]&r
+  &6[Vargos]&r
  Then I’ll let everyone else know we’re meeting now. Let us go.
  If you leave the meeting go back to Vargos:
   You can leave the meeting by stepping on the pressure plate at [-1432 120 2910].
- To rejoin talk to Vargos again: Table
+ To rejoin talk to Vargos again:
  Vargos
   Coordinates: [-917, 91, -161]
-   &6[Vargos]
+   &6[Vargos]&r
  Ready to go back to the meeting?
-  &5[Yes, please]
-  &6[Vargos]
+  &5[Yes, please]&r
+  &6[Vargos]&r
  Right away.
  &o  C: Talk to Bhairavi - and the other guests - to discuss the plan to handle Teal.
  Pre-Meeting dialogue:
   Levyn
   Coordinates: [-1423 119 2910]
-   &6[Levyn]
+   &6[Levyn]&r
  Ahoy cap'n. Anythin' I can be doin' ta help?
-  &5[You're helping just by being here Levyn. It's nice to see you.]
-  &6[Levyn]
- Ye as well Cap'n!  Table
+  &5[You're helping just by being here Levyn. It's nice to see you.]&r
+  &6[Levyn]&r
+ Ye as well Cap'n!
  Keller
   Coordinates: [-1432 131 2911]
-   &6[Keller]
+   &6[Keller]&r
  What an experience. Time travel, magical corruption, and a fake wool? I have no idea what's next, but I'll be prepared for
-anything.  Table
+anything.
  Antigone
   Coordinates: [-1433 100 2917]
-   &6[Antigone]
+   &6[Antigone]&r
  Hi [Player].
-  &5[Hi Antigone. Surprised you're here!]
-  &6[Antigone]
+  &5[Hi Antigone. Surprised you're here!]&r
+  &6[Antigone]&r
  I figured I could leave Professor Marin flopping around through time for a bit. I've already made a few excursions into the
 Congress anyway. What's up?
-  &5[Just looking for info on Teal.]
-  &6[Antigone]
- Nothing new from me, sad to report.  Table
+  &5[Just looking for info on Teal.]&r
+  &6[Antigone]&r
+ Nothing new from me, sad to report.
  First Mate Jones
   Coordinates: [-1422 100 2914]
-   &6[First Mate Jones]
+   &6[First Mate Jones]&r
  Ahoy, Captain! Hostin’ another big event, I see!
-  &5[I am. It's an important one. Do you have any information about the Teal spirit?]
-  &6[First Mate Jones]
+  &5[I am. It's an important one. Do you have any information about the Teal spirit?]&r
+  &6[First Mate Jones]&r
  Th' wha' now? Not a darned clue what yer on 'bout, Captain. Say, I hear ye be askin' about weird glowy figures 'n' even weirder
 stuff around 'em.
-  &5[I... absolutely am. That's actually what I just asked about!]
-  &6[First Mate Jones]
+  &5[I... absolutely am. That's actually what I just asked about!]&r
+  &6[First Mate Jones]&r
  Do ye know 'bout th' Depths then? Portals ta th' world below the sea. Opened by a monster sighted by crews 'cross th' sea... It
 be no sailor's tale. Over th' years many have claimed ta see glowin' figures floatin' above th' ocean, causin' rifts ta open
 deep below th' waves.
-  &5[Huh, that sounds wild. Could it have been Teal as well?]
-  &6[First Mate Jones]
- Th' ocean tends ta be more of a deep blue, but maybe? Thanks fer hearin' me out, cap'n.  Table
+  &5[Huh, that sounds wild. Could it have been Teal as well?]&r
+  &6[First Mate Jones]&r
+ Th' ocean tends ta be more of a deep blue, but maybe? Thanks fer hearin' me out, cap'n.
  Brayllur
   Coordinates: [-1430 104 2929]
-   &6[Brayllur]
+   &6[Brayllur]&r
  Hi hi puny one. You fight like bear inside, yes. Eye no survive - it be made of sandglass now! Brayllur survive though. Thank
-you, friend.  Table
+you, friend.
  Wexley
   Coordinates: [-1431 107 2922]
-   &6[Wexley]
+   &6[Wexley]&r
  Well hey [Player]! We're here for the big meeting!
-  &5[Hi Wexley! Find anything in the Congress that might help?]
-  &6[Wexley]
- SOOOOO many books! But nothing about Teal, sorry! Took me a moment to realize whatcha meant...  Table
+  &5[Hi Wexley! Find anything in the Congress that might help?]&r
+  &6[Wexley]&r
+ SOOOOO many books! But nothing about Teal, sorry! Took me a moment to realize whatcha meant...
  Torbran
   Coordinates: [-1428 107 2923]
-   &6[Torbran]
+   &6[Torbran]&r
  Greetings [Player]. It's nice to see you again. Hopefully we'll get to speak when not in the midst of a crisis eventually.
-Table
  Zarek
   Coordinates: [-1426 107 2922]
-   &6[Zarek]
+   &6[Zarek]&r
  Hey hey Captain [Player]! Glad to see ya made it to your meeting.
-  &5[Glad I made it as well. Got any info for me?]
-  &6[Zarek]
- Nothing new on Teal, sorry. The Congress had enough craziness!  Table
+  &5[Glad I made it as well. Got any info for me?]&r
+  &6[Zarek]&r
+ Nothing new on Teal, sorry. The Congress had enough craziness!
  Marshall Ludvic
   Coordinates: [-1434 107 2917]
-   &6[Marshall Ludvic]
+   &6[Marshall Ludvic]&r
  Let’s see here... Oh, hello. You’re the... Captain, yes? Good to meet you properly. I’m here on behalf of her Majesty, Queen
 Obregson, to represent her in this conference.
-  &5[Do you have any information on the whereabouts of the Teal Spirit?]
-  &6[Marshall Ludvic]
+  &5[Do you have any information on the whereabouts of the Teal Spirit?]&r
+  &6[Marshall Ludvic]&r
  Oh, yes, that I do. There was an event several months back on the west end of the continent which was, at the time, blamed on
 the mages hiding out in Wispervale. A large storm had formed above an ancient tower, lightning crashing down around the area.
 Allegedly, this was an attempt at some dangerous ritual by the mages, designed to destroy the crown for good...
-  &6[Marshall Ludvic]
+  &6[Marshall Ludvic]&r
  Yet, as our nation begins to grow more tolerant of magic, some scrutiny has been placed on these claims. As far as we can tell,
 the mages of Wispervale were not responsible for this event.
-  &6[Marshall Ludvic]
+  &6[Marshall Ludvic]&r
  With the knowledge of this rogue spirit, it seems possible that it was the source of the magic on that day. I couldn’t tell you
 what it was attempting - the tower returned to normal long before anyone could investigate. But, perhaps that is enough of a
 lead to help you with your search.
  Talking again:
-  &6[Marshall Ludvic]
+  &6[Marshall Ludvic]&r
  Hmm... Let's see... Oh, hello again, Captain. What else can I do for you? Is the meeting getting underway?
-  &5[Not yet, just checking back in.]
-  &6[Marshall Ludvic]
- Thanks for checking. I've got nothing new, I'm afraid.  Table
+  &5[Not yet, just checking back in.]&r
+  &6[Marshall Ludvic]&r
+ Thanks for checking. I've got nothing new, I'm afraid.
  Wilhelm
   Coordinates: [-1435 107 2915]
-   &6[Wilhelm]
+   &6[Wilhelm]&r
  [Player], good to see you. I had hoped our troubles would have mostly ended when we removed Ridnan, but it seems there is more
 work to do.
-  &5[There's always more work to do. Do you have any information on the whereabouts of the Teal Spirit?]
-  &6[Wilhelm]
+  &5[There's always more work to do. Do you have any information on the whereabouts of the Teal Spirit?]&r
+  &6[Wilhelm]&r
  Ah! I personally do not, no. I did, however, invite my old friend Artol to this council. He believes he has seen something that
 fits your search.
-  &5[It’s good to see you as well. How are things in Chillwind?]
-  &6[Wilhelm]
+  &5[It’s good to see you as well. How are things in Chillwind?]&r
+  &6[Wilhelm]&r
  Things are going as well as they can be, I would say. A sizable group of Magehunters fled the capitol after Ridnan’s removal
-from power, and seem to still be at large... But we have it handled.  Table
+from power, and seem to still be at large... But we have it handled.
  Artol
   Coordinates: [-1435 107 2915]
-   &6[Artol]
+   &6[Artol]&r
  Hm. Well met, Paladin [Player]. I trust your adventures have gone well? You’ve slain many undead in your travels, surely!
-  &5[I’ve defeated many undead, Artol.]
-  &6[Artol]
+  &5[I’ve defeated many undead, Artol.]&r
+  &6[Artol]&r
  Excellent! Fine work, my friend. You have made an excellent paladin in your time away.
-  &5[Wilhelm told me you have information about Teal.]
-  &6[Artol]
+  &5[Wilhelm told me you have information about Teal.]&r
+  &6[Artol]&r
  Ah. Yes. The strange spirit. Not my area of expertise, I will admit. The undead are my only foes.
-  &6[Artol]
+  &6[Artol]&r
  I have, in any case, seen a strange sight indeed. During one of my routine patrols around Nightroost, my eye was caught by
 flashes of otherworldly light deep within the abandoned dig sight.
-  &6[Artol]
+  &6[Artol]&r
  As I descended to investigate, I caught a glimpse of an impossibility. An arm of a mighty Frost Giant burst from the ground,
 flailing and grasping at seemingly nothing. A tall figure floated above, watching. In a blink of an eye, it vanished along with
 the arm.
-  &6[Artol]
+  &6[Artol]&r
  The area was scarred with a strange magic, unlike any I have seen before. I have seen nothing since, though I have kept my eye
 on the area.
  Talking again:
-  &6[Artol]
+  &6[Artol]&r
  Hm. You return. What can I do for you?
-  &5[Just seeking information still.]
-  &6[Artol]
- Pursuit of knowledge is often the best way forward.  Table
+  &5[Just seeking information still.]&r
+  &6[Artol]&r
+ Pursuit of knowledge is often the best way forward.
  Brandy
   Coordinates: [-1423 107 2920]
-   &6[Brandy]
+   &6[Brandy]&r
  Hello again [Player]. Nice to see you without a prisoner needing persuading this time.
-  &5[Good to see you Brandy. How's the family?]
-  &6[Brandy]
- Doing well! Cinevra wanted to come along, but I told her to stay put for now. She says hello.  Table
+  &5[Good to see you Brandy. How's the family?]&r
+  &6[Brandy]&r
+ Doing well! Cinevra wanted to come along, but I told her to stay put for now. She says hello.
  Archivist Nyra
   Coordinates: [-1420 107 2917]
-   &6[Archivist Nyra]
+   &6[Archivist Nyra]&r
  So you’re Mistport’s Captain, then? I suppose I should have connected the dots, what with the strange questions you kept asking
 me about our history.
-  &5[That's me. What information do you have on the whereabouts of the Teal Spirit?]
-  &6[Archivist Nyra]
+  &5[That's me. What information do you have on the whereabouts of the Teal Spirit?]&r
+  &6[Archivist Nyra]&r
  Oh, yes, the rogue spirit. I will admit, this was a challenging topic to research, even with all our resources... But I believe
 I managed to find an item which is relevant to your search.
-  &6[Archivist Nyra]
+  &6[Archivist Nyra]&r
  Out in the Ishniran desert was a statue that seemed to depict a Silver Knight, based on the research I did. Here's the catch
 though. It was quite grand only a few years back. However, your friend Bhairavi has told me it's destroyed and she found
 important writings inside.
-  &6[Archivist Nyra]
+  &6[Archivist Nyra]&r
  I've since found an eyewitness to its destruction! His name was Ron or something. He saw a glowing figure appear near it, float
 around for a bit, then the whole thing began to crumble quite suddenly. Then it was gone. I hope that helps!
  Talking again:
-  &6[Archivist Nyra]
+  &6[Archivist Nyra]&r
  Ah, the Captain returns. What can I do for you?
-  &5[I'm still looking for more information.]
-  &6[Archivist Nyra]
- Alas, I have none for you. Perhaps someone else will.  Table
+  &5[I'm still looking for more information.]&r
+  &6[Archivist Nyra]&r
+ Alas, I have none for you. Perhaps someone else will.
  Torren
   Coordinates: [-1419 107 2915]
-   &6[Torren]
+   &6[Torren]&r
  Well met [Player]. I'm surprised you managed to coordinate another meeting here so quickly.
-  &5[Me too. Do you have any information about the Teal Spirit? I've been asking around to gather what we know.]
-  &6[Torren]
+  &5[Me too. Do you have any information about the Teal Spirit? I've been asking around to gather what we know.]&r
+  &6[Torren]&r
  I think I do. Alnera had to send a regimen to the north of Ishnir recently to handle reports of what I could only describe as
 well... one of our founding god myths, Mauta, appearing.
-  &5[That sounds amazing.]
-  &6[Torren]
+  &5[That sounds amazing.]&r
+  &6[Torren]&r
  You would think, but all we found were smoldering remains of humans, coated in magma-like armor that cooled into something more
 silver. Like a war had been fought under the lava itself. People nearby claimed to have seen a glowing figure floating about the
 lava, then the molten flow itself came alive and began to form into a figure. The being seemed to take something, then it
 vanished.
-  &6[Torren]
+  &6[Torren]&r
  From your description, the figure sounds like Teal, but I have no idea what it could have been seeking. I hope this is enough
 to help you.
  Talking again:
-  &6[Torren]
+  &6[Torren]&r
  Well met again [Player]. What brings you back?
-  &5[Still poking around for information. I figured talking to everyone a bunch could help.]
-  &6[Torren]
- I wish I could help more.  Table
+  &5[Still poking around for information. I figured talking to everyone a bunch could help.]&r
+  &6[Torren]&r
+ I wish I could help more.
  Head Guard Obadiah
   Coordinates: [-1420 107 2913]
-   &6[Head Guard Obadiah]
+   &6[Head Guard Obadiah]&r
  Well hello Captain [Player].
-  &5[Hi Obadiah. Sorry again for accusing you...]
-  &6[Head Guard Obadiah]
+  &5[Hi Obadiah. Sorry again for accusing you...]&r
+  &6[Head Guard Obadiah]&r
  Not to worry. I think I've gotten over it! What can I do for you?
-  &5[I'm looking for information on the Teal Wool spirit.]
-  &6[Head Guard Obadiah]
- I'm not sure I can help you, but I know Nyra has a story for you.  Table
+  &5[I'm looking for information on the Teal Wool spirit.]&r
+  &6[Head Guard Obadiah]&r
+ I'm not sure I can help you, but I know Nyra has a story for you.
  Izzy
   Coordinates: [-1431 107 2909]
-   &6[Izzy]
+   &6[Izzy]&r
  Ahoy [Player]! So, we're finally doing this?
-  &5[Yes indeed. It's time to find Teal and take it down.]
-  &6[Izzy]
+  &5[Yes indeed. It's time to find Teal and take it down.]&r
+  &6[Izzy]&r
  We’ll figure out what to do about Teal, I’m sure of it. I think you should go chat with everyone you can. Maybe they have some
-good information we can use.  Table
+good information we can use.
  Pten
   Coordinates: [-1429 107 2908]
-   &6[Pten]
+   &6[Pten]&r
  Hail [Player]. It's good to see you again, even under dire circumstances.
-  &5[Indeed. How goes the project at the Congress?]
-  &6[Pten]
+  &5[Indeed. How goes the project at the Congress?]&r
+  &6[Pten]&r
  Well, but slow. We've been trying to recover parts of the Conscriptorium recently. Fascinating stuff, but seriously, so
-dangerous. Would have been far worse without your help in there.  Table
+dangerous. Would have been far worse without your help in there.
  Vargos
   Coordinates: [-1425 107 2908]
-   &6[Vargos]
+   &6[Vargos]&r
  Welcome to the meeting, [Player]. Head around and chat with the guests. See what information you can get together before we
 start the meeting properly.
-  Meeting: Table
+  Meeting:
  Bhairavi
   Coordinates: [-1427 107 2907]
-   &6[Bhairavi]
+   &6[Bhairavi]&r
  So! Have you spoken to everyone yet?
-  &5[Not yet. I still have a few people I need to get to.]
-  &6[Bhairavi]
+  &5[Not yet. I still have a few people I need to get to.]&r
+  &6[Bhairavi]&r
  Okay. Let me know when you're ready to discuss.
-  &5[I’ve spoken to everyone I need to, yes.]
-  &6[Bhairavi]
+  &5[I’ve spoken to everyone I need to, yes.]&r
+  &6[Bhairavi]&r
  Excellent. Do we have any new leads from the information you got?
-  &5[Not really. Some of the reports could actually be Teal, but if it was, the spirit’s long gone by now.]
-  &6[Bhairavi]
+  &5[Not really. Some of the reports could actually be Teal, but if it was, the spirit’s long gone by now.]&r
+  &6[Bhairavi]&r
  That’s… discouraging. Is there at least something that the reports share in common? Something that could link them together?
   &5[Well, Teal seems to really dislike the Silver Knights. Some reports include it messing with or destroying things that could
-be linked to the knights.]
-  &6[Bhairavi]
+be linked to the knights.]&r
+  &6[Bhairavi]&r
  The Silver Knights... What do we know about them?
-  &6[Izzy]
+  &6[Izzy]&r
  The Silver Knights are enforcers, seeking out Wool. Traces of them are hard to find, but they've been active all over the
 world, in ancient history, and have left traces of their time around. Legends as well. Great battles.
-  &6[Pten]
+  &6[Pten]&r
  They certainly were involved with the creation of the Monuments. [Player] got a Hammer of theirs from the Valley that Farr's
 people found at said Monument.
-  &5[I've met some Knights.]
-  &6[Bhairavi]
+  &5[I've met some Knights.]&r
+  &6[Bhairavi]&r
  I'm sorry, what?
   &5[I found one in the Valley underneath the Monument. I found another here in the Isles during an adventure related to
-Salazar, under the Silver Tower.]
-  &6[Vargos]
+Salazar, under the Silver Tower.]&r
+  &6[Vargos]&r
  Why are you just now bringing this up [Player]? Were any of them alive?
-  &5[Not those ones, but I did meet three who spoke with me briefly under the City of Bones, in the Blackflame city. ]
-  &6[Izzy]
+  &5[Not those ones, but I did meet three who spoke with me briefly under the City of Bones, in the Blackflame city. ]&r
+  &6[Izzy]&r
  I thought I mentioned those guys to you Archmage Vargos?
   &5[Maybe you did. Maybe time reverted again? Things were weird there... They can't help us though. They can't leave. It's
-complicated.]
-  &6[Vargos]
+complicated.]&r
+  &6[Vargos]&r
  So basically we can't actually speak to the Knights to see if they know anything. Shame.
-  &6[Torren]
+  &6[Torren]&r
  Nor do we have any actual knowledge of where this Teal spirit is.
-  &6[Wilhelm]
+  &6[Wilhelm]&r
  Nor do we even have the capability to catch it.
-  &6[Marshall Ludvic]
+  &6[Marshall Ludvic]&r
  Will our forces even work against it? The Wools are dangerous after all. Something living with that power could decimate us
 with a thought! How would we win?
-  &6[Obadiah]
+  &6[Obadiah]&r
  So this was all pointless then?
-  &6[Brandy]
+  &6[Brandy]&r
  Surely there's a reason we're all here... Why would we have just randomly been called together to-
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  Hey. Hey! HEY! Shut up! There's a reason we're all here, and it's to try and pool our resources and our knowledge to try and
 come up with something. So, does anyone have any ideas?
   &5[I... I know someone who would know how to help. He's called the Crimson King. He's... another Wool Spirit, from the Crimson
-Wool.]
-  &6[Vargos]
+Wool.]&r
+  &6[Vargos]&r
  ...EXCUSE ME?! WHY ARE YOU JUST NOW BRINGING THIS UP?
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  Surely you're joking. There isn't a Crimson Wool.
-  &5[Not anymore. It was destroyed during the attack on the city of Farr by C'Telsket, a leader of the Sons of the Forest.]
-  &6[Vargos]
+  &5[Not anymore. It was destroyed during the attack on the city of Farr by C'Telsket, a leader of the Sons of the Forest.]&r
+  &6[Vargos]&r
  ...Um. What? We didn't know of Wool back then. Herring died in that attack... Maxwel- Calder... He and Minerva, his friend,
 survived that attack. They never mentioned a Wool.
   &5[He holds domain over Memory. His release caused a severe warp in memory nearby, even keeping Farr trapped in its damaged
-state.]
-  &6[Bhairavi]
+state.]&r
+  &6[Bhairavi]&r
  Why is this all making sense...? You really know another Wool Spirit?
-  &5[I do, and I count him as an ally. Unlike Teal, he is not hostile, and wants to be back in his Wool.]
-  &6[Bhairavi]
+  &5[I do, and I count him as an ally. Unlike Teal, he is not hostile, and wants to be back in his Wool.]&r
+  &6[Bhairavi]&r
  And you believe him? The Wools... They lie, [Player]. You know this. We've all heard the stories and seen the destruction
 they've wrought. You and I have been involved in far too many adventures involving the dangers they pose. Would the Crimson
 spirit actually work against Teal?
-  &5[Yes. To all of it.]
-  &6[Bhairavi]
+  &5[Yes. To all of it.]&r
+  &6[Bhairavi]&r
  Do you know that for sure?
-  &6[Izzy]
+  &6[Izzy]&r
  Yeah... Can he actually be trusted, or is he just working with you to get what he wants?
-  &6[Brandy]
+  &6[Brandy]&r
  I've not said much so far but... the Wool. They've caused such horrors. Would it be so bad if one were helping heal? [Player]
 has more experience with this being than us. This could be a chance for us.
-  The gathered crowd murmurs agreement... slightly.
-  &6[Vargos]
+  &8The gathered crowd murmurs agreement... slightly.&r
+  &6[Vargos]&r
  I think Brandy is right. I think we should be taking the allies we can get. If [Player] truly has gained an ally of a Wool
 spirit, and they can offer us help in resolving this crisis, we should take it.
-  &5[Thank you for your thoughts. Should I pay him a visit?]
-  Voices break out across the room. Excited. Nervous. Scared. Hopeful. Eventually the murmuring reaches an agreement... until...
-  &6[Vargos]
+  &5[Thank you for your thoughts. Should I pay him a visit?]&r
+  &8Voices break out across the room. Excited. Nervous. Scared. Hopeful. Eventually the murmuring reaches an agreement...
+until...&r
+  &6[Vargos]&r
  Yes.
-  &5[I hope he can help us.]
-  &6[Vargos]
+  &5[I hope he can help us.]&r
+  &6[Vargos]&r
  For all of our sakes, yes. Go pay your Crimson King in the King's Valley a visit. Let's see what he can do for us.
  Talking to Vargos after the meeting:
-  &6[Vargos]
+  &6[Vargos]&r
  Hi [Player]. Go meet with your Wool Spirit, wherever he is. No time to waste.
-&o  C: Travel to the King's Valley and meet with the Crimson King. Header meeting_crimson_king  Meeting Crimson King Table
+&o  C: Travel to the King's Valley and meet with the Crimson King. Header meeting_crimson_king  Meeting Crimson King
  The Crimson King
   Coordinates: [-917 91 -161 (KV)]
-   &6[The Crimson King]
-  Hello again [Player].
-  &5[I have something to talk to you about. It's important. [Borrowed Time]]
-  &6[The Crimson King]
-  Did you find them? The Silver Knights?
-  &5[Kind of. It's actually about another Wool. Teal has been broken and the spirit inside is loose. I need your help.]
-  &6[The Crimson King]
-  ...How?! The Malefactor was never to be released.
+   &6[The Crimson King]&r
+  &4Hello again [Player].&r
+  &5[I have something to talk to you about. It's important. [Borrowed Time]]&r
+  &6[The Crimson King]&r
+  &4Did you find them? The Silver Knights?&r
+  &5[Kind of. It's actually about another Wool. Teal has been broken and the spirit inside is loose. I need your help.]&r
+  &6[The Crimson King]&r
+  &4...How?! The Malefactor was never to be released.&r
   &5[It's a very long story. After much discussion with my allies, I felt you were the best option to ask for help. Also,
-neither were you?]
-  &6[The Crimson King]
-  I would be glad to assist you. Teal's pedestal would be a good starting point. We could potentially track him from it. Do you
-know where it is?
-  &5[Pedestal? There wasn't one for Teal with the other Wool in the Celsian Isles.]
-  &6[The Crimson King]
-  That can not be right. His place was in the Isles. Unless he took his pedestal as well? That would be very odd indeed. The two
-of us, following the same path once again... Can we visit this Monument then?
-  &5[Of course. It's in a place called Steelmeld in the Isles. Will you just follow me?]
-  &6[The Crimson King]
-  That will work. Let me reach out to Jeremiah to get him out of our Monument first. I would rather not leave him trapped in
-there unexpectedly. Feel free to begin your travels. I will catch up.
-&o  C: Travel to the Steelmeld Monument. Table
+neither were you?]&r
+  &6[The Crimson King]&r
+  &4I would be glad to assist you. Teal's pedestal would be a good starting point. We could potentially track him from it. Do
+you know where it is?&r
+  &5[Pedestal? There wasn't one for Teal with the other Wool in the Celsian Isles.]&r
+  &6[The Crimson King]&r
+  &4That can not be right. His place was in the Isles. Unless he took his pedestal as well? That would be very odd indeed. The
+two of us, following the same path once again... Can we visit this Monument then?&r
+  &5[Of course. It's in a place called Steelmeld in the Isles. Will you just follow me?]&r
+  &6[The Crimson King]&r
+  &4That will work. Let me reach out to Jeremiah to get him out of our Monument first. I would rather not leave him trapped in
+there unexpectedly. Feel free to begin your travels. I will catch up.&r
+&o  C: Travel to the Steelmeld Monument.
  The Crimson King
   Coordinates: [-1334 109 2814 (CI)]
-   &6[The Crimson King]
-  &5[Exactly.]
-  &6[The Crimson King]
-  &5[Can we do that? I thought a specific Doorway was needed to enter.]
-  &6[The Crimson King]
-  &5[Why did you need Azacor's help then?]
-  &6[The Crimson King]
-  &5[Then let's go.]
-  &6[The Crimson King]
-&o  C: Talk to the Crimson King. Table
+   &6[The Crimson King]&r
+  &4I must say, [Player], this really doesn't make sense. There is not even a natural space for Teal to rest.&r
+  &5[Exactly.]&r
+  &6[The Crimson King]&r
+  &4We should enter the Veil. Examine what this place is like in the fallen memories of the fraying threads. Perhaps it can
+guide us to where the missing wool is.&r
+  &5[Can we do that? I thought a specific Doorway was needed to enter.]&r
+  &6[The Crimson King]&r
+  &4For you, absolutely. For me? The Veil is a curtain, waiting to be parted. I am not of the living as you are.&r
+  &5[Why did you need Azacor's help then?]&r
+  &6[The Crimson King]&r
+  &4Entering the Veil and traveling through it are two very different things. With Azacor, my deal was to be given guidance to
+the place I needed that I could not otherwise enter physically. This time, all we need to do is step within and take a look
+around the environment.&r
+  &5[Then let's go.]&r
+  &6[The Crimson King]&r
+  &4Let's. We'll need to move quickly though. This is not a quiet magic.&r
+&o  C: Talk to the Crimson King.
  Crimson King
   Coordinates: [-2613 163 2607 (Veil)]
-   &6[The Crimson King]
-  &5[Where are the wool markers?]
-  &6[The Crimson King]
-  &5[So Hekawt wasn't lying, the pedestals aren't supposed to be here...]
-  &6[The Crimson King]
-  &5[How do we even start looking for where they're supposed to be?]
-  &6[The Crimson King]
-  &6[The Crimson King]
-&o  C: Talk to the Crimson King... and Teal. Table
+   &6[The Crimson King]&r
+  &4What is this?&r
+  &5[Where are the wool markers?]&r
+  &6[The Crimson King]&r
+  &4Where are the ruins?&r
+  &5[So Hekawt wasn't lying, the pedestals aren't supposed to be here...]&r
+  &6[The Crimson King]&r
+  &4I do not even want to know who that is... It is like this place is brand new. Fresh. Unscarred. The Malefactor did not move
+his pedestal. Someone moved the rest of them.&r
+  &5[How do we even start looking for where they're supposed to be?]&r
+  &6[The Crimson King]&r
+  &4We start by finding him.&r
+  &6[The Crimson King]&r
+  &4Or perhaps he finds us. We need to get out of here.&r
+&o  C: Talk to the Crimson King... and Teal.
  The Crimson King
   Coordinates: [-1334 109 2814 (CI)]
-   &6[The Malefactor]
-  &5[Teal!]
-  &6[The Crimson King]
-  &6[The Malefactor]
-  &6[The Crimson King]
-  &5[We will not help you continue to cause such destruction and death.]
-  &6[The Crimson King]
-  &6[The Malefactor]
-  &6[The Crimson King]
-  &6[The Malefactor]
+   &6[The Malefactor]&r
+  &3hello brother. hello watcher. it has been quite some time.&r
+  &5[Teal!]&r
+  &6[The Crimson King]&r
+  &4Hello brother. It has indeed been many lifetimes. Why are you here?&r
+  &6[The Malefactor]&r
+  &3oh, don’t you play coy. you know why i am here. the pedestals are wrong. help me, vaessini. i know you searched for yours
+for so long. help me find mine. join my cause for freedom.&r
+  &6[The Crimson King]&r
+  &4No. That is not what I seek. I will not help you destroy it all. The Veil is already weak. Do you not feel the gods pressing
+at the fabric, begging to feast?&r
+  &5[We will not help you continue to cause such destruction and death.]&r
+  &6[The Crimson King]&r
+  &4Begone. We are not meant to clash. You and I both know what we have done.&r
+  &6[The Malefactor]&r
+  &3as if you could stop me if you tried, watcher. you’ve made many mistakes in your journey. this very place is one of them. my
+fellow wool do not belong here. they cannot rest... let me show them what it is like to be free once more...&r
+  &6[The Crimson King]&r
+  &4This should not work! He can not damage the wool once they have been placed. Reality and the Veil in harmony... but...&r
+  &6[The Malefactor]&r
+  &3but there is not harmony between them. the Architect cannot hold us all forever. let me be the first to free the others. we
+will not be contained any longer!&r
 &o  C: Battle back the broken Wool!
   You must survive for 3 minutes. Every time the next wool is broken then mobs from that dungeon will start spawning.
- &o  C: Talk to the Crimson King. Table
+ &o  C: Talk to the Crimson King.
  The Crimson King
   Coordinates: [-1334 109 2814 (CI)]
-   &5[What... what just happened?]
-  &6[The Crimson King]
-  &5[How are we going to stop him from just doing it again?]
-  &6[The Crimson King]
-  &5[If you think we can pull it off...]
-  &6[The Crimson King]
-  &6[The Malefactor]
-  &5[Hello, Teal.]
-  &6[The Crimson King]
-  &6[The Malefactor]
-  &6[The Crimson King]
-  &6[The Malefactor]
-  &6[The Crimson King]
-  &6[The Malefactor]
-  &6[The Crimson King]
-  &5[Now, you need to leave. There is nothing here for you.]
-  &6[The Crimson King]
-  &5[We found a Knight resting below the Monument in the King's Valley.]
-  &6[The Malefactor]
-  &5[You were the voice in the memory?]
-  &6[The Malefactor]
-  &6[The Crimson King]
-  &6[The Malefactor]
-  &6[The Crimson King]
-  &5[I'm ready.]
+   &5[What... what just happened?]&r
+  &6[The Crimson King]&r
+  &4I... I have used a power I do not use often. I can not use it often either... I have taken a memory and placed it back upon
+the world. Wide reaching. The wool are safe. The Malefactor approaches once more. He knows what I did... we need to be ready
+this time.&r
+  &5[How are we going to stop him from just doing it again?]&r
+  &6[The Crimson King]&r
+  &4We give him what he wants. Information. Then we go find the pedestal ourselves.&r
+  &5[If you think we can pull it off...]&r
+  &6[The Crimson King]&r
+  &4I do not think we have another choice. I can not pull off that move again right now. The Malefactor does not need to know
+that, however... Quickly, he approaches once more.&r
+  &6[The Malefactor]&r
+  &3hello brother. hello watcher. it has... been quite some time...&r
+  &5[Hello, Teal.]&r
+  &6[The Crimson King]&r
+  &4Hello brother. It has... indeed been many lifetimes. Why are you here?&r
+  &6[The Malefactor]&r
+  &3spare me the nonsense. i know what you have done. why do you oppose me? we could be free together.&r
+  &6[The Crimson King]&r
+  &4Your pedestal is not here. This Monument has been moved and your pedestal has been left elsewhere, alone. I am disinterested
+in your pleas.&r
+  &6[The Malefactor]&r
+  &3then you will help me find it. this is no longer an offer, brother. i demand it or i will break the others once more.&r
+  &6[The Crimson King]&r
+  &4The Monument will stand firm.&r
+  &6[The Malefactor]&r
+  &3for now.&r
+  &6[The Crimson King]&r
+  &4Forever. The memory has been imprinted forever. Damage it, and it shall echo through time as you do and return to the moment
+I have given shape. You shall not damage this place any more.&r
+  &5[Now, you need to leave. There is nothing here for you.]&r
+  &6[The Crimson King]&r
+  &4Your pedestal must be somewhere the Silver Knights would hold safe. Surely no Knight would be resting here. This place did
+not exist when they captured you. You need to find somewhere they would have felt they could rest within.&r
+  &5[We found a Knight resting below the Monument in the King's Valley.]&r
+  &6[The Malefactor]&r
+  &3you think i didn't know this already? i saw you there, watcher.&r
+  &5[You were the voice in the memory?]&r
+  &6[The Malefactor]&r
+  &3i was, yes, but that is not what i mean. you were there when he was attacked. let me make you a real offer, if you must
+stand against my desire to be free. i will show you what happened to that knight. in exchange, you will tell me where you think
+the pedestal would be.&r
+  &6[The Crimson King]&r
+  &4No more attacks? No more cruelty? You have been the progenitor of much suffering for your freedom, brother. You were the
+cause of much more beforehand as well.&r
+  &6[The Malefactor]&r
+  &3let me show you. perhaps your trust of the watcher over here is worth reconsidering once you have seen what i have.&r
+  &6[The Crimson King]&r
+  &4Show us then. You have a deal. A memory for a single thought.&r
+  &5[I'm ready.]&r
 &o  C: Speak to the Silver Knight and learn the past...
-  &6[The Malefactor]
-   Table
+  &6[The Malefactor]&r
+  &3gaze upon history, seen during my journeys through the threads of time.&r
  The Malefactor
   Coordinates: [-2307 179 2444]
-   &6[The Malefactor]
-  &5[By... my hand? How? How did I get here?]
-  &6[The Malefactor]
-    Table
+   &6[The Malefactor]&r
+  &3you are... you. i followed your threads first, after the man bearing the black freed me. i traveled, seeking knights,
+seeking information. it is quite easy to find when time itself parts for your passage. here i saw this knight fall by your
+hand.&r
+  &5[By... my hand? How? How did I get here?]&r
+  &6[The Malefactor]&r
+  &3that is not the question i am here to answer, nor do i know. you are here to see it, and live it once more. approach. listen
+to what you said.&r
  Silver Knight Daarken
-  &5[You must be Daarken.]
-  &6[Silver Knight Daarken]
+  &5[You must be Daarken.]&r
+  &6[Silver Knight Daarken]&r
  Another stranger approaches this sacred tomb. Have they placed down the imprisoned to activate the Claim? The last stranger
 took the prison that waited here, I see...
-  &5[No. I came to find you.]
-  &6[Silver Knight Daarken]
+  &5[No. I came to find you.]&r
+  &6[Silver Knight Daarken]&r
  Something has let them through the gateways. This cannot be anything but a sign of the end. The Veil cannot survive this.
-  &5[The Veil will be fine. You, however, have reached the end of your usefulness. It's time to go.]
-  &6[Silver Knight Daarken]
+  &5[The Veil will be fine. You, however, have reached the end of your usefulness. It's time to go.]&r
+  &6[Silver Knight Daarken]&r
  No. What master do you serve? Yes, I speak to you directly. I see them inside. Those eyes are not your own. Thy thoughts are
 empty and cold. I feel for thee, puppet. How did thee enter these sacred halls? What darkness hath thee twisted?
-  &5[The how does not matter, only the results. It is your time to return, Daarken.]
-  &6[Silver Knight Daarken]
+  &5[The how does not matter, only the results. It is your time to return, Daarken.]&r
+  &6[Silver Knight Daarken]&r
  Know I will not lay down my arms lightly. If what speaks through you expects this to be easy, know it shall be not! To arms!
  After beating Silver Knight Daarken:
-  &6[Silver Knight Daarken]
+  &6[Silver Knight Daarken]&r
  How...? I feel...... him calling...................... Header post_silver_knight  Post Silver Knight
-&o  C: Talk to the Crimson King... and Teal. Table
+&o  C: Talk to the Crimson King... and Teal.
  The Crimson King
   Coordinates: [-1334 109 2814 (CI)]
-   &6[The Crimson King]
-  &5[I have no idea. I have no memory of that. You heard him. That wasn't me.]
-  &6[The Malefactor]
-  &5[That couldn't be me. I'd never been there before, as far as I know. Why would I kill him?]
-  &6[The Crimson King]
-  &5[The Knight - Daarken? - mentioned there was someone else before me.]
-  &6[The Crimson King]
-  &5[I swear to you I’m not. Could this be more false memories? Could Teal be trying to drive us apart?]
-  &6[The Malefactor]
+   &6[The Crimson King]&r
+  &4[Player]... What did you do?&r
+  &5[I have no idea. I have no memory of that. You heard him. That wasn't me.]&r
+  &6[The Malefactor]&r
+  &3or perhaps it was the you before you made your little deal with vaessini.&r
+  &5[That couldn't be me. I'd never been there before, as far as I know. Why would I kill him?]&r
+  &6[The Crimson King]&r
+  &4I do not know. Even the traces of you I feel in my memories does not match what we just saw.&r
+  &5[The Knight - Daarken? - mentioned there was someone else before me.]&r
+  &6[The Crimson King]&r
+  &4C’Telsket, surely. We were right. The room we saw in his memories was false. Covered up. Could your presence have been
+trying to obfuscate things? …Are you trying to hide answers from me?&r
+  &5[I swear to you I’m not. Could this be more false memories? Could Teal be trying to drive us apart?]&r
+  &6[The Malefactor]&r
+  &3i come with no lies, only righteous fury to be free from confinement. now tell me what i seek.&r
   &5[I found another Knight here in the Isles, under the Silver Tower. I activated a machine near it, but the place collapsed. I
-don’t know what happened to it. Maybe it knows where the pedestal is?]
-  &6[The Crimson King]
-  &6[The Malefactor]
-  &5[We'll stop you. You can't keep destroying time to get your way.]
-  &6[The Malefactor]
-  &6[The Crimson King]
-  &5[I have so many more questions about what we've learned...]
-  &6[The Crimson King]
+don’t know what happened to it. Maybe it knows where the pedestal is?]&r
+  &6[The Crimson King]&r
+  &4We could get back inside. See if there are more memories to be seen?&r
+  &6[The Malefactor]&r
+  &3you are free to travel there, but i will have been there already. my plans have been in place for far too long to be
+interrupted by excavation and toil. everything that has happened thus far had to happen. everything that will happen will only
+happen because i allow it.&r
+  &5[We'll stop you. You can't keep destroying time to get your way.]&r
+  &6[The Malefactor]&r
+  &3i can. i must. i hope to see you again, watcher. it has been oh so long since i have had to raise my power in battle... good
+bye.&r
+  &6[The Crimson King]&r
+  &4I think it may be time to reunite with your team so we can all find your Knight at the Silver Tower. I would very much like
+to meet a living Knight...&r
+  &5[I have so many more questions about what we've learned...]&r
+  &6[The Crimson King]&r
+  &4And no time to ask them. Go, find your crew. Discuss your next moves.&r
 &o  C [1/2]: Leave the Monument.
 &o  C [2/2]: Talk to Vargos.
  After hitting Vargos and getting sent to the dialogue area:
 &o  C [1/2]: Talk to Vargos.
-&o  C [2/2]: Talk to Bhairavi and Vargos. Table
+&o  C [2/2]: Talk to Bhairavi and Vargos.
  Zarek
-  &6[Zarek]
- Hey [Player]! Vargos is waiting to chat with ya.  Table
+  &6[Zarek]&r
+ Hey [Player]! Vargos is waiting to chat with ya.
  Pten
-  &6[Pten]
- Hello [Player]. Vargos and Bhairavi are waiting to discuss with you.  Table
+  &6[Pten]&r
+ Hello [Player]. Vargos and Bhairavi are waiting to discuss with you.
  Izzy
-  &6[Izzy]
- Ahoy Captain. I assume you're bringing news? Vargos and Bhairavi will definitely want to hear it.  Table
+  &6[Izzy]&r
+ Ahoy Captain. I assume you're bringing news? Vargos and Bhairavi will definitely want to hear it.
  Bhairavi & Vargos
-  &6[Bhairavi]
+  &6[Bhairavi]&r
  You’re back! I heard there was a disturbance in Steelmeld and got really worried it was you.
-  &5[It was, but things have settled. Let me fill you in.]
-  &6[Bhairavi]
+  &5[It was, but things have settled. Let me fill you in.]&r
+  &6[Bhairavi]&r
  Please do!
-  You fill them all in on the events that occurred.
-  &6[Vargos]
+  &8You fill them all in on the events that occurred.&r
+  &6[Vargos]&r
  So your spirit friend did the same thing he seems to have done to Farr to the Monument? He really stood against the Teal
 spirit? This is incredible.
-  &5[Yeah. He genuinely is an ally here. He has his own goals, but we’re clearly aligned here.]
-  &6[Izzy]
+  &5[Yeah. He genuinely is an ally here. He has his own goals, but we’re clearly aligned here.]&r
+  &6[Izzy]&r
  So what’s the next move?
   &5[We need to meet Crimson at the Silver Tower. He wants to help us get back in to try and find the Silver Knight inside so we
-can try and find out where Teal’s pedestal might be located.]
-  &6[Bhairavi]
+can try and find out where Teal’s pedestal might be located.]&r
+  &6[Bhairavi]&r
  Are we sure we can trust him? Meeting him somewhere safe was fine, and he defended you... But the Tower seems sketchy. I'm
 sorry, but my trust of wool is low. I think we need some time to discuss all of this. Work out who is willing to go. If the risk
 here is worth the potential reward. How much time do we have?
-  &5[I'm not sure. We shouldn't wait long.]
-  &6[Vargos]
+  &5[I'm not sure. We shouldn't wait long.]&r
+  &6[Vargos]&r
  Then we will make this as quick as we can. Thank you for your contributions, [Player]. We are truly operating on borrowed time
-right now. Come back and see us soon. We'll have made a decision by then, I'm sure.  Table
-  BORROWED TIME COMPLETE
-LineBreak   Awarded 6 Ambrosia and 6 Hyper Crystalline Shards.
+right now. Come back and see us soon. We'll have made a decision by then, I'm sure.
+  &8BORROWED TIME COMPLETE&r
+LineBreak   &3Awarded 6 Ambrosia and 6 Hyper Crystalline Shards.&r

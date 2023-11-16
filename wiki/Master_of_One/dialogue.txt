@@ -1,66 +1,67 @@
-&o  Assist the Teacher in rebuilding the school of Mistport. Table
+&r
+&o  Assist the Teacher in rebuilding the school of Mistport.
  The Teacher SoftBreak  Coordinates: -1829, 127, 2431
-  Color|orange|[The Teacher]
- Well hello, you must be      Color|purple|[You have?]
-  Color|orange|[The Teacher]
+  &6[The Teacher]&r
+ Well hello, you must be      &5[You have?]&r
+  &6[The Teacher]&r
  Yes, it was only logical you would end up here eventually. I knew it would happen.
-  Color|purple|[So why were you waiting for me?]
-  Color|purple|[That's a tad creepy.]
-  Color|orange|[The Teacher]
+  &5[So why were you waiting for me?]&r
+  &5[That's a tad creepy.]&r
+  &6[The Teacher]&r
  You see, the building you passed through on your way here once housed a great school, one where people of all trades could come
 and hone their skills to new heights. I wish to rebuild that school, but I require some assistance.
-  Color|purple|[How can I help?]
-  Color|purple|[No thanks.]
-  Color|orange|[The Teacher]
+  &5[How can I help?]&r
+  &5[No thanks.]&r
+  &6[The Teacher]&r
  Let's start with some rather... hard-to-come-by materials. In Alnera, there is a blacksmith who is famous across the world as
 the only able to create creating Crystallized Iron. Likewise, in Frostgate, an expert artisan is the only known crafter of
 Wisperwood Stakes. I require you to fetch these for me- they are of the utmost importance to my task.
-&o  1/2 - Search out a blacksmith in Alerna that can produce crystallized iron. Table
+&o  1/2 - Search out a blacksmith in Alerna that can produce crystallized iron.
  Blacksmith Ghalla SoftBreak  Coordinates: 438, 61, 770
-  Color|orange|[Blacksmith Ghalla]
+  &6[Blacksmith Ghalla]&r
  I don't really have much time to talk. Got a lot of orders to fill today.
-  Color|purple|[I was sent to ask you about some Crystallized Iron.]
-  Color|orange|[Blacksmith Ghalla]
+  &5[I was sent to ask you about some Crystallized Iron.]&r
+  &6[Blacksmith Ghalla]&r
  You and every other person in the world. Listen, if you want a weapon, you'll need to place an order like everyone else.
-  Color|purple|[I don't want a weapon, I was just sent to get some iron for Mistport.]
-  Color|orange|[Blacksmith Ghalla]
+  &5[I don't want a weapon, I was just sent to get some iron for Mistport.]&r
+  &6[Blacksmith Ghalla]&r
  WHAT? Mistport? Damn that Xeno, we had a deal- stay away from me and my iron mines and I'll prioritize his end-of-month
 requests.
-  Color|purple|[I'm not here with-]
-  Color|orange|[Blacksmith Ghalla]
+  &5[I'm not here with-]&r
+  &6[Blacksmith Ghalla]&r
  You know what, I don't have time to stress about this. Here, take some that was just made, and get out.
-&o  2/2 - You also need to find an artisan in Frostgate who can provide wisperwood stakes. Table
+&o  2/2 - You also need to find an artisan in Frostgate who can provide wisperwood stakes.
  Artisan Angra SoftBreak  Coordinates: -1500, 98, 938
-  Color|orange|[Artisan Angra]
+  &6[Artisan Angra]&r
  Hello there, are you looking for anything specific today? Some crafted displays, or maybe a polished table?
-  Color|purple|[I think I'm good right now.]
-  Color|purple|[I was sent to ask you about a Wisperwood Stake.]
-  Color|orange|[Artisan Angra]
+  &5[I think I'm good right now.]&r
+  &5[I was sent to ask you about a Wisperwood Stake.]&r
+  &6[Artisan Angra]&r
  Oh my, I haven't made one of those in years. That trade started dying when the wood became endangered. I'm the only one left
 that can even still make them, though I won't hurt that species any more than I already have.
-  Color|purple|[I need one for a mission I have in Mistport.]
-  Color|orange|[Artisan Angra]
+  &5[I need one for a mission I have in Mistport.]&r
+  &6[Artisan Angra]&r
  Mistport?! No no no, listen, I don't want any trouble with pirates. I moved to Frostgate to get away from them.
-  Color|purple|[I'm not going to hurt-]
-  Color|orange|[Artisan Angra]
+  &5[I'm not going to hurt-]&r
+  &6[Artisan Angra]&r
  Here look, I have a single one still in my drawer that I keep to remember the old days. You can take it, but please just leave.
-&o  Return to The Teacher when you have both the crystallized iron and whisperwood stake. Table
+&o  Return to The Teacher when you have both the crystallized iron and whisperwood stake.
  The Teacher SoftBreak  Coordinates: -1829, 127, 2431
-  Color|orange|[The Teacher]
+  &6[The Teacher]&r
  Ahh yes, both of these are perfect. They will do just nicely.
-  Color|gray|The Teacher slides both items into his drawer.
-  Color|purple|[How do these things help us with the rebuilding the school?]
-  Color|orange|[The Teacher]
+  &8The Teacher slides both items into his drawer.&r
+  &5[How do these things help us with the rebuilding the school?]&r
+  &6[The Teacher]&r
  These? Ohoh no no, that's not what these are for. No, they will come in handy much later; but don't worry too much about that.
-  Color|purple|[You said they were essential for building the school.]
-  Color|orange|[The Teacher]
+  &5[You said they were essential for building the school.]&r
+  &6[The Teacher]&r
  No, I believe I said they were essential for my task. You see, there was a lesson to learn here. What did you notice about the
 two individuals you visited?
-  Color|purple|[They were the only ones who could produce these items.]
-  Color|orange|[The Teacher]
+  &5[They were the only ones who could produce these items.]&r
+  &6[The Teacher]&r
  Precisely. You see, things are different here in the Isles than the are in the Valley. What you experienced today were
 individuals who are masters in their trades.
-  Color|orange|[The Teacher]
+  &6[The Teacher]&r
  The line doesn't draw there though. No, far from it. There are people who take their skills even higher: Specialists, you might
 say. And this is the crown jewel of knowledge: getting one of them to share their experience with you. So, for your final task,
 go find one of these specialists. Do what it takes to learn about their skills, and return to me with the knowledge you gained.
@@ -68,7 +69,7 @@ go find one of these specialists. Do what it takes to learn about their skills, 
 them.
  Each   Link   class specialization Class_Specializations wikilink has its own quest. Complete the one of your choosing and
 return to The Teacher.
- Credit to Elecsat for finding the coordinates for each specialization. Table
+ Credit to Elecsat for finding the coordinates for each specialization.
 Link   Mage Mage wikilink
 Link   Arcanist Arcanist wikilink
  (-170, 160, 430)
@@ -125,13 +126,13 @@ Link   A Shaman's Lament A_Shaman's_Lament wikilink
 Link   Hexbreaker Shaman#Hexbreaker wikilink
  (-1248 90 1306)
 Link   A oke of Genius A_oke_of_Genius wikilink
-&o  You should probably head back to the Teacher in Mistport to tell him of the knowledge you've learned here. Table
+&o  You should probably head back to the Teacher in Mistport to tell him of the knowledge you've learned here.
  The Teacher SoftBreak  Coordinates: -1829, 127, 2431
-  Color|purple|[The Teacher]
+  &5[The Teacher]&r
  Ahh, I sense you are much wiser than the last time we spoke! You found a master, didn't you? Please, tell me about your time
 with them.
-  Color|gray|You tell the teacher about your adventure.
-  Color|purple|[The Teacher]
+  &8You tell the teacher about your adventure.&r
+  &5[The Teacher]&r
  I see! How fascinating; I would never have even considered that! Very well, I shall do what needs to be done to remake that
 building into the great school it once was. That said, your assistance is still needed. I sense that there are still many more
 masters out there in the world. Search them out and continue to learn what they teach. From that, we may further expand our data

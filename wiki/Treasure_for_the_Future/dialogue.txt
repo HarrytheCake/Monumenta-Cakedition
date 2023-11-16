@@ -1,268 +1,272 @@
-  WorkInProgress
-&o  Travel to Mistport and seek out Zeroc's missing associate. Table
+&r
+  WorkInProgress&r
+&o  Travel to Mistport and seek out Zeroc's missing associate.
  Zeroc
   Coordinates: [-1475, 102, 932]
-   &6[Zeroc]
+   &6[Zeroc]&r
  I wonder if he found the right person already...
-  &5[Hi, are you Zeroc?]
-  &6[Zeroc]
+  &5[Hi, are you Zeroc?]&r
+  &6[Zeroc]&r
  How do you know my name? Unless... Zulamar sent you here?
-  &5[I have no idea who you're talking about.]
-  &6[Zeroc]
+  &5[I have no idea who you're talking about.]&r
+  &6[Zeroc]&r
  Off you go then.
-  &5[That's right. He's a very interesting person, don't you think?]
-  &6[Zeroc]
+  &5[That's right. He's a very interesting person, don't you think?]&r
+  &6[Zeroc]&r
  Yes, I suppose... However, you're not here to talk about him, right?
-  &6[Zeroc]
+  &8He sighs.&r
+  &6[Zeroc]&r
  I suppose you have a lot of questions? Ask, I'll try to answer them.
-  &5[Who are you?]
-  &6[Zeroc]
+  &5[Who are you?]&r
+  &6[Zeroc]&r
  As you know already, my name is Zeroc. I'm a researcher from Steelmeld - an underwater complex that doesn't belong to the
 Ishnir desert or the Chillwind tundra. You should visit it some day, if you haven't already.
-  &5[Why did you decide to stay here, in Frostgate?]
-  &6[Zeroc]
+  &5[Why did you decide to stay here, in Frostgate?]&r
+  &6[Zeroc]&r
  I don't enjoy hot places, so I don't like being in Ishnir longer than I have to. Besides, Zulamar wanted to go there on his
 own. Wispervale is full of people that are a bit too curious for their own good, and Nightroost didn't have proper temporary
 housing due to their recent problems. Mistport on the other hand is too dangerous for extended visits. That left Frostgate as
 the best place for my research.
-  &5[Zulamar said you could tell me more about the remnants of the Viridian Empire.]
-  &6[Zeroc]
+  &5[Zulamar said you could tell me more about the remnants of the Viridian Empire.]&r
+  &6[Zeroc]&r
  In a sense. I sent an associate of mine to investigate the lead in Mistport, but I've since lost contact with them. If I had
 any other contacts in Mistport, this wouldn't be a problem, but alas. I do not. And traveling there myself presents its own
 danger, what with the unpredictability of those pirates.
-  &5[That's a shame.]
-  &6[Zeroc]
+  &5[That's a shame.]&r
+  &6[Zeroc]&r
  Indeed it is.
-  &5[Well, I'm the Captain of Mistport. I could go find your associate.]
-  &6[Zeroc]
+  &5[Well, I'm the Captain of Mistport. I could go find your associate.]&r
+  &6[Zeroc]&r
  You're... the Captain of Mistport? Well, now, this changes things. This changes things quite a bit. If that's the case, I would
 greatly appreciate your help in retrieving this second artifact, just as with the first. I'll offer fair payment for your work,
 of course.
-  &5[I'm not sure I have the time to help you.]
-  &6[Zeroc]
+  &5[I'm not sure I have the time to help you.]&r
+  &6[Zeroc]&r
  Hm... Fine. You've certainly helped us enough already. We'll certainly be able to find a way past this roadblock ourselves.
-  &5[I suppose I have the time. I'll find this artifact for you.]
-  &6[Zeroc]
+  &5[I suppose I have the time. I'll find this artifact for you.]&r
+  &6[Zeroc]&r
  Excellent. Your first step will be to locate my associate, and retrieve whatever information they managed to gather before we
 lost contact. Their name is Zyon, I trust you'll be able to find what happened.
 &o  Search Mistport for any sign of Zeroc's missing associate, Zyon. Maybe someone knows what happened?
   Boatswain Baxter
   Coordinates: [-801, 81, 1339]
-   &5[Hello Boatswain. Would you happen to know the whereabouts of a person called Zyon?]
-  &6[Boatswain Baxter]
- Yarrg, can't say I do Cap'n. I just guard your boat.  Table
+   &5[Hello Boatswain. Would you happen to know the whereabouts of a person called Zyon?]&r
+  &6[Boatswain Baxter]&r
+ Yarrg, can't say I do Cap'n. I just guard your boat.
  Drunk Pirate
   Coordinates: [-830, 88, 1359]
-   &5[Hey. You. Do you know about someone called Zyon?]
-  &6[Drunk Pirate]
+   &5[Hey. You. Do you know about someone called Zyon?]&r
+  &6[Drunk Pirate]&r
  *Hic* YaaaAArrr... *hic* ...Barteeender?
-  &5[Nevermind. I shouldn't have asked.]
-  &6[Drunk Pirate]
- *hic*  Table
+  &5[Nevermind. I shouldn't have asked.]&r
+  &6[Drunk Pirate]&r
+ *hic*
  Salty Bartender
   Coordinates: [-829, 87, 1367]
-   &5[Bartender. Do you know anything about someone known as Zyon?]
-  &6[Salty Bartender]
+   &5[Bartender. Do you know anything about someone known as Zyon?]&r
+  &6[Salty Bartender]&r
  Zehahaha! I do, cap'n! That laddy waltzed on inter me pub, an' made a great ol' fool of 'emself! Got 'emself dragged off ter
 the brig, 'ey did!
-  &5[That's very helpful. Thanks for the information.]
-  &6[Salty Bartender]
- Zehahaha! A fine story costs me nothin', cap'n!  Table
+  &5[That's very helpful. Thanks for the information.]&r
+  &6[Salty Bartender]&r
+ Zehahaha! A fine story costs me nothin', cap'n!
  Marcus
   Coordinates: [-828, 82, 1307]
-   &5[Yes. Academy. Great. By the way, would you happen to know anything about a person called Zyon?]
-  &6[Marcus]
- I vaguely recall the name, but I can't remember where from. You'll have to ask elsewhere, I'm afraid.  Table
+   &5[Yes. Academy. Great. By the way, would you happen to know anything about a person called Zyon?]&r
+  &6[Marcus]&r
+ I vaguely recall the name, but I can't remember where from. You'll have to ask elsewhere, I'm afraid.
  Alton
   Coordinates: [-808, 81, 1308]
-   &5[Sorry to interrupt - but do you know anything about a person called Zyon?]
-  &6[Alton]
+   &5[Sorry to interrupt - but do you know anything about a person called Zyon?]&r
+  &6[Alton]&r
  Oooh... They were at the bar... I think...
   Prison Guard
   Coordinates: [-809, 88, 1292]
-   &6[Prison Guard]
+   &6[Prison Guard]&r
  Yar! Cap'n Xeno put me on duty fer' the prison, but now that he be gone, I guess I be watching it fer you now Cap'n [Player].
-  &5[Is there a prisoner by the name of Zyon?]
-  &6[Prison Guard]
+  &5[Is there a prisoner by the name of Zyon?]&r
+  &6[Prison Guard]&r
  Yar, so there be! Locked up by the First Mate his self, Cap'n!
-  &5[The First Mate? Did he give a reason?]
-  &6[Prison Guard]
+  &5[The First Mate? Did he give a reason?]&r
+  &6[Prison Guard]&r
  Under orders from Cap'n Xeno, he said! And ye know how Xeno was, Cap'n. Don't question him, or you be next in the brig!
-  &5[I'll have to talk to First Mate Jones about this.]
-  &6[Prison Guard]
+  &5[I'll have to talk to First Mate Jones about this.]&r
+  &6[Prison Guard]&r
  Yar, good luck Cap'n!
-  &5[Can I speak to the prisoner?]
-  &6[Prison Guard]
- Of course, Cap'n [Player]!  Table
+  &5[Can I speak to the prisoner?]&r
+  &6[Prison Guard]&r
+ Of course, Cap'n [Player]!
  Zyon
   Prison Cell
-   &6[Zyon]
+   &6[Zyon]&r
  G-gah! What do you want now, pirates?! I don't have anything to tell you!
-  &5[Arrgh! Yer set fer execution, prisoner!]
-  &6[Zyon]
+  &5[Arrgh! Yer set fer execution, prisoner!]&r
+  &6[Zyon]&r
  Ack! No, no, I can get out of this somehow...
-  &5[You're Zyon? Zeroc sent me to find you.]
-  &6[Zyon]
+  &5[You're Zyon? Zeroc sent me to find you.]&r
+  &6[Zyon]&r
  He did?! That's- that's great news! Quick, get me out of here, I've been locked up in here for far too long!
-  &5[You know, you could have just asked the chicken outside for help. Worked for me.]
-  &6[Zyon]
+  &5[You know, you could have just asked the chicken outside for help. Worked for me.]&r
+  &6[Zyon]&r
  Wh- Huh? What does that even mean?
-  &5[What did you do to get locked up in here?]
-  &6[Zyon]
+  &5[What did you do to get locked up in here?]&r
+  &6[Zyon]&r
  Well... I snuck aboard Captain Xeno's ship, searching for anything they might have known about the artifact! And I did find
 something! A document which mentioned something they found in Viridis. I went to the bar, the Salty Seaswindler, to celebrate.
 But then, who do I run into but the First Mate himself!
-  &5[So he locked up up for breaking into the captain's ship?]
-  &6[Zyon]
+  &5[So he locked up up for breaking into the captain's ship?]&r
+  &6[Zyon]&r
  What? Oh, no. I just... I made a bit of a fool of myself. How was I supposed to know that singing off key was enough to get
 someone locked up in prison?! It's ridiculous, really...
-  &5[...Right. Well, thanks for the information. I'm going to go now.]
-  &6[Zyon]
+  &5[...Right. Well, thanks for the information. I'm going to go now.]&r
+  &6[Zyon]&r
  Oh... You're just going to- Alright, sure, I'll just wait for you to get back I guess!
-  &5[Thanks for the information, I'll tell the guards to let you out.]
-  &6[Zyon]
- Y-yes, of course! It's my job, after all! Just... I'm never coming to Mistport again.  Table
+  &5[Thanks for the information, I'll tell the guards to let you out.]&r
+  &6[Zyon]&r
+ Y-yes, of course! It's my job, after all! Just... I'm never coming to Mistport again.
  Prison Guard
   Coordinates: [-809, 88, 1292]
-   &6[Prison Guard]
+   &6[Prison Guard]&r
  Yar! Cap'n Xeno put me on duty fer' the prison, but now that he be gone, I guess I be watching it fer you now Cap'n [Player].
-  &5[As Captain of Mistport, I order you to release the prisoner.]
-  &6[Prison Guard]
+  &5[As Captain of Mistport, I order you to release the prisoner.]&r
+  &6[Prison Guard]&r
  Aye aye, Cap'n! Less work fer me to do!
-&o  Speak to First Mate Jones to travel to the Viridian Vault. Table
+&o  Speak to First Mate Jones to travel to the Viridian Vault.
  First Mate Jones
   Coordinates: [-761, 81, 1344]
-   &6[First Mate Jones]
+   &6[First Mate Jones]&r
  Ahoy Captain [Player]. Good job getting us into that city. We're lootin' good tonight.
-  &5[I hear you locked someone in the brig under Captain Xeno's orders.]
-  &6[First Mate Jones]
+  &5[I hear you locked someone in the brig under Captain Xeno's orders.]&r
+  &6[First Mate Jones]&r
  So I did! Captain Xeno wanted any number o' people locked up, Captain. Ye can't truly expect me to remember every troublemaker
 we locked up, can ye?
-  &5[Does the name Zyon ring any bells?]
-  &6[First Mate Jones]
+  &5[Does the name Zyon ring any bells?]&r
+  &6[First Mate Jones]&r
  Ah! So it does. They found somethin' we want to keep fer ourselves, ye hear? Treasure, Captain, for all of us! In the lost
 city, there be a vault, of sorts. It be heavily defended, ye must 'ave missed it when ye went through the city. Xeno thought it
 be too dangerous to loot then, and left it fer later.
-  &5[That vault may be what I'm looking for. Is there any way we could go there?]
-  &6[First Mate Jones]
+  &5[That vault may be what I'm looking for. Is there any way we could go there?]&r
+  &6[First Mate Jones]&r
  So ye think ye can handle it? If ye say so, Captain! I'll get the whole crew together, we'll make an event of it! Yarharharg!
-  If you want to leave: Table
+  If you want to leave:
  First Mate Jones (Vault)
   Coordinates: []
-   &6[First Mate Jones]
+   &6[First Mate Jones]&r
  Ahoy, Captain! Anythin' ye need from me?
-  &5[Can you take us back to Mistport?]
-  &6[First Mate Jones]
+  &5[Can you take us back to Mistport?]&r
+  &6[First Mate Jones]&r
  Of course, Captain!
- If you want to return: Table
+ If you want to return:
  First Mate Jones
   Coordinates: [-809, 88, 1292]
-   &6[First Mate Jones]
+   &6[First Mate Jones]&r
  Ahoy Captain [Player]. The crew be set to return to the lost city! Are ye ready to go?
-  &5[I need a moment to prepare.]
-  &6[First Mate Jones]
+  &5[I need a moment to prepare.]&r
+  &6[First Mate Jones]&r
  Take yer time Captain. Wouldn't want ye to die tryin' to loot the vault, eh?
-  &5[I'm ready to go.]
-  &6[First Mate Jones]
+  &5[I'm ready to go.]&r
+  &6[First Mate Jones]&r
  Arr! Let's get that treasure, Captain!
  &o  Attempt to open the Viridian Vault.
-  &6[Second Mate Gary]
+  &6[Second Mate Gary]&r
  Arrgh. Ze treasure is zis way, Cap'n.
-  &6[Third Mate Stevens]
+  &6[Third Mate Stevens]&r
  'ello Cap'n. Pleasure to meet ya for th' first time. Let's go get this 'ere treasure, eh?
  Walking into the circular room:
-  &6[Echoing Voice]
+  &6[Echoing Voice]&r
  You again... One sacred relic claimed, now onto the second? Why do you seek these dangerous weapons...?
-  &6[Echoing Voice]
+  &6[Echoing Voice]&r
  Whatever your aim... Your quest is doomed to fail. No good will come of these relics, mortals...
-  &6[Echoing Voice]
+  &6[Echoing Voice]&r
  Another test may prove your will. Defeat the guardian... Unseal the vault... And this relic will be yours.
  After defeating the guardian:
-  &6[Echoing Voice]
+  &6[Echoing Voice]&r
  Very well... You have proven your strength, as you proved your will before. Come forth... Reclaim this sacred relic.
-&o  Speak to the spirit within the vault. Table
+&o  Speak to the spirit within the vault.
  Izumur
-  &6[???]
+  &6[???]&r
  You are... [Player]. Yes, I remember your work in the city... So you have now claimed all three of Salazar's great treasures,
 then.
-  &5[Who are you?]
-  &6[Izumur]
+  &5[Who are you?]&r
+  &6[Izumur]&r
  I am... Izumur. I have protected this empire... From its birth, to its fall, and yet beyond. And you... You must have a reason
 to reclaim these relics. To have traveled to find both... Tell me, what is it you seek?
-  &5[I have been told they can be used to restore the empire.]
-  &6[Izumur]
+  &5[I have been told they can be used to restore the empire.]&r
+  &6[Izumur]&r
  Ah... I understand, now. You have been misled, I am afraid. The relics you have claimed... they can not be used for such means.
-  &5[What do you mean?]
-  &6[Izumur]
+  &5[What do you mean?]&r
+  &6[Izumur]&r
  These weapons you now hold... They were part of a mechanism, yes. But not one of Viridian origin. They do not belong in these
 ruins... And the danger they pose has kept me vigilant.
-  &5[Danger?]
-  &6[Izumur]
+  &5[Danger?]&r
+  &6[Izumur]&r
  Hm... These relics... they hold great power, even in their damaged state. I fear the strength they would offer, in the wrong
 hands...
-  &5[They're not of Viridian origin? Where are they from?]
-  &6[Izumur]
+  &5[They're not of Viridian origin? Where are they from?]&r
+  &6[Izumur]&r
  I am afraid I could not tell you. I have rested in my domain for many years, mortal... I know little of the world beyond.
 However... I can tell you of the man who brought them here.
-  &6[Izumur]
+  &6[Izumur]&r
  He traveled here, with his Knowledge and these two weapons of silver sheen. He built his empire with their power... yet when he
 had no more use for such, he sealed them away. Even as he disappeared, his fear had kept him from wielding them anew.  Plain
 (Either ends converstation)
-  &5[What should I do with them then?]
-  &6[Izumur]
+  &5[What should I do with them then?]&r
+  &6[Izumur]&r
  Hm... These relics... they hold great power, even in their damaged state. I fear the strength they would offer, in the wrong
 hands...
-  &5[If they don't belong here, I can return them to their rightful place.]
-  &6[Izumur]
+  &5[If they don't belong here, I can return them to their rightful place.]&r
+  &6[Izumur]&r
  They are in your hands, now. Do what you will... But be away of the power they hold. I trust you will do what is right, mortal.
 Now, all I wish is to rest...
  Dialogues after:
-  &6[Izumur]
+  &6[Izumur]&r
  Hm... I see you have come with a crew. In truth, I do not mind the raiders. Their desire to claim the forgotten things of my
 domain... It comforts me, to know some may find value in such remnants.
-  &6[Second Mate Gary]
+  &6[Second Mate Gary]&r
  Arrgh. Ze treasure is ourz now, Cap'n.
-  &6[Third Mate Stevens]
+  &6[Third Mate Stevens]&r
  Excellent work out there, Cap'n. Time to go get us our treasure, eh?
-&o  Speak to First Mate Jones to return to Mistport. Table
+&o  Speak to First Mate Jones to return to Mistport.
  First Mate Jones (Vault)
   Coordinates: []
-   &6[First Mate Jones]
+   &6[First Mate Jones]&r
  Ahoy, Captain! I see ye've opened the vault! Excellent work. Are we set to get to lootin'?
-  &5[The treasure's all yours, Jones. I need to get back to Mistport.]
-  &6[First Mate Jones]
+  &5[The treasure's all yours, Jones. I need to get back to Mistport.]&r
+  &6[First Mate Jones]&r
  Arr! I'll bring ye back, Captain. The crew will get goin' while yer gone!
 &o  [1/2]: Return to Zeroc in Frostgate with the artifact.
-&o  [2/2]: If you lost the artifact, you can speak to First Mate Jones to return to the vault. Table
+&o  [2/2]: If you lost the artifact, you can speak to First Mate Jones to return to the vault.
  Zeroc
   Coordinates: [-1475, 102, 932]
-   &6[Zeroc]
+   &6[Zeroc]&r
  Hm...
-  &5[Zeroc, I'm back.]
-  &6[Zeroc]
+  &5[Zeroc, I'm back.]&r
+  &6[Zeroc]&r
  Ah! There you are. I received a message from Zyon telling me you freed them. I suppose that means you've had luck with your
 search?
-  &5[I have! I've retrieved the second artifact.]
-  &6[Zeroc]
+  &5[I have! I've retrieved the second artifact.]&r
+  &6[Zeroc]&r
  You- you have? That's excellent news! Yes, We're getting rather close to achieving our goals! Soon, we'll have restored the
 Viridian Empire! Just think of the technology we'll be able to retrieve!
-  &5[But I learned that the artifacts can't actually restore the empire.]
-  &6[Zeroc]
+  &5[But I learned that the artifacts can't actually restore the empire.]&r
+  &6[Zeroc]&r
  What? Where did you learn this information?
-  &5[Well, I met a genius loci at the resting place of this relic, and-]
-  &6[Zeroc]
+  &5[Well, I met a genius loci at the resting place of this relic, and-]&r
+  &6[Zeroc]&r
  Bah. That's hardly a source of information at all! You'd have me discard years of research and abandon my goals because of a
 spirit we can't even be sure exists?
-  &6[Zeroc]
+  &8He takes a moment to compose himself.&r
+  &6[Zeroc]&r
  Ahem... My apologies. I truly do appreciate your hlep, but we will continue on from here, regardless of what you may believe.
-  &5[Alright. I'll see this through.]
-  &6[Zeroc]
+  &5[Alright. I'll see this through.]&r
+  &6[Zeroc]&r
  Excellent. Now... We just need to discern where these artifacts can be used. I've been taking some time to decipher some of
 these texts which Zulumar has accessed from Alnera's archives, but we haven't quite gotten it yet.
-  &5[If it helps, I learned that King Salazar brought them with him before he founded his empire.]
-  &6[Zeroc]
+  &5[If it helps, I learned that King Salazar brought them with him before he founded his empire.]&r
+  &6[Zeroc]&r
  Interesting. Before the empire... I believe I have something just like that. Give me a moment...
-  &6[Zeroc]
+  &8He rummages through a pile of documents.&r
+  &6[Zeroc]&r
  Aha! Here we are. From what I can gather, it's a section of a journal written by the King of his travels before he ruled
 Viridia. While you discern where we need to travel to use these artifacts, I'll attempt to contact Zulumar so we can meet you
 there.
@@ -270,96 +274,103 @@ there.
   The place the diary is referencing is   Link   Silver Tower Silver_Tower wikilink  's basement.
   After entering:
 &o  Search the ruins beneath the Silver Tower for any signs of the mechanism.
-  &6[Zeroc]
+  &6[Zeroc]&r
  Now, this... This is remarkable. I would have never guessed that something this expansive could be hiding just beneath the
-surface! We're close, I can feel it. Table
+surface! We're close, I can feel it.
  Zulamar
-  &6[Zulamar]
+  &6[Zulamar]&r
  Yes, yes, hello again! I hear you got the second artifact all on your own, without my help!
-  &5[I got the first one mostly on my own as well.]
-  &6[Zulamar]
+  &5[I got the first one mostly on my own as well.]&r
+  &6[Zulamar]&r
  Well... That's neither here nor there. Now- we're very close to achieving our goal! Are you excited? I'm excited. I can tell
 Zeroc is as well.
- In the next area: Table
+ In the next area:
  Zeroc
-  &6[Zeroc]
+  &6[Zeroc]&r
  Two statues... Yes, this is fascinating. The architecture doesn't mat what we've seen in other Viridian ruins... Though, I
 suppose that would match our timeline.
-  &5[What should we do now?]
-  &6[Zeroc]
+  &5[What should we do now?]&r
+  &6[Zeroc]&r
  We keep searching. Zulamar went ahead, you can see if he's found anything.
-  &5[Can you give me the artifacts?]
-  &6[Zeroc]
- Ah. Yes, of course. You're best equipped to activate the mechanism, after all.  Table
+  &5[Can you give me the artifacts?]&r
+  &6[Zeroc]&r
+ Ah. Yes, of course. You're best equipped to activate the mechanism, after all.
  Zulamar
-  &6[Zulamar]
+  &6[Zulamar]&r
  Yes, yes, there you are. Take a look at this. Seems something was held here before, yes?
-  &5[It looks like it may have been a Wool.]
-  &6[Zulamar]
+  &5[It looks like it may have been a Wool.]&r
+  &6[Zulamar]&r
  A wool? Are you certain? This seems a touch grand for something so mundane, yes?
-  &5[Nevermind. Have you found the mechanism yet?]
-  &6[Zulamar]
+  &5[Nevermind. Have you found the mechanism yet?]&r
+  &6[Zulamar]&r
  Not yet, no. It must be further into this place, then. You can go on ahead, yes? I'd like to see if I can discern what was held
 here.
-  &5[Whatever it was, it's long gone now.]
-  &6[Zulamar]
+  &5[Whatever it was, it's long gone now.]&r
+  &6[Zulamar]&r
  So it is! Well, in any case, have you had any luck finding our mechanism?
-  &5[I cam here to ask you the same thing.]
-  &5[No luck yet.] Plain  (Both answers lead to the same line)
-  &6[Zulamar]
+  &5[I cam here to ask you the same thing.]&r
+  &5[No luck yet.]&r Plain  (Both answers lead to the same line)
+  &6[Zulamar]&r
  It must be further into this place, then. You can go on ahead, yes? I'd like to see if I can discern what was held here.
  When you interact with the knight:
+  &8It's a knight in silver armor. It doesn't stir as you approach. It's armor looks damaged, and there's no sign of life inside
+the helmet.&r
  After putting in both artifacts to each pedestal:
-  The room begins to shake, as the glow from the artifacts fades...
+  &8The room begins to shake, as the glow from the artifacts fades...&r
+  &8The exit slams shut behind you, and the chamber begins to flood with defenders.&r
  After beating the waves of defenders:
+  &8You manage to break past the defenses, and escape the chamber. The passage collapses behind you.&r
+  &8The cavern is still shaking... You need to find Zeroc and Zulamar and get out of this place, quickly.&r
 &o  Find Zeroc and Zulamar and escape the ruins.
-  &6[Zeroc]
+  &6[Zeroc]&r
  ...yes, Zulamar, I understand! But I can't get this open if you keep-
-  &6[Zulamar]
+  &6[Zulamar]&r
  There must be a reason the exit's shut! If we tried to search for a way to deactivate whatever caused it, we'd be able to-
-  &6[Zeroc]
+  &6[Zeroc]&r
  And as I told you before, we do not know how long we have, Zulamar! If we don't get this open quickly, we don't know what could
 happen!
-  &6[Zulamar]
+  &6[Zulamar]&r
  Oh, Zeroc, It's [Player]! What happened? You went off on your own, and then all the exits shut, and the cavern began to shake,
 yes?
-  &6[Zeroc]
+  &6[Zeroc]&r
  Hm... You went off on your own? Could that possibly mean you discovered the mechanism? Is that what has caused this? Did it
 not-
-  &6[Zulamar]
+  &6[Zulamar]&r
  Zeroc, we don't have time for such questions! We can discuss later, for now we have to...
-  &6[Zulamar]
+  &6[Zulamar]&r
  Aha! There we are! Now, let's get out of here before it's too late, yes?
-&o  Speak to Zeroc. Table
+&o  Speak to Zeroc.
  Zeroc
-  &6[Zeroc]
+  &6[Zeroc]&r
  What was that? That was the mechanism, yes? Did you place the relics properly? How could it have possibly failed?
-  &5[Yes, it was the mechanism, and I placed the relics correctly. I told you earlier, the mechanism-]
-  &6[Zulamar]
+  &5[Yes, it was the mechanism, and I placed the relics correctly. I told you earlier, the mechanism-]&r
+  &6[Zulamar]&r
  Ah! Sorry to interrupt, but we should leave this place. It's far too cold and dark down here! We can regroup in Frostgate, yes?
-  &5[Zulamar's right. We can't stay here.]
-  &6[Zeroc]
+  &5[Zulamar's right. We can't stay here.]&r
+  &6[Zeroc]&r
  You're right... You're right, of course. Let us go.
-&o  Speak to Zeroc in the Frostgate Inn. Table
+&o  Speak to Zeroc in the Frostgate Inn.
  Zeroc
-  &6[Zeroc]
+  &6[Zeroc]&r
  This expedition was a disaster... We've lost both relics, and the mechanism to restore the empire failed.
-  &5[Zeroc, I told you the mechanism was never going to work.]
-  &6[Zulamar]
+  &8He sighs.&r
+  &5[Zeroc, I told you the mechanism was never going to work.]&r
+  &6[Zulamar]&r
  So you did. I didn't list, of course, and it nearly got us killed. I'll have to do some thinking on this whole matter. And the
 structures down there.... If only we spent more time investigating them.
-  &5[Maybe someday you'll find another way to regain the lost knowledge you wanted.]
-  &6[Zeroc]
+  &5[Maybe someday you'll find another way to regain the lost knowledge you wanted.]&r
+  &6[Zeroc]&r
  Perhaps. Perhaps not. In any case, I suspect I'll have to return to Steelmeld soon. I'll have more resources at my disposal
 there.
-  &5[What about Zulamar?]
-  &6[Zeroc]
+  &5[What about Zulamar?]&r
+  &6[Zeroc]&r
  Oh, we'll still work together for the time being. He seems as invested in this cause as I am, so we'll keep working towards it.
-  &6[Zeroc]
+  &8He takes a moment to think.&r
+  &6[Zeroc]&r
  Yes, regarding your payment. I have these crystalline shards, of course... Ah, here we are. In the time you spent away, I asked
 Zulamar to create a replica of our second artifact. I'll give this to you as well. Will this be sufficient?
-  &5[Sounds good.]
-  &6[Zeroc]
+  &5[Sounds good.]&r
+  &6[Zeroc]&r
  Excellent. No matter how it ended, I appreciate your assistance with this expedition.
-  '''TREASURE FOR THE FUTURE COMPLETE!'''<br>
-Awarded [[Blade of Exaltation]] and 64 Compressed Crystalline Shards!
+  &3'''TREASURE FOR THE FUTURE COMPLETE!'''<br>
+Awarded [[Blade of Exaltation]] and 64 Compressed Crystalline Shards!&r
