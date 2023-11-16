@@ -1,7 +1,7 @@
-prerequisites=&3Cure for Insomnia&rstarting_npc_name=The Praetorregion=Architect's Ringtown=New Antiumstarting_npc_coordinates=-461 192 -64related_poi=Doomed Encampment
-Silvic Quarrystarting_npc_name=The Praetorregion=Architect's Ringtown=New Antiumstarting_npc_coordinates=-461 192 -64related_poi=Doomed Encampment
-Silvic Quarrystarting_npc_coordinates=-461 192 -64related_poi=Doomed Encampment
-Silvic Quarryregion=Architect's Ringtown=New Antiumstarting_npc_coordinates=-461 192 -64related_poi=Doomed Encampment
-Silvic Quarrytown=New Antiumstarting_npc_coordinates=-461 192 -64related_poi=Doomed Encampment
-Silvic Quarryrelated_poi=Doomed Encampment
+prerequisites=&3Cure for Insomnia&rstarting_npc_name=The Praetorregion=Architect's Ringtown=New Antiumstarting_npc_coordinates=-461 192 -64POI: Doomed Encampment
+Silvic Quarrystarting_npc_name=The Praetorregion=Architect's Ringtown=New Antiumstarting_npc_coordinates=-461 192 -64POI: Doomed Encampment
+Silvic Quarrystarting_npc_coordinates=-461 192 -64POI: Doomed Encampment
+Silvic Quarryregion=Architect's Ringtown=New Antiumstarting_npc_coordinates=-461 192 -64POI: Doomed Encampment
+Silvic Quarrytown=New Antiumstarting_npc_coordinates=-461 192 -64POI: Doomed Encampment
+Silvic QuarryPOI: Doomed Encampment
 Silvic Quarry

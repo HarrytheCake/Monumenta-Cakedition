@@ -1,4 +1,4 @@
 Pre-req: none 
  NPC: Captain Indigo &1Coords:&r 683, 73, 491
 &2 King's Valley&r Sierhaven
-related_poi=&3Grand Maw&r, &3Murky Maze&r
+POI: &3Grand Maw&r, &3Murky Maze&r

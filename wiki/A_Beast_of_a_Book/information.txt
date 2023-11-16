@@ -1,4 +1,4 @@
 Pre-req: Completed the &3Vernal NightmareYellow dungeon&r
  NPC: Erwen &1Coords:&r 600, 99, 115
 &2 King's Valley&r Farr
-related_poi=&3Aphelion Isle&r&r &3Weeping Wormwood&r&r &3Altar of Evocation&r&r
+POI: &3Aphelion Isle&r&r &3Weeping Wormwood&r&r &3Altar of Evocation&r&r
