@@ -1,163 +1,176 @@
-&bHotfix:&r Fixed Blue's Air Branch 2nd checkpoint not
-activating
-&bFixed at daily restart:&r
-• Lightning totem no longer targets whatever it is thrown
-against, and now only targets hostiles that it's thrown against
-&b(10.9.0)&r
-For the update on November 9, 2023
-&bExalted Malevolent Reverie&r
-• Exalted Malevolent Reverie has been added to the Exalted Hall.
-Take on brand new challenges in the reprised version of Region
-1’s capstone dungeon, and purchase remastered versions of iconic
-items from them!
-• Exalted Reverie will be made available this weekend, opening
-up at our usual launch window at <t:1699722000:F>.
-• As a reminder, Exalted Dungeons count as your instance of that
-dungeon for the week, so you cannot run a non-Exalted and an
-Exalted version of the same dungeon in one week. Additionally,
-Exalted Dungeons can be done to complete Season Pass objectives
-and Delve Bounties, and the leaderboard for completions is
-shared between Exalted and basic versions.
-&bMinor Changes:&r
-• The monuments now stay completed for anyone who has completed
-the monument. The wools will disappear if someone nearby has not
-completed the monument, or if a moderator is in creative mode in
-the area.
-• Cut particle count of Galactic Rain (Coup de Grace cosmetic)
-to reduce lag, no noticeable visual change
-• Updated the legacy Omnilockbox trade to display refunded
-materials
-• Creeperween 2023 has ended, and as such Creeper Fanatic Boris
-has ceased spreading his Bag o' Treats across Monumenta. If you
-have any remaining Creeper Delights from the event that you
-would like to use, they may be used on creepers for one more
-week before being disabled until next year's event.
-• The Monumenta Music Pack has been updated to version 2.2.0
-with music for the Alchemy Labs dungeon. Download it here –
-<https://files.playmonumenta.com/resource-
-packs/MonumentaMusicPack.zip>
-&bTrade GUI Changes:&r
-• Now shows the amount of currency in a wallet rather than from
-a wallet
-• Now works with trades intended to be used a limited amount of
-times
-&bWeek 1 R3 Shaman Balance Changes:&r
-• Chain Lightning Enhancement
-    • 60% damage totem efficiency -> 50%
-    • 25% efficiency for other totems -> 30%
- • Cleansing Totem Enhancement: Now heals the shaman and players
-within 3 blocks of the summon location of the totem for 20% and
-cleanses
- • Crystalline Combos:
-    • Sounds for strikes have been upgraded
-    • Threshold is now 12 for both level 1 and 2
-    • 2.5% speed per stack in the enhancement -> 4%
- • Flame Totem Enhancement:
-    • Deals 2 extra magic damage over the base skill amount
-chosen
-    • Enhancement Radius 2.5 -> 3
- • Lightning Totem Enhancement:
-    • Lightning rods changed to Lightning Storms
-    • Lightning Storms have a 100% chance of spawning
-    • New storms cannot be created within the radius of an
-existing storm
- • Totemic Projection Enhancement
-    • 10% per totem damage increase -> 15%
- • Decayed Totem slowness amplifier 40% -> 30%
-• Chain Healing Wave healing 20%/25% -> 25%/35%
-&bWeek 1 R3 Shaman Charm Balance Changes:&r
-• Unstable Reactor: +15% -> -10% Damage, -25% -> -30% Radius, 4
--> 3 Charm Power
-• Explosive Charm of Thundering: +25% -> +20% Radius
-• Crumbling Effigy: +2 -> +1 Targets
-• Mist of Dawn: -35% -> -30% Duration, -35% -> -40% Cooldown
-• Silver Medallion: +50% -> +60% Radius
-&bMob Changes&r
-• Bloodthirsty telegraph now causes the selected mobs to glow
-orange instead of red
-• Mobs launched by Bloodthirsty cannot be launched by another
-Bloodthirsty mob for 1.5s
-&nValley of Forgotten Pharaohs&r
-• Desiccated Husk:
-  • Re-added worn armor that was mistakenly removed
-  • Removed passive Zombie vanilla armor
-&nThe Fallen Forum&r
-• Flame Spirit:
-  • Fireballs now apply 30% Slowness for 4 seconds instead of
-vanilla Slowness 2 for 4 seconds
-• Spirit Rider:
-  • 0.8 -> 0.7 Magic Arrow Projectile Speed
-  • Punch 2 -> Punch 1
-• Congress Sentinel:
-  • Removed vanilla attributes from held/worn items
-• Experiment Eighty-Three:
-  • 80 -> 60 Health
-  • Removed passive Zombie vanilla armor
-• Hushbringer:
-  • 0 -> 2 Size (Attack damage was reduced to keep the mob's
-total damage the same)
-• Malkus Abomination:
-  • 20 -> 30 tick Fuse
-  • 0.32 -> 0.3 Movement Speed
-&nRush of Dissonance&r
-• Tōshō:
-  • 0.5 -> 0.4 Movement Speed
-  • Fangs now apply 30% Slowness for 4 seconds instead of
-vanilla Slowness 2 for 4 seconds
-• Heightened Shower:
-  • 0.4 -> 0.35 Movement Speed
-• Dawn of Life:
-  • 25 -> 75 Rejuvenation Health Restored
-  • Rejuvenation can no longer overheal
-  • Rejuvenation only self-heals
-&nArchitect's Ring Overworld&r
-• Chanterelle Grenadier:
-  • Improved grenade explosion particles (previously only 1
-particle was summoned for the explosion)
-&nCradle of the Broken God&r
-• Copperfly:
-  • Significantly reduced passive particle spread
-• Plus/Minus Charged Engineer:
-  • Reduced the size and count of grenade explosion particles
-location)
-&nExalted Arcane Rivalry&r
-• Putrid Alchemist:
-  • Added potion landing particle effects and improved potion
-particle trail visibility
-• Magic-Touched Alchemist:
-  • Added potion landing particle effects
-  • 400% Speed to players hit for 1.5 seconds -> 200% Speed to
-players hit for 1.5 seconds
-  • 225% Speed to mobs hit for 1.5 seconds -> 75% Speed to mobs
-hit for 1.5 seconds
-&bMinor Bug Fixes:&r
-• Fixed the description of Inferno to match with its recent
-change
-• Fixed the wrong display of projectile weapons in the
-Mechanical Armory Item Shop
-• Fixed Stoneborn Tunic having not updated correctly last week
-• Fixed Razed Remnants increasing Panacea on-hit damage instead
-of damage over time
-• Fixed several issues with Elantia, Aradia Potionmaster's
-dialogue.
-• Gray Tess (u) now properly gives its cooldown message when
-used outside of the mainhand
-• Fixed Challenger's Emblem pulsating gold trade being locked
-• There is now a Shaman option in the Architect Token
-• There is now a respawning chest of bottles in the Orange
-Dungeon Quest's alchemy puzzleThe player market has been locked
-following this week's update. In order to unlock your shop talk
-to the shop shulker and select `I want to unlock this shop`.
-The City of Shifting Waters is still bugged. Players are advised
-to complete the dungeon in a single sitting to avoid instance
-corruption.
-&bHotfix:&r Information presented at a certain NPC in the
-exalted hub has been corrected
-&bHotfix:&r Ex Reverie -_• bois will now allow you to re-enter
-open dungeonsReverie-1 has been restarted to fix a memory
-problem. It is coming back up now • apologies for the issues for
-those of you whose instance is on that shard
 &bHotfix:&r Exalted ||C'Axtal|| should not cause permanent tps
 drops when casting totems
 &bHotfix&r (at daily restart): Fixed immortal mounts getting
-vengeful modifier and becoming invincible.
+vengeful modifier and becoming invincible.The Plunderer's Blitz
+has been closed once again since it is teleporting everyone on
+valley shards to Levyn in the Sierhaven Bar whenever someone is
+actively playing a game.
+&bBug Fixes:&r
+• Fixed a typo of a sign in Sierhaven
+• Fixed a significant bedrock hole in Yellow and Exalted Yellow
+• Fixed Spy21DD's name not being listed on the credits signs for
+Exalted Malevolent Reverie
+• Fixed Corrupted Malevolence at the end of Exalted Reverie
+showing up as "MYSTERY BUGGED ITEM"
+• Fixed a stuck spot in the Acrobat of the Demon parkour
+• Fixed a missing lava source in the Masquerader's Ruin lobby
+• Fixed build errors in Exalted Malevolent Reverie and regular
+Malevolent Reverie
+• Fixed spelling and grammatical mistakes in External Corruption
+• Fixed Tuathan Blessing always granting speed and resistance to
+the user instead of only granting speed if another player was
+nearby and never granting resistance to the user
+• Fixed around 50 mobs that were applying the vanilla Slowness
+effect instead of the custom Slowness effect via abilities or on
+hit
+• Added Holy Water to the item API and added the Celsian Isles
+Overworld location tag it was missing
+• Added missing coordinates to The Minefield POI advancement
+entry
+• Fixed the quest compass waypoint for The Minefield daily
+bounty being off-center
+• Fixed the quest compass waypoint for the Corrupted Fort daily
+bounty being off-center
+• Fixed some vague wording on Alchemist's Empowering Odor skill
+to clarify buffed players deal more damage rather than take more
+damage
+• Fixed typo in Mage's Legacy
+• Leaving the basement in Crown of Majesty will now forcefully
+reset the puzzle if there is no one actively playing it
+• Fixed typo in Into the Woods
+• Fixed a bug where Amanita Colony mobs were not receiving the
+1.2x delve stat multiplier
+• Fixed an issue where Repairman Felix would display a "Out of
+Stock" message for those trying to purchase anvils through the
+trade GUI
+&b(10.10.0)&r
+For the update on November 16, 2023
+&bNew Features:&r
+• There are new chat inline commands available, <mainhand> and
+<offhand>. These provide users the ability to link their
+mainhand and offhand items, respectively, as hoverable elements
+in chat. For initial release, we're leaving this open to all
+players, but please don't make it so we have to change that.
+• There's also a new chat inline command available, <roll>. This
+falls into 3 main forms and is accessible to all players:
+  • <roll>, rolling between 1 and 100
+  • <roll X>, rolling between 1 and X
+  • <roll XdY>, rolling X dice with Y sides
+&bMinor Changes:&r
+• You can no longer use a Totem of Transposing in SKT boss
+fights
+• The Odd Artist now offers reverse trades for Depths skins
+• We’ve made a small tweak to External Corruption this week to
+change how it’s started. Suspicious blocks will no longer drop
+and will be removed next week.
+• ViaVersion has been updated, increasing stability for 1.20.2
+players.
+• Repairman Felix and The Professor and other important NPCs now
+have always-visible name tags to help them stand out as
+important NPCs
+&bExalted C'Axtal Changes:&r
+• Exalted C'Axtal's totems now have a limited lifetime of 10
+minutes
+  • Developer Note: The totems are supposed to be killed by
+players, thus they don't have unfair abilities and can be
+attacked without taking damage
+• Reduced totem throw range
+• Reduced Totem of Havoc's ability range
+• Slightly reduced phase transition skill radius
+• Phase transition now ignores 33% of blocks
+• Exalted C'Axtal's item drops now drop at the reward pedestals
+• Increased Exalted C'Axtal pedestal rewards to 2 Corrupted
+Malevolence
+&bMob and Dungeon Changes:&r
+• All Exalted Reverie ghast spawners' TNT are now unstable, and
+will now blow up when broken
+• Primitive Dreamscreecher : Now is immune to delve modifiers,
+requires line of sight to transform, and is CC immune, 7 -> 12
+Transformation Timer, 50 -> 40 Force Spell Duration, 450 -> 475
+Health
+• Evolving Dreamscreecher: Now is immune to delve modifiers, and
+requires line of sight to transform, 35 -> 32 Atack Damage, 7 ->
+12 Transformation Timer, 350 -> 395 Health
+• Massively reduced the particles that all Exalted Reverie
+heralds produce
+ • Developer Note : The particles produced are roughly 4x less
+than their original amount, so this should help improve
+performance in the Castle section of the dungeon, without
+impacting gameplay significantly
+• Helltorn Stallion: 0.425 -> 0.375 Movement Speed
+• Isharian Steed: 0.425 -> 0.375 Movement Speed
+• Herald of Secret Stars : Tweaked the particles on the ability,
+making it far less performance intensive
+• High Priest of C'Zanil : Tweaked the particles on the ability,
+making it far less performance intensive
+• Twisted Cardinal : Tweaked the particles on the heal, making
+it less performance intensive and more visible
+• Vas Mortis : Tweaked the particles on the projectile and
+slashes, making it far less performance intensiveThe player
+market has been locked following this week's update. In order to
+unlock your shop talk to the shop shulker and select I want to
+unlock this shop.
+The City of Shifting Waters is still bugged. Players are advised
+to complete the dungeon in a single sitting to avoid instance
+corruption.
+The Plunderer's Blitz remains closed.
+&bHotfix:&r The 75 point mission for this week no longer
+erroneously checks for a rotating modifierPer our announcement
+at the ending of Creeperween on the update of November 9th,
+Tricky Creepers have been disabled until next Halloween season
+&b(10.11.0)&r
+For the update on November 22, 2023
+&bMajor New Features:&r
+&bDelve Modifier Changes:&r
+• Infernal has been reworked! It is no longer a fiery clone of
+Arcanic and introduces a new set of mobs instead. Embers are
+bound to cause chaos and light up the battlefield if you pick
+this modifier!
+  • Description: Spawners have a (8% &o level) chance to spawn
+Embers. Players take (20% &r level) more Burning Damage and (10%
+&o level) more Environmental Damage.
+• Added rare consumable drops, skin tokens, and Challenger Skins
+for Infernal mobs
+• Extra mobs spawned by Legionary will spawn with a small offset
+from the mob they originate from instead of spawning inside each
+other. Additionally, particles indicate what extra mobs were
+spawned by Legionary.
+• Specter of Malediction: 105 -> 90 Health
+&bMinor New Features:&r
+• The Emoji trinket now utilizes particle settings, and new
+options for Emoji particles have been added to the PEB.
+Additionally, the usage cooldowns have been reduced to 15s for
+non patrons, and 1s for patrons.
+• The quests Kingdom of Lies and R is for Reprisal now require
+completion of the Purple Wool dungeon in order to  begin
+• The reward from External Corruption can now be purchased again
+from the starting NPC.
+• A vent has been added to the Farr sewer system to alleviate
+excessive air pressure. Please do not block this vent • there's
+enough air pressure to blow you all the way up from the Lowland
+Temple!
+• Suspicious blocks have become less suspicious
+&bMob Changes:&r
+• Primitive Dreamscreecher : 12 -> 8 Second Transformation
+Duration, is now affected by delve modifiers
+• Evolving Dreamscreecher : 12 -> 8 Second Transformation
+Duration, is now affected by delve modifiers
+&bFeedback Fixes:&r
+• Altered and tamed the TNT trap in the first section of the
+Halls of Wind and Blood
+• Reduced turtle's attack range to 1.5 blocks
+• Some small additional tweaks have been made to the flow of
+External Corruption to help future players beat it.
+&bMajor Bug Fixes:&r
+• Fixed many cases in which enchantments work in mainhand or
+offhand when not intended
+&bMinor Bug Fixes:&r
+• The Tesseract Inception books have been given a line of lore
+text, allowing them to be hit by item replacements and applying
+several long-pending spelling and grammatical fixes
+• Fixed a placeholder beacon in Exalted Malevolent Reverie
+• Fixed Voodoo Bonds Damage charm stat not working
+• Fixed Crystalline Blessing giving 20% damage instead of the
+value describes in-game (15%)
+• Fixed a typo in Challenge Delve description
+• Fixed a typo in Mage's Legacy dialogue&r
