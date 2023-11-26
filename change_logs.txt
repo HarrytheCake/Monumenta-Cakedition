@@ -1,48 +1,3 @@
-&bHotfix:&r Exalted ||C'Axtal|| should not cause permanent tps
-drops when casting totems
-&bHotfix&r (at daily restart): Fixed immortal mounts getting
-vengeful modifier and becoming invincible.The Plunderer's Blitz
-has been closed once again since it is teleporting everyone on
-valley shards to Levyn in the Sierhaven Bar whenever someone is
-actively playing a game.
-&bBug Fixes:&r
-• Fixed a typo of a sign in Sierhaven
-• Fixed a significant bedrock hole in Yellow and Exalted Yellow
-• Fixed Spy21DD's name not being listed on the credits signs for
-Exalted Malevolent Reverie
-• Fixed Corrupted Malevolence at the end of Exalted Reverie
-showing up as "MYSTERY BUGGED ITEM"
-• Fixed a stuck spot in the Acrobat of the Demon parkour
-• Fixed a missing lava source in the Masquerader's Ruin lobby
-• Fixed build errors in Exalted Malevolent Reverie and regular
-Malevolent Reverie
-• Fixed spelling and grammatical mistakes in External Corruption
-• Fixed Tuathan Blessing always granting speed and resistance to
-the user instead of only granting speed if another player was
-nearby and never granting resistance to the user
-• Fixed around 50 mobs that were applying the vanilla Slowness
-effect instead of the custom Slowness effect via abilities or on
-hit
-• Added Holy Water to the item API and added the Celsian Isles
-Overworld location tag it was missing
-• Added missing coordinates to The Minefield POI advancement
-entry
-• Fixed the quest compass waypoint for The Minefield daily
-bounty being off-center
-• Fixed the quest compass waypoint for the Corrupted Fort daily
-bounty being off-center
-• Fixed some vague wording on Alchemist's Empowering Odor skill
-to clarify buffed players deal more damage rather than take more
-damage
-• Fixed typo in Mage's Legacy
-• Leaving the basement in Crown of Majesty will now forcefully
-reset the puzzle if there is no one actively playing it
-• Fixed typo in Into the Woods
-• Fixed a bug where Amanita Colony mobs were not receiving the
-1.2x delve stat multiplier
-• Fixed an issue where Repairman Felix would display a "Out of
-Stock" message for those trying to purchase anvils through the
-trade GUI
 &b(10.10.0)&r
 For the update on November 16, 2023
 &bNew Features:&r
@@ -173,4 +128,14 @@ several long-pending spelling and grammatical fixes
 • Fixed Crystalline Blessing giving 20% damage instead of the
 value describes in-game (15%)
 • Fixed a typo in Challenge Delve description
-• Fixed a typo in Mage's Legacy dialogue&r
+• Fixed a typo in Mage's Legacy dialogueThe player market has
+been locked following this week's update. In order to unlock
+your shop talk to the shop shulker and select `I want to unlock
+this shop`.
+The City of Shifting Waters is still bugged. Players are advised
+to complete the dungeon in a single sitting to avoid instance
+corruption.
+The Plunderer's Blitz remains closed.
+&bHotfix:&r The reward from External Corruption now can
+&rreally&o be repurchased.Ephemeral Corridors has been
+temporarily closed.Ephemeral Corridors has been re-opened.&r
