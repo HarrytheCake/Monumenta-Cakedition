@@ -1,78 +1,3 @@
-&b(10.10.0)&r
-For the update on November 16, 2023
-&bNew Features:&r
-• There are new chat inline commands available, <mainhand> and
-<offhand>. These provide users the ability to link their
-mainhand and offhand items, respectively, as hoverable elements
-in chat. For initial release, we're leaving this open to all
-players, but please don't make it so we have to change that.
-• There's also a new chat inline command available, <roll>. This
-falls into 3 main forms and is accessible to all players:
-  • <roll>, rolling between 1 and 100
-  • <roll X>, rolling between 1 and X
-  • <roll XdY>, rolling X dice with Y sides
-&bMinor Changes:&r
-• You can no longer use a Totem of Transposing in SKT boss
-fights
-• The Odd Artist now offers reverse trades for Depths skins
-• We’ve made a small tweak to External Corruption this week to
-change how it’s started. Suspicious blocks will no longer drop
-and will be removed next week.
-• ViaVersion has been updated, increasing stability for 1.20.2
-players.
-• Repairman Felix and The Professor and other important NPCs now
-have always-visible name tags to help them stand out as
-important NPCs
-&bExalted C'Axtal Changes:&r
-• Exalted C'Axtal's totems now have a limited lifetime of 10
-minutes
-  • Developer Note: The totems are supposed to be killed by
-players, thus they don't have unfair abilities and can be
-attacked without taking damage
-• Reduced totem throw range
-• Reduced Totem of Havoc's ability range
-• Slightly reduced phase transition skill radius
-• Phase transition now ignores 33% of blocks
-• Exalted C'Axtal's item drops now drop at the reward pedestals
-• Increased Exalted C'Axtal pedestal rewards to 2 Corrupted
-Malevolence
-&bMob and Dungeon Changes:&r
-• All Exalted Reverie ghast spawners' TNT are now unstable, and
-will now blow up when broken
-• Primitive Dreamscreecher : Now is immune to delve modifiers,
-requires line of sight to transform, and is CC immune, 7 -> 12
-Transformation Timer, 50 -> 40 Force Spell Duration, 450 -> 475
-Health
-• Evolving Dreamscreecher: Now is immune to delve modifiers, and
-requires line of sight to transform, 35 -> 32 Atack Damage, 7 ->
-12 Transformation Timer, 350 -> 395 Health
-• Massively reduced the particles that all Exalted Reverie
-heralds produce
- • Developer Note : The particles produced are roughly 4x less
-than their original amount, so this should help improve
-performance in the Castle section of the dungeon, without
-impacting gameplay significantly
-• Helltorn Stallion: 0.425 -> 0.375 Movement Speed
-• Isharian Steed: 0.425 -> 0.375 Movement Speed
-• Herald of Secret Stars : Tweaked the particles on the ability,
-making it far less performance intensive
-• High Priest of C'Zanil : Tweaked the particles on the ability,
-making it far less performance intensive
-• Twisted Cardinal : Tweaked the particles on the heal, making
-it less performance intensive and more visible
-• Vas Mortis : Tweaked the particles on the projectile and
-slashes, making it far less performance intensiveThe player
-market has been locked following this week's update. In order to
-unlock your shop talk to the shop shulker and select I want to
-unlock this shop.
-The City of Shifting Waters is still bugged. Players are advised
-to complete the dungeon in a single sitting to avoid instance
-corruption.
-The Plunderer's Blitz remains closed.
-&bHotfix:&r The 75 point mission for this week no longer
-erroneously checks for a rotating modifierPer our announcement
-at the ending of Creeperween on the update of November 9th,
-Tricky Creepers have been disabled until next Halloween season
 &b(10.11.0)&r
 For the update on November 22, 2023
 &bMajor New Features:&r
@@ -138,4 +63,104 @@ corruption.
 The Plunderer's Blitz remains closed.
 &bHotfix:&r The reward from External Corruption now can
 &rreally&o be repurchased.Ephemeral Corridors has been
-temporarily closed.Ephemeral Corridors has been re-opened.&r
+temporarily closed.Ephemeral Corridors has been re-
+opened.shaman-feedback and shaman-discussion have been closed
+due to the relative stability of the class post-release, please
+redirect discussions to <#575516687676211215> and any feedback
+posts into <#1022346855444656189> !
+&bMinor New Features:&r
+• There's a new simplified tab list offered through the PEB's
+technical options! If you have an up to date Unofficial
+Monumenta Mod (1.9.8 Beta +) this is recommended, as you can get
+your effects overlay from the client mod and the tab list will
+no longer show the custom effects and will limit the patron
+shrine listings to active ones, increasing space for players on
+the tab list.
+• Damage that causes a boss to change phases will now be capped
+at the amount required to trigger the phase change
+• The Chain Healing Wave trigger can now be customized to not
+require holding a projectile weapon
+• Trade GUI Changes:
+ • Toggling 'show all trades' now shows trades from across
+different pages
+ • Added RP support for the confirm and cancel trade buttons
+&bDelve Modifier Changes:&r
+• Ember of Mania:
+  • Ability initial delay increased from 0.5s to 1s, cooldown
+increased from 2.5s to 3s
+  • Adjusted fire throw height so that it does not overlap the
+mob hitbox and is less likely to block attacks
+  • Fixed a bug causing its ability to target players through
+blocks
+  • Fixed a bug causing its ability to target two players
+instead of just one
+• Ember of Trepidation: 50 -> 40 Health
+• Ember of Fervor: 50 -> 40 Health
+• Ember of Greed:
+  • Ability now only enables once a player enters line of sight
+for the first time
+  • Adjusted fire throw height so that it does not overlap the
+mob hitbox and is less likely to block attacks
+• Ember of Knowledge:
+  • Ability cooldown increased from 6s to 8s, damage increased
+from 15 to 18
+  • Fixed a bug causing its ability to target players through
+blocks
+• The base item for Flittering Spark has been changed from Blaze
+Powder to Netherite Scrap, so it no longer burns away into
+cinders before your very eyes.
+&b(10.12.0)&r
+For the update on November 30, 2023
+&bMajor New Features:&r
+&bHoliday Event:&r
+• It's that festive time of year again! Essences of Winter once
+again appear throughout the King's Valley, Celsian Isles, and
+Architect's Ring. They can be used to unlock the various winter
+events located in the Snowman Embassy in Sierhaven!
+• A new Winter Event Minigame has arrived,
+&bP-Zero&r!
+• Get ready for some free-for-all racing competition, in this
+minecraft recreation of the game F-Zero. Try to avoid crashing
+out, and boost to 1st place while avoiding collisions with walls
+and other contestants!
+• Please don't mind the pig noises coming from your vehicle's
+engine.
+• You may access this event at the
+&bP-Zero Chauffeur&r in the Snowman Embassy.
+• The other winter minigames will once again award Cryospheres
+upon successful completion.
+• Trades for Tesseracts of Festivity and the Snow Strand have
+been re-enabled.
+• Happy Holidays everyone!
+&bFeedback Fixes:&r
+• Certain music categories should no longer require toggling
+them in the PEB menu to hear them for the first time
+&bMinor Bug Fixes:&r
+• The Fountain of Miracles now grants Kingfruit instead of
+vanilla golden apples
+• Fixed some bedrock issues in the starting room of White
+• Fixed Regicide applying to some damage it shouldn’t and
+applying to projectiles twice
+• Fixed Valley of Forgotten Pharaohs loading Port Manteau plot
+border
+• Quest advancements in R3 will now properly play the obtainment
+jingle, rather than being silent
+• Fixed text bug in Supply and Demand
+• Fixed grammatical mistake in Primeval Creations VI
+• Added progressing dialogue indicators to a segment of Burning
+Bright
+• The Verdant instance GUI no longer erroneously claims that
+Inner Sanctum is 1-3 Players
+• Fixed a bug causing some Infernal Ember abilities to target
+players through blocks
+• Fixed a bug causing Ember of Mania's ability to target two
+players instead of just one
+• Fixed the coffin not moving and the door not opening in
+Quelled Convent
+• If you conquer fate and win a jackpot after just 1 chip, the
+broadcast announcement will no longer be grammatically incorrect
+• Fixed typo in Fueled by Blood book
+• Clucking on Jars of Clucks is now a proper on consume effect,
+which fixes a few minor bugs
+• Fixed Embers being able to place fire and magma blocks in
+adventure mode/safe zones&r
