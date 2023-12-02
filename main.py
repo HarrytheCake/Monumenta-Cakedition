@@ -75,6 +75,10 @@ if __name__ == "__main__":
         a_messages = [message.content async for message in a_channel.history(limit=last_messages)]
 
         a_messages.reverse()
+        a_string = ''.join(map(str,a_messages))
+        a_string = markdown(a_string)
+        a_string = a_string.replace("&b","\n&b")
+        a_messages = a_string.splitlines()
         fa = open("announcement.txt", "w")
         for items in a_messages:
                 for item in textwrap.wrap(items,64):
