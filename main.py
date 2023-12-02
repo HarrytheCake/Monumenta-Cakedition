@@ -77,7 +77,8 @@ if __name__ == "__main__":
         a_messages.reverse()
         fa = open("announcement.txt", "w")
         for items in a_messages:
-                fa.write("%s\n" % textwrap.fill(items,64))
+                for item in textwrap.wrap(items,64):
+                    fa.write("%s\n" % item)
         fa.close()
         
         c_channel = client.get_channel(1168874628354158642)
