@@ -1,73 +1,9 @@
-&b(10.11.0)&r
-For the update on November 22, 2023
-&bMajor New Features:&r
-&bDelve Modifier Changes:&r
-• Infernal has been reworked! It is no longer a fiery clone of
-Arcanic and introduces a new set of mobs instead. Embers are
-bound to cause chaos and light up the battlefield if you pick
-this modifier!
-  • Description: Spawners have a (8% &o level) chance to spawn
-Embers. Players take (20% &r level) more Burning Damage and (10%
-&o level) more Environmental Damage.
-• Added rare consumable drops, skin tokens, and Challenger Skins
-for Infernal mobs
-• Extra mobs spawned by Legionary will spawn with a small offset
-from the mob they originate from instead of spawning inside each
-other. Additionally, particles indicate what extra mobs were
-spawned by Legionary.
-• Specter of Malediction: 105 -> 90 Health
-&bMinor New Features:&r
-• The Emoji trinket now utilizes particle settings, and new
-options for Emoji particles have been added to the PEB.
-Additionally, the usage cooldowns have been reduced to 15s for
-non patrons, and 1s for patrons.
-• The quests Kingdom of Lies and R is for Reprisal now require
-completion of the Purple Wool dungeon in order to  begin
-• The reward from External Corruption can now be purchased again
-from the starting NPC.
-• A vent has been added to the Farr sewer system to alleviate
-excessive air pressure. Please do not block this vent • there's
-enough air pressure to blow you all the way up from the Lowland
-Temple!
-• Suspicious blocks have become less suspicious
-&bMob Changes:&r
-• Primitive Dreamscreecher : 12 -> 8 Second Transformation
-Duration, is now affected by delve modifiers
-• Evolving Dreamscreecher : 12 -> 8 Second Transformation
-Duration, is now affected by delve modifiers
-&bFeedback Fixes:&r
-• Altered and tamed the TNT trap in the first section of the
-Halls of Wind and Blood
-• Reduced turtle's attack range to 1.5 blocks
-• Some small additional tweaks have been made to the flow of
-External Corruption to help future players beat it.
-&bMajor Bug Fixes:&r
-• Fixed many cases in which enchantments work in mainhand or
-offhand when not intended
-&bMinor Bug Fixes:&r
-• The Tesseract Inception books have been given a line of lore
-text, allowing them to be hit by item replacements and applying
-several long-pending spelling and grammatical fixes
-• Fixed a placeholder beacon in Exalted Malevolent Reverie
-• Fixed Voodoo Bonds Damage charm stat not working
-• Fixed Crystalline Blessing giving 20% damage instead of the
-value describes in-game (15%)
-• Fixed a typo in Challenge Delve description
-• Fixed a typo in Mage's Legacy dialogueThe player market has
-been locked following this week's update. In order to unlock
-your shop talk to the shop shulker and select `I want to unlock
-this shop`.
-The City of Shifting Waters is still bugged. Players are advised
-to complete the dungeon in a single sitting to avoid instance
-corruption.
-The Plunderer's Blitz remains closed.
-&bHotfix:&r The reward from External Corruption now can
-&rreally&o be repurchased.Ephemeral Corridors has been
-temporarily closed.Ephemeral Corridors has been re-
-opened.shaman-feedback and shaman-discussion have been closed
-due to the relative stability of the class post-release, please
-redirect discussions to <#575516687676211215> and any feedback
-posts into <#1022346855444656189> !
+Ephemeral Corridors has been temporarily closed.Ephemeral
+Corridors has been re-opened.shaman-feedback and shaman-
+discussion have been closed due to the relative stability of the
+class post-release, please redirect discussions to
+<#575516687676211215> and any feedback posts into
+<#1022346855444656189> !
 &bMinor New Features:&r
 • There's a new simplified tab list offered through the PEB's
 technical options! If you have an up to date Unofficial
@@ -163,4 +99,20 @@ broadcast announcement will no longer be grammatically incorrect
 • Clucking on Jars of Clucks is now a proper on consume effect,
 which fixes a few minor bugs
 • Fixed Embers being able to place fire and magma blocks in
-adventure mode/safe zones&r
+adventure mode/safe zones
+&bYou can now join Monumenta with client versions between 1.19.4
+and 1.20.2&r. The server natively remains 1.19.4.The player
+market has been locked following this week's update. In order to
+unlock your shop talk to the shop shulker and select `I want to
+unlock this shop`.
+The City of Shifting Waters is still bugged. Players are advised
+to complete the dungeon in a single sitting to avoid instance
+corruption.
+The Plunderer's Blitz remains closed.The New Winter Event
+Minigame P-Zero has been temporarily closed due to a major
+bug.Said major bug has now been hotfixed, and the minigame is
+once again open.
+Be warned • there appears to still be a bug that disconnects you
+whenever you get put into the spectator area. This means that
+unfortunately no rewards are given by the minigame when you
+finish. The game is otherwise fully playable for fun.
