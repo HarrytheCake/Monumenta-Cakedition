@@ -1,34 +1,6 @@
-Monumenta #announcementsA while ago, we moved the [Official
-Monumenta Wiki](https://monumenta.wiki.gg/wiki/Monumenta_Wiki)
-from Fandom to wiki.gg. Unfortunately, because of Fandom’s
-rules, we cannot remove the wiki nor link to the new one; Fandom
-will consider edits of this sort vandalism and revert them.
-In order for wiki.gg to appear as the first Google search
-result, we advise not visiting the Fandom wiki at all, even for
-purposes of vandalism/linking to wiki.gg.
-Thank you to all players who have contributed to the wiki!
-&bExalted Dungeons, Batch 4: Malevolent Reverie!&r
-Very happy to announce that the finale of the R1 Exalted dungeon
-line is on its way, the Exalted Malevolent Reverie! The mob and
-balance team has been working extremely diligently over the
-course of the past few months to ensure that this milestone for
-Exalteds lives up to its expectations, and we're excited for you
-to finally get your hands on it.
-Keep on guard and your eyes peeled, because you never know what
-may have changed as you delve back into the nightmare of the
-Exalted Reverie, arriving next weekend at our usual launch
-window, <t:1699722000:F>!
-We hope to see you all there! @everyone
-||P■■as■ ■■ve■tu■e■, ■ n■■d ■■■r h■l■. ■■met■■■g ■■s r■■■nt■y
-a■■e■■ed ■■ t■■■ p■■c■, ■■met■■■g t■■■ ■il■ ■efi■■te■■ ■■aw ■t■
-a■■en■■■n • ■ d■■a■ ■it■■n ■ d■■a■. S■■■et■ l■■ ■er■ t■■■ ■■■
-■ee■ ■■ k■o■...||Please do not pick Vengeful in Exalted Reverie
-&bas of now&r, as some mobs break due to the modifier.https://di
-scord.gg/monumenta?event=1180327848347701299https://youtu.be/t6-
-dquPVQVkHey @everyone! The trailer for our biggest launch of the
-year is about to go live• come join us for the premier in just a
-minute! You'll find it just above this message.&nClosing
-Points:&r
+Hey @everyone! The trailer for our biggest launch of the year is
+about to go live• come join us for the premier in just a minute!
+You'll find it just above this message.&nClosing Points:&r
 Unlike with the initial release of Region 3, we will be staging
 these updates • releasing them separately across the updates of
 December. This will allow us to more dedicatedly pinpoint
@@ -77,4 +49,57 @@ Calamity, Sirius • the final herald of the Stars. Gather
 together with your friends and allies, and take down this threat
 to the Ring for good!
 This fight showcases mechanics never before seen in a world
-boss, and is shaping up to be a fight unlike any other!
+boss, and is shaping up to be a fight unlike any other!I'm happy
+to announce that @ascynx and @[WOOL] ChargingUv have joined the
+development team! Ascynx has worked on many plugin features as
+well as contributing to the Unofficial Monumenta Mod, while
+Charging has contributed many builds, including rooms for
+Celestial Zenith, R1 POI reworks, and more future content. Don't
+forget to give them their well-earned 🏓Keep a lookout tomorrow
+for our next major reveal 👀
+Live at <t:1702231200:F>
+https://youtu.be/3CKR_QAfKP4?si=GJmdkV8Ei507F0RK
+&bCelestial Zenith Reveal!&r
+Hey @everyone! We hope you have all been enjoying Star Point so
+far• but the fun is far from over. The trailer for our new
+dungeon is premiering live now! Within you will find an update
+on the dynamic rewards we teased in our 2023 roadmap, a look at
+the next evolution of our endless model, and much more!
+Make sure to gather a party of up to 4 and climb as high as you
+can on <t:1702746000:F>!
+https://youtu.be/3CKR_QAfKP4?si=nNwtPa9bzEi2RFP-
+Credit to @Christmastotle for the video as always.After
+listening to player feedback, and discussing internally how we
+want the Masterwork system to feel, the consensus is that on
+average the current M4 upgrades do not provide a satisfactory
+increase in strength relative to delve scaling. As a result,
+every M4 item is having its stats re-evaluated and re-balanced
+to be more inline with what would be expected from the other
+Masterwork upgrades, ready for next week. As a warning, this
+will involve a very large number of stat changes for M4 items in
+particular, with the goal of making them feel both more
+powerful, and more interesting (as a large proportion received
+only 0.5 Armor/Agility). We hope that this is able to provide a
+more satisfactory feeling to your Masterwork upgrades in the
+long-run and that this announcement can help you make informed
+decisions prior to the weekly update.@Koko
+&bNew Player Questions has been revamped!&r
+Similarly to <#1165742923510468618>' recent transformation to a
+forum channel, <#1184711607423615077> has also been changed to a
+forum channel to allow frequently asked questions to be more
+easily searchable. Players can search for keywords using the
+search bar to find posts addressing commonly asked questions or
+use tags to filter through the entries. If a new player cannot
+find the answer to their question, they can still create a post
+within the forum channel for other players to respond, and
+resolved inquiries will still be cleared frequently.
+Please check out <#1184799684565413929> for more information.Due
+to an unfortunate oversight, all custom ability triggers for
+players who have logged in between the weekly update and now
+have been cleared. Since the only way to restore these settings
+would be to roll everything back to the weekly update, which we
+have decided not to do, any affected players will have to
+recreate their triggers. Shards will be restarting soon to fix
+this as well as the class GUI not opening from the Professor or
+D'Orin. Players who haven't logged in since the update are
+unaffected.

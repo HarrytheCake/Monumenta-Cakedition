@@ -1,277 +1,353 @@
-&bHotfix&r (pending next restart):
-The disconnection issue regarding the P-Zero minigame has been
-"fixed". Unfortunately this means that there won't be a side
-scoreboard with real-time rankings anymore (which was causing
-the issue to begin with), but you'll be able to see your own
-position on your action bar.The above hotfix should actually be
-live now. Sorry for the inconvenience.The Gallery of Fear map
-&bSanguine Halls&r has been closed due to a gamebreaking
-exploit. Marina Noir remains open and playable.Kaul, Eldrask,
-and Hekawt can now only be summoned on valley-3 and isles-3
-respectively in preparation for Star Point release
-&b(10.13.0)&r
-For the update on December 7, 2023
-&bMajor New Features:&r
-• All Masterworkable items can now be upgraded to Masterwork
-level 4
+• Resonant Scythe (M4 Only) : 14 -> 13.5 Attack Damage, 1 -> 2
+Stamina
+• Shroud of the Disappeared (M4 Only) : 5% -> 10% Speed
+• Silvari Coin (M4 Only) : 35% -> 30% Projectile Damage, 6.5 ->
+7.5 Agility
+• Stonewrought Helmet (M4 Only) : 11.5 -> 11 Agility, 2 -> 3
+Melee Protection
+• The Cascade's Ignorance (M4 Only) : 5% -> 8% Speed
+&bStar Point Items:&r
+• Celestial Siege (M4 Only) : 7 -> 6.5 Armor, 20% -> 24%
+Projectile Damage
+• Duskroot Legguards (M4 Only) : 8.5 -> 9 Agility
+• Footprints Beneath Void (M4 Only) : 7 -> 7.5 Armor
+• Hungering Moonbeams (M4 Only) : 8 -> 8.5 Armor
+• Memory of the Star (M4 Only) : 8 -> 8.5 Armor
+• Protomartyr Remains (M4 Only) : 15% -> 18% Magic Damage
+• Soothing Starblood (M4 Only) : 9 -> 9.5 Agility
+• Starbound Talon (M4 Only) : 4.5 -> 5 Agility
+• Vain Star (M4 Only) : 20% -> 25% Attack Damage
+• Vilepriest Garments (M4 Only) : 7.5 -> 7 Armor, 25% -> 30%
+Attack Damage
+&bSilver Knight’s Tomb Items:&r
+• Adept’s Raiment (M4 Only) : 9 -> 9.5 Armor
+• Crimson Tithe (M4 Only) : 10 -> 9.5 Armor, 28% -> 32% Attack
+Damage, 0.1 -> 0.15 Attack Speed
+• Cutter of Eons (M4 Only) : 19.5 -> 20 Attack Damage
+• God Tamer (M4 Only) : 80% -> 75% Spell Power, 1 -> 2 Magic
+Protection
+• Immortal Flame (M4 Only) : 0 -> 1 Fire Protection
+• Melded Bronzeskin (M4 Only) : 30% -> 33% Attack Damage
+• Shattered Crown (M4 Only) : 2 -> 3 Projectile Protection
+• Silver Satchel (M4 Only) : 3 -> 2.8 Potion Radius
+• Threadbound Boots (M4 Only) : 25% -> 28% Magic Damage
+• Threadreaper (M4 Only) : 21.5 -> 21 Attack Damage, 3 -> 4
+Slayer
+• Timerift Stave (M4 Only) : 28% -> 30% Magic Damage
+• Word of the Architect (M4 Only) : 22 -> 22.5 Projectile Damage
+&bCoven’s Gambit Items:&r
+• Death’s Echo (M4 Only) : 7 -> 9 Decay
+• Hycenea’s Chains (M4 Only) : 2 -> 3 Adrenaline
+• Molldyer’s Greatstaff (M4 Only) : 21 -> 20.5 Attack Damage, 4
+-> 5 Inferno
+• Primordial Blaze (M4 Only) : 7.5 -> 8 Agility• Resilient
+Growth (M4 Only) : 0.015 -> 0.01 Speed, 9.5 -> 10 Agility, 0 ->
+1 Feather Falling
+• Roots of the Fen (M4 Only) : 1 -> 2 Knockback Resistance
+• Treads of the Hungerer (M4 Only) : 2 -> 3 Fire Protection
+• Veiled Might (M4 Only) : 9.5 -> 9 Agility, 1 -> 2 Adrenaline
+• Venemous Folly (M4 Only) : 2 -> 3 Fire Protection
+• Wolfsblood Tome (M4 Only) : 7.5 -> 7 Agility, 35% -> 40% Magic
+Damage
+&bCradle of the Broken God Items:&r
+• Anti-Acid Apron (M4 Only) : 7.5 -> 8 Agility
+• Clockwork Enigma (M4 Only) : 10.5 -> 11 Armor
+• Gem-Tipped Boilerdrill (M4 Only) : 0 -> 1 Drilling
+• Mechanized Pipepuncher (M2/M3 Only) : +0.5 Projectile Damage
+each
+• Moltencopper Potion (M4 Only) : 11.5 -> 11.8 Potion Damage
+• Motherboard Callibrator (M4 Only) : 25% -> 30% Magic Damage
+• Steaming Stave (M4 Only) : 80% -> 75% Spell Power, 1 -> 2
+Thunder Aspect, 9.5 -> 10 Attack Damage
+&bP.O.R.T.A.L. Items:&r
+• Circuit Breaker (M4 Only) : 8.5 -> 8 Agility, 10% -> 15% Magic
+Damage
+• Energized Enclosure (M4 Only) : 7.5 -> 7 Agility, 1 -> 2 Melee
+Protection
+• Friendship Cube (M4 Only) : 2 -> 3 First Strike
+• Long Drop Boots (M4 Only) : 10% -> 15% Speed
+• Portal Core (M4 Only) : 0.4 -> 0.5 Throw Rate
+• Timepiece Plate (M4 Only) : 15% -> 18% Speed, 9.5 -> 10
+Agility
+&bMasquerader’s Ruin Items:&r
+• Blackblade Mask (M4 Only) : 20% -> 18% Attack Speed, 0% -> 5%
+Attack Damage
+• Siegebreaker Boots (M4 Only) : 0 -> 1.5 Knockback Resistance
+• Woolwoven Staff (M4 Only) : 9 -> 9.5 Attack Damage
+&bGallery of Fear Items:&r
+• Argentum Arbitrium (M4 Only) : 60% -> 65% Attack Damage
+• Caduceus (M4 Only) : 6.5 -> 7 Attack Damage
+• Morbid Hallucination (M4 Only) : 12% -> 15% Magic Damage
+• Striking Torrent (M4 Only) : 20% -> 18% Attack Damage, 1 -> 2
+First Strike
+• Royal Anklets (M4 Only) : 0% -> 5% Speed
+• Sanguine Hood (M4 Only) : 0% -> 5% Speed
+• Silver Heart (M4 Only) : 2 -> 3 Magic Protection
+&bGodspore Items:&r
+• Mycelic Skin (M4 Only) : 9 -> 9.5 Agility
+• Roots of Influence (M4 Only) : 9 -> 9.5 Armor
+• Toxin-Cursed Bind (M4 Only) : 25% -> 30% Thorns Damage
+&bFishing Items:&r
+• Abyssal Truncheon (M4 Only) : 1 -> 2 Abyssal
+• Seafarer’s Rapier (M4 Only) : 5% -> 7% Speed
+• Tidebound Arbalest (M4 Only) : 20.5 -> 20 Projectile Damage, 2
+-> 3 First Strike
+&bExalted Dungeon Items:&r
+• EX Archmage’s Vestment (M4 Only) : 9.5 -> 9 Agility, 10% ->
+15% Magic Damage
+• EX Bonepiercer (M4 Only) : 2 -> 3 Bleeding
+• EX Broodhide Tunic (M4 Only) : 8 -> 8.5 Armor
+• EX Cascade (M4 Only) : 5.5 -> 6 Armor
+• EX Corrupted Jeweled Tiara (M4 Only) : 8.5 -> 9 Armor
+• EX C’Zanil’s Charm (M4 Only) : 6.5 -> 7 Armor
+• EX C’Zanil’s Shroud (M4 Only) : 3 -> 4 Regeneration
+• EX Emblem of Greed (M4 Only) : 5 -> 5.5 Agility
+• EX Ironscale Leggings (M4 Only) : 7.5 -> 7 Armor, 0 -> 1
+Stamina
+• EX Ixume’s Hunt (M4 Only) : 3 -> 4 First Strike
+• EX Kingslayer (M4 Only) : 6.5 -> 6 Agility, 40% -> 45% Attack
+Damage
+• EX Lunatic’s Dance (M4 Only) : 3 -> 2 Blast Protection, 0% ->
+5% Attack Damage, 8 -> 8.5 Agility
+• EX Reaper’s Harvest (M4 Only) : 15.5 -> 15 Attack Damage, 2 ->
+3 Magic Protection
+• EX Shimmering Veil (M4 Only) : 10% -> 12% Speed
+• EX Stoneborn Sculptor (M4 Only) : 6 -> 5 Knockback Resistance,
+0 -> 1 Adrenaline
+• EX Telum Immoriel (M4 Only) : 28 -> 28.5 Attack Damage
+• EX Zanil’s Regret (M4 Only) : 8.5 -> 8 Agility, 4 -> 5
+Regeneration
+&bQuest Items:&r
+• Blackblood Coagulant (M4 Only) : 1 -> 2 Sustenance
+• Hycenea’s Vinelash (M4 Only) : 3 -> 4 Projectile Protection
+• Pelias’ Last Step (M4 Only) : 20% -> 22% Projectile Damage
+• Uriddan’s Legacy (M4 Only) : 7.5 -> 8 Armor
+• Wolf’s Rosary (M4 Only) : 15% -> 10% Attack Damage, 0 -> 1
+Technique
+&bStar Point Mob Changes:&r
+• All POI TrueRandom pools changed from (5 melee, 3 ranged, 1
+elite) to (7 melee, 4 ranged, 1 elite)• Bosses for Celestial
+Rampart, Starbound Sanctuary, and Chittering Gutters no longer
+have boss fog to improve visibility
+• Constellation Tower:
+  • Increased the detection radius of jump pads and adjusted
+their trajectories
+• Celestial Rampart:
+  • Star Skulker: 0.5s -> 1s TP Behind Stun Time
+  • Afflicted Reeler: 24 -> 22 Projectile Damage
+  • Deep Field Gazer: TP Behind starts 0.5s sooner
+  • Echo of Sirius: 1800 -> 2000 Health
+• Starbound Sanctuary:
+  • Silver-Armed Bulwark: 2s -> 2.5s Ability Cooldown, 0.15 ->
+0.14 Movement Speed
+• The Tolumaeus:
+  • Lunacrest Captain: 35 -> 30 Attack Damage, 0.22 -> 0.21
+Movement Speed, 7 -> 6.5 Ability Range
+  • Fixed Lunacrest Tinkerers not spawning with their mounts and
+having way more HP than intended
+• Chittering Gutters:
+  • Vilepriest Hunter now has poison arrows
+  • Infected Detonator: 5 -> 4 Grenade Explosion Radius, 10 -> 6
+Lob Variance
+• The Nadir:
+  • Afflicted Reeler: 24 -> 22 Projectile Damage
+  • Stellar Manifestation: 0.5s -> 0.65s initial activation
+delay
+  • Fixed Blightleaking Heart falling into the void on spawn
 &bDarkest Depths Changes:&r
-&nGeneral:&r
-• Many messages that include names of abilities, rarities, or
-trees are now colored. Additionally, ability names in chat can
-now be highlighted to view their description
-• Shift left click and swap abilities can now be used while
-holding a projectile weapon; right click, shift right click, and
-swap abilities can now be used while holding a pickaxe or
-shovel; right click and shift right click abilities can no
-longer be used while holding a trident
-• The Weapon Aspect selection GUI can now take currency from
-your Wallet
-• Ability and upgrade choice GUIs will now continue to flow into
-the next choice if you have multiple to make
-• The Chaos utility room now has a small chance to give you a
-third ability, and a small chance to upgrade some of the given
-abilities. It also now tells you the level of your received
-abilities.
-• Wand Aspect now guarantees your next three ability selections
-will be from active slots
-• Improved particles or sounds for Radiant Blessing, Avalanche,
-Ice Lance, Frost Nova, and Permafrost
-• Lightning Bottles and other dungeon-specific items are now
-cleared immediately upon completing the dungeon
-&nDawnbringer:&r
-• Added a new Dawnbringer sneak bow ability
-• Lightning Bottle potions now pass through players and
-passive/friendly entities
-&nFrostborn:&r
-• Actively placing ice with Frostborn abilities where there is
-already ice now deals 15% max health damage to mobs above the
-ice
-• Avalanche: 20s -> 18s cooldown, now deals 4 separate pulses of
-damage in quick succession that can only hit a given mob once,
-increased hitbox size vertically
-• Cryobox now "freezes" nearby mobs for 2 seconds upon
-activation
-• Frigid Combos: If there is ice below the mob, it shatters,
-dealing 8-20 damage to mobs within 6 blocks• Frost Nova: 6-18 ->
-8-20 damage, 18s -> 15s cooldown, 6s -> 8s ice duration, 50% ->
-100% ice radius
-• Ice Barrier: 15 -> 30 range. Mobs near the wall when it is
-created are dealt 12-26 damage. If the height difference between
-the markers is at least 4, now creates a staircase.
-• Mobs damaged by Ice Lance will now create ice where they die
-if it is within 30 seconds, whether or not they die due to Ice
-Lance
-• Permafrost now causes mobs within 6 blocks of the spawner to
-leave a trail of ice that lasts for 5 seconds where they walk
-for 10 seconds
-&nSteelsage:&r
-• Firework Blast: 4 -> 1.5 block radius, but if a mob is hit
-directly by the firework, the radius is increased to 4 blocks;
-10% -> 5% damage increase per block
-• Metalmancy: No longer targets shot mobs. Instead, the
-Construct's target can now be set by retriggering the ability
-while looking at a mob.
-• Rapid Fire: 12 -> 10 damage
-• Scrapshot: Improved hit detection and damage falloff
-calculations
-• Sidearm: -3s cooldown reduction on kill -> -67% cooldown
-reduction
-• Volley: 12s -> 15s cooldown, 7-24 -> 7-18 arrows
-&nWindwalker:&r
-• Howling Winds: Additionally does a one-time strong pull
-immediately when cast
-• Wind Walk: Additionally stuns mobs you pass through for 1.5s
-and applies Levitation to all mobs (as opposed to non-Elites)
-&nBug Fixes:&r
-• The items spawned by Bottled Sunlight, Sundrops, Totem of
-Salvation, Chaos Dagger, and Cloak of Shadows are now
-invulnerable
-• Fixed Bramble Shell and Flame Spirit not being affected by
-Primordial Mastery and some other abilities/enchantments
-• Fixed lifeline abilities not using their designated actionbar
-color when they are triggered
-• Fixed text on Lightning Bottle items being italicized and
-changed the name color to the Dawnbringer color• Fixed some
-issues regarding contradictions between abilities in
-ability/upgrade selections and abilities gained or lost from
-other means (i.e. some utility rooms). Now if an ability or
-upgrade option becomes invalid for any reason, it will be
-removed from the selection with no impact on other abilities in
-the selection. If a selection becomes empty, it will be skipped.
-Additionally, it is now possible for the chaos utility room to
-grant you abilities with a trigger which are in a viewed ability
-selection; the relevant abilities in the selection will be
-removed in this case.
-&bP-Zero Update:&r
-• Added a leaderboard that keeps track of your fastest race
-finishes.
-• Reduced the amount of laps from 5 to 3.
-• Elimination, Crash Out, and Finish messages are now also sent
-to all nearby players.
-• Crossing the finish line now replenishes some energy equal to
-(yourPlacement • 1) &o 2 (1st gets 0, 2nd gets 2, 3rd gets 4,
-etc...).
-• The game start countdown has been lowered from 30s to 20s.
-• You can now hold/press sneak to Ho(i)nk your car horn.
-• Afk players will now be automatically Crashed Out after some
-time.
-• The base rewards have been increased, and now include every
-player. Rewards are given if at least one player has finished
-the race.
-• Fixed a bug regarding milliseconds in the time displays.
-• Fixed being able to cross the finish line while in the Crash
-Out animation.
-&bMinor New Features:&r
-• Delve scaling for Region 3 has increased across the board
-slightly to compensate for the addition of Masterwork level 4
-• A substantial amount of loot tables were changed to
-accommodate changes in where some items are stored. Please bug
-report any chests/mechanisms that are consistently failing to
-generate items!
-• Added a secret to the Sierhaven Teleport Hub
-• Reenabled Training Dummy DPS holograms
-• Marina Noir and Architect's Ring Fishing items have been added
-to the Region 3 Transmogrifier pool• Inure will now continue
-being half as effective in the case you take alternating damage
-types, until a third type of damage is taken.
-• The following consumables have been updated to have new names
-but the same stats in loot chests in the Celsian Isles:
-  • Healing Vial -> Remedial Brew
-  • Minor Strength Potion -> Privateer's Philter
-  • Minor Swiftness Potion -> Chillwind Tonic
-&bItem Changes:&r
- • Wolf's Rosary (M3) (Rework) : 9 Armor, 10% Attack Damage, 10%
-Magic Damage, Triage 2
- • Kisarith (M3) : 0 -> 1 Quick Charge, 10 -> 5 Thunder Aspect,
-19.5 -> 15.5 Damage
- • Air Purified Thresher (M3) : 2 -> 1.6 Attack Speed, 14.5 ->
-16, 2 -> 1 Wind Aspect
- • Rocket Boots : 0 -> +1.5 Meteor Slam Reduced Threshold
-•
-&b Exalted Dungeons&r
- • EX Brimstone Alembic (M3) : 10.5 -> 11 Potion Damage, 2 ->
-2.5 Potion Radius ↑
- • The Nightmare's Warden (M3) : 6.5 -> 7.5 Armor ↑
- • EX Kingslayer (M3) : 5.5 -> 6 Agility ↑
- • EX Corrupted Scalawags Hatchet (M3) : 20 -> 20.5 Attack
-Damage ↑
- • EX Ironscale Leggings (M3) : 6.5 -> 7 Armor ↑
- • EX Telum Immoriel (M3) : 2 -> 3 Sweeping Edge ↑
- • EX Shimmering Veil (M3) : 5 -> 6 Agility ↑
- • EX Primordial Flames (M3) : 7 -> 7.5 Agility ↑
- • EX Tlaxan Mask (M3) : 4 -> 5 Projectile Protection, 4 -> 5
-Magic Protection, 8.5 -> 8 Armor ↑
- • EX Tlaxan Bulwark (M3) : 4.5 -> 5 Armor ↑
-•
-&bMarina Noir&r
-  • Oneiro Mavros (M3) : 2 -> 1 Curse of Crippling, 20.5 -> 21
-Damage ↑
-  • Duskborn Graft (M3) : 7 -> 7.5 Agility ↑
-•
-&bSanguine Halls&r
- • Silver Heart (M3) : 6 -> 6.5 Armor ↑
-•
-&bArchitect's Ring Fishing&r
- • Tidebound Arbalest (M3) : 3 -> 2 Point Blank, 16 -> 20 Damage
-↑
- • Wavelost Regalia (M3) : 5% -> 10% Magic Damage ↑
- • Thalassic Cinders (M3) : -10% Speed -> 0% Speed ↑
- • Abyssal Truncheon (M3) : 17.5 -> 18.5 Attack Damage ↑
-•
-&bThe Godspore's Domain&r
- • Roots of Influence (M3) : 4 -> 5 Magic Protection ↑
- • Sporebound Husk (M3) : 7.5 -> 8 Armor ↑• Glorious Battle now
-does +5 bonus damage and removes landing damage if the player
-collides with mobs while in air.
-• Prismatic Shield enhancement bonus damage reduced from 30% to
-20%
-• Transmutation Ring now affects its caster at half the
-efficiency
-• Voodoo Bonds L1 Cooldown reduced from 22s to 18s
-• Shield Wall L1 Cooldown reduced from 30s to 25s
-• Recasting Advancing Shadows with the Enhancement grants half
-the damage bonus and does not grant Deadly Ronde stacks.
+• Focused Combos: 40-100% -> 30-80% Damage Multiplier
+• Projectile Mastery: 10-25% -> 8-20% Damage Multiplier
+• Sharpshooter: 2.5-7.0% -> 2.4-4.8% Damage Per Stack
+• Rapid Fire: 18s -> 22s Cooldown
+• Scrapshot: Damage falloff begins at 25% of the max range,
+instead of 50%
+• Firework Blast: 16-40 -> 12-36 Damage, 1.5 -> 2 Explosion
+Radius, damage now only begins increasing once the projectile
+has traveled at least 6 blocks
+• Avalanche's hitbox has been expanded horizontally slightly to
+match Ice Barrier's hitbox
 &bFeedback Fixes:&r
-• Moved the Overworld Instance bot in the Azacor lobby closer to
-Helring and the recycling bin
-• Slightly altered some pathing in the underground section of
-Quelled Convent
-• Plus-Charged Electricians now have a slightly different
-appearance
-• Waterlogged leaves in the underwater portion of the Plagueroot
-Temple
+• Copied signs now show a brighter version of their text for
+readability. The original color is preserved for the `>` at the
+start of each line.
+• Replaced black concrete powder on the ceiling in the final
+section of Vernal Nightmare.• Removed waterlogged slabs in the
+main room of the Nadir
+• Changed the positioning and rotation for the first time you
+enter ||Smallpoint|| during For Whom the Bell Tolls
+• The Funambulist of the Ruined Tower Jumping Puzzle has seen an
+increase in cheese protection
+• Improved lighting in Starbound Sanctuary boss arena to make
+seeing the boss and its abilities easier
+• Added a chest to The Tolumaeus
+• Added a message in Gallery of Fear when a player is revived
+• Improved the message in Gallery of Fear when a player dies
+• Edited the reverb description in the handbook to make its
+precise functionality clearer
+• Improved foliation in Locum Vernantia
+• All charms no longer take durability damage, even if not
+explicitly unbreakable
+• Earthquake spells that replace blocks, such as that of
+Snowstorm Hailcaller, will no longer replace carpet blocks and
+instead will destroy carpets and replace the block below
+• Added a Quest Compass chest to the Chantry of Repentance
+&bMajor Bug Fixes:&r
+• Fixed all items that were missing empty 4th masterwork stars
+• Many checks to see if a player is online and alive in the
+plugin code no longer fail when a player is briefly in an
+unloaded chunk, such as when teleporting or changing
+shards/worlds. This fixes some abilities, such as Meteor Slam,
+deciding not to work until the player's class is refreshed. The
+bug only needed to appear 22 times since we updated to 1.19.4 in
+order to ~~drive a dev into madness~~get it fixed.
+• Fixed all players and items above black concrete in valley
+being teleported to the exit of the Painter's Abode whenever
+there's a player inside the Abode. This teleport now only
+affects players and items actually inside the Abode.
 &bMinor Bug Fixes:&r
-• Fixed "null" effects occasionally appearing in the effect list
-• Fixed certain tiered items in the King's Valley having a
-higher drop chance than intended
-• Added missing location tags to Golden Ale, River's Malt,
-Charger's Lager, Rakija, Myriad's Martini, and Fisherman's Folly
-• Fixed an issue where tier 4 loot chests in the King's Valley
-sometimes dropped Minor Strength Potions instead of Strength
-Potions
-• Fixed a longstanding issue where Magenta dungeon loot chests
-were only generating Aqueous Potions, Minor Regeneration
-Potions, and Regeneration Potions instead of the full set of
-King's Valley Tier 3 and 4 potions
-• Fixed an issue where tier 0, 1, and 2 loot chests in the
-King's Valley were sometimes dropping Healing Vials instead of
-Minor Healing Vials
-• Haunting Shades and Prestigious Shades no longer briefly
-appear at their full size before being shrunk down to baby armor
-stand size
-• Fixed a typo in Mage's Legacy dialogue•
-&bCradle of the Broken God&r
- • Hardest Hat (M3) : 0 -> 8% Attack Damage ↑
- • Anti-Acid Apron (M3) : 7 -> 7.5 Agility ↑
- • Hypersonic Screwdriver (M3) : 10.5 -> 11 Projectile Damage ↑
- • Wrench of the Perfect Atrium (M3) : 17 -> 18.5 Attack Damage
-↑
-•
-&bMasquerader's Ruin&r
- • Shadowstone Ballista (M3) : 19.5 -> 19 Projectile Damage ↓
- • Tactician's Axe (M3) : 2 -> 3 First Strike, 23.5 -> 22.5
-Attack Damage ↑
- • Reforged Greaves (M3) : 10.5 -> 11.5 Armor ↑
-•
-&bP.O.R.T.A.L&r
- • Portal Core (M3) : 0.5 -> 0.4 Throw Rate ↓
- • Long Drop Boots (M3) : 0% -> 10% Speed ↑
-•
-&bSilver Knight's Tomb&r
- • Shattered Crown (M3) : 1 -> 2 Projectile Protection ↑
- • Threadbound Boots (M3) : 8 -> 8.5 Armor ↑
-•
-&bCoven's Gambit&r
- • The Vedha's Soulcrusher (M3) : 20 -> 19.5 Attack Damage ↓
- • Molldyer's Greatstaff (M3) : 1 -> 3 Knockback ↑
- • Verdant Dawn (M3) : 5% -> 8% Speed, 9 -> 9.5 Armor ↑
- • Roots of the Fen (M3) : -15% -> -5% Speed ↑
-•
-&bPelias' Keep&r
- • Hollow Gladius (M3) : 14.5 -> 14 Attack Damage ↓
- • Stormblessed Greatspear (M3) : 31 -> 29.5 Projectile Damage ↓
- • The Cascade's Ignorance (M3) : 10.5 -> 11 Agility ↑
- • Stalwart Protector (M3) : 8.5 -> 9 Armor ↑
- • Hammer of Legacy (M3) : 0 -> 2 Knockback Resistance ↑
-•
-&bThe Wolfswood&r
- • Samsara Vessel (M3) : 5.5 -> 6 Agility ↑
- • Mycelian Mantra (M3) : 8.5 -> 9 Armor ↑
- • Dignified Greaves (M3) : 8.5 -> 9 Armor ↑
- • Hexborn Shard (M3) : 3 -> 4 Magic Protection, 5% -> 10% Speed
-↑
- • Tradewind Cap (M3) : 11.5 -> 12 Armor ↑
-•
-&bSeasonal Pass&r
- • Aether Threads (M3) : 8.5 -> 8 Agility ↓
-•
-&bCharms&r
- • Porphyry Shackle : +0.25 -> +0.5 Interconnected Havoc stun
-duration ↑
- • Accursed Stake : -5% -> 0% Sanctuary resistance amplifier ↑
- • Sailor's Rope : +100% -> +50% Hallowed Beam Cooldown ↑
- • Lesser Linked Charm : 2% -> 5% Voodoo Bonds Damage ↑
- • Lesser Sacrosanct Charm: 0 -> 5% Hallowed Beam Healing ↑
-&bClass Changes:&r
-• Interconnected Havoc enhancement stun duration increased from
-0.5s to 0.75s&r
+• Fixed Clucking not applying to other players
+• Fixed the Bell Fast Travel area not being a safe zone
+• Fixed being able to eat a certain charm
+• Fixed block breaking mobs deleting contents of certain non-
+chest container blocks like jukeboxes, lecterns, or furnaces•
+The Cyan Tesseract will no longer confuse places of extreme
+height (like Constellation Tower) as void
+• Fixed the Galengarde Infusion Master not having a Star Point
+Fragment -> Silver Dust trade
+• Fixed entrance behind Subterus Bell Tower being inaccessible
+due to zone
+• "Placeholder" items in infusion, delve infusion, and
+masterwork GUIs now show the actual name of item and should not
+longer have minor issues in some cases such as not being dyed or
+displaying unnecessary information
+• Fixed an issue with items not properly getting reset back to
+their original state when their last infusion (e.g. stat track)
+is removed. This in particular could affect lockboxes used to
+buy Armory loadout slots, as well as shulkers used in villager
+trades, blocking these actions/trades.
+• Fixed the M2 version of Wolf's Rosary having incorrect stats
+• Fixed Iridium Crown M2 having an incorrect unbreaking value
+(10 -> 11)
+• Fixed Caduceus' M4 lore being incorrect.
+• Fixed Witchbane Revolver's M4 lore being incorrect.
+• Fixed Cutter of Eons' 4th Masterwork accidentally having a
+lower Quake level than the previous upgrade
+• Fixed Nalatia's Galeblade losing Unbreaking levels at M4
+• Fixed Replica Final Hour having less Unbreaking than Heatwave
+• Fixed Astral Omen Damage Modifier having an effect without
+Astral Omen L2 selected
+• Extended the size of an adventure mode zone in A Sirius
+Problem
+• Added Adventure Mode zones to The Nadir and Chittering Gutters
+teleports
+• Fixed wrongly rotated stripped spruce logs in Galengarde
+teleporter hub
+• The Conductor NPC in Echoes of Oblivion is now visible if a
+Conductor's Staff is in the player's inventory
+• Fixed Glorious Battle not being activated by damage from the
+Riposte enhancement
+• Fixed a few small errors in Behind the Starlit Shroud and A
+Sirius Problem that were remnants from a previous draft of the
+quests.
+• Fixed a few quest markers being visible at wrong times
+• Fixed a quest reward duplication• The Delve Infusion GUI will
+now close immediately and send a message to players who have not
+completed Depths and are attempting to access it
+• Fixed the Quench description in the Delve Infusion GUI missing
+the words "per level"
+• Fixed a stuck spot in Galengarde
+• Fixed spelling error on Forum sign board
+• Fixed a problem with Forum lecterns where you can potentially
+get stuck in a state that is unable to take a lore book
+• Fixed Legionary sometimes spawning the extra mobs inside of
+solid blocks
+• Fixed crossbows' shooting rate being shown inverted in the
+Player Stats GUI (i.e. showing time between shots instead of
+shots per second)
+• Fixed the description of Worldly Protection in the handbook
+not mentioning that it reduces damage dealt
+• Fixed a typo in the Construct Note book
+• Fixed an error in Behind the Starlit Shroud dialogue that
+points you in the wrong direction. Quest compass remains
+correct.
+• Fixed some typos and issues in Behind the Starlit Shroud's
+dialogue
+• Fixed a typo when taking a book near the Nadir
+• Fixed typo in Into Thin Air compass entry
+• Fixed a strange diorite wall on an island in the Narsen Sea
+• Fixed missing text in For Whom the Bell Tolls’ rewards text
+• Removed an unnecessary lectern in Starbound Sanctuary
+• Fixed a typo in Tesseract Inception Vol. 4
+• Fixed a typo in the Behind the Starlit Shroud advancement
+• Fixed a typo in A Sirius Problem's puzzle rule text
+• Fixed a typo in Ovieda's dialogue
+• Fixed a gendered term in Behind the Starlit Shroud• Fixed a
+minor build error in Constellation Tower
+• Fixed Challenge level 2 not counting creepers that explode as
+dead
+• Fixed Guarding Bolt not damaging mobs if the user did not
+teleport because the target was less than a block away (despite
+consuming cooldown and playing particles)
+• Fixed a bug where abilities and summons would target Sidereal
+Scholar's floating eyes
+• Fixed typo on the Occidenalus Bell Tower of Uriddan sign
+• Fixed a double space in Mystery Box description
+• Fixed Depths Combos abilities not working with some mainhand
+items
+• Fixed Astral Attractor not affecting Melancholic Lament's
+Enhancement Duration due to a typo
+• The bounty dialogue for Celestial Rampart and Starbound
+Sanctuary have been flipped, to more properly align with the
+lore of each location• Fixed some issues with Professor Marl in
+Into Thin Air and restored some sounds that had been disabled
+due to this same bug
+• Fixed First Strike charms not working
+• Fixed an item frame in the Chantry of Repentance stealing
+items
+• Hid some exposed Bedrock in Star Point
+• Fixed the Arena of Terth not giving the Light of Salvation on
+wins
+• Fixed the looking option in the ability triggers GUI having
+white instead of gray text
+• Fixed sneak left click abilities in Depths not being castable
+while holding a projectile weapon if Rapid Fire was equipped
+(They will now be cast only when Rapid Fire is on cooldown)
+• Fixed Star Point POIs not having entries in the compass if
+selected for the Architect's Ring Bounty
+• Fixed the ||Boon of the Fractured Tree|| shrine being called
+||Sky Seeker's Grace||
+• Fixed ||Boon of the Fractured Tree|| and ||Sky Seeker's
+Grace|| shrines having incorrect flavor text
+• Fixed typo in Supply and Demand
+• Fixed saturation levels not being sent at full health for
+certain specific values of max health due to a floating-point
+accuracy issue
+• Lytania's Projections can no longer be moved down to Arx by
+mining the blocks underneath
+• Fixed being able to overfill quivers by picking up a stack of
+arrows
+• Fixed issues when weekly update changes two stacks of arrows
+to the same type in a quiver • these are now combined into one
+stack automatically
+• Fixed the entrance to the warehouse from Scout's Codex not
+being in adventure mode
+• Fixed Star Charter not giving the Damage or Healing bonuses
+correctly for Prismatic Shield (u)
+• Fixed the Deep God's Endowment shrine not being an Adventure
+Mode zone and not granting an advancement
+• Fixed bullets from bullet hell abilities moving vertically
+after being spawned when the caster moves vertically
+• Infernal Izarra should now be on the item API
+• Attempting to reposition Shield Wall while the remaining
+duration is less than 0.5s will now do nothing instead of
+removing the wall
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• The Plunderer's Blitz remains closed.
+• World Bosses are only available on valley-3 and isles-3 due to
+Star Point's recent release.
