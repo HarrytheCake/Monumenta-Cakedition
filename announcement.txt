@@ -1,212 +1,45 @@
-A reminder that in just under a hour (~51 minutes) from this
-message, our new dungeon
-&bCelestial Zenith&r will be available for everyone to play!
-Please be courteous and respectful when readying up in the lobby
-with your squad, we have ten ring instances to use. Best of luck
-and hope you enjoy!Hey everyone ⭐
-We are looking for builders interested in building new rooms for
-the recently released Celestial Zenith!
-If you're interested but not already a Building Contributor, you
-can submit an application with a few screenshots of things
-you've built in <#358326443609948160>. Once accepted, you'll
-have access to a builders channel where building guidelines and
-specifications are available for current build shard projects.
-Note: You don't need to already be a wonderful builder to
-contribute to Monumenta. Beginners are welcome! The build shard
-has all of the tools you will need, and other people can help
-you learn them. It will take time and effort to learn and
-improve your skills, but anyone seriously interested is
-encouraged to apply.
-&bMerry Christmas from Team Monumenta!&r
-Merry Christmas, everyone • 'tis the season of remembrance.
-While many may be prepping for the holidays and new year ahead
-of us, I think it's important for us to reflect on the journey
-that we all went through this year. So as always, come join me
-as we walk back through what 2023 brought to this game and
-community.
-In January, hot off the heels of Region 3's launch late last
-year, the community was presented with an awesome new sandbox to
-work with • our open Item API, and with it, one of the most
-important community tools in recent memory, ohthemisery.tk! This
-spectacular addition to the community has revolutionized the way
-we view, share, and discuss items for a game with an ever
-increasing amount, and we are all the better for it.
-Delves have long been something that grew and expanded well
-beyond the vision of their original creator, with more and more
-modifiers being added on to it over the years. With February, we
-saw the overhaul of the delves experience with the addition of
-Challenge Delves! These hand-picked experiences combine the
-chaos of 50 point delves with modifiers best suited for the
-dungeon at hand, allowing for unique ways to experience the
-dungeon and claim your Trophy. And of course max point delves
-are still there for those of you brave and/or foolish enough....
-Speaking of dungeons, entering March we saw the launch of a
-brand new type of dungeon experience • Exalted Dungeons!
-Launching a whopping 4 exalteds over the course of a few weeks,
-you could now experience White, Orange, Magenta, and Light Blue
-as fully realized Region 3 dungeons, complete with mob and
-difficulty overhauls that brought them up to snuff with your
-endgame R3 gear. And with the promise of more to come, Exalteds
-stand as a wonderful expansion onto our latest region!April took
-a bit of a break from content as we focused on some upcoming
-launches, but it wasn't without its highlights, especially in
-the systems department. This month saw several pieces of
-content, most notably our strikes, transition to being instanced
-out of the overworlds. This was a huge leap forward for our
-server load and infrastructure, as it freed up shard space for
-more needed content. And with some systems in the works as we
-speak, you can expect more of these transitions to be seen
-heading into 2024!
-May was an explosive month for us, seeing not only the expansion
-of Yellow and Willows into the Exalted system, but also a type
-of update the game has not seen in nearly 6 years • the addition
-of a brand new class, Shaman! This class focuses heavily on
-controlling your area and managing your totems to best optimize
-your combat experience, offering a type of playstyle different
-to anything the game had offered prior. And with the constant
-feedback loop given by you all, this class was fine tuned into
-something truly special!
-In June, we return back to dungeons once again for the overhaul
-of yet another system • the re-introduction of Dungeon Races as
-an official game mode! Gone are the days of one attempt a week,
-having to waste your instance. You can now hammer out
-leaderboard times to your heart's content, optmizing your routes
-and striving for that #1 slot for fun, glory, and the most
-important reward of all, bragging rights!In October, we return
-again to Shaman, with the second batch of the class' release.
-After several months of constant feedback and design concepting,
-the class was finally incorporated into Region 3's ecosystem,
-complete with charms and enhancements. At last, we could finally
-call Monumenta's 8th class fully realized, and you could play it
-without hesistation in the Architect's Ring!
-November saw a finale of sorts to a system we've alluded to a
-couple times now, rounding out the Region 1 exalted dungeon set
-with the release of the Exalted Malevolent Reverie! Return once
-again to the nightmare, and take down these waves of fully
-redesigned R3 mobs, complete with a fully overhauled Axtal
-bossfight! Keep your eyes peeled though, because many new
-secrets lie below the surface of this dream within a dream...
-Finally, we have reached December, a month that should need no
-introduction. Wrapping up the year, we saw the launch of the
-first expansion to the Architect's Ring, Star Point. So far, you
-have seen the release of the new overworld island, complete with
-6 brand new POIs and several quests, as well as our latest
-dungeon, the Celestial Zenith • the successor to the Darkest
-Depths. That's not all that lies in store for the Serebrium
-Citadel though, as much more is on it's way in the coming weeks
-and months!
-And there we have it, a trip back through 2023! The game has
-changed so drastically in the past year, and we didn't even
-mention smaller, but still incredibly important updates like the
-Seasonal Passes, the Forsworn Sanctum enhancements, the
-Alchemist rework, Mechanical Armory, boat races, website
-upgrades, the Trade GUI, dungeon music, and so much more! This
-has been a wonderful year for the game, and I hope 2024 brings
-us just as much, if not more, to behold.
-So with that, from all of us here at Team Monumenta • Merry
-Christmas, and Happy New Year!July takes us all the way back to
-the early game experience. Some of the game's earliest quests
-have always been daunting • having vague information and
-directions given, outdated mechanics, and overall were seen as
-an unfun slog to the first dungeon. This month saw the complete
-overhaul of several of the beginner level quests, including
-Mage's Legacy, Crown of Topaz/Majesty, Supply and Demand, and Of
-Monks and Magic. These weren't just small tweaks, but full
-scale, ground-up remakes designed to enhance the new game
-experience and bring questing in this segment of the game up to
-modern standards. A few POIs even got some awesome rebuilds in
-the process, including the Axtan Monastery, the most quest-
-visited POI in R1!
-Keeping Monumenta up to date with Minecraft's additions over the
-years has always been something the dev team has strived for and
-believed in, not wanting the server to fall several updates
-behind ||(like some servers I won't name)||. As such, August saw
-us enter an upgrade period to bring the game up to 1.19! This
-requires us to take several weeks focusing on critical issues
-that each update brings (thanks Mojang), but is always well
-worth it in the end. Here's looking forward to 1.20 in 2024!
-Coming out of the 1.19 upgrade in September, our first major
-update came in the form of Marina Noir, the second map to the
-Gallery of Fear! In this spiritual successor to the Malevolent
-Reverie, you return to a place very familiar to you, yet somehow
-very different. We took several steps to incorporate feedback
-from Gallery's first map into Marina's fundamental design, and,
-with some unrelated memory leak issues notwithstanding, this map
-has proven to be a much welcome boon to the Gallery ecosystem!
-&bA&rnother time, another place
-&bW&raiting to see you, face to face
-&bA&rnother hour, I don’t know when
-&bL&ronging ‘til we can speak again
-&bT&rime ticks by, wholely unaware
-&bE&rver mindless that you aren’t there
-&bR&rivers that flow, from eyes to jaw
-&bS&rpeak of our story, our laughs like law
-&bK&rind, and warm, and gentle of soul
-&bO&rur words but fail to paint you whole
-&bN&row our paths split, divergence begotten
-&bG&rone you may be, but never forgotten
-Remembering our dear friend and co-developer, Awalterskong, one
-year following his passing. We miss you, buddy.Thank you to
-everyone who came out to play the launch of our new dungeon,
-Celestial Zenith!
-We have some fun data to share from the first week of play, put
-together by the amazing @panderz14. This information gives us
-valuable insight into how players are performing and helps us
-keep the game balanced for the future.
-We are blown away by the incredible reception to this content
-and it clearly shows us it deserves more support and features in
-the future. Stay tuned for our 2024 content roadmap!
-&b2024 Monumenta Roadmap&r
-It's been an amazing 2023 for Monumenta, and as with previous
-years it's time to share a glimpse of what the development team
-has sights on for 2024! This will cover a wide range of areas
-from new content to infrastructure improvements, and with
-release dates from anytime next month until the end of the year.
-Let's start with the carryover from the last roadmap that we
-didn't quite have ready in 2023 but should be available soonTM
-in the first part of next year:
-• We have two different content features nearing completion for
-enhancing R3's overworld replayability, focused on quick, bite
-size content that works well solo or with a large team!
-• After some on and off development throughout 2023, the market
-plugin is still in progress and being actively worked on. We are
-hoping to have more to share about this publicly soon,
-especially to our Patrons!
-And now for some new stuff we haven't talked about before:
-• We’ll be returning to Star Point again next year to continue
-your adventures. We’re excited to say we have a full scale
-traditional dungeon currently in development, alongside
-additional overworld content, new quests, and even more
-surprises.
-• Furthermore, we'll continue supporting the ever replayable
-Celestial Zenith dungeon with more ascensions and features!• We
-aren't actively working on the next biome expansion for the
-Architect's Ring yet, but early next year we will finalize our
-direction for what that will be, with the goal once again to
-ship something significant by the end of 2024.
-• Several new quests for the Celsian Isles are in development to
-continue and complete old storylines, as well as new quests for
-the Architect's Ring to continue to expand its world.
-• Exalted dungeons will continue bridging major content releases
-next year, kicking off the R2 dungeons. The first batch of these
-is still a ways out, but we look forward to continue modernizing
-these popular dungeons with all of the new R3 gameplay options
-available to us• time has flown by but we'll be celebrating the
-5th birthday of the Celsian Isles in 2024!
-• The devious designers behind Silver Knight's Tomb are working
-on another multiplayer boss raid, with several challenging
-teamwork-based encounters planned.
-• We're working on an extremely unique piece of passive content
-that serves to give incentive to interact with the game more
-frequently.
-• We'll be updating to 1.20 at some point next year, enabling us
-to use the new blocks and gameplay features in our next
-expansion.
-• Finally, our next infrastructure technology goal is enabling
-multiple different dungeons to run on the same shard. This will
-significantly reduce our server costs and provide a large step
-towards enabling servers in different locations around the
-world!
-That's all we have to share for now, but like Shaman this year,
-you can always expect some surprises! Happy New Year from Team
-Monumenta and we wish you all the best for 2024!
+Everyone welcome our newest member to the moderator team!
+@pokushokus17 🏓We are 1 hour out from the release of Sirius! For
+the time being, we have shut off other bosses in order to
+prevent further server strain than there already will be.
+Furthermore, in order to optimize server load caused by
+constantly ongoing fights, Sirius' release will be limited to
+&bodd numbered&r ring shards: ring, ring-3, ring-5, etc. (this
+is one ring shard per server ip).
+Please make sure you are on a proper world in time for launch,
+and we hope to see you all there!Sirius has been opened on all
+&beven numbered&r ring shards: ring-2, ring-4, ring-6, ring-8,
+ring-10. Please spread out in more rings to reduce
+lag.@MagicalSharkHekawt, Eldrask and Kaul have been reopened in
+all valleys now that Sirius fights have stabilised
+&bUpdate to<#313404235544788993> Post Rules&r
+Hi everyone,
+The channel specific rules for <#313404235544788993> have been
+updated to the following:
+• You may repost your guild/Monumenta related community
+advertisement once per month
+• You are not required to delete previous posts, but you may
+still do so if you wish
+• Posts from users no longer in the Discord, deleted users, or
+with dead Discord links are subject to removal without warning.
+Please save the contents of your posts beforehand.
+The channel description will be updated to reflect these changes
+shortly.Due to a number of ongoing recurring bugs and issues
+that have been plaguing moderaters for months, the Teal dungeon
+will be receiving a significant under-the-hood overhaul with
+this week's update.
+If you have an open Teal instance, or plan to open one, please
+complete it and make sure that it is
+&bready to abandon&r following update. We cannot promise that
+old instances will not become incompletable.As a reminder of the
+announcement above, please finish any active Teal instances that
+you may have
+&bprior&r to update tonight. Old instances will become
+incompletable.There is currently a bug with the Sirius out of
+bounds kill zone. If you wish to spectate the fight, please stay
+away from the barriers surrounding the arena. Failing to stay
+far enough away results in taking Void damage (that is, Shatter
+3 and loss of levels). You may get one "freebie" refund in case
+you get too close, but moderators will not refund on subsequent
+deaths.~~Eldrask is temporarily disabled due to a bug with
+icicles not working.~~ Eldrask is reopened.

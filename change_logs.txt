@@ -1,150 +1,156 @@
-• A new NPC has been added to the Black Mist, the Ghostly
-Shantyman. Interacting with him allows you to hear a new music
-track if you have the Monumenta Music pack (see the
-<#746440233368682566> channel for information on how to download
-and install the pack), called The Parting Veil, written and
-performed by Fangride.
-&bDepths/Zenith Ability Trigger Customization:&r
-• There is now a button to open the ability trigger
-customization GUI in the Depths/Zenith ability summary GUI. In
-this GUI, individual abilities' triggers and key options can be
-customized as expected.
-• Customizations to a given ability do not transfer to other
-abilities that share the same trigger by default, and
-customizations are kept between runs.
-• All Depths/Zenith abilities remain only castable with melee
-and projectile weapons and tools, and the default options for
-each ability apply further restrictions equivalent to the
-current restrictions for that trigger.
-• There is no effect on what slot an ability occupies and the
-summary GUI and ability descriptions will always refer to the
-slots by their default trigger.
-&bZenith Balance Changes:&r
-• 4 and 5 charm power Zenith charms have had their budget
-increased. Wildcard charm types have had their budget slightly
-increased. Existing charms may gain additional positive effects
-to reflect this!
-• Diversity will now give you a Prismatic selection instead of a
-random one ↑
-• Earthen Wrath cooldown now begins after the effect is over,
-instead of at the start of cast. Damage reflected (before
-multipliers) is capped at 160 (240 in Zenith). 30s -> 24s
-Cooldown. ↓
-• Updated the particles and sounds of Blade Flurry, and slightly
-expanded its hitbox vertically
-&bItem Changes:&r
-• Sedated Reckless Charm has been reworked into Explosive
-Reckless charm due to Glorious Battle Bleed Amplifier no longer
-existing: 3 Charm Power, +30% Glorious Battle Radius, +10%
-Glorious Battle Damage, +5% Glorious Battle Velocity
+&bMinor New Features:&r
+• In-line chat replacements for roll now occur once per message
+and have size limitations
+• All cost has been removed from Silver Knight's Tomb • Story
+Mode. Instances can be obtained by speaking directly with the
+access bots in the lobby, with no need for a key. The
+Probatekeepers in the lobby have had trades and dialogue updated
+to reflect this change, and Story Mode keys have been legacied.
+• Currency no longer shatters
+• Pickup filters no longer assume items with lore are
+interesting
+• Carriers of Explosion now only grave if their contents would
+• Carrier of Explosion color coding has been updated to match
+the new pickup rules
+• Obsidian has been added to the interesting items list
+• The trade for Sanctifying Guard has been reverted to 1
+Spellready Buckler and 1 Strong Sanctify Potion now that
+Sanctify Potions are once again obtainable
+• Sear now has a special interaction if you talk to him while
+sneaking
 &bMob Changes:&r
-• Crewman of Xeno:
-  • Remove vanilla Armor
-  • 18 -> 15 Attack Damage
-  • 5 -> 8 Second Initial Rejuvenation Cast Delay
-  • 8 -> 10 Second Rejuvenation Cooldown
-  • 30 -> 25 Health Restored per Rejuvenation Cast
-  • 3 -> 4 Rejuvenation Range
-  • 5 -> 4 Second Initial Jump Cast Delay
-  • 8 -> 10 Second Jump Cooldown
-• Lunacrest Bladedancer:
-  • 45 -> 35 Attack Damage
-• Nadir Construct:
-  • Slightly adjusted the height of its wave attack
+• Changed Sirius damage phase and Elite hp scaling
 &bFeedback Fixes:&r
-• The Celestial Zenith F2 Elite lava room has received numerous
-tweaks including bedrocking fixes, spawner parameters and minor
-build/layout changes to help alleviate frustration with the room
-• Added dummies to the wheel utility rooms in The Celestial
-Zenith
-• Refraction now sends its duration information to the client
-mod
-• Slightly decreased accuracy required to trigger Bodyguard and
-Guarding Bolt
-• Added some much needed lighting to the Mistport Black Market
-• An Overworld Instance Bot has been added near Reynart's house
-in Mistport
-• Reduced the amount of lightning sounds that play on the Black
-Mist and reduced their volume.
+• Made the fire in amped Fire Shrine colder
+• Improved Hit Detection on Blight Wall
+• It is now harder to accidentally step off the pressure plate
+to the barriers in the selling stations at the Forge
+• Improved spawners in various Celestial Zenith rooms
+• Adjusted Holy Javelin particles to better reflect its hitbox
+size
+• Readded the static Strong Sanctify Potion to the Cursed Forest
+POI
 &bMajor Bug Fixes:&r
-• Fixed existing Zenith charms not being affected by charm
-effect balance changes
-• Fixed a rare edge case that allowed generated but not chosen
-Depths/Zenith ability rewards to not properly remove passive
-abilities gained through some other method
+• Fixed an issue where sometimes, when a group lost against
+Sirius, the boss tab entry would not get cleared.
+• Fixed some boss serialization errors when unloading the boss
+due to dying or disconnects.
+If issues still arise, please make a bug report with the
+timestamp and what shard you were on so this can be investigated
+further.
+&b(10.19.0)&r
+For the update on January 18, 2024
+&bMajor New Features:&r
+A number of special advancements have been added to the Sirius
+boss fight! Try out different approaches and conditions to the
+fight, and see if you can unlock all of the secrets!
+For the first week, the advancements will remain hidden from the
+website as to maximize the hunt, but to get you started, here
+are the names:
+• Getting Sirius
+• Sirius Inquiries Only
+• Silent Blight
+• Sirius Condition
+• Let the Stars Fall
+• The Fault in Our Stars
+• Why So Sirius
+• Stars Fall, Everyone Dies
+&bTeal:&r
+Due to an ongoing number of significant bugs and issues that
+have occurred since our dungeon instances switched over to world
+instancing, the Echoes of Oblivion dungeon has received a
+significant mechanical overhaul. For affected gameplay, you can
+find the following changes:
+• When returning to the start of the dungeon via Max, the
+transition will now occur faster and more reliably
+• Transferring between eras is now considerably more reliable
+• White and Cyan Tesseracts can no longer be used in Era 4,
+including the cutscene, race, and loot room
+• Items in the relic room are now always present, and no longer
+require dropping into the water to spawn/respawn
+• Dying/logging out in Era 4, failing the race, and choosing a
+relic now all automatically assign and send you to a loot room
+without need for stepping on pressure plates
+• If the cutscene is not skipped, only one person in a group
+must now click the dialogue in order for the entire group to
+progress
+• Finishing the dungeon while progressing through Unmasked will
+no longer try to automatically send you back to Isles after the
+final cutscene, and instead drop you back in the starting room
+• Players not present when the group proceeds to Era 4 may now
+claim a loot room by speaking to Max in Era 3. Loot found in
+loot rooms is still determined by the number of Time Crystals
+collected
+&bprior&r to anyone advancing to Era 4.
 &bMinor Bug Fixes:&r
-• Fixed being able to invite a 5th player into Darkest Depths
-and Celestial Zenith under certain conditions
-• Fixed Depths/Zenith ice abilities replacing pressure plates,
-Sculk veins, banners, and a few other blocks with ice when they
-shouldn't
-• Fixed Dethroner, Aeromancy, Pyromania, Primordial Mastery, and
-Icebreaker triggering on some damage they shouldn't
-• Fixed Avalanche and Chroma Blade not properly storing the
-player's stats when cast
-• Fixed some out of order dialogue when speaking to Izzy after
-beating Sealed Remorse and also after beating Eternal Vigil• The
-very first chest in Cyan contains a Remedial Brew instead of a
-Healing Vial
-• Remedial Brew, Privateer's Philter and Chillwind Tonic should
-now be in the Item API
-• Added missing location tag to Worker's Pale Ale
-• Fixed minor build bugs in Zenith rooms and loot rooms
-• Fixed minor build and mob bugs in Magenta/Exalted Magenta,
-Ring, Valley, and Shifting City
-• Fixed Colossal Crusher not being in the items API
-• Fixed Rebirth being shown in the client mod
-• Fixed some Callicarpa spells not canceling on death
-• Fixed Volcanic Meteor damage falloff not being affected by the
-radius charm effect
-• Added Quest Marker to Alan
-• Updated Oceangate Quest Guide to reflect the release of All
-That Remains
-• Fixed several typos during All That Remains
-• Fixed typo in Silent Knight
-• Properly barriered the bridge after ||bossfight in ATR||
-• Fixed several cases of exposed bedrock in All That Remains
-• Added emergency escape button from the ||Outworld Pit|| in ATR
-• You can no longer break blocks near cave entrance in Oceangate
-• Mobility abilities are no longer enabled in Aphelios' Den
-during ATR
-• Fixed Refraction slowness lasting longer than the actual
-attack if many mobs were killed
-• Fixed the Refraction kill sound playing even when the ability
-is not active
-• Fixed Chestey being a Celsian Isles Uncommon instead of a
-King's Valley Uncommon
-• Fixed mobs not placing blocks in Zenith final boss
-• Fixed Star Storm not being canceled sometimes on Phase Changes
-such as Dark Hole
-• Fixed Ice Barrier to properly respect block collision to find
-the targeted block
-• Fixed Disco Ball and Divine Beam targeting some mobs they
-shouldn’t• Fixed grammatical error in Bleeding Proof
-• Fixed the formatting of the splash text when starting Silent
-Knight
-• Fixed the ESCAPE button in Exalted Malevolent Reverie sending
-you to valley instead of ring
-• Fixed Depths/Zenith Rejuvenation listing its duration of 0
-seconds in the effect list
-• Fixed weirdness with Bottled Sunlight activating Encore and
-Multiplicity when it shouldn't
-• Fixed item frames not being breakable without breaking the
-block behind them on plots
-• Fixed a few more instances of incorrect {...}s in Behind the
-Starlit Shroud.
-• Fixed the repaired keys not being consumed when opening the
-door to Ekah
-&bSeasonal Pass:&r
-After a rush of releases for Star Point, we bring you a fairly
-straightforward seasonal pass, the Coin Rush pass! This pass is
-largely to both help catch up on artifacts and other rewards for
-players and decrease the workload on plugin development/builders
-this pass that was focused elsewhere.• Changes to Zenith Charms
-retroactively did not update this week due a bug, we are
-investigating but won't be able to fix until next week as we
-can't rerun the weekly update. New charms dropped from today
-will benefit from the increased charm budget
+• Sirius boss music now stops upon being granted victory
+• Fixed mobility abilities not being usable in the Hellborn
+Skylands in Ring Around the Rose
+• Fixed not being able to open the boss room in Zenith Ascension
+10+ if a player had no active abilities that they could remove
+• Fixed not getting any options in Depths/Zenith ability rewards
+if Aspect of the Wand was active while having every active
+ability slot filled
+• Fixed removed abilities contributing to the cap for abilities
+from a given tree in Zenith Ascension 14+
+• Fixed Zenith Volley Damage Multiplier charm effect being
+multiplicative with the ability's damage multiplier rather than
+additive
+• Fixed minor display issues in PEB GUI
+• Potentially fixed a situation where Xenotopsis could kill
+players in the waiting room
+• Fixed quick drink going on cooldown if a cooldown-applying
+potion was attempted to be consumed but could not be because a
+non-cooldown-applying potion was in the middle of being consumed
+• Fixed Crystalline Combos mechanisms in Sierhaven/Mistport
+academies not working
+• Fixed Earthquake Cooldown charm stat not working
+• Fixed not being able to re-enter the instance or invite
+players into Exalted Malevolent Reverie from the Dungeon Access
+Bot
+• Fixed Starbound Ichor Earthbound activating on blocked attacks
+• Fixed Blight Wave Ignoring Stasis
+• Fixed Distorting Reality being cast during Blight Wave
+• Fixed Blight Wave visual teleporting to the end of its path
+for some players
+• Fixed Sirius not always one-shotting upon impact
+• Fixed missing words in Howling Winds description
+• Fixed Excavator sending a debug message when breaking some
+block types
+• The advancement for Revelation will now appear on the website
+• Fixed typo in Windswept Combos description
+• Fixed the throw summon spell not being canceled by
+stun/silence
+• Fixed Oblivion Occultists' potion throw ability not being
+cancelled by stun/silence, and potentially some other similar
+bugs• Potentially fixed some cases in which mobs would not
+target Metalmancy or Dummy Decoy summons when they should
+• Fixed Restless Souls sometimes targeting invulnerable mobs
+• Fixed Totem of the Tombstone's Totemic Projection Enhancement
+Damage Duration not working
+• Fixed bedrocking in various Zenith rooms
+• Fixed the Cleansing Totem enhancement cleansing the user of
+debuffs if they were within range of the landing despite not
+healing the user in that case
+• When Sirius fights are started, music will no longer play for
+people outside of the arena
+• Fixed typo in Scoutmaster Ursan's dialogue
+• Fixed a typo in the description of the Azacor completion
+advancement
+• Fixed Custom Effect packets being sometimes wrong (causing
+them to not stack clientside or the strength not being sent,
+etc...).
+• Added a message when toggling visibility of other players'
+armor
+• Fixed Cloak and Dagger Damage charm stat adding as a decimal
+instead of multiplying the damage of the ability (+10% damage
+would result in +0.1 damage per stack instead of 10% more
+damage)
+• Fixed Darkness not counting as a negative potion effect
+• Fixed stuck spots in the Farr stables.
+• Fixed the punctuation in Sirius win message.
+• Fixed death compass entries not displaying any time if it is
+less than 1 second ago
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -153,12 +159,23 @@ and select `I want to unlock this shop`.
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
 • The Plunderer's Blitz remains closed.
-• World Bosses are only available on valley-3 and isles-3 due to
-Star Point's recent release.• Adding Hope, Colossal, and
-Phylactery to any item is currently bugged. Please do not try
-and apply these enchants until it has been fixed.
-&bHotfix:&r You can once again add infusions and other player-
-added enchantments to your items.
-&bHotfix:&r The world boss status in tab will now actually work
-in shards other than valley(-1) and isles(-1)
-Applied on next restart.
+• World Bosses are available on all shards.
+• Moderators
+&bwill not&r be assisting with instances broken by the Teal
+changes in this week's update.
+&bHotfix&r
+• Fixed Silent Blight not having a player requirementThe public
+plugin repo at <https://github.com/TeamMonumenta/monumenta-
+plugins-public> has been updated to be current as of last week's
+update.
+It's been about three months since we last pushed the latest
+code there. This now includes code for new things such as Zenith
+and Sirius. Lots of changes since then:
+> 739 files changed, 54280 insertions(+), 8691 deletions(-)
+As always, this code is released under an AGPL license • which
+means you are free to use any of it for any reason, so long as
+you also open source your code under the same license to give
+back to the community.
+&bHotfix:&r Updated the chat_channels in /chat help
+commandMasquerader's Ruin has been closed.Masquerader's Ruin has
+been reopened
