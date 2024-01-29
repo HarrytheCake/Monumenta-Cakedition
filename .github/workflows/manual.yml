@@ -1,6 +1,8 @@
-name: run main.py
+name: Sync with Monumenta Change-logs and announcement
 
 on:
+  schedule: 
+  - cron: "0 2 * * 5"
   workflow_dispatch:
 
 jobs:
