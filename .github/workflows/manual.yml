@@ -2,7 +2,7 @@ name: Sync with Monumenta Change-logs and announcement
 
 on:
   schedule: 
-  - cron: "0 2 * * 5"
+  - cron: "0 6 * * 5"
   workflow_dispatch:
 
 jobs:
