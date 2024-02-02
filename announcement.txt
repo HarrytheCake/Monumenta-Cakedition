@@ -1,17 +1,5 @@
-Everyone welcome our newest member to the moderator team!
-@pokushokus17 🏓We are 1 hour out from the release of Sirius! For
-the time being, we have shut off other bosses in order to
-prevent further server strain than there already will be.
-Furthermore, in order to optimize server load caused by
-constantly ongoing fights, Sirius' release will be limited to
-&bodd numbered&r ring shards: ring, ring-3, ring-5, etc. (this
-is one ring shard per server ip).
-Please make sure you are on a proper world in time for launch,
-and we hope to see you all there!Sirius has been opened on all
-&beven numbered&r ring shards: ring-2, ring-4, ring-6, ring-8,
-ring-10. Please spread out in more rings to reduce
-lag.@MagicalSharkHekawt, Eldrask and Kaul have been reopened in
-all valleys now that Sirius fights have stabilised
+Hekawt, Eldrask and Kaul have been reopened in all valleys now
+that Sirius fights have stabilised
 &bUpdate to<#313404235544788993> Post Rules&r
 Hi everyone,
 The channel specific rules for <#313404235544788993> have been
@@ -43,3 +31,91 @@ far enough away results in taking Void damage (that is, Shatter
 you get too close, but moderators will not refund on subsequent
 deaths.~~Eldrask is temporarily disabled due to a bug with
 icicles not working.~~ Eldrask is reopened.
+&bRegarding the Recent Ban Wave&r
+Hi everyone,
+There has been a critical exploit present in the Celestial
+Zenith since its release that allowed players who died to remain
+in the instance, and be resurrected after the defeat of a boss
+with no penalty. This bug was abused by a substantial number of
+players which led to undeserved wins. This bug was reported
+shortly after Zenith's release, but it unfortunately fell to the
+wayside as we attempted to fix bugs and integrate feedback.
+While we are responsible for this, what is not okay is that
+&bthis bug was only reported by two players, despite obviously
+being an exploit of game systems.&r
+After we received the second report, a significant investigation
+was launched where we tracked down every possible instance of a
+player abusing the bug, and we have manually removed those who
+were flagged with insufficient evidence. All who remained lost
+their leaderboard positions, were given temporary bans based on
+how many times they used the exploit, and lost up to 3 Zenith
+Charm Power. For those that remember the Horseman Massacre, this
+situation is significantly different because the exploit was
+deliberately hidden from TM by certain circles of the community
+and it was exploited over a longer period of time.
+We are reasonably confident that those who were punished are
+fully responsible for their actions, but we have most likely
+missed a few players. Due to the lack of evidence from our
+investigation, we will not punish anyone who possibly knew about
+the exploit but failed to report it. Punishments can be appealed
+by privately messaging a Moderator on Discord • we are trying
+our best to handle this situation as fairly as possible.
+For those who have cleared the Celestial Zenith at least once
+without abusing this exploit, you may find yourself contacted by
+your unexpected benefactor during the weekly dungeon instance
+reset...
+As always, please directly report gamebreaking exploits or bugs
+to a Moderator.For an easy way to get to your logs folder from
+your Minecraft client regardless of what you're using, go to
+`Options` -> `Resource Packs...` -> `Open Pack Folder`, go up
+one folder, and check the `logs` folder. `latest.log` is the
+latest log file. You may need an archive manager that supports
+the gzip file format for the `.gz` compressed log files from
+previous days/sessions.The function that grants the Ladder of
+Honesty currently has unintended behavior. If you are eligible
+for the trophy, you must stay in the same shard for at least 15
+seconds after logging on post weekly dungeon reset to receive
+it. If you believe you were not given the Ladder of Honesty
+correctly, please DM @spy1dd. Include a snippet of your
+Minecraft log that shows you either logged off or changed shards
+after logging on post dungeon reset. This log will be present
+somewhere within
+`C:\Users\YourUser\AppData\Roaming\.minecraft\logs\` on vanilla
+or in `\.minecraft\logs\` on a third party launcher.
+&bMonumenta Server Infrastructure Update & Downtime&r
+&bTLDR: We are upgrading our server infrastructure over the next
+two weeks, and this will require some play server downtime, most
+notably on Sunday. &r
+&nMore detail: &r
+Monumenta currently runs on five physical servers in North
+America (east coast Canada), and one in Europe (France).
+Several of these servers are quite old, including the "main"
+server, monumenta-8, which we leased 3-4 years ago.
+OVH (our hosting company) recently launched some new server
+offerings which are going to be both faster and more affordable
+for us overall. So we are looking at moving to them, and taking
+this opportunity to update a number of supporting tools that we
+use (for example, the main servers currently run Ubuntu 18.04,
+which is more than 5 years old at this point, the version of
+kubernetes we use is 3 years old... etc.).
+&nWhat this means for you: &r
+• Weekly update downtime this week will be a bit longer (approx
+2.5 hours) as we move some underlying data around. The shards
+will continue to run where they are now.
+• On Sunday, we are planning to do the "actual" move, which we
+currently think will involve around 4 hours of server downtime.
+This will likely be Sunday afternoon US time. We will announce
+the specific timeframe Saturday night.
+• After this move, many of the current bungeecord proxies will
+be shut down. If you're connecting to
+`server.playmonumenta.com`, that'll still work fine, but if
+you're connecting to specific proxies (i.e. monumenta-8), you'll
+need to update these. More info will be shared when that
+happens.
+• Over the next week, many non-game things will likely be
+unstable • for example the item API that powers the oh-the-
+misery index, the website, advancements page, etc.
+• Next week's update will also be longer as we settle things
+into their final resting places.
+Many thanks to our current & past Patreons, who continue to make
+Monumenta's upkeep sustainable.
