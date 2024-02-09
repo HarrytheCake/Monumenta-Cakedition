@@ -1,290 +1,142 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-• The Plunderer's Blitz remains closed.
-• Check <#313403825442521088> if you have been banned following
-the update.
-&bHotfix:&r When beginning Voyage of Discovery, Captain Argoun
-will no longer say you need to complete Crew to Remember when
-you have already done so
-&b(10.21.0)&r
-For the update on February 1, 2024
-&bMajor New Features:&r
-&bAssisted Dreaming:&r
-A new quest, Assisted Dreaming, has made its way to New Antium.
-Having recently arrived in the Architect's Ring, your old friend
-Reynart requires some assistance in order to hunt down the
-source of the nightmares that plague the region. A new chapter
-in the Architect's Ring story awaits!
-This quest acts as the introduction to Exalted dungeons, and can
-be started by speaking to Reynart near New Antium after having
-completed Cure for Insomnia and the King's Valley Monument.
-It should be noted that you may still access the Exalted hub
-regardless of quest status, Reynart and crew will simply no
-longer be present until completion. Likewise, External
-Corruption has had its starting requirement switched to
-completion of Assisted Dreaming.
+&bDue to a critical-severity bug, the server has been put into
+maintenance mode.&r
+Please watch <#579190910567317514> for further updates.
+&bHotfix (when server is back up):&r Reynart will no longer have
+no dialogue when you are trying to finish Assisted Dreaming if
+you are currently in an in-progress state for External
+Corruption
+&bAll world bosses have been temporarily closed.&r
+Since the bossfights cause network lag for all online players,
+the bosses are unavailable until the stability of the server
+improves to pre-migration levels.Eldrask has been reopened on
+the isles shard.Public github repo at
+<https://github.com/TeamMonumenta/monumenta-plugins-public> has
+been updated with code up through the most recent update.Due to
+the switch in the URL for the main gameplay build calculator
+ohthemisery.vercel.app from a .tk website to a .vercel.app
+website, I have posted new links to every <#1165742923510468618>
+post in the replies of that thread with the new link. Please
+ping me over in <#575516687676211215> with a link to the thread
+that needs fixing if something is incorrect, this was admittedly
+done very fast and with limited validations as I went. I will
+get to any reported when i can, but hopefully a large majority
+of them are working fine now.
+&b(10.22.0)&r
+For the update on February 8, 2024
 &bMinor New Features:&r
-• The Sierhaven Snow Removal Union has successfully negotiated a
-12% raise, and cleared the snow from the plaza. We wish them
-luck in their next strike to be paid in CXP instead of Essence
-of Winter!
-• Snow Man Left Behind's non-winter season requirement has been
-shifted to completion of the King's Valley Monument, in order to
-prevent newer players who are too underleveled to beat the boss
-or reliably obtain Essence of Winter from getting indefinitely
-stuck with the quest on their compass
-• The dye traders in Sierhaven now offer free dyes, banners, and
-tips, as well as a satellite location in the guild hall. They
-additionally now sell 10 types of white blocks that can be dyed
-to other colors. This means all dyed blocks except for shulker
-boxes can be obtained in one shop.
-• Cleaned up more paths around the Blackroot Jungle and the
-Highlands as per last week.
-• Added a path from the Suspicious Village POI to Kaul.
-• Eldrask and Sirius now use unique summon sounds when they are
-announced to the server
-• Sirius summon messages now use his color instead of Eldrask's
-• Added new Godspore Cutting NPC and POI interactions.
-&bVesperidys Changes:&r
-• Ascension Health Scaling increase: 3% Per Ascension -> 5% Per
-Ascension (A15: 25375 -> 30625 HP)
-• Reality Distortion: Vesperidys is now invincible during the 3
-second phase change cast.
-• Void Wave (A8+): Initial wave telegraph now begins at 2
-seconds, subsequent waves are unchanged.
-&bItem Changes:&r
-• Air-Purified Thresher (M4) : 16.5 -> 16 Attack Damage
-• Moonscarred Clockblade (M4) : 14 -> 15.5 Attack Damage
-• Mist of Dawn : 0% -> -30% Lightning Totem Lightning Storm
-Duration
-• Explosive Charm of Ignition : +30% Flame Totem Radius -> +20%
-Flame Totem Explosion Radius
-• Iridium Crown (M2) : 5 -> 5.5 Agility
-• Iridium Crown (M1) : 5 -> 5.5 Agility
-• Razorleaf Breeches (M4 only) : 5.5 -> 6 Agility
-• Ex Kingslayer (M4) : 45% -> 50% Attack Damage, 6 -> 6.5
-Agility
-• Ex Kingslayer (M3) : 40% -> 45% Attack Damage
-• Bottled Font of Tuulen: +1 -> 0 Sage’s Insight Stack Trigger
-Threshold
-• Lunacrestum Pulsar : 5 -> 4 Charm Power, -30% -> -20% Luminous
-Infusion Damage, -30% -> -20% Luminous Infusion Radius
-• Lordtomb Fragment : 4 -> 3 Charm Power, 7.5% -> 5% Vicious
-Combos Enhancement Damage
-• Scion of the Stars : -4 -> -3 Culling Duration
-• Silvari Blade Handle : 4 -> 3 Charm Power, +50% -> +35% Blade
-Dance Radius, 2.5 -> 1.5 Blade Dance Root Duration, +50% -> +35%
-Blade Dance Cooldown
-• Clocktower’s Blessing : 5 -> 4 Charm Power, +50% -> + 25%
-Warding Remedy Radius
-• Starmetal Knucklebones (Rework) : 3 Charm Power, +100% Shield
-Bash Range, +40% Shield Bash Damage, -30% Shield Bash Duration
-• Derelict Tablet : +30% -> +50% Holy Javelin Size, +30% -> +25%
-Holy Javelin Damage
-• Fungal Fortitude : 0 -> +10% Toughness Healing Increase
-• Threads of Valor : 0 -> -10% Inferno Damage
-• Inferno diminishing returns increased from [Level]^0.95 to
-[Level]^0.9
-&bCelestial Zenith Changes:&r
-• Added a new F2 Elite room from qwantonlol, amecyann02 and
-0dnalr0
-• Combo abilities now have an invisible cooldown of 2 seconds.
-Reaching the hit requirement before 2 seconds have passed will
-instead set your hit count to one less than the requirement.
-• Ring of Flames has been replaced with a new ability, Igneous
-Rune. Charm stats have been renamed accordingly.
-• Reworked Fireball, Range on charms has been replaced with
-Velocity. 8-20 -> 10-22 Damage ↑
-• Pyromania: now also counts players on fire ↑
-• Flamestrike: 14-35 -> 14-31 Damage ↓
-• Pyroblast: 20-50 -> 20-44 Damage ↓
-• Avalanche: 18 -> 20s cooldown, 25%/25%/25%/25% ->
-15%/15%/15%/55% Damage Split, 10 -> 8 Radius ↓
-• Icebreaker: 24-48 -> 20-40 Ice Damage Multiplier, 12-24 ->
-10-20 Debuff Damage Multiplier ↓
-• Advancing Shadows: 20-50% -> 16-40% Damage Multiplier ↓
-• Scrapshot: The shot now splits into shrapnel after hitting a
-mob and deals 33% of the initial damage dealt in a 4 block cone
-behind the target. Added Scrapshot Shrapnel Cone Angle charm
-stat. ↑
-• Sidearm: 12-30 -> 14-32 Damage ↑
-• Last Breath: Now cancels the damage that triggers it ↑
-• Reduced magnitude and effect cap of Avalanche Radius present
-on charms ↓
-• Reduced magnitude and effect cap of Frost Nova Radius present
-on charms ↓
-• Reduced magnitude and effect cap of Radiant Blessing Cooldown
-and Duration present on charms ↓
-• Reduced magnitude and effect cap of Lightning Bottle
-Vulnerability and Slowness present on charms ↓
-• The Sharpshooter Damage per Stack charm stat now scales more
-linearly (Epic/Legendary unchanged), reduced variance and effect
-cap ↓
-• Reduced variance and effect cap of Sharpshooter Decay Timer
-present on charms ↓
-• Reduced effect cap of Sharpshooter Max Stacks present on
-charms ↓
-&bConsumable Changes:&r
-• Potion droprates in all dungeons and overworlds has been
-significantly changed:
-  • The base droprate of tiered potions has been decreased for
-most chests
-  • Potions from loot chests now have loot scaling, which is
-increased in Delves
-  • You may occasionally find strong potions in Tier 3 or
-greater King's Valley and Celsian Isles chests
-• Azacor, Kaul, Eldrask, and Hekawt loot chests now exclusively
-drop strong potions
-• Verdant Remnants, Forsworn Sanctum, Black Mist, and Sealed
-Remorse lootrooms now exclusively drop strong potions
-• The droprate for Dreadful Damassine, Colossal Cognac, Spectral
-Schnapps, Riftborn Rum, Infernal Izarra, Twisted Tepache, and
-Astral Ale has been decreased
-• The droprate of consumables from Rush of Dissonance mobs has
-been decreased
-• Dreadful Damassine: -10% Speed -> -10% Max Health
-• Riftborn Rum: -10% Max Health -> -10% Speed
-• Chillwind Tonic: 10% -> 20% Speed
-• Kingfruit: 20% Healing Rate (0:20) -> 20% Healing Rate (0:30)
-• Spider Essence cost: 1 -> 2 Soul Threads
-• Phantom Dew cost: 4 -> 10 Soul Threads
-• Potion of Salvation cost: 8 -> 10 Soul Threads
-• Soulweavers now offer 5 Arrows for 1 Soul Thread
-• Soulweaver trades are now ordered by Soul Thread cost
-&bClass Changes:&r
-• Predator Strike Level 1 now cannot deal above 400 damage and
-750 damage in Region 2 and Region 3 respectively. Level 2
-increases the cap of each region by 2 times (800 damage and 1500
-damage respectively).
-• Luminous Infusion L2 only considers half of your Inferno level
-if the triggering damage type is not melee
-&bShaman Changes:&r
-&nBalance Changes&r
-• Chain Healing Wave: 1->2 charges, CD 15s->10s, Heal 25/35% ->
-30/40%, CDR 1.5s->1s
-• Cleansing Totem enhance: Replaced with +3% healing/second and
-now over heals into absorption with cap 4 absorption (2 hearts)
-• Flame Totem: Base skill adopts the enhancement's style of
-impacting mobs, targeting a mob and bombing an area around them.
-Enhancement continues to offer the same inferno efficiency and a
-second target to be bombed. Damage 4/5 -> 5/6
-• Chain lightning now has a stricter fire restriction, cone of
-targeting 45 degrees to an 18 degree cone at range and 30 degree
-cone closer by, and requires line of sight between targets to
-bounce to a target. Bounces 2/4 -> 3/5
-• Lightning totem enhancement: clouds now run for 7s regardless
-of when the cloud is spawned in the totem's duration
-&oDev note: The goal of these balance changes are to help
-increase the throughput for support users and to increase the
-focus around skilled placement and aiming for the class as a
-whole.&r
-&nFeedback Fixes and Bug Fixes&r
-• Devastation now gives priority to a 18-30 degree cone in front
-of the player, sorted by closest, before defaulting to closest
-totem in general.
-• Added protections to hopefully allow Totemic Projection to
-pass through other players
-• Slightly updated visuals and upgraded the sounds for
-Devastation
-• All shaman sounds should now properly be playing within the
-Players category
+• Added a new Zenith F1 elite room from safeliquids
+• Added two new strong potions to the King's Valley loot tables
+• Strong potions in all three regions now have lore text
+• Added Star Point to the Bestiary
+&bBalance Changes:&r
+• Cleansing totem absorb is now properly only given if you have
+chosen the enhancement
+• Cleansing totem max absorption hearts corrected
+• Cleansing totem absorption now has a 15s duration
+• Increased number of daily Tlaxan Record Player and Soulsinger
+charges from 2 and 3 to 3 and 6 respectively
+• Faimynyw's Call can now only be played from a Soulsinger
+• Adjusted the duration of -5% Ability Cooldowns on Faimynyw's
+Call to 10 minutes
 &bMob Changes:&r
-• Starblood Seed now generates Sculk instead of Sculk Catalysts
-when attacking
-• Blightleaking Heart now generates Sculk instead of Sculk
-Catalysts when attacking
-• Crowned mobs durring Crowned Blight can no longer swim• The
-Depths/Zenith Talisman pages in the Knick Knack Sack will no
-longer offer the option to reset your preference if it was not
-set in the first place
-• Adjusted line wrapping in descriptions of many items in the
-Knick Knack Sack
-• Fixed Knick Knack Sack not having any lore text
-• The Power Source levers in Cyan's first part are less prone to
-breaking entirely if a creeper blows up near them
-• Fixed typo in Harmonic Convergence
-• Casting for Help now properly appears on the Quest Guide for
-newer accounts
-• Wounded Captain now has an orange name to signify it is an
-Elite
-• The Limited Edition Bestiary is no longer enchanted with Quick
-Charge 3
-• Jeremiah now tells you the stats of the Light of Salvation
-when you complete the Arena of Terth
-• World Bosses now tell you to make two spaces in your inventory
-available for the win rewards
-• Added the missing "Make at least two spaces available in your
-inventory!" message to Hekawt's ending sequence
-• Sirius summoning messages now only display for those who have
-completed Tomb of Time
-• Sirius summoning messages now tell you your gear will not be
-shattered on death instead of kept on death
-• Fixed Blood Titan and Unchained Experiment using a long
-duration Glowing effect instead of the Glowing entity variable
-• Vengeful Drifters will no longer telekinetically poison you
-when they get too close
-• Removed vanilla armor value from Leviathan of Fury
-• Fixed most standard Yellow chests dropping regular arrows
-instead of Kaul's Fury
-• Fixed an issue where Yellow chests in Aquiren's section would
-sometimes overfill due to excessive filler items
-• Fixed Scrapshot distance calculations; rather than calculating
-the distance between your eyes to the mob's feet, it calculates
-the distance from your eyes to where the shot impacted the mob
-instead
-• Fixed Soothing Combos Speed Amplifier charm effect
-calculations being incorrect• Fixed Deep God's Endowment not
-including Windswept Combos
-• Fixed various balance and aesthetic changes not being applied
-to Deep God's Endowment
-• Fixed a stuck spot in Port Manteau
-• Fixed some Divine Beam and Soothing Combos charm effects being
-added to charms that were supposed to only have Totem of
-Salvation effects
-• Fixed Celestial Rampart Elite spawners spawning Hellish
-Mannequin Parts from Exalted Reverie
+• The Lord of Winds at the end of White has been reworked.
+Rather than charging (and frequently falling off the edge), it
+now walks on air while firing a weak wind projectile that homes
+onto players
+• Restless Souls vexes now spawn with some random variation in
+their bobbing animation
+• Added particles for when a Restless Souls vex hits a mob
 &bFeedback Fixes:&r
-•  Replaced the displayed Sketched Annilys in Season Pass Hub
-with a Sketched Harmony's End.
-• Added Apportation Rune display behind the Royal Spellbinders.
-• The armor stands behind Captain Murano in his office now have
-custom Monumenta items instead of vanilla armor/weapons
-• Reworked the High to Low race Hut.
-• Added Ladder of Honesty to the items API
-• Standardized the vertical movement tools for the Galengarde
-teleport hub between the 4 hallways
-• Fixed the inter-region TPs in the Galengarde TP hub not
-picking up their entire set of pressure plates
+• Added a crafting table by the dye trader in Sierhaven Castle
+• Added a confirmation to starting majority of Normal Dungeons
+• Smoothed out the outside of the Anthill POI
+• Added music disc 5 to the vanilla music category at the
+Jammin' DJ and Record Player
+• The Jammin' DJ will now reset any vanilla record disc music
+playing when asked to
+• Mage's class description now includes information on how Spell
+Power boosts its spell damage
 &bMinor Bug Fixes:&r
-• Failing to slay Kaul and Hekawt now broadcasts your failure to
-the entire overworld
-• Fixed Frozen Domain only working half the time at Uncommon,
-Epic, and Twisted rarity
-• Added The Headless Horseman location to the Firefly in a/n
-Cracked/Uncracked bottle along with some lore text
-• Added Special Crystalline Chip to the items API
-• Replaced any errant copies of "Special" Crystalline Chip with
-Special Crystalline Chip
-• Replaced any errant copies of Prismatic Runeblade with
-Prismatic Blade
-• Fixed Flightless Mothqueen's lacerate spell targeting players
-in stealth
-• Fixed Conjured Terror's Crushing Depths spell targeting
-players in stealth
-• Fixed Rampage description not mentioning the damage type
-• Fixed some empty spawners/chests in Chanterelle Village
-• Fixed inconsistent color in message when Crimson Contract
-cannot be used in Knick Knack Sack due to zone
-• Fixed slightly different description for the Tlaxan Record
-Player and Soulsinger in the Knick Knack Sack
-• Fixed the Depths Talisman slot in the Knick Knack Sack saying
-Depths Trinket instead when locked
-• Fixed the Depths Trinket not being accessible in the Knick
-Knack Sack if Zenith has been unlocked but not Depths
-• Fixed the Zenith Talisman item in the Knick Knack Sack not
-having lore
+• Bestiary progress is now wiped when you reset your account
+progress
+• All Soulweavers and Gatekeepers now have updated prices and an
+intended price change for last week was added
+• Fixed Cursed Wound enhancement not counting or spreading
+vanilla fire as a debuff
+• Clarified Cursed Wound enhancement description to state that
+it excludes stuns and silences
+• Restless Souls vexes no longer target invulnerable enemies
+• Restless Souls vexes now always pathfind towards the center of
+a mob rather than taking unnecessary distance to their feet
+• If you have accessed Region 3 via Tomb of Time, and later go
+on to complete Ring Around the Rose after having been on a ring
+shard since that week's update, the quest will no longer be
+incompletable. This applies for replays of the quest as well.
+• Jennis and Keilick will no longer be visible in Port Manteau
+prior to completing Ring Around the Rose
+• Fixed || Maniacal Alchemist || dropping its head
+• Fixed Predator Strike not respecting damage cap
+• Fixed Predator Strike from double hitting mobs in a single
+cast
+• Fixed grammatical error in Assisted Dreaming
+• Fixed the Death Crystals + P4 Soul Dissipation boss bars in
+Hekawt not disappearing when it should.
+• Hopefully fixed an issue where a player claiming their first
+Treasures of Viridia cache would receive no leaderboard credit
+or an announcement
+• The warnings when using the Reset Booth have been cleaned up
+grammatically and received extra emphasis• It is now specified
+that your cosmetics will be preserved when resetting
+• The Tunnel of Magically Resetting has received a lighting
+pass, exposed bedrock fixed, and is now more rainbow-y than
+before
+• Fixed the Postman speaking twice at once in some situations
+• Fixed Defender Construct taking very little damage from
+killing Spark Elementals in certain situations
+• Fixed typo in The Teacher's dialogue
+• Fixed some build errors in the Valley
+• Cleaned up the Event Attendant's dialogue
+• Fixed Selholly still selling event items out of season
+• Fixed Colder's dialogue still claiming essence of winter can
+be found everywhere
+• Fixed grammar error during A Crown of Majesty
+• Decreased the range from which ii and youyouyouyou can be
+claimed from lecterns in the Fallen Forum to prevent both
+lecterns giving both books at once
+• Potentially fixed issue with Mage's Legacy where score
+progression could be skipped
+• Removed a potion from the Floor 3 Depths trap room that is not
+from Region 2
+• Mutated Cnidarian no longer uses the vanilla Slowness debuff
+• Fixed several issues with the Guardian of the Lost Master
+including it not being in the Bestiary, having vanilla
+armor/enchantments, and partially corrupted spawner data
+• Added missing punctuation to the White Hawk Statue activation
+messages
+• Tuathans now drop potions of 10% Strength and Regeneration 1
+instead of vanilla effects
+• Fixed a typo in the Sirius win message that referred to him as
+"The Star Herald" instead of "The Final Herald"
+• Added missing {...} indicators in Duke and Morn's interaction
+in Oceangate
+• Fixed typo in Guilding Blocks
+• Magic of the Bastion mob has been added to the Bestiary
+• Magic Mount is now unlocked automatically (at some point) in
+the Bestiary if Exalted Light Blue has been completed
+• Fixed incorrectly named categories in the Bestiary
+• Fixed typo in the special Twisted Scout's name
+• Added Veiltorn Helminth to the Bestiary• Veiltorn Helminth
+Mount is now unlocked automatically (at some point) in the
+Bestiary if Exalted Willows has been completed
+• Rounded all stat values of mobs in the Bestiary to prevent
+float chicanery
+• Added a [2-way] to the first White Shortcut sign
+• Patched the ability to use the Blade dance skill to negate all
+damage from Paradox in SKT
+• Fixed a typo in Behind the Starlit Shroud dialogue
+• Disabled shear usage in adventure mode zones
+• Fixed container auto-deposit message bugs
+• Reworded lightning bottle charm to 'Lightning Bottle Kill
+Threshold'
+• Fixed Embalmer's Mixtape claiming to give +10% Health Boost
+instead of the superior +10% Max Health

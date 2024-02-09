@@ -1,21 +1,7 @@
-Hekawt, Eldrask and Kaul have been reopened in all valleys now
-that Sirius fights have stabilised
-&bUpdate to<#313404235544788993> Post Rules&r
-Hi everyone,
-The channel specific rules for <#313404235544788993> have been
-updated to the following:
-• You may repost your guild/Monumenta related community
-advertisement once per month
-• You are not required to delete previous posts, but you may
-still do so if you wish
-• Posts from users no longer in the Discord, deleted users, or
-with dead Discord links are subject to removal without warning.
-Please save the contents of your posts beforehand.
-The channel description will be updated to reflect these changes
-shortly.Due to a number of ongoing recurring bugs and issues
-that have been plaguing moderaters for months, the Teal dungeon
-will be receiving a significant under-the-hood overhaul with
-this week's update.
+Due to a number of ongoing recurring bugs and issues that have
+been plaguing moderaters for months, the Teal dungeon will be
+receiving a significant under-the-hood overhaul with this week's
+update.
 If you have an open Teal instance, or plan to open one, please
 complete it and make sure that it is
 &bready to abandon&r following update. We cannot promise that
@@ -118,4 +104,7 @@ misery index, the website, advancements page, etc.
 • Next week's update will also be longer as we settle things
 into their final resting places.
 Many thanks to our current & past Patreons, who continue to make
-Monumenta's upkeep sustainable.
+Monumenta's upkeep sustainable.The server is going down for
+planned maintenance at <t:1707085800:t> (<t:1707085800:R>); we
+plan to be down for 4 hours.Please welcome @[PP] Firestorm to
+the Moderation Team! Unleash the warm, friendly 🏓 s!
