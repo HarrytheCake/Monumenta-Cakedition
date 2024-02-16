@@ -1,142 +1,202 @@
-&bDue to a critical-severity bug, the server has been put into
-maintenance mode.&r
-Please watch <#579190910567317514> for further updates.
-&bHotfix (when server is back up):&r Reynart will no longer have
-no dialogue when you are trying to finish Assisted Dreaming if
-you are currently in an in-progress state for External
-Corruption
-&bAll world bosses have been temporarily closed.&r
-Since the bossfights cause network lag for all online players,
-the bosses are unavailable until the stability of the server
-improves to pre-migration levels.Eldrask has been reopened on
-the isles shard.Public github repo at
-<https://github.com/TeamMonumenta/monumenta-plugins-public> has
-been updated with code up through the most recent update.Due to
-the switch in the URL for the main gameplay build calculator
-ohthemisery.vercel.app from a .tk website to a .vercel.app
-website, I have posted new links to every <#1165742923510468618>
-post in the replies of that thread with the new link. Please
-ping me over in <#575516687676211215> with a link to the thread
-that needs fixing if something is incorrect, this was admittedly
-done very fast and with limited validations as I went. I will
-get to any reported when i can, but hopefully a large majority
-of them are working fine now.
-&b(10.22.0)&r
-For the update on February 8, 2024
+• Zenith has been temporarily closed due to a critical bug
+making it incompletableZenith has been reopened.Sirius has been
+temporarily closed due to excessive TPS issues.Plunderer's Blitz
+has been reopened
+&b(10.23.0)&r
+For the update on February 15, 2024
 &bMinor New Features:&r
-• Added a new Zenith F1 elite room from safeliquids
-• Added two new strong potions to the King's Valley loot tables
-• Strong potions in all three regions now have lore text
-• Added Star Point to the Bestiary
-&bBalance Changes:&r
-• Cleansing totem absorb is now properly only given if you have
-chosen the enhancement
-• Cleansing totem max absorption hearts corrected
-• Cleansing totem absorption now has a 15s duration
-• Increased number of daily Tlaxan Record Player and Soulsinger
-charges from 2 and 3 to 3 and 6 respectively
-• Faimynyw's Call can now only be played from a Soulsinger
-• Adjusted the duration of -5% Ability Cooldowns on Faimynyw's
-Call to 10 minutes
+• The P.O.R.T.A.L. and Masquerader's Ruin strikes no longer take
+place on individual shards, and have been converted over to our
+world instancing system out of the Ring shards
+• Added a new Shifting room. Thanks to Rook and ShadowVisions
+for the contribution
+• The weighting of normal rooms in the Shifting City has been
+rebalanced
+• The amount of time shields are stunned for when blocking
+certain mob attacks now scales with region; previously, the same
+ratio was used across regions which caused even relatively low-
+damage attacks in R2 and especially R3 to stun shields for a
+long time. This will reduce shield break times in R2 and R3 by
+~30% to ~40%.
+• Lowered duration of Obsidian Hits buff from 8 minutes to 4
+minutes
+• Lowered duration of Sandy Smooth Jazz buffs from 8 minutes
+each to 6 minutes each
+• Blue ice can now be crafted back into packed ice, which can be
+crafted back into ice, making those recipes reversible
+• Dyed blocks that have an undyed form can be placed in a
+crafting table by themselves to get the undyed version; the dye
+is not refunded
+&bTradeGUI Features:&r
+• Added custom multiplier functionality:
+&bswap&r on any trade in the preview menu (or on the trade
+multiplier button) to enter a custom multiplier. Accepts simple
+calculations like the Wallet GUI (rounded down).
+• Added quick-buy functionality:
+&bshift-click&r on any trade in the preview menu to instantly
+buy one (disableable in PEB).
+&bDelve Modifier Changes:&r
+• Arcanic:
+  • Reduced the damage of Arcanic Arrow and Arcanic Missile in
+Region 1 from 15 to 12 damage
+  • Arcanic Heal's heal amount now scales with region, and its
+radius is lowered from 14 to 8 blocks
+• Infernal:
+  • Ember of Mania: instead of throwing fire blocks, now throws
+a single grenade that deals damage and explodes into fire
+  • Ember of Greed: lowered fire blocks spawned, now dashes at
+the player with its ability
+• Transcendent:
+  • Now plays sounds and particles when a Transcendent spawns
+  • Missiles: Increased startup delay by 1s
+  • Commander: removed Inspire passive, and the number of mobs
+that can be duplicated is now capped at 5. Added a small
+animation to the duplication effect.
+• Chivalrous:
+  • Removed magma cube mount (it will remain in the Lava mount
+pool) and replaced it with a new cave spider mount
+  • Slime mount no longer jumps in a random direction on spawn
+• Bloodthirsty:
+  • Creepers are launched with less velocity
+  • Jump cooldown per mob increased from 1.5s to 6s
+  • No longer selects mobs that are riding another mob
+• Twisted:
+  • Twisteds cannot spawn if there are unbreakable blocks
+between the spawner and nearby players
+  • Twisted Cardinal: Now has a maximum number of 6 mobs it can
+grant invincibility, prioritizing the nearest mobs
+&bStar Point Mob Changes:&r
+• Tweaked several spawners in Star Point POIs, including true
+randoms and magma cubes/creepers in tight spaces
+• Blighted Stargazer: 125 -> 115 Health
+• Star Skulker: 110 -> 90 Health, 1s -> 1.5s TP Stun Time
+• Blighted Animal: 40 -> 30 Health, 26 -> 24 Attack Damage
+• Germinated Blight: Size reduced by 1, spawns with AI disabled
+for 1.5s, 26 -> 24 Attack Damage
+• Blightspreader: 70 -> 65 Health, 4 -> 3 Explosion Power
+• Starblood Seed: 130 -> 120 Health
+• Silver-Armed Bulwark: 400 -> 300 Health
+• Vicious Stingtail: 90 -> 80 Health, 25 -> 22 Attack Damage
+• Lunacrest Bladedancer: Slightly reworked ability sequence• The
+depths/zenith "spawner remaining" message now has proper grammar
+• Mobs with the Debuff Hit ability now apply custom Slowness and
+Weakness instead of their vanilla counterparts
+• Sleeping in a Kaul fight applies custom Slowness rather than
+vanilla Slowness
+• Players who win against Kaul receive 100% Resistance and
+custom Regeneration instead of their vanilla counterparts
+• Kaul's Earthen Rupture spell applies custom Slowness instead
+of vanilla Slowness
+• Kaul's Earth's Wrath spell applies custom Slowness instead of
+vanilla Slowness
+• Kaul's Ground Surge spell applies custom Slowness instead of
+vanilla Slowness
+• The Primordial/Immortal Elemental's Primordial Bolt applies
+custom Slowness instead of vanilla Slowness
+• Kaul's Putrid Plague spell applies custom Slowness instead of
+vanilla Slowness
+• The boss in Assisted Dreaming is now properly named
+• You can no longer softlock yourself in A Sirius Problem by
+losing the Star Chart, as Ishmur will offer you another copy
+• Improved Illuminate block collision detection so that it no
+longer usually passes through thin blocks such as glass panes
+• The Quest Compass should now update more readily upon choosing
+a bounty
+• Fixed spawners in strikes on valley/isles shards counting for
+seasonal pass missions that require breaking spawerns in POIs
+• Fixed some inconsistencies with the armor stands in That Armor
+Stand Room™ in Shifting
+• Olgae has realized they no longer need to drink a Resistance 5
+potion to protect themselves
+• The Speed and Jump Boost boon near the Swamp Sinkhole now
+properly works once again
+• Fixed a tree growing into a bridge in the Ring
+• Exalted C'Axtal is now in the Bestiary
+• The Spawner Mimic is now in the Bestiary
+• Fixed grammar error in Salazar's dialogue
+• Fixed the free banners chest in the dye traders shop not
+refreshing when closed• Fixed several off-center compass
+waypoints used in Casting for Help
+• Fixed an off-center compass waypoint for Riverbed Cavern
+• Fixed an off-center compass waypoint for Ice Castle
+• Fixed an off-center compass waypoint for Silvic Quarry
+• Fixed Ice Sickle having Unbreaking 4 instead of Unbreaking 5
+• Fixed several build errors in Light Gray's catacombs and
+palace
+• Removed weird potion effects from Duke of Frost
+• Fixed Cold Creepers dropping potions with vanilla effects
+• Fixed Creeping Frost dropping a potion with vanilla effects
+• Fixed Frost Archers applying vanilla slowness with their
+arrows
+• The old Mistleaf Hood from Unveiled is now Legacy tier and no
+longer has defensive attributes
+• Fixed Ominous Scout dropping a potion of vanilla
+Strength/Nausea
+• Fixed Spearleaf Lure being unpushable and always glowing white
+as a result
+• Fixed Bonepiercing Hawks applying vanilla Slowness instead of
+custom effect Slowness
+• Fixed Silver Construct having an unnecessary Glowing active
+effect and removed its ability to drop items
+• Fixed Lucky Starbrew inexplicably not applying any of its
+effects
+• Changed the behavior of the mob healing spell to cast more
+consistently
+• Fixed several typos in Namtar's dialogue
+• Fixed several typos in the lore of the Knick-Knack Sack
+• Added a missing apostrophe to the name of Salazar's Folly in
+the Dungeon Access Bot
+• Fixed the Force boss spell applying vanilla Slowness by
+default instead of custom Slowness
+• Fixed exposed Bedrock in Zenith
+• Numerous build fixes and clean-up in the Valley, including
+many blocks of sugarcane receiving haircuts
+• Fixed pufferfish chivalrous mounts always having a zombie
+grafted onto their body
 &bMob Changes:&r
-• The Lord of Winds at the end of White has been reworked.
-Rather than charging (and frequently falling off the edge), it
-now walks on air while firing a weak wind projectile that homes
-onto players
-• Restless Souls vexes now spawn with some random variation in
-their bobbing animation
-• Added particles for when a Restless Souls vex hits a mob
+• Mobs channeling the Fireball spell no longer gain Resistance 3
 &bFeedback Fixes:&r
-• Added a crafting table by the dye trader in Sierhaven Castle
-• Added a confirmation to starting majority of Normal Dungeons
-• Smoothed out the outside of the Anthill POI
-• Added music disc 5 to the vanilla music category at the
-Jammin' DJ and Record Player
-• The Jammin' DJ will now reset any vanilla record disc music
-playing when asked to
-• Mage's class description now includes information on how Spell
-Power boosts its spell damage
+• The timer no longer ticks during the countdown while starting
+Masquerader's Ruin. Likewise, the timer now properly starts at
+60 seconds rather than 65 to compensate for the ticking
+• The Delve Preset Selection GUI is now centered
+• Sir Reginald's dialogue has been updated to the delayed chat
+system, he warns you to make space in your inventory to hold the
+Alchemy Labs key, and he now directs you to Captain Murano if
+you speak to him before speaking to Murano
+• Added an Overworld Instance Bot next to the Fatekeeper
+• Adjusted the trees in the minibiome around the Rift of the
+Drowned to have Mangrove Leaves instead of Jungle Leaves
+• Reduced the amount of particles Kaul's Primordial/Immortal
+Elemental creates when a Primordial Bolt hits a player
 &bMinor Bug Fixes:&r
-• Bestiary progress is now wiped when you reset your account
-progress
-• All Soulweavers and Gatekeepers now have updated prices and an
-intended price change for last week was added
-• Fixed Cursed Wound enhancement not counting or spreading
-vanilla fire as a debuff
-• Clarified Cursed Wound enhancement description to state that
-it excludes stuns and silences
-• Restless Souls vexes no longer target invulnerable enemies
-• Restless Souls vexes now always pathfind towards the center of
-a mob rather than taking unnecessary distance to their feet
-• If you have accessed Region 3 via Tomb of Time, and later go
-on to complete Ring Around the Rose after having been on a ring
-shard since that week's update, the quest will no longer be
-incompletable. This applies for replays of the quest as well.
-• Jennis and Keilick will no longer be visible in Port Manteau
-prior to completing Ring Around the Rose
-• Fixed || Maniacal Alchemist || dropping its head
-• Fixed Predator Strike not respecting damage cap
-• Fixed Predator Strike from double hitting mobs in a single
-cast
-• Fixed grammatical error in Assisted Dreaming
-• Fixed the Death Crystals + P4 Soul Dissipation boss bars in
-Hekawt not disappearing when it should.
-• Hopefully fixed an issue where a player claiming their first
-Treasures of Viridia cache would receive no leaderboard credit
-or an announcement
-• The warnings when using the Reset Booth have been cleaned up
-grammatically and received extra emphasis• It is now specified
-that your cosmetics will be preserved when resetting
-• The Tunnel of Magically Resetting has received a lighting
-pass, exposed bedrock fixed, and is now more rainbow-y than
-before
-• Fixed the Postman speaking twice at once in some situations
-• Fixed Defender Construct taking very little damage from
-killing Spark Elementals in certain situations
-• Fixed typo in The Teacher's dialogue
-• Fixed some build errors in the Valley
-• Cleaned up the Event Attendant's dialogue
-• Fixed Selholly still selling event items out of season
-• Fixed Colder's dialogue still claiming essence of winter can
-be found everywhere
-• Fixed grammar error during A Crown of Majesty
-• Decreased the range from which ii and youyouyouyou can be
-claimed from lecterns in the Fallen Forum to prevent both
-lecterns giving both books at once
-• Potentially fixed issue with Mage's Legacy where score
-progression could be skipped
-• Removed a potion from the Floor 3 Depths trap room that is not
-from Region 2
-• Mutated Cnidarian no longer uses the vanilla Slowness debuff
-• Fixed several issues with the Guardian of the Lost Master
-including it not being in the Bestiary, having vanilla
-armor/enchantments, and partially corrupted spawner data
-• Added missing punctuation to the White Hawk Statue activation
-messages
-• Tuathans now drop potions of 10% Strength and Regeneration 1
-instead of vanilla effects
-• Fixed a typo in the Sirius win message that referred to him as
-"The Star Herald" instead of "The Final Herald"
-• Added missing {...} indicators in Duke and Morn's interaction
-in Oceangate
-• Fixed typo in Guilding Blocks
-• Magic of the Bastion mob has been added to the Bestiary
-• Magic Mount is now unlocked automatically (at some point) in
-the Bestiary if Exalted Light Blue has been completed
-• Fixed incorrectly named categories in the Bestiary
-• Fixed typo in the special Twisted Scout's name
-• Added Veiltorn Helminth to the Bestiary• Veiltorn Helminth
-Mount is now unlocked automatically (at some point) in the
-Bestiary if Exalted Willows has been completed
-• Rounded all stat values of mobs in the Bestiary to prevent
-float chicanery
-• Added a [2-way] to the first White Shortcut sign
-• Patched the ability to use the Blade dance skill to negate all
-damage from Paradox in SKT
-• Fixed a typo in Behind the Starlit Shroud dialogue
-• Disabled shear usage in adventure mode zones
-• Fixed container auto-deposit message bugs
-• Reworded lightning bottle charm to 'Lightning Bottle Kill
-Threshold'
-• Fixed Embalmer's Mixtape claiming to give +10% Health Boost
-instead of the superior +10% Max Health
+• Zenith charms now calculate the cap after all modifiers are
+added together so that adding in negative modifiers after an
+effect has been capped does not just remove from the cap
+• Sky Seeker's Grace, Gift of the Stars, and Boon of the
+Fractured Tree effects are now preserved on shard transfer and
+logout
+• The Strength boon inside the Water Cavern should really,
+actually, for real, give +10% Strength now
+• Faimynyw's Call now correctly appears if you use Soulsinger
+via the buffs menu shortcut
+• The Tlaxan Record Player and Soulsinger now state that you can
+right click them in an inventory to open
+• Fixed spawner on top of bedrock in a Celestial Zenith room
+• Fixed typo in A Sirius Problem compass entry
+• You no longer can put candles with lore on cakes.
+• Replaced vanilla effects from Azacor's "Knock Away" spell with
+newer custom effects
+• Players who win against Azacor receive 100% Resistance instead
+of vanilla Resistance and Regeneration
+• It is now not possible to remove starblood ichor from more
+than one item at a time
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• All World Bosses are available, however they may be closed
+should the server suffer performance issues.
