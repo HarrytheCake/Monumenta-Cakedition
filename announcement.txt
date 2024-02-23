@@ -1,20 +1,9 @@
-Due to a number of ongoing recurring bugs and issues that have
-been plaguing moderaters for months, the Teal dungeon will be
-receiving a significant under-the-hood overhaul with this week's
-update.
-If you have an open Teal instance, or plan to open one, please
-complete it and make sure that it is
-&bready to abandon&r following update. We cannot promise that
-old instances will not become incompletable.As a reminder of the
-announcement above, please finish any active Teal instances that
-you may have
-&bprior&r to update tonight. Old instances will become
-incompletable.There is currently a bug with the Sirius out of
-bounds kill zone. If you wish to spectate the fight, please stay
-away from the barriers surrounding the arena. Failing to stay
-far enough away results in taking Void damage (that is, Shatter
-3 and loss of levels). You may get one "freebie" refund in case
-you get too close, but moderators will not refund on subsequent
+There is currently a bug with the Sirius out of bounds kill
+zone. If you wish to spectate the fight, please stay away from
+the barriers surrounding the arena. Failing to stay far enough
+away results in taking Void damage (that is, Shatter 3 and loss
+of levels). You may get one "freebie" refund in case you get too
+close, but moderators will not refund on subsequent
 deaths.~~Eldrask is temporarily disabled due to a bug with
 icicles not working.~~ Eldrask is reopened.
 &bRegarding the Recent Ban Wave&r
@@ -107,4 +96,12 @@ Many thanks to our current & past Patreons, who continue to make
 Monumenta's upkeep sustainable.The server is going down for
 planned maintenance at <t:1707085800:t> (<t:1707085800:R>); we
 plan to be down for 4 hours.Please welcome @[PP] Firestorm to
-the Moderation Team! Unleash the warm, friendly 🏓 s!
+the Moderation Team! Unleash the warm, friendly 🏓 s!Trying
+something a bit experimental down in our Stage VC. Come hang out
+and suggest some suggestions/bugs that you would like to see
+implemented/fixed. Rules for the stream are posted in
+<#936475423703957545>, please give them a read • would love to
+have you!At the top of the hour, I'll be hosting another Sug-Bug
+stream down in our Stage VC. Feel free to come hang out and
+suggest some things to get done. <#936475423703957545> has been
+re-opened, please give the pin a read for the stream rules
