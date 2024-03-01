@@ -1,292 +1,5 @@
-• Keloch now has a trade for Ancient Power Fragments to Royal
-Dust
-• Added Sorting Bins to Blue and Brown Lobbies
-• Added hints for a certain secret within Forsworn Sanctum
-• Slightly decreased the initial delay of Ember of Mania and
-Ember of Greed's abilities
-&bCelestial Zenith Balance Changes:&r
-• Wind Walk is now a Right Click ability, replacing Slipstream.
-• Added a new Sneak + Right Click ability: Aeroblast. Existing
-Slipstream stats on charms have been renamed and adjusted to
-work with Aeroblast.
-• Howling Winds now throws a snowball that turns into the vortex
-upon reaching its max distance or impacting an enemy or wall.
-Base range buffed from 6 -> 12.
-&bData’s Feedback Fixes:&r
-• The Record Player and Jammin' DJ now play vanilla record discs
-in the background rather than centered on the location you were
-standing when you selected the track
-• Kaul's arena will stay in a grassy state if the last battle
-ended in a win
-• Mr. Snuggles will now always be visible in his pen after
-completion of Runaway pet
-• The Ghost Whisperer elite in the Whispering Woods now summons
-Vengeful Whispers instead of regular vexes
-• The Headless Horseman and Daredevil now glow orange instead of
-white
-• Leonard now sells spawn eggs for donkeys, mules, llamas, and
-trader llamas
-• The Standard Bearer now sells a Freetrader banner
-• Engineer Blair now sells prismarine and dark prismarine
-• The last compass step in Soul of the Forest now points to the
-entrance to the Yellow lobby in the Cursed Forest rather than
-Braylur inside the lobby
-• Replaced all the acacia buttons in the Primeval Creations gray
-puzzle with polished blackstone buttons for visibility
-• Kaul now glows green instead of white
-• The player is now a bit more respectful when asking Monk Gehri
-to teach you to become an Elementalist
-• A chat notification is given to everyone in the Snowman
-Embassy when a snowball fight is starting in 30 seconds• Ewan
-now provides his barking and debarking services to Mangrove Logs
-• Added more specifics to a quest compass stage in Beasts of
-Men, and made it more obvious you need to fall down the hole in
-the Council Research Site to progress
-• Squire Reggie can now convert Royal Crystals to Gleaming
-Seashells and vice versa with Twisted Strands
-• The Lost Trader in the Ephemeral Corridors now sells
-cobblestone
-• A Ta'Eldim NPC previously lost to chunk errors has returned,
-with new dialogue for those with Forsworn Sanctum completion
-• The darkness in the Tenebrist spec quest is now darker
-• The Grand Maw is now a T3 bounty
-• Haunted Mine is now a T2 bounty
-• Hallowed Hedges is now a T3 bounty
-• Leaving a guild now has a confirm option
-• Adjusted the names of some locations on the teleport hub map
-• A member of the Finch family has shown up to the Sierhaven
-docks to supply boats
-• When starting Rapacity, you are no longer forced to be rude to
-Historian Rhodes and instead have an alternate dialogue option
-• Adjusted the swapped text in chat when using the Loadout
-Lockbox and CHARM 2000 for consistency with the Mechanical
-Armory
-• All the CALDER Dimensional Wands now mention you can swap
-hands to clear active portals
-• The Sierhaven dye trader now sells glow ink sacs
-• It's now much more obvious that the way to progress in Words
-Upon Hushed Lips in the Anthill section is to investigate
-underneath the Corridors puzzle rather than solving it
-• Rangers across the Valley and Isles have finally received
-crossbows to sell
-• The Swampland Witch's cauldron now bubbles instead of spawning
-fire particles, and the Grove Witch's cauldron has been filled
-with ~~water~~ mysterious potions, and is bubbling as well
-• Repairman Felix, Mastersmith Antonio, and Mastersmith Sofia
-now have dialogue if you bring any of the broken keys from
-Verdant Remnants to them
-• Updated Mastersmith Antonio and Sofia's Unveiled dialogue to
-be more lore accurate• Updated signs in the Sierhaven dungeon tp
-hub to specify Verdant Remnants required The Elder's Scrolls
-completion while Inner Sanctum required Unveiled
-• The tree in the Reverie lobby now matches the trees in the
-dungeon itself
-• Adjusted the Mistport farm so you don't need to climb a ladder
-for 15 seconds straight to leave, and made the exit more natural
-instead of being a random room with an exit button
-• The King's Seer can now be found in Castle Narsen
-• You can now shift left click the Master of Clucks to quick-
-decluck yourself
-• Removed some wither roses in Teal that were griefing an
-enderman elite
-• Class abilities now work on The Pig God
-• Updated the Bleeding Proof quest compass to specify that you
-need to talk to Izzy once you exit the passage
-• Adjusted Captain Indigo's dialogue at the end of Raiding Party
-so both dialogue options provide the same lore
-• The teleporters in Purple from spawn to shrine and spawn to
-lobby now teleport you facing away from the teleporter back to
-spawn
-• Fidget Spinners can now be repurchased from Stefan
-• Stefan now only sells pretzels after the completion of Bane of
-the Bakers
-• Pretzels and Volkamph's Snake Oil have been updated with tiers
-and effects when consumed
-• The hanging "bags of meat" in Mistport have been updated to
-high rez deluxe 3D ultimax graphics
-• Updated the lore text of all the Signal Flares to mention they
-apply glowing for 10 seconds
-• Adjusted the order of some sections of the Bestiary for
-consistency
-• Changed the base item of Arcane Crystals from prismarine
-crystals to echo shard
-• During Halid's Song, you can now see what records you've
-already given him
-• Updated Azacor's appearance in Outer Demons, and gave him some
-extra light
-• Those with build shard access can now shift click the
-Buildmaster as shortcut to get there
-• The Black Willows delve lore items are now uncommon tier
-• Various NPCs without dialogue now have dialogue• The exit from
-Sealed Remorse POI to the City of Bones now puts you at a more
-reasonable position
-• Added nameplate to Riverbed Cavern's other entrance
-• Patched a skip in the Depths lobby parkour
-• The Beer-otron 9000 in Breachpoint now sells "Coffee"
-• The quest compass for A Vault of Glass has been updated with
-details for more stages of the quest
-• Igor has invested in an ender chest for convenience
-• Added a sign to the White wool box for new players to help
-ensure they take the wool with them and keep it somewhere safe
-• A message will now display when a world boss starts early due
-to player cap
-• Added bone blocks to the roof of the "Molta SMP" hut for
-accuracy
-• Captain Verne can now take players to the Minefield after
-completion of Depths Charge
-• Dungeon completion announcements now say you've conquered the
-dungeon rather than you defeated the dungeon
-• (Finally) removed Jeremiah's dialogue referencing a practice
-mode for the Arena of Terth
-• Talisid now has extra dialogue when you have the Letter to a
-Loved One in your inventory
-• Reduced the price of Unlucky Horseshoes (Headless Horseman
-keys) from 2 HCS to 1 HCS and 32 CCS
-• Due to player suggestion, a toilet in the Grasp of Avarice has
-been changed from a cauldron filled with water to a composter
-filled with "compost"
-• James aka Myriad will now buy back rigged chips (for 20% less
-than you paid for them in the first place)
-• Increased the number of Ice Diamonds received per Snow Spirit
-kill from 2 to 4
-• Reduced max Snow Wool Spirit player cap from 8 to 6, and
-adjusted key price accordingly
-• Salvation Incarnate now has slightly different lore text
-• Spiked Buckler now has the Material tag
-• Added shift click option to Fred at the Steelmeld Passage
-entrance to quick enter
-• You can now teleport with Micha once again
-• Engineers at the Sierhaven Workshop now sell dispensers and
-droppers
-• Dr. Volkamph now sells fox spawn eggs
-• Ashed Zweihänder now has Two Handed• Added trades for the
-other 2 multitool forms of the King's Dolabra skin at RYAN so
-they can be previewed before buying
-• Added rising smoke from the Altar of Evocation to match what's
-described in its bounty
-• The Rose now correctly has the material tag
-• Arcane Fish now has infinity so you can't accidentally lose it
-by eating it
-• Adjusted the items on display at the Seasonal Skin Manager
-• Magistr now sells Standard Lighters and Beacon Crystals to
-those who have earned them from the Royal Gambit race already
-• Azacor now has 50% KBR
-• Beacon Crystal now has +0.01 Speed (same as Abyssal Flame) to
-serve as an alternative that isn't a flint and steel like the
-Abyssal Flame is
-• Icy Crystal, Whirlpool Coin, and Eye of the Tempest are now
-all key tier
-• You can now shift click to quick enter the Garden of Yesel
-• You can now shift click Colder to quick enter the Snow Spirit
-lobby
-• You can now shift click Nurse Eris to quick-get 4 minutes of
-regeneration
-• You can now shift click Sergeant Alton to quick leave the
-Highwatch prison
-• Spectral Maravedi's base item is now a brick instead of a clay
-ball to prevent market log confusion with the Spectral Doubloon
-• Added a sign to Labs specifying the tnt needs to be broken
-• Captain's Quiver can no longer be fragged
-• Greatly increased the number of rails in the chest at the
-start of Cyan
-• The Necronomicon can now be used from the inventory
-• Ellora now sells soul campfires
-• Twisted Pomes and Ambrosia now have the Dungeon Delves tag
-• Creeper Fanatic Boris's trades for R2 items are only available
-now if you've been to R2
-• The Azacor Artifact Trader now sells Aesir's Embrace for 3
-Fireblossoms (because some players wanted this for some reason)
-• Replaced the reset booth pressure plate with a stone one so it
-can't be activated by entities like arrows
-• Cavedweller C'Orin now sells Pointed Dripstone, Amethyst
-Shards, and converts Deepslate to Cobbled Deepslate and back
-• Yesel's Fruit is now trophy tier rather than unique• Adjusted
-the quest compass in Overdoomed to nudge players towards getting
-tips from the other patrons of the bar
-• The bottled water in the puzzle room for A Lost Cause is no
-longer unnecessarily hidden
-• Ethereal Pergament is now trophy tier rather than unique
-• Added a new risky to get chest to Forum
-&bMajor Bug Fixes:&r
-• All shops that are overdue on upkeep will now be locked during
-weekly updates, regardless of whether you disabled locking them
-or not. This should help make it more obvious when your shop is
-about to expire. Note that shops still only lock automatically
-during weekly update; since shops expire after 14 days overdue
-on upkeep, this means potentially you will have 7-14 days of
-your shop being locked to notice and pay the upkeep before it
-expires, depending on when update happens. Keep your shop paid
-up to avoid losing it or having it locked.
-&bMinor Bug Fixes:&r
-• Fixed issue with Snow Man Left Behind in the Sierhaven Quest
-Guide
-• Fixed winning against Kaul applying both vanilla Resistance
-and custom effect Resistance
-• Inure description has been updated to reflect the 60 second
-time interval requirement
-• Turtles no longer vanish when trying to attack the player
-• Shaman totem summon sounds are now in the Player category
-• Fixed the Soulsinger upgrade setting your charges to 3 instead
-of 6, and multiple outdated mentions of the charge cap being 3
-instead of 6
-• Adjusted the use description of the Knick-Knack Sack to be
-gray instead of dark gray for consistency
-• Fixed all dungeon starting room Gatekeepers having no trades
-whatsoever
-• Fixed the Seasonal Pass holographic display stating the Desert
-Pass is active when in fact the Coin Rush Pass has been active
-for eight weeks
-• Faimynyw's Call now shows up when opening the Soulsinger from
-the Knick-Knack Sack. As a consequence, those who have upgraded
-their Tlaxan Record Player to a Soulsinger are now unable to use
-the base record player.
-• Forum miniboss will no longer drop loot in race mode• Fixed
-Glorious Battle often not being triggered if a Chivalrous mount
-or otherwise untargetable mob was affected by the attack
-• The teleport to the puzzle in Winds of War will no longer
-prioritize players already in the puzzle
-• The lava parkour segment of Crystal Connections will no longer
-get stuck on reload
-• The detection ring in Forsworn Sanctum to summon the boss now
-has significantly less particle buildup
-• Fixed Leonard's quest marker being out of position
-• Killed a Selholly clone
-• Fixed some tree inconsistencies in Reverie as well as making
-an intentionally inconsistent tree inconsistent again
-• The Royal Guards in the Narsen Castle are now better aligned
-• Fixed exposed bedrock near the Nameless Ruins
-• Fixed some consistency errors with various handbook
-enchantments
-• Fixed the CALDER Dimensional Wand lore text not respecting the
-player's keybinds
-• Fixed the Mechanical Armory lore text not entirely respecting
-the player's keybinds
-• Fixed spawner in Exalted Magenta having too small a player
-detection range
-• Fixed the Swamplands Witch selling outdated potions
-• Fixed typo while looking for Kitten
-• Cleaned up Chuck's island
-• Fixed the R1 quests location in the bestiary having been
-missing
-• Fixed multiple bestiary additions from the past few weeks not
-showing up
-• Stefan is no longer haunted by the ghost of his adult self
-• Fixed incorrect objective names for the Azacor win
-leaderboards
-• The tunnel in Bleeding Proof can no longer be used until after
-you kill the assassin
-• Fixed the Burly Thug in a Vault of Glass having a green name
-instead of gold
-• Fixed grammar in Mechanized Pipepuncher lore
-• Fixed grammar issues in some dungeon completion announcements
-• Fixed grammar errors in Shifting Realities
-• Fixed not being able to start A Study in Crimson with Standard
-EC completion
-• Fixed the Practice Mode EC advancement displaying as outdated
-on the Valley shard
-• Fixed being teleported into a block when entering the Gardens
-of Yesel• Fixed the Grace of Star Communion advancement being
-outdated when on a Ring shard
+• Fixed the Grace of Star Communion advancement being outdated
+when on a Ring shard
 • Fixed a few build errors in the Architect's Ring
 • Fixed a build error in Willows
 • Fixed ||Bloodcrazed Beast|| summons spawning specters
@@ -312,3 +25,162 @@ advised to complete the dungeon in a single sitting to avoid
 instance corruption.
 • All World Bosses are available, however they may be closed
 should the server suffer performance issues.
+&bHotfix:&r Kaul's arena now resets properly after a fight
+concludes
+&bHotfix:&r Leaving guilds now works, and the messages now
+correctly say guild instead of clan
+&b(10.25.0)&r
+For the update on February 29, 2024
+&bMajor New Features:&r
+&bGuild Changes:&r
+On <t:1709398800:F>, we will be taking the server network down
+to update our guild infrastructure. Here's what we're adding:
+• Founders can now invite players to your guild, whether online
+or offline, as a full member or as a guest, with the use of
+`/guild invite`
+• Founders can now demote or kick non-founder guild members
+without moderator intervention, as well as promote guild members
+up to Founder with the use of `/guild access`
+• Added a new Manager role within each guild that also allows
+you to invite players to the guild, and entrusts you with the
+ability to promote other guild members to manager, and kick
+players with less access from the guild
+• Added a new guest role to each guild, which allows you to
+visit those guilds through a new right click action for Orin's
+teleport GUI on plots
+• Added a new `/guild gui` for all sorts of things (also
+available in the Knick Knack Sack):
+  • An emergency lockdown feature with a confirmation page.
+Founders and managers can activate this in the event of trouble
+within their guild, preventing changes to guild membership,
+invites, and preventing access to the guild plot and island, all
+while alerting the moderator team. Be warned that only a
+moderator can lift a lockdown, and abusing this system may
+result in moderators denying you access to this tool.
+  • A list of who has access to your guild
+  • A list of the guilds you have access to, including accepting
+and rejecting invites
+  • A complete list of every guild on Monumenta, include their
+name, tag, and guild banner
+• The ability to get your guild's banner with `/guild getbanner`
+These changes give us more tools to interact with guilds in the
+future • whether it be as exciting as moving guild plots and
+guild islands to their own worlds, or as mundane as updating the
+guild hall at Castle Narsen without needing to copy banners to
+the build server.
+&bCelestial Zenith Changes:&r
+• Avalanche: Area of effect starts out at 25% of the radius and
+grows with each pulse until it reaches 100%. Damage split
+reverted to 25/25/25/25.
+• Ice Barrier: Fixed particles and damage originating from the
+corner of blocks instead of the center. Fixed Ice Barrier's 5s
+placement period being buggy if its cooldown was reduced below
+5s.
+• Guarding Bolt: 24s -> 20s Cooldown. Improved teleport
+targeting; if the first raytrace misses, will try again 2 more
+times with increasing hitbox size until a target is found. Added
+a small amount of momentum to the teleport.
+• Aeroblast: 6-12 -> 10-22 Damage, 150% -> 100% additional
+damage on collision, recoil effect removed
+• Precision Strike: 3.5-5.5 -> 5-9 Damage. Now has improved
+particles/sounds and integrates with Unofficial Monumenta Mod
+&bMinor New Features:&r
+• The Fatekeeper now has Dust of the Herald for exchange and his
+trades have been roughly organized by the intended progression
+order of content
+• Total chest counter is displayed in actionbar when chests are
+collected in strikes.
+&bFeedback Fixes:&r
+• Updated the textures of Fungal Fury, Silence of the Waves, and
+Demondance Grin
+• Fixed some bedrocking around a White/Exalted White trap
+• Fixed issues with pathing and path blocks across most of The
+Architect's Ring
+• The Sierhaven Apartments can now pass a health and safety
+inspection
+• Improved the colossal spawn animation particles
+• Leftover Tridents and Arrows from fishing arenas are now
+removed
+• Added a ladder to the bridge from Highwatch to the Grove
+&bMinor Bug Fixes:&r
+• Fixed Silver Construct allowing players to still hold their
+shield up when it disables shields
+• Activating a Tesseract of Body (u) will now properly give the
+equivalent of vanilla Speed I
+• Cornifer will now always have the correct items when trading,
+regardless of whether he was summoned or found in his room in
+the City of Shifting Waters
+• Fixed some effects showing up positive when they should be
+negative and vice-versa (in custom effect packets)
+• Fixed loreless pretzels not being updated with their
+effects/lore text
+• Fixed spawner range on a few Baby Boomers in Exalted Magenta
+• Fixed Relkim having an empty dialogue option with an empty
+response
+• Fixed use of the Necronomicon interfering with the Gallery
+Brochure and other book based items
+• Fixed typo in Starriest Night
+• An exit of the secret puzzle after Starriest Night now always
+tps you out in case you somehow got in there with the wrong
+requirements
+• Restored missing lore text to Unmailed quest items
+• Fixed the loot chest in Browncorp Hideout #36 being pre-rolled
+• Fixed the Questing Beast arena emergency exit teleport placing
+players into the ground
+• Fixed an off-center quest compass waypoints for Brewery,
+Crystal Outpost, and Crystal Mine
+• Fixed some inconsistent pronouns in a player dialogue option
+in Woof!
+• Fixed some typos in the description of Wolfswood's Fury
+• The armor stands for ||the lake trap in Light Gray|| no longer
+block projectiles
+• Fixed Frozen Guard applying vanilla effects to players and
+removed its vanilla enchantments/armor
+• Fixed Glacial Sniper, Potionmaker, Forsworn Monk, Web Reapers,
+Savage Hawk, and Bone Cult Shaman applying vanilla effects to
+players
+• Fixed Air Wraith not being replaced with a newer version that
+has corrected data
+• Fixed the P.O.R.T.A.L. and Masquerader's Ruin gatekeepers
+referring to the strikes as dungeons• Removed a Cadeus
+doppelganger that lurked near the real one
+• Fixed some unusual formatting on the weapons of Stargazer
+Duelist
+• Fixed several typos in the dialogue for Siege of Highwatch
+• The Mega Boomer in Exalted Orange should now have enough space
+to spawn consistently
+• Added a missing {...} to Tsuchiya's dialogue
+• Fixed the Finches not giving boats
+• Slightly increased effective range of emergency escape button
+inside the ||Outworld Pit|| during All That Remains
+• Added an Ender Chest before bossfight with ||Aphelios||  in
+All That Remains
+• Fixed an issue where ||The King?|| in Reverie would offer
+trades before he was supposed to
+• Fixed an exposed bedrock in Sierhaven
+• Fixed lanterns in Sierhaven being broken by opening the
+trapdoors they hang on
+• Fixed bee mounts in Blue not being classified as mounts, which
+allowed abilities to target them
+• Fixed Reverb targeting mounts
+• Reworded Annilys and Sketched Annilys descriptions to be
+consistent
+• Corrected Depths Wind Walk’s description
+• Repaired a defective pressure plate in the Galengarde TP Hub
+• Hid bedrock in Orange
+• Fixed Mana Lance’s description
+• Fixed Enchanted Prayer's healing and damage triggering
+multiple times
+• Fixed a stuck spot in the Celestial Zenith lootroom
+• Fixed a build error in The Godspore lobby
+• Fixed exposed bedrock in Normal and Exalted Reverie
+• Added missing tier and location tags to Magisolve Crystal,
+Energetic Powder, Summoning Crystal, and Conduit Key
+• Fixed bolded space after player name for the patron shrine
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
