@@ -1,11 +1,5 @@
-There is currently a bug with the Sirius out of bounds kill
-zone. If you wish to spectate the fight, please stay away from
-the barriers surrounding the arena. Failing to stay far enough
-away results in taking Void damage (that is, Shatter 3 and loss
-of levels). You may get one "freebie" refund in case you get too
-close, but moderators will not refund on subsequent
-deaths.~~Eldrask is temporarily disabled due to a bug with
-icicles not working.~~ Eldrask is reopened.
+~~Eldrask is temporarily disabled due to a bug with icicles not
+working.~~ Eldrask is reopened.
 &bRegarding the Recent Ban Wave&r
 Hi everyone,
 There has been a critical exploit present in the Celestial
@@ -105,3 +99,59 @@ have you!At the top of the hour, I'll be hosting another Sug-Bug
 stream down in our Stage VC. Feel free to come hang out and
 suggest some things to get done. <#936475423703957545> has been
 re-opened, please give the pin a read for the stream rules
+&bChanges to moderation and team roles&r
+The Monumenta community has grown significantly over the last
+few years. In the earlier days of the server, the team structure
+was relatively flat and fluid, with many developers and
+moderators holding dual roles. As the server has grown, these
+roles have considerably diverged, with the modern moderation
+team largely being independent from the development team in
+terms of deciding/upholding rules, helping players, and handling
+appeals/punishments.
+However, an exception to this increasing distinction had still
+remained • the Monumenta Leads, who have publicly straddled both
+roles in making decisions on both moderation and development.
+Today, the Leads primarily front development of the game and
+have internally stepped back from moderation. Occassionally
+however, Leads have still been called upon by players for
+moderation issues like appeals.
+At the same time, they also acted as the group of people with
+the "final authority" on moderation decisions, in the rare cases
+of contentions (both internal and external) with moderation
+decisions • a role they also wished to relinquish to people more
+heavily in-tune with community moderation.
+As such, moving forward, the Monumenta Leads role will be
+stepping down from all involvement in moderation affairs, and a
+new
+&bModerator Leads&r role will be added to fill this void in
+"final authority", with @Pakstf, @[VH] Aramil, and @michthemoo
+designated as Moderator Leads (MLs).
+&nWhat this means in practice&r
+• Monumenta Leads (@Combustible "Busty" , @Crondis,
+@NickNackGus, @nobodypi, @shadowvisions, @squirrr, @chipmunk46)
+will be stepping back from all issues related to moderation. We
+ask that you not approach them in attempt to subvert moderator
+decisions.
+• For in-game and in-discord <#358326443609948160> issues, there
+is no change to the way players interact with the mod team. All
+mods, including the new Moderator Leads, have the same
+permissions and will be able to help with any issues you may
+encounter. Please continue to ping @ Moderator where necessary,
+and use the /mh channel in game.
+• Moderation decisions will continue to be made collectively by
+the moderator team. This means that you should continue to send
+bugs/appeals/any moderation questions to
+&bany moderator&r, who will pass it on to the team to be
+discussed before a decision is made. Decisions conveyed by any
+moderator can generally be assumed to be on behalf of the entire
+moderator team.
+• While the above is true for 99% of situations, there are a
+small number of cases where players may wish to contest
+decisions made by moderators. In these cases, you can reach out
+to individual MLs with your concerns. The MLs will take these up
+internally and get back to you.
+As always, thank you for your support of the server and for both
+the moderation and development teams. Moving forward, we hope
+that this will make it clearer for players who to approach for
+situations where mods are required, while allowing the
+Development Leads to focus on making great content for the game.

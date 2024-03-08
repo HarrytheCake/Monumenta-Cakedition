@@ -1,182 +1,299 @@
-• Fixed the Grace of Star Communion advancement being outdated
-when on a Ring shard
-• Fixed a few build errors in the Architect's Ring
-• Fixed a build error in Willows
-• Fixed ||Bloodcrazed Beast|| summons spawning specters
-• Removed the ability to expose some command blocks in the
-Harmonic Arboretum
-• Fixed a build inconsistency in Brown Lobby
-• Fixed a stuck spot in Galengarde
-• Updated formatting of old Unmailed quest items
-• Fixed a tp into the ground during Stone Ocean
-• Fixed being able to spam the Silvic Instrument, causing
-unforeseen consequences during The Stone Ocean
-• Fixed grammar and missing punctuation in /grave list text
-• Fixed Twisted Occultist totems not disappearing on death
-• Fixed Empowered Tuathan's death potion giving vanilla effects
-instead of custom onesPublic plugin repo has been updated
-<https://github.com/TeamMonumenta/monumenta-plugins-public>
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-• All World Bosses are available, however they may be closed
-should the server suffer performance issues.
-&bHotfix:&r Kaul's arena now resets properly after a fight
-concludes
-&bHotfix:&r Leaving guilds now works, and the messages now
-correctly say guild instead of clan
-&b(10.25.0)&r
-For the update on February 29, 2024
+&b(10.26.0)&r
+For the update on March 7, 2024
 &bMajor New Features:&r
-&bGuild Changes:&r
-On <t:1709398800:F>, we will be taking the server network down
-to update our guild infrastructure. Here's what we're adding:
-• Founders can now invite players to your guild, whether online
-or offline, as a full member or as a guest, with the use of
-`/guild invite`
-• Founders can now demote or kick non-founder guild members
-without moderator intervention, as well as promote guild members
-up to Founder with the use of `/guild access`
-• Added a new Manager role within each guild that also allows
-you to invite players to the guild, and entrusts you with the
-ability to promote other guild members to manager, and kick
-players with less access from the guild
-• Added a new guest role to each guild, which allows you to
-visit those guilds through a new right click action for Orin's
-teleport GUI on plots
-• Added a new `/guild gui` for all sorts of things (also
-available in the Knick Knack Sack):
-  • An emergency lockdown feature with a confirmation page.
-Founders and managers can activate this in the event of trouble
-within their guild, preventing changes to guild membership,
-invites, and preventing access to the guild plot and island, all
-while alerting the moderator team. Be warned that only a
-moderator can lift a lockdown, and abusing this system may
-result in moderators denying you access to this tool.
-  • A list of who has access to your guild
-  • A list of the guilds you have access to, including accepting
-and rejecting invites
-  • A complete list of every guild on Monumenta, include their
-name, tag, and guild banner
-• The ability to get your guild's banner with `/guild getbanner`
-These changes give us more tools to interact with guilds in the
-future • whether it be as exciting as moving guild plots and
-guild islands to their own worlds, or as mundane as updating the
-guild hall at Castle Narsen without needing to copy banners to
-the build server.
-&bCelestial Zenith Changes:&r
-• Avalanche: Area of effect starts out at 25% of the radius and
-grows with each pulse until it reaches 100%. Damage split
-reverted to 25/25/25/25.
-• Ice Barrier: Fixed particles and damage originating from the
-corner of blocks instead of the center. Fixed Ice Barrier's 5s
-placement period being buggy if its cooldown was reduced below
-5s.
-• Guarding Bolt: 24s -> 20s Cooldown. Improved teleport
-targeting; if the first raytrace misses, will try again 2 more
-times with increasing hitbox size until a target is found. Added
-a small amount of momentum to the teleport.
-• Aeroblast: 6-12 -> 10-22 Damage, 150% -> 100% additional
-damage on collision, recoil effect removed
-• Precision Strike: 3.5-5.5 -> 5-9 Damage. Now has improved
-particles/sounds and integrates with Unofficial Monumenta Mod
+&bMarket Plugin (Closed Beta)&r
+After ~~months~~ years of development, a basic implementation of
+the market plugin will finally be released. At <t:1710003600:f>,
+the Market will be available to patrons, as well as developers
+and moderators. One week later, assuming everything goes well,
+it will be available for everyone.
+• Why a beta?:
+While it may look simple, it is not simple to make sure that
+items in the market are safe from both deletion and duplication.
+Obviously, we would not be releasing it if we knew of any such
+issue, but it is crucial that everything works, so in the case
+that something goes wrong, it will affect fewer people.
+• What to expect:
+The features of the market plugin are intentionally limited.
+This iteration contains what is best described as a virtual
+bazaar, with a framework for future features. Limiting the
+complexity was necessary in order to create a working product
+without burning out developers and with less risk of critical
+bugs. The goal of this release is to have something that players
+could use, and we can add features over time.
+• For those who will have access:
+Feel free to share what you see/do to other players. Even though
+you have access and others don't, there are no secrets or
+spoilers, so you can discuss any aspect of it with anyone.
+While we want things to go as smoothly as possible, and while
+that thing got tested pretty well, we might still encounter some
+bugs. As always, report any bugs you see and especially report
+any duplication or item-deleting bugs promptly.• What's next:
+First of all, we'll address feedback regarding what's currently
+implemented. We expect many people will ask for some kind of
+filter to avoid looking through pages and pages of items, and
+yes, that will be implemented soon. After that, we have many
+other features planned, with the ultimate goal being to pretty
+much replace current market island. Among other things, that
+means different kinds of trading, such as a stock market or
+auction house.
 &bMinor New Features:&r
-• The Fatekeeper now has Dust of the Herald for exchange and his
-trades have been roughly organized by the intended progression
-order of content
-• Total chest counter is displayed in actionbar when chests are
-collected in strikes.
+• A new race has been added to the Architect’s Ring! Race across
+Star Point for a chance at the top of the leaderboard and a
+special reward
+• Added the `/ping` command, allowing players to check their
+ping to the server
+• When transferring from a dungeon to an (unspecified) overworld
+shard, the shard number will now always be the same for a given
+dungeon instance, instead of varying by time. In other
+scenarios, there are no changes to shard sorting
+• Clicking on ability or level items in the Class Display GUI
+now sends the description in chat
+• Adjusted enhancement item in Class Display GUI to be more
+consistent with the level item
+• Key sellers in dungeon lobbies for non-bonus dungeons have
+regained their original name of Gatekeeper. The Gatekeepers
+located inside of dungeons have been renamed to Dungeon Guards
+• All Strikes have received a completion trophy item
+• Guild Hall inside the Castle Narsen received a visual update
+• Increased the cooldown of certain mobs' rejuvenation spells
+that had insanely low cooldown
+&bItem Changes:&r
+• Poise now provides half the bonus if the player is above 70%
+hp
+• Inferno scaling per level increased from [Level^0.9] to
+[Level^0.95]&nRegion 1 Items:&r
+• Ancient Robes : 3 -> 4 Unbreaking
+• Serpensia Wrap : 3 -> 4 Unbreaking
+• C'Zanil's Shroud : 3 -> 4 Unbreaking
+• Stonegazer Eyes : 3 -> 4 Unbreaking
+• Alchemist's Insight : 3 -> 4 Unbreaking
+• Coldsteel Blunt : 0 -> 2 Unbreaking
+• Plague Bearer's Tunic : 2 -> 4 Unbreaking
+• Plague Bearer's Soiled Trousers : 2 -> 4 Unbreaking
+• Plague Bearer's Boots : 2 -> 4 Unbreaking
+&nRegion 2 Items:&r
+• Golden Sun Set : Agility -> Armor
+• Crown of Flames : 3 -> 4 Unbreaking
+• Chillwind Treads : 8 -> 11 Unbreaking
+• Robes of the Pharaoh : 8 -> 10 Unbreaking
+• Mage Hunter's Mask : 3 -> 4 Unbreaking
+• Galemage's Greaves : 2 -> 3 Unbreaking
+• Myriad's Embrace : 4 -> 6 Unbreaking
+• Spellbinder's Slippers : 8 -> 11 Unbreaking
+• Blackthread Boots : 0 -> 2 Unbreaking, 0 -> 1 Depth Strider
+• Apotheosis Spear (Thunder) : 0 -> +10% Movement Speed
+• Frost Giant's Crusher : 20 -> 21.5 Attack Damage ↑&nRegion 3
+Items:&r
+• Spring-Loaded Sheath (Rework) : 1 Charm Power, +3 Dagger Throw
+Daggers, +10% Dagger Throw Damage, -20% Dagger Throw Range ⟲
+Note: &oThe charm didn't provide much upside before, with the
+cooldown decrease rendered useless by Vicious Combos, and this
+change hopes to make it more appealing in builds.&r
+• Six-Pronged Sea Stone : +1 -> +2 Chain Lightning Targets ↑
+Note: &oThe enhancement for Chain Lightning has since been
+reduced in power, so the charm can afford to be stronger in its
+utility.&r
+• Silvari Blade Handle : +35% -> +50% Blade Dance Radius, +1.5
+-> +1 Blade Dance Root Duration, +35% Blade Dance Cooldown ->
++25% Blade Dance Cooldown ↑
+Note: &oSilvari Blade Handle in niche was similar to the
+Explosive Razor charm, in which it became essentially near
+useless to run the former before these stat changes.&r
+• Echo of the Beast : 5 -> 4 Charm Power, +25% -> +10% Bodkin
+Blitz Distance ↑
+Note: &oEcho is getting a charm power decrease, seeing as it's
+harder to fit into builds, and also doesn't provide enough
+benefit for its high cost.&r
+• Urn of Perpetuity : -70% -> -90% Blizzard Damage ↓
+• Explosive Charm of Snowfall : +10% -> 0% Blizzard Damage ↓
+Note: &oBlizzard Specialisation charms paired with Urn of
+Perpetuity were performing better than intended, and encouraged
+spawner-rushing playstyles and AFK gameplay.&r
+• Chaos Codex : -60% -> -40% Voodoo Bonds Received Damage ↓
+Note: &oWhile Chaos Codex is quite niche, the penalty for using
+it currently isn't large enough for what it provides in a team
+setting, so the DR increase is getting reduced to compensate.&r
+• Everflow Pendant : 0% -> -30% Blade Dance Radius ↓
+• Aether Edge : +200% -> +100% Deadly Ronde Angle ↓
+Note: &oThese charms paired cause Deadly Ronde and Blade Dance
+to become almost full 360 degree AOE damage coverage around the
+player, so they're getting nerfed down to be more reasonably in
+line with the other classes.&r• Lesser Charm of Insight: 1 -> 2
+Charm Power ↓
+Note: &oBottled Font of Tuulen's downside is largely countered
+by this lesser charm, so it's becoming slightly more expensive
+as a result.&r
+• Abyssal Truncheon (Rework) : Riptide 2, Magic Protection 1,
+Technique 3, 17 Attack Damage, 1.3 Attack Speed ⟲
+Note: &oThis item has been underperforming since its release, so
+it's undergoing an experimental change to see how it fares.&r
+• Blasphemous Cataphract (Rework) : Guard 2, Curse of Crippling
+1, 7 Armor, 7 Knockback Resistance ⟲
+Note : &oAs an item with both offense and defense, it struggled
+with spreading its stats too thin, so it's shifting to a
+completely defensive item.&r
+• Thalassic Cinders (M4) : 1 -> 0 Curse of Crippling, 75% -> 70%
+Spell Power ↑
+Note: &oMoving the damage decrease from crippling to spell power
+instead removes the damage penalty from being at the Second Wind
+threshold, and is a general buff to spell power as well&r
+• Argentum Arbitrium (M4) : 2 -> 1 Curse of Anemia, 7 -> 6.5
+Agility ↑
+Note: &oArgentum Arbitrium in the context of Agility offhands
+didn't perform so well after it received anemia, so we're
+reverting the change.&r
+• Norvigut Skewer (M4) : 1 -> 2 First Strike ↑
+• Resonant Scythe (M4) : 13.5 -> 14 Attack Damage ↑
+• Epoch Hammer (M4) : 2 -> 1 Adrenaline ↓
+• Copper Furnace (Replacement): Copper Relay Unit: 2 Charm
+Power, +2.5 Restless Souls Debuff Radius, +2.5 Restless Souls
+Debuff Duration, -10% Restless Souls Damage
+• Molldyer's Inferno (Replacement): Hexcrafted Siphon: 1 Charm
+Power, -15% Amplifying Hex Enhancement Health Threshold, +10%
+Amplifying Hex Enhancement Damage Bonus
+Note: &oCopper Furnace has been a repeatedly-problematic charm
+and Molldyer's Inferno has had an underwhelming presence for one
+of Warlock's epic charms. We're taking this opportunity to
+rework both charms and introduce new stats for players to
+experiment with.&rBoth charms will automatically be replaced
+into their new versions after the update. For Molldyer's
+Inferno, since it is an epic charm, there will be a trade at
+Ageratina to refund Hexcrafted Siphons in exchange for HAR and
+blue mats
+&bfor this week only&r. The epic purchase message for Hexcrafted
+Siphon will also be disabled for this week only to prevent
+abusing the refunds.
+&bClass Changes:&r
+• Swapping off of your weapon during Stealth early no longer
+inflicts Mining Fatigue on the player, and now simply just
+removes the stealth.
+• Shield Wall: Now follows the user continuously instead of
+remaining in one place. The following additional changes and
+adjustments were made to enable this change and make it feel
+more consistent.
+ • If the trigger is used again while active, it will stay where
+it is at the time for the remainder of the duration
+ • Added a new trigger to cast the wall immediately stationary,
+which is disabled by default
+ • Mobs can now be knocked back more often (up to 4 times a
+second) but can still only be damaged once they have exited and
+reentered the hitbox
+ • Slightly reduced vertical knockback
+ • Slightly reduced hitbox size
+ • Mobs that manage to stay within the hitbox of the wall are no
+longer given slowness, as it is much more common for mobs that
+don't have high amounts of KBR to do this
+ • Reworked particles (including Prestigious Shield) to have
+clarity when moving
 &bFeedback Fixes:&r
-• Updated the textures of Fungal Fury, Silence of the Waves, and
-Demondance Grin
-• Fixed some bedrocking around a White/Exalted White trap
-• Fixed issues with pathing and path blocks across most of The
-Architect's Ring
-• The Sierhaven Apartments can now pass a health and safety
-inspection
-• Improved the colossal spawn animation particles
-• Leftover Tridents and Arrows from fishing arenas are now
-removed
-• Added a ladder to the bridge from Highwatch to the Grove
+• The Experience Flask is now rewarded for the completion of
+Supply and Demand, giving new players access to this QoL item
+much earlier into the game. Likewise, the Experience Flask's
+repurchase value at the Royal Spellbinders has been
+significantly reduced.
+• The currency reward for Supply and Demand is now 12
+Concentrated Experience rather than 96 Experience Bottles
+• Removed non-projectile weapon restriction from cleansing rain
+• The Fish Quality effect now only displays when on ring shards
+• The one-way teleport at the end of Chittering Gutters is now a
+few seconds faster
+• The name formatting has been standardized across all Replica
+Wool trophies to be underlined
+• The "and Manumitted" segment of the Replica Malefactor and
+Manumitted trophy has been color corrected to match the Replica
+Crimson trophy
+• The Blue-Colored Thread trophy from Masquerader's Ruin has
+been format adjusted to have an underlined name and proper lore
+text
+• Added Sorting Bins to all Dungeon Lobbies in the King's Valley
+and the Celsian Isles
+• Added a second Sorting Bin on the other pillar in the Darkest
+Depths lobby for consistency
+&bMajor Bug Fixes:&r
+• Fixed a bug where zenith charms could be stolen from /player
+details
+• Fixed bug-prone Kaul advancements (Unlucky, Mloci, Celebrity,
+and So Close)
 &bMinor Bug Fixes:&r
-• Fixed Silver Construct allowing players to still hold their
-shield up when it disables shields
-• Activating a Tesseract of Body (u) will now properly give the
-equivalent of vanilla Speed I
-• Cornifer will now always have the correct items when trading,
-regardless of whether he was summoned or found in his room in
-the City of Shifting Waters
-• Fixed some effects showing up positive when they should be
-negative and vice-versa (in custom effect packets)
-• Fixed loreless pretzels not being updated with their
-effects/lore text
-• Fixed spawner range on a few Baby Boomers in Exalted Magenta
-• Fixed Relkim having an empty dialogue option with an empty
-response
-• Fixed use of the Necronomicon interfering with the Gallery
-Brochure and other book based items
-• Fixed typo in Starriest Night
-• An exit of the secret puzzle after Starriest Night now always
-tps you out in case you somehow got in there with the wrong
-requirements
-• Restored missing lore text to Unmailed quest items
-• Fixed the loot chest in Browncorp Hideout #36 being pre-rolled
-• Fixed the Questing Beast arena emergency exit teleport placing
-players into the ground
-• Fixed an off-center quest compass waypoints for Brewery,
-Crystal Outpost, and Crystal Mine
-• Fixed some inconsistent pronouns in a player dialogue option
-in Woof!
-• Fixed some typos in the description of Wolfswood's Fury
-• The armor stands for ||the lake trap in Light Gray|| no longer
-block projectiles
-• Fixed Frozen Guard applying vanilla effects to players and
-removed its vanilla enchantments/armor
-• Fixed Glacial Sniper, Potionmaker, Forsworn Monk, Web Reapers,
-Savage Hawk, and Bone Cult Shaman applying vanilla effects to
-players
-• Fixed Air Wraith not being replaced with a newer version that
-has corrected data
-• Fixed the P.O.R.T.A.L. and Masquerader's Ruin gatekeepers
-referring to the strikes as dungeons• Removed a Cadeus
-doppelganger that lurked near the real one
-• Fixed some unusual formatting on the weapons of Stargazer
-Duelist
-• Fixed several typos in the dialogue for Siege of Highwatch
-• The Mega Boomer in Exalted Orange should now have enough space
-to spawn consistently
-• Added a missing {...} to Tsuchiya's dialogue
-• Fixed the Finches not giving boats
-• Slightly increased effective range of emergency escape button
-inside the ||Outworld Pit|| during All That Remains
-• Added an Ender Chest before bossfight with ||Aphelios||  in
-All That Remains
-• Fixed an issue where ||The King?|| in Reverie would offer
-trades before he was supposed to
-• Fixed an exposed bedrock in Sierhaven
-• Fixed lanterns in Sierhaven being broken by opening the
-trapdoors they hang on
-• Fixed bee mounts in Blue not being classified as mounts, which
-allowed abilities to target them
-• Fixed Reverb targeting mounts
-• Reworded Annilys and Sketched Annilys descriptions to be
-consistent
-• Corrected Depths Wind Walk’s description
-• Repaired a defective pressure plate in the Galengarde TP Hub
-• Hid bedrock in Orange
-• Fixed Mana Lance’s description
-• Fixed Enchanted Prayer's healing and damage triggering
-multiple times
-• Fixed a stuck spot in the Celestial Zenith lootroom
-• Fixed a build error in The Godspore lobby
-• Fixed exposed bedrock in Normal and Exalted Reverie
-• Added missing tier and location tags to Magisolve Crystal,
-Energetic Powder, Summoning Crystal, and Conduit Key
-• Fixed bolded space after player name for the patron shrine
+• Fixed Shield Wall's hitbox starting 1 block above the user's
+standing level instead of 1 block below the user's standing
+level, which among other issues allowed mobs less than 1 block
+tall to walk through
+• Fixed Blight Infection Level effect in Sirius persisting when
+logging out during the fight
+• Fixed Paradox effect in Silver Construct persisting when
+logging out during the fight
+• Fixed inconsistent capitalization in messages when
+transferring to a specific overworld shard using Instance Bots
+or Orin
+• Fixed Micha's teleport pad being able to teleport players
+inside of blocks• Fixed extra space before the names of players
+who are not in a guild, or who have their guild hidden
+• Updated all channel name arguments to accept quotes if
+required by channels with unusual characters in their names
+• Fixed guild chat not being consistently updated to match your
+current guild
+• Guild members and up can no longer accidentally accept invites
+to their own guild, which previously demoted them
+• Fixed guild gui lore text formatting in the Knick-Knack Sack
+• Fixed a chest in The Fallen Forum that had no loot table
+• Fixed Igneous Rune triggering on non-combat entities like
+Dummy Decoys or room reward hitboxes
+• You can no longer rotate nearby astrals by using the Gray
+Tesseract
+• Fixed grammar error in Beast of a Book
+• Added missing punctuation to Tuulen's message concerning a
+failed Declaration against Sirius
+• Hekawt's knockback effect upon phase change now applies custom
+slowness
+• Hekawt's Desecrate spell now applies custom slowness and
+weakness
+• Hekawt's Dies Irae spell now applies custom slowness and
+weakness
+• Successfully escaping Hekawt's ||Shadow Realm|| now applies
+custom Resistance and Regeneration
+• Removed Armor values on Vesperidys
+• Fixed stuck spots in Galengarde• Fixed being able to "return"
+to the Player Details GUI by clicking the slot in which the back
+button would be in the Class Display GUI even if it is not there
+• Fixed Detonation, Volcanic Combos, and Frigid Combos not
+gaining 50% damage in Zenith and not being affected by % magic
+damage or various abilities/enchantments such as Primordial
+Mastery or Trivium
+• Fixed Detonation's damage radius being significantly larger
+than intended, and scaling with rarity when it should not
+• Fixed particles when using portal guns in P.O.R.T.A.L. not
+being the correct color based on portal color
+• Fixed level 2 Restless Souls's DoT effect being attributed to
+a null source rather than to the ability itself
+• The Black Shard in the Inner Sanctum now properly displays its
+texture
+• Fixed vanilla Saturation Suspicious Stews not being replaced
+with Dichen Specialty Stew
+• The Swamplands Witch and Grove Witch are no longer targetable
+by class skills
+• Removed vanilla armor/enchantments/strange formatting from
+Blighted Warden, Decaying Tlaxan, Distorted Hulk, R'Kitxet,
+Shadow of the Forest, Teccatl, Tlorix, Twisted Ranger, Twisted
+Tlaxan, and Verdant Battlemage
+• Fixed Animated Potions applying vanilla effects to players hit
+by its splash potions
+• Fixed the quest compass waypoint for Chanterelle Village being
+off-center
+• Fixed the quest compass waypoint for Fall Shrine being off-
+center
+• Fixed the nameplate for Withered Hideout not being block-
+aligned
+• Fixed the quest compass waypoint for Frostgate Ruins being
+off-center
+• Fixed some Summoning Crystals having no lore whatsoever
+• Fixed several launch pads/bouncy mushrooms in and around
+Galengarde that used the master sound channel instead of ambient
+• Fixed Aeroblast's description having built-in negative damage
+• Fixed Aeroblast's initial damage being blocked by i-frames
+• Fixed Depths/Zenith Sharpshooter not boosting projectile skill
+damage
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
