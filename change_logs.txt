@@ -1,56 +1,3 @@
-• Fixed being able to "return" to the Player Details GUI by
-clicking the slot in which the back button would be in the Class
-Display GUI even if it is not there
-• Fixed Detonation, Volcanic Combos, and Frigid Combos not
-gaining 50% damage in Zenith and not being affected by % magic
-damage or various abilities/enchantments such as Primordial
-Mastery or Trivium
-• Fixed Detonation's damage radius being significantly larger
-than intended, and scaling with rarity when it should not
-• Fixed particles when using portal guns in P.O.R.T.A.L. not
-being the correct color based on portal color
-• Fixed level 2 Restless Souls's DoT effect being attributed to
-a null source rather than to the ability itself
-• The Black Shard in the Inner Sanctum now properly displays its
-texture
-• Fixed vanilla Saturation Suspicious Stews not being replaced
-with Dichen Specialty Stew
-• The Swamplands Witch and Grove Witch are no longer targetable
-by class skills
-• Removed vanilla armor/enchantments/strange formatting from
-Blighted Warden, Decaying Tlaxan, Distorted Hulk, R'Kitxet,
-Shadow of the Forest, Teccatl, Tlorix, Twisted Ranger, Twisted
-Tlaxan, and Verdant Battlemage
-• Fixed Animated Potions applying vanilla effects to players hit
-by its splash potions
-• Fixed the quest compass waypoint for Chanterelle Village being
-off-center
-• Fixed the quest compass waypoint for Fall Shrine being off-
-center
-• Fixed the nameplate for Withered Hideout not being block-
-aligned
-• Fixed the quest compass waypoint for Frostgate Ruins being
-off-center
-• Fixed some Summoning Crystals having no lore whatsoever
-• Fixed several launch pads/bouncy mushrooms in and around
-Galengarde that used the master sound channel instead of ambient
-• Fixed Aeroblast's description having built-in negative damage
-• Fixed Aeroblast's initial damage being blocked by i-frames
-• Fixed Depths/Zenith Sharpshooter not boosting projectile skill
-damage
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-&bHotfix:&r The Gatekeepers in old dungeon instances should now
-automatically update to be Dungeon Guards when you log in or
-switch shards near themThe Gallery of Fear has been closed due
-to instability issues. This includes both maps but the rare
-traders in the lobby are still available. It is unlikely to
-reopen until next weekly update.
 &b(10.27.0)&r
 For the update on March 14, 2024
 &bMinor New Features:&r
@@ -240,3 +187,127 @@ within a second of the totem expiring
 • Fixed a stuck spot in Galengarde
 • Fixed The Vesperidys being able to use Void Corruption after
 dying
+&b(10.28.0)&r
+For the update on March 21, 2024
+&bMinor New Features:&r
+• Added a new Highest Time Remaining on the Clock leaderboard to
+the Forsworn Sanctum. Due to the static nature of Sanctum's
+timer, you must activate all three pyres and collect all chests
+in the strike to earn a placement
+• Added a new Highest Time Remaining on the Clock leaderboard to
+the Masquerader's Ruin
+• Added a new leaderboard for each casino: Lifetime Highest Dry
+Streak. The current Dry Streak leaderboards have been renamed to
+"Current Dry Streak"
+• Rock's Little Casino and Monarch's Cozy Casino's slot machines
+have received significant behind the scenes optimizations to how
+they function with some minor visual/sound effect tweaks.
+Additionally, when gambling at Monarch's Cozy Casino, Rigged
+chips are now always prioritized if they are present in your
+inventory
+• Added bestiary lore blurbs to all mobs in the Headless
+Horseman section of the Bestiary
+• Added bestiary lore blurb to Lord of Wind, Hate Knight
+• Cloned elites from finishers now all glow a different colour
+• A new PEB setting has been added to change the visibility of
+cloned elites from finishers
+&bMob Changes:&r
+• CShura's jump attack is now limited to 4 jumps per cast
+&bCelestial Zenith Balance Changes:&r
+• Detonation: 3.5-7 -> 3-6 damage
+• Frost Nova: 15s -> 16s cooldown
+• Removed the Frostborn "passive" that dealt % max health damage
+to mobs when ice is placed in the same place twice
+• Color Splash: 35s -> 30s cooldown
+• Rebirth: Now refreshes ability/upgrade options when triggered
+in order to prevent issues where multiple abilities in one slot
+could be obtained
+• Refraction: Maximum duration post-extensions 10s -> 15s
+&bMarket Changes:&r
+• Access point NPCs have been added to Sierhhaven, Mistport, and
+Galengarde
+• Fixed a bug where players using autoclickers could find
+themselves stuck in a GUI security, making them unable to do any
+action. (if that still happens to you, you can just leave and
+re-open the GUI)
+• Filled quivers cannot be listed anymore
+• Made Market Menu GUI buttons prettier
+• Filled lootboxes and books made by players are no longer
+sellable on the Player Market
+&bMarket Fixes:&r
+• GUI shouldn't implode anymore due to items with way too much
+data being attempted to be sold. Those items are now blocked
+from being listed
+• The amount of listings owned by the player should not be
+unsync with the 'Your Listings' tab anymore, which caused
+players not being able to add listings, even though GUI showed
+it was possible
+• You should not be able to buy listings with a multiplier of 0
+anymore
+• You should not be able to buy your own listings anymore
+&bFeedback Fixes:&r
+• Adjusted the medal times for They Toll for Thee race, making
+some medals easier to achieve
+• Adjusted the medal times for Delivery Dash race, making some
+medals easier to achieve
+• Arcane Reagent and Stellar Core now have bolded epic
+announcement messages
+• Dispelling an otherworldly barrier in the Harmonic Arboretum
+now plays a sound effect
+• Salazar has received new dialogue when asking him about
+Viridia after completion of The Olive Branch
+• Added a Sorting Bin to the Rush of Dissonance Lobby
+• Added some sound effects to the Paint Splash elite finisher
+• Increased the time that the swords are on the ground for the
+Sword Rain finisher
+• Replaced the spruce leaves in the Rotted Cave with Mangrove
+Roots
+• The Everseeing Eye scout cosmetic now makes mobs glow a
+lighter shade of red to prevent confusion with Halls' Nightmares
+&bMinor Bug Fixes:&r
+• Significantly reduced the amount of barriers around the
+chandeliers in the Sirius arena. This should hopefully fix a lot
+of cases where it's difficult to complete Aurora's Stardust
+Declaration
+• Fixed Devastation, Phlegmatic Resolve, Judgement Chain,
+Crushing Earth, Ice Lance, Blade Flurry, Shadow Slam, Sidearm,
+Guarding Bolt, Earthquake, Pyroblast, Volcanic Meteor, Firework
+Blast, and Blizzard not bypassing iframes
+• Lightning Bottles now have their own iframes (just like
+Alchemist potions)
+• Fixed Iron Golems not despawning when the POI respawns
+• Fixed reward text for Delivery Dash displaying less than the
+amount actually given
+• Starting the They Toll for Thee race will properly regrant the
+completion goal advancements for your respective time
+• Fixed the Sirius arena in the world not having the changes
+made to it from last update when an update resets terrain to its
+pristine state
+• Added a missing space to the Dungeon Guard's name in dialogue
+• The Teacher now takes the materials he asks you to fetch for
+his quest, Master of One
+• Fixed Sirius items not being fragmentable
+• Fixed Exalted items being fragmentable
+• Fixed unintended behavior with POI Loot Pinatas occuring when
+chests are placed next to it
+• Fixed Calissium Tincture and Dust of the Dreamstate not
+applying effects when used
+• Elder's Vision (a villager) no longer shows up in the Bestiary
+under Sealed Remorse
+• Fixed some Salazar dialogue not requiring the correct stage in
+Rapacity to view
+• Fixed various issues with the Buried Blade area in both the
+Overgrown Cave and Rotted Cave (amped version)
+• Fixed Timetorn Legionary's Cosmic Moonblade spell not applying
+damage to players• Fixed Timesick Sharpshooter's Grenade
+Launcher spell dealing damage in a 30 block radius upon contact
+with a player or the ground instead of a 3 block radius
+• Fixed the Corrupted Stick of Ultimate Destiny! applying on hit
+enchantment effects
+• Fixed a missing block under Snow in Frostgate
+• Throwing an uncommon onto Circus ticket pressure plate now
+properly gives 2 tickets
+• Specified that Restless Souls deals magic damage in its
+description.
+• Fixed Ichor's Steelsage bonus jump boost sometimes also
+lengthening the jump boost duration.
