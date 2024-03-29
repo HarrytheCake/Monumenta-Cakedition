@@ -1,313 +1,216 @@
-&b(10.27.0)&r
-For the update on March 14, 2024
+&bHotfix&r: The daily bounty mission for the season pass this
+week has been fixed
+&bHotfixes&r: (Some of these shipped with last night's restart,
+others are from the last few minutes)
+• Zenith season pass missions now require completion of the
+instance to receive credit
+• Zenith Ascension missions now count only once for regional
+content
+• Completion amounts for this week's pass missions have been
+corrected to match their descriptions
+&b(10.29.0)&r
+For the update on March 28, 2024
+&bMajor New Features:&r
+• Orin and PEB now occasionally provide additional tips and
+tricks!
+• Balanced and adjusted spawn rates for the various planet
+hazards including tremors, meteor showers, volcanic activity,
+fire tornados, and ion storms. Hazards should now spawn less
+frequently during missions.
+• Kaul has received a visual overhaul!
+• King's Warden : 6.5 -> 6.5 Armor
+• EX Stoneborn Sculptor (M4) : Curse of Shrapnel 2 -> Curse of
+Shrapnel 3
+• Removed guilds due to low engagement
+• Slightly increased chance of Elites spawning from TrueRandom
+spawners
+• All tesseracts have received a third upgrade variant, the
+Perfect Tesseracts! They can be purchased from Selari in the
+Architect's Ring for 64 ADE and 64 HAR each!
+• We know you've been waiting for it • All That Remains releases
+tonight! Please ignore any changelogs in December that say
+otherwise.
+• A brand new quest has been added • Everything Else That
+Remains. This follow up to All That Remains can be started in
+Oceangate and serves to answer any lingering questions that may
+have remained after All That Remains. If you have any further
+lingering questions after finishing Everything Else That
+Remains, please visit <#186239376836132864> and complain.
+• Flower spawnrates in Celestial Zenith Ascension 15 have been
+increased by 50% to account for players' dps.
+• All instances of custom slowness have finally been fixed to be
+vanilla slowness
+• 🐀
+• Just like vanilla anvils, the masterwork anvil will now break
+after a few uses
+• Callicarpa, Blight of the Beyond now has a 50% chance to be
+replaced with Captain David, Void Herald• A new non-combat boss-
+like encounter has been added to the Architect’s Ring •
+&bThe Godsnore&r! Following the Godspore’s defeat, he has gotten
+very smol and very eepy. Help free the rest of the Mycelia from
+his control by working with the Abello to put him into a slumber
+again like we do for half our world bosses. Rewards include a
+special Bed enchantment • Snooze • which allows you to hit
+snooze on the daily restart when you need a few extra minutes to
+do stuff.
+• The original April Fools’ quest, Unmailed, has returned for a
+limited time, in a new form! Find a mysterious letter
+&osomewhere&r in the King’s Valley and bring it to the Postman
+in Highwatch to begin this wild adventure!
+• Bullet hell bosses have been buffed to include attack patterns
+from "Touhou Eiyashou ~ Imperishable Night (Lunatic Difficulty)"
+• For the LAST TIME. The City of Shifting Waters is NOT fixed!!
+&bShow your moves in MONUMENTA FESTIVAL!&r
+• This update, we're releasing the first of many new gamemodes
+in the Monumenta Universe • Monumenta Festival! In &oMonumenta
+Festival&r, give those mobs a break from hits and mix hit music
+instead! Clucking and goat horns both showed us how much
+Monumenta players enjoy making noise in Minecraft. We thought
+this would be a more productive route for being loud and
+actually put you on center stage. To start we've got 8 familiar
+songs you know and love!
+• This gamemode is a rhythm game with the spirit of &oGuitar
+Hero&r, where you play along with a track. In our Minecraft
+implementation, you hit coloured wooden buttons to the beat.
+Choose songs for your setlist, then compete with your friends to
+get the highest score. This event will take place inside New
+Antium, so help your newer player friends fast track to get
+there ASAP!
 &bMinor New Features:&r
-• A new race has been added to Frostgate! Help make deliveries
-across town for a chance at the top of the leaderboard and a
-special reward
-• CoreProtect now displays lore, durability and container info
-for items
-• The Masterwork GUI now shows you what stats your item gains
-from each Masterwork level
-• The Masterwork, Infusion, and Delve Infusion GUIs now show the
-actual item instead of placeholders
-• Added command /effectlist, which sends the full list of active
-custom effects (not including absorption, gallery effects, etc.)
-in chat. Hovering over an effect shows its debug information:
-the "source" which is an (usually somewhat descriptive) string
-specific to whatever applied the effect, the "ID" which is the
-name of the type of effect, the duration in ticks, and the
-"magnitude" which is a (sometimes unused or meaningless) number
-that represents how potent the effect is. While this command can
-be useful for finding or verifying bugs, please do _not_ report
-any "inconsistencies" with the source or ID strings, as they are
-purely for backend and debug purposes.
-• The purchase announcement for Hexcrafted Siphon at Ageratina
-has been re-enabled, and the refund trade for it has been
-removed
-&bMarket Changes:&r
-•  Access to the GUI is now locked behind Magenta completion,
-like market island
-• Sign items which contain text data will be stopped from being
-sold.
-• Tax rate changed from 10% to 5%
-• The effective tax rate is now directly shown on the confirm
-button when the player creates a listing
-• The maximum amount of concurrent listings a player can have
-has been reduced from 90 to 27
-• Fixed listings not showing up in the browser after being
-unlocked
-• Listings saying that items can be claimed are now properly
-claimable
+• Clicking on the recipe book in the inventory now opens the
+Player Details GUI instead of the Player Stats GUI (The Player
+Stats GUI is easily accessible within the Player Details GUI).
+There is now also an option in the PEB to disable this feature
+and reinstate the vanilla functionality of opening up the
+recipes page when clicking on the recipe book
+• Rearranged and made small edits to the Technical Options PEB
+page
+• Snowballs should now have textures when thrown
+• All Malevolent Reverie mobs have received bestiary lore
+blurbs. Thanks to @[Wool-chan Artist] ajdude9 for his
+contributions writing these blurbs!
+• After completion of The Elder's Scrolls, R'Tsiv has gained a
+new bit of dialogue if you speak to him with a certain delve
+challenge trophy in your inventory
+• Soulblighter's Sacrifice has received new lore text
+• The message when clearing effects from a Training Dummy by
+punching now has a hover message that lists the removed effects.
+However, note that (similar to /effectlist) this feature is for
+debugging purposes primarily, and many effects, particularly
+those that would never be applied to a player, have no display
+&bMarket:&r
+Changes:
+• Changed some icon visuals/functionality
+  • The listing display in 'your listings' tab has received a
+complete overhaul
+  • The button to change pages changed a bit its visuals, and
+you can now press your swap key to manually input a page
+• Left-clicking on an item in the 'your listings' tab opens up a
+new tab that lets you edit the listing. In this edit tab, you
+can currently:
+  • Make the listing visible/invisible
+  • Delete the listing
+• Added an expiration mechanism. Expiration is set for 30 days
+after the listing's creation. for listings that were made before
+this update, their expiration date is set to <t:1714518000:f>.
+When a listing is expired, it will not be displayed in the
+browser, and your only possible action is to claim and delete
+the listing.
+• If you have a wallet in your inventory, claiming currencies
+will put the claimed currency directly into the wallet
+• Added a simple security preventing players from buying
+listings when their inventory is full
+• Added a filtering system in the background, you should not see
+any changes in a normal usage, but now you are effectively using
+a filter that only shows active listings (pre-work for actual
+player-made filtering).
+Fixes:
+• Fixed items having extra NBT data added to them when attempted
+to be put in a listing, which breaks the usage of those items in
+some cases
+• Fixed ability to list curse of ephemerality items
+• Attempt at fixing the random listing ownership loss
+• Fixed (non-written) books with no tier not being able to be
+sold
+• Fixed an unnecessarily capitalized T
 &bFeedback Fixes:&r
-• Reduced Shield Wall particle count and sound volume by 50%
-when mobs are being knocked back repeatedly
-• Shield Wall's particles now follow particle settings more
-consistently
-• The Unofficial Monumenta Mod should now count chests more
-consistently
-• Added a line when starting a dungeon race to correctly display
-that it will not count towards delve bounty
-• Fixed build errors and performed visual updates to the
-Vesperidys' Arena
-• Polished up the cliff in Mistport
-• Slightly reduced the amount of particles in the Gong Finisher
-to decrease lag
-• If Jump Boost from Swiftness is disabled, it will no longer be
-reenabled by the class being refreshed for any reason
-&bMajor Bug Fixes:&r
-• Players are no longer kicked out of strikes when the "It's a
-new day" message appears in chat; they will continue to be
-kicked out if they log out and back in again, including for
-server restarts and other kicks or connection issues.
-• Fixed bosses in P.O.R.T.A.L. and Masquerader’s Ruin scaling
-with players’ overworld delve points instead of strike delve
-points
-• Fixed multiple Depths/Zenith rooms spawning on top of each
-other if multiple players chose rooms within a small time frame
-• If a player logs out in Depths/Zenith and then the run begins
-without them, they will now be teleported out of the instance.
-This fixes some exploits.
-• Fixed an issue where escaping Hekawt's ||Shadow Realm||
-applies 100% Vulnerability rather than 100% Resistance
+• Removed copper ores, raw copper, and copper ingots from the
+list of interesting items
+• The length needed to mine through the Yellow shortcut has been
+shortened
+• Re-added a small shortcut to the Fateweaver
+• Elcard's boss fight dialogue has been updated to better
+reflect his speech patterns in the ||post-Alchemy Labs
+interaction||• Made various small tweaks to the cliffs in
+Anthill
+• Minor build edits to Bhairavi's Basement
+• Increased the volume of Primordial Bolt's telegraph
+• Slightly adjusted the lore text of Plagueroot Clasp
+• R'Kitxet has received a bestiary lore blurb
+• New drops of the Crimson Mage armor set are now crimson
+instead of magenta
+• Removed usage of goat horn to prevent players from spamming it
 &bMinor Bug Fixes:&r
-• Fixed Glorious Battle description not mentioning that it
-requires a sword or axe to be cast
-• Fixed Steadfast Advancement not mentioning that it scales with
-the level of the enchantment
-• Fixed Poise description in player stats GUI not being updated
-• Simplified Steadfast description in player stats GUI
-• Fixed Six-Pronged Sea Stone having Chain Healing Wave Targets
-instead of Chain Lightning Targets
-• Fixed some stat tracks counting even if the user doesn't meet
-the Patreon requirement anymore• Fixed Replica C'thedrros having
-less attack damage than Frost Giant's Crusher
-• Updated Technique's Handbook entry to have the correct radius
-value of 3 blocks
-• Hekawt's Grasping Hands spell now applies custom slowness
-• Hekawt's Miasma spell now applies custom weakness
-• Hekawt's ||Alchemist revenants|| now apply custom slowness
-• Hekawt's ||Warrior revenants|| now apply custom resistance to
-their allies
-• Hekawt's ||Rogue revenants|| now apply custom
-slowness/weakness
-• Strife's Sinister Reach spell now applies custom slowness
-• Fixed T'Lm in the quest Magenta loot room having unupdated
-trades
-• Fixed Twisted Occultist and C'Zanil's totems often not
-disappearing on death
-• Fixed Judgement Chain requiring a second trigger to "cancel"
-nothing (before casting again) if a cast failed to find a target
-• Fixed Judgement Chain trigger not falling through if it failed
-to find a target
-• Fixed Generosity not offering (or applying) the gift if it is
-an active ability and the recipient has the same ability at a
-lower level
-• Fixed damage from Curse of Shrapnel being reduced by some
-things such as Second Wind
-• Adjusted Arcane Strike enhancement description
-• Unstacked podzol in and around Bandit Camp
-• Fixed about 40 truncated decorative cages in SKT Orasomn arena
-and its plot border• Fixed the following quest compass waypoints
-being off-center for daily bounties for these POIs: Irilyth,
-Palm Tree Paradise, Canyon Bandit Camp, Cavern of Cinders, Lost
-Lava Labs, Floating Fortress, Magmashroom Mine, Emberborne
-Sanctuary, Antlion Pit, Abandoned Winery, Smuggler's Cabin, Ice
-Mine, Supply Fort, Tundra Lighthouse, Mini Mining Camp, Military
-Base, Raider Camp, Ice Boat, Abandoned Snowman Settlement,
-Sealed Descent, Bandit Encampment, Igloos and You, Crystal
-Forest Grove, Silver Tower, Kreepa Kastle, Winter Shrine,
-Riverbed Cavern, Archaeological Dig Site, Fortress of Bacon,
-Church of Munk, Rogue's Fortress, Ship Landing Zone, Frigid
-Laboratory, Cliffside Ruins, Mountaintop Bandits, Weathered
-Tower, Weathered Citadel, Bandits By The Sea, Underground
-Settlement, Whitecliffe Citadel, Hot Springs, Smitten Library,
-Mountain Market, Stargazer's Hideaway, Seigrit Mineshaft,
-Feyrune Forest, Taproot Ruins, Fungus Thorn Cave, Spiral Island,
-Skull Island, Sunken Ship, Tangled Cove, Mystical Tower, Dueling
-Fleets, Guardian's Gate, Summer Shrine, Bastion at Sea, Barracks
-at Sea, City of Bones, Crystalline Vault, Sunken Tomb, Rosebud
-Ruins, Sacrarium of Aeons, Madman's Redoubt, Shroom Spires,
-Vengeance of the Sea, Magmortic Atheneum, Steelmeld Passage, and
-The Minefield
-• Fixed a typo in the quest compass entry for Steelmeld
-Passage's daily bounty
-• Fixed a longstanding issue where The Godspore's bestiary entry
-could not be unlocked. Your Godspore kill count will be updated
-the next time you successfully defeat it• Removed vanilla
-armor/strange formatting/improper stats/vanilla effects or
-otherwise improved the following mobs: Leviathan of Doom, Elder
-Gillman, Gillman Fighter, Gillman Tadpole, Mutated Royal Guard,
-Viridian Royal Harpooner, Viridian Royal Guard, Viridian
-Defender, Viridian Wizard, Viridian Archer, Whispering Phantom,
-Stellar Zealot, Winter Spirit, Tlaxan Sharpshooter, Ceremonial
-Guardian, Unyielding Slinger, Tangled Artificer, Frost Moon
-Archer, Son of the Forest, Timetorn Legionary, Timesick
-Sharpshooter, Decayed Chillwind Scholar, Decayed Ishnir Scholar,
-and Twisted Outcast
-• Restored Bestiary lore blurbs that were accidentally removed
-• Fixed the Malevolent Reverie lobby parkour not granting 2
-Corrupted Malevolence upon completion
-• Iota's Bestiary entry now states the correct default health
-value instead of 0
-• Fixed a longstanding issue where the PEB would tell you that
-you could activate ten times as many Patreon Shrine charges as
-you are entitled to and improved some of its message formatting
-• Adjusted a few spawners in Forsworn Sanctum to spawn in the
-correct spots more consistently
-• The initial activation of Tesseract of Body (u) now gives the
-proper amount of speed
-• Fixed a barrier blocking a jump in the Depths lobby parkour
-• Added a missing comma to the bounty message for Whispering
-Woods
-• The handbook advancement for the Patron Shrine in the King's
-Valley is now granted at its current, rather than former,
-location
-• It is no longer possible to stand on the chandeliers in the
-Sirius arena before or during a fight
-• Fixed ice placed by Cryobox usually not working with Frozen
-Domain, Icebreaker, and Frigid Combos
-• Fixed issues with Depths/Zenith Split Arrow targeting
-• Fixed small typo in They Toll for Thee race when grabbing a
-bell
-• Fixed wrong bell name when grabbing Subterus in They Roll for
-Thee race
-• Fixed Inferno handbook entry not being updated
-• Fixed They Toll for Thee race not contributing to Speedster of
-Architect's Ring• Fixed a stuck spot near the Sirius Arena
-• Fixed dying during They Toll for Thee race not properly
-enabling teleporters and bells4
-• Fixed Iota and Eldrask often not appearing in the correct
-location client-side after teleporting
-• Fixed Advancing Shadows (u) not being put on cooldown even if
-a recast is available
-• Fixed Devastation not lowering a totem's cooldown if cast
-within a second of the totem expiring
-• Fixed <roll XdY> not working
-• Fixed multiple build errors in Frostgate
-• Fixed a stuck spot in Galengarde
-• Fixed The Vesperidys being able to use Void Corruption after
-dying
-&b(10.28.0)&r
-For the update on March 21, 2024
-&bMinor New Features:&r
-• Added a new Highest Time Remaining on the Clock leaderboard to
-the Forsworn Sanctum. Due to the static nature of Sanctum's
-timer, you must activate all three pyres and collect all chests
-in the strike to earn a placement
-• Added a new Highest Time Remaining on the Clock leaderboard to
-the Masquerader's Ruin
-• Added a new leaderboard for each casino: Lifetime Highest Dry
-Streak. The current Dry Streak leaderboards have been renamed to
-"Current Dry Streak"
-• Rock's Little Casino and Monarch's Cozy Casino's slot machines
-have received significant behind the scenes optimizations to how
-they function with some minor visual/sound effect tweaks.
-Additionally, when gambling at Monarch's Cozy Casino, Rigged
-chips are now always prioritized if they are present in your
-inventory
-• Added bestiary lore blurbs to all mobs in the Headless
-Horseman section of the Bestiary
-• Added bestiary lore blurb to Lord of Wind, Hate Knight
-• Cloned elites from finishers now all glow a different colour
-• A new PEB setting has been added to change the visibility of
-cloned elites from finishers
-&bMob Changes:&r
-• CShura's jump attack is now limited to 4 jumps per cast
-&bCelestial Zenith Balance Changes:&r
-• Detonation: 3.5-7 -> 3-6 damage
-• Frost Nova: 15s -> 16s cooldown
-• Removed the Frostborn "passive" that dealt % max health damage
-to mobs when ice is placed in the same place twice
-• Color Splash: 35s -> 30s cooldown
-• Rebirth: Now refreshes ability/upgrade options when triggered
-in order to prevent issues where multiple abilities in one slot
-could be obtained
-• Refraction: Maximum duration post-extensions 10s -> 15s
-&bMarket Changes:&r
-• Access point NPCs have been added to Sierhhaven, Mistport, and
-Galengarde
-• Fixed a bug where players using autoclickers could find
-themselves stuck in a GUI security, making them unable to do any
-action. (if that still happens to you, you can just leave and
-re-open the GUI)
-• Filled quivers cannot be listed anymore
-• Made Market Menu GUI buttons prettier
-• Filled lootboxes and books made by players are no longer
-sellable on the Player Market
-&bMarket Fixes:&r
-• GUI shouldn't implode anymore due to items with way too much
-data being attempted to be sold. Those items are now blocked
-from being listed
-• The amount of listings owned by the player should not be
-unsync with the 'Your Listings' tab anymore, which caused
-players not being able to add listings, even though GUI showed
-it was possible
-• You should not be able to buy listings with a multiplier of 0
-anymore
-• You should not be able to buy your own listings anymore
-&bFeedback Fixes:&r
-• Adjusted the medal times for They Toll for Thee race, making
-some medals easier to achieve
-• Adjusted the medal times for Delivery Dash race, making some
-medals easier to achieve
-• Arcane Reagent and Stellar Core now have bolded epic
-announcement messages
-• Dispelling an otherworldly barrier in the Harmonic Arboretum
-now plays a sound effect
-• Salazar has received new dialogue when asking him about
-Viridia after completion of The Olive Branch
-• Added a Sorting Bin to the Rush of Dissonance Lobby
-• Added some sound effects to the Paint Splash elite finisher
-• Increased the time that the swords are on the ground for the
-Sword Rain finisher
-• Replaced the spruce leaves in the Rotted Cave with Mangrove
-Roots
-• The Everseeing Eye scout cosmetic now makes mobs glow a
-lighter shade of red to prevent confusion with Halls' Nightmares
-&bMinor Bug Fixes:&r
-• Significantly reduced the amount of barriers around the
-chandeliers in the Sirius arena. This should hopefully fix a lot
-of cases where it's difficult to complete Aurora's Stardust
-Declaration
-• Fixed Devastation, Phlegmatic Resolve, Judgement Chain,
-Crushing Earth, Ice Lance, Blade Flurry, Shadow Slam, Sidearm,
-Guarding Bolt, Earthquake, Pyroblast, Volcanic Meteor, Firework
-Blast, and Blizzard not bypassing iframes
-• Lightning Bottles now have their own iframes (just like
-Alchemist potions)
-• Fixed Iron Golems not despawning when the POI respawns
-• Fixed reward text for Delivery Dash displaying less than the
-amount actually given
-• Starting the They Toll for Thee race will properly regrant the
-completion goal advancements for your respective time
-• Fixed the Sirius arena in the world not having the changes
-made to it from last update when an update resets terrain to its
-pristine state
-• Added a missing space to the Dungeon Guard's name in dialogue
-• The Teacher now takes the materials he asks you to fetch for
-his quest, Master of One
-• Fixed Sirius items not being fragmentable
-• Fixed Exalted items being fragmentable
-• Fixed unintended behavior with POI Loot Pinatas occuring when
-chests are placed next to it
-• Fixed Calissium Tincture and Dust of the Dreamstate not
-applying effects when used
-• Elder's Vision (a villager) no longer shows up in the Bestiary
-under Sealed Remorse
-• Fixed some Salazar dialogue not requiring the correct stage in
-Rapacity to view
-• Fixed various issues with the Buried Blade area in both the
-Overgrown Cave and Rotted Cave (amped version)
-• Fixed Timetorn Legionary's Cosmic Moonblade spell not applying
-damage to players• Fixed Timesick Sharpshooter's Grenade
-Launcher spell dealing damage in a 30 block radius upon contact
-with a player or the ground instead of a 3 block radius
-• Fixed the Corrupted Stick of Ultimate Destiny! applying on hit
-enchantment effects
-• Fixed a missing block under Snow in Frostgate
-• Throwing an uncommon onto Circus ticket pressure plate now
-properly gives 2 tickets
-• Specified that Restless Souls deals magic damage in its
-description.
-• Fixed Ichor's Steelsage bonus jump boost sometimes also
-lengthening the jump boost duration.
+• Removed a cheesy safe spot from Marina Noir and fixed several
+areas where it was possible to escape the map
+• Alchemist Bags can no longer be dispensed
+• Players are now properly forced to wait until they have all
+cleansed before spawning rooms in A10+
+• Fixed an exploit involving Scorched Earth
+• Fix quest items being inserted into quivers
+• Callicarpa's Bramble Ball now applies custom slowness
+• Davey's melee hits now apply custom slowness
+• Callicarpa's Leaf Nova now applies custom slowness
+• Ghalkor's Forward Sweep now applies custom slowness
+• Svalgot's Rising Blackflame now applies custom slowness
+• Worthy Sacrifice now applies custom slowness on Force spell
+hit
+• Fixed Twisted Shadow's Smoke Grenade applying custom slowness,
+vanilla slowness, and vanilla weakness instead of just custom
+slowness and weakness
+• Fixed ||Isadora, the Bloodied Queen||'s Gilded Grenade
+applying custom slowness, vanilla slowness, and vanilla weakness
+instead of just custom slowness and weakness
+• Removed vanilla armor values from Forsaken Miner
+• Removed vanilla effects from on hit/spell hit/etc. in favor of
+custom effects on the following mobs: Plague Titan, Plagued
+Spores, Temple Haunter, Frost Golem, and Jaguar Slinger• Dungeon
+race advancements are no longer shown in the advancement GUI
+prior to be obtained
+• Fixed typo in Lord of Winds bestiary lore blurb
+• Fixed the Hyper TNT puzzle in Unveiled
+• Fixed a creeper spawner in Anthill not having enough space to
+spawn
+• Attempted a fix to players dying to lethal fall damage if they
+were falling prior to being teleported to the final era of Teal
+• Fixed the status of the PEB option to toggle other players'
+gear not being consistent in the GUI and in chat
+• Fixed incorrect spelling of Serpensia in the books Struck Down
+and Forgive Me
+• Fixed missing comma in Nightleaf Visage lore
+• Fixed Wind Aspect triggering on non-hostile mobs
+• Adjusted Eruption advancement, notably including the
+interaction with Wind Aspect and specifying that the radius for
+Sapper and Adrenaline is 8 blocks instead of 5
+• Fixed some boss bars in the Masquerader's Ruin boss battle
+persisting when the player dies
+• Fixed a typo in the dialogue of Tom the Delivery Man
+• Fixed a typo in one of the Delivery Dash item
+• Fixed portions of Delivery Dash dialogue not being capitalized
+• Fixed capitalization of the main gate in Pink
+• Fixed Tesseract of Soul teleport message not being displayed
+on Valley
+• Fixed decayed totem scaling off current equipment stats rather
+than stats at cast time
+• Fix passable blocks slowing down particle projectile attacks
+(like for specter of ignorance)
+• Fixed a typo in the Guilding Blocks dialogue
+• Fixed some issues with Escape Artist’s teleport
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• Masterwork Anvils have been reenabled.
