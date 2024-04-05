@@ -1,211 +1,348 @@
-&bHotfix&r: The daily bounty mission for the season pass this
-week has been fixed
-&bHotfixes&r: (Some of these shipped with last night's restart,
-others are from the last few minutes)
-• Zenith season pass missions now require completion of the
-instance to receive credit
-• Zenith Ascension missions now count only once for regional
-content
-• Completion amounts for this week's pass missions have been
-corrected to match their descriptions
-&b(10.29.0)&r
-For the update on March 28, 2024
-&bMajor New Features:&r
-• Orin and PEB now occasionally provide additional tips and
-tricks!
-• Balanced and adjusted spawn rates for the various planet
-hazards including tremors, meteor showers, volcanic activity,
-fire tornados, and ion storms. Hazards should now spawn less
-frequently during missions.
-• Kaul has received a visual overhaul!
-• King's Warden : 6.5 -> 6.5 Armor
-• EX Stoneborn Sculptor (M4) : Curse of Shrapnel 2 -> Curse of
-Shrapnel 3
-• Removed guilds due to low engagement
-• Slightly increased chance of Elites spawning from TrueRandom
-spawners
-• All tesseracts have received a third upgrade variant, the
-Perfect Tesseracts! They can be purchased from Selari in the
-Architect's Ring for 64 ADE and 64 HAR each!
-• We know you've been waiting for it • All That Remains releases
-tonight! Please ignore any changelogs in December that say
-otherwise.
-• A brand new quest has been added • Everything Else That
-Remains. This follow up to All That Remains can be started in
-Oceangate and serves to answer any lingering questions that may
-have remained after All That Remains. If you have any further
-lingering questions after finishing Everything Else That
-Remains, please visit <#186239376836132864> and complain.
-• Flower spawnrates in Celestial Zenith Ascension 15 have been
-increased by 50% to account for players' dps.
-• All instances of custom slowness have finally been fixed to be
-vanilla slowness
-• 🐀
-• Just like vanilla anvils, the masterwork anvil will now break
-after a few uses
-• Callicarpa, Blight of the Beyond now has a 50% chance to be
-replaced with Captain David, Void Herald• A new non-combat boss-
-like encounter has been added to the Architect’s Ring •
-&bThe Godsnore&r! Following the Godspore’s defeat, he has gotten
-very smol and very eepy. Help free the rest of the Mycelia from
-his control by working with the Abello to put him into a slumber
-again like we do for half our world bosses. Rewards include a
-special Bed enchantment • Snooze • which allows you to hit
-snooze on the daily restart when you need a few extra minutes to
-do stuff.
-• The original April Fools’ quest, Unmailed, has returned for a
-limited time, in a new form! Find a mysterious letter
-&osomewhere&r in the King’s Valley and bring it to the Postman
-in Highwatch to begin this wild adventure!
-• Bullet hell bosses have been buffed to include attack patterns
-from "Touhou Eiyashou ~ Imperishable Night (Lunatic Difficulty)"
-• For the LAST TIME. The City of Shifting Waters is NOT fixed!!
-&bShow your moves in MONUMENTA FESTIVAL!&r
-• This update, we're releasing the first of many new gamemodes
-in the Monumenta Universe • Monumenta Festival! In &oMonumenta
-Festival&r, give those mobs a break from hits and mix hit music
-instead! Clucking and goat horns both showed us how much
-Monumenta players enjoy making noise in Minecraft. We thought
-this would be a more productive route for being loud and
-actually put you on center stage. To start we've got 8 familiar
-songs you know and love!
-• This gamemode is a rhythm game with the spirit of &oGuitar
-Hero&r, where you play along with a track. In our Minecraft
-implementation, you hit coloured wooden buttons to the beat.
-Choose songs for your setlist, then compete with your friends to
-get the highest score. This event will take place inside New
-Antium, so help your newer player friends fast track to get
-there ASAP!
+&b(10.30.0)&r
+For the update on April 4, 2024
 &bMinor New Features:&r
-• Clicking on the recipe book in the inventory now opens the
-Player Details GUI instead of the Player Stats GUI (The Player
-Stats GUI is easily accessible within the Player Details GUI).
-There is now also an option in the PEB to disable this feature
-and reinstate the vanilla functionality of opening up the
-recipes page when clicking on the recipe book
-• Rearranged and made small edits to the Technical Options PEB
-page
-• Snowballs should now have textures when thrown
-• All Malevolent Reverie mobs have received bestiary lore
-blurbs. Thanks to @[Wool-chan Artist] ajdude9 for his
-contributions writing these blurbs!
-• After completion of The Elder's Scrolls, R'Tsiv has gained a
-new bit of dialogue if you speak to him with a certain delve
-challenge trophy in your inventory
-• Soulblighter's Sacrifice has received new lore text
-• The message when clearing effects from a Training Dummy by
-punching now has a hover message that lists the removed effects.
-However, note that (similar to /effectlist) this feature is for
-debugging purposes primarily, and many effects, particularly
-those that would never be applied to a player, have no display
+• Ability Hotbars (Experimental)
+  • New PEB functionality to toggle on / off an Ability HUD (PEB
+-> Gameplay Options -> Ability Hotbars), displaying information
+of cooldowns, stacks and modes from various class abilities and
+depths / zenith active abilities as a boss bar (similar to a
+certain Njol's mod used by many)!
+  • Future Work: Customizability of HUD (renaming skills,
+reordering, recoloring), changing placement of hotbars to
+actionbar or scoreboards, and RP integration some day.• The
+Embers have been added to the delve section of the Bestiary
+• Various Delve mobs in the Bestiary have received lore blurbs!
+Thanks @ellie._ for their contributions writing these blurbs
+&bRegarding the Future of the Seasonal Pass:&r
+• The Seasonal Pass will once again be on break this week due to
+several circumstances. What was envisioned as a low effort way
+to give players fun challenges to complete each week has
+unfortunately become a drain on developer resources that make it
+difficult to create new and exciting pass content/rewards such
+as Elite finishers, Seasonal Pass Hub changes, and unique,
+exciting pass missions. The development team is reevaluating how
+we wish to run Seasonal Passes, but you can expect rewards and
+the pass mission structure to be similar when it returns.
 &bMarket:&r
-Changes:
-• Changed some icon visuals/functionality
-  • The listing display in 'your listings' tab has received a
-complete overhaul
-  • The button to change pages changed a bit its visuals, and
-you can now press your swap key to manually input a page
-• Left-clicking on an item in the 'your listings' tab opens up a
-new tab that lets you edit the listing. In this edit tab, you
-can currently:
-  • Make the listing visible/invisible
-  • Delete the listing
-• Added an expiration mechanism. Expiration is set for 30 days
-after the listing's creation. for listings that were made before
-this update, their expiration date is set to <t:1714518000:f>.
-When a listing is expired, it will not be displayed in the
-browser, and your only possible action is to claim and delete
-the listing.
-• If you have a wallet in your inventory, claiming currencies
-will put the claimed currency directly into the wallet
-• Added a simple security preventing players from buying
-listings when their inventory is full
-• Added a filtering system in the background, you should not see
-any changes in a normal usage, but now you are effectively using
-a filter that only shows active listings (pre-work for actual
-player-made filtering).
-Fixes:
-• Fixed items having extra NBT data added to them when attempted
-to be put in a listing, which breaks the usage of those items in
-some cases
-• Fixed ability to list curse of ephemerality items
-• Attempt at fixing the random listing ownership loss
-• Fixed (non-written) books with no tier not being able to be
-sold
-• Fixed an unnecessarily capitalized T
+• Yet another attempt at fixing the ownership loss. No new
+features will be added to the market until this is fixed.
+• In case the fix doesn’t work, a better tool is available for
+moderators. No need to know your listing IDs anymore.
+• With the balance changes this week, this will be the first
+time item replacements are run on the market data. Keep an eye
+out for issues related to item changes.
+&bWarlock Revamp:&r
+Warlock is receiving some ability revamps this update! This
+mainly aims to increase its build diversity by strengthening
+level 2 choices and lowering the necessity to take 1 point in
+every skill. Its healing is also being looked at, particularly
+the strength of Soul Rend.• Choleric Flames L2: The damage is
+increased to 5, and
+&balso afflict mobs with -100% Healing for 7s. (Counts as a
+level 1 debuff.)&r
+• Grasping Claws L2: Increase the Slowness to 30%.
+&bAfter the projectile lands, your next melee scythe attack
+within the next 4 seconds will deal 4 + 10% of the attack's
+damage as magic damage in a 3 block radius.&r
+• Melancholic Lament L2: Increase the Weaken to 30% and casting
+this ability decreases the duration of all negative potion
+effects on players in the radius by 10s.
+&bYour next melee scythe attack within the next 4 seconds will
+silence all mobs in a 3 block radius for 3s.&r
+• Sanguine Harvest: Now applies Bleed 2 and has a 4-block radius
+at both levels. Now explodes at max range instead of requiring
+mob/block collision. New L2:
+&bIncrease the mark's healing to 10% of max health. Melee
+attacks against marked mobs heal the player for 10% of their max
+health, deal 10% more damage, and consume the mark.&r
+• Phlegmatic Resolve:
+&bNow capped at 3 abilities on cooldown.&r Resistance buffed
+from
+&b+1.5%/+2.5% to +3%/+5% Resistance&r, and knockback resistance
+buffed from
+&b+0.5 to +1 KBR&r.
+• Soul Rend: L1 now
+&bheals 5 health&r. New L2:
+&bThe attacked enemy is marked for 8s, allowing your next 2
+critical scythe attacks against them to heal you for 10% of the
+damage dealt, capped at 2.5 health per hit. Killing the enemy
+heals you for 1.5 health for each remaining mark on the mob.&r
+Healing from this ability now applies to all players within 7
+blocks of you.
+  • Dark Pact's L2 interaction remains unchanged, allowing Soul
+Rend to heal 2/4 HP when triggered.
+&bRegion 1 Item Changes:&r
+Tiered :
+• Hobnailed Set : 0.5 -> 1 Armor
+• Hunter's Stake : 2 -> 0 Unbreaking
+• Smoldering Hatchet : 7 -> 7.5 Attack Damage
+• Blast Set : 1.5 -> 2 Armor
+• Tempered Ironwood Blade : 0 -> 0.5 Agility
+• Smoldering Mace : 8 -> 7.5 Attack Damage
+• Flamewreath Splinter : 4.5 -> 5 Attack Damage
+• Light Scimitar : 1.6 -> 1.8 Attack Speed• Meteor Hammer : 0.8
+-> 0.7 Attack Speed
+• Tempered Mace : 8.5 -> 9 Attack Damage
+• Searing Bow : 8 -> 9 Projectile Damage
+• Salubric Scythe : 2 -> 1 Slayer
+• Hardened Leather Set : 3 -> 3.5 Armor
+• Assassin's Dagger +5% -> +8% Attack Damage
+• Ironwrought Shield : 1 -> 1.5 Armor
+• Volcanic Orb : 1 -> 2 Fire Protection
+• Swiftwood Buckler : 1.5 -> 2 Agility
+• Eternal Cresent : 5 -> 5.5 Attack Damage
+• Phoenix Axe : 9.5 -> 10 Attack Damage
+Uncommon :
+• Alchemical Apron : -10% -> -5% Speed
+• Rebel’s Dagger : +5% -> +10% Attack Damage
+• Syringe Sharpshooter : 4 -> 5 Projectile Damage
+• Medicine Stick : 2 -> 4 Attack Damage, 3 -> 2 Attack Speed
+• Oncoming Wave : 1.5 -> 2 Agility
+• Lingering Flame : 5 -> 5.5 Attack Damage
+• Plagueborne Axe : 8 -> 9.5 Attack Damage
+• Ponderous Stone : 1 -> 1.5 Armor
+• Cutting Breeze : 1.6 -> 1.8 Attack Speed
+• Civit Dagger : 5.5 -> 6 Attack Damage, 0 -> -5% Speed
+• Blighted Scythe : 3.5 -> 4 Attack Damage
+• Volatic Edge : 5 -> 5.5 Attack Damage
+• Ensanguined Flower : 3 -> 2 Armor
+• Wrangler's Disguise : 0 -> +5% Speed
+• Blazing Soul : +5% -> +8% Magic Damage
+• Mistleaf Bracer : 1.5 -> 2 Agility
+• Drowned Shellmet : 3 -> 3.5 Agility
+• Abyssal Flame : 1 -> 1.5 Agility
+• Peaceful Slumber : 2 -> 3 Melee Protection
+• Demoncaller Boots : 3.5 -> 4.5 Armor
+Unique :
+• Unstable Sparkler : 2 -> 2.5 Attack Damage
+• Stargazer's Hood : 2 -> 3 Agility
+• Geomantic Dagger : 5 -> 5.5 Attack Damage, Slayer 0 -> 1
+• Ophion : 5.5 -> 6 Attack Damage
+Event Unique :
+• Plague Bearer's Soiled Trousers : 6.5 -> 6 Agility
+• Helm of the Pumpking : 1 -> 1.5 Armor
+Rares :
+• Stonegazer Eyes : 2.5 -> 3 Armor
+• Tidewalker Rags : 2 -> 0 Fire Protection, 0 -> 2 Abyssal
+• Bandit's Dagger : 0 -> 10% Speed
+• Stormborn Boots : 3 -> 3.5 Agility
+• Seasoaked Helmet : 3 -> 3.5 Armor
+• Flamekissed Runeblade : 3 -> 5 Fire Protection
+• Hawktree Bark : 4 -> 3.5 Agility, 0 -> +5% Projectile Damage
+• Plaguebringer : 3.5 -> 4 Agility
+• Sodden Sandals : 2.5 -> 3 Agility• Reaper's Harvest : 1 -> 1.2
+Attack Speed
+• Doom's Edge : 1.6 -> 1.7 Attack Speed
+• Alchemist's Insight : 5 -> 5.5 Attack Damage
+Artifacts :
+• Breaking Wave : 2 -> 2.5 Agility
+• Burdened Stone : 2.5 -> 3 Armor
+• Mistleaf Vambrace : 2 -> 2.5 Agility
+• Soul of Conflagration : +5% -> +8% Magic Damage
+• Slicing Wind : 5 -> 5.5 Attack Damage, 1.6 -> 1.8 Attack Speed
+• Smouldering Flame : 6 -> 6.5 Attack Damage
+• Coldsteel Blunt : 0 -> 1 Ice Aspect
+• Thawed Frozen Mallet : 10.5 -> 11.5 Attack Damage
+• Yurei : +15% -> +25% Attack Speed
+• Chains of the Deep : 4 -> 4.5 Agility
+• C'Zanil's Talisman : 1 -> 2 Fire Protection, 1 -> 2 Feather
+Falling
+• Whispering Chains : 4 -> 4.5 Agility
+• Wormwood Bark : 4 -> 4.5 Armor
+• Deepslate Xkelaq : -2 -> -1 Max Health
+Patron Made :
+• Gem Encrusted Manpance : 3 -> 3.5 Armor
+• Night's Shadow : 2 -> 2.5 Agility
+&bRegion 2 Item Changes:&r
+Tiered :
+• Saguaro Set : 2.5 -> 3 Armor
+• Silence Set : 2.5 -> 3 Agility
+• Privateer's Sabre : 1 -> 1.5 Agility
+• Driftwood's Gambit : 6.5 -> 7 Attack Damage
+• Coldfire Axe : 10.5 -> 11 Attack Damage
+• Farsight Flame : 8 -> 9 Projectile Damage
+• Fencer's Foil : +5% -> +10% Attack Damage
+• Graceful Broadsword : 6.5 -> 7 Attack Damage
+• Ignition Wand : 45 -> 40% Spell Power
+• Glowblossom : 40 -> 35% Spell Power
+• Seawater Razor : 5.5 -> 6.5 Attack Damage
+• Blastmesh Set : 5.5 -> 6 Agility
+• Frosted Sabre : 7.5 -> 8 Attack Damage
+• Erriot's Eradicator : 45% -> 40% Spell Power
+• Combustion Staff : 50% -> 45% Spell Power
+• Cursed Hammer : 13 -> 14 Attack Damage
+• Sandstone Shield : 3.5 -> 4 Armor
+• Sword of Ages : 7 -> 8 Attack Damage
+• Holywood Staff : 50% -> 45% Spell Power
+• Starbound Longbow : 12 -> 12.5 Projectile Damage
+• Chillwind Repeater : 12 -> 13 Projectile Damage
+• Starbound Warhammer : 12 -> 13 Attack Damage
+• Thunderhead : 13 -> 13.5 Attack Damage
+• Tenebrous Set : 6.5 -> 7 Agility
+• Golden Sun Set : 4 -> 4.5 Armor
+• Mercurial Set : 6.5 -> 7 Agility• Bone Cultist's : 2 -> 4
+Thorns
+• Masamune : 4 -> 4.5 Armor
+• Soulmender : 1 -> 1.5 Agility
+• Everlasting Falchion : 8.5 -> 9 Attack Damage
+• Perilous Zweihander : 9 -> 9.5 Attack Damage
+• Flame Tempest : 50% -> 45% Spell Power
+• Archmage's Staff : 55% -> 50% Spell Power
+• Mechanized Shortbow : 18 -> 19 Projectile Damage
+• Spirit Hammer : 13.5 -> 14 Attack Damage
+• Silver Warhammer : 0.9 -> 0.8 Attack Speed
+• Spirit Skiver : 8 -> 8.5 Attack Damage
+Uncommon :
+• Blessed Vestment : 2 -> 2.5 Armor
+• Web Ripper : 7.5 -> 8 Attack Damage
+• Soul Spear : 9 -> 14 Attack Damage
+• Crusader’s Phalanx : 2.5 -> 3 Agility
+• Frigid Firangi : 3 -> 5 Thorns
+• Obsidian Skin : 3 -> 4 Armor
+• Scorian Ingot : 2.5 -> 3 Armor, 2.5 -> 3 Agility
+• Moon's Chime : 4 -> 4.5 Agility
+• Cursestone Set : 5.5 -> 6 Armor
+• Eye of Dahne : 2 -> 2.5 Agility
+• Snowstorm Idol : 2 -> 2.5 Armor, 0 -> 1 Melee Protection
+• Mr. Happy Doll : 1.5 -> 2 Armor, 1.5 -> 2 Agility
+• Ghost Pirate's Hook : +2 -> +3 Max Health, +5% -> +10% Attack
+Damage
+• Moonlit Halo : 5 -> 5.5 Armor
+• Wall of Flesh : 2.5 -> 3 Armor
+Unique :
+• Yoga Pants : 3.5 -> 4.5 Agility
+• Selaginella Leaf : 3 -> 3.5 Agility
+• Seadiver’s Shell : 4.5 -> 5 Agility
+• Lyson’s Head (Offhand) : +15% -> +20% Attack Damage
+• Vargos' Old Wand : 55% -> 50% Spell Power
+• Apotheosis Spear (Ice and Thunder) : 22 -> 23 Projectile
+Damage
+• Stablemaster's Prod : 7.5 -> 8 Attack Damage
+• Freezeflame : 18 -> 20 Projectile Damage
+Event Unique :
+• Ghost Costume : 2.5 -> 3 Agility, 2 -> 3 Melee Protection
+• Skeletal Galoshes : 4 -> 3 Melee Protection, 1 -> 0 Curse of
+Crippling
+Rare :
+• Metamorphosis : 3.5 -> 4 Armor
+• Salazar's Spats : 6 -> 6.5 Agility
+• Seafoam Cap : 6 -> 6.5 Agility
+• Phantom Flintlock : 15 -> 16 Projectile Damage
+• Wispleaf Ward : 3 -> 3.5 Agility (hek skin as well)
+• True Ice Splinter : 1.6 -> 1.8 Attack Speed
+• Sunblessed Leggings : 4 -> 4.5 Armor
+• Sahra Ib : 2.5 -> 3 Agility
+• Ammi's Embrace : 0 -> +0.1 Attack Speed, -5% -> -8% Speed•
+Scarab's Bane : 18 -> 19 Projectile Damage
+• Mirrorshard Scythe: 9 -> 9.5 Attack Damage
+• Bloodletter's Dagger : +15% -> +18% Attack Damage
+• Fleshmaddened Roots : 3 -> 3.5 Armor
+• Phantom Cutlass : 9.5 -> 10.5 Attack Damage
+• Phoenix Shroud : 2 -> 3.5 Agility, +5 -> +4 Max Health
+Artifact :
+• Flame of Fallen Grace : 0 -> 1 Sustenance
+• Seafloor's Sabatons : 0 -> 1 Aqua Affinity
+• Chillwind Overcoat : 0 -> 1 Sustenance
+• Mu'xro'hkr : 1 -> 0 Poise, 0 -> 1 Steadfast, 0 -> -5% Speed
+• Unwavering Will : 10 -> 11.5 Attack Damage
+• Daredevil's Wake : 2 -> 3 Agility
+• Water's Embrace : 4 -> 4.5 Agility
+• Poet's Tome : 1.5 -> 2 Armor
+• Vehemence : 7.5 -> 7 Agility
+Patron Made :
+• Jeweled Bunny Flippers : 3.79 -> 4.79 Armor
+• The White Cliff : 4.5 -> 5.5 Armor
+• Bloom : 0 -> 1 Melee Protection, +30% -> +35% Attack Damage
+• Aramil's Shield Wall : 3 -> 3.5 Agility
+• Angely Sugar : 3.5 -> 4 Agility
+• Heaven's Lullaby : 2 -> 2.5 Armor, +15% -> +20% Attack Damage
+• Madman's Leggings : 6 -> 7 Armor
+• Crown of the Depths : 0 -> 1 Aqua Affinity
+• Azure Forget-Me-Not : 3 -> 4 Magic Protection, +15% -> +20%
+Magic Damage
+• Longtime Sunshine : 9 -> 10 Attack Damage
+• Plaguebaron Scythe : 1 -> 2 Hex Eater
+• Doomsday Clock : 45% -> 50% Spell Power
+&bOther Item Changes:&r
+• Eschar Dreamcatcher (M4) : 1 -> 1.3 Attack Speed, -15% -> 0%
+Speed, 17 -> 15.5 Attack Damage
+ • Previously, the scythe was in an attack speed range where it
+was awkward to build for both attack speed and magic damage, so
+it's getting its attack speed increased.
+• Bloodpact Pendant : -50% -> -30% Divine Justice Self Heal,
++40% -> 0% Sanctified Armor Damage
+• Barbed Spore Pouch (Rework) : 1 Charm Power, +15% Counter
+Strike Damage, -30% Counter Strike Duration
+• Lesser Charm of Equanimity : +0.5% -> +1% Phlegmatic Resolve
+Resistance
+• Greater Charm of Equanimity : +0.75% -> +1.5% Phlegmatic
+Resolve Resistance, +0.5 -> +1 Phlegmatic Resolve Knockback
+Resistance• Lesser/Greater/Focused/Sedated/Distant Charm of the
+Beast : Grasping Claws Radius -> Grasping Claws Pull Radius,
+Grasping Claws Damage -> Grasping Claws Pull Damage
+• Lesser/Greater Fracturing Charm : Removed Soul Rend Heal Cap
+• Event Horizon : +100% Grasping Claws Radius -> +100% Grasping
+Claws Pull Radius, +50% -> 0% Grasping Claws Damage, 0% -> +15%
+Grasping Claws Cleave Damage
+• Astral Attractor : 0% -> -95% Melancholic Lament Silence
+Radius
 &bFeedback Fixes:&r
-• Removed copper ores, raw copper, and copper ingots from the
-list of interesting items
-• The length needed to mine through the Yellow shortcut has been
-shortened
-• Re-added a small shortcut to the Fateweaver
-• Elcard's boss fight dialogue has been updated to better
-reflect his speech patterns in the ||post-Alchemy Labs
-interaction||• Made various small tweaks to the cliffs in
-Anthill
-• Minor build edits to Bhairavi's Basement
-• Increased the volume of Primordial Bolt's telegraph
-• Slightly adjusted the lore text of Plagueroot Clasp
-• R'Kitxet has received a bestiary lore blurb
-• New drops of the Crimson Mage armor set are now crimson
-instead of magenta
-• Removed usage of goat horn to prevent players from spamming it
+• The rodent problem plaguing The Tolumaeus has been cleared out
+• There is now a warning when starting a delve bounty for a
+dungeon for which you have an instance from a previous week,
+telling you to start a new instance to receive credit
+• Added additional class options (Cleric, Rogue, Alchemist,
+Shaman) to the preset class selection room in Alchemy Labs.
+• Created new path in Bandit Camp POI
+• Reworked the pathing of a certain particularly long F1 Elite
+room in The Celestial Zenith
+• The Reverie lore book has been rewritten to be more accurate
+to modern day lore
+• The Reverie lore book now appears in Exalted Reverie. The loot
+chests that previously occupied the space have been moved
+elsewhere
+• The banner crafting supplies have returned to the guild hall
+for your convenience. They are also available at the dye trader
+elsewhere in Sierhaven.
+• Item Repair stations can now fix Shattered Items
+• The basement in fire branch of Blue is now unlocked with
+buttons instead of pressure plates.
+• Added particles for Sidearm kill shots
+&bMajor Bug Fixes:&r
+• Fixed solo dungeon deaths increasing nearby mobs' damage by
+25% rather than decreasing it by 25%
+• Fixed all player's ability/upgrade options being rerolled when
+any player triggers Rebirth
 &bMinor Bug Fixes:&r
-• Removed a cheesy safe spot from Marina Noir and fixed several
-areas where it was possible to escape the map
-• Alchemist Bags can no longer be dispensed
-• Players are now properly forced to wait until they have all
-cleansed before spawning rooms in A10+
-• Fixed an exploit involving Scorched Earth
-• Fix quest items being inserted into quivers
-• Callicarpa's Bramble Ball now applies custom slowness
-• Davey's melee hits now apply custom slowness
-• Callicarpa's Leaf Nova now applies custom slowness
-• Ghalkor's Forward Sweep now applies custom slowness
-• Svalgot's Rising Blackflame now applies custom slowness
-• Worthy Sacrifice now applies custom slowness on Force spell
-hit
-• Fixed Twisted Shadow's Smoke Grenade applying custom slowness,
-vanilla slowness, and vanilla weakness instead of just custom
-slowness and weakness
-• Fixed ||Isadora, the Bloodied Queen||'s Gilded Grenade
-applying custom slowness, vanilla slowness, and vanilla weakness
-instead of just custom slowness and weakness
-• Removed vanilla armor values from Forsaken Miner
-• Removed vanilla effects from on hit/spell hit/etc. in favor of
-custom effects on the following mobs: Plague Titan, Plagued
-Spores, Temple Haunter, Frost Golem, and Jaguar Slinger• Dungeon
-race advancements are no longer shown in the advancement GUI
-prior to be obtained
-• Fixed typo in Lord of Winds bestiary lore blurb
-• Fixed the Hyper TNT puzzle in Unveiled
-• Fixed a creeper spawner in Anthill not having enough space to
-spawn
-• Attempted a fix to players dying to lethal fall damage if they
-were falling prior to being teleported to the final era of Teal
-• Fixed the status of the PEB option to toggle other players'
-gear not being consistent in the GUI and in chat
-• Fixed incorrect spelling of Serpensia in the books Struck Down
-and Forgive Me
-• Fixed missing comma in Nightleaf Visage lore
-• Fixed Wind Aspect triggering on non-hostile mobs
-• Adjusted Eruption advancement, notably including the
-interaction with Wind Aspect and specifying that the radius for
-Sapper and Adrenaline is 8 blocks instead of 5
-• Fixed some boss bars in the Masquerader's Ruin boss battle
-persisting when the player dies
-• Fixed a typo in the dialogue of Tom the Delivery Man
-• Fixed a typo in one of the Delivery Dash item
-• Fixed portions of Delivery Dash dialogue not being capitalized
-• Fixed capitalization of the main gate in Pink
-• Fixed Tesseract of Soul teleport message not being displayed
-on Valley
-• Fixed decayed totem scaling off current equipment stats rather
-than stats at cast time
-• Fix passable blocks slowing down particle projectile attacks
-(like for specter of ignorance)
-• Fixed a typo in the Guilding Blocks dialogue
-• Fixed some issues with Escape Artist’s teleport
+• Fixed the Parrot GUI not showing the date that a parrot was
+bought immediately after buying it until the GUI is reopened
+• Fixed the Parrot GUI not showing updated requirements for the
+Rainbow Parrot if one of the required parrots was bought until
+the GUI is reopened
+• Enmity Sentry is now correctly under Exalted Reverie in the
+Bestiary
+• Updated the Kaul's Warden interaction in Reverie and Exalted
+Reverie. It is now tied to the instance rather than to the
+player, so those who were not present when it was completed can
+still access the trades. It will also no longer break if you
+start it but don't finish it in one week
+• Fixed opening a Wildcard room in Zenith deleting the block
+that the player is standing inside of
+• Fixed Brutal Thug not being elite
+• Svalgot and Beast of the Blackflame's Orb spells now cancel
+when they die
+• Named snowballs can no longer be dispensed
+• Fixed Spore Blast's bossbar not appearing
+• Fixed fixing a fixed item on Item Repair stations
+• Fixed Enlightenment rarity increase not changing from rare to
+epic
+• Fixed description issues in Color Splash, Earthen Wrath,
+Eternal Savior, Fireball, Ice Barrier, and Volcanic Meteor
+• Fixed Fireball not setting mobs on fire
+• The updated version of Struck Down now appears in the Inner
+Sanctum
+• Totem of Transposing is now properly disabled in Teal Era 4
+• Fixed Resonant Scythe MW2 having incorrect stats
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -213,4 +350,3 @@ and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
-• Masterwork Anvils have been reenabled.
