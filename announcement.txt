@@ -1,52 +1,11 @@
-&bRegarding the Recent Ban Wave&r
-Hi everyone,
-There has been a critical exploit present in the Celestial
-Zenith since its release that allowed players who died to remain
-in the instance, and be resurrected after the defeat of a boss
-with no penalty. This bug was abused by a substantial number of
-players which led to undeserved wins. This bug was reported
-shortly after Zenith's release, but it unfortunately fell to the
-wayside as we attempted to fix bugs and integrate feedback.
-While we are responsible for this, what is not okay is that
-&bthis bug was only reported by two players, despite obviously
-being an exploit of game systems.&r
-After we received the second report, a significant investigation
-was launched where we tracked down every possible instance of a
-player abusing the bug, and we have manually removed those who
-were flagged with insufficient evidence. All who remained lost
-their leaderboard positions, were given temporary bans based on
-how many times they used the exploit, and lost up to 3 Zenith
-Charm Power. For those that remember the Horseman Massacre, this
-situation is significantly different because the exploit was
-deliberately hidden from TM by certain circles of the community
-and it was exploited over a longer period of time.
-We are reasonably confident that those who were punished are
-fully responsible for their actions, but we have most likely
-missed a few players. Due to the lack of evidence from our
-investigation, we will not punish anyone who possibly knew about
-the exploit but failed to report it. Punishments can be appealed
-by privately messaging a Moderator on Discord • we are trying
-our best to handle this situation as fairly as possible.
-For those who have cleared the Celestial Zenith at least once
-without abusing this exploit, you may find yourself contacted by
-your unexpected benefactor during the weekly dungeon instance
-reset...
-As always, please directly report gamebreaking exploits or bugs
-to a Moderator.For an easy way to get to your logs folder from
-your Minecraft client regardless of what you're using, go to
-`Options` -> `Resource Packs...` -> `Open Pack Folder`, go up
-one folder, and check the `logs` folder. `latest.log` is the
-latest log file. You may need an archive manager that supports
-the gzip file format for the `.gz` compressed log files from
-previous days/sessions.The function that grants the Ladder of
-Honesty currently has unintended behavior. If you are eligible
-for the trophy, you must stay in the same shard for at least 15
-seconds after logging on post weekly dungeon reset to receive
-it. If you believe you were not given the Ladder of Honesty
-correctly, please DM @spy1dd. Include a snippet of your
-Minecraft log that shows you either logged off or changed shards
-after logging on post dungeon reset. This log will be present
-somewhere within
+The function that grants the Ladder of Honesty currently has
+unintended behavior. If you are eligible for the trophy, you
+must stay in the same shard for at least 15 seconds after
+logging on post weekly dungeon reset to receive it. If you
+believe you were not given the Ladder of Honesty correctly,
+please DM @spy1dd. Include a snippet of your Minecraft log that
+shows you either logged off or changed shards after logging on
+post dungeon reset. This log will be present somewhere within
 `C:\Users\YourUser\AppData\Roaming\.minecraft\logs\` on vanilla
 or in `\.minecraft\logs\` on a third party launcher.
 &bMonumenta Server Infrastructure Update & Downtime&r
@@ -159,4 +118,36 @@ to 4.
 Additionally, Market Rule G4 is receiving an update. The new
 rule is as follows:
 `G.4: A guild stall can only be owned by a guild having at least
-4 active members.`
+4 active members.`Sorry for keeping you all waiting, I have been
+bit more busy than I would like during my vacation.
+A big THANK YOU to the Monumenta team for allowing me to
+announce the release of my new map in this channel:
+RAGECRAFT IV (for Minecraft version 1.20.1)
+Explore the vast underworld and fight your way through hordes of
+monsters in perilous environments! Can you retrieve the mythical
+crystals and complete the monument?
+This survival-style CTM map features 16 massive dungeons, a
+unique crafting system that goes far beyond normal Minecraft
+mechanics, and a semi-open underground world containing
+innumerable challenges and secrets. And who knows, maybe you'll
+even find some things that feel vaguely familiar as a Monumenta
+player 😉
+The map is scheduled for release on:
+Sunday, April 7, 10 PM CET
+Map Creator: heliceo
+Datapack Contributor: Suso
+Custom Textures: cocoacollei
+Trailer: Counter_Coffee
+Check out the trailer if you are interested:
+https://www.youtube.com/watch?v=hjl5QfimUCo
+&bConcerning Discord's New Poll Feature&r
+Discord, in its infinite wisdom, has tied the new Polls feature
+to the ability for people to send/view messages in channels.
+While the Polls feature can be useful in certain situations, we
+do not want our server to be bombarded with spurious and spammy
+polls. Going forward, polls should only be used in situations
+where it makes sense such as information/opinion gathering for
+topics in the Feedback category, or crowd sourcing build ideas
+in appropriate channels. The moderation team reserves the right
+to remove polls at our discretion. Users who continuously spam
+polls will be warned and muted.

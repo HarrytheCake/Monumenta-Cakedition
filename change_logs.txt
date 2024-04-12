@@ -1,239 +1,4 @@
-&b(10.30.0)&r
-For the update on April 4, 2024
-&bMinor New Features:&r
-• Ability Hotbars (Experimental)
-  • New PEB functionality to toggle on / off an Ability HUD (PEB
--> Gameplay Options -> Ability Hotbars), displaying information
-of cooldowns, stacks and modes from various class abilities and
-depths / zenith active abilities as a boss bar (similar to a
-certain Njol's mod used by many)!
-  • Future Work: Customizability of HUD (renaming skills,
-reordering, recoloring), changing placement of hotbars to
-actionbar or scoreboards, and RP integration some day.• The
-Embers have been added to the delve section of the Bestiary
-• Various Delve mobs in the Bestiary have received lore blurbs!
-Thanks @ellie._ for their contributions writing these blurbs
-&bRegarding the Future of the Seasonal Pass:&r
-• The Seasonal Pass will once again be on break this week due to
-several circumstances. What was envisioned as a low effort way
-to give players fun challenges to complete each week has
-unfortunately become a drain on developer resources that make it
-difficult to create new and exciting pass content/rewards such
-as Elite finishers, Seasonal Pass Hub changes, and unique,
-exciting pass missions. The development team is reevaluating how
-we wish to run Seasonal Passes, but you can expect rewards and
-the pass mission structure to be similar when it returns.
-&bMarket:&r
-• Yet another attempt at fixing the ownership loss. No new
-features will be added to the market until this is fixed.
-• In case the fix doesn’t work, a better tool is available for
-moderators. No need to know your listing IDs anymore.
-• With the balance changes this week, this will be the first
-time item replacements are run on the market data. Keep an eye
-out for issues related to item changes.
-&bWarlock Revamp:&r
-Warlock is receiving some ability revamps this update! This
-mainly aims to increase its build diversity by strengthening
-level 2 choices and lowering the necessity to take 1 point in
-every skill. Its healing is also being looked at, particularly
-the strength of Soul Rend.• Choleric Flames L2: The damage is
-increased to 5, and
-&balso afflict mobs with -100% Healing for 7s. (Counts as a
-level 1 debuff.)&r
-• Grasping Claws L2: Increase the Slowness to 30%.
-&bAfter the projectile lands, your next melee scythe attack
-within the next 4 seconds will deal 4 + 10% of the attack's
-damage as magic damage in a 3 block radius.&r
-• Melancholic Lament L2: Increase the Weaken to 30% and casting
-this ability decreases the duration of all negative potion
-effects on players in the radius by 10s.
-&bYour next melee scythe attack within the next 4 seconds will
-silence all mobs in a 3 block radius for 3s.&r
-• Sanguine Harvest: Now applies Bleed 2 and has a 4-block radius
-at both levels. Now explodes at max range instead of requiring
-mob/block collision. New L2:
-&bIncrease the mark's healing to 10% of max health. Melee
-attacks against marked mobs heal the player for 10% of their max
-health, deal 10% more damage, and consume the mark.&r
-• Phlegmatic Resolve:
-&bNow capped at 3 abilities on cooldown.&r Resistance buffed
-from
-&b+1.5%/+2.5% to +3%/+5% Resistance&r, and knockback resistance
-buffed from
-&b+0.5 to +1 KBR&r.
-• Soul Rend: L1 now
-&bheals 5 health&r. New L2:
-&bThe attacked enemy is marked for 8s, allowing your next 2
-critical scythe attacks against them to heal you for 10% of the
-damage dealt, capped at 2.5 health per hit. Killing the enemy
-heals you for 1.5 health for each remaining mark on the mob.&r
-Healing from this ability now applies to all players within 7
-blocks of you.
-  • Dark Pact's L2 interaction remains unchanged, allowing Soul
-Rend to heal 2/4 HP when triggered.
-&bRegion 1 Item Changes:&r
-Tiered :
-• Hobnailed Set : 0.5 -> 1 Armor
-• Hunter's Stake : 2 -> 0 Unbreaking
-• Smoldering Hatchet : 7 -> 7.5 Attack Damage
-• Blast Set : 1.5 -> 2 Armor
-• Tempered Ironwood Blade : 0 -> 0.5 Agility
-• Smoldering Mace : 8 -> 7.5 Attack Damage
-• Flamewreath Splinter : 4.5 -> 5 Attack Damage
-• Light Scimitar : 1.6 -> 1.8 Attack Speed• Meteor Hammer : 0.8
--> 0.7 Attack Speed
-• Tempered Mace : 8.5 -> 9 Attack Damage
-• Searing Bow : 8 -> 9 Projectile Damage
-• Salubric Scythe : 2 -> 1 Slayer
-• Hardened Leather Set : 3 -> 3.5 Armor
-• Assassin's Dagger +5% -> +8% Attack Damage
-• Ironwrought Shield : 1 -> 1.5 Armor
-• Volcanic Orb : 1 -> 2 Fire Protection
-• Swiftwood Buckler : 1.5 -> 2 Agility
-• Eternal Cresent : 5 -> 5.5 Attack Damage
-• Phoenix Axe : 9.5 -> 10 Attack Damage
-Uncommon :
-• Alchemical Apron : -10% -> -5% Speed
-• Rebel’s Dagger : +5% -> +10% Attack Damage
-• Syringe Sharpshooter : 4 -> 5 Projectile Damage
-• Medicine Stick : 2 -> 4 Attack Damage, 3 -> 2 Attack Speed
-• Oncoming Wave : 1.5 -> 2 Agility
-• Lingering Flame : 5 -> 5.5 Attack Damage
-• Plagueborne Axe : 8 -> 9.5 Attack Damage
-• Ponderous Stone : 1 -> 1.5 Armor
-• Cutting Breeze : 1.6 -> 1.8 Attack Speed
-• Civit Dagger : 5.5 -> 6 Attack Damage, 0 -> -5% Speed
-• Blighted Scythe : 3.5 -> 4 Attack Damage
-• Volatic Edge : 5 -> 5.5 Attack Damage
-• Ensanguined Flower : 3 -> 2 Armor
-• Wrangler's Disguise : 0 -> +5% Speed
-• Blazing Soul : +5% -> +8% Magic Damage
-• Mistleaf Bracer : 1.5 -> 2 Agility
-• Drowned Shellmet : 3 -> 3.5 Agility
-• Abyssal Flame : 1 -> 1.5 Agility
-• Peaceful Slumber : 2 -> 3 Melee Protection
-• Demoncaller Boots : 3.5 -> 4.5 Armor
-Unique :
-• Unstable Sparkler : 2 -> 2.5 Attack Damage
-• Stargazer's Hood : 2 -> 3 Agility
-• Geomantic Dagger : 5 -> 5.5 Attack Damage, Slayer 0 -> 1
-• Ophion : 5.5 -> 6 Attack Damage
-Event Unique :
-• Plague Bearer's Soiled Trousers : 6.5 -> 6 Agility
-• Helm of the Pumpking : 1 -> 1.5 Armor
-Rares :
-• Stonegazer Eyes : 2.5 -> 3 Armor
-• Tidewalker Rags : 2 -> 0 Fire Protection, 0 -> 2 Abyssal
-• Bandit's Dagger : 0 -> 10% Speed
-• Stormborn Boots : 3 -> 3.5 Agility
-• Seasoaked Helmet : 3 -> 3.5 Armor
-• Flamekissed Runeblade : 3 -> 5 Fire Protection
-• Hawktree Bark : 4 -> 3.5 Agility, 0 -> +5% Projectile Damage
-• Plaguebringer : 3.5 -> 4 Agility
-• Sodden Sandals : 2.5 -> 3 Agility• Reaper's Harvest : 1 -> 1.2
-Attack Speed
-• Doom's Edge : 1.6 -> 1.7 Attack Speed
-• Alchemist's Insight : 5 -> 5.5 Attack Damage
-Artifacts :
-• Breaking Wave : 2 -> 2.5 Agility
-• Burdened Stone : 2.5 -> 3 Armor
-• Mistleaf Vambrace : 2 -> 2.5 Agility
-• Soul of Conflagration : +5% -> +8% Magic Damage
-• Slicing Wind : 5 -> 5.5 Attack Damage, 1.6 -> 1.8 Attack Speed
-• Smouldering Flame : 6 -> 6.5 Attack Damage
-• Coldsteel Blunt : 0 -> 1 Ice Aspect
-• Thawed Frozen Mallet : 10.5 -> 11.5 Attack Damage
-• Yurei : +15% -> +25% Attack Speed
-• Chains of the Deep : 4 -> 4.5 Agility
-• C'Zanil's Talisman : 1 -> 2 Fire Protection, 1 -> 2 Feather
-Falling
-• Whispering Chains : 4 -> 4.5 Agility
-• Wormwood Bark : 4 -> 4.5 Armor
-• Deepslate Xkelaq : -2 -> -1 Max Health
-Patron Made :
-• Gem Encrusted Manpance : 3 -> 3.5 Armor
-• Night's Shadow : 2 -> 2.5 Agility
-&bRegion 2 Item Changes:&r
-Tiered :
-• Saguaro Set : 2.5 -> 3 Armor
-• Silence Set : 2.5 -> 3 Agility
-• Privateer's Sabre : 1 -> 1.5 Agility
-• Driftwood's Gambit : 6.5 -> 7 Attack Damage
-• Coldfire Axe : 10.5 -> 11 Attack Damage
-• Farsight Flame : 8 -> 9 Projectile Damage
-• Fencer's Foil : +5% -> +10% Attack Damage
-• Graceful Broadsword : 6.5 -> 7 Attack Damage
-• Ignition Wand : 45 -> 40% Spell Power
-• Glowblossom : 40 -> 35% Spell Power
-• Seawater Razor : 5.5 -> 6.5 Attack Damage
-• Blastmesh Set : 5.5 -> 6 Agility
-• Frosted Sabre : 7.5 -> 8 Attack Damage
-• Erriot's Eradicator : 45% -> 40% Spell Power
-• Combustion Staff : 50% -> 45% Spell Power
-• Cursed Hammer : 13 -> 14 Attack Damage
-• Sandstone Shield : 3.5 -> 4 Armor
-• Sword of Ages : 7 -> 8 Attack Damage
-• Holywood Staff : 50% -> 45% Spell Power
-• Starbound Longbow : 12 -> 12.5 Projectile Damage
-• Chillwind Repeater : 12 -> 13 Projectile Damage
-• Starbound Warhammer : 12 -> 13 Attack Damage
-• Thunderhead : 13 -> 13.5 Attack Damage
-• Tenebrous Set : 6.5 -> 7 Agility
-• Golden Sun Set : 4 -> 4.5 Armor
-• Mercurial Set : 6.5 -> 7 Agility• Bone Cultist's : 2 -> 4
-Thorns
-• Masamune : 4 -> 4.5 Armor
-• Soulmender : 1 -> 1.5 Agility
-• Everlasting Falchion : 8.5 -> 9 Attack Damage
-• Perilous Zweihander : 9 -> 9.5 Attack Damage
-• Flame Tempest : 50% -> 45% Spell Power
-• Archmage's Staff : 55% -> 50% Spell Power
-• Mechanized Shortbow : 18 -> 19 Projectile Damage
-• Spirit Hammer : 13.5 -> 14 Attack Damage
-• Silver Warhammer : 0.9 -> 0.8 Attack Speed
-• Spirit Skiver : 8 -> 8.5 Attack Damage
-Uncommon :
-• Blessed Vestment : 2 -> 2.5 Armor
-• Web Ripper : 7.5 -> 8 Attack Damage
-• Soul Spear : 9 -> 14 Attack Damage
-• Crusader’s Phalanx : 2.5 -> 3 Agility
-• Frigid Firangi : 3 -> 5 Thorns
-• Obsidian Skin : 3 -> 4 Armor
-• Scorian Ingot : 2.5 -> 3 Armor, 2.5 -> 3 Agility
-• Moon's Chime : 4 -> 4.5 Agility
-• Cursestone Set : 5.5 -> 6 Armor
-• Eye of Dahne : 2 -> 2.5 Agility
-• Snowstorm Idol : 2 -> 2.5 Armor, 0 -> 1 Melee Protection
-• Mr. Happy Doll : 1.5 -> 2 Armor, 1.5 -> 2 Agility
-• Ghost Pirate's Hook : +2 -> +3 Max Health, +5% -> +10% Attack
-Damage
-• Moonlit Halo : 5 -> 5.5 Armor
-• Wall of Flesh : 2.5 -> 3 Armor
-Unique :
-• Yoga Pants : 3.5 -> 4.5 Agility
-• Selaginella Leaf : 3 -> 3.5 Agility
-• Seadiver’s Shell : 4.5 -> 5 Agility
-• Lyson’s Head (Offhand) : +15% -> +20% Attack Damage
-• Vargos' Old Wand : 55% -> 50% Spell Power
-• Apotheosis Spear (Ice and Thunder) : 22 -> 23 Projectile
-Damage
-• Stablemaster's Prod : 7.5 -> 8 Attack Damage
-• Freezeflame : 18 -> 20 Projectile Damage
-Event Unique :
-• Ghost Costume : 2.5 -> 3 Agility, 2 -> 3 Melee Protection
-• Skeletal Galoshes : 4 -> 3 Melee Protection, 1 -> 0 Curse of
-Crippling
-Rare :
-• Metamorphosis : 3.5 -> 4 Armor
-• Salazar's Spats : 6 -> 6.5 Agility
-• Seafoam Cap : 6 -> 6.5 Agility
-• Phantom Flintlock : 15 -> 16 Projectile Damage
-• Wispleaf Ward : 3 -> 3.5 Agility (hek skin as well)
-• True Ice Splinter : 1.6 -> 1.8 Attack Speed
-• Sunblessed Leggings : 4 -> 4.5 Armor
-• Sahra Ib : 2.5 -> 3 Agility
-• Ammi's Embrace : 0 -> +0.1 Attack Speed, -5% -> -8% Speed•
-Scarab's Bane : 18 -> 19 Projectile Damage
+• Scarab's Bane : 18 -> 19 Projectile Damage
 • Mirrorshard Scythe: 9 -> 9.5 Attack Damage
 • Bloodletter's Dagger : +15% -> +18% Attack Damage
 • Fleshmaddened Roots : 3 -> 3.5 Armor
@@ -349,4 +114,139 @@ update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
-instance corruption.
+instance corruption.The City of Shifting Waters has been closed.
+&bMinor New Features:&r
+• Dying while you already have a grave active spawns a new grave
+at the new death location (if able), and deletes the previous
+grave.
+• Added a new epic cosmetic skill set for Warlock, which can be
+acquired from a certain NPC after conquering a jungle's
+nightmare.
+• We are experimenting with a few changes to musical elite
+finishers, using Poultrification as a starting point. While this
+finisher is playing, any kills during the currently playing part
+will continue to play in harmony. No other finishers will be
+randomly selected until all parts of the current song have
+finished. We plan to update the other musical finishers as time
+permits, so that only one song will play at a time for a given
+player's kills.
+• Lore entries have been added for the Light Blue dungeon mobs
+in the Bestiary
+&bFeedback Fixes:&r
+• Spring Loaded Sheath now displays +4 Dagger Throw Daggers
+instead of +3, but this is already how it functioned because
+Dagger Throw always rounds up to an odd number of daggers
+• Slightly lowered the rate at which Elixir of Exorcism drop in
+Gray loot chests
+• Improved ability description for Amplifying Hex
+• You can now shift click Telsket's effigy to quick enter
+C'Telsket's Memory after completion of A Study in Crimson Part 1
+&bMinor Bug Fixes:&r
+• Fixed bug where NameMC "likes" weren't able to be checked. As
+a reminder, you can "like" our server on
+<https://namemc.com/server/server.playmonumenta.com> to get two
+tokens to spin the Seasonal Pass treasure wheel by talking to
+Pollmaster Tennenbaum in Sierhaven. Thanks for helping us
+advertise the server by doing this!
+&b(10.31.0)&r
+For the update on April 11, 2024
+&bMajor New Features:&r
+&bSierhaven Overhaul: Phase 4&r
+After a long hiatus, work has picked back up on modernizing
+Sierhaven! This phase, we specifically addressed the Western
+side of Sierhaven, including Docks and the Arena of Terth, but
+you'll notice some other general changes as well! The second
+half of this phase, the Eastern side of Sierhaven, will release
+in the coming weeks. Please note there will be some build
+inconsistencies in the meantime.
+• Revamped builds for Docks, Arena of Terth Island, and nearby
+areas
+• Revamped roads on the main island
+• Replaced vanilla trees and applied a new biome to Sierhaven
+• Added some new public infrastructure
+• Added new block and decorative head merchants
+• Relocated Frod the Builder and his cave
+• Revised the pathing for both the Flash in the Pan and
+Tutorial+ races
+• Updated the Message in a Bottle from Crew to Remember to have
+slightly new and more accurate coordinates to translate
+• Slightly moved entrance to Beast of a Book's ||Questing Beast
+Arena||
+&bFarr Overhaul:&r
+Alongside the Sierhaven revamp, Farr has received significant
+changes to keep up with the modern build style! While the layout
+of the town remains roughly the same, the town has been rebuilt
+from the ground up!
+• Added a new parkour course to the Teleport Hub
+• Relocated the market NPCs closer together for convenience
+• Adjusted the existing parkour course ending on top of the
+central ziggurat
+• Added a fast travel to and from Rock's Little Casino from the
+Teleport Hub
+• Simplified the route to the King’s Herald
+• Moved the Bounty Clerk closer to the King’s Herald
+• Updated the ||Ziggurat in Pre-Attack Farr||
+• Improved lighting
+• The Quarantine variant of Farr in The Roots of the Plague may
+take longer to update due to needing an overhaul to the
+detection system.• Items with Attack Speed less than 4 but only
+1 Attack Damage (i.e. Frodian Keyblade) will now display their
+attack damage. Also fixed such items not triggering Swift Cuts.
+• It is now possible to buy rewards from previous season passes
+without there being a currently active season pass
+• Fixed incorrect word in new version of The Reverie
+• Fixed Grasping Claws and Melancholic Lament's level 2 attack
+effects persisting past the 4-second window
+• Fixed only Magenta completion being required to access the
+market instead of White, Orange, and Magenta
+• Fixed description issues in Sanguine Harvest, Dark Pact, and
+Judgement Chain
+• Fixed the preview in the Masterwork GUI rounding to the
+nearest tenth in some cases where it shouldn't
+• Fixed the Stasis advancement not being granted
+• Fixed Twisted Outcast losing its glowing when it summons
+• Fixed typo in Striking Torrent lore
+• Fixed previews in the Masterwork GUI not displaying changes in
+projectile speed on mainhands
+• The particles that appear around the Light of Salvation statue
+now properly only play if the statue is glowing
+• Fixed an empty Zenith spawner
+• Fixed a Mistport stuckspot on a ship
+• Fixed a missing npc on an Expedition Docks boat
+• Reworked spawn platforms for two Tolumaeus archer spawners
+• Levyn can now give another copy of Message from a Bottle if
+you lose it after getting it deciphered by the Royal
+Cartographer
+• The Royal Cartographer can no longer decipher the Message from
+a Bottle if you don't have it on you
+• Fixed a stuck spot in Sierhaven
+• Fixed a text order error in Monk Gehri's dialogue when
+starting What Lies Within
+• Fixed typo in Colossus of Entropy lore blurb
+• Fixed Hydraling have a lore blurb that was just the full stats
+and lore text of the Resonant Scythe
+• Winning a fight against Sirius now grants custom Resistance
+rather than vanilla Resistance
+• Eldrask's Ring of Frost now applies custom Slowness rather
+than vanilla Slowness• Eldrask's Frost Rift now applies custom
+Slowness rather than vanilla Slowness
+• Eldrask's Hailstorm now applies custom Slowness rather than
+vanilla Slowness
+• Fixed a typo in the name of the Headless Horseman's Burning
+Vengeance spell
+• Kaul no longer applies vanilla Slowness to himself and thus
+cannot be targeted by Amplifying Hex when he channels certain
+spells
+• Kaul's Putrid Plague now applies custom Slowness rather than
+vanilla Slowness
+• The Mimic Queen's Multihit Heal attack now applies 15 Melee
+damage per hit instead of 15 typeless damage
+• C'Shura's Smoke Bomb now applies custom Slowness and Weakness
+instead of vanilla Slowness and Weakness
+• Fixed issues with picking up Master Jukeboxes
+• Fixed a grammatical error in the Roots of the Plague dialogue
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters remains closed.
