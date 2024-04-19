@@ -1,197 +1,6 @@
-• Scarab's Bane : 18 -> 19 Projectile Damage
-• Mirrorshard Scythe: 9 -> 9.5 Attack Damage
-• Bloodletter's Dagger : +15% -> +18% Attack Damage
-• Fleshmaddened Roots : 3 -> 3.5 Armor
-• Phantom Cutlass : 9.5 -> 10.5 Attack Damage
-• Phoenix Shroud : 2 -> 3.5 Agility, +5 -> +4 Max Health
-Artifact :
-• Flame of Fallen Grace : 0 -> 1 Sustenance
-• Seafloor's Sabatons : 0 -> 1 Aqua Affinity
-• Chillwind Overcoat : 0 -> 1 Sustenance
-• Mu'xro'hkr : 1 -> 0 Poise, 0 -> 1 Steadfast, 0 -> -5% Speed
-• Unwavering Will : 10 -> 11.5 Attack Damage
-• Daredevil's Wake : 2 -> 3 Agility
-• Water's Embrace : 4 -> 4.5 Agility
-• Poet's Tome : 1.5 -> 2 Armor
-• Vehemence : 7.5 -> 7 Agility
-Patron Made :
-• Jeweled Bunny Flippers : 3.79 -> 4.79 Armor
-• The White Cliff : 4.5 -> 5.5 Armor
-• Bloom : 0 -> 1 Melee Protection, +30% -> +35% Attack Damage
-• Aramil's Shield Wall : 3 -> 3.5 Agility
-• Angely Sugar : 3.5 -> 4 Agility
-• Heaven's Lullaby : 2 -> 2.5 Armor, +15% -> +20% Attack Damage
-• Madman's Leggings : 6 -> 7 Armor
-• Crown of the Depths : 0 -> 1 Aqua Affinity
-• Azure Forget-Me-Not : 3 -> 4 Magic Protection, +15% -> +20%
-Magic Damage
-• Longtime Sunshine : 9 -> 10 Attack Damage
-• Plaguebaron Scythe : 1 -> 2 Hex Eater
-• Doomsday Clock : 45% -> 50% Spell Power
-&bOther Item Changes:&r
-• Eschar Dreamcatcher (M4) : 1 -> 1.3 Attack Speed, -15% -> 0%
-Speed, 17 -> 15.5 Attack Damage
- • Previously, the scythe was in an attack speed range where it
-was awkward to build for both attack speed and magic damage, so
-it's getting its attack speed increased.
-• Bloodpact Pendant : -50% -> -30% Divine Justice Self Heal,
-+40% -> 0% Sanctified Armor Damage
-• Barbed Spore Pouch (Rework) : 1 Charm Power, +15% Counter
-Strike Damage, -30% Counter Strike Duration
-• Lesser Charm of Equanimity : +0.5% -> +1% Phlegmatic Resolve
-Resistance
-• Greater Charm of Equanimity : +0.75% -> +1.5% Phlegmatic
-Resolve Resistance, +0.5 -> +1 Phlegmatic Resolve Knockback
-Resistance• Lesser/Greater/Focused/Sedated/Distant Charm of the
-Beast : Grasping Claws Radius -> Grasping Claws Pull Radius,
-Grasping Claws Damage -> Grasping Claws Pull Damage
-• Lesser/Greater Fracturing Charm : Removed Soul Rend Heal Cap
-• Event Horizon : +100% Grasping Claws Radius -> +100% Grasping
-Claws Pull Radius, +50% -> 0% Grasping Claws Damage, 0% -> +15%
-Grasping Claws Cleave Damage
-• Astral Attractor : 0% -> -95% Melancholic Lament Silence
-Radius
-&bFeedback Fixes:&r
-• The rodent problem plaguing The Tolumaeus has been cleared out
-• There is now a warning when starting a delve bounty for a
-dungeon for which you have an instance from a previous week,
-telling you to start a new instance to receive credit
-• Added additional class options (Cleric, Rogue, Alchemist,
-Shaman) to the preset class selection room in Alchemy Labs.
-• Created new path in Bandit Camp POI
-• Reworked the pathing of a certain particularly long F1 Elite
-room in The Celestial Zenith
-• The Reverie lore book has been rewritten to be more accurate
-to modern day lore
-• The Reverie lore book now appears in Exalted Reverie. The loot
-chests that previously occupied the space have been moved
-elsewhere
-• The banner crafting supplies have returned to the guild hall
-for your convenience. They are also available at the dye trader
-elsewhere in Sierhaven.
-• Item Repair stations can now fix Shattered Items
-• The basement in fire branch of Blue is now unlocked with
-buttons instead of pressure plates.
-• Added particles for Sidearm kill shots
-&bMajor Bug Fixes:&r
-• Fixed solo dungeon deaths increasing nearby mobs' damage by
-25% rather than decreasing it by 25%
-• Fixed all player's ability/upgrade options being rerolled when
-any player triggers Rebirth
-&bMinor Bug Fixes:&r
-• Fixed the Parrot GUI not showing the date that a parrot was
-bought immediately after buying it until the GUI is reopened
-• Fixed the Parrot GUI not showing updated requirements for the
-Rainbow Parrot if one of the required parrots was bought until
-the GUI is reopened
-• Enmity Sentry is now correctly under Exalted Reverie in the
-Bestiary
-• Updated the Kaul's Warden interaction in Reverie and Exalted
-Reverie. It is now tied to the instance rather than to the
-player, so those who were not present when it was completed can
-still access the trades. It will also no longer break if you
-start it but don't finish it in one week
-• Fixed opening a Wildcard room in Zenith deleting the block
-that the player is standing inside of
-• Fixed Brutal Thug not being elite
-• Svalgot and Beast of the Blackflame's Orb spells now cancel
-when they die
-• Named snowballs can no longer be dispensed
-• Fixed Spore Blast's bossbar not appearing
-• Fixed fixing a fixed item on Item Repair stations
-• Fixed Enlightenment rarity increase not changing from rare to
-epic
-• Fixed description issues in Color Splash, Earthen Wrath,
-Eternal Savior, Fireball, Ice Barrier, and Volcanic Meteor
-• Fixed Fireball not setting mobs on fire
-• The updated version of Struck Down now appears in the Inner
-Sanctum
-• Totem of Transposing is now properly disabled in Teal Era 4
-• Fixed Resonant Scythe MW2 having incorrect stats
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.The City of Shifting Waters has been closed.
-&bMinor New Features:&r
-• Dying while you already have a grave active spawns a new grave
-at the new death location (if able), and deletes the previous
-grave.
-• Added a new epic cosmetic skill set for Warlock, which can be
-acquired from a certain NPC after conquering a jungle's
-nightmare.
-• We are experimenting with a few changes to musical elite
-finishers, using Poultrification as a starting point. While this
-finisher is playing, any kills during the currently playing part
-will continue to play in harmony. No other finishers will be
-randomly selected until all parts of the current song have
-finished. We plan to update the other musical finishers as time
-permits, so that only one song will play at a time for a given
-player's kills.
-• Lore entries have been added for the Light Blue dungeon mobs
-in the Bestiary
-&bFeedback Fixes:&r
-• Spring Loaded Sheath now displays +4 Dagger Throw Daggers
-instead of +3, but this is already how it functioned because
-Dagger Throw always rounds up to an odd number of daggers
-• Slightly lowered the rate at which Elixir of Exorcism drop in
-Gray loot chests
-• Improved ability description for Amplifying Hex
-• You can now shift click Telsket's effigy to quick enter
-C'Telsket's Memory after completion of A Study in Crimson Part 1
-&bMinor Bug Fixes:&r
-• Fixed bug where NameMC "likes" weren't able to be checked. As
-a reminder, you can "like" our server on
-<https://namemc.com/server/server.playmonumenta.com> to get two
-tokens to spin the Seasonal Pass treasure wheel by talking to
-Pollmaster Tennenbaum in Sierhaven. Thanks for helping us
-advertise the server by doing this!
-&b(10.31.0)&r
-For the update on April 11, 2024
-&bMajor New Features:&r
-&bSierhaven Overhaul: Phase 4&r
-After a long hiatus, work has picked back up on modernizing
-Sierhaven! This phase, we specifically addressed the Western
-side of Sierhaven, including Docks and the Arena of Terth, but
-you'll notice some other general changes as well! The second
-half of this phase, the Eastern side of Sierhaven, will release
-in the coming weeks. Please note there will be some build
-inconsistencies in the meantime.
-• Revamped builds for Docks, Arena of Terth Island, and nearby
-areas
-• Revamped roads on the main island
-• Replaced vanilla trees and applied a new biome to Sierhaven
-• Added some new public infrastructure
-• Added new block and decorative head merchants
-• Relocated Frod the Builder and his cave
-• Revised the pathing for both the Flash in the Pan and
-Tutorial+ races
-• Updated the Message in a Bottle from Crew to Remember to have
-slightly new and more accurate coordinates to translate
-• Slightly moved entrance to Beast of a Book's ||Questing Beast
-Arena||
-&bFarr Overhaul:&r
-Alongside the Sierhaven revamp, Farr has received significant
-changes to keep up with the modern build style! While the layout
-of the town remains roughly the same, the town has been rebuilt
-from the ground up!
-• Added a new parkour course to the Teleport Hub
-• Relocated the market NPCs closer together for convenience
-• Adjusted the existing parkour course ending on top of the
-central ziggurat
-• Added a fast travel to and from Rock's Little Casino from the
-Teleport Hub
-• Simplified the route to the King’s Herald
-• Moved the Bounty Clerk closer to the King’s Herald
-• Updated the ||Ziggurat in Pre-Attack Farr||
-• Improved lighting
-• The Quarantine variant of Farr in The Roots of the Plague may
-take longer to update due to needing an overhaul to the
-detection system.• Items with Attack Speed less than 4 but only
-1 Attack Damage (i.e. Frodian Keyblade) will now display their
-attack damage. Also fixed such items not triggering Swift Cuts.
+• Items with Attack Speed less than 4 but only 1 Attack Damage
+(i.e. Frodian Keyblade) will now display their attack damage.
+Also fixed such items not triggering Swift Cuts.
 • It is now possible to buy rewards from previous season passes
 without there being a currently active season pass
 • Fixed incorrect word in new version of The Reverie
@@ -250,3 +59,146 @@ instead of vanilla Slowness and Weakness
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 • The City of Shifting Waters remains closed.
+&bHotfix:&r Dungeon guards will no longer appear in a Shifting
+instance prior to generation, and exit/race buttons will
+likewise be inoperable. Shifting has been reopened as a result
+of this change.
+&bHotfixes:&r
+• Fixed logging out in Celestial Zenith after triggering Rebirth
+(and not dying and being revived at any point since then)
+sending the player to the lootroom, as if they logged out while
+in the death waiting room. Additionally, some skills such as
+Skyhook and Escape Artist did not work properly under these
+conditions.
+• Fixed Swift Cuts triggering on any damage dealt where holding
+an item with an Attack Speed attribute
+&bHotfix:&r A change has been made on the backend to the way
+dungeon races are initiated. This should solve a certain issue
+with Shifting's race, as well as broadly raise stability for
+dungeon races as a whole.
+&b(10.32.0)&r
+For the update on April 18, 2024
+&bMinor New Features:&r
+• A new function has been added to the Knick Knack Sack, Mobile
+Quest Guides! Obtain the quest list for each town that you have
+discovered across Monumenta on the fly with this nifty feature!
+• Added the Enchantopedia to the Knick-Knack Sack, allowing
+players to see a list of every enchantment they've discovered,
+as well as all enchantments that apply to a specific item! This
+list can also be filtered by name and category.
+• The Equestrian Society of Galengarde has been informed of
+another Treehorse in its lovely town. It has been provided hay,
+water, and the name Lightmyth.
+• Several towns and significant locations across Monumenta have
+been given banners to represent them in teleport hubs. Some have
+even taken up to displaying them around the locations!
+• The Volcano poi in R1 has been completely rebuilt• thanks to
+MN_128, ChargingUv, LegendMC119, panderz, and nicknon!
+• Market: currencies of regions you have not unlocked are now
+not selectable as listing currency
+• Added a new andesite merchant in Sierhaven
+• Updated and standardized the Jammin' DJ, Master Jukebox, and
+Record Player/Soulsinger:
+ • The Master Jukebox now uses a GUI like the others
+   • Added many tracks that were missing but in the other GUIs
+   • As before, the Master Jukebox plays to other players within
+a 48 block radius (as opposed to the others which play only to
+the user)
+ • Added Verdant Remnants, All That Remains, Sealed Remorse,
+Davey, Chantry, Samwell, Sirius, Broodmother, Vesperidys, and
+Star Point tracks, along with all dungeon tracks
+ • Playing music from these GUIs now always plays regardless of
+your PEB settings
+ • Fixed Verdant Remnants completion being required to play
+C'Shura's music instead of Forsworn Sanctum completion
+ • Various rearrangements within the GUIs
+&bMarket Plugin: Filters • Part. 1/3&r
+A new button has appeared in the browser: it adds the ability to
+select one of 9 pre-made filters, to help you search specific
+items more efficiently.
+• Filter 1: No filters. Pretty much what you had previously.
+• Filter 2: Shows only King's Valley items.
+• Filter 3: Shows only Celsian Isles items.
+• Filter 4: Shows only Architect's Ring items.
+• Filter 5: Shows items that aren't from any regions (vanilla
+item, simple lore stuff, or some QoL items like Firmament)
+• Filter 6: Shows only items that have a Region:Tier tag.
+• Filter 7: Opposite of Filter 6
+• Filter 8: Items considered either armor, or off-hand.
+• Filter 9: Opposite of Filter 8
+Once you have selected a filter, you will have to press the new
+shiny refresh button.
+This week, those filters are not editable. Next week, they
+should be.
+This corresponds to part 2/3, which will bring the ability to
+add/edit your own custom filters.
+We are aware the pre-made filters given this week will not be
+enough for all your specific needs, but it &oshould&r provide a
+better experience, as well as give us potential data for bug
+hunting, at least until next week, when filters will be
+editable.
+Part 3/3 will be an anti-progression-skip mechanic, hiding items
+that you should not have access to without the market.
+&bMob Changes:&r
+• Aggressive Enderman
+  • 0.3 -> 0.2 Movement Speed
+  • 15 -> 17 Attack Damage
+• Spectral Enderman
+  • 0.3 -> 0.25 Movement Speed
+  • Now sets victims on fire for 5 seconds instead of 4 seconds
+&bFeedback Fixes:&r
+• The memorial for the NPCs who died in the attack on Farr now
+uses text displays instead of signs
+• Made slight adjustments to the Acrobat of the Clocktower
+parkour to be more clear about where you need to go
+• Improved lighting in several Region 2 PoIs
+• Clarified Shadow Slam description
+• Added ambient particles to the barrel containing Dusk
+Honeycomb
+• Added an ender chest to The Nightcap
+• Renamed the biome used in Sierhaven
+• Small visual touch-ups in Caves of Bones POI
+• Tweaked the visuals of Faespirits and Bursting Roots from the
+Jungleborn Warlock set
+&bMinor Bug Fixes:&r
+• Fixed Farr Guards being kleptomaniacs for players' shields
+• Fixed Gallery of Fears and Celestial Zenith graves being
+kleptomaniacs for players' shields
+• Fixed paintings and other entities in EC not spawning when
+entering a new room
+• Removed the random bookcases from the Valley sort box
+• Fixed market putting currencies in wallets that shouldn't be
+able to contain said currencies
+• An outdated holdover on the visibility requirement for the
+||Exalted Hub|| Quest Guide from the days prior to Assisted
+Dreaming has been corrected
+• Fixed typo in All That Remains
+• Fixed several build errors in Sierhaven
+• Fixed a stuck spot in Farr
+• Fixed small build errors in Star Point and Chillwind
+• Fixed melee and bow kills not generating Crystalline Combos
+stacks
+• Reworded Steelsage Ichor's effect and fixed a broken
+interaction with Scout Swiftness
+• Soul Rend marks can no longer be triggered by players other
+than the original caster
+• Fixed Dark Pact preventing Soul Rend from healing nearby
+players or applying marks
+• Soul Rend marks no longer apply absorption for overheals
+• Prevented Advancing Shadows from teleporting to enemies behind
+you if your hitbox overlaps
+• Aligned Flamestrike's particle cone with its actual effect
+cone
+• Cloned mobs in elite finishers now correctly do not have
+entity collision
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• A reminder that the Barrel Bazaar will be closing on
+<t:1713715200>. Please see https://discord.com/channels/31306665
+5494438922/313403825442521088/1229206599114166322 for more
+information.
