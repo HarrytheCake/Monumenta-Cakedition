@@ -1,151 +1,3 @@
-• Items with Attack Speed less than 4 but only 1 Attack Damage
-(i.e. Frodian Keyblade) will now display their attack damage.
-Also fixed such items not triggering Swift Cuts.
-• It is now possible to buy rewards from previous season passes
-without there being a currently active season pass
-• Fixed incorrect word in new version of The Reverie
-• Fixed Grasping Claws and Melancholic Lament's level 2 attack
-effects persisting past the 4-second window
-• Fixed only Magenta completion being required to access the
-market instead of White, Orange, and Magenta
-• Fixed description issues in Sanguine Harvest, Dark Pact, and
-Judgement Chain
-• Fixed the preview in the Masterwork GUI rounding to the
-nearest tenth in some cases where it shouldn't
-• Fixed the Stasis advancement not being granted
-• Fixed Twisted Outcast losing its glowing when it summons
-• Fixed typo in Striking Torrent lore
-• Fixed previews in the Masterwork GUI not displaying changes in
-projectile speed on mainhands
-• The particles that appear around the Light of Salvation statue
-now properly only play if the statue is glowing
-• Fixed an empty Zenith spawner
-• Fixed a Mistport stuckspot on a ship
-• Fixed a missing npc on an Expedition Docks boat
-• Reworked spawn platforms for two Tolumaeus archer spawners
-• Levyn can now give another copy of Message from a Bottle if
-you lose it after getting it deciphered by the Royal
-Cartographer
-• The Royal Cartographer can no longer decipher the Message from
-a Bottle if you don't have it on you
-• Fixed a stuck spot in Sierhaven
-• Fixed a text order error in Monk Gehri's dialogue when
-starting What Lies Within
-• Fixed typo in Colossus of Entropy lore blurb
-• Fixed Hydraling have a lore blurb that was just the full stats
-and lore text of the Resonant Scythe
-• Winning a fight against Sirius now grants custom Resistance
-rather than vanilla Resistance
-• Eldrask's Ring of Frost now applies custom Slowness rather
-than vanilla Slowness• Eldrask's Frost Rift now applies custom
-Slowness rather than vanilla Slowness
-• Eldrask's Hailstorm now applies custom Slowness rather than
-vanilla Slowness
-• Fixed a typo in the name of the Headless Horseman's Burning
-Vengeance spell
-• Kaul no longer applies vanilla Slowness to himself and thus
-cannot be targeted by Amplifying Hex when he channels certain
-spells
-• Kaul's Putrid Plague now applies custom Slowness rather than
-vanilla Slowness
-• The Mimic Queen's Multihit Heal attack now applies 15 Melee
-damage per hit instead of 15 typeless damage
-• C'Shura's Smoke Bomb now applies custom Slowness and Weakness
-instead of vanilla Slowness and Weakness
-• Fixed issues with picking up Master Jukeboxes
-• Fixed a grammatical error in the Roots of the Plague dialogue
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters remains closed.
-&bHotfix:&r Dungeon guards will no longer appear in a Shifting
-instance prior to generation, and exit/race buttons will
-likewise be inoperable. Shifting has been reopened as a result
-of this change.
-&bHotfixes:&r
-• Fixed logging out in Celestial Zenith after triggering Rebirth
-(and not dying and being revived at any point since then)
-sending the player to the lootroom, as if they logged out while
-in the death waiting room. Additionally, some skills such as
-Skyhook and Escape Artist did not work properly under these
-conditions.
-• Fixed Swift Cuts triggering on any damage dealt where holding
-an item with an Attack Speed attribute
-&bHotfix:&r A change has been made on the backend to the way
-dungeon races are initiated. This should solve a certain issue
-with Shifting's race, as well as broadly raise stability for
-dungeon races as a whole.
-&b(10.32.0)&r
-For the update on April 18, 2024
-&bMinor New Features:&r
-• A new function has been added to the Knick Knack Sack, Mobile
-Quest Guides! Obtain the quest list for each town that you have
-discovered across Monumenta on the fly with this nifty feature!
-• Added the Enchantopedia to the Knick-Knack Sack, allowing
-players to see a list of every enchantment they've discovered,
-as well as all enchantments that apply to a specific item! This
-list can also be filtered by name and category.
-• The Equestrian Society of Galengarde has been informed of
-another Treehorse in its lovely town. It has been provided hay,
-water, and the name Lightmyth.
-• Several towns and significant locations across Monumenta have
-been given banners to represent them in teleport hubs. Some have
-even taken up to displaying them around the locations!
-• The Volcano poi in R1 has been completely rebuilt• thanks to
-MN_128, ChargingUv, LegendMC119, panderz, and nicknon!
-• Market: currencies of regions you have not unlocked are now
-not selectable as listing currency
-• Added a new andesite merchant in Sierhaven
-• Updated and standardized the Jammin' DJ, Master Jukebox, and
-Record Player/Soulsinger:
- • The Master Jukebox now uses a GUI like the others
-   • Added many tracks that were missing but in the other GUIs
-   • As before, the Master Jukebox plays to other players within
-a 48 block radius (as opposed to the others which play only to
-the user)
- • Added Verdant Remnants, All That Remains, Sealed Remorse,
-Davey, Chantry, Samwell, Sirius, Broodmother, Vesperidys, and
-Star Point tracks, along with all dungeon tracks
- • Playing music from these GUIs now always plays regardless of
-your PEB settings
- • Fixed Verdant Remnants completion being required to play
-C'Shura's music instead of Forsworn Sanctum completion
- • Various rearrangements within the GUIs
-&bMarket Plugin: Filters • Part. 1/3&r
-A new button has appeared in the browser: it adds the ability to
-select one of 9 pre-made filters, to help you search specific
-items more efficiently.
-• Filter 1: No filters. Pretty much what you had previously.
-• Filter 2: Shows only King's Valley items.
-• Filter 3: Shows only Celsian Isles items.
-• Filter 4: Shows only Architect's Ring items.
-• Filter 5: Shows items that aren't from any regions (vanilla
-item, simple lore stuff, or some QoL items like Firmament)
-• Filter 6: Shows only items that have a Region:Tier tag.
-• Filter 7: Opposite of Filter 6
-• Filter 8: Items considered either armor, or off-hand.
-• Filter 9: Opposite of Filter 8
-Once you have selected a filter, you will have to press the new
-shiny refresh button.
-This week, those filters are not editable. Next week, they
-should be.
-This corresponds to part 2/3, which will bring the ability to
-add/edit your own custom filters.
-We are aware the pre-made filters given this week will not be
-enough for all your specific needs, but it &oshould&r provide a
-better experience, as well as give us potential data for bug
-hunting, at least until next week, when filters will be
-editable.
-Part 3/3 will be an anti-progression-skip mechanic, hiding items
-that you should not have access to without the market.
-&bMob Changes:&r
-• Aggressive Enderman
-  • 0.3 -> 0.2 Movement Speed
-  • 15 -> 17 Attack Damage
-• Spectral Enderman
-  • 0.3 -> 0.25 Movement Speed
-  • Now sets victims on fire for 5 seconds instead of 4 seconds
 &bFeedback Fixes:&r
 • The memorial for the NPCs who died in the attack on Farr now
 uses text displays instead of signs
@@ -202,3 +54,104 @@ instance corruption.
 <t:1713715200>. Please see https://discord.com/channels/31306665
 5494438922/313403825442521088/1229206599114166322 for more
 information.
+&bHotfix:&r Dungeon races will no longer immediately terminate
+when trying to start
+&bHotfix:&r Selecting the Sierhaven Quest Guide in the Knick
+Knack Sack on a non-Valley shard will no longer spit an
+unfunctional dialogue chain
+&bHotfix:&r Selecting the New Antium Quest Guide in the Knick
+Knack Sack after having completed Keeper Agents will now
+properly display the quest listDaily restart has been made an
+hour earlier (<t:1713589200:t>) due to DST where the server
+operators live. This should help with operator availability if
+something goes wrong.
+&bMob Changes:&r
+• Reworked DPS Cap mechanics of Vesperidys.
+ • 3% Max HP / Hit -> Effectively 3% Max HP / Second
+Intricacies:
+• Damage Cap now increases over time up to 10% Max HP, but it
+decreases whenever the boss takes damage that is over 1% of its
+max health. (If you do 5% Max HP worth of damage, the Damage Cap
+lowers by 4% only)
+• It increases at a rate of 1% Max HP / s, but if the Damage Cap
+is lower than 3% the rate doubles to 2% Max HP / s, allowing for
+better sustained DPS.
+• Damage Cap can never go under 1% Max HP, and never taxed,
+allowing for all attacks to do at least 1% Max HP of damage.
+This change hopefully allows for abilities that do a singular
+big hit (e.g. Chaos Dagger) to be able to do its job better when
+the Damage Cap is high, while keeping sustained DPS on the boss
+similar to before.
+For reference, A0's 1% is 175 HP, A15's 1% is 306.25 HP.
+&bMinor Bug Fixes:&r
+• The crystal detection in the City of Shifting Waters should
+now be more reliable
+• Fixed about 400 mobs with armor
+• Adjusted Unstable Amalgam, Whirling Blade, and Crystalline
+Combos descriptions
+• Fixed some cases in which Crystalline Combos could give
+multiple stacks for one kill. Additionally, stacks are now
+gained slightly sooner after getting a kill
+• Fixed stuckspot on top of a tree near Sierhaven's Arcane
+Emporium
+• Fixed stuckspot in the roots of a tree on the Arena of Terth
+island
+• Fixed a stuck spot in The Tomb of Time
+• Fixed broken redstone for a secret in Sierhaven
+• Fixed an outdated teleport in Sierhaven that teleported
+players to the wrong location
+• Unstacked grass in Sierhaven
+• Fixed Cole's bed being made of two pillows instead of one
+• Removed a Zenith credit sign which underwent mitosis
+• Fixed special spawners in a Zenith room not having their
+particles• The Lights Beyond puzzle now resets more reliably
+when there's no one in the room
+• Fixed being able to break certain Nether Warts in Silent
+Knight's Ravenna
+• Fixed an exposed bedrock in Rock's Little Casino
+• Fixed being able to ride horses onto the Farr clocktower roof
+• Added anti-horse technology to the Floating Carnival Parkour
+• Fixed Box of Endless Echoes and Mouth of the Mimic using wrong
+base items in the API
+&b(10.33.0)&r
+For the update on April 25, 2024
+&bItem Discoveries:&r
+• Scattered throughout locations in our overworlds, you may find
+some new objects, called Discoveries. Punch these Discoveries to
+collect them and get various small rewards!
+• In the future, depending on how well this system performs, we
+may expand Discoveries to further reaches of the overworlds or
+other pieces of content.
+• The Bestiary mob entries unlocked from interacting with NPCs
+(ex: Stoneborn Immortal in the Black Willows) have been updated
+to use the Discoveries system. It's recommended to those who've
+previously unlocked the entries via the old method to come and
+unlock them again.
+&bMinor New Features:&r
+• Uriddan now has new dialogue available for those who have
+completed the Celestial Zenith's 15th Ascension
+• The Guild Hall in Castle Narsen now scrolls through all guilds
+without being manually updated by developers or moderators
+• Small visual optimizations to Weeping Wormwood POI
+&bMarket Plugin • Filters Part 2/3 • Editable Filters:&r
+• You can now edit the given pre-made filters: rename them,
+change their filtered values, and so on.
+• Filter changes are saved across shards
+• If you really know what you are looking for, a quicksearch
+button has been added to the topbar. It enables you to search by
+item name, and stacks with the selected filter.
+• The refresh button has been removed (the techy stuff that
+required it is gone ;p)
+• A 'sort by' button has been added. You can sort items by every
+field available in the filters, in ascending or descending
+order.
+Next week: anti-progression-skip
+&oSide note: this week will have the first cases of listing
+expirations. keep an eye out of bugs ;3
+&b&rImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.

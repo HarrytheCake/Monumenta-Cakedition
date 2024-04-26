@@ -1,51 +1,13 @@
-&bMonumenta Server Infrastructure Update & Downtime&r
-&bTLDR: We are upgrading our server infrastructure over the next
-two weeks, and this will require some play server downtime, most
-notably on Sunday. &r
-&nMore detail: &r
-Monumenta currently runs on five physical servers in North
-America (east coast Canada), and one in Europe (France).
-Several of these servers are quite old, including the "main"
-server, monumenta-8, which we leased 3-4 years ago.
-OVH (our hosting company) recently launched some new server
-offerings which are going to be both faster and more affordable
-for us overall. So we are looking at moving to them, and taking
-this opportunity to update a number of supporting tools that we
-use (for example, the main servers currently run Ubuntu 18.04,
-which is more than 5 years old at this point, the version of
-kubernetes we use is 3 years old... etc.).
-&nWhat this means for you: &r
-• Weekly update downtime this week will be a bit longer (approx
-2.5 hours) as we move some underlying data around. The shards
-will continue to run where they are now.
-• On Sunday, we are planning to do the "actual" move, which we
-currently think will involve around 4 hours of server downtime.
-This will likely be Sunday afternoon US time. We will announce
-the specific timeframe Saturday night.
-• After this move, many of the current bungeecord proxies will
-be shut down. If you're connecting to
-`server.playmonumenta.com`, that'll still work fine, but if
-you're connecting to specific proxies (i.e. monumenta-8), you'll
-need to update these. More info will be shared when that
-happens.
-• Over the next week, many non-game things will likely be
-unstable • for example the item API that powers the oh-the-
-misery index, the website, advancements page, etc.
-• Next week's update will also be longer as we settle things
-into their final resting places.
-Many thanks to our current & past Patreons, who continue to make
-Monumenta's upkeep sustainable.The server is going down for
-planned maintenance at <t:1707085800:t> (<t:1707085800:R>); we
-plan to be down for 4 hours.Please welcome @[PP] Firestorm to
-the Moderation Team! Unleash the warm, friendly 🏓 s!Trying
-something a bit experimental down in our Stage VC. Come hang out
-and suggest some suggestions/bugs that you would like to see
-implemented/fixed. Rules for the stream are posted in
-<#936475423703957545>, please give them a read • would love to
-have you!At the top of the hour, I'll be hosting another Sug-Bug
-stream down in our Stage VC. Feel free to come hang out and
-suggest some things to get done. <#936475423703957545> has been
-re-opened, please give the pin a read for the stream rules
+Please welcome @[PP] Firestorm to the Moderation Team! Unleash
+the warm, friendly 🏓 s!Trying something a bit experimental down
+in our Stage VC. Come hang out and suggest some suggestions/bugs
+that you would like to see implemented/fixed. Rules for the
+stream are posted in <#936475423703957545>, please give them a
+read • would love to have you!At the top of the hour, I'll be
+hosting another Sug-Bug stream down in our Stage VC. Feel free
+to come hang out and suggest some things to get done.
+<#936475423703957545> has been re-opened, please give the pin a
+read for the stream rules
 &bChanges to moderation and team roles&r
 The Monumenta community has grown significantly over the last
 few years. In the earlier days of the server, the team structure
@@ -174,3 +136,49 @@ that it is nearing completing and will be coming out soon.
 &bModerators will begin the process of moving barrels to player
 plots starting at <t:1713715200>. No additional claims will be
 allowed past this time.&r
+&bCall for Moderator Applications&r
+It's the kinda-semi-annual moderator recruitment drive!
+We'd like to encourage anyone qualified, willing, and interested
+in being a moderator to apply!
+&b&oREQUIREMENTS&r&r
+• Have a good reputation in the community and be known to the
+existing mods as honest, fair, helpful, and mature.
+• Have a consistent history of activity in the community,
+&bboth in-game and in Discord&r.
+• Completion of most major content in Monumenta (dungeons,
+strikes, bosses, and quests).
+• Proficiency in English.
+&b&oPreferred but Optional&r&r (be sure to mention these in your
+application if relevant)
+• Being active at a time when most existing moderators are
+unavailable. Being in a non-American/Canadian time zone helps.
+• Being extremely familiar with Monumenta's ins-and-outs. The
+more expertise, the better.
+• Proficiency in a non-English language.
+• Previous experience moderating an online community, or with MC
+commands/servers.
+&b&oResponsibilities&r&r
+• Helping players in-game with technical issues.
+• Making judgment calls about "gray areas" in applying the
+rules.
+• Being willing to be 🏓 'd here in Discord and in-game to help
+players.
+• Being online and in-game relatively frequently on an average
+week.
+• Being fair, polite, and patient in dealing with problems.
+&b&oPerks&r&r
+• Beta Test unreleased content and limited access to the Team
+Monumenta development Discord.
+• Gain experience Minecraft commands in general and learn some
+of how Monumenta works specifically.
+• Spectate others freely.
+• Work closely with dev team on various things. Many mods have
+joined the dev team eventually through this path. &o(Just
+saying.)&r
+• Be able to fix your own problems instead of waiting on a
+moderator! 😄
+&bApply here!&r
+<https://docs.google.com/forms/d/1qT8KO0gZARSBD7LwXUmxfV1wm8vGK_
+i3s-eO5Oqkpwg/viewform?edit_requested=true>Please welcome @[TCL]
+Honeypint to the mod team! As always, be sure to give them a
+celebratory 🏓 , and thank them for selling their soul to us!
