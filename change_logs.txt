@@ -1,154 +1,245 @@
-&bFeedback Fixes:&r
-• The memorial for the NPCs who died in the attack on Farr now
-uses text displays instead of signs
-• Made slight adjustments to the Acrobat of the Clocktower
-parkour to be more clear about where you need to go
-• Improved lighting in several Region 2 PoIs
-• Clarified Shadow Slam description
-• Added ambient particles to the barrel containing Dusk
-Honeycomb
-• Added an ender chest to The Nightcap
-• Renamed the biome used in Sierhaven
-• Small visual touch-ups in Caves of Bones POI
-• Tweaked the visuals of Faespirits and Bursting Roots from the
-Jungleborn Warlock set
-&bMinor Bug Fixes:&r
-• Fixed Farr Guards being kleptomaniacs for players' shields
-• Fixed Gallery of Fears and Celestial Zenith graves being
-kleptomaniacs for players' shields
-• Fixed paintings and other entities in EC not spawning when
-entering a new room
-• Removed the random bookcases from the Valley sort box
-• Fixed market putting currencies in wallets that shouldn't be
-able to contain said currencies
-• An outdated holdover on the visibility requirement for the
-||Exalted Hub|| Quest Guide from the days prior to Assisted
-Dreaming has been corrected
-• Fixed typo in All That Remains
-• Fixed several build errors in Sierhaven
-• Fixed a stuck spot in Farr
-• Fixed small build errors in Star Point and Chillwind
-• Fixed melee and bow kills not generating Crystalline Combos
-stacks
-• Reworded Steelsage Ichor's effect and fixed a broken
-interaction with Scout Swiftness
-• Soul Rend marks can no longer be triggered by players other
-than the original caster
-• Fixed Dark Pact preventing Soul Rend from healing nearby
-players or applying marks
-• Soul Rend marks no longer apply absorption for overheals
-• Prevented Advancing Shadows from teleporting to enemies behind
-you if your hitbox overlaps
-• Aligned Flamestrike's particle cone with its actual effect
-cone
-• Cloned mobs in elite finishers now correctly do not have
-entity collision
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-• A reminder that the Barrel Bazaar will be closing on
-<t:1713715200>. Please see https://discord.com/channels/31306665
-5494438922/313403825442521088/1229206599114166322 for more
-information.
-&bHotfix:&r Dungeon races will no longer immediately terminate
-when trying to start
-&bHotfix:&r Selecting the Sierhaven Quest Guide in the Knick
-Knack Sack on a non-Valley shard will no longer spit an
-unfunctional dialogue chain
-&bHotfix:&r Selecting the New Antium Quest Guide in the Knick
-Knack Sack after having completed Keeper Agents will now
-properly display the quest listDaily restart has been made an
-hour earlier (<t:1713589200:t>) due to DST where the server
-operators live. This should help with operator availability if
-something goes wrong.
-&bMob Changes:&r
-• Reworked DPS Cap mechanics of Vesperidys.
- • 3% Max HP / Hit -> Effectively 3% Max HP / Second
-Intricacies:
-• Damage Cap now increases over time up to 10% Max HP, but it
-decreases whenever the boss takes damage that is over 1% of its
-max health. (If you do 5% Max HP worth of damage, the Damage Cap
-lowers by 4% only)
-• It increases at a rate of 1% Max HP / s, but if the Damage Cap
-is lower than 3% the rate doubles to 2% Max HP / s, allowing for
-better sustained DPS.
-• Damage Cap can never go under 1% Max HP, and never taxed,
-allowing for all attacks to do at least 1% Max HP of damage.
-This change hopefully allows for abilities that do a singular
-big hit (e.g. Chaos Dagger) to be able to do its job better when
-the Damage Cap is high, while keeping sustained DPS on the boss
-similar to before.
-For reference, A0's 1% is 175 HP, A15's 1% is 306.25 HP.
-&bMinor Bug Fixes:&r
-• The crystal detection in the City of Shifting Waters should
-now be more reliable
-• Fixed about 400 mobs with armor
-• Adjusted Unstable Amalgam, Whirling Blade, and Crystalline
-Combos descriptions
-• Fixed some cases in which Crystalline Combos could give
-multiple stacks for one kill. Additionally, stacks are now
-gained slightly sooner after getting a kill
-• Fixed stuckspot on top of a tree near Sierhaven's Arcane
-Emporium
-• Fixed stuckspot in the roots of a tree on the Arena of Terth
-island
-• Fixed a stuck spot in The Tomb of Time
-• Fixed broken redstone for a secret in Sierhaven
-• Fixed an outdated teleport in Sierhaven that teleported
-players to the wrong location
-• Unstacked grass in Sierhaven
-• Fixed Cole's bed being made of two pillows instead of one
-• Removed a Zenith credit sign which underwent mitosis
-• Fixed special spawners in a Zenith room not having their
-particles• The Lights Beyond puzzle now resets more reliably
-when there's no one in the room
-• Fixed being able to break certain Nether Warts in Silent
-Knight's Ravenna
-• Fixed an exposed bedrock in Rock's Little Casino
-• Fixed being able to ride horses onto the Farr clocktower roof
-• Added anti-horse technology to the Floating Carnival Parkour
-• Fixed Box of Endless Echoes and Mouth of the Mimic using wrong
-base items in the API
-&b(10.33.0)&r
-For the update on April 25, 2024
-&bItem Discoveries:&r
-• Scattered throughout locations in our overworlds, you may find
-some new objects, called Discoveries. Punch these Discoveries to
-collect them and get various small rewards!
-• In the future, depending on how well this system performs, we
-may expand Discoveries to further reaches of the overworlds or
-other pieces of content.
-• The Bestiary mob entries unlocked from interacting with NPCs
-(ex: Stoneborn Immortal in the Black Willows) have been updated
-to use the Discoveries system. It's recommended to those who've
-previously unlocked the entries via the old method to come and
-unlock them again.
+The City of Shifting Waters has been temporarily closed.
+&bHotfix:&r Shifting end rooms will once again properly open
+once all 3 crystals have been destroyed. This fix &odoes&r apply
+retroactively to opened instances, so assuming it hasn't
+bedrocked, you should be able to finish your cleared instance.
+Shifting has been reopened as a result of this fix.
+&b(10.34.0)&r
+For the update on May 2, 2024
+&bMajor New Features:&r
+&bHope Skin Obtainment Rework:&r
+This week sees a total overhaul to the process by which you can
+obtain Hope skins on an item! Gone are the days of tirelessly
+pinging an older player in a desperate effort to get their skin
+on an obscure item • as all Hope skins are now publicly
+available at a whim!
+• Upon speaking to Mastersmith Antonio in Highwatch, you will be
+presented with a new GUI, which allows you to choose between
+applying normal Hope (cost 9 SotM / 3 HXP) or applying skinned
+Hope (cost 12 SotM / 4 HXP)
+• By choosing to Hope Skin an item, you will enter the Hope Skin
+GUI, where you can choose from all currently available Hope
+skins for that item at your leisure
+• You may now choose to re-apply Hope on an item that already
+has the infusion, effectively swapping the "Hoped by" name on an
+item and allowing you to place a skin on an item that was
+already infused, for the difference of the two costs (3 SotM / 1
+HXP)
+• Antonio's dialogue has been significantly cleaned up, and the
+process of un-Hoping an item has been shifted over to
+Mastersmith Sofia. Note: Un-Hoping a skinned Hope item will only
+return 9 SotM, not 12 • so make sure you absolutely wish to do
+this before proceeding.
+&nAs a note&r: In order to make the most of this new system and
+experience as many of the skins as possible, we recommend using
+the latest Unfoolsified 5.0.0 version of the resource pack.
+Download can be found here: https://discord.com/channels/3130666
+55494438922/481866127471804427/1235387596864094349
 &bMinor New Features:&r
-• Uriddan now has new dialogue available for those who have
-completed the Celestial Zenith's 15th Ascension
-• The Guild Hall in Castle Narsen now scrolls through all guilds
-without being manually updated by developers or moderators
-• Small visual optimizations to Weeping Wormwood POI
-&bMarket Plugin • Filters Part 2/3 • Editable Filters:&r
-• You can now edit the given pre-made filters: rename them,
-change their filtered values, and so on.
-• Filter changes are saved across shards
-• If you really know what you are looking for, a quicksearch
-button has been added to the topbar. It enables you to search by
-item name, and stacks with the selected filter.
-• The refresh button has been removed (the techy stuff that
-required it is gone ;p)
-• A 'sort by' button has been added. You can sort items by every
-field available in the filters, in ascending or descending
-order.
-Next week: anti-progression-skip
-&oSide note: this week will have the first cases of listing
-expirations. keep an eye out of bugs ;3
-&b&rImportant:&r
+• Added new Discoveries to King's Valley, Celsian Isles, and The
+Architect's Ring (||2, 1, and 7|| respectively)
+• Mecha-Pelias now has a boss theme, courtesy of Xernial!
+Download the latest music pack at
+<https://files.playmonumenta.com/resource-
+packs/MonumentaMusicPack.zip> and check <#481866909097132043>
+for a Youtube version of it!• The Ability Hotbar HUD now
+displays the duration of silence effects if the player is
+silenced
+&bMarket Plugin • Filters Part 3/3: Anti-Prog-Skipping&r
+• Coming this week, items that originate from content that you
+have not unlocked will not show up in your market browser.
+  For example:
+ • You need to reach the Architect's Ring in order to see any
+Architect's Ring item.
+ • You need to finish 'Soul of the Forest' quest, or beat the
+Yellow wool dungeon, to see any Vernal Nightmare items.
+• Because you cannot buy something that you cannot see, this
+acts as an anti-prog-skip mechanic, just inside of the market
+plugin.
+• If you somehow find one of the hidden items, and want to sell
+it, you still can do so.
+• A small part of the config for this is missing, and will be
+added over time, but we might have missed some. If you see
+something in the market that you think you should not have
+access to -> bugreport
+• Opposedly, if you do not see something, and you have beaten
+the content it comes from, -> bugreport
+• With this feature also comes a custom-ordering for the filter
+editor • Component selection tab.
+  It used to display possible values in the alphabetical order,
+but now the order is more 'logical'
+  (for example, for the Locations values, it goes R1 overworld
+-> R1 dungeons -> R1 strikes -> R1 bosses -> R2 overworld... and
+so on)
+• Still in the filter editor • Component selection tab, some
+values now have an 'icon' that represents the values themselves
+  (regions have banners of their respective regions, wool
+dungeons have a wool block corresponding to their color, and so
+on)
+  A LOT of those icons are missing, and will be added over time.
+Consider this a proof of concept ;3
+&bItem Changes:&r
+• Myriad's Rapier : 11.5 -> 10.5 Attack Damage
+&bVoodoo Bonds&r
+• Voodoo Bonds has moved away from a passive and into an active,
+making it so your AoE is more decisively used. It has received a
+damage buff to compensate for this, and a level 2 that can
+create chain reactions.
+• L1: Left click while holding a projectile weapon to fire a pin
+that instantly travels forward for 10 blocks and hits the first
+3 mobs or players in its path. Mobs hit take 3 melee damage and
+are cursed for 8s. When a cursed mob takes non-ailment damage
+(except from this ability), all other mobs of the same type in a
+3 block radius take 20% of the suffered damage. Players hit are
+bonded to you instead; the next hit they take in the next 8s
+will be redirected to you based on the percentage of health that
+player would have lost, but cannot reduce your health below 1.
+Charges: 2. Charge Cooldown: 10s.
+• L2: Pins now pierce all mobs and players in their path instead
+of stopping at 3. Mobs hit by Judgement Chain automatically have
+a pin fired at them. When a cursed mob dies, 3 other cursed mobs
+take 6 melee damage and have their curse extended by 3s.
+&bReaper Charms&r
+Charms for Judgement Chain and Voodoo Bonds have also been
+reworked accordingly:
+• Lesser Prosecutor's Charm: 1 Charm Power, +5% Judgement Chain
+Weakness/Slowness Amplifier
+• Greater Prosecutor's Charm: 2 Charm Power, +10% Judgement
+Chain Weakness/Slowness Amplifier
+• Distant Prosecutor's Charm: 2 Charm Power, +50% Judgement
+Chain Range, +50% Judgement Chain Extra Targets Radius
+• Swift Prosecutor's Charm: 3 Charm Power, -15% Judgement Chain
+Cooldown, +0.5 Judgement Chain Debuff Duration
+• Distant Linked Charm: 1 Charm Power, +50% Voodoo Bonds Pin
+Range, +50% Voodoo Bonds Curse Radius
+• Soul Synchronizer: 2 Charm Power, -30% Judgement Chain
+Cooldown, -100% Judgement Chain Debuff Duration
+&bClass Changes:&r
+• Shield Wall: 4 -> 2.75 radius while moving. If stationary, the
+radius is unchanged at 4 blocks. Reduced particles, and
+particles now scale with radius
+• Will of Ganzir: -45% -> -20% Radius (which cancels out with
+the base radius change)
+&bReaper Revamp&r
+Reaper is receiving some changes this update! Judgement Chain
+has sat in a very awkward spot for a long time, and Voodoo Bonds
+provides too much value for little investment. These changes aim
+to give Reaper some more exciting tools to supplement its
+attacks with and significantly increase the diversity of spec
+point layouts you can use with it.
+&bJudgement Chain&r
+• Judgement Chain now has the power to bring mobs into melee
+range directly, while still being able to apply a very strong
+debuff. You may think of this as a mobility tool, except the
+mobs are the ones moving to you. Fans of Ragecraft 4 may like
+this one...
+• L1: Swap hands while looking at an unchained mob within 20
+blocks to teleport them in front of you and chain them to you
+for 10s, taunting them and afflicting them with 40% Slowness and
+40% Weakness for 2s. Bosses and crowd control immune mobs cannot
+be teleported, but will still be chained and debuffed. Cooldown:
+15s.
+• L2: Judgement Chain now additionally teleports and chains the
+2 closest mobs within 3 blocks of the targeted mob. Passively
+gain 3% Strength and 3% Resistance for each mob currently
+chained to you, capped at 5 mobs. Killing a chained mob extends
+your Dark Pact by an additional 1s if you have one currently
+active.• Cracked Pocketwatch: 3 Charm Power, -50% Voodoo Bonds
+Curse Duration, +50% Voodoo Bonds Curse Radius, +20% Voodoo
+Bonds Curse Death Damage, -20% Voodoo Bonds Cooldown
+• Chaos Codex: 4 Charm Power, -40% Voodoo Bonds Cooldown, -40%
+Voodoo Bonds Received Damage, +50% Voodoo Bonds Protection
+Duration, -100% Voodoo Bonds Curse Duration
+&bMob Changes:&r
+• Albino Rat:
+  • 37 -> 34 Attack Damage
+&bFeedback Fixes:&r
+• Changed the rewards of a certain Discovery near Highwatch
+• Added a chat message when collecting your first Discovery
+• Changed the location of one of the Discoveries near Sierhaven
+Docks
+• Improved the Eldrask announcement sound effect and made it
+consistent across shards
+• Added an ender chest to Harvir's House and Fishing Hut in Port
+Manteau
+• Moved Verdant Lobby's Sorting Bin outside of the cage
+• Added a checkpoint to the Catacombs of Quelled Convent
+&bMinor Bug Fixes:&r
+• Fixed an exploit in The City of Shifting Waters
+• Fix some abilities (ex: Bodkin Blitz) not canceling when the
+player dies
+• Cleaned up and modernized hundreds of mob equipment and stats.
+This should &ohopefully&r be the last armor stats on mobs
+• Fixed numerous cases of mobs having mismatching health and max
+health. This may result in some mobs having slightly more or
+less health
+• Fixed an issue where rolling a Rock's Little Casino or
+Monarch's Cozy Casino slot machine with the chest open would
+result in not getting the epic announcement message nor the
+scoreboard resets
+• Extended the Adventure Mode zone of the King's Valley Monument
+• Fixed typo in Silver Knight Uriddan dialogue
+• Fixed a few remaining mobs with armor attributes still
+• Corrected some signs with incorrect demonyms in the Sierhaven
+Storeroom
+• Fixed the Discovery used for unlocking the Stoneborn Immortal
+bestiary entry not being in Exalted Willows
+• Flipped a closed trapdoor blocking a ladder in Port Manteau
+• Fixed being able to flip trapdoors in certain parts of
+Sierhaven• Fixed build errors in water near Starpoint Eastern
+Bridge Tower
+• Fixed an issue where some laser channeling mobs could be
+targeted by Amplifying Hex
+• Fixed an issue where Virius could be targeted by Amplifying
+Hex while he channels his laser
+• Fixed an issue where Kaul's Primordial/Immortal Elemental
+could be targeted by Amplifying Hex while it channels its Charge
+spell
+• Fixed an issue where players were receiving 1 damage hit
+negated instead of 100% Resistance at the end of a Kaul fight
+• Fixed an issue where Swordsage Richter could be targeted by
+Amplifying Hex while he channels certain spells
+• Fixed an issue where Swordsage Richter would never summon his
+Swift Living Blade
+• Improved error handling for an edge case where the False
+Spirit would be unkillable because the Ex Nihilo tridents
+silently failed to spawn
+• Eldrask no longer inflicts vanilla slowness on players who
+dare mock his battle by taking a nap
+• Refactored/improved how boss dialogue is sent while players
+are fighting Eldrask, the False Spirit, and Swordsage Richter
+• Fixed numerous bosses that gave vanilla
+resistance/regeneration or no resistance/regeneration instead of
+custom resistance/regeneration when it was appropriate to do so
+• Herriot's Sword of Destiny is now the correct base item to
+display the texture for it
+• Fixed Smuggler Assassin and Smuggler Leader having broken tags
+leading to abilities that didn't work
+• Fixed numerous mobs having outdated versions of their
+passengers
+• Fixed the Sirius announcement not being sent to players
+without Tomb of Time quest completion
+• Fixed some build inconsistencies in Rock's Little Casino
+• Fixed spelling error in Blue-Colored Strand lore text• Updated
+multiple mobs that dropped equipped items to instead drop them
+directly from loot tables
+• Fixed build errors in Reverie, Exalted Reverie, Swamp, and
+Isles
+• Fixed a stray `F` in Cain's name at the Farr memorial
+• Stable Paradox is now correctly in the Bestiary in the SKT
+section
+• Amplifying Hex (u) self-damage no longer wastes the Voodoo
+Bonds shield
+• Blade Dance no longer causes nearby enemies to momentarily
+lose targeting
+• Blade Dance no longer causes dodging to not deal damage
+• On hit potion effects no longer apply through Blade Dance or
+dodging
+• Steel Stallion now has invincibility frames
+• World Bosses no longer remove glowing upon starting
+• Clarified Starblood Ichor's Earthbound Imbuement's description
+to mention the valid types of damage taken
+&bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.

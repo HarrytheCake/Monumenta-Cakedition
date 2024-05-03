@@ -1,13 +1,7 @@
-Please welcome @[PP] Firestorm to the Moderation Team! Unleash
-the warm, friendly 🏓 s!Trying something a bit experimental down
-in our Stage VC. Come hang out and suggest some suggestions/bugs
-that you would like to see implemented/fixed. Rules for the
-stream are posted in <#936475423703957545>, please give them a
-read • would love to have you!At the top of the hour, I'll be
-hosting another Sug-Bug stream down in our Stage VC. Feel free
-to come hang out and suggest some things to get done.
-<#936475423703957545> has been re-opened, please give the pin a
-read for the stream rules
+At the top of the hour, I'll be hosting another Sug-Bug stream
+down in our Stage VC. Feel free to come hang out and suggest
+some things to get done. <#936475423703957545> has been re-
+opened, please give the pin a read for the stream rules
 &bChanges to moderation and team roles&r
 The Monumenta community has grown significantly over the last
 few years. In the earlier days of the server, the team structure
@@ -181,4 +175,18 @@ moderator! 😄
 <https://docs.google.com/forms/d/1qT8KO0gZARSBD7LwXUmxfV1wm8vGK_
 i3s-eO5Oqkpwg/viewform?edit_requested=true>Please welcome @[TCL]
 Honeypint to the mod team! As always, be sure to give them a
-celebratory 🏓 , and thank them for selling their soul to us!
+celebratory 🏓 , and thank them for selling their soul to us!Two
+new mods have joined the team! Everyone give a warm welcome and
+lots of  🏓 to @[WOOL] WizV2 and @TheAz1!
+&bUpcoming Hope Skin Change:&r
+Hey guys, wanted to make everyone aware of an upcoming change to
+the way Hope Skins are obtained ingame that broadens
+accessibility. Starting with next week's updates, all Hope Skins
+will be fully publicized, meaning they will be purchasable via a
+new GUI at Mastersmith Antonio.
+What this more broadly means is that in order to Hope Skin an
+item (that has one available to be applied), all you will need
+is the item is question, and the materials with which to
+purchase the infusion. The days of needing to track down a
+specific patron in order to have their skin applied to your item
+will finally be behind us!
