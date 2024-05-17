@@ -1,18 +1,3 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-&bHotfix:&r Amping Earth Shrine has been temporarily
-disabledExalted Fallen Menagerie has been temporarily
-closed.Exalted Fallen Menagerie has been reopened.
-&bHotfix:&r When transitioning from the main Hope GUI to the
-Hope Skin GUI, there is no longer a frame or two where you exit
-the GUI window
-&bHotfix:&r The Hope Skin for an undyed vanilla shulker box now
-properly gets pulled up in the Hope Skin GUI
 &bHotfix&r(ed 2 hours ago): Judgement Chain can no longer
 teleport mobs with full knockback resistance
 &bHotfix:&r Conjoined Bombers spawned in via the Legionary delve
@@ -63,4 +48,85 @@ compass entries
 • Fixed Ember of Fervor spawning with the post-throw already-
 ignited version instead of the normal version
 • Fixed Steel Stallion not blocking damage
-• Fixed Heavenly Boon (u) not working on other players
+• Fixed Heavenly Boon (u) not working on other playersEchoes of
+Oblivion has been temporarily closed.Vernal Nightmare and
+Exalted Vernal Nightmare have been temporarily closed.
+&b(10.36.0)&r
+For the update on May 16, 2024
+&bMinor New Features:&r
+• Added ||4|| new Discoveries to the Celsian Isles
+• Updated our version of CommandAPI (the plugin that we use to
+build most of our custom commands). This should have no effect,
+but might cause some bugs as it required minor updates to most
+commands, so please report anything you find. This was a
+necessary step towards eventually updating the server to a 1.20+
+version
+&bFeedback Fixes:&r
+• Trivium damage to Training Dummies is now labeled as such in
+the hover text
+• /blockinteractions now prevents inserting music discs into
+jukeboxes
+• The Tesseract of Light now creates Core Protect logs on use
+• The Tesseract of Light now works with Stat Track Blocks
+Placed• Fixed grammatical error in a Starrier Night compass
+entry
+• Fixed grammatical error in the PORTAL trophy
+• You will now only obtain the Celsian Isles Dungeons root
+advancement upon entering the region for the first time (does
+not apply retroactively to accounts that have already obtained
+this)
+• Fixed the first instance of Trivium damage dealt to Training
+Dummies as a result of Elemental Arrows being labeled as
+Projectile damage in the hover text
+• Added Light Roast, Supreme Light Roast, Very Dark Roast,
+Caramel Mocha, Caffinated Cream, Divine Potion of Protection,
+Ragebrew, Elixir of the Serpent (Legacy), Saltwater Pint,
+Pirate's Brew, Crow's Nest Concoction, Fresh Salty Swill, Golden
+Ale, River's Malt, Royalty's Stout, Rakija, Myriad's Martini,
+Spectre Potion, and Firecloak Vial to the Items API
+• The "no potions" trigger option now prevents using empty glass
+bottles
+• The miscellaneous trigger option now prevents using
+written/writable books
+• Fixed Lava Cannons in the Masquerader's Ruin bossfight being
+targetable by various abilities
+• Added missing Arena of Terth location tag to Arena
+Extinguisher, Swift Mixture, Greater Swift Mixture, Healing
+Bomb, Totem of Undying Extract, and Goddess Brew
+• Fixed Stat Track Times Consumed not working on Fruit of Life
+and R3 casino epic potions
+• Fixed Ability Hotbar in dd/zenith displaying Solar Ray kill
+stacks permanently instead of cooldown.
+• Fixed Ability Hotbar not displaying DD Dodging and Bulwark
+cooldowns
+&bBug Fixes:&r
+• Fixed Fleshbound Monstrosity dropping an enchanted fire coral
+on death
+• Fixed small build error in Celsian Isles overworld
+• Fixed Stat Track Blocks Placed counting up when mining a
+spawner
+• Fixed a build error in Smallpoint
+• Fixed Plague Bearer's Soiled Trousers' stats being
+inconsistent with the Replica version
+• Fixed an issue where Twisted Depths/Zenith rooms and/or
+rewards print out a nonsensical message in chat to the party
+• Potentially fixed a rare bug with the Star Chart in Smallpoint
+related to returning to it after it is unloaded
+• Fixed typo in snowball fight lose message
+• Absorption in snowball fights is now custom aborption, which
+might fix edge cases in which it isn't cleared properly
+• Fixed Zenith F3 boss ambient music not playing when opening
+the room
+• Enabled trapdoor flipping in a section of the Sierhaven Flag
+Jumping Puzzle to fix it being impossible to complete
+• Fixed the slime near the Chivalrous Mount Discovery in
+Reynart's attic being targetable with Judgment Chain
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• Vernal Nightmare and Exalted Vernal Nightmare have been
+reopened.
