@@ -1,7 +1,181 @@
-&bHotfix&r(ed 2 hours ago): Judgement Chain can no longer
-teleport mobs with full knockback resistance
-&bHotfix:&r Conjoined Bombers spawned in via the Legionary delve
-modifier no longer drop boots
+&bWarning:&r Patron Shrine currently consumes your charges
+without actually sending out the Patron buffs, the tab also
+shows some buffs active when they are not, players are advised
+not to use their Shrine Power until this is fixed.
+&b(10.37.0)&r
+For the update on May 23, 2024
+&bMinor New Features:&r
+• Added a Discovery to the Celsian Isles
+• Ability cooldowns are now handled every 5 ticks instead of
+every 10 ticks. This means that ability cooldowns will be more
+accurate in general, reducing issues such as:
+  • Certain levels of Aptitude and other forms of cooldown
+reduction having no effect on certain abilities
+  • Abilities taking shorter or longer time to refresh than
+usual in certain circumstances
+&bMarket Plugin • QOL Update&r
+&nAdditions :&r
+• Bundles:
+You can now change the amount of items included per trade. For
+example, you can sell 4 steaks for 1xp, give the listing 20
+steaks as stock, which equals to 5 trades.
+This bundle size is limited to powers of two, with a maximum of
+64 per trade.
+A new button has been added to the AddListing GUI to enable
+this.
+• Claim-all button:
+In the 'Your listings' GUI, a new button got added: clicking it
+will go through all your owned listings, and will give you all
+the claimable money available, and collect/delete the expired
+listings.
+• Notifications:
+When joining an overworld or plots shard, a chat message will
+pop-up if you have claimable/expired listings, telling you so.
+• Options tab:
+A new tab is added. accessible though the main menu; it will let
+you edit your market options/preferences, like a settings page.
+Currently only one setting is available: you can change in which
+shards the notification above is displayed. More options will
+come later.
+• M'Orin
+The M'Orin NPC is back! It lets you access the market from
+anywhere in plots. It is obtainable thtough a trade in the usual
+plot-npc trader, in the Sierhaven Academy.&nChanges :&r
+• The AddListing GUI has been slightly overhauled.
+• The price tag on browser listings has been upgraded toward
+better readability.
+• Reorganized the main menu GUI, while also adding the needed
+options button, and two placeholders for future features ;3
+• A lot of back-end stuff that shouldn't be visible.
+• On your listings tab, right clicking a listing which has no
+stock left, and nothing to claim, now deletes a listing.
+• Added a bunch of icons for the filter component editor.
+&nFixes :&r
+• Fixed filter issue resulting in empty pages in the browser.
+• Switching filters now brings the selected page to the max-
+page, if that selected page is bigger than max-page.
+• When selecting an item to be sold in the AddListing GUI, it
+now properly reads the amount of those items available in the
+inventory.
+• Going down in the amount of trades selector in the AddListing
+GUI, when that amount is at 1, now brings to the maximum
+available amount in the inventory.
+• Fixed filters component having the 'gray concrete' or 'green
+concrete' names when no manual config has been made for them.
+• Fixed stat-less playerheads being considered wearable helmets.
+They are now considered 'misc'[Original Message Deleted]
+&bFeedback Fixes:&r
+• Added sounds and/or particles for Energizing Elixir's
+enhancement and recast toggle, Elemental Arrows' on-hit effect,
+Spellshock's melee static clear effect, Agility's enhancement,
+and Toughness' enhancement
+• Fixed some skill sound effects not being under the Players
+category
+• Fixed some skill particle effects being under the wrong
+particle settings category
+• Fixed Astral Omen not showing some particles
+• Deadly Ronde no longer causes the screen to rapidly zoom in
+and out
+• Improved Blizzard particles
+• Added Rp support to the Class Selection GUI
+• Updated the Charms GUI's appearance
+&bMinor Bug Fixes:&r
+• Fixed barrels in market shops not actually being unlocked when
+switching from locked to "semilocked" (locked with barrels
+unlocked) state
+• Fixed several of Kaul's passives having unexpected behavior
+due to phase changes
+• Added missing location tags to Potion of Potency, Potion of
+Fortitude, and Potion of Alacrity
+• Fixed specializations not showing their description once
+chosen in the class selection GUI
+• Fixed the chosen class saying to click to choose it instead of
+click to view skills in the class selection GUI
+• Fixed typo in Returning to Balance
+• Fixed misaligned bones in Sealed Remorse lobby
+• Fixed inconsistencies with the hallway to the minigame area in
+the Academy
+• Aether Threads from the Seasonal Pass Relic Wheel now have the
+correct leather color
+• Fixed formatting error in Mage's Legacy dialogue
+• The cutscene in the Ruins lobby during Unraveled now has
+scrolling text indicators
+• Calder no longer references a non-existent position title in
+Wolf in Witch's Clothing
+• Fixed an instance of a scrolling text indicator being missing
+in the Wolf in Witch's Clothing end cutscene• Fixed punctuation
+error in Godspore Cutting dialogue
+• Fixed the teleport out of Sierhaven repair stations when the
+player should not be there going a few blocks too far
+• Fixed typo in All That Remains dialogue
+• Fixed typo in Basanite Guard dialogue
+• Fixed typo in Captain Indigo dialogue
+• Fixed typo in Silvan dialogue
+• Fixed typo in Amina dialogue
+• Fixed typo in Darkened Lodestone lore
+• Fixed typo in Professor Lyson dialogue
+• Fixed Torren referring to Wilhelm as "Ishnir" for some reason
+• Fixed several build errors in Light Blue
+• Fixed the Eruption's description in handbook missing its
+trigger condition
+&bMob Changes:&r
+• Immortal Elemental:
+  • 1 -> 3.25 second spell cooldown after casting charge
+  • 8 -> 3 second charge channeling time
+  • 75% -> 90% slowness for 2 -> 3.25 seconds while channeling
+charge
+  • 20 -> 40 block charge range
+  • Substantially improved readability of all charge particles
+  • Increased the audible distance for charge tell sounds and
+changed some sounds
+• Primordial Elemental and Immortal Elemental:
+  • 15 -> 10 second spell cooldown after casting Earthen Rupture
+  • Slightly increased Earthen Rupture vertical force
+  • Improved readability of Earthen Rupture particles
+  • Increased the audible distance for Earthen Rupture sound
+effects
+• Night Terror and Shroom Mother:
+  • Tightened the particle spread of the mob's projectile spell
+for better readability
+  • Significantly increased the audible distance from which the
+projectile spell tell sound can be heard
+• Dune Warlock, Viridian Wizard, Desert Archmage, Bone Cult
+Mage, Ghost of Holiday's Present, Gazing Spellcaster, Kreepa
+Necromancer, Decayed Spirit, Crystal Construct, Viridian
+Archmage, Greyskull, and Elder Terror:
+  • 5 -> 3 second laser channeling time
+  • Improved laser hit particle effects to be less obscuring
+  • (Dune Warlock only) Removed passive Fire Resistance potion
+effect
+• Silent Echoes:
+  • Made on hit silence particles more noticeable
+  • Improved on hit sound effects
+• Skewer Fisherman, Mutated Aberration, Ghostly General,
+Ascended Lichguard, Fallen Queensguard, and Star Spitter:
+  • 0.035 -> 0 hook projectile turn radius
+  • Tightened the particle spread of the mob's hook projectile
+spell for better readability
+  • Significantly increased the audible distance from which the
+hook projectile spell tell sound can be heard
+  • Slightly changed the hook projectile on hit particles
+  • (Star Spitter only) 0.8 -> 0.4 hook projectile speed
+  • (Star Spitter only) 1 -> 4 second projectile initial cast
+delay• Forgotten Spirit, Molten Sentry, Festering Growth,
+Scorched Wizard, and Sycorax:
+  • Players targeted by the mob's laser spell should now be able
+to better hear it without being next to the channeler
+  • Significantly improved laser targeting particles to be more
+readable
+  • Improved laser hit particle effects to be less obscuring
+• Azalea Camouflage, Fabrication Pod, Ent Chrysalis, Stable
+Paradox, and Sparkling Stardust:
+  • Damage dealt to the Creeper is now transferred to the summon
+at a 20% rate. For example, if the Creeper has lost 50% of its
+max health, then the summoned mob takes 10% of its max health as
+accumulated damage upon spawn.
+• Unstable Paradox and Island Egg:
+  • Damage dealt to the Creeper is now transferred to the summon
+at a 40% rate
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -9,124 +183,8 @@ and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
-&b(10.35.0)&r
-For the update on May 9, 2024
-&bMinor New Features:&r
-• Adjusted the Star Chart above Smallpoint
-&bFeedback Fixes:&r
-• Improved Judgement Chain trying to send mobs below 1-block
-thin floors
-• Voodoo Bonds now only spreads melee, projectile, and magic
-damage
-• Lowered the amount of key fragments needed to purchase
-Ephemeral Key • Fullwipe to match the Standard key trade
-&bBug Fixes:&r
-• Fixed barriers in the Seasonal Pass Hub
-• Fixed some Teal and Light Blue loot rooms missing some
-barriers around the pressure plates
-• Fixed players waiting to be revived in Celestial Zenith being
-teleported in a broken state (causing being sent to the loot
-room when disconnecting and making a few abilities not work)
-when bosses begin or new floors are started. If a player is
-revived after this point (i.e. from Rebirth), they are only then
-teleported to the location, so that they are not stuck
-• Fixed Glorious Battle not damaging the same enemy after
-recasting
-• The Exalted versions of the Yellow minibosses now drop their
-heads via loot table
-• Patched a bedrock hole in the Halls of Wind & Blood
-• Fixed typo in the R1 Mainline GUI
-• Fixed leftover placeholders and water errors around Arena of
-Terth
-• Fixed typo in Market GUI
-• Fixed typo in Adrenaline handbook advancement
-• Fixed many missing periods in A Study in Crimson Part 2
-compass entries
-• Fixed pluralization in Rebirth description
-• Fixed missing period in Nelfine description
-• Killed an extra Gatekeeper in the White lobby
-• Fixed Ember of Fervor spawning with the post-throw already-
-ignited version instead of the normal version
-• Fixed Steel Stallion not blocking damage
-• Fixed Heavenly Boon (u) not working on other playersEchoes of
-Oblivion has been temporarily closed.Vernal Nightmare and
-Exalted Vernal Nightmare have been temporarily closed.
-&b(10.36.0)&r
-For the update on May 16, 2024
-&bMinor New Features:&r
-• Added ||4|| new Discoveries to the Celsian Isles
-• Updated our version of CommandAPI (the plugin that we use to
-build most of our custom commands). This should have no effect,
-but might cause some bugs as it required minor updates to most
-commands, so please report anything you find. This was a
-necessary step towards eventually updating the server to a 1.20+
-version
-&bFeedback Fixes:&r
-• Trivium damage to Training Dummies is now labeled as such in
-the hover text
-• /blockinteractions now prevents inserting music discs into
-jukeboxes
-• The Tesseract of Light now creates Core Protect logs on use
-• The Tesseract of Light now works with Stat Track Blocks
-Placed• Fixed grammatical error in a Starrier Night compass
-entry
-• Fixed grammatical error in the PORTAL trophy
-• You will now only obtain the Celsian Isles Dungeons root
-advancement upon entering the region for the first time (does
-not apply retroactively to accounts that have already obtained
-this)
-• Fixed the first instance of Trivium damage dealt to Training
-Dummies as a result of Elemental Arrows being labeled as
-Projectile damage in the hover text
-• Added Light Roast, Supreme Light Roast, Very Dark Roast,
-Caramel Mocha, Caffinated Cream, Divine Potion of Protection,
-Ragebrew, Elixir of the Serpent (Legacy), Saltwater Pint,
-Pirate's Brew, Crow's Nest Concoction, Fresh Salty Swill, Golden
-Ale, River's Malt, Royalty's Stout, Rakija, Myriad's Martini,
-Spectre Potion, and Firecloak Vial to the Items API
-• The "no potions" trigger option now prevents using empty glass
-bottles
-• The miscellaneous trigger option now prevents using
-written/writable books
-• Fixed Lava Cannons in the Masquerader's Ruin bossfight being
-targetable by various abilities
-• Added missing Arena of Terth location tag to Arena
-Extinguisher, Swift Mixture, Greater Swift Mixture, Healing
-Bomb, Totem of Undying Extract, and Goddess Brew
-• Fixed Stat Track Times Consumed not working on Fruit of Life
-and R3 casino epic potions
-• Fixed Ability Hotbar in dd/zenith displaying Solar Ray kill
-stacks permanently instead of cooldown.
-• Fixed Ability Hotbar not displaying DD Dodging and Bulwark
-cooldowns
-&bBug Fixes:&r
-• Fixed Fleshbound Monstrosity dropping an enchanted fire coral
-on death
-• Fixed small build error in Celsian Isles overworld
-• Fixed Stat Track Blocks Placed counting up when mining a
-spawner
-• Fixed a build error in Smallpoint
-• Fixed Plague Bearer's Soiled Trousers' stats being
-inconsistent with the Replica version
-• Fixed an issue where Twisted Depths/Zenith rooms and/or
-rewards print out a nonsensical message in chat to the party
-• Potentially fixed a rare bug with the Star Chart in Smallpoint
-related to returning to it after it is unloaded
-• Fixed typo in snowball fight lose message
-• Absorption in snowball fights is now custom aborption, which
-might fix edge cases in which it isn't cleared properly
-• Fixed Zenith F3 boss ambient music not playing when opening
-the room
-• Enabled trapdoor flipping in a section of the Sierhaven Flag
-Jumping Puzzle to fix it being impossible to complete
-• Fixed the slime near the Chivalrous Mount Discovery in
-Reynart's attic being targetable with Judgment Chain
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-• Vernal Nightmare and Exalted Vernal Nightmare have been
-reopened.
+• The Patron Shrine is working again.
+&bHotfix:&r
+• Reduced the price of M'Orin, the Market Access NPC for plots
+from 16 Royal Crystals and 50 Hyperexperience to 16 Royal
+Crystals and 20 Hyperexperience
