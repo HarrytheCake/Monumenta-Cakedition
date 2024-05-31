@@ -1,63 +1,3 @@
-At the top of the hour, I'll be hosting another Sug-Bug stream
-down in our Stage VC. Feel free to come hang out and suggest
-some things to get done. <#936475423703957545> has been re-
-opened, please give the pin a read for the stream rules
-&bChanges to moderation and team roles&r
-The Monumenta community has grown significantly over the last
-few years. In the earlier days of the server, the team structure
-was relatively flat and fluid, with many developers and
-moderators holding dual roles. As the server has grown, these
-roles have considerably diverged, with the modern moderation
-team largely being independent from the development team in
-terms of deciding/upholding rules, helping players, and handling
-appeals/punishments.
-However, an exception to this increasing distinction had still
-remained • the Monumenta Leads, who have publicly straddled both
-roles in making decisions on both moderation and development.
-Today, the Leads primarily front development of the game and
-have internally stepped back from moderation. Occassionally
-however, Leads have still been called upon by players for
-moderation issues like appeals.
-At the same time, they also acted as the group of people with
-the "final authority" on moderation decisions, in the rare cases
-of contentions (both internal and external) with moderation
-decisions • a role they also wished to relinquish to people more
-heavily in-tune with community moderation.
-As such, moving forward, the Monumenta Leads role will be
-stepping down from all involvement in moderation affairs, and a
-new
-&bModerator Leads&r role will be added to fill this void in
-"final authority", with @Pakstf, @[VH] Aramil, and @michthemoo
-designated as Moderator Leads (MLs).
-&nWhat this means in practice&r
-• Monumenta Leads (@Combustible "Busty" , @Crondis,
-@NickNackGus, @nobodypi, @shadowvisions, @squirrr, @chipmunk46)
-will be stepping back from all issues related to moderation. We
-ask that you not approach them in attempt to subvert moderator
-decisions.
-• For in-game and in-discord <#358326443609948160> issues, there
-is no change to the way players interact with the mod team. All
-mods, including the new Moderator Leads, have the same
-permissions and will be able to help with any issues you may
-encounter. Please continue to ping @ Moderator where necessary,
-and use the /mh channel in game.
-• Moderation decisions will continue to be made collectively by
-the moderator team. This means that you should continue to send
-bugs/appeals/any moderation questions to
-&bany moderator&r, who will pass it on to the team to be
-discussed before a decision is made. Decisions conveyed by any
-moderator can generally be assumed to be on behalf of the entire
-moderator team.
-• While the above is true for 99% of situations, there are a
-small number of cases where players may wish to contest
-decisions made by moderators. In these cases, you can reach out
-to individual MLs with your concerns. The MLs will take these up
-internally and get back to you.
-As always, thank you for your support of the server and for both
-the moderation and development teams. Moving forward, we hope
-that this will make it clearer for players who to approach for
-situations where mods are required, while allowing the
-Development Leads to focus on making great content for the game.
 &bImportant&r
 The amount of players required to found a guild is being lowered
 to 4.
@@ -190,3 +130,39 @@ is the item is question, and the materials with which to
 purchase the infusion. The days of needing to track down a
 specific patron in order to have their skin applied to your item
 will finally be behind us!
+&bRegarding the (most) Recent Ban Wave&r
+Hi everyone,
+Kaul is one of the game's oldest bosses, and as such he has had
+his fair share of bugs and unintended behaviors. One such bug
+that has been present for a while has been the ability to
+sometimes skip certain forced spell casts. The most deadly of
+these is supposed to be his force cast of Volcanic Demise at 10%
+of his health. Players, moderators, and developers have been
+aware of this bug for quite a while, but only recently was it
+discovered that you can consistently reproduce this behavior.
+What was once thought to be a somewhat random occurrence has
+been exploited by a select group of players for illicit gains
+due to increase in Shard of the Mantle prices after the Hope
+Skin Rework.
+&bThe reason bans were issued was not because of Volcanic Demise
+skipping, but due to the concerted effort by a small group of
+players who were reliably reproducing the bug, and were actively
+and consistently exploiting it without intention of reporting
+it.&r
+Following further discussions with the moderation team, we will
+be unbanning majority of the players initially banned who were
+unaware of the circumstances around the skip. We will not punish
+anyone who we are not highly certain knew about the exploit but
+failed to report it. We will also not be banning any players who
+have unintentionally used the bug in previous fights.
+Punishments can be appealed by privately messaging a Moderator
+on Discord • we are trying our best to handle this situation as
+fairly as possible.
+As always, please directly report any exploits or (suspected)
+bugs to a Moderator. Thank you for your help in making Monumenta
+a better game experience for the community.
+&bAn Update on the Recent Ban Wave&r
+Hello,
+The decision has been made to lift all remaining punishments
+issued in relation to this incident. The team apologizes for any
+inconvenience caused by the situation.

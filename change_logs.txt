@@ -1,123 +1,3 @@
-&bWarning:&r Patron Shrine currently consumes your charges
-without actually sending out the Patron buffs, the tab also
-shows some buffs active when they are not, players are advised
-not to use their Shrine Power until this is fixed.
-&b(10.37.0)&r
-For the update on May 23, 2024
-&bMinor New Features:&r
-• Added a Discovery to the Celsian Isles
-• Ability cooldowns are now handled every 5 ticks instead of
-every 10 ticks. This means that ability cooldowns will be more
-accurate in general, reducing issues such as:
-  • Certain levels of Aptitude and other forms of cooldown
-reduction having no effect on certain abilities
-  • Abilities taking shorter or longer time to refresh than
-usual in certain circumstances
-&bMarket Plugin • QOL Update&r
-&nAdditions :&r
-• Bundles:
-You can now change the amount of items included per trade. For
-example, you can sell 4 steaks for 1xp, give the listing 20
-steaks as stock, which equals to 5 trades.
-This bundle size is limited to powers of two, with a maximum of
-64 per trade.
-A new button has been added to the AddListing GUI to enable
-this.
-• Claim-all button:
-In the 'Your listings' GUI, a new button got added: clicking it
-will go through all your owned listings, and will give you all
-the claimable money available, and collect/delete the expired
-listings.
-• Notifications:
-When joining an overworld or plots shard, a chat message will
-pop-up if you have claimable/expired listings, telling you so.
-• Options tab:
-A new tab is added. accessible though the main menu; it will let
-you edit your market options/preferences, like a settings page.
-Currently only one setting is available: you can change in which
-shards the notification above is displayed. More options will
-come later.
-• M'Orin
-The M'Orin NPC is back! It lets you access the market from
-anywhere in plots. It is obtainable thtough a trade in the usual
-plot-npc trader, in the Sierhaven Academy.&nChanges :&r
-• The AddListing GUI has been slightly overhauled.
-• The price tag on browser listings has been upgraded toward
-better readability.
-• Reorganized the main menu GUI, while also adding the needed
-options button, and two placeholders for future features ;3
-• A lot of back-end stuff that shouldn't be visible.
-• On your listings tab, right clicking a listing which has no
-stock left, and nothing to claim, now deletes a listing.
-• Added a bunch of icons for the filter component editor.
-&nFixes :&r
-• Fixed filter issue resulting in empty pages in the browser.
-• Switching filters now brings the selected page to the max-
-page, if that selected page is bigger than max-page.
-• When selecting an item to be sold in the AddListing GUI, it
-now properly reads the amount of those items available in the
-inventory.
-• Going down in the amount of trades selector in the AddListing
-GUI, when that amount is at 1, now brings to the maximum
-available amount in the inventory.
-• Fixed filters component having the 'gray concrete' or 'green
-concrete' names when no manual config has been made for them.
-• Fixed stat-less playerheads being considered wearable helmets.
-They are now considered 'misc'[Original Message Deleted]
-&bFeedback Fixes:&r
-• Added sounds and/or particles for Energizing Elixir's
-enhancement and recast toggle, Elemental Arrows' on-hit effect,
-Spellshock's melee static clear effect, Agility's enhancement,
-and Toughness' enhancement
-• Fixed some skill sound effects not being under the Players
-category
-• Fixed some skill particle effects being under the wrong
-particle settings category
-• Fixed Astral Omen not showing some particles
-• Deadly Ronde no longer causes the screen to rapidly zoom in
-and out
-• Improved Blizzard particles
-• Added Rp support to the Class Selection GUI
-• Updated the Charms GUI's appearance
-&bMinor Bug Fixes:&r
-• Fixed barrels in market shops not actually being unlocked when
-switching from locked to "semilocked" (locked with barrels
-unlocked) state
-• Fixed several of Kaul's passives having unexpected behavior
-due to phase changes
-• Added missing location tags to Potion of Potency, Potion of
-Fortitude, and Potion of Alacrity
-• Fixed specializations not showing their description once
-chosen in the class selection GUI
-• Fixed the chosen class saying to click to choose it instead of
-click to view skills in the class selection GUI
-• Fixed typo in Returning to Balance
-• Fixed misaligned bones in Sealed Remorse lobby
-• Fixed inconsistencies with the hallway to the minigame area in
-the Academy
-• Aether Threads from the Seasonal Pass Relic Wheel now have the
-correct leather color
-• Fixed formatting error in Mage's Legacy dialogue
-• The cutscene in the Ruins lobby during Unraveled now has
-scrolling text indicators
-• Calder no longer references a non-existent position title in
-Wolf in Witch's Clothing
-• Fixed an instance of a scrolling text indicator being missing
-in the Wolf in Witch's Clothing end cutscene• Fixed punctuation
-error in Godspore Cutting dialogue
-• Fixed the teleport out of Sierhaven repair stations when the
-player should not be there going a few blocks too far
-• Fixed typo in All That Remains dialogue
-• Fixed typo in Basanite Guard dialogue
-• Fixed typo in Captain Indigo dialogue
-• Fixed typo in Silvan dialogue
-• Fixed typo in Amina dialogue
-• Fixed typo in Darkened Lodestone lore
-• Fixed typo in Professor Lyson dialogue
-• Fixed Torren referring to Wilhelm as "Ishnir" for some reason
-• Fixed several build errors in Light Blue
-• Fixed the Eruption's description in handbook missing its
-trigger condition
 &bMob Changes:&r
 • Immortal Elemental:
   • 1 -> 3.25 second spell cooldown after casting charge
@@ -187,4 +67,117 @@ instance corruption.
 &bHotfix:&r
 • Reduced the price of M'Orin, the Market Access NPC for plots
 from 16 Royal Crystals and 50 Hyperexperience to 16 Royal
-Crystals and 20 Hyperexperience
+Crystals and 20 HyperexperienceKaul has been temporarily
+disabled.
+&bHotfix:&r
+• The Raiders encounter in Guilding Blocks should no longer fail
+to spawn due to TPS issues
+• A development relic that prevented a contengency from
+triggering in Guilding Blocks has been removed
+&b(10.38.0)&r
+For the update on May 30, 2024
+&bSilver Skinned&r
+Continuing our aim of 2024 to wrap out lingering Region 2 quest
+lines, a new quest has come to the Celsian Isles • Silver
+Skinned! This quest serves as both the finale to the Shifting
+City story, and as an epilogue to the region's mainline/Parting
+Veil plot.
+Join back together with Fred as you embark on one last bizarre
+adventure, solving lingering questions about the city's history
+as you follow the trails of the past.
+To begin Silver Skinned, you may speak to the Fred fish in
+Breachpoint, after having completed The Stone Ocean, A Lich in
+the System, The Tomb of Time, and Scientists of Steelmeld II.
+&bMinor New Features:&r
+• Increased the cost of the Celestial Zenith Pulsating Diamond
+trade
+• Due to the ongoing technical issues with the City of Shifting
+Waters, players who have all the necessary requirements to start
+The Stone Ocean, minus a Shifting completion, may now obtain one
+via Chuck in Sierhaven. Unlike Chuck's other trades, this one is
+temporary and will be removed when the technical issues are
+resolved.
+• Adjusted properties of zones for shrines in R3; most now allow
+movement abilities but no longer give resistance
+• Dungeon soundtracks can now be played from the Soulsinger and
+the Tlaxan Record Player if the player has the JamminDJ merged
+into it
+• Smallpoint bells can now once again be clicked in the middle
+of the teleporting animation
+&bMob Changes:&r
+• The Shatter mob ability now roots the mob instead of
+completely disabling its AI
+• Maintenance Drone and Pruning Drone no longer inflict poison
+on hit, and now have special sounds and particles
+&bFeedback Fixes:&r
+• The icon used to represent The Tomb of Time in the Mainline
+Tree GUI has been updated
+• Added a Rare / Artifact Fragmenting Station to Monarch's Cozy
+Casino
+• Added a tip about the Knick-Knack Sack• Tweaked the palettes
+of Bastion at Sea, Garden at Sea, Barracks at Sea, and their
+related Lime quest areas to remove endstone variants and be
+overall less noisy
+&bMajor Bug Fixes:&r
+• Fixed an issue in Kaul that could cause a spell to be canceled
+after the last phase has started and allow Judgement to be cast
+in the last phase even though it is not supposed to be
+• Fixed some issues with boss phases being skipped if the
+entirety of the boss's remaining health was dealt in one hit
+• Fixed Depths/Zenith utility room potions being graveable
+&bMinor Bug Fixes:&r
+• Fixed False Spirit Portal Gates having significantly more
+damage resistance than intended
+• The Royal Cartographer now gives you a clickable link to
+follow for the live map, like his dialogue implies
+• Alutana's Devoted now correctly move faster after their totem
+breaks
+• Fixed vanity and parrots being modified by using a lockbox
+even if using the lockbox failed (due to having a shulker box in
+the hotbar)
+• Fixed lockboxes staying on the cursor when parrots are
+successfully swapped
+• Fixed lockboxes removing vanity instead of swapping it when
+set to swap
+• Fixed typo in Nexus dialogue
+• Fixed enchantments and info on Consuming Elixir and Black Sun
+Brew being unnecessarily hidden and replicated with lore text
+• Fixed many invisible bee mounts being targetable by
+abilities/summons/enchantments/etc.
+• Fixed the Shatter mob ability not being canceled by stun or
+silence
+• Fixed Haunting Shades being able to persist in areas after
+their duration runs out
+• Fixed build errors in the Isles, Sirius Area and Brown Lobby
+• Fixed Sanctifying Armor not working on passive mobs given
+custom base attacks• Replaced horizontal ellipsis (`…`) with
+three periods (`...`) in most places
+• Fixed /vzc not working on non-zenith shards
+• Fixed bees moving very fast when close to the ground
+• Removed problematic lever on Zenith Lobby Infusion Bot
+• Modified buttons in Study in Crimson Maze to prevent accident
+breakage of fragile foliage
+• Fixed a stuck spot in the Study in Crimson Maze
+• Fixed a typo in a Brown sign
+• Fixed two incorrect mobs in Exalted Reverie spawners
+• Fixed an old Sierhaven docks map in a quest area
+• Fixed Totem of Transposing sometimes sending Eye of Viridia’s
+message
+• Fixed an extra {…} in Kingdom of Lies’s dialogue
+• Fixed Jehenne’s Silver Knight quest dialogue occurring in Blue
+lobby
+• Fixed typo in Scribe Abacad’s dialogue
+• Fixed JamminDJ having outdated dialogue about the music pack
+• Fixed Exalted Malevolent Reverie races refunding a normal
+Reverie key instead of an exalted one
+• Fixed Spring Demon's Guardian head not counting as an elite
+• Fixed Soul Switcher in Sanguine Halls being able to teleport
+you from the death waiting room
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• Kaul has been reopened.
