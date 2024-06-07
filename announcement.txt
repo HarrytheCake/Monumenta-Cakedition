@@ -1,31 +1,3 @@
-&bImportant&r
-The amount of players required to found a guild is being lowered
-to 4.
-Additionally, Market Rule G4 is receiving an update. The new
-rule is as follows:
-`G.4: A guild stall can only be owned by a guild having at least
-4 active members.`Sorry for keeping you all waiting, I have been
-bit more busy than I would like during my vacation.
-A big THANK YOU to the Monumenta team for allowing me to
-announce the release of my new map in this channel:
-RAGECRAFT IV (for Minecraft version 1.20.1)
-Explore the vast underworld and fight your way through hordes of
-monsters in perilous environments! Can you retrieve the mythical
-crystals and complete the monument?
-This survival-style CTM map features 16 massive dungeons, a
-unique crafting system that goes far beyond normal Minecraft
-mechanics, and a semi-open underground world containing
-innumerable challenges and secrets. And who knows, maybe you'll
-even find some things that feel vaguely familiar as a Monumenta
-player 😉
-The map is scheduled for release on:
-Sunday, April 7, 10 PM CET
-Map Creator: heliceo
-Datapack Contributor: Suso
-Custom Textures: cocoacollei
-Trailer: Counter_Coffee
-Check out the trailer if you are interested:
-https://www.youtube.com/watch?v=hjl5QfimUCo
 &bConcerning Discord's New Poll Feature&r
 Discord, in its infinite wisdom, has tied the new Polls feature
 to the ability for people to send/view messages in channels.
@@ -166,3 +138,13 @@ Hello,
 The decision has been made to lift all remaining punishments
 issued in relation to this incident. The team apologizes for any
 inconvenience caused by the situation.
+&bModmail&r
+We have added @ModMail to the server. All issues that require
+messaging a Moderator such as appealing a punishment or
+reporting an exploit will now be handled through Modmail.
+Simply message the bot with your issue and select the Monumenta
+Discord Server to open a ticket with Moderators.A note for
+founders/managers of guilds • with this week's update, you'll
+need to grant any guests of your guild access to your guild plot
+and/or chat, as by default these permissions are disabled. You
+can do so in the guild GUI here, or on a per-guest basis.

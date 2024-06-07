@@ -1,178 +1,324 @@
-&bMob Changes:&r
-• Immortal Elemental:
-  • 1 -> 3.25 second spell cooldown after casting charge
-  • 8 -> 3 second charge channeling time
-  • 75% -> 90% slowness for 2 -> 3.25 seconds while channeling
-charge
-  • 20 -> 40 block charge range
-  • Substantially improved readability of all charge particles
-  • Increased the audible distance for charge tell sounds and
-changed some sounds
-• Primordial Elemental and Immortal Elemental:
-  • 15 -> 10 second spell cooldown after casting Earthen Rupture
-  • Slightly increased Earthen Rupture vertical force
-  • Improved readability of Earthen Rupture particles
-  • Increased the audible distance for Earthen Rupture sound
-effects
-• Night Terror and Shroom Mother:
-  • Tightened the particle spread of the mob's projectile spell
-for better readability
-  • Significantly increased the audible distance from which the
-projectile spell tell sound can be heard
-• Dune Warlock, Viridian Wizard, Desert Archmage, Bone Cult
-Mage, Ghost of Holiday's Present, Gazing Spellcaster, Kreepa
-Necromancer, Decayed Spirit, Crystal Construct, Viridian
-Archmage, Greyskull, and Elder Terror:
-  • 5 -> 3 second laser channeling time
-  • Improved laser hit particle effects to be less obscuring
-  • (Dune Warlock only) Removed passive Fire Resistance potion
-effect
-• Silent Echoes:
-  • Made on hit silence particles more noticeable
-  • Improved on hit sound effects
-• Skewer Fisherman, Mutated Aberration, Ghostly General,
-Ascended Lichguard, Fallen Queensguard, and Star Spitter:
-  • 0.035 -> 0 hook projectile turn radius
-  • Tightened the particle spread of the mob's hook projectile
-spell for better readability
-  • Significantly increased the audible distance from which the
-hook projectile spell tell sound can be heard
-  • Slightly changed the hook projectile on hit particles
-  • (Star Spitter only) 0.8 -> 0.4 hook projectile speed
-  • (Star Spitter only) 1 -> 4 second projectile initial cast
-delay• Forgotten Spirit, Molten Sentry, Festering Growth,
-Scorched Wizard, and Sycorax:
-  • Players targeted by the mob's laser spell should now be able
-to better hear it without being next to the channeler
-  • Significantly improved laser targeting particles to be more
-readable
-  • Improved laser hit particle effects to be less obscuring
-• Azalea Camouflage, Fabrication Pod, Ent Chrysalis, Stable
-Paradox, and Sparkling Stardust:
-  • Damage dealt to the Creeper is now transferred to the summon
-at a 20% rate. For example, if the Creeper has lost 50% of its
-max health, then the summoned mob takes 10% of its max health as
-accumulated damage upon spawn.
-• Unstable Paradox and Island Egg:
-  • Damage dealt to the Creeper is now transferred to the summon
-at a 40% rate
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-• The Patron Shrine is working again.
-&bHotfix:&r
-• Reduced the price of M'Orin, the Market Access NPC for plots
-from 16 Royal Crystals and 50 Hyperexperience to 16 Royal
-Crystals and 20 HyperexperienceKaul has been temporarily
-disabled.
-&bHotfix:&r
-• The Raiders encounter in Guilding Blocks should no longer fail
-to spawn due to TPS issues
-• A development relic that prevented a contengency from
-triggering in Guilding Blocks has been removed
-&b(10.38.0)&r
-For the update on May 30, 2024
-&bSilver Skinned&r
-Continuing our aim of 2024 to wrap out lingering Region 2 quest
-lines, a new quest has come to the Celsian Isles • Silver
-Skinned! This quest serves as both the finale to the Shifting
-City story, and as an epilogue to the region's mainline/Parting
-Veil plot.
-Join back together with Fred as you embark on one last bizarre
-adventure, solving lingering questions about the city's history
-as you follow the trails of the past.
-To begin Silver Skinned, you may speak to the Fred fish in
-Breachpoint, after having completed The Stone Ocean, A Lich in
-the System, The Tomb of Time, and Scientists of Steelmeld II.
-&bMinor New Features:&r
-• Increased the cost of the Celestial Zenith Pulsating Diamond
-trade
-• Due to the ongoing technical issues with the City of Shifting
-Waters, players who have all the necessary requirements to start
-The Stone Ocean, minus a Shifting completion, may now obtain one
-via Chuck in Sierhaven. Unlike Chuck's other trades, this one is
-temporary and will be removed when the technical issues are
-resolved.
-• Adjusted properties of zones for shrines in R3; most now allow
-movement abilities but no longer give resistance
-• Dungeon soundtracks can now be played from the Soulsinger and
-the Tlaxan Record Player if the player has the JamminDJ merged
-into it
-• Smallpoint bells can now once again be clicked in the middle
-of the teleporting animation
-&bMob Changes:&r
-• The Shatter mob ability now roots the mob instead of
-completely disabling its AI
-• Maintenance Drone and Pruning Drone no longer inflict poison
-on hit, and now have special sounds and particles
+• The Plot Engineer accepts all three regional currencies for
+trades
+• Updated the base items of Restless Souls and Ranger for RP
+compatibility
+• Added RP support to the Delve GUIs
+• Added RP support to the (NPC) Trade GUI
+• Added a PEB toggle for RP GUI textures
+&bItem Changes:&r
+• Silverheart : 1 -> 0 Sapper
+• Squid Hunter : 12 -> 14.5 Projectile Damage
+• True North : 2 -> 1 Feather Falling
+• Truer North : 3 -> 2 Feather Falling, 2 -> 1 Regeneration, 2
+-> 1 Worldly Protection
+• Truest North (M4) : 3 -> 6 Fire Protection, 2 -> 1
+Regeneration, 2 -> 1 Worldly Protection, 1 -> 0 Sustenance
+  • &oDeveloper commentary: All other tiers in the
+True/Truer/Truest North item line have also received changes,
+which are not listed here for brevity. Truest North should now
+be better suited for its intended purpose of dangerous terrain
+traversal and grave recovery rather than being an all-in-one
+defensive option as its previous iteration stifled other items
+from being competitive in the defensive mainhand item niche.&r
+• Cracked Pocketwatch: +20% Voodoo Bonds Curse Death Damage ->
++20% Voodoo Bonds Pin Damage
+• Focused Shielding Charm: 3 -> 2 Charm Power, +30% -> +20%
+Shield Wall Damage, +100% -> 0% Shield Wall Knockback
+&bConsumable Changes:&r
+&nArena of Terth:&r
+• Swift Mixture : Haste 1 (1:00) -> +10% Attack Speed (1:00)
+• Greater Swift Mixture : Haste 2 (3:00) -> +20% Attack Speed
+(3:00)
+&nMulti-Region:&r
+• Potion of Might (rework) : +30% Fire Resistance (3:00), +15%
+Projectile Resistance (3:00), +10% Strength (3:00)
+• Soulfruit : +50% Absorption Health (2:00) -> +50% Absorption
+Health (1:00), Fire Immunity (5:00) -> Fire Immunity (2:00),
+removed Knockback Resistance, increased price from 12 to 13
+Twisted Soul Thread
+• Ambrosia : +50% Absorption Health (2:00) -> +50% Absorption
+Health (1:00), Fire Immunity (5:00) -> Fire Immunity (2:00),
+Regeneration 2 (0:20) -> Regeneration 3 (0:07), removed
+Resistance
+• Firecloak Vial : Fire Immunity (3:00) -> 80% Fire Resistance
+(3:00)&nKing's Valley:&r
+• Eggnog : Regeneration 1 (0:18) -> Regeneration 1 (0:30), Haste
+2 (0:18) -> Haste 1 (0:30), increased price from 2 to 6 Ice
+Diamonds
+• Hot Chocolate : Increased price from 2 to 6 Ice Diamonds
+• High Fructose Corn Syrup : Haste 3 (10:00) -> Haste 2 (10:00)
+• Pinot Grigio Wine : +20% Speed (0:45) -> +10% Speed (1:30),
+removed Nausea, increased price from 4 XP to 1 CXP
+• Zinfandel Wine : Removed Nausea, increased price from 5 XP to
+2 CXP
+• Imperial Stout : Removed Nausea, increased price from 10 XP to
+2 CXP
+• Bastion's Brew : Regeneration 1 (1:15) -> Regeneration 1
+(1:30), +20% Strength (1:15) -> +20% Strength (1:30), -45% Speed
+(1:15) -> -30% Speed (1:30), increased price from 3 CXP to 5 CXP
+• Miner's Brew : Haste 2 (3:00) -> Haste 1 (3:00)
+• Worker's Pale Ale (Rework) : +20% Knockback Resistance (1:00),
++20% Fall Resistance (1:00), costs 3 CXP
+• Blaze's Whiskey : Removed Nausea, increased price from 18 XP
+to 3 CXP
+• Sunfish Rum : Removed Nausea, increased price from 10 XP to 2
+CXP
+• Blackroot Brew : Removed Nausea, increased price from 18 XP to
+4 CXP
+• Tlaxan Wine : 40% Instant Health -> 30% Instant Health,
+removed Nausea, increased price from 32 XP to 5 CXP
+• Ragebrew : Haste 1 (4:00) -> +10% Attack Speed (4:00), +10%
+Strength -> +10% Melee Damage, reduced price from 16 CXP to 10
+CXP
+• Minotaur's Wrath : Haste 1 (0:30) -> +10% Attack Speed (1:00),
++10% Resistance (0:30) -> +10% Resistance (1:00), reduced the
+amount of potions that are present in the Hallowed Hedges
+• Soul Barrier (Rework) : +20% Magic Resistance (0:30), +20%
+Blast Resistance (0:30), Glowing (0:30), no longer comes in a
+stack of 5
+• Elixir of the Serpent : Removed Haste 2, added +15% Projectile
+Damage (2:00)
+• C'Shura's Fury : Removed 40% Instant Health
+• Elemental Resin : Regeneration 1 (1:00) -> Regeneration 1
+(1:30), +10% Resistance (1:00) -> +10% Resistance (1:30)
+• Flame's Warmth : Removed 20% Instant Health
+• Wind's Strength : Haste 2 (5:00) -> Haste 1 (5:00)• Earth's
+Might : +10% Max Health (2:00) -> +10% Max Health (3:00), +20%
+Resistance (2:00) -> +20% Resistance (3:00)
+• Water's Blessing : Removed +10% Max Health, added +15% Magic
+Resistance (10:00)
+• Fury of the Elements : Fire Immunity (6:00) -> Fire Immunity
+(2:00), Regeneration 2 (6:00) -> Regeneration 1 (4:00), removed
+Absorption Health, +30% Speed (6:00) -> +30% Speed (4:00), Water
+Breathing (6:00) -> Water Breathing (4:00)
+• Jungle's Boon : Increased all buff durations from 1:30 to 2:00
+• Essence of Flame : +20% Magic Damage (12:00) -> +20% Magic
+Damage (15:00) Fire Immunity (12:00) -> +90% Fire Resistance
+(15:00)
+&nCelsian Isles:&r
+• Inner Flame : Regeneration 1 (0:20) -> Regeneration 1 (0:10),
+increased price from 1 to 3 CCS
+• Advanced Extinguisher : Fire Immunity (0:20) -> Fire Immunity
+(0:30), increased price from 1 to 3 CCS
+• Pineapple Extract : Increased price from 1 to 4 CCS
+• Extinguisher Bomb : Fire Immunity (0:12) -> Fire Immunity
+(0:07)
+• Advanced Extinguisher Bomb : Fire Immunity (0:22) -> Fire
+Immunity (0:15), removed Absorption Health, added +20% Speed
+(0:15)
+• Weak Azure Mixture : +20% Speed (2:30) -> +20% Speed (2:00),
+Haste 1 (2:30) -> +10% Attack Speed (2:00)
+• Azure Mixture : +20% Speed (4:40) -> +20% Speed (3:00), Haste
+1 (4:40) -> +10% Attack Speed (3:00)
+• Empowered Azure Mixture : +40% Speed (4:40) -> +40% Speed
+(4:00), Haste 1 (4:40) -> +10% Attack Speed (4:00)
+• Potion of Warcry : 40% Instant Health -> 25% Instant Health
+• Strong Potion of Warcry : 40% Instant Health -> 30% Instant
+Health
+• Sunshard Brew : Fire Immunity (1:00) -> +80% Fire Resistance
+(1:00)
+• Bastion of Will : Removed +20% Absorption Health
+• Chillwind Cocktail : Removed Nausea
+• Myriad's Martini : Removed Nausea
+• Blur Brew : Increased buff durations from 0:40 to 1:00,
+increased price from 8 CCS to 12 CCS
+• Dragonrage Brew : Haste 3 (0:30) -> Haste 2 (0:30), increased
+price from 1 to 2 Shards of Remorse• Spirits of the Song
+(Rework) : +30% Fall Resistance (20:00), +40% Knockback
+Resistance (20:00), +80% Fire Resistance (20:00)
+&nArchitect's Ring:&r
+• Dichen Energy Brew : +40% Speed (0:10) -> 30% Speed (0:10),
+Haste 1 (3:00) -> Haste 1 (1:00), Regeneration 3 (0:10) ->
+Regeneration 2 (0:12)
+• Strong Dichen Energy Brew : +60% Speed (0:10) -> +40% Speed
+(0:10), Haste 1 (5:00) -> Haste 1 (2:00), Regeneration 3 (0:10)
+-> Regeneration 3 (0:06)
+• Empowered Swiftshield Tincture : +40% Speed (1:00) -> +40%
+Speed (2:00), +40% Absorption Health (1:00) -> +30% Absorption
+Health (2:00)
+• Concentrated Shade Seabass : +45% Blast Resistance (0:12) ->
++40% Blast Resistance (0:30)
+• Oily Mechanical Monkfish : Mining Fatigue 2 (0:04) -> Mining
+Fatigue 1 (0:10)
+• Greasy Mechanical Monkfish : Mining Fatigue 1 (0:02) -> Mining
+Fatigue 1 (0:05)
+• Average Mechanical Monkfish : Haste 1 (0:02) -> Haste 1 (0:05)
+• Efficient Mechanical Monkfish : Haste 1 (0:05) -> Haste 1
+(0:15)
+• Optimal Mechanical Monkfish : Haste 2 (0:05) -> Haste 1 (0:30)
+• Concentrated Mechanical Monkfish : Haste 2 (1:00) -> Haste 1
+(2:00), Night Vision (0:30) -> Night Vision (2:00)
+• Potion of Fortitude : Increased price from 1 to 3 Fortitude
+Augments
+• Potion of Potency : Increased price from 1 to 3 Potency
+Augments
+• Potion of Alacrity : Increased price from 1 to 3 Alacrity
+Augments
+• Fissure Tonic : Fire Immunity (60:00) -> +70% Fire Resistance
+(60:00)
+&bClass Changes:&r
+• Dark Pact: Now can be
+&bretriggered to cancel&r it, but only after
+&b7 seconds&r have elapsed. (If you have an existing pact and
+Dark Pact is off cooldown, it will prioritize recasting Dark
+Pact instead of cancelling it.)
+• Judgement Chain: Now has a much more forgiving mob detection
+range. 15s -> 12s Cooldown, and now has 2 charges. You deal 10%
+more damage to chained mobs, increased to 20% at level 2. Level
+2's strength/resist and Dark Pact extension have been removed.•
+L1: Swap hands ... to teleport and chain them to you for
+&b8s&r, taunting them and afflicting them with 40% Slowness and
+40% Weakness for 3s.
+&bDeal 10% more damage to chained mobs.&r Bosses and crowd
+control immune mobs cannot be teleported, but will still be
+chained and debuffed.
+&bCharges: 2. Charge Cooldown: 12s.&r
+  • L2: Judgement Chain now additionally teleports and chains
+the 2 closest mobs within 3 blocks of the targeted mob, and
+&byou deal 20% more damage to chained mobs.&r
+• Voodoo Bonds: Trigger changed to sprint left click, and now
+has an extra melee slash hitbox. Curse reworked: Now spreads
+damage to other nearby cursed mobs, instead of mob type. Crits
+on cursed mobs spread the curse to other nearby mobs. L2 also
+reworked.
+  • L1:
+&bLeft click while sprinting&r and holding a scythe to
+&bslash in a small arc&r and fire a pin ... When a cursed mob
+takes melee, projectile, or magic damage (except from this
+ability),
+&ball other cursed mobs&r in a 4 block radius take 15% of the
+suffered damage.
+&bCritical hits against cursed mobs will spread it to 1 other
+un-cursed mob within 10 blocks.&r Players hit are bonded to you
+instead; the next hit they take in the next 8s will be
+redirected to you .... Charges: 2. Charge Cooldown: 10s.
+  • L2: The curse now deals 20% of taken damage, and it spreads
+to 2 other mobs on critical hits. The slash and pin deal 9
+additional damage to already-cursed mobs. Take 25% less damage
+when redirecting damage from other players.
 &bFeedback Fixes:&r
-• The icon used to represent The Tomb of Time in the Mainline
-Tree GUI has been updated
-• Added a Rare / Artifact Fragmenting Station to Monarch's Cozy
-Casino
-• Added a tip about the Knick-Knack Sack• Tweaked the palettes
-of Bastion at Sea, Garden at Sea, Barracks at Sea, and their
-related Lime quest areas to remove endstone variants and be
-overall less noisy
-&bMajor Bug Fixes:&r
-• Fixed an issue in Kaul that could cause a spell to be canceled
-after the last phase has started and allow Judgement to be cast
-in the last phase even though it is not supposed to be
-• Fixed some issues with boss phases being skipped if the
-entirety of the boss's remaining health was dealt in one hit
-• Fixed Depths/Zenith utility room potions being graveable
+• Slightly moved the location of a chest in Chittering Gutters
+• Browncorp #39 "Farr Out" is now slightly easier to find
 &bMinor Bug Fixes:&r
-• Fixed False Spirit Portal Gates having significantly more
-damage resistance than intended
-• The Royal Cartographer now gives you a clickable link to
-follow for the live map, like his dialogue implies
-• Alutana's Devoted now correctly move faster after their totem
-breaks
-• Fixed vanity and parrots being modified by using a lockbox
-even if using the lockbox failed (due to having a shulker box in
-the hotbar)
-• Fixed lockboxes staying on the cursor when parrots are
-successfully swapped
-• Fixed lockboxes removing vanity instead of swapping it when
-set to swap
-• Fixed typo in Nexus dialogue
-• Fixed enchantments and info on Consuming Elixir and Black Sun
-Brew being unnecessarily hidden and replicated with lore text
-• Fixed many invisible bee mounts being targetable by
-abilities/summons/enchantments/etc.
-• Fixed the Shatter mob ability not being canceled by stun or
-silence
-• Fixed Haunting Shades being able to persist in areas after
-their duration runs out
-• Fixed build errors in the Isles, Sirius Area and Brown Lobby
-• Fixed Sanctifying Armor not working on passive mobs given
-custom base attacks• Replaced horizontal ellipsis (`…`) with
-three periods (`...`) in most places
-• Fixed /vzc not working on non-zenith shards
-• Fixed bees moving very fast when close to the ground
-• Removed problematic lever on Zenith Lobby Infusion Bot
-• Modified buttons in Study in Crimson Maze to prevent accident
-breakage of fragile foliage
-• Fixed a stuck spot in the Study in Crimson Maze
-• Fixed a typo in a Brown sign
-• Fixed two incorrect mobs in Exalted Reverie spawners
-• Fixed an old Sierhaven docks map in a quest area
-• Fixed Totem of Transposing sometimes sending Eye of Viridia’s
-message
-• Fixed an extra {…} in Kingdom of Lies’s dialogue
-• Fixed Jehenne’s Silver Knight quest dialogue occurring in Blue
-lobby
-• Fixed typo in Scribe Abacad’s dialogue
-• Fixed JamminDJ having outdated dialogue about the music pack
-• Fixed Exalted Malevolent Reverie races refunding a normal
-Reverie key instead of an exalted one
-• Fixed Spring Demon's Guardian head not counting as an elite
-• Fixed Soul Switcher in Sanguine Halls being able to teleport
-you from the death waiting room
+• Fixed Kaul's Immortal Elemental being vulnerable and readded
+its missing head item
+• Fixed Shadow Turrets in the Masquerader's Ruin bossfight
+having a loot table
+• Fixed a typo when claiming ||Construct Logs||
+• Fixed typo in A Sirius Problem
+• Fixed typos in Silver Skinned
+• Fixed Alchemy Labs music in the music GUI never being
+unlocked• Fixed exposed bedrock in the final room of Quelled
+Convent
+• Fixed grammatical error in the Region 2 Mainline GUI
+• Fixed spelling error in The Third Vault book
+• Replaced ellipses in plugin code with triple periods
+• Fixed a stuck spot in Galengarde
+• Fixed the advancement description for Browncorp #39 "Farr Out"
+being outdated
+• Fixed typo in the R3 casino jackpot advancement
+• Fixed being able to use Judgement Chain on Master Jukeboxes
+• Fixed Longtime Sunshine and Hightide Moonshine having outdated
+stats
+• The Arcanist in Sierhaven's Arcane Emporium now sells Crimson
+Mage armor with the new color
+• Raging Ghoul no longer holds the soul in book form of its
+compatriot, the Enraged Ghoul, in its left hand
+• Fixed some issues when glowing is applied to Manifested
+Paradox in Teal
+• Fixed Animated Potions dropping potions of Instant Damage that
+were doing significantly more damage than intended
+• Spore Swarmers in Fungus Thorn Cave and a Vengeful Whisper in
+Whispering Woods now drop potions of custom Instant Damage
+instead of vanilla Instant Damage
+• Fixed Calamitous Rider, Lancer of Terror, Keeper of the
+Occult, Consumed Alchemist, Decayed Alchemist, Devourer Worm,
+Ent, Festive Ankle Biter, Festive Catman, Fungal Crawler, Gear
+Gremlin, Igneous Wraith, Illusioner of the Mist, Jovial
+Combatant, Lighthouse Warrior, Living Statue, Lumi, Magma
+Charger, Magmatic Ghast, Mimic, Noxious Aberration, Ominous
+Scout, Raging Minotaur, Rotting Warrior, Rusted Gear, Scholar of
+the Tides, Warptouched Guardian, The Grinch, Torrential Scourge,
+Torrential Spearer, Venomous Supplicant, Startouched Cultist,
+Serpensia Corpse, Soulblighter's Sacrifice, Dark Magic, Fallen
+Adventurer, and Tuathan having vanilla armor, vanilla damage
+stats on weapons, unnecessary vanilla effects, and/or vanilla
+armor enchantments
+• Fixed Killer Bunny and Cleaning Drone dropping potions with
+vanilla effects
+• Replaced two vanilla Drowned spawners near the Bandit
+Stronghold with custom mob spawners• Fixed Mushroom Archmage,
+Paralyzing Mycelia Apprentice, Harbinger of Slowness, Earth
+Worm, Snowman Ranger, Seaside Vermin, Jovial Combatant,
+Explosive's Soul, Deepbound Paladin, and Guardian of Life
+applying vanilla slowness on spell attacks
+• Added Silent Knight to the items API
+• The advancement for All That Remains will now properly appear
+on the website
+• Fixed a recurring misspelling in Ring Around the Rose
+• Fixed single-character ellipses in a Silver Skinned book
+• An instance of incorrect dialogue order has been fixed in The
+Stone Ocean
+• Fixed exposed bedrock in a section of Silver Skinned
+• Removed the "Quest Reward" tag from ||Irrus' Brace||
+• Merchant's Curio is now unbreakable
+• Fixed a few typos in Dr. Laurie's dialogue during The Plague
+• Fixed Plot Alchemist NPCs having outdated trades. You must
+Eggify and replace any currently placed Plot Alchemists for the
+changes to take effect
+• Fixed M'Orin not being silent. You must Eggify and replace any
+currently placed M'Orins for the changes to take effect
+• Fixed Plot Quartermaster NPCs having outdated trades. You must
+Eggify and replace any currently placed Plot Quartermasters for
+the changes to take effect
+• Added Plot NPC spawn eggs to the items API
+• Added most generic Training Dummy spawn eggs to the items API
+• Fixed a typo in the lore of Bonepiercer
+• Fixed grammatical error in Into the Woods
+• Fixed a Discovery having an invalid loot table
+• Mellie in Silver Skinned has no longer totally lost all sense
+of direction
+• Fixed not being able to fragment R3 season pass artifacts
+• De-wonked walls on the Sierhaven Docks
+• The Velara-ocity race may now be started if you have completed
+Scars of Magic but have not yet spoken to Bhairavi post-quest
+with a Light Blue completion in preparation for Soul of the
+Forest
+• Fixed dialogue formatting error in Starless Night
+• Fixed a location-based dialogue error in Snow Man Left Behind
+• Touched up some continuity with Starn in Soul of the Forest•
+An unneeded delay has been removed from dialogue with Bhairavi
+in Soul of the Forest
+• Fixed a dialogue rerun error in Voyage of Discovery
+• Fixed dialogue order error in A Merchant's Woe
+• Repaved the road above the rare fragging station in Monarch's
+Cozy Casino
+• Fixed some typos in Gemsmith Amber's dialogue
+• Fixed a typo in Hekawt's dialogue
+• Added all Celestial Zenith dungeon-exclusive potions and the
+Ladder of Honesty to the items API
+• Added numerous quest items to the items API
+• Exalted C'Axtal no longer applies vanilla slowness upon phase
+change
+• Added Soul Switcher, Knowledge Construct, Shattered Companion,
+Sanctified Construct, Elder Aberration, and C'Zanil, the
+Soulcrusher to the Bestiary
+• Oil and sludge in Cradle of the Broken God now apply custom
+slowness
+• Added Marina Noir mobs to the Bestiary
+• Added Celestial Zenith mobs to the Bestiary
+• Added Sirius mobs to the Bestiary
+• Fixed Blightseeking Sharpshooter having vanilla health/max
+health
+• Fixed Azacor's Bestiary category not displaying properly
+• Curse of Corruption now applies custom Slowness
+• KBR increases in the masterwork level preview are now aligned
+with how it looks on items
+• Fixed a build error in Star Point
+• Fixed Parrots not re-appearing when leaving Spectator mode.
+• Fixed a typo in Silent Knight's quest start message.
+• Flipped a trapdoor in The Nadir
+• Ladder'd a dock in Sierhaven
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -180,4 +326,5 @@ and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
-• Kaul has been reopened.
+&bHotfix&r: Fixed mobs with lasers deleting a 7x7x7 cube of
+blocks on hit
