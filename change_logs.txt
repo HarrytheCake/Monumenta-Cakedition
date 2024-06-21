@@ -1,49 +1,7 @@
-• An unneeded delay has been removed from dialogue with Bhairavi
-in Soul of the Forest
-• Fixed a dialogue rerun error in Voyage of Discovery
-• Fixed dialogue order error in A Merchant's Woe
-• Repaved the road above the rare fragging station in Monarch's
-Cozy Casino
-• Fixed some typos in Gemsmith Amber's dialogue
-• Fixed a typo in Hekawt's dialogue
-• Added all Celestial Zenith dungeon-exclusive potions and the
-Ladder of Honesty to the items API
-• Added numerous quest items to the items API
-• Exalted C'Axtal no longer applies vanilla slowness upon phase
-change
-• Added Soul Switcher, Knowledge Construct, Shattered Companion,
-Sanctified Construct, Elder Aberration, and C'Zanil, the
-Soulcrusher to the Bestiary
-• Oil and sludge in Cradle of the Broken God now apply custom
-slowness
-• Added Marina Noir mobs to the Bestiary
-• Added Celestial Zenith mobs to the Bestiary
-• Added Sirius mobs to the Bestiary
-• Fixed Blightseeking Sharpshooter having vanilla health/max
-health
-• Fixed Azacor's Bestiary category not displaying properly
-• Curse of Corruption now applies custom Slowness
-• KBR increases in the masterwork level preview are now aligned
-with how it looks on items
-• Fixed a build error in Star Point
-• Fixed Parrots not re-appearing when leaving Spectator mode.
-• Fixed a typo in Silent Knight's quest start message.
-• Flipped a trapdoor in The Nadir
-• Ladder'd a dock in Sierhaven
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-&bHotfix&r: Fixed mobs with lasers deleting a 7x7x7 cube of
-blocks on hitEldrask has been temporarily disabled.Eldrask has
-been reopened.
 &bHotfix:&r Non-delve dungeons no longer count for the delve
 dungeon mission for weeks 1-4 of the current season pass
 &b(10.39.0)&r
-For the update on June 6, 2024
+For the update on June 13, 2024
 &bMinor New Features:&r
 • In preparation for the upcoming 5.0.0 Resource Pack update,
 &b23&r new Hope Skins entries have been added to Mastersmith
@@ -134,6 +92,65 @@ they currently have
 • Fixed a typo in an Earthbound Charm adjective
 • Fixed the description of the Preset Delve option using the
 wrong color
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+&bHotfix:&r This week's mission in EC now properly counts rooms
+instead of floors (fix already live)
+&bHotfix:&r Fixed the Exalted Delve Light Blue GUI failing to
+open
+&bHotfix:&r Fixed an issue with applying one of the Hope skins
+for God Tamer
+&b(10.40.0)&r
+For the update on June 20, 2024
+&bFeedback Fixes:&r
+• Added a Quest Compass chest to the Mistport Docks
+• Updated the lore text of Silver Satchel
+• Reduced the amount of particles in Aurora's Declaration
+• Reduced the amount of particles in Cosmic Portals
+&bMinor Bug Fixes:&r
+• NPC trading GUI RP Fixes:
+ • Fixed classic mode border panes being visible
+ • Tweaked design and tag locations
+ •
+&bNote&r: some breaking RP changes were made, please update to
+the newest RP patch
+• Fixed players teleporting to the Blue lobby facing the wrong
+direction
+• Disabled slots in some armor stand decorations
+• Fixed resetting your profile not resetting your R3 delve
+modifiers
+• Fixed minor build bugs and stuckspots in Sierhaven, Willows,
+Exalted Yellow, Season Pass Hub, Shifting Amalgam poi, Zenith
+Loot Rooms, and Zenith Lobby
+• Fixed a quest chest in the Northern Jaguar Village
+• Fixed several issues and build errors around the Highlands
+paths
+• Unlocked two barrels in Nurse Deidre's room
+• Teal's custom dungeon music will now function
+• Fixed Chain Lightning sound being stacked
+• Fixed a typo in Memories of Battle and reward
+• Fixed a typo in Vampiric Drain cosmetic skill
+• Fixed multiple typos in Silver Surfer description
+• Fixed many All That Remains typos (thank you chroma.tk)
+• Fixed a typo in Dazed Man dialogue
+• Fixed a typo in Noelle dialogue
+• Fixed a few hope skins misspelling the patron's name in the
+hope skin GUI
+• Fixed Samwell's dialogue overlapping if killed too fast
+• Fixed typographical errors in Witchbane Revolver's lore
+• Fixed typographical errors in Tobias' dialogue for Of Monks
+and Magic
+• Colossus of Chaos (iron golem) and Dreadnaught of Subjugation
+(ravager) can now roll for Gladiolus and Nightshade respectively
+• Fixed an issue where Delve mobs with potion drops had a
+slightly lower than intended drop chance for Soul Threads
+• Fixed custom trades sometimes not correctly recognizing
+specific shulker boxes
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker

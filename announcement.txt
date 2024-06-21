@@ -1,15 +1,4 @@
-&bConcerning Discord's New Poll Feature&r
-Discord, in its infinite wisdom, has tied the new Polls feature
-to the ability for people to send/view messages in channels.
-While the Polls feature can be useful in certain situations, we
-do not want our server to be bombarded with spurious and spammy
-polls. Going forward, polls should only be used in situations
-where it makes sense such as information/opinion gathering for
-topics in the Feedback category, or crowd sourcing build ideas
-in appropriate channels. The moderation team reserves the right
-to remove polls at our discretion. Users who continuously spam
-polls will be warned and muted.## Announcing the Closure of the
-Barrel Bazaar
+## Announcing the Closure of the Barrel Bazaar
 &bImportant: The player market will continue to remain
 operational for the time being. Player and Guild shop stalls
 will continue to function as normal.&r
@@ -148,3 +137,32 @@ founders/managers of guilds • with this week's update, you'll
 need to grant any guests of your guild access to your guild plot
 and/or chat, as by default these permissions are disabled. You
 can do so in the guild GUI here, or on a per-guest basis.
+&bOpen Call for Quest Dev Applications:&r
+Hey everyone, I'd like to take some time to put out an open call
+for applications for anyone who is interested in applying to
+Team Monumenta as a Quest Developer. Over the years, our quest
+team has grown and thinned out fluxuatingly, and we'd like to
+expand a bit in order to alleviate work load.
+&nFor this application, you:&r
+Don't Need:
+• To come in with extensive and exhaustive lore knowledge
+• To have written your own story before
+• To have a deep knowledge of minecraft mechanisms
+Need:
+• Willingness to discuss ideas with the quest team and iterate
+until a product is worth making
+• Willingness to learn ScriptedQuests and small scale minecraft
+commands
+• General good standing with the community as any application
+would require
+I need to heavily stress the "willingness to learn" part of this
+• Monumenta is driven by people who are motivated to see
+something through to the end. This is
+&bnot&r a call for people who just want to write lore and
+nothing else, but for people who are willing to learn the
+systems that drive quest development (the ScriptedQuests
+structure, and minecraft commands) and implement their ideas. We
+can teach you what you need to know, but you must also have your
+own passion for it.
+If these conditions fit you, you may apply by directly DM'ing
+me, or any other lead, or @Aristotle
