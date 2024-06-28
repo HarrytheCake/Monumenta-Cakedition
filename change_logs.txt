@@ -1,97 +1,3 @@
-&bHotfix:&r Non-delve dungeons no longer count for the delve
-dungeon mission for weeks 1-4 of the current season pass
-&b(10.39.0)&r
-For the update on June 13, 2024
-&bMinor New Features:&r
-• In preparation for the upcoming 5.0.0 Resource Pack update,
-&b23&r new Hope Skins entries have been added to Mastersmith
-Antio's GUI • thank you to all of our patrons for your continued
-support!
-• Additionally, 3 further, much older Hope Skin entries are
-making their return to Monumenta.
-• You can now quickly access the Hope GUI by crouch-punching
-Mastersmith Antio. This still requires the item you wish to Hope
-to be in your mainhand.
-• Added one Discovery each to the Celsian Isles and the
-Architect's Ring
-• Improved collision checks for some abilities (Tactical
-Maneuvers, Wind Walk, Glorious Battle) related to waterlogged
-blocks, climbable blocks, and mounts
-• Added RP support to the Dungeon GUIs
-• Increased the cost of the Celestial Zenith Twisted Strand
-trade
-&bItem Changes:&r
-• Weak Azure Mixture : +10% Attack Speed (2:00) -> Haste 1
-(0:30)
-• Azure Mixture : +10% Attack Speed (3:00) -> Haste 1 (1:00),
-+20% Speed (3:00) -> +20% Speed (4:00)
-• Empowered Azure Mixture : +10% Attack Speed (4:00) -> Haste 1
-(1:30), +40% Speed (4:00) -> +40% Speed (6:00)
-&bFeedback Fixes:&r
-• Chroma Blade description now includes trees from which the
-player has an ability even if they do not innate have the tree
-unlocked
-• Convergence description now lists the spawner break abilities
-teammates have
-• Wind Walk trail particles (for both Swordsage and Windwalker)
-now count as passive particles and gradually disappear over
-time, making them much less obstructive
-• Added a back button to the guild GUI's permission editing view
-• The guild GUI's access level icons in the members view now
-show the correct guild permissions for each level
-• Fixed the guild GUI's permission editing view not refreshing
-its preview icon when updating permissions
-• Added extra barrier blocks around all player plot borders to
-remove any water that may have leaked out
-• Adjusted and fixed several things in the Seasonal Pass Hub
-&bMinor Bug Fixes:&r
-• White Tesseract is now explicitly disabled in world boss
-arenas, rather than relying on mob distance rules
-• Fixed an issue where it was possible to smuggle charms into
-areas where items are not allowed
-• Fixed an issue where Hekawt's Horsemen would be permanently
-stuck if dug into sufficiently deep holes
-• Fixed some bedrocking in White
-• Fixed typo in The Third Vault for real this time
-• Fixed the Forsworn Sanctum Highest Time Remaining leaderboard
-showing its internal scoreboard name rather than the display
-name
-• Fixed a longstanding issue where Creepers in Cave Village were
-unnamed with non-vanilla stats
-• Fixed an exposed command block in the new Season Pass hub
-• Fixed a stuck spot in Galengarde
-• Fixed All That Remains and Shifting Amalgam advancements from
-being hidden from the website (for real this time?)
-• Fixed Divine Justice not triggering on Multishot or Piercing
-projectiles that hit multiple mobs on the same tick
-• Fixed dialogue formatting error in Winds of War
-• Replaced very long effects with infinite effects on about 50
-mobs
-• Aesir's Embrace now actually has an infinite glowing effect
-• Fixed grammatical error in Bandit Troubles
-• Fixed Andesite Andy blatantly scamming the player with his
-prices
-• Fixed grammatical errors in Guilding Blocks
-• Fixed tab display for Patreon Shrine effects all being aqua
-instead of having their own colors
-• Fixed typos in Mage's Legacy
-• Fixed questionable grammar in Crown of Madness
-• Added Twisted Occultist to the Bestiary
-• Fixed build errors in Iota Arena, Grasp of Avarice, and Vernal
-Nightmare• Fixed one of the Teleport Hub item frames being
-rotatable in Mistport
-• Removed vanilla armor values from Judgement and certain
-overworld Mimics
-• Fixed a typo in the Path to Nyr hologram outside Sierhaven
-• Fixed Apartments Rats dropping the Apartments Dev Note legacy
-item
-• Fixed a typo in the Music GUI
-• Fixed being able to promote Guild members to the same rank
-they currently have
-• Fixed a series of typos in the Listings GUI
-• Fixed a typo in an Earthbound Charm adjective
-• Fixed the description of the Preset Delve option using the
-wrong color
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -157,4 +63,93 @@ update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
-instance corruption.
+instance corruption.• An upgrade to the Mechanical Armory is now
+here! Players can now choose to equip their Overworld or Zenith
+charms in each loadout after purchasing an upgrade module at
+Mittens in the Celestial Zenith lobby for 128 Indigo Blightdust.
+&bLoot Table Improvements:&r
+• Many loot tables in the King's Valley have received major
+backend changes to improve organization and eliminate technical
+debt. Chances for items should remain unchanged but you are
+encouraged to bug report items that do not drop at all or drop
+more frequently than usual. The list of loot tables affected
+includes:
+  • All tier 3 through 5 items, which have been separated and
+moved. This completes the separation of all R1 tiered items into
+their own tables.
+  • Many uncommon items, which have been separated and moved
+  • Numerous miscellaneous items such as filler items, mob
+drops, boss/dungeon keys, consumables, and some dungeon loot
+chests
+  • Rock's Little Casino's slot machines, where the chances for
+items should not be changed (except for a fix to base potions
+being slightly rarer than intended) but they are calculated
+slightly differently • for example, the King's Warden has a
+1/800 drop chance instead of a (1/80)&o(1/10) chance.
+&bFeedback Fixes:&r
+• The buttons at the Kaul shrine now always target the player
+who pressed the button, rather than the closest player
+• /vzc Now displays stats even when not in a Celestial Zenith
+instance
+&bMinor Bug Fixes:&r
+• Turning items into Circus Tickets with the Perfect
+Crystallizer now grants progress towards Ticket Master
+advancements and Carnival Tokens are properly tracked internally
+• Fixed skinned lockboxes removing its skin when used.
+• Fixed Levyn in An Alcoholic Accord not correctly spawning in
+the quest area
+• Fixed a formatting error in the Bamboo Enthusiast's dialogue
+• Fixed a formatting error in the Angry Poutrygeist's dialogue
+• Fixed Nelfine's name being missing from the new Farr memorial
+board
+&b(10.41.0)&r
+For the update on June 27, 2024
+&bAn Unexpected Lesson&r
+Another Region 2 storyline sees some love this week as a new
+quest hits the Celsian Isles, An Unexpected Lesson!
+Duchess Emmeline calls upon you for a mission once again,
+following your "party" in Mistport. Something is different this
+time though, as her right hand man, Salieri, seems to be keeping
+something from her. Dive into the mysterious swordsage's past,
+prove your skills in the combat art, and uncover an unnerving
+secret that hides behind his servitude to Emmeline.
+An Unexpected Lesson can be started by speaking to Tiffy in
+Mistport, following the completion of The Olive Branch and
+Unyielding Potential!
+&bMinor New Features:&r
+• In order to better communicate the numerous amount of
+significant quests in Region 1 to players, the Valley's Mainline
+GUI (and more broadly, what is considered mainline for the
+region) has been drastically overhauled. Much like the chapter
+system found in later regions, the King's Valley story has now
+been reclassified into 4 individual "Tales" quest lines that
+make up the full mainline
+• Mage's Legacy, Tlaxan Troubles, Lost in My Mind, and Starry
+Night now all have title pop ups that occur at quest start,
+signifying the beginning of each mainline Tale series. Likewise
+Unveiled, Shurima's Big Day Off, A Study in Crimson P2, and All
+That Remains now have title pop ups signaling the end of a Tale
+series• Fixed Angler's Rod never dropping when a chest rolls for
+King's Valley tier 3 items
+• Added Calamitous Rider, Boltshooter of Terror, Lancer of
+Terror, Archer of Terror, and Colossal Creeper to the Bestiary
+• Fixed an issue where Colossus of Chaos was not present in the
+Bestiary because of the creeper of the same name
+• Fixed Crystalline Combos not being affected by Destructive
+Expertise and Support Expertise
+• Fixed Player Slayer advancement not being granted if the
+player died from a projectile
+• Fixed grammar issue in The Stone Ocean
+• Fixed mob descriptions being sent twice to players
+• Fixed typographical errors in ||Snow Princess|| lore
+• Fixed a typo in Bleeding Proof
+• Fixed a typo in the City Guide's dialogue
+• Fixed Slow Falling from Alnera's Levitator being cleared
+whenever the player is splashed with a potion
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.&r
