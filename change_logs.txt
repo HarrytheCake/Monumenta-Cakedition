@@ -1,3 +1,113 @@
+&bHotfix:&r This week's Zenith Ascension 7 or higher mission for
+the season pass has been rebalanced to Ascension 5 or higher
+&bHotfixes:&r(For daily restart)
+• Fixed Shaman damage while having a spec equipped reducing your
+damage
+• Fixed the parrot gui failing to load from loot tables
+• Fixed /vcz not properly knowing the max value for zenith
+charms.
+&b(10.42.0)&r
+For the update on July 4, 2024
+&bMajor Balance Change: The Additive Damage Rework&r
+&nIntroduction:&r
+After well over a year of development and several weeks of
+testing and bug fixing, the balance team is pleased to release a
+major overhaul to damage calculations we've termed the Additive
+Damage Rework. Under the previous system, all non-flat damage
+buffs were multiplicative • damage buffs become greater than the
+sum of their parts very quickly. This led to the following
+issues:
+• There was a large spread between median and maximum damage
+output. This led to issues designing mob and boss encounters
+since health values would either be excessive for average
+players or low for optimal group compositions.
+• High damage gear, class buffs, infusions, and other damage
+enhancements were required for high level content. Not using
+these tools meant significant underperformance in comparison
+even if skill levels and strategies between groups were held
+constant.
+• Many classes had an advantage over others due to innate damage
+stacking or were limited to prevent excessive damage output. For
+example, the base damage of Alchemist Potions between Region 2
+and Region 3 were near identical due to damage buffs in Region
+3.&nSummary of Changes:&r
+&bSimplified New Formula:&r
+`Total Damage = Base Weapon Damage &o Critical Melee Hit &r (1 +
+Gear Damage + Situational Enchant Damage + Infusion Damage) &o
+(1 + All other multipliers combined) &r (1 • Mob Resistance) +
+Flat Damage`
+For a detailed breakdown of the old and new damage formulas and
+an explanation of terms, see the text document below.
+The spread between the median and maximum damage achievable has
+been significantly reduced, and many class skills and items have
+received damage increases to compensate. We took this
+opportunity to reduce the damage output of some classes that
+were significantly outperforming others due to damage stacking,
+but these calculations are left vague to allow the community to
+check our work without knowing what the supposed outcomes are.
+For players that did not take full advantage of damage buffs,
+your damage output should remain the same or increase. You may
+read a list of changes in the provided text document.
+&nFinal Thoughts:&r
+Due to the broad scope of these changes, we likely missed
+something or introduced new bugs to the game. We will roll out a
+few balance patches outside of our normal monthly cycle to
+address these issues in the coming weeks. You are encouraged to
+report bugs as soon as you find them to https://discord.com/chan
+nels/313066655494438922/569283901202366524 or the @ModMail bot
+depending on their severity.
+It is our hope that these changes will provide a better
+experience for players and help us deliver better balanced, high
+quality content in the future. Thanks for your continued
+enjoyment and support of Monumenta!
+&bMinor New Features:&r
+• Added a new epic cosmetic skill set for Cleric, which can be
+acquired from a certain NPC after withstanding the greatest pain
+the mind can suffer
+• Added new spawning sound effects for all delve mobs
+• You can now load classes from a yellow tesseract when you
+don't have one selected
+• Messages from players are now received as system messages
+rather than player messages. This is due to Mojang dropping
+support for unsigned player messages, and also only briefly
+supporting signed messages with custom formatting. While these
+changes are not strictly required on 1.19.4, it will make
+transitioning to future versions easier.
+• Added /report <player> <reason> to report a player that is
+breaking the rules directly to the moderation team in-game.
+• Increased the max distance the key golems in Reverie can be
+moved and still have them work
+• Infusion settings are now saved in /ps
+• Added Chests Destroyed Stat Track
+• You now gain Resistance and Regeneration after Black Mist Boss
+• Lightning Bottle is now virtual, instead of creating stacks in
+your inventory
+&bMinor Bug Fixes:&r
+• Defeating ||C'Zanil the Soulcrusher|| is now required to
+purchase Twisted Torrap, for real this time
+• Added missing location tag to Crimstonian Brew
+• Fixed spelling errors in the R1 Mainline Gui
+• Fixed spelling errors in An Unexpected Lesson
+• Fixed grammatical errors in the All for Nera race rewards
+dialogue
+• Fixed Desecrating Shot not being scaled by Totemic Projection
+Enhancement
+• Fixed several biome issues in the surroundings of Mistport•
+Fixed splash potions thrown from mainhand making no sound or
+particle effect when splashed on a player with Heavenly Boon
+selected
+• Fixed Thurible Procession's 'apply builtup buffs' effect
+playing again when falling below the health threshold while the
+effect is active
+• Thurible Procession's Rejuvenation healing bonus effect now
+displays its strength on tab
+• Fixed Crusade's enhancement description not mentioning base
+undead mobs
+• Fixed vanilla trading GUI taking custom items for vanilla
+ingredients in trades such as the Black Mist key trade
+• Trivium sound effect now plays at the average location of all
+affected mobs, rather than the player
+• Fixed Brown Wool dungeon GUI not loading some RP textures
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -5,151 +115,10 @@ and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
-&bHotfix:&r This week's mission in EC now properly counts rooms
-instead of floors (fix already live)
-&bHotfix:&r Fixed the Exalted Delve Light Blue GUI failing to
-open
-&bHotfix:&r Fixed an issue with applying one of the Hope skins
-for God Tamer
-&b(10.40.0)&r
-For the update on June 20, 2024
-&bFeedback Fixes:&r
-• Added a Quest Compass chest to the Mistport Docks
-• Updated the lore text of Silver Satchel
-• Reduced the amount of particles in Aurora's Declaration
-• Reduced the amount of particles in Cosmic Portals
-&bMinor Bug Fixes:&r
-• NPC trading GUI RP Fixes:
- • Fixed classic mode border panes being visible
- • Tweaked design and tag locations
- •
-&bNote&r: some breaking RP changes were made, please update to
-the newest RP patch
-• Fixed players teleporting to the Blue lobby facing the wrong
-direction
-• Disabled slots in some armor stand decorations
-• Fixed resetting your profile not resetting your R3 delve
-modifiers
-• Fixed minor build bugs and stuckspots in Sierhaven, Willows,
-Exalted Yellow, Season Pass Hub, Shifting Amalgam poi, Zenith
-Loot Rooms, and Zenith Lobby
-• Fixed a quest chest in the Northern Jaguar Village
-• Fixed several issues and build errors around the Highlands
-paths
-• Unlocked two barrels in Nurse Deidre's room
-• Teal's custom dungeon music will now function
-• Fixed Chain Lightning sound being stacked
-• Fixed a typo in Memories of Battle and reward
-• Fixed a typo in Vampiric Drain cosmetic skill
-• Fixed multiple typos in Silver Surfer description
-• Fixed many All That Remains typos (thank you chroma.tk)
-• Fixed a typo in Dazed Man dialogue
-• Fixed a typo in Noelle dialogue
-• Fixed a few hope skins misspelling the patron's name in the
-hope skin GUI
-• Fixed Samwell's dialogue overlapping if killed too fast
-• Fixed typographical errors in Witchbane Revolver's lore
-• Fixed typographical errors in Tobias' dialogue for Of Monks
-and Magic
-• Colossus of Chaos (iron golem) and Dreadnaught of Subjugation
-(ravager) can now roll for Gladiolus and Nightshade respectively
-• Fixed an issue where Delve mobs with potion drops had a
-slightly lower than intended drop chance for Soul Threads
-• Fixed custom trades sometimes not correctly recognizing
-specific shulker boxes
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.• An upgrade to the Mechanical Armory is now
-here! Players can now choose to equip their Overworld or Zenith
-charms in each loadout after purchasing an upgrade module at
-Mittens in the Celestial Zenith lobby for 128 Indigo Blightdust.
-&bLoot Table Improvements:&r
-• Many loot tables in the King's Valley have received major
-backend changes to improve organization and eliminate technical
-debt. Chances for items should remain unchanged but you are
-encouraged to bug report items that do not drop at all or drop
-more frequently than usual. The list of loot tables affected
-includes:
-  • All tier 3 through 5 items, which have been separated and
-moved. This completes the separation of all R1 tiered items into
-their own tables.
-  • Many uncommon items, which have been separated and moved
-  • Numerous miscellaneous items such as filler items, mob
-drops, boss/dungeon keys, consumables, and some dungeon loot
-chests
-  • Rock's Little Casino's slot machines, where the chances for
-items should not be changed (except for a fix to base potions
-being slightly rarer than intended) but they are calculated
-slightly differently • for example, the King's Warden has a
-1/800 drop chance instead of a (1/80)&o(1/10) chance.
-&bFeedback Fixes:&r
-• The buttons at the Kaul shrine now always target the player
-who pressed the button, rather than the closest player
-• /vzc Now displays stats even when not in a Celestial Zenith
-instance
-&bMinor Bug Fixes:&r
-• Turning items into Circus Tickets with the Perfect
-Crystallizer now grants progress towards Ticket Master
-advancements and Carnival Tokens are properly tracked internally
-• Fixed skinned lockboxes removing its skin when used.
-• Fixed Levyn in An Alcoholic Accord not correctly spawning in
-the quest area
-• Fixed a formatting error in the Bamboo Enthusiast's dialogue
-• Fixed a formatting error in the Angry Poutrygeist's dialogue
-• Fixed Nelfine's name being missing from the new Farr memorial
-board
-&b(10.41.0)&r
-For the update on June 27, 2024
-&bAn Unexpected Lesson&r
-Another Region 2 storyline sees some love this week as a new
-quest hits the Celsian Isles, An Unexpected Lesson!
-Duchess Emmeline calls upon you for a mission once again,
-following your "party" in Mistport. Something is different this
-time though, as her right hand man, Salieri, seems to be keeping
-something from her. Dive into the mysterious swordsage's past,
-prove your skills in the combat art, and uncover an unnerving
-secret that hides behind his servitude to Emmeline.
-An Unexpected Lesson can be started by speaking to Tiffy in
-Mistport, following the completion of The Olive Branch and
-Unyielding Potential!
-&bMinor New Features:&r
-• In order to better communicate the numerous amount of
-significant quests in Region 1 to players, the Valley's Mainline
-GUI (and more broadly, what is considered mainline for the
-region) has been drastically overhauled. Much like the chapter
-system found in later regions, the King's Valley story has now
-been reclassified into 4 individual "Tales" quest lines that
-make up the full mainline
-• Mage's Legacy, Tlaxan Troubles, Lost in My Mind, and Starry
-Night now all have title pop ups that occur at quest start,
-signifying the beginning of each mainline Tale series. Likewise
-Unveiled, Shurima's Big Day Off, A Study in Crimson P2, and All
-That Remains now have title pop ups signaling the end of a Tale
-series• Fixed Angler's Rod never dropping when a chest rolls for
-King's Valley tier 3 items
-• Added Calamitous Rider, Boltshooter of Terror, Lancer of
-Terror, Archer of Terror, and Colossal Creeper to the Bestiary
-• Fixed an issue where Colossus of Chaos was not present in the
-Bestiary because of the creeper of the same name
-• Fixed Crystalline Combos not being affected by Destructive
-Expertise and Support Expertise
-• Fixed Player Slayer advancement not being granted if the
-player died from a projectile
-• Fixed grammar issue in The Stone Ocean
-• Fixed mob descriptions being sent twice to players
-• Fixed typographical errors in ||Snow Princess|| lore
-• Fixed a typo in Bleeding Proof
-• Fixed a typo in the City Guide's dialogue
-• Fixed Slow Falling from Alnera's Levitator being cleared
-whenever the player is splashed with a potion
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.&r
+&bBalance Changes Missing in the Document&r
+• Vigor, Focus, and Perspicacity have been changed from +0.75%
+melee/projectile/magic damage per level to the following:
+  • Region 1: +1% damage per level
+  • Region 2: +1.25% damage per level
+  • Region 3: +1.5% damage per levelThe Celestial Zenith has
+been temporarily closed.
