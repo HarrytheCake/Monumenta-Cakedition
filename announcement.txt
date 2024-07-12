@@ -1,51 +1,5 @@
-&bCall for Moderator Applications&r
-It's the kinda-semi-annual moderator recruitment drive!
-We'd like to encourage anyone qualified, willing, and interested
-in being a moderator to apply!
-&b&oREQUIREMENTS&r&r
-• Have a good reputation in the community and be known to the
-existing mods as honest, fair, helpful, and mature.
-• Have a consistent history of activity in the community,
-&bboth in-game and in Discord&r.
-• Completion of most major content in Monumenta (dungeons,
-strikes, bosses, and quests).
-• Proficiency in English.
-&b&oPreferred but Optional&r&r (be sure to mention these in your
-application if relevant)
-• Being active at a time when most existing moderators are
-unavailable. Being in a non-American/Canadian time zone helps.
-• Being extremely familiar with Monumenta's ins-and-outs. The
-more expertise, the better.
-• Proficiency in a non-English language.
-• Previous experience moderating an online community, or with MC
-commands/servers.
-&b&oResponsibilities&r&r
-• Helping players in-game with technical issues.
-• Making judgment calls about "gray areas" in applying the
-rules.
-• Being willing to be 🏓 'd here in Discord and in-game to help
-players.
-• Being online and in-game relatively frequently on an average
-week.
-• Being fair, polite, and patient in dealing with problems.
-&b&oPerks&r&r
-• Beta Test unreleased content and limited access to the Team
-Monumenta development Discord.
-• Gain experience Minecraft commands in general and learn some
-of how Monumenta works specifically.
-• Spectate others freely.
-• Work closely with dev team on various things. Many mods have
-joined the dev team eventually through this path. &o(Just
-saying.)&r
-• Be able to fix your own problems instead of waiting on a
-moderator! 😄
-&bApply here!&r
-<https://docs.google.com/forms/d/1qT8KO0gZARSBD7LwXUmxfV1wm8vGK_
-i3s-eO5Oqkpwg/viewform?edit_requested=true>Please welcome @[TCL]
-Honeypint to the mod team! As always, be sure to give them a
-celebratory 🏓 , and thank them for selling their soul to us!Two
-new mods have joined the team! Everyone give a warm welcome and
-lots of  🏓 to @[WOOL] WizV2 and @TheAz1!
+Two new mods have joined the team! Everyone give a warm welcome
+and lots of  🏓 to @[WOOL] WizV2 and @TheAz1!
 &bUpcoming Hope Skin Change:&r
 Hey guys, wanted to make everyone aware of an upcoming change to
 the way Hope Skins are obtained ingame that broadens
@@ -151,3 +105,27 @@ Mehaz meanwhile has been working hard on an upcoming piece of
 Raid content that will be coming to you all in the near future!
 Very happy to have them both on the team!
 Make sure to give all 4 of these guys the congradulatory ping 🏓
+&bHappy Depths-versary!&r
+To celebrate the third anniversary of Darkest Depths release
+(July 17, 2021), six player mode is making a return! Start a run
+with up to five other friends and compete for the special
+leaderboard spots for an extended run of two weeks. The event
+starts after the weekly update tonight, July 11, and runs until
+the weekly update of July 25. Good luck, have fun, and keep an
+eye out for some more changes soon!
+&bSpeed Bug&r
+Tonight we fixed an issue that would give some players permanent
++10% speed, including in areas where speed effects were not
+supposed to take effect. The issue stemmed from the Patron
+Shrine speed effect not always getting cleared properly, and was
+not triggered intentionally. Fortunately, no other Patron Shrine
+effects were affected because they did not modify attributes
+directly. We aren't sure precisely how long this issue has been
+around for, but it is probably somewhere in the range of 1-2
+years. Obviously, this bug affects races and multiple world
+records are confirmed to have unintentionally had this issue,
+and are therefore likely impossible now. Since we were already
+considering doing "soft resets" to some race leaderboards (see h
+ttps://discord.com/channels/313066655494438922/33780419064889344
+1/1260453584710008905), we will wait until further decisions
+have been made and will update leaderboards at some future time.

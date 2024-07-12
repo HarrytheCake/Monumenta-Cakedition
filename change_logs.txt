@@ -1,124 +1,144 @@
-&bHotfix:&r This week's Zenith Ascension 7 or higher mission for
-the season pass has been rebalanced to Ascension 5 or higher
-&bHotfixes:&r(For daily restart)
-• Fixed Shaman damage while having a spec equipped reducing your
-damage
-• Fixed the parrot gui failing to load from loot tables
-• Fixed /vcz not properly knowing the max value for zenith
-charms.
-&b(10.42.0)&r
-For the update on July 4, 2024
-&bMajor Balance Change: The Additive Damage Rework&r
-&nIntroduction:&r
-After well over a year of development and several weeks of
-testing and bug fixing, the balance team is pleased to release a
-major overhaul to damage calculations we've termed the Additive
-Damage Rework. Under the previous system, all non-flat damage
-buffs were multiplicative • damage buffs become greater than the
-sum of their parts very quickly. This led to the following
-issues:
-• There was a large spread between median and maximum damage
-output. This led to issues designing mob and boss encounters
-since health values would either be excessive for average
-players or low for optimal group compositions.
-• High damage gear, class buffs, infusions, and other damage
-enhancements were required for high level content. Not using
-these tools meant significant underperformance in comparison
-even if skill levels and strategies between groups were held
-constant.
-• Many classes had an advantage over others due to innate damage
-stacking or were limited to prevent excessive damage output. For
-example, the base damage of Alchemist Potions between Region 2
-and Region 3 were near identical due to damage buffs in Region
-3.&nSummary of Changes:&r
-&bSimplified New Formula:&r
-`Total Damage = Base Weapon Damage &o Critical Melee Hit &r (1 +
-Gear Damage + Situational Enchant Damage + Infusion Damage) &o
-(1 + All other multipliers combined) &r (1 • Mob Resistance) +
-Flat Damage`
-For a detailed breakdown of the old and new damage formulas and
-an explanation of terms, see the text document below.
-The spread between the median and maximum damage achievable has
-been significantly reduced, and many class skills and items have
-received damage increases to compensate. We took this
-opportunity to reduce the damage output of some classes that
-were significantly outperforming others due to damage stacking,
-but these calculations are left vague to allow the community to
-check our work without knowing what the supposed outcomes are.
-For players that did not take full advantage of damage buffs,
-your damage output should remain the same or increase. You may
-read a list of changes in the provided text document.
-&nFinal Thoughts:&r
-Due to the broad scope of these changes, we likely missed
-something or introduced new bugs to the game. We will roll out a
-few balance patches outside of our normal monthly cycle to
-address these issues in the coming weeks. You are encouraged to
-report bugs as soon as you find them to https://discord.com/chan
-nels/313066655494438922/569283901202366524 or the @ModMail bot
-depending on their severity.
-It is our hope that these changes will provide a better
-experience for players and help us deliver better balanced, high
-quality content in the future. Thanks for your continued
-enjoyment and support of Monumenta!
+Kaul, Hekawt, Eldrask and the Celestial Zenith have been
+reopened.
+&bHotfixes:&r
+• Fixed Luminous Infusion dealing too much damage
+• Fixed damage calculation issues in Brute Force, Skirmisher,
+Desecrating Shot, Aeromancy, Ice Aspect, and Thunder Aspect
+• Fixed Destructive Expertise and Support Expertise only
+applying to one damage instance in a given tick
+• Fixed description issues in Volley, Frenzy, Weapon Mastery,
+and Heavenly Boon
+&bHotfix:&r Fixed the Elder Pufferfish mobs in Architect's Ring
+Fishing combat arenas appearing as floating snowballs
+&b(10.44.0)&r
+For the update on July 11, 2024
 &bMinor New Features:&r
-• Added a new epic cosmetic skill set for Cleric, which can be
-acquired from a certain NPC after withstanding the greatest pain
-the mind can suffer
-• Added new spawning sound effects for all delve mobs
-• You can now load classes from a yellow tesseract when you
-don't have one selected
-• Messages from players are now received as system messages
-rather than player messages. This is due to Mojang dropping
-support for unsigned player messages, and also only briefly
-supporting signed messages with custom formatting. While these
-changes are not strictly required on 1.19.4, it will make
-transitioning to future versions easier.
-• Added /report <player> <reason> to report a player that is
-breaking the rules directly to the moderation team in-game.
-• Increased the max distance the key golems in Reverie can be
-moved and still have them work
-• Infusion settings are now saved in /ps
-• Added Chests Destroyed Stat Track
-• You now gain Resistance and Regeneration after Black Mist Boss
-• Lightning Bottle is now virtual, instead of creating stacks in
-your inventory
+• Added `/plot region`, which can be used to set your own region
+while on plots/playerplots shards (for abilities, region
+scaling, etc.). If the command has never been used, the plot
+region will default to the latest region unlocked by the player
+(and will update if new regions are unlocked). Celsian Isles
+items continue to not be debuffed in plots even when the plot
+region is 3. Note that the region is per player, so multiple
+players on the same plot can have different personal regions.
+• Shift left clicking the class summary item in a Mechanical
+Armory loadout will now use the class icon as the loadout's
+display item
+• Added hotbar support to the Mechanical Armory for nine more
+quick swap slots
+• Added a new chat inline command, <equipment>, which lists all
+worn equipment and mainhand when hovering over it. This aims to
+make sharing builds easy and compact, removing the need to type
+out long messages or fetch links from online sites.
+• Cleric Cosmetic Set changes:
+ • Fixed Awakening (Celestial Blessing) playing its effect once
+for every player in range, rather than only once
+ • Fixed Telekinesis' (Enchanted Prayer) tuff block item display
+disappearing if anyone triggered the on-hit effect, rather than
+only the caster
+ • Tweaked sounds and/or particles for Awakening, Bloodbath,
+Contorting Bolt, Animating Aura, Hypnotic Chant, Impaling
+Distortion, Rippling Beam, Purging Pyre, Soul Strain and
+Vitality Extraction
+&bItem Changes:&r
+• Frost Giant's Crescent : 0.7 -> 0.8 Attack Speed, 21 -> 20
+Attack Damage
+• Hrimnir's Incisor : 20 -> 22 Attack Damage
+• Marauder's Haze : 9 -> 11.5 Attack Damage, 2 -> 1.6 Attack
+Speed
+• Mirrorshard Scythe : 9.5 -> 10 Attack Damage
+• Gambler's Cane : 4 -> 6 Chaotic, 15.5 -> 16.5 Attack Damage
+• Demon's Scar : 9 -> 10 Attack Damage, 2 -> 1.7 Attack Speed
+  • &oDeveloper Note: These scythe changes were meant to launch
+last week but were missed during item updates. Previously,
+scythe choices in Region 2 were limited to fast attack speed or
+slow-swinging scythes with few viable options in the middle. A
+few slow-swinging scythes were given a small buff to improve
+their viability and two underperforming scythes were reworked to
+middle-ground attack speed.&r
+• Abyssal Truncheon : 1.3 -> 1.1 Attack Speed
+&bFeedback Fixes:&r
+• Added "garbage" barrels to King's Valley and Celsian Isles'
+Casinos
+• Added more restock materials to the Swamp Camps
+• Added lighting updates to Moltaria Palace and Steelmeld
+Passage
+• Prestigious Remedy now plays a major scale rather than equally
+spaced pitches
+• Gardens of Yesel no longer require an empty inventory to enter
+and instead disable all speed effects similar to the Ruined
+Tower and Speed Fitness Jumping Puzzles. A single water block
+has been replaced with another jump so that the parkour is not
+cheesable with Riptide
+• Added a biome to the Gardens of Yesel
+• White Tesseract is now usable within the Ruined Tower Jumping
+Puzzle
+&bMajor Bug Fixes:&r
+• Fixed a case in which Lightning Bottle worked infinitely and
+did not decrease count
 &bMinor Bug Fixes:&r
-• Defeating ||C'Zanil the Soulcrusher|| is now required to
-purchase Twisted Torrap, for real this time
-• Added missing location tag to Crimstonian Brew
-• Fixed spelling errors in the R1 Mainline Gui
-• Fixed spelling errors in An Unexpected Lesson
-• Fixed grammatical errors in the All for Nera race rewards
+• Fixed /ps calculating damage values with infusions being
+multiplicative instead of additive
+• Fixed Soulsinger not receiving the same Worldly Protection
+level reduction as Annilys
+• Added a missing Boss tag to all Astral Training Dummies
+• Fixed some training dummies that had more than 10,000 health
+• Added a missing Boss tag to all Mutated Astrals. This should
+allow multiple players to gain Bestiary credit upon successful
+kill
+• Fixed tier 5 items not dropping in Ephemeral Corridors loot
+• All tool versions of the King's Dolabra, Queen's Dolabra, and
+Forest's Gambit should be present in the items API
+• Added several dozen missing Region 2 legacy items to the items
+API
+• Added Unbreakable to Merchant's Curio, again
+• Fixed Sketched Failure of the Void having incorrect stats
+• The item frame for Primordial Flames in Knight-Errant
+Reynart's attic is now invisible
+• Captain Bijou's Spyglass now has a bolded name
+• Corrected the location of Corroded Truer North and fixed a
+typo in its lore
+• Fixed a spawner in Moltaria Palace that had insufficient room
+to spawn
+• Beginning a Hekawt fight no longer clears the Glowing effect
+on players within the arena
+• Fixed a spawner in the Harmonic Arboretum that spawned mobs
+where it wasn't supposed to
+• Fixed a spawner in Exalted Vernal Nightmare that prevented its
+Vernal Marksman summon from attacking
+• Fortress Marksman no longer apply vanilla slowness on attacks
+• Replaced consumables from incorrect regions with region
+appropriate consumables in Echoes of Oblivion and the Steelmeld
+Passage
+• Fixed a stuck spot in the King's Valley
+• Fixed a grammatical error in the City Tour race's rewards
 dialogue
-• Fixed Desecrating Shot not being scaled by Totemic Projection
-Enhancement
-• Fixed several biome issues in the surroundings of Mistport•
-Fixed splash potions thrown from mainhand making no sound or
-particle effect when splashed on a player with Heavenly Boon
-selected
-• Fixed Thurible Procession's 'apply builtup buffs' effect
-playing again when falling below the health threshold while the
-effect is active
-• Thurible Procession's Rejuvenation healing bonus effect now
-displays its strength on tab
-• Fixed Crusade's enhancement description not mentioning base
-undead mobs
-• Fixed vanilla trading GUI taking custom items for vanilla
-ingredients in trades such as the Black Mist key trade
-• Trivium sound effect now plays at the average location of all
-affected mobs, rather than the player
-• Fixed Brown Wool dungeon GUI not loading some RP textures
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-&bBalance Changes Missing in the Document&r
-• Vigor, Focus, and Perspicacity have been changed from +0.75%
-melee/projectile/magic damage per level to the following:
-  • Region 1: +1% damage per level
-  • Region 2: +1.25% damage per level
-  • Region 3: +1.5% damage per levelThe Celestial Zenith has
-been temporarily closed.
+• Fixed Micha's teleporter in Sierhaven sometimes teleporting
+the player into walls• Fixed Annilys/Sketched Annilys not
+receiving item changed listed in last week's changelog
+• Fixed multiple typos and evil apostrophes in An Unexpected
+Lesson dialogue
+• Fixed typo in External Corruption dialogue
+• Fixed Yellow Tesseract not working if you didn't have a class
+selected.
+• Fixed Box of Endless Echoes and Mouth of the Mimic not
+appearing on the API
+• Fixed Cosmic Portals warping players in Stasis.
+• Fixed being able to be knocked out of revive range while
+Eternal Savior' Stasis is active.
+• Fixed Grenade spells with multiple lobs not properly canceling
+on mob death.
+• Fixed a grammatical error when attempting to quick-drink
+infinite potions.
+• Chaos Dagger's description now more clearly states its proc
+conditions.
+• Fixed Judgement Chain sometimes taking a while to update mobs’
+positions after teleporting
+• Fixed Choir Bell's description showing ticks instead of
+seconds• Fixed `/plot access info`'s expiration time failing to
+display properly
+&bHotfix:&r The chat changes for this update will be available
+on the next shard restart, currently scheduled for tomorrow
+night
+&bHotfix:&r The `/plot region` command is now able to be used on
+plots/playerplots shards
