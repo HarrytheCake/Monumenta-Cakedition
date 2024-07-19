@@ -1,17 +1,3 @@
-Two new mods have joined the team! Everyone give a warm welcome
-and lots of  🏓 to @[WOOL] WizV2 and @TheAz1!
-&bUpcoming Hope Skin Change:&r
-Hey guys, wanted to make everyone aware of an upcoming change to
-the way Hope Skins are obtained ingame that broadens
-accessibility. Starting with next week's updates, all Hope Skins
-will be fully publicized, meaning they will be purchasable via a
-new GUI at Mastersmith Antonio.
-What this more broadly means is that in order to Hope Skin an
-item (that has one available to be applied), all you will need
-is the item is question, and the materials with which to
-purchase the infusion. The days of needing to track down a
-specific patron in order to have their skin applied to your item
-will finally be behind us!
 &bRegarding the (most) Recent Ban Wave&r
 Hi everyone,
 Kaul is one of the game's oldest bosses, and as such he has had
@@ -128,4 +114,13 @@ and are therefore likely impossible now. Since we were already
 considering doing "soft resets" to some race leaderboards (see h
 ttps://discord.com/channels/313066655494438922/33780419064889344
 1/1260453584710008905), we will wait until further decisions
-have been made and will update leaderboards at some future time.
+have been made and will update leaderboards at some future
+time.@xernial and @qwanton have just become our newest
+developers! Xernial has contributed various features such as the
+recent cleric cosmetic set, and Qwanton has made some races and
+worked on the seasonal pass, among other projects. Please
+welcome them both with plenty of pings! 🏓
+&bRules Update&r
+A new Market Rule has been added.
+`Currency loaning services are not permitted. Item loaning (or
+“rental”) services are allowed.`
