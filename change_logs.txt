@@ -1,289 +1,199 @@
-&b(10.45.0)&r
-For the update on July 18, 2024
-#
-&bCelestial Zenith Expansion&r
-In continued celebration of Darkest Depths' 3 year anniversary,
-this week we are shipping a major expansion to the Celestial
-Zenith dungeon! Climb through three new ascensions with your
-friends by overcoming powerful curses and mastering several new
-abilities and an all-new ability reroll system. We've also added
-many new builder contributed rooms, bringing the dungeon to a
-total of over 100 to explore. Good luck and have fun!
-&bGeneral Changes&r:
-• 3 New Ascensions have been added (16, 17, and 18)
-• A new reroll mechanic has been introduced: On any ability or
-upgrade reward, you now have the option to reroll your options.
-This is a consumable resource; all players start with 1 reroll
-for the run and they can earn more or less through various
-methods, such as abilities or the wheel.
-• A small anti-spawner rush system has been implemented: not
-killing mobs and having enemies near the exit door may prevent
-you from opening the next room.
-  • We believe it will be lenient enough to not affect the vast
-majority of players, but if issues arise, feel free to offer
-feedback in a https://discord.com/channels/313066655494438922/10
-22346855444656189 thread
-• The Wheel will now grant extra Rerolls when landing on Purple
-outside of Floor 3
-• Added a new F1 Normal room from amecyann02
-• Added a new F1 Elite room from Firestorm
-• Added a new F3 Normal room from amecyann02 and
-redandblueknight
-• Added a new F3 Normal room from Kiocifer
-• Added a new F3 Normal room from ChargingUv
-• Added a new F3 Normal room from ChargingUv
-• Added a new F3 Elite room from ChargingUv
-• Added a new F3 Elite room from Zaleting
-• Reworked pathing and spawners of a F2 Elite room
-• Reduced bedrocking in the Lava Temple F2 Elite room
-• Uriddan has obtained new dialogue for those who obtain
-completion of Ascension 18 and a certain quest
-• Existing trophies have been legacied and renamed to
-||`Uriddan's Eternal Call (A15)`||
-&bAbility Changes:&r
-&bPrismatic&r
-• Refraction: Now stays locked in position on cast, rather than
-moving with the player. No longer slows the player or gains
-duration on kill. 25 -> 20s cooldown, 5 -> 3.5s duration, +1.5
-damage (6 DPS) at all rarities
-• Disco Ball: Targeting angle now starts off highly focused
-beneath it at first and spreads out over time. Multiple beams
-can no longer hit the same enemy multiple times at once
-• Solar Ray: 0.25 -> 0.33 damage per stack
-• Prosperity: Chance reduced by 5% at all rarities, except
-Twisted
-• Added two new passive abilities, Opportunity and Abnormality
-&bDawnbringer&r
-• Bottled Sunlight: The bottle now glows yellow
-• Divine Beam: Increased Healing by 20% and Stun Duration by
-0.5s at all rarities, increased stun hitbox, 4-target CDR
-removed, cooldown 20s -> 16s
-• Eternal Savior: Grave revive radius increased to 100% of the
-heal radius instead of 50%. Nearby mobs deal 80% less damage
-while you're in stasis and for 2s afterward.
-• Totem of Salvation has been replaced with a new ability, Spark
-of Inspiration
-• Lightning Bottle: Now displays an actionbar message when
-charges are gained
-&bEarthbound&r
-• Crushing Earth: Now hits in an AoE cone in front of you, stun
-duration decreased by 0.25s at all rarities, reworked visuals
-• Taunt: Passively deal bonus melee damage on crits to any mob
-that is targeting you or stunned.
-• Stone Skin has been replaced with a new ability, Iron Grip
-&bFlamecaller&r
-• Volcanic Combos: Now triggers instantly on melee attack, but
-has a cooldown, similar to Arcane Strike. Reworked visuals
-• Detonation: Damage reduced by 1 at all rarities
-• Pyromania: Caps at 10 nearby entities on fire
-&bFrostborn&r
-• Frigid Combos: Now triggers instantly on melee attack, but has
-a cooldown, similar to Arcane Strike. Reworked visuals
-• Ice Lance: Ice mark mechanic removed, now creates ice under
-all mobs hit. Can now pierce through ice blocks.
-• Ice Barrier: No longer scales ice duration or cooldown with
-level; set to 14s ice duration and 14s cooldown at all levels
-• Piercing Cold: Can now pierce through ice blocks.
-• Cryobox: After triggering, for the next 4 seconds, standing on
-ice will rapidly replenish your absorption shield
-&bShadowdancer&r
-• Added a new ability for the Spawner Break trigger, Phantom
-Force
-&bSteelsage&r
-• Sidearm: Now stores 3 charges and has a 14s cooldown,
-replenishing all charges when coming off cooldown. Kills reduce
-its cooldown by 3s. Damage decreased by 2 at all levels.
-• Firework Blast: Radius no longer changes depending on whether
-or not it hits an enemy, reworked visuals
-• Metalmancy has been replaced with a new ability, Gravity Bomb
-• Projectile Mastery: Removed, now exists as part of
-Sharpshooter. Charms have been adjusted accordingly
-&bWindwalker&r
-• Howling Winds has been replaced with a new ability,
-Thundercloud Form
-&bZenith Charm Changes:&r
-• Improvements to the charm generation algorithm:
- • Certain stats, like Fire Duration, will no longer appear at
-high rarities. Existing charms with stats at these levels will
-see them downgraded, and the excess budget returned.
- • Leftover budget on a charm will now be spent on upgrading its
-stats until there is none left; particularly noticeable on
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+&bHotfixes:&r (at daily restart)
+• Fixed bug causing Sirius to completely stop
+• Fixed Eternal Savior causing graves to become unrevivable
+• Reworked ||Curse of Impatience to "After casting an ability,
+all other abilities' cooldowns are increased by 1s." (Thanks Az1
+for the idea)||
+• Fixed ||Curse of Sobriety not clearing previously held vanilla
+effects||
+• Fixed ||Curse of Gluttony still letting the removed abilities
+be usable until a new ability/upgrade was obtained||
+• Fixed ||Curse of Ruin triggering when rejecting a Generosity
+gift||
+• Fixed Refraction not handling particle settings correctly,
+making most particles invisible if the player active setting was
+anywhere below 100%
+• Fixed Lightning Bottle giving a bottle even if the player
+already had one
+• Fixed Guarding Bolt description mentioning Metalmancy
+• Fixed many of the new enchantment sounds playing once per
+Volley arrow shot instead of just once
+&bHotfixes:&r
+• Fixed Curse of Impatience being able to cause Earthen Wrath to
+come off cooldown too early
+• Fixed Rebirth being able to turn non-Curses into Curses and
+vice versa
+• Fixed being able to upgrade an ability that was just removed
+by Curse of Gluttony
+• Fixed missing color in twisted Phantom Force description
+• Fixed guild displays not removing entities
+• Fixed Sirius breaking in some situations.
+&bHotfixes:&r (at daily restart)
+• Reverted optimizations that sometimes would prevent players
+regaining hp in Sirius
+• Fixed blightwall sometimes not hitting players.
+&b(10.46.0)&r
+For the update on July 25, 2024
+###
+&bCelestial Zenith Changes:&r
+&bGeneral Changes&r
+• Tweaked spawners in various rooms
+• Made pathing more obvious in one of the new F3 Elite rooms
+&bCurse Changes&r
+• Ruin: Can no longer downgrade Twisted rarity abilities
+• Death: No longer doubles how long it takes to revive other
+players
+• Sloth: Now cancels speed effects instead of inverting them
+• Lust (Rework): Deal 8% less damage, maximum -40%, per block
+away from nearest teammate, starting at 5 blocks.
+• Three new curses have been added: Envy, Pessimism, and
+Redundancy
+&bAbility Changes&r
+• Refraction: Beam width increased from 1.5 blocks to 2.5 blocks
+• Abnormality: Now grants a selection of one of three
+Prismatics/Curses, rather than given at random
+• Spark of Inspiration: "Cannot be used on the same player twice
+in a row" restriction removed. Can now be used on yourself if
+there are no other players in your party. 2s instant cooldown
+reduction replaced with a 100% heal on both players.
+• Blade Flurry: Radius increased from 3 to 4
+• Phantom Force: -1 Vexes spawned at all levels
+&bZenith Charm Changes&r
+• Since they weren't updated last update, Zenith Charms have
+been correctly updated this update.
+• A recap of the changes:
+  • Certain stats, like Fire Duration, will no longer appear at
+high rarities. Existing charms with these stats will keep them,
+but future charms from now on will not.
+  • Leftover budget on a charm will now be spent on upgrading
+its stats until there is none left; particularly noticeable on
 single-ability charms that didn't properly use all of their
 budget.
- • Your charms may have updated according to the above changes.
- • Additionally, charm stats for Totem of Salvation, Stone Skin,
-Metalmancy and Howling Winds will automatically convert to stats
-for the respective new abilities.
- • New charm adjectives and nouns have been added
-• General charm cap reductions:
-  • While zenith charms are key to becoming stronger in Zenith,
-the large boost they provided scaled wildly out of hand. These
-changes aim to reduce their maximum effectiveness, while
-providing a noticeable difference compared to having no charms.
-  • For most abilities, damage now caps at +80%, radius caps at
-+50%, and cooldown caps at -30%.
-  • Exact changes:
-```Old values:
-Cooldown: max 50%, var 6 (+/• variance), 6/10/14/18/22 (values
-at Common-Legendary)
-Damage: max 100%, var 10, 10/15/20/25/30
-Radius: max 100% var 10, 20/30/40/50/60
-New values:
-Cooldown: max 30%, var 3, 5/7.5/10/12.5/15
-Damage: max 80%, var 5, 10/15/20/25/30
-Radius: max 50%, var 5, 10/15/20/25/30```
-&bMinor New Features:&r
-• Winning the Grand Prize Ticket now grants the advancements for
-Liquid Courage, Intoxicating Warmth and Temporal Bender
-• Shop shulkers in the market are now colored red when locked
-and change back to magenta when unlocked. This may take a while
-to propagate to all shops as the color change only happens when
-the shop goes from unlocked -> locked.
-• Restructured the hover message on chat channels to include a
-description, as well as associated commands for joining and
-leaving the channel.
-• Added two new chat inline commands, <abilities>, which list
-all selected skills and their levels, and <charms>, which lists
-all equipped charms and their combined charm power usage when
-hovered over.
-• Cyan Tesseract can no longer be used on non-solid blocks
-• Added new tooling to the task bots, including links to tasks
-when searched via the bot and support for linking/posting tasks
-into the related discussion space.
-• Backend improvements to NetworkChat and NetworkRelay
-• Hallowed Pond and Lowland Temple have been completely rebuilt!
-In tandem with the new pois, the overworld surrounding them has
-been redesigned to improve connectivity and meet our modern
-standards.
- • The entrance to Velara has been rebuilt
- • Lowland Temple is now a 3 star poi
- • Earth Shrine's tree has been remade
-• A new Discovery has been added to the King's Valley
-• A new Discovery has been added to the Architect's Ring
-• Today as all of us developers were gathering together for our
-bi-weekly do-nothing conference, we noticed that a few crying
-obsidians had gained sentience and were walking away past us.
-Upon further inspection into the ring overworld we discovered a
-few conspicuous crying-obsidian shaped holes where some of you
-may remember them residing, and we promptly filled these in with
-cheap plaster. We apologize for any inconvenience this may have
-caused to any Monumenta explorers, lore enthusiasts,
-conspirators, contemplators, philosophers, etc.
-&bEnchantment Changes:&r
-• Rage of the Keter : 15% -> 20% Damage for 15 seconds
-• First Strike has received a minor rework. After not attacking
-an enemy damaged by First Strike for 3 seconds, First Strike
-will apply to the next instance of melee or projectile damage
-against it.
+  • Charm stats for Totem of Salvation, Stone Skin, Metalmancy
+and Howling Winds will automatically convert to stats for the
+respective new abilities.
+&bStar Point Fishing Expansion:&r
+ • Three new Star Point themed fish with accompanying daily
+quests, concentrated fish potions, and all-important fish lore.
+• A new fishing combat difficulty: Monsoon.
+• A new fishing minigame. (I'm sorry in advance!)
+• A new fishing arena themed after Star Point.
+• The Fishy Businessperson now lets you trade 1 5&o fish -> 2
+4&r fish for better access to the potion trades.
+• Lowered the Sand Sticker cost of concentrated potions from 28
+-> 16.
 &bItem Changes:&r
-&oDeveloper Note: Many of this week's item changes address the
-excessive power of Thorns stacking strategies when used in
-conjunction with Cleric's Sanctified Armor. In a previous
-balance update, we made the decision to buff Thorns items since
-they saw minimal use. When Sanctified Armor was changed to its
-current iteration, this allowed Clerics to achieve such high
-survivability and high passive damage that it wasn't necessary
-to actively engage in combat besides occasional spell uses.
-These changes are intended to make the Thorns Cleric playstyle
-less powerful but viable, and the items should still be useful
-for other melee tanks such as Warrior and Warlock.&r
-&nRegion 1:&r
-• Reflective Pants : 16 -> 15 Thorns Damage
-&nRegion 2:&r
-• Acinaces : 2.5 -> 3 Armor
-• Bloom : 8 -> 7 Thorns Damage
-• Celsian Sarissa : 6.5 -> 6 Armor, 8 -> 7 Thorns Damage
-• Dionaeas Graft : 6 -> 4 Thorns Damage
-• Icicle Greaves (Frost Giant's Leggings) : 4 -> 3 Melee
-Protection, 6 -> 5.5 Armor&nRegion 3:&r
-• Fungal Will (M4) 9.5 -> 8.5 Armor
-• Sporesoaked Robe (M4) : 9 -> 8 Agility
-• Blackblood Coagulant (M4) : 12 -> 9 Thorns Damage, 3 -> 2
-Melee Protection
-• EX Emblem of Greed (M4) : 5.5 -> 5 Armor, 5.5 -> 5 Agility
-• Toxin-Cursed Bind (M4) : 11 -> 8 Max Health
-• Sporebound Husk (M4) : 10 -> 9 Thorns Damage
-• Blightblood Falchion (M4) : 6 -> 4 Thorns Damage
-• Remnants of Isharist (M4) : 1 -> 2 Stamina
-• Adanartis (M4) : 3 -> 4 Stamina
-• Circuit Breaker (M4) : 2 -> 3 Trivium
-• Belt of the Tyrant (M4) : 1 -> 2 Regicide
-• EX Archmage's Vestment (M4) : 1 -> 2 Trivium
-• EX Primordial Flames (M4) : 3 -> 4 Trivium
-• EX Warden's Ruin (M4) : 3 -> 4 Stamina
-• Empty Echoing Steps (M3, M4) : 1 -> 2 Trivium
-• Souls of Silver (M4) : 3 -> 4 Stamina
-&bOther Item Changes:&r
-• Rootways Boulder : 5 -> 4 Charm Power, 2% -> 0% Challenge
-Speed Per Mob
-• Duelist's Sigil : 3 -> 2 Charm Power
-&bMob Changes:&r
-• Constellation Construct now has range immunity to attacks
-outside its effective range
+• Several of Monumenta's custom potions that were previously
+vanilla potions have been merged to reduce potion bloat. The
+full list is as follows, following the format current -> merged
+into:
+  • Aqueous Vial and Minor Aqueous Potion -> Aqueous Potion
+  • Darksight Vial and Minor Darksight Potion -> Darksight
+Potion
+  • Major Regeneration Vial -> Major Regeneration Potion
+  • Major Strength Vial -> Major Strength Potion
+  • Major Swiftness Vial -> Major Swiftness Potion
+  • Minor Regeneration Vial -> Minor Regeneration Potion
+  • Minor Strength Vial -> Minor Strength Potion
+  • Minor Swiftness Vial -> Minor Swiftness Potion
+  • Regeneration Vial -> Regeneration Potion
+  • Strength Vial -> Strength Potion
+  • Swiftness Vial -> Swiftness Potion
 &bFeedback Fixes:&r
-• White Tesseract is now only disabled from the start of
-worldbosses up until rewards are given
-• White Tesseract can now be used in the Sirius Arena, unless
-you are currently in the bossfight
-• If you are on the roof of the Sirius Arena when it starts you
-are now teleported to Aurora or Tuulen
-• Added/changed sounds for Arcane Thrust, Bleeding, Decay, Earth
-Aspect, Fire Aspect, Hex Eater, Ice Aspect, Regicide, Reverb,
-Thunder Aspect, and Wind Aspect enchantments as well as many of
-the cosmetics in the Arcane alchemist set
-• `/help rp` now links the Modrinth page for the resource pack•
-Changed the Divine Justice Enhancement’s base item to sugar
-• Dark Punishment and Soul Strain have received FX overhauls to
-their enhancements to make them distinct from Divine Justice
-• Dark Punishment no longer obstructs the player's view when
-triggered from afar
-• The gap in Blightwall now glows
-• Made several adjustments to Mistport
-• Reduced Aurora's declaration particle count
-• The Forsworn Sanctum sorting bin has been moved outside of the
-cage
-• The Mistport tiered gear sellers are now more intuitive to
-help stop players from picking up gear they are trying to sell
-• The colour of the water for the second part of Vernal
-Nightmares has been changed to red
-• Farr's casino pressure plates are now no longer triggerable by
-items
+• Keys for Strikes and bosses have been revamped to have more
+consistent formatting and more useful information
+• Tweaked a spawner in The Tolumaeus
+• Several spots around Mistport have been appropriately bone
+mealed following last week's adjustments
+• Chaos Dagger now glows purple and makes the mob it hits glow
+purple
+• Remaining Wand Aspect charges are now listed in the
+description
+• The entrance to Velara now has particles to indicate its
+presence
+• When choosing an ability option hidden by Curse of Obscurity,
+you now get a message telling you what ability it was
+• Adjusted many Depths/Zenith messages, mainly to standardize
+their format
+• /plot region can now be run with valley/isles/ring instead of
+just 1/2/3
+• Updated the lighting and some pathing of Irilyth
+• Cleric Cosmetic Set Changes:
+ • Reworked Contorting Bolt's (Hand of Light) chain pathing to
+be smoother.
+ • Some of Awakening's (Celestial Blessing) sounds can now only
+be heard by affected players individually rather than everyone
+around them. This should make it a lot quieter in large groups.
+ • Tweaked particles and/or sounds for Animating Aura,
+Bloodbath, Contorting Bolt, Soul Strain, Vitality Extraction,
+and Impaling Distortion.
+&bMajor Bug Fixes:&r
+• Fixed softlock when players with twisted Charity attempt to
+revive teammates
 &bMinor Bug Fixes:&r
-• Fixed splash potions not being affected by or applying
-healing/absorption sickness
-• Fixed potions from Heavenly Boon not being affected by Quench
-• Lightning Bottle: should now be dropped upon exiting a depths
-party
-• Fixed inconsistencies with Classless Worldboss advancements
-• Fixed Eldrask victory title not playing
-• Fixed White Tesseract using an outdated list of hostile
-enemies, leading to issues with certain entities such as Fishing
-Bobbers or Markers preventing its usage
-• Fixed various build bugs in An Unexpected Lesson
-• Fixed Helm of the Pumpking having incorrect stats
-• Fixed display entities in Sirius not get removed in some
-circumstances
-• Fixed Sirius's collision lingering in some cases
-• Fixed Blighted Pods and Blight Bombs having gold names.
-• High-Density TNT charge now correctly clears after placement
-during warehouse section of Scout's Codex
-• Corrected several typos and made adjustments to Laura's
-dialogue in Scout's Codex
-• Fixed Spider's Crux having incorrect stats
-• Fixed typo in Sirius teleporter
-• Fixed typo in Aheb dialogue• Fixed Vigor, Focus, and
-Perspicacity advancements not being updated
-• Fixed missing comma in Ethereal Spirit dialogue
-• Fixed exposed bedrock in Light Gray
-• Fixed Procyons Gazer losing glow color after using an ability.
-• Fixed the Alchemy Labs key given by Sir Reginald dropping on
-the floor of the castle basement rather than the dungeon lobby
-if the player's inventory is full
-• Improved the quest compass entry for entering the Alchemy Labs
-in the prologue
-• Fixed Eternal Savior not reviving nearby graves
-• Fixed potential exposed bedrock spots in Shifting City's lore
-rooms
+• Fixed two default playerheads just outside of Farr
+• Fixed two hidden spawners in Lowland Temple not being able to
+spawn mobs
+• Fixed a stuck spot in the Valley Monument
+• Updated the description of Rage of the Keter
+• Fixed a spelling error in the Bewitched Dominion conquer
+message
+• Updated the description for purple on the Zenith wheel utility
+room
+• Fixed Chaos Dagger causing some mobs (such as Callicarpa) to
+stop glowing
+• Fixed many cases in which mobs' names' colors would be changed
+due to changing their glowing color
+• Fixed stuck spot(s) in Port Manteau
+• Replaced some unintentional oak leaves near the Axtan
+Monastery• Fixed 3 missing hope skins in Mastersmith Antonio's
+hope skin GUI (Truest North, Clearcut, Blightblood Falchion)
+• Fixed rare cases in which the player would have missing
+choices in ability/upgrade choices immediately after choosing
+Abnormality or Curse of Gluttony
+• Potentially fixed rare cases in which Wand Aspect charges
+would be consumed unnecessarily
+• Fixed missing comma in Nurse Deirdre dialogue
+• Fixed Tesseract of Knowledge (u) storing anvils when it is
+being unshattered using anvils
+• Fixed Refraction not being very prismatic in color
+• Fixed several typos in boss & strike keys
+• Improved hitbox detection on Mittens in the Celestial Zenith
+lobby
+• Fixed Spectral Scythe having incorrect stats
+• Fixed numerous spawners in Irilyth that had incorrect minimum
+delay, maximum delay, and/or mob count stats
+• Fixed Arcane Confection having incorrect stats
+• Fixed Casting for Help sometimes not awarding anything or
+giving incorrect rewards upon completion
+• Corrected a typo in The Overclocker's lore
+• Replaced incorrect potions with region appropriate potions in
+Exalted Orange, Exalted Light Blue, and Darkest Depths
+• Fixed Submerged Citadel slime mounts being targetable by
+abilities
+• Fixed some spawners in Exalted Light Blue that did not spawn
+mobs normally
+• Fixed Azacor not incrementing win scores for players who have
+reached the daily loot limit
+• Corrected a typo in Viridescent Cure
+• Fixed Lightning Bottles not displaying their current count on
+the item
+• Fixed some particles from Astral Omen not playing correctly
+• Fixed Cleansing Rain's enhancement particles stacking at the
+caster instead of playing at each player
+• Adjusted some blocks in the Verdant Remnants Lobby
+• Fixed syntactic errors in Nelfine's Curse
+• Fixed a typo in An Unexpected Lesson• The Celestial Zenith now
+grants its completion advancement upon victory of any normal run
+or ascension (which also fixes an issue with the Bestiary not
+displaying mobs even for those who have completed the dungeon)
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
