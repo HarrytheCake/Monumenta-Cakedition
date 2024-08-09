@@ -1,18 +1,3 @@
-• The Celestial Zenith now grants its completion advancement
-upon victory of any normal run or ascension (which also fixes an
-issue with the Bestiary not displaying mobs even for those who
-have completed the dungeon)
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-&bHotfix:&r Fixed an issue with Curse of Pessimism in Celestial
-Zenith
-&bHotfix&r (at daily restart): Fixed Kaul and Hekawt keys not
-working
 &bHotfix:&r
 • Fixed zone issues with the newly added Fishing Combat Arena
 • An issue with Divine Beam Cooldown Reduction and Howling Winds
@@ -152,3 +137,131 @@ damage per stack were not updated to 30% and 5%, respectively as
 listed in the changelogs. After allowing the changes to settle
 for a few weeks, we have decided to keep the current values in
 place
+&bHotfix:&r It should once again be possible to unshatter items
+whose base item cannot be damaged
+&bMob Changes:&r
+• The damage from going out of bounds in Varcosa's Black Mist
+arena (being too high or too low) has changed. Each damage tick
+deals significantly more damage, applies anti-heal, and damage
+ticks happen less frequently. Additionally, a bug with the
+damage's knockback/acceleration effects has been fixed
+• Bosses and mobs that block break have received additional
+under the hood improvements to reduce the differences between
+block break implementations and address edge cases
+&bFeedback Fixes:&r
+• The Marina Noir death room boat barriers have been moved
+further back to allow better spectating
+• Added another ladder to the Sierhaven docks for easier access
+out of the water
+• Re-added the Mistport Seer's sorting bin
+• The amount of particles displayed during the Moist Ruins
+segment of Clear as Glass has been halved
+• Keller's house in Scars of Magic is now adventure mode
+• Added emergency escapes to the start of Shifting Amalgam and
+the crystal puzzle in Silver Skinned
+&bMajor Bug Fixes:&r
+• Fixed Brute Force level 2 applying some damage multipliers
+twice on splash damage
+• Fixed Brutalize dealing too much damage to the mob hit
+• Fixed Brutalize not taking many multipliers into account on
+splash damage
+• Fixed a bug allowing players to get infinite Lightning
+Bottles. As a side effect, Lightning Bottles won’t show their
+count in the item stack until we fully migrate them to the same
+system that Alchemist Potions use
+&bMinor Bug Fixes:&r
+• Reworded Arcane Thrust's advancement description slightly to
+better clarify its scaling
+• Fixed Sketched Lightbringer and Pole Star having outdated
+stats
+• Fixed multiple build errors within the Submerged Citadel
+• Fixed not being able to select the Monsoon Fishing Combat
+difficulty
+• Fixed a floating point issue in the Shattered actionbar
+message
+• Fixed purchasing Stellar Core not equipping all the cosmetic
+skills automatically
+• Fixed chests broken stat track not showing up• Fixed issues
+with launch pads in Skyhigh Bora
+• Removed an outdated function from completing the White Wool
+dungeon that would tell players they had just unlocked the
+Global channel
+• Fixed some non-mob entities counting as mob kills on death,
+such as the Unstable Amalgam slime or the body parts of worm
+mobs. This means that e.g. ability entities like Amalgam will no
+longer buff vengeful mobs, and worm mobs only count as one kill
+instead of several for Vicious Combos.
+• Updated the intra-Sierhaven teleporters
+• Fixed Volley's description incorrectly displaying the damage
+bonus
+• Fixed the Player Stats GUI incorrectly calculating melee,
+projectile and magic damages
+• Fixed Falling Wrath in Sanguine Halls visually showing the
+incorrect cost
+• Zenith wheel utility room signs are now up to date
+• Updated Mistport gear seller signs
+• Removed broken timer outside of Lowtide
+• Fixed rotatable item frames at the Farr TP Hub
+• Fixed the King's Bounty sorting bin having no name
+• Locked the trapdoors of Mistport
+• Fixed the Plush P-Zero Kart MKII not being eggifiable
+• The Plush P-Zero Kart MKII now comes equipped with a saddle.
+Any already existing spawns need to be eggified and placed again
+to update
+• Fixed duplicated dialogue when conversing with Levyn about
+nightmares.
+• Fixed Orasomn correctly teleporting back to the middle when
+reaching the edge of the arena
+• Extended the distance of Orasomn's Shatter to prevent cheese
+spots in the wall
+• Fixed players not actually dying during Orasomn's final phase
+• Fixed Silver Construct bugging out when starting the boss
+fight too quickly
+• Fixed an exposed bedrock in Silent Knight's Silvernalia
+Ravenna
+• Fixed stacked grass in both Normal and Exalted Fallen
+Menagerie
+• Removed an unintentional sign in a Celestial Zenith room
+• Added Worn Claymore and Woodsman's Axe to the items API
+&b(10.48.0)&r
+For the update on August 8, 2024
+&bMinor New Features:&r
+• The Mountain Mineshaft, Moist Ruins & Suspicious Village POIs
+have been rebuilt! Along with new builds to explore, the
+surrounding overworld has received visual overhauls including
+Keller's house, the Volcano, and more.
+• A new lore book has been added to the King's Valley, explore
+around the areas being reworked this week to discover it!
+• A fishing leaderboard has been added near the village of Port
+Manteau! To be registered on the leaderboard, fish at least once
+in any region!
+• Any Depth Strider on equipped armor is now disabled while
+holding a Riptide trident, allowing for faster & longer
+riptides. There is also a PEB option to only disable Depth
+Strider during the actual riptide which players without high
+ping may prefer.
+• Equipment Cases can now have some more tags: various item
+tiers (tiered, uncommon, unique, rare, artifact, legendary),
+some weapon types (sword, axe, scythe, wand, ranged), pickaxe,
+shield, as well as tool/utility (matches various tools and
+utility items), and 'zenith' for Zenith charms
+• Renaming an Equipment Case will now tell you which tags have
+been detected in its name
+• Purchasing a new Fishing Combat difficulty now immediately
+selects it
+• Piggy Bank is now Artifact tier like all other wallets below
+Bag of Hoarding
+• Hex Eater now works with all projectile types
+• The sounds when shooting a projectile with various
+enchantments will now be toggled by the "Passive ability sounds"
+option in the PEB. Additionally, decreased volumes of many of
+these sounds
+&bGrave Poses:&r
+• 3 new patron grave poses have been added
+• Certain grave poses now face you directly when clicked
+• Grave poses now work in Gallery and Zenith
+• Grave animations now play if the user has none of the
+unshatterable items in their inventory
+• Graves in normal content, Gallery, and Zenith have been
+standardized to display your current vanity, and your player
+head
