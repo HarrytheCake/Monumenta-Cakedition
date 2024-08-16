@@ -1,267 +1,149 @@
-&bHotfix:&r
-• Fixed zone issues with the newly added Fishing Combat Arena
-• An issue with Divine Beam Cooldown Reduction and Howling Winds
-Cast Range stats has been fixed.
-• If you logged in before the hotfix, message @frozenearth or
-ping them in <#358326443609948160> to have your charms fixed.
-  • This includes any Divine Beam or Thundercloud Form charm
-with anomalous stats, including duplicated stats, or stats from
-a different ability.
-  • If not manually fixed, they will also be automatically fixed
-next update as well.Headless Horseman has been temporarily
+Kaul has been temporarily closed.Hekawt has been temporarily
 closed.
-&bHotfix&r (at daily restart): Fixed the Headless Horseman not
-taking an Unlucky Horseshoe when entering a new fight. The
-Headless Horseman will be reopened after the hotfix is
-applied###
-&bMajor New Features:&r
-&bNew Patron Perk: Grave Poses and Animations&r
-• Tier 1+ patrons now have access to a new menu in the Cosmetics
-GUI, which features 15 brand new grave poses to choose from
-• On death, your grave can take the shape of a multitude of
-popular poses, from a simple wave to showing off some cool dance
-moves!
-• Additionally, other players will be able to click your grave
-to play a corresponding animation based on the pose chosen
-###
-&bCelestial Zenith Changes&r
-&bGeneral Changes:&r
-• Tweaked spawners in certain Zenith rooms
-&bAbility Changes:&r
-&bFlamecaller&r
-• Volcanic Combos: Damage increased by 2 at all levels
-• Volcanic Meteor: Damage decreased from 40/50/60/70/80/100 to
-36/45/54/63/72/90, radius decreased from 6 to 5, minimum damage
-at max falloff is now 50% instead of 0%
-&bFrostborn&r
-• Frigid Combos: Shatter damage increased by 2 at all levels
-• Frost Nova has been replaced with a new ability, Snowstorm
-• Ice Barrier: Damage increased by 3 at all levels, cooldown and
-ice duration reduced from 14s to 12s
-• Piercing Cold: Damage increased by 4 at all levels
-• Avalanche: Damage increased from 30/35/40/45/50/60 to
-28/35/42/49/56/70
-• Icebreaker: Ice damage changed from 20/26.5/33/39.5/46/59 to
-20/27/33/40/46/60, debuff damage changed from
-10/13.3/16.5/19.8/23/29.5 to 10/13.5/16.5/20/23/30
-&bSteelsage&r
-• Sharpshooter: Passive damage buff decreased by 5% at all
-levels, damage per stack increased from 3/4.2/5.4/6.6/7.8/10.2
-to 3/4.25/5.5/6.75/8/10.5
-&bWindwalker&r
-• Windswept Combos: Hit requirement decreased from 4 hits to 3
-hits
-&bCharm Changes:&r
-• Volcanic Meteor Radius: Changed how the stat impacts the
-damage falloff; now scales the whole function equally, rather
-than increasing the max damage zone by 3 blocks.
-• Sidearm Cooldown Reduction: Decreased legendary stat and
-maximum cap from 2 seconds to 1 second
-• Volley Damage Modifier: Increased maximum cap from +30% to
-+60%
+&bHotfix&r (at daily restart): Fixed Hekawt targeting players
+outside his arena
+&bHotfixes&r pending daily restart: (some of these didn't need
+to go in until next update, but aren't worth delaying while
+hotfixing Hekawt's actual bug)
+• Fixed /vote being inconsistent depending on which proxy you
+were connected to, and fixed clicking all the links going to the
+last voting site.
+• Fixed excessive volume on several Lich abilitiesHekawt has
+been reopened
+&b(10.49.0)&r
+For the update on August 15, 2024
 &bMinor New Features:&r
-• Bezoar, Sundrop, Iron Tincture, and Bottled Sunlight are now
-picked up when any body part gets close to them, not only the
-player's feet, e.g. allowing picking them up when they are
-elevated by a block
-• The Arcane Alchemist epic cosmetic skill set has been tweaked
-a bit, and the missing cosmetics for Energizing Elixir and
-Esoteric Enhancements have been added. Right click with your
-soulbound Arcane Reagent in hand to receive these cosmetics if
-you've bought it before this week.
-• Added spawner count (broken and required) to Challenge delve
-end messages
-• Challenge delves now open the delve point menu where you can
-view the points and click start like custom/preset delves
-• Attempting to move after at least 3 seconds in the death
-screen will now clear the death screen as if the player had
-clicked
-• Players will no longer take any durability damage in player
-plots and market plots
-&b(10.47.0)&r
-For the update on August 1, 2024
-&bItem Changes:&r
-• Everflow Pendant : +30% -> 0% Blade Dance Damage, -30% -> 0%
-Blade Dance Radius
-• Silvari Blade Handle : 0% -> +50% Blade Dance Damage, +25% ->
-+50% Blade Dance Cooldown, 1 -> +0.5 Blade Dance Root Duration
-• Wind's Gaze (M4) : 29.5 -> 30 Projectile Damage
-• Pulsing Orb (Rework) : Adaptability, Melee Protection 2,
-Regeneration 1, +5 Armor, +3 Max Health, +20% Projectile Damage
-• Fading Horizon (M4) : 2 -> 3 Stamina
-• Harrakfar’s Claw (M4) : 1 -> 2 First Strike
-• Abyssal Truncheon (M4) : 1.1 -> 1.2 Attack Speed
-• Tactician’s Axe (M4) : 3 -> 5 First Strike, 24.5 -> 23.5
-Attack Damage
-• The Vedha’s Soulcrusher (M4) : 20 -> 21 Attack Damage
-• Resonant Scythe (M4) : 2 -> 3 Stamina
-• Veinshredder (M4) : 1 -> 2 Quake
-• Eschar Dreamcatcher (M4) : 1 -> 2 Trivium
-• Yxojh’zha : 10 -> 13 Attack Damage, 2 -> 1.6 Attack Speed, 0
--> 2 Triage, 0 -> 1 Sustenance, 10% -> 13% Magic Damage, 2 -> 0
-Fire Aspect, 1 -> 0 Ice Aspect
-• Shadowstone Ballista (M4) : 5 -> 4 Point Blank
-• Lamellic Delusion (M4) : +35% -> +40% Projectile Damage
-• Lunacrestum Pulsar : 4 -> 5 Charm Power, +1 -> +2 Luminous
-Infusion Infused Hits, 0% -> +30% Luminous Infusion Cooldown,
--20% -> -45% Luminous Infusion Damage, -20% -> 0% Luminous
-Infusion Radius
-• Lightbringer : 8 -> 6 Attack Damage, 1.1 -> 1 Attack Speed
-  • &oDeveloper Note: Lightbringer is both a melee and
-projectile damage trident. With the proper set of gear and
-skills (either by running Cleric or Melee Scout), Lightbringer
-was able to substantially outclass Corrupted Watcher's Sword in
-what should be CWatcher's niche of undead melee DPS. These
-changes leave its strong projectile capabilities alone while
-making it less potent as a melee undead weapon.&r
-• Ashes of Eternity has received a partial rework:
- • &oApplies the effect of Resurrection upon death while holding
-in mainhand. When a player triggers this effect, the enchant is
-marked as \"Used\" and becomes unusable to them until the next
-new day. The enchant is refreshed and mark is removed when
-clicking with the item in mainhand, if a new day has occurred
-since last use.&r
-&bClass Changes:&r
-• Divine Justice: Level 2 damage decreased from 5 + 25% damage
-to 5 + 20% damage. Enhancement decreased from 5% damage per
-stack, capped at 40%, to 4% damage per stack, capped at 32%.
-• Illuminate: Enhancement now deals damage every 2 seconds,
-instead of every 0.5 seconds.
-• Glorious Battle: Pierce damage now only hits the first 3 mobs
-you collide with while charging.
-• Cloak and Dagger : Damage from this skill no longer counts
-towards its boss damage thresholds for cloak stack gain
-• Sharpshooter : Due to a bug we did not catch until after the
-release of Additive, Sharpshooter's 25% base and 4% projectile
-damage per stack were not updated to 30% and 5%, respectively as
-listed in the changelogs. After allowing the changes to settle
-for a few weeks, we have decided to keep the current values in
-place
-&bHotfix:&r It should once again be possible to unshatter items
-whose base item cannot be damaged
-&bMob Changes:&r
-• The damage from going out of bounds in Varcosa's Black Mist
-arena (being too high or too low) has changed. Each damage tick
-deals significantly more damage, applies anti-heal, and damage
-ticks happen less frequently. Additionally, a bug with the
-damage's knockback/acceleration effects has been fixed
-• Bosses and mobs that block break have received additional
-under the hood improvements to reduce the differences between
-block break implementations and address edge cases
-&bFeedback Fixes:&r
-• The Marina Noir death room boat barriers have been moved
-further back to allow better spectating
-• Added another ladder to the Sierhaven docks for easier access
-out of the water
-• Re-added the Mistport Seer's sorting bin
-• The amount of particles displayed during the Moist Ruins
-segment of Clear as Glass has been halved
-• Keller's house in Scars of Magic is now adventure mode
-• Added emergency escapes to the start of Shifting Amalgam and
-the crystal puzzle in Silver Skinned
-&bMajor Bug Fixes:&r
-• Fixed Brute Force level 2 applying some damage multipliers
-twice on splash damage
-• Fixed Brutalize dealing too much damage to the mob hit
-• Fixed Brutalize not taking many multipliers into account on
-splash damage
-• Fixed a bug allowing players to get infinite Lightning
-Bottles. As a side effect, Lightning Bottles won’t show their
-count in the item stack until we fully migrate them to the same
-system that Alchemist Potions use
+• When quick-depositing items into a wallet, there's now an undo
+button in the chat message to undo the action if it was done
+accidentally
+• This functionality required adding a new command, which you
+can also use manually via `/wallet withdraw <items>`, e.g.
+`/wallet withdraw 4 Hyperexperience, 12 Shard of the Mantle`
+• Wallets can now convert between the different rare fragment
+dusts and pulsating infusion items (e.g. Royal Dust to Pulsating
+Gold)
+• Your own revenant in Lich's shadow realm will now glow a
+different colour from the others
+• Crowned Blight and the mobs attacking Tuulen in Sirius will
+now keep their special glowing colour even if under the effect
+of Eagle Eye
+• Added a new PEB option to disable glowing from Eagle Eye,
+either completely or only from other people's Eagle Eye
+• Your own grave now always glows, but for you only. Holding a
+compass makes it glow golden and also glow for other players.
+Small item graves only glow when holding a compass, and only for
+the owner.
+• The floating ball of tuff used by the "Telekinesis" cosmetic
+skill now only glows for the caster
+• In some situations where given items are dropped on the ground
+due to having a full inventory, they will now glow red
+temporarily. Additionally, if multiple such items are dropped on
+the ground at one time, the message will only be sent once
+• Brayllur's across the Architect's Ring have been slightly
+damaged, in order to display some new skins in the upcoming
+version of the resource pack. If you see Brayllur is missing
+health using mods, please do not report this as a bug.
+• The music discs from the City of Shifting Waters (Golden
+Grooves and Frayed Cacophony) are now artifact tier, making them
+create a grave when destroyed
 &bMinor Bug Fixes:&r
-• Reworded Arcane Thrust's advancement description slightly to
-better clarify its scaling
-• Fixed Sketched Lightbringer and Pole Star having outdated
-stats
-• Fixed multiple build errors within the Submerged Citadel
-• Fixed not being able to select the Monsoon Fishing Combat
-difficulty
-• Fixed a floating point issue in the Shattered actionbar
-message
-• Fixed purchasing Stellar Core not equipping all the cosmetic
-skills automatically
-• Fixed chests broken stat track not showing up• Fixed issues
-with launch pads in Skyhigh Bora
-• Removed an outdated function from completing the White Wool
-dungeon that would tell players they had just unlocked the
-Global channel
-• Fixed some non-mob entities counting as mob kills on death,
-such as the Unstable Amalgam slime or the body parts of worm
-mobs. This means that e.g. ability entities like Amalgam will no
-longer buff vengeful mobs, and worm mobs only count as one kill
-instead of several for Vicious Combos.
-• Updated the intra-Sierhaven teleporters
-• Fixed Volley's description incorrectly displaying the damage
-bonus
-• Fixed the Player Stats GUI incorrectly calculating melee,
-projectile and magic damages
-• Fixed Falling Wrath in Sanguine Halls visually showing the
-incorrect cost
-• Zenith wheel utility room signs are now up to date
-• Updated Mistport gear seller signs
-• Removed broken timer outside of Lowtide
-• Fixed rotatable item frames at the Farr TP Hub
-• Fixed the King's Bounty sorting bin having no name
-• Locked the trapdoors of Mistport
-• Fixed the Plush P-Zero Kart MKII not being eggifiable
-• The Plush P-Zero Kart MKII now comes equipped with a saddle.
-Any already existing spawns need to be eggified and placed again
-to update
-• Fixed duplicated dialogue when conversing with Levyn about
-nightmares.
-• Fixed Orasomn correctly teleporting back to the middle when
-reaching the edge of the arena
-• Extended the distance of Orasomn's Shatter to prevent cheese
-spots in the wall
-• Fixed players not actually dying during Orasomn's final phase
-• Fixed Silver Construct bugging out when starting the boss
-fight too quickly
-• Fixed an exposed bedrock in Silent Knight's Silvernalia
-Ravenna
-• Fixed stacked grass in both Normal and Exalted Fallen
-Menagerie
-• Removed an unintentional sign in a Celestial Zenith room
-• Added Worn Claymore and Woodsman's Axe to the items API
-&b(10.48.0)&r
-For the update on August 8, 2024
-&bMinor New Features:&r
-• The Mountain Mineshaft, Moist Ruins & Suspicious Village POIs
-have been rebuilt! Along with new builds to explore, the
-surrounding overworld has received visual overhauls including
-Keller's house, the Volcano, and more.
-• A new lore book has been added to the King's Valley, explore
-around the areas being reworked this week to discover it!
-• A fishing leaderboard has been added near the village of Port
-Manteau! To be registered on the leaderboard, fish at least once
-in any region!
-• Any Depth Strider on equipped armor is now disabled while
-holding a Riptide trident, allowing for faster & longer
-riptides. There is also a PEB option to only disable Depth
-Strider during the actual riptide which players without high
-ping may prefer.
-• Equipment Cases can now have some more tags: various item
-tiers (tiered, uncommon, unique, rare, artifact, legendary),
-some weapon types (sword, axe, scythe, wand, ranged), pickaxe,
-shield, as well as tool/utility (matches various tools and
-utility items), and 'zenith' for Zenith charms
-• Renaming an Equipment Case will now tell you which tags have
-been detected in its name
-• Purchasing a new Fishing Combat difficulty now immediately
-selects it
-• Piggy Bank is now Artifact tier like all other wallets below
-Bag of Hoarding
-• Hex Eater now works with all projectile types
-• The sounds when shooting a projectile with various
-enchantments will now be toggled by the "Passive ability sounds"
-option in the PEB. Additionally, decreased volumes of many of
-these sounds
-&bGrave Poses:&r
-• 3 new patron grave poses have been added
-• Certain grave poses now face you directly when clicked
-• Grave poses now work in Gallery and Zenith
-• Grave animations now play if the user has none of the
-unshatterable items in their inventory
-• Graves in normal content, Gallery, and Zenith have been
-standardized to display your current vanity, and your player
-head
+• Fixed most if not all instances of glowing colours changing
+unexpectedly, especially after using abilities like Eagle Eye
+• Fixed Zenith Charms losing infusions when updated
+• Fixed Bhairavi appearing in various places in the Architect's
+Ring before the appropriate quest stages have been reached
+• Changed &oGiant Ants&r spawners to &oBroodmother&r spawners in
+Mountain Mineshaft
+• Fixed Dust of the Herald and Star Point Fragments not
+appearing right after Wolfswood/Keep frags/mats in the Bag of
+Hoarding
+• Fixed worm mobs' body parts making mob sounds
+• Fixed a few more places where worm mobs' body parts triggered
+effects when the worm dies, such as elite finishers and item
+enchants like Usurper
+• Fixed worm body parts being able to ride boats, severing the
+worm in the process
+• Fixed some charms being sorted into utility Equipment Cases
+• Fixed a bunch of floating sand near Mistport, Molta, and
+Alnera
+• Fixed .0s in the Curse of Lust description
+• Removed floating spruce leaves near Volcano
+• Repaired Killer Bunny spawner in Mountain area of the Valley
+• Fixed some cases in which the pre-upgrade rarity displayed on
+Depths/Zenith upgrade rewards did not update
+• Fixed disabling glowing on players also turning off the second
+head texture layer (don't ask)
+• Fixed a build error in the Sierhaven Teleport Hub
+• Fixed the Volcano's ability to launch players
+• Fixed a broken quest chest in Volcano
+• Fixed Moist Ruins having too low of a required spawner clear
+count
+• Fixed 'Soul Grubs' fishing bait not having the fishing
+location tag
+• Fixed some exposed bedrock in Cyan
+• Fixed some missing water blocks in the water near Submerged
+Citadel
+• Fixed stacked grass in Sierhaven• Fixed a sandstone block in
+Magenta
+• Fixed dying to the boss in Crystal Connections teleporting you
+a block into the floor
+• Leaving the All That Remains area upon quest completion will
+now properly end the spoopy ambient music before Oceangate's
+chimes in.
+The boss of ||Marina Noir,|| ||Xenotopsis'|| music will now loop
+• Fixed the Dungeon Guard in White not having any trades
+• Fixed nearby minecarts preventing the use of white tesseract
+• Added an escape button to a hidden room in Sierhaven to allow
+opening it from the inside
+• Fixed the handbook advancement for Piercing being unobtainable
+• Ami Udake can now remove the Sacrificial Dagger skin from a
+Kingslayer
+• Fixed items being put into wrong types of Carriers of
+Explosions in some circumstances
+• Fixed DPS holograms not being removed when a training dummy is
+eggifyed
+• Fixed both Sanguine Halls and Marina Noir being called
+'gallery' when world name spoofing is enabled. They are now
+named 'sanguine' and 'marina' respectively.
+• Fixed depositing stacked potions into a Potion Barrel giving a
+wrong message of only depositing one potion
+• Fixed a misspelling of Serpensia and an extra space in Beasts
+of Men
+• (Hopefully) Fixed an issue where Kaul would try to forcecast a
+spell he didn't have which led to unexpected behavior
+&bCelestial Zenith Changes:&r
+• Tweaked spawners in two F2 Elite rooms
+• Added 7 new candles to the Zenith Charm Transmogrifier. These
+candles allow you to guarantee that the resulting charm comes
+from the corresponding tree.
+• Added Shattered Gems as a rare Zenith loot drop. You have a
+higher chance of gaining them on your first Zenith clear of the
+day.
+  • These items can be used to purchase Celestial Gems, which
+can be used to upgrade any Zenith Charm to the next rarity, but
+can only be used on the same charm once.
+• Zenith Charms will now generate with 10 stats maximum.
+Existing charms will not be affected.
+• Adjusted wildcard tree cap chances from 33/33/17/8/5/4 to
+50/30/12/5/2/1 for 2-7 trees, respectively (more dual-tree and
+tri-tree focused)
+&bMob Changes:&r
+• Venus Laqueum can no longer be affected by Bloodthirsty
+&bFeedback Fixes:&r
+• Adjusted the order and improved sign readability in the
+regional teleports of the Sierhaven Teleport Hub
+• Fixed several inconsistencies in the regional teleports of the
+Sierhaven and Mistport Teleport Hubs
+&bMajor Bug Fixes:&r
+• Fixed being able to go from one instance of P.O.R.T.A.L. to
+another using portals
+• You can no longer spam click your own grave animation to make
+it run off
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• Kaul has been reopened.

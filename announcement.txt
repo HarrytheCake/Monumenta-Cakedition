@@ -1,8 +1,3 @@
-&bAn Update on the Recent Ban Wave&r
-Hello,
-The decision has been made to lift all remaining punishments
-issued in relation to this incident. The team apologizes for any
-inconvenience caused by the situation.
 &bModmail&r
 We have added @ModMail to the server. All issues that require
 messaging a Moderator such as appealing a punishment or
@@ -122,4 +117,27 @@ https://forms.gle/GpvFvpNVGKSNjFCP8.
 an idea of your build skills, either linked in the application
 itself, or DM'd to Aristotle.&r Solo builds are preferred, but
 if any of it was done with other people, please make it clear
-what part of it was your work.
+what part of it was your work.Hello everyone! We’re thrilled to
+announce the next piece of Monumenta Raid content coming to the
+server:
+&bHexfall&r!
+The spiritual successor to Silver Knight’s Tomb, Hexfall
+features the finale of the story of Hycenea and Harrakfar, the
+Blue Wool. This raid will pit you against two fearsome new raid
+bosses posing threats not seen before in Monumenta.  Hexfall
+features some of the most mechanically complex fights to date
+that will test the limits of you and your party. You'll find
+unique, gameplay-altering patterns throughout each fight that
+will test your problem-solving capabilities and reflexes. This
+raid emphasizes mechanical difficulty, and will require
+progression more akin to a traditional MMO raid tier.
+We’re incredibly excited for you all to take on the challenges
+that lie in wait in Hexfall at the beginning of September!
+&bPUPPET, HOW YOU WANDER WEAKLY
+KNOWING NAUGHT OF WHOM YOU SERVE
+MEAGER CHILD, RAISING FEEBLY
+STEEL AGAINST OUR IRON NERVE
+FOR I AM LIFE, AND YOURS I’VE WATCHED.
+YOUR VILE DEEDS CORRUPT AND REND
+GREAT EMPERORS AND KINGS AND GODS
+YOU’VE FELLED, YET HERE YOU’LL MEET YOUR END&r
