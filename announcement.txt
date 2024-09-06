@@ -1,13 +1,3 @@
-&bModmail&r
-We have added @ModMail to the server. All issues that require
-messaging a Moderator such as appealing a punishment or
-reporting an exploit will now be handled through Modmail.
-Simply message the bot with your issue and select the Monumenta
-Discord Server to open a ticket with Moderators.A note for
-founders/managers of guilds • with this week's update, you'll
-need to grant any guests of your guild access to your guild plot
-and/or chat, as by default these permissions are disabled. You
-can do so in the guild GUI here, or on a per-guest basis.
 &bOpen Call for Quest Dev Applications:&r
 Hey everyone, I'd like to take some time to put out an open call
 for applications for anyone who is interested in applying to
@@ -140,4 +130,33 @@ STEEL AGAINST OUR IRON NERVE
 FOR I AM LIFE, AND YOURS I’VE WATCHED.
 YOUR VILE DEEDS CORRUPT AND REND
 GREAT EMPERORS AND KINGS AND GODS
-YOU’VE FELLED, YET HERE YOU’LL MEET YOUR END&r
+YOU’VE FELLED, YET HERE YOU’LL MEET YOUR END&rHey @everyone !
+I'm happy to announce that Hexfall, our brand new 4-player raid
+content, will be releasing on
+&b<t:1725724800:F>&r!  Alongside Hexfall, with our next patch on
+Thursday a new prelude quest "Bad Moon Rising" will be releasing
+covering the events leading up to the raid. This raid is easily
+the hardest and most mechanically challenging piece of content
+the server has yet seen and will be a monumental hurdle for even
+the most experienced teams, so be prepared! We're beyond excited
+to watch you all tackle this content and hope you'll enjoy
+playing it as much as we enjoyed making it.
+||🍃 Down with the Witch 🍃 ||
+https://youtu.be/GRwxXLzK3UI
+&bNew Zenith Charm Auction Bot:&r
+Hey everyone,
+A new bot @Monumenta Charms Bot, is here to manage Zenith charm
+auctions! Simply head to <#313066655494438922> and get the
+@Zenith Auctions role, then head to <#1249243796701577298> and
+run /help for a basic command list, and explanations on what
+each command does.
+The previous system of manually creating and typing in bids has
+caused moderation issues and has made it hard to find the charms
+you are looking for. The new bot aims to solve these issues by
+having standardized rules and search features.
+The currently active Auctions Thread will remain open for the
+time being, but all new charm auctions should be moved over to
+the bot.
+If you have found any bugs, please message @pe.li. Expect the
+bot to be down sometimes for the first week until it is fully
+stabilized.

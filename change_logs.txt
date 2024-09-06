@@ -1,289 +1,290 @@
+These charms have been reworked to the following stats:
+• Bewitched Eye : 2 ★, +10% Amplifying Hex Damage, +70%
+Amplifying Hex Range, -70% Amplifying Hex Cone
+• Blazing Shard : 2 ★, -30% Magma Shield Cooldown, +15% Magma
+Shield Fire Ability Damage Bonus, -30% Magma Shield Damage
+• Bloodborne Locket : 2 ★, +5% By My Blade Enhancement Health,
++10% By My Blade Enhancement Elite Health
+• Earthquake Staff : 3 ★, +75% Brute Force Radius, -75% Brute
+Force Knockback
+• Eroded Sconce : 1 ★, +2 Voodoo Bonds Curse Spread Count, -20%
+Voodoo Bonds Curse Duration
+• Explosive Component : 2 ★, +50% Luminous Infusion Radius, +50%
+Enchanted Prayer Attack Range
+• Petrified Sap : 2 ★, +4 Cleansing Totem Absorption Maximum,
+-15% Cleansing Totem Pulse Delay
+• Quickening Bracer : 2 ★, +5% Agility Enhancement Cooldown
+Reset
+• Regenerative Spores : 1 ★, +5% Bezoar Damage Modifier, +25%
+Bezoar Healing
+• Resonating Belltongue : 3 ★, +30% Alchemical Artillery
+Aftershock Damage, +30% Alchemical Artillery Velocity, -30%
+Alchemical Artillery Aftershock Delay
+• Royal Jewel : 2 ★, +1 Cloak And Dagger Stealth Duration, +10%
+Cloak And Dagger Damage
+• Spark Panel : 2 ★, +15% Spellshock Melee Amplifier, +15%
+Spellshock Slowness Amplifier, -5% Spellshock Spell Amplifier
+• Specialist Bauble : 1 ★, -25% Thurible Procession Cooldown,
++50% Thurible Procession Heal
+• Stargazer's Glasses : 1 ★, +6 Sharpshooter Enhancement
+Distance
+• Trembling Root : 2 ★, -15% Riposte Cooldown, +1.5 Riposte Root
+Duration, +1.5 Riposte Knockback
+• Withering Petal : 1 ★, -50% Decayed Totem Pulse Delay, -25%
+Decayed Totem Duration, -20% Decayed Totem Slowness Amplifier###
+Class Changes:
+• Paladin's Luminous Infusion level 2 has been reworked to the
+following: `The damage is increased to 32 against undead and 16
+against non-undead. Undead are passively set on fire for 3s when
+damaged, but Inferno is applied at 50% efficiency for magic and
+projectile attacks. Cooldown: 10s.`
+  • &oDeveloper Note: Region 3 Paladin previously held the
+record for the highest damage per minute in most situations by a
+wide margin. For example, by using a fully infused damage set
+with appropriate damage buffs against a single-target Boss, a
+Paladin could deal 30% more damage than the next best performer,
+Berserker. The main damage sources Paladins were using to
+achieve this were Divine Justice and Luminous Infusion 2, which
+provided multiplicative damage buffs. This change removes the
+old functionality of Luminous Infusion 2 as Divine Justice 3 and
+makes it more useful for caster Paladin. We will likely make
+changes to Divine Justice's damage formula in later patches to
+reduce its complexity and implement smoother damage scaling
+throughout the regions.&r
+### Enchantment Changes:
+• Decay : 1 -> 2 damage per tick
+  • &oDeveloper Note: This change is meant to keep Decay builds
+viable in Region 3 despite the removal of generalist Decay
+charms without bloating Decay levels to excessively high
+numbers. As such, most R1 and R2 items have received Decay level
+decreases.&r
+• First Strike : Now applies to the following damage types:
+Projectile skills, Melee skills (if melee damage was dealt in
+the same tick), and Melee Enchantments (if melee damage was
+dealt in the same tick). Previously it only applied to Melee and
+Projectile damage types.### Item Changes:
+&nRegion 1 Gear:&r
+• Alchemic Caster : 2.5 -> 2 Attack Damage
+• Corrupted Siershen's Caster : 2 -> 1 Decay (Replica Actypoh)
+• Heartwood Wand : 2 -> 1 Decay
+• Jungle's Requiem : 2 -> 1 Decay
+• Myrahg's Pestilence : 3 -> 2 Decay (Colossal Greatlance)
+(Soulblighter's Sacrifice)
+• Pestilence Vial : 2 -> 1 Decay
+• Plagueborne Axe : 2 -> 1 Decay
+• Soulblighter's Scepter : 2 -> 1 Decay
+&nRegion 2 Gear:&r
+• Apotheosis Spear : -10 -> -2 Max Health
+• Blizzard's Rage : 2 -> 1 Decay
+• Completely Harmless Tome : 2 -> 1 Decay (Infernal Codex)
+• Cracked Canopic : 3 -> 2 Decay
+• Destroyed Blade of Exaltation : -10 -> -2 Max Health
+• Embers of Thori'dal : 3 -> 2 Decay
+• Fleshbreaker : 3 -> 2 Decay (Sketched) (Drinker of Mercy)
+• Frost Giant's Crusher : 2 -> 3 Quake (Replica C'thedrros)
+• Myriad's Rapier : 3 -> 2 Decay
+• Phantom Cutlass : 2 -> 1 Decay
+• Shipwrecker's Sabre : 7 -> 5 Decay
+• Talaya's Decay : 4 -> 3 Decay
+• Unwavering Will : 2 -> 1 Decay
+• Wand of Decay : 3 -> 2 Decay
+• Wand of the Mire : 2 -> 1 Decay
+&nRegion 3 Gear:&r
+• Caduceus (M4) : 1 -> 2 Hex Eater, 7 -> 6.5 Attack Damage
+• Core-Injected Safety Suit (M4) : 6 -> 7 Inferno
+• Crimson Tithe (M3) : 9.5 -> 9 Armor
+• Crimson Tithe (M4) : 0.15 -> 0.1 Attack Speed
+• Darkstar Pauldron (M4) : 5.5 -> 4 Agility, 2 -> 0 Fire
+Fragility
+• Death's Echo (M4) : 9 -> 15 Decay
+• Duskroot Legguards (M4) : 2 -> 0 Second Wind, +20% -> +25%
+Attack Speed, 9 -> 11 Agility
+• Fensap Flask (M4) : 3 -> 4 Decay
+• Holy Vitriol (M4) : 2 -> 1 Second Wind, 6.5 -> 7 Armor
+• Hycenea's Vinelash (M4) : 32% -> 25% Magic Damage
+• Hycenea's Will (M4) : 8 -> 9 Attack Damage
+• Iridium Crown (M4) : 6 -> 6.5 Agility
+• Miner's Lament (M4) : 4 -> 5 Inferno
+• Moonscarred Clockblade (M4) : Reverb 3 -> 4
+• Mycelian Crescent (M4) : 12 -> 20 Decay
+• Mycelian Mantra (M4) : 9.5 -> 10 Armor, 1 -> 0 First Strike•
+Overgrown Bodkin (M4) : 2 -> 1 Magic Protection
+• Pelias' Last Step (M4) : 3 -> 2 Magic Protection
+• Razorleaf Breeches (M4) : 6 -> 5.5 Agility, 1 -> 2 Regicide
+• Silver Order Shako (M4) : 2 -> 3 Technique
+• Silver Moon Crown (M4) : 7 -> 9 Agility, 2 -> 0 Melee
+Protection, 2 -> 0 Adrenaline
+• Souls of Silver (M3) : 8 -> 8.5 Agility
+• Souls of Silver (M3 and M4) : Stamina 4 -> 3, -10% -> 0% Speed
+• Stargazer's Shadow (M4) : 3 -> 4 Technique
+• Supernova Mattock (M3) : 0 -> 1 Efficiency, 7 -> 6 Eruption
+• Supernova Mattock (M4) : 2 -> 3 Inferno
+• The Nightmare's Warden (M4) : 1 -> 3 Regicide, 2 -> 1 Melee
+Protection
+• The Vedha's Soulcrusher (M4) : 2 -> 3 Quake
+• Uriddan's Legacy (M4 only) : 35 -> 30% Attack Damage
+• Woolwoven Staff (M3 and M4) : 5 -> 10 Decay
+• Wrench of the Perfect Atrium (M4) : 7 -> 8 Unbreaking
+&nGallery of Fear Gear:&r
+• Envoy of Dreams : 2 • > 3 Trivium
+• Midday Harbinger : 4 -> 5 Quake
+• Rivers of Blood : 4 -> 5 Quake
+• Silent Night : 2 -> 3 Quake
+&nRegion 3 Charms:&r
+&oMage Charms:&r
+• Magna Luna : +1 -> +1.5 Cosmic Moonblade Cooldown Cap, +65% ->
++50% Cosmic Moonblade Cooldown
+• Molldyer's Chalk : 5 -> 4 Charm Power, 0% -> +20% Fire
+Elemental Spirit Damage, +20% -> 0% Eruption Damage, +15% -> 0%
+Inferno Damage, +25% -> +15% Magma Shield Damage
+• Silver Ring : 0 -> -15% Mana Lance Cooldown
+&oWarrior Charms:&r
+• &oDeveloper Note: Warriors (both Berserkers and Guardians)
+were able to achieve better damage per minute averages against
+single target Bosses than Assassin with Brute Force damage
+stacking. Many of these changes are intended to reduce a
+Warrior's damage using a full damage build.&r
+• Lesser Force Charm : +15% -> +10% Brute Force Damage
+• Greater Force Charm : +30% -> +20% Brute Force Damage
+• Focused Force Charm : +50% -> +35% Brute Force Damage
+• Distant Force Charm :  +15% -> +10% Brute Force Damage
+• Lesser Charm of Defense : 2 -> 1 Charm Power, +5% -> +4%
+Defensive Line Resistance• Greater Charm of Defense : 3 -> 2
+Charm Power
+• Sedated Charm of Defense : +20% -> +40% Defensive Line
+Duration
+• Deepslate Chunk : +100% -> +75% Brute Force Damage
+• Rune of Dominion : 0% -> +25% Shield Wall Angle
+• Silver Pauldron : +100% -> +50% Rampage Healing
+• Starmetal Knucklebones : 3 -> 2 Charm Power
+&oCleric Charms:&r
+• Lesser Smiting Charm : +15% -> +10% Divine Justice Damage
+• Greater Smiting Charm : +30% -> +20% Divine Justice Damage
+• Focused Smiting Charm : +50% -> +35% Divine Justice Damage
+• Sustaining Smiting Charm : +15% -> +10% Divine Justice Damage
+• Bloodpact Pendant : +40% -> +30% Divine Justice Damage
+• Martial Mantra : 3 -> 2 Charm Power, -15% -> 0% Luminous
+Infusion Damage, -50% -> -30% Luminous Infusion Cooldown
+• Lunacrestum Pulsar : 5 -> 4 Charm Power, -45% -> -50% Luminous
+Infusion Damage
+• Suzu of Stasis (Rework) : 2 Charm Power, +50% Choir Bells
+Damage, +25% Choir Bells Slowness Amplifier, -25% Choir Bells
+Vulnerability Amplifier, -15% Choir Bells Weakness Amplifier,
+-50% Choir Bells Debuff Duration
+• Threads of Valor : -10% -> 0% Inferno Damage
+&oRogue Charms:&r
+• Lesser Umbral Charm : +3% -> +4% Advancing Shadows Damage
+Multiplier
+• Greater Umbral Charm : +6% -> +8% Advancing Shadows Damage
+Multiplier
+• Focused Umbral Charm : +9% -> +10% Advancing Shadows Damage
+Multiplier
+• Swift Umbral Charm : +4% -> +5% Advancing Shadows Damage
+Multiplier, -10% -> -20% Advancing Shadows Cooldown
+• Explosive Umbral Charm : +3% -> +5% Advancing Shadows Damage
+Multiplier
+&oAlchemist Charms:&r
+• &oDeveloper Note: Due to the changes from the Additive Rework,
+Alchemists in Region 3 using Brutal Alchemy and its charms were
+able to substantially outperform other DoT based builds on
+Alchemist and other classes. These changes are intended to
+reduce the damage output from stacking Brutal Alchemy buffs.&r
+• Lesser Brutal Charm : +30% -> +25% Brutal Alchemy DoT Damage
+• Greater Brutal Charm : +60% -> +50% Brutal Alchemy DoT Damage•
+Focused Brutal Charm : +90% -> +75% Brutal Alchemy DoT Damage
+&oScout Charms:&r
+• Deathbound Cavaliers : 3 -> 2 Charm Power
+&nConsumables:&r
+• Miserable Mungfish : 5% Attack Speed (2:30) -> 5% Attack Speed
+(1:00), -25% Melee Damage (2:30) -> -35% Melee Damage (1:00)
+• Unsubstantial Mungfish : 8% Attack Speed (2:30) -> 5% Attack
+Speed (1:30), -20% Melee Damage (2:30) -> -30% Melee Damage
+(1:30)
+• Modest Mungfish : 8% Attack Speed (5:00) -> 5% Attack Speed
+(2:00), -20% Melee Damage (5:00) -> -25% Melee Damage (2:00)
+• Adequate Mungfish : 8% Attack Speed (5:00) -> 10% Attack Speed
+(2:30), -15% Melee Damage (5:00) -> -20% Melee Damage (2:30)
+• Pleasant Mungfish : 10% Attack Speed (5:00) -> 10% Attack
+Speed (3:00), -10% Melee Damage (5:00) -> -15% Melee Damage
+(3:00)
+• Concentrated Mungfish : 30% Attack Speed (5:00) -> 20% Attack
+Speed (5:00)
+&bMob Changes:&r
+• Mutated Astral Pillars (all) : 60% -> 55% Max Health True
+Damage, 0 -> 1 Flat True Damage
+• Twisteds (all) : Removed extra Block Break spell that would
+sometimes cause issues
+&bFeedback Fixes:&r
+• Several advancements have been cleaned up in regards to where
+they sit in the GUI tree
+• Multiple advancements whose icons represent specific custom
+items now support their RP skin
+• Slightly updated the Masterwork Items advancement to be less
+confusing
+• Updated the Items and Gear Nexus NPC not to include Region 3
+in its statement about tiered items
+• Improved the lighting and fieriness of Kaul's Judgement for
+better lore accuracy
+• Reduced the number of spawners needed to clear Challenge Forum
+by ~80 (to account for only 2/3 accessible branches)
+&bMinor Bug Fixes:&r
+• Fixed Recoil not applying when looking straight down if you
+jump and fire the crossbow at the same time
+  • Note: If you recoil, and then jump right when the velocity
+is applied to you, there is a chance for the jump to override
+the recoil velocity.
+• Fixed taking damage from certain damage sources such as
+poison, wither, fire, lava, and berry bushes cancelling velocity
+from other sources such as recoil, launchpads and other
+abilities like Wind Walk
+• Fixed a bug where you could prevent Recoil from resetting by
+jumping around with high ping
+• The Totally Legit Businessman in Lowtide now has Teal {...} in
+his dialog.
+• Fixed one of Deranged Alchemist's dialogue options in Scars of
+Magic breaking
+• The compass in Siege of Highwatch now properly points to the
+Tlaxan Shaman
+• Filled a hollow rock with cheap plaster near Volcano
+• Fixed being able to spam the Forum cutscene
+ • Fixed wiped signs on the floating island near Highwatch
+• Professor Marl now listens to you talk instead of responding
+before doing so during Into Thin Air
+• The teleport back to Frostgate in Treasure for the Future no
+longer puts you into the ground
+• Fixed being able to die to fall damage in the Obelisk quest
+zone
+• Fixed getting put in the ground at the start of the Unmasked
+sewer fight
+• The text for when you fail the drinking puzzle in Overdoomed
+no longer appears twice
+• Silent Knight now displays a compass message in Ravenna before
+finding your first cat
+• You can no longer start the Elder Scrolls from T'Xoc in the
+Crystal Connection bunker
+• Fixed the emergency escape button in the Collapsing Tower
+basement puzzle
+• Added a period to the end of the Thorns Damage handbook
+advancement description to keep consistent with the rest of the
+Passives section• Adjusted Murky Maze's bounty waypoint to be at
+the entrance of the cave instead of inside of it
+• Fixed the ship to go to the plots shard in Sierhaven
+teleporting you a block into the ground upon returning
+• Filled a couple of item frames in An Unexpected Lesson to
+prevent them from taking players' items
+• Fixed a couple of scenarios where points weren't properly
+given in the Deadly Ronde trial in An Unexpected Lesson
+• Fixed signs right outside of Highwatch that were
+unintentionally blank
+• Adjusted Thug spawns in Vault of Glass, as some of them were
+failing their invasion and were suffocating in a wall instead
+• Fixed the puzzle instructions chest for the Scars of Magic
+chest not resetting, and not having the books
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-&b(10.50.0)&r
-For the update on August 22, 2024
-&bMajor New Features:&r
-• The Battlefield east of Nyr has been completely revamped!
-Along with the Ruined Mansion POI, the sorrounding overworld has
-recieved some additions and visual overhauls, such as the Winds
-of War Vault, Murky Maze POI, and more.
-• Migrated our server proxies from Bungeecord to Velocity. If
-this causes any issues, please report it in
-<#569283558741508107>!
-• Migrated our tablist plugin from BTLP to a combination of TAB
-and the Monumenta plugin. Once again, report any strange
-behavior to <#569283558741508107>!
-&bMinor New Features:&r
-• Players will now be sent to the shard's sort box when
-abandoning or being kicked from a dungeon instance
-• The invisible glowing slime in Depths/Zenith ability/upgrade
-reward chests has been replaced by a gold block which glows only
-for players who have unclaimed rewards. Additionally, it now
-persists until a new one is spawned, instead of lasting a set
-amount of time
-• You can now preview a Celestial Gem upgrade by swapping hands
-on a Zenith Charm while a Celestial Gem is in your inventory
-• Chests in strikes can now also be collected via left-clicks,
-which prevents accidentally breaking them
-• Spoiler for Hekawt: ||There is now a fake victory message
-after Hekawt dies for the first time for players who have not
-yet defeated the boss||
-• Antidote now uses a custom effect to clear poison, and also
-grants immunity to poison for a short while
-• Following the 5.1.0 Resource Pack update, twelve new Hope
-Skins have been added to Mastersmith Antonio's shop! Thank you
-very much to our Patrons for your continued support!
-• A new discovery has been added to the King's Valley.
-&bFeedback Fixes:&r
-• Custom respawn points in R3 POIs are now respected if they are
-within the same POI that you died in. Conquering a POI resets
-your respawn point if set within the POI to prevent respawning
-inside a POI when dying outside of one.
-• Cyan Tess now remembers in which direction you were looking
-when you set your respawn point
-• POIs will now only respawn 10 seconds after the last player
-leaves instead of immediately
-• Boats that a player is riding no longer get deleted when a POI
-respawns with the player in it
-• Item selling stations, fragging stations, and
-ticketing/tokenisation stations now work similar to
-Experiencinators/Crystallizers and will thus no longer sell or
-frag infused items or items not at base masterwork level
-• Added stairs to a front door in Suspicious Village
-• The buttons in the yellow puzzle of the Primeval Creations
-series have been replaced with remote click detection to tidy up
-the puzzle
-• Jar of Clucks no longer provides healing, and thus Heavenly
-Boon will no longer spread it in a large area
-• Clucking noises are now only audible to the cursed player and
-play slightly randomly (are you sure there's a chicken? must be
-your imagination)
-• If already Clucked, no additional pieces of gear will be
-Clucked
-• Divine Justice enhancement damage is now displayed as stacks
-in the ability display of the Unofficial Monumenta Mod
-• Fixed Divine Justice enhancement damage disappearing for a
-fraction of a second when it loses a stack
-• Purified Ash drops from Divine Justice enhancement are now
-easier to pick up
-• Improved  `/ping`  command accuracy
-&bMob/Boss Changes:&r
-• The Block Breaking boss/mob spell has received a significant
-rework:
-  • Improved sounds and particles when blocks are broken
-  • Mobs will try to avoid breaking blocks excessively when
-digging upwards towards a player
-  • Most mobs that break blocks now use one spell instead of
-multiple implementations with similar functionality
-  • The performance of the spell has been significantly
-increased which should reduce lag spikes when a mob breaks a
-large amount of blocks in one tick
-  • Block breakers are now more aggressive in breaking blocks
-that prevent pathfinding or slow them
-• Twisteds (and other mobs that place blocks) have received a
-significant rework to block placing logic:
-  • Added slight variation to block placing sounds
-  • Fixed a bug where the mob wouldn't place blocks in many
-valid locations
-  • The code now uses the updated block breaking spell instead
-of an outdated, hardcoded version
-  • Increased the leniency of the bridging algorithm's height
-difference calculations. The target player can jump normally and
-stand on slightly elevated ground without the mob attempting to
-place blocks
-  • The bridging algorithm no longer places blocks inside the
-mob which should reduce instances of it getting stuck
-  • Improved detection and handling for the mob getting stuck in
-placed blocks
-  • The performance of the spell has been significantly
-increased
-• Kaul and Primordial/Immortal Elemental now glow permanently
-• Sirius' impact can now be felt in your bones (and ears)
-&bBug Fixes:&r
-• Fixed Trivium dealing incorrect amounts of damage if multiple
-players triggered it in the same tick
-• Fixed several stuck spots in Galengarde
-• Fixed a build error in Port Manteau
-• Fixed a stuck spot in Ta'Ksaav
-• Added punctuation to several lines of dialogue in A Charming
-Proposition
-• Fixed a build error in Forsaken Manor
-• Fixed grammar in Barras dialogue
-• Fixed grammar in Long Drop Boots lore
-• Fixed some Into Thin Air compass locations being a block off
-• Fixed missing punctuation in Fountain of Miracles dialogue
-options
-• Fixed custom ambient Depths music not working if the dungeon
-ends up being particularly long
-• The SKT Lobby on Isles once again returns you to the SKT lobby
-instead of the Forum lobby
-• Manually abandoning exalted dungeons now puts you on Ring
-instead of Valley. Note that this does not include instances
-that expired before a weekly update.
-• Fixed unupdated launch pad in Skyhigh Bora
-• Fixed Lich's, Kaul's, and a few other bosses/summons' glowing
-colours being overridden by player abilities like Eagle Eye
-• Fixed Sirius and the crystal shield ghasts in Hekawt being
-able to receive glowing from player abilities
-• Fixed double stacked wheat in Ta'Ksaav
-• Fixed stacked grass in Orange & Ex Orange
-• Fixed completing SR parkour putting you one block into the
-ground
-• Fixed the Player Stats GUI not properly calculating reduced
-damage dealt due to region scaling and shattered items
-• Fixed plots counting as both isles and ring for items when
-using `/plot region ring`, preventing proper testing of isles
-equipment and also displaying wrong values in the Player Stats
-GUI (this used to be necessary for isles equipment to _mostly_
-work before `/plot region` was added). To restore the old
-behaviour, use the new `/plot region all`.
-• Fixed Chaotic generating errors in logs every time it dealt
-negative damage
-• Fixed an issue with the hint for Forsworn Sanctum's ||Three is
-Key secret||• Fixed some mobs, including most iron golems, not
-properly being counted as hostile immediately when spawned,
-causing issues such as delve modifiers not being applied
-• Fixed players in the death room when a Zenith boss is spawned
-not being played music
-• Fixed Hedera, Callicarpa, Davey, and Gyrhaeddant music being
-played too loud
-• Fixed the Quest Guide in Mistport referring to "An Unexpected
-Lession" rather than "An Unexpected Lesson"
-• The text "Master of One" is now properly capitalized when
-starting the quest
-• Fixed punctuation in The Elder's Scrolls compass
-• You should not longer be teleported into the ground at a
-certain point in Study in Crimson
-• Fixed punctionation in Runaway Pet
-• Fixed legacy Corridoors mode name in Memories of Battle
-rewards list
-• Fixed starting splash error for Flash in the Pan
-• Fixed punctuation in Crystal Connections
-• Fixed punctuation in Starrier Night
-• Fixed text color error in Winds of War
-• Fixed a number of tablist related bugs
-• Fixed `/vote` not working for players with no raffle entries
-• Fixed Zenith Charm generation spending budget on upgrading
-stats without actually upgrading the stat. Your charms may have
-updated due to this fix.
-• Fixed softlocks in All That Remains' thicket fight
-• Fixed slightly misplaced compass waypoints for The Elder's
-Scrolls
-• Fred in Breachpoint can no longer be seen by players who are
-currently playing through Fred's Bizzare Adventure• Replaced a
-missing floor block in Into Thin Air
-• Fixed Velara compass coordinates for a few quests
-• The passage opening message for where Nelfine is now only
-sends once
-• Fixed funky grass in Ruined Mansion
-• Fixed a thieving armor stand in the Battlefield by Nyr
-• Fixed a double space in Old Man Gunther's dialogue
-• Fixed the Farr sewer entrance waypoint in Roots of the Plague
-pointing to the old location, updated the dialogue to hint
-towards Lowland Temple rather than Hallowed Pond, and fixed
-various missing commas
-• Fixed handbook advancements for currency items all being
-granted at once in the tutorial instead of when the respective
-currency item is first received as intended
-• Mountain Mineshaft is now listed as tier 2 in the King's
-Bounty menu
-• The Patron Settings shulkers are now skill immune
-• Fixed Poison Immunity not removing poison that has been
-applied by Cave Spiders
-• Greatly restored integrity of bedrock foundations across the
-Valley and Isles
-• Fixed Predator Strike showing its "primed" duration in the
-Unofficial Monumenta Mod whenever the player's class is
-refreshed (e.g. on login or shard transfer)
-• Fixed chests in Ephemeral Corridors and SKT not being
-collected on left click
-• Fixed Accident Prone not being sorted into offhand Equipment
-Cases, and fixed zenith charms being sorted into normal charm
-cases even when there's a zenith charm case available
-• Fixed the miniboss of Mage's Tower sometimes spawning on the
-ledge outside instead of inside the tower
-• The Silent Knight advancement is no longer mistakenly hidden
-from the website
-• Unlocked trapdoors in an area for the quest Xenophobia
-&b(10.51.0)&r
-For the update on August 29, 2024
-&bMajor New Features:&r
-•
-&bExperimental Delve Modifier: Chance Cubes&r
-  • Description: ||Take a chance with a break of fate! Breaking
-a spawner rolls a random effect.||
-  • The first of its kind, this week, a limited-time event delve
-modifier has been added!
-  • One week of each month will feature a completely new
-experimental delve mod, for the next few months
-  • These mods are not necessarily balanced for regular
-gameplay, but instead a fun gimmick to play around
-  • Experimental delve modifiers may not come back for a while,
-so try the first one out for a limited time this week!
-&bMinor New Features:&r
-• Tales of your greatest achievements have gone north, maybe an
-old friend wants to hear of those...
-• `/help` now has the same command suggestions as the full
-`/chat help` command
-• Added `/help commands`, which currently covers information on
-the `/chat`, `/guild`, and `/plot` commands. More commands will
-be added in the future.
-• Hunting Companions now follow the player if they have no valid
-target
-• Charm upgrade previews no longer require a Celestial Gem in
-the player's inventory
-&bFeedback Fixes:&r
-• Attriba will now only grant hexes past Magenta.
-• Shadowcast Bastille's reset zone is now slightly larger
-• Chantry of Repentance's teleporter will no longer affect those
-behind the wall to the east
-• Added coordinates to each city advancement in the Handbook tab
-• You will now be notified if you have any pending guild invites
-if you haven't been logged in for a while
-• Lost In My Mind's end dialogue now appears over time instead
-of all at once.
-• Adjusted the combat warning line in Fabled Destiny
-• Added item frames to the Soulweaver trades
-• Upon talking to her, Gertude now grants the Silent Knight
-quest advancement to players who are supposed to have it, but do
-not
-&bBug Fixes:&r
-• Fixed resetting the Winds of War puzzle pasting over blocks
-from the old room.
-• Fixed All That Remains' thicket fight mobs not getting cleared
-on death
-• Fixed being able to die in All That Remains' den area
-• Fixed an incredibly small typo on the NPC Cavir.
-• Fixed an issue where Celestial wasn't being additively applied
-to the appropriate damage bucket.
-• Fixed an issue where the Old Hermit could be spleefed
-• Fixed several build errors in the Architect's Ring.
-• Fixed a stuck spot in Galengarde.
-• Fixed Rewrite History's max health debuff persisting after
-death
-• Fixed lightning bottle treating every splash potion as a
-lightning bottle
-• Fixed an incorrect biome in the Breathing Rock "cutscene".
-• Fixed several doors in Sierhaven being incorrectly placed.
-• Fixed Star Point NPCs appearing for players when they
-shouldn't
-• Fixed a typo in one of Cornifer's dialogue
-• Fixed getting stuck one block into the ground when being
-teleported to the bunker in The Crystal Connections
-• Dying in the Kaul arena no longer spawns you inside of leaves
-• Fixed Suspicious Village bounty coordinates and advancement
-discovery/coordinates
-• Fixed teleporting into the brown wool lobby putting you a
-block into the ground
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
+instance corruption.• Added emojis to chat while we were
+hotfixing the tablist issues 🔥 See `/help formatting emoji`
