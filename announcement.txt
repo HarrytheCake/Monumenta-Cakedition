@@ -1,79 +1,8 @@
-&bOpen Call for Quest Dev Applications:&r
-Hey everyone, I'd like to take some time to put out an open call
-for applications for anyone who is interested in applying to
-Team Monumenta as a Quest Developer. Over the years, our quest
-team has grown and thinned out fluxuatingly, and we'd like to
-expand a bit in order to alleviate work load.
-&nFor this application, you:&r
-Don't Need:
-• To come in with extensive and exhaustive lore knowledge
-• To have written your own story before
-• To have a deep knowledge of minecraft mechanisms
-Need:
-• Willingness to discuss ideas with the quest team and iterate
-until a product is worth making
-• Willingness to learn ScriptedQuests and small scale minecraft
-commands
-• General good standing with the community as any application
-would require
-I need to heavily stress the "willingness to learn" part of this
-• Monumenta is driven by people who are motivated to see
-something through to the end. This is
-&bnot&r a call for people who just want to write lore and
-nothing else, but for people who are willing to learn the
-systems that drive quest development (the ScriptedQuests
-structure, and minecraft commands) and implement their ideas. We
-can teach you what you need to know, but you must also have your
-own passion for it.
-If these conditions fit you, you may apply by directly DM'ing
-me, or any other lead, or @AristotleVery happy to announce that
-both @panderz14 and @nicknon have been promoted to Monumenta
-developer Leads!
-Nicknon is one of our most prolific back-end developers,
-supporting content releases anywhere and everywhere that he is
-called upon, as well as being a guiding voice in gameplay
-design. Panderz meanwhile has been a powerhouse of driving
-content development for some time now, overseeing several
-projects, such as the currently ongoing Sierhaven/R1 rebuilds.
-Excited to have them join the Leads team to drive the direction
-of Monumenta in the days to come!
-Further, @certified portal fan and @[PP] Mehaz have both joined
-Team Monumenta as developers!
-Flowey has been greatly assisting our server ops team,
-overseeing the steps towards Monumenta's next version upgrade!
-Mehaz meanwhile has been working hard on an upcoming piece of
-Raid content that will be coming to you all in the near future!
-Very happy to have them both on the team!
-Make sure to give all 4 of these guys the congradulatory ping 🏓
-&bHappy Depths-versary!&r
-To celebrate the third anniversary of Darkest Depths release
-(July 17, 2021), six player mode is making a return! Start a run
-with up to five other friends and compete for the special
-leaderboard spots for an extended run of two weeks. The event
-starts after the weekly update tonight, July 11, and runs until
-the weekly update of July 25. Good luck, have fun, and keep an
-eye out for some more changes soon!
-&bSpeed Bug&r
-Tonight we fixed an issue that would give some players permanent
-+10% speed, including in areas where speed effects were not
-supposed to take effect. The issue stemmed from the Patron
-Shrine speed effect not always getting cleared properly, and was
-not triggered intentionally. Fortunately, no other Patron Shrine
-effects were affected because they did not modify attributes
-directly. We aren't sure precisely how long this issue has been
-around for, but it is probably somewhere in the range of 1-2
-years. Obviously, this bug affects races and multiple world
-records are confirmed to have unintentionally had this issue,
-and are therefore likely impossible now. Since we were already
-considering doing "soft resets" to some race leaderboards (see h
-ttps://discord.com/channels/313066655494438922/33780419064889344
-1/1260453584710008905), we will wait until further decisions
-have been made and will update leaderboards at some future
-time.@xernial and @qwanton have just become our newest
-developers! Xernial has contributed various features such as the
-recent cleric cosmetic set, and Qwanton has made some races and
-worked on the seasonal pass, among other projects. Please
-welcome them both with plenty of pings! 🏓
+@xernial and @qwanton have just become our newest developers!
+Xernial has contributed various features such as the recent
+cleric cosmetic set, and Qwanton has made some races and worked
+on the seasonal pass, among other projects. Please welcome them
+both with plenty of pings! 🏓
 &bRules Update&r
 A new Market Rule has been added.
 `Currency loaning services are not permitted. Item loaning (or
@@ -159,4 +88,17 @@ time being, but all new charm auctions should be moved over to
 the bot.
 If you have found any bugs, please message @pe.li. Expect the
 bot to be down sometimes for the first week until it is fully
-stabilized.
+stabilized.Hey @everyone , just a reminder that 49 minutes from
+this message, our new raid
+&bHexfall&r will be releasing!
+Form up a team of 4 and be ready for some of the hardest
+challenges the game has to offer. We hope you all have as much
+fun playing as we did making it!
+Good luck everyone!We have a hotfix coming in for Hexfall in
+around an hour. At that time we will be breifly restarting the
+server so these changes can take effect.We have a second hotfix
+coming in 20 mins aimed at improving Ru'Ten significantly with
+some changes to Hycenea as well. Thank you very much for your
+patience today, we hope this will lead to an even better
+experienceCongratulations to the Server First Hexfall team!
+Great job @niamn @sadlucy @[HVN] Abtruse @tlua !!
