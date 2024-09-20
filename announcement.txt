@@ -1,12 +1,3 @@
-@xernial and @qwanton have just become our newest developers!
-Xernial has contributed various features such as the recent
-cleric cosmetic set, and Qwanton has made some races and worked
-on the seasonal pass, among other projects. Please welcome them
-both with plenty of pings! 🏓
-&bRules Update&r
-A new Market Rule has been added.
-`Currency loaning services are not permitted. Item loaning (or
-“rental”) services are allowed.`
 &bOpen Call for Building Developer Applications:&r
 Hey all, we're putting out this call for anyone that is
 interested in joining TM as a Builder. Building is one of the
@@ -101,4 +92,12 @@ coming in 20 mins aimed at improving Ru'Ten significantly with
 some changes to Hycenea as well. Thank you very much for your
 patience today, we hope this will lead to an even better
 experienceCongratulations to the Server First Hexfall team!
-Great job @niamn @sadlucy @[HVN] Abtruse @tlua !!
+Great job @niamn @sadlucy @[HVN] Abtruse @tlua !!The information
+on applying to build shard has been updated/clarified, see https
+://discord.com/channels/313066655494438922/1104197800452947978/1
+104451368770601051. In particular, it now mentions that people
+wanting to apply for non-building purposes should tell us what
+they want to use the non-building plugins for. In addition, it
+now specifies that the trust of applicants is taken into account
+when reviewing applications.Please welcome @castti back as a
+Moderator! Make sure to give them a congratulatory ping! 🏓
