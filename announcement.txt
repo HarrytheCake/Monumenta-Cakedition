@@ -1,56 +1,4 @@
-&bOpen Call for Building Developer Applications:&r
-Hey all, we're putting out this call for anyone that is
-interested in joining TM as a Builder. Building is one of the
-largest bottlenecks for releasing new content, and we're hoping
-to grow our rosters so that we can release high quality content
-more often.
-&nTo apply, we ask that you:&r
-• Can work collaboratively with other builders and parts of the
-team
-• Can create unique gameplay spaces and visual themes
-• Can take feedback & constructive criticism from your peers
-• Have basic familiarity with build tools such as FAWE (World
-Edit), FAVS (VoxelSniper), or Axiom
-A key factor to success as a builder is your ability to self
-motivate. We're looking for people not only with a knack for
-building but also those who can see their builds through to
-completion in a timely manner.
-If you feel you may not have sufficient skill with building, but
-have experience with gameplay/level design and a willingness to
-learn building, we would also like to consider your application.
-Having played through most Monumenta content is a great boon as
-to familiarize yourself with our level style.
-For those interested in applying, please fill out the Monumenta
-Developer Application form here:
-https://forms.gle/GpvFvpNVGKSNjFCP8.
-&bPlease provide a showcase/portfolio of your work for us to get
-an idea of your build skills, either linked in the application
-itself, or DM'd to Aristotle.&r Solo builds are preferred, but
-if any of it was done with other people, please make it clear
-what part of it was your work.Hello everyone! We’re thrilled to
-announce the next piece of Monumenta Raid content coming to the
-server:
-&bHexfall&r!
-The spiritual successor to Silver Knight’s Tomb, Hexfall
-features the finale of the story of Hycenea and Harrakfar, the
-Blue Wool. This raid will pit you against two fearsome new raid
-bosses posing threats not seen before in Monumenta.  Hexfall
-features some of the most mechanically complex fights to date
-that will test the limits of you and your party. You'll find
-unique, gameplay-altering patterns throughout each fight that
-will test your problem-solving capabilities and reflexes. This
-raid emphasizes mechanical difficulty, and will require
-progression more akin to a traditional MMO raid tier.
-We’re incredibly excited for you all to take on the challenges
-that lie in wait in Hexfall at the beginning of September!
-&bPUPPET, HOW YOU WANDER WEAKLY
-KNOWING NAUGHT OF WHOM YOU SERVE
-MEAGER CHILD, RAISING FEEBLY
-STEEL AGAINST OUR IRON NERVE
-FOR I AM LIFE, AND YOURS I’VE WATCHED.
-YOUR VILE DEEDS CORRUPT AND REND
-GREAT EMPERORS AND KINGS AND GODS
-YOU’VE FELLED, YET HERE YOU’LL MEET YOUR END&rHey @everyone !
+Hey @everyone !
 I'm happy to announce that Hexfall, our brand new 4-player raid
 content, will be releasing on
 &b<t:1725724800:F>&r!  Alongside Hexfall, with our next patch on
@@ -101,3 +49,52 @@ they want to use the non-building plugins for. In addition, it
 now specifies that the trust of applicants is taken into account
 when reviewing applications.Please welcome @castti back as a
 Moderator! Make sure to give them a congratulatory ping! 🏓
+&bDevelopment Update&r
+Hey all, wanted to give the playerbase an update on Monumenta
+development over the next few months by reflecting on our 2024
+roadmap shared at the start of the year.
+Things from the roadmap that we delivered on so far:
+• Market plugin
+• Zenith expansion
+• Several new quests tying up loose storylines
+• R1 improvements, including reworks to numerous POIs and
+Sierhaven
+• Hexfall, the raid successor to SKT
+Things we've made significant progress on:
+• Both overworld replayability features are still being worked
+on actively and are growing further to completion. We still
+expect both to be out this year
+• The next traditional mainline dungeon, based in Star Point has
+had major progress and is looking great
+• 1.20 update is progressing on the build server, but will need
+testing before we share anything about updating the play server
+What has been pushed out:
+• Work on the next R3 expansion has only begun quite recently.
+There are a few reasons for this. The team is low on active
+builders, there was significant burnout post Star Point release,
+and there was a desire to focus on repolishing some early game
+R1 content in order to put our best foot forward for new
+players. As a result, we are in the design and ideation phase
+for our next expansion, and it will certainly not be ready to
+ship this year. We know this is disappointing given we typically
+have a sizeable holiday release, but hope the transparency is
+appreciated and the team is looking forward to a productive
+2025.
+Finally, some new stuff coming soon that wasn't on the roadmap:
+• Some exciting new features are coming to Celestial Zenith
+later this month
+• A recent development planned for release in the not-too-
+distant future, the team has been working hard on a new Strike
+set deep below the Architect's Ring! This Strike, conceived as a
+spiritual successor to the Sealed Remorse, is the product of a
+team-wide development jam hosted in August.
+As always, thanks for your patience and support!
+&bAttention All Fellow Cleric Players&r
+It is with great regret I announce that I messed up the changes
+to Divine Justice that were pushed with the latest balance
+patch. There was a hotfix to temporarily address the issue but
+it should not remain in place for the rest of the month since it
+is an unintentional buff to high damage builds while hurting
+medium to low damage builds. Therefore, you can expect there to
+be another set of changes to Divine Justice and its charms with
+this next update that attempt to address these issues.

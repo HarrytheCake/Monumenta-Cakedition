@@ -1,186 +1,13 @@
-&bHotfix:&r
-• Readded shaman to class selection gui
-• Fixed instance bots being too verbose
-• Fixed RP background not displaying if you had no class
-selected in class selection gui
-&bHotfix:&r Disabled respawn spectator in Corridors&nCleric:&r
-• Divine Justice has received a rework:
-  • L1: 0% -> 15% Divine Justice Damage Multiplier
-  • L2: 20% -> 30% Divine Justice Damage Multiplier
-  • Divine Justice now uses the base (unscaled) damage of the
-attack that applied it
-  • The "Divine Justice Damage" charm stat has been renamed to
-"Divine Justice Percent Damage" and adds to Divine Justice's
-damage multiplier
-  • Divine Justice's damage is calculated by the following
-formula:
-`Divine Justice Damage = (5 + Weapon Base Damage &o Melee Crit
-Bonus if applicable &r (Divine Justice Damage Multiplier + Charm
-Damage)) &o Magic Damage &r Class Skill Buffs &o Consumable
-Buffs`
-• &rDeveloper Notes: To prevent Region 1 and 2 Cleric from
-underperforming, Divine Justice's damage multiplier has been
-increased. These changes attempt to address several issues with
-Divine Justice, including:&o
-  • &rA Cleric with a good build was still outperforming all
-other classes in single target damage in Region 3 due to Divine
-Justice and its charms. Charm stacking is still useful but less
-potent after this change&o
-  • &rSince Divine Justice applied the effects of
-Attack/Projectile Damage twice, it was a suboptimal choice to
-build for Magic Damage in melee-centric playstyles&o
-  • &rDivine Justice's damage formula was confusing/not
-intuitive&o
-  • &rSplit-type Attack/Magic Damage gear will perform better on
-Cleric with this change since Attack Damage contributes less to
-total melee damage and Magic Damage helps compensate for DJ's
-lower base damage&o
-• Hallowed Beam : Significantly improved particles and targeting
-• Sanctified Armor : Fixed the enhancement applying its effects
-on a Thorns kill
-&nWarlock:&r
-• Dark Pact :
-  • L1: +35% -> +50% Melee Damage
-  • L2: +55% -> +75% Melee Damage
-• Judgement Chain :
-  • L1: +10% -> +15% damage to chained mobs
-  • L2 +20% -> +30% damage to chained mobs
-### Item Changes:
-&nRegion 1:&r
-• Far-Out Chakram : 4.5 -> 5 Attack Damage
-• Lunatic's Respite : 11 -> 12 Attack Damage
-&b(10.56.0)&r
-For the update on October 3, 2024
-### Major New Features:
-• As bells resonate throughout the Ring, a derelict seventh rots
-upon its precipice, yearning to be rung once more.
-### Minor New Features:
-• Added 5 new cosmetic skills for Shaman to the existing
-cosmetic skill shops:
-  • Darkest Depths: Chroma Cascade (Earthen Tremor)
-  • Delves: Haunted Scarecrow (Flame Totem)
-  • Challenge Delves: Prestigious Totem (Whirlwind Totem) and
-Prestigious Devastation (Devastation)
-  • Sanguine Halls: Summoning Rite (Totemic Projection)
-  • &rDeveloper Note: Some of these skills will be seeing
-mechanical changes in the near future, which means the cosmetics
-will have to be changed. The concepts of the cosmetics will
-remain the same, but you should be aware when buying these that
-they will not all stay the exact same.&o
-### Loot Changes:
-• Tier 3 and Tier 4 Bounties in the Celsian Isles now drop 2
-Gleaming Seashells
-  • &rDeveloper Note: Tier 3 and Tier 4 bounties account for
-~25% of all Celsian Isles POIs. This change allows players to
-obtain Gleaming Seashells at a comparable rate as Royal Crystals
-from Double Bounty Weekends in the King's Valley and Godtree
-Carvings from Delved bounties in the Architect's Ring.&o
-### Class Changes:
-&nMage:&r
-• Astral Omen L2 : 7 -> 7.5 Magic Damage
-• Cosmic Moonblade L2 : Additionally, if a mob is killed by this
-skill, reduce all cooldowns by 7.5% (capped at 0.75s). This
-effect can only be triggered once per activation.
-• Many wands in Region 3 have received buffs to improve Mage's
-damage output after the Additive Rework. Please read the Item
-Changes section for more details.&nRegion 2:&r
-• Alric's Eyegouger : 4 -> 4.5 Armor
-• Betrayer of the Blackflame : 2 -> 3 Quake, 2 -> 3 Regicide
-• Frost Giant’s Staff : 17.5 -> 18.5 Attack Damage
-• Harmony's End : Regicide 2 -> 3 (Holiday's End, Sketched
-Harmony's End)
-• K'x'aehdd : 18 -> 19 Projectile Damage (Spectral Crossbow)
-• Mutiny : 2 -> 4 Regicide
-• Portable Defender : +30% -> +10% Attack Speed, +0% -> +10%
-Attack Damage
-&nRegion 3:&r
-• Amberlight Vial (M4) : 11.7 -> 11.2 Potion Damage, 2 -> 5
-Technique
-• Caduceus (M4) : +75% -> +80% Spell Power
-• C.A.L.D.E.R. Non-Dimensional Wand (M4) : +80% -> +88% Spell
-Power
-• Corrupted Scalawag's Hatchet EX (M4) : 21 -> 21.5 Attack
-Damage
-• ||Covenmourn Rend (M6)|| : 22 -> 20.5 Projectile Damage, 1 ->
-2 Quick Charge
-• Cresent of Dominion (M4) : 20 -> 11.5 Attack Damage, 0.9 ->
-1.6 Attack Speed
-• Eschar Dreamcatcher (M4) : 15.5 -> 17.5 Attack Damage
-• God Tamer (M4) : +75% -> +82% Spell Power
-• Greaves of Sunken Faith (M4) : 10% -> 15% Magic Damage
-• Hycenea's Will (M4) : 9 -> 10 Attack Damage
-• Hyperion (M4) : 1.5 -> 1.6 Attack Speed
-• Iridium Bulwark (M4) : 4 -> 3 Projectile Protection
-• Memoria Ancestrale (M4) : +75% -> +82% Spell Power
-• Molldyer's Greatstaff (M4) : +70% -> +75% Spell Power, 5 -> 6
-Inferno
-• Mycelian Cresent (M4) : 22 -> 20 Projectile Damage
-• Norvigut Skewer (M4) : 28 -> 30 Projectile Damage
-• Reaper's Harvest EX (M4) : 15 -> 15.5 Attack Damage
-• Resonant Scythe (M4) : 15 -> 15.5 Attack Damage
-• Snowblossom Caster : +65% -> +70% Spell Power
-• Spatial Rift (M4) (Rework) : Magic Protection 4, Melee
-Fragility 1, Knockback 2, Tempo 1, 1 Agility
-  • &rDeveloper Note : The previous iteration of this item was
-ineffective since its tank stats and on hit effects did not
-synergize with most builds and playstyles. This rework should
-make it effective against magic attacks.&o
-• Spiritspark Flint EX (M4) : 0.6 -> 0.7 Attack Speed
-• Steaming Stave (M4) : +75% -> +85% Spell Power
-• Thalassic Cinders (M4) : +70% -> +77% Spell Power• The Godcap
-(M4) : +70% -> +75% Spell Power
-• Threadreaper (M4) : 4 -> 2 Slayer, 0 -> 1 Ice Aspect, 21 ->
-14.5 Attack Damage, 0.8 -> 1.4 Attack Speed
-• Thundering Legacy (M4) : +80% -> +90% Spell Power
-• Veinshredder (M4) : 15.5 -> 16 Attack Damage
-• Vermin Waltz (M4) : 21.5 -> 22 Attack Damage
-• Wavelost Regalia (M4) : 18% -> 22% Magic Damage
-• Withering Hydrangea (M4) : +75% -> +82% Spell Power
-• Woolwoven Staff (M4) : +80% -> +85% Spell Power
-&nGallery of Fear:&r
-• Dawn's End : 1 -> 2 Stamina
-• Envoy of Dreams : 14 -> 16 Attack Damage
-• Midday Harbringer : 23 -> 26 Attack Damage
-• Shard of the Dreamer : +100% -> +111% Spell Power
-• Tome of Epiphany : +100% -> +111% Spell Power
-### Charm Changes:
-&nMage Charms:&r
-• Ironwood Vambrace : +35% -> +50% Elemental Spirits Size, +35%
--> +40% Ice Elemental Spirit Damage, -15% -> -10% Fire Elemental
-Spirit Damage
-• Apocalyptic Scroll : 0 -> +10% Astral Omen Damage
-• True Ice Pendant : 3 -> 2 Power
-• Manaleaf Razor : -20% -> -15% Arcane Strike Damage
-• Swift Lunar Charm : 4 -> 3 Power
-• Explosive Lunar Charm : +10% -> +15% Cosmic Moonblade Damage
-• Empowering Astral Charm : +5% -> +10% Astral Omen Damage
-Modifier
-• Cry Havoc : -20% -> -35% Thunder Step Damage
-• Urn of Perpetuity : -90% -> -95% Blizzard Damage
-• Focused Charm of Snowfall : +35% -> +30% Blizzard Damage
-&nWarrior Charms:&r
-• Vires Terrae : +15% -> +20% Challenge Damage
-• Pressure Gauntlet : 0 -> +20% Brute Force Wave Damage Ratio,
-+25% -> +20% Brute Force Radius
-• Trembling Root : -1.5 -> -20% Riposte Cooldown
-&nCleric Charms:&r
-• Gears of the King : 0 -> -33% Celestial Blessing Cooldown
-• Suzu of Stasis : +50% -> +100% Choir Bells Damage
-• Emerald Lens : 3 -> 2 Charm Power, 0 -> -15% Hallowed Beam
-Damage
-• Martial Mantra : -30% -> -50% Luminous Infusion Cooldown, 1 ->
-2 Charm Power
-• Poisoned Wisteria : -10% -> -50% Enchanted Prayer
-Healing&nRogue Charms:&r
+&nRogue Charms:&r
 • Masked's Black Knife : 2 -> 1 Charm Power, +8 -> +6 Cloak and
 Dagger Max Stacks
 • Nalatia's Sigil : 4 -> 3 Charm Power
 • Bloodborne Locket : 2 -> 3 Charm Power, 0 -> -15% By My Blade
 Damage, 0 -> -15% By My Blade Cooldown
-  • &rDeveloper Note : This charm failed to perform well in the
+  • &oDeveloper Note : This charm failed to perform well in the
 niche it provided and was inconsistent. The new stats are
 intended to improve the rate and consistency of healing from By
-My Blade's enhancement.&o
+My Blade's enhancement.&r
 &nAlchemist Charms:&r
 • Toxic Steroid : +10% -> +25% Taboo Damage Modifier
 • Resonating Belltongue : +30% -> +150% Alchemical Artillery
@@ -192,7 +19,7 @@ Aftershock Damage, 3 -> 4 Charm Power
 &nScout Charms:&r
 • Bloodhound's Crest : 5 -> 3 Charm Power, -50% -> -33%
 Quickdraw Cooldown, -10% -> -15% Quickdraw Damage
-  • &rDeveloper Note: Bloodhound's Crest was the most-run charm
+  • &oDeveloper Note: Bloodhound's Crest was the most-run charm
 across all players in Region 3 for several months since it
 allowed Rangers to apply consistent high DPS from a distance and
 eschew normal attacks with bows, tridents, and crossbows that
@@ -200,7 +27,7 @@ are balanced around their respective charge times. Previously,
 Bloodhound's Crest offered a 16% increase in Quickdraw DPS per
 charm power. This new version offers a 9.6% increase. The new
 stats are intended to make it a good option for fast cooldown
-playstyles but with appropriate downsides.&o
+playstyles but with appropriate downsides.&r
 • Loci Carving : -30% -> -40% Volley Damage
 &nWarlock Charms:&r
 • Impmaster's Fiddle : +18% -> 0% Hex Eater Damage, 0 -> 10%
@@ -234,9 +61,9 @@ Damage
 • Focused Tide Charm : +3% -> +50% Cleansing Totem Healing
 • Swift Tide Charm : +2% -> +33% Cleansing Totem Healing
 • Explosive Tide Charm : +1% -> +16% Cleansing Totem Healing
-• &rDeveloper Note: The following charms have been rebalanced to
+• &oDeveloper Note: The following charms have been rebalanced to
 apply their effects multiplicatively to make them consistent
-with other charms that modify healing skills.&o
+with other charms that modify healing skills.&r
 • Lesser Charm of Healing : +6% -> +20% Chain Healing Wave
 Healing
 • Greater Charm of Healing : +12% -> +40% Chain Healing Wave
@@ -291,4 +118,135 @@ update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
-instance corruption.&r
+instance corruption.
+&bHotfix&r (was done so last daily restart but I forgot to
+post):
+• Tier 3 and 4 Celsian Isles bounty chests have had their chance
+to drop an additional Gleaming Seashell adjusted to 33% and 66%,
+respectively. Additionally, the Seer will award new chests that
+use these updated chances while old chests have been reverted to
+only drop one Seashell.
+  • &oDeveloper Note: I severely underestimated the amount of
+tier 3 and tier 4 bounties that a player could expect to
+encounter when rolling for daily bounties. To prevent the market
+from being flooded with Seashells, this bug fix was pushed as a
+hotfix. I apologize for the inconvenience this has caused.
+&b&r(10.57.0)&r
+For the update on October 10, 2024
+### Major New Features:
+&bExperimental Delve Modifier: Haunted Paranoia&r
+Description: ||Your looming consequence only moves when you are
+not looking at it. Letting it get too close will send you into
+paranoia.||
+• Experimental delve modifiers are back for the second time
+during this week, starting on weekly reset
+• To celebrate the spooky season, Haunted has been guaranteed •
+with a new, special level 2 of the modifier
+• Watch your back, and don't be afraid of ghosts…
+### Minor New Features:
+• The Fallen Menagerie Dungeon lobby has been rebuilt! The lobby
+has been themed around the Dungeon itself to improve immersion
+and give the player a taste of what awaits them inside.
+• Hexfall rare charms are now able to be fragmented.
+• The Hexfall Fragment to Silver Dust trade is now at the
+Infusion Master in Galengarde
+• Added a trade for Amberlight Vial that does not include the
+base Region 3 alchemist bag to the Hexfall Artifact Trader
+• Added `/gg` as a shortcut for `/g gg` due to many typos
+attempting to type that
+• Added a message to thank the player after voting on all server
+listings
+• Suppressed the voting reminder when there are no eligible
+sites to vote on
+• Slightly improved the image quality of a map in a secret###
+Divine Justice:
+• Divine Justice has received additional changes to address
+issues added with the previous update:
+  • The Divine Justice Percent Damage charm stat has been made
+additive with Divine Justice's damage multiplier again
+  • The effects of Divine Justice can only be applied to the
+same mob once every 10 ticks, but higher damage Divine Justice
+hits will add additional damage
+    • &oDeveloper Note: Divine Justice is unique in that it is a
+melee/projectile skill that applies magic damage. This means it
+originally ignored invulnerability ticks mobs receive when
+taking damage. Due to the way different damage types are
+balanced, this led to situations where it was optimal to stack
+multiple Clerics for single target damage in multiplayer which
+runs contrary to all other class stacking strategies that suffer
+heavily from diminishing returns. Since Divine Justice now uses
+the same timing for invulnerability ticks as melee and
+projectiles, this specific change will have little to no effect
+on solo players' damage output.&r
+  • Lesser Smiting Charm : +10% -> +5% Divine Justice Percent
+Damage
+  • Greater Smiting Charm : +20% -> +10% Divine Justice Percent
+Damage
+  • Focused Smiting Charm : +35% -> +15% Divine Justice Percent
+Damage
+  • Sustaining Smiting Charm : +10% -> 0% Divine Justice Percent
+Damage, +25% -> +50% Divine Justice Ally Heal
+  • Silver Rosary : +15% -> +0% Divine Justice Percent Damage,
++15% -> +25% Divine Justice Self Heal, +15% -> +25% Divine
+Justice Ally Heal
+  • Bloodpact Pendant : +30% -> 20% Divine Justice Percent
+Damage, -30% -> -50% Divine Justice Self Heal
+• &oDeveloper Note: It is known that these changes along with
+last week's patch have greatly decreased Cleric's damage output.
+We were planning to ship more changes to address this but due to
+time constraints it wasn't possible to implement and test them
+thoroughly. There will be more changes to address this issue
+next balance patch.&r• Standard Infusions and Delve Infusions
+refund 100% of the cost for this week
+### Mob Changes:
+• Primordial Clayman: 4 -> 1 player max targets
+• Supercharged Spirit Projectile: 0.05 -> 0 Turn Radius, 0.44 ->
+0.7 speed
+### Major Bug Fixes:
+• Fixed Iota desync bug
+### Minor Bug Fixes:
+• Fixed evil apostrophes in ||Sealing Keystone|| lore
+• Fixed typos in a secret
+• Made some buttons super buttons in a secret
+• Fixed an empty spawner in Hallowed Pond
+• Fixed class/specialization descriptions/passives not
+displaying in the class GUI some cases
+• Fixed the class GUI claiming you can choose specializations
+when you already have one in another class
+• Resetting your specialization from the skill selection page no
+longer kicks you to the main class selection page
+• Fixed the formatting on the secret messages in External
+Corruption and made them display in chat again
+• Forced a block of diorite into calcite conformity in Celestial
+Rampart
+• Fixed evil magic to do with the item lore of ||Sealing
+Keystone|| and ||Judgement of the Outer World||
+• Updated Curse of the Veil to deal 1 damage per 3 seconds per
+level and not deal damage when outside of combat, dead, or in
+stasis
+• Fixed a stuck spot next to the Sierhaven Academy
+• Fixed Crescent of Dominion's attack damage getting reverse-
+masterworked
+• Fixed extra space in messages when gaining an ability in
+Depths/Zenith
+• Fixed upgrade/downgrade messages in Depths/Zenith not listing
+the previous rarity in the hover text
+• Fixed players accumulating treasure score while in Zenith
+after being abandoned.
+• The Hyperchromatic Archos Ring handbook advancement no longer
+incorrectly grants itself when the player has 1 Archos Ring
+• Handbook advancements in the "Money" section of the tab have
+had their icons changed to recognize their resource pack
+textures• Item frames next to the Hyperinflation trader can no
+longer be rotated
+• Fixed a barrier hole in the Azacor arena
+• You can no longer abandon Hexfall instances with loot caches
+in your inventory.
+• Fixed a rare exploit involving Arena
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
