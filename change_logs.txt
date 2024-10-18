@@ -1,248 +1,348 @@
-&nRogue Charms:&r
-• Masked's Black Knife : 2 -> 1 Charm Power, +8 -> +6 Cloak and
-Dagger Max Stacks
-• Nalatia's Sigil : 4 -> 3 Charm Power
-• Bloodborne Locket : 2 -> 3 Charm Power, 0 -> -15% By My Blade
-Damage, 0 -> -15% By My Blade Cooldown
-  • &oDeveloper Note : This charm failed to perform well in the
-niche it provided and was inconsistent. The new stats are
-intended to improve the rate and consistency of healing from By
-My Blade's enhancement.&r
-&nAlchemist Charms:&r
-• Toxic Steroid : +10% -> +25% Taboo Damage Modifier
-• Resonating Belltongue : +30% -> +150% Alchemical Artillery
-Aftershock Damage, 3 -> 4 Charm Power
-• Coven Amulet : +30% -> +20% Transmutation Ring Damage Cap, +3%
--> +2% Transmutation Ring Per Death Amplifier
-• Heretical Ore : -20% -> -30% Scorched Earth Cooldown
-• Razed Remnants : +60% -> +100% Panacea DoT Damage
-&nScout Charms:&r
-• Bloodhound's Crest : 5 -> 3 Charm Power, -50% -> -33%
-Quickdraw Cooldown, -10% -> -15% Quickdraw Damage
-  • &oDeveloper Note: Bloodhound's Crest was the most-run charm
-across all players in Region 3 for several months since it
-allowed Rangers to apply consistent high DPS from a distance and
-eschew normal attacks with bows, tridents, and crossbows that
-are balanced around their respective charge times. Previously,
-Bloodhound's Crest offered a 16% increase in Quickdraw DPS per
-charm power. This new version offers a 9.6% increase. The new
-stats are intended to make it a good option for fast cooldown
-playstyles but with appropriate downsides.&r
-• Loci Carving : -30% -> -40% Volley Damage
-&nWarlock Charms:&r
-• Impmaster's Fiddle : +18% -> 0% Hex Eater Damage, 0 -> 10%
-Restless Souls Damage
-• Soul Synchronizer : -30% -> -40% Judgement Chain Cooldown
-• Tome of Broken Vows : 5 -> 4 Charm Power
-• Rusted Bracers : 3 -> 2 Charm Power
-• Blessing of the Convert : 3 -> 2 Charm Power
-• Eroded Sconce : -20% -> -35% Voodoo Bonds Curse
-Duration&nShaman Charms:&r
-• Totem of the Tombstone : -40% -> -25% Totemic Projection
-Damage Duration, +100% -> +80% Totemic Projection Damage
-• Crumbling Effigy : 1 -> 2 Decayed Totem Targets, +30% -> +20%
-Decayed Totem Radius
-• Propulsion Engine : +45% -> +50% Earthen Tremor Damage
-• Frenzied Earth : 2 -> 1 Charm Power, +300% -> +200% Earthen
-Tremor Shockwave Distance
-• Aether Dart : 3 -> 2 Charm Power
-• Deep Resonant Fragment : 4 -> 3 Charm Power
-• Lesser Charm of Binding : +10% -> +12% Interconnected Havoc
-Damage
-• Greater Charm of Binding : +20% -> +25% Interconnected Havoc
-Damage
-• Focused Charm of Binding : +35% -> +40% Interconnected Havoc
-Damage
-• Porphyry Shackle : 3 -> 2 Power
-• Shadow Mask : +0% -> +80% Totemic Projection Spread, +10% ->
-+0% Interconnected Havoc Damage
-• Lesser Tide Charm : +1% -> +16% Cleansing Totem Healing
-• Greater Tide Charm : +2% -> +33% Cleansing Totem Healing
-• Focused Tide Charm : +3% -> +50% Cleansing Totem Healing
-• Swift Tide Charm : +2% -> +33% Cleansing Totem Healing
-• Explosive Tide Charm : +1% -> +16% Cleansing Totem Healing
-• &oDeveloper Note: The following charms have been rebalanced to
-apply their effects multiplicatively to make them consistent
-with other charms that modify healing skills.&r
-• Lesser Charm of Healing : +6% -> +20% Chain Healing Wave
-Healing
-• Greater Charm of Healing : +12% -> +40% Chain Healing Wave
-Healing
-• Focused Charm of Healing : +18% -> +60% Chain Healing Wave
-Healing
-• Swift Charm of Healing : +6% -> +20% Chain Healing Wave
-Healing
-• Explosive Charm of Healing : +10% -> +33% Chain Healing Wave
-Healing
-### Mob Changes:
-• Alchemical Aberrations have been given swimming lessons and
-can now move faster in water
-### Feedback Fixes:
-• Adjusted the location the player spawns in when using a bell
-to teleport into Smallpoint
-• Swapped wooden pressure plates for stone in Blue's Water
-Branch
-### Major Bug Fixes:
-• Fixed a complex exploit allowing users to hypothetically lock
-every valley shard's arena### Minor Bug Fixes:
-• Fixed an issue that made Region 3 POI Titles stay active for
-2.5 times longer than intended
-• Movement abilities and Light Blue Tesseract no longer work in
-the Teal cutscene area
-• Fixed Attriba infinitely spawning at her previous location
-• Updated Sierhaven's map at the intra-city teleport hub
-• Fixed glowing from Chaos Dagger appearing for players other
-than the user and not clearing when the multiplier is used
-• Fixed Depths/Zenith ability descriptions not including
-modifications from charms and some other dynamic details
-• Fixed a bug causing random particles to persist after firing a
-projectile with an effect such as Wind Bomb, Quickdraw, or
-Lightning Bottle
-• Fixed various cosmetic skills not following the player's Y
-value when below 0
-• Fixed Lightning Totem's thunderstorm clouds displaying twice
-as many particles as intended
-• Fixed an outdated compass waypoint in Sons of the Forest
-• Fixed issues in Flame Totem's level 1 description
-• Flame Totem will no longer play its sound effect twice when
-enhanced
-• Fixed a hole in the barrier floor of Smallpoint
-• Fixed duplicated dialogue with Rhygfar
-• Fixed some grammar in Hyperion upgrade text
-• Added punctuation to a dialogue option in An Alcoholic Accord
-• Fixed an issue with the end of Lost in my Mind
-• Fixed Flock and Key gate not opening
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-&bHotfix&r (was done so last daily restart but I forgot to
-post):
-• Tier 3 and 4 Celsian Isles bounty chests have had their chance
-to drop an additional Gleaming Seashell adjusted to 33% and 66%,
-respectively. Additionally, the Seer will award new chests that
-use these updated chances while old chests have been reverted to
-only drop one Seashell.
-  • &oDeveloper Note: I severely underestimated the amount of
-tier 3 and tier 4 bounties that a player could expect to
-encounter when rolling for daily bounties. To prevent the market
-from being flooded with Seashells, this bug fix was pushed as a
-hotfix. I apologize for the inconvenience this has caused.
-&b&r(10.57.0)&r
-For the update on October 10, 2024
+&b(10.58.0)&r
+For the update on October 17, 2024
 ### Major New Features:
-&bExperimental Delve Modifier: Haunted Paranoia&r
-Description: ||Your looming consequence only moves when you are
-not looking at it. Letting it get too close will send you into
-paranoia.||
-• Experimental delve modifiers are back for the second time
-during this week, starting on weekly reset
-• To celebrate the spooky season, Haunted has been guaranteed •
-with a new, special level 2 of the modifier
-• Watch your back, and don't be afraid of ghosts…
+&bCreeperween 2024: Oh The Creepery!&r
+Spooky season is here once again! Creeperween has returned to
+Monumenta, re-introducing the same tricks and treats that were
+present last year.
+• Discover Creeper's Delights across the world and feed them as
+a snack to Creepers for some rather... &oexplosive&r results. If
+you manage to survive, make sure to take the Bags of Tricks that
+they leave behind!
+• Have a conversation with Creeper Fanatic Boris at the
+Sierhaven Apartments to earn a seasonal advancement & trade for
+event rewards using Bags of Tricks. He may also have an
+additional task for you in the near future...
+• Note that once the event ends, you will no longer be able to
+feed Creeper's Delights to Creepers until next year. Although,
+you will still be able to eat them... with significantly more
+boring results!
+&bDepths & Zenith Update&r
+This update introduces celestial gifts, improves talisman
+quality of life, and levels out balance outliers especially in
+curses. Please enjoy and let us know what you think!
+&bCelestial Gifts&r &o(Zenith Only)&r
+A brand new system that serves to further make every run unique!
+After defeating a boss, rather than earning a twisted ability,
+that will be merely one option for players to upgrade their kit.
+Players will now select between three celestial gifts, with one
+possibility guaranteed to always be the twisted ability in the
+case that the others don't work well for them. In total, there
+are over twenty gifts to discover and explore!
+&bTalisman Changes:&r
+At the start of a run, you can now choose a secured tree for the
+run out of 3 random options. If you have an active talisman,
+your tree is guaranteed to be one of the three. One of the three
+options gives you a 15% treasure score boost for the run, capped
+at 10 treasure score. If you have an active talisman, it will
+never be your tree that is boosted.
+Rigged keys have been removed.
+&bPrismatic Changes:&r &o(Zenith Only)&r
+All damaging prismatics now scale slightly with each ascension
+level. Some damage abilities have had their numbers slightly
+tweaked to account for this.
+Encore: Cooldown reduced by 2s at all levels
+Multiplicity: Cooldown reduction increased by 10% at all levels
+Opportunity: Rerolls 1/2/3/4/5/7 -> 1/1/2/3/4/6
+Color Splash: Random tree chosen each cast -> each sequential
+cast cycles through available trees
+Disco Ball: -0.5 damage at all levels
+Refraction: +0.25 damage at all levels
+Chroma Blade: +1 damage at all levels
+&bCurse Changes:&r &o(Zenith Only)&r
+Curse of Death: Revive timer set to minimum -> 2 deaths worth of
+time is lost
+Curse of Envy: Is now found beyond F1
+Curse of Redundancy: Cooldown affected duration 8s -> 5s
+Curse of Lust: Min distance 5 -> 7
+Curse of Greed: 4% -> 5% max health
+Curse of Gluttony: 3 -> 2 highest rarity abilities
+Added Curse of Arachnophobia, Curse of Pride, Curse of Chaos
+&bAbility Changes:&r
+Snowstorm: Radius 6 -> 5, Damage reduced by 0.5 damage per tick
+at all levels
+Cryobox: Absorption health increased by 2 at all levels. Frozen
+duration 2s -> 3s.
+Escape Artist: Stealth Duration 3/3.5/4/4.5/5/6s ->
+3/4/5/6/7/10s
+Bulwark: Cooldown increased by 1 at all levels
+Dodging: Cooldown increased by 1 at all levels
+Sundrops: Damage Reduction 20% -> 25%
+Spark of Inspiration: Cooldown 50s -> 40s
+Fireball: Damage increased by 1 at all levels
+Scrapshot: Damage increased by 2 at all levels
+Firework Blast: Impact Radius 4 -> 5
+&bYou've Got Mail!&r
+• Players and guilds may now send and receive items through a
+new `/mail` command, as well as through a new tab in the guild
+GUI. You can access this from almost anywhere, and send almost
+anything, including containers with other items, or player-
+written books.• There are now guild permissions for managing
+guild mail and guild shops, which are granted to guild managers
+by default, and can be granted to guild members, but not guests
+of the guild. Guild permissions may now be revoked for guild
+members/managers if a guild deems it necessary.
+• With these changes, we are one step closer to moving guild
+plots and islands to separate worlds. This will allow an
+unlimited number of guilds to own a plot and an island, and make
+adding guild permissions for survival mode and accessing items
+feasible.
 ### Minor New Features:
-• The Fallen Menagerie Dungeon lobby has been rebuilt! The lobby
-has been themed around the Dungeon itself to improve immersion
-and give the player a taste of what awaits them inside.
-• Hexfall rare charms are now able to be fragmented.
-• The Hexfall Fragment to Silver Dust trade is now at the
-Infusion Master in Galengarde
-• Added a trade for Amberlight Vial that does not include the
-base Region 3 alchemist bag to the Hexfall Artifact Trader
-• Added `/gg` as a shortcut for `/g gg` due to many typos
-attempting to type that
-• Added a message to thank the player after voting on all server
-listings
-• Suppressed the voting reminder when there are no eligible
-sites to vote on
-• Slightly improved the image quality of a map in a secret###
-Divine Justice:
-• Divine Justice has received additional changes to address
-issues added with the previous update:
-  • The Divine Justice Percent Damage charm stat has been made
-additive with Divine Justice's damage multiplier again
-  • The effects of Divine Justice can only be applied to the
-same mob once every 10 ticks, but higher damage Divine Justice
-hits will add additional damage
-    • &oDeveloper Note: Divine Justice is unique in that it is a
-melee/projectile skill that applies magic damage. This means it
-originally ignored invulnerability ticks mobs receive when
-taking damage. Due to the way different damage types are
-balanced, this led to situations where it was optimal to stack
-multiple Clerics for single target damage in multiplayer which
-runs contrary to all other class stacking strategies that suffer
-heavily from diminishing returns. Since Divine Justice now uses
-the same timing for invulnerability ticks as melee and
-projectiles, this specific change will have little to no effect
-on solo players' damage output.&r
-  • Lesser Smiting Charm : +10% -> +5% Divine Justice Percent
-Damage
-  • Greater Smiting Charm : +20% -> +10% Divine Justice Percent
-Damage
-  • Focused Smiting Charm : +35% -> +15% Divine Justice Percent
-Damage
-  • Sustaining Smiting Charm : +10% -> 0% Divine Justice Percent
-Damage, +25% -> +50% Divine Justice Ally Heal
-  • Silver Rosary : +15% -> +0% Divine Justice Percent Damage,
-+15% -> +25% Divine Justice Self Heal, +15% -> +25% Divine
-Justice Ally Heal
-  • Bloodpact Pendant : +30% -> 20% Divine Justice Percent
-Damage, -30% -> -50% Divine Justice Self Heal
-• &oDeveloper Note: It is known that these changes along with
-last week's patch have greatly decreased Cleric's damage output.
-We were planning to ship more changes to address this but due to
-time constraints it wasn't possible to implement and test them
-thoroughly. There will be more changes to address this issue
-next balance patch.&r• Standard Infusions and Delve Infusions
-refund 100% of the cost for this week
+• Changed how particles are processed behind the scenes to
+improve shard performance. This should allow for more granular
+per-player particle settings in the future.
+    • Note: Please report if there are any bugs with how
+particles are displayed. Specify the ability/mob/cosmetic in the
+bug report if applicable.
+• Added 9 new Hexed skins for Epoch Hammer, Hungering Moonbeams,
+Hyperion, Resonant Scythe, Forgeflame Liquor, Serebrian Godbrew,
+Mountain's Dew, Dreadwood Log, and Prismatic Enigma
+  • Note that these skins will be no different visually until
+the next Resource Pack version, v5.3.0, releases on October
+20th.
+• Added locked trades for all Hexed skins to The Vedha as
+previews of their Resource Pack textures
+• The Patreon player head in Sierhaven now encourages Mac users
+to pledge using their browsers rather than the Apple store app •
+<https://news.patreon.com/articles/understanding-apple-
+requirements-for-patreon>
+• Increased the time to achieve the False God of Life
+advancement from 0.5 to 3 seconds
 ### Mob Changes:
-• Primordial Clayman: 4 -> 1 player max targets
-• Supercharged Spirit Projectile: 0.05 -> 0 Turn Radius, 0.44 ->
-0.7 speed
-### Major Bug Fixes:
-• Fixed Iota desync bug
+&nGeneral Changes:&r
+• Shulkers in repeatable content (not week locked dungeons) have
+had their chances to drop Soul Threads and Shulker Shell
+Fragments standardized
+• Reduced the particles and improved the readability of the
+Flame Nova, Frost Nova, Tracking Projectile, Seeking Projectile,
+and Arcane Projectile spells on numerous mobs• Improved sound
+and particle effects on the Magic Arrow spell on several mobs
+&nDelve Mobs:&r
+• Last Companion (Delve mob) : 0.3 -> 0.24 Movement Speed
+• Lancer of Terror (Delve mob) : Removed non-functional vanilla
+Fire Aspect on held weapon, 0 -> 80 ticks of on fire debuff on
+hit
+• Boltshooter of Terror (Delve mob) : Removed vanilla Flame on
+held weapon, 0 -> 100 ticks of on fire debuff on hit
+• Calamitous Rider (Delve mob) :
+  • 0.5 -> 0 KnockbackResistance
+  • 0.5 -> 1.5 seconds Slash Attack spell initial cast delay
+  • Removed CC Immunity
+• Colossus of Calamity (Delve elite) : Fixed an issue where the
+mob would not target a player until it was damaged
+• Colossus of Chaos (Delve elite) :
+  • Projectile on hit push force now respects Knockback
+Resistance
+  • 0.5 -> 1.0 Projectile push force
+  • Improved hit detection for the area of effect generated when
+the projectile hits a player or solid blocks
+  • Tweaked Projectile spell sound and particle effects
+  • Added a spell name to the mob's Projectile spell
+  • 0.37 -> 0.34 MovementSpeed
+• Leviathan of Chaos (Delve elite) :
+  • Projectile on hit push force now respects Knockback
+Resistance
+  • 0.5 -> 1.0 Projectile push force
+  • Improved hit detection for the area of effect generated when
+the projectile hits a player or solid blocks
+  • Tweaked Projectile spell sound and particle effects
+  • Added a spell name to the mob's Projectile spell
+&nRegion 1:&r
+• Grand Cnidarian (Sunken City elite) : Updated Mutated Host
+mount mob to the new immortal mount and passenger system
+• Noxious Beast (Forsaken Watchtower mob) : Removed elite name
+formatting since the mob is not an elite
+• Tamed Dolphin (Plagueroot Temple mob) : Removed elite status
+• Archmage (Arcane Rivalry elite) :
+  • Removed vanilla Knockback enchantment from held weapon, 0 ->
+2 AttackKnockback
+  • Removed vanilla Fire Aspect enchantment from held weapon, 0
+-> 80 ticks of on fire debuff on hit&nRegion 2:&r
+• Ancient Viridian Defender (Treasure for the Future miniboss) :
+2.5 -> 4 second Projectile spell cooldown
+• Saboteur and Masked Saboteur (Celsian Isles quest minibosses)
+:
+  • Removed vanilla Knockback enchantment from held weapon, 0 ->
+1 AttackKnockback
+  • Updated cosmetic armor to use resource pack textures
+• Otherworldly Cow (An Otherworldly Hunt quest mob) : Removed
+vanilla Blast Protection and vanilla Feather Falling from worn
+equipment
+• Winter Wraith (Harmonic Convergence quest elite) :
+  • Slowness 2 -> 20% Slowness on Aura Effect spell
+  • Slowness 4 -> 50% Slowness on hit on Frost Nova spell
+  • Removed vanilla Knockback enchantment from held weapon, 0 ->
+1 AttackKnockback
+  • Reduced the particles and improved the readability of the
+Aura Effect spell
+• Star Avenger (Stargazer's Hideaway mob) :
+  • Removed vanilla Knockback enchantment from held weapon, 0 ->
+2 AttackKnockback
+  • Removed vanilla Fire Aspect enchantment from held weapon, 0
+-> 80 ticks of on fire debuff on hit
+• Gazing Spellcaster (Chillwind, Palace of Mirrors elite) :
+  • Slowness 4 -> 50% Slowness on hit on Frost Nova spell
+  • Removed vanilla Knockback enchantment from held weapon, 0 ->
+2 AttackKnockback
+• Corrupted Archbishop (Church of Munk elite) :
+  • Removed vanilla Knockback enchantment from held weapon, 0 ->
+2 AttackKnockback
+  • Removed vanilla Fire Aspect enchantment from held weapon, 0
+-> 80 ticks of on fire debuff on hit
+  • Removed vanilla Projectile Protection from worn equipment
+  • Slowness 4 -> 50% Slowness on hit on Frost Nova spell
+  • Updated cosmetic armor and held items to use resource pack
+textures• Old Moon (Whitecliffe Citadel miniboss) :
+  • Removed vanilla Knockback enchantment from held weapon, 0 ->
+1 AttackKnockback
+  • Slowness 4 -> 50% Slowness on hit on Nova spell
+  • 8 -> 10 seconds Nova cooldown
+  • Further tweaks to Nova spell particles
+  • 1.25 -> 1 second Charge channel time
+  • 5 -> 4 seconds Charge initial cast delay
+  • 8 -> 10 seconds Charge cooldown
+  • Charge cannot target players within 12 blocks of Old Moon
+  • 20 -> 32 block Charge detection range
+  • Tweaked Charge spell particle and sound effects
+  • Added spell names to Charge and Nova spells
+  • Changed boss bar color to blue
+• Soul Keeper (Magmortic Atheneum miniboss) :
+  • Removed vanilla Speed 2 and Water Breathing effects that
+were nonfunctional
+  • Removed vanilla Armor Toughness attribute
+  • Changed boss bar color to yellow
+• Harmonic Sorcerer (Harmonic Arboretum elite) :
+  • Slowness 4 -> 50% Slowness on hit on Nova spell
+  • Added spell name to Nova spell
+  • Further tweaks to Nova spell particles
+• Overseer of Magic (Echoes of Oblivion elite) :
+  • Removed Tracking Projectile spell
+  • 1 -> 2 Magic Arrow spell charges
+• Eternal Sentry (Echoes of Oblivion miniboss) : 0.5 -> 0.4
+MovementSpeed
+• Eternal Sorcerer (Echoes of Oblivion miniboss) :
+  • Fixed an issue where the mob was marked as having Delve
+Modifiers instead of being immune to Delve scaling and abilities
+  • Changed boss bar color to purple
+• Corpse Possessor (City of Shifting Waters mob) : Removed elite
+status
+• Ferus (City of Shifting Waters elite) : Removed vanilla
+Feather Falling enchantment from worn equipment
+• Warped Minister (City of Shifting Waters miniboss) :
+  • 0 -> -65% speed debuff on land
+  • The mob no longer overrides the default chance to drop soul
+threads with no drops
+  • Changed boss bar color to blue
+• Eomen, Head Researcher (The Fallen Forum miniboss) : Changed
+boss bar color to green• Elder Dionaea (The Fallen Forum
+miniboss) :
+  • Removed vanilla Projectile Protection from worn equipment
+  • Changed boss bar color to green
+• Magistruct Overload (The Fallen Forum miniboss) :
+  • Removed Tracking Projectile spell
+  • 1 -> 3 Magic Arrow spell charges
+  • 4 -> 8 second Magic Arrow spell cooldown
+  • 1 -> 0.75 second Magic Arrow cast delay
+  • Changed boss bar color to red
+• Frozen Abyss (Rush of Dissonance elite) : Slowness 4 -> 50%
+Slowness on hit on Frost Nova spell
+&nRegion 3:&r
+• Mine Guardian (Silvic Quarry mob) : 1 -> 2 seconds Projectile
+spell initial cast delay
+• Silvic Geomancer (Silvic Quarry miniboss) : Changed Projectile
+spell warning sound to be more audible
+• Oil Sprite (Cradle of the Broken God mob) : 60 -> 50 Melee
+Damage on explode
+### Feedback Fixes:
+• The market GUI now remembers your selected filter and sort
+options
+• Added bows to the Bow Challenge in Beasts of Men
+• Added a Soulweaver to the Grand Hall in the Academy
+• Added a Soulweaver to the Mistport teleport hub
+• Changed the delve infusion symbol for Geodes
 ### Minor Bug Fixes:
-• Fixed evil apostrophes in ||Sealing Keystone|| lore
-• Fixed typos in a secret
-• Made some buttons super buttons in a secret
-• Fixed an empty spawner in Hallowed Pond
-• Fixed class/specialization descriptions/passives not
-displaying in the class GUI some cases
-• Fixed the class GUI claiming you can choose specializations
-when you already have one in another class
-• Resetting your specialization from the skill selection page no
-longer kicks you to the main class selection page
-• Fixed the formatting on the secret messages in External
-Corruption and made them display in chat again
-• Forced a block of diorite into calcite conformity in Celestial
-Rampart
-• Fixed evil magic to do with the item lore of ||Sealing
-Keystone|| and ||Judgement of the Outer World||
-• Updated Curse of the Veil to deal 1 damage per 3 seconds per
-level and not deal damage when outside of combat, dead, or in
-stasis
-• Fixed a stuck spot next to the Sierhaven Academy
-• Fixed Crescent of Dominion's attack damage getting reverse-
-masterworked
-• Fixed extra space in messages when gaining an ability in
-Depths/Zenith
-• Fixed upgrade/downgrade messages in Depths/Zenith not listing
-the previous rarity in the hover text
-• Fixed players accumulating treasure score while in Zenith
-after being abandoned.
-• The Hyperchromatic Archos Ring handbook advancement no longer
-incorrectly grants itself when the player has 1 Archos Ring
-• Handbook advancements in the "Money" section of the tab have
-had their icons changed to recognize their resource pack
-textures• Item frames next to the Hyperinflation trader can no
-longer be rotated
-• Fixed a barrier hole in the Azacor arena
-• You can no longer abandon Hexfall instances with loot caches
-in your inventory.
-• Fixed a rare exploit involving Arena
+• You should no longer be able to tunnel out of Hexfall
+• Fixed several stuck spots in the Orange lobby
+• Fixed an infinite amount of build errors in the infinite
+staircase
+• Fixed Cosmic Moonblade cooldown reduction on kill reducing
+2.5% more than intended
+• Fixed Cosmic Moonblade description display error
+• Fixed exposed bedrock in Depths, Zenith, and Oceangate cave
+• Updated Curse of the Veil advancement to mention that it only
+triggers in-combat
+• Fixed Swamp Goo, Water Lily Mixture, and Red Mushroom Tincture
+having hidden vanilla effects that prevented the potions from
+working properly
+• Fixed Inert Bottle, Bottle of Souls, Blood of the Forest, and
+Pig Potion of Porcine Perfection and Peculiarity having hidden
+vanilla effects and incorrect lore formatting
+• Fixed items hiding Location, Fish Quality, Masterwork or Charm
+Power information if they had no Region information.• Fixed
+Reforged Greaves MW4, Woolwoven Staff, and Iridium Bulwark
+missing from the item API
+• Fixed several build errors, stuck spots, and exposed bedrock
+• Fixed Arcanic Elixir, Darksight Potion, and Aqueous Potion
+having duplicate effects
+• Fixed Curse of Corruption not properly clearing when on plots
+if transferred while having it active
+• Fixed whether vanity is displayed in the player details GUI
+being determined by the target player's settings rather than the
+viewer's settings
+• Fixed zones that cause effect durations to not be reduced on
+death not affecting vanilla potion effects
+• Some gravity defying sand in Isles have been convinced gravity
+is cool and no longer defy it
+• Added Enchanted Bow, Enchanted Shield, Enchanted Blade, and
+Midnight Wraith to the Bestiary
+• Added asymmetry to some chests in Consecrated Grounds
+• Fixed Chain Healing Wave healing 0.4 health instead of 40% max
+health
+• Fixed extra space in Captain Indigo dialogue
+• Updated First Strike handbook advancement
+• Fixed double chests in lootrooms sharing part of the loot to
+Lootboxes
+• Fixed typo in "A Journey's End" book
+• Fixed Mantra of the Flame and Infernal Breastplate names not
+being underlined
+• Fixed formatting on Broken Ancient Relic, Flame-Spiced Wheat,
+and Moonbound Gloomstone
+• Fixed incorrect stats with Woolwoven Staff that prevented it
+from being Masterworkable
+• Fixed incorrect quest number on Carved Rifle
+• Fixed missing R1 amped poi advancements
+• It is no longer possible to jump above the ATR bossfight arena
+barriers to die
+• You no longer take fall damage when exiting a certain
+discovery area
+• Merrel no longer lies to you about the New Antium church
+having red walls
+• Fixed a typo in Brocket's dialogue• Sierhaven horses are now
+immortal
+• Fixed a typo in Calix's dialogue
+• Fixed a typo in Old Man Gunther's dialogue
+• Fixed Winds of War's compass waypoints leading to nowhere
+rather than ghosts (spooky!)
+• Fixed a typo in Torren's dialogue
+• Fixed being teleported into the ground of Rowantree during Of
+Mushrooms and Magic
+• Fixed a useless space in one of Tybale's dialogue
+• Fixed entering the funeral for Sporetal Combat putting you one
+block in the ground
+• Fixed a mistake in the Legendary Discoveries advancement
+description
+• Fixed Supply and Demand's compass to Melinda not being updated
+• Tweaked Orson's dialogue in Supply and Demand to better
+indicate Melinda
+• Fixed missing punctuation in the Xenophobia quest
+• Corrected the Xenophobia item reward's name in the quest
+completion message
+• Fixed several stuck spots in Galengarde
+• Changed Master time race achievements to all use the Challenge
+frame
+• Fixed Predator Strike sometimes bypassing damage cap
+• Fixed numerous items that were missing the
+MainhandOffhandDisable or OffhandMainhandDisable enchantments
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker

@@ -1,34 +1,5 @@
-Hey @everyone !
-I'm happy to announce that Hexfall, our brand new 4-player raid
-content, will be releasing on
-&b<t:1725724800:F>&r!  Alongside Hexfall, with our next patch on
-Thursday a new prelude quest "Bad Moon Rising" will be releasing
-covering the events leading up to the raid. This raid is easily
-the hardest and most mechanically challenging piece of content
-the server has yet seen and will be a monumental hurdle for even
-the most experienced teams, so be prepared! We're beyond excited
-to watch you all tackle this content and hope you'll enjoy
-playing it as much as we enjoyed making it.
-||🍃 Down with the Witch 🍃 ||
-https://youtu.be/GRwxXLzK3UI
-&bNew Zenith Charm Auction Bot:&r
-Hey everyone,
-A new bot @Monumenta Charms Bot, is here to manage Zenith charm
-auctions! Simply head to <#313066655494438922> and get the
-@Zenith Auctions role, then head to <#1249243796701577298> and
-run /help for a basic command list, and explanations on what
-each command does.
-The previous system of manually creating and typing in bids has
-caused moderation issues and has made it hard to find the charms
-you are looking for. The new bot aims to solve these issues by
-having standardized rules and search features.
-The currently active Auctions Thread will remain open for the
-time being, but all new charm auctions should be moved over to
-the bot.
-If you have found any bugs, please message @pe.li. Expect the
-bot to be down sometimes for the first week until it is fully
-stabilized.Hey @everyone , just a reminder that 49 minutes from
-this message, our new raid
+Hey @everyone , just a reminder that 49 minutes from this
+message, our new raid
 &bHexfall&r will be releasing!
 Form up a team of 4 and be ready for some of the hardest
 challenges the game has to offer. We hope you all have as much
@@ -97,4 +68,29 @@ it should not remain in place for the rest of the month since it
 is an unintentional buff to high damage builds while hurting
 medium to low damage builds. Therefore, you can expect there to
 be another set of changes to Divine Justice and its charms with
-this next update that attempt to address these issues.
+this next update that attempt to address these issues.Hey
+Monumenta! I'm happy to announce that
+&b@Honeypint will be stepping up as Moderator Lead&r! Please
+give him lots of 🏓 🏓 !
+Mod Leads have the final authority on any moderation issues,
+particularly in the small number of cases where players may wish
+to contest decisions made to moderators, or with private reports
+that players may prefer not to share with the entire mod team.
+In 99% of situations, moderation decisions will continue to be
+made collectively by the team. See the previous announcement
+here: https://discord.com/channels/313066655494438922/3134038254
+42521088/1213313800028295229
+At the same time, I'll be stepping back from the Mod Lead role
+due to being too busy irl. Please continue to give the team and
+and our new Mod Lead your support in making Monumenta a great
+gaming experience for everyone :)Hey all! It's a great day
+because ~~the weekly update is coming~~ we have some new
+developers on Team Monumenta! Congratulations to:
+@shotoh for their work on a brand new Zenith feature shipping
+&otonight&r
+@[Sorrow] Michael228p for major contributions to one of the
+aforementioned overworld replayability systems in the roadmap
+@Potion Seller Enthusiast™ and @[WOOL] MN for being awesome
+additions to our build team, especially helping out in giving
+the King's Valley the makeover it deserves!
+Congratulations! 🏓
