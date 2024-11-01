@@ -1,94 +1,305 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.Mail has been temporarily disabled.The
-Market Plugin has been temporarily disabled.Kaul has been
-temporarily closed.Re-opened Kaul
-&bHotfix:&r
-• You can now feed your favorite r3 overworld creepers with
-Creeper's DelightsFor the resource pack 5.3.0 update,
-Mastersmith Antonio has received 5 new Hope Skins to his shop
-(with a 6th coming following tonight's update)!
-&b(10.59.0)&r
-For the update on October 24, 2024
-### Minor New Features:
-• Creeper Farm has been fully rebuilt! Watch the leaves
-carefully…
-• The Postman in Highwatch now tells you about the mail GUI
-• `/mail send` now includes players on other shards
-• Disco Ball description now includes how many of the 8 trees
-your party currently has
-• When a Zenith ability or upgrade reward cannot be used because
-there are no remaining abilities or upgrades, it will now count
-as skip for Bottomless Bowl and Rainbow Geode
+In many cases, this was the most optimal damage setup. As a
+consequence, this made most fast attack speed weapons suboptimal
+because it was not possible to stack enough attack damage to
+outdo the gains slow weapons with attack speed gear received.
+Most item changes this balance update attempt to fix this issue,
+and the following is a summary of changes:
+• Flat attack speed has been removed and replaced with percent
+attack speed on most gear pieces
+• Percent attack speed or other stats have been reduced on most
+pieces of gear with percent attack speed
+• Many slow attack speed weapons have received buffs to their
+damage to compensate for the loss of flat attack speed and
+overall reduction in attack speed gear
+### Class Changes:
+Scorched Earth : The damage and effects of a Scorched Earth zone
+can only be applied to mobs within it once every two game ticks
+• &oDeveloper Note: Scorched Earth is a unique skill with high
+highs and low lows. For optimal output, it requires precise
+positioning and coordination with a group of players to get the
+full effects of the skill. In situations where mobs are
+guaranteed to stay in one area, the difficulty to achieve
+optimal damage is trivial and its potentially uncapped damage
+led to meta centrallizing strategies. This change aims to
+maintain its power level in solo play (as it is close to
+impossible to hit mobs with enough damage to hit the 2 tick cap
+consistently) while capping its damage potential in the best
+case circumstances.&rLuminous Infusion has received a rework:
+• L1: Performing a critical melee attack against an enemy grants
+1 stack of Luminosity capped at 6 stacks. Right click while not
+sneaking or holding usable items to prime one stack of
+Luminosity, or all stacks while looking down. All stacks unprime
+after 4s. With two or more primed stacks, the next attack or
+ability against an undead enemy is infused with explosive power
+that deals 2 magic damage per stack to it and other undead
+enemies, or half damage against non-undead, in a 0.33 blocks per
+stack radius around it and knocking other enemies away from it.
+Gain 1 stack of Luminosity every 0.5s if you haven't triggered
+an explosion in 9s and have no primed stacks.
+• L2: Luminosity stacks up to 12 times. With at least one primed
+stack, the next critical melee attack against an undead enemy
+triggers Divine Justice for 20% of your critical attack damage.
+Undead enemies hit by this ability are set on fire for 3s.
+• To accommodate this change, the default trigger for Hand of
+Light has been moved to right click while sneaking
+• &oDeveloper Note: Cleric has received a series of nerfs in
+recent months that have harmed Paladin's game loop while we
+tried to address balance issues with Hierophant. This rework
+attempts to do the following:&r
+  • &oImprove Paladin's damage consistency in melee and magic&r
+  • &oEmphasize the strengths of Paladin's playstyle while
+retaining the skill's usability in any situation&r
+  • &oMove away from Paladin's current tendency to cast every
+skill off cooldown and finish off with Luminous. This playstyle
+is too close to Reaper in execution and outcome and leads to
+issues with class identity.&r
+&oDue to time constraints, other skill changes intended to
+further improve Paladin were not able to be shipped with this
+update. This is a significant shift from Paladin's current
+design; nevertheless we hope Paladin players will enjoy this
+faster paced iteration of the skill and look forward to future
+improvements.&r• Lesser Divine Flare Charm : +10% Luminous
+Infusion Damage -> +0.2 Luminous Infusion Damage Per Stack
+• Greater Divine Flare Charm : +20% Luminous Infusion Damage ->
++0.4 Luminous Infusion Damage Per Stack
+• Focused Divine Flare Charm : +35% Luminous Infusion Damage ->
++0.7 Luminous Infusion Damage Per Stack
+• Explosive Divine Flare Charm : +10% Luminous Infusion Damage
+-> +0.2 Luminous Infusion Damage Per Stack, +50% Luminous
+Infusion Radius -> +0.165 Luminous Infusion Radius Per Stack
+• Swift Divine Flare Charm : +15% Luminous Infusion Damage ->
++0.3 Luminous Infusion Damage Per Stack
+• Mourning Star : +150% Luminous Infusion Damage -> +3 Luminous
+Infusion Damage Per Stack, +100% Luminous Infusion Radius ->
++0.33 Luminous Infusion Radius Per Stack, 0 -> +1 Luminous
+Infusion Hit Requirement
+• Martial Mantra : -100% Luminous Infusion Radius -> -1 Luminous
+Infusion Radius Per Stack
+  • &oDeveloper Note: Luminous Infusion's explosion radius
+cannot be less than 0.1 blocks.&r
+• Explosive Component (Rework) : 1 Charm Power, +50% Enchanted
+Prayer Attack Range, +50% Enchanted Prayer Range, -25% Enchanted
+Prayer Damage
+• Lunacrestum Pulsar (Rework) : 5 Charm Power, +1 Luminous
+Infusion Stacks On Hit, -0.5 Luminous Infusion Damage Per Stack
+### Enchantment Changes:
+• Guard : 2.5s | 5s -> 4s | 6s effect duration for offhand and
+mainhand shields, respectively
+• Inferno : The damage scaling has been reverted from level^0.95
+to level damage### Item Changes:
+&nRegion 1 Gear:&r
+• Cascade (Sketched Cascade) : 3.5 -> 4 Armor
+• Demoncaller Tunic : 4.5 -> 4 Agility
+• Edge of Death (Edge of Reality) : +28% -> +25% Attack Damage
+• Jungle's Vengeance : +0.1 -> +10% Attack Speed, +32% -> +28%
+Attack Damage
+• King's Greaves (Queen's Greaves) : 5 -> 4.5 Armor
+• Lodestar Boots : 4.5 -> 3.5 Armor
+• Plague Bearer's Soiled Trousers (Replica Plague Bearer's
+Soiled Trousers) : +25% -> +20% Attack Speed, 6 -> 5.5 Agility
+• Rod of the Onodrim (Replica Rod of the Onodrim) : 2 -> 3 Armor
+• Rogue's Knife : +10% -> +8% Attack Speed
+• Yurei : +25% -> +20% Attack Speed, +3 -> +2 Max Health
+&nRegion 1 Weapons:&r
+• Battle Axe : 10 -> 11 Attack Damage
+• Crushing Mace : 10.5 -> 11 Attack Damage
+• Falling Comet : 9.5 -> 10.5 Attack Damage
+• Jagged Cleaver : 10 -> 11 Attack Damage
+• Meteor Hammer : 10 -> 10.5 Attack Damage
+• Soulhammer : 10 -> 10.5 Attack Damage
+• Tempered Mace : 9 -> 10 Attack Damage
+• Acrid Wrath : 11 -> 11.5 Attack Damage
+• Arachnobane : 7 -> 7.5 Attack Damage
+• Archmage's Femur : +30% -> +35% Spell Power, 0 -> 1 Knockback
+• C'Axtal's Crusher : 11.5 -> 12 Attack Damage
+• Corrupted Scalawag's Hatchet (Dreadful Crusher) (Divine
+Scalawag's Hatcher) : 13.5 -> 14 Attack Damage
+• Harvestman's Scythe (Divine Harvestman's Scythe) (Dreadful
+Harvester) : 10 -> 10.5 Attack Damage
+• Lightbringer (Sketched Lightbringer) (Pole Star) : 6 -> 7
+Attack Damage
+• Lunatic's Respite : 12 -> 12.5 Attack Damage
+• Scalawag's Hatchet : 9.5 -> 10 Attack Damage
+• Silver Knight's Hammer : 9.5 -> 10 Attack Damage
+• Soulcrusher : 12 -> 13 Attack Damage
+• Spiritspark Flint (Bonecarver) : 9 -> 10 Attack Damage
+• Telum Immoriel (Ari's Ionic Buster) : 12 -> 13 Attack Damage
+• Thawed Frozen Mallet : 11.5 -> 12 Attack Damage
+• The Ravager : 10 -> 10.5 Attack Damage
+• Threadwarped Tkaa (Sketched Threadwarped Tkaa) : 10 -> 11
+Attack Damage• Tome of Arcane Horrors : 13 -> 14.5 Attack Damage
+• Tome of Madness : 11.5 -> 12 Attack Damage
+• Velara Crusher : 15 -> 17 Attack Damage
+• Verdant Crusher : 8 -> 8.5 Attack Damage
+&nRegion 2 Gear:&r
+• Akam's Ferocity : +0.1 -> +8% Attack Speed
+• Ammi's Embrace : +0.1 -> +10% Attack Speed, 6.5 -> 5.5 Armor
+• Bastion of Isharist : +0.1 -> +10% Attack Speed
+• Bloom : -0.3 -> -16% Attack Speed
+• Capricious Chains (leggings) : +25% -> +15% Attack Speed
+• Chains from Below the Waves (Spectral Loincloth) : +20% ->
++12% Attack Damage
+• Curse of Alutana : +0.1 -> +10% Attack Speed
+• Crown of the Rift : +18% -> +10% Attack Speed
+• Crown of Unseen Knowledge : +48% -> +50% Attack Damage
+• Frigid Firangi : +20% -> +15% Attack Speed
+• Heart of the Hero (Frost Giant's Courage) : +0.1 -> +10%
+Attack Speed
+• Horseman's Head (Dread Admiral's Hat) : +18% -> +15% Attack
+Damage, +18% -> +15% Attack Speed, 4.5 -> 4 Agility
+• Laborious Chains : +0.1 -> +5% Attack Speed
+• Leggings of Insanity : 9 -> 8.5 Armor
+• Mage Hunter's Mask : 1 -> 0 Melee Protection, 0 -> 1 Magic
+Protection, +25% -> +20% Attack Damage
+• Magistruct Breaker : +0.1 -> 0 Attack Speed, +10% -> +15%
+Attack Speed
+• Magma Galoshes : +15% -> +10% Attack Speed
+• Rhinoceros Set : +12% Attack Damage -> +10% Attack Damage
+• Royal Shield : +0.1 -> +10% Attack Speed
+• Sailwoven Sandals : 7.5 -> 6.5 Agility
+• Salazar's Greed (Will of the Empire) : +50% -> +45% Attack
+Damage
+• Seal of Revival : +0.15 -> +15% Attack Speed
+• Shattered Sovereign : +0.1 -> +10% Attack Speed, +15% -> +10%
+Attack Damage
+• Steel Maelstrom (Flurried Echoes) : +32% -> +30% Attack
+Damage, +20% -> +15% Attack Speed
+• The Eternal Mist : +15% -> +5% Attack Damage
+• The Olive Branch (Dreadful Shield) : +0.1 -> +10% Attack
+Speed, 4.5 -> 4 Agility
+• Tiffy's Shield : +15% -> +10% Attack Speed
+• Tube of Toothpaste : +30% -> +25% Attack Speed, +28% -> +20%
+Attack Damage
+• Varcosa's Doublet : 4.5 -> 4 Agility• Wadah's Solitude : 5.5
+-> 5 Agility
+• Warding Lily : +0.1 -> +10% Attack Speed, +15% -> +10% Attack
+Damage
+• Yoga Pants : +15% -> +10% Attack Speed
+&nRegion 2 Weapons:&r
+• Ironcast Tomahawk : 12 -> 12.5 Attack Damage
+• Iron Battleaxe : 12 -> 12.5 Attack Damage
+• Steelscale Maul : 0 -> 2 Unbreaking
+• Skullcrusher : 14 -> 14.5 Attack Damage
+• Reaper's Razor : 15 -> 16 Attack Damage
+• Archeologist's Hammer : 18 -> 18.5 Attack Damage
+• Entcrusher (Shaman's Crusher) : 25 -> 26 Attack Damage
+• Erebus (Spectral Halberd) : 14.5 -> 15 Attack Damage
+• Frost Giant's Greatstaff : +50% -> +55% Spell Power
+• Frost Giant's Greatsword : 22 -> 23 Attack Damage
+• Frost Giant's Crusher (Replica C'theddros) : 21.5 -> 23 Attack
+Damage
+• Frost Giant's Crescent (Spectral Scythe) : 20 -> 21 Attack
+Damage
+• Hurricane Halberd : 19 -> 20 Attack Damage
+• Oar : 16 -> 17.5 Attack Damage
+&nRegion 3 Gear:&r
+• Aether Treads (M4) : 8.5 -> 8 Agility
+• Argentum Arbitrium (M4) : 6.5 -> 7 Agility
+• Belt of the Tyrant (M4) : +10% -> 0 Attack Speed, 6.5 -> 8
+Armor
+• Blackblade Mask (M4) : +8% -> 0% Attack Damage, +18% -> +15%
+Attack Speed
+• Bryophyte Roots (M4) : +18% -> +15% Attack Speed
+• EX Cascade (M4) : 6 -> 6.5 Armor
+• Crimson Tithe (M4) : +0.1 -> 0 Attack Speed, 0 -> +10% Attack
+Speed
+• Dignified Greaves (M4) : 1 -> 0 Projectile Protection, 9.5 ->
+9 Armor
+• Dragonscale Helm (M4) : +20% -> +15% Attack Speed, 3 -> 2 Fire
+Protection
+• Duskroot Legguards (M4) : +25% -> +20% Attack Speed
+• Fidelis Stella (M4) : +0.15 -> 0 Attack Speed, 0 -> +15%
+Attack Speed
+• Flight from the Capital (M4) : 1 -> 0 Melee Protection, 9 ->
+8.5 Armor
+• Footprints Beneath Void (M4) : 8 -> 6.5 Armor
+• Journey's End (M4) : +0.2 -> 0 Attack Speed, 0 -> +18% Attack
+Speed, 10.5 -> 10 Armor
+• EX Kingslayer (M4) : 6.5 -> 6 Agility• Nature's Failure (M4) :
++0.15 -> 0 Attack Speed, 0 -> +15% Attack Speed
+• Overgrown Bodkin (M4) : +25% -> +15% Attack Speed, 1 -> 2
+Magic Protection
+• Remnants of Isharist (M4) : +0.15 -> 0 Attack Speed, 0 -> +15%
+Attack Speed, 35% -> 30% Attack Damage
+• Shackled Earth's Boon (M4) : 6 -> 6.5 Agility, +10% -> 0%
+Attack Speed, 6 -> 2 Thorns Damage
+• EX Shimmering Veil (M4) : +12% -> 0% Speed, +20% -> +15%
+Attack Speed
+• Silver Moon Crown (M4) : +15% -> +20% Attack Damage
+• Stargazer's Shadow (M4) : +15% -> 0% Attack Speed, 8 -> 8.5
+Agility
+• EX Warden's Ruin (M4) : +0.1 -> 0 Attack Speed, 8 -> 8.5
+Agility
+&nRegion 3 Weapons:&r
+• EX Corrupted Scalawag's Hatchet (M4) : 21.5 -> 22.5 Attack
+Damage, 1 -> 2 Regicide
+• Crescent of Dominion (M4) : 11.5 -> 15 Attack Damage
+• Dreadwood Log (M4) : 21 -> 22 Attack Damage
+• Molldyer's Greatstaff (M4) : 20.5 -> 22 Attack Damage
+• Regulated Cogblade (M4) : 1.5 -> 2 Armor, 21.5 -> 22 Attack
+Damage
+• Tactician's Axe (M4) : 23 -> 25 Attack Damage
+• EX Telum Immoriel (M4) : 28.5 -> 32.5 Attack Damage
+• The Knucklebones (M4) : 23 -> 25 Attack Damage
+• Threadreaper (M4) : 15.5 -> 16.5 Attack Damage
+• The Vedha's Soulcrusher (M4) : 21 -> 22.5 Attack Damage
 ### Feedback Fixes:
-• Basked Rat Jesus in Glorious Light
-• Lit up a room in Plagueroot Temple
-• Scattered several Ender Chests at notable locations across the
-Cradle of the Broken God
-• Added one normal chest to Coven Fortress
-• Adjusted the signs in Part 2 of Halls of Wind and Blood to
-state that what you're about to activate is a boon
-• Improved lighting in the P.O.R.T.A.L. Strike garden room
-• A lamp in Kreepa Kastle is now made of Glowstone for
-consistency
-• Spruced up the Mistport Weapons Locker shop and gave the
-merchants a little more space
-• Most items displayed around shops in Galengarde have been
-replaced with RP textured items
-• Reduced purchase cost of Celestial Gems and tree-specific
-Zenith Charm transmogrifier candles
-### Major Bug Fixes:
-• Fixed Rebirth being able to convert any passive ability into a
-Curse or Celestial Gift, as well as giving some specific
-abilities in situations that should be impossible
-• Ru'Ten no longer consumes Creeper's Delights when they are
-given to them. Even though it doesn't fall for the Trick
-anymore, players may still feel relatively accomplished for
-attempting it this Creeperween…
-• Zenith abandon feature now still tracks if you get
-disconnected due to connection issues
-• Poet's Quill will no longer be offered if the player has no
-trees or all of the trees (which caused an error making it
-impossible to claim further rewards)### Minor Bug Fixes:
-• Fixed Celestial Gifts contributing to Diversity
-• Fixed Generosity message including a rarity when used with an
-ability that does not have rarities (i.e. Celestial Gifts)
-• Updated message when gaining a Celestial Gift
-• Fixed Depths/Zenith talisman descriptions in the Knick Knack
-Sack not being updated
-• Fixed Calamitous Rider attacking its mount
-• Fixed a strange hole in the ground in Silver Knight's Tomb
-• Fixed Curse of Ruin incorrectly downgrading Twisted abilities
-• Fixed missing word in Curse of Pessimism description
-• You can no longer rotate the potions displayed near the
-Galengarde Food Store
-• Removed a set of conspicuous blocks floating above Wispervale
-• Fixed being able to see your guild's mail without the mail
-guild permission
-• Fixed numerous stuck spots around trees in Galengarde
-• Fixed several build errors in the Architect's Ring
-• Fixed the Zenith charms GUI saying that more charm power can
-be unlocked by progressing in the Architect's Ring instead of by
-purchasing it in the lobby
-• A handful dungeon lobbies and starting rooms have had their
-biomes updated so that the RP will correctly apply NPC textures
-appropriate to the dungeon
-• Fixed exposed Bedrock in All That Remains
-• Fixed stacked Warped Nylium in All That Remains
-• Fixed Celsian Isles Tier 3 bounty chests sometimes overfilling
-loot
-• Fixed particles for certain things being processed oddly
-• Creeper Fanatic Boris no longer sends double dialogue
-• Fixed a specific legacy progress on Of Monks and Magic soft
-locking players
-• Fixed a stuck spot in ||upside-down Nadir||
-• A levitation pad in Doomed Encampment is now encased in blocks
-• Rotated a chest in Exalted Malevolent Reverie to face the
-player
+• Using a repair station lets you pick up repaired items without
+getting off the pressure plate again
+• You can no longer feed Creeper's Delights to the Paradox
+creepers in Silver Knight's Tomb
+• Exalted C'Axtal now glows dark red.
+• Vargos' dialogue post-Mage's Legacy has been minorly adjusted
+to make more sense with established timeline of events
+• Changed quest requirement wording for A Study In Crimson Part
+One and Two to be in line with other quests
+• Now only guild members with mail access receive guild mail
+notifications
+• The mailbox GUI title now updates as you switch between your
+inbox/outbox/combined mailbox
+• Dragon heads are now treated as head items equipment-wise
+• Assigned each of SKT's Marching Fates a unique color### Minor
+Bug Fixes:
+• Fixed numerous stuck spots on the Bad Moon Rising version of
+Galengarde's Chenmai treetop
+• Fixed several build errors and a bedrock structure issue in
+Creeper Farm
+• An incorrect word in the Shifting Realities poem has been
+correct
+• Fixed Totem of Transposing not getting its channel set on new
+items. Ask a moderator for a replacement pair after weekly
+update.
+• Wrangler Sedol can speak to you in the Creeper Farm once
+again.
+• Fixed certain loot chests failing to send through the mail
+• Fixed exposed bedrock in Hexfall
+• Mechanical Armory and Vanity Manager no longer respect
+durability damage on items when cloning items for display
+• Fixed Pillar of Light having a capital O
+• Fixed triggering Shield Wall while it is already stationary
+counting as a successful trigger for the purposes of fall-
+through despite nothing happening
+• Fixed A Study In Crimson Part One and Two's starting waypoint
+being incorrect
+• Fixed missing punctuation in dialogues of A Study In Crimson
+Part One and Two
+• Fixed incorrect compass locations in A Study In Crimson Part
+One and Two
+• Fixed All that Remains Bloodflame Fungus and Hardened Vial not
+being accepted by Sophie
+• Fixed extra punctuation in The Gem of Ishnir's rewards text
+&b1.20.4 • Content Freeze&r
+We are starting the process of updating Minecraft to 1.20.4. We
+begin by upgrading the internal development server to 1.20.4 and
+doing more intensive testing. Once we are confident that most
+critical bugs are fixed, the play server will also be upgraded.
+During this time, our ability to release new content will be
+diminished. We won't be running weekly updates until the end of
+the freeze. Critical bug fixes will still be shipped. Changes
+will still occur during this time, but they will target 1.20.4
+and ship after we upgrade the play server.
+TL;DR: No new changes will happen for the next few weeks, then
+play will be upgraded to 1.20.4 with a big changelog.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -96,4 +307,3 @@ and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
-• Mail and the Player Market GUI remain disabled.

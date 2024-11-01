@@ -1,8 +1,4 @@
-We have a second hotfix coming in 20 mins aimed at improving
-Ru'Ten significantly with some changes to Hycenea as well. Thank
-you very much for your patience today, we hope this will lead to
-an even better experienceCongratulations to the Server First
-Hexfall team!
+Congratulations to the Server First Hexfall team!
 Great job @niamn @sadlucy @[HVN] Abtruse @tlua !!The information
 on applying to build shard has been updated/clarified, see https
 ://discord.com/channels/313066655494438922/1104197800452947978/1
@@ -100,4 +96,17 @@ not wish to foster a culture where it is acceptable to use
 discriminatory language.
 We'd also like to clarify that having your message blocked by
 the chat filter is not considered grounds for an unmute if one
-is issued.
+is issued.Hey everyone!
+I've been waiting a long time to follow through with this, but
+have decided to step officially step down from being a Monumenta
+Lead and likely development as whole. I was one of the original
+founders of this project and seeing it grow the way it has since
+2016 has been one of the most fulfilling things I've ever done.
+The way this project and community have grown has exceeded my
+wildest expectations. Thank you everyone for being a part of
+this whether you're a developer, mod, or player. Everything here
+has meant so much to me and I'm excited to see how things
+continue on into the future.
+I'll be around to be a gremlin as usual every little bit, but
+it'll be more as a player more than anything. If you guys see me
+around be sure to say hi!
