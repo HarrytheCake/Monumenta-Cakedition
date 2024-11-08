@@ -1,222 +1,5 @@
-In many cases, this was the most optimal damage setup. As a
-consequence, this made most fast attack speed weapons suboptimal
-because it was not possible to stack enough attack damage to
-outdo the gains slow weapons with attack speed gear received.
-Most item changes this balance update attempt to fix this issue,
-and the following is a summary of changes:
-• Flat attack speed has been removed and replaced with percent
-attack speed on most gear pieces
-• Percent attack speed or other stats have been reduced on most
-pieces of gear with percent attack speed
-• Many slow attack speed weapons have received buffs to their
-damage to compensate for the loss of flat attack speed and
-overall reduction in attack speed gear
-### Class Changes:
-Scorched Earth : The damage and effects of a Scorched Earth zone
-can only be applied to mobs within it once every two game ticks
-• &oDeveloper Note: Scorched Earth is a unique skill with high
-highs and low lows. For optimal output, it requires precise
-positioning and coordination with a group of players to get the
-full effects of the skill. In situations where mobs are
-guaranteed to stay in one area, the difficulty to achieve
-optimal damage is trivial and its potentially uncapped damage
-led to meta centrallizing strategies. This change aims to
-maintain its power level in solo play (as it is close to
-impossible to hit mobs with enough damage to hit the 2 tick cap
-consistently) while capping its damage potential in the best
-case circumstances.&rLuminous Infusion has received a rework:
-• L1: Performing a critical melee attack against an enemy grants
-1 stack of Luminosity capped at 6 stacks. Right click while not
-sneaking or holding usable items to prime one stack of
-Luminosity, or all stacks while looking down. All stacks unprime
-after 4s. With two or more primed stacks, the next attack or
-ability against an undead enemy is infused with explosive power
-that deals 2 magic damage per stack to it and other undead
-enemies, or half damage against non-undead, in a 0.33 blocks per
-stack radius around it and knocking other enemies away from it.
-Gain 1 stack of Luminosity every 0.5s if you haven't triggered
-an explosion in 9s and have no primed stacks.
-• L2: Luminosity stacks up to 12 times. With at least one primed
-stack, the next critical melee attack against an undead enemy
-triggers Divine Justice for 20% of your critical attack damage.
-Undead enemies hit by this ability are set on fire for 3s.
-• To accommodate this change, the default trigger for Hand of
-Light has been moved to right click while sneaking
-• &oDeveloper Note: Cleric has received a series of nerfs in
-recent months that have harmed Paladin's game loop while we
-tried to address balance issues with Hierophant. This rework
-attempts to do the following:&r
-  • &oImprove Paladin's damage consistency in melee and magic&r
-  • &oEmphasize the strengths of Paladin's playstyle while
-retaining the skill's usability in any situation&r
-  • &oMove away from Paladin's current tendency to cast every
-skill off cooldown and finish off with Luminous. This playstyle
-is too close to Reaper in execution and outcome and leads to
-issues with class identity.&r
-&oDue to time constraints, other skill changes intended to
-further improve Paladin were not able to be shipped with this
-update. This is a significant shift from Paladin's current
-design; nevertheless we hope Paladin players will enjoy this
-faster paced iteration of the skill and look forward to future
-improvements.&r• Lesser Divine Flare Charm : +10% Luminous
-Infusion Damage -> +0.2 Luminous Infusion Damage Per Stack
-• Greater Divine Flare Charm : +20% Luminous Infusion Damage ->
-+0.4 Luminous Infusion Damage Per Stack
-• Focused Divine Flare Charm : +35% Luminous Infusion Damage ->
-+0.7 Luminous Infusion Damage Per Stack
-• Explosive Divine Flare Charm : +10% Luminous Infusion Damage
--> +0.2 Luminous Infusion Damage Per Stack, +50% Luminous
-Infusion Radius -> +0.165 Luminous Infusion Radius Per Stack
-• Swift Divine Flare Charm : +15% Luminous Infusion Damage ->
-+0.3 Luminous Infusion Damage Per Stack
-• Mourning Star : +150% Luminous Infusion Damage -> +3 Luminous
-Infusion Damage Per Stack, +100% Luminous Infusion Radius ->
-+0.33 Luminous Infusion Radius Per Stack, 0 -> +1 Luminous
-Infusion Hit Requirement
-• Martial Mantra : -100% Luminous Infusion Radius -> -1 Luminous
-Infusion Radius Per Stack
-  • &oDeveloper Note: Luminous Infusion's explosion radius
-cannot be less than 0.1 blocks.&r
-• Explosive Component (Rework) : 1 Charm Power, +50% Enchanted
-Prayer Attack Range, +50% Enchanted Prayer Range, -25% Enchanted
-Prayer Damage
-• Lunacrestum Pulsar (Rework) : 5 Charm Power, +1 Luminous
-Infusion Stacks On Hit, -0.5 Luminous Infusion Damage Per Stack
-### Enchantment Changes:
-• Guard : 2.5s | 5s -> 4s | 6s effect duration for offhand and
-mainhand shields, respectively
-• Inferno : The damage scaling has been reverted from level^0.95
-to level damage### Item Changes:
-&nRegion 1 Gear:&r
-• Cascade (Sketched Cascade) : 3.5 -> 4 Armor
-• Demoncaller Tunic : 4.5 -> 4 Agility
-• Edge of Death (Edge of Reality) : +28% -> +25% Attack Damage
-• Jungle's Vengeance : +0.1 -> +10% Attack Speed, +32% -> +28%
-Attack Damage
-• King's Greaves (Queen's Greaves) : 5 -> 4.5 Armor
-• Lodestar Boots : 4.5 -> 3.5 Armor
-• Plague Bearer's Soiled Trousers (Replica Plague Bearer's
-Soiled Trousers) : +25% -> +20% Attack Speed, 6 -> 5.5 Agility
-• Rod of the Onodrim (Replica Rod of the Onodrim) : 2 -> 3 Armor
-• Rogue's Knife : +10% -> +8% Attack Speed
-• Yurei : +25% -> +20% Attack Speed, +3 -> +2 Max Health
-&nRegion 1 Weapons:&r
-• Battle Axe : 10 -> 11 Attack Damage
-• Crushing Mace : 10.5 -> 11 Attack Damage
-• Falling Comet : 9.5 -> 10.5 Attack Damage
-• Jagged Cleaver : 10 -> 11 Attack Damage
-• Meteor Hammer : 10 -> 10.5 Attack Damage
-• Soulhammer : 10 -> 10.5 Attack Damage
-• Tempered Mace : 9 -> 10 Attack Damage
-• Acrid Wrath : 11 -> 11.5 Attack Damage
-• Arachnobane : 7 -> 7.5 Attack Damage
-• Archmage's Femur : +30% -> +35% Spell Power, 0 -> 1 Knockback
-• C'Axtal's Crusher : 11.5 -> 12 Attack Damage
-• Corrupted Scalawag's Hatchet (Dreadful Crusher) (Divine
-Scalawag's Hatcher) : 13.5 -> 14 Attack Damage
-• Harvestman's Scythe (Divine Harvestman's Scythe) (Dreadful
-Harvester) : 10 -> 10.5 Attack Damage
-• Lightbringer (Sketched Lightbringer) (Pole Star) : 6 -> 7
-Attack Damage
-• Lunatic's Respite : 12 -> 12.5 Attack Damage
-• Scalawag's Hatchet : 9.5 -> 10 Attack Damage
-• Silver Knight's Hammer : 9.5 -> 10 Attack Damage
-• Soulcrusher : 12 -> 13 Attack Damage
-• Spiritspark Flint (Bonecarver) : 9 -> 10 Attack Damage
-• Telum Immoriel (Ari's Ionic Buster) : 12 -> 13 Attack Damage
-• Thawed Frozen Mallet : 11.5 -> 12 Attack Damage
-• The Ravager : 10 -> 10.5 Attack Damage
-• Threadwarped Tkaa (Sketched Threadwarped Tkaa) : 10 -> 11
-Attack Damage• Tome of Arcane Horrors : 13 -> 14.5 Attack Damage
-• Tome of Madness : 11.5 -> 12 Attack Damage
-• Velara Crusher : 15 -> 17 Attack Damage
-• Verdant Crusher : 8 -> 8.5 Attack Damage
-&nRegion 2 Gear:&r
-• Akam's Ferocity : +0.1 -> +8% Attack Speed
-• Ammi's Embrace : +0.1 -> +10% Attack Speed, 6.5 -> 5.5 Armor
-• Bastion of Isharist : +0.1 -> +10% Attack Speed
-• Bloom : -0.3 -> -16% Attack Speed
-• Capricious Chains (leggings) : +25% -> +15% Attack Speed
-• Chains from Below the Waves (Spectral Loincloth) : +20% ->
-+12% Attack Damage
-• Curse of Alutana : +0.1 -> +10% Attack Speed
-• Crown of the Rift : +18% -> +10% Attack Speed
-• Crown of Unseen Knowledge : +48% -> +50% Attack Damage
-• Frigid Firangi : +20% -> +15% Attack Speed
-• Heart of the Hero (Frost Giant's Courage) : +0.1 -> +10%
+• Nature's Failure (M4) : +0.15 -> 0 Attack Speed, 0 -> +15%
 Attack Speed
-• Horseman's Head (Dread Admiral's Hat) : +18% -> +15% Attack
-Damage, +18% -> +15% Attack Speed, 4.5 -> 4 Agility
-• Laborious Chains : +0.1 -> +5% Attack Speed
-• Leggings of Insanity : 9 -> 8.5 Armor
-• Mage Hunter's Mask : 1 -> 0 Melee Protection, 0 -> 1 Magic
-Protection, +25% -> +20% Attack Damage
-• Magistruct Breaker : +0.1 -> 0 Attack Speed, +10% -> +15%
-Attack Speed
-• Magma Galoshes : +15% -> +10% Attack Speed
-• Rhinoceros Set : +12% Attack Damage -> +10% Attack Damage
-• Royal Shield : +0.1 -> +10% Attack Speed
-• Sailwoven Sandals : 7.5 -> 6.5 Agility
-• Salazar's Greed (Will of the Empire) : +50% -> +45% Attack
-Damage
-• Seal of Revival : +0.15 -> +15% Attack Speed
-• Shattered Sovereign : +0.1 -> +10% Attack Speed, +15% -> +10%
-Attack Damage
-• Steel Maelstrom (Flurried Echoes) : +32% -> +30% Attack
-Damage, +20% -> +15% Attack Speed
-• The Eternal Mist : +15% -> +5% Attack Damage
-• The Olive Branch (Dreadful Shield) : +0.1 -> +10% Attack
-Speed, 4.5 -> 4 Agility
-• Tiffy's Shield : +15% -> +10% Attack Speed
-• Tube of Toothpaste : +30% -> +25% Attack Speed, +28% -> +20%
-Attack Damage
-• Varcosa's Doublet : 4.5 -> 4 Agility• Wadah's Solitude : 5.5
--> 5 Agility
-• Warding Lily : +0.1 -> +10% Attack Speed, +15% -> +10% Attack
-Damage
-• Yoga Pants : +15% -> +10% Attack Speed
-&nRegion 2 Weapons:&r
-• Ironcast Tomahawk : 12 -> 12.5 Attack Damage
-• Iron Battleaxe : 12 -> 12.5 Attack Damage
-• Steelscale Maul : 0 -> 2 Unbreaking
-• Skullcrusher : 14 -> 14.5 Attack Damage
-• Reaper's Razor : 15 -> 16 Attack Damage
-• Archeologist's Hammer : 18 -> 18.5 Attack Damage
-• Entcrusher (Shaman's Crusher) : 25 -> 26 Attack Damage
-• Erebus (Spectral Halberd) : 14.5 -> 15 Attack Damage
-• Frost Giant's Greatstaff : +50% -> +55% Spell Power
-• Frost Giant's Greatsword : 22 -> 23 Attack Damage
-• Frost Giant's Crusher (Replica C'theddros) : 21.5 -> 23 Attack
-Damage
-• Frost Giant's Crescent (Spectral Scythe) : 20 -> 21 Attack
-Damage
-• Hurricane Halberd : 19 -> 20 Attack Damage
-• Oar : 16 -> 17.5 Attack Damage
-&nRegion 3 Gear:&r
-• Aether Treads (M4) : 8.5 -> 8 Agility
-• Argentum Arbitrium (M4) : 6.5 -> 7 Agility
-• Belt of the Tyrant (M4) : +10% -> 0 Attack Speed, 6.5 -> 8
-Armor
-• Blackblade Mask (M4) : +8% -> 0% Attack Damage, +18% -> +15%
-Attack Speed
-• Bryophyte Roots (M4) : +18% -> +15% Attack Speed
-• EX Cascade (M4) : 6 -> 6.5 Armor
-• Crimson Tithe (M4) : +0.1 -> 0 Attack Speed, 0 -> +10% Attack
-Speed
-• Dignified Greaves (M4) : 1 -> 0 Projectile Protection, 9.5 ->
-9 Armor
-• Dragonscale Helm (M4) : +20% -> +15% Attack Speed, 3 -> 2 Fire
-Protection
-• Duskroot Legguards (M4) : +25% -> +20% Attack Speed
-• Fidelis Stella (M4) : +0.15 -> 0 Attack Speed, 0 -> +15%
-Attack Speed
-• Flight from the Capital (M4) : 1 -> 0 Melee Protection, 9 ->
-8.5 Armor
-• Footprints Beneath Void (M4) : 8 -> 6.5 Armor
-• Journey's End (M4) : +0.2 -> 0 Attack Speed, 0 -> +18% Attack
-Speed, 10.5 -> 10 Armor
-• EX Kingslayer (M4) : 6.5 -> 6 Agility• Nature's Failure (M4) :
-+0.15 -> 0 Attack Speed, 0 -> +15% Attack Speed
 • Overgrown Bodkin (M4) : +25% -> +15% Attack Speed, 1 -> 2
 Magic Protection
 • Remnants of Isharist (M4) : +0.15 -> 0 Attack Speed, 0 -> +15%
@@ -307,3 +90,30 @@ and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
+&bHotfix:&r Fixed the cooldown of Advancing Shadows in Darkest
+Depths/Celestial Zenith not functioning
+&bHotfix:&r You can no longer tricky the creepers in the
+Creeperween quest
+&bHotfix:&r Namtar now offers full refunds for Lunacrestum
+Pulsar for this week
+&bHotfixes&r (Pending Daily Restart):
+• Fixed Luminous Infusion igniting enemies at level 1 and added
+clarification to its description
+• Fixed Luminous Infusion not consuming a primed Luminosity
+stack when boosting Divine Justice's damage
+• Fixed issues with Divine Justice's damage application and
+scaling when applied by Luminous Infusion
+• Fixed Luminous Infusion's charm Radius Per Stack effect being
+non-functional
+• Fixed Holy Javelin not getting the passive damage boost
+provided by Luminous Infusion
+• Fixed issues where clientside mods were not being refreshed
+correctly about Luminous InfusionSKT has been temporarily
+closed.
+&bImportant:&r
+• The market will not be locked this week due to the content
+freeze.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• The Silver Knight's Tomb remains closed.
