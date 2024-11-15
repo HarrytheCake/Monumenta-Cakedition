@@ -1,88 +1,3 @@
-• Nature's Failure (M4) : +0.15 -> 0 Attack Speed, 0 -> +15%
-Attack Speed
-• Overgrown Bodkin (M4) : +25% -> +15% Attack Speed, 1 -> 2
-Magic Protection
-• Remnants of Isharist (M4) : +0.15 -> 0 Attack Speed, 0 -> +15%
-Attack Speed, 35% -> 30% Attack Damage
-• Shackled Earth's Boon (M4) : 6 -> 6.5 Agility, +10% -> 0%
-Attack Speed, 6 -> 2 Thorns Damage
-• EX Shimmering Veil (M4) : +12% -> 0% Speed, +20% -> +15%
-Attack Speed
-• Silver Moon Crown (M4) : +15% -> +20% Attack Damage
-• Stargazer's Shadow (M4) : +15% -> 0% Attack Speed, 8 -> 8.5
-Agility
-• EX Warden's Ruin (M4) : +0.1 -> 0 Attack Speed, 8 -> 8.5
-Agility
-&nRegion 3 Weapons:&r
-• EX Corrupted Scalawag's Hatchet (M4) : 21.5 -> 22.5 Attack
-Damage, 1 -> 2 Regicide
-• Crescent of Dominion (M4) : 11.5 -> 15 Attack Damage
-• Dreadwood Log (M4) : 21 -> 22 Attack Damage
-• Molldyer's Greatstaff (M4) : 20.5 -> 22 Attack Damage
-• Regulated Cogblade (M4) : 1.5 -> 2 Armor, 21.5 -> 22 Attack
-Damage
-• Tactician's Axe (M4) : 23 -> 25 Attack Damage
-• EX Telum Immoriel (M4) : 28.5 -> 32.5 Attack Damage
-• The Knucklebones (M4) : 23 -> 25 Attack Damage
-• Threadreaper (M4) : 15.5 -> 16.5 Attack Damage
-• The Vedha's Soulcrusher (M4) : 21 -> 22.5 Attack Damage
-### Feedback Fixes:
-• Using a repair station lets you pick up repaired items without
-getting off the pressure plate again
-• You can no longer feed Creeper's Delights to the Paradox
-creepers in Silver Knight's Tomb
-• Exalted C'Axtal now glows dark red.
-• Vargos' dialogue post-Mage's Legacy has been minorly adjusted
-to make more sense with established timeline of events
-• Changed quest requirement wording for A Study In Crimson Part
-One and Two to be in line with other quests
-• Now only guild members with mail access receive guild mail
-notifications
-• The mailbox GUI title now updates as you switch between your
-inbox/outbox/combined mailbox
-• Dragon heads are now treated as head items equipment-wise
-• Assigned each of SKT's Marching Fates a unique color### Minor
-Bug Fixes:
-• Fixed numerous stuck spots on the Bad Moon Rising version of
-Galengarde's Chenmai treetop
-• Fixed several build errors and a bedrock structure issue in
-Creeper Farm
-• An incorrect word in the Shifting Realities poem has been
-correct
-• Fixed Totem of Transposing not getting its channel set on new
-items. Ask a moderator for a replacement pair after weekly
-update.
-• Wrangler Sedol can speak to you in the Creeper Farm once
-again.
-• Fixed certain loot chests failing to send through the mail
-• Fixed exposed bedrock in Hexfall
-• Mechanical Armory and Vanity Manager no longer respect
-durability damage on items when cloning items for display
-• Fixed Pillar of Light having a capital O
-• Fixed triggering Shield Wall while it is already stationary
-counting as a successful trigger for the purposes of fall-
-through despite nothing happening
-• Fixed A Study In Crimson Part One and Two's starting waypoint
-being incorrect
-• Fixed missing punctuation in dialogues of A Study In Crimson
-Part One and Two
-• Fixed incorrect compass locations in A Study In Crimson Part
-One and Two
-• Fixed All that Remains Bloodflame Fungus and Hardened Vial not
-being accepted by Sophie
-• Fixed extra punctuation in The Gem of Ishnir's rewards text
-&b1.20.4 • Content Freeze&r
-We are starting the process of updating Minecraft to 1.20.4. We
-begin by upgrading the internal development server to 1.20.4 and
-doing more intensive testing. Once we are confident that most
-critical bugs are fixed, the play server will also be upgraded.
-During this time, our ability to release new content will be
-diminished. We won't be running weekly updates until the end of
-the freeze. Critical bug fixes will still be shipped. Changes
-will still occur during this time, but they will target 1.20.4
-and ship after we upgrade the play server.
-TL;DR: No new changes will happen for the next few weeks, then
-play will be upgraded to 1.20.4 with a big changelog.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -116,4 +31,8 @@ freeze.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
-• The Silver Knight's Tomb remains closed.
+• The Silver Knight's Tomb remains closed.SKT has been reopened.
+&bHotfix&r: It is no longer possible to be trapped by a trapdoor
+in Sierhaven Circle
+&bHotfix:&r Boss fights should no longer appear in the tab list
+after they finish
