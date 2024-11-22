@@ -1,10 +1,3 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
 &bHotfix:&r Fixed the cooldown of Advancing Shadows in Darkest
 Depths/Celestial Zenith not functioning
 &bHotfix:&r You can no longer tricky the creepers in the
@@ -36,3 +29,5 @@ instance corruption.
 in Sierhaven Circle
 &bHotfix:&r Boss fights should no longer appear in the tab list
 after they finish
+&bHotfix:&r Disabled being able to place blocks in New Antium's
+entrance to the Keep
