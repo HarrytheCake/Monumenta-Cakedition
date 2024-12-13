@@ -1,5 +1,3 @@
-&bHotfix:&r You can no longer tricky the creepers in the
-Creeperween quest
 &bHotfix:&r Namtar now offers full refunds for Lunacrestum
 Pulsar for this week
 &bHotfixes&r (Pending Daily Restart):
@@ -28,4 +26,8 @@ in Sierhaven Circle
 &bHotfix:&r Boss fights should no longer appear in the tab list
 after they finish
 &bHotfix:&r Disabled being able to place blocks in New Antium's
-entrance to the KeepThe City of Shifting Waters has been closed.
+entrance to the KeepThe City of Shifting Waters has been
+closed.• The City of Shifting Waters has reopened, now with
+several exploitable bugs fixed. It is, however, still bugged.
+Players are advised to complete the dungeon in a single sitting
+to avoid instance corruption.
