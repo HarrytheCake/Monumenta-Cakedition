@@ -1,5 +1,3 @@
-&bHotfix:&r Namtar now offers full refunds for Lunacrestum
-Pulsar for this week
 &bHotfixes&r (Pending Daily Restart):
 • Fixed Luminous Infusion igniting enemies at level 1 and added
 clarification to its description
@@ -31,3 +29,6 @@ closed.• The City of Shifting Waters has reopened, now with
 several exploitable bugs fixed. It is, however, still bugged.
 Players are advised to complete the dungeon in a single sitting
 to avoid instance corruption.
+&bHotfix:&r Following the 5.4.0 Resource Pack update, 9 new hope
+skins have been added to Mastersmith Antonio's shop! Many thanks
+to our Patrons for their continued support!

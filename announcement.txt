@@ -1,43 +1,3 @@
-&bDevelopment Update&r
-Hey all, wanted to give the playerbase an update on Monumenta
-development over the next few months by reflecting on our 2024
-roadmap shared at the start of the year.
-Things from the roadmap that we delivered on so far:
-• Market plugin
-• Zenith expansion
-• Several new quests tying up loose storylines
-• R1 improvements, including reworks to numerous POIs and
-Sierhaven
-• Hexfall, the raid successor to SKT
-Things we've made significant progress on:
-• Both overworld replayability features are still being worked
-on actively and are growing further to completion. We still
-expect both to be out this year
-• The next traditional mainline dungeon, based in Star Point has
-had major progress and is looking great
-• 1.20 update is progressing on the build server, but will need
-testing before we share anything about updating the play server
-What has been pushed out:
-• Work on the next R3 expansion has only begun quite recently.
-There are a few reasons for this. The team is low on active
-builders, there was significant burnout post Star Point release,
-and there was a desire to focus on repolishing some early game
-R1 content in order to put our best foot forward for new
-players. As a result, we are in the design and ideation phase
-for our next expansion, and it will certainly not be ready to
-ship this year. We know this is disappointing given we typically
-have a sizeable holiday release, but hope the transparency is
-appreciated and the team is looking forward to a productive
-2025.
-Finally, some new stuff coming soon that wasn't on the roadmap:
-• Some exciting new features are coming to Celestial Zenith
-later this month
-• A recent development planned for release in the not-too-
-distant future, the team has been working hard on a new Strike
-set deep below the Architect's Ring! This Strike, conceived as a
-spiritual successor to the Sealed Remorse, is the product of a
-team-wide development jam hosted in August.
-As always, thanks for your patience and support!
 &bAttention All Fellow Cleric Players&r
 It is with great regret I announce that I messed up the changes
 to Divine Justice that were pushed with the latest balance
@@ -112,4 +72,5 @@ season and bring your friends between
 approximately be during the standard weekly update time,
 depending on the status of the 1.20 content freeze.
 Good luck and have fun!6-player Zenith is now live! Best of
-luck!
+luck!Welcome @lynx1240 as your newest moderator!! Please gift
+them plenty of 🏓
