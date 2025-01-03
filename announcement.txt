@@ -1,29 +1,5 @@
-&bImportant:&r
-Griefing during the 6 minute wait for World Bosses is no longer
-permitted under any circumstances and will result in punishment.
-The team would also like to address some of the language being
-used within private contexts on the server. Discriminatory and
-inappropriate language is not permitted in these contexts, and
-will result in punishment. The reason for this is the team does
-not wish to foster a culture where it is acceptable to use
-discriminatory language.
-We'd also like to clarify that having your message blocked by
-the chat filter is not considered grounds for an unmute if one
-is issued.Hey everyone!
-I've been waiting a long time to follow through with this, but
-have decided to step officially step down from being a Monumenta
-Lead and likely development as whole. I was one of the original
-founders of this project and seeing it grow the way it has since
-2016 has been one of the most fulfilling things I've ever done.
-The way this project and community have grown has exceeded my
-wildest expectations. Thank you everyone for being a part of
-this whether you're a developer, mod, or player. Everything here
-has meant so much to me and I'm excited to see how things
-continue on into the future.
-I'll be around to be a gremlin as usual every little bit, but
-it'll be more as a player more than anything. If you guys see me
-around be sure to say hi!Please welcome @whyprophecy as our
-newest Moderator! Don't be afraid to 🏓
+Please welcome @whyprophecy as our newest Moderator! Don't be
+afraid to 🏓
 &bZenith Anniversary Event&r
 It's been nearly a year since the Celestial Zenith launched on
 December 16, 2023, and since then you all have played it
@@ -151,4 +127,24 @@ ways starkly different than it was just a year ago, and we're
 all excited to see the year ahead as 2025 shapes up to be a
 great time for us!
 So with that, from all of here at Team Monumenta, we wish you
-all a Merry Christmas, and Happy New Year!
+all a Merry Christmas, and Happy New Year!One last new developer
+for 2024 • please congratulate @TheAz1 for promotion to full dev
+for being instrumental in the development of the Creeperjuice
+quest and several other things not quite out yet!
+&bHappy New Year Monumenta!&r
+We'd like to kick it off by updating you all on the status of
+our upgrade to 1.20.4.
+Currently, the upgrade has been completed on an internal clone
+of Monumenta that we call the "stage" server, where we are
+currently testing anything and everything we can think of that
+might have issues with the new version, and fixing as we go. We
+can't promise any particular date when this is done because we
+don't yet know everything that needs fixing and what works
+perfectly. Below is snippet of our testing log channel as a peak
+behind the curtain.
+Provided we don't find anything catastrophic, this should be our
+final step before we end our feature freeze and push the upgrade
+to Monumenta itself!
+Thank you all for your patience with us these last couple
+months! Please look forward to the awesome stuff we have in
+store for you in 2025!
