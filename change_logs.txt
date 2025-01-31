@@ -1,34 +1,117 @@
-&bHotfixes&r (Pending Daily Restart):
-• Fixed Luminous Infusion igniting enemies at level 1 and added
-clarification to its description
-• Fixed Luminous Infusion not consuming a primed Luminosity
-stack when boosting Divine Justice's damage
-• Fixed issues with Divine Justice's damage application and
-scaling when applied by Luminous Infusion
-• Fixed Luminous Infusion's charm Radius Per Stack effect being
-non-functional
-• Fixed Holy Javelin not getting the passive damage boost
-provided by Luminous Infusion
-• Fixed issues where clientside mods were not being refreshed
-correctly about Luminous InfusionSKT has been temporarily
-closed.
-&bImportant:&r
-• The market will not be locked this week due to the content
-freeze.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-• The Silver Knight's Tomb remains closed.SKT has been reopened.
-&bHotfix&r: It is no longer possible to be trapped by a trapdoor
-in Sierhaven Circle
-&bHotfix:&r Boss fights should no longer appear in the tab list
-after they finish
-&bHotfix:&r Disabled being able to place blocks in New Antium's
-entrance to the KeepThe City of Shifting Waters has been
-closed.• The City of Shifting Waters has reopened, now with
-several exploitable bugs fixed. It is, however, still bugged.
-Players are advised to complete the dungeon in a single sitting
-to avoid instance corruption.
-&bHotfix:&r Following the 5.4.0 Resource Pack update, 9 new hope
-skins have been added to Mastersmith Antonio's shop! Many thanks
-to our Patrons for their continued support!
+Zenith has been reopened!Zenith has been temporarily closed
+(again).Zenith has been reopened (again)!
+&bHotfix:&r The Virius fight in Clear as Glass now properly
+starts
+&bHotfix:&r An issue with dungeon races has been resolved
+&bHotfix:&r Holding an invalid map (such as given by a quest) no
+longer causes shards to crash • because I removed all of them
+and temporarily replaced them with another randomly chosen
+known-good map. This means many maps given by quests, etc. will
+probably just be wrong, possibly misleadingly so. The map will
+show some random other picture • but the item itself is fine,
+you can keep it and it'll work right and show the correct image
+when the bug is fixed, hopefully the next update or two.
+&bHotfix:&r The <coords> chat inline command is now usable.###
+Feedback Fixes:
+• The Snowball Launcher now comes with max ammo, and restocks on
+every weekly update
+• The Snowball Launcher now has its highlight feature in
+description
+• Snowball Launcher empowered ammo 8 -> 16
+• The Onyx Crownbearer boss fight now uses the standard health
+scaling formula
+• Azacor's demon summons now spawn randomly in a small area
+around the center of his arena
+• The Gray dungeon race has been renamed to "Quicksand"
+• `/blockinteractions` (`/bi`) now blocks editing signs outside
+of plots or creative mode
+• A repair station in Galengarde has been swapped out for a
+second sell station
+### Minor Bug Fixes:
+• Fixed Hunting Companions and Restless Souls preventing
+Tesseract of the Soul usage
+• Fixed Brown grenade launcher mobs bypassing stuns
+• Fixed Tesseract of the Soul (u) not offering a warp to nearby
+players in dungeons
+• Fixed effects causing weird damage numbers to occur
+• Fixed numerous spawners in Northern Jaguar Village having too
+high of a range, causing them to spawn outside of walls
+• Hotfixed POIs as of this message to fix broken spawners & the
+above spawner range issue.
+  • Fountain of Miracles & Amp
+  • Northern & Southern Jaguar Villages
+  • Southern Cenote
+• Barrels in Northern Jaguar Village are now locked
+• Fixed a build error near Magma Chasm
+• Fixed numerous stuck spots around Chenmai's treetop
+• Fixed Eldrask's Titanic Rupture sending one message per player
+in the fight instead of one message to each player
+• Fixed Eldrask's armor not correctly cracking when hit with an
+icicle in his final chill phase
+• The market GUI pagination buttons are now accurate
+• Spellshock's enhancement now describes 'activating' a
+spellshock to be more consistent
+• Fixed a stuck spot in the original snowball brawl arena
+• Fixed issue with swap on all Multitool items
+• Made it possible to sit in many a chair
+• Cosmetic delve skills now have the proper plurality
+• The Opportunity depths skill now has the proper plurality•
+Fixed a duplicated word in one of Bhairavi's dialogues in Mage's
+Legacy
+• Taboo burst now properly shows seconds instead of ticks in the
+ability bar
+• Fixed ChargingUv placing a stray target block in the ring
+overworld
+• A gravity-defying tree near Frostgate has been forced to fall
+in line
+• Fixed Eastern Pass (R1 POI) having an R3 Exalted blaze
+spawner... (Blazing Soul vs Flaming Soul, I was close)
+• Fixed a discovery build-marker in Eastern Pass
+• Eastern pass decorated pot that contains eighteen experience
+bottles should no longer be weird
+• A skeleton spawner in Charn now spawns more consistently
+• Fixed a cage in SKT being a very bad cage (it had a hole in
+it)
+• Fixed a few typos in the Onyx Crownbearer quest boss fight
+• Fixed a few issues where ||Exalted C'Axtal|| would replace
+blocks he shouldn't with certain attacks
+• Fixed a small hit detection issue with the icicles in
+Eldrask's arena
+• Configuring Yellow tesseracts should properly work again
+• Fixed missing Creeperween items from the item API
+&b(11.1.0)&r
+For the update on January 30, 2025
+### Major New Features:
+&bQuest Progression Resetting:&r
+A new NPC has arrived in the Sierhaven Academy, Hans, who will
+offer the player a new reset ability. Through him, players can
+now opt to reset their entire quest progression from the ground-
+up, without having to scratch other play data/progression.
+Utilizing's Hans offer, the following will occur:
+• All quest progress will be reset back to zero (the only
+exception being Halid's Song)
+• All quest-related advancements will be wiped
+• Uniques and other rewards can be obtained via quest re-
+completions
+• No dungeon progression, instances, skill points, inventory,
+plots, or other data will be affected by the reset
+Further details can be found in game! As an additional security
+measure, Hans will also allow the option to never offer this
+service again, should you be convinced that you never want to
+risk it occurring to your account.
+### Minor New Features:
+• Cryospheres are now considered an event currency
+• The Season Pass Hub music now plays in your ears instead of
+from some point above your head
+• You can now take a seat in the Season Pass Hub
+• Orin and the instance switcher now show how many of your
+guildmates are on a given instance
+• The crypt below Star Point has been spawnered, and will
+respawn when conquered
+  • This does not count for bounties, nor have any unique loot
+associated. It can be considered a "T0" POI.
+• Added a missing discovery to Eastern Pass
+• Updated the icon of the website
+• Updated Team Monumenta, moderators, and top patrons on the
+website
+• Special arrows now have location tags

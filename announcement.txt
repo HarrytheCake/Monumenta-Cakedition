@@ -1,108 +1,12 @@
-Please welcome @whyprophecy as our newest Moderator! Don't be
-afraid to 🏓
-&bZenith Anniversary Event&r
-It's been nearly a year since the Celestial Zenith launched on
-December 16, 2023, and since then you all have played it
-remarkably over 100,000 times! Now it is finally almost time to
-put those dusty leaderboard signs to use. Celebrate the holiday
-season and bring your friends between
-&bDecember 12&r and
-&bDecember 26&r to participate in 6-player Zenith! Times will
-approximately be during the standard weekly update time,
-depending on the status of the 1.20 content freeze.
-Good luck and have fun!6-player Zenith is now live! Best of
-luck!Welcome @lynx1240 as your newest moderator!! Please gift
-them plenty of 🏓
-&bMerry Christmas from Team Monumenta!&r
-Merry Christmas, everyone • 'tis the season of remembrance.
-While many may be prepping for the holidays and new year ahead
-of us, I think it's important for us to reflect on the journey
-that we all went through this year. So as always, come join me
-as we walk back through what 2024 brought to this game and
-community.
-In January, we saw the final content drop as part of our initial
-Star Point expansion • Sirius, the final herald. As Monumenta's
-fourth world boss, Sirius brought with it a unique objective-
-based fight that pitted you, Tuulen, and Aurora against the
-blight of the Stars. This is not the end for Serebria though,
-and the fallout from the herald's defeat will be explored in
-2025 as we see the conclusion of the Chapter 3 storyline!
-One of Monumenta's most fundamental qualities is the push to
-play content with your friends, and nothing is more exemplary of
-this than the Guild system! February saw a drastic overhaul of
-our backend guild systems, adding numerous quality of life
-features and establishing the framework needed to continue
-adding more in the future and supporting a far greater number of
-guilds. For example, one of our major goals in the coming year
-is the transition of guild plots and islands to our world-
-instancing system!
-Kicking off March, Monumenta saw the initial release of our
-custom Market plugin! It is one of the team's long term goals to
-make selling and purchasing among the community as seamless as
-possible, and the Market plugin is our first step towards that
-end. With several features added throughout the year, we hope to
-continue seeing its usefulness grow in the months to come!As
-Monumenta continues to create an increasingly expansive endgame
-in the Architect's Ring, it is important that we look back and
-ensure that our early game lives up to the standards of content
-experienced later on. As such, April saw the continuation of
-this endeavor, releasing Phase 4 of the Sierhaven rework and the
-Farr rework! This release laid the groundwork for the Phase 5
-release that came later in the year, as well as numerous POI
-reworks throughout. You can continue to expect our work on the
-King's Valley to continue into 2025, focusing largely on the
-beginning stages of the game such as the swamp and Labs/White!
-Stepping away from content for a moment, an often overlooked
-aspect of Monumenta is the immense work and dedication placed
-into the resource pack by our RP Devs! One such contribution is
-the application of their own patron perk, Hope Skins • a passion
-project that held some of wackiest textures in the game, but was
-often plagued by being inaccessable due to the inactivity of
-some recipients. In this vein, the full integration of this
-system into the game came in May, in the form of Mastersmith
-Antonio's Hope Skin shop! With the full publication of all
-available Hope Skins, gone are the days of the struggle to
-obtain these awesome displays of texture art!
-Something we've yet to discuss was a large focus in 2024 among
-the Quest Team to wrap out lingering storylines from our
-previous regions. This began with the release of Guilding
-Blocks, the finale to the Ishnir trade story, and continued on
-in June with the release of both Silver Skinned, the finale to
-the Shifting story, and An Unexpected Lesson, the continuation
-of the Duchess story! This is an endeavor we remain committed
-to, and the coming year will continue to see projects in this
-vein!July was a particularly busy month, starting off with the
-release of the Additive Damage rework! Balancing an MMO like
-Monumenta becomes increasingly complex as the game further and
-further pushes the limits of player power, and this rework to
-our damage calculation system, which spent over a year in the
-oven, promises a path forward for the game as we expand further
-into Star Point and beyond!
-Secondly, rounding out the month as we headed into August, came
-the release of the Celestial Zenith's first major expansion!
-Pushing the endgame into Ascension 18, adding unique modifiers
-for these levels, a new reroll system, several new rooms, and
-later in the year, Celestial Gifts and talisman overhauls! What
-more lies in store for this content in the year to come?
-In September came the next major content release to Monumenta,
-the game's second full scale Raid, Hexfall! In this conclusion
-to the Wolfswood storyline, you are pitted against the dryad
-maiden, Hycenea, in her conquest to obtain the Blue Wool.
-Secrets are not the only thing that lie below the Vernantia, but
-some of the most mechanically complex boss fights Monumenta has
-ever seen! While certainly not your average dungeon, this
-spiritual successor to the Silver Knight's Tomb experiments
-heavily with the formula set therein, and we are excited to see
-what direction it might take in the future!Another addition to
-Monumenta in 2024 that we have yet to discuss was the
-introduction early in the year of Item Discoveries. These often
-small and hidden interactions serve as a way to promote
-exploration throughout the game, rewarding players for searching
-every nook and cranny across Monumenta's world. That said,
-nothing quite encapsulates the sheer potential of item
-discoveries as a framework for storytelling and community
-cooperation as what came in October, the release of the
-Smallpoint discovery! In this region-crossing adventure, you
+Another addition to Monumenta in 2024 that we have yet to
+discuss was the introduction early in the year of Item
+Discoveries. These often small and hidden interactions serve as
+a way to promote exploration throughout the game, rewarding
+players for searching every nook and cranny across Monumenta's
+world. That said, nothing quite encapsulates the sheer potential
+of item discoveries as a framework for storytelling and
+community cooperation as what came in October, the release of
+the Smallpoint discovery! In this region-crossing adventure, you
 experience a tale unlike anything Monumenta has ever told • one
 I can hardly speak on lest I spoil you, but also one that sets
 the bar for stories to come!
@@ -148,3 +52,41 @@ to Monumenta itself!
 Thank you all for your patience with us these last couple
 months! Please look forward to the awesome stuff we have in
 store for you in 2025!
+&b1.20.4 Upgrade Plans&r
+After months of development and several rounds of beta testing
+completed, we plan to perform the server upgrade to version
+1.20.4 <t:1737925200:R>, roughly at <t:1737925200:F>.
+We heavily encourage you to finish up any open dungeon instances
+as soon as possible, as they may become broken or otherwise
+impossible to complete following the version upgrade. Estimated
+downtime for the update is anywhere between 4 to 8 hours. After
+this, we will resume our usual weekly update schedule. As usual,
+report any new bugs to # bug-reports and we will fix them as
+soon as we can.
+As a note, this time is flexible, and may be pushed back
+depending on any unforseen issues that may occur between now and
+then.
+@everyone
+As an additional note: Due to slow progress over the holidays
+and a desire to launch the next balance update with as few
+issues as possible, we are not launching a balance patch with
+the 1.20.4 update. Instead, the next patch is planned to ship on
+February 6th. The bulk of the update will be focused on
+addressing issues with Scout and Cleric. Until then, feel free
+to bring your balance concerns to https://discord.com/channels/3
+13066655494438922/1022346855444656189 and thanks for your
+patience.[Original Message Deleted]Happy to announce that
+@Honeypint has joined Team Monumenta's developer team! As
+someone who needs no introductions, Honeypint has been with us
+behind the scenes with us for a while now as we underwent the
+1.20 upgrade, developing some really awesome stuff for yall that
+will be seen with today's changelogs!
+Make sure to give the congratulatory 🏓[Original Message
+Deleted]We're very pleased to announce that @amecyann02 has
+joined Team Monumenta's developer team as our newest builder!
+He's done some seriously impressive work on future content that
+we can't wait for y'all to enjoy!
+Fire up those congrat 🏓 s and maybe toss in a few 🦔 s in there
+too.Please welcome @Texlla as our newest moderator! Be sure to
+give them a lot of 🏓s and 🐰s!Please welcome @[WOOL] Echoed_S0u1
+as our newest Moderator! Make sure to give them a celebratory 🏓
