@@ -1,40 +1,3 @@
-Another addition to Monumenta in 2024 that we have yet to
-discuss was the introduction early in the year of Item
-Discoveries. These often small and hidden interactions serve as
-a way to promote exploration throughout the game, rewarding
-players for searching every nook and cranny across Monumenta's
-world. That said, nothing quite encapsulates the sheer potential
-of item discoveries as a framework for storytelling and
-community cooperation as what came in October, the release of
-the Smallpoint discovery! In this region-crossing adventure, you
-experience a tale unlike anything Monumenta has ever told • one
-I can hardly speak on lest I spoil you, but also one that sets
-the bar for stories to come!
-And finally, we reach November and December. It has been a long
-standing belief of the dev team that the best way to keep
-Monumenta relevant in the years to come is to stay as updated to
-Minecraft's versions as possible. As such, in these months we
-have placed a pause on content releases as we spend time
-upgrading to the server to 1.20.4! This as usual has been a
-lengthy process, filled with strange bugs and backend changes,
-but rest assured that we remain hard at work to bring Monumenta
-back to our regular release schedule, and are spending the
-downtime wrapping out several pieces of content to come in the
-early days of 2025!
-And there we have it, Monumenta's 2024 in a not-so-brief
-nutshell, and we didn't even discuss more minor releases such as
-the Teal mechanical overhaul, ability hotbars, the
-warlock/reaper revamps, enchantopedia, grave poses, the mail
-system, and so much more! While the year certainly had less
-massive content drops than we typically see, it is still in many
-ways starkly different than it was just a year ago, and we're
-all excited to see the year ahead as 2025 shapes up to be a
-great time for us!
-So with that, from all of here at Team Monumenta, we wish you
-all a Merry Christmas, and Happy New Year!One last new developer
-for 2024 • please congratulate @TheAz1 for promotion to full dev
-for being instrumental in the development of the Creeperjuice
-quest and several other things not quite out yet!
 &bHappy New Year Monumenta!&r
 We'd like to kick it off by updating you all on the status of
 our upgrade to 1.20.4.
@@ -89,4 +52,48 @@ we can't wait for y'all to enjoy!
 Fire up those congrat 🏓 s and maybe toss in a few 🦔 s in there
 too.Please welcome @Texlla as our newest moderator! Be sure to
 give them a lot of 🏓s and 🐰s!Please welcome @[WOOL] Echoed_S0u1
-as our newest Moderator! Make sure to give them a celebratory 🏓
+as our newest Moderator! Make sure to give them a celebratory 🏓#
+Developer Applications
+Dev applications are always open, but in the spirit of the
+recent promotions and call for mod apps we wanted to encourage
+everyone qualified and interested in working on Monumenta to
+apply!
+&bRequirements&r
+• Completion of most major content in Monumenta (dungeons,
+strikes, bosses, and quests).
+• Clarity on what kind of work you'd like to do as a dev
+(plugins, building, quests, mobs, etc)
+• A clear idea of at least one thing you'd like to make and the
+initiative to make it happen (with the team's help, of course 🙂
+)
+• Willingness to learn systems unique to Monumenta when
+relevant.
+• Basic proficiency in English.
+&bPreferred/Optional&r
+• Previous experience in the kind of development you'd like to
+do (tell us all about it in the app!)
+• Solid reputation in the community, and a good rapport with the
+existing devs.
+&bPerks&r
+• Make your mark on Monumenta!
+• ~~Spoil yourself on~~ Learn about tons of upcoming content!
+• Gain experience in amateur game development.
+• Be a part of a relaxed but dedicated team of people making
+something fun for the love of it.
+&bNotes&r
+• Several of our custom systems, such as ScriptedQuests and
+Library of Souls can be learned on the build shard beforehand.
+One of the strongest things an applicant can have is to have
+already demonstrated their abilities on the build shard. If
+interested, see here for more info • https://discord.com/channel
+s/313066655494438922/1104197800452947978/1104451368770601051
+• We are not accepting applications to rebalance the game.
+• Quest devs must be willing to implement their quest as well as
+write them.
+&b[APPLY HERE](https://forms.gle/GpvFvpNVGKSNjFCP8)&rThe weekly
+update has been moved to <t:1738814400:F> due to internal
+scheduling reasons. This month's balance update is delayed and
+will be shipping next week.
+This will
+&bnot&r impact your instances, since those are tied to the
+weekly reset.

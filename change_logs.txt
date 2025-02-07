@@ -1,117 +1,94 @@
-Zenith has been reopened!Zenith has been temporarily closed
-(again).Zenith has been reopened (again)!
-&bHotfix:&r The Virius fight in Clear as Glass now properly
-starts
-&bHotfix:&r An issue with dungeon races has been resolved
-&bHotfix:&r Holding an invalid map (such as given by a quest) no
-longer causes shards to crash • because I removed all of them
-and temporarily replaced them with another randomly chosen
-known-good map. This means many maps given by quests, etc. will
-probably just be wrong, possibly misleadingly so. The map will
-show some random other picture • but the item itself is fine,
-you can keep it and it'll work right and show the correct image
-when the bug is fixed, hopefully the next update or two.
-&bHotfix:&r The <coords> chat inline command is now usable.###
-Feedback Fixes:
-• The Snowball Launcher now comes with max ammo, and restocks on
-every weekly update
-• The Snowball Launcher now has its highlight feature in
-description
-• Snowball Launcher empowered ammo 8 -> 16
-• The Onyx Crownbearer boss fight now uses the standard health
-scaling formula
-• Azacor's demon summons now spawn randomly in a small area
-around the center of his arena
-• The Gray dungeon race has been renamed to "Quicksand"
-• `/blockinteractions` (`/bi`) now blocks editing signs outside
-of plots or creative mode
-• A repair station in Galengarde has been swapped out for a
-second sell station
-### Minor Bug Fixes:
-• Fixed Hunting Companions and Restless Souls preventing
-Tesseract of the Soul usage
-• Fixed Brown grenade launcher mobs bypassing stuns
-• Fixed Tesseract of the Soul (u) not offering a warp to nearby
-players in dungeons
-• Fixed effects causing weird damage numbers to occur
-• Fixed numerous spawners in Northern Jaguar Village having too
-high of a range, causing them to spawn outside of walls
-• Hotfixed POIs as of this message to fix broken spawners & the
-above spawner range issue.
-  • Fountain of Miracles & Amp
-  • Northern & Southern Jaguar Villages
-  • Southern Cenote
-• Barrels in Northern Jaguar Village are now locked
-• Fixed a build error near Magma Chasm
-• Fixed numerous stuck spots around Chenmai's treetop
-• Fixed Eldrask's Titanic Rupture sending one message per player
-in the fight instead of one message to each player
-• Fixed Eldrask's armor not correctly cracking when hit with an
-icicle in his final chill phase
-• The market GUI pagination buttons are now accurate
-• Spellshock's enhancement now describes 'activating' a
-spellshock to be more consistent
-• Fixed a stuck spot in the original snowball brawl arena
-• Fixed issue with swap on all Multitool items
-• Made it possible to sit in many a chair
-• Cosmetic delve skills now have the proper plurality
-• The Opportunity depths skill now has the proper plurality•
-Fixed a duplicated word in one of Bhairavi's dialogues in Mage's
-Legacy
-• Taboo burst now properly shows seconds instead of ticks in the
-ability bar
-• Fixed ChargingUv placing a stray target block in the ring
-overworld
-• A gravity-defying tree near Frostgate has been forced to fall
-in line
-• Fixed Eastern Pass (R1 POI) having an R3 Exalted blaze
-spawner... (Blazing Soul vs Flaming Soul, I was close)
-• Fixed a discovery build-marker in Eastern Pass
-• Eastern pass decorated pot that contains eighteen experience
-bottles should no longer be weird
-• A skeleton spawner in Charn now spawns more consistently
-• Fixed a cage in SKT being a very bad cage (it had a hole in
-it)
-• Fixed a few typos in the Onyx Crownbearer quest boss fight
-• Fixed a few issues where ||Exalted C'Axtal|| would replace
-blocks he shouldn't with certain attacks
-• Fixed a small hit detection issue with the icicles in
-Eldrask's arena
-• Configuring Yellow tesseracts should properly work again
-• Fixed missing Creeperween items from the item API
-&b(11.1.0)&r
-For the update on January 30, 2025
-### Major New Features:
-&bQuest Progression Resetting:&r
-A new NPC has arrived in the Sierhaven Academy, Hans, who will
-offer the player a new reset ability. Through him, players can
-now opt to reset their entire quest progression from the ground-
-up, without having to scratch other play data/progression.
-Utilizing's Hans offer, the following will occur:
-• All quest progress will be reset back to zero (the only
-exception being Halid's Song)
-• All quest-related advancements will be wiped
-• Uniques and other rewards can be obtained via quest re-
-completions
-• No dungeon progression, instances, skill points, inventory,
-plots, or other data will be affected by the reset
-Further details can be found in game! As an additional security
-measure, Hans will also allow the option to never offer this
-service again, should you be convinced that you never want to
-risk it occurring to your account.
+&bHotfix:&r Voyage of Discovery now properly sends you to Isles
+during its progression
+&bHotfix:&r Updated the respawning barrel of signs in the player
+market to include all of the new sign typesPublic plugin repo
+has been updated https://github.com/TeamMonumenta/monumenta-
+plugins-public
+&bHotfix:&r Upgraded every map item file; Purple and all the
+other dungeons will no longer kick you or crash anything for
+picking up maps. Some maps on Valley may still have dummy data
+from the temporary fix earlier, but that will fix itself with
+weekly update. If the map item you're holding has dummy data on
+it, it's safe to hold onto it • it will be updated at that
+time.[Original Message Deleted]### (11.2.0)
+For the update on February 5, 2025
 ### Minor New Features:
-• Cryospheres are now considered an event currency
-• The Season Pass Hub music now plays in your ears instead of
-from some point above your head
-• You can now take a seat in the Season Pass Hub
-• Orin and the instance switcher now show how many of your
-guildmates are on a given instance
-• The crypt below Star Point has been spawnered, and will
-respawn when conquered
-  • This does not count for bounties, nor have any unique loot
-associated. It can be considered a "T0" POI.
-• Added a missing discovery to Eastern Pass
-• Updated the icon of the website
-• Updated Team Monumenta, moderators, and top patrons on the
-website
-• Special arrows now have location tags
+• Tier 1+ patrons, moderators, and developers can now bully each
+other on playerplots and plots
+  • Equip a Player Punch cosmetic and punch a tier 1+ patron,
+moderator, or developer to launch them into the sky!
+  • A bully can punch a player every 30 seconds, and a victim
+can only be launched every 60 seconds
+  • You can opt out of Player Punches by opening your PEB and
+going to Gameplay/Combat Options
+  • Be careful who you pick on or else you might find yourself
+being launched from afar...
+### Mob Changes:
+• Elcard the Ignoble, Arvaya's Statue, The Pig God, Swordsage
+Richter, T'Calin, and Masked Figure now use the standard health
+scaling formula
+### Feedback Fixes:
+• The cog signs in the Primeval Creations III Light Blue puzzle
+now have glowing text for ease of visibility
+• The Quest Guide in Oceangate and Steelmeld now will tell you
+what quests are in Oceangate without having to punch them again
+• Whisper channels are now hidden from chat command suggestions
+• Made some minor visual changes and added a staircase to the
+second part of Salazar's Folly
+• Switched and slightly improved the vanities of Invokers and
+Convokers to make it easier for non-RP users in Wolf in Witch's
+Clothing
+• Respawnered near the end of Coven Fortress where two gameplay
+areas were very thinly divided
+• Added one chest near the end of Coven Fortress
+• Reduced the health of Hexbound Arachnid (summoned-spider in
+Coven Fortress)
+• Added missing bedrock to Coven Fortress so the poi doesn't
+entirely implode with creepers / pernicious
+• Visually improved a small ruin and its surroundings near
+Highwatch
+### Minor Bug Fixes:
+• Fixed Stasis not working on certain damage types like
+Broodmother's web carpet
+• Fixed weird interactions between graves/teleports and Steel
+Stallion/Color Splash mounts. Unfortunately, this means that the
+mounts can once again be dismounted when sneaking.• Fixed Urchin
+Barb and Mist-Touched-Arrow not having location tags
+• Fixed visual bug with Winged mobs caused by using degrees
+instead of radians
+• (hopefully) Fixed being able to get the conquer message twice
+for the new crypt poi
+• Fixed the Crafter handbook advancement ungranting itself
+outside of Valley shards
+• The output in the Primeval Creations III Light Blue puzzle now
+properly respects the cog numbers
+• Fixed winning the Kaul fight spawning bedrock in molten chasm
+• Corrected a missing apostrophe in Mage's Legacy
+• Creeperjuice is once again available to play when it's not
+Creeperween.
+• Fixed a stuck spot in the Fallen Menagerie lobby
+• Fixed several stuck spots on a tree near Galengarde
+• Fixed some build errors in Celestial Zenith rooms
+• Fixed Ascended Pyromancers in Blue not spawning chests on
+death
+• Fixed the sigil stage in the Wolf in Witch's Clothing quest
+not functioning
+• Fixed the Coven's Gambit quest advancement being incorrectly
+titled "Witch in Wolf's Clothing"
+• Fixed a discovery in Eastern Pass being buried inside an ochre
+froglight
+• The starting sequence when entering the final arena in Silver
+Knight's Tomb now properly begins (This will only apply to new
+instances, old instances will remain bugged and require
+moderator support)
+• For Whom the Bell Tolls, True Genius, and Truer Genius can now
+properly be progressed after a quest reset. Previously affected
+players will automatically be fixed upon weekly rollover (not
+immediately post update)
+• Clicking Lecterns in the Fallen Forum once again give you
+their respective books
+• Fixed AntiLootrun not working with Leftclick
+• Decorated Pots can no longer accept deposited items or be
+broken by projectiles in adventure mode areas• The dynmap is
+back up and updating <https://map.playmonumenta.com/>Hekawt has
+been temporarily Closed.Hekawt has been reopened!
