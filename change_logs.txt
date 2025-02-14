@@ -1,94 +1,203 @@
-&bHotfix:&r Voyage of Discovery now properly sends you to Isles
-during its progression
-&bHotfix:&r Updated the respawning barrel of signs in the player
-market to include all of the new sign typesPublic plugin repo
-has been updated https://github.com/TeamMonumenta/monumenta-
-plugins-public
-&bHotfix:&r Upgraded every map item file; Purple and all the
-other dungeons will no longer kick you or crash anything for
-picking up maps. Some maps on Valley may still have dummy data
-from the temporary fix earlier, but that will fix itself with
-weekly update. If the map item you're holding has dummy data on
-it, it's safe to hold onto it • it will be updated at that
-time.[Original Message Deleted]### (11.2.0)
-For the update on February 5, 2025
-### Minor New Features:
-• Tier 1+ patrons, moderators, and developers can now bully each
-other on playerplots and plots
-  • Equip a Player Punch cosmetic and punch a tier 1+ patron,
-moderator, or developer to launch them into the sky!
-  • A bully can punch a player every 30 seconds, and a victim
-can only be launched every 60 seconds
-  • You can opt out of Player Punches by opening your PEB and
-going to Gameplay/Combat Options
-  • Be careful who you pick on or else you might find yourself
-being launched from afar...
-### Mob Changes:
-• Elcard the Ignoble, Arvaya's Statue, The Pig God, Swordsage
-Richter, T'Calin, and Masked Figure now use the standard health
-scaling formula
-### Feedback Fixes:
-• The cog signs in the Primeval Creations III Light Blue puzzle
-now have glowing text for ease of visibility
-• The Quest Guide in Oceangate and Steelmeld now will tell you
-what quests are in Oceangate without having to punch them again
-• Whisper channels are now hidden from chat command suggestions
-• Made some minor visual changes and added a staircase to the
-second part of Salazar's Folly
-• Switched and slightly improved the vanities of Invokers and
-Convokers to make it easier for non-RP users in Wolf in Witch's
-Clothing
-• Respawnered near the end of Coven Fortress where two gameplay
-areas were very thinly divided
-• Added one chest near the end of Coven Fortress
-• Reduced the health of Hexbound Arachnid (summoned-spider in
-Coven Fortress)
-• Added missing bedrock to Coven Fortress so the poi doesn't
-entirely implode with creepers / pernicious
-• Visually improved a small ruin and its surroundings near
-Highwatch
+&nScout Charms&r
+• Added common charms for Rending Razor
+• Lesser Marksman's Charm : +0.25% -> +0.2% Sharpshooter Stack
+Damage
+• Greater Marksman's Charm : +0.5% -> +0.4% Sharpshooter Stack
+Damage
+• Focused Marksman's Charm : +0.5% -> +0.4% Sharpshooter Stack
+Damage
+• Lesser Quickshot Charm : +5% -> +10% Quickdraw Damage
+• Greater Quickshot Charm : +10% -> +20% Quickdraw Damage
+• Focused Quickshot Charm : +15% -> +35% Quickdraw Damage
+• Swift Quickshot Charm : +5% -> +10% Quickdraw Damage
+• Bloodhound's Crest : -15% -> -10% Quickdraw Damage
+• Bottled Wind (Rework) : 2 Charm Power, +10% Swiftness Attack
+Speed Amplifier, -10% Swiftness Speed Amplifier
+• Laser Attachment : +2 -> +1 Quickdraw Piercing
+• Quickening Mycosis (Rework) : 2 Charm Power, -30% Rending
+Razor Cooldown, +30% Rending Razor Travel Speed, +30% Rending
+Razor Size, -15% Rending Razor Rend Damage, -15% Rending Razor
+Embed Damage
+• Quickening Bracer (Rework) : 2 Charm Power, +5% Swiftness
+Enhancement Cooldown Reduction
+&nWarlock Charms&r
+• Scion of the Stars (Rework) : 3 Charm Power, +1 Soul Rend Mark
+Count, -30% Soul Rend Ally Heal, +2 Dark Pact Heal
+&nShaman Charms&r
+• Crumbling Effigy : 3 -> 4 Charm Power
+• Withering Petal : -50% -> -35% Decayed Totem Pulse Delay
+&bItem Changes&r
+&nArrows&r
+• Ashkii Quarrel : -30% -> -35% Projectile Damage
+• Luther's Bolt: -25% -> -30% Projectile Damage
+• Keterborn Bolt : +10% -> +5% Projectile Damage
+• Pale Arrow : +25% -> +15% Projectile Damage
+• Proprietor's Present : -10% -> -20% Projectile Damage
+• Sentry's Arrow : -30% -> -35% Projectile Damage
+• Star Seeker's Needle : +10% -> +5% Projectile Damage
+• Stormsurge Quarrel: -35% Projectile Damage -> -25% Projectile
+Damage, 10 -> 6 Abyssal
+• Timetorn Arrow : +100% -> +50% Projectile Speed&nCelsian Isles
+Tiered&r
+• Arrow's Guide : 16 -> 15.5 Projectile Damage
+• Celsian Standard : 13 -> 14 Projectile Damage
+• Chillwind Repeater : 13 -> 14 Projectile Damage, 1 -> 1.1
+Projectile Speed, 1 -> 0 Punch
+• Deadweight Cannon : 20 -> 24 Projectile Damage
+• Eagle's Talon : 16 -> 16.5 Projectile Damage
+• Ebon Shadows : 18 -> 19 Projectile Damage
+• Farsight Flame : 9 -> 10.5 Projectile Damage
+• Final Crescent : 20 -> 21 Projectile Damage
+• Frostbomb Lobber : 14 -> 17.5 Projectile Damage
+• General's Sidearm : 15 -> 15.5 Projectile Damage
+• Ishnir Sharpshooter : 14 -> 15.5 Projectile Damage
+• Northwind : 12 -> 13.5 Projectile Damage
+• Ranger's Gale : 14 -> 16.5 Projectile Damage
+• Seared Bow : 14 -> 15 Projectile Damage
+• Stalwart Shortbow : 8 -> 9 Projectile Damage
+• Starbound Longbow : 12.5 -> 13.5 Projectile Damage
+• Strikebow : 14 -> 14.5 Projectile Damage, 1 -> 1.2 Projectile
+Speed
+• Viridian Hunter : 12 -> 13 Projectile Damage
+&nCelsian Isles Uncommon, Event and Unique&r
+• Astéri : 24 -> 25 Projectile Damage, 1 -> 1.4 Projectile Speed
+• Entropic Blunderbuss : 16 -> 17 Projectile Damage
+• Frozen Longbow : 8 -> 13 Projectile Damage
+• Mechanized Shortbow : 19 -> 20 Projectile Damage
+• Miner's Flintlock : 15 -> 16.5 Projectile Damage
+• Waveborn Bow : 12 -> 14.5 Projectile Damage
+• Frostbolt : 18 -> 22 Projectile Damage
+• Crest of Celsia (Crest of the Covetous) : 22 -> 22.5
+Projectile Damage
+• Freezeflame : 20 -> 21.5 Projectile Damage
+• Pirate's Flintlock : 12 -> 13 Projectile Damage
+• Thousand Fists of Turaal : 8 -> 9.5 Projectile Damage&nCelsian
+Isles Patron&r
+• Bramble Blaster : 14 -> 19 Projectile Damage
+• Carcano 91/38 : 16 -> 18 Projectile Damage
+• Frigid Rupture : 20 -> 20.5 Projectile Damage, 3 -> 2 Piercing
+• Heart Phinim : 16 -> 17 Projectile Damage
+• Hippolyta's Revenge : 20 -> 21.5 Projectile Damage
+• Imminent Requiem : 8 -> 10 Projectile Damage
+• Polaris : 8 -> 10 Projectile Damage
+• Stalker's Repeater : 18 -> 20 Projectile Damage
+• Violet Arc : 15 -> 19 Projectile Damage
+&nCelsian Isles Rare, Artifact, and Epic&r
+• Aleph (Glacial Railgun) : 16 -> 17 Projectile Damage
+• Aperion : 18 -> 20 Projectile Damage
+• Embers of the Hearth : 17.5 -> 20 Projectile Damage
+• Fury of the Storm (Fury of the Designer) : 20 -> 21 Projectile
+Damage
+• Icicle Greatbow : 14 -> 16 Projectile Damage
+• Incendiary Inferno : 17 -> 23 Projectile Damage
+• Phantom Flintlock : 16 -> 19 Projectile Damage, 10 -> 5
+Piercing
+• Poacher's Rifle : 18 -> 18.5 Projectile Damage
+• Scarab's Bane : 19 -> 22 Projectile Damage
+• Springloaded Gadget : 24 -> 26.5 Projectile Damage
+• Sunken Blunderbuss : 20 -> 23 Projectile Damage
+• Creation : 22 -> 26.5 Projectile Damage
+• Wildthorn Crescent : 20 -> 22 Projectile Damage
+• Ire of the Gods (Colossal Crossbow) : 26 -> 26.5 Projectile
+Damage&nThe Architect's Ring Tiered&r
+• Adventurer's Longbow : 22.5 -> 21.5 Projectile Damage
+• Archite Pistol : 20 -> 19 Projectile Damage
+• Ashkii Pine Crossbow : 20 -> 21.5 Projectile Damage
+• Bow of Stars : 22 -> 23.5 Projectile Damage
+• Eastern Winds : 1 -> 2 Unbreaking
+• Oaksteel Blade : 12 -> 14 Attack Damage
+• Silver Blade : 13 -> 15 Attack Damage
+• Slayer of Fears : 14 -> 15.5 Attack Damage
+&nGallery of Fear Items&r
+• The Watcher : 34 -> 36 Projectile Damage
+• Heart Stopper : 29.5 -> 34 Projectile Damage
+&nThe Architect's Ring Masterwork&r
+• Bonepiercer EX (M4) : 27 -> 30 Projectile Damage
+• Crescent of Dominion (M4) : 15 -> 14 Attack Damage
+• Death's Gaze (M4) : 24 -> 27 Projectile Damage
+• Floral Anguish (M4) : 26 -> 30 Projectile Damage
+• Hycenea's Vinelash (M4 only) : 4 -> 3 Magic Protection
+• Kisarith (M4) : 18.5 -> 23.5 Projectile Damage, 0 -> 3
+Regicide, 3 -> 0 Fire Aspect
+• Prismatic Enigma (M4) : 32 -> 32.5 Projectile Damage
+• Roar of the Valley EX (M4) : 27 -> 29.5 Projectile Damage
+• Shadowstone Ballista (M4) : 19.5 -> 25.5 Projectile Damage
+• Shrouded Sabatons (M4) : +18% -> +25% Attack Damage, 4 -> 3
+Melee Protection, 4 -> 3 Magic Protection
+• The Vedha’s Soulcrusher (M4) : 22.5 -> 25 Attack Damage
+• Vermin’s Waltz (M4) : 22.5 -> 25 Attack Damage, 0.9 -> 0.8
+Attack Speed
+• Word of the Architect (M4) : 22.5 -> 23 Projectile Damage
+• Wind's Gaze (M4) : 30 -> 32 Projectile Damage
+• Witchbane Revolver (M4) : 12.5 -> 13 Projectile Damage###
+Feedback Fixes:
+• Changed the pitch of a waterfall effect in Sierhaven
+• Adjusted a coven overseer spawner in Coven Fortress
+• Added a couple spawners to Bewitched Dominion, tweaked a few
+encounters, and added 2 chests
+• Waterlogged submerged barriers surrounding Marina Noir
+• Removed blindness effect from entering the Portal strike
+• Optimized the cloud pads in the air branch of Coven's Gambit
+• Tweaked a small visual pillar Lowland Temple
+• The Foreman's elite's Electric Spark summons in Brown no
+longer reward experience when killed
+• Adjusted Exalted Yellow spawner placements and spawner
+detection ranges for particularly difficult spots
+• Added 3 chests to Exalted Yellow
 ### Minor Bug Fixes:
-• Fixed Stasis not working on certain damage types like
-Broodmother's web carpet
-• Fixed weird interactions between graves/teleports and Steel
-Stallion/Color Splash mounts. Unfortunately, this means that the
-mounts can once again be dismounted when sneaking.• Fixed Urchin
-Barb and Mist-Touched-Arrow not having location tags
-• Fixed visual bug with Winged mobs caused by using degrees
-instead of radians
-• (hopefully) Fixed being able to get the conquer message twice
-for the new crypt poi
-• Fixed the Crafter handbook advancement ungranting itself
-outside of Valley shards
-• The output in the Primeval Creations III Light Blue puzzle now
-properly respects the cog numbers
-• Fixed winning the Kaul fight spawning bedrock in molten chasm
-• Corrected a missing apostrophe in Mage's Legacy
-• Creeperjuice is once again available to play when it's not
-Creeperween.
-• Fixed a stuck spot in the Fallen Menagerie lobby
-• Fixed several stuck spots on a tree near Galengarde
-• Fixed some build errors in Celestial Zenith rooms
-• Fixed Ascended Pyromancers in Blue not spawning chests on
-death
-• Fixed the sigil stage in the Wolf in Witch's Clothing quest
-not functioning
-• Fixed the Coven's Gambit quest advancement being incorrectly
-titled "Witch in Wolf's Clothing"
-• Fixed a discovery in Eastern Pass being buried inside an ochre
-froglight
-• The starting sequence when entering the final arena in Silver
-Knight's Tomb now properly begins (This will only apply to new
-instances, old instances will remain bugged and require
-moderator support)
-• For Whom the Bell Tolls, True Genius, and Truer Genius can now
-properly be progressed after a quest reset. Previously affected
-players will automatically be fixed upon weekly rollover (not
-immediately post update)
-• Clicking Lecterns in the Fallen Forum once again give you
-their respective books
-• Fixed AntiLootrun not working with Leftclick
-• Decorated Pots can no longer accept deposited items or be
-broken by projectiles in adventure mode areas• The dynmap is
-back up and updating <https://map.playmonumenta.com/>Hekawt has
-been temporarily Closed.Hekawt has been reopened!
+• Fixed 6 player cz leaderboard being gone
+• Fixed bonus treasure score from gifts and bonus tree not
+applying sometimes when beating Depths content
+• Fixed death counter not decreasing sometimes when going to the
+next floor in Depths content
+• Fixed broken clock gift sounds playing for the wrong person
+• Fixed Earthen Tremor's block displays being tilted in the
+player's facing direction
+• Fixed block display "quake" effects such as Earthen Tremor
+being off-center
+• Fixed Fountains of Miracle Grove Terror kills not counting
+towards the quest
+• Fixed one of the Starpoint beacons not lighting
+• Books can once again be signed• Covered up some polished
+deepslate in Mini Mining Camp
+• Fixed a build glitch inside the Baker's Basement Quest Area
+• Fixed elite finisher dummy spawners not spawning elite
+finisher dummies if there are mobs nearby; they now only check
+for mobs of the same name as intended. You will need to pick up
+and place your spawners with an egginator to apply the fix.
+• Purchasing the Snowball Launcher from Selholly Sprignos now
+properly gives you the "2024 Events" advancement if you didn't
+have it already. If you are missing this advancement because of
+this issue, talk to Selholly with a launcher in your inventory
+anytime during the current Winter event to get the advancement.
+• Fixed the area around one of the Starpoint beacons being
+breakable
+• Fixed Zenith Charms updating themselves in weird ways and
+losing/gaining stats unnecessarily
+• Fixed Teal in skt playing both songs at the same time
+• Fixed Velara not being a safezone
+• Fixed the tip for Experiencinator obtainment saying the wrong
+dungeon
+• Fixed Halid's Song starting waypoint being offcentered
+• Removed some barrier blocks floating above the Dehydrated
+Oasis
+• Added Adventure zone for Huntsman O'Neil past the Nyr
+Battlefield
+• Updated the vanities of the Vindicator & Basic training
+dummies (this may not update already existing copies)
+• Fixed a memory leak due to potion effects
+• Fixed a bug causing the tablist to never refresh for other
+shards
+• Fixed a bug allowing to obtain infinite absorption when
+winning in Snowball Fight
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• Snowball Fights have been reopened.
+&bHotfix:&r Rending Razor charms can now be dropped
+&bHotfix:&r Elder Yuti Abello now offers a full refund for
+Quickening Mycosis for this week only
