@@ -1,32 +1,9 @@
-&b1.20.4 Upgrade Plans&r
-After months of development and several rounds of beta testing
-completed, we plan to perform the server upgrade to version
-1.20.4 <t:1737925200:R>, roughly at <t:1737925200:F>.
-We heavily encourage you to finish up any open dungeon instances
-as soon as possible, as they may become broken or otherwise
-impossible to complete following the version upgrade. Estimated
-downtime for the update is anywhere between 4 to 8 hours. After
-this, we will resume our usual weekly update schedule. As usual,
-report any new bugs to # bug-reports and we will fix them as
-soon as we can.
-As a note, this time is flexible, and may be pushed back
-depending on any unforseen issues that may occur between now and
-then.
-@everyone
-As an additional note: Due to slow progress over the holidays
-and a desire to launch the next balance update with as few
-issues as possible, we are not launching a balance patch with
-the 1.20.4 update. Instead, the next patch is planned to ship on
-February 6th. The bulk of the update will be focused on
-addressing issues with Scout and Cleric. Until then, feel free
-to bring your balance concerns to https://discord.com/channels/3
-13066655494438922/1022346855444656189 and thanks for your
-patience.[Original Message Deleted]Happy to announce that
-@Honeypint has joined Team Monumenta's developer team! As
-someone who needs no introductions, Honeypint has been with us
-behind the scenes with us for a while now as we underwent the
-1.20 upgrade, developing some really awesome stuff for yall that
-will be seen with today's changelogs!
+[Original Message Deleted]Happy to announce that @Honeypint has
+joined Team Monumenta's developer team! As someone who needs no
+introductions, Honeypint has been with us behind the scenes with
+us for a while now as we underwent the 1.20 upgrade, developing
+some really awesome stuff for yall that will be seen with
+today's changelogs!
 Make sure to give the congratulatory 🏓[Original Message
 Deleted]We're very pleased to announce that @amecyann02 has
 joined Team Monumenta's developer team as our newest builder!
@@ -81,3 +58,28 @@ This will
 &bnot&r impact your instances, since those are tied to the
 weekly reset.Please welcome @chasm101 as our newest Moderator!
 Make sure to give them a celebratory 🏓
+&bSilver Knight Remnants:&r
+Excited to announce that at long last, the mystery of the Crying
+Obsidian all around Star Point and the Architect’s Ring
+overworld will finally be solved on <t:1740852000:F> in our
+brand new piece of overworld content • Silver Knight Remnants.
+As part of this new addition to Region 3, you'll find yourself
+exploring bite sized sections of places familiar and strange
+alike, testing your combat and puzzle capabilities, and giving
+the Ring a taste of smaller sized content that was lost with the
+introduction of mega-POIs.
+Along with its accompanying quest, your journeys into the
+Remnants will be supplemented by playing certain R3 Overworld
+content (including PoIs, Strikes, Galleries, and bosses) to find
+keys to the SKRs, with plenty of rewards to find within!
+Players who wish to engage with the Remnants will be able to
+find the introductory quest,
+&bRemnants of the Empire&r, at the Record-Keeper near the
+Chantry of Repentance to learn all about what lies beyond the
+hidden Silvergates all over the Ring • requiring completion of
+For Whom the Bell Tolls, a completion of the Celestial Zenith on
+any difficulty, and completion of the world boss Sirius, the
+Final Herald.
+Please enjoy this teaser trailer, and we hope to see you all
+there there! @everyone
+https://youtu.be/aADLBZcNT1Q

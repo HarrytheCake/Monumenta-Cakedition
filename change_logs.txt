@@ -5,86 +5,6 @@ and select `I want to unlock this shop`.
 • The City of Shifting Waters is still bugged. Players are
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
-• Snowball Fights have been reopened.
-&bHotfix:&r Rending Razor charms can now be dropped
-&bHotfix:&r Elder Yuti Abello now offers a full refund for
-Quickening Mycosis for this week only
-&bHotfix:&r Double daily bounties for Valentine's day are now
-working; change shards or log back in for today's second bounty
-&bHotfix:&r Added new emoji; additional help pages to view all
-options will be available after daily restart
-&b(11.4.0)&r
-For the update on February 19, 2025
-### Minor New Features:
-• A Dummy to test damage related enchantments like Stamina and
-Thorns has been added to the Markus in New Antium
-• Abilities with modifiable triggers now have modifications
-reflected in their description
-  • Some possible modifications are not included as they would
-make the descriptions potentially too long without being more
-useful
-  • Modifiable triggers are highlighted yellow
-  • Swap and drop triggers are now listed as "Press [key]" where
-[key] is the key you have bound to swap/drop (i.e. F and Q by
-default). Right and left clicks are still listed as such because
-Minecraft would call them "Right Button" and "Left Button" which
-is worse.
-• Abilities with charms now have (almost all) modified values
-from charms reflected in their descriptions, similar to Zenith
-abilities
-• A few abilities which have different numbers in different
-regions will now have those numbers dynamically update based on
-which region the player is in while viewing the description
-• Some ability descriptions have had minor changes to wording or
-formatting for consistency, clarity, etc.
-### Feedback Fixes:
-• A Shaman's Lament now places colored concrete under the
-potions
-• Added an Assist Mode option to the Tower segment of An
-Unexpected Lesson
-• You can now quick-leave and quick-return to the Tower and boss
-segments of An Unexpected Lesson, quick traveling between those
-areas of the quest and the summit near Wispervale
-• The colored concrete in the Mirrored Egos puzzle has been
-replaced with colored glazed terracotta### Mob Changes:
-• Crystal Behemoth :
-  • 60 -> 50 Blast damage on Meteor Slam hit
-  • 6 -> 4 block Meteor Slam damage radius
-  • 90% -> 75% Slowness on Projectile spell hit
-  • The spell cast order, spell cooldowns, and Meteor Slam's
-velocity have been modified to make the boss less likely to jump
-off its arena and prevent the projectile spell from being an
-unavoidable hit in certain situations
-• Coven Overseer now requires line of sight to summon spiders &
-slimes
-### Minor Bug Fixes:
-• By My Blade's Haste duration is now affected by the By My
-Blade Attack Speed Duration charm effect
-• Fixed Emerald Ascension being non-functional
-• Fixed Mourning Star's Luminous Infusion Kill Requirement charm
-effect not being shown in red
-• Properly updated Scion of Stars to its new charm effects
-• The chest by the Professor in Sierhaven containing class
-starter weapons will no longer close itself when opened
-• Fixed Primordial Elemental (from Kaul) not properly scaling
-health / initializing attributes
-• Fixed Quickdraw triggering Hex Eater
-• Rending Razor no longer applies enchantments from the
-projectile weapon used to cast it
-• Fixed Replica C'thedrros having incorrect damage
-• Fixed an issue where block placer mobs in the middle of a
-Meteor Slam attack would continue to place blocks
-• Fixed Crystal Behemoth applying vanilla slowness on projectile
-spell hit
-• Fixed White Tesseract (u) not sending group teleport option in
-a dungeon
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
 &bHotfixes&r:
 • Fixed Magma Shield enhancement causing Inferno to deal orders
 of magnitude more damage than intended
@@ -104,3 +24,132 @@ increases the Elemental Arrows projectile multiplier
 • Fixed a few changes from the changelog not actually happening
 &bHotfix&r (at daily restart): Actually fixed Amplifying Hex
 doing significantly less damage than intended
+&bHotfix&r: The Rush of Dissonance pass mission now properly
+tracks waves completed.
+&bHotfix:&r Following the Resource Pack 5.5.0 update,
+Mastersmith Antonio has gained 7 new Hope Skins in his shop!
+Many thanks to our patrons for their continued support!
+&bHotfix&r (at daily restart): The tab list updates itself again
+&b(11.5.0)&r
+For the update on February 26, 2025
+### Major New Features:
+&bSilver Knight Remnants&r
+• A brand new repeatable piece of Overworld content, Silver
+Knight Remnants is releasing <t:1740852000:F>!
+• A brand new quest,
+&bRemnants of the Empire&r, introduces this content, which can
+be accessed at the Record-Keeper outside the Chantry of
+Repentance with completion of For Whom the Bell Tolls, a win of
+Celestial Zenith, and at least one Sirius kill, which will
+unlock access to SKRs.
+• Play existing Overworld content like PoIs, Strikes, Gallery
+maps, and more to occasionally find Remnant Scrolls which can
+then be used to access a Silver Knight Remnant room. These can
+also be upgraded at the Record-Keeper for longer Sequence
+scrolls which require more steps to complete, but offer greater
+rewards!
+• Once you've gotten a Scroll and have completed the quest,
+interact with your Scroll to receive a hint to a Silvergate
+you've attuned to. Find that location and you'll enter a brand
+new combat encounter to conquer or puzzle encounter to unravel.
+• Find rich lore about the Silver Knights of the past and their
+hunts for various Wool across the world, in new and familiar
+locations.
+• Earn incredible rewards, including currency, new items, and
+exciting new charms, as well as a brand new utility Artifact,
+the Portable Gatecharm.
+&bFriend System&r
+• Added a friend system
+  • `/friend add <player>`
+    • Send a friend request to a player using this command
+    • Friend requests can be accepted by the receiver using the
+same command
+    • Requests last for ten minutes before expiring
+  • `/friend remove <player>`
+    • You can remove friends using this command
+  • `/friend list`
+    • Run this command to see your list of friends in a GUI
+    • You can also remove friends within the GUI by entering
+removal mode
+  • `/friend list_raw [page]`
+    • If you prefer to list your friends in chat, you can run
+this command instead
+• Added a blocking system
+  • For the time being, this new blocking system is in addition
+to the existing ignore system that is accessible using `/chat
+ignore`
+  • As of now, blocking a player only prevents them from being
+able to send you friend requests
+  • You can interact with your list of blocked players using the
+following commands
+    • `/block add <player>`
+    • `/block remove <player>`
+    • `/block list`
+    • `/block list_raw [page]`
+### Minor New Features:
+&bCave of Secrets Overhaul&r
+Cave of Secrets has been entirely rebuilt from the ground up! In
+addition to rebuilding the surrounding overworld, the Poi is now
+a T3, has entirely new mobs, and related quest sequences have
+been made significantly cooler. Additionally, due to the poi's
+size, dying inside Cave of Secrets will respawn you at the
+beginning of the Poi rather than Sierhaven.
+• Entering the portal in the Cave of Secrets during The Staff
+quest now only requires the Elemental Staff to be in your
+inventory, rather than required to be in your mainhand
+• The vanilla food in the King's Valley overworld chests has
+been replaced with new custom foods
+• Discovery r1 new
+• Added sounds to the Class Selection and Ability Triggers GUIs
+• Primordial Bolt now has a charge-up bar
+• Automatic shard sorting has been updated to prioritize shards
+with better performance and shards with guild mates.### Feedback
+Fixes:
+• When your partner dies in Rush of Dissonance, the ensuing
+message now makes clear that loot payout will continue to be
+halved as part of Duo mode
+• Jungle ruins biome (used in Lowland Temple) now has ambient
+sounds
+• Vinewoven Apostle (R1 Jungle Mob) slight damage increase
+• Moved a problematic chest in Bewitched Dominion
+• Attempted to add a water shortcut to Coven Fortress
+• The line of sight reqs that were supposed to be added to Coven
+Overseers have probably been added for real this time
+• Remade the teleporter barriers at the end of each seasonal
+sanctuary in Pink to prevent players from accidentally leaving
+without deactivating the sanctuary
+• During External Corruption, when turning in items to Reynart,
+you will now be given an involved character story's in
+chronological progression, rather than parts of the story being
+tied directly to specific items
+• The weekly update bot now remembers the most reacted message
+from the last week when it restarts
+### Minor Bug Fixes:
+• Loot chests from Eldrask now stack with other unopened Eldrask
+loot chests without needing to re-open the container you put
+them in first
+• Fixed incorrect grammar on a sign in White's lootroom
+• Reynart will no longer have double dialogue during External
+Corruption
+• Fixed Dreadful Crusher having 0.5 less attack damage than
+Corrupted Scalawag's Hatchet
+• Fixed minor description issues for Celestial Blessing,
+Melancholic Lament, and Counter Strike
+• Fixed Swift Cuts enhancement reducing Whirling Blade damage
+and radius instead of increasing them
+• Fixed multiple unintended enchantments, etc. triggering on
+Rending Razor rend damage
+• Fixed `increasd` typo in Magma Shield and Frost Nova
+• Fixed namemc like verification
+• Lich's Warlock shadows now include custom debuffs when casting
+Amplifying Hex on players
+• Fixed Chilling Abominations from Rush of Dissonance applying
+vanilla slowness
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The City of Shifting Waters is still bugged. Players are
+advised to complete the dungeon in a single sitting to avoid
+instance corruption.
+• The player reset booth remains closed.
