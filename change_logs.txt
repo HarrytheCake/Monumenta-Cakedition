@@ -1,150 +1,224 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is still bugged. Players are
-advised to complete the dungeon in a single sitting to avoid
-instance corruption.
-&bHotfixes&r:
-• Fixed Magma Shield enhancement causing Inferno to deal orders
-of magnitude more damage than intended
-• Fixed Amplifying Hex dealing significantly less damage than
-intended
-• Fixed Taboo burst mode lasting only a quarter of a second
-• Fixed Rending Razor not applying slowness
-• Fixed Tactical Maneuvers forwards dealing the wrong amount of
-damage
-• Fixed the class GUI failing to load if charms caused there to
-be a negative roman numeral displayed
-• Fixed charms modifying vanilla potion effect values to be
-listed in the description as adding 1 more level than they did
-• Fixed Elemental Spirit description not mentioning that level 2
-increases the Elemental Arrows projectile multiplier
-• Fixed many minor issues with various ability descriptions
-• Fixed a few changes from the changelog not actually happening
-&bHotfix&r (at daily restart): Actually fixed Amplifying Hex
-doing significantly less damage than intended
-&bHotfix&r: The Rush of Dissonance pass mission now properly
-tracks waves completed.
-&bHotfix:&r Following the Resource Pack 5.5.0 update,
-Mastersmith Antonio has gained 7 new Hope Skins in his shop!
-Many thanks to our patrons for their continued support!
-&bHotfix&r (at daily restart): The tab list updates itself again
-&b(11.5.0)&r
-For the update on February 26, 2025
-### Major New Features:
-&bSilver Knight Remnants&r
-• A brand new repeatable piece of Overworld content, Silver
-Knight Remnants is releasing <t:1740852000:F>!
-• A brand new quest,
-&bRemnants of the Empire&r, introduces this content, which can
-be accessed at the Record-Keeper outside the Chantry of
-Repentance with completion of For Whom the Bell Tolls, a win of
-Celestial Zenith, and at least one Sirius kill, which will
-unlock access to SKRs.
-• Play existing Overworld content like PoIs, Strikes, Gallery
-maps, and more to occasionally find Remnant Scrolls which can
-then be used to access a Silver Knight Remnant room. These can
-also be upgraded at the Record-Keeper for longer Sequence
-scrolls which require more steps to complete, but offer greater
-rewards!
-• Once you've gotten a Scroll and have completed the quest,
-interact with your Scroll to receive a hint to a Silvergate
-you've attuned to. Find that location and you'll enter a brand
-new combat encounter to conquer or puzzle encounter to unravel.
-• Find rich lore about the Silver Knights of the past and their
-hunts for various Wool across the world, in new and familiar
-locations.
-• Earn incredible rewards, including currency, new items, and
-exciting new charms, as well as a brand new utility Artifact,
-the Portable Gatecharm.
-&bFriend System&r
-• Added a friend system
-  • `/friend add <player>`
-    • Send a friend request to a player using this command
-    • Friend requests can be accepted by the receiver using the
-same command
-    • Requests last for ten minutes before expiring
-  • `/friend remove <player>`
-    • You can remove friends using this command
-  • `/friend list`
-    • Run this command to see your list of friends in a GUI
-    • You can also remove friends within the GUI by entering
-removal mode
-  • `/friend list_raw [page]`
-    • If you prefer to list your friends in chat, you can run
-this command instead
-• Added a blocking system
-  • For the time being, this new blocking system is in addition
-to the existing ignore system that is accessible using `/chat
-ignore`
-  • As of now, blocking a player only prevents them from being
-able to send you friend requests
-  • You can interact with your list of blocked players using the
-following commands
-    • `/block add <player>`
-    • `/block remove <player>`
-    • `/block list`
-    • `/block list_raw [page]`
+&bHotfix:&r The totem near the Air Shrine as part of Tlaxan
+Troubles will once again function and progress your quest
+&b(11.6.0)&r
+For the update on March 5, 2025
 ### Minor New Features:
-&bCave of Secrets Overhaul&r
-Cave of Secrets has been entirely rebuilt from the ground up! In
-addition to rebuilding the surrounding overworld, the Poi is now
-a T3, has entirely new mobs, and related quest sequences have
-been made significantly cooler. Additionally, due to the poi's
-size, dying inside Cave of Secrets will respawn you at the
-beginning of the Poi rather than Sierhaven.
-• Entering the portal in the Cave of Secrets during The Staff
-quest now only requires the Elemental Staff to be in your
-inventory, rather than required to be in your mainhand
-• The vanilla food in the King's Valley overworld chests has
-been replaced with new custom foods
-• Discovery r1 new
-• Added sounds to the Class Selection and Ability Triggers GUIs
-• Primordial Bolt now has a charge-up bar
-• Automatic shard sorting has been updated to prioritize shards
-with better performance and shards with guild mates.### Feedback
-Fixes:
-• When your partner dies in Rush of Dissonance, the ensuing
-message now makes clear that loot payout will continue to be
-halved as part of Duo mode
-• Jungle ruins biome (used in Lowland Temple) now has ambient
-sounds
-• Vinewoven Apostle (R1 Jungle Mob) slight damage increase
-• Moved a problematic chest in Bewitched Dominion
-• Attempted to add a water shortcut to Coven Fortress
-• The line of sight reqs that were supposed to be added to Coven
-Overseers have probably been added for real this time
-• Remade the teleporter barriers at the end of each seasonal
-sanctuary in Pink to prevent players from accidentally leaving
-without deactivating the sanctuary
-• During External Corruption, when turning in items to Reynart,
-you will now be given an involved character story's in
-chronological progression, rather than parts of the story being
-tied directly to specific items
-• The weekly update bot now remembers the most reacted message
-from the last week when it restarts
+• Added a new cosmetic skill set for Mage, which can be acquired
+from a certain NPC after liberating the seasons and conquering
+the source of their affliction.
+• A new Galos themed SKR puzzle had been added!
+• Added advancements for new spawner types that were introduced
+with the release of Silver Knight Remnants
+• Worldshaper's Loom now has an additional mode that
+automatically changes mode based on where the player is looking
+• Interactable lecterns across the game (Forum, Star Point,
+etc.) have been given a sound effect when receiving a book from
+them
+• Added Cherry Chahna to the Isles overworld
+• Various changes to player plots
+  • Added a standardized prefix to most messages
+  • Changed the syntax of commands dealing with plot access from
+`/plot access` to `/plot`
+  • Suggestions of players with access to your plot now appear
+when typing `/plot remove` in chat
+  • Fixed not being notified when you are granted access to
+someone's plot if you were not on the same shard as them
+• The PEB/Player settings GUI has received a rework, and now
+displays your current settings in the lore. Please report any
+bugs related to unclear or inconsistent descriptions or inverted
+settings.
+• Reduced sound on Crystallized Combos, Supernova Finisher, and
+Locust Swarm Finisher
+• Quake radius now works in a sphere instead of a square
+• Eldrask's Greatsword Slam : 18 -> 36 Magic Damage### SK
+Remnants Changes:
+&nScroll Drops:&r
+• All dailies / weeklies that can drop Scrolls now have a decent
+chance at dropping Scroll Fragments when a scroll fails.
+• All Scroll drops are now weighted equally between Combat &
+Puzzle scrolls.
+   • If desired, we could look into weighing based on content
+akin to augments.
+• Strike & Boss daily scroll rates have been buffed slightly.
+   • Nerfed portal's non-daily drop rate to account for the
+possible completion speed.
+   • Buffed Sirius daily by 10%, godspore daily by 15%.
+   • Buffed Sirius uncommon by 15%, godspore uncommon by 10%
+• Fishing dailies (Five greater/abyssal caches) can now drop
+Scrolls and Scroll Fragments
+• Bounties are now weighed equally across tiers.
+   • It was weird that this was the only obtainment method that
+scaled with delves, functionally excluding newer players
+• Poi pinatas (end chests) can now drop scroll fragments rarely.
+   • This chance scales with players.
+   • This chance is weighted based on the same criteria for
+scroll chances, explained here: https://discord.com/channels/313
+066655494438922/1345340298527637566/1346178292998213773
+   • Chance for scrolls from endchests remains the same.
+• Bonus scroll from clearing 19 pois has been reduced to
+&b12&r.
+   • Instead of 7 days to do 3 biomes worth, you have 7 days to
+do 2 biomes worth.
+   • The chat message is also green now.&nRemnant Caches:&r
+• Have been reworked, now have a significantly buffed rare drop
+chance but cost
+&b9&r memory fragments, previously 6.
+• In tandem with additional Scroll & Scroll Fragment drops being
+added, caches will spew out less raw har value in currencies.
+Dropped har still remains at  3 • 4.
+• Removed sequence scrolls as a possible drop from caches. While
+the dopamine chase was fun, the variance caused in large part by
+this drop was allowing for dubious scroll loops.
+• +1 scroll fragment when a scroll doesn't drop from a cache. (1
+to 2) -> (2 to 3)
+• Replaced the augment potion drops with strong potion drops
+&nRecord Keeper Trades&r:
+• Reduced the fragment cost of basic scrolls, from 10 -> 8. Har
+cost increased from 1 -> 2.
+• Sequence scroll remain at 12 fragment cost.
+   • Aim here is to allow sequences to an option of preference,
+however due to room chest variance they'll still be a wee bit
+better on average.
+• Reduced Rare trade frag costs by 33% (24 -> 16 Memory
+Fragments)
+   • Overall the direct rare trade aims to be the main reliable
+source of rares
+&nRoom Changes:&r
+• Fixed a few rooms having less chests than intended.
+• Galos waters are now shark infested
+• Normal Combat and Puzzle rooms now at minimum have 6 chests.
+  • Overall combats and puzzles are closer in average value to
+each other.
+• Better standardized Puzzle room rewards to have less variance
+• Long Combat room rewards have been better standardized
+   • In practice this means we shot a single outlying room with
+too many chests that was causing me headaches
+   • Increased chest count in a couple under chested Long
+Combats
+• The actionbar now displays total chest count in a given room.
+• A name's room is now displayed on the initial entry in a
+subtitle.
+• The Minesweeper puzzle has been given a new room and is now
+part of the Wolfswood biome.&nGeneral Changes:&r
+• Mobs are now in the bestiary. Massive shout-out to Wembler for
+taking on this tedious task.
+• SKR items are now on the Item API.
+     • They are not in the mog pool yet, check back in a month.
+• Reduced some annoying glow lichen that could block melee
+attacks.
+• Dev, Room Contributor, and Beta Tester credits are now added
+to the tree behind the Record Keeper.
+• Crying Obsidian which mark entrance locations can no longer be
+mined.
+• The Portable Gatecharm now notifies the player upon
+unsuccessfully trying to put Rare, Epic, and Zenith charms into
+it.
+• Fixed a lore book referencing a location from an earlier
+draft.
+&nFeedback&r
+The vast majority of these changes are in direct response to the
+comments over in the feedback thread: https://discord.com/channe
+ls/313066655494438922/1345340298527637566
+Please continue providing your input as I try to read every
+message. The general aim here is for scrolls to remain as a rare
+drop, primarily from weekly / daily rewards to allow access to
+the more casual players. I'll be keeping an eye on overall drops
+this next week to gauge how this goes. Thank you all who've
+given feedback so far ❤️
+### Major Bug Fixes:
+• Fixed an issue where mobs summoned by certain bosses did not
+conform to the 20 spawns per spawner limit for loot and XP drops
 ### Minor Bug Fixes:
-• Loot chests from Eldrask now stack with other unopened Eldrask
-loot chests without needing to re-open the container you put
-them in first
-• Fixed incorrect grammar on a sign in White's lootroom
-• Reynart will no longer have double dialogue during External
-Corruption
-• Fixed Dreadful Crusher having 0.5 less attack damage than
-Corrupted Scalawag's Hatchet
-• Fixed minor description issues for Celestial Blessing,
-Melancholic Lament, and Counter Strike
-• Fixed Swift Cuts enhancement reducing Whirling Blade damage
-and radius instead of increasing them
-• Fixed multiple unintended enchantments, etc. triggering on
-Rending Razor rend damage
-• Fixed `increasd` typo in Magma Shield and Frost Nova
-• Fixed namemc like verification
-• Lich's Warlock shadows now include custom debuffs when casting
-Amplifying Hex on players
-• Fixed Chilling Abominations from Rush of Dissonance applying
-vanilla slowness
+• Fixed the tab world boss display
+• Prevented Stellar Zealot and Mire Stomper from being affected
+by the Chivalrous delve modifier
+• Fixed a scarecrow in a long combat SKR room
+• Fixed Bloated Boomer (Scourge of Lunacy) dropping a potion
+that applies vanilla Strength
+• Fixed Frostbite (Rush of Dissonance) applying vanilla Slowness
+on arrow hit
+• Fixed Secret Keeper (Mage Tower) applying vanilla Slowness on
+arrow hit
+• Fixed an issue where Eldrask reward chests would not stack
+with old versions unless they were put into a container first•
+Fixed a longstanding issue where Varcosa, Hekawt, and Archmage
+dummies had vanilla protection enchantments on their cosmetic
+armors
+• Fixed Shaman's Crusher having incorrect stats
+• Fixed the Starvation enchantment not showing its level if it
+was present at level one on an item
+• Fixed Pallid Slayer dropping vanilla effect splash potions on
+death
+• Fixed Magic of the Bastion having vanilla armor and made its
+mount immune to skills
+• Fixed Heart of Astaroth having vanilla armor
+• Fixed Cascade Scourge dropping a splash potion with vanilla
+effects on death
+• The "For Whom the Bell Tolls" advancement is no longer hidden
+on the website
+• `/dd` gives feedback now
+• End gateway beams will no longer occur when the portal appears
+in Cave of Secrets
+• An escape button has been added to the ||Towers|| SKR puzzle
+• The SKR ||Towers|| puzzle will no longer spawn incorrectly due
+to slow world loading
+• The SKR ||Towers|| puzzle now accepts alternate valid
+solutions outside of the pregenerated solution
+• Several typos in the SKR ||Axxil VI, VII, and VIII|| books
+have been corrected
+• Fixed number error in the SKR ||Axxil VII|| book
+• In the SKR ||Operator|| puzzle:
+  • Fixed taking a stone out of a socket being able to delete
+the stone if the player is far away
+  • The first map layout (not solution) is now randomized when
+entering the room
+  • All maps have received a sign with the map's name
+• Fixed a stuck spot and a misplaced block in SKR ||Find the
+Buttons||
+• Fixed about thirty damn signs in SKR that had a spelling
+mistake
+• Fixed a typo in the name of Aggripa's Gearshredder and several
+issues with its lore
+• Fixed a typo in the Blackroot Fruit item lore.
+• Hopefully fixed vanilla Suspicous Stews not being correctly
+updated to Dichen Specialty Stews
+• Fixed Short Circuit being tagged as a Pelias' Keep rare charm
+instead of a Silver Knight's Remnants rare charm
+• Fixed Earthen Tremor leaving lingering block displays if
+unloaded mid-cast• Lunacrest Bladedancer is now listed in the
+Tolumaeus bestiary
+• Added some waterlogged barriers to Marina Noir to remove a
+spider stuck spot
+• Souls summoned by C'Axtal can now only attack players
+• C'Shura's Corrupted Strike can now be blocked
+• Fixed Moneychanger Elgort suddenly going missing in Ta'Eldim
+• Fixed a stuckspot in Galengarde
+• Fixed Remnants of the Empire's quest puzzle emergency exit not
+letting you enter the puzzle again
+• Fixed a couple stuck spots in an adventure mode R3 tree
+• Removed a froglight marking a &odiscoert&r in Cave of Secrets
+• Fixed &oArchitect's Abyssal Fishing Cache II&r overfilling•
+possibly then re-introduced it. Bug report if it happens post
+update.
+• Fixed an issue where Eldrask could cast Frost Whirlwind even
+if players are not present in the arena
+• Fixed an issue where Eldrask's Frostbite spell would damage
+Berserkers using Meteor Slam
+• Fixed an Isharist SKR Room having a silly adventure mode zone
+• Purple Tesseract (U) no longer converts potion barrels
+themselves into carriers/chests (as this turned them into normal
+barrels/chests)
+• Potion Barrels now drop in the center of the block instead of
+the "center" (corner)
+• Fixed grammatical error in Ephesius post-quest dialogue
+• Fixed a rare issue where R3 bounty chests T2 and T3 could
+overfill. And then also possibly reintroduced it. Please bug
+report it if it happens post update
+• Fixed a wording inconsistency with the Ensnared spawner
+advancement
+• The automated shard status message in <#579190910567317514>
+should no longer stop updating due to the message character
+limit
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -153,3 +227,12 @@ and select `I want to unlock this shop`.
 advised to complete the dungeon in a single sitting to avoid
 instance corruption.
 • The player reset booth remains closed.
+• Gallery of Fear remains closed.
+&bHotfix:&r
+• New instances of Pink will have the new cosmetic set item be
+properly soulbounded. Traders in existing instances will be
+repaired over time.
+• (On shard restart) Fixed the new cosmetic set not being
+equippable
+&bHotfix:&r The SKR advancements are no longer hidden from the
+website (starting the next website refresh)
