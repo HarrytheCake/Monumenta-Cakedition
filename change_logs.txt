@@ -1,224 +1,12 @@
-&bHotfix:&r The totem near the Air Shrine as part of Tlaxan
-Troubles will once again function and progress your quest
-&b(11.6.0)&r
-For the update on March 5, 2025
-### Minor New Features:
-• Added a new cosmetic skill set for Mage, which can be acquired
-from a certain NPC after liberating the seasons and conquering
-the source of their affliction.
-• A new Galos themed SKR puzzle had been added!
-• Added advancements for new spawner types that were introduced
-with the release of Silver Knight Remnants
-• Worldshaper's Loom now has an additional mode that
-automatically changes mode based on where the player is looking
-• Interactable lecterns across the game (Forum, Star Point,
-etc.) have been given a sound effect when receiving a book from
-them
-• Added Cherry Chahna to the Isles overworld
-• Various changes to player plots
-  • Added a standardized prefix to most messages
-  • Changed the syntax of commands dealing with plot access from
-`/plot access` to `/plot`
-  • Suggestions of players with access to your plot now appear
-when typing `/plot remove` in chat
-  • Fixed not being notified when you are granted access to
-someone's plot if you were not on the same shard as them
-• The PEB/Player settings GUI has received a rework, and now
-displays your current settings in the lore. Please report any
-bugs related to unclear or inconsistent descriptions or inverted
-settings.
-• Reduced sound on Crystallized Combos, Supernova Finisher, and
-Locust Swarm Finisher
-• Quake radius now works in a sphere instead of a square
-• Eldrask's Greatsword Slam : 18 -> 36 Magic Damage### SK
-Remnants Changes:
-&nScroll Drops:&r
-• All dailies / weeklies that can drop Scrolls now have a decent
-chance at dropping Scroll Fragments when a scroll fails.
-• All Scroll drops are now weighted equally between Combat &
-Puzzle scrolls.
-   • If desired, we could look into weighing based on content
-akin to augments.
-• Strike & Boss daily scroll rates have been buffed slightly.
-   • Nerfed portal's non-daily drop rate to account for the
-possible completion speed.
-   • Buffed Sirius daily by 10%, godspore daily by 15%.
-   • Buffed Sirius uncommon by 15%, godspore uncommon by 10%
-• Fishing dailies (Five greater/abyssal caches) can now drop
-Scrolls and Scroll Fragments
-• Bounties are now weighed equally across tiers.
-   • It was weird that this was the only obtainment method that
-scaled with delves, functionally excluding newer players
-• Poi pinatas (end chests) can now drop scroll fragments rarely.
-   • This chance scales with players.
-   • This chance is weighted based on the same criteria for
-scroll chances, explained here: https://discord.com/channels/313
-066655494438922/1345340298527637566/1346178292998213773
-   • Chance for scrolls from endchests remains the same.
-• Bonus scroll from clearing 19 pois has been reduced to
-&b12&r.
-   • Instead of 7 days to do 3 biomes worth, you have 7 days to
-do 2 biomes worth.
-   • The chat message is also green now.&nRemnant Caches:&r
-• Have been reworked, now have a significantly buffed rare drop
-chance but cost
-&b9&r memory fragments, previously 6.
-• In tandem with additional Scroll & Scroll Fragment drops being
-added, caches will spew out less raw har value in currencies.
-Dropped har still remains at  3 • 4.
-• Removed sequence scrolls as a possible drop from caches. While
-the dopamine chase was fun, the variance caused in large part by
-this drop was allowing for dubious scroll loops.
-• +1 scroll fragment when a scroll doesn't drop from a cache. (1
-to 2) -> (2 to 3)
-• Replaced the augment potion drops with strong potion drops
-&nRecord Keeper Trades&r:
-• Reduced the fragment cost of basic scrolls, from 10 -> 8. Har
-cost increased from 1 -> 2.
-• Sequence scroll remain at 12 fragment cost.
-   • Aim here is to allow sequences to an option of preference,
-however due to room chest variance they'll still be a wee bit
-better on average.
-• Reduced Rare trade frag costs by 33% (24 -> 16 Memory
-Fragments)
-   • Overall the direct rare trade aims to be the main reliable
-source of rares
-&nRoom Changes:&r
-• Fixed a few rooms having less chests than intended.
-• Galos waters are now shark infested
-• Normal Combat and Puzzle rooms now at minimum have 6 chests.
-  • Overall combats and puzzles are closer in average value to
-each other.
-• Better standardized Puzzle room rewards to have less variance
-• Long Combat room rewards have been better standardized
-   • In practice this means we shot a single outlying room with
-too many chests that was causing me headaches
-   • Increased chest count in a couple under chested Long
-Combats
-• The actionbar now displays total chest count in a given room.
-• A name's room is now displayed on the initial entry in a
-subtitle.
-• The Minesweeper puzzle has been given a new room and is now
-part of the Wolfswood biome.&nGeneral Changes:&r
-• Mobs are now in the bestiary. Massive shout-out to Wembler for
-taking on this tedious task.
-• SKR items are now on the Item API.
-     • They are not in the mog pool yet, check back in a month.
-• Reduced some annoying glow lichen that could block melee
-attacks.
-• Dev, Room Contributor, and Beta Tester credits are now added
-to the tree behind the Record Keeper.
-• Crying Obsidian which mark entrance locations can no longer be
-mined.
-• The Portable Gatecharm now notifies the player upon
-unsuccessfully trying to put Rare, Epic, and Zenith charms into
-it.
-• Fixed a lore book referencing a location from an earlier
-draft.
-&nFeedback&r
-The vast majority of these changes are in direct response to the
-comments over in the feedback thread: https://discord.com/channe
-ls/313066655494438922/1345340298527637566
-Please continue providing your input as I try to read every
-message. The general aim here is for scrolls to remain as a rare
-drop, primarily from weekly / daily rewards to allow access to
-the more casual players. I'll be keeping an eye on overall drops
-this next week to gauge how this goes. Thank you all who've
-given feedback so far ❤️
-### Major Bug Fixes:
-• Fixed an issue where mobs summoned by certain bosses did not
-conform to the 20 spawns per spawner limit for loot and XP drops
-### Minor Bug Fixes:
-• Fixed the tab world boss display
-• Prevented Stellar Zealot and Mire Stomper from being affected
-by the Chivalrous delve modifier
-• Fixed a scarecrow in a long combat SKR room
-• Fixed Bloated Boomer (Scourge of Lunacy) dropping a potion
-that applies vanilla Strength
-• Fixed Frostbite (Rush of Dissonance) applying vanilla Slowness
-on arrow hit
-• Fixed Secret Keeper (Mage Tower) applying vanilla Slowness on
-arrow hit
-• Fixed an issue where Eldrask reward chests would not stack
-with old versions unless they were put into a container first•
-Fixed a longstanding issue where Varcosa, Hekawt, and Archmage
-dummies had vanilla protection enchantments on their cosmetic
-armors
-• Fixed Shaman's Crusher having incorrect stats
-• Fixed the Starvation enchantment not showing its level if it
-was present at level one on an item
-• Fixed Pallid Slayer dropping vanilla effect splash potions on
-death
-• Fixed Magic of the Bastion having vanilla armor and made its
-mount immune to skills
-• Fixed Heart of Astaroth having vanilla armor
-• Fixed Cascade Scourge dropping a splash potion with vanilla
-effects on death
-• The "For Whom the Bell Tolls" advancement is no longer hidden
-on the website
-• `/dd` gives feedback now
-• End gateway beams will no longer occur when the portal appears
-in Cave of Secrets
-• An escape button has been added to the ||Towers|| SKR puzzle
-• The SKR ||Towers|| puzzle will no longer spawn incorrectly due
-to slow world loading
-• The SKR ||Towers|| puzzle now accepts alternate valid
-solutions outside of the pregenerated solution
-• Several typos in the SKR ||Axxil VI, VII, and VIII|| books
-have been corrected
-• Fixed number error in the SKR ||Axxil VII|| book
-• In the SKR ||Operator|| puzzle:
-  • Fixed taking a stone out of a socket being able to delete
-the stone if the player is far away
-  • The first map layout (not solution) is now randomized when
-entering the room
-  • All maps have received a sign with the map's name
-• Fixed a stuck spot and a misplaced block in SKR ||Find the
-Buttons||
-• Fixed about thirty damn signs in SKR that had a spelling
-mistake
-• Fixed a typo in the name of Aggripa's Gearshredder and several
-issues with its lore
-• Fixed a typo in the Blackroot Fruit item lore.
-• Hopefully fixed vanilla Suspicous Stews not being correctly
-updated to Dichen Specialty Stews
-• Fixed Short Circuit being tagged as a Pelias' Keep rare charm
-instead of a Silver Knight's Remnants rare charm
-• Fixed Earthen Tremor leaving lingering block displays if
-unloaded mid-cast• Lunacrest Bladedancer is now listed in the
-Tolumaeus bestiary
-• Added some waterlogged barriers to Marina Noir to remove a
-spider stuck spot
-• Souls summoned by C'Axtal can now only attack players
-• C'Shura's Corrupted Strike can now be blocked
-• Fixed Moneychanger Elgort suddenly going missing in Ta'Eldim
-• Fixed a stuckspot in Galengarde
-• Fixed Remnants of the Empire's quest puzzle emergency exit not
-letting you enter the puzzle again
-• Fixed a couple stuck spots in an adventure mode R3 tree
-• Removed a froglight marking a &odiscoert&r in Cave of Secrets
-• Fixed &oArchitect's Abyssal Fishing Cache II&r overfilling•
-possibly then re-introduced it. Bug report if it happens post
-update.
-• Fixed an issue where Eldrask could cast Frost Whirlwind even
-if players are not present in the arena
-• Fixed an issue where Eldrask's Frostbite spell would damage
-Berserkers using Meteor Slam
-• Fixed an Isharist SKR Room having a silly adventure mode zone
-• Purple Tesseract (U) no longer converts potion barrels
-themselves into carriers/chests (as this turned them into normal
-barrels/chests)
-• Potion Barrels now drop in the center of the block instead of
-the "center" (corner)
-• Fixed grammatical error in Ephesius post-quest dialogue
-• Fixed a rare issue where R3 bounty chests T2 and T3 could
-overfill. And then also possibly reintroduced it. Please bug
-report it if it happens post update
-• Fixed a wording inconsistency with the Ensnared spawner
-advancement
-• The automated shard status message in <#579190910567317514>
-should no longer stop updating due to the message character
-limit
+&bHotfix&r (on shard restart): `/friend list`/`/f list` no
+longer throws an error for friends added after weekly update
+&bHotfix&r (in 10 minutes): The mage cosmetic set is working
+again
+&bHotfix:&r The Olive Branch puzzle is no longer incompletable
+due to one tube selecting an incorrect powder
+&bHotfix (at nightly restart):&r Some flawed logic in the SKR
+Galos puzzle randomization code that made it easier than
+anticipated has been resolved
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -228,11 +16,239 @@ advised to complete the dungeon in a single sitting to avoid
 instance corruption.
 • The player reset booth remains closed.
 • Gallery of Fear remains closed.
-&bHotfix:&r
-• New instances of Pink will have the new cosmetic set item be
-properly soulbounded. Traders in existing instances will be
-repaired over time.
-• (On shard restart) Fixed the new cosmetic set not being
-equippable
-&bHotfix:&r The SKR advancements are no longer hidden from the
-website (starting the next website refresh)
+&b(11.7.0)&r
+For the update on March 12, 2025
+• As a reminder, this is the last week for the Winter and
+Valentines events. They will be ending with the next weekly
+update. Be sure to get the seasonal advancements and trades
+before it is too late!
+&bMinor New Features:&r
+• The Halls of Wind and Blood Dungeon lobby has been rebuilt!
+The lobby has been themed around the Dungeon itself to improve
+immersion and give the player a taste of what awaits them
+inside.
+• Multiple skills have received visual revamps:
+  • Alchemist:
+    • Unstable Amalgam, Alchemical Artillery (u), Gruesome
+Alchemy, Brutal Alchemy, Transmutation Ring, Scorched Earth
+  • Cleric:
+    • Celestial Blessing, Cleansing Rain, Divine Justice (heal
+effect), Enchanted Prayer, Choir Bells, Luminous Infusion
+  • Mage:
+    • Frost Nova, Magma Shield, Thunder Step, Blizzard (reduced
+particles), Elemental Spirits (less obtrusive), Starfall, Cosmic
+Moonblade
+  • Rogue:
+    • Advancing Shadows, By My Blade (very minor), Skirmisher,
+Smokescreen, Vicious Combos, Blade Dance, Deadly Ronde (range
+now factored), Wind Walk (minor), Reduced Stealth smoke
+particles, Cloak and Dagger
+  • Scout:
+    • Wind Bomb, Whirling Blade, Rending Razor
+  • Warlock:
+    • Amplifying Hex, Choleric Flames, Sanguine Harvest
+  • Warrior:
+    • Brute Force, Counter Strike (minor), Glorious Battle
+(minor), Meteor Slam (less obtrusive), Rampage, Challenge (less
+obtrusive)
+• Added a PEB toggle for other people's elite finisher clones
+• Made Hide and Don't Glow option for elite finisher clones
+remove the hitbox as well
+• The crying obsidian in the ring spawnbox has now disappeared
+• Added a secret discovery to a certain SKR puzzle room
+• Added a crafting table and a few chests to a fishing boat near
+Vibrant Hollow
+• Coven Fortress actually for real has water shortcuts now
+&bFeedback Fixes:&r
+• Added some lighting to the ||Galos Outlook|| SKR room
+• Added a leaderboard for Combat and Puzzle SKR rooms
+• Added extra barriers to SKR ||Minesweeper|| viewing platform
+• Lowered SKR Room ||Briarstone||'s chest count by one
+• Buffed SKR Room ||The Nesting Grounds||'s chest count by one
+• Replaced a block in a SKR ||Ice Slider|| puzzle to make the
+objective more clear
+• Removed a stuck spot in a SKR ||Ice Slider|| puzzle
+• Nerfed the health of Myth Bearers (SKR phantoms) from 95 -> 65
+• Added "refund" / "disposal" trades for SKR rares, yielding 3
+memory frags each
+• Added a crafting table and five sorting bins near the Record-
+Keeper
+• Doubled the chance of &nnot&r getting a Scroll Fragment from
+all 5 fishing dailies (nerfed)
+  • &oThe chance of not getting a single scroll frag is still
+relatively low• compared to other daily sources fishing was over
+performing&r
+• Slightly reduced the drop rate of scrolls from fishing
+  • &oVery small change here, aiming to get it output closer in
+line with other dailies overall.&r
+• The Shifting City teleporter utility room is now 2-way,
+opening up a return teleport in the lobby hub when found and
+used
+• The Olive Branch puzzle has been given some QoL upgrades:
+  • The puzzle rules now have a dedicated button and are now
+more clearly defined.
+  • The randomization button has been made more prominant
+alongside the new rules button
+  • The old buttons-with-arrows style of controlling powder
+movement has been entirely replaced with clicking interactions.
+As is seen in the SKR version of the puzzle, clicking upon the
+tubes themselves (even at a distance) will allow you to select
+and move the powder from tube to tube.
+• Protector spawners now make a visible connection to their
+protected mobs
+• Added a few sculk blocks to the middle of the floor in Zenith
+lobby
+• Replaced a bunch of tall grass with short grass in a combat
+area near SKT’s beginning Ravager spawner
+&bBug Fixes:&r
+• Fixed tablist boss display
+• When a shard goes down, other shards, should now clear the
+boss events from it right away instead of waiting for the
+timeout period to end.
+• Fixed Frost Nova always giving the enhancement bonus damage
+• Fixed a bedrocking error in an SKR room
+• The subtitle for the ||Galos Outlook|| SKR room now uses the
+correct color for the Galos biome
+• Fixed Lesser and Greater Marksman's Charms not functioning
+• Fixed Encore not working with most abilities
+• Fixed incorrect chest count for the SKR Long Combat room
+Waterlogged Outskirts
+• Fixed Rending Razor Cooldown being the wrong color on Swift
+Lacerating Charm
+• Fixed minor description issues for Restless Souls, Defensive
+Line, Challenge, Sanctified Armor, Interconnected Havoc, and
+Bodkin Blitz
+• Fixed an SKR Room title being completely messed up
+(||#487c1aos Floodpits -> Galos Floodpits||)
+• Fixed The Gloryvault SKR Long Combat room displaying 15 chests
+max when it only has 14
+• Fixed Hekawt's Soul Shackle attack not working properly
+• Fixed dying in the SKR ||Minesweeper|| room putting you in a
+wall
+• Fixed SKR Long Combat room ||"Tal Amar"|| showing a 12 chest
+count on the action bar when it has 15 total chests
+• Added an emergency exit button to the SKR ||Minesweeper|| room
+• The SKR Galos puzzle will no longer require a manual
+randomization under circumstances of slow world loading
+• Fixed a sign referencing an old plot command behind the City
+Planner in Sierhaven
+• Fixed a a big ball of wibbly wobbly, timey wimey stuff causing
+the Ring Overworld to be slightly later into the night than
+intended
+• Fixed Remnant Scroll Fragment descriptions referring to the
+"Record Keeper" instead of the "Record-Keeper"
+• Fixed some placeholders in various SKR rooms
+• Fixed boss bars appearing to everyone in the world for 1 tick
+regardless of distance
+• Raised the Star Point fishing arena's mob spawn points and
+added a barrier floor, making the water 2 blocks deep
+• Fixed Vesperidys's Corruption Explosion attack dealing less
+damage than intended## March Balance Update
+&bClass Changes&r
+&nWarrior&r
+• Brute Force : Fixed an issue where this ability applied Other
+type damage instead of Melee Skill damage to prevent the ability
+from gaining damage buffs/debuffs twice. In effect, this means
+the ability now consistently works with all damage buffs/debuffs
+and Berserker's Rampage.
+• Rampage :
+  • L1 : Gain a Rage stack every 50 -> 75 damage
+  • L2 : Gain a Rage stack every 35 -> 50 damage
+  • &oDeveloper Note: Since Rampage now accounts for Brute Force
+damage, its thresholds have been increased. Overall, this should
+still be a buff to Berserker's kit and allow for greater
+specialization ability diversity.&r
+&nCleric&r
+• Divine Justice : Weapons with Cumbersome now use the weapon's
+base damage for damage calculations and no longer give the
+critical melee hit damage bonus
+• Luminous Infusion :
+  • Dealing 300/450 -> 200/300 damage against a Boss grants 1
+stack of Luminousity
+  • Consume one stack of Luminousity to trigger Divine Justice
+for 20% -> 30% of your critical attack damage
+  • &oDeveloper Note: Luminous Infusion's ability to exchange
+Luminousity to buff Divine Justice was not performing
+adequately, even in builds that try to take full advantage of
+it. This change should make it a better option for single-target
+burst damage.&r
+&nScout&r
+• Quickdraw : Base Projectile damage now scales per region. R1 =
+11, R2 = 17, R3 = 22
+• Pinning Shot : No longer triggers if the projectile was
+launched by a Volley initiated by Quickdraw
+• Split Arrow : No longer triggers if the projectile was
+launched by a Volley initiated by Quickdraw
+  • &oDeveloper Note: Pinning Shot and Split Arrow were
+originally not designed with Quickdraw in mind. Because Volley
+is already an excellent area-of-effect clear ability and
+Quickdraw allows one to bypass projectile weapon charge time,
+this interaction has been removed to tone down Scout's area-of-
+effect potential.&r
+&bCharm Changes&r
+&nWarrior Charms&r
+• Loci's Hunger (Rework) : -5 Rampage Stacks Needed For
+Activation, +30% Rampage Damage, +30% Rampage Radius, -0.3%
+Rampage Resistance Per Stack
+  • &oDeveloper Note: The previous iteration of this charm
+failed to achieve its design goal of allowing for fast Rampage
+cycling. This new iteration should fulfill that niche
+adequately.&r
+&nCleric Charms&r
+• Martial Mantra : +20% -> +30% Luminous Infusion Damage
+Multiplier
+&nScout Charms&r
+• Lesser Quickshot Charm : +15% -> +7% Quickdraw Damage
+• Greater Quickshot Charm : +20% -> +15% Quickdraw Damage
+• Focused Quickshot Charm : +35% -> +25% Quickdraw Damage
+• Swift Quickshot Charm : +10% -> +7% Quickdraw Damage
+&nWarlock Charms&r
+• Impmaster's Fiddle : +2 -> +3 Restless Souls Vex Cap, +10% ->
++15% Restless Souls Damage
+• Windeater Icon (Rework) : 2 Charm Power, +50% Restless Souls
+Movement Speed, +25% Restless Souls Damage, -25% Restless Souls
+Duration
+  • &oDeveloper Note: This charm's previous iteration was a
+statistical upgrade over Impmaster's Fiddle. After re-evaluating
+the niches of both charms, Impmaster's Fiddle has received a
+buff to better fill its niche while Windeater Icon has been
+reworked to improve Restless Souls' efficiency in combat.
+&b&rLoot Changes&r
+• Vigora now sells 3 -> 6 Eyes of Viridia for 1 Hyper
+Crystalline Shard
+&bItem Changes&r
+&nKing's Valley&r
+• Highwatch Pike : 11 -> 13 Projectile Damage
+&nCelsian Isles&r
+• Hrimnir's Incisor (Rework) : Ethereal 1, Ice Aspect 2, Second
+Wind 1, Two Handed, Unbreaking 3, 19 Attack Damage, 1.4 Attack
+Speed
+  • &oDeveloper Note: The previous iteration of this item was
+difficult to build around due to its low attack speed and Two
+Handed enchantment. This version intends to grant additional
+tanking potential that synergizes with Reaper's ability kit
+without making its build limitations implausible to
+accomodate.&r
+&nThe Architect's Ring&r
+• Air-Purified Thresher (M4) (Rework) : Knockback 1, Bleeding 2,
+First Strike 2, Unbreaking 7, 17 Attack Damage, 1.6 Attack
+Speed, +10% Speed
+  • &oDeveloper Note: The previous interation of this item did
+not function well with either of Warlock's specializations. This
+new version is intended to be a well-rounded option with mid-
+range attack speed.&r
+• Cresent of Dominion (M4) : 14 -> 15 Attack Damage
+• Death's Echo (M3 and M4) : 0 -> +1 Armor
+• Eschar Dreamcatcher (M4) : 17.5 -> 18 Attack Damage
+• Fading Horizon (M4) : 14.5 -> 15.5 Attack Damage
+• Harrakfar's Claw (M4) : 17 -> 18 Attack Damage
+• Last Respects (M4) : 16 -> 17 Attack Damage
+• Nalatia's Galeblade (M4) : 16 -> 17 Attack Damage
+• Reaper's Harvest EX (M4) : 15.5 -> 17 Attack Damage
+• Seafarer's Rapier (M4) : 17 -> 18 Attack Damage
+• Thalassic Cinders (M4) : 19 -> 21 Attack Damage
+• Veinshredder (M4) : 16 -> 17.5 Attack Damage
+• Will of the Codex (M4) : 4 -> 3 Duelist
+• Woolwoven Staff (M4) : 10 -> 15 Decay~~lukewarmfix~~
+&bHotfix&r (on next shard restart): fixed floral flechettes
+being weird
