@@ -1,7 +1,5 @@
-Please welcome @Texlla as our newest moderator! Be sure to give
-them a lot of 🏓s and 🐰s!Please welcome @[WOOL] Echoed_S0u1 as
-our newest Moderator! Make sure to give them a celebratory 🏓#
-Developer Applications
+Please welcome @[WOOL] Echoed_S0u1 as our newest Moderator! Make
+sure to give them a celebratory 🏓# Developer Applications
 Dev applications are always open, but in the spirit of the
 recent promotions and call for mod apps we wanted to encourage
 everyone qualified and interested in working on Monumenta to
@@ -78,3 +76,25 @@ your patience and understanding.The @ModMail bot is currently
 having issues. Please direct any appeals, reports, etc to
 Moderators directly for the time being.The @ModMail bot is
 working again.
+&bDiamenean Hunts&r
+Mysterious beasts have been spotted across the Architect's Ring!
+Talk to a colorful cast of veteran hunters at the grand opening
+of Retneau's Lodge to learn about how to hunt each quarry and
+tackle their unique mechanics. Can you successfully hunt them
+all down without spoiling the precious loot?
+Starting after the weekly update, you can get initiated at the
+Lodge in the Wolfswood and gather information on each of the 6
+new bosses. The first boss will spawn somewhere in the
+Architect's Ring on <t:1742673600:F> (note unusual release time)
+and subsequent bosses will spawn periodically after that, with
+an average time in between bosses of about 2 hours.
+Please note that by the nature of this content, there is
+significant downtime between hunts (similar to Treasures of
+Viridia). On top of that, due to the mechanics of each boss, it
+is possible to have a very low success rate at first (especially
+for players who do not read the relevant dialogue from the
+veteran hunters). For these reasons, please do
+&bnot&r expect this new content to be the primary thing to do,
+even on release day.
+I hope to see everyone out on the hunting grounds!
+@everyone

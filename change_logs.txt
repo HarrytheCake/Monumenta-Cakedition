@@ -1,12 +1,149 @@
-&bHotfix&r (on shard restart): `/friend list`/`/f list` no
-longer throws an error for friends added after weekly update
-&bHotfix&r (in 10 minutes): The mage cosmetic set is working
-again
-&bHotfix:&r The Olive Branch puzzle is no longer incompletable
-due to one tube selecting an incorrect powder
-&bHotfix (at nightly restart):&r Some flawed logic in the SKR
-Galos puzzle randomization code that made it easier than
-anticipated has been resolved
+&bHotfix:&r Fixed the 50 MP pass mission this week accepting the
+wrong dungeons entirely.
+&bHotfix:&r Removed some hard-to-type characters from the emoji
+text codes, because otherwise why let you type out text to get
+at an emoji?Zenith, Hexfall, Ex Willows, Ex Reverie and Lime
+have been reopened.
+&b(11.8.0)&r
+For the update on March 19, 2025
+### Major New Feature:
+&bDiamenean Hunts&r
+• 6 new bosses will appear periodically in the Architect's Ring
+overworld at specific locations, the first one spawning at
+<t:1742673600:F> (note the later than usual release time). There
+is a randomized time between each spawn, with an average
+duration of 2 hours.
+• Starting right after the update, you can talk to veteran
+hunters at the Lodge near Galengarde to learn about each of the
+quarries and get tips on how to fight them. Talk to Retneau to
+begin your initiation. There are no prerequisites other than
+being in Region 3.
+• In particular, the most important information to learn from
+the veteran hunters is each quarry's &obanish&r and &ospoil&r
+mechanics
+  • Each quarry will have some way to &obanish&r you from the
+fight, leaving you safe back at the lodge, but without any
+chance to defeat the boss
+  • Each quarry has valuable but fragile loot. If you don't hunt
+it carefully, you could &ospoil&r the loot, significantly
+reducing the yield you get upon victory
+• 15 and 5 minutes before a quarry spawns, players who have been
+initiated at the lodge will receive announcements in chat,
+including which ring shard the fight will occur on and a hint
+for the location where the boss will spawn
+• If many players are at the hunt when the quarry appears, some
+will be transferred to a different shard where another copy of
+the boss will spawn. If possible, members of the same guild will
+be kept together when this happens
+• Players who arrive late to a hunt will not be able to get any
+loot and will get shattered and lose experience if they die
+(players who are not late will not be shattered or lose
+experience when dying in a hunt)### Minor New Features:
+• A new Keep-biome puzzle room has been added to the Silver
+Knight Remnants
+• Added two new Keep SKR rooms, one normal combat and one long
+• Block placing mobs will no longer place blocks if there are
+players within a small radius around them
+• `/friend` and `/block` now show players on other shards
+• Some mushrooms just outside of Galengarde have become extra
+bouncy
+• Added a few new waterpools near the Blue overworld teleporter
+• Added some puddles of rainfall in a few trees & roofs around
+Galengarde
+• Split the weapon enchantment section of the handbook into 2
+rows, one of which contains all aspect enchantments and Decay
+and Bleeding (which function exactly like aspects) and the other
+row contains everything else
+• The Winter event has ended. Thanks for enjoying the late
+festivities this year! Essences of Winter will no longer be
+found across Monumenta. Adding Festive to items and Selholly
+Sprignos's event trades have been disabled. The Snowball
+Launcher remains functional.
+• The Valentines event has ended. The maze is now no longer
+accessible, and the Replica Cupid's Bow is not obtainable...
+until next year, I suppose?
+•
+&bNew Experimental Delve Modifier&r • Rot (3 pts / level,
+available for the next 2 weeks)
+  • Level 1: Saturation no longer heals
+   • Level 2: And healing is cut by 30%
+### Gameplay Changes:
+&nPoi Layout:&r
+• Removed all unnecessary spawner shields from elite spawners in
+The Tolumaeus, The Nadir, Chittering Gutters, Constellation
+Tower, Celestial Rampart, and Starbound Sanctuary
+• Reworked a few encounters in Constellation Tower, Celestial
+Rampart, and Starbound Sanctuary
+• Added leaves behind the penultimate launchpad in Constellation
+Tower so players fall to death less often
+• Added 3 chests to Celestial Rampart
+• Removed either 8 or 9 spawners from the house in Quelled
+Convent
+• Increased the explosive power of a ||trapped spawner embedder
+in the bridge|| in The Tolumaeus&nCelestial Rampart Mobs:&r
+• Blightspreader (creeper) is no longer silent
+&nChittering Mobs:&r
+• Several Sewer Menaces almost never spawned in Chittering
+Gutters, these spawner ranges have increased to allow successful
+spawning more often.
+• Carrion Crawler vengeful healing down from 40% -> 15%
+• Volatile Fleshmass can no longer spawn Stingtails nor Carrion
+Crawlers
+• Volatile Fleshmass spawned mobs on explode down from 6 -> 5
+• Altered the behavior of Infected Detonator's death explosion
+&nDelve Mobs:&r
+• Spectral of Malediction now respects line of sight
+• Removed the ability for Twisted Minibosses to place blocks
+while in close proximity to the player
+&nSKR Changes:&r
+• SKR mobs have seen a roughly 15% stat increase to better
+account for the MW level that the Quest Requirements places it
+at.
+  • Exact changes are going to vary based on the mob type /
+gimmick
+  • The Phantoms were reduced in health
+• Added additional spawners to rooms: Arx Subterra, Rootways
+Outskirt, Arx Tumulus
+### Feedback Fixes:
+• Remade a portion of the path to the Axtan Monastery that was
+just cobblestone stairs
+• Added a hint to a certain SKR puzzle room discovery
+• Updated the Dungeon Guard dialog to no longer hint at a dialog
+choice to fix being in the wrong instance, as that bug was fixed
+long ago
+• Tweaked visuals and sounds for Eruption
+• Based off of the recent Feedback Thread and discussions, some
+changes were made to these spells:
+    • Thunderstep, Cloak and Dagger, Blade Dance, Whirling
+Blade, Wind Bomb (u), Rampage, Brute Force, Shield Bash, Vicious
+Combos
+• Replaced a spruce trapdoor in a SKR ||Ice Slider|| puzzle to
+prevent a skip
+• Made Doomed Encampment levitation pads more responsive### Bug
+Fixes:
+• Exterminated a rogue polar bear colony living on every ring
+shard
+• Fixed the ||Nesting Grounds|| SKR room having an incorrect
+action bar
+• Charms inside the charm bag are now updated during weekly
+update
+• Shift clicking Dungeon Guards inside of dungeons now hides the
+dialog for a normal click
+• Player shop plots now update their name when interacted with,
+in the event their owner changed their name
+• Fixed SKR Leaderboard signs not working
+• Fix piercing not working on mob kill
+• Readded Fortitude Augment to the Items API
+• Fixed &oCoffee&r not being in the Items API due to strange
+item data
+• Fish specific bait no longer gives you fish with the wrong
+base type
+• Fixed a bug with the colouring of slash attack spells on mobs
+• Fixed Elder River Wraith not cycling properly to Elder Earth
+Wraith
+• Fixed build errors in the SKR ||Ice Slider|| puzzle room
+• Fixed a random hole in the SKR Long Combat Room ||"Charred
+Monastery"||
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -16,239 +153,8 @@ advised to complete the dungeon in a single sitting to avoid
 instance corruption.
 • The player reset booth remains closed.
 • Gallery of Fear remains closed.
-&b(11.7.0)&r
-For the update on March 12, 2025
-• As a reminder, this is the last week for the Winter and
-Valentines events. They will be ending with the next weekly
-update. Be sure to get the seasonal advancements and trades
-before it is too late!
-&bMinor New Features:&r
-• The Halls of Wind and Blood Dungeon lobby has been rebuilt!
-The lobby has been themed around the Dungeon itself to improve
-immersion and give the player a taste of what awaits them
-inside.
-• Multiple skills have received visual revamps:
-  • Alchemist:
-    • Unstable Amalgam, Alchemical Artillery (u), Gruesome
-Alchemy, Brutal Alchemy, Transmutation Ring, Scorched Earth
-  • Cleric:
-    • Celestial Blessing, Cleansing Rain, Divine Justice (heal
-effect), Enchanted Prayer, Choir Bells, Luminous Infusion
-  • Mage:
-    • Frost Nova, Magma Shield, Thunder Step, Blizzard (reduced
-particles), Elemental Spirits (less obtrusive), Starfall, Cosmic
-Moonblade
-  • Rogue:
-    • Advancing Shadows, By My Blade (very minor), Skirmisher,
-Smokescreen, Vicious Combos, Blade Dance, Deadly Ronde (range
-now factored), Wind Walk (minor), Reduced Stealth smoke
-particles, Cloak and Dagger
-  • Scout:
-    • Wind Bomb, Whirling Blade, Rending Razor
-  • Warlock:
-    • Amplifying Hex, Choleric Flames, Sanguine Harvest
-  • Warrior:
-    • Brute Force, Counter Strike (minor), Glorious Battle
-(minor), Meteor Slam (less obtrusive), Rampage, Challenge (less
-obtrusive)
-• Added a PEB toggle for other people's elite finisher clones
-• Made Hide and Don't Glow option for elite finisher clones
-remove the hitbox as well
-• The crying obsidian in the ring spawnbox has now disappeared
-• Added a secret discovery to a certain SKR puzzle room
-• Added a crafting table and a few chests to a fishing boat near
-Vibrant Hollow
-• Coven Fortress actually for real has water shortcuts now
-&bFeedback Fixes:&r
-• Added some lighting to the ||Galos Outlook|| SKR room
-• Added a leaderboard for Combat and Puzzle SKR rooms
-• Added extra barriers to SKR ||Minesweeper|| viewing platform
-• Lowered SKR Room ||Briarstone||'s chest count by one
-• Buffed SKR Room ||The Nesting Grounds||'s chest count by one
-• Replaced a block in a SKR ||Ice Slider|| puzzle to make the
-objective more clear
-• Removed a stuck spot in a SKR ||Ice Slider|| puzzle
-• Nerfed the health of Myth Bearers (SKR phantoms) from 95 -> 65
-• Added "refund" / "disposal" trades for SKR rares, yielding 3
-memory frags each
-• Added a crafting table and five sorting bins near the Record-
-Keeper
-• Doubled the chance of &nnot&r getting a Scroll Fragment from
-all 5 fishing dailies (nerfed)
-  • &oThe chance of not getting a single scroll frag is still
-relatively low• compared to other daily sources fishing was over
-performing&r
-• Slightly reduced the drop rate of scrolls from fishing
-  • &oVery small change here, aiming to get it output closer in
-line with other dailies overall.&r
-• The Shifting City teleporter utility room is now 2-way,
-opening up a return teleport in the lobby hub when found and
-used
-• The Olive Branch puzzle has been given some QoL upgrades:
-  • The puzzle rules now have a dedicated button and are now
-more clearly defined.
-  • The randomization button has been made more prominant
-alongside the new rules button
-  • The old buttons-with-arrows style of controlling powder
-movement has been entirely replaced with clicking interactions.
-As is seen in the SKR version of the puzzle, clicking upon the
-tubes themselves (even at a distance) will allow you to select
-and move the powder from tube to tube.
-• Protector spawners now make a visible connection to their
-protected mobs
-• Added a few sculk blocks to the middle of the floor in Zenith
-lobby
-• Replaced a bunch of tall grass with short grass in a combat
-area near SKT’s beginning Ravager spawner
-&bBug Fixes:&r
-• Fixed tablist boss display
-• When a shard goes down, other shards, should now clear the
-boss events from it right away instead of waiting for the
-timeout period to end.
-• Fixed Frost Nova always giving the enhancement bonus damage
-• Fixed a bedrocking error in an SKR room
-• The subtitle for the ||Galos Outlook|| SKR room now uses the
-correct color for the Galos biome
-• Fixed Lesser and Greater Marksman's Charms not functioning
-• Fixed Encore not working with most abilities
-• Fixed incorrect chest count for the SKR Long Combat room
-Waterlogged Outskirts
-• Fixed Rending Razor Cooldown being the wrong color on Swift
-Lacerating Charm
-• Fixed minor description issues for Restless Souls, Defensive
-Line, Challenge, Sanctified Armor, Interconnected Havoc, and
-Bodkin Blitz
-• Fixed an SKR Room title being completely messed up
-(||#487c1aos Floodpits -> Galos Floodpits||)
-• Fixed The Gloryvault SKR Long Combat room displaying 15 chests
-max when it only has 14
-• Fixed Hekawt's Soul Shackle attack not working properly
-• Fixed dying in the SKR ||Minesweeper|| room putting you in a
-wall
-• Fixed SKR Long Combat room ||"Tal Amar"|| showing a 12 chest
-count on the action bar when it has 15 total chests
-• Added an emergency exit button to the SKR ||Minesweeper|| room
-• The SKR Galos puzzle will no longer require a manual
-randomization under circumstances of slow world loading
-• Fixed a sign referencing an old plot command behind the City
-Planner in Sierhaven
-• Fixed a a big ball of wibbly wobbly, timey wimey stuff causing
-the Ring Overworld to be slightly later into the night than
-intended
-• Fixed Remnant Scroll Fragment descriptions referring to the
-"Record Keeper" instead of the "Record-Keeper"
-• Fixed some placeholders in various SKR rooms
-• Fixed boss bars appearing to everyone in the world for 1 tick
-regardless of distance
-• Raised the Star Point fishing arena's mob spawn points and
-added a barrier floor, making the water 2 blocks deep
-• Fixed Vesperidys's Corruption Explosion attack dealing less
-damage than intended## March Balance Update
-&bClass Changes&r
-&nWarrior&r
-• Brute Force : Fixed an issue where this ability applied Other
-type damage instead of Melee Skill damage to prevent the ability
-from gaining damage buffs/debuffs twice. In effect, this means
-the ability now consistently works with all damage buffs/debuffs
-and Berserker's Rampage.
-• Rampage :
-  • L1 : Gain a Rage stack every 50 -> 75 damage
-  • L2 : Gain a Rage stack every 35 -> 50 damage
-  • &oDeveloper Note: Since Rampage now accounts for Brute Force
-damage, its thresholds have been increased. Overall, this should
-still be a buff to Berserker's kit and allow for greater
-specialization ability diversity.&r
-&nCleric&r
-• Divine Justice : Weapons with Cumbersome now use the weapon's
-base damage for damage calculations and no longer give the
-critical melee hit damage bonus
-• Luminous Infusion :
-  • Dealing 300/450 -> 200/300 damage against a Boss grants 1
-stack of Luminousity
-  • Consume one stack of Luminousity to trigger Divine Justice
-for 20% -> 30% of your critical attack damage
-  • &oDeveloper Note: Luminous Infusion's ability to exchange
-Luminousity to buff Divine Justice was not performing
-adequately, even in builds that try to take full advantage of
-it. This change should make it a better option for single-target
-burst damage.&r
-&nScout&r
-• Quickdraw : Base Projectile damage now scales per region. R1 =
-11, R2 = 17, R3 = 22
-• Pinning Shot : No longer triggers if the projectile was
-launched by a Volley initiated by Quickdraw
-• Split Arrow : No longer triggers if the projectile was
-launched by a Volley initiated by Quickdraw
-  • &oDeveloper Note: Pinning Shot and Split Arrow were
-originally not designed with Quickdraw in mind. Because Volley
-is already an excellent area-of-effect clear ability and
-Quickdraw allows one to bypass projectile weapon charge time,
-this interaction has been removed to tone down Scout's area-of-
-effect potential.&r
-&bCharm Changes&r
-&nWarrior Charms&r
-• Loci's Hunger (Rework) : -5 Rampage Stacks Needed For
-Activation, +30% Rampage Damage, +30% Rampage Radius, -0.3%
-Rampage Resistance Per Stack
-  • &oDeveloper Note: The previous iteration of this charm
-failed to achieve its design goal of allowing for fast Rampage
-cycling. This new iteration should fulfill that niche
-adequately.&r
-&nCleric Charms&r
-• Martial Mantra : +20% -> +30% Luminous Infusion Damage
-Multiplier
-&nScout Charms&r
-• Lesser Quickshot Charm : +15% -> +7% Quickdraw Damage
-• Greater Quickshot Charm : +20% -> +15% Quickdraw Damage
-• Focused Quickshot Charm : +35% -> +25% Quickdraw Damage
-• Swift Quickshot Charm : +10% -> +7% Quickdraw Damage
-&nWarlock Charms&r
-• Impmaster's Fiddle : +2 -> +3 Restless Souls Vex Cap, +10% ->
-+15% Restless Souls Damage
-• Windeater Icon (Rework) : 2 Charm Power, +50% Restless Souls
-Movement Speed, +25% Restless Souls Damage, -25% Restless Souls
-Duration
-  • &oDeveloper Note: This charm's previous iteration was a
-statistical upgrade over Impmaster's Fiddle. After re-evaluating
-the niches of both charms, Impmaster's Fiddle has received a
-buff to better fill its niche while Windeater Icon has been
-reworked to improve Restless Souls' efficiency in combat.
-&b&rLoot Changes&r
-• Vigora now sells 3 -> 6 Eyes of Viridia for 1 Hyper
-Crystalline Shard
-&bItem Changes&r
-&nKing's Valley&r
-• Highwatch Pike : 11 -> 13 Projectile Damage
-&nCelsian Isles&r
-• Hrimnir's Incisor (Rework) : Ethereal 1, Ice Aspect 2, Second
-Wind 1, Two Handed, Unbreaking 3, 19 Attack Damage, 1.4 Attack
-Speed
-  • &oDeveloper Note: The previous iteration of this item was
-difficult to build around due to its low attack speed and Two
-Handed enchantment. This version intends to grant additional
-tanking potential that synergizes with Reaper's ability kit
-without making its build limitations implausible to
-accomodate.&r
-&nThe Architect's Ring&r
-• Air-Purified Thresher (M4) (Rework) : Knockback 1, Bleeding 2,
-First Strike 2, Unbreaking 7, 17 Attack Damage, 1.6 Attack
-Speed, +10% Speed
-  • &oDeveloper Note: The previous interation of this item did
-not function well with either of Warlock's specializations. This
-new version is intended to be a well-rounded option with mid-
-range attack speed.&r
-• Cresent of Dominion (M4) : 14 -> 15 Attack Damage
-• Death's Echo (M3 and M4) : 0 -> +1 Armor
-• Eschar Dreamcatcher (M4) : 17.5 -> 18 Attack Damage
-• Fading Horizon (M4) : 14.5 -> 15.5 Attack Damage
-• Harrakfar's Claw (M4) : 17 -> 18 Attack Damage
-• Last Respects (M4) : 16 -> 17 Attack Damage
-• Nalatia's Galeblade (M4) : 16 -> 17 Attack Damage
-• Reaper's Harvest EX (M4) : 15.5 -> 17 Attack Damage
-• Seafarer's Rapier (M4) : 17 -> 18 Attack Damage
-• Thalassic Cinders (M4) : 19 -> 21 Attack Damage
-• Veinshredder (M4) : 16 -> 17.5 Attack Damage
-• Will of the Codex (M4) : 4 -> 3 Duelist
-• Woolwoven Staff (M4) : 10 -> 15 Decay~~lukewarmfix~~
-&bHotfix&r (on next shard restart): fixed floral flechettes
-being weird
+&bHotfix:&r Muted players who try to type in chat will once
+again be sent their mute reason and mute duration remaining.
+&bHotfix:&r Morgan, one of the Diamenean Hunters, has been
+reminded that her prey doesn't behave as it did in early
+testing. She will now provide more reliable information.
