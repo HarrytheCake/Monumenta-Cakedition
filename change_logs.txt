@@ -1,246 +1,177 @@
-### All That Remains:
-The long awaited finale to the Oceangate storyline, All That
-Remains, has arrived! Venture back to the Valley, and delve into
-the mystery of the blighted cave behind Oceangate, uncovering
-the fate of Aphelios and the truth behind one of the Shards of
-Andromeda.
-In order to begin this quest, you will need to have completed
-Into Thin Air, and can be started by speaking to Alan at the
-cave entrance in Oceangate!
-### Monumenta Music Pack Version 4.1.25
-• A new song has been added to the official Music pack: Wake Me
-Up Before You Indi-go-go • thank you @Wham! for your
-contribution! <https://youtu.be/pIgZ7gMze7A?si=2zNi43fM1fzpLh4K>
-### Monumenta: Runestones:
-We're delighted to announce that we are nearing the finalization
-of a deal to distribute &nour upcoming TCG&r •
-&bMonumenta: Runestones&r.
-As such, we're looking to move out of Alpha Testing and open up
-Beta Testing for our amazing Discord members. While art and
-balance are
-&bnot&r finalized, the game is very playable in its current form
-and we're looking for feedback to see what kind of decks the
-community can create and balance issues we may not have noticed.
-[The Rulebook can be found here](https://docs.google.com/documen
-t/d/15EyLGZn5R1uvnxeegU7OtZCp2KQQsu1zwf-
-ynbaSjaU/edit?usp=sharing)
-[The card images can be found here, for downloading or to port
-into your game engine of choice.](https://drive.google.com/drive
-/folders/1U_Qwggg3mqc3hQU0T1tVGJbZiuzJiY-3)
-We've used Cockatrice and Roll20 to facilitate testing in the
-past, and would recommend those tools to try things out. Thank
-you!
-&oFor those who served as Alpha testers, please remember that
-you are under an NDA and may not discuss your experiences with
-the Alpha.&r### Violet Wool:
-We are excited to release the new dungeon that has been in
-development for a very long time •
-&bThe Violet Wool Dungeon&r!
-Assembled from all previous dungeons, this dungeon offers a
-unique mechanic •
-&binverted controls&r, thanks to the power of
-&bViolet Wool&r!
-Since our players &ojust love&r chaotic and unexpected
-encounters, the controls are inverted at random times during the
-dungeon playthrough! We are absolutely certain that you will
-love this new thrilling experience!
-Moreover, being the wool of inversion, every death in a dungeon
-takes away one level from the player, so preparation is
-essential. Good luck!
+&b(11.10.0)&r
+For the update on April 2, 2025
+### Guild Plots
+&bIt's moving day!&r
+Guild plots and islands are now moving from the `plots` shard to
+the `guildplots` shard! We're also removing the rent to visit
+your guild island, and offering a refund on any upkeep you've
+paid in advance. Note that it'll take us about two hours after
+weekly update to move all of the existing guild plots, so you
+don't have to.
+• Orin lets you travel between the guild plots you have access
+to from any shard, and remembers which one you last visited.
+• Guild plots are now 451x508x451 block worlds, much like a
+larger version of playerplots; between their location and use of
+barrier blocks instead of bedrock, these are ideal for map art.
+• To help navigate this space, Travel Anchors have been added;
+purchasable shulker NPCs you can dye different colors, rename,
+and teleport between.
+• Guilds can now control which players can access inventories,
+use survival mode, use egginators, edit and/or use travel
+anchors on their plot, move the spawn point, and change the time
+of day.
+• Guilds can now purchase a guild plot without moderator
+intervention.
+• The cost of a guild plot has gone up to 12 hyper and 6 daily
+currency, which can be paid in any region's currency.
+• The guildplots shard also has a guild hub anyone can access,
+providing a calm place to chill. If the guild you're visiting
+goes on lockdown or removes you from the guild, you will find
+yourself here.
+• If you find yourself trapped, `/stuck` will take you to the
+guild hub.### Latepril Fools: Amplified Coven Fortress:
+For the next two weeks, you can speak with Ageratina, the Blue
+epic trader, to open an instance of Amplified Coven Fortress. Do
+not expect a balanced experience; this has been made for fun,
+and it is recommended to have a party of 3+ endgame players to
+clear. If you manage to break 750 spawners and conquer the POI,
+you'll be rewarded with a seasonal advancement!
+### Depths & Zenith Changes:
+Players will be blocked from spawning new rooms if a Twisted
+miniboss currently exists in the world.
+Gravity Bomb Damage: 20-50 -> 18-42
+Gravity Bomb no longer takes into account player yaw/pitch
+Pyromania Mob Cap: 10 -> 6
+Sundrops:
+Base Resistance: 25% -> 15%
+Speed Charm Cap: 40% -> 30%
+Resistance Charm Cap: 15% -> 10%
+Resistance Charm Effects: 0/0/0/4/8 -> 0/0/0/2.5/5
+No longer can drop as a single ability charm.
 ### Minor New Features:
-• A new puzzle has been added to the SKR pool from ILoveCookies_
-• Added a new Zenith F1 Normal room from Nyaalma
-• Added a new Zenith F1 Elite room from Qweun
-• Added a new Zenith F1 Elite room from Sw0ut
-• Added a new Zenith F2 Normal room from Qweun
-• Added a new Zenith F2 Normal room from safeliquids
-• Added a new Zenith F3 Elite room from Nyaalma
-• The Databank SKR puzzle has been given a new room, and is now
-part of the Isharist (Moltaria) biome, thanks to Alittar for the
-contribution!
-• The SKR book ||Axxil V|| has been shifted to the new Databank
-puzzle room. Likewise, the Isharist (Tarkir) room ||"Waterlogged
-Outskirts"|| has received a brand new lore book.
-• Hunts items are now in the itemapi
-• Unspoiled Hunts Caches can now drop a memory scroll fragment
-if a scroll does not drop
-• Reduced variability in average Hunts spawn time
-• Added a painting shortcut between Galengarde and the Hunts
-Lodge
-• Added a one way launcher from the top of Galengarde to the
-Hunts Lodge• The guild plots changelog entry is only partially a
-joke; the plots shard is closing for about two hours after
-weekly update next week to move the guild plots to a new shard
-that will work similar to playerplots. If you need anything from
-your guild plot between <t:1743634800:F> and <t:1743647400:t>,
-please plan accordingly. You will then have access to a survival
-world 451x508x451 in size, with your existing guild plot and
-island automatically transferred over.### Mob Changes:
-• Vengeful Spirit (R3 OW Blaze) avenger damage boost 20% per
-stack -> 10%
-• Stellar Zealot's landing shockwaves are significantly faster,
-and the rate at which it casts abilities has been slightly
-reduced.
-• Stellar Manifestation's (Stardust Crusader) slashes 12 -> 4
-damage, but no longer respect iframes
-• Tweaked an evoker elite's spawner range in Constellation Tower
-so that it doesn't trigger before it should
-• Fixed the following mobs having vanilla Armor: Starhungry
-Slasher, Frost Moon's Shadow, Sacrificial Totem Dummy
-• Fixed the following mobs applying vanilla Slowness: Twisted
-Ranger, Verdant Wanderer, Aquatic Archer, Twisted Invoker, Earth
-Vassal, Elder Aberration, Grove Lurker, Frozen Sniper, Frost
-Wraith Archer, Undead Scavenger, Lichen Lurker, Beyond's Grasp,
-Freezing Crystal
-• Fixed the following mobs applying vanilla Speed: Mercenary
-Archer, Tempest Watcher, Tempest Shade, Tempest Wraith, Warping
-Crystal
-• Fixed T'Calin's dropped potion applying vanilla Strength
+• Added Shared Vaults. These are like the Bag of Hoarding in
+that they can hold every currency, but in block form, and with
+their inventory tied to the block instead of accessible from
+anywhere. They can be used to share loot between members of a
+guild, just yourself, or made available to anyone who can reach
+them for dungeons.
+• Added a trade for Silver Armament to the ||Gatecharm||
+trader### Mob Changes:
+• Demented Pishogue: Reduced heal on hit from 50% to 40%
+• Silent Echoes: 0.26 -> 0.14 Movement Speed, 10 KBR -> 0 KBR
+• Specter of Silence: Removed KBR (was 5) and CC immunity
+• Specter of Fury: Removed KBR (was 10) and CC immunity
+• Specter of Ignorance: Removed KBR (was 6) and CC immunity
+• Specter of Malediction: (unchanged)
+• Ember of Mania: Removed CC immunity
+• Ember of Knowledge: Removed CC immunity
+• Ember of Trepidation: Removed CC immunity
+• Ember of Greed: Removed CC immunity
+• Water Spirit (Light Blue baby drowned) base health from 10 ->
+8 and base attack damage from 6.5 -> 5.5
 ### Feedback Fixes:
-• Portals on the floor no longer teleport players that are
-sneaking. Thanks ChromaTK for contributing this to the public
-github!
-• A bold message warning you to finish your SKR before the
-Weekly update has been implemented
-• The three latest ran SKR rooms of each type (Normal Combat,
-Long Combat, Puzzle) are now saved per player. While saved,
-these rooms cannot be rolled, allowing for higher room variety.
-• Made the tile of the exit prompt in the end room of SKR
-||Tarkir Arboretum|| clearer
-• The Isharist SKR room ||"The Gloryvault"|| has been renamed to
-||"Vault Gamma"||
-• Thrown enderpearls are now killed if their thrower dies
-• Adjusted lootbox functionality to allow users with the Box of
-Endless Echoes to retrieve their own share of a chest sent to
-their box if they open the chest, toggleable in PEB, with a 1.5s
-slow.
-• Added a message into chat when receiving an event currency or
-a rare or higher item into a lootbox.• Port Manteau now plays
-Lowtide's music as a placeholder until it gets its own original
-theme
-• As with Sierhaven's and Mistport's TP hubs, Galengarde's music
-does not start when players are within the TP hub area so they
-are not hearing the first 15s over and over as they warp between
-places.
-• Aloc Acoc's arena has grown so large that it is now visible
-from Smallpoint
-• Clicking a mine in a minesweeper fishing minigame while you
-still have a life remaining will now automatically flag that
-tile.
-• Empty squares with no adjacent mines will now be marked with a
-"0" rather than a dot, in minesweeper fishing minigames.
-• Made some of the aiming fishing minigame variants more lenient
-on time.
-• Visually cleaned up the Frostgate Teleporter building
-• Replaced all
-&bvanilla&r spruce trees around Frostgate with custom ones
-• A goofy-looking handmade snowman has been built in the town of
-Frostgate
-• Removed an overzealous protected spawner in Constellation
-Tower
-• Torches are no longer picked up if you have /pickup filtering
-enabled unless there are torches on your hotbar.
-• A given Hunts Quarry should no longer be able to spawn twice
-in a row
-• The lore book in the Hunts Lodge is now obtainable by clicking
-the lectern.
+• You can now use the White Tesseract in the Hunts Lodge
+• Updated various Hunts dialogue to better reflect the fights
+themselves
+• Removed pointed dripstone from The Impenetrable's Arena
+because players couldn't stop impaling each other
+• Moved a chest in SKR Room Galos Floodpits
 ### Bug Fixes:
-• Fixed certain frogs spamming command blocks
-• Fixed Celestial Rampart not having 2 chests that were added to
-it last week
-• Added titles for the two new added combat rooms that were
-forgotten
-• Fixed several Star Point POIs having player nametags saved in
-them and employed evacuation procedures when we press the save
-button
-• Fixed a Doomed Encamp levi pad not working
-• A red concrete block in the walls of Starpoint has been
-murdered and replaced with an andesite
-• Fixed multiple elite spawners in Starpoint having standard mob
-spawner spawn count and spawn rates
-• Fixed several build errors in the Architect's Ring• Fixed
-several pieces of short grass on Spiral Island that had defied
-gravity
-• Fixed stacked grass in Sierhaven
-• Fixed Ruck not having the Epic Crafting Material tag
-• Removed Magenta Wool placeholders from SKR's: ||Takir
-Skyreach, Takir Arboretum||
-• Removed an extra undocumented chest from SKR room ||The
-Forgeway||
-• Fixed an oversight that reset spawner and chest counts if you
-lagged out inside of SKR
-• Fixed a hole in the barrier in SKR ||Tarkir Arboretum||
-• Fixed armor stands that could steal items in Seasonal Pass and
-A Study in Crimson
-• Fixed empty spawners in Ancient Ruin and named remaining
-unnamed mobs
-• Fixed a Yellow miniboss's spawn radius
-• Fixed build error in Cavern of Cinders
-• Fixed decorative heads in Hoard + Hoard entrance lobby that
-had lost their textures
-• Fixed mobs sometimes persisting in Fishing arenas after
-failing a fishing combat
-• Fixed a number of small typos, grammar mistakes, and
-inconsistencies in ability descriptions for Arcane Strike, Frost
-Nova, Magma Shield, Prismatic Shield, Cosmic Moonblade,
-Elemental Spirits, Dethroner, Advancing Shadows, By My Blade,
-Vicious Combos, Coup De Grace, Blade Dance, and Lightning Totem.
-• Fishing in R3 (but not the overworld) will no longer return
-you empty chests sometimes.
-• Fixed an unbreakable Creeper spawner in a Zenith room
-• Removed a bunch of very mysterious oak signs that have latched
-onto the walls of a Zenith room
-• Reopened the window into Aketo's house in Alnera
-• Fixed Dexterous Beastmen having 94 trident & melee damage
-instead of 56
-• The Warped Minister in Shifting should no longer be able to
-escape his room
-• Fixed Star Energy sometimes taking two hits
-• The SKR Minesweeper puzzle is now properly randomized upon
-instance generation
-• Dusted off some cobwebs on the path to the Godspore lobby
-• Retneau now properly charges a single HAR for Lodge membership
-• Fixed some building errors in a SKR room
-• Fixed portals not clearing when changing worlds
+• Fraying Veil will no longer be consumed should you choose to
+eat it
+• Fixed the new SKR puzzle room ||Path of the Mind|| enter
+teleport launching you the wrong way
+• Fixed conquer sounds and message appearing when losing in the
+SKR puzzle room ||Path of the Mind||
+• Fixed a placeholder spawner in an SKR room
+• Fixed a weird hole in ||Construct Ruins|| Puzzle SKR Room
+• Added an emergency button to ||Construct Ruins || and ||Path
+of the Mind ||Puzzle SKR Rooms
+• The Shuffle Puzzle SKR's exit is now less hidden
+• Fixed an issue with Gray's lore signs
+• Fixed || Uaemiel's banish not accepting potions with debuffs
+on them||
+• Fixed a spelling error in the PEB
+• Fixed an error in Stefan's dialogue
+• Fixed minor grammatical error in Mellini's dialogue
+• Fixed duration issues with Melancholic Lament and Sanguine
+Harvest's descriptions
+• Gave an elite in Forsworn Sanctum some breathing space
+• Slightly changed the Pelias Keep's bounty trader's dialogue to
+better reflect their trades
+• Fixed exposed bedrock in Vernal Nightmare• Replaced updating
+block in a Sierhaven boat
+• Fixed a rogue space in the tab menu
+• The option to edit a guild member's or manager's permissions
+is now labelled correctly
+• Fixed a Constellation Tower elite spawner having the mob count
+and spawn time of a normal mob spawner
+• Fixed Sirius Rare Trader not having a silver dust trade
+• Prevented dismounting mobs when Orasomn uses its rewind spell
+• Sealed Remorse should play the City of Bones, Ambient Arena,
+and Vigil themes properly in their own areas
+• All That Remains' Alchemist Bastion secret's music is no
+longer on the master volume channel
+• Added an emergency escape the an SKT cutscene room
+• The bounty compass message for Charn is now grammatically
+correct
+• The patron shrine now accurately tells you what tier of patron
+you need to be to activate the shrine
+• Fixed Dichen Alchemist's Bag having incorrect Projectile Speed
+• Readded Witchbane Revolver to the Items API
+• Rejuvenating Ents in Blitz will now actually rejuvenate
+instead of only claiming they do
+• Kaul now displays his single-player health value in his
+Bestiary entry
+• Players who reset their quest progress and/or all player data
+and then go to Isles/Ring before weekly update are now
+teleported to the spawn box when they get there
+• Grammatical error in the Tarri V lore book has been corrected
+• Fixed Luminous Infusion actionbar spam for "is now off
+cooldown!"
+• Fixed protected mobs from spawners retaining their protection
+when way too far away from their spawner
+• Fixed Hunts mobs missing from the Bestiary
+• Removed a placeholder sign in a Zenith room
+• Fixed an issue where the cooldown of level one Hallowed Beam
+was displayed with an incorrect value in the class selection GUI
+• Fixed an issue where the description of Earthen Tremor
+contained random characters
+• Fixed an issue where the feedback message for `/wallet
+withdraw` displayed the wrong amount of items that was withdrawn
+• Fixed Ghostly Cannons particle count issues• Fix Transcendent
+Commanders duplicating while silenced
+• Fix some bosses targeting spectators
+• Fixed Crystal Behemoth Dummy not having complete knockback
+resistance
+• Fixed Ru'Ten, Devouring Loci's title.
+• Fixed Ru'Ten attempting to explode players
+• Fixed Beast of the Blackflame Spawning at the wrong location
+sometimes
+• Fix charge spell hitbox being too small
+• Fixed Thurible Healing (Rejuvenation Heal in tab) and Prayer
+being debuffs in effect packets
+• Attempted to fix Chivalrous mobs targeting players in Stealth.
+• Fixed Ventus being one block in the ground
+• The boss of Masquerader's Ruin no longer makes default wither
+skeleton sounds.
+• Fixed a typo in the Marble Mine's POI marker
+• Fixed a block remaining in the Lime mirror tunnel opening
+sequence
+• Fixed Final Herald's Lifeblood not actually decreasing
+Desecrating Shot's radius
+• Fixed Echo of Sirius' rider (Enforcer of Sirius) dying before
+the boss does.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The City of Shifting Waters is (hopefully) not bugged. Players
-are not advised to complete the dungeon in a single sitting to
-avoid instance corruption.
-• The player reset booth remains closed.• Fixed players being
-able to interact with armor stands in the Hunter's Lodge
-• Fixed players being able to give a shield to an armor stand in
-a SKR room
-• Fixed falling gravel not getting removed correctly in a SKR
-room
-• Fixed multiple building errors around the Architect's Ring
-• Removed some barrier blocks from a Long Combat Room
-||Briarstone||
-• Fixed ||Outsmarted|| Ice Slider puzzle trapdoors for real this
-time.
-• Fixed a Shifting parkour challenge room skip
-• Replaced the path blocks with dirt near New Antium
-• Fixed a bug with Experiment 71 resistance
-• Fixed Steelwing Hawk not having damage resistance
-• Underlined the Godspore Cutting's name
-• Fixed The Impenetrable advancements not being granted to
-players who should have earned the advancements before the
-hotfix
-• Decreased particle count from Mudquake scaling with total
-number of mud blocks
-• Fixed Muddy Leap being able to target dead players or players
-who left the fight
-•  Fixed the message when attempting to damage Core Elemental
-during the banish spell with something other than melee not
-sending if the damage was from a projectile
-• Fixed Core Elemental banish boss bar not working
-• A lore book in Galengarde that was incorrectly replaced by a
-book from the King's Valley is now correct • and slightly
-updated
-&bHotfix&r (pending restart; shards set to restart as they empty
-out): The resource pack shows the correct icons for icons with
-the corrected class names
-&bHotfix&r: The reset booths are open again (as of 6 hours ago;
-late changelog entry)
+and select `I want to unlock this shop`.Amplified Coven Fortress
+is temporarily disabled.
+&bHotfix:&r Fixed a bug where ||failing a quiz|| in Amped Coven
+Fortress sends you out of bounds; we're applying this fix at the
+start of the hour, which will cause a few seconds of lag. (Done)
+&bHotfix&r (pending restart):
+• Travel anchors now properly unload when removed or in an
+unloaded chunk
+• Unpausing chat should no longer break as easilyAmplified Coven
+Fortress is temporarily disabled.
