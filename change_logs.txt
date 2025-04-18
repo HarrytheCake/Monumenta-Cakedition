@@ -1,276 +1,202 @@
-### Guild Plots Feedback and Bug Fixes:
-• Added the option to control the permissions of anyone not in
-your guild. This means you can let everyone visit your guild
-plot, view your items, or hang out in your guild chat.
-• In case you didn't &oactually&r mean &oanyone&r not in your
-guild, there is now also a Blocked access level, who are never
-allowed any of your guild permissions. The "kick" option is the
-same as whatever your public permissions are, and Guest is for
-individual members not in your guild.
-• Added proper "manage membership" and "lockdown" permissions
-instead of them being tied to the manager and founder access
-levels.
-• It is no longer possible to edit the permissions of individual
-players who are invited to the guild, but who have not accepted
-your invite.
-• Added a cooldown on `/guild invite`.
-• The white tesseract now works on guild plots
-• Fixed being unable to place blocks on the barrier block floor
-of Guild Plots## April Balance Update
-&bEnchantment Changes&r
-• Intoxicating Warmth : 15 -> 12s effect duration
-  • &oDeveloper Note: This enchantment made Forgeflame Liquor
-more powerful than steak consumables at Saturation stacking with
-its ability to be used at any time off cooldown; other foods
-require missing hunger. Its effect has been shortened to make
-foods and Starvation potions more competitive in the niche.&r
-• Jungle's Nourishment : 24 -> 20 Hunger
-  • &oDeveloper Note: This change has no effect on the
-enchantment's potency as player hunger is capped at 20 points.&r
-• Rage of the Keter :
-  • +6 -> +4 Hunger
-  • +6 -> +4 Saturation
-  • The enchantment's description has been updated to clarify
-only melee, projectile, and magic damage are affected
-  • &oDeveloper Note: This enchantment was providing more hunger
-recovery than we anticipated when pair with other buff
-consumables for what is supposed to be a go-to for damage. As a
-result, dedicated hunger recovery consumables were not appealing
-to many endgame players. Its food statistics have been reduced
-to give hunger recovery consumables a chance to be
-competitive.&r
-• Regicide : Now provides the same damage buff (+10%) against
-Elite and Boss enemies• Retaliation (Rework) :
-  • Any mob you attack within 4s of successfully blocking damage
-(max 1 mob per tick), will take increased damage from all the
-damage you deal in that tick, based on the type of enemy blocked
-(25% for normal, 40% for elite, 50% for boss). Certain blocked
-debuffs will infuse the first attack with an effect based on
-those debuffs.
-  • &oDeveloper Note : The previous iteration of this
-enchantment was paradoxically worse in easier content as it
-scaled off of mobs' original damage without factoring in buffs.
-Due to technical reasons, it wasn't possible to make Retaliation
-consider the mob's damage buffs. This new damage calculation is
-a compromise that still achieves the goal of damage bonus
-consistency across all content, but also reduces the cases of
-losing a high damage buff from continuing to block.&r
-• Reverb : Killing an enemy with a Reverb projectile allows the
-projectile to bounce to another enemy within range
-• Temporal Bender (Rework) :
-  • +100% Ability Cooldown Recharge Rate for 5s
-  • +6 -> +4 Hunger
-  • +6 -> +4 Saturation
-  • &oDeveloper Note: Temporal Bender was a contender for one of
-the strongest enchantments in the game. Its previous effect of
-hard CDR drastically changed how certain classes played and
-caused unintended gameplay effects in Region 1 and 2 since
-consumables can be freely used in all regions. Reducing the CDR
-value of the previous version was not an option as too little
-CDR upon consumption would not be worth the costs of the time to
-consume Mountain's Dew to gain the effect, the cooldown, and
-hotbar space. To keep this new version useful it does not change
-the final outcome; 5 seconds of cooldown are saved at the end of
-the effect's duration on all active class abilities. We will be
-listening to your feedback on this enchantment's strength in the
-coming months and adjust it accordingly.
-&b&rCharm Changes&r
-• Lesser Brutal Charm : +25% -> 20% Brutal Alchemy DoT Damage
-• Greater Brutal Charm : +50% -> 40% Brutal Alchemy DoT Damage
-• Focused Brutal Charm : +75% -> 60% Brutal Alchemy DoT Damage
-• Lesser Rage Charm : 0 -> +10% Rampage Damage
-• Greater Rage Charm : 0 -> +20% Rampage Damage
-• Sustaining Rage Charm : 3 -> 2 Charm Power
-• Focused Rage Charm : 4 -> 3 Charm Power
-• Bottled Font of Tuulen : 5 -> 4 Charm Power
-• Callicarpa Compound : +70% -> +50% Unstable Amalgam Radius
-• Heart of the Forge : -60% -> -35% Unstable Amalgam Cooldown,
--70% -> -10% Unstable Amalgam Damage, -30% -> -10% Unstable
-Amalgam Dropped Potion Damage Modifier
-• Loci's Hunger : -0.3% -> -0.75% Rampage Resistance Per Stack,
-0 -> -10 Rampage Damage Threshold
-  • &oDeveloper Note : While the previous iteration of this
-charm increased the flexibility of Berserker's skills, its
-overall effect on encounters did not justify the cost of the
-charm. This rework intends to make the charm lean more into high
-risk, high reward Rampage usage.&r
-• Pyroclastic Emesis : -50% -> -30% Starfall Fall Speed, 0 ->
-+30% Starfall Radius
-• Stonebearer Toxin : -25% -> 0% Iron Tincture Absorption, 0% ->
-+50% Iron Tincture Stun Radius
-• Titanic Hailstone (Rework) : 3 Charm Power, +125% Illuminate
-Damage, +75% Illuminate Radius, -75% Illuminate Max Range, -100%
-Illuminate Trail Duration
-• Toxic Steroid : +20% -> +12% Taboo Damage Modifier
-• Urn of Perpetuity (Rework) : 1 Charm Power, +20 Blizzard
-Duration, +10% Blizzard Slowness Amplifier, -35% Blizzard Range,
--200% Blizzard Damage
-  • &oDeveloper Note : This charm's previous niche was difficult
-to balance as passive playstyles could still deal substantial
-damage with Blizzard Damage charms equipped. This reworked
-version is intended to give Elementalists zoning capabilities
-against melee enemies.&r
-• Wolfbone Pendant : -25% -> 0% Hunting Companion Damage, +5% ->
-+100% Hunting Companion Healing
-&bItem Changes&r
-&nKing's Valley&r
-• Archmage's Femur : 9 -> 11 Attack Damage
-&nCelsian Isles&r
-• Blackflame Gauntlet (Infernal Gauntlet) : 1 -> 0 Poise, 0 -> 2
-Melee Protection, +50% -> +55% Spell Power
-&nArchitect's Ring Consumables&r
-• All Hunts Potions' durations have been increased to 40 minutes
-• Quicksilver Vial : 0% -> +10% Speed
-• Muddied Tincture : +50% -> 75% Knockback Resistance
-• Concentrated Wolfswood Carp : Regeneration 1 (0:12) ->
-Regeneration 3 (0:12), 20% Healing Rate (0:09) -> 30% Healing
-Rate (0:12)
-• Concentrated Shade Seabass : 0 -> +10% Resistance (12:30),
-+40% Blast Resistance (0:30) -> +30% Blast Resistance (12:30)
-• Concentrated Mechanical Monkfish : Effect durations increased
-from 2:00 to 12:30
-• Concentrated Forest Flounder : 0 -> +10% Max Health (12:30)
-• Concentrated Shroomfish : Effect durations increased from 0:30
-to 2:30, Poison 1 -> Poison Immunity, 60% -> 40% Speed
-• Concentrated Hexed Salmon : Effect durations increased from
-5:00 to 12:30
-• Concentrated Mungfish : Effect durations increased from 5:00
-to 12:30, -15% -> -10% Attack Damage
-• Concentrated Keep-side Sardine : Effect durations increased
-from 8:00 to 12:30
-• Concentrated Trout of the Architect : Effect durations reduced
-from 1:00 to 0:30, 0 -> +30% Absorption Health (0:30), 25% ->
-30% Resistance
-• Concentrated Crystallized Cod : Effect durations increased
-from 5:00 to 12:30 (except Glowing)
-• Concentrated Norvigut Tuna : Removed Nausea, Poison 2 (30:00)
--> Poison 3 (12:30), 0 -> -100% Healing Rate (12:30)
-• Concentrated Startouched Swordfish : Effect durations
-increased from 5:00 to 12:30&nArchitect's Ring Masterwork&r
-• Across the Ocean (M4) : 9.5 -> 9 Armor
-• Blightblood Falchion (M4) : 19 -> 18.5 Attack Damage
-  • &oDeveloper Note: This sword was out-competing other weapon
-options for Rogue and Warrior. Since its base attack speed
-allows it to achieve 100% critical hit uptime with the attack
-speed both classes gain from abilities, its damage output has
-been slightly reduced to allow other weapons to be
-competitive.&r
-• Caduceus (M4) : 6.5 -> 7.5 Attack Damage, 80% -> 85% Spell
-Power
-• Chimera's Grace (M6) : 1 -> 0 Ethereal, 0 -> 1 Guard, 3 -> 0
-Technique, 0 -> 2 Magic Protection, Unbreakable -> Unbreaking 5
-+ Mending
-  • The shield's defensive enchants no longer work when held in
-mainhand
-  • &oDeveloper Note: Ethereal was initially chosen to provide
-the player increased defense while their shield was disabled,
-but this ended up with the unintended effect of making the
-shield feel weaker in general. This iteration has Guard instead
-to provide more consistent defenses overall. Additionally,
-Technique was removed in favor of strengthening Retaliation (see
-enchantment changes), granting the shield more versatility
-across classes and playstyles that Technique did not benefit.&r
-• Eclipse Stream (M4) (Rework) : 9 Agility, 20% Magic Damage,
-Adaptability, Inferno 2, Unbreaking 10
-• Extinction (M4) : 32 -> 30 Attack Damage, 3 -> 4 Impact, 3 ->
-4 Knockback
-• God Tamer (M4 only) : 82% -> 85% Spell Power, 2 -> 1 Magic
-Protection• Memoria Ancestrale (M4) : 15.5 -> 16.5 Attack Damage
-• Molldyer's Greatstaff (M4) : 22.5 -> 23.5 Attack Damage
-• Moonscarred Clockblade (M4) : 15.5 -> 15 Attack Damage
-  • &oDeveloper Note: This sword was out-competing other sword
-options for Rogue by a wide margin, especially since Reverb
-pairs well with Rogue's abilities. Its damage output has been
-slightly reduced to allow other swords to be competitive.&r
-• The Godcap (M4) : 12 -> 12.5 Attack Damage
-• The Vedha's Soulcrusher (M4) : 25 -> 24 Attack Damage
-  • &oDeveloper Note: This axe was out-competing other weapons
-for Warrior by a wide margin. As a result, its damage buff from
-the February balance update has been tuned down.&r
-• Thundering Legacy (M4) : 14 -> 15.5 Attack Damage
-• Veinshredder (M4) : 17.5 -> 17 Attack Damage
-• Withering Hydrangea (M4) : 6.5 -> 8.5 Attack Damage, 1 -> 4
-Decay, 1 -> 2 Ice Aspect
-### Feedback Fixes:
-• Static application by Arcane Strike is now done after the
-melee strike to prevent the melee hit "eating" the static
-application instantly, and preventing Arcane Strike from
-interrupting your Spellshock combos
-• Increased the lighting on all Diamenean Hunts arenas
-• Upon contact with SKR exit particles, you now receive
-knowledge of your current chest count
-• The parkour for ||Path of the Mind ||  SKR puzzle room is now
-bit easier.
-• Removed a chest from SKR room ||The Forgeway||
-• Moved the chests from the SKR room ||Path of the Mind||'s hard
-mode to be more accessible
-• Added a bomb tossing ability to the Corrupt Foreman
-• Predator Strike no longer plays sounds and particles for
-priming if less than 0.5s have passed since last prime
-• Fixed particle settings issues with Celestial Blessing and its
-cosmetics
-• Celestial Blessing now plays most effect sounds clientside
-• Contorting Bolt (Hand of Light) healing and damage chains are
-now capped at 20 players/mobs
-• Reduced volume of Contorting Bolt (Hand of Light)• Reduced
-volume of Predator Strike and Firework Strike (Predator Strike)
-priming effect
-• Contorting Bolt (Hand of Light) now has a small peripheral arc
-to show its range
-• Lowered Soul Strain (Divine Justice) particle count and
-slightly reworked its particles
-• Increased the frost buildup from all attacks in Aloc Acoc
-• Prevented mud from being stuck in trees in the Experiment
-Seventy-One fight
-• Decreased the maximum worm count, increased the spawn delay of
-worms, and adjusted count scaling in the Experiment Seventy-One
-fight
-• Reduced the random variability for worm spawner count and
-changed the block to mangrove roots in the Experiment Seventy-
-One fight
-• Increased the clarity of Experiment Seventy-One's Mud Geyser
-attack and decreased the damage from 75 to 60
-### Bug Fixes:
-• Fix parsing the filters= for the EntityTargets bosstag
-sometimes resulting in an infinite loop, crashing the build
-shard when trying to make specific types of mobs.
-• Fixed The Impenetrable wins not counting for the leaderboard,
-etc.
-• Fixed a stuck spot located in Sierhaven
-• Fixed the Energy Overseer Cradle of the Broken God miniboss
-attempting to target non-players with its projectile spell
-• Fixed unlocked item frames in Purple
-• Fixed minor build bugs in Ravenna and Sierhaven
-• Fixed an issue in SKR Room ||Path of the Mind|| where the iron
-bars wouldn't go down
-• Fixed the biome in SKR Room ||Path of the Mind|| not being
-dark forest
-• The interactable lectern in the SKR room ||Construct Ruins||
-has been moved to its intended location
-• Replaced Wulfric Warrden in Eastern Sierhaven
-• Fixed a double "who" in the lore of The Statue
-• Greater Experience Stash should now appear on the items API•
-Fixed a typo in the lore of Tarri's Windeater
-• Fixed Valley overworld chests giving too much food and too few
-arrows, if none at all
-• Fixed the dungeon access bot (`-_-`) showing incorrect
-invite/abandon status
-• Fixed killing worm enemies triggering multiple death effects
-at once
-• Fixed worm enemies counting as multiple enemies for the
-purposes of reflexes/cloaked
-• Actually fixed Crystal Behemoth Dummy taking knockback
-• Fixed an issue where mobs can occasionally spawn in walls
-during fights against Sirius
-• Removed a placeholder spawner in ||Tal Amar|| SKR combat room
-• Fixed various building errors around the King's Valley
-overworld.
-• Fixed banners facing the wrong direction in Rock's Little
-Casino
-• A trap in a certain Galos SKR room now functions as intended
-• Updated Creeper Farm's bounty icon
-• Fixed a stuck spot near Steel Wing Hawk's arena.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
+&bMonumenta: Runestones&r • Update 0.2
+Welcome to Monumenta: Runestones' first major update! We'll be
+primarily keeping change notes and information to the
+<#1354661850498994196> thread, but as this is the first update,
+I wanted to share it here. For those out of the know, Runestones
+is our Monumenta themed Card Game that soft-launched in Alpha
+last month.
+We've made some adjustments to the rule book following a month
+of open testing, some changes to cards to make them more fun and
+useful, begun adding card art, and added a big package of new
+cards! If you'd like to see more details, with the full
+changelog, how to play, and how to view all the new and updated
+cards, please visit and follow the Runestones thread linked
+above.
+&bHotfix:&r Fixed issue with Spore Meteors in Godspore
+&bHotfix&r (<t:1744502400:R>): Fixed an issue that caused over
+half a second of TPS lag every 30 seconds for the last few weeks
+&bHotfix:&r Fixed crops not growing on guild plots, whether
+through random ticks or bonemeal
+&b(11.12.0)&r
+For the update on April 16, 2025
+### Minor New Features:
+• Added new delve mobs Colossus of Conquest & Specter of
+Mourning
+• Added a new Zenith F1 Elite room from Qweun
+• Added a new Zenith F1 Normal room from Qweun
+• Added a new Zenith F1 Elite room from Qweun
+• Added a new Zenith F1 Normal room from Qweun
+• Added a new Zenith F2 Elite room from Nyaalma
+• We've added extra protections against vanilla villager trades
+appearing (anything with vanilla emeralds), and as such we're
+now more likely to use emeralds in survival areas
+• Vengeance: Now capped at 5 stacks, healing 10% HP and gaining
+5% damage per stack
+• Arcanic: Arcanic Missile damage reduced from 12/30/40 to
+12/25/35
+• Transcendent: Transcendent Missile knockback now respects KBR
+### Depths & Zenith Changes:
+This round of balance updates has two main goals: Firstly, to
+rework spawner break abilities which as a whole have had several
+negative effects on gameplay. Secondly, to improve the early run
+experience, particularly in Zenith. Several abilities have been
+significantly reworked, so let us know how they feel and expect
+a round of follow up changes as we gather data.
+• Wand Aspect no longer makes your first three ability
+selections a guaranteed trigger slot. This feature is now a
+default to the entire content.
+• The starting random ability for each player has been replaced
+by an ability selection.
+• Wand Aspect now only amplifies magic damage with spell power.
+• Sidearm, Scrapshot and Firework Blast have had their damage
+increased slightly to compensate (see misc. changes for numbers)
+• Hubris logout effect no longer depends on current death timer
+and should respond more fairly.&oCallicarpa Changes&r
+The following changes to Callicarpa should make her more
+consistent on elite summons and less of a wall at high
+ascensions, hopefully opening up runs to be viable even if
+players don't hit everything in the first few rooms.
+• Plant spawn rate reduced by 25%.
+• No longer passively spawns mobs. Now summons a set of mobs in
+the center of the arena at specific health breakpoints.
+&oSpawner Break Changes&r
+• Spawner break trigger converted to new "wildcard action"
+trigger.
+• All wildcard passive abilities are now eligible for single
+ability charms. Add cooldown charm effect where applicable
+• Lightning Bottle and Rapid Fire now occupy this trigger for
+their respective trees.
+• Sundrops has moved to a passive slot.
+&oFlame Spirit&r
+• Trigger changed to: summons spirit at the closest enemy hit
+when dealing damage to three or more enemies at once.
+• Cooldown: 12s
+• Duration doubled from 3s to 6s
+• Damage roughly halved
+&oPhantom Force&r
+• Trigger changed to: on elite kill
+• The vexes now hover near a nearby target which can be attacked
+to explode nearby vexes, dealing damage and applying
+vulnerability in a small aoe
+• Twisted vex count 4 -> 3
+• Cooldown: 5s
+&oPermafrost&r
+• Trigger changed to: left click when not sneaking
+• Gain up to three charges, each by killing three mobs.
+• Can be cast to place ice in an arc. Now applies selfish
+vulnerability to the enemy, only you deal 10-22% (scales) more
+damage to them for 3s.
+• Twisted packed ice effect removed.
+• Charm effects:
+  • Ice Bonus Duration -> Debuff Duration
+  • Trail Duration -> Slowness Amplifier
+  • Ice Duration -> Vuln Amplifier
+&oWhirlwind&r
+• Trigger changed to: when airborne for more than 0.75s
+• Cooldown: 15s
+• Instead of knockback, now reduces the next casted ability's
+cooldown by 5-15% (scales) after casting. Still applies speed
+• Radius charms are now cooldown, knockback charm effect
+replaced with cdr effect.&oEntrench&r
+• Trigger changed to: when blocking a melee attack via shield or
+absorption
+• Cooldown: 18s
+• Now roots the area around attacking mob instead of the spawner
+location
+• Applies brittle effect to non-boss enemies rooted for
+1.5-2.5s. The next time they are melee attacked, they are
+knocked back in the direction hit, bypassing CC immunity.
+• Root now bypasses cc immunity for non-boss enemies
+• Works with any shield, taunt, dawn abils, etc
+&oPrecision Strike&r
+• Removed, charms converted to other steel effects:
+• Damage -> Rapid Fire Damage
+• Range -> Split Arrow Range
+• Max Stacks -> Sharpshooter Max Stacks
+&oConvergence&r
+• Reworked: Now allows you to hold multiple wildcard trigger
+abilities (amount scaling with rarity), which display in the
+passive section and can’t be removed as an active. Removing
+Convergence also removes held wildcard trigger abilities.
+&oMisc Balance&r
+• Ice Barrier Cooldown: 12s -> 14-8s (scales)
+• Sidearm Damage: 12-24 -> 15-27
+• Scrapshot Damage: 32-62 -> 35-68
+• Firework Blast Damage: 12-28 -> 13-31
+### Feedback Fixes:
+• Improved the sound of Rending Razor
+• Reduced Chivalrous Bee Mount aggro range
+• Teleport from ||Ta'Eldim|| to the ||Kaul Arena|| now teleports
+multiple players within the range
+• Teleport from New Antium to the Casino now teleports multiple
+players within the range
+• Godspore enemies now appear from the ground like Kaul zombies,
+• The Scars of Magic Tower Puzzle now uses the same control
+scheme as the SKR Tower Puzzle. A book in the room explaining
+the rules has been replaced with a button that does so
+• Left clicking on a tower in either the Scars of Magic or SKR
+Tower Puzzle will now lower its height by 1
+### Bug Fixes:
+• Fixed exploit involving Hunts and Phylactery
+• Replaced all potions in Gray, Purple, Fallen Forum, Whitecliff
+Citadel, SKT, and Shifting City with proper Region 2 variants
+• You can no longer interact with potion barrels on guild plots
+if you do not have access to modify inventories there• Fixed a
+bug that would cause R1 Arcanic Missile's damage to get
+multiplied by the base delve mult of the dungeon (i.e. a White
+mob using Arcanic Missile would deal 1.7x damage vs. a Reverie
+mob dealing 1x damage)
+• Fixed an issue where Varcosa would retain his speed buff
+granted by his Deathly Charge ability after hitting a player
+• Fixed minor build errors in SKT, Light Blue, Sierhaven,
+Zenith, R3 overworld, Silent Knight quest area, and SKR rooms
+• Fixed unlocked item frame in Nyr
+• Fixed missing decorative banners in an SKR room
+• Fixed mob stuckspot in Star Point fishing arena
+• Fixed chat messages sometimes not showing up while refreshing
+chat (like when changing shards)
+• Fixed built-in NetworkChat help file for chat channels showing
+up among the Monumenta help files
+• Fixed armor stands not dropping as items since we updated to
+1.20.4; any equipped gear on them still drops correctly
+• Fixed Death's Echo MW3 not having +1 Armor like intended
+• Fixed The Envoy spawner in Depths spawning multiple boss mobs
+at once
+• Fixed a survival mode section on the edge of Galengarde that
+should be adventure
+• Fixed a bug where Chivalrous mobs wouldn't play any sound when
+damaging the player
+• Fixed Bloated Blightgushers playing playerhurt sounds twice
+• Named previously unnamed Azacor's Grove creepers and fixed a
+creeper drop trap in Igor's Laboratory
+• If you shoot a projectile with Skyhook and are teleported
+before it hits anything, you are no longer teleported you where
+it lands
+• Fixed Experiment 71's reward caches having less ar and arrows
+than intended
+• Fixed Dark Pact antiheal sometimes disappearing or having the
+wrong magnitude
+• Fixed Constellation Construct not knowing how to wear its hat
+properly
+• Fixed a bench not being sittable in Sierhaven
+• Fixed the Corrupt Foreman damaging his own allies with his
+bombs
+• Fixed a softlock in the Memory Vault while using a Black Mist
+potion• Removed extra crying obsidian from the R3 overworld
+• Fixed Grove Witch trades
+• The first click on a DD Quest/SKR Minesweeper puzzle will now
+always start you off on a fully empty tile
+• The DD Quest Minesweeper puzzle has been given the sound
+effects of the SKR version
+• You are no longer able to select the second-to-top concrete
+powder in the Forum Quest/SKR Tubes puzzle by being quick enough
+• Fixed a stuck spot in Sierhaven.
+• Fixed ||Whispering Ossuary||  SKR combat room not having the
+correct biome.
+• Fixed various stuck spots around Port Manteau
+• You can no longer activate redstone with projectiles in zones
+that disable redstone interactions
