@@ -1,192 +1,4 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bMonumenta: Runestones&r • Update 0.2
-Welcome to Monumenta: Runestones' first major update! We'll be
-primarily keeping change notes and information to the
-<#1354661850498994196> thread, but as this is the first update,
-I wanted to share it here. For those out of the know, Runestones
-is our Monumenta themed Card Game that soft-launched in Alpha
-last month.
-We've made some adjustments to the rule book following a month
-of open testing, some changes to cards to make them more fun and
-useful, begun adding card art, and added a big package of new
-cards! If you'd like to see more details, with the full
-changelog, how to play, and how to view all the new and updated
-cards, please visit and follow the Runestones thread linked
-above.
-&bHotfix:&r Fixed issue with Spore Meteors in Godspore
-&bHotfix&r (<t:1744502400:R>): Fixed an issue that caused over
-half a second of TPS lag every 30 seconds for the last few weeks
-&bHotfix:&r Fixed crops not growing on guild plots, whether
-through random ticks or bonemeal
-&b(11.12.0)&r
-For the update on April 16, 2025
-### Minor New Features:
-• Added new delve mobs Colossus of Conquest & Specter of
-Mourning
-• Added a new Zenith F1 Elite room from Qweun
-• Added a new Zenith F1 Normal room from Qweun
-• Added a new Zenith F1 Elite room from Qweun
-• Added a new Zenith F1 Normal room from Qweun
-• Added a new Zenith F2 Elite room from Nyaalma
-• We've added extra protections against vanilla villager trades
-appearing (anything with vanilla emeralds), and as such we're
-now more likely to use emeralds in survival areas
-• Vengeance: Now capped at 5 stacks, healing 10% HP and gaining
-5% damage per stack
-• Arcanic: Arcanic Missile damage reduced from 12/30/40 to
-12/25/35
-• Transcendent: Transcendent Missile knockback now respects KBR
-### Depths & Zenith Changes:
-This round of balance updates has two main goals: Firstly, to
-rework spawner break abilities which as a whole have had several
-negative effects on gameplay. Secondly, to improve the early run
-experience, particularly in Zenith. Several abilities have been
-significantly reworked, so let us know how they feel and expect
-a round of follow up changes as we gather data.
-• Wand Aspect no longer makes your first three ability
-selections a guaranteed trigger slot. This feature is now a
-default to the entire content.
-• The starting random ability for each player has been replaced
-by an ability selection.
-• Wand Aspect now only amplifies magic damage with spell power.
-• Sidearm, Scrapshot and Firework Blast have had their damage
-increased slightly to compensate (see misc. changes for numbers)
-• Hubris logout effect no longer depends on current death timer
-and should respond more fairly.&oCallicarpa Changes&r
-The following changes to Callicarpa should make her more
-consistent on elite summons and less of a wall at high
-ascensions, hopefully opening up runs to be viable even if
-players don't hit everything in the first few rooms.
-• Plant spawn rate reduced by 25%.
-• No longer passively spawns mobs. Now summons a set of mobs in
-the center of the arena at specific health breakpoints.
-&oSpawner Break Changes&r
-• Spawner break trigger converted to new "wildcard action"
-trigger.
-• All wildcard passive abilities are now eligible for single
-ability charms. Add cooldown charm effect where applicable
-• Lightning Bottle and Rapid Fire now occupy this trigger for
-their respective trees.
-• Sundrops has moved to a passive slot.
-&oFlame Spirit&r
-• Trigger changed to: summons spirit at the closest enemy hit
-when dealing damage to three or more enemies at once.
-• Cooldown: 12s
-• Duration doubled from 3s to 6s
-• Damage roughly halved
-&oPhantom Force&r
-• Trigger changed to: on elite kill
-• The vexes now hover near a nearby target which can be attacked
-to explode nearby vexes, dealing damage and applying
-vulnerability in a small aoe
-• Twisted vex count 4 -> 3
-• Cooldown: 5s
-&oPermafrost&r
-• Trigger changed to: left click when not sneaking
-• Gain up to three charges, each by killing three mobs.
-• Can be cast to place ice in an arc. Now applies selfish
-vulnerability to the enemy, only you deal 10-22% (scales) more
-damage to them for 3s.
-• Twisted packed ice effect removed.
-• Charm effects:
-  • Ice Bonus Duration -> Debuff Duration
-  • Trail Duration -> Slowness Amplifier
-  • Ice Duration -> Vuln Amplifier
-&oWhirlwind&r
-• Trigger changed to: when airborne for more than 0.75s
-• Cooldown: 15s
-• Instead of knockback, now reduces the next casted ability's
-cooldown by 5-15% (scales) after casting. Still applies speed
-• Radius charms are now cooldown, knockback charm effect
-replaced with cdr effect.&oEntrench&r
-• Trigger changed to: when blocking a melee attack via shield or
-absorption
-• Cooldown: 18s
-• Now roots the area around attacking mob instead of the spawner
-location
-• Applies brittle effect to non-boss enemies rooted for
-1.5-2.5s. The next time they are melee attacked, they are
-knocked back in the direction hit, bypassing CC immunity.
-• Root now bypasses cc immunity for non-boss enemies
-• Works with any shield, taunt, dawn abils, etc
-&oPrecision Strike&r
-• Removed, charms converted to other steel effects:
-• Damage -> Rapid Fire Damage
-• Range -> Split Arrow Range
-• Max Stacks -> Sharpshooter Max Stacks
-&oConvergence&r
-• Reworked: Now allows you to hold multiple wildcard trigger
-abilities (amount scaling with rarity), which display in the
-passive section and can’t be removed as an active. Removing
-Convergence also removes held wildcard trigger abilities.
-&oMisc Balance&r
-• Ice Barrier Cooldown: 12s -> 14-8s (scales)
-• Sidearm Damage: 12-24 -> 15-27
-• Scrapshot Damage: 32-62 -> 35-68
-• Firework Blast Damage: 12-28 -> 13-31
-### Feedback Fixes:
-• Improved the sound of Rending Razor
-• Reduced Chivalrous Bee Mount aggro range
-• Teleport from ||Ta'Eldim|| to the ||Kaul Arena|| now teleports
-multiple players within the range
-• Teleport from New Antium to the Casino now teleports multiple
-players within the range
-• Godspore enemies now appear from the ground like Kaul zombies,
-• The Scars of Magic Tower Puzzle now uses the same control
-scheme as the SKR Tower Puzzle. A book in the room explaining
-the rules has been replaced with a button that does so
-• Left clicking on a tower in either the Scars of Magic or SKR
-Tower Puzzle will now lower its height by 1
-### Bug Fixes:
-• Fixed exploit involving Hunts and Phylactery
-• Replaced all potions in Gray, Purple, Fallen Forum, Whitecliff
-Citadel, SKT, and Shifting City with proper Region 2 variants
-• You can no longer interact with potion barrels on guild plots
-if you do not have access to modify inventories there• Fixed a
-bug that would cause R1 Arcanic Missile's damage to get
-multiplied by the base delve mult of the dungeon (i.e. a White
-mob using Arcanic Missile would deal 1.7x damage vs. a Reverie
-mob dealing 1x damage)
-• Fixed an issue where Varcosa would retain his speed buff
-granted by his Deathly Charge ability after hitting a player
-• Fixed minor build errors in SKT, Light Blue, Sierhaven,
-Zenith, R3 overworld, Silent Knight quest area, and SKR rooms
-• Fixed unlocked item frame in Nyr
-• Fixed missing decorative banners in an SKR room
-• Fixed mob stuckspot in Star Point fishing arena
-• Fixed chat messages sometimes not showing up while refreshing
-chat (like when changing shards)
-• Fixed built-in NetworkChat help file for chat channels showing
-up among the Monumenta help files
-• Fixed armor stands not dropping as items since we updated to
-1.20.4; any equipped gear on them still drops correctly
-• Fixed Death's Echo MW3 not having +1 Armor like intended
-• Fixed The Envoy spawner in Depths spawning multiple boss mobs
-at once
-• Fixed a survival mode section on the edge of Galengarde that
-should be adventure
-• Fixed a bug where Chivalrous mobs wouldn't play any sound when
-damaging the player
-• Fixed Bloated Blightgushers playing playerhurt sounds twice
-• Named previously unnamed Azacor's Grove creepers and fixed a
-creeper drop trap in Igor's Laboratory
-• If you shoot a projectile with Skyhook and are teleported
-before it hits anything, you are no longer teleported you where
-it lands
-• Fixed Experiment 71's reward caches having less ar and arrows
-than intended
-• Fixed Dark Pact antiheal sometimes disappearing or having the
-wrong magnitude
-• Fixed Constellation Construct not knowing how to wear its hat
-properly
-• Fixed a bench not being sittable in Sierhaven
-• Fixed the Corrupt Foreman damaging his own allies with his
-bombs
-• Fixed a softlock in the Memory Vault while using a Black Mist
-potion• Removed extra crying obsidian from the R3 overworld
+• Removed extra crying obsidian from the R3 overworld
 • Fixed Grove Witch trades
 • The first click on a DD Quest/SKR Minesweeper puzzle will now
 always start you off on a fully empty tile
@@ -200,3 +12,189 @@ correct biome.
 • Fixed various stuck spots around Port Manteau
 • You can no longer activate redstone with projectiles in zones
 that disable redstone interactions
+&bHotfixes:&r
+• Added further protections against moving items without
+permission on guild plots
+• Decorated Fangride's bench on the Guild Hub
+&bHotfix:&r Shadyn't Citizen in guildplots now has dialogue
+&bHotfix:&r Following the Resource Pack 5.6.0 update,
+Mastersmith Antonio has gained 2 new Hope Skins in his shop!
+Many thanks to our patrons for their continued support!
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&b(11.13.0)&r
+For the update on April 23, 2025
+### Seasonal Pass:
+• The Seasonal Pass is back in full swing, with a brand new
+original pass • the
+&bMarsh Madness Pass&r! Jump on lily pads and wade through the
+swampy mud as you complete the usual 13 weeks of missions.
+• As you progress through the pass, unlock brand new Player
+Titles, Mob Dummies, and Elite Finishers. Ever wanted to turn
+your enemies into frogs? Or maybe play a nostalgic tune when
+killing them? Are you feeling a bit... &oExperimental&r?
+• There are new items to collect • including two new items added
+to the Relic Wheel pool, as well as two new Sketched reskins!
+• Head to the new Seasonal Pass hub in Sierhaven to start your
+adventure... and maybe stack a few frogs along the way, too.
+### Minor New Features:
+• We've updated a lot of 3rd party plugins we depend upon in the
+hopes of fixing some of the connections issues players have been
+facing. Let us know if this introduces new bugs.
+•
+&bMurky Maze&r has been once again rebuilt, this time completely
+from scratch! In addition, Murky Maze is now considered as a T2
+PoI.
+• Increased guildplots view distance
+• `/blockinteractions` (`/bi`) now blocks clicking on decorated
+pots
+• Caroline in P.O.R.T.A.L. Strike sells a light blue dye for 1
+AR to recolor a C.H.A.R.M. 2000 needed for the trade
+• A new Galos-biome puzzle has been added to the SKR pool, from
+catgirl_cookie and uurik
+• After a bit of a delay, the Silver Knight Merdd IV book has
+&obee&rn written and updated.
+### Feedback Fixes:
+• Tweaked a trap in White to not get triggered by mobs as often.
+• Removed the delay between Remnants of the Empire Quest Start
+Info and the Record Keeper's next dialogue
+• Reynart's dialogue in the Celsian Isles regarding Delve Epics
+has been adjusted to be more lore accurate### Mob Changes:
+• Tarnished Revenant: 0.22 -> 0.18 Movement Speed
+• Stellar Manifestation: 4 -> 3 Damage per Slash
+• Colossus of Conquest (Skeleton Horse): 140 -> 155 Health
+• Rider of Conquest (Drowned): 100 -> 110 Health
+• Ember of Greed is now a zombie until piglin brutes are fixed
+to respect stealth
+• Specter of Mourning now dies when it attacks you
+• Specter of Mourning now applies vuln and causes nearby mobs to
+target you, instead of wither
+• Specter of Mourning will slowly decay health over time
+• Twisted Cardinal's damage nova, mob healing, and mob
+resistance projectiles now all occur at the same time
+• Many mobs in the Wolfswood have recieved updated vanity
+### Enhanced Twisteds:
+• The Twisted Delve modifier has received a major update,
+introducing
+&b16&r unique, miniboss-level threats.
+• The base modifier has been overhauled, and now goes up to a
+maximum level of 2, with each level being worth 4 delve points
+for 8 points in total. Choosing level 1 is now equivalent to
+what level 4 Twisted used to be, while the level 2 hosts all the
+new enemies.
+• Any existing points of Twisted will be set to level 1
+automatically, alongside challenge delves, which have had their
+point selections adjusted accordingly.
+• Ascension 13 of Celestial Zenith now gives the party Twisted
+1.
+• Multiplayer is strongly recommended while having Twisted level
+2 selected, delve at your own risk...### Bug Fixes:
+• Fixed even more stuckspots in Port Manteau
+• Fixed shulker trades sometimes not working
+• Fixed vaults and possibly mail sometimes failing to be
+accessible to guilds due to a loading issue
+• Prevented dripstone from falling when shot by projectiles in
+adventure mode areas
+• Dragon egg interactions are now prevented where required
+(adventure mode areas, guild plots without survival permission)
+• Blocked being able to copy signs with commands on them
+• Fixed being able to use `/mail` and other virtual inventories
+in several areas that disable portable storage
+• Fixed the view distance on many shards being higher than
+intended
+• Fixed some of the Hunts quarries requiring many wins to see
+lore in the Bestiary (instead of just requiring completing each
+unspoiled)
+• Fixed Pillar Gamma indicator desyncing from bullet spawn
+points
+• Fixed mob jump spells not working on non full blocks
+• Rider of Conquest no longer has 2 base armor
+• Fixed an error in Predator Strike lvl 2's description
+• Fixed Orasomn despawning when too far away from the arena
+• Fixed Sporebearer being stuck in the ground in Godspore
+• Fixed Siren's Lantern applying vanilla slowness with its
+flamethrower attack and fully rooting players on a melee hit
+• Fixed some lingering spawner placeholders in SKR rooms
+• Fixed being able to press start in the SKR Operator puzzle
+room again during the second map, making the puzzle impossible
+• Slightly clarified the description for the SKR Operator puzzle
+• Fixed two double armor stands in SKR Vault Gamma
+• Fixed the respawn point in SKR Vault Gamma being inside the
+Portal
+• Fixed some building errors in ||Tal Amar|| SKR combat room.
+• Added Replica Cupid's Bow to the items API
+• Inferno's description now states the correct scaling value and
+clarifies its mechanics
+• Updated the Legacy tier's Handbook description
+• Replaced incorrect characters in the lore of several items•
+Fixed Starblood Ichor not being applyable to Pretsell (or any
+infinite rotten flesh)
+• Fixed Polished Shield having incorrect lore/location data
+• Fixed Star-touched Bolt having incorrect lore/location data
+• Fixed Inner Flame and Premium Water having incorrect name
+formatting
+• Fixed Strong Insanity Charm's Unstable Amalgam Cast Range stat
+using a flat increase instead of a percent increase
+• Fixed Bottled Font of Tuulen's class identifier to specify it
+is for Mage (which was causing issues with the items API and
+unupdated copies)
+• The Crimson Mage armor in the tutorial has been updated to the
+new color
+• Fixed Eckoun, Preacher of Heavens selling Focused Divine Flare
+Charm for two different prices
+• Fixed lingering issues with the Grove Witch's trades
+• The Swamplands Witch will now accept Concentrated Experience
+for her potions
+• Mayleen and Montana now accept Red and Blue Potions for Red
+and Blue Lens, respectively
+• R'Tsiv's dialogue in The Elders' Scrolls now correctly asks
+you to fish up five dreams and better implies they won't be
+through normal fishing mechanics.
+• Fixed a very niche bug where players who hadn't talked to
+Bhairavi after finishing both Magenta and Yellow would get
+double dialogue for a bit. This does mean that the requirement
+to start Scars of Magic now &orequires&r you to have spoken to
+Bhairavi after finishing Roots of the Plague and the Magenta
+dungeon.
+• When players first arrive in Sierhaven from the tutorial, they
+should now be able to reply to Nurse Deirdre without needing to
+reinteract with her.
+• Added proper emergency escape buttons to parts of the Bad Moon
+Rising quest, which should also fix several soft locks
+• Fixed a section of A Well Deserved Rest requiring a second
+click due to "no longer meeting requirements".
+• Fixed A Well Deserved Rest not taking the Steel Woodcutter.
+• Patched a hole in the bedrock in a quest area for What Lies
+Within that was allowing the outside light to shine through it•
+Fixed The Rooster Crows at Midnight's base not allowing shulker
+boxes (the talking-section, not the parkour section)
+• The Captured Warden in Siege of Highwatch can no longer be
+targeted by skills
+• Fixed a bug where Kathryn wouldnt teleport the player to
+Highwatch in Unveiled
+• Fixed Markus, Silver Swordsman's dialogue using curly quotes
+instead of straight quotes
+• Fixed Leonard being unable to be talked to in parts of his
+room
+• Fixed a double dialogue in All That Remains
+• Fixed a typo in The Lost Empire
+• Fixed an inconsistency in The Rooster Crows At Midnight
+• Fixed gendered language in Lost In The Dark
+• Fixed a typo and some incorrect compass locations in Clear as
+Glass
+• Fixed typos in A Study in Crimson Part One
+• Fixed a few issues in Healthful Networking
+• Fixed compass locations in Vital Needs that were slightly off
+• Fixed a double dialogue in Roots of the Plague
+• Fixed missing punctuation in Ten Thousand Bets
+• Fixed typo in The Foreign Soldier
+• Fixed an incorrect name label in Xenophobia
+• In Xenophobia, Xeno and the Masked Saboteur will now actually
+look at each other in their conversation
+• Fixed a missing period in Mirrored Egos
+• Fixed swapped text in Secrets Best Left Forgotten
+• Fixed a few build errors involving path blocks near Molta
+• Fixed typos in the Quest Guide's listed requirements for An
+Unexpected Lesson
