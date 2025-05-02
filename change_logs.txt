@@ -1,96 +1,4 @@
-• Removed extra crying obsidian from the R3 overworld
-• Fixed Grove Witch trades
-• The first click on a DD Quest/SKR Minesweeper puzzle will now
-always start you off on a fully empty tile
-• The DD Quest Minesweeper puzzle has been given the sound
-effects of the SKR version
-• You are no longer able to select the second-to-top concrete
-powder in the Forum Quest/SKR Tubes puzzle by being quick enough
-• Fixed a stuck spot in Sierhaven.
-• Fixed ||Whispering Ossuary||  SKR combat room not having the
-correct biome.
-• Fixed various stuck spots around Port Manteau
-• You can no longer activate redstone with projectiles in zones
-that disable redstone interactions
-&bHotfixes:&r
-• Added further protections against moving items without
-permission on guild plots
-• Decorated Fangride's bench on the Guild Hub
-&bHotfix:&r Shadyn't Citizen in guildplots now has dialogue
-&bHotfix:&r Following the Resource Pack 5.6.0 update,
-Mastersmith Antonio has gained 2 new Hope Skins in his shop!
-Many thanks to our patrons for their continued support!
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&b(11.13.0)&r
-For the update on April 23, 2025
-### Seasonal Pass:
-• The Seasonal Pass is back in full swing, with a brand new
-original pass • the
-&bMarsh Madness Pass&r! Jump on lily pads and wade through the
-swampy mud as you complete the usual 13 weeks of missions.
-• As you progress through the pass, unlock brand new Player
-Titles, Mob Dummies, and Elite Finishers. Ever wanted to turn
-your enemies into frogs? Or maybe play a nostalgic tune when
-killing them? Are you feeling a bit... &oExperimental&r?
-• There are new items to collect • including two new items added
-to the Relic Wheel pool, as well as two new Sketched reskins!
-• Head to the new Seasonal Pass hub in Sierhaven to start your
-adventure... and maybe stack a few frogs along the way, too.
-### Minor New Features:
-• We've updated a lot of 3rd party plugins we depend upon in the
-hopes of fixing some of the connections issues players have been
-facing. Let us know if this introduces new bugs.
-•
-&bMurky Maze&r has been once again rebuilt, this time completely
-from scratch! In addition, Murky Maze is now considered as a T2
-PoI.
-• Increased guildplots view distance
-• `/blockinteractions` (`/bi`) now blocks clicking on decorated
-pots
-• Caroline in P.O.R.T.A.L. Strike sells a light blue dye for 1
-AR to recolor a C.H.A.R.M. 2000 needed for the trade
-• A new Galos-biome puzzle has been added to the SKR pool, from
-catgirl_cookie and uurik
-• After a bit of a delay, the Silver Knight Merdd IV book has
-&obee&rn written and updated.
-### Feedback Fixes:
-• Tweaked a trap in White to not get triggered by mobs as often.
-• Removed the delay between Remnants of the Empire Quest Start
-Info and the Record Keeper's next dialogue
-• Reynart's dialogue in the Celsian Isles regarding Delve Epics
-has been adjusted to be more lore accurate### Mob Changes:
-• Tarnished Revenant: 0.22 -> 0.18 Movement Speed
-• Stellar Manifestation: 4 -> 3 Damage per Slash
-• Colossus of Conquest (Skeleton Horse): 140 -> 155 Health
-• Rider of Conquest (Drowned): 100 -> 110 Health
-• Ember of Greed is now a zombie until piglin brutes are fixed
-to respect stealth
-• Specter of Mourning now dies when it attacks you
-• Specter of Mourning now applies vuln and causes nearby mobs to
-target you, instead of wither
-• Specter of Mourning will slowly decay health over time
-• Twisted Cardinal's damage nova, mob healing, and mob
-resistance projectiles now all occur at the same time
-• Many mobs in the Wolfswood have recieved updated vanity
-### Enhanced Twisteds:
-• The Twisted Delve modifier has received a major update,
-introducing
-&b16&r unique, miniboss-level threats.
-• The base modifier has been overhauled, and now goes up to a
-maximum level of 2, with each level being worth 4 delve points
-for 8 points in total. Choosing level 1 is now equivalent to
-what level 4 Twisted used to be, while the level 2 hosts all the
-new enemies.
-• Any existing points of Twisted will be set to level 1
-automatically, alongside challenge delves, which have had their
-point selections adjusted accordingly.
-• Ascension 13 of Celestial Zenith now gives the party Twisted
-1.
-• Multiplayer is strongly recommended while having Twisted level
-2 selected, delve at your own risk...### Bug Fixes:
+### Bug Fixes:
 • Fixed even more stuckspots in Port Manteau
 • Fixed shulker trades sometimes not working
 • Fixed vaults and possibly mail sometimes failing to be
@@ -198,3 +106,144 @@ look at each other in their conversation
 • Fixed a few build errors involving path blocks near Molta
 • Fixed typos in the Quest Guide's listed requirements for An
 Unexpected Lesson
+&bHotfix:&r An addition 2 Hope Skins, which were later
+submissions to the 5.6.0 update, have been added to Mastersmith
+Antonio's shop!• Twisted Abomination: Fixed Nuclear Amalgam not
+exploding if players were too far away, and also not
+playerscaling, increased the blast radius of Nuclear Amalgam by
+4x, fixed Atomic Aberrations not being delve mobs
+• Twisted Artificer : Now summons a Twisted Panacea instead of
+an Artificer Glyph that tracks players for its lifespan and
+applies debuffs, changed Apex of Alchemy into a creeper, 400 ->
+300 Apex of Alchemy Health, fixed Apex of Alchemy not counting
+as a delve mob
+• Twisted Omenspeaker : 12 -> 20 Earthen Tremor Spike Damage,
+15s -> 10s Earthen Tremor Duration, 30% -> 50% Eradication Totem
+Antiheal, 4s -> 2s Twisted Earthen Tremor Prime Duration
+• Twisted Prosecutor : Prosecutor now responds to certain ranged
+abilities by casting Judgement Chain, and responds to certain
+AOE skills by summing Voodoo Dolls, Judgement Chain now pulls
+more frequently per tick, and targets a maximum of 2 targets,
+prioritising farther targets, made Dark Pact's cast more
+obvious, 10 -> 15 Dark Pact Slash Damage, Voodoo Dolls now have
+a delay before being able to reflect damage, and are now tossed
+instead of summoned in the floor
+• Twisted Gravecaller : Now capable of commanding its Gravesoul
+Haunter to charge at the furthest player, resetting its cooldown
+state, fixed Gravesoul Armada casting through walls, Grasping
+Claws now has as more visible telegraph, 8 -> 7 Grasping Claws
+Radius, fixed Gravesoul Haunter not despawning in some cases,
+Gravesoul Haunter is now damageable by attacks, but is immortal,
+Gravesoul Thralls no longer damage the player
+• Twisted Crusader : Now responds to certain ranged abilities by
+casting Twisted Javelins
+• Twisted Bishop : 2s -> 1s All-Seeing Seraphim Final Judgement
+telegraph duration, fixed All-Knowing Seraphim not counting as a
+delve mob, All-Knowing Seraphim no longer heals the Bishop
+• Twisted Revenant : Now responds to certain ranged abilities by
+charging at the farthest player, Meteor Slam now applies 4s of
+10% Vulnerability
+&b(11.14.0)&r
+For the update on April 30, 2025
+### Minor New Features:
+• A new player title has been added and can be obtained in the
+Seasonal Pass hub. May the frogs be with you.
+### Enhanced Twisted Changes:
+• Added a new potion drop to Enhanced Twisteds
+• Enhanced Twisteds now all have Depth Strider
+• Many persisting summons now disappear alongside their Twisted
+• Twisted Moonweaver : Spatial Distortion renamed to Prismatic
+Distortion, Prismatic Distortion now has 4 stages, its total
+health split across these stages. Each stage reached heals the
+Moonweaver for less, even if the Prismatic Distortion was not
+fully killed. Prismatic Distortion particle telegraphs made more
+obvious, Prismatic Distortion now also distorts audio when
+successfully casting, and also now has a message for being
+successfully stopped
+• Twisted Shadestepper : Stealth now lasts for a maximum of 10s,
+now also hides Shadestepper's bossbar, and responds to certain
+ranged abilities by entering stealth, 60% -> 35% Shadestepper
+Stealth Speed Boost, added a 5s cooldown to Shadestepper Clones
+spawning
+• Twisted Tempest : 6 -> 4 Hurricane Dance Slash Damage, 12 -> 8
+Hurricane Dance Finisher Damage, 20 -> 14 Whirlwind Dance Damage
+Per Slash, 2.5 -> 2 Wind Walk Hitbox Size, 5s -> 8s Wind Walk
+Cooldown, 5s -> 8s Whirlwind Blade Cooldown, 4 -> 3 Whirlwind
+Blade Radius
+• Twisted Watchman : Whirling Ripsaw now deletes itself after
+hitting a player, 6s -> 10s Volley + Jump Cooldown, removed
+dodging ability, removed Whirling Ripsaw Recast upon taking
+damage, 125 -> 75 Twisted Cloudpiercer Health, changed the
+volley telegraph noise to a Wither Ambient
+• Twisted Deadeye : Now summons a Twisted Ninetails as a
+companion, and casts it in response to the player's Hunting
+Companion, 1.6 -> 1.4 Predator Missile Projectile Speed,
+Predator Missiles now spawn closer together rather than spread
+out, 1.5 -> 1 Twisted Split Arrow Hitbox• Sharpshooter stacks no
+longer reset when gaining an ability
+• Fixed Curse of Arachnophobia not applying to Broodmother's
+Limb
+• Fixed some mobs not playing a sound when stunning your shield
+and still applying their on-hit effects
+• Added missing names to the SKR build credits
+• Removed placeholder signs from a Zenith room
+• Fixed rider of conquest not having updated health and still
+having base armor
+• Updated a name in the Hope Skin GUI
+• Fixed some building errors in Hexfall
+• Fixed being able to hook Hekawt with a fishing rod on spawn
+• Fixed incorrect velocity of snowballs while using Quickdraw
+• Fixed typos in Bonking Expert's dialogue
+• Fixed missing {...} in Ekah's dialogue
+• Fixed Ami Udake perceiving Ta'Eldim as a bunker
+• Fixed typos in Rapacity
+• Fixed a spawner spawning vanilla skeletons in a Zenith room
+• Fixed a spawner in a Zenith room spawning a Forsaken Manor mob
+• Fixed odd wording and a typo in Kingdom of Lies• Twisted
+Vanguard : Removed the ability for Vanguard to cast movement
+abilities while Iron Maiden is active.
+### Feedback Fixes:
+• Level 2 Twisted minibosses can no longer spawn if there is an
+amount of Twisteds nearby equal to or greater than the amount of
+players present (that are eligible for loot scaling), unless the
+upper boundary for spawns since last Twisted summon is reached
+• Increased the Twisted minibosses' lower boundary and decreased
+their Level 2 upper boundary for spawns since last Twisted
+summon. Level 2 Twisted spawn chance has been slightly reduced
+• The music in the season pass now only plays if you have lobby
+music enabled in your PEB
+• Slightly increased delay between Lunacrest Bladedancer skills
+(Air Combo cooldown 10s -> 12s cd, Dagger Throw delay 3s -> 4s)
+• Added an explanation board for Treasure Wheel on which colour
+gives what rewards.
+• Many mobs in Pelias' Keep, Sanguine Halls, Blue, and Brown
+have received updated vanity
+• Players can now choose which active ability to replace when
+obtaining the Prismatic Cube
+• Changed a couple of  Marsh Madness Pass reward item icons to
+match what they are in other GUIs
+• The Ephemeral Corridors Calibration Lock has been updated to
+use a less button-heavy control scheme
+• Adjusted the message when gaining a Curse of the Dark Soul
+boon to be more thematic
+• Added custom sounds and effects to Colossus of Conquest's slam
+• Added more unique sounds to the Sketched Bag of Hoarding
+### Bug Fixes:
+• Fixed certain bosses not granting win Regeneration and
+Resistance to players in Stasis
+• Removed unnecessary dismount trigger for Steel Stallion
+• Fixed Callicarpa's Pointed Hat only giving normal abilities
+choices
+• Permafrost charges no longer reset when gaining an ability
+• Fixed Callicarpa's Pointed Hat allowing players to bypass the
+4 active tree cap
+• Renamed Phantom Force Weaken charm effects to Phantom Force
+Vulnerability
+• Permafrost no longer triggers while holding a shield by
+default
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&bHotfix:&r fixed broken FastAsyncWorldEdit config, so POIs
+should not only be working, but stay working
