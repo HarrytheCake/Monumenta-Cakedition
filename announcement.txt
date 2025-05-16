@@ -1,10 +1,5 @@
-The weekly update has been moved to <t:1738814400:F> due to
-internal scheduling reasons. This month's balance update is
-delayed and will be shipping next week.
-This will
-&bnot&r impact your instances, since those are tied to the
-weekly reset.Please welcome @chasm101 as our newest Moderator!
-Make sure to give them a celebratory 🏓
+Please welcome @chasm101 as our newest Moderator! Make sure to
+give them a celebratory 🏓
 &bSilver Knight Remnants:&r
 Excited to announce that at long last, the mystery of the Crying
 Obsidian all around Star Point and the Architect’s Ring
@@ -86,4 +81,10 @@ testing team to have adequate time to give feedback and find
 issues. Going forward, we will be working on a plan internally
 to try to avoid delaying future balance updates and make
 adequate room for testing. We once again thank you for your
-patience and understanding.
+patience and understanding.Happy to announce that @[MAID]
+catgirljade_ and @[MAID] #1 SKR FAN have joined Team Monumenta
+as content developers! They've both been with us for a while,
+helping out behind the scenes • but they're largest contribution
+is spearheading the development and release of this week's new
+boss!
+Please make sure to give them the congratulatory 🏓
