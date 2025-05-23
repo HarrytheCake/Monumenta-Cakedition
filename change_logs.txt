@@ -1,182 +1,111 @@
-### Bug Fixes
-• Fixed boss tab displays not displaying on numbered overworld
-shards when held on a non-numbered overworld shard (i.e. not
-displaying on ring-2 when the event is on ring). This includes
-all Hunts tab displays
-• Fixed the SKR Exit sometimes soft locking itself
-• Fixed some building errors in ||The Grand Forgeway|| long
-combat SKR room.
-• Fixed some building errors near Molta
-• Fixed unsafe zone that should be safe in Molta
-• Fixed Toxic Den reset not clearing invalid lamps
-• Fixed an issue with Toxic Den's Akari boards
-• Fixed a gravel trap not working in Sealed Remorse
-• Fixed being able to lag through the teleport and die to void
-in Purple's Path of Confusion
-• Fixed Tlaxan Crafter's Pulsating Gold Pickaxe and Pulsating
-Gold Shovel crafts
-• Fixed first snowball fight win announcement not being
-italicised• Fixed a typo and smart quotes in Pyre and Prejudice
-• Fixed an incorrect waypoint and a typo in Treasure of the Past
-• Fixed Elite Hunter Gloria in R is for Reprisal having no
-dialogue
-• Fixed the compass giving bad instructions in parts of Kingdom
-of Lies
-• Fixed double space in Jehenne's dialogue
-• Fixed unnecessary space in Wolf in Witch's Clothing
-• Fixed missing {...} in SoS 3
-• Fixed typos in A Charming Proposition
-• Fixed a lot of smart quotes in Borrowed Time
-• Fixed a lot of slightly incorrect waypoints in Borrowed Time
-• Fixed smart quotes in Here There Be Dragons
-• Fixed Soulweavers not speaking in R3
-• Fixed the last step of Fallen Lore-um
-• The entire quest name for A Lich in the System is no longer
-obfuscated in the Breachpoint quest guide
-• Fixed the Scars of Magic Towers puzzle's Rules button being
-labeled Reset
-• Fixed spelling and formatting errors in Unraveled
-• Fixed spelling error in Into the Woods
-• Fixed Twisted Ninetails' ram not working on non-scout players
-• Fixed the Spring Shrine elite mob having the same name as an
-SKR mob and applying vanilla slowness
-• Fixed the Twisted Bishop summoning Lost Souls instead of the
-Angelic Trio
-• Fixed the first 2 Godspore Weaknesses not being Boss mobs
-• Fixed Twisted Vanguard not correctly removing its Iron Maiden
-upon death### Pickaxe Changes
-• Adjusted the Eruption / Thunder Aspect interaction to apply a
-0.3s stun per level of Thunder Aspect (down from 0.5s), relevant
-pickaxes have been adjusted below.
-• Ekah's Anger: 1 -> 2 Efficiency, 1 -> 3 Attack Damage, 4 ->
-1.2 Attack Speed
-• Dionaeas Graft: 0 -> 3 Decay
-• Vesuva: 2 -> 3 Efficiency, 7 -> 5 Eruption
-• Skyfeller: 3 -> 5 Eruption
-• Pureshard Adze: 2 -> 1 Efficiency
-• Gem-Tipped Boiler Drill: 1 -> 2 Efficiency
-• Supernova Mattock: 7 -> 8 Eruption
-• The Overclocker: 1 -> 2 Thunder Aspect
-• EX Stoneborn Sculptor: 4 -> 3 Efficiency, 2 -> 0 Curse of
-Shrapnel, 1 -> 2 Earth Aspect, 2 -> 3 Melee Protection
-• Hailcaller Adze / Silverheart / Stonecarver / Slave's Pickaxe:
-3 -> 2 Efficiency
-### Class Changes
-&n
-&bAlchemist&r&r
-• Alchemical Artillery L1: 4.5 + 75% -> 6 + 70% damage
-• Alchemical Artillery L2: 6 + 150% -> 7 + 100% damage
-• Esoteric Enhancement L1: 6 + 100% -> 7.5 + 80% damage
-• Esoteric Enhancement L2: 7.5 + 150% -> 9 + 100% damage
-• Taboo L2: 30% -> 20% magic buff while active, 7% -> 5% burst
-mode health drain
-&n
-&bMage&r&r
-• Arcane Strike L1: Damage increased from 4 to 4 + 10% of your
-weapon base damage
-• Arcane Strike L2: Damage increased from 7 to 7 + 20% of your
-weapon base damage
-• Arcane Strike (u): 40% -> 15% Bonus Damage
-• Frost Nova L2: 18s -> 16s Cooldown
-• Frost Nova (u): Reduces cooldown by 1s and frozen mobs
-additionally gain 100% anti-heal.
-• Spellshock (u): All effects except Fire reworked:
-  • Arcane: Apply a damage over time effect that does 3 magic
-damage per second, for 3 seconds.
-  • Ice: Additionally inflicts 15% vulnerability to mobs, on top
-of the slow.
-  • Lightning: Deal 5 magic damage to a random mob within 7
-blocks, prioritizing Elites and Bosses.
-  • Damage dealt by Spellshock (u) will not apply or trigger
-Static.
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix:&r
-• Fixed problems with tormented delve mods### Mob Changes
-• Twisted Primordialist: Increased timer to kill Galactic
-Collider from 7s to 10s, reduced Planetary Impact's particle
-count from 120k to 6k, Planetary Impact now hits in a 32 block
-sphere, and cannot be blocked by shields.
-• Twisted Gravecaller: Gravesoul Haunters now are properly tied
-to the Gravecaller's death and properly despawn, added
-additional visual motifs and telegraphs for when a Haunter is
-active or not
-### Bug Fixes
-• Removed a random redstone block floating in the Ring spawnbox
-• Fixed a gravel trap in Sealed Remorse for real this time
-• Removed some unused redstone from Ice Slider puzzle SKR room
-• Fixed some building errors in a Zenith room
-• Fixed a staircase made of stone bricks instead of stone brick
-stairs in the Sierhaven minecart line by the Forge
-• Fixed some building errors in a SKR room
-• The SKR Construct Ruins puzzle will no longer ever fail to
-randomize (either on entry, or manual randomization)
-• Fixed Eruption's handbook entry to reflect the newest balance
-changes
-• Fixed a typo in Repairman Felix's dialogue
-• Fixed a typo in Keeper Agents
-• Fixed a lot of typos and incorrect waypoints in Beyond The
-Starlit Shroud
-• Fixed a typo in Remnants of the Empire's listed requirements
-at the Quest Guide
-• Fixed a typo and smart quotes in Sporetal Combat
-• Fixed several grammatical and spelling errors in numerous R3
-quests
-• Fixed a grammatical issue in Clear as Glass
-• Fixed some block entities having names in The Fallen Forum
-• Fixed being able to heal iron golems with iron ingots
-• Fixed Thief's Raiment having not been updated correctly with
-the balance update
-• Fixed the Twisted modifier being set to level 1 when entering
-a dungeon or relogging if selected at level 3-5
-• Fixed Frost Nova (u) increasing the ability cooldown by 1
-second instead of decreasing as it should.
-&b(11.16.0)&r
-For the update on May 14, 2025
-### Major New Features
-&bTwisted ########&r
-A new boss has made its way into Architect's Ring, the Twisted
-########  Step into the dreams, gather materials dropped by the
-Tormenteds, and face down Region 3's newest nightmare!
-This boss is designed to be played by solo and duo groups, and
-it is highly recommended to play this with 4&o Masterwork, so
-gear up and bring a friend to experience the nightmare!
-To accompany the release of the boss, a new quest,
-&bSleeping Shadows&r, has been added! Squire Firwold requires
-help with his research on the shadowy creatures you may have
-encountered in the dreamscape.
-To begin Sleeping Shadows, you must have completed the quest
-Assisted Dreaming. The quest will be available following
-tonight's update, meanwhile the boss will be unlocked
-<t:1747497600:F>!
-Good luck, and we hope to see you all there!
-### Minor New Features
-• Lowered the cooldown of SKR Scrolls to 5 seconds
-• Added a confirmation when clicking the SKR abandon button
-• The SKR Construct Ruins puzzle has been upgraded to now be
-8x8! Note, a few seconds worth of generation time may be
-required between randomizations.
-• Players no longer receive notifications for mail from the
-build shard to the rest of the server or vice versa
-• Added a Guild Plots teleporter from Sierhaven, Mistport, and
-Galengarde
-• Added Smart Furnaces, which act as if they had built-in
-hoppers on each side and interact with neighboring barrels. They
-also work with any shulker boxes or carriers inside those
-barrels.
-• Updated the list of wood (bark on 6 sides) that can be crafted
-back into logs (bark on 4 sides)
-• Added more frogs to the season pass lobby
-• Benches in the Exalted Hall cafeteria are now sittable.
-• Thrown Alchemist's Bags show your potion's texture now
-• Added some decoration to a ship in Mistport
-• Added a tiny pond to Masquerader's Ruin
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.The Untended Furnace
 Puzzle Room for SKR is bugged and impossible to complete. It is
 recommended to avoid starting Puzzle or Sequence Scrolls until a
-fix has been deployed.Hotfixed SKR&r
+fix has been deployed.Hotfixed SKR
+&bHotfix:&r World bosses disabled ahead of content releaseOur
+newest boss has been opened!
+&bHotfix (at nightly restart):&r The broadcasted chat message
+for winning at the new boss has been fixed to display the
+winner's name
+&b(11.17.0)&r
+For the update on May 21, 2025
+### Twisted Intruder Changes
+||• Added a sorting bin to Twisted Intruder Lobby
+• Fixed debug messages present in Twisted Intruder.
+• Fixed mobs remaining in the arena upon dying.
+• Fixed Irritating Hallucination’s backwards jump scaling based
+off of distance
+• Fixed Nightmarish Carvings not being able to be claimed while
+spam clicking
+• Barriered the wisps in the Twisted Intruder’s arena
+• Made Exalted Yellow bosses in Amalgamating Dreamscape glow
+yellow
+• Made Parasomnic Mist’s telegraph more obvious and hid the
+boss’ passive particles
+• Added an indicator to Cognitive Distortion to hint at the
+mechanic, debuff duration 30s -> 60s, -30% speed -> -40% speed
+• Improved Malevolent Conduit’s telegraph
+• Agitated Tantrum: 35 damage 20% true damage -> 35 damage 15%
+true damage
+• Nightmarish Carvings now show the buff on hover.
+• Carving of Restoration now gives 1 reincarnation for the
+remainder of the fight
+• Psychic Miasma now spawns initially further away in the arena
+by 5 blocks, speed after hitting a player 0.4 -> 0.34
+• Adjusted Exalted Lightblue spawn location and mob spawn
+locations in Amalgamating Dreamscape
+• Improved Lighting in Amalgamating Dreamscape
+• Abhorrent Hallucination’s mob spawns Knockback Resistance 0.6
+-> 0.4
+• Faceless One’s Knockback Resistance 1.0 -> 0.4, removed cc
+immunity
+• Brutal Hallucination (Purple one with a scythe), removed
+Brutal Miasma, Merciless Slash ram size 4.25 -> 4,
+• Screamroom distortion debuff duration 30s -> 60s
+• Fixed certain spells not cancelling when they need too at the
+start of Parasomnic Mist, when the party loses at Sinking
+Nightmares
+• Made Lucid Rend less loud
+• Fixed Abhorrent Hallucination not playing its sound
+• Made Faceless Dozen requirement more generous
+||### Bug Fixes
+• Fixed some misplaced blocks around the Sirius arena
+• Fixed Brown Rare Trader being able to be killed.
+• Fixed Soul Rend making Dark Pact extend with -100% healing
+instead of -66.6% healing
+• Fixed Throw Oppsosite Potion throwing an untextured alchemist
+bag
+• Improved bedrocking in Doomed Encampment.
+• Removed a trapdoor blocking a staircase in Doomed Encampment
+• Added missing tree information on Disco Ball description
+• Fixed Reverie loot sometimes not working (in instances created
+after this update)
+• Fixed Sanguine Harvest heal triggering twice under specific
+conditions
+• Removed Great Mandrake's extra fern from its main hand
+• Took away Unchained Experiment's armor and invisible fishing
+rod
+• The second charge of Magenta and Gray Tesseract (u)'s are now
+reset by daily restart
+• Fixed the Totem of Transposing lore text incorrectly showing
+"missing channel" (they all still work, we just changed where
+the tag was)
+• Re-centered the ambient sound for the levitator in the middle
+of Galengarde
+• Fixed Hunts Lodge fast travel and everything else not working
+• Fixed tab display for Hunts not clearing automatically when
+the hunt does not happen on the ring shard### Minor New Features
+• Julia in the tutorial explains pause chat right away for those
+players joining with very active chat.
+• The Rare Trader in the P.O.R.T.A.L. lobby and NPC in Willows
+Lobby that renames Shulker Boxes now both clarify that keywords
+in the names of Equipment Cases will sort such items into them.
+• Rare Alchemical Utensils from dungeons can now appear in loot
+chests in their respective dungeons
+• Underlined the name of the Emblem of the Big Pig trophy
+• Added "Epic Crafting Material" to the Fractured Psyche
+• Removed the hat from the Constellation Construct Dummy
+• A new normal combat SKR Room has been added to the pool
+• Added Sharrels and Community Chests that allow plot visitors
+to move their contents, even if they do not otherwise have
+permission to do so with other containers. They can be exchanged
+with unnamed chests, trapped chests, and barrels at the Plots
+Item Salesman
+• Added Enlightening to place a torch below falling blocks • go
+to Selari's lab (Primeval Creations puzzle area) and talk to the
+NPC that upgrades your tesseracts
+### Mob Changes
+• The Nalatia's Galeblade enemy will now launch you upwards
+instead of using a force pull
+• Turned Earth Worms into worms
+• Added extra sounds to Vedha's Bladedancer
+• Improved Foreman's chain telegraph when connected to an
+Electric Spark
+• Added Metallic noises to Brown Dungeon enemies
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
