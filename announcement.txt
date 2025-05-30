@@ -1,35 +1,4 @@
-&bSilver Knight Remnants:&r
-Excited to announce that at long last, the mystery of the Crying
-Obsidian all around Star Point and the Architect’s Ring
-overworld will finally be solved on <t:1740852000:F> in our
-brand new piece of overworld content • Silver Knight Remnants.
-As part of this new addition to Region 3, you'll find yourself
-exploring bite sized sections of places familiar and strange
-alike, testing your combat and puzzle capabilities, and giving
-the Ring a taste of smaller sized content that was lost with the
-introduction of mega-POIs.
-Along with its accompanying quest, your journeys into the
-Remnants will be supplemented by playing certain R3 Overworld
-content (including PoIs, Strikes, Galleries, and bosses) to find
-keys to the SKRs, with plenty of rewards to find within!
-Players who wish to engage with the Remnants will be able to
-find the introductory quest,
-&bRemnants of the Empire&r, at the Record-Keeper near the
-Chantry of Repentance to learn all about what lies beyond the
-hidden Silvergates all over the Ring • requiring completion of
-For Whom the Bell Tolls, a completion of the Celestial Zenith on
-any difficulty, and completion of the world boss Sirius, the
-Final Herald.
-Please enjoy this teaser trailer, and we hope to see you all
-there there! @everyone
-https://youtu.be/aADLBZcNT1QSilver Knight Remnants is live! We
-hope you all enjoy!Due to issues found during beta testing, this
-month's balance update will be delayed until next week to
-integrate feedback and add some finishing touches. Thanks for
-your patience and understanding.The @ModMail bot is currently
-having issues. Please direct any appeals, reports, etc to
-Moderators directly for the time being.The @ModMail bot is
-working again.
+The @ModMail bot is working again.
 &bDiamenean Hunts&r
 Mysterious beasts have been spotted across the Architect's Ring!
 Talk to a colorful cast of veteran hunters at the grand opening
@@ -91,4 +60,17 @@ like a guild acronym that lives next to your name and appears in
 your profile everywhere.
 The Monumenta Discord now has one!
 If you care to rep Monumenta, you can select it near the bottom
-of your Edit Profile settings!
+of your Edit Profile settings!Please welcome @star_bright as our
+latest Moderator! 🏓[
+&bFlowey Developer Interview&r](https://youtu.be/fRObUF0mVBU)
+After over two years, we're doing at least a couple extension
+episodes of an old series of TM interviews!
+Hope y'all enjoy getting to learn more about some of the people
+behind the game!
+[For those interested in the old series, there's a playlist here
+!](<https://www.youtube.com/playlist?list=PL2WArZ1Cz78eA3c2tj8yT
+vkP_USiKzuG2>)[
+&bMistHelix Developer
+Interview&r](https://youtu.be/10CuZFi90Dg)[
+&bChargingUv Developer
+Interview&r](https://youtu.be/Wd4c72BpbjU)

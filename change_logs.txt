@@ -1,15 +1,3 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.The Untended Furnace
-Puzzle Room for SKR is bugged and impossible to complete. It is
-recommended to avoid starting Puzzle or Sequence Scrolls until a
-fix has been deployed.Hotfixed SKR
-&bHotfix:&r World bosses disabled ahead of content releaseOur
-newest boss has been opened!
-&bHotfix (at nightly restart):&r The broadcasted chat message
-for winning at the new boss has been fixed to display the
-winner's name
 &b(11.17.0)&r
 For the update on May 21, 2025
 ### Twisted Intruder Changes
@@ -109,3 +97,133 @@ Electric Spark
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
+&bHotfix:&r Logging out during the Sons of the Forest cutscene
+will now properly restart the sequence
+&b(11.18.0)&r
+For the update on May 28, 2025
+### Major New Features:
+The final portion of the Eastern R1 Jungle has been fully
+rebuilt, spanning all around Farr, from Kaul's arena to the Air
+Shrine plateau! This massive rebuild features several things for
+the player to discover, including a brand new legendary
+discovery!
+### Minor New Features:
+• To account for the Farr surroundings being rebuilt, the race
+Tree Hopping Madness' track and name have been totally revamped.
+As such, the old leaderboard has been legacied and moved above
+the tree it was in
+• The Impenetrable should now be afraid of the outside and not
+try to teleport out of the caves. Additionally, reduced the
+furthest it can teleport from its spawnpoint by 5 blocks
+• Reworded the ||Faceless Dozen|| advancement description to be
+more accurate to the actual obtainment method.
+• Added a Formless Void -> blightdust trade to Iris
+• Hex Eater, Chaotic and First Strike now apply to thrown
+alchemist potions
+• Hex Eater's and Chaotic's descriptions now specify that they
+only apply to basic attacks and not abilities
+• You can no longer place blocks that cannot be mined
+• Added a message on Daily for Harvir's fishing bounties###
+Intruder Changes:
+||
+• Twisted Intruder uncommon's loot 1 -> 2 Fractured Psyche
+• Added a Pulsating Diamond trade to the Rare Trader of Twisted
+Intruder at 4 Fractured Psyches -> 1 Pulsating Diamond
+• Depraved Hallucination's lacerate telegraph now has large dust
+particles
+• Made the debuffs for failing Screamroom and Cognitive
+Distortion last for the entire fight, stacking each time
+• Removed Parasomnic Mist's final still section, player
+collision disabled when active, particle interval 10 -> 5 ticks
+, damage interval 4 -> 10 ticks, true damage instance 2 -> 4.
+• Fixed Parasomnic Mist's slowdown when changing directions not
+working
+• Fix Reincarnation bypassing Amalgamatign Dreamscape's fail
+condition
+• Fixed Iron Maiden remaining on death in Intruder
+• Fixed Stillwater not properly sending you back to the arena
+sometimes
+• Fixed Screamroom capturing dead players
+• Made Abhorrent Hallucination not teleport above Liminal
+Corruption
+• Cerebral Outburst no longer deals 0 damage if you have taken
+damage in the last 0.5s
+• Fixed true damage bypassing Intruder's resistance during
+Abhorrent Hallucination
+• Fix extra '.' in a dialogue
+• Fixed Manifested  Herald of the Secret Stars flying into the
+air
+• Tormented Replicants 45% -> 50% health, Sinking Nightmares,
+40% -> 45% health threshold cast, Lucid rend 75%-50% -> 40%-25%
+    • &oNote: a rework is planned for lucid rend eventually,
+this was just done to reduce the number of abilities in the
+first part&r
+||
+### Feedback Fixes:
+• Twisted Shadestepper stealth force cast threshold 400 -> 550
+damage
+• Slightly lowered speed and drastically reduced homing
+capability of Twisted Crusader's Twisted Javelin attack to make
+it more dodgeable with correct movement
+• Twisted Prosecutor now cancels the judgement chain on taking
+melee damage
+• Colossus of Conquest initial jump now takes longer
+• Rider of Conquest 21 -> 20 trident damage
+• Specter of Mourning 0.2 -> 0.3 vertical spawn velocity
+• Added railings to a balcony in the Nadir
+• Clarified Stamina's enchantment description and added a note
+about duration refreshing on hit
+• Painter's Realm is more walkable now
+• You can now break spruce wood (6-sided logs) in Gray### Bug
+Fixes:
+• Removed a check preventing mobs without AI from being stunned.
+This should fix some mobs that never have AI from not being able
+to be stunned, some mob abilities that temporarily remove AI
+from being interrupted by stuns, and stuns not being able to be
+extended by applying a longer stun. However there's a good
+chance this introduces some more minor bugs, so please report
+any weird interactions with stuns
+• Grammatical issues in the Merdd V  book have been resolved
+• Fixed minor build bugs in Gray, Twilight Ruins, Player Market,
+Axtan Monastery, Crystal Mines, Amped Earth Shrine
+• Fixed Soothing Combos Haste Level charm effect only working if
+the ability was exactly legendary rarity
+• Fixed some small numbers from charms not showing in
+descriptions such as any 1% modifiers
+• Fixed Starblood Ichor Earthbound only triggering on damage
+from mobs (i.e. never triggering for fire or environmental stuff
+like TNT from a trap, etc.)
+• Fixed Chroma Blade Windwalker not reducing cooldowns
+• Fixed One with the Wind Range charms not working
+• Fixed mobs briefly glowing white when Judgement Chain runs out
+and infinitely glowing white if Judgement Chain is immediately
+reapplied
+• Fixed some particles for Voodoo Bonds being in the wrong
+particle category
+• Fixed mobs that were not supposed to glow due to player
+abilities still glowing from player abilities
+• ||Stillwater now teleports you to the arena Y level to prevent
+getting stuck in the water||
+• ||Iron Maiden no longer lingers in Twisted Intruder||
+• Fixed First Strike applying twice on projectile skills
+• Added Celestial Zenith location tag to the utility room
+potions to match Depths
+• Fixed Spellshock enhancement increasing the damage of Fire
+Elemental Arrows twice
+• Adjusted capitalization in completion messages of Gray
+• Fixed many dummies from the seasonal pass not being on the
+item api
+• Fixed Patreon Enchanted Book being targeted by some abilities
+• Fixed a typo in Murky Maze's advancement coordinates
+• Fixed multiple stuckspots in Galengarde.
+• Fixed multiple stuckspots around Arena of Terth
+• Fixed the following mobs applying vanilla Slowness: Plague
+Spreader, Plague Golem, Ice Archer
+• Added some vines to 9th room of Scientists of Steelmeld II to
+prevent softlocking.
+• Fixed discoball new missing tree description
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&bHotfix:&r The Staff no longer breaks at the Air Shrine step
