@@ -1,229 +1,299 @@
-&b(11.17.0)&r
-For the update on May 21, 2025
-### Twisted Intruder Changes
-||• Added a sorting bin to Twisted Intruder Lobby
-• Fixed debug messages present in Twisted Intruder.
-• Fixed mobs remaining in the arena upon dying.
-• Fixed Irritating Hallucination’s backwards jump scaling based
-off of distance
-• Fixed Nightmarish Carvings not being able to be claimed while
-spam clicking
-• Barriered the wisps in the Twisted Intruder’s arena
-• Made Exalted Yellow bosses in Amalgamating Dreamscape glow
-yellow
-• Made Parasomnic Mist’s telegraph more obvious and hid the
-boss’ passive particles
-• Added an indicator to Cognitive Distortion to hint at the
-mechanic, debuff duration 30s -> 60s, -30% speed -> -40% speed
-• Improved Malevolent Conduit’s telegraph
-• Agitated Tantrum: 35 damage 20% true damage -> 35 damage 15%
-true damage
-• Nightmarish Carvings now show the buff on hover.
-• Carving of Restoration now gives 1 reincarnation for the
-remainder of the fight
-• Psychic Miasma now spawns initially further away in the arena
-by 5 blocks, speed after hitting a player 0.4 -> 0.34
-• Adjusted Exalted Lightblue spawn location and mob spawn
-locations in Amalgamating Dreamscape
-• Improved Lighting in Amalgamating Dreamscape
-• Abhorrent Hallucination’s mob spawns Knockback Resistance 0.6
--> 0.4
-• Faceless One’s Knockback Resistance 1.0 -> 0.4, removed cc
-immunity
-• Brutal Hallucination (Purple one with a scythe), removed
-Brutal Miasma, Merciless Slash ram size 4.25 -> 4,
-• Screamroom distortion debuff duration 30s -> 60s
-• Fixed certain spells not cancelling when they need too at the
-start of Parasomnic Mist, when the party loses at Sinking
-Nightmares
-• Made Lucid Rend less loud
-• Fixed Abhorrent Hallucination not playing its sound
-• Made Faceless Dozen requirement more generous
-||### Bug Fixes
-• Fixed some misplaced blocks around the Sirius arena
-• Fixed Brown Rare Trader being able to be killed.
-• Fixed Soul Rend making Dark Pact extend with -100% healing
-instead of -66.6% healing
-• Fixed Throw Oppsosite Potion throwing an untextured alchemist
-bag
-• Improved bedrocking in Doomed Encampment.
-• Removed a trapdoor blocking a staircase in Doomed Encampment
-• Added missing tree information on Disco Ball description
-• Fixed Reverie loot sometimes not working (in instances created
-after this update)
-• Fixed Sanguine Harvest heal triggering twice under specific
-conditions
-• Removed Great Mandrake's extra fern from its main hand
-• Took away Unchained Experiment's armor and invisible fishing
-rod
-• The second charge of Magenta and Gray Tesseract (u)'s are now
-reset by daily restart
-• Fixed the Totem of Transposing lore text incorrectly showing
-"missing channel" (they all still work, we just changed where
-the tag was)
-• Re-centered the ambient sound for the levitator in the middle
-of Galengarde
-• Fixed Hunts Lodge fast travel and everything else not working
-• Fixed tab display for Hunts not clearing automatically when
-the hunt does not happen on the ring shard### Minor New Features
-• Julia in the tutorial explains pause chat right away for those
-players joining with very active chat.
-• The Rare Trader in the P.O.R.T.A.L. lobby and NPC in Willows
-Lobby that renames Shulker Boxes now both clarify that keywords
-in the names of Equipment Cases will sort such items into them.
-• Rare Alchemical Utensils from dungeons can now appear in loot
-chests in their respective dungeons
-• Underlined the name of the Emblem of the Big Pig trophy
-• Added "Epic Crafting Material" to the Fractured Psyche
-• Removed the hat from the Constellation Construct Dummy
-• A new normal combat SKR Room has been added to the pool
-• Added Sharrels and Community Chests that allow plot visitors
-to move their contents, even if they do not otherwise have
-permission to do so with other containers. They can be exchanged
-with unnamed chests, trapped chests, and barrels at the Plots
-Item Salesman
-• Added Enlightening to place a torch below falling blocks • go
-to Selari's lab (Primeval Creations puzzle area) and talk to the
-NPC that upgrades your tesseracts
-### Mob Changes
-• The Nalatia's Galeblade enemy will now launch you upwards
-instead of using a force pull
-• Turned Earth Worms into worms
-• Added extra sounds to Vedha's Bladedancer
-• Improved Foreman's chain telegraph when connected to an
-Electric Spark
-• Added Metallic noises to Brown Dungeon enemies
+### Item Changes
+&bArchitect's Ring Weapons&r
+• Reaper's Harvest (M4) (Rework) : Decay 3, Quake 3, Smite 2,
+Curse of Anemia 2, 24 Attack Damage, 0.7 Attack Speed, 4
+Knockback Resistance
+• Crescent of Dominion (M4) (Rework) : Ethereal 1, Duelist 2,
+Thunder Aspect 2, First Strike 2, 16.5 Attack Damage, 1.1 Attack
+Speed, 6 Thorns Damage
+• Threadreaper (M4) (Rework) : Cumbersome, Ice Aspect 1,
+Regicide 1, Slayer 3, 22 Attack Damage, 1.3 Attack Speed, +15%
+Speed
+ &o• Developer Note : These three scythes all suffered from
+leaning too much into the specialist niche, and as such we're
+reworking them to have more general use while still keeping some
+specialist flavor. Reaper’s Harvest is turning into a slow melee
+weapon with capability to deal both large AOE and single target
+damage, without needing to reach critspam speed to perform.
+Crescent of Dominion is turning into a generalist defensive
+scythe that has value on tankier builds with its innate First
+Strike. And Threadreaper has Cumbersome introduced to support
+faster gameplay styles.&r
+• Herald's Cruelty (M4) (Rework) : Quick Charge 2, Piercing 1,
+Reverb 3, 20 Projectile Damage, 1.5 Projectile Speed, 18% Magic
+Damage
+• Tidebound Arbalest (M4) (Rework) : Quick Charge 3, Multishot,
+First Strike 3, Point Blank 3, Retrieval 3, 10 Projectile
+Damage, 1 Projectile Speed
+• Witchbane Revolver (M4) : 0 -> 3 Retrieval, 4 -> 3 Quick
+Charge, 13 -> 19 Projectile Damage, 0 -> 1 Punch
+ &o• Developer Note : Witchbane Revolver has historically been
+unwieldy to use due to its reliance on high speed input, so
+we're adjusting it to a slower, and more manageable speed, and
+adding some CC control on it to emulate the effective knockback
+it had from Quick Charge 4.&r
+• Extinction (M4) : 1 -> 1.1 Attack Speed, 60 -> 70 Unbreaking
+• Covenmourn Rend (M6) : 0 -> 3 Retrieval
+• Fading Horizon (M4) : 3 -> 2 Stamina
+&bArchitect's Ring Alchemical Utensils&r
+• &oDeveloper Note : We're adjusting some of the flavour stats
+on these alchemist bags, as they were previously rather
+uninteresting or hard to make use of (such as Technique on
+Amberlight), and some therefore went largely unused.&r
+• Shadebound Satchel (M4) :  0 -> 1 Ice Aspect, 0 -> 1 Melee
+Protection, 2.5 -> 3 Knockback Resistance
+• EX Brimstone Alembic (M4) : 0 -> 2 Bleeding, 3 -> 0 Fire
+Protection, 0 -> 1 Curse of Anemia
+• Amberlight Vial (M4) : 0 -> 1 Hex Eater, 5 -> 2 Technique,
+11.2 -> 12 Potion Damage
+ &o• Developer Note : Hex Eater increases Potion Damage by 0.5
+per debuff on hit mobs. Only applies to thrown potions.&r
+&bArchitect's Ring Armor&r
+• Fidelis Stella (M4) (Rework) : Guard 1, Sustenance 2, 6 Armor,
++30% Attack Damage
+ &o• Developer Note : The presence of defensive Guard armor
+pieces was already dominant with the existence of Blasphemous
+Cataphract and Striking Torrent, and while not being good, still
+invalidated the niche of the previous iteration of this item.
+This iteration hopes to provide a fresh take on the item, being
+a Guard item with a sizeable offensive stat with an increased
+effective healing.&r
+• Blighted Path (M4) : 1 -> 0 Tempo, 0 -> 2 Sustenance, +15% ->
++20% Projectile Damage
+ &o• Developer Note : It feels like the item does a few too many
+different things and spreads itself too thin. Since scouts don’t
+have many great sustain options at the minute, and there’s
+already an abundance of choices for Tempo, we’re replacing the
+Tempo and redistributing the stats to greater sustainability and
+a bit more projectile damage.&r• Flesh Without Names (M4)
+(Rework) : Projectile Protection 2, 10 Agility, +10% Attack
+Speed, +10% Magic Damage, 3 Knockback Resistance
+ &o• Developer Note : Flesh Without Names didn’t do well in an
+environment already full of solid agility melee protection
+helmet options like Stonewrought Helmet and Falling Blades, so
+it’s receiving a rework to turn it into a hybrid magic armor
+piece akin to Crown of the Rift from the Celsian Isles.&r
+• Godtree Greaves (M4) : 0% -> +15% Speed, 2 -> 1 Regeneration
+ &o• We’re giving Godtree Greaves some speed in exchange for a
+level of Regeneration to encourage its role as an all-rounder
+armor piece.&r
+• Blasphemous Cataphract (M4) : 0 -> 1 Shielding, 1 -> 0 Curse
+of Crippling, 2 -> 1 Guard
+ &o• Developer Note : This item from Zenith's release onward has
+seen remarkably low usage due to the inconsistency of Guard in
+general Region 3 content. We're adding shielding to it to
+alleviate some pressure off of Guard to perform, increasing the
+item's consistency.&r
+• Footprints Beneath Void (M4) : 6.5 -> 8 Armor, +18% -> +15%
+Attack Speed, 3 -> 2 First Strike
+ &o• Developer Note : Footprints lost a significant chunk of its
+base armor in the transition to the new evaluation of Attack
+Speed. To encourage players to pick it as a more defensive
+option over Flight from the Capital, it's getting additional
+Armor and reduced Attack Speed.&r
+• Soothing Starblood (M4) : 0% -> +10% Speed, 3 -> 2
+Regeneration
+• Aether Threads (M4) : 7.5 -> 8 Agility
+• Lunacrest Solleret (M4) : 7 -> 7.5 Armor
+&bArchitect's Ring Shields&r
+• Mycelian Cap (M4) (Rework) : Melee Protection 3, Adrenaline 3,
+5.5 Armor, 2 Max Health, +15% Attack Speed
+ &o• Developer Note : We’re trying a change that makes Mycelian
+Cap a solid option in providing a high amount of movement speed
+in combat, while being able to support slower attack speed
+weapons akin to Remnants of Isharist.&r• Silver Heart (M4) : 0
+-> 2 Stamina, 2 -> 4 Knockback Resistance, 7 -> 6 Armor, 3 -> 2
+Magic Protection
+ &o• Developer Note : Silver Heart has remained unremarkable
+ever since its release. As such, the shield is receiving Stamina
+and a Knockback Resistance buff in order to encourage players to
+choose it for its defensive qualities compared to other options,
+and will be losing an amount of it to accommodate the increase
+in power.&r
+• Defiled Carving (M4) (Rework) : Blast Protection 2, First
+Strike 4, 8.5 Agility, +15% Speed
+ &o• Developer Note : Similarly to Silver Heart, this shield has
+remained relatively unused outside of certain extremely niche
+scenarios. In order to preserve those small use cases and expand
+its usage outside of that, its hybrid stats have been converted
+into raw First Strike, alongside a sizable speed stat to allow
+for faster playstyles.&r
+• Shackled Earth's Boon (M4) : 2 -> 1 Curse of Anemia, +42% ->
++50% Attack Damage, 6.5 -> 5 Agility
+ &o• Developer Note : The previous iteration of Shackled Earth's
+Boon boasted a higher attack damage while having an Attack Speed
+stat, making it strong offensively but quite unwieldy with its
+Curse of Anemia. We're increasing the damage stat on the shield
+while reducing the Anemia level to increase its staying power in
+long-drawn out fights, and to solidify its position as a heavily
+offense-oriented shield.&r
+• EX Tlaxan Bulwark (M4) : 2 -> 4 Sustenance, 5.5 -> 6 Armor,
++20% -> +15% Max Health, +2 -> 0 Max Health
+ &o• Developer Note : This shield's main niche was to provide a
+large boost to maximum health and healing, but the cost of using
+it outweighed the benefits. As such we're giving it an increased
+effective healing through a Sustenance increase, while still
+having enough Max Health to pair with other -Max Health items
+such as Agaric Abhorrence, with the combo still reaching 18 Max
+HP.
+&b&rArchitect's Ring Charms&r
+• Parasomnic Remnant : +80% -> 🔒 +125% Deadly Ronde Damage
+• Silvari Blade Handle : 0 -> 🔒 0.5 Blade Dance Resistance
+Duration, +50% -> +75% Blade Dance Damage, 3 -> 4 Charm Power
+• Rusted Bracers : -50% -> -10% Amplifying Hex Damage
+&bKing's Valley Armor&r
+• Serpensia Wrap : 0% -> +5% Magic Damage, 3 -> 2 Projectile
+Protection
+• Phantom’s Hood : 0 -> 2 Retrieval
+• Cultist’s Scowl : 0 -> 1 First Strike, +18% -> +10% Attack
+Damage
+• Boots of Vitality : 0 -> 1 Sustenance, 4 -> 3 Max Health
+• Boots of Vigor : 0 -> 2 Sustenance, 5 -> 4 Max Health
+• Plaguebringer (Rework) : 4 Agility, +6% Magic Damage, +6%
+Speed
+• Archmage’s Vestment : 5% -> 8% Magic Damage
+• Warded Vestment (Sketched Warded Vestment) : 10% -> 12% Magic
+Damage
+• Warden’s Ruin : 0% -> +10% Attack Speed, +15% -> 0% Speed
+• Ironscale Leggings : 0 -> 1 Stamina, 2 -> 1 Projectile
+Protection
+• Steelscale Leggings : 0 -> 1 Stamina, 0 -> 2 Knockback
+Resistance, 3 -> 2 Projectile Protection
+• Corrupted Water Robe : 0 -> 1 Aptitude, +5% -> 0% Magic Damage
+• Chaparral Circlet (Rework) : Regeneration 1, 3 Armor, +10%
+Projectile Damage, +10% Throw Rate
+• Monk’s Robe : 4 -> 3 Agility
+• Soul of Conflagration : +8% -> +12% Magic Damage
+&bKing's Valley Shields&r
+• Magmahide Shield : 0 -> 1 Inferno
+• Shimmering Veil (Nobody's Wall) : 0% -> +5% Magic Damage
+• Soulblighter’s Bulwark : 0 -> 1 Stamina
+• Keeper of the Jungle : 0% -> +8% Attack Speed
+&bKing's Valley Weapons&r
+• Quetzalcoatl’s Wrath : 0 -> 1 Regicide, 0 -> 1 Fire Aspect, 13
+-> 12 Projectile Damage,
+• Quetzalcoatl’s Fury : 0 -> 1 Regicide, 0 -> 1 Fire Aspect, 14
+-> 13.5 Projectile Damage
+• Ashfloe Chisel : 3 -> 2 Efficiency, 1 -> 3 Unbreaking, 0 -> 1
+Mending
+• Spiritspark Flint (Bonecarver) : 3 -> 2 Smite
+• The Ravager : 0 -> 1 First Strike, 2 -> 1 Knockback
+• Lunatic’s Respite : 0 -> 2 First Strike, 2 -> 0 Fire Aspect, 3
+-> 2 Knockback, 12.5 -> 11.5 Attack Damage• Arachnobane : 1 ->
+1.2 Attack Speed, 7.5 -> 8 Attack Damage, 3 -> 2 Slayer
+• Bonepiercer : 12 -> 12.5 Projectile Damage, 0 -> 1 Bleeding
+• Doom’s Edge : 0 -> 2 Decay, 1.7 -> 1.6 Attack Speed
+• Soulcrusher : 0 -> 1 Quake, 13 -> 12.5 Attack Damage
+• Reaper’s Harvest : 4.5 -> 6 Attack Damage, 0 -> 1 Decay, 4 ->
+2 Smite
+• Acrid Wrath : 2 -> 1 Knockback
+• Thaumaturge’s Greed (Divine Thaumaturge’s Greed) (Rework) : 1
+Regicide, 1 Smite, 4 Attack Damage, 4 Attack Speed, +30% Spell
+Power
+• Tome of Arcane Horrors (Rework) : Knockback 2, Magic
+Protection 2, Ineptitude 2, 8.5 Attack Damage, 1 Attack Speed,
++40% Spell Power
+• Arcane Storm (Rework) : Ice Aspect 1, Sniper 1, 12 Projectile
+Damage, 1.5 Projectile Speed
+• Xanatull’s Skystorm (Arcane Snowstorm) (Rework) : Ice Aspect
+1, Sniper 1, 13.5 Projectile Damage, 1.5 Projectile Speed, +8%
+Magic Damage
+• Sleepwalker’s Sickle : 0 -> 2 Thunder Aspect, 6 -> 8 Attack
+Damage, 2 -> 1.3 Attack Speed
+• Rosethorn Blade (Divine Rosethorn Blade) : 0 -> 1 Life Drain,
+6.5 -> 6 Attack Damage, 2.5 -> 0 Agility, 2 -> 3 Thorns
+• Poison Ivy : 0 -> 1 Life Drain, 6 ->  5.5 Attack Damage, 2 ->
+0 Agility
+• Soulvenom Bow (Divine Soulvenom Bow) : 0 -> 3 Decay, 16 -> 15
+Projectile Damage
+• Telum Immoriel (Ari’s Ionic Buster) : 1 -> 3 Sweeping Edge
+• Willowtwist Wand (Chimarian Wand) (Rework) : Fire Aspect 1,
+Earth Aspect 1, 4 Attack Damage, 4 Attack Speed, +30% Spell
+Power, +7% Speed
+• Willowtwist Memory (Rework) : Fire Aspect 1, Earth Aspect 1, 5
+Attack Damage, 4 Attack Speed, +35% Spell Power, +10% Speed
+• Heatwave (Replica Final Hour) : 14 -> 14.5 Projectile Damage
+• Scattershot Kolotl : 2 -> 0 Punch, 0 -> 1 Point Blank, 14 ->
+13.5 Projectile Damage
+• Warforged Crossbow : 3 -> 1 Piercing, 0 -> 1 Quick Charge, 14
+-> 13.5 Projectile Damage, 0 -> 1 First Strike, 3 -> 4
+Unbreaking
+• Earthbound Runeblade : 0 -> 1 Earth Aspect, 2 -> 1 Armor
+• Seasoaked Runeblade : -10% -> 0% Speed, 1 -> 0 Smite, 0 -> 1
+First Strike• Stormborn Runeblade : 0 -> 2 Thunder Aspect, 0 ->
+1 Adrenaline, +10% -> 0% Speed, 2 -> 1.8 Attack Speed
+• Lustrous Edge : 6.5 -> 7.5 Attack Damage, 2 -> 3 Thunder
+Aspect, 1 -> 0 Fire Aspect, 1.6 -> 1.4 Attack Speed
+• Vermin’s End (Rework) : Efficiency 3, Decay 3, Quake 1, 7
+Attack Damage, 1.4 Attack Speed
+  &o• Developer Note : This sword was failing to perform with
+its Slayer niche, as it was outclassed by both Corrupted
+Geomantic Sword and Arachnidruid Cutlass. This new iteration
+gives it a unique spot among swords as a 1.4 Attack Speed sword,
+as well as inflicting Decay and spreading it on kill.&r
+• Vermin’s Scourge (Rework) : Decay 2, 6.5 Attack Damage, 1.4
+Attack Speed
+• Corrupted Watcher’s Sword (Divine Watcher’s Sword) : 3 -> 2
+Smite, 0 -> 1 Bleeding, 5.5 -> 6 Attack Damage
+ &o• Developer Note : Corrupted Watcher’s Sword has been the
+staple pick for Rogues in the Valley for a long time to come
+now, and while there isn’t technically an issue with this, we’d
+like to promote weapon diversity by increasing the power level
+of other swords while decreasing the power of this one.&r
+• Corrupted Geomantic Dagger : 2 -> 0 Slayer, 0 -> 2 Stamina, 6
+-> 7 Attack Damage
+• Geomantic Dagger : 1 -> 0 Slayer, 0 -> 1 Stamina
+• Elemental Wrath (North Pole) : 3.5 -> 4 Attack Damage
+• Heartwood Wand : 1 -> 3 Decay• Stiletto of the Summoner
+(Rework) : 1 Adrenaline, 1 Fire Aspect, 1 Slayer, +8% Magic
+Damage, 5.5 Attack Damage, 1.6 Attack Damage
+ &o• Developer Note : Stiletto's duelist niche, while filling an
+empty slot in the region's sword pool, had extremely few use
+cases (mostly Snow Spirit), which were made and balanced long
+before the item's existence. The item therefore saw remarkably
+low usage and was one of those filler pass artifacts people
+always turn to fragments. We're trying a new design that caters
+to magic-focused Cleric builds, and by extension Shaman, as a
+sword alternative to C'Axtal's Crusher, with Fire Aspect to
+trigger Inferno and Slayer to assist during Crusade downtime.&r
+• Loci Offering : 6 -> 6.5 Attack Damage, 1 -> 0 Slayer, 0 -> 2
+First Strike, 1.6 -> 1.5 Attack Speed
+• Blackroot Branch (Blade of the Lost) : 0 -> 2 Earth Aspect, 0
+-> 2 Unbreaking, 9 -> 10 Attack Damage, 1 -> 0 Melee Protection,
+1.8 -> 1.5 Attack Speed
+• Pyreborne Spear : 10 -> 17 Projectile Damage, 0 -> 2 Inferno,
+4 -> 2 Slayer, 0.8 -> 0.6 Throw Rate
+• Threadwarped Tkaa (Sketched Threadwarped Tkaa) : 11 -> 11.5
+Attack Damage
+• Harvestman’s Scythe (Divine Harvestman’s Scythe/Dreadful
+Harvester) : 0.9 -> 1 Attack Speed
+• Roots' Repose : 5 -> 5.5 Attack Damage
+• Cutting Breeze : 5 -> 5.5 Attack Damage, 7.5% -> 10% Speed
+• Slicing Wind : 5.5 -> 6.5 Attack Damage, 10% -> 15% Speed
+&bKing's Valley Alchemical Utensils&r
+• &oDeveloper Note : Many Alchemical Utensils in R1 have
+historically been underperforming, especially in the early game,
+and had a steep progression that forced players to upgrade their
+bags at every dungeon, as well as generally having few enchants
+to shape a unique identity.&r
+• Alchemist’s Bag : 2.5 -> 3.5 Potion Damage
+• Soulleather Bag : 3 -> 4 Potion Damage, 0% -> +10% Speed, 5 ->
+3 Feather Falling
+• Chimera Maw : 3.5 -> 4 Potion Damage, 0 -> 1 Bleeding
+• Pestilence Vial : 1 -> 2 Decay, 4 -> 3.5 Potion Damage•
+Abnormality should now work if it was obtained a second time
+(i.e. from the wheel) before using a previously obtained
+Abnormality's Prismatic selection
+• Fixed a slightly misplaced compass waypoint in Sleeping
+Shadows
+• Fixed multiple typos in Sleeping Shadows
+• Clarified a task in the quest Sleeping Shadows (hopefully.)
+• You can now get a spare Ornate Spyglass in Sleeping Shadows if
+you somehow lose it
+• Fixed an issue where dyes from the respawning chests/barrels
+in Sierhaven and the Guild Hub sometimes didn't stack with each
+other or even themselves
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-&bHotfix:&r Logging out during the Sons of the Forest cutscene
-will now properly restart the sequence
-&b(11.18.0)&r
-For the update on May 28, 2025
-### Major New Features:
-The final portion of the Eastern R1 Jungle has been fully
-rebuilt, spanning all around Farr, from Kaul's arena to the Air
-Shrine plateau! This massive rebuild features several things for
-the player to discover, including a brand new legendary
-discovery!
-### Minor New Features:
-• To account for the Farr surroundings being rebuilt, the race
-Tree Hopping Madness' track and name have been totally revamped.
-As such, the old leaderboard has been legacied and moved above
-the tree it was in
-• The Impenetrable should now be afraid of the outside and not
-try to teleport out of the caves. Additionally, reduced the
-furthest it can teleport from its spawnpoint by 5 blocks
-• Reworded the ||Faceless Dozen|| advancement description to be
-more accurate to the actual obtainment method.
-• Added a Formless Void -> blightdust trade to Iris
-• Hex Eater, Chaotic and First Strike now apply to thrown
-alchemist potions
-• Hex Eater's and Chaotic's descriptions now specify that they
-only apply to basic attacks and not abilities
-• You can no longer place blocks that cannot be mined
-• Added a message on Daily for Harvir's fishing bounties###
-Intruder Changes:
-||
-• Twisted Intruder uncommon's loot 1 -> 2 Fractured Psyche
-• Added a Pulsating Diamond trade to the Rare Trader of Twisted
-Intruder at 4 Fractured Psyches -> 1 Pulsating Diamond
-• Depraved Hallucination's lacerate telegraph now has large dust
-particles
-• Made the debuffs for failing Screamroom and Cognitive
-Distortion last for the entire fight, stacking each time
-• Removed Parasomnic Mist's final still section, player
-collision disabled when active, particle interval 10 -> 5 ticks
-, damage interval 4 -> 10 ticks, true damage instance 2 -> 4.
-• Fixed Parasomnic Mist's slowdown when changing directions not
-working
-• Fix Reincarnation bypassing Amalgamatign Dreamscape's fail
-condition
-• Fixed Iron Maiden remaining on death in Intruder
-• Fixed Stillwater not properly sending you back to the arena
-sometimes
-• Fixed Screamroom capturing dead players
-• Made Abhorrent Hallucination not teleport above Liminal
-Corruption
-• Cerebral Outburst no longer deals 0 damage if you have taken
-damage in the last 0.5s
-• Fixed true damage bypassing Intruder's resistance during
-Abhorrent Hallucination
-• Fix extra '.' in a dialogue
-• Fixed Manifested  Herald of the Secret Stars flying into the
-air
-• Tormented Replicants 45% -> 50% health, Sinking Nightmares,
-40% -> 45% health threshold cast, Lucid rend 75%-50% -> 40%-25%
-    • &oNote: a rework is planned for lucid rend eventually,
-this was just done to reduce the number of abilities in the
-first part&r
-||
-### Feedback Fixes:
-• Twisted Shadestepper stealth force cast threshold 400 -> 550
-damage
-• Slightly lowered speed and drastically reduced homing
-capability of Twisted Crusader's Twisted Javelin attack to make
-it more dodgeable with correct movement
-• Twisted Prosecutor now cancels the judgement chain on taking
-melee damage
-• Colossus of Conquest initial jump now takes longer
-• Rider of Conquest 21 -> 20 trident damage
-• Specter of Mourning 0.2 -> 0.3 vertical spawn velocity
-• Added railings to a balcony in the Nadir
-• Clarified Stamina's enchantment description and added a note
-about duration refreshing on hit
-• Painter's Realm is more walkable now
-• You can now break spruce wood (6-sided logs) in Gray### Bug
-Fixes:
-• Removed a check preventing mobs without AI from being stunned.
-This should fix some mobs that never have AI from not being able
-to be stunned, some mob abilities that temporarily remove AI
-from being interrupted by stuns, and stuns not being able to be
-extended by applying a longer stun. However there's a good
-chance this introduces some more minor bugs, so please report
-any weird interactions with stuns
-• Grammatical issues in the Merdd V  book have been resolved
-• Fixed minor build bugs in Gray, Twilight Ruins, Player Market,
-Axtan Monastery, Crystal Mines, Amped Earth Shrine
-• Fixed Soothing Combos Haste Level charm effect only working if
-the ability was exactly legendary rarity
-• Fixed some small numbers from charms not showing in
-descriptions such as any 1% modifiers
-• Fixed Starblood Ichor Earthbound only triggering on damage
-from mobs (i.e. never triggering for fire or environmental stuff
-like TNT from a trap, etc.)
-• Fixed Chroma Blade Windwalker not reducing cooldowns
-• Fixed One with the Wind Range charms not working
-• Fixed mobs briefly glowing white when Judgement Chain runs out
-and infinitely glowing white if Judgement Chain is immediately
-reapplied
-• Fixed some particles for Voodoo Bonds being in the wrong
-particle category
-• Fixed mobs that were not supposed to glow due to player
-abilities still glowing from player abilities
-• ||Stillwater now teleports you to the arena Y level to prevent
-getting stuck in the water||
-• ||Iron Maiden no longer lingers in Twisted Intruder||
-• Fixed First Strike applying twice on projectile skills
-• Added Celestial Zenith location tag to the utility room
-potions to match Depths
-• Fixed Spellshock enhancement increasing the damage of Fire
-Elemental Arrows twice
-• Adjusted capitalization in completion messages of Gray
-• Fixed many dummies from the seasonal pass not being on the
-item api
-• Fixed Patreon Enchanted Book being targeted by some abilities
-• Fixed a typo in Murky Maze's advancement coordinates
-• Fixed multiple stuckspots in Galengarde.
-• Fixed multiple stuckspots around Arena of Terth
-• Fixed the following mobs applying vanilla Slowness: Plague
-Spreader, Plague Golem, Ice Archer
-• Added some vines to 9th room of Scientists of Steelmeld II to
-prevent softlocking.
-• Fixed discoball new missing tree description
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix:&r The Staff no longer breaks at the Air Shrine step
