@@ -1,109 +1,5 @@
-### Item Changes
-&bArchitect's Ring Weapons&r
-• Reaper's Harvest (M4) (Rework) : Decay 3, Quake 3, Smite 2,
-Curse of Anemia 2, 24 Attack Damage, 0.7 Attack Speed, 4
-Knockback Resistance
-• Crescent of Dominion (M4) (Rework) : Ethereal 1, Duelist 2,
-Thunder Aspect 2, First Strike 2, 16.5 Attack Damage, 1.1 Attack
-Speed, 6 Thorns Damage
-• Threadreaper (M4) (Rework) : Cumbersome, Ice Aspect 1,
-Regicide 1, Slayer 3, 22 Attack Damage, 1.3 Attack Speed, +15%
-Speed
- &o• Developer Note : These three scythes all suffered from
-leaning too much into the specialist niche, and as such we're
-reworking them to have more general use while still keeping some
-specialist flavor. Reaper’s Harvest is turning into a slow melee
-weapon with capability to deal both large AOE and single target
-damage, without needing to reach critspam speed to perform.
-Crescent of Dominion is turning into a generalist defensive
-scythe that has value on tankier builds with its innate First
-Strike. And Threadreaper has Cumbersome introduced to support
-faster gameplay styles.&r
-• Herald's Cruelty (M4) (Rework) : Quick Charge 2, Piercing 1,
-Reverb 3, 20 Projectile Damage, 1.5 Projectile Speed, 18% Magic
-Damage
-• Tidebound Arbalest (M4) (Rework) : Quick Charge 3, Multishot,
-First Strike 3, Point Blank 3, Retrieval 3, 10 Projectile
-Damage, 1 Projectile Speed
-• Witchbane Revolver (M4) : 0 -> 3 Retrieval, 4 -> 3 Quick
-Charge, 13 -> 19 Projectile Damage, 0 -> 1 Punch
- &o• Developer Note : Witchbane Revolver has historically been
-unwieldy to use due to its reliance on high speed input, so
-we're adjusting it to a slower, and more manageable speed, and
-adding some CC control on it to emulate the effective knockback
-it had from Quick Charge 4.&r
-• Extinction (M4) : 1 -> 1.1 Attack Speed, 60 -> 70 Unbreaking
-• Covenmourn Rend (M6) : 0 -> 3 Retrieval
-• Fading Horizon (M4) : 3 -> 2 Stamina
-&bArchitect's Ring Alchemical Utensils&r
-• &oDeveloper Note : We're adjusting some of the flavour stats
-on these alchemist bags, as they were previously rather
-uninteresting or hard to make use of (such as Technique on
-Amberlight), and some therefore went largely unused.&r
-• Shadebound Satchel (M4) :  0 -> 1 Ice Aspect, 0 -> 1 Melee
-Protection, 2.5 -> 3 Knockback Resistance
-• EX Brimstone Alembic (M4) : 0 -> 2 Bleeding, 3 -> 0 Fire
-Protection, 0 -> 1 Curse of Anemia
-• Amberlight Vial (M4) : 0 -> 1 Hex Eater, 5 -> 2 Technique,
-11.2 -> 12 Potion Damage
- &o• Developer Note : Hex Eater increases Potion Damage by 0.5
-per debuff on hit mobs. Only applies to thrown potions.&r
-&bArchitect's Ring Armor&r
-• Fidelis Stella (M4) (Rework) : Guard 1, Sustenance 2, 6 Armor,
-+30% Attack Damage
- &o• Developer Note : The presence of defensive Guard armor
-pieces was already dominant with the existence of Blasphemous
-Cataphract and Striking Torrent, and while not being good, still
-invalidated the niche of the previous iteration of this item.
-This iteration hopes to provide a fresh take on the item, being
-a Guard item with a sizeable offensive stat with an increased
-effective healing.&r
-• Blighted Path (M4) : 1 -> 0 Tempo, 0 -> 2 Sustenance, +15% ->
-+20% Projectile Damage
- &o• Developer Note : It feels like the item does a few too many
-different things and spreads itself too thin. Since scouts don’t
-have many great sustain options at the minute, and there’s
-already an abundance of choices for Tempo, we’re replacing the
-Tempo and redistributing the stats to greater sustainability and
-a bit more projectile damage.&r• Flesh Without Names (M4)
-(Rework) : Projectile Protection 2, 10 Agility, +10% Attack
-Speed, +10% Magic Damage, 3 Knockback Resistance
- &o• Developer Note : Flesh Without Names didn’t do well in an
-environment already full of solid agility melee protection
-helmet options like Stonewrought Helmet and Falling Blades, so
-it’s receiving a rework to turn it into a hybrid magic armor
-piece akin to Crown of the Rift from the Celsian Isles.&r
-• Godtree Greaves (M4) : 0% -> +15% Speed, 2 -> 1 Regeneration
- &o• We’re giving Godtree Greaves some speed in exchange for a
-level of Regeneration to encourage its role as an all-rounder
-armor piece.&r
-• Blasphemous Cataphract (M4) : 0 -> 1 Shielding, 1 -> 0 Curse
-of Crippling, 2 -> 1 Guard
- &o• Developer Note : This item from Zenith's release onward has
-seen remarkably low usage due to the inconsistency of Guard in
-general Region 3 content. We're adding shielding to it to
-alleviate some pressure off of Guard to perform, increasing the
-item's consistency.&r
-• Footprints Beneath Void (M4) : 6.5 -> 8 Armor, +18% -> +15%
-Attack Speed, 3 -> 2 First Strike
- &o• Developer Note : Footprints lost a significant chunk of its
-base armor in the transition to the new evaluation of Attack
-Speed. To encourage players to pick it as a more defensive
-option over Flight from the Capital, it's getting additional
-Armor and reduced Attack Speed.&r
-• Soothing Starblood (M4) : 0% -> +10% Speed, 3 -> 2
-Regeneration
-• Aether Threads (M4) : 7.5 -> 8 Agility
-• Lunacrest Solleret (M4) : 7 -> 7.5 Armor
-&bArchitect's Ring Shields&r
-• Mycelian Cap (M4) (Rework) : Melee Protection 3, Adrenaline 3,
-5.5 Armor, 2 Max Health, +15% Attack Speed
- &o• Developer Note : We’re trying a change that makes Mycelian
-Cap a solid option in providing a high amount of movement speed
-in combat, while being able to support slower attack speed
-weapons akin to Remnants of Isharist.&r• Silver Heart (M4) : 0
--> 2 Stamina, 2 -> 4 Knockback Resistance, 7 -> 6 Armor, 3 -> 2
-Magic Protection
+• Silver Heart (M4) : 0 -> 2 Stamina, 2 -> 4 Knockback
+Resistance, 7 -> 6 Armor, 3 -> 2 Magic Protection
  &o• Developer Note : Silver Heart has remained unremarkable
 ever since its release. As such, the shield is receiving Stamina
 and a Knockback Resistance buff in order to encourage players to
@@ -297,3 +193,87 @@ other or even themselves
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
+&b(11.20.0)&r
+For the update on June 11, 2025
+### Minor New Features:
+• Ringing the Hollow Chime in the Blue branch of Purple will now
+come with a free attack from Varcosa
+• Added warning/error sounds when attempting to start a dungeon
+that not all players can join right away, depending on if
+abandoning an instance can fix the issue
+• Added a tormented leviathan
+• Added an &oArmory Page Upgrader&r, which can be used in the
+Mechanical Armory to purchase another page of Mechanical Armory
+Slots (Up until 3). The Upgrader can be purchased at the Portal
+trader for 256 Hyperchromatic Archos Rings
+• Added torchflowers, pitcher plants, cherry saplings, and pink
+petals to the Flower Merchants on Plots and Guild Plots
+### Feedback Fixes:
+• Gave Author Medals the currency tag and removed its material
+enchant
+• Added a small sound when obtaining a key in the VR loot room
+• Made the lava yeet in Masquerader's Ruins ~50% more powerful
+• Starting Orasomn now teleports your entire team regardless of
+where they are
+• The teleporter to the Cave of Winds in white now rotates you
+180 degrees to make you look at the next part rather than back
+• Added some cover to final section of Chambers of Prophecy SKR
+combat room
+• Replaced several SKR Ice Slider layouts with more interesting
+(and challenging) layouts
+### Bug Fixes:
+• Fixed vanilla item drops from mobs not dropping (arrows from
+skeletons, blazes, etc., passive mob drops, filler items from
+mimics and Forum minibosses, food and arrows from Rush of
+Dissonance mobs)
+• Fixed smart quotes in new race NPC dialogues
+• Fixed Brimstone Alembic appearing as MYSTERY BUGGED ITEM when
+defeating the boss of Malevolent Reverie
+• Fixed grammar in Sketched Perfect Crystallizer lore
+• Fixed many smart apostrophes and quotes in dialogue in Valley,
+Ring, Teal, and Forum
+• Fixed grammar in Calix dialogue• Added lore to the Depths
+Trinket that mentions how to see Delve Points
+• Fixed typo in Sleeping Shadows quest guide entry
+• Fixed Parrot GUI listing the highest Corridors floor reached
+instead of the highest floor cleared
+• Fixed typo in Remnants of the Empire dialogue
+• Fixed Multi-Load advancement being named inconsistently
+• Infusions are now properly displayed on items sent through
+`/mail` or the market plugin after weekly updates
+• Corrected the PEB setting description for auto-abandoning
+completed dungeon instances to match the current logic (1 week
+after your last visit to a completed instance)
+• Fixed Grove Creepers applying vanilla Slowness
+• Fixed Twisted Panacea being killable
+• Fixed some enemies' charge spell having incorrect targeting
+• Fixed Ember of Fervor requiring line of sight to a nearby
+player to even spread fire in the first place
+• Fixed the Blightleaking Heart's invisible mount itself
+counting as an Elite
+• Fixed some enemies' spell particles
+• Fixed Lunacrest Captain not properly following up slash attack
+on the struck target
+• Fixed not being able to get a spare Ornate Spyglass in
+Sleeping Shadows
+• Fixed SQ login events that are supposed to trigger if you've
+been offline long enough not triggering
+• Fixed an exposed command block in Sierhaven
+• Fixed los errors on Ember of Mania
+Plume,skt_blaze_lacerate,Monolithic Remnant Mount, Dying Beast,
+MyceliaHierophant, Reagent Mixer, Zanils Harbinger,
+CerebralBarrage, UndyingFlameMount, Eternal Flame,
+ProtectiveSpores, Twisted Omenspeaker, Isadora the Bloodied
+Queen, A. Igneous Rune, Nuclear Amalgam, Starfall, Lucid Rend,
+TwistedINTRUDERusingNightmarishCarvings, Voracious Flesheater,
+Coven Overseer, Matter Amalgamater, Twisted Revenant,
+ColossalVanguard, RottedHellcystTendril,
+BloodbeastoftheBetrayed, Shadow Claymore, TwistedChoirBells,
+Twisted Deadeye, Flesheater Brute, AbhorrentWatcher, Weathering
+Cyclone, Vorpal Planewalker, Contorted Inquisitor,
+CumbersomeEarth, NightmarishCavalierMount
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• Mail remains disabled.
