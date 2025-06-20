@@ -1,183 +1,4 @@
-• Silver Heart (M4) : 0 -> 2 Stamina, 2 -> 4 Knockback
-Resistance, 7 -> 6 Armor, 3 -> 2 Magic Protection
- &o• Developer Note : Silver Heart has remained unremarkable
-ever since its release. As such, the shield is receiving Stamina
-and a Knockback Resistance buff in order to encourage players to
-choose it for its defensive qualities compared to other options,
-and will be losing an amount of it to accommodate the increase
-in power.&r
-• Defiled Carving (M4) (Rework) : Blast Protection 2, First
-Strike 4, 8.5 Agility, +15% Speed
- &o• Developer Note : Similarly to Silver Heart, this shield has
-remained relatively unused outside of certain extremely niche
-scenarios. In order to preserve those small use cases and expand
-its usage outside of that, its hybrid stats have been converted
-into raw First Strike, alongside a sizable speed stat to allow
-for faster playstyles.&r
-• Shackled Earth's Boon (M4) : 2 -> 1 Curse of Anemia, +42% ->
-+50% Attack Damage, 6.5 -> 5 Agility
- &o• Developer Note : The previous iteration of Shackled Earth's
-Boon boasted a higher attack damage while having an Attack Speed
-stat, making it strong offensively but quite unwieldy with its
-Curse of Anemia. We're increasing the damage stat on the shield
-while reducing the Anemia level to increase its staying power in
-long-drawn out fights, and to solidify its position as a heavily
-offense-oriented shield.&r
-• EX Tlaxan Bulwark (M4) : 2 -> 4 Sustenance, 5.5 -> 6 Armor,
-+20% -> +15% Max Health, +2 -> 0 Max Health
- &o• Developer Note : This shield's main niche was to provide a
-large boost to maximum health and healing, but the cost of using
-it outweighed the benefits. As such we're giving it an increased
-effective healing through a Sustenance increase, while still
-having enough Max Health to pair with other -Max Health items
-such as Agaric Abhorrence, with the combo still reaching 18 Max
-HP.
-&b&rArchitect's Ring Charms&r
-• Parasomnic Remnant : +80% -> 🔒 +125% Deadly Ronde Damage
-• Silvari Blade Handle : 0 -> 🔒 0.5 Blade Dance Resistance
-Duration, +50% -> +75% Blade Dance Damage, 3 -> 4 Charm Power
-• Rusted Bracers : -50% -> -10% Amplifying Hex Damage
-&bKing's Valley Armor&r
-• Serpensia Wrap : 0% -> +5% Magic Damage, 3 -> 2 Projectile
-Protection
-• Phantom’s Hood : 0 -> 2 Retrieval
-• Cultist’s Scowl : 0 -> 1 First Strike, +18% -> +10% Attack
-Damage
-• Boots of Vitality : 0 -> 1 Sustenance, 4 -> 3 Max Health
-• Boots of Vigor : 0 -> 2 Sustenance, 5 -> 4 Max Health
-• Plaguebringer (Rework) : 4 Agility, +6% Magic Damage, +6%
-Speed
-• Archmage’s Vestment : 5% -> 8% Magic Damage
-• Warded Vestment (Sketched Warded Vestment) : 10% -> 12% Magic
-Damage
-• Warden’s Ruin : 0% -> +10% Attack Speed, +15% -> 0% Speed
-• Ironscale Leggings : 0 -> 1 Stamina, 2 -> 1 Projectile
-Protection
-• Steelscale Leggings : 0 -> 1 Stamina, 0 -> 2 Knockback
-Resistance, 3 -> 2 Projectile Protection
-• Corrupted Water Robe : 0 -> 1 Aptitude, +5% -> 0% Magic Damage
-• Chaparral Circlet (Rework) : Regeneration 1, 3 Armor, +10%
-Projectile Damage, +10% Throw Rate
-• Monk’s Robe : 4 -> 3 Agility
-• Soul of Conflagration : +8% -> +12% Magic Damage
-&bKing's Valley Shields&r
-• Magmahide Shield : 0 -> 1 Inferno
-• Shimmering Veil (Nobody's Wall) : 0% -> +5% Magic Damage
-• Soulblighter’s Bulwark : 0 -> 1 Stamina
-• Keeper of the Jungle : 0% -> +8% Attack Speed
-&bKing's Valley Weapons&r
-• Quetzalcoatl’s Wrath : 0 -> 1 Regicide, 0 -> 1 Fire Aspect, 13
--> 12 Projectile Damage,
-• Quetzalcoatl’s Fury : 0 -> 1 Regicide, 0 -> 1 Fire Aspect, 14
--> 13.5 Projectile Damage
-• Ashfloe Chisel : 3 -> 2 Efficiency, 1 -> 3 Unbreaking, 0 -> 1
-Mending
-• Spiritspark Flint (Bonecarver) : 3 -> 2 Smite
-• The Ravager : 0 -> 1 First Strike, 2 -> 1 Knockback
-• Lunatic’s Respite : 0 -> 2 First Strike, 2 -> 0 Fire Aspect, 3
--> 2 Knockback, 12.5 -> 11.5 Attack Damage• Arachnobane : 1 ->
-1.2 Attack Speed, 7.5 -> 8 Attack Damage, 3 -> 2 Slayer
-• Bonepiercer : 12 -> 12.5 Projectile Damage, 0 -> 1 Bleeding
-• Doom’s Edge : 0 -> 2 Decay, 1.7 -> 1.6 Attack Speed
-• Soulcrusher : 0 -> 1 Quake, 13 -> 12.5 Attack Damage
-• Reaper’s Harvest : 4.5 -> 6 Attack Damage, 0 -> 1 Decay, 4 ->
-2 Smite
-• Acrid Wrath : 2 -> 1 Knockback
-• Thaumaturge’s Greed (Divine Thaumaturge’s Greed) (Rework) : 1
-Regicide, 1 Smite, 4 Attack Damage, 4 Attack Speed, +30% Spell
-Power
-• Tome of Arcane Horrors (Rework) : Knockback 2, Magic
-Protection 2, Ineptitude 2, 8.5 Attack Damage, 1 Attack Speed,
-+40% Spell Power
-• Arcane Storm (Rework) : Ice Aspect 1, Sniper 1, 12 Projectile
-Damage, 1.5 Projectile Speed
-• Xanatull’s Skystorm (Arcane Snowstorm) (Rework) : Ice Aspect
-1, Sniper 1, 13.5 Projectile Damage, 1.5 Projectile Speed, +8%
-Magic Damage
-• Sleepwalker’s Sickle : 0 -> 2 Thunder Aspect, 6 -> 8 Attack
-Damage, 2 -> 1.3 Attack Speed
-• Rosethorn Blade (Divine Rosethorn Blade) : 0 -> 1 Life Drain,
-6.5 -> 6 Attack Damage, 2.5 -> 0 Agility, 2 -> 3 Thorns
-• Poison Ivy : 0 -> 1 Life Drain, 6 ->  5.5 Attack Damage, 2 ->
-0 Agility
-• Soulvenom Bow (Divine Soulvenom Bow) : 0 -> 3 Decay, 16 -> 15
-Projectile Damage
-• Telum Immoriel (Ari’s Ionic Buster) : 1 -> 3 Sweeping Edge
-• Willowtwist Wand (Chimarian Wand) (Rework) : Fire Aspect 1,
-Earth Aspect 1, 4 Attack Damage, 4 Attack Speed, +30% Spell
-Power, +7% Speed
-• Willowtwist Memory (Rework) : Fire Aspect 1, Earth Aspect 1, 5
-Attack Damage, 4 Attack Speed, +35% Spell Power, +10% Speed
-• Heatwave (Replica Final Hour) : 14 -> 14.5 Projectile Damage
-• Scattershot Kolotl : 2 -> 0 Punch, 0 -> 1 Point Blank, 14 ->
-13.5 Projectile Damage
-• Warforged Crossbow : 3 -> 1 Piercing, 0 -> 1 Quick Charge, 14
--> 13.5 Projectile Damage, 0 -> 1 First Strike, 3 -> 4
-Unbreaking
-• Earthbound Runeblade : 0 -> 1 Earth Aspect, 2 -> 1 Armor
-• Seasoaked Runeblade : -10% -> 0% Speed, 1 -> 0 Smite, 0 -> 1
-First Strike• Stormborn Runeblade : 0 -> 2 Thunder Aspect, 0 ->
-1 Adrenaline, +10% -> 0% Speed, 2 -> 1.8 Attack Speed
-• Lustrous Edge : 6.5 -> 7.5 Attack Damage, 2 -> 3 Thunder
-Aspect, 1 -> 0 Fire Aspect, 1.6 -> 1.4 Attack Speed
-• Vermin’s End (Rework) : Efficiency 3, Decay 3, Quake 1, 7
-Attack Damage, 1.4 Attack Speed
-  &o• Developer Note : This sword was failing to perform with
-its Slayer niche, as it was outclassed by both Corrupted
-Geomantic Sword and Arachnidruid Cutlass. This new iteration
-gives it a unique spot among swords as a 1.4 Attack Speed sword,
-as well as inflicting Decay and spreading it on kill.&r
-• Vermin’s Scourge (Rework) : Decay 2, 6.5 Attack Damage, 1.4
-Attack Speed
-• Corrupted Watcher’s Sword (Divine Watcher’s Sword) : 3 -> 2
-Smite, 0 -> 1 Bleeding, 5.5 -> 6 Attack Damage
- &o• Developer Note : Corrupted Watcher’s Sword has been the
-staple pick for Rogues in the Valley for a long time to come
-now, and while there isn’t technically an issue with this, we’d
-like to promote weapon diversity by increasing the power level
-of other swords while decreasing the power of this one.&r
-• Corrupted Geomantic Dagger : 2 -> 0 Slayer, 0 -> 2 Stamina, 6
--> 7 Attack Damage
-• Geomantic Dagger : 1 -> 0 Slayer, 0 -> 1 Stamina
-• Elemental Wrath (North Pole) : 3.5 -> 4 Attack Damage
-• Heartwood Wand : 1 -> 3 Decay• Stiletto of the Summoner
-(Rework) : 1 Adrenaline, 1 Fire Aspect, 1 Slayer, +8% Magic
-Damage, 5.5 Attack Damage, 1.6 Attack Damage
- &o• Developer Note : Stiletto's duelist niche, while filling an
-empty slot in the region's sword pool, had extremely few use
-cases (mostly Snow Spirit), which were made and balanced long
-before the item's existence. The item therefore saw remarkably
-low usage and was one of those filler pass artifacts people
-always turn to fragments. We're trying a new design that caters
-to magic-focused Cleric builds, and by extension Shaman, as a
-sword alternative to C'Axtal's Crusher, with Fire Aspect to
-trigger Inferno and Slayer to assist during Crusade downtime.&r
-• Loci Offering : 6 -> 6.5 Attack Damage, 1 -> 0 Slayer, 0 -> 2
-First Strike, 1.6 -> 1.5 Attack Speed
-• Blackroot Branch (Blade of the Lost) : 0 -> 2 Earth Aspect, 0
--> 2 Unbreaking, 9 -> 10 Attack Damage, 1 -> 0 Melee Protection,
-1.8 -> 1.5 Attack Speed
-• Pyreborne Spear : 10 -> 17 Projectile Damage, 0 -> 2 Inferno,
-4 -> 2 Slayer, 0.8 -> 0.6 Throw Rate
-• Threadwarped Tkaa (Sketched Threadwarped Tkaa) : 11 -> 11.5
-Attack Damage
-• Harvestman’s Scythe (Divine Harvestman’s Scythe/Dreadful
-Harvester) : 0.9 -> 1 Attack Speed
-• Roots' Repose : 5 -> 5.5 Attack Damage
-• Cutting Breeze : 5 -> 5.5 Attack Damage, 7.5% -> 10% Speed
-• Slicing Wind : 5.5 -> 6.5 Attack Damage, 10% -> 15% Speed
-&bKing's Valley Alchemical Utensils&r
-• &oDeveloper Note : Many Alchemical Utensils in R1 have
-historically been underperforming, especially in the early game,
-and had a steep progression that forced players to upgrade their
-bags at every dungeon, as well as generally having few enchants
-to shape a unique identity.&r
-• Alchemist’s Bag : 2.5 -> 3.5 Potion Damage
-• Soulleather Bag : 3 -> 4 Potion Damage, 0% -> +10% Speed, 5 ->
-3 Feather Falling
-• Chimera Maw : 3.5 -> 4 Potion Damage, 0 -> 1 Bleeding
-• Pestilence Vial : 1 -> 2 Decay, 4 -> 3.5 Potion Damage•
-Abnormality should now work if it was obtained a second time
+• Abnormality should now work if it was obtained a second time
 (i.e. from the wheel) before using a previously obtained
 Abnormality's Prismatic selection
 • Fixed a slightly misplaced compass waypoint in Sleeping
@@ -272,6 +93,73 @@ BloodbeastoftheBetrayed, Shadow Claymore, TwistedChoirBells,
 Twisted Deadeye, Flesheater Brute, AbhorrentWatcher, Weathering
 Cyclone, Vorpal Planewalker, Contorted Inquisitor,
 CumbersomeEarth, NightmarishCavalierMount
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• Mail remains disabled.The Items API
+(<https://api.playmonumenta.com/items>) is updating once again.
+Due to the addition of "locked" charm stats, the spec for charms
+objects in the api has changed from
+```json
+CharmName: {
+  ...
+  stats: {
+    stat1: 10,
+    stat2: 100,
+    ...
+  }
+}
+```
+to
+```json
+CharmName: {
+  ...
+  stats: {
+    stat1: {
+      locked: false,
+      value: 10
+    },
+    stat2: {
+      locked: true,
+      value: 100
+    },
+    ...
+  }
+}
+```
+&bHotfix:&r Single and double quotes now work in URLs in chat
+&bHotfix:&r Following the Resource Pack 5.7.0 update, 5 new hope
+skins have been added to Mastersmith Antonio's shop! Thank you
+to our patrons for your continuous support!
+&b(11.21.0)&r
+For the update on June 18, 2025
+### Minor New Features:
+• Multitool now auto-switches to the best tool for the job, and
+has sound effects for each mode
+• Renovated a house in Old Antium
+### Feedback Fixes:
+• Spirensis Statue's charge spell no longer uses the generic
+charge visuals and sounds
+• Removed decoration pots from a Zenith room.
+• Specter of Mourning now has a 1 second delay before it can
+attack
+• Galactic Collider now glows
+• Mobs affected by the Arcanic delve modifier will now have a
+visual indicator
+• Made Yellow's teleporters faster to respond
+### Bug Fixes:
+• Fixed typo in the description for the Harmonic Crystalline
+Cluster
+• Fixed a stuck spot near Arena of Terth.
+• Fixed Astéri peeking out of its glass box.
+• Fixed Mechanical Armory telling you to go to Caroline to buy
+the page upgrader
+• Fixed a build error in Galengarde's Celestial Zenith
+teleporter
+• Fixed Story SKT's end softlocking by walking too far away or
+disconnecting
+• Fixed protector spawners not working with stacked mobs
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
