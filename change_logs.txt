@@ -1,98 +1,3 @@
-• Abnormality should now work if it was obtained a second time
-(i.e. from the wheel) before using a previously obtained
-Abnormality's Prismatic selection
-• Fixed a slightly misplaced compass waypoint in Sleeping
-Shadows
-• Fixed multiple typos in Sleeping Shadows
-• Clarified a task in the quest Sleeping Shadows (hopefully.)
-• You can now get a spare Ornate Spyglass in Sleeping Shadows if
-you somehow lose it
-• Fixed an issue where dyes from the respawning chests/barrels
-in Sierhaven and the Guild Hub sometimes didn't stack with each
-other or even themselves
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&b(11.20.0)&r
-For the update on June 11, 2025
-### Minor New Features:
-• Ringing the Hollow Chime in the Blue branch of Purple will now
-come with a free attack from Varcosa
-• Added warning/error sounds when attempting to start a dungeon
-that not all players can join right away, depending on if
-abandoning an instance can fix the issue
-• Added a tormented leviathan
-• Added an &oArmory Page Upgrader&r, which can be used in the
-Mechanical Armory to purchase another page of Mechanical Armory
-Slots (Up until 3). The Upgrader can be purchased at the Portal
-trader for 256 Hyperchromatic Archos Rings
-• Added torchflowers, pitcher plants, cherry saplings, and pink
-petals to the Flower Merchants on Plots and Guild Plots
-### Feedback Fixes:
-• Gave Author Medals the currency tag and removed its material
-enchant
-• Added a small sound when obtaining a key in the VR loot room
-• Made the lava yeet in Masquerader's Ruins ~50% more powerful
-• Starting Orasomn now teleports your entire team regardless of
-where they are
-• The teleporter to the Cave of Winds in white now rotates you
-180 degrees to make you look at the next part rather than back
-• Added some cover to final section of Chambers of Prophecy SKR
-combat room
-• Replaced several SKR Ice Slider layouts with more interesting
-(and challenging) layouts
-### Bug Fixes:
-• Fixed vanilla item drops from mobs not dropping (arrows from
-skeletons, blazes, etc., passive mob drops, filler items from
-mimics and Forum minibosses, food and arrows from Rush of
-Dissonance mobs)
-• Fixed smart quotes in new race NPC dialogues
-• Fixed Brimstone Alembic appearing as MYSTERY BUGGED ITEM when
-defeating the boss of Malevolent Reverie
-• Fixed grammar in Sketched Perfect Crystallizer lore
-• Fixed many smart apostrophes and quotes in dialogue in Valley,
-Ring, Teal, and Forum
-• Fixed grammar in Calix dialogue• Added lore to the Depths
-Trinket that mentions how to see Delve Points
-• Fixed typo in Sleeping Shadows quest guide entry
-• Fixed Parrot GUI listing the highest Corridors floor reached
-instead of the highest floor cleared
-• Fixed typo in Remnants of the Empire dialogue
-• Fixed Multi-Load advancement being named inconsistently
-• Infusions are now properly displayed on items sent through
-`/mail` or the market plugin after weekly updates
-• Corrected the PEB setting description for auto-abandoning
-completed dungeon instances to match the current logic (1 week
-after your last visit to a completed instance)
-• Fixed Grove Creepers applying vanilla Slowness
-• Fixed Twisted Panacea being killable
-• Fixed some enemies' charge spell having incorrect targeting
-• Fixed Ember of Fervor requiring line of sight to a nearby
-player to even spread fire in the first place
-• Fixed the Blightleaking Heart's invisible mount itself
-counting as an Elite
-• Fixed some enemies' spell particles
-• Fixed Lunacrest Captain not properly following up slash attack
-on the struck target
-• Fixed not being able to get a spare Ornate Spyglass in
-Sleeping Shadows
-• Fixed SQ login events that are supposed to trigger if you've
-been offline long enough not triggering
-• Fixed an exposed command block in Sierhaven
-• Fixed los errors on Ember of Mania
-Plume,skt_blaze_lacerate,Monolithic Remnant Mount, Dying Beast,
-MyceliaHierophant, Reagent Mixer, Zanils Harbinger,
-CerebralBarrage, UndyingFlameMount, Eternal Flame,
-ProtectiveSpores, Twisted Omenspeaker, Isadora the Bloodied
-Queen, A. Igneous Rune, Nuclear Amalgam, Starfall, Lucid Rend,
-TwistedINTRUDERusingNightmarishCarvings, Voracious Flesheater,
-Coven Overseer, Matter Amalgamater, Twisted Revenant,
-ColossalVanguard, RottedHellcystTendril,
-BloodbeastoftheBetrayed, Shadow Claymore, TwistedChoirBells,
-Twisted Deadeye, Flesheater Brute, AbhorrentWatcher, Weathering
-Cyclone, Vorpal Planewalker, Contorted Inquisitor,
-CumbersomeEarth, NightmarishCavalierMount
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -165,3 +70,73 @@ disconnecting
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 • Mail remains disabled.
+&bHotfix&r: Arclight and Royal Blue can now be started; the
+quest guide is still incorrect and might tell you that you do
+not have access to the quest yet when you actually can. They
+will be fixed tomorrow when we've had a chance to sort them out.
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• Mail remains disabled.
+&b(11.22.0)&r
+For the update on June 25, 2025
+### Minor New Features:
+• A brand new quest, celebrating Pride Month, has been added •
+&bArclight and Royal Blue&r! It can be started at Cinevra in
+Sierhaven, requiring The Crystal Connection (+A Little Spark)
+and A Crown of Madness to play. Completing this quest rewards
+some absolutely fabulous pride-themed skill cosmetics. Happy
+pride! 🏳️‍🌈
+• Heavily optimized the social system to improve server
+performance
+• Added a new PEB toggle under Technical Options to swap the
+positions of the Friends and Guild sections in the tab list
+• Fixed an issue where the Friends and Guild sections in the tab
+list would be missing a separator if there were no moderators
+online
+• Guilds purchasing new plots now have new options to choose
+from:
+  • Lake Island is the existing plot type, which was made so
+that guilds that purchased guild islands back when those were a
+thing kept all their stuff without needing to rebuild everything
+from scratch
+  • Grassy Flatland is one layer of grass at y=56, and
+everything under that is sand for easy clearing
+  • Void is just empty with the usual barrier blocks; a
+completely blank slate
+  • The mod team has also volunteered to replace guild plots
+with one of these templates if requested, though keep in mind
+the contents of your plot will be lost, and you will not receive
+the item equivalent of any of the blocks that are removed.
+### Feedback Fixes:
+• Made Twisted Javelin telegraph clearer
+• Updated Antumbral Stalker's vanity
+• Updated Lucid Rend visuals, Lucid Rend slash cooldown 5 -> 8s,
+Rings 10 -> 20, they now change target after slashing
+• Sketched Artist and Artisan within the Painter's Abode now
+have dialogue
+• The Drunken Sailor for the End Chimes quest will now give out
+a warning _before_ it is too late### Bug Fixes:
+• Fixed Twisted Bishop manifesting pufferfish into existence
+• Added Sketched Bag of Hoarding and Sketched D.R.E.A.M. to API
+• Thunder Step no longer falsely claims to deal knockback
+• Author medal advancements should now show up on the website
+• Multitools no longer auto-switch on instantly mined blocks or
+if the current tool is just as effective as the other options
+• Removed the cooldown on auto-switching multitools (fixes
+autotools not switching after instantly mined blocks)
+• Fixed Reverie's plaza starting with the reward pedestals
+already spawned
+• Fixed many issues with Kaul Spleef and made the following
+changes as a result:
+  • Spleef can no longer be started if Kaul's pre-fight
+countdown is running
+  • Spleef's max game time is determined by the amount of
+players present when it starts, where each player adds 30
+seconds (capped at a maximum of 6 minutes)
+  • Improved feedback for players attempting to start a Spleef
+match when it isn't allowed
+• Fixed an armor stand being destructable in Old Antium.
+• Fixed the TNT in the tutorial exploding instantly during its
+cutscene
