@@ -1,268 +1,100 @@
-• Pyrrhic Greaves : 1 -> 3 Magic Protection, 0 -> 3 Fire
-Protection, +15% -> +20% Attack Damage, 7 -> 6.5 Armor, 2 -> 0
-Inferno
-• Sands of Ishnir : 1 -> 2 Melee Protection, 1 -> 2 Magic
-Protection, 6 -> 5 Agility
-• Sunblessed Leggings : 0% -> +5% Magic Damage, +5% -> 0% Speed,
-4.5 -> 4 Armor
-• Greymane Pelt : 0% -> +12% Projectile Damage, 0 -> 3
-Retrieval, 5 -> 3 Projectile Protection, 0 -> 3 Unbreaking
-• Aqueduct Greaves : 3 -> 4 Melee Protection, 3 -> 3.5 Agility,
-+20% -> +10% Max Health
-• Dragonscale Greaves : 0 -> 2 Stamina, 6.5 -> 5.5 Armor
-• Leviathan Scales : 0% -> +15% Attack Damage, 0% -> -10% Attack
-Speed
-• Brightbind : 2 -> 3 Knockback Resistance
-• Nightpyre Chains : +25% -> +35% Magic Damage, 2 -> 3 Fire
-Protection, 2 -> 0 Inferno
- &o• Developer Note : This item was weighted much lower than it
-should have been, and with its general lack of usage, additional
-points have been added to its magic damage to offset the penalty
-of its Ineptitude.&r
-• Frostguard Sabatons (Rework) : 6 Armor, Magic Protection 2,
-+15% Attack Damage, -10% Speed, +2 Knockback Resistance
-• Winter’s March : 0 -> 1 Stamina, 0% -> +10% Attack Speed, 6.5
--> 5.5 Armor
-• Sulfuric Sandals : 0 -> 2 Sustenance, 2 -> 0 Max Health, 4 ->
-2 Blast Protection
-• Varcosa’s Cavaliers : 1 -> 2 Second Wind, 5.5 -> 4.5 Agility
-• Boots of Alutana (Boots of Monshee) : 0 -> 2 First Strike, +8%
--> 0% Projectile Damage, 7 -> 6.5 Armor
- &o• Developer Note : Boots of Alutana have been changed for a
-similar reason to Mask of the Interim, to open its niche to
-melee as well as maintaining its projectile viability.&r
-• Nightsky Treads : 9 -> 8 Agility
- &o• Developer Note : This item was weighted too high, leaving
-it with stats similar to an Artifact..&r# Celsian Isles Offhand
-Items 📜
-• Blackthread Whip (Rework) : Melee Protection 3, Blast
-Protection 3, Technique 3, 4.5 Agility, +10% Speed
- &o• Developer Note : The previous version of this item was
-stretched too thin trying to fulfill multiple different niches
-at once, so it’s getting a full rework to help diversify it from
-the competition.&r
-• Dissonant Dagger : +55% -> +45% Attack Damage
- &o• Developer Note : Dissonant Dagger was incorrectly weighted
-as higher than it should have been as a Pink rare, so this will
-make it have the budget it was supposed to.&r
-• Celsian Sarissa (Rework) : First Strike 2, 6 Armor, +15%
-Attack Damage, 3 Knockback Resistance
-• Chime of the Requiem (Rework) : Shielding 1, Second Wind 2,
-Triage 2, 3.5 Armor, +20% Attack Speed
- &o• Developer Note : Chime previously lost out to offhand
-shields/defensive offhands due to its lower defensive stats and
-attack damage, so it’s turning into attack speed and gaining
-defense to lessen the burden when building slower scythes.&r
-•  Rites of Eternity : 0 -> 1 Aptitude, 1 -> 2 Regeneration
-• Firefly’s Rush : 0 -> 1 Ethereal, 6 -> 5.5 Agility, 1 -> 0
-Evasion
- &o• Developer Note : Firefly’s Rush’s situational enchantment
-had negative synergy with its other stats, so it’s getting
-changed into Ethereal to help it perform better in its niche.&r
-• Passing Shadows : 0 -> 1 Technique, 0 -> 2 Agility, +42% ->
-+20% Attack Damage, +10% -> 0% Speed
- &o• Developer Note : This change should help builds acquire the
-agility they need to reach the situational scaling cap more
-easily, while not compromising completely on its offensive
-traits.&r
-• Water’s Embrace (Rework) : Abyssal 1, Gills, Sustenance 2, 6
-Agility, +15% Magic Damage
- &o• Developer Note : The previous version of this item was
-unable to fulfill any meaningful niche above land or under the
-sea, so it’s becoming something hopefully more appealing to
-both.&r# Patron Items 💰
-• Frigid Rupture : 20.5 -> 22 Projectile Damage
-• Plaguebaron’s Scythe : 5 -> 7 Attack Damage, 0 -> 1 Thunder
-Aspect, 2 -> 1.6 Attack Speed
-• Moon’s Shadow : 10 -> 11 Attack Damage
-• Iron Pipe : 7 -> 12.5 Attack Damage, 2 -> 1.2 Attack Speed
-• Memory Maker : 6 -> 9 Projectile Damage 0 -> 1 Piercing
- &o• Developer Note : Memory Maker’s item niche existed
-previously as a catalyst for Alchemical Artillery, a skill that
-no longer exists, leaving the item very underwhelming.&r
-# Architect’s Ring Charms 📿
-&o• Developer Note : Following the release of Touch of Radiance,
-many cooldown reducing charms are getting their stats reduced to
-accommodate for the increased uptime.&r
-• Starstrike Emblem (Rework): 3 Charm Power, +0.5 Touch of
-Radiance Enhancement Stun Duration, +3 Touch of Radiance Buff
-Duration, -15% Touch of Radiance Self Cooldown Recharge Rate,
--15% Touch of Radiance Ally Cooldown Recharge Rate
-• Bewitching Lantern: -50% -> -40% Hallowed Beam Cooldown
-• Gears of the King: -33% -> -25% Celestial Blessing Cooldown
-• Swift Benediction Charm: -10% -> -5% Celestial Blessing
-Cooldown, 8% -> 10% Celestial Blessing  Speed Amplifier
-• Threads of Valor: -60% -> -50% Holy Javelin Cooldown
-• Malignant Neuron : -75% -> -50% Heavenly Boon Radius, -60% ->
--50% Heavenly Boon Healing
-• Urn of Perpetuity : -200% -> 🔒 -65% Blizzard Damage
-• Quickening Mycosis (Rework) : -50% Rending Razor Cooldown,
-+35% Rending Razor Travel Speed, -20% Rending Razor Embed
-Damage, -20% Rending Razor Rend Damage
-• Lesser Lacerating Charm : +10% -> +7.5% Rending Razor Embed
-Damage, +10% -> +7.5% Rending Razor Rend Damage
-• Greater Lacerating Charm : +20% -> +15% Rending Razor Embed
-Damage, +20% -> +15% Rending Razor Rend Damage
-• Focused Lacerating Charm : +35% -> +25% Rending Razor Embed
-Damage, +35% -> +25% Rending Razor Rend Damage
-• Distant Lacerating Charm : +20% -> +15% Rending Razor Embed
-Damage, +20% -> +15% Rending Razor Rend Damage• Swift Lacerating
-Charm : -15% -> -10% Rending Razor Cooldown, +15% -> +10%
-Rending Razor Travel Speed, +15% -> +10% Rending Razor Embed
-Damage, +15% -> +10% Rending Razor Rend Damage
-# Architect’s Ring Weapons⚔️
-• Memoria Ancestrale (Rework): Magic Protection 2, Aptitude 1,
-Life Drain 1, 19 Attack Damage, 1 Attack Speed, +80% Spell Power
-# Architect’s Ring Armor 🦺
-&o• Developer Note : As Inferno has been much reduced in power,
-and Triage’s usefulness overstated, we’ve reduced the cost these
-enchants take on certain items, as well as moving some of their
-niches away into more usable items.&r
-• Shattered Crown (Rework): Inferno 3, Regicide 1, Stamina 1,
-Trivium 1, Fire Fragility 2, 10.5 Armor
-• Miner’s Lament (Rework): Regeneration 1, Stamina 4, 11 Armor,
--10% Attack Speed
-• Core-Injected Safety Suit (Rework): Inferno 3, Curse of Anemia
-1, 10 Agility, +20% Projectile Damage, +7% Speed
-• Primordial Blaze: 4 -> 2 Inferno, 0 -> 2 Adrenaline, 8 -> 9
-Agility
-• Silence of Space: 8.5 -> 9 Armor
-• Soothing Starblood: 2 -> 3 Regeneration
-# Architect’s Ring Offhand Items 📜
-• Ignited Bloodstone (Rework): Melee Protection 3, Reflexes 1,
-Inferno 5, Sustenance 1, +6 Max Health, +15% Speed
-• Totem of Life (Rework): Projectile Protection 2, Magic
-Protection 3, Sustenance 4, Triage 5, +8 Max Health, +20% Speed
-• Wolf’s Rosary: 1 -> 2 Technique
-• EX C’Zanil’s Charm: +10% -> +15% Speed
-• Ornamental Dream Catcher (Gallery): 1 -> 2 Aptitude#
-&bClass Changes&r ⚙️
-&o• Developer Note: Crusade was always a must-pick skill for
-Cleric as a whole, and was sapping 2 skill points from being
-used on other skills. As such we're moving it into the base
-class and replacing it with a utility skill that provides CDR to
-you and your allies. As a mini-roadmap for the next balance
-update(s), we will continue to look at Cleric with focus on
-especially Divine Justice, improving its damage formula and
-combating its charm dependency, and Luminous Infusion,
-addressing its inconsistency and charm dependency as well.&r
-•
-&bCleric:&r
-  • Rejuvenation has been changed to Hierophant's specialization
-passive
-  • Crusade has become the new Cleric passive. Description:
-`Human-like enemies are treated as Undead by your abilities.
-After being damaged or debuffed by an ability, any mob will
-count as Undead by your abilities for the next 10 seconds.`
-  • The ability slot Crusade previously occupied has been
-replaced by a new ability,
-&bTouch of Radiance&r:
-    • L1: `<Trigger> while looking at another player or an
-Undead mob within 16 blocks to gain 35% faster cooldown recharge
-rate for all other abilities and 50% knockback resistance for 7
-seconds. If looking at a player, the player gains the same
-buffs. If looking at an Undead, it is stunned for 1.5 seconds.
-Players are prioritized when searching for a target. Cooldown:
-24s.`
-    • L2: `Cooldown recharge rate is increased to 50%.
-Additionally, all mobs within a 3.5 block radius of the target
-are inflicted with 20% weakness for 7 seconds.`
-    • Enhancement: `After killing the targeted mob, your next
-attack on an Undead deals 9 magic damage to it and stuns it for
-0.5s. That mob becomes the new target, and killing it grants the
-same effect, repeating until Touch of Radiance runs out. If the
-original target was a player, the effect is primed for both of
-you immediately.`• Cleansing Rain has been partially reworked:
-    • L1: `<Trigger> to summon a Cleansing Rain that follows
-you, removing all negative effects shorter than 30 seconds from
-players within 4 blocks, including yourself, and lasts for 6
-seconds. Players heal 10% of their max health the first time a
-given debuff is cleansed, up to 3 unique debuffs. Cooldown:
-25s.`
-    • L2: `Additionally grants 20% Resistance to affected
-players. Duration is increased to 10 seconds.`
-    • Enhancement: `The radius increases to 6 blocks, and each
-player touched by the rain keeps its effect for the cast
-duration.`
-•
-&bMage:&r
-&o• Developer Note: Spellshock's enhancement paired with the
-high octane spell casting of Arcanist builds ended up being
-stronger than we anticipated, so we're toning it back to more
-reasonable levels.&r
-  • Spellshock Enhancement:
-   ` • 15% -> 10% vulnerability from Ice Spellshock triggers
- • 3 -> 1.5 DoT from Arcane Spellshock triggers
- • 5 -> 4 damage from Lightning Spellshock triggers`
-•
-&bScout:&r
-&o• Developer Note: A lot of Rending Razor's strength in R3 was
-helped out by charms, leaving it inflexible and very polarizing
-when building, and didn't fare so well in R2, so it's receiving
-a base buff and getting its charms nerfed/reworked.&r
-• Rending Razor:
-` • Cooldown changed from 8s/6s -> 6s/4s.
-  • Embed damage changed from 12/16 -> 16/20
-  • Rend damage changed from 16/22 -> 20/26`
-  • Sharpshooter:
-`• L1: Now gives up to 4 sharpshooter stacks. 20% -> 15%
-Projectile Damage bonus
- • L2: 15% -> 20% Projectile Damage bonus`
-# Mob Changes:
-• Draining Creepers now apply weakness and slow with their
-explosion
-• Removed Twisted Prosecutor's response to Alchemical Artillery
-• Significantly reduced the amount of time Twisted Prosecutor
-pulls players when casting Judgment Chain, and increased the
-pull strength slightly# Feedback Fixes:
-• Players with access to Player Punches can now also punch their
-friends into the sky
-• You can now toggle auto-swapping multitool items by using your
-swap key on them in your inventory
-• Made player summons ignore the Stellar Manifestation (Stardust
-Crusader summon)
-• Pulling entities from a location below them will no longer
-knock them slightly upwards if they are already in the air
-• Small delay added to Arclight and Royal Blue
-• Scrambling Mechanism in Arclight and Royal Blue has a
-different button
-• Cutscene in Arclight and Royal Blue can be rewatched after
-completion
-• Puzzle Area in Arclight and Royal Blue can be reaccessed after
-completion
-• Cinevra has post-quest dialogue
-• Sierhaven Prison is once again accessible without having to
-complete Arclight and Royal Blue
-• Went back in time to change the time in the Ring back to
-normal
-• Added reverse recipes to turn various stone and quartz block
-variants back to their base forms
-• Added ways to re-obtain Ascending Winds and Judgement of the
-Outer World
-• Improved quality of a map in Smallpoint
-# Bug Fixes:
-• Several books across the game with special formatting (colored
-text, underscores, etc.) no longer display botched json
-• Fixed Challenge Willows being only 48 delve points
-• Removed some stacking grass blocks in Light Blue
-• Removed placeholder wool from Vibrant Hollow
-• Fixed a spelling error in Arclight and Royal Blue
-• ~~One~~ Two missing periods added to Casting for Help
-• An impostor has been removed from the Arclight and Royal Blue
-cafe cutscene
-• Smart quotes have been removed from a book in Arclight and
-Royal Blue
-• Colossus of Conquest and Rider of Conquest's name now properly
-bolded
-• Fixed Whirling Blade spinning a little bit more than a full
-cycle around the player
-• Made the Colossus of Conquest's rider delve immune
-• Fixed a stuck spot in the Realm of Faces
+&bHotfix:&r
+• Fixed the Willows memory leak
+&bHotfix:&r
+• Fixed Silver Knight Tuulen not allowing Starless Night or the
+Irrus' Brace interaction to start.
+&bHotfixes:&r
+• A refractor in the second stage of the Guilding Blocks puzzle
+should no longer randomly vanish
+• You can no longer leech Kaul and Hekawt fights by digging
+below the arena
+&bHotfix:&r The above fix has been reverted for Kaul pending
+some further consideration for Primordial Bolt
+&b(11.24.0)&r
+For the update on July 9, 2025
+### Class Changes:
+• Cleric has been rebranded from the Destroyer of Undeads (but
+also humanoids) to the Annihilator of Heretics. All mentions of
+Undead in Cleric's abilities have been replaced with Heretic
+• Adjusted Cleric's and Paladin's class descriptions
+### Mob Changes:
+• A backend refactor to bosses and mobs with spells has been
+done, please report any undocumented changes to mobs!
+• R3 Spawner Mimics are now Elites
+### Twisted Changes:
+• Killing Twisted Omenspeaker now removes its earthen tremor
+spell
+• Twisted Omenspeaker no longer casts Earthen Tremor post-mortem
+• Killing Twisted Bishop now removes all remaining Seraphims
+• Twisted Bishop no longer summons three Seraphims post-mortem
+• Twisted Panacea now turns into a different form after 5s,
+targeting mobs while healing and shielding them, and can also be
+killed (100 Health). Killing the Panacea grants players within
+the radius 20% absorption health for 10s.
+• Twisted Panacea cooldown increased from 18s to 25s
+• Apex of Alchemy now only grants the Twisted Artificer 25%
+resistance (from 40%)
+• Reduced movement speed of Twisted Panacea from 0.3 to 0.2
+• Galactic Collider is now a custom model Size 8 magma cube and
+does not bob up and down anymore
+• Galactic Collider health reduced from 275 to 225
+• Twisted Split Arrow speed reduced from 2.3 to 1.5
+• Hunter's Trap cooldown increased from 100 to 200
+• Hunter's Trap now has a 2s arming time
+• Prismatic Distortion now properly heals the Twisted Moonweaver
+• Twisted Prosecutor's Anti Heal now lasts for a total of 4s,
+and weakens by 25% each second.### Feedback Fixes:
+• Buttons, pressure plates and levers will no longer break by
+explosions
+• Spectral Scythe has been updated to match Frost Giant's
+Crescent
+• Colossal Crusher has been updated to match Devouring Wind
+• Nightshade Pickaxe has been updated to match Molta's Labor
+• Architect's Dagger has been updated to match Dissonant Dagger
+• Shocking Gift has been updated to match Skyfeller
+• Greatly shortened the description of Thurible Procession
+### Bug Fixes:
+• Fixed:
+  • Mist's Wake having 0.5 more agility
+  • The Eternal Mist having 1 less stamina
+  • Colossal Crusher having 1 less damage
+  • Spectral Scythe having 1 less damage
+  • Miner's Lament MW0 not being correctly updated
+  • Water's Embrace having completely incorrect stats
+• Winter's Bounty now correctly updates into leggings
+• Fixed the Sharpshooter Max Stacks charm stat not working on
+Sharpshooter L2
+• Fixed the Eagle Eye Enhancement Damage charm stat being
+multiplicative instead of additive
+• Thurible Procession now correctly refers to Rejuvenation
+• Fixed multiple grammatical errors across various Cleric
+ability descriptions
+• Primeval Creations: ||Zero One Three Minus Two Wools clock
+puzzle|| now resets every time you enter the area, unless
+another player is already there
+• Primeval Creations: ||Zero One Three Minus Two Wools clock
+puzzle|| no longer spam-resets when standing in a specific spot
+• Primeval Creations: ||Zero One Three Minus Two Wools clock
+puzzle|| desynchronisation has been fixed
+• Archmage's Femur is now a Unique
+• Swift Spiritual Charm is no longer mispelled
+• Silver Satchel's lore now accurately reflects its texture
+• Loadout Lockbox now has the Willows location tag
+• Boots of Monshee now has the Celsian Isles Overworld tag
+• Told a poppy to stop levitating outside the Infested House•
+Executed a spare Sketched Artist in the basement of the
+||Painter's Abode||
+• Arclight and Royal Blue's difficulty is now consistent across
+dialogue and quest guide
+• The Tomb of Cyrar (Orange Quest's archery section) now has
+barrier blocks above the chests(I forgot to put this in the
+changelogs)
+• We're updating the border of the guild plots so it appears as
+transparent on map items, rather than the weird stone color it
+was before. Guildplots will be accessible again within an hour
+of update.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-• Mail remains disabled.
-&bHotfix:&r Touch of Radiance can now be equippedMissed from
-changelog ^
-• Cleansing Rain now properly cleanses custom debuffs
+• Mail remains disabled.• Guildplots is back up
