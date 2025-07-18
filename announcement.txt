@@ -1,57 +1,14 @@
-&bDiamenean Hunts&r
-Mysterious beasts have been spotted across the Architect's Ring!
-Talk to a colorful cast of veteran hunters at the grand opening
-of Retneau's Lodge to learn about how to hunt each quarry and
-tackle their unique mechanics. Can you successfully hunt them
-all down without spoiling the precious loot?
-Starting after the weekly update, you can get initiated at the
-Lodge in the Wolfswood and gather information on each of the 6
-new bosses. The first boss will spawn somewhere in the
-Architect's Ring on <t:1742673600:F> (note unusual release time)
-and subsequent bosses will spawn periodically after that, with
-an average time in between bosses of about 2 hours.
-Please note that by the nature of this content, there is
-significant downtime between hunts (similar to Treasures of
-Viridia). On top of that, due to the mechanics of each boss, it
-is possible to have a very low success rate at first (especially
-for players who do not read the relevant dialogue from the
-veteran hunters). For these reasons, please do
-&bnot&r expect this new content to be the primary thing to do,
-even on release day.
-I hope to see everyone out on the hunting grounds!
-@everyoneAs mentioned in https://discord.com/channels/3130666554
-94438922/313404193647886337/1354652991080239127, guild plots and
-islands will be moving from the `plots` shard to a new
-`guildplots` shard. The new plot will be fully survival mode,
-about the width of a dungeon and the full height of the world,
-and feature barrier blocks instead of bedrock to allow for
-transparent map art and a skyblock aesthetic for anyone who
-wants them. There will be no upkeep required to access any of
-it, and a guild manager/founder can talk to Lectros for a refund
-on any remaining days of island access. There will be plenty of
-new features, including 9 new guild permissions, purchasable
-Travel Anchors (intra-plot teleporters) and Shared Vaults (Bags
-of Hoarding in block form, each with a separate inventory).
-As for the `plots` shard, a copy of your guild plot and island
-will remain there in adventure mode for anyone to visit, with
-all containers locked. Visitors can read signs and lecterns,
-view armor stands and item frames, and interact with villagers
-(including teleporting to the guild islands). All other entities
-will be removed. Guilds have until weekly update begins at
-<t:1743634800:F> to make their guild plot presentable to
-visitors.
-We're looking forward to Moving Day, and hope you enjoy the new
-guild features!This month's balance update has been delayed to
-next week as we were unable to prepare changes in time for our
-testing team to have adequate time to give feedback and find
-issues. Going forward, we will be working on a plan internally
-to try to avoid delaying future balance updates and make
-adequate room for testing. We once again thank you for your
-patience and understanding.Happy to announce that @[MAID]
-catgirljade_ and @[MAID] #1 SKR FAN have joined Team Monumenta
-as content developers! They've both been with us for a while,
-helping out behind the scenes • but they're largest contribution
-is spearheading the development and release of this week's new
+This month's balance update has been delayed to next week as we
+were unable to prepare changes in time for our testing team to
+have adequate time to give feedback and find issues. Going
+forward, we will be working on a plan internally to try to avoid
+delaying future balance updates and make adequate room for
+testing. We once again thank you for your patience and
+understanding.Happy to announce that @[MAID] catgirljade_ and
+@[MAID] #1 SKR FAN have joined Team Monumenta as content
+developers! They've both been with us for a while, helping out
+behind the scenes • but they're largest contribution is
+spearheading the development and release of this week's new
 boss!
 Please make sure to give them the congratulatory 🏓Discord has
 come out with a new feature called Server Tags • a little icon
@@ -78,3 +35,32 @@ Monumenta as content developers! They have both worked
 extensively on some upcoming content, which you will hopefully
 see soon™!
 Be sure to give them a congratulatory 🏓
+&bThe Architect's Ring: Indigo Wool Dungeon&r
+After nearly two years of planning and development, the third
+mainline, traditional-style dungeon for the Architect's Ring has
+finally arrived! As the culmination of your adventure throughout
+Star Point, the time has come to break the seal to Phyrrys and
+attempt to claim the Indigo Wool for yourself!
+It won't be an easy endeavor though, as foes and former-allies
+alike will stand in your way, each with their own agenda • so
+prepare yourself for the challenge that awaits you within...
+Grab your friends and mark your calendars, because the dungeon
+will be live on <t:1752944400:F> !
+To accompany the dungeon's release, a new quest in Chapter 3,
+&bHolding Space&r, will be available immediately following
+weekly update! Requiring &oStarless Night&r, &oAll That
+Remains&r, and completion of any level of &oCelestial Zenith&r •
+the quest will be progressable up until the point that you
+discover the lobby...
+The team has poured an incredible amount of time and passion
+into this dungeon and everything surrounding it, and we can't
+wait for you all to enjoy! @everyone
+https://youtu.be/RL6Iuc2InlA
+&bHappy Depths-versary!&r
+It's that time of the year again• to celebrate the fourth
+anniversary of Darkest Depths release (July 17, 2021), six
+player mode is making a return! Start a run with up to five
+other friends and compete for the special leaderboard spots for
+an extended run of two weeks. The event starts after the weekly
+update tomorrow, July 16, and runs until the weekly update of
+July 30. Good luck and have fun!

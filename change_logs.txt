@@ -1,49 +1,4 @@
-&bHotfix:&r
-• Fixed the Willows memory leak
-&bHotfix:&r
-• Fixed Silver Knight Tuulen not allowing Starless Night or the
-Irrus' Brace interaction to start.
-&bHotfixes:&r
-• A refractor in the second stage of the Guilding Blocks puzzle
-should no longer randomly vanish
-• You can no longer leech Kaul and Hekawt fights by digging
-below the arena
-&bHotfix:&r The above fix has been reverted for Kaul pending
-some further consideration for Primordial Bolt
-&b(11.24.0)&r
-For the update on July 9, 2025
-### Class Changes:
-• Cleric has been rebranded from the Destroyer of Undeads (but
-also humanoids) to the Annihilator of Heretics. All mentions of
-Undead in Cleric's abilities have been replaced with Heretic
-• Adjusted Cleric's and Paladin's class descriptions
-### Mob Changes:
-• A backend refactor to bosses and mobs with spells has been
-done, please report any undocumented changes to mobs!
-• R3 Spawner Mimics are now Elites
-### Twisted Changes:
-• Killing Twisted Omenspeaker now removes its earthen tremor
-spell
-• Twisted Omenspeaker no longer casts Earthen Tremor post-mortem
-• Killing Twisted Bishop now removes all remaining Seraphims
-• Twisted Bishop no longer summons three Seraphims post-mortem
-• Twisted Panacea now turns into a different form after 5s,
-targeting mobs while healing and shielding them, and can also be
-killed (100 Health). Killing the Panacea grants players within
-the radius 20% absorption health for 10s.
-• Twisted Panacea cooldown increased from 18s to 25s
-• Apex of Alchemy now only grants the Twisted Artificer 25%
-resistance (from 40%)
-• Reduced movement speed of Twisted Panacea from 0.3 to 0.2
-• Galactic Collider is now a custom model Size 8 magma cube and
-does not bob up and down anymore
-• Galactic Collider health reduced from 275 to 225
-• Twisted Split Arrow speed reduced from 2.3 to 1.5
-• Hunter's Trap cooldown increased from 100 to 200
-• Hunter's Trap now has a 2s arming time
-• Prismatic Distortion now properly heals the Twisted Moonweaver
-• Twisted Prosecutor's Anti Heal now lasts for a total of 4s,
-and weakens by 25% each second.### Feedback Fixes:
+### Feedback Fixes:
 • Buttons, pressure plates and levers will no longer break by
 explosions
 • Spectral Scythe has been updated to match Frost Giant's
@@ -98,3 +53,91 @@ of update.
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 • Mail remains disabled.• Guildplots is back up
+&bHotfix:&r Something has shifted in Galengarde...
+&b(11.25.0)&r
+For the update on July 16, 2025
+### Phyrrys, City of Fallen Stars
+At last, the long awaited Star Point Wool Dungeon is finally
+released! Uncover the secrets of a fractured city, find your way
+to the very bottom of the sealed Locus Tower and claim the
+Indigo Wool!
+Phyrrys, City of Fallen Stars will unlock at <t:1752944400:F>.
+Enjoy!
+### Major New Features:
+• A brand new mainline quest has been added •
+&bHolding Space&r! Work with your allies to at last seek a way
+into Phyrrys, the City of Fallen Stars to claim the Indigo Wool
+before Aurora and her team can do so and enact their grand plan!
+This quest can be started at Silver Knight Tuulen outside the
+Sirius arena, and requires Starriest Night, All That Remains,
+and a Celestial Zenith completion. &oNote, this quest cannot be
+finished until the release of the Indigo Dungeon.&r
+### Minor New Features:
+• Corrupted Caves POI has been visually overhauled. Furthermore
+the POI has new enemies and some gameplay adjustments.
+• Updated all stair crafting recipes to give as many stairs as
+you provide blocks
+• Added crafting recipes for converting slabs and stairs back
+into blocks
+• Added crafting recipes to turn planks back into logs
+• In Depths/Zenith GUIs, active ability items will now list the
+slot they occupy (since this is not obvious for Wildcard
+abilities)
+• In the Depths/Zenith ability summary GUI, the available
+abilities in your trees are now listed on the items indicating
+that you have no ability in a given slot. In Ascension 14+, if
+an ability cannot be obtained due to having too many active
+abilities in its tree already, it will be crossed out in this
+display
+### Item Changes:
+• The Lightning Totem Pulse Delay charm stat has been separated
+into one for the base skill and one for the enhancement, and
+Unstable Reactor has therefore received -30% Lightning Totem
+Lightning Storm Pulse Delay. The charm is unchanged
+functionally.### Mob Changes:
+• Twisted Moonweaver now has a second phase, with two new
+spells.
+• Reworked Prismatic Distortion healing to the following :
+100%/40%/20%/10%
+• Fixed Galactic Collider not being hittable from some angles
+• Gravesoul Haunter no longer applies 25% Vulnerability and 5s
+of Silence, and now applies the following:
+  • Decaying Anti Heal (100%/75%/50%/25%), 4s of Blindness, and
+2s of 40% Slowness
+• Twisted Intruder now has 100% anti heal permanently
+### Feedback Fixes:
+• Damage from Sanctified Armor, Panacea, and Ice Elemental
+Spirits will no longer trigger spoils on some Hunts bosses
+• Increased the delay and damage of the earthquake spawners in
+The Nadir
+• Significantly reduced the delay between Frost Golem's
+projectile attack telegraph and attack actually happening
+• Mastermind SKR now directly tells you there are colorblind
+modes instead of vaguely hinting towards it
+• Galengarde's Customer Office chairs are now sittable.
+### Bug Fixes:
+• Fixed some building errors in a SKR combat room
+• Fixed every Echo Shard functioning as a Fire Suppressant in
+the Architect's Ring
+• Players not being properly assigned to an SKT Story instance
+should be resolved
+• Refilled the malice in the Lord's blood (Cyan)
+• Fixed some dead bodies in Arx Tumulus getting grabby with
+player shields
+• Removed an extra barrier in the ||Invisible Inquiry|| SKR ice
+slider making it impossible
+• Removed an unnecessary fence gate in ||Dumpster Fire|| SKR ice
+slider
+• Removed extra trades from Floral Merchants
+• Fixed an Adventure mode stuck spot on a hill outside of Farr
+• Fixed an issue where Maywitch would appear in strange spots
+only right after finishing Behind the Starlit Shroud
+• Amalgamating Dreamscape now makes you face away from the
+wall/entrance of the dreamscape that you are sent to
+• Fixed various issues related to mail
+• Fixed Cerebral Overcharge remaining in Intruder after death
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• Mail remains disabled.• Mail is reenabled
