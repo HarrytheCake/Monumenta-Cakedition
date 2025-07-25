@@ -1,19 +1,6 @@
-This month's balance update has been delayed to next week as we
-were unable to prepare changes in time for our testing team to
-have adequate time to give feedback and find issues. Going
-forward, we will be working on a plan internally to try to avoid
-delaying future balance updates and make adequate room for
-testing. We once again thank you for your patience and
-understanding.Happy to announce that @[MAID] catgirljade_ and
-@[MAID] #1 SKR FAN have joined Team Monumenta as content
-developers! They've both been with us for a while, helping out
-behind the scenes • but they're largest contribution is
-spearheading the development and release of this week's new
-boss!
-Please make sure to give them the congratulatory 🏓Discord has
-come out with a new feature called Server Tags • a little icon
-like a guild acronym that lives next to your name and appears in
-your profile everywhere.
+Discord has come out with a new feature called Server Tags • a
+little icon like a guild acronym that lives next to your name
+and appears in your profile everywhere.
 The Monumenta Discord now has one!
 If you care to rep Monumenta, you can select it near the bottom
 of your Edit Profile settings!Please welcome @star_bright as our
@@ -63,4 +50,26 @@ player mode is making a return! Start a run with up to five
 other friends and compete for the special leaderboard spots for
 an extended run of two weeks. The event starts after the weekly
 update tomorrow, July 16, and runs until the weekly update of
-July 30. Good luck and have fun!
+July 30. Good luck and have fun!World Bosses have been disabled
+for Indigo's release in 10 minutes.Right now seems like a
+wonderful time, for absolutely no reason whatsoever, to re-
+establish with our existing community (and well-inform our
+new/recent players) of Monumenta's financial gain stance:
+• Monumenta is a &ovolunteer&r-operated project. Our developers,
+moderators, and contributors do not get paid or otherwise make
+any profit from their work on Monumenta
+• Our funds that we receive from Patreon strictly go towards
+keeping the lights on, upgrading our infrastructure, and keeping
+our plugins online
+• We have long repeated this, but it is our vow to the community
+(and to ourselves, morally) that Monumenta will &nnever&r
+introduce pay-to-win (p2w) aspects, in any form, in an effort to
+extort more money from our community
+If you enjoy playing Monumenta, especially with the recent
+release of the Indigo dungeon, and would like to see more
+content like it, as well as desire potential infrasture boons
+that require fiscal means (eg, true-local EU and EA servers),
+then we ask only that you consider subscribing to our Patreon at
+https://www.patreon.com/MonumentaMMO . Our community is the
+reason for our continuity, and we hope to see this game forward
+for as long as we can!

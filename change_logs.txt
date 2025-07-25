@@ -1,143 +1,175 @@
-### Feedback Fixes:
-• Buttons, pressure plates and levers will no longer break by
-explosions
-• Spectral Scythe has been updated to match Frost Giant's
-Crescent
-• Colossal Crusher has been updated to match Devouring Wind
-• Nightshade Pickaxe has been updated to match Molta's Labor
-• Architect's Dagger has been updated to match Dissonant Dagger
-• Shocking Gift has been updated to match Skyfeller
-• Greatly shortened the description of Thurible Procession
-### Bug Fixes:
-• Fixed:
-  • Mist's Wake having 0.5 more agility
-  • The Eternal Mist having 1 less stamina
-  • Colossal Crusher having 1 less damage
-  • Spectral Scythe having 1 less damage
-  • Miner's Lament MW0 not being correctly updated
-  • Water's Embrace having completely incorrect stats
-• Winter's Bounty now correctly updates into leggings
-• Fixed the Sharpshooter Max Stacks charm stat not working on
-Sharpshooter L2
-• Fixed the Eagle Eye Enhancement Damage charm stat being
-multiplicative instead of additive
-• Thurible Procession now correctly refers to Rejuvenation
-• Fixed multiple grammatical errors across various Cleric
-ability descriptions
-• Primeval Creations: ||Zero One Three Minus Two Wools clock
-puzzle|| now resets every time you enter the area, unless
-another player is already there
-• Primeval Creations: ||Zero One Three Minus Two Wools clock
-puzzle|| no longer spam-resets when standing in a specific spot
-• Primeval Creations: ||Zero One Three Minus Two Wools clock
-puzzle|| desynchronisation has been fixed
-• Archmage's Femur is now a Unique
-• Swift Spiritual Charm is no longer mispelled
-• Silver Satchel's lore now accurately reflects its texture
-• Loadout Lockbox now has the Willows location tag
-• Boots of Monshee now has the Celsian Isles Overworld tag
-• Told a poppy to stop levitating outside the Infested House•
-Executed a spare Sketched Artist in the basement of the
-||Painter's Abode||
-• Arclight and Royal Blue's difficulty is now consistent across
-dialogue and quest guide
-• The Tomb of Cyrar (Orange Quest's archery section) now has
-barrier blocks above the chests(I forgot to put this in the
-changelogs)
-• We're updating the border of the guild plots so it appears as
-transparent on map items, rather than the weird stone color it
-was before. Guildplots will be accessible again within an hour
-of update.
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• Mail remains disabled.• Guildplots is back up
-&bHotfix:&r Something has shifted in Galengarde...
-&b(11.25.0)&r
-For the update on July 16, 2025
-### Phyrrys, City of Fallen Stars
-At last, the long awaited Star Point Wool Dungeon is finally
-released! Uncover the secrets of a fractured city, find your way
-to the very bottom of the sealed Locus Tower and claim the
-Indigo Wool!
-Phyrrys, City of Fallen Stars will unlock at <t:1752944400:F>.
-Enjoy!
-### Major New Features:
-• A brand new mainline quest has been added •
-&bHolding Space&r! Work with your allies to at last seek a way
-into Phyrrys, the City of Fallen Stars to claim the Indigo Wool
-before Aurora and her team can do so and enact their grand plan!
-This quest can be started at Silver Knight Tuulen outside the
-Sirius arena, and requires Starriest Night, All That Remains,
-and a Celestial Zenith completion. &oNote, this quest cannot be
-finished until the release of the Indigo Dungeon.&r
+### Quest Compass Overhaul:
+• The Quest Compass has been completely revamped! Right clicking
+with a compass in hand will now open up a GUI with quests,
+waypoints and deaths neatly sorted. Quest entries display their
+name, messages, locations and distances thereto, as well as
+signaling if an entry is on a different world. Additionally, the
+rework comes equipped with a set of new QoL features:
+  • Direct access to the already existing Quest Guides GUI at
+the top
+  • Shift-right clicking with the compass in hand will now cycle
+through steps of the selected quest, instead of through all
+quests
+  • A button to stop tracking quests completely until one is
+selected again
+  • Information on using custom waypoints
+• Bug fixes and miscellaneous:
+  • Viewing respawn timers of nearby POIs has been changed from
+shift-right click to shift-left click
+  • Setting and deleting a custom waypoint will now update your
+compass immediately
+  • The Quest Compass item, Intro to Quest Compasses book and
+compass dialogue by Nurse Deidre have been updated to reflect
+the new functions
+  • The /waypoint command now has an optional world name regex
+field, mostly intended for dev-side usage. Defaults to your
+current world when unset. The <coords> inline command uses the
+world the sender was on at the time the message was sent.
+• Specifying worlds in quests is a brand new feature, so please
+create a bug report if you encounter a quest entry on a
+different world that is not shown as being correct.
 ### Minor New Features:
-• Corrupted Caves POI has been visually overhauled. Furthermore
-the POI has new enemies and some gameplay adjustments.
-• Updated all stair crafting recipes to give as many stairs as
-you provide blocks
-• Added crafting recipes for converting slabs and stairs back
-into blocks
-• Added crafting recipes to turn planks back into logs
-• In Depths/Zenith GUIs, active ability items will now list the
-slot they occupy (since this is not obvious for Wildcard
-abilities)
-• In the Depths/Zenith ability summary GUI, the available
-abilities in your trees are now listed on the items indicating
-that you have no ability in a given slot. In Ascension 14+, if
-an ability cannot be obtained due to having too many active
-abilities in its tree already, it will be crossed out in this
-display
+• Indigo • ||Race:
+&bGrappler Effect&r. Use the fully upgraded Grappling Hook from
+the start to pull yourself to the World Record!||
+• The Plagueroot Temple and Black Willows Dungeon lobbies have
+been rebuilt! The lobbies have both been themed around their
+respective Dungeons to improve immersion and give the player a
+taste of what awaits them inside.### Indigo Mob Changes:
+• Reduced the amount of protected spawners in Indigo, and made
+other minor adjustments to spawners throughout the dungeon
+• Ionic Phaser's laser beam is now blockable, and will disable
+shields for 25s
+• Ionic Phaser's laser beam now deals Magic Damage (from
+Projectile Damage)
+• Silverblessed Priestess can now target up to 3 mobs, heals
+mobs for 10% health per burst (previously 60 flat per burst),
+and shoots three healing bursts.
+• Silverblessed Priestess now casts its ability 10 ticks after
+spawning (from 40 ticks)
+• Shattered Citadel Commander first slash cast delay reduced to
+20 ticks (from 60 ticks)
+• Increased the speed, frequency, and radius of Starstomper's
+stomp attack
+• Empyreal Predator now casts its ability on a 180 tick cooldown
+(from 240 ticks)
+### Twisted Changes:
+• Twisted Revenant health reduced to 1350 (from 1500)
+• Twisted Moonweaver second phase slash telegraph duration
+reduced to 20 ticks (from 40)
+• Astral Pillar health increased to 100 (from 50)
+• Fix Twisted Panacea's Rebound not respecting healing effects
+on mobs
+• Added a secondary trade for Tormented Core costing 2 HAR and
+32 AR
+• Twisted Intruder Key Cost reduced to 2 Tormented Fragments and
+48 AR (from 4 Tormented Fragments and 1 HAR)
+• Twisted Intruder Artifact Chests no longer reward Tiered
+Items, and instead reward 56 AR
+• Twisted Intruder Uncommon Chests no longer reward Tiered
+Items, and instead reward 20 AR
+### Mob Changes:
+• All Brown mobs with custom sounds have had their sounds made
+quieter/reworked to be less abrasive
+• Minus Charged Power Engineer now has 50% knockback resistance
+(from 0%)
+• Brown Engineers' bombs are now quieter, and have clearer
+telegraph particles for their landing position
+• Nuclear Creepers now have additional explosion cosmetics
+• ||Echo from the Great Beyond|| health reduced to 600 (from
+1200)
+• ||Remnant of Despair|| health reduced to 750 (from 1500)•
+Updated the vanities of Decayed Lich, Piercing Vanguard, Arcane
+Spirit, Bronze Guardian, Forgotten Guardian, Mutated Aberration,
+Barkless Ent, Spirit Root, Masked Man, Frost Moon Knight, Frost
+Moon Archer, Frost Moon Brute, Frost Walker, Frost Moon
+Barbarian, Frost Moon Retiarus, Frost Moon Skewer, Gazing
+Spellcaster
+• Removed vanilla armor from Tormented Homunculus
+• Kaul's Volcanic Demise hitbox now reaches underground
 ### Item Changes:
-• The Lightning Totem Pulse Delay charm stat has been separated
-into one for the base skill and one for the enhancement, and
-Unstable Reactor has therefore received -30% Lightning Totem
-Lightning Storm Pulse Delay. The charm is unchanged
-functionally.### Mob Changes:
-• Twisted Moonweaver now has a second phase, with two new
-spells.
-• Reworked Prismatic Distortion healing to the following :
-100%/40%/20%/10%
-• Fixed Galactic Collider not being hittable from some angles
-• Gravesoul Haunter no longer applies 25% Vulnerability and 5s
-of Silence, and now applies the following:
-  • Decaying Anti Heal (100%/75%/50%/25%), 4s of Blindness, and
-2s of 40% Slowness
-• Twisted Intruder now has 100% anti heal permanently
+• ||Judgement of the Voidstained (M4) : 2 -> 3 Arcane Thrust, 17
+-> 17.5 Attack Damage||
+• Inversion Aegis (M4) : 9 -> 10 Armor, 3 -> 4 Blast Protection
+• The Outworld’s Cruelty (M4) : 2 -> 3 Fractal
+• Serebrium Ring : 2 -> 4 Knockback Resistance
 ### Feedback Fixes:
-• Damage from Sanctified Armor, Panacea, and Ice Elemental
-Spirits will no longer trigger spoils on some Hunts bosses
-• Increased the delay and damage of the earthquake spawners in
-The Nadir
-• Significantly reduced the delay between Frost Golem's
-projectile attack telegraph and attack actually happening
-• Mastermind SKR now directly tells you there are colorblind
-modes instead of vaguely hinting towards it
-• Galengarde's Customer Office chairs are now sittable.
+• Updated the vanity of Lunar Great Helm, The Knight's Pledge,
+and Cazol's Shattered Mask
+• Improved the lighting at top of the ||Locus Tower||
+• Replaced several existing SKR ice slider layouts and revamped
+existing ones with a more thematic block pallet
+• Improved Prologue's compass waypoints and messages to avoid
+confusion for new players
+• Indigo • ||Removed launch when failing gauntlet||
 ### Bug Fixes:
-• Fixed some building errors in a SKR combat room
-• Fixed every Echo Shard functioning as a Fire Suppressant in
-the Architect's Ring
-• Players not being properly assigned to an SKT Story instance
-should be resolved
-• Refilled the malice in the Lord's blood (Cyan)
-• Fixed some dead bodies in Arx Tumulus getting grabby with
-player shields
-• Removed an extra barrier in the ||Invisible Inquiry|| SKR ice
-slider making it impossible
-• Removed an unnecessary fence gate in ||Dumpster Fire|| SKR ice
-slider
-• Removed extra trades from Floral Merchants
-• Fixed an Adventure mode stuck spot on a hill outside of Farr
-• Fixed an issue where Maywitch would appear in strange spots
-only right after finishing Behind the Starlit Shroud
-• Amalgamating Dreamscape now makes you face away from the
-wall/entrance of the dreamscape that you are sent to
-• Fixed various issues related to mail
-• Fixed Cerebral Overcharge remaining in Intruder after death
+• Fixed the Indigo Epic trader having an incorrect version of
+the delve material
+• Fixed typo in ||Tuulen dialog post quest||
+• Fixed compass waypoint for the ||Enter Phyrrys, City of Fallen
+Stars.|| entry of Holding Space being a block off
+• Fixed exposed bedrock in Indigo
+• Removed a placeholder wool in Indigo
+• Fixed a few errors in Holding Space
+• Fixed Indigo reward titles being shown on lootroom reentries
+• Added ||Fractal|| to the handbook
+• Indigo • ||Fixed rusted special rares not being given when you
+have a full inventory||
+• Indigo • ||Fixed the telescope giving vanilla slowness||
+• Indigo • ||Fixed the Outworld teleporters particles breaking
+sometimes||
+• Indigo: ||Fixed multiple cases where players could permanently
+lose charges on their Silverhook, resulting in negative
+charges||• ||Re-logging should now properly replenish all
+Silverhook charges||
+• Indigo • ||Void now teleports you to your spawn point if youre
+in the same area, so falling in city will not tp you to a
+spawnpoint in outworld, while falling in outworld will||
+• Indigo • ||Gauntlet Anticheese: You can no longer smuggle or
+obtain stronger versions of the Grappling Hook. Lava deals true
+damage now.||
+• Fixed ||Ophia talking instead of Myropy in the R1 Outworld||
+in Holding Space
+• Holding Space: ||The lore books The Seven Sisters Vol. 1, 2
+and 3 are now reobtainable by talking to Tuulen post-quest||
+• Fixed Clocktower Deadeye applying vanilla slowness
+• Restored Slime to the Sierhaven Castle Parkour
+• Fixed several build errors around the Architect's Ring
+• Fixed a piece of exposed bedrock in P.O.R.T.AL. Strike
+• Fixed a very rare issue with the Sierhaven quest guide that
+would mark Arclight and Royal Blue's requirements as not met.
+• Irrus' Memory is once again obtainable after completing
+Holding Space
+• Fixed a few visual inconsistencies with current and old
+Seasonal Pass reward tracks, including Player Title format fixes
+and Plot Border icons not matching their actual icons in other
+GUIs.
+• Fixed Explosive being able to trigger more than once on the
+same mob by multiple arrows hitting it at the same time
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-• Mail remains disabled.• Mail is reenabled
+&bHotfixes:&r
+• Fixed an incorrect out of bounds check in the new season pass
+hub
+• Fixed Orin and the Indigo lobby sending all players to the
+first Indigo shard instead of all eight of them, which resulted
+in fresh instances being generated for old instance scores
+• Locked the trades on a villager in Indigo for a week until
+their trades can be corrected; if you want to access those
+trades as soon as possible, avoid opening your instance next
+week until <t:1753981200> (the first new day after next week's
+update).Indigo is open again
+&bHotfix&r
+• Leaving willows and returning to the overworld lobby will no
+longer suffocate the player in dirt
+• There's now a small pothole in the willows lobby
+&bHotfix:&r Indigo epics can now be purchased at a temporary
+trader in ||the legendary discovery observatory|| for the
+duration of the week until the regular trader is fixed
+&bHotfixes&r (at daily restart):
+• Fixed the Quest Guides button in the Quest Compass GUI not
+working
+• Fixed being unable to delete custom waypoints in the Quest
+Compass GUI if it was the only entry present
