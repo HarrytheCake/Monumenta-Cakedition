@@ -1,179 +1,234 @@
-&bHotfix:&r Fixed the 100 MP Seasonal Pass mission incorrectly
-accepting Orange completes instead of Lime completes
-&bHotfix:&r ||Indigo's Grappling Hook can no longer be
-graved.||Dungeon Races have been temporarily disabled.
-&b(11.27.0)&r
-For the update on July 30, 2025
-### Minor New Features:
-• Indigo • ||New Race:
-&bHook Hell&r. Use your Silverhook wisely to get through the
-Gauntlet in record time!||
-• Added Indigo Fragment -> Silver Dust trade
-• Depths parties are once again capped at 4 members.
-### Twisted Changes:
-• Twisted Gravecaller has two new health-phase based attacks
-• Gravesoul Abomination has received new attacks
-• Twisted Gravecaller Gravesoul Haunter projection requirement
-increased to 1000HP (from 600HP)
-• Twisted Shadestepper stealth cast requirement increased to
-1000HP (from 550HP)
-• Twisted Shadestepper stealth cooldown reduced to 15s (from
-20s)
-• Nuclear Amalgam health increased to 300 (from 200)
-• Removed Twisted Abomination applying -20% Vulnerability for 4s
-• Atomic Aberrations have been reworked into a new enemy
-### Intruder Changes:
-• Inescapable Hallucination no longer rams into players when
-within 5 blocks of them
-• Inescapable Hallucination base speed reduced to 0.22 (from
-0.25)
-• Inescapable Hallucination final speed reduced to 0.418 (from
-0.475)
-### Indigo Mob Changes:
-• Made Crawling Parasite immune to delve modifiers to fix an
-immortality bug
-• Made the Lesser Attractor (Spacetime Manipulator summon)
-expire after 8 seconds
-• Removed the forced pull during the spin phase of ||The Void
-Knight's first attack||. Increased the range of the pull before
-the spin
-• Changed the pull during ||The Void Knight's jump -> slam
-attack|| to respect movement abilities instead of overriding
-them
-### SKR Changes:
-• The Record Keeper now offers a new delve infusion to players
-who've cleared 5+ rooms
-  • This infusion behaves the similar to Sturdy from Hunts,
-however it can be applied to any item
-• A new NPC adjacent to the Record Keeper now sells SKR themed
-training dummies
-• Slightly adjusted spawners in a few short combat rooms.
-(Spawner Count remains the same overall)### Feedback Fixes:
-• Very slightly increased rare rates for base Indigo dungeon
-• Decreased delve material rates for delve Indigo dungeon
-• Indigo • ||Improved Gauntlet Anticheese||
-• Moved Indigo items in the Wallet to be placed right after
-Brown's items
-• Infusions that cannot be upgraded at a Delve Infusion station,
-like Sturdy, now show a barrier icon instead of a maxed-out cake
-icon at the station, unless it is truly fully upgraded
-• Specter of Mourning can no longer damage the player for the
-first 2.5s of its existence (it can still fly / shoot up from
-spawn, but can't instantly tap you)
-• Floramancer (Hexfall encounter 2) reduced movement from 0.3 ->
-0.26, increase KBR from 0 -> 0.5, increased meteor damage from
-60 -> 75, increase meteor poison level from 1 -> 2
-• Reduced damage of Snowman from 8 -> 5
-• Improved lighting in Briarstone combat SKR room.
-• Tweaked Voidmother's movement pattern
-• Tweaked Veiltorn Helminth's movement pattern
-• We're once again attempting to disable the automatic playback
-of vanilla music on the music volume slider. Monumenta's music
-is still on the record/note block volume slider while we test
-this, but turn up your music slider and let us know if you hear
-vanilla music, and what Minecraft version you're playing on. Any
-vanilla music you hear with a record player or jukebox doesn't
-count for this test.
-### Bug Fixes:
-• Fixed Challenge Indigo being completable below the 80% spawner
-mark
-• Fixed Challenge Indigo not rewarding a Challenge Point
-• Indigo • ||Potentially fixed dying in Void Knight not (or only
-partially) resetting the arena||
-• Fixed several cases where players would lose eligibility for
-Indigo's ||blockless|| advancement
-• Fixed the only stuck spot in the new Magenta lobby
-• Fixed the following charms:
-  • ||Origin of Void||
-  • ||Antimatter Siphon||
-  • ||Kaleidoscopic Chalice||
-• Updated info item in the ability trigger GUI regarding fall-
-through• Dungeon access messages about SKT will now say skt
-instead of silver
-• Fixed Mistport Patreon Shrine being under the ground
-• Fixed Other Players glowing settings not being in PEB
-• Standardized grammar and punctuation in completion messages
-for specialization trials
-• Fixed Elemental Arrows enhancement not granting Sage's Insight
-stacks
-• Fixed log errors from Gravity Expansion
-• Fixed a hole in Mecha Pass Lobby.
-• Fixed loot tables for Indigo ||Locus Tower and Outworld|| not
-giving any filler items in delves
-• Fixed Esoteric Enhancements not doing damage in plots and
-adventure mode areas
-• Fixed Esoteric Enhancements not being affected by knockback
-resistance
-• Fixed Esoteric Enhancements knocking back mobs which were both
-invulnerable and untargetable
-• Fixed Deepslate Maw having vanilla armor
-• Fixed Dungeon Guard in Hexfall not having full health
-• Fixed Statue of Regret being able to offer Curse of Anchoring
-the player has a swap ability already
-• Fixed Encore being able to trigger on the ender pearl in
-Escape Artist (but not actually let it be cast again)
-• Mechanical Spider Dummy will no longer jump at you
-• Fixed Heavenly Boon's Enhancement not decreasing the cooldowns
-of other players
-• Fixed typo in Sacred Duty
-• Fixed smart apostrophes in Morgan dialogue
-• Fixed Ensnared spawners counting mobs that it shouldn't such
-as summons
-• Adjusted Dvolas dialogue for clarity
-• Fixed damage number in Amplifying Hex enhancement description
-being the total possible percent increase instead of the percent
-increase per percent health
-• Fixed Specter of Mourning not dropping a delve potion
-• Spectral Mourn (the part that kills you) is now in the
-bestiary
-• Punch now works on Elemental Arrows
-• Urchin Barbs' Punch works
-• Updated Spellshock (u) damage type names
-• Fixed Arcanic particles not spawning
-• Fixed deprecated bosstags on certain los entries with
-boss_tpbehind
-• Fixed an error in Keening of the Empty One's lore text.• Fixed
-deprecated bosstags on Spawner Mimic, Unyielding Guardian,
-SpawnArcaneKnivesMiddle, SpawnArcaneKnives, Midnight Wraith,
-Shadestepper Clone, Shade Hound, Dying Beast, Star Skulker,
-Sewer Mimic, Sarin'tul, Hunters Trap, Silver Chariot
-Sharpshooter, (Old) Suncrashing Sovereign, Silent Masquerader,
-Barkless Ent, Lunacrest Captain, Agglomerated Event Horizon,
-Ferocious Warden, Serpensia Berserker, Soul Scatter, Evolving
-Dreamscreecher, Twisted Panacea, Depths Tendril, Greater Mimic,
-Extrinsic Spirit, Deep Field Gazer, Decayed Assasin,
-SpawnArcaneKnivesTwo, Livestock Mollusk, Ganzir, Blighted
-Lunacrest, Relentless Starseeker, Reliquary Overseer
-• Fixed los errors on Lunar Zealot, Demise Crawler, Viridian
-Arbalest, Eight Legged Plague Dash, Sunken Viridis Contruct,
-Animated Pyre, Ember of Purgation
-• Indigo • ||GH upgrade buttons can no longer be broken||
-• Fixed Mana Flowers having Silk Touch even though its not in
-the lore text
-• Fixed ||Ishmur|| not having any dialogue in the Indigo lobby
-• Fixed Brown Rare Trader not having any dialogue
-• Added Indigo to PEB dungeons
-• Fixed Void Corruption ignoring immunity frames only when you
-had the absorption effect.
-  • A change was made internally regarding Void Corruption, so
-if you feel like you are getting abnormal corruption gains in a
-single tick then please make a bug report
-• Fixed a few stuck spots in the Willows lobby
-• Cyan tess now also works when standing in a light block
-• Gave Mellini a calendar so he stops refunding Chimera's Grace
-• Prismatic Shield now only saves you if overkill damage is four
-times your absorption health instead of four times your
-absorption health plus one
-• Removed the now-disabled launch pads from the Sirius arena
-• Fixed the custom recipes for turning slabs back into blocks
-• Fixed the middle access box room closing every gate instead of
-just its' own gate in the Halls of Wind and Blood lobby
+## Sweeping Edge Changes:
+• Sweeping Edge will now trigger on any fully-charged, non-
+critical hit
+_Dev Note: Sweeping Edge has historically been a weak AoE
+enchantment due to its awkward trigger conditions, not even
+working underwater. The changes to hitbox and trigger conditions
+should make it much more intuitive to use._
+• Sweeping Edge and Arcane Thrust will now transfer Aspects
+_Dev Note: Aspect transfer will make aspects slightly more
+relevant on these items. ||Judgement of the Voidstained|| in
+particular will transfer its Decay quite well._
+• Sweeping Edge damage transfer has been changed to 20% per
+level
+_Dev Note: With the increased power of the enchantment, we want
+to be able to fine-tune its power, especially in R1 where the
+AoE is fairly powerful._
+• The hitbox of Sweeping Edge no longer requires the mob to be
+within 3 blocks
+•
+&bKing's Valley&r
+  • Elemental Spellblade (Rework) : Sweeping Edge 1, Knockback
+1, Ice Aspect 1, Fire Aspect 1, 5 Attack Damage, 1.6 Attack
+Speed, +35% Spell Power
+  • Glass Dagger : 0 -> 3 Sweeping Edge
+  • Ashheart Dagger : 5 -> 5.5 Attack Damage, 2 -> 4 Fire
+Protection,  2 -> 0 Sweeping Edge
+  • Doom's Edge : 4 -> 2 Sweeping Edge
+  • Rosethorn Blade (Divine Rosethorn Blade) : 2 -> 0 Sweeping
+Edge
+  • Poison Ivy : 2 -> 0 Sweeping Edge
+  • Slicing Wind : 3 -> 4 Sweeping Edge
+  • Cutting Breeze : 2 -> 3 Sweeping Edge
+  • Corrupted Watcher's Sword (Divine Watcher's Sword) : 1 -> 0
+Sweeping Edge
+  • Jungle's Requiem : 1 -> 0 Sweeping Edge
+  • Sleepwalker's Sickle : 0 -> 2 Sweeping Edge, 8 -> 7.5 Attack
+Damage•
+&bCelsian Isles&r
+  • Siege Axe : 0 -> 2 Sweeping Edge
+  • Rootstrike : 3 -> 4 Sweeping Edge
+  • Hammer of the Architect : 0 -> 1 Sweeping Edge, 0 -> 1
+Unbreaking
+  • Shipwrecker's Sabre : 0 -> 3 Sweeping Edge, Decay 8 -> 6, 12
+-> 11 Attack Damage
+  • Thunder and Tempest : 17.5 -> 17 Attack Damage
+  • Frost Giant's Greatsword : 1 -> 3 Sweeping Edge, 23.5 -> 24
+Attack Damage
+  • Yxojh'zha : 0 -> 3 Sweeping Edge
+  • Swordfish : 10 -> 5 Sweeping Edge
+•
+&bArchitect's Ring&r
+  • Extinction (M4) : 0 -> 4 Sweeping Edge, 30 -> 28.5 Attack
+Damage, 1.1 -> 1 Attack Speed
+  • EX Telum Immoriel (M4) : 5 -> 4 Sweeping Edge
+  • Cutter of Eons (M4) : 5 -> 4 Sweeping Edge
+  • Threadreaper (M4) : 0 -> 2 Sweeping Edge, 22 -> 21 Attack
+Damage, 3 -> 2 Slayer
+## Defensive Situational Enchant Changes:
+• The Situational scaling cap in R3 has been raised from 30 to
+36
+ • &oALL Defensive Situationals have a new damage resistance
+formula, they now provide enough Armor or Agility to provide 20%
+/ 25% / 30% Effective Health, scaling linearly up to (R1) 20 /
+(R2) 30 / (R3) 36 Armor / Agility. &r
+&oOverall, these changes won't impact Region 1, but will largely
+impact Region 2, and slightly impact Region 3, making builds
+that rely on many of them at once considerably weaker. As such,
+many of the items with defensive situationals have been buffed
+as listed below, as well as changes to some of the situational
+enchants themselves.&r
+• Tempo : Halved effectivity moved from 2s to 2.5s.
+  • &oDeveloper Note : A small nerf to Tempo to hit its
+consistency when paired with Ethereal. Items with Tempo have
+generally received some small buffs to compensate.&r
+• Inure : Half effectivity clause removed.
+   • &oDeveloper Note : Items with Inure have generally been
+buffed to compensate for this change.&r• Guard : ADDITIONAL
+TRIGGER: Activates for 4s when being hit by heavy attacks (35%
+HP or more).
+  • &oDeveloper Note : This additional activation condition
+should help make Guard more reliable even without a shield, and
+better on those that already used them.&r
+• Reflexes (Rework) :  Gain 20%/25%/30% Effective Health as
+Agility after damaging enemies for 0.65s. Damage over Time (DoT)
+abilities and enchants do not trigger Reflexes.
+  • &oDeveloper Note: This is a considerable change to Reflexes,
+meaning all reflexes items in the game have been re-evaluated,
+and either buffed/changed into more fitting stats.&r
+• Cloaked : ADDITIONAL TRIGGERS: Half of the bonus is granted if
+there are 3 or fewer enemies. Cloaked also activates for 6s
+after killing an Elite or Boss mob.
+  • &oDeveloper Note: The goal here is to make the enchant more
+viable for general clearing without pairing it with old
+Reflexes.&r
+• All changes regarding these updates to Situationals can be
+found in the text file below:## Twisted Changes:
+• Fixed Twisted Gravecaller casting Grasping Claws during Dark
+Rune • Subjugate
+• Dark Rune • Scatter now does 15 magic damage + 20% true damage
+(from 30 magic)
+• Dark Rune • Scatter now has a damaging radius underneath the
+correct y-level, dealing 30 magic damage per second
+• Twisted Prosecutor Dark Pact Trigger requirement increased to
+650 (from 450)
+• Twisted Prosecutor no longer responds to Predator Strike
+• Gravesoul Haunters are now CC-Immune
+• Twisted Shadestepper's Cloaked Strike now deals no damage
+initially, but telegraphs a circular slash around itself,
+slashing twice for 20 melee damage each, dealing 1.5x more
+damage if attacking from behind
+• Twisted Shadestepper now dashes in response to Predator Strike
+instead of entering stealth
+• Twisted Shadestepper's daggers now use a custom display
+• Twisted Shadestepper now fires a volley of 3 single daggers,
+each dealing 15 melee damage and applying 40% vulnerability for
+4s
+• Removed base potion throw attack from both Twisted Alchemists
+• Twisted Abomination's artillery explosion can now be jumped
+over
+• Increased Atomic Aberration's lifespan to 30s (from 15s)
+• Fixed Atomic Aberration dealing twice the amount of damage as
+intended
+• Twisted Vanguard's Colossal Shockwave damage reduced to 10
+(from 20)
+• Prismatic Distortion now has a clearer spawn noise
+## Intruder Changes:
+• Added armor to some basic enemies to differentiate them more
+from the boss
+## Colourblindness Fixes:
+• Sands of Time (blue) has had its bell sound pitched up by a
+perfect fifth
+• Sands of Time (blue) now also has a thunder SFX
+• Totemic Destruction now shows a symbol on your screen when you
+are afflicted with Life/Death Vulnerability• Fixed missing and
+misplaced glow lichen in the Nadir's transept and side aisles
+• Added Holding Space Quest Items to API
+• Fixed misplaced barrier in the Sirius Arena
+• Fixed being able to place wools outside of the Monument
+• Fixed stuck spots in Galengarde teleporter hub
+• Fixed the Masterwork Paths for Memoria Ancestrale and Miner's
+Lament including downgrades
+• Fixed a stuck spot near Port Manteau.
+• Fixed Thread of Fate • Shifting City missing from items API
+• Fixed Multi-Load ammo not being saved over weekly updates
+(does not apply to this update)
+• Heavenly Boon now works on plots shards
+• Fixed Doorway from Eternity Blackstone mode not being saved
+over weekly updates (does not apply to this update, and because
+the tech was changed, Firmament will not save its mode this
+update)
+• Fixed Worldshaper's Loom mode not being saved over weekly
+updates (does not apply to this update). It will also now have
+Bridge mode enabled in the trader
+• Fixed Worldshaper's Loom not being blocked by block placing
+prevention in Hunts areas before the boss spawns
+• Fixed typo in Donkey Attendant dialogue
+• Fixed Blightspreader applying blindness and wither when doing
+damage with Arcanic abilities
+• Fixed Hekawt applying 0% vulnerability and weakness effects
+(instead of just not applying any effect)
+• A totem in Blue no longer defy the laws of gravity.
+• Fixed Rending Razor being able to embed in some mobs it
+shouldn't, such as immortal mounts## Feedback Fixes:
+• Set Godspore key materials to be classed as currencies.
+• You can now disable delve mods being cleared on bounty
+completion at the Seanchaidh
+• Shift-clicking a Quest Guide now opens the Mainline GUI
+• Swapped the triggers for cycling quest steps (now right click)
+and opening the Quest Compass GUI (now shift right click)
+• Antimagic Ward is now an Uncommon instead of a Unique
+• Antimagic Ward is now rebuyable at the Shady Trader
+• Decorated two pots in Sierhaven
+• Indigo • ||Namtar now hints you towards Grappling Hook's
+interaction with mobs||
+• Indigo • ||Changed the cooldown of Silverhook charges to be
+more in line with how class abilities behave||
+• Indigo • ||Tightened the angle at which the Silverhook will
+pull you downwards||
+• Updated Arcane Thrust particles
+• Arcane Thrust now transfers Aspects
+• Updated Archaic Guardian's vanity slightly
+• Constellation Construct Dummy now has its hat back
+• Impact's description now mentions the KBR Piercing effect
+(Enemies hit with an Impact weapon lose (level) Knockback
+Resistance).
+• Rewrote Paladin's spec description to properly reflect its
+abilities and gameplay
+## Bug Fixes:
+• Fixed Challenge Indigo spawner requirement being broken
+• Fixed Guarding the Guarded's Combat Encounter breaking very
+frequently
+• Fixed Mechanical Spider Dummy jumping (for real, this time)
+• Fixed Siren's Lantern Dummy being able to walk
+• Fixed Wendigo of the Wolfswood Dummy taking knockback
+• Enchelei Dummy's invisible legs have lost their movement
+capabilities
+• Fixed an issue with ||the Void Knight arena||'s zoning
+• Fixed a minor build error and an empty spawner in Indigo
+• Fixed Sacrificial Totem Dummy having vanilla armor
+• Fixed Wit's End having different colors in dungeon rare pool
+and rare trader
+• Fixed ||a beacon not lighting up|| in Indigo
+• Fixed a few smart quotes in Halls dialogue
+• Abilities with 0 max charges/stacks (such as Divine Justice
+when not enhanced) will no longer appear in the UMM skill
+hotbar• Fixed R3 Shrine Boons losing duration on death
+• Fixed delve multipliers and bosstags being able to affect true
+damage attacks
+• Fixed issues with the -_• detection zones in the Indigo lobby
+• Fixed Punch, for real this time
+• Removed a check for melee iframes on Sharpshooter
+• Sharpshooter L1 stacks function as intended now
+• Removed hitboxes from a number of armor stands used in
+Tormented attacks and Indigo mobs
+• Fixed Crawling Parasite still having lingering delve modifiers
+on it, for real this time
+• Fixed issues with Urn of Perpetuity and Thousand Realm Jewel
+that made them much stronger than intended
+• Wind Aspect will retain the horizontal velocity of mobs when
+activated by magic damage or a weapon with Punch / Knockback
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-&bHotfix:&r
-Re-added indigo's temporary epic trader for this week &oonly&r
-on ring-1
-&bHotfix (at daily reset):&r Fixed MORE edge cases where players
-could lose access to Indigo's blockless advancement
+&bHotfixes&r: (at daily restart)
+• Made various technical changes for Knockback and Punch
+enchantments that were supposed to have been made during
+yesterday's update.
+&oThere is a chance items that have been processed by a player
+after the update with these enchantments will act strange. If
+this is the case, try running /updatehelditem while holding the
+item first and if issues persist make a bug report.&r
+• Fixed Sharpshooter not gaining stacks from many projectile
+damage abilities
