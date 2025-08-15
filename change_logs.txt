@@ -1,209 +1,4 @@
-## Sweeping Edge Changes:
-• Sweeping Edge will now trigger on any fully-charged, non-
-critical hit
-_Dev Note: Sweeping Edge has historically been a weak AoE
-enchantment due to its awkward trigger conditions, not even
-working underwater. The changes to hitbox and trigger conditions
-should make it much more intuitive to use._
-• Sweeping Edge and Arcane Thrust will now transfer Aspects
-_Dev Note: Aspect transfer will make aspects slightly more
-relevant on these items. ||Judgement of the Voidstained|| in
-particular will transfer its Decay quite well._
-• Sweeping Edge damage transfer has been changed to 20% per
-level
-_Dev Note: With the increased power of the enchantment, we want
-to be able to fine-tune its power, especially in R1 where the
-AoE is fairly powerful._
-• The hitbox of Sweeping Edge no longer requires the mob to be
-within 3 blocks
-•
-&bKing's Valley&r
-  • Elemental Spellblade (Rework) : Sweeping Edge 1, Knockback
-1, Ice Aspect 1, Fire Aspect 1, 5 Attack Damage, 1.6 Attack
-Speed, +35% Spell Power
-  • Glass Dagger : 0 -> 3 Sweeping Edge
-  • Ashheart Dagger : 5 -> 5.5 Attack Damage, 2 -> 4 Fire
-Protection,  2 -> 0 Sweeping Edge
-  • Doom's Edge : 4 -> 2 Sweeping Edge
-  • Rosethorn Blade (Divine Rosethorn Blade) : 2 -> 0 Sweeping
-Edge
-  • Poison Ivy : 2 -> 0 Sweeping Edge
-  • Slicing Wind : 3 -> 4 Sweeping Edge
-  • Cutting Breeze : 2 -> 3 Sweeping Edge
-  • Corrupted Watcher's Sword (Divine Watcher's Sword) : 1 -> 0
-Sweeping Edge
-  • Jungle's Requiem : 1 -> 0 Sweeping Edge
-  • Sleepwalker's Sickle : 0 -> 2 Sweeping Edge, 8 -> 7.5 Attack
-Damage•
-&bCelsian Isles&r
-  • Siege Axe : 0 -> 2 Sweeping Edge
-  • Rootstrike : 3 -> 4 Sweeping Edge
-  • Hammer of the Architect : 0 -> 1 Sweeping Edge, 0 -> 1
-Unbreaking
-  • Shipwrecker's Sabre : 0 -> 3 Sweeping Edge, Decay 8 -> 6, 12
--> 11 Attack Damage
-  • Thunder and Tempest : 17.5 -> 17 Attack Damage
-  • Frost Giant's Greatsword : 1 -> 3 Sweeping Edge, 23.5 -> 24
-Attack Damage
-  • Yxojh'zha : 0 -> 3 Sweeping Edge
-  • Swordfish : 10 -> 5 Sweeping Edge
-•
-&bArchitect's Ring&r
-  • Extinction (M4) : 0 -> 4 Sweeping Edge, 30 -> 28.5 Attack
-Damage, 1.1 -> 1 Attack Speed
-  • EX Telum Immoriel (M4) : 5 -> 4 Sweeping Edge
-  • Cutter of Eons (M4) : 5 -> 4 Sweeping Edge
-  • Threadreaper (M4) : 0 -> 2 Sweeping Edge, 22 -> 21 Attack
-Damage, 3 -> 2 Slayer
-## Defensive Situational Enchant Changes:
-• The Situational scaling cap in R3 has been raised from 30 to
-36
- • &oALL Defensive Situationals have a new damage resistance
-formula, they now provide enough Armor or Agility to provide 20%
-/ 25% / 30% Effective Health, scaling linearly up to (R1) 20 /
-(R2) 30 / (R3) 36 Armor / Agility. &r
-&oOverall, these changes won't impact Region 1, but will largely
-impact Region 2, and slightly impact Region 3, making builds
-that rely on many of them at once considerably weaker. As such,
-many of the items with defensive situationals have been buffed
-as listed below, as well as changes to some of the situational
-enchants themselves.&r
-• Tempo : Halved effectivity moved from 2s to 2.5s.
-  • &oDeveloper Note : A small nerf to Tempo to hit its
-consistency when paired with Ethereal. Items with Tempo have
-generally received some small buffs to compensate.&r
-• Inure : Half effectivity clause removed.
-   • &oDeveloper Note : Items with Inure have generally been
-buffed to compensate for this change.&r• Guard : ADDITIONAL
-TRIGGER: Activates for 4s when being hit by heavy attacks (35%
-HP or more).
-  • &oDeveloper Note : This additional activation condition
-should help make Guard more reliable even without a shield, and
-better on those that already used them.&r
-• Reflexes (Rework) :  Gain 20%/25%/30% Effective Health as
-Agility after damaging enemies for 0.65s. Damage over Time (DoT)
-abilities and enchants do not trigger Reflexes.
-  • &oDeveloper Note: This is a considerable change to Reflexes,
-meaning all reflexes items in the game have been re-evaluated,
-and either buffed/changed into more fitting stats.&r
-• Cloaked : ADDITIONAL TRIGGERS: Half of the bonus is granted if
-there are 3 or fewer enemies. Cloaked also activates for 6s
-after killing an Elite or Boss mob.
-  • &oDeveloper Note: The goal here is to make the enchant more
-viable for general clearing without pairing it with old
-Reflexes.&r
-• All changes regarding these updates to Situationals can be
-found in the text file below:## Twisted Changes:
-• Fixed Twisted Gravecaller casting Grasping Claws during Dark
-Rune • Subjugate
-• Dark Rune • Scatter now does 15 magic damage + 20% true damage
-(from 30 magic)
-• Dark Rune • Scatter now has a damaging radius underneath the
-correct y-level, dealing 30 magic damage per second
-• Twisted Prosecutor Dark Pact Trigger requirement increased to
-650 (from 450)
-• Twisted Prosecutor no longer responds to Predator Strike
-• Gravesoul Haunters are now CC-Immune
-• Twisted Shadestepper's Cloaked Strike now deals no damage
-initially, but telegraphs a circular slash around itself,
-slashing twice for 20 melee damage each, dealing 1.5x more
-damage if attacking from behind
-• Twisted Shadestepper now dashes in response to Predator Strike
-instead of entering stealth
-• Twisted Shadestepper's daggers now use a custom display
-• Twisted Shadestepper now fires a volley of 3 single daggers,
-each dealing 15 melee damage and applying 40% vulnerability for
-4s
-• Removed base potion throw attack from both Twisted Alchemists
-• Twisted Abomination's artillery explosion can now be jumped
-over
-• Increased Atomic Aberration's lifespan to 30s (from 15s)
-• Fixed Atomic Aberration dealing twice the amount of damage as
-intended
-• Twisted Vanguard's Colossal Shockwave damage reduced to 10
-(from 20)
-• Prismatic Distortion now has a clearer spawn noise
-## Intruder Changes:
-• Added armor to some basic enemies to differentiate them more
-from the boss
-## Colourblindness Fixes:
-• Sands of Time (blue) has had its bell sound pitched up by a
-perfect fifth
-• Sands of Time (blue) now also has a thunder SFX
-• Totemic Destruction now shows a symbol on your screen when you
-are afflicted with Life/Death Vulnerability• Fixed missing and
-misplaced glow lichen in the Nadir's transept and side aisles
-• Added Holding Space Quest Items to API
-• Fixed misplaced barrier in the Sirius Arena
-• Fixed being able to place wools outside of the Monument
-• Fixed stuck spots in Galengarde teleporter hub
-• Fixed the Masterwork Paths for Memoria Ancestrale and Miner's
-Lament including downgrades
-• Fixed a stuck spot near Port Manteau.
-• Fixed Thread of Fate • Shifting City missing from items API
-• Fixed Multi-Load ammo not being saved over weekly updates
-(does not apply to this update)
-• Heavenly Boon now works on plots shards
-• Fixed Doorway from Eternity Blackstone mode not being saved
-over weekly updates (does not apply to this update, and because
-the tech was changed, Firmament will not save its mode this
-update)
-• Fixed Worldshaper's Loom mode not being saved over weekly
-updates (does not apply to this update). It will also now have
-Bridge mode enabled in the trader
-• Fixed Worldshaper's Loom not being blocked by block placing
-prevention in Hunts areas before the boss spawns
-• Fixed typo in Donkey Attendant dialogue
-• Fixed Blightspreader applying blindness and wither when doing
-damage with Arcanic abilities
-• Fixed Hekawt applying 0% vulnerability and weakness effects
-(instead of just not applying any effect)
-• A totem in Blue no longer defy the laws of gravity.
-• Fixed Rending Razor being able to embed in some mobs it
-shouldn't, such as immortal mounts## Feedback Fixes:
-• Set Godspore key materials to be classed as currencies.
-• You can now disable delve mods being cleared on bounty
-completion at the Seanchaidh
-• Shift-clicking a Quest Guide now opens the Mainline GUI
-• Swapped the triggers for cycling quest steps (now right click)
-and opening the Quest Compass GUI (now shift right click)
-• Antimagic Ward is now an Uncommon instead of a Unique
-• Antimagic Ward is now rebuyable at the Shady Trader
-• Decorated two pots in Sierhaven
-• Indigo • ||Namtar now hints you towards Grappling Hook's
-interaction with mobs||
-• Indigo • ||Changed the cooldown of Silverhook charges to be
-more in line with how class abilities behave||
-• Indigo • ||Tightened the angle at which the Silverhook will
-pull you downwards||
-• Updated Arcane Thrust particles
-• Arcane Thrust now transfers Aspects
-• Updated Archaic Guardian's vanity slightly
-• Constellation Construct Dummy now has its hat back
-• Impact's description now mentions the KBR Piercing effect
-(Enemies hit with an Impact weapon lose (level) Knockback
-Resistance).
-• Rewrote Paladin's spec description to properly reflect its
-abilities and gameplay
-## Bug Fixes:
-• Fixed Challenge Indigo spawner requirement being broken
-• Fixed Guarding the Guarded's Combat Encounter breaking very
-frequently
-• Fixed Mechanical Spider Dummy jumping (for real, this time)
-• Fixed Siren's Lantern Dummy being able to walk
-• Fixed Wendigo of the Wolfswood Dummy taking knockback
-• Enchelei Dummy's invisible legs have lost their movement
-capabilities
-• Fixed an issue with ||the Void Knight arena||'s zoning
-• Fixed a minor build error and an empty spawner in Indigo
-• Fixed Sacrificial Totem Dummy having vanilla armor
-• Fixed Wit's End having different colors in dungeon rare pool
-and rare trader
-• Fixed ||a beacon not lighting up|| in Indigo
-• Fixed a few smart quotes in Halls dialogue
-• Abilities with 0 max charges/stacks (such as Divine Justice
-when not enhanced) will no longer appear in the UMM skill
-hotbar• Fixed R3 Shrine Boons losing duration on death
+• Fixed R3 Shrine Boons losing duration on death
 • Fixed delve multipliers and bosstags being able to affect true
 damage attacks
 • Fixed issues with the -_• detection zones in the Indigo lobby
@@ -232,3 +27,168 @@ this is the case, try running /updatehelditem while holding the
 item first and if issues persist make a bug report.&r
 • Fixed Sharpshooter not gaining stacks from many projectile
 damage abilities
+&bHotfix&r (as of last daily restart):
+• Temporarily removed Veiltorn Heimlinth from the selection pool
+of Twisted Intruder's Amalgamating Dreamscape phase, pending
+fixes to frequent softlocks
+&b(11.29.0)&r
+For the update on August 13, 2025
+## Delve Modifier Megapack
+•
+&bIdolatry • Level 5 Experimental, 1pt/level&r
+Spawners have a 3% chance per level to spawn a slow moving Idol.
+While an enemy is within a 12 block radius of an alive Idol, 75%
+of the damage it takes will instead be redirected to the Idol.
+ _Dev Note: Idolatry is aimed at a Carapace replacement.
+Carapace, although intent on “making mobs slightly tougher”,
+ended up doing it in a way that was disproportionately harsh on
+slow weapons and easy to counter on fast weapons. Idolatry is
+supposed to support “mobs being slightly tougher” with an Idol
+which can be taken down both by heavy single-target and AoE._
+&bBloodlust • Level 4 Experimental, 1pt/level&r
+• When a regular mob is killed, 1 mob that's at least 5 blocks
+away has a level &o 10% chance to leap to the player. When an
+elite is killed, 3 mobs have a level &r 20% chance to leap.
+&bCloaked • Level 3 Experimental, 3pts/level&r
+• Mobs have a 70% chance to become cloaked on spawn. Cloaked
+mobs are invisible and do not render armour.
+• Mobs become uncloaked while within 8 • 2 &o level blocks of
+any player.
+&rDev Note: Cloaked 3 is a hilarious experience, but can be
+quite unbalanced. If you are looking to experience the delve mod
+for the first time, Cloaked 1 or 2 is recommended.&o
+&bRegenerating • Level 3 Experimental, 1pt/level&r
+• All mobs passively heal at a rate of ([6 &r level] + 6)% HP
+per second.
+• Dealing direct damage with a spell or weapon to a mob
+interrupts the healing for 2 seconds.
+• Damage over time effects do not cancel the healing.
+&bBountiful • Level 1 Experimental, 5pt/level&r
+• Most spawner ranges are doubled.### Delve Modifier Changes:
+• Dreadful, Colossal, Spectral, and Infernal have received
+percentage reduction per level. In return, every delve mob has
+received minor stat compensation and some functionality change.
+The following goes per point...
+Dreadful: 20 -> 12 %
+Colossi: 5 -> 3 %
+Spectral: 7 -> 4 %
+Infernal: 8 -> 6 %
+• Additionally, delve mobs has received scaling changes in
+region 3:
+1.7x -> 1.6x HP
+1.0x DMG -> 1.3x DMG
+• The following challenge delves have received Tormented 3 in
+place of Twisted 5 (& 1pt): Pink, Purple, Teal, Forum, Blue,
+Brown.
+• Entropy can exceed delve modifier cap in all delves. City of
+Shifting Waters has received a new challenge preset to reflect
+this change.
+• Choosing a level below the maximum level of a Rotating
+modifier grants only part of the 25% XP bonus
+### Twisted Changes:
+• Replaced Twisted Spiritcaller's Tree's Shockwave spell with a
+short duration groundseeker spell.
+• Twisted Vanguard's Shield Wall has been replaced with a stomp
+attack
+• Twisted Tempest's Hurricane Dance requirement increased to 700
+(from 400)
+• Twisted Tempest now has a new tornado attack, other spells
+increased in cooldown to compensate
+• Twisted Tempest's Whirlwind Blade damage increased to 14 (from
+10)
+• Twisted Tempest's Hurricane Ronde now happens 5 ticks faster,
+and has cleaner visuals
+• Twisted Gravecaller's Scatter Rune now knocks away mobs if
+they are inside of its radius
+• Twisted Ninetails' ram no longer does knockback
+• Twisted Abomination:
+   • 3 -> 2 lobs of Scorched Earth, 0.5 -> 0.8 y-velocity, added
+a throw sound
+  • Increased delay between its spells
+  • Fixed Twisted Artillery entity staying after exploding
+• Twisteds have learned to use the Floor mode of their
+Worldshaper's Looms
+• Twisteds will respect your personal space slightly more when
+placing blocks (exclusion range 2.5 -> 3.5 blocks, vertical
+exclusion zone 7 blocks)
+• Twisteds will attempt to block break when directly above their
+target• Fixed Reverb only being able to trigger once total per
+tick on a given shard and potentially doing the wrong amount of
+damage if multiple players were using Reverb items
+simultaneously
+• Fixed Thurible Procession level 2 description saying that
+Rejuvenation's heal was doubled instead of tripled and calling
+it Cleric's passive instead of Rejuvenation
+• Fixed Lightning Totem description saying it dealt damage every
+40 seconds instead of every 2 seconds
+• Fixed Weapon Mastery enhancement description missing the word
+seconds
+• Fixed Gravity fall damage calculations being wrong (if the
+modifier returns)
+• Fixed Alchemical Artillery level 1 description showing a charm
+modification when there was none if level 2 was selected, and
+not showing any charm modifications if level 1 was selected
+• Fixed Talaria of Magic being missing from the API
+• Fixed blue wool in Blue dungeon being outdated
+• Removed an imposter decoration pot in Indigo.
+• Fixed a semi-unfinished path near Hallowed Pond
+• Fixed Infested Corpse in Murky Maze having 2 armor
+• Fixed Hostile Ethereality having contact damage
+• Fixed several build errors in Sierhaven
+• Fixed the interaction of Sweeping Edge and Arcane Thrust with
+the following skills and tweaked some descriptions to reflect
+this:
+  • Weapon Mastery
+  • Riposte
+  • Frenzy
+  • Cursed Wound
+  • Dark Pact
+  • Skirmisher
+• Made a minor build tweak and fixed an inconsistency in
+Mistport### Indigo Mob Changes:
+• ||Fixed Uriddan's thrown axes targeting the player instead of
+The Void Knight||
+• ||Reduced the pull strength and frequency during The Void
+Knight's initial pull attack||
+• Reduced the damage of Stelliform Duelist's slashing attack
+from 2x32 magic -> 2x20 melee damage
+### Mob Changes:
+• Mobs with charge ability no longer ignore stealth during mid-
+telegraph
+• Warped Spectre Health increased from 16 -> 24, Damage
+increased from 5 -> 6, Wither duration increased from 1.5s ->
+2.5s
+• Jittery Crawler Health increased from 12 -> 16
+• Enfeebling Lurker Health increased from 40 -> 50, Damage
+increased from 3 -> 5
+### Feedback Fixes:
+• Updated the default Mana Lance cosmetic to do a little push
+forwards
+• Made Reflexes trigger on damage of type Projectile Enchantment
+_Dev Note: Should have no effect on current gameplay as all
+sources of Projectile Enchantment are associated with the
+Explosive enchantment itself dealing Projectile damage._
+• Fixed First Strike not triggering on projectiles
+• Slightly buffed an SKR trap
+### Bug Fixes:
+• Smited a copy of  Ryker of the Silver Order for undergoing
+mitosis
+• Fixed Soulbinder's Combat Boots, Death's Echo, Motherboard
+Calibrator, Wispleaf Ward (+ Serenity of the Stars), Totem of
+the Tombstone, Eomen's Robes and EX Primordial Flames having
+incorrect stats (adjusted to match previous changelogs)
+• Fixed minor building errors in Blue & Brown.
+• Fixed Inure not having an updated advancement description
+(removal of the half-effectivity clause).
+• Fixed Waxlicker's invisible mount counting as hostile
+• Fixed Reverb not triggering if the player stopped holding the
+item with Reverb at the right time (particularly, this meant
+that Reverb stopped chaining if the player stopped holding a
+Reverb item which should now work correctly)Missed from
+Changelog:
+• Infernal rolls now occur per wave rather than per mob
+• Bountiful is excluded from Architect's Ring PoIs
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
