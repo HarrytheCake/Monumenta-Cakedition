@@ -1,194 +1,212 @@
-• Fixed R3 Shrine Boons losing duration on death
-• Fixed delve multipliers and bosstags being able to affect true
-damage attacks
-• Fixed issues with the -_• detection zones in the Indigo lobby
-• Fixed Punch, for real this time
-• Removed a check for melee iframes on Sharpshooter
-• Sharpshooter L1 stacks function as intended now
-• Removed hitboxes from a number of armor stands used in
-Tormented attacks and Indigo mobs
-• Fixed Crawling Parasite still having lingering delve modifiers
-on it, for real this time
-• Fixed issues with Urn of Perpetuity and Thousand Realm Jewel
-that made them much stronger than intended
-• Wind Aspect will retain the horizontal velocity of mobs when
-activated by magic damage or a weapon with Punch / Knockback
+&bHotfix:&r
+• Changed the current 100 MP Seasonal Pass mission to accept any
+Dungeon Delve with Colossal 3+ instead of just Magenta and
+Purple, due to the former being closed at the current moment.
+Note that, in order for it to count, the dungeon has to be
+completed post-hotfix.Magenta has been fixed and reopened•
+Spiritcaller Trees no longer deal damage themselves, and now
+summon two Rekindled Spirits every 10s, three times per tree
+• Ice Elemental no longer deals damage
+• Twisted Bishop now heals all mobs within a 30 block radius
+(from only 2 mobs at once)
+• Twisted Bishop now heals for 2% of a mob's maximum health per
+projectile (from 25 flat)
+• Twisted Bishop now summons a new angel upon reaching its
+second phase
+• Twisted Bishop now enters its second phase at 40% health (from
+30%)
+• Fixed all Twisted Bishop angels having incorrect HP values
+• Twisted Bishop angel spawn cooldown reduced to 10s (from 20s)
+• All-Knowing Seraphim's lance spawn range reduced to 5 blocks
+(from 14)
+• All-Knowing Seraphim's particles have been made less obtrusive
+• All-Knowing Seraphim's health is increased to 250 (from 100)
+• All-Powerful Seraphim now passively absorbs damage from all
+mobs within a 12 block radius of itself
+• All-Powerful Seraphim health is increased to 400 (from 175)
+• All-Seeing Seraphim's Final Judgement radius decreased to 4
+blocks (from 5)
+• All-Seeing Seraphim's Final Judgement total duration reduced
+to 1.5s (from 4s). This does not affect the total damage, only
+how long the player is stuck inside
+• All-Seeing Seraphim's health is increased to 250 (from 100)
+• Twisted Vanguard's Bull Stomp damage increased to 40 (from 35)
+• Twisted Revenant no longer gains resistance in its second
+phase
+• Twisted Revenant's second phase particles are now less
+obtrusive
+&b(11.30.0)&r
+For the update on August 20, 2025
+### Minor New Features
+• Following the 5.8.0 Resource Pack update, 5 new Hope Skins
+have been added to Mastersmith Antonio's shop! Thank you very
+much to our patrons for your continued support!
+• Added Othello to the minigames area in Sierhaven's academy
+• Added Travel Anchor Groups, so that you can create sub-
+networks and hide cluttered parts of your plot. Travel Anchors
+can be part of one or more groups, and you are free to create
+and edit as many as you like.
+• Removed Regenerating, Bountiful and Bloodlust
+&oDev Note: We've had our fun with these three, but for now we'd
+like to shift focus to Idolatry and the delve mob changes.
+Cloaked will be saying its goodbyes soon as well. Don't fret,
+Regenerating and Bloodlust may come back...&r
+### Idolatry Change
+• Damage Passthrough: 10% -> 20%
+• Damage Redirect: 35% -> 55%
+• All Idols now glow
+• Fixed Idol of Haste buffing player speed instead of mobs
+• Idols can no longer protect creepers
+• Silencing an Idol now interrupts its Damage Reduction
+• Idols can now only spawn on the first spawn wave of a spawner
+### Idol Changes
+• Guardian Idol: 320 -> 250 hp, 25 -> 10 attack dmg, 0.08 ->
+0.06 movespeed
+• Idol of Haste 500 -> 300 hp, 27 -> 14 attack dmg
+• Idol of Vigor 500 -> 300 hp 27 -> 14 attack dmg, 0.08 -> 0.06
+movespeed
+• Added 1 new Idol### Twisted Changes
+• All tormented damage has been reduced by 30% in all regions
+• All tormented health has been increased by 10% in all regions
+• Tormenteds now have a special noise upon death to announce
+their defeat
+• Twisted Moonweaver's Frost Moon no longer does upwards
+knockback
+• Twisted Crusader's Bell now correctly removes upon death
+• Twisted Crusader now only casts Luminous Infusion twice, at
+75% and 25% health
+• Twisted Crusader has a new phase, with two new attacks
+• Fixed Twisted Shadestepper spamming too many dagger throws
+• Trickshade Barrage no longer deals knockback
+• Twisted Shadestepper's dash telegraph noise has been changed
+• Twisted Shadestepper can no longer cast dagger throw while
+stealthed
+• Twisted Shadestepper's stealth cooldown increased to 20s (from
+15s)
+• Twisted Shadestepper's Cloaked Strike damage increased to
+50/75 with backstab (from 40/60 with backstab)
+• Shadestepper Clones have received the following changes: 100
+health (from 50), 0.26 movement speed (from 0.23), and they no
+longer dash upon death, they have a new dash spell and no longer
+despawn after a set time, instead despawning after the
+Shadestepper dies
+• Hurricane Dance now disappears after killing Twisted Tempest
+• Fixed Astral Pillars spawning Spectrals
+• Fixed Astral Pillars not properly casting Lunar Omens
+• Fixed Whirling Ripsaw dealing true knockback
+• Increased Dark Rune • Scatter's delay before doing damage from
+1.5s to 4s
+• Increased Dark Rune • Scatter's delay before pulling players
+from 3s to 4s
+• Twisted Spiritcaller now has a new summon
+• Spiritcaller Trees are now smaller garden-like growths###
+Feedback Fixes
+• Removed pull from ||The Void Knight||'s first attack pattern
+• The Butterfly Effect Skill Cosmetic sound has been changed
+• Replaced buttons that trigger TNT with target blocks in Gray
+and Exalted Reverie.
+• Updated the vanity and sound for Archaic Guardian, Lost Soul,
+Hawk Spirit, and Jaguar Spirit
+• Updated the vanities of Primordial Elemental and Immortal
+Elemental
+• Indigo: Added ||Broken Artifacts, Silverhooks, and Empty Space
+items|| to the API
+• Added Mecha-Pass dummies to the API
+• Added SKR dummies to the API
+• Changed the colour of a crystal altar in Sierhaven
+• The area effect clouds on Ghoulish Monstrosities now lasts up
+to 2 minutes instead of over 8 minutes
+• Nudged squire firwold a bit to the left
+### Bug Fixes
+• Indigo • ||Outworld Void teleports sooner. This attempts to
+fix lingering issues with people &ostill&r falling to their
+death. Please report any bugs like these with all details you
+have.||
+• Aria in Farr no longer has trades with emeralds
+• Made a bench in Sierhaven sittable.
+• Fixed Specter of Malediction being ccimmune
+• Fixed Whirling Ripsaw dealing magic damage
+• Fixed Parasomnic Mist not disabling player collision
+• Fixed an issue where Ionic Phasers would deal rifle damage
+with their melee attacks
+• Fixed a case with Ionic Phasers where the telegraph target and
+the true target weren't the same
+• Removed an outdated message from Captain Murano's dialogue
+during the prologue about using the quest compass
+• Fixed Purple's Varcosa not rewarding anything when called
+early using the Hollow Chime
+• Fixed Indigo delves rewarding a Brown delve bounty
+• Fixed Indigo failing to show up as a delve bounty option
+• Indigo • ||Fixed Aurora sometimes disappearing and sometimes
+being able to start the fight outside the arena (causing many
+more issues)||
+• Indigo • ||Fixed Indigo objectives triggering repeatedly when
+standing in the right spot||
+• Indigo • ||Fixed weird behaviour if VK dies at the same time
+as the player||• Indigo • ||Fixed winning or losing objectives
+killing all mobs in the area instead of just the objective
+mobs||
+• Fixed Chanterelle Village's end chest not having any filler
+blocks when undelved
+• The "Weird Route" advancement now shows up on the website
+• Fixed a typo in Steadfast's description in the Player Stats
+GUI
+• Fixed Rending Razor iframing itself when withdrawn too quickly
+• Fixed an issue where Ionic Phasers would deal rifle damage
+with their melee attacks
+• Fixed a case with Ionic Phasers where the telegraph target and
+the true target weren't the same
+• Slightly updated Tuulen's dialogue at the end of and right
+after Starless Night to be more consistent with the rest of her
+dialogue.
+• Tuulen's dialogue at the end of Holding Space and her post-
+quest dialogue has been updated to be more consistent with the
+rest of her dialogue and feelings.
+• Fixed the order of Namtar's dialogue options after Starless
+Night so that Revelation is on the bottom again.
+• Empty decorated pots can no longer take items from players in
+non-plots shards
+• Fixed a build error in Galengarde
+• Fixed Heavenly Boon's enhancement reducing its own cooldown on
+other affected players
+• Immortal mounts and immortal passengers no longer trigger
+death-based abilities on death
+• Fixed Heavenly Boon being able to bypass worm body parts' no-
+death-trigger-abilities tag, making it roll for a boon for every
+mob in the worm
+• Fixed Corridors not copying delve modifiers correctly### Delve
+Mob Changes
+• Region 3 Scaling re-adjusted to: 1.7x HP, 1.2x DMG.
+• Bug fix: Infernal should only roll per spawn wave instead of
+per mob.
+-# Infernal were designed as pseudo elites, however their rates
+are bugged to roll per mob spawn rather than per wave.
+• Ember of Mania: 1s -> 3s spawn delay before casting first
+ability.
+• Ember of Fervor: fuse time 3s -> 4s. When thrown, requires a
+player within 6 block with LoS to fuse. Lava no longer a source
+block.
+• Specter of Silence: 95 -> 85 HP, Silence duration 2s -> 1.5s,
+Silence window 2.5s -> 2s, Audio telegraph includes witch laugh,
+Audio teleport slightly amplified. Include visual telegraph for
+silence.
+• Specter of Malediction: 1s -> 3s spawn delay before preparing
+pull ability. Pull casting 1.5s -> 3s. Audio heavily amplified.
+Glowing while casting the pull, additional particle telegraph
+under players feet.
+• Removed Specter of Mourning from the spectral pool.
+• Dreadnaught of Sorrow shield stun 6s -> 2s. Enraged move speed
+0.24 -> 0.22.
+• Contagion Manifest (Pestilence's Projectile) no longer break
+blocks, explosion damage & size reduced. Applies high wither for
+3s when close to blast zone.
+• Dreadnaught of Fury (Subjugation's Rider) dismounted melee
+range set to 1~ block.
+• Dreadling: 18 -> 16 DMG.
+-# Dreadlings were meant to get 2 dmg as part of their CCI
+loss/Dread reduction, not 4.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfixes&r: (at daily restart)
-• Made various technical changes for Knockback and Punch
-enchantments that were supposed to have been made during
-yesterday's update.
-&oThere is a chance items that have been processed by a player
-after the update with these enchantments will act strange. If
-this is the case, try running /updatehelditem while holding the
-item first and if issues persist make a bug report.&r
-• Fixed Sharpshooter not gaining stacks from many projectile
-damage abilities
-&bHotfix&r (as of last daily restart):
-• Temporarily removed Veiltorn Heimlinth from the selection pool
-of Twisted Intruder's Amalgamating Dreamscape phase, pending
-fixes to frequent softlocks
-&b(11.29.0)&r
-For the update on August 13, 2025
-## Delve Modifier Megapack
-•
-&bIdolatry • Level 5 Experimental, 1pt/level&r
-Spawners have a 3% chance per level to spawn a slow moving Idol.
-While an enemy is within a 12 block radius of an alive Idol, 75%
-of the damage it takes will instead be redirected to the Idol.
- _Dev Note: Idolatry is aimed at a Carapace replacement.
-Carapace, although intent on “making mobs slightly tougher”,
-ended up doing it in a way that was disproportionately harsh on
-slow weapons and easy to counter on fast weapons. Idolatry is
-supposed to support “mobs being slightly tougher” with an Idol
-which can be taken down both by heavy single-target and AoE._
-&bBloodlust • Level 4 Experimental, 1pt/level&r
-• When a regular mob is killed, 1 mob that's at least 5 blocks
-away has a level &o 10% chance to leap to the player. When an
-elite is killed, 3 mobs have a level &r 20% chance to leap.
-&bCloaked • Level 3 Experimental, 3pts/level&r
-• Mobs have a 70% chance to become cloaked on spawn. Cloaked
-mobs are invisible and do not render armour.
-• Mobs become uncloaked while within 8 • 2 &o level blocks of
-any player.
-&rDev Note: Cloaked 3 is a hilarious experience, but can be
-quite unbalanced. If you are looking to experience the delve mod
-for the first time, Cloaked 1 or 2 is recommended.&o
-&bRegenerating • Level 3 Experimental, 1pt/level&r
-• All mobs passively heal at a rate of ([6 &r level] + 6)% HP
-per second.
-• Dealing direct damage with a spell or weapon to a mob
-interrupts the healing for 2 seconds.
-• Damage over time effects do not cancel the healing.
-&bBountiful • Level 1 Experimental, 5pt/level&r
-• Most spawner ranges are doubled.### Delve Modifier Changes:
-• Dreadful, Colossal, Spectral, and Infernal have received
-percentage reduction per level. In return, every delve mob has
-received minor stat compensation and some functionality change.
-The following goes per point...
-Dreadful: 20 -> 12 %
-Colossi: 5 -> 3 %
-Spectral: 7 -> 4 %
-Infernal: 8 -> 6 %
-• Additionally, delve mobs has received scaling changes in
-region 3:
-1.7x -> 1.6x HP
-1.0x DMG -> 1.3x DMG
-• The following challenge delves have received Tormented 3 in
-place of Twisted 5 (& 1pt): Pink, Purple, Teal, Forum, Blue,
-Brown.
-• Entropy can exceed delve modifier cap in all delves. City of
-Shifting Waters has received a new challenge preset to reflect
-this change.
-• Choosing a level below the maximum level of a Rotating
-modifier grants only part of the 25% XP bonus
-### Twisted Changes:
-• Replaced Twisted Spiritcaller's Tree's Shockwave spell with a
-short duration groundseeker spell.
-• Twisted Vanguard's Shield Wall has been replaced with a stomp
-attack
-• Twisted Tempest's Hurricane Dance requirement increased to 700
-(from 400)
-• Twisted Tempest now has a new tornado attack, other spells
-increased in cooldown to compensate
-• Twisted Tempest's Whirlwind Blade damage increased to 14 (from
-10)
-• Twisted Tempest's Hurricane Ronde now happens 5 ticks faster,
-and has cleaner visuals
-• Twisted Gravecaller's Scatter Rune now knocks away mobs if
-they are inside of its radius
-• Twisted Ninetails' ram no longer does knockback
-• Twisted Abomination:
-   • 3 -> 2 lobs of Scorched Earth, 0.5 -> 0.8 y-velocity, added
-a throw sound
-  • Increased delay between its spells
-  • Fixed Twisted Artillery entity staying after exploding
-• Twisteds have learned to use the Floor mode of their
-Worldshaper's Looms
-• Twisteds will respect your personal space slightly more when
-placing blocks (exclusion range 2.5 -> 3.5 blocks, vertical
-exclusion zone 7 blocks)
-• Twisteds will attempt to block break when directly above their
-target• Fixed Reverb only being able to trigger once total per
-tick on a given shard and potentially doing the wrong amount of
-damage if multiple players were using Reverb items
-simultaneously
-• Fixed Thurible Procession level 2 description saying that
-Rejuvenation's heal was doubled instead of tripled and calling
-it Cleric's passive instead of Rejuvenation
-• Fixed Lightning Totem description saying it dealt damage every
-40 seconds instead of every 2 seconds
-• Fixed Weapon Mastery enhancement description missing the word
-seconds
-• Fixed Gravity fall damage calculations being wrong (if the
-modifier returns)
-• Fixed Alchemical Artillery level 1 description showing a charm
-modification when there was none if level 2 was selected, and
-not showing any charm modifications if level 1 was selected
-• Fixed Talaria of Magic being missing from the API
-• Fixed blue wool in Blue dungeon being outdated
-• Removed an imposter decoration pot in Indigo.
-• Fixed a semi-unfinished path near Hallowed Pond
-• Fixed Infested Corpse in Murky Maze having 2 armor
-• Fixed Hostile Ethereality having contact damage
-• Fixed several build errors in Sierhaven
-• Fixed the interaction of Sweeping Edge and Arcane Thrust with
-the following skills and tweaked some descriptions to reflect
-this:
-  • Weapon Mastery
-  • Riposte
-  • Frenzy
-  • Cursed Wound
-  • Dark Pact
-  • Skirmisher
-• Made a minor build tweak and fixed an inconsistency in
-Mistport### Indigo Mob Changes:
-• ||Fixed Uriddan's thrown axes targeting the player instead of
-The Void Knight||
-• ||Reduced the pull strength and frequency during The Void
-Knight's initial pull attack||
-• Reduced the damage of Stelliform Duelist's slashing attack
-from 2x32 magic -> 2x20 melee damage
-### Mob Changes:
-• Mobs with charge ability no longer ignore stealth during mid-
-telegraph
-• Warped Spectre Health increased from 16 -> 24, Damage
-increased from 5 -> 6, Wither duration increased from 1.5s ->
-2.5s
-• Jittery Crawler Health increased from 12 -> 16
-• Enfeebling Lurker Health increased from 40 -> 50, Damage
-increased from 3 -> 5
-### Feedback Fixes:
-• Updated the default Mana Lance cosmetic to do a little push
-forwards
-• Made Reflexes trigger on damage of type Projectile Enchantment
-_Dev Note: Should have no effect on current gameplay as all
-sources of Projectile Enchantment are associated with the
-Explosive enchantment itself dealing Projectile damage._
-• Fixed First Strike not triggering on projectiles
-• Slightly buffed an SKR trap
-### Bug Fixes:
-• Smited a copy of  Ryker of the Silver Order for undergoing
-mitosis
-• Fixed Soulbinder's Combat Boots, Death's Echo, Motherboard
-Calibrator, Wispleaf Ward (+ Serenity of the Stars), Totem of
-the Tombstone, Eomen's Robes and EX Primordial Flames having
-incorrect stats (adjusted to match previous changelogs)
-• Fixed minor building errors in Blue & Brown.
-• Fixed Inure not having an updated advancement description
-(removal of the half-effectivity clause).
-• Fixed Waxlicker's invisible mount counting as hostile
-• Fixed Reverb not triggering if the player stopped holding the
-item with Reverb at the right time (particularly, this meant
-that Reverb stopped chaining if the player stopped holding a
-Reverb item which should now work correctly)Missed from
-Changelog:
-• Infernal rolls now occur per wave rather than per mob
-• Bountiful is excluded from Architect's Ring PoIs
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
+and select `I want to unlock this shop`.Temporarily disabled
+Twisted Intruder pending Amalgamating Dreamscape fix
