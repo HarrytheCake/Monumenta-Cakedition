@@ -1,71 +1,4 @@
-&bHotfix:&r
-• Changed the current 100 MP Seasonal Pass mission to accept any
-Dungeon Delve with Colossal 3+ instead of just Magenta and
-Purple, due to the former being closed at the current moment.
-Note that, in order for it to count, the dungeon has to be
-completed post-hotfix.Magenta has been fixed and reopened•
-Spiritcaller Trees no longer deal damage themselves, and now
-summon two Rekindled Spirits every 10s, three times per tree
-• Ice Elemental no longer deals damage
-• Twisted Bishop now heals all mobs within a 30 block radius
-(from only 2 mobs at once)
-• Twisted Bishop now heals for 2% of a mob's maximum health per
-projectile (from 25 flat)
-• Twisted Bishop now summons a new angel upon reaching its
-second phase
-• Twisted Bishop now enters its second phase at 40% health (from
-30%)
-• Fixed all Twisted Bishop angels having incorrect HP values
-• Twisted Bishop angel spawn cooldown reduced to 10s (from 20s)
-• All-Knowing Seraphim's lance spawn range reduced to 5 blocks
-(from 14)
-• All-Knowing Seraphim's particles have been made less obtrusive
-• All-Knowing Seraphim's health is increased to 250 (from 100)
-• All-Powerful Seraphim now passively absorbs damage from all
-mobs within a 12 block radius of itself
-• All-Powerful Seraphim health is increased to 400 (from 175)
-• All-Seeing Seraphim's Final Judgement radius decreased to 4
-blocks (from 5)
-• All-Seeing Seraphim's Final Judgement total duration reduced
-to 1.5s (from 4s). This does not affect the total damage, only
-how long the player is stuck inside
-• All-Seeing Seraphim's health is increased to 250 (from 100)
-• Twisted Vanguard's Bull Stomp damage increased to 40 (from 35)
-• Twisted Revenant no longer gains resistance in its second
-phase
-• Twisted Revenant's second phase particles are now less
-obtrusive
-&b(11.30.0)&r
-For the update on August 20, 2025
-### Minor New Features
-• Following the 5.8.0 Resource Pack update, 5 new Hope Skins
-have been added to Mastersmith Antonio's shop! Thank you very
-much to our patrons for your continued support!
-• Added Othello to the minigames area in Sierhaven's academy
-• Added Travel Anchor Groups, so that you can create sub-
-networks and hide cluttered parts of your plot. Travel Anchors
-can be part of one or more groups, and you are free to create
-and edit as many as you like.
-• Removed Regenerating, Bountiful and Bloodlust
-&oDev Note: We've had our fun with these three, but for now we'd
-like to shift focus to Idolatry and the delve mob changes.
-Cloaked will be saying its goodbyes soon as well. Don't fret,
-Regenerating and Bloodlust may come back...&r
-### Idolatry Change
-• Damage Passthrough: 10% -> 20%
-• Damage Redirect: 35% -> 55%
-• All Idols now glow
-• Fixed Idol of Haste buffing player speed instead of mobs
-• Idols can no longer protect creepers
-• Silencing an Idol now interrupts its Damage Reduction
-• Idols can now only spawn on the first spawn wave of a spawner
-### Idol Changes
-• Guardian Idol: 320 -> 250 hp, 25 -> 10 attack dmg, 0.08 ->
-0.06 movespeed
-• Idol of Haste 500 -> 300 hp, 27 -> 14 attack dmg
-• Idol of Vigor 500 -> 300 hp 27 -> 14 attack dmg, 0.08 -> 0.06
-movespeed
-• Added 1 new Idol### Twisted Changes
+### Twisted Changes
 • All tormented damage has been reduced by 30% in all regions
 • All tormented health has been increased by 10% in all regions
 • Tormenteds now have a special noise upon death to announce
@@ -209,4 +142,93 @@ loss/Dread reduction, not 4.
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.Temporarily disabled
-Twisted Intruder pending Amalgamating Dreamscape fix
+Twisted Intruder pending Amalgamating Dreamscape fixTwisted
+Intruder is now open again!
+&b(11.31.0)&r
+For the update on August 27, 2025
+&o
+&bA brand new quest has been added • Centurem Lost!&r The shades
+may now be mortal, but that doesn't mean the Keep is empty of
+threats. New dangers rise to take their place, and the shade
+hunters require your aid. This quest can be started at Shade
+Hunter Titus on the new walls of New Antium and requires
+completion of Unconventional Methods.
+### Minor New Features:
+• Added one Discovery to the King's Valley Overworld
+• Grappler Effect is now counted for Primordial Speedster. This
+is not granted retroactively, you need to redo the race if
+you've done it in the past.
+• Unyielding delve modifier now has a minimum knockback
+requirement for healing interruption
+### Idolatry Changes:
+• Guardian Idol max redirects 3 -> 1 (per aoe attack),
+passthrough damage 20% -> 15%, is now considered an elite
+• Idol of Haste max redirects 3 -> 2, passthrough damage 20% ->
+15%, Fixed speed not applying to nearby mobs (35% speed, 6
+range)
+• Idol of Vigor max redirects 3 -> 2,  passthrough damage 20 ->
+15%
+• Idol of Suppression 15% -> 40% slowness, 6 -> 7 block aoe
+• Idols will now take damage over time if there are no mobs
+nearby to worship them
+### Twisted Changes:
+• Increased Rekindled Spirits' health to 150 (from 100)
+• Hurricane Effigies now take 7 hits to break (from 4)
+• Fixed Shadestepper Clone having 10 bonus stealth damage
+### Feedback Fixes:
+• Updated sound effects, effect particles, and vanity for the
+following mobs: Bandit, Bandit Archer, Bandit Camp Leader,
+Bandit Executioner, Bandit Sniper, Bandit Stronghold Leader,
+Catman, Festive Catman, Glacial Sniper, Hawk Bowlord, Hawk
+Bowman, Hawk Skirmisher, Hawk Spirit, Hawk Soul, Jaguar
+Berserker, Jaguar Slinger, Jaguar Soul, Jaguar Warrior,
+Serpensia Lord, Serpensia Corpse, Serpensia Knot, Serpensia
+Soul, Serpensia Venomlord, Serpensia Warrior
+• Refactored player nametags• Removed Nausea from the Plague
+Golem arrows
+• Improved the base Panacea and  Arcane Panacea visuals (changed
+last week)
+• Added Page Upgrader Fragment and Armory Page Upgrader to the
+API
+• Added Sketched Earthshaker, Sketched Mage Hunter's Mask,
+Sacrificial Totem Dummy, Pinot Grigio Wine, Zinfandel Wine,
+Imperial Stout, Replica Crown of the Forbidden Yew, Replica
+Uniform of the Arena Champion, Replica Starshine Pants, Replica
+Galoshes of the Waves and Winds, and Wrooby Wrack to the API
+• Made Agglomerated Event Horizon easier to escape from
+• Reduced Agglomerated Event Horizon's damage
+• Matter Agglomerator's projectile now has a smaller contact
+hitbox and homes in less aggressively
+### Bug Fixes:
+• Actually fixed Reverb chaining stopping if the Reverb item was
+no longer held
+• Fixed there being two Nelfines
+• Fixed Vesperidys Soul Link messages being able to play
+multiple times if multiple parties are fighting the boss at once
+• Fixed Specters of Mourning in Corridors turning into Keeper's
+Shades
+• Fixed Flame Spirit only triggering on magic damage
+• Fixed multiple stuck spots in Exalted Halls
+• Fixed a stuck spot in MR lobby
+• Fixed a stuck spot in Sierhaven
+• Removed a tutorial sign in Northeastern Mineshaft
+• Fractal can no longer be primed by non-magic damage
+• Fixed Elemental Arrows priming Fractal and receiving the
+Fractal damage increase in the same shot
+• Colossal Shockwave name fixed
+• Fixed smart quotes in the lore of Unstable Canister and
+Muddied Tincture
+• Fixed typo in the lore of Corrupted Remnant
+• Fixed typo in the lore of Golden Creeper's Delight
+• Fixed typo in the lore of Sacrifice's Scalp
+• Fixed typos in Prismatic Shield, Decayed Totem, Crystalline
+Combos, Judgement Chain, Melancholic Lament, and Brute Force
+descriptions
+• Fixed shield bash knockback stat not working
+• Fixed an issue with the Sierhaven Quest Guide that would show
+Arclight and Royal Blue as not yet accessible when players met
+the requirement.
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.&r
