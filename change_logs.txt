@@ -1,234 +1,237 @@
-### Twisted Changes
-• All tormented damage has been reduced by 30% in all regions
-• All tormented health has been increased by 10% in all regions
-• Tormenteds now have a special noise upon death to announce
-their defeat
-• Twisted Moonweaver's Frost Moon no longer does upwards
-knockback
-• Twisted Crusader's Bell now correctly removes upon death
-• Twisted Crusader now only casts Luminous Infusion twice, at
-75% and 25% health
-• Twisted Crusader has a new phase, with two new attacks
-• Fixed Twisted Shadestepper spamming too many dagger throws
-• Trickshade Barrage no longer deals knockback
-• Twisted Shadestepper's dash telegraph noise has been changed
-• Twisted Shadestepper can no longer cast dagger throw while
-stealthed
-• Twisted Shadestepper's stealth cooldown increased to 20s (from
-15s)
-• Twisted Shadestepper's Cloaked Strike damage increased to
-50/75 with backstab (from 40/60 with backstab)
-• Shadestepper Clones have received the following changes: 100
-health (from 50), 0.26 movement speed (from 0.23), and they no
-longer dash upon death, they have a new dash spell and no longer
-despawn after a set time, instead despawning after the
-Shadestepper dies
-• Hurricane Dance now disappears after killing Twisted Tempest
-• Fixed Astral Pillars spawning Spectrals
-• Fixed Astral Pillars not properly casting Lunar Omens
-• Fixed Whirling Ripsaw dealing true knockback
-• Increased Dark Rune • Scatter's delay before doing damage from
-1.5s to 4s
-• Increased Dark Rune • Scatter's delay before pulling players
-from 3s to 4s
-• Twisted Spiritcaller now has a new summon
-• Spiritcaller Trees are now smaller garden-like growths###
-Feedback Fixes
-• Removed pull from ||The Void Knight||'s first attack pattern
-• The Butterfly Effect Skill Cosmetic sound has been changed
-• Replaced buttons that trigger TNT with target blocks in Gray
-and Exalted Reverie.
-• Updated the vanity and sound for Archaic Guardian, Lost Soul,
-Hawk Spirit, and Jaguar Spirit
-• Updated the vanities of Primordial Elemental and Immortal
-Elemental
-• Indigo: Added ||Broken Artifacts, Silverhooks, and Empty Space
-items|| to the API
-• Added Mecha-Pass dummies to the API
-• Added SKR dummies to the API
-• Changed the colour of a crystal altar in Sierhaven
-• The area effect clouds on Ghoulish Monstrosities now lasts up
-to 2 minutes instead of over 8 minutes
-• Nudged squire firwold a bit to the left
-### Bug Fixes
-• Indigo • ||Outworld Void teleports sooner. This attempts to
-fix lingering issues with people &ostill&r falling to their
-death. Please report any bugs like these with all details you
-have.||
-• Aria in Farr no longer has trades with emeralds
-• Made a bench in Sierhaven sittable.
-• Fixed Specter of Malediction being ccimmune
-• Fixed Whirling Ripsaw dealing magic damage
-• Fixed Parasomnic Mist not disabling player collision
-• Fixed an issue where Ionic Phasers would deal rifle damage
-with their melee attacks
-• Fixed a case with Ionic Phasers where the telegraph target and
-the true target weren't the same
-• Removed an outdated message from Captain Murano's dialogue
-during the prologue about using the quest compass
-• Fixed Purple's Varcosa not rewarding anything when called
-early using the Hollow Chime
-• Fixed Indigo delves rewarding a Brown delve bounty
-• Fixed Indigo failing to show up as a delve bounty option
-• Indigo • ||Fixed Aurora sometimes disappearing and sometimes
-being able to start the fight outside the arena (causing many
-more issues)||
-• Indigo • ||Fixed Indigo objectives triggering repeatedly when
-standing in the right spot||
-• Indigo • ||Fixed weird behaviour if VK dies at the same time
-as the player||• Indigo • ||Fixed winning or losing objectives
-killing all mobs in the area instead of just the objective
-mobs||
-• Fixed Chanterelle Village's end chest not having any filler
-blocks when undelved
-• The "Weird Route" advancement now shows up on the website
-• Fixed a typo in Steadfast's description in the Player Stats
-GUI
-• Fixed Rending Razor iframing itself when withdrawn too quickly
-• Fixed an issue where Ionic Phasers would deal rifle damage
-with their melee attacks
-• Fixed a case with Ionic Phasers where the telegraph target and
-the true target weren't the same
-• Slightly updated Tuulen's dialogue at the end of and right
-after Starless Night to be more consistent with the rest of her
-dialogue.
-• Tuulen's dialogue at the end of Holding Space and her post-
-quest dialogue has been updated to be more consistent with the
-rest of her dialogue and feelings.
-• Fixed the order of Namtar's dialogue options after Starless
-Night so that Revelation is on the bottom again.
-• Empty decorated pots can no longer take items from players in
-non-plots shards
-• Fixed a build error in Galengarde
-• Fixed Heavenly Boon's enhancement reducing its own cooldown on
-other affected players
-• Immortal mounts and immortal passengers no longer trigger
-death-based abilities on death
-• Fixed Heavenly Boon being able to bypass worm body parts' no-
-death-trigger-abilities tag, making it roll for a boon for every
-mob in the worm
-• Fixed Corridors not copying delve modifiers correctly### Delve
-Mob Changes
-• Region 3 Scaling re-adjusted to: 1.7x HP, 1.2x DMG.
-• Bug fix: Infernal should only roll per spawn wave instead of
-per mob.
--# Infernal were designed as pseudo elites, however their rates
-are bugged to roll per mob spawn rather than per wave.
-• Ember of Mania: 1s -> 3s spawn delay before casting first
-ability.
-• Ember of Fervor: fuse time 3s -> 4s. When thrown, requires a
-player within 6 block with LoS to fuse. Lava no longer a source
-block.
-• Specter of Silence: 95 -> 85 HP, Silence duration 2s -> 1.5s,
-Silence window 2.5s -> 2s, Audio telegraph includes witch laugh,
-Audio teleport slightly amplified. Include visual telegraph for
-silence.
-• Specter of Malediction: 1s -> 3s spawn delay before preparing
-pull ability. Pull casting 1.5s -> 3s. Audio heavily amplified.
-Glowing while casting the pull, additional particle telegraph
-under players feet.
-• Removed Specter of Mourning from the spectral pool.
-• Dreadnaught of Sorrow shield stun 6s -> 2s. Enraged move speed
-0.24 -> 0.22.
-• Contagion Manifest (Pestilence's Projectile) no longer break
-blocks, explosion damage & size reduced. Applies high wither for
-3s when close to blast zone.
-• Dreadnaught of Fury (Subjugation's Rider) dismounted melee
-range set to 1~ block.
-• Dreadling: 18 -> 16 DMG.
--# Dreadlings were meant to get 2 dmg as part of their CCI
-loss/Dread reduction, not 4.
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.Temporarily disabled
-Twisted Intruder pending Amalgamating Dreamscape fixTwisted
-Intruder is now open again!
-&b(11.31.0)&r
-For the update on August 27, 2025
-&o
-&bA brand new quest has been added • Centurem Lost!&r The shades
-may now be mortal, but that doesn't mean the Keep is empty of
-threats. New dangers rise to take their place, and the shade
-hunters require your aid. This quest can be started at Shade
-Hunter Titus on the new walls of New Antium and requires
-completion of Unconventional Methods.
-### Minor New Features:
-• Added one Discovery to the King's Valley Overworld
-• Grappler Effect is now counted for Primordial Speedster. This
-is not granted retroactively, you need to redo the race if
-you've done it in the past.
-• Unyielding delve modifier now has a minimum knockback
-requirement for healing interruption
-### Idolatry Changes:
-• Guardian Idol max redirects 3 -> 1 (per aoe attack),
-passthrough damage 20% -> 15%, is now considered an elite
-• Idol of Haste max redirects 3 -> 2, passthrough damage 20% ->
-15%, Fixed speed not applying to nearby mobs (35% speed, 6
-range)
-• Idol of Vigor max redirects 3 -> 2,  passthrough damage 20 ->
-15%
-• Idol of Suppression 15% -> 40% slowness, 6 -> 7 block aoe
-• Idols will now take damage over time if there are no mobs
-nearby to worship them
-### Twisted Changes:
-• Increased Rekindled Spirits' health to 150 (from 100)
-• Hurricane Effigies now take 7 hits to break (from 4)
-• Fixed Shadestepper Clone having 10 bonus stealth damage
+• Roots of Life (M4) : -30% -> -20% Speed
+• Memory of the Star (M4) : 0 -> 1 Cloaked, 1 -> 0 Reflexes
+• Silence of Space (M4) : 2 -> 3 Inferno
+• Hailstorm Pelt (M4) : 3 -> 2 Trivium, 10 -> 11 Armor
+• Fungal Will (M4) : 0 -> 2 Stamina, 8 -> 2 Thorns Damage
+### • Celsian Isles
+• Dragonbreath Repeater (Dreadful Ballista) : 0 -> 3 Retrieval
+• Seal of Revival: 3 -> 4 Unbreaking
+### • King's Valley
+• Chains of the Deep (Rework) : Projectile Protection 1, First
+Strike 1, Mending, 4 Agility, +15% Attack Speed
+• Soulbinder's Combat Boots : 2 -> 3 Second Wind
+• Cazol's Shattered Mask : 0 -> 1 First Strike, +13% -> +15%
+Projectile Damage, 1 -> 0 Adaptability
+• Scattershot Kolotl : 0 -> 1 Melee Protection, 13.5 -> 14
+Projectile Damage
+• Marmothhide Leggings : 0 -> 1 Second Wind, 1 -> 0 Adaptability
+• Exoskelehelm : 0 -> 1 Melee Protection, 0% -> +10% Attack
+Speed, 5 -> 4.5 Armor
+• Chitin Helm : 0% -> +5% Attack Speed, 4 -> 3.5 Armor
+• Stiletto of the Summoner : 5.5 -> 6.5 Attack Damage, 20 -> 30
+Unbreaking
+• Blightbane : 0 -> 1 Abyssal
+• Phoenix Spellblade (Silver Tithe) : 2 -> 5 Unbreaking
+• Firestorm Robe : 2.5 -> 3 Armor, 0 -> 1 First Strike
+• Ghoulskin Shroud : 0 -> 1 Regeneration, 3 -> 2.5 Armor
+• Breaking Wave : 0% -> +10% Attack Speed, 2.5 -> 3 Armor, 0 ->
+1 Aqua Affinity
+• Mistleaf Vambrace : 2.5 -> 3 Agility, 0 -> 1 Projectile
+Protection
+### Charm Changes
+• Earthquake Staff (Rework) : 2 Charm Power, +25% Brute Force
+Knockback, # +75% Brute Force Radius, +75% Brute Force Wave
+Delay
+• Deathbound Cavaliers (Rework) : 3 Charm Power, +75% Tactical
+Maneuver Damage, +25% Tactical Maneuver Velocity, +25% Tactical
+Maneuver Cooldown
+• Vires Terrae (Rework : 2 Charm Power, +10% Challenge Max Melee
+Damage Amplifier, -40% Challenge Cooldown, +40% Challenge Melee
+Damage Amplifier Per Mob, -40% Challenge Duration, -5 Challenge
+Max Mobs
+• Clocktower's Blessing (Rework) : 2 Charm Power, -25% Warding
+Remedy Cooldown, +25% Warding Remedy Healing Bonus, -25% Warding
+Remedy Max Absorption• Magna Luna (Rework) : 3 Charm Power,
++300% Cosmic Moonblade Damage, +100% Cosmic Moonblade Cooldown
+Cap, +100% Cosmic Moonblade On Kill Cooldown Reduction, +50%
+Cosmic Moonblade Range, +50% Cosmic Moonblade Cooldown, # -1
+Cosmic Moonblade Slashes
+• Cerebral Expansion (Rework) : 2 Charm Power, -25% Cleansing
+Rain Cooldown, +10% Cleansing Rain Damage Reduction, +50%
+Cleansing Rain Healing, -50% Cleansing Rain Duration
+• Resonating Belltongue (Rework) : 3 Charm Power, +4 Alchemical
+Artillery Aftershocks, -80% Alchemical Artillery Aftershock
+Delay, -20% Alchemical Artillery Cooldown, +40% Alchemical
+Artillery Aftershock Damage, # -40% Alchemical Artillery Damage
+• Spellbound Spearhead : +55% -> +100% Mana Lance Damage, 0% ->
++100% Mana Lance Size, +50% -> # +50% Mana Lance Cooldown
+• Parasomnic Remnant : -2 -> -3 Deadly Ronde Stack Decay Timer
+• Swift Lunar Charm : 3 -> 4 Charm Power, +5% -> +2.5% Cosmic
+Moonblade Cooldown Reduction
+• Guiding Moonlight : 4 -> 3 Charm Power, 0 -> -5% Cosmic
+Moonblade Damage, 0 -> -1% Cosmic Moonblade Cooldown Reduction
+• Event Horizon : 0 -> +10 Grasping Claws Cleave Flat Damage,
++15% -> +0% Grasping Claws Cleave Damage
+• Antimatter Siphon : 0% -> +100% Grasping Claws Cleave Percent
+Damage, +0.5 -> 0 Grasping Claws Cleave Damage
+• Null Agglomerate : -40% -> -50% Blizzard Cooldown, -50% -> #
+-40% Blizzard Range
+• Looming Demise : 4 -> 3 Charm Power, +40% -> +30% Starfall
+Radius
+• Derelict Tablet : +25% -> +35% Holy Javelin Damage
+• Darkest Pact : -100% -> -60% Dark Pact Absorption Per Kill
+• Starstrike Emblem : 0% -> +15% Touch of Radiance Enhancement
+Damage
+• Star Charter : -100% -> 0% Prismatic Shield Knockback
+• Aether Turbine : +80% -> +60% Wind Walk Cooldown
+• Architect's Aegis : 4 -> 3 Charm Power, 0% -> +100% Shield
+Wall Radius
+• Quickening Mycosis : -20% -> -25% Rending Razor Embed Damage,
+-20% -> -25% Rending Razor Rend Damage
+• Crucus Gauntlet : +25% -> +45% Shield Bash Cooldown Reduction,
+-400% -> -300% Shield Bash Knockback• Split Tincture : -50% -> #
+-50% Iron Tincture Cooldown
+• Malignant Neuron: -50% -> # -50% Heavenly Boon Healing, -50%
+-> # -50% Heavenly Boon Radius
+• Lesser Prismatic Charm : 3 -> 1 Charm Power, 0% -> -5%
+Prismatic Shield Cooldown, 2 -> 1 Prismatic Shield Absorption
+Health
+• Greater Prismatic Charm : 5 -> 2 Charm Power, 3 -> 2 Prismatic
+Shield Absorption Health
+• Heavy Prismatic Charm : 2 -> 1 Charm Power
+• Swift Prismatic Charm : 3 -> 2 Charm Power
+• Lesser Parasitic Charm : 0% -> -5% Sanguine Harvest Cooldown,
++25% -> +10% Sanguine Harvest Healing
+• Greater Parasitic Charm : 0% -> -10% Sanguine Harvest
+Cooldown, +50% -> +20% Sanguine Harvest Healing
+• Swift Parasitic Charm : -10% -> -20% Sanguine Harvest Cooldown
+• Sedated Parasitic Charm (Rework) : 2 Charm Power, +10%
+Sanguine Harvest Healing, +25% Sanguine Harvest Bleed Duration,
++25% Sanguine Harvest Blight Duration
+• Explosive Parasitic Charm : 4 -> 3 Charm Power, 0% -> +50%
+Sanguine Harvest Radius, +25% -> 0% Sanguine Harvest Healing
+• Lesser Charm of the Beast : 0% -> +15% Grasping Claws Cleave
+Percent Damage, +20% -> 0% Grasping Claws Pull Damage
+• Greater Charm of the Beast : 0% -> +30% Grasping Claws Cleave
+Percent Damage, +40% -> 0% Grasping Claws Pull Damage
+• Focused Charm of the Beast : 0% -> +50% Grasping Claws Cleave
+Percent Damage, +60% -> 0% Grasping Claws Pull Damage
+• Sedated Charm of the Beast : 0% -> +25% Grasping Claws Cleave
+Percent Damage, +20% -> 0% Grasping Claws Pull Damage
+• Distant Charm of the Beast : 0% -> +40% Grasping Claws Cleave
+Percent Damage, +40% -> 0% Grasping Claws Pull Damage
+• Lesser Iron Charm : 3 -> 2 Charm Power, 0% -> -10% Iron
+Tincture Cooldown, 2 -> 1 Iron Tincture Absorption Health
+• Greater Iron Charm : 5 -> 3 Charm Power, 0% -> -20% Iron
+Tincture Cooldown, 4 -> 2 Iron Tincture Absorption Health
+• Swift Iron Charm : 3 -> 2 Charm Power
+• Sedated Innate Charm (Rework) : +10% Panacea Damage, +25%
+Panacea Movement Duration, +25% Panacea Movement Speed• Swift
+Insanity Charm : 3 -> 2 Charm Power, +15% -> +10% Unstable
+Amalgam Damage
+• Explosive Artillery Charm : +15% -> +25% Alchemical Artillery
+Radius
+• Sustaining Taboo Charm : 4 -> 2 Charm Power, +4% -> 0% Taboo
+Damage Modifier
+• Explosive Enhancing Charm : 4 -> 3 Charm Power, +10% -> 0%
+Esoteric Enhancements Bleed Amplifier
+• Explosive Razor Charm : 4 -> 2 Charm Power, +10% -> 0% Blade
+Dance Damage
+• Swift Razor Charm : 3 -> 2 Charm Power, +15% -> +10% Blade
+Dance Damage
+• Swift Dagger Charm : 3 -> 2 Charm Power, +15% -> +10% Dagger
+Throw Damage
+• Lesser Charm of Self : 3 -> 1 Charm Power, 0% -> -5% Escape
+Death Cooldown, +2 -> +1 Escape Death Absorption Health
+• Greater Charm of Self : 5 -> 2 Charm Power, +3 -> +2 Escape
+Death Absorption Health
+• Sedated Sacrosant Charm (Rework) : 3 Charm Power, +1 Hallowed
+Beam Stun Duration, +1 Hallowed Beam Resistance Duration, -10%
+Hallowed Beam Cooldown
+• Swift Sacrosant Charm : 3 -> 2 Charm Power, +5% -> +10%
+Hallowed Beam Healing, +15% -> +10% Hallowed Beam Damage
+• Distant Lance Charm : 3 -> 2 Charm Power, +10% -> 0% Holy
+Javelin Damage, +50% -> +40% Holy Javelin Range
+• Swift Lance Charm : 3 -> 2 Charm Power, +15% -> +10% Holy
+Javelin Damage
+• Explosive Orison Charm : 3 -> 2 Charm Power, 5% -> 10%
+Enchanted Prayer Healing, +10% -> 0% Enchanted Prayer Damage
+• Lesser Lacerating Charm : +7.5% -> +5% Rending Razor Embed
+Damage, +7.5% -> +5% Rending Razor Rend Damage
+• Greater Lacerating Charm : +15% -> +10% Rending Razor Embed
+Damage, +15% -> +10% Rending Razor Rend Damage
+• Focused Lacerating Charm : +25% -> +20% Rending Razor Embed
+Damage, +25% -> +20% Rending Razor Rend Damage
+• Distant Lacerating Charm : +15% -> +10% Rending Razor Embed
+Damage, +15% -> +10% Rending Razor Rend Damage
+• Swift Lacerating Charm : +10% -> +20% Rending Razor Travel
+Speed, +10% -> +0% Rending Razor Embed Damage, +10% -> +0%
+Rending Razor Rend Damage• Distant Force Charm : 3 -> 2 Charm
+Power, +50% -> +25% Brute Force Radius +10% -> 0% Brute Force
+Damage### Mob Changes:
+• Matter Agglomerator's telegraph is now much more obvious
+• Reduced the radius of Star Stomper's attack to 3 blocks (from
+4)
+• Reduced the height of Star Stomper's jump to 0.5 velocity
+(from 1.0)
+• Reworked Voidmother's attack pattern
+• Made Deflector Mage's helmet more distinct
+• Ionic Phasers now telegraph their shot with a sound effect
+positioned on the player each tick while aiming
+• Ionic Phaser's shot now deals normal arrow knockback and
+causes vanilla screenshake
+• Gravity Suppression Mechanism now has much clearer telegraph
+and sound cues
+• Shadestepper Clone health reduced to 50 (from 100)
+• Shadestepper Clones no longer have the 1.5x backstab bonus
+• Dark Rune • Scatter now no longer pulls players or deals
+damage below it if they are out of bounds. Instead, if there are
+no players inside the dodging zone, the Twisted Gravecaller will
+be healed for 5% of its health every second.
+• Rekindled Spirit health reduced to 100 (from 150)
 ### Feedback Fixes:
-• Updated sound effects, effect particles, and vanity for the
-following mobs: Bandit, Bandit Archer, Bandit Camp Leader,
-Bandit Executioner, Bandit Sniper, Bandit Stronghold Leader,
-Catman, Festive Catman, Glacial Sniper, Hawk Bowlord, Hawk
-Bowman, Hawk Skirmisher, Hawk Spirit, Hawk Soul, Jaguar
-Berserker, Jaguar Slinger, Jaguar Soul, Jaguar Warrior,
-Serpensia Lord, Serpensia Corpse, Serpensia Knot, Serpensia
-Soul, Serpensia Venomlord, Serpensia Warrior
-• Refactored player nametags• Removed Nausea from the Plague
-Golem arrows
-• Improved the base Panacea and  Arcane Panacea visuals (changed
-last week)
-• Added Page Upgrader Fragment and Armory Page Upgrader to the
-API
-• Added Sketched Earthshaker, Sketched Mage Hunter's Mask,
-Sacrificial Totem Dummy, Pinot Grigio Wine, Zinfandel Wine,
-Imperial Stout, Replica Crown of the Forbidden Yew, Replica
-Uniform of the Arena Champion, Replica Starshine Pants, Replica
-Galoshes of the Waves and Winds, and Wrooby Wrack to the API
-• Made Agglomerated Event Horizon easier to escape from
-• Reduced Agglomerated Event Horizon's damage
-• Matter Agglomerator's projectile now has a smaller contact
-hitbox and homes in less aggressively
+• Removed `/rejoin` from purgatory; you can disconnect and
+reconnect instead if needed, though in a future update you won't
+be sent to purgatory in the first place unless operator
+intervention is required for you to rejoin the server.
+• Adjusted volumes on new mob sounds from last week's patch
+• Reorganized Region 3 Delve Infusion advancements into
+different rows that correspond to how they are ordered within
+the delve infusion GUI, to match the organization of previous
+regions
+• Fixed big discrepancies between the advancement icon and delve
+infusion GUI icon for the enchantments Natant, Decapitation, and
+Fervor
+• The Forsworn Sanctum's ambient music will now end when the
+boss spawns
+• Shulker Shell Fragment is now a currency
+• Azacor key mats are now currencies
+• Unrepaired VR keys are now keys instead of uncommons so you
+can't pchris them by accident, you can sell them for the
+uncommon sell value at the Keymaker• Significantly lowered price
+of Tlaxan Record Player and Crimson Contract rebuys
+• Instaboom Creepers and Instaboom Terrors now have a unique
+particle effect denoting their status
+• The Navigator in the Black Mist lobby now offers a refund for
+Mist's Wake
 ### Bug Fixes:
-• Actually fixed Reverb chaining stopping if the Reverb item was
-no longer held
-• Fixed there being two Nelfines
-• Fixed Vesperidys Soul Link messages being able to play
-multiple times if multiple parties are fighting the boss at once
-• Fixed Specters of Mourning in Corridors turning into Keeper's
-Shades
-• Fixed Flame Spirit only triggering on magic damage
-• Fixed multiple stuck spots in Exalted Halls
-• Fixed a stuck spot in MR lobby
-• Fixed a stuck spot in Sierhaven
-• Removed a tutorial sign in Northeastern Mineshaft
-• Fractal can no longer be primed by non-magic damage
-• Fixed Elemental Arrows priming Fractal and receiving the
-Fractal damage increase in the same shot
-• Colossal Shockwave name fixed
-• Fixed smart quotes in the lore of Unstable Canister and
-Muddied Tincture
-• Fixed typo in the lore of Corrupted Remnant
-• Fixed typo in the lore of Golden Creeper's Delight
-• Fixed typo in the lore of Sacrifice's Scalp
-• Fixed typos in Prismatic Shield, Decayed Totem, Crystalline
-Combos, Judgement Chain, Melancholic Lament, and Brute Force
-descriptions
-• Fixed shield bash knockback stat not working
-• Fixed an issue with the Sierhaven Quest Guide that would show
-Arclight and Royal Blue as not yet accessible when players met
-the requirement.
+• Fixed major bugs with the Infusion and Delve Infusion GUIs
+• Fixed an issue with Veiltorn Helminth that frequently caused
+it to fall out of bounds, causing a force loss in the Twisted
+Intruder fight. With this fix, Veiltorn Heimlinth has been
+readded to the selection pool of Twisted Intruder's Amalgamating
+Dreamscape phase.
+• Fixed multiple quests in the New Antium quest guide showing
+medium difficulty in red instead of yellow
+• Fixed Overseer Dummies Pack not giving any dummies
+• Fixed the ||True Genius||/Kaul Dream area not giving Jump
+Boost
+• Fixed double Community Chests not working
+• Fixed a chair in Lowtide not being sittable.
+• Fixed a cheese spot in Sanguine Halls.
+• Updated the lore of Blackroot's Path
+• Fixed errors in the following items' lore: Ta'Ferna's Quiver,
+Forum Fragment, Xanatull's Skystorm, Thunderous Greaves, Robes
+of the Secret Sun, &nDeath's Cistern&r, &nKeening of the Empty
+One&r
+• Bodkin Blitz will no longer teleport the player if they have
+been teleported by most causes while the bodkin is mid-flight
+• Bodkin Blitz will no longer teleport the player if they die
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.&r
+and select `I want to unlock this shop`.Twisted Intruder has
+been temporarily closed
+&bHotfix (pending restart at xx:15):&r
+• Fixed Veiltorn Heimlinth causing issues in intruder
+• Fixed Rogue's Dodging enhancement working outside of Region 3
