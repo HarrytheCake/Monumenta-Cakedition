@@ -1,232 +1,3 @@
-• Roots of Life (M4) : -30% -> -20% Speed
-• Memory of the Star (M4) : 0 -> 1 Cloaked, 1 -> 0 Reflexes
-• Silence of Space (M4) : 2 -> 3 Inferno
-• Hailstorm Pelt (M4) : 3 -> 2 Trivium, 10 -> 11 Armor
-• Fungal Will (M4) : 0 -> 2 Stamina, 8 -> 2 Thorns Damage
-### • Celsian Isles
-• Dragonbreath Repeater (Dreadful Ballista) : 0 -> 3 Retrieval
-• Seal of Revival: 3 -> 4 Unbreaking
-### • King's Valley
-• Chains of the Deep (Rework) : Projectile Protection 1, First
-Strike 1, Mending, 4 Agility, +15% Attack Speed
-• Soulbinder's Combat Boots : 2 -> 3 Second Wind
-• Cazol's Shattered Mask : 0 -> 1 First Strike, +13% -> +15%
-Projectile Damage, 1 -> 0 Adaptability
-• Scattershot Kolotl : 0 -> 1 Melee Protection, 13.5 -> 14
-Projectile Damage
-• Marmothhide Leggings : 0 -> 1 Second Wind, 1 -> 0 Adaptability
-• Exoskelehelm : 0 -> 1 Melee Protection, 0% -> +10% Attack
-Speed, 5 -> 4.5 Armor
-• Chitin Helm : 0% -> +5% Attack Speed, 4 -> 3.5 Armor
-• Stiletto of the Summoner : 5.5 -> 6.5 Attack Damage, 20 -> 30
-Unbreaking
-• Blightbane : 0 -> 1 Abyssal
-• Phoenix Spellblade (Silver Tithe) : 2 -> 5 Unbreaking
-• Firestorm Robe : 2.5 -> 3 Armor, 0 -> 1 First Strike
-• Ghoulskin Shroud : 0 -> 1 Regeneration, 3 -> 2.5 Armor
-• Breaking Wave : 0% -> +10% Attack Speed, 2.5 -> 3 Armor, 0 ->
-1 Aqua Affinity
-• Mistleaf Vambrace : 2.5 -> 3 Agility, 0 -> 1 Projectile
-Protection
-### Charm Changes
-• Earthquake Staff (Rework) : 2 Charm Power, +25% Brute Force
-Knockback, # +75% Brute Force Radius, +75% Brute Force Wave
-Delay
-• Deathbound Cavaliers (Rework) : 3 Charm Power, +75% Tactical
-Maneuver Damage, +25% Tactical Maneuver Velocity, +25% Tactical
-Maneuver Cooldown
-• Vires Terrae (Rework : 2 Charm Power, +10% Challenge Max Melee
-Damage Amplifier, -40% Challenge Cooldown, +40% Challenge Melee
-Damage Amplifier Per Mob, -40% Challenge Duration, -5 Challenge
-Max Mobs
-• Clocktower's Blessing (Rework) : 2 Charm Power, -25% Warding
-Remedy Cooldown, +25% Warding Remedy Healing Bonus, -25% Warding
-Remedy Max Absorption• Magna Luna (Rework) : 3 Charm Power,
-+300% Cosmic Moonblade Damage, +100% Cosmic Moonblade Cooldown
-Cap, +100% Cosmic Moonblade On Kill Cooldown Reduction, +50%
-Cosmic Moonblade Range, +50% Cosmic Moonblade Cooldown, # -1
-Cosmic Moonblade Slashes
-• Cerebral Expansion (Rework) : 2 Charm Power, -25% Cleansing
-Rain Cooldown, +10% Cleansing Rain Damage Reduction, +50%
-Cleansing Rain Healing, -50% Cleansing Rain Duration
-• Resonating Belltongue (Rework) : 3 Charm Power, +4 Alchemical
-Artillery Aftershocks, -80% Alchemical Artillery Aftershock
-Delay, -20% Alchemical Artillery Cooldown, +40% Alchemical
-Artillery Aftershock Damage, # -40% Alchemical Artillery Damage
-• Spellbound Spearhead : +55% -> +100% Mana Lance Damage, 0% ->
-+100% Mana Lance Size, +50% -> # +50% Mana Lance Cooldown
-• Parasomnic Remnant : -2 -> -3 Deadly Ronde Stack Decay Timer
-• Swift Lunar Charm : 3 -> 4 Charm Power, +5% -> +2.5% Cosmic
-Moonblade Cooldown Reduction
-• Guiding Moonlight : 4 -> 3 Charm Power, 0 -> -5% Cosmic
-Moonblade Damage, 0 -> -1% Cosmic Moonblade Cooldown Reduction
-• Event Horizon : 0 -> +10 Grasping Claws Cleave Flat Damage,
-+15% -> +0% Grasping Claws Cleave Damage
-• Antimatter Siphon : 0% -> +100% Grasping Claws Cleave Percent
-Damage, +0.5 -> 0 Grasping Claws Cleave Damage
-• Null Agglomerate : -40% -> -50% Blizzard Cooldown, -50% -> #
--40% Blizzard Range
-• Looming Demise : 4 -> 3 Charm Power, +40% -> +30% Starfall
-Radius
-• Derelict Tablet : +25% -> +35% Holy Javelin Damage
-• Darkest Pact : -100% -> -60% Dark Pact Absorption Per Kill
-• Starstrike Emblem : 0% -> +15% Touch of Radiance Enhancement
-Damage
-• Star Charter : -100% -> 0% Prismatic Shield Knockback
-• Aether Turbine : +80% -> +60% Wind Walk Cooldown
-• Architect's Aegis : 4 -> 3 Charm Power, 0% -> +100% Shield
-Wall Radius
-• Quickening Mycosis : -20% -> -25% Rending Razor Embed Damage,
--20% -> -25% Rending Razor Rend Damage
-• Crucus Gauntlet : +25% -> +45% Shield Bash Cooldown Reduction,
--400% -> -300% Shield Bash Knockback• Split Tincture : -50% -> #
--50% Iron Tincture Cooldown
-• Malignant Neuron: -50% -> # -50% Heavenly Boon Healing, -50%
--> # -50% Heavenly Boon Radius
-• Lesser Prismatic Charm : 3 -> 1 Charm Power, 0% -> -5%
-Prismatic Shield Cooldown, 2 -> 1 Prismatic Shield Absorption
-Health
-• Greater Prismatic Charm : 5 -> 2 Charm Power, 3 -> 2 Prismatic
-Shield Absorption Health
-• Heavy Prismatic Charm : 2 -> 1 Charm Power
-• Swift Prismatic Charm : 3 -> 2 Charm Power
-• Lesser Parasitic Charm : 0% -> -5% Sanguine Harvest Cooldown,
-+25% -> +10% Sanguine Harvest Healing
-• Greater Parasitic Charm : 0% -> -10% Sanguine Harvest
-Cooldown, +50% -> +20% Sanguine Harvest Healing
-• Swift Parasitic Charm : -10% -> -20% Sanguine Harvest Cooldown
-• Sedated Parasitic Charm (Rework) : 2 Charm Power, +10%
-Sanguine Harvest Healing, +25% Sanguine Harvest Bleed Duration,
-+25% Sanguine Harvest Blight Duration
-• Explosive Parasitic Charm : 4 -> 3 Charm Power, 0% -> +50%
-Sanguine Harvest Radius, +25% -> 0% Sanguine Harvest Healing
-• Lesser Charm of the Beast : 0% -> +15% Grasping Claws Cleave
-Percent Damage, +20% -> 0% Grasping Claws Pull Damage
-• Greater Charm of the Beast : 0% -> +30% Grasping Claws Cleave
-Percent Damage, +40% -> 0% Grasping Claws Pull Damage
-• Focused Charm of the Beast : 0% -> +50% Grasping Claws Cleave
-Percent Damage, +60% -> 0% Grasping Claws Pull Damage
-• Sedated Charm of the Beast : 0% -> +25% Grasping Claws Cleave
-Percent Damage, +20% -> 0% Grasping Claws Pull Damage
-• Distant Charm of the Beast : 0% -> +40% Grasping Claws Cleave
-Percent Damage, +40% -> 0% Grasping Claws Pull Damage
-• Lesser Iron Charm : 3 -> 2 Charm Power, 0% -> -10% Iron
-Tincture Cooldown, 2 -> 1 Iron Tincture Absorption Health
-• Greater Iron Charm : 5 -> 3 Charm Power, 0% -> -20% Iron
-Tincture Cooldown, 4 -> 2 Iron Tincture Absorption Health
-• Swift Iron Charm : 3 -> 2 Charm Power
-• Sedated Innate Charm (Rework) : +10% Panacea Damage, +25%
-Panacea Movement Duration, +25% Panacea Movement Speed• Swift
-Insanity Charm : 3 -> 2 Charm Power, +15% -> +10% Unstable
-Amalgam Damage
-• Explosive Artillery Charm : +15% -> +25% Alchemical Artillery
-Radius
-• Sustaining Taboo Charm : 4 -> 2 Charm Power, +4% -> 0% Taboo
-Damage Modifier
-• Explosive Enhancing Charm : 4 -> 3 Charm Power, +10% -> 0%
-Esoteric Enhancements Bleed Amplifier
-• Explosive Razor Charm : 4 -> 2 Charm Power, +10% -> 0% Blade
-Dance Damage
-• Swift Razor Charm : 3 -> 2 Charm Power, +15% -> +10% Blade
-Dance Damage
-• Swift Dagger Charm : 3 -> 2 Charm Power, +15% -> +10% Dagger
-Throw Damage
-• Lesser Charm of Self : 3 -> 1 Charm Power, 0% -> -5% Escape
-Death Cooldown, +2 -> +1 Escape Death Absorption Health
-• Greater Charm of Self : 5 -> 2 Charm Power, +3 -> +2 Escape
-Death Absorption Health
-• Sedated Sacrosant Charm (Rework) : 3 Charm Power, +1 Hallowed
-Beam Stun Duration, +1 Hallowed Beam Resistance Duration, -10%
-Hallowed Beam Cooldown
-• Swift Sacrosant Charm : 3 -> 2 Charm Power, +5% -> +10%
-Hallowed Beam Healing, +15% -> +10% Hallowed Beam Damage
-• Distant Lance Charm : 3 -> 2 Charm Power, +10% -> 0% Holy
-Javelin Damage, +50% -> +40% Holy Javelin Range
-• Swift Lance Charm : 3 -> 2 Charm Power, +15% -> +10% Holy
-Javelin Damage
-• Explosive Orison Charm : 3 -> 2 Charm Power, 5% -> 10%
-Enchanted Prayer Healing, +10% -> 0% Enchanted Prayer Damage
-• Lesser Lacerating Charm : +7.5% -> +5% Rending Razor Embed
-Damage, +7.5% -> +5% Rending Razor Rend Damage
-• Greater Lacerating Charm : +15% -> +10% Rending Razor Embed
-Damage, +15% -> +10% Rending Razor Rend Damage
-• Focused Lacerating Charm : +25% -> +20% Rending Razor Embed
-Damage, +25% -> +20% Rending Razor Rend Damage
-• Distant Lacerating Charm : +15% -> +10% Rending Razor Embed
-Damage, +15% -> +10% Rending Razor Rend Damage
-• Swift Lacerating Charm : +10% -> +20% Rending Razor Travel
-Speed, +10% -> +0% Rending Razor Embed Damage, +10% -> +0%
-Rending Razor Rend Damage• Distant Force Charm : 3 -> 2 Charm
-Power, +50% -> +25% Brute Force Radius +10% -> 0% Brute Force
-Damage### Mob Changes:
-• Matter Agglomerator's telegraph is now much more obvious
-• Reduced the radius of Star Stomper's attack to 3 blocks (from
-4)
-• Reduced the height of Star Stomper's jump to 0.5 velocity
-(from 1.0)
-• Reworked Voidmother's attack pattern
-• Made Deflector Mage's helmet more distinct
-• Ionic Phasers now telegraph their shot with a sound effect
-positioned on the player each tick while aiming
-• Ionic Phaser's shot now deals normal arrow knockback and
-causes vanilla screenshake
-• Gravity Suppression Mechanism now has much clearer telegraph
-and sound cues
-• Shadestepper Clone health reduced to 50 (from 100)
-• Shadestepper Clones no longer have the 1.5x backstab bonus
-• Dark Rune • Scatter now no longer pulls players or deals
-damage below it if they are out of bounds. Instead, if there are
-no players inside the dodging zone, the Twisted Gravecaller will
-be healed for 5% of its health every second.
-• Rekindled Spirit health reduced to 100 (from 150)
-### Feedback Fixes:
-• Removed `/rejoin` from purgatory; you can disconnect and
-reconnect instead if needed, though in a future update you won't
-be sent to purgatory in the first place unless operator
-intervention is required for you to rejoin the server.
-• Adjusted volumes on new mob sounds from last week's patch
-• Reorganized Region 3 Delve Infusion advancements into
-different rows that correspond to how they are ordered within
-the delve infusion GUI, to match the organization of previous
-regions
-• Fixed big discrepancies between the advancement icon and delve
-infusion GUI icon for the enchantments Natant, Decapitation, and
-Fervor
-• The Forsworn Sanctum's ambient music will now end when the
-boss spawns
-• Shulker Shell Fragment is now a currency
-• Azacor key mats are now currencies
-• Unrepaired VR keys are now keys instead of uncommons so you
-can't pchris them by accident, you can sell them for the
-uncommon sell value at the Keymaker• Significantly lowered price
-of Tlaxan Record Player and Crimson Contract rebuys
-• Instaboom Creepers and Instaboom Terrors now have a unique
-particle effect denoting their status
-• The Navigator in the Black Mist lobby now offers a refund for
-Mist's Wake
-### Bug Fixes:
-• Fixed major bugs with the Infusion and Delve Infusion GUIs
-• Fixed an issue with Veiltorn Helminth that frequently caused
-it to fall out of bounds, causing a force loss in the Twisted
-Intruder fight. With this fix, Veiltorn Heimlinth has been
-readded to the selection pool of Twisted Intruder's Amalgamating
-Dreamscape phase.
-• Fixed multiple quests in the New Antium quest guide showing
-medium difficulty in red instead of yellow
-• Fixed Overseer Dummies Pack not giving any dummies
-• Fixed the ||True Genius||/Kaul Dream area not giving Jump
-Boost
-• Fixed double Community Chests not working
-• Fixed a chair in Lowtide not being sittable.
-• Fixed a cheese spot in Sanguine Halls.
-• Updated the lore of Blackroot's Path
-• Fixed errors in the following items' lore: Ta'Ferna's Quiver,
-Forum Fragment, Xanatull's Skystorm, Thunderous Greaves, Robes
-of the Secret Sun, &nDeath's Cistern&r, &nKeening of the Empty
-One&r
-• Bodkin Blitz will no longer teleport the player if they have
-been teleported by most causes while the bodkin is mid-flight
-• Bodkin Blitz will no longer teleport the player if they die
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -235,3 +6,94 @@ been temporarily closed
 &bHotfix (pending restart at xx:15):&r
 • Fixed Veiltorn Heimlinth causing issues in intruder
 • Fixed Rogue's Dodging enhancement working outside of Region 3
+&bHotfix (pending restart at xx:30):&r
+• Fixed a bug with Idolatry that was deleting the bosstags of
+nearby mobs
+&b(11.33.0)&r
+For the update on September 10, 2025
+### Minor New Features:
+• Added a small room to Brown
+### Feedback Fixes:
+• Shield Wall changes:
+  • Inner Radius: Base Radius • 0.4 -> 0.7 &o Base Radius • 0.5
+  • Outer Radius: Base Radius + 0.4 -> 1.15 &r Base Radius
+&oDev Note: This is essentially a bugfix for fast projectiles
+phasing through the Wall.&r
+• Architect's Aegis: 0% -> 100% Shield Wall Height
+• Judgement Chain L2 should no longer be able to pull mobs that
+L1 could not
+• Updated the sound and vanity for the following mobs: Air
+Shade, Air Wraith, Corrupt Miner, Corrupt Foreman, Distorted
+Overseer, Earth Shade, Earth Spectre, Earth Wraith, Elcard the
+Ignoble, Flame Shade, Flame Wraith, Igneous Wraith, Lycan,
+Master Scavenger, Mercenary, Mercenary Archer, Mercenary Bowman,
+Mercenary Dummy, Mercenary Ranger, Mercenary Sergeant, Mercenary
+Sniper, Mercenary Warrior, Rebel Assassin, Rebel Bombardier,
+Rebel Captain, Rebel Guard, Rebel Pathfinder, Rebel Slinger,
+Rebel Soldier, Rebel Technician, Scavenger Assassin, Scavenger
+Marksman, Shadow Spirit, Shaman Marauder, Silver Chariot
+Guardian, Silver Chariot Knight, Silver Chariot Leader, Silver
+Chariot Ranger, Silver Chariot Sharpshooter, Silver Dreadnaught,
+Silver Theurge, Torrential Scourge, Twisted Executioner, Water
+Shade, Water Wraith
+• Culled ccimmune from Siren of Andromeda
+• Increased the Health of Hawk Bowlords from 20 -> 28 and the
+Punch of their bows from 1 -> 2
+• Kaul's Lightning Storm's shock damage will now stop if the
+player is sent to Kaul's Judgement
+• Adjusted a basement in Port Manteau
+• Unlocked a trapdoor in Port Manteau
+• Triggers in ability descriptions will no longer display
+redundant conditions "not sneaking" or "not sprinting" if
+sprinting or sneaking are required respectively
+• Slightly updated Parasomnic Mist's moving circle particles###
+Bug Fixes:
+• Fixed untextured player head in a SKR combat room
+• Fixed Mimics in Yellow and Willows having vanilla armor,
+outdated visuals, and not having their aura spell work
+• Fixed Hunts bosses not being bosses in the Bestiary (and
+therefore requiring more kills)
+• Fixed an armor stand in a Zenith room being interactable
+• Fixed the water draining in Gray not removing water that is
+part of a bubble column
+• Fixed Forsaken Grimoire not offering Wildcard abilities if the
+player has Convergence
+• Fixed Demested Pishogue and Wi'ntsigo Pup holding stacked
+items
+• Fixed part of the arena for Bad Moon Rising giving saturation
+• Fixed unnecessary spaces in The High Priest dialogue
+• Fixed out of order Namtar dialogue and clickable text
+• Fixed untextured player head in Black Mist
+• Fixed world name spoofing not correctly differentiating
+between Exalted and King's Valley instances of specifically
+Black Willows and Malevolent Reverie
+• Fixed smart quotes in the dialogue of Breathing Rock, Dimitri
+(post-||Primeval Creations 013-2||), Fred (during Silver
+Skinned), and Raffati, Eastern Pilgrim
+• False Spirit and Masked Man no longer apply vanilla Slowness
+• Bloodthirsty (and Bloodlust) will no longer fling Idols
+• Drowned Thralls self-damage per half-second: 6 flat -> 4% of
+max health
+_Dev Note: Undelved gameplay is unchanged, delved versions will
+now always die in 12.5s instead of being slightly variable_
+• Drowned Thralls no longer shred Idols
+• Idols should no longer transfer damage between each other
+• A particle line is drawn between Idols and their faithful when
+redirecting damage
+• Volleying with Throwing Knife shoots a fleet with the correct
+projectile speed
+• Fixed Silver Chariot Sharpshooter dealing minimal damage with
+its bow
+&bHotfix:&r
+• fixed broken trades relating to tormented fragments
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• Hekawt has been reopened.
+&bNow Discovered:&r (spoilers!)
+• ||A new poi has been added to the Architect's Ring, Fathom's
+Reach!||
+• ||The masterwork cost of Emblem of Wrath has been reworked to
+accommodate the new poi's rare items||Hotfix (On daily restart):
+||Fixed Fathom's Reach loot not scaling with Delves||
