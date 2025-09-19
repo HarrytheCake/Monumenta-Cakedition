@@ -1,89 +1,3 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.Twisted Intruder has
-been temporarily closed
-&bHotfix (pending restart at xx:15):&r
-• Fixed Veiltorn Heimlinth causing issues in intruder
-• Fixed Rogue's Dodging enhancement working outside of Region 3
-&bHotfix (pending restart at xx:30):&r
-• Fixed a bug with Idolatry that was deleting the bosstags of
-nearby mobs
-&b(11.33.0)&r
-For the update on September 10, 2025
-### Minor New Features:
-• Added a small room to Brown
-### Feedback Fixes:
-• Shield Wall changes:
-  • Inner Radius: Base Radius • 0.4 -> 0.7 &o Base Radius • 0.5
-  • Outer Radius: Base Radius + 0.4 -> 1.15 &r Base Radius
-&oDev Note: This is essentially a bugfix for fast projectiles
-phasing through the Wall.&r
-• Architect's Aegis: 0% -> 100% Shield Wall Height
-• Judgement Chain L2 should no longer be able to pull mobs that
-L1 could not
-• Updated the sound and vanity for the following mobs: Air
-Shade, Air Wraith, Corrupt Miner, Corrupt Foreman, Distorted
-Overseer, Earth Shade, Earth Spectre, Earth Wraith, Elcard the
-Ignoble, Flame Shade, Flame Wraith, Igneous Wraith, Lycan,
-Master Scavenger, Mercenary, Mercenary Archer, Mercenary Bowman,
-Mercenary Dummy, Mercenary Ranger, Mercenary Sergeant, Mercenary
-Sniper, Mercenary Warrior, Rebel Assassin, Rebel Bombardier,
-Rebel Captain, Rebel Guard, Rebel Pathfinder, Rebel Slinger,
-Rebel Soldier, Rebel Technician, Scavenger Assassin, Scavenger
-Marksman, Shadow Spirit, Shaman Marauder, Silver Chariot
-Guardian, Silver Chariot Knight, Silver Chariot Leader, Silver
-Chariot Ranger, Silver Chariot Sharpshooter, Silver Dreadnaught,
-Silver Theurge, Torrential Scourge, Twisted Executioner, Water
-Shade, Water Wraith
-• Culled ccimmune from Siren of Andromeda
-• Increased the Health of Hawk Bowlords from 20 -> 28 and the
-Punch of their bows from 1 -> 2
-• Kaul's Lightning Storm's shock damage will now stop if the
-player is sent to Kaul's Judgement
-• Adjusted a basement in Port Manteau
-• Unlocked a trapdoor in Port Manteau
-• Triggers in ability descriptions will no longer display
-redundant conditions "not sneaking" or "not sprinting" if
-sprinting or sneaking are required respectively
-• Slightly updated Parasomnic Mist's moving circle particles###
-Bug Fixes:
-• Fixed untextured player head in a SKR combat room
-• Fixed Mimics in Yellow and Willows having vanilla armor,
-outdated visuals, and not having their aura spell work
-• Fixed Hunts bosses not being bosses in the Bestiary (and
-therefore requiring more kills)
-• Fixed an armor stand in a Zenith room being interactable
-• Fixed the water draining in Gray not removing water that is
-part of a bubble column
-• Fixed Forsaken Grimoire not offering Wildcard abilities if the
-player has Convergence
-• Fixed Demested Pishogue and Wi'ntsigo Pup holding stacked
-items
-• Fixed part of the arena for Bad Moon Rising giving saturation
-• Fixed unnecessary spaces in The High Priest dialogue
-• Fixed out of order Namtar dialogue and clickable text
-• Fixed untextured player head in Black Mist
-• Fixed world name spoofing not correctly differentiating
-between Exalted and King's Valley instances of specifically
-Black Willows and Malevolent Reverie
-• Fixed smart quotes in the dialogue of Breathing Rock, Dimitri
-(post-||Primeval Creations 013-2||), Fred (during Silver
-Skinned), and Raffati, Eastern Pilgrim
-• False Spirit and Masked Man no longer apply vanilla Slowness
-• Bloodthirsty (and Bloodlust) will no longer fling Idols
-• Drowned Thralls self-damage per half-second: 6 flat -> 4% of
-max health
-_Dev Note: Undelved gameplay is unchanged, delved versions will
-now always die in 12.5s instead of being slightly variable_
-• Drowned Thralls no longer shred Idols
-• Idols should no longer transfer damage between each other
-• A particle line is drawn between Idols and their faithful when
-redirecting damage
-• Volleying with Throwing Knife shoots a fleet with the correct
-projectile speed
-• Fixed Silver Chariot Sharpshooter dealing minimal damage with
-its bow
 &bHotfix:&r
 • fixed broken trades relating to tormented fragments
 &bImportant:&r
@@ -97,3 +11,84 @@ Reach!||
 • ||The masterwork cost of Emblem of Wrath has been reworked to
 accommodate the new poi's rare items||Hotfix (On daily restart):
 ||Fixed Fathom's Reach loot not scaling with Delves||
+&bHotfix&r:
+• The Gallery pass mission now requires 40 rounds as stated in
+the descriptionHello!
+I've just deployed a completely new version of the API: it has
+been rewritten (with new technologies) to make it more
+maintainable and future-proof.
+I have also added documentation at the base url,
+<https://api.playmonumenta.com/>, which now informs you about
+all the available paths.
+For now, the new API should behave
+&bexactly like the previous version&r (if not slightly better) •
+basically you should not notice the change.
+(if you do notice something different or not behaving, or things
+that used to work are now broken, please let me know!)
+&b(11.34.0)&r
+For the update on September 17, 2025
+### Minor New Features:
+• The Upper Jungle area has been fully rebuilt! This includes
+POI reworks for Tlaxan Ziggurat, Hawk Village and Mysterious
+Cenote!
+### Darkest Depths Change:
+• Crushing Earth has been replaced with a new ability, Beast's
+Claw!
+### Feedback Fixes:
+• Tormented Fragment base item changed from Netherrack to
+Netherite Scrap, to prevent burning
+• Guardian Cherubim now spawns half as many meteors per wave (5
+now) , at half the frequency (every 2s now), and the radius of
+the splash damage is increased.
+• All-Knowing Seraphim no longer has a jump spell
+Updated the vanity and particle effects for the following mobs:
+Lost Soul, Ominous Scout, Serpensia Lord
+• Throw Rate armor no longer causes bows and crossbows to put
+Throwing Knife on cooldown
+• Throwing Knife no longer sets tridents on cooldown if you only
+have a Riptide trident
+• Guardian Idols (basic idols) are no longer elites
+• Idolatry will make its permanent return next update
+### Fathom's Reach:
+• Now counts for a weekly poi reward
+• Can now be rolled as a bounty
+• Delve stat multiplier 1.2x -> 1.1x
+• Abyssal now works in the entire poi
+• Whalefall death explosion 85 -> 75 dmg, renamed "Detonation"
+-> "Falling Whale"
+• Whalefall charge delay 10sec -> 2.5sec, fireball explosion
+power 5 -> 4, doubled audible radius of telegraph sounds
+• Hydra Nymph no longer appears CCI due to having 100% KBR
+• Reduced spawn count of Hydra Nymph in several spawners ( 4
+attempts -> 3 attempts)
+• Reduced spawn count of Infected Mantarays in several spawners
+(4 -> 2 attempts)
+• Liquified Flesh 0 -> 1 explosion power
+• Squid Hunter 55 -> 45 attack damage, 0.16 -> 0.18 movespeed
+• Wavelost Priestess 350 -> 280 health, fang attack 35 -> 29
+damage, fixed totem 50% heal -> 1% heal, skulls ~33 -> 25 damage
+• Filled in various potholes in inconvenient spots
+• Removed a phantom spawner from the double chest encounter•
+Reworked the double coral colossus encounter to just 1 colossus
+• Coral Colossus 50 -> 42 attack damage, 360 -> 320 health
+• Sacabambaspis 360 -> 300 health, repeat hit damage increase
+15% -> 5%, pull strength (respects kbr) 1.2 -> 0.8
+• Coral Cursebearer:  10% weakness potion on death, 9 second
+duration. Moved the additional potions to only be summoned on
+explode
+• Consumed remains power 22 -> power 19
+### Bug Fixes:
+• Fixed the Sturdy infusion not applying to magic attacks
+• Fixed an error in the lore of Architect's Ring Fragment
+• Fixed a handful of minor spelling errors in NPC dialogues
+• Fixed Tesseract of Emotions having an inaccurate raycast
+• Fixed an additional space introduced in tablist effects for
+type-specific Strengths and Resistances
+• Hits Blocked effects will now update properly
+• Fixed a cheese spot in Sanguine Halls
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&bHotfix (for daily restart):&r
+• fix purple tess not working properly with double chests
