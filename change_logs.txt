@@ -1,75 +1,5 @@
-&bHotfix:&r
-• fixed broken trades relating to tormented fragments
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• Hekawt has been reopened.
-&bNow Discovered:&r (spoilers!)
-• ||A new poi has been added to the Architect's Ring, Fathom's
-Reach!||
-• ||The masterwork cost of Emblem of Wrath has been reworked to
-accommodate the new poi's rare items||Hotfix (On daily restart):
-||Fixed Fathom's Reach loot not scaling with Delves||
-&bHotfix&r:
-• The Gallery pass mission now requires 40 rounds as stated in
-the descriptionHello!
-I've just deployed a completely new version of the API: it has
-been rewritten (with new technologies) to make it more
-maintainable and future-proof.
-I have also added documentation at the base url,
-<https://api.playmonumenta.com/>, which now informs you about
-all the available paths.
-For now, the new API should behave
-&bexactly like the previous version&r (if not slightly better) •
-basically you should not notice the change.
-(if you do notice something different or not behaving, or things
-that used to work are now broken, please let me know!)
-&b(11.34.0)&r
-For the update on September 17, 2025
-### Minor New Features:
-• The Upper Jungle area has been fully rebuilt! This includes
-POI reworks for Tlaxan Ziggurat, Hawk Village and Mysterious
-Cenote!
-### Darkest Depths Change:
-• Crushing Earth has been replaced with a new ability, Beast's
-Claw!
-### Feedback Fixes:
-• Tormented Fragment base item changed from Netherrack to
-Netherite Scrap, to prevent burning
-• Guardian Cherubim now spawns half as many meteors per wave (5
-now) , at half the frequency (every 2s now), and the radius of
-the splash damage is increased.
-• All-Knowing Seraphim no longer has a jump spell
-Updated the vanity and particle effects for the following mobs:
-Lost Soul, Ominous Scout, Serpensia Lord
-• Throw Rate armor no longer causes bows and crossbows to put
-Throwing Knife on cooldown
-• Throwing Knife no longer sets tridents on cooldown if you only
-have a Riptide trident
-• Guardian Idols (basic idols) are no longer elites
-• Idolatry will make its permanent return next update
-### Fathom's Reach:
-• Now counts for a weekly poi reward
-• Can now be rolled as a bounty
-• Delve stat multiplier 1.2x -> 1.1x
-• Abyssal now works in the entire poi
-• Whalefall death explosion 85 -> 75 dmg, renamed "Detonation"
--> "Falling Whale"
-• Whalefall charge delay 10sec -> 2.5sec, fireball explosion
-power 5 -> 4, doubled audible radius of telegraph sounds
-• Hydra Nymph no longer appears CCI due to having 100% KBR
-• Reduced spawn count of Hydra Nymph in several spawners ( 4
-attempts -> 3 attempts)
-• Reduced spawn count of Infected Mantarays in several spawners
-(4 -> 2 attempts)
-• Liquified Flesh 0 -> 1 explosion power
-• Squid Hunter 55 -> 45 attack damage, 0.16 -> 0.18 movespeed
-• Wavelost Priestess 350 -> 280 health, fang attack 35 -> 29
-damage, fixed totem 50% heal -> 1% heal, skulls ~33 -> 25 damage
-• Filled in various potholes in inconvenient spots
-• Removed a phantom spawner from the double chest encounter•
-Reworked the double coral colossus encounter to just 1 colossus
+• Reworked the double coral colossus encounter to just 1
+colossus
 • Coral Colossus 50 -> 42 attack damage, 360 -> 320 health
 • Sacabambaspis 360 -> 300 health, repeat hit damage increase
 15% -> 5%, pull strength (respects kbr) 1.2 -> 0.8
@@ -92,3 +22,157 @@ update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 &bHotfix (for daily restart):&r
 • fix purple tess not working properly with double chests
+&bHotfix&r (because plot templates don't ship with weekly
+updates):
+• Filled an unsupported air pocket on the guildplots template
+&b(11.35.0)&r
+For the update on September 24, 2025
+### Minor New Features:
+• Standing before the mighty Ziggurat, you hear the wind whistle
+through the broken Hawk statue…
+• Added Plush Cat spawn eggs
+### Mob Changes:
+• Twisteds are now significantly more aggressive with using
+their Worldshaper's Looms
+• Land Twisted movement speed significantly increased when in
+water
+• Land Twisteds will now attempt to escape water and lava when
+possible
+&oDev Note: Hopefully this fixes the issues with Twisteds in
+Fathom's Reach!&r
+• Reduced Demented Phisogue's movement speed from 0.28 to 0.24
+• Aligned Cascade's Lancer stats with Afflicted Reeler (Nadir
+trident mob) instead of the Zenith counter part
+• Updated the sound, vanity, and particle effects for the
+following mobs: Arcane Archer, Archmage, Clay Golem, Dark Magic,
+Deranged Alchemist, Earth Golem, Evolved Guardian, Fire Mage,
+Ice Mage, Land Guardian, Lunatic Cultist, Mutated Abomination,
+Savage Jaguar, Savage Hawk, Water Golem, Water Spirit
+### Feedback Fixes:
+• Added Repair Anvil, Ghastroot, Black Cat Brew, Woodsman's Axe,
+and "Lofi Hip Hop Radio 24/7 Chill Gaming / Study Beats" to the
+Items API
+• Shift clicking the Blitz board now starts a game directly
+• The infusions you can ask Infusion Master about are now
+ordered like they are in the menu
+• Slightly adjusted a staircase in Arx Sprinensis
+• A stargazer in Galengarde now notices when a certain star goes
+missing
+• Locking items at the Willows Spirit now costs 16cxp instead of
+3hxp
+• Removed the insanely loud and unnecessarily rapid step sounds
+from Sanguine Scorpion
+• Arx Tumulus and Tarkir Arboretum no longer spawn mobs
+immediately upon you entering
+• Disabled SKR scrolls outside the Ring Overworld
+• Your third SKR spot will now always be 🎃 as a hint to where
+the Gatecharm Trader is located.  This ignores the "no double
+SKRs in a row" rule. It is also guaranteed to have a "light
+beam" hint
+• Removed a notorious bubble column in Fathom's Reach• Water in
+Fathom's Reach now grants conduit power
+• Mungfish now cost 1 pulsating shard instead of 10 arachos
+rings
+• Some potions sold by Tondan in the Nightcap now cost 1
+pulsating shard
+• Stephan the Scaffolder has reduced the price of scaffolding,
+and additionally offers a bulk discount trade for 1 pulsating
+shard
+• Reduced the likelihood of pulsating shards from SKR chances
+(archite chips are slightly more likely as a result)
+• Added a message to SR and MR when you manage to improve your
+PB for highest time on the clock
+• Completing the Mastermind SKR under 6 turns in the first round
+will immediately grant all chest rewards, instead of having to
+complete hardmode separately. Due to technical limitations,
+obtaining the lore book is still locked behind the second round
+• Me in What Lies Within now has some particles to hint towards
+their existence for people who have glowing disabled
+• Added a button to the post-Temple to Kaul quest area that can
+teleport you to the start of the PoI so you dont get thrown into
+a respawned PoI and need to clear it again when leaving the
+quest area
+• Shift-clicking Mysterious Mushroom while holding Blighted
+Roots will craft as many Blighted Roots as possible at once.
+(Right Click is not an option as the NPC is also a trader)
+### Bug Fixes:
+• Fixed the Sturdy infusion not applying to magic attacks
+• Removed a suspicious armor stand from Hawk Village
+• Shears have gone out of fashion in Hawk Village
+• Fixed some exposed bedrock in Tlaxan Ziggurat
+• Fixed Rotting Skullcap having incorrect stats
+• Fixed Magna Luna having incorrect stats• Fixed typos and
+compass issues in Coraline's dialogue, The Tolumaeus' conquer
+message, Words Upon Hushed Lips, Winds of War,  Beasts of Men,
+Scars of Magic, Tlaxan Troubles, Buried Blade, Missing Soldiers,
+A Little Spark, The Salmon, A Crew To Remember, Voyage of
+Discovery, An Unexpected Lesson, Primeval Creations 6, Centurem
+Lost, Sleeping Shadows, Long Way Down, Stablemaster's Request,
+Dealbreaker, Sabotage and A Merchant's Woe
+• Fixed a compass entry in Winds of War
+• Removed dupe Shady Traders in Sierhaven
+• Flipped a trapdoor to make it align with its neighbours in
+Tundra Lighthouse
+• Resetting the Light Gray Tesseract puzzle is now more pleasant
+on the ears
+• Fixed tiny build issues in Lowtide, Nyr, Isles Ocean, Light
+Blue, Blue, Indigo, SKT, Shifting's Vault, Chanterelle Village
+and a quest area from An Unexpected Lesson
+• Fixed incorrect advancement coordinates for Magmashroom Mine,
+Terracotta Mining Town, Cave Village and Aquamarine Monastery
+• Fixed vanilla armor on a few Fathom's Reach mobs
+• Plot Quatermaster now sells more steak to have prices
+comparable to their competition
+• Added Sulfuric Flame Boots and Tarnished Flame Skull to API
+• Randomizing The Olive Branch/Galos Outlook's puzzle while
+having a block selected no longer breaks the puzzle
+• Fixed a random cuboid of stone bricks at the start of
+Magenta's water section
+• Changed a window in Sierhaven to make a jump in Tutorial+ less
+depending on ping
+• Fixed an already rolled chest in Corrupted Island
+• The Hallucinatekeeper no longer hallucinates about Intruder
+being a dungeon
+• Changed the wording of Murky Maze's bounty text slightly to
+fit the mobs of the PoI better
+• Added Intruder to the PEB dailies
+• Changed wording in Remnants of the Empire to make it clear
+that you can't leave through the emergency exit even after
+completing the puzzle
+• The rules button for SKR's data banks puzzle has finally
+noticed the board has become bigger• Fixed discrepancy between
+Eroded Effigy's Health and MaxHealth
+• The advancements for the Explosive and Grappling Hook
+enchantments now show up on the website
+• The Seanchaidh no longer claims that they will reward you for
+only breaking enough spawners in a bounty
+• A post-Treasure for the Future interaction with Atiuh is now
+actually locked behind Treasure for the Future
+• Fixed minor bugs related to the Smallpoint discovery
+• Fixed right clicking the Quest Compass playing the page turn
+sound but not displaying an entry
+• Fixed Monolithic Axon spawning more Spectrals than intended
+• Replaced all Harmonic Sentinel and Dissonant Sentinel spawners
+in Harmonic Arboretum still using outdated mechs to spawn, and
+they will no longer spawn Spectrals occasionally when the
+modifier is selected
+• Alcyoneus should now not go into the Tools section of an
+Armory
+• Loadout Lockboxes and the Mechanical Armory will now refuse to
+store Curse of Ephemerality items
+• Endless Ephemeral Corridors is now more resilient against
+players receiving different delve modifiers in the event that
+they are renamed, added, or removed in the future
+• Three Rare Discoveries in the King's Valley will now correctly
+reward 100 XP when claimed
+• Removed the ability for players to use beds in Inner Sanctum
+and Verdant Remnants to prevent a deathlooping bug
+• Fixed a memory leak with Divine Justice
+• Fixed The Gift Wrapper not working
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.Hotfix (on daily
+restart):
+• Fixed a bug preventing access to the secret near Tlaxan
+Ziggurat
