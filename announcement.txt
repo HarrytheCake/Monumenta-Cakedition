@@ -1,6 +1,4 @@
 [
-&bMistHelix Developer
-Interview&r](https://youtu.be/10CuZFi90Dg)[
 &bChargingUv Developer
 Interview&r](https://youtu.be/Wd4c72BpbjU)I'm happy to announce
 that @[MAID] ILoveCookies_ and @star_bright have joined Team
@@ -70,4 +68,18 @@ forward. Please make sure to give him the congratulatory 🏓The
 MONU discord tag has been re-enabled. Thanks everyone for
 boosting our discord, we really appreciate it!Please welcome
 @onion as our newest Moderator! Be sure to send them many
-congratulatory 🏓 s!
+congratulatory 🏓 s!If you are having trouble connecting to
+Monumenta: please ensure that you are
+&bNOT&r using `playmonumenta.com`
+NA proxy domains are:
+• `server.playmonumenta.com`
+• `play.playmonumenta.com` (points to `server`)
+• `server-na.playmonumenta.com`
+• `na.playmonumenta.com` (points to `server-na`)
+(Experimental) EU proxy domains are:
+• `server-eu.playmonumenta.com`
+• `eu.playmonumenta.com` (points to `server-eu`)
+The following domains work but are unsupported, as they are
+subject to change if we move hosts:
+• `m##.playmonmumenta.com`
+• `monumenta-##.playmonumenta.com`

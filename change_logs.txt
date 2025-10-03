@@ -1,178 +1,266 @@
-• Reworked the double coral colossus encounter to just 1
-colossus
-• Coral Colossus 50 -> 42 attack damage, 360 -> 320 health
-• Sacabambaspis 360 -> 300 health, repeat hit damage increase
-15% -> 5%, pull strength (respects kbr) 1.2 -> 0.8
-• Coral Cursebearer:  10% weakness potion on death, 9 second
-duration. Moved the additional potions to only be summoned on
-explode
-• Consumed remains power 22 -> power 19
-### Bug Fixes:
-• Fixed the Sturdy infusion not applying to magic attacks
-• Fixed an error in the lore of Architect's Ring Fragment
-• Fixed a handful of minor spelling errors in NPC dialogues
-• Fixed Tesseract of Emotions having an inaccurate raycast
-• Fixed an additional space introduced in tablist effects for
-type-specific Strengths and Resistances
-• Hits Blocked effects will now update properly
-• Fixed a cheese spot in Sanguine Halls
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix (for daily restart):&r
-• fix purple tess not working properly with double chests
-&bHotfix&r (because plot templates don't ship with weekly
-updates):
-• Filled an unsupported air pocket on the guildplots template
-&b(11.35.0)&r
-For the update on September 24, 2025
-### Minor New Features:
-• Standing before the mighty Ziggurat, you hear the wind whistle
-through the broken Hawk statue…
-• Added Plush Cat spawn eggs
+• &oThe ability relied on certain overtuned charms in R3 to deal
+significant damage. The new rework aims to make Beam much better
+on its own, reducing the need for high damage boosting charms.&r
+  • &oThe gap in strength between L1 and L2 was too vast. It had
+2/3 charges and 16s/12s cooldown per charge at L1/L2
+respectively, which has been buffed to 3 charges and 10s
+cooldown at both levels. The L2 has been replaced by a primed
+AoE effect to give the spec some more consistent on-demand AoE
+via added skill expression. The higher consistency also plays
+into the addition of the following skill:&r
+&nKeeper Virtue (NEW • Replacing Thurible Procession)&r:
+&oAn angelic spirit follows you, supporting nearby players and
+attacking Heretics but losing health in the process.&r
+• L1: Passively have a Virtue with 30 health follow you, and
+while inactive it regenerates 1 health every 0.5s and grants you
+15% speed. It can be healed by Hallowed Beam at any time. <Swap
+while not sneaking> to toggle it active, making it seek out
+players within 16 blocks under 60% health, healing them for 5%
+of their max health every 0.5s until they're up to 70% or
+higher, draining 2 health per heal. If there are no players to
+heal, it instead seeks out Heretics, dealing R2: 6 / R3: 8 magic
+damage to them and draining 2 health every 1.25s. The Virtue
+regenerates half as much while active and without a target. If
+the Virtue dies, it respawns after 20s.
+• L2: The Virtue now has 35 health. The speed bonus when
+inactive is now granted to all players in a 9 block radius
+around you. Mobs attacked by the Virtue are inflicted with 15%
+vulnerability for 4s.
+&bRelated Charms:&r
+&o Specialist Bauble (Rework) : 1 Charm Power, +20% Keeper
+Virtue Regeneration, -20% Keeper Virtue Cooldown
+&r Bewitching Lantern (Rework) : 3 Charm Power, +10 Keeper
+Virtue Health, -60% Keeper Virtue Attack Delay, -30% Keeper
+Virtue Damage, -30% Keeper Virtue Healing&o Lesser Sentinel
+Charm (Replaces Lesser Thurible Charm) : 1 Charm Power, +3
+Keeper Virtue Health
+&r Greater Sentinel Charm (Replaces Greater Thurible Charm) : 2
+Charm Power, +6 Keeper Virtue Health
+&o Distant Sentinel Charm (New) : 2 Charm Power, +3 Virtue
+Health, +50% Virtue Action Range
+&r Bloodpact Pendant : -50% -> -40% Divine Justice Self Heal
+&o Seal of the Way (Rework) : 3 Charm Power, +25% Hand of Light
+Healing, +25% Hallowed Beam Healing, +25% Keeper Virtue Healing,
+-40% Hand of Light Damage, -40% Hallowed Beam Damage, -40%
+Keeper Virtue Damage
+&r Ashkii Galero (Rework) : 2 Charm Power, +10% Keeper Virtue
+Speed Amplifier, +10% Ethereal Ascension Throw Rate Amplifier
+&o Lesser Consecrated Charm (Rework) : 1 Charm Power, +2%
+Sanctified Armor Resistance
+&r Greater Consecrated Charm (Rework) : 2 Charm Power, +4%
+Sanctified Armor Resistance
+&o Swift Consecrated Charm (Replaces Focused Consecrated Charm)
+: 2 Charm Power, +2% Sanctified Armor Resistance, -10%
+Sanctified Armor Cooldown
+&r Sedated Consecrated Charm (Rework) : 2 Charm Power, +2%
+Sanctified Armor Resistance, +15% Sanctified Armor Slowness
+Amplifier
+&o Silver Rosary : +15% -> 0% Sanctified Armor Damage, 0% -> +5%
+Sanctified Armor Resistance
+&r Zoetic Geas : +150% -> +120% Hand of Light Damage
+&o Titanic Hailstone : +125% -> +100% Illuminate Damage, +75% ->
++60% Illuminate Radius
+&r Martial Mantra : -20% -> 0% Choir Bells Debuff Duration, -0%
+-> -40% Choir Bells Range
+&o Pious Prism (Rework) : 3 Charm Power, +65% Hallowed Beam
+Damage, -65% Hallowed Beam Distance
+&r Emerald Lens (Rework) : 3 Charm Power, -25% Hallowed Beam
+Cooldown, -25% Hallowed Beam Healing, -1 Hallowed Beam Charge
+&o Sailor's Rope (Rework) : 3 Charm Power, +1.5 Hallowed Beam
+Stun Duration, +10% Hallowed Beam Resistance, -15% Hallowed Beam
+Damage
+&r Explosive Component (Rework) : 1 Charm Power, +35% Hallowed
+Beam Seal Radius, -40% Hallowed Beam Healing&o Poisoned Wisteria
+(Rework) : 2 Charm Power, +100% Hallowed Beam Seal Damage, -55%
+Hallowed Beam Damage
+&r Sustaining Sacrosant Charm: 4 -> 3 Charm Power, +50% -> +30%
+Hallowed Beam Healing
+&o Lesser Boon Charm : +2% -> +5% Heavenly Boon Potion Chance
+&r Greater Boon Charm : +4% -> +10% Heavenly Boon Potion Chance
+&o Focused Boon Charm (Rework) : 3 Charm Power, +5% Heavenly
+Boon Strength Amplifier, +10% Heavenly Boon Potion Chance, -5%
+Heavenly Boon Cooldown
+&r Distant Boon Charm (New) : 2 Charm Power, +5% Heavenly Boon
+Potion Chance, +50% Heavenly Boon Radius
+&o Automatic Distillery (Rework) : 1 Charm Power, +80% Heavenly
+Boon Potion Chance, +80% Heavenly Boon Cooldown
+&r Rampant Miasma : +10% -> +5% Heavenly Boon Resistance
+Amplifier
+&o Lesser Transcendent Charm (Replaces Lesser Orison Charm) : 1
+Charm Power, +5% Ethereal Ascension Orb Damage, +5% Ethereal
+Ascension Orb Buff Duration
+&r Greater Transcendent Charm (Replaces Greater Orison Charm) :
+2 Charm Power, +10% Ethereal Ascension Orb Damage, +10% Ethereal
+Ascension Orb Buff Duration
+&o Explosive Transcendent Charm (Replaces Explosive and Focused
+Orison Charm) : 3 Charm Power, +30% Ethereal Ascension Orb
+Radius, +10% Ethereal Ascension Orb Buff Duration
+&r Swift Transcendent Charm (Replaces Swift Orison Charm) : 3
+Charm Power, +35% Ethereal Ascension Orb Travel Speed, -10%
+Ethereal Ascension Cooldown
+&o Malignant Neuron (Rework) : 3 Charm Power, +45% Ethereal
+Ascension Orb Damage, +65% Ethereal Ascension Orb Radius, +3
+Ethereal Ascension Max Duration Extension, 🔒 +50% Ethereal
+Ascension Cooldown
+• &rAs a mini-roadmap for the next future balance update(s),
+development on the Berserker rework will resume, and we will
+begin directing more attention over to Warlock as well. There
+are no more large-scale Cleric plans for now, we didn't get to
+do Cleansing Rain changes like mentioned last month but may pick
+up on that in the near future.&o### Enchantments:
+• Reflexes now grants half the agility bonus for 0.35s after the
+initial 0.65s.
+• Guard now is only active for 2s when activated by its
+secondary health threshold condition.
 ### Mob Changes:
-• Twisteds are now significantly more aggressive with using
-their Worldshaper's Looms
-• Land Twisted movement speed significantly increased when in
-water
-• Land Twisteds will now attempt to escape water and lava when
-possible
-&oDev Note: Hopefully this fixes the issues with Twisteds in
-Fathom's Reach!&r
-• Reduced Demented Phisogue's movement speed from 0.28 to 0.24
-• Aligned Cascade's Lancer stats with Afflicted Reeler (Nadir
-trident mob) instead of the Zenith counter part
-• Updated the sound, vanity, and particle effects for the
-following mobs: Arcane Archer, Archmage, Clay Golem, Dark Magic,
-Deranged Alchemist, Earth Golem, Evolved Guardian, Fire Mage,
-Ice Mage, Land Guardian, Lunatic Cultist, Mutated Abomination,
-Savage Jaguar, Savage Hawk, Water Golem, Water Spirit
+• Hycenea: 275k -> 210k health
+• Ru'Ten: 75k -> 60k health
+  • &rThe removal of Thurible Procession has greatly lowered the
+ceiling for notably melee DPS with optimized builds in R3, so
+we're reducing the health values of Hexfall bosses to compensate
+and hopefully make the content slightly more accessible to less
+optimized groups. Health reductions to other bosses have been
+deemed unnecessary but may be reevaluated later.&o
+• The Starbound Sanctuary POI boss has been reworked
+• Twisted Moonweaver no longer has an Arcane Strike spell
+• Rekindled Spirits will no longer respawn after the
+Spiritcaller has died
 ### Feedback Fixes:
-• Added Repair Anvil, Ghastroot, Black Cat Brew, Woodsman's Axe,
-and "Lofi Hip Hop Radio 24/7 Chill Gaming / Study Beats" to the
-Items API
-• Shift clicking the Blitz board now starts a game directly
-• The infusions you can ask Infusion Master about are now
-ordered like they are in the menu
-• Slightly adjusted a staircase in Arx Sprinensis
-• A stargazer in Galengarde now notices when a certain star goes
-missing
-• Locking items at the Willows Spirit now costs 16cxp instead of
-3hxp
-• Removed the insanely loud and unnecessarily rapid step sounds
-from Sanguine Scorpion
-• Arx Tumulus and Tarkir Arboretum no longer spawn mobs
-immediately upon you entering
-• Disabled SKR scrolls outside the Ring Overworld
-• Your third SKR spot will now always be 🎃 as a hint to where
-the Gatecharm Trader is located.  This ignores the "no double
-SKRs in a row" rule. It is also guaranteed to have a "light
-beam" hint
-• Removed a notorious bubble column in Fathom's Reach• Water in
-Fathom's Reach now grants conduit power
-• Mungfish now cost 1 pulsating shard instead of 10 arachos
-rings
-• Some potions sold by Tondan in the Nightcap now cost 1
-pulsating shard
-• Stephan the Scaffolder has reduced the price of scaffolding,
-and additionally offers a bulk discount trade for 1 pulsating
-shard
-• Reduced the likelihood of pulsating shards from SKR chances
-(archite chips are slightly more likely as a result)
-• Added a message to SR and MR when you manage to improve your
-PB for highest time on the clock
-• Completing the Mastermind SKR under 6 turns in the first round
-will immediately grant all chest rewards, instead of having to
-complete hardmode separately. Due to technical limitations,
-obtaining the lore book is still locked behind the second round
-• Me in What Lies Within now has some particles to hint towards
-their existence for people who have glowing disabled
-• Added a button to the post-Temple to Kaul quest area that can
-teleport you to the start of the PoI so you dont get thrown into
-a respawned PoI and need to clear it again when leaving the
-quest area
-• Shift-clicking Mysterious Mushroom while holding Blighted
-Roots will craft as many Blighted Roots as possible at once.
-(Right Click is not an option as the NPC is also a trader)
-### Bug Fixes:
-• Fixed the Sturdy infusion not applying to magic attacks
-• Removed a suspicious armor stand from Hawk Village
-• Shears have gone out of fashion in Hawk Village
-• Fixed some exposed bedrock in Tlaxan Ziggurat
-• Fixed Rotting Skullcap having incorrect stats
-• Fixed Magna Luna having incorrect stats• Fixed typos and
-compass issues in Coraline's dialogue, The Tolumaeus' conquer
-message, Words Upon Hushed Lips, Winds of War,  Beasts of Men,
-Scars of Magic, Tlaxan Troubles, Buried Blade, Missing Soldiers,
-A Little Spark, The Salmon, A Crew To Remember, Voyage of
-Discovery, An Unexpected Lesson, Primeval Creations 6, Centurem
-Lost, Sleeping Shadows, Long Way Down, Stablemaster's Request,
-Dealbreaker, Sabotage and A Merchant's Woe
-• Fixed a compass entry in Winds of War
-• Removed dupe Shady Traders in Sierhaven
-• Flipped a trapdoor to make it align with its neighbours in
-Tundra Lighthouse
-• Resetting the Light Gray Tesseract puzzle is now more pleasant
-on the ears
-• Fixed tiny build issues in Lowtide, Nyr, Isles Ocean, Light
-Blue, Blue, Indigo, SKT, Shifting's Vault, Chanterelle Village
-and a quest area from An Unexpected Lesson
-• Fixed incorrect advancement coordinates for Magmashroom Mine,
-Terracotta Mining Town, Cave Village and Aquamarine Monastery
-• Fixed vanilla armor on a few Fathom's Reach mobs
-• Plot Quatermaster now sells more steak to have prices
-comparable to their competition
-• Added Sulfuric Flame Boots and Tarnished Flame Skull to API
-• Randomizing The Olive Branch/Galos Outlook's puzzle while
-having a block selected no longer breaks the puzzle
-• Fixed a random cuboid of stone bricks at the start of
-Magenta's water section
-• Changed a window in Sierhaven to make a jump in Tutorial+ less
-depending on ping
-• Fixed an already rolled chest in Corrupted Island
-• The Hallucinatekeeper no longer hallucinates about Intruder
-being a dungeon
-• Changed the wording of Murky Maze's bounty text slightly to
-fit the mobs of the PoI better
-• Added Intruder to the PEB dailies
-• Changed wording in Remnants of the Empire to make it clear
-that you can't leave through the emergency exit even after
-completing the puzzle
-• The rules button for SKR's data banks puzzle has finally
-noticed the board has become bigger• Fixed discrepancy between
-Eroded Effigy's Health and MaxHealth
-• The advancements for the Explosive and Grappling Hook
-enchantments now show up on the website
-• The Seanchaidh no longer claims that they will reward you for
-only breaking enough spawners in a bounty
-• A post-Treasure for the Future interaction with Atiuh is now
-actually locked behind Treasure for the Future
-• Fixed minor bugs related to the Smallpoint discovery
-• Fixed right clicking the Quest Compass playing the page turn
-sound but not displaying an entry
-• Fixed Monolithic Axon spawning more Spectrals than intended
-• Replaced all Harmonic Sentinel and Dissonant Sentinel spawners
-in Harmonic Arboretum still using outdated mechs to spawn, and
-they will no longer spawn Spectrals occasionally when the
-modifier is selected
-• Alcyoneus should now not go into the Tools section of an
-Armory
-• Loadout Lockboxes and the Mechanical Armory will now refuse to
-store Curse of Ephemerality items
-• Endless Ephemeral Corridors is now more resilient against
-players receiving different delve modifiers in the event that
-they are renamed, added, or removed in the future
-• Three Rare Discoveries in the King's Valley will now correctly
-reward 100 XP when claimed
-• Removed the ability for players to use beds in Inner Sanctum
-and Verdant Remnants to prevent a deathlooping bug
-• Fixed a memory leak with Divine Justice
-• Fixed The Gift Wrapper not working
+• The automation bot now displays when public boss fights are
+starting soon in `#server-status`
+• The Ability Hotbar now shows the remaining duration of
+abilities that use the UMM duration bar feature
+• Using the Tesseract of Light underwater will now place
+lanterns
+• Made Twisted Intruder dailies display as Twisted <obfuscated
+text>
+• Shift-clicking Max in Teal will now directly send you into the
+past if you have collected enough crystals
+• Added a name/difficulty text to Chanterelle Village's back
+entrance
+• The jump into the final section of Yellow no longer deals fall
+damage
+• When trying to compress currency while not having enough, you
+will now also be informed of the required amount when sneaking
+• Made Pink's final teleporter and Cyan's checkpoints a little
+quieter
+• Made Spirit Archery a safe zone
+• Added Resistance V to Vigil
+• Obtaining boons in White now explicitly tells you they are in
+the final room
+• In SKT, stacks of AR now spawn as 1 HAR
+• Starting Corridors now tells you that you can obtain a map in
+the south-east corner of the start room### Bug Fixes:
+• You can no longer smuggle Curse of Ephemerality items past
+checks by having it selected in your cursor
+• Fixed Antimagic Ward, Tarnished Flame Boots, and Tarnished
+Flame Skull not being re-obtainable at Shady Trader
+• Fixed Egginator not working on the realistic cat plushes
+• Fixed a broken Ionic Phaser spawner in Indigo
+• Removed vanilla armor from Crawling Parasite
+• Fixed Savage Jaguar counting as Elite
+• Fixed incorrect capitalization on Sirius in Dailies Menu
+• Made Tesseract vendors in Primeval Creations invulnerable
+• Added Spiritshot to enchantments
+• Fixed typos and compass issues in Sleeping Shadows'
+achievement, Forum End Cutscene, Hyperion's Isles Upgrade, the
+Magenta start room, Ring's Mainquest GUI, A Charming
+Proposition, Sons of the Forest, Soul of the Forest, Bhairavi's
+post-Scars of Magic dialogue, Siege of Highwatch, Unveiled, A
+Lost Cause, The Plague and Empty Space
+• Changed how the Sierhaven-Ta'Eldim teleporters labels work so
+they shouldn't bug out anymore
+• The Wools in Borrowed Time's Monument fight are now cc immune
+• The selector shulker in SKR Mastermind is now cc immune
+• Added Mecha-Pass sketched skins and their reverse trades to
+Painter's Abode
+• Fixed a minor build bug in Light Blue
+• Fixed dying in certain parts of Tlaxan Ziggurat and parts of
+the plateau surrounding it respawning you at Cave of Secrets
+• Fixed the Onyx Crownbearer fight affecting players in some
+areas of Sierhaven castle where it should not
+• Fixed Apotheosis Spear element transformation not working for
+the fire and lightning variants
+• The advancements for Zenith in the Dungeons tab now show up on
+the website
+• Corrected Healer Spawners' handbook entry
+• Fixed some stuck spots in Valley Overworld
+• Fixed Summer Shrine's encounter infinitely looping when
+entering it post-quest
+• Fixed the bouncy mushrooms around the Wolfswood something
+completely breaking for some players. This should also fix it
+for people for whom they are currently not working• Made the
+cauldron in Galengarde refill itself, and added refilling
+cauldrons to Sierhaven and Mistport's teleport hubs
+• Explosive will now transfer Punch
+• Sage’s Insight will now restore one charge of Magma Shield (u)
+• Twisted Moonweaver no longer has an Arcane Strike spell
+• Rekindled Spirits will no longer respawn after the
+Spiritcaller has died
+• Slightly expanded the final platform of Silvic Quarry.
+• Updated the name of Starblood Ichor to be a gradient of the
+prismatic colors
+• Rush's start GUI now clarifies you need to complete 40 waves
+in Solo mode to unlock the Duo checkpoint
+• Tweaked MR's launch from falling off the bridge to be stronger
+and more reliable
+• Knockback Resistance will now apply to explosions
+• Knockback Resistance will now work midair
+• Having 1 (visually +100%) Knockback Resistance will now
+actually prevent Knockback
+• Knockback Resistance will now display as a percentage instead
+of a flat value
+• Disabled the custom villager trading GUI in the Arena of
+Terth, to prevent confusion regarding the armor needing to be
+dyed
+• When your SKR scroll seems to be resonating with something
+nearby, its cooldown is reduced to 2 seconds
+• Chris now also appears when having skins of Fleshbreaker in
+your inventory
+• Manifested Soulweaver to strike lobbies.
+• Added a reverse trade rorriM aroruA -> Aurora Mirror
+• Added refund trades for Bewitching Lantern to the Hexfall
+Artifact Trader and for Malignant Neuron at the Lingering
+Hallucination
+• Replaced apples in Altar of Evocation's uncommon chest with
+Blackroot Fruit to match the other chests in the POI
+• Adjusted solo world boss dialogue to account for one player
+### Spirit Archery Changes:
+• Spirit Archery targets will no longer glow
+• The Spiritsinger will sell Pulsating Ticket Books after
+beating the third difficulty
+• Added some secret failsafes
+• Removed some barriers which were impacting gameplay
+• Dying will now end Spirit Archery
+• Dying should no longer be possible in Spirit Archery• Updated
+Throwing Knife's handbook entry
+• Fixed Sierhaven Smith appearing in Twilight Ruins without
+dialogue for people with certain quest progress
+• Made the Star Point Bounty Official invulnerable
+• Fixed discrepancies between bounty npc text and compass text
+for Celestial Rampart and Starbound Sanctuary
+• Wexley in Orange now notices when the barrier right behind him
+opens
+• Fixed multiple stuck spots in Galengarde
+• Fixed Reflection triggering spoils for some Hunts bosses
+• Holy Javelin L2 can no longer launch forwards more than once
+before hitting the ground
+• Restless Souls 2 will apply the correct amount of DoT if
+Withering Gaze was the most recently used spell
+• Starfall will no longer follow dead players
+• Starfall will no longer follow players in stealth
+• Reflection (delve infusion) now respects (your) iframes
+• Deadly Ronde now mentions that "ronde-dumping" is inefficient
+&rDev Note: No effect on gameplay, the gameplay was updated
+years ago and the description is only now being updated to
+reflect it.&o
+• Fixed Amplified Hawk Fortress not granting the Festive
+Fortress advancement on clear
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.Hotfix (on daily
-restart):
-• Fixed a bug preventing access to the secret near Tlaxan
-Ziggurat
+and select `I want to unlock this shop`.•
+&bHotfix:&r Disabled knockback resistance patch because it broke
+stuff!
+&bHotfix (for daily restart):&r
+• Fix KBR&r
