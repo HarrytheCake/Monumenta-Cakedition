@@ -1,261 +1,3 @@
-• &oThe ability relied on certain overtuned charms in R3 to deal
-significant damage. The new rework aims to make Beam much better
-on its own, reducing the need for high damage boosting charms.&r
-  • &oThe gap in strength between L1 and L2 was too vast. It had
-2/3 charges and 16s/12s cooldown per charge at L1/L2
-respectively, which has been buffed to 3 charges and 10s
-cooldown at both levels. The L2 has been replaced by a primed
-AoE effect to give the spec some more consistent on-demand AoE
-via added skill expression. The higher consistency also plays
-into the addition of the following skill:&r
-&nKeeper Virtue (NEW • Replacing Thurible Procession)&r:
-&oAn angelic spirit follows you, supporting nearby players and
-attacking Heretics but losing health in the process.&r
-• L1: Passively have a Virtue with 30 health follow you, and
-while inactive it regenerates 1 health every 0.5s and grants you
-15% speed. It can be healed by Hallowed Beam at any time. <Swap
-while not sneaking> to toggle it active, making it seek out
-players within 16 blocks under 60% health, healing them for 5%
-of their max health every 0.5s until they're up to 70% or
-higher, draining 2 health per heal. If there are no players to
-heal, it instead seeks out Heretics, dealing R2: 6 / R3: 8 magic
-damage to them and draining 2 health every 1.25s. The Virtue
-regenerates half as much while active and without a target. If
-the Virtue dies, it respawns after 20s.
-• L2: The Virtue now has 35 health. The speed bonus when
-inactive is now granted to all players in a 9 block radius
-around you. Mobs attacked by the Virtue are inflicted with 15%
-vulnerability for 4s.
-&bRelated Charms:&r
-&o Specialist Bauble (Rework) : 1 Charm Power, +20% Keeper
-Virtue Regeneration, -20% Keeper Virtue Cooldown
-&r Bewitching Lantern (Rework) : 3 Charm Power, +10 Keeper
-Virtue Health, -60% Keeper Virtue Attack Delay, -30% Keeper
-Virtue Damage, -30% Keeper Virtue Healing&o Lesser Sentinel
-Charm (Replaces Lesser Thurible Charm) : 1 Charm Power, +3
-Keeper Virtue Health
-&r Greater Sentinel Charm (Replaces Greater Thurible Charm) : 2
-Charm Power, +6 Keeper Virtue Health
-&o Distant Sentinel Charm (New) : 2 Charm Power, +3 Virtue
-Health, +50% Virtue Action Range
-&r Bloodpact Pendant : -50% -> -40% Divine Justice Self Heal
-&o Seal of the Way (Rework) : 3 Charm Power, +25% Hand of Light
-Healing, +25% Hallowed Beam Healing, +25% Keeper Virtue Healing,
--40% Hand of Light Damage, -40% Hallowed Beam Damage, -40%
-Keeper Virtue Damage
-&r Ashkii Galero (Rework) : 2 Charm Power, +10% Keeper Virtue
-Speed Amplifier, +10% Ethereal Ascension Throw Rate Amplifier
-&o Lesser Consecrated Charm (Rework) : 1 Charm Power, +2%
-Sanctified Armor Resistance
-&r Greater Consecrated Charm (Rework) : 2 Charm Power, +4%
-Sanctified Armor Resistance
-&o Swift Consecrated Charm (Replaces Focused Consecrated Charm)
-: 2 Charm Power, +2% Sanctified Armor Resistance, -10%
-Sanctified Armor Cooldown
-&r Sedated Consecrated Charm (Rework) : 2 Charm Power, +2%
-Sanctified Armor Resistance, +15% Sanctified Armor Slowness
-Amplifier
-&o Silver Rosary : +15% -> 0% Sanctified Armor Damage, 0% -> +5%
-Sanctified Armor Resistance
-&r Zoetic Geas : +150% -> +120% Hand of Light Damage
-&o Titanic Hailstone : +125% -> +100% Illuminate Damage, +75% ->
-+60% Illuminate Radius
-&r Martial Mantra : -20% -> 0% Choir Bells Debuff Duration, -0%
--> -40% Choir Bells Range
-&o Pious Prism (Rework) : 3 Charm Power, +65% Hallowed Beam
-Damage, -65% Hallowed Beam Distance
-&r Emerald Lens (Rework) : 3 Charm Power, -25% Hallowed Beam
-Cooldown, -25% Hallowed Beam Healing, -1 Hallowed Beam Charge
-&o Sailor's Rope (Rework) : 3 Charm Power, +1.5 Hallowed Beam
-Stun Duration, +10% Hallowed Beam Resistance, -15% Hallowed Beam
-Damage
-&r Explosive Component (Rework) : 1 Charm Power, +35% Hallowed
-Beam Seal Radius, -40% Hallowed Beam Healing&o Poisoned Wisteria
-(Rework) : 2 Charm Power, +100% Hallowed Beam Seal Damage, -55%
-Hallowed Beam Damage
-&r Sustaining Sacrosant Charm: 4 -> 3 Charm Power, +50% -> +30%
-Hallowed Beam Healing
-&o Lesser Boon Charm : +2% -> +5% Heavenly Boon Potion Chance
-&r Greater Boon Charm : +4% -> +10% Heavenly Boon Potion Chance
-&o Focused Boon Charm (Rework) : 3 Charm Power, +5% Heavenly
-Boon Strength Amplifier, +10% Heavenly Boon Potion Chance, -5%
-Heavenly Boon Cooldown
-&r Distant Boon Charm (New) : 2 Charm Power, +5% Heavenly Boon
-Potion Chance, +50% Heavenly Boon Radius
-&o Automatic Distillery (Rework) : 1 Charm Power, +80% Heavenly
-Boon Potion Chance, +80% Heavenly Boon Cooldown
-&r Rampant Miasma : +10% -> +5% Heavenly Boon Resistance
-Amplifier
-&o Lesser Transcendent Charm (Replaces Lesser Orison Charm) : 1
-Charm Power, +5% Ethereal Ascension Orb Damage, +5% Ethereal
-Ascension Orb Buff Duration
-&r Greater Transcendent Charm (Replaces Greater Orison Charm) :
-2 Charm Power, +10% Ethereal Ascension Orb Damage, +10% Ethereal
-Ascension Orb Buff Duration
-&o Explosive Transcendent Charm (Replaces Explosive and Focused
-Orison Charm) : 3 Charm Power, +30% Ethereal Ascension Orb
-Radius, +10% Ethereal Ascension Orb Buff Duration
-&r Swift Transcendent Charm (Replaces Swift Orison Charm) : 3
-Charm Power, +35% Ethereal Ascension Orb Travel Speed, -10%
-Ethereal Ascension Cooldown
-&o Malignant Neuron (Rework) : 3 Charm Power, +45% Ethereal
-Ascension Orb Damage, +65% Ethereal Ascension Orb Radius, +3
-Ethereal Ascension Max Duration Extension, 🔒 +50% Ethereal
-Ascension Cooldown
-• &rAs a mini-roadmap for the next future balance update(s),
-development on the Berserker rework will resume, and we will
-begin directing more attention over to Warlock as well. There
-are no more large-scale Cleric plans for now, we didn't get to
-do Cleansing Rain changes like mentioned last month but may pick
-up on that in the near future.&o### Enchantments:
-• Reflexes now grants half the agility bonus for 0.35s after the
-initial 0.65s.
-• Guard now is only active for 2s when activated by its
-secondary health threshold condition.
-### Mob Changes:
-• Hycenea: 275k -> 210k health
-• Ru'Ten: 75k -> 60k health
-  • &rThe removal of Thurible Procession has greatly lowered the
-ceiling for notably melee DPS with optimized builds in R3, so
-we're reducing the health values of Hexfall bosses to compensate
-and hopefully make the content slightly more accessible to less
-optimized groups. Health reductions to other bosses have been
-deemed unnecessary but may be reevaluated later.&o
-• The Starbound Sanctuary POI boss has been reworked
-• Twisted Moonweaver no longer has an Arcane Strike spell
-• Rekindled Spirits will no longer respawn after the
-Spiritcaller has died
-### Feedback Fixes:
-• The automation bot now displays when public boss fights are
-starting soon in `#server-status`
-• The Ability Hotbar now shows the remaining duration of
-abilities that use the UMM duration bar feature
-• Using the Tesseract of Light underwater will now place
-lanterns
-• Made Twisted Intruder dailies display as Twisted <obfuscated
-text>
-• Shift-clicking Max in Teal will now directly send you into the
-past if you have collected enough crystals
-• Added a name/difficulty text to Chanterelle Village's back
-entrance
-• The jump into the final section of Yellow no longer deals fall
-damage
-• When trying to compress currency while not having enough, you
-will now also be informed of the required amount when sneaking
-• Made Pink's final teleporter and Cyan's checkpoints a little
-quieter
-• Made Spirit Archery a safe zone
-• Added Resistance V to Vigil
-• Obtaining boons in White now explicitly tells you they are in
-the final room
-• In SKT, stacks of AR now spawn as 1 HAR
-• Starting Corridors now tells you that you can obtain a map in
-the south-east corner of the start room### Bug Fixes:
-• You can no longer smuggle Curse of Ephemerality items past
-checks by having it selected in your cursor
-• Fixed Antimagic Ward, Tarnished Flame Boots, and Tarnished
-Flame Skull not being re-obtainable at Shady Trader
-• Fixed Egginator not working on the realistic cat plushes
-• Fixed a broken Ionic Phaser spawner in Indigo
-• Removed vanilla armor from Crawling Parasite
-• Fixed Savage Jaguar counting as Elite
-• Fixed incorrect capitalization on Sirius in Dailies Menu
-• Made Tesseract vendors in Primeval Creations invulnerable
-• Added Spiritshot to enchantments
-• Fixed typos and compass issues in Sleeping Shadows'
-achievement, Forum End Cutscene, Hyperion's Isles Upgrade, the
-Magenta start room, Ring's Mainquest GUI, A Charming
-Proposition, Sons of the Forest, Soul of the Forest, Bhairavi's
-post-Scars of Magic dialogue, Siege of Highwatch, Unveiled, A
-Lost Cause, The Plague and Empty Space
-• Changed how the Sierhaven-Ta'Eldim teleporters labels work so
-they shouldn't bug out anymore
-• The Wools in Borrowed Time's Monument fight are now cc immune
-• The selector shulker in SKR Mastermind is now cc immune
-• Added Mecha-Pass sketched skins and their reverse trades to
-Painter's Abode
-• Fixed a minor build bug in Light Blue
-• Fixed dying in certain parts of Tlaxan Ziggurat and parts of
-the plateau surrounding it respawning you at Cave of Secrets
-• Fixed the Onyx Crownbearer fight affecting players in some
-areas of Sierhaven castle where it should not
-• Fixed Apotheosis Spear element transformation not working for
-the fire and lightning variants
-• The advancements for Zenith in the Dungeons tab now show up on
-the website
-• Corrected Healer Spawners' handbook entry
-• Fixed some stuck spots in Valley Overworld
-• Fixed Summer Shrine's encounter infinitely looping when
-entering it post-quest
-• Fixed the bouncy mushrooms around the Wolfswood something
-completely breaking for some players. This should also fix it
-for people for whom they are currently not working• Made the
-cauldron in Galengarde refill itself, and added refilling
-cauldrons to Sierhaven and Mistport's teleport hubs
-• Explosive will now transfer Punch
-• Sage’s Insight will now restore one charge of Magma Shield (u)
-• Twisted Moonweaver no longer has an Arcane Strike spell
-• Rekindled Spirits will no longer respawn after the
-Spiritcaller has died
-• Slightly expanded the final platform of Silvic Quarry.
-• Updated the name of Starblood Ichor to be a gradient of the
-prismatic colors
-• Rush's start GUI now clarifies you need to complete 40 waves
-in Solo mode to unlock the Duo checkpoint
-• Tweaked MR's launch from falling off the bridge to be stronger
-and more reliable
-• Knockback Resistance will now apply to explosions
-• Knockback Resistance will now work midair
-• Having 1 (visually +100%) Knockback Resistance will now
-actually prevent Knockback
-• Knockback Resistance will now display as a percentage instead
-of a flat value
-• Disabled the custom villager trading GUI in the Arena of
-Terth, to prevent confusion regarding the armor needing to be
-dyed
-• When your SKR scroll seems to be resonating with something
-nearby, its cooldown is reduced to 2 seconds
-• Chris now also appears when having skins of Fleshbreaker in
-your inventory
-• Manifested Soulweaver to strike lobbies.
-• Added a reverse trade rorriM aroruA -> Aurora Mirror
-• Added refund trades for Bewitching Lantern to the Hexfall
-Artifact Trader and for Malignant Neuron at the Lingering
-Hallucination
-• Replaced apples in Altar of Evocation's uncommon chest with
-Blackroot Fruit to match the other chests in the POI
-• Adjusted solo world boss dialogue to account for one player
-### Spirit Archery Changes:
-• Spirit Archery targets will no longer glow
-• The Spiritsinger will sell Pulsating Ticket Books after
-beating the third difficulty
-• Added some secret failsafes
-• Removed some barriers which were impacting gameplay
-• Dying will now end Spirit Archery
-• Dying should no longer be possible in Spirit Archery• Updated
-Throwing Knife's handbook entry
-• Fixed Sierhaven Smith appearing in Twilight Ruins without
-dialogue for people with certain quest progress
-• Made the Star Point Bounty Official invulnerable
-• Fixed discrepancies between bounty npc text and compass text
-for Celestial Rampart and Starbound Sanctuary
-• Wexley in Orange now notices when the barrier right behind him
-opens
-• Fixed multiple stuck spots in Galengarde
-• Fixed Reflection triggering spoils for some Hunts bosses
-• Holy Javelin L2 can no longer launch forwards more than once
-before hitting the ground
-• Restless Souls 2 will apply the correct amount of DoT if
-Withering Gaze was the most recently used spell
-• Starfall will no longer follow dead players
-• Starfall will no longer follow players in stealth
-• Reflection (delve infusion) now respects (your) iframes
-• Deadly Ronde now mentions that "ronde-dumping" is inefficient
-&rDev Note: No effect on gameplay, the gameplay was updated
-years ago and the description is only now being updated to
-reflect it.&o
-• Fixed Amplified Hawk Fortress not granting the Festive
-Fortress advancement on clear
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -263,4 +5,150 @@ and select `I want to unlock this shop`.•
 &bHotfix:&r Disabled knockback resistance patch because it broke
 stuff!
 &bHotfix (for daily restart):&r
-• Fix KBR&r
+• Fix KBR
+&b(11.37.0)&r
+For the update on October 8, 2025
+### Minor New Features:
+• Added a new Zenith F2 Elite room from uurik
+• A cosmetic for Ethereal Ascension has been added to the
+Awakened Cleric cosmetic set! If you've already bought the set,
+right click with the Sins of the Voracious soulbound to you to
+acquire it
+### Mini-Balance Update #1:
+&oWe're doing some early balance and QoL changes to Seraph and a
+new item added last week to address feedback and oversights in a
+timely manner. There will be more changes next week and we may
+continue doing more until things have stabilized and Seraph is
+more finely tuned. For clarification, there will not be changes
+to items or classes that weren't affected by (or relevant to
+changes from) last week.&r
+• Ethereal Ascension:
+  • You can now double-jump once every 2s to dash forward while
+Ascended
+  • Bobbing is less intense (levitation 2 -> 1), and now bobs
+between exactly 3 and ~3.8 blocks off the ground. Levitation
+ramps up in strength when close to the ground.
+  • Orb direction is now unaffected by player velocity (no
+unpredictable deviation)
+  • Cooldown now starts when flight ends instead of on cast, 40
+-> 25s cooldown
+  • Orb damage: 5 + 75% -> 4 + 85%
+  • Iframe duration: 0.5s (was actually 0.45s by accident) ->
+0.4s
+  • Orb travel speed: 1.6 -> 1.7
+  • L2: 0.25s -> 0.5s duration extension per kill, 3s -> 4s max
+duration extension
+    • &oThe duration extension has been buffed in potency as it
+no longer refunds any cooldown.&r
+• Hallowed Beam:
+  • Beam damage: 25/35 -> 26/40 (R2/R3)
+  • L2 will now transfer the seal to the nearest mob within 4
+blocks if the targeted mob dies from the beam
+  • Seals can now be exploded by anyone, not just the caster
+  • Hallowed Beam can now only apply recoil 3 -> 1 time before
+touching the ground• Keeper Virtue:
+  • Damage: 6/8 -> 7/10 (R2/R3)
+  • No longer spoils Hunts bosses by damaging
+  • The Virtue has learned social distancing and will always
+keep horizontal distance when moving towards you
+  • Toggling Keeper Virtue now resets its action delay
+  • Fixed the Virtue not getting removed when the player
+switches worlds
+• Items:
+  • Versatile Vase (M4) : 30 -> 28 Projectile Damage, 0.9 -> 0.8
+Throw Rate
+  • Emerald Lens: 3 -> 2 Charm Power
+  • Pious Prism: +65% -> +40% Hallowed Beam Damage, -65% -> -50%
+Hallowed Beam Distance, 0 -> -50% Hallowed Beam Stun Duration
+  • Poisoned Wisteria: 2 -> 3 Charm Power, 0 -> +35% Hallowed
+Beam Seal Radius, -55% -> -40% Hallowed Beam Damage
+  • Explosive Component (Rework): 2 Charm Power, +65% Ethereal
+Ascension Orb Radius, +10% Ethereal Ascension Orb Damage
+Amplifier, -20% Ethereal Ascension Orb Damage
+  • Ashkii Galero (Rework): 2 Charm Power, -30% Ethereal
+Ascension Cooldown, -25% Ethereal Ascension Duration, -20%
+Ethereal Ascension Orb Buff Duration
+  • Malignant Neuron (Rework): 3 Charm Power, +30% Ethereal
+Ascension Orb Damage, +40% Ethereal Ascension Orb Travel Speed,
++6 Ethereal Ascension Max Duration Extension, +0.5 Ethereal
+Ascension Duration Extension, # -50% Ethereal Ascension Duration
+  • Swift Transcendent Charm: +35% -> +30% Ethereal Ascension
+Orb Travel Speed, 0 -> +5% Ethereal Ascension Orb Damage
+  • Lesser Sentinel Charm (Rework): +10% Keeper Virtue Damage,
++5% Keeper Virtue Healing
+  • Greater Sentinel Charm (Rework): +20% Keeper Virtue Damage,
++10% Keeper Virtue Healing
+  • Distant Sentinel Charm: +50% -> +35% Keeper Virtue Action
+Range, 0 -> +35% Keeper Virtue Detection Range
+  • Focused Sacrosant Charm: +35% -> +30% Hallowed Beam Damage
+  • Automatic Distillery: +80% -> +50% Heavenly Boon Cooldown###
+Mob Changes:
+• Hycenea: 210k -> 250k health
+• Ru'Ten: 60k -> 75k health
+  • &oThe health nerfs to these bosses last week were heavier
+handed than what we've seen as necessary, so we've decided to
+revert Ru'Ten's health and settled for a ~10% nerf to Hycenea
+(from 275k before last week).&r
+### Feedback Fixes:
+• The Mainline Quests GUI entry for Holding Space now displays
+the custom resource pack wool texture rather than just a player
+head
+• Adjusted checks to increase valid items for applying the Owned
+infusion. In particular, this now allows you to apply the
+infusion to items like shulker boxes, legacy items, and non-
+Zenith charms.
+• Updated the mob vanity, sound, and particles for the following
+mobs: Archmage Dummy, Arising Undergrowth, Apprentice, Crazed
+Spellslinger, Crazed Spellslinger Dummy, Cursed Stone Bricks,
+Cursed Prismarine Bricks, Damned Stone Bricks, Damned Prismarine
+Bricks, Emergent Undergrowth, Enflamed Quetzal Priest, Flower
+Tower, Forgotten Remains, Ghoul, Ghoulish Monstrosity, Gilded
+Revenant, Glacial Sniper, Gnarled Leshen Bark, Guardian of the
+Lost Master, Howling Wind, Odokuro, Phantom Ranger, Phantom
+Warrior, Plague Golem, Plague Spreader, Quetzal Priest, Raging
+Ghoul, Secret Keeper, Silver Chariot Ritualist, Skeletal
+Abomination, Skeletal Archer, Skeletal Revenant, Soaked Ghoul,
+Son of the Forest, Soulblighter's Sacrifice, Soulseeker, Tamed
+Dolphin, Tempest Shade, Tempest Watcher, Tempest Wraith, Tlaxan
+Sentinel, Twisted Leshen Bark
+• Added Author Medal to API
+• Added the firework animation to Owned infusing and removing
+### Bug Fixes:
+• Fixed Dreadnaught of Subjugation mount desyncing from its
+actual in-world position on some Minecraft clients
+• Fixed stuck spots on the Academy's roof
+• Fixed a very obscure bug in Loci's Respite causing the puzzle
+to break completely
+• Fixed mailing certain unopened chests of loot not sending the
+actual loot
+• Fixed Carrier of Festivity colours• Fixed Carrier of Emotion
+base item
+• Fixed an issue that prevented non-patrons from opting out of
+being punched via Player Punches
+• Fixed the player punch description in the Cosmetics GUI
+• Fixed Enky being able to be affected by skills
+• Fixed Enky trapping players in their residence for eternity
+• Fixed grammatical errors in Enky's dialogue
+• Enky now has something to say if you ignore their workspace
+• Unyielding's description in the Delve GUI now reflects the
+shift to percentage KBR in displays
+• Fixed a gendered term in Fabled Destiny
+• Fixed Matter Agglomerator not playing all of its sound effects
+to all nearby players
+• Fixed Sopping Frost applying vanilla slowness with its dropped
+potion
+• Fixed Blightleaking Heart and Celestial Gaze mounts dying
+independently of their main mob regardless of current health
+• Fixed charge spells removing mob AI if they are stunned while
+casting the spell
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The Silver Knight's Tomb remains closed.
+&bHotfix:&r
+Fixed a bug with swapping sets in armory deleting items with no
+lore
+&bHotfix&r (on daily restart):
+• Disabled Tricky Creepers in Silver Knight Remnants to prevent
+instance softlock issues
