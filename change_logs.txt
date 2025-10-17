@@ -1,154 +1,111 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.•
-&bHotfix:&r Disabled knockback resistance patch because it broke
-stuff!
-&bHotfix (for daily restart):&r
-• Fix KBR
-&b(11.37.0)&r
-For the update on October 8, 2025
-### Minor New Features:
-• Added a new Zenith F2 Elite room from uurik
-• A cosmetic for Ethereal Ascension has been added to the
-Awakened Cleric cosmetic set! If you've already bought the set,
-right click with the Sins of the Voracious soulbound to you to
-acquire it
-### Mini-Balance Update #1:
-&oWe're doing some early balance and QoL changes to Seraph and a
-new item added last week to address feedback and oversights in a
-timely manner. There will be more changes next week and we may
-continue doing more until things have stabilized and Seraph is
-more finely tuned. For clarification, there will not be changes
-to items or classes that weren't affected by (or relevant to
-changes from) last week.&r
-• Ethereal Ascension:
-  • You can now double-jump once every 2s to dash forward while
-Ascended
-  • Bobbing is less intense (levitation 2 -> 1), and now bobs
-between exactly 3 and ~3.8 blocks off the ground. Levitation
-ramps up in strength when close to the ground.
-  • Orb direction is now unaffected by player velocity (no
-unpredictable deviation)
-  • Cooldown now starts when flight ends instead of on cast, 40
--> 25s cooldown
-  • Orb damage: 5 + 75% -> 4 + 85%
-  • Iframe duration: 0.5s (was actually 0.45s by accident) ->
-0.4s
-  • Orb travel speed: 1.6 -> 1.7
-  • L2: 0.25s -> 0.5s duration extension per kill, 3s -> 4s max
-duration extension
-    • &oThe duration extension has been buffed in potency as it
-no longer refunds any cooldown.&r
-• Hallowed Beam:
-  • Beam damage: 25/35 -> 26/40 (R2/R3)
-  • L2 will now transfer the seal to the nearest mob within 4
-blocks if the targeted mob dies from the beam
-  • Seals can now be exploded by anyone, not just the caster
-  • Hallowed Beam can now only apply recoil 3 -> 1 time before
-touching the ground• Keeper Virtue:
-  • Damage: 6/8 -> 7/10 (R2/R3)
-  • No longer spoils Hunts bosses by damaging
-  • The Virtue has learned social distancing and will always
-keep horizontal distance when moving towards you
-  • Toggling Keeper Virtue now resets its action delay
-  • Fixed the Virtue not getting removed when the player
-switches worlds
-• Items:
-  • Versatile Vase (M4) : 30 -> 28 Projectile Damage, 0.9 -> 0.8
-Throw Rate
-  • Emerald Lens: 3 -> 2 Charm Power
-  • Pious Prism: +65% -> +40% Hallowed Beam Damage, -65% -> -50%
-Hallowed Beam Distance, 0 -> -50% Hallowed Beam Stun Duration
-  • Poisoned Wisteria: 2 -> 3 Charm Power, 0 -> +35% Hallowed
-Beam Seal Radius, -55% -> -40% Hallowed Beam Damage
-  • Explosive Component (Rework): 2 Charm Power, +65% Ethereal
-Ascension Orb Radius, +10% Ethereal Ascension Orb Damage
-Amplifier, -20% Ethereal Ascension Orb Damage
-  • Ashkii Galero (Rework): 2 Charm Power, -30% Ethereal
-Ascension Cooldown, -25% Ethereal Ascension Duration, -20%
-Ethereal Ascension Orb Buff Duration
-  • Malignant Neuron (Rework): 3 Charm Power, +30% Ethereal
-Ascension Orb Damage, +40% Ethereal Ascension Orb Travel Speed,
-+6 Ethereal Ascension Max Duration Extension, +0.5 Ethereal
-Ascension Duration Extension, # -50% Ethereal Ascension Duration
-  • Swift Transcendent Charm: +35% -> +30% Ethereal Ascension
-Orb Travel Speed, 0 -> +5% Ethereal Ascension Orb Damage
-  • Lesser Sentinel Charm (Rework): +10% Keeper Virtue Damage,
-+5% Keeper Virtue Healing
-  • Greater Sentinel Charm (Rework): +20% Keeper Virtue Damage,
-+10% Keeper Virtue Healing
-  • Distant Sentinel Charm: +50% -> +35% Keeper Virtue Action
-Range, 0 -> +35% Keeper Virtue Detection Range
-  • Focused Sacrosant Charm: +35% -> +30% Hallowed Beam Damage
-  • Automatic Distillery: +80% -> +50% Heavenly Boon Cooldown###
-Mob Changes:
-• Hycenea: 210k -> 250k health
-• Ru'Ten: 60k -> 75k health
-  • &oThe health nerfs to these bosses last week were heavier
-handed than what we've seen as necessary, so we've decided to
-revert Ru'Ten's health and settled for a ~10% nerf to Hycenea
-(from 275k before last week).&r
-### Feedback Fixes:
-• The Mainline Quests GUI entry for Holding Space now displays
-the custom resource pack wool texture rather than just a player
-head
-• Adjusted checks to increase valid items for applying the Owned
-infusion. In particular, this now allows you to apply the
-infusion to items like shulker boxes, legacy items, and non-
-Zenith charms.
-• Updated the mob vanity, sound, and particles for the following
-mobs: Archmage Dummy, Arising Undergrowth, Apprentice, Crazed
-Spellslinger, Crazed Spellslinger Dummy, Cursed Stone Bricks,
-Cursed Prismarine Bricks, Damned Stone Bricks, Damned Prismarine
-Bricks, Emergent Undergrowth, Enflamed Quetzal Priest, Flower
-Tower, Forgotten Remains, Ghoul, Ghoulish Monstrosity, Gilded
-Revenant, Glacial Sniper, Gnarled Leshen Bark, Guardian of the
-Lost Master, Howling Wind, Odokuro, Phantom Ranger, Phantom
-Warrior, Plague Golem, Plague Spreader, Quetzal Priest, Raging
-Ghoul, Secret Keeper, Silver Chariot Ritualist, Skeletal
-Abomination, Skeletal Archer, Skeletal Revenant, Soaked Ghoul,
-Son of the Forest, Soulblighter's Sacrifice, Soulseeker, Tamed
-Dolphin, Tempest Shade, Tempest Watcher, Tempest Wraith, Tlaxan
-Sentinel, Twisted Leshen Bark
-• Added Author Medal to API
-• Added the firework animation to Owned infusing and removing
-### Bug Fixes:
-• Fixed Dreadnaught of Subjugation mount desyncing from its
-actual in-world position on some Minecraft clients
-• Fixed stuck spots on the Academy's roof
-• Fixed a very obscure bug in Loci's Respite causing the puzzle
-to break completely
-• Fixed mailing certain unopened chests of loot not sending the
-actual loot
-• Fixed Carrier of Festivity colours• Fixed Carrier of Emotion
-base item
-• Fixed an issue that prevented non-patrons from opting out of
-being punched via Player Punches
-• Fixed the player punch description in the Cosmetics GUI
-• Fixed Enky being able to be affected by skills
-• Fixed Enky trapping players in their residence for eternity
-• Fixed grammatical errors in Enky's dialogue
-• Enky now has something to say if you ignore their workspace
-• Unyielding's description in the Delve GUI now reflects the
-shift to percentage KBR in displays
-• Fixed a gendered term in Fabled Destiny
-• Fixed Matter Agglomerator not playing all of its sound effects
-to all nearby players
-• Fixed Sopping Frost applying vanilla slowness with its dropped
-potion
-• Fixed Blightleaking Heart and Celestial Gaze mounts dying
-independently of their main mob regardless of current health
-• Fixed charge spells removing mob AI if they are stunned while
-casting the spell
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The Silver Knight's Tomb remains closed.
 &bHotfix:&r
 Fixed a bug with swapping sets in armory deleting items with no
 lore
 &bHotfix&r (on daily restart):
 • Disabled Tricky Creepers in Silver Knight Remnants to prevent
 instance softlock issues
+&bHotfix:&r
+Silver Knight's Tomb has been reopened.
+&bHotfix&r:
+• Guilds who don't already have a guild plot can &oactually&r
+select non-default types now
+&bHotfixes:&r
+• Fix lag caused by placing/breaking torches in places with high
+amounts of tile entities
+• Guilds can no longer add players to their guild as guests
+without using an invite
+• When buying a guild plot, other guild members are ejected from
+the purchase screen to prevent being charged twice
+• There is now a limit on how many unanswered invites a guild
+can have open at once. Use `/guild invite <player> uninvite` to
+remove old invites### Mini-Balance Update #2
+• Divine Justice healing has been reworked:
+  • `Whenever you kill a Heretic, you and players within 12
+blocks of you regenerate 5% of their max health over 1 second.
+Duration stacks on kill up to 3 seconds.`
+  • &oWe're trying a different approach to DJ healing this week
+that should handle some issues better than the last change.
+Healing no longer requires you to have triggered Divine Justice
+on the mob in the last 1.5 seconds, which was done to detach the
+healing from mob density and reduce caster builds' healing
+power, but would sometimes make using abilities feel bad as
+you'd be missing out on healing. Now it's a regenerative effect
+that stacks in duration, meaning you no longer lose out on
+healing from killing with abilities, but of course it's no
+longer instant. For Seraph, this means you can now heal from DJ
+during Ascension. The 3 second duration ceiling exists to limit
+the healing you can gain from killing large amounts of mobs at
+once while not making fast killing go entirely to waste.&r
+• Heavenly Boon Enhancement: 0.75s -> 1s cooldown reduction cap
+• Keeper Virtue now heals targeted players at least 5 times
+before stopping at the upper threshold
+  • &oKeeper Virtue is looking to receive large
+changes/potentially a rework in the future, likely won't get
+many changes before then.&r
+• Luminous Infusion: 20s -> 18s cooldown
+• Malignant Neuron: +6 -> +10 Ethereal Ascension Max Duration
+Extension
+&b(11.38.0)&r
+For the update on October 15, 2025
+### Minor New Features:
+• You can now remove glowing with Aesir's Embrace by using swap
+hands
+• A new NPC can be found in the Sierhaven chapel who will help
+you see in the night
+• After years of technological advancement, the Queen of
+Frostgate has finally figured out how to make it snow in
+Chillwind
+• Idolatry has been added to the Rotating Delve Modifier pool
+• Carapace damage boost before shield break 30% -> 20%
+• Bloodlust is temporarily available again until the week of 7th
+November, Friday (depends on your timezone)
+• Fixed KBR, actually, actually
+### Feedback Fixes:
+• Slightly reworked an elite encounter in Indigo (near the
+||southeastern hook upgrade||)
+• Made Deflector Mages' telegraph sounds less ear piercing
+• Added additional lighting to the final portion of the Indigo
+Dungeon
+• Tuulen's version of the Zenith ascension dialogue post-Holding
+Space has been heavily updated to be more reflective of her
+character
+• C'Shura and her reflection, in Ta'Eldim, has had her armor
+removed to help her resource pack skin function.
+• Clarified Scout's Versatile passive (no functionality changes)
+• Shortened the tab list display of the CustomRegeneration
+effect (X Regeneration Per Y Second(s) -> X/Ys Regeneration)•
+Bug Fixes/Misc. Changes:
+  • Unwavering, Rejuvenation, and the Divine Justice Damage
+charm stat now display their bonuses in the Class Selection GUI
+  • Fixed Ethereal Ascension making players unable to move when
+flying in creative mode
+  • Ethereal Ascension Orb Damage Amplifier charm stat is now
+additive instead of multiplicative
+  • Ethereal Ascension no longer applies stronger levitation if
+the player is close to a ceiling
+  • Fixed Keeper Virtue triggering Reflexes
+  • Keeper Virtue description now specifies that only you can
+heal it with Hallowed Beam
+  • Hallowed Beam trigger can now be customized to not require a
+projectile weapon
+### Bug Fixes
+• Fixed the Patreon shrine in isles spawning itself in the roof
+of the structure instead of on the enchanting table
+• Fixed a stuck spot in Rahkeri
+• Fathom's Reach is no longer missing unique bounty dialogue
+with The Seanchaidh
+• Fixed Discoveries memory leak affecting Willows
+• Fixed "You have already collected this" message sometimes
+showing the first time a discovery is collected
+• Apex of Alchemy can no longer be fed tricky candies to create
+an infinite source of Bag Of Treats
+• Ember of Ardor/Fervor can no longer be feed Creeper's Delight
+• Xeno, Shattered Scalawag will no longer have exactly 1000
+health and deal undelved R2 damage everywhere
+• Ability Tridents (from casting snowball abilites underwater)
+no longer deal 7 projectile damage
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.Twisted Intruder has
+been reopened.
