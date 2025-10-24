@@ -1,50 +1,3 @@
-&bHotfix:&r
-Fixed a bug with swapping sets in armory deleting items with no
-lore
-&bHotfix&r (on daily restart):
-• Disabled Tricky Creepers in Silver Knight Remnants to prevent
-instance softlock issues
-&bHotfix:&r
-Silver Knight's Tomb has been reopened.
-&bHotfix&r:
-• Guilds who don't already have a guild plot can &oactually&r
-select non-default types now
-&bHotfixes:&r
-• Fix lag caused by placing/breaking torches in places with high
-amounts of tile entities
-• Guilds can no longer add players to their guild as guests
-without using an invite
-• When buying a guild plot, other guild members are ejected from
-the purchase screen to prevent being charged twice
-• There is now a limit on how many unanswered invites a guild
-can have open at once. Use `/guild invite <player> uninvite` to
-remove old invites### Mini-Balance Update #2
-• Divine Justice healing has been reworked:
-  • `Whenever you kill a Heretic, you and players within 12
-blocks of you regenerate 5% of their max health over 1 second.
-Duration stacks on kill up to 3 seconds.`
-  • &oWe're trying a different approach to DJ healing this week
-that should handle some issues better than the last change.
-Healing no longer requires you to have triggered Divine Justice
-on the mob in the last 1.5 seconds, which was done to detach the
-healing from mob density and reduce caster builds' healing
-power, but would sometimes make using abilities feel bad as
-you'd be missing out on healing. Now it's a regenerative effect
-that stacks in duration, meaning you no longer lose out on
-healing from killing with abilities, but of course it's no
-longer instant. For Seraph, this means you can now heal from DJ
-during Ascension. The 3 second duration ceiling exists to limit
-the healing you can gain from killing large amounts of mobs at
-once while not making fast killing go entirely to waste.&r
-• Heavenly Boon Enhancement: 0.75s -> 1s cooldown reduction cap
-• Keeper Virtue now heals targeted players at least 5 times
-before stopping at the upper threshold
-  • &oKeeper Virtue is looking to receive large
-changes/potentially a rework in the future, likely won't get
-many changes before then.&r
-• Luminous Infusion: 20s -> 18s cooldown
-• Malignant Neuron: +6 -> +10 Ethereal Ascension Max Duration
-Extension
 &b(11.38.0)&r
 For the update on October 15, 2025
 ### Minor New Features:
@@ -109,3 +62,58 @@ no longer deal 7 projectile damage
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.Twisted Intruder has
 been reopened.
+&bHotfix:&r The second totem in Tlaxan Troubles will no longer
+softlock the quest
+&bHotfix&r:
+• The new Rush leaderboard signs are fixed
+&bHotfix:&r
+• Creeperjuice quest should once again be completable
+&b(11.39.0)&r
+For the update on October 22, 2025
+### Rush of Dissonance
+&oThe nexus stirs once more...&r
+•
+&bRush of Dissonance has completely been reworked!&r Featuring
+the same premise but with a new pace!
+• The arena has been rebuilt! It is larger in size and each of
+the four seasons feature their own environmental hazards. The
+new nexus now supports up to four players!
+• The influence from the Dissonance realm has forced the
+denizens to undergo changes. Familiar faces and new foes now
+occupy the nexus, with their numbers larger than ever.
+• Progression is done by rounds. Each round consists of four
+waves, with the last having greater count than the rest. Trades
+and advancements are unlocked by rounds.
+• The Dissonant Spirit offers additional trades for those who
+stand their ground long enough...
+-# Remnant of the Rose usage from the previous iteration is
+kept.### Seasonal Pass
+• We hoped you enjoyed the mechanical theme featured in the
+previous Seasonal Pass! We're sure all of the sounds of
+mechanical whirring and gears turning started to get old after a
+while. Now, we have a brand new Seasonal Pass, corresponding
+with the brand-new Rush of Dissonance rework: The
+&bPass of Dissonance&r, featuring cosmetics and builds related
+to Harmony and Dissonance!
+• Unlock brand new Titles, Mob Dummies, Elite Finishers, and
+other rewards as you progress through the usual 13 weeks of pass
+missions. Additionally, we have introduced five brand-new extra
+tiers to the rewards track, containing extra tokens as a reward
+for those who continue completing missions!
+• One new Seasonal Pass Artifact has been added to the Relic
+Wheel pool! A second one may be coming within the next few
+weeks.
+• The Seasonal Pass GUI has been slightly reworked, specifically
+under the Rewards tab, to improve organization and allow support
+for the new tier count in this Seasonal Pass.
+• Due to a mistake when setting up the Marsh Madness Pass, every
+monthly mission since then has been considered a "Bonus"
+mission, making it easier to get the Tryhard title.
+Unfortunately, this change was unintentional. To fix this
+problem without being too punishing, we have decided to meet in
+the middle • the third monthly mission, on Weeks 9 to 12, will
+remain as a Bonus mission, while the other two will not.
+• Head to the Seasonal Pass Lobby to start your new adventure,
+in celebration of the new Rush of Dissonance!
+&bHotfix 11.39.1 (for daily restart):&r
+• Fixed rush memory leak

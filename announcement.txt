@@ -1,10 +1,7 @@
-[
-&bChargingUv Developer
-Interview&r](https://youtu.be/Wd4c72BpbjU)I'm happy to announce
-that @[MAID] ILoveCookies_ and @star_bright have joined Team
-Monumenta as content developers! They have both worked
-extensively on some upcoming content, which you will hopefully
-see soon™!
+I'm happy to announce that @[MAID] ILoveCookies_ and
+@star_bright have joined Team Monumenta as content developers!
+They have both worked extensively on some upcoming content,
+which you will hopefully see soon™!
 Be sure to give them a congratulatory 🏓
 &bThe Architect's Ring: Indigo Wool Dungeon&r
 After nearly two years of planning and development, the third
@@ -82,4 +79,10 @@ NA proxy domains are:
 The following domains work but are unsupported, as they are
 subject to change if we move hosts:
 • `m##.playmonmumenta.com`
-• `monumenta-##.playmonumenta.com`
+• `monumenta-##.playmonumenta.com`We're delighted to announce
+that @[Looking for Guild] cocopad has joined Team Monumenta as a
+full developer after leading the Rush of Dissonance
+Overhaul/Rework! https://discord.com/channels/313066655494438922
+/313404193647886337/1430752656997220424
+We hope you give him only your most kind, respectful
+<:Ping:387017938055593985> s
