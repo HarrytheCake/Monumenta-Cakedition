@@ -1,93 +1,4 @@
-&b(11.38.0)&r
-For the update on October 15, 2025
-### Minor New Features:
-• You can now remove glowing with Aesir's Embrace by using swap
-hands
-• A new NPC can be found in the Sierhaven chapel who will help
-you see in the night
-• After years of technological advancement, the Queen of
-Frostgate has finally figured out how to make it snow in
-Chillwind
-• Idolatry has been added to the Rotating Delve Modifier pool
-• Carapace damage boost before shield break 30% -> 20%
-• Bloodlust is temporarily available again until the week of 7th
-November, Friday (depends on your timezone)
-• Fixed KBR, actually, actually
-### Feedback Fixes:
-• Slightly reworked an elite encounter in Indigo (near the
-||southeastern hook upgrade||)
-• Made Deflector Mages' telegraph sounds less ear piercing
-• Added additional lighting to the final portion of the Indigo
-Dungeon
-• Tuulen's version of the Zenith ascension dialogue post-Holding
-Space has been heavily updated to be more reflective of her
-character
-• C'Shura and her reflection, in Ta'Eldim, has had her armor
-removed to help her resource pack skin function.
-• Clarified Scout's Versatile passive (no functionality changes)
-• Shortened the tab list display of the CustomRegeneration
-effect (X Regeneration Per Y Second(s) -> X/Ys Regeneration)•
-Bug Fixes/Misc. Changes:
-  • Unwavering, Rejuvenation, and the Divine Justice Damage
-charm stat now display their bonuses in the Class Selection GUI
-  • Fixed Ethereal Ascension making players unable to move when
-flying in creative mode
-  • Ethereal Ascension Orb Damage Amplifier charm stat is now
-additive instead of multiplicative
-  • Ethereal Ascension no longer applies stronger levitation if
-the player is close to a ceiling
-  • Fixed Keeper Virtue triggering Reflexes
-  • Keeper Virtue description now specifies that only you can
-heal it with Hallowed Beam
-  • Hallowed Beam trigger can now be customized to not require a
-projectile weapon
-### Bug Fixes
-• Fixed the Patreon shrine in isles spawning itself in the roof
-of the structure instead of on the enchanting table
-• Fixed a stuck spot in Rahkeri
-• Fathom's Reach is no longer missing unique bounty dialogue
-with The Seanchaidh
-• Fixed Discoveries memory leak affecting Willows
-• Fixed "You have already collected this" message sometimes
-showing the first time a discovery is collected
-• Apex of Alchemy can no longer be fed tricky candies to create
-an infinite source of Bag Of Treats
-• Ember of Ardor/Fervor can no longer be feed Creeper's Delight
-• Xeno, Shattered Scalawag will no longer have exactly 1000
-health and deal undelved R2 damage everywhere
-• Ability Tridents (from casting snowball abilites underwater)
-no longer deal 7 projectile damage
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.Twisted Intruder has
-been reopened.
-&bHotfix:&r The second totem in Tlaxan Troubles will no longer
-softlock the quest
-&bHotfix&r:
-• The new Rush leaderboard signs are fixed
-&bHotfix:&r
-• Creeperjuice quest should once again be completable
-&b(11.39.0)&r
-For the update on October 22, 2025
-### Rush of Dissonance
-&oThe nexus stirs once more...&r
-•
-&bRush of Dissonance has completely been reworked!&r Featuring
-the same premise but with a new pace!
-• The arena has been rebuilt! It is larger in size and each of
-the four seasons feature their own environmental hazards. The
-new nexus now supports up to four players!
-• The influence from the Dissonance realm has forced the
-denizens to undergo changes. Familiar faces and new foes now
-occupy the nexus, with their numbers larger than ever.
-• Progression is done by rounds. Each round consists of four
-waves, with the last having greater count than the rest. Trades
-and advancements are unlocked by rounds.
-• The Dissonant Spirit offers additional trades for those who
-stand their ground long enough...
--# Remnant of the Rose usage from the previous iteration is
-kept.### Seasonal Pass
+### Seasonal Pass
 • We hoped you enjoyed the mechanical theme featured in the
 previous Seasonal Pass! We're sure all of the sounds of
 mechanical whirring and gears turning started to get old after a
@@ -117,3 +28,138 @@ remain as a Bonus mission, while the other two will not.
 in celebration of the new Rush of Dissonance!
 &bHotfix 11.39.1 (for daily restart):&r
 • Fixed rush memory leak
+&bHotfix:&r
+• Replaced the duplicate Sunblessed title reward in the season
+pass
+&bHotfix:&r
+• Teal should now properly count as a Wool Dungeon for the
+current Seasonal Pass multiweek mission
+&b(11.40.0)&r
+For the update on October 29, 2025
+### Minor New Features:
+• Following the 5.9.0 resource pack update, 10 new hope skins
+have been added to Mastersmith Antonio's store! Thank you very
+much to our patrons for your continued support!
+• Potion Barrels now show a copy of the potion that's inside,
+removing the need for signs or item frames to keep track of
+which potion is where
+• Due to issues with ViaVersion, it is advised to play on only
+Minecraft 1.20.4, not 1.20.5 or higher. You are still able to
+connect with up to 1.21.4 for the moment, but this will no
+longer be mentioned in the server list's message. Once we've
+updated past 1.20.4, connecting with later versions will likely
+be stable again.
+### Rush of Dissonance Week 1 Changes:
+&nGameplay Changes&r
+• Obsidian spawning is more aggressive above a certain y level.
+Increased the timer by one second.
+• Mobs re-adjust health should a player die (Does not apply
+retroactively to existing mobs).
+• Players who has not received loot and were kicked out of the
+instance can be refunded at the Dissonant Converter.
+• Rewards past round 30 receive a minor increase in payout.
+• Speed now scales past round 30.
+&bMob Changes&r
+&nGeneric&r
+• Soulweaver : Now appears in the waiting room
+&nSummer&r
+• Solstiquito : Increased melee damage to 25 (from 18), and now
+dies upon attacking.
+• Summer Brute : Only cast one projectile instead of per player.
+Inflicts fire instead of wither on melee hit. Gains block break.
+• Billowing Spirit : Now inflicts -100% Fire Resistance in a 8
+block radius
+&nSpring&r
+• Awakening Growth : Audio fixed. Decreased explosion damage
+from 200 to 100, now evolves into an Awakened Growth upon
+exploding.
+• Springfield Titan : Grass block grow speed reduced to 2 (from
+10), can no longer place platforms unless it stands on solid
+blocks.
+• Pixie of Life : Gains full KBR. No longer oscillates, Now
+heals for 10% max health instead of flat 20.&nFall&r
+• Willowweave Warlock : Now has 30% Knockback Resistance (from
+0%). Gains a 1s telegraph before throwing the bomb. Tweaked
+grenade particles while midair to be more visible.
+&nWinter&r
+• Putrescent Verglas : Added a rift spell that deals 15 magic
+damage and applies Wither 4 for 4 seconds (4s cooldown). Reduced
+melee damage to 15 (from 20)
+||&nSeasonal Bosses&r|| ||
+• Suncrashing Sovereign : Ability changed to no longer get stuck
+in blocks. Basking Sun damage reduced to 40 (from 100, now deals
+25% true damage.
+• Splitroot Abomination : Reduced root splits to 4 (from 5),
+added a piercing beam spell that deals 15 magic damage and 25%
+true damage, targeting up to 8 random mobs. Summons Splitroot
+Bark if not enough mobs are present.
+• Splitroot Bark reworked : 100 health, 0.2 walkspeed, regular
+zombie.
+• Umbrafall : Updated beam spell visuals, beam spell now deals 8
+magic damage (from 20), now deals 25% true damage
+• Rimeborn Elemental : Snow Storm spell now deals 8 magic damage
+and 5% true damage per tick, and also inflicts a decaying 4s
+antiheal, decreasing from 100% by 25% each second
+||
+&nBug Fixes&r
+• Adjusted teleporting audio to not be loud.
+• Death messages now appears properly.
+• Summoned mobs now properly receive stat scaling.
+• Tuathans are no longer considered Rush mobs.
+### Item Changes:
+• Mask of the Interim: Unbreaking 5 -> Unbreakable
+### Feedback Fixes:
+• Left clicking an Eye of Viridia while in Isles now informs you
+about the current cycle (time remaining, caches claimed)
+• Increased the prices of potions sold in Galengarde
+• Danann nMagh in the Black Willows is no longer a vindicator
+and is now instead a Tuathan-skinned villager
+• Reworded Rush of Dissonance round count advancements to
+specify "Rounds" instead of "Waves"• Added Constellation
+Construct, Arcane Terror, Living Stardust, Bloodcrazed Beast,
+Mudburdened Rat, Skybound Remains, The Void Knight, Supercharged
+Obelisk, Progenitor of Void, Vanguard of Tarnished Silver,
+Mecha-Pelias, Eternal Gear to the Bestiary
+• Added Spawner Mimic to The Nadir's bestiary
+• Added Fathom's Reach mobs to the Bestiary
+• Updated Rush of Dissonance section of Bestiary to account for
+the reworked mobs
+• Twisteds took some swimming lessons from dolphins, and
+waterproofed their Looms
+### Bug Fixes:
+• Players who had just barely unlocked the Remnant of the Rose
+before last week's update are once again able to use it, without
+needing to visit the Rush lobby
+• Added Pass of Dissonance items to the API
+• Fixed Illuminate's direct hit counting as DoT for Hunts bosses
+and the enhancement's trail counting as not DoT
+• Re-added the Fateweaver trader to the new Rush lobby
+• The One way teleport at the end of Bewitched Dominion can no
+longer break
+• The Terth Trophy has been given a proper Trophy tag
+• You can no longer eat Silvered Sliver, Odious Husk, or
+Fractured Psyche
+• Two Handed now applies -40% speed while holding a non-
+Weightless offhand, as intended
+• Fixed Lyson's Head's stats being unnecessarily hidden and
+duplicated in its lore
+• The Celsian Seer has been taught cardinal directions, and will
+not point players south to seek Guardian's Gate to the west
+• Fixed typo and smart quote in Unraveled
+• Fixed numerous typos in Handbook advancement for Charms
+• A floating tree in Frostgate has been given some support
+• Orasomn, The Hand of Fate is no longer invisible, in order for
+its new resource pack model to work
+• Worm mobs can now have separate resource pack textures
+assigned to head, body and tail, fixing a bug with Skyseeker
+Wyvern's model
+• Fixed a spot in Rush lobby where you don't get added to the
+instance
+• Fixed a typo in Old Man Gunther's dialogue
+• Removed The Conductor (Scepter of Agony component trader) from
+the Bestiary
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.Rush has been
+temporarily closed.Rush has been re-opened
