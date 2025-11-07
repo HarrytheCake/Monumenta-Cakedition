@@ -1,165 +1,223 @@
-### Seasonal Pass
-• We hoped you enjoyed the mechanical theme featured in the
-previous Seasonal Pass! We're sure all of the sounds of
-mechanical whirring and gears turning started to get old after a
-while. Now, we have a brand new Seasonal Pass, corresponding
-with the brand-new Rush of Dissonance rework: The
-&bPass of Dissonance&r, featuring cosmetics and builds related
-to Harmony and Dissonance!
-• Unlock brand new Titles, Mob Dummies, Elite Finishers, and
-other rewards as you progress through the usual 13 weeks of pass
-missions. Additionally, we have introduced five brand-new extra
-tiers to the rewards track, containing extra tokens as a reward
-for those who continue completing missions!
-• One new Seasonal Pass Artifact has been added to the Relic
-Wheel pool! A second one may be coming within the next few
-weeks.
-• The Seasonal Pass GUI has been slightly reworked, specifically
-under the Rewards tab, to improve organization and allow support
-for the new tier count in this Seasonal Pass.
-• Due to a mistake when setting up the Marsh Madness Pass, every
-monthly mission since then has been considered a "Bonus"
-mission, making it easier to get the Tryhard title.
-Unfortunately, this change was unintentional. To fix this
-problem without being too punishing, we have decided to meet in
-the middle • the third monthly mission, on Weeks 9 to 12, will
-remain as a Bonus mission, while the other two will not.
-• Head to the Seasonal Pass Lobby to start your new adventure,
-in celebration of the new Rush of Dissonance!
-&bHotfix 11.39.1 (for daily restart):&r
-• Fixed rush memory leak
-&bHotfix:&r
-• Replaced the duplicate Sunblessed title reward in the season
-pass
-&bHotfix:&r
-• Teal should now properly count as a Wool Dungeon for the
-current Seasonal Pass multiweek mission
-&b(11.40.0)&r
-For the update on October 29, 2025
+Rush has been re-openedHekawt has been temporarily closed
+&b(11.41.0)&r
+For the update on November 5, 2025
+• As a warning, this will be the last week that the Creeperween
+2025: Spirit Creeperween event will be active. Make sure to
+participate in the festivities while you still can!
 ### Minor New Features:
-• Following the 5.9.0 resource pack update, 10 new hope skins
-have been added to Mastersmith Antonio's store! Thank you very
-much to our patrons for your continued support!
-• Potion Barrels now show a copy of the potion that's inside,
-removing the need for signs or item frames to keep track of
-which potion is where
-• Due to issues with ViaVersion, it is advised to play on only
-Minecraft 1.20.4, not 1.20.5 or higher. You are still able to
-connect with up to 1.21.4 for the moment, but this will no
-longer be mentioned in the server list's message. Once we've
-updated past 1.20.4, connecting with later versions will likely
-be stable again.
-### Rush of Dissonance Week 1 Changes:
-&nGameplay Changes&r
-• Obsidian spawning is more aggressive above a certain y level.
-Increased the timer by one second.
-• Mobs re-adjust health should a player die (Does not apply
-retroactively to existing mobs).
-• Players who has not received loot and were kicked out of the
-instance can be refunded at the Dissonant Converter.
-• Rewards past round 30 receive a minor increase in payout.
-• Speed now scales past round 30.
-&bMob Changes&r
-&nGeneric&r
-• Soulweaver : Now appears in the waiting room
-&nSummer&r
-• Solstiquito : Increased melee damage to 25 (from 18), and now
-dies upon attacking.
-• Summer Brute : Only cast one projectile instead of per player.
-Inflicts fire instead of wither on melee hit. Gains block break.
-• Billowing Spirit : Now inflicts -100% Fire Resistance in a 8
-block radius
-&nSpring&r
-• Awakening Growth : Audio fixed. Decreased explosion damage
-from 200 to 100, now evolves into an Awakened Growth upon
-exploding.
-• Springfield Titan : Grass block grow speed reduced to 2 (from
-10), can no longer place platforms unless it stands on solid
-blocks.
-• Pixie of Life : Gains full KBR. No longer oscillates, Now
-heals for 10% max health instead of flat 20.&nFall&r
-• Willowweave Warlock : Now has 30% Knockback Resistance (from
-0%). Gains a 1s telegraph before throwing the bomb. Tweaked
-grenade particles while midair to be more visible.
-&nWinter&r
-• Putrescent Verglas : Added a rift spell that deals 15 magic
-damage and applies Wither 4 for 4 seconds (4s cooldown). Reduced
-melee damage to 15 (from 20)
-||&nSeasonal Bosses&r|| ||
-• Suncrashing Sovereign : Ability changed to no longer get stuck
-in blocks. Basking Sun damage reduced to 40 (from 100, now deals
-25% true damage.
-• Splitroot Abomination : Reduced root splits to 4 (from 5),
-added a piercing beam spell that deals 15 magic damage and 25%
-true damage, targeting up to 8 random mobs. Summons Splitroot
-Bark if not enough mobs are present.
-• Splitroot Bark reworked : 100 health, 0.2 walkspeed, regular
-zombie.
-• Umbrafall : Updated beam spell visuals, beam spell now deals 8
-magic damage (from 20), now deals 25% true damage
-• Rimeborn Elemental : Snow Storm spell now deals 8 magic damage
-and 5% true damage per tick, and also inflicts a decaying 4s
-antiheal, decreasing from 100% by 25% each second
-||
-&nBug Fixes&r
-• Adjusted teleporting audio to not be loud.
-• Death messages now appears properly.
-• Summoned mobs now properly receive stat scaling.
-• Tuathans are no longer considered Rush mobs.
-### Item Changes:
-• Mask of the Interim: Unbreaking 5 -> Unbreakable
+• Added a new item for Author Medal races: the Speedometer!
+Completing your first Author Medal race will reward you with a
+Speedometer, which will allow you to check your exact speed. If
+you've already beaten at least one Author Medal race before
+today, Flashy in Sierhaven will give you one for free, as well
+as selling more if you ever lose yours.
+• The Skills API now contains class/spec passives, as well as
+the simple descriptions for skills
+• Squire Aaron will temporarily offer refunds for Delve Arrows
+changed this update
+### Bleeding Rework:
+  • Bleeding now applies `level` bleeding stacks on hit. Stacks
+last 5s, apply 4% / 1% weak per stack to enemies / bosses
+respectively. At 5 / 20 stacks, the mob Hemorrhages, losing all
+stacks and taking 30% max health / `region &o 150` flat damage.
+  • Mobs suffer 30% weaken for 5 seconds after Hemorrhaging, and
+cannot gain stacks during this time.
+• Refraction (Steelsage) applies 1 stack of bleed
+• Esoteric Enhancements applies 35% slow
+• Counter Strike (u) no longer applies bleed
+• Volley (u) no longer applies bleed
+• Hunting Companion (u) applies 20% weaken instead of 20% bleed
+• Warlock damaging non-DoT abilities apply 1 stack of bleed when
+Sanguine Harvest is selected
+&bMisc Class Changes:&r
+• Pinning Shot no longer pops if the mob has projectile iframes
+• Judgement Chain damage buff is now additive with other class
+damages, damage buff at L1/L2 15% / 30% -> 25% / 50%
+• Chain Healing Wave's self-heal has been halved
+• Cursed Wound and Withering Gaze damage Ailment -> Magic
+• Sanguine Harvest passive no longer triggers on Damage Over
+Time
+• "Withering Gaze Dot" charm stat renamed to "Withering Gaze
+Damage Over Time"
+&bMisc Enchant Changes & Additions:&r
+• New enchantment, Kinetic Loading: Instantly load a crossbow /
+recharge a trident/snowball/throwing knife on successful melee
+crit
+• New enchantment, Harpoon: Pulls mobs towards you when struck
+by an arrow
+• New enchantment, Skyseeker: Do more damage to mobs above your
+height (For projectile weapons)
+• Reverb should no longer scale with vulnerability
+• Point Blank and Sniper now work on limpshots (at reduced
+efficiency)
+• Technique now measures 2.7 blocks from the edge of the mob's
+hitbox to you (should be neutral on zombie-like mobs)
+• Technique Projectile damage per level 7.5% -> 10%
+• Adrenaline triggers at half efficiency on projectile damage
+&bArrow Changes:&r
+• Luther's Bolt: Piercing 1, -30% Projectile Damage -> Wind
+Aspect 1
+• Star-Tipped Arrow: Piercing 2, -35% Projectile Damage -> Wind
+Aspect 1, Regicide 1
+• Proprietor's Present: Thunder Aspect 2, Piercing 1, -20%
+Projectile Damage -> Thunder Aspect 2, Decay 2
+• Sentry's Arrow: Point Blank 1, Piercing 1, -35% Projectile
+Damage -> Punch 2, Thunder Aspect 2
+• Askhii Quarrel: Sniper 1, Piercing 1, -35% Projectile Damage
+-> Punch 2, +35% Projectile Speed
+• Keterborn Bolt: Point Blank 1, +5% Projectile Damage ->
+Technique 2
+• Fish Popper: Point Blank 1 -> Abyssal 1, Punch 1
+• Blackbearer's Bolt: Point Blank 2, -50% Projectile Speed ->
+Quake 1, -30% Projectile Speed
+• Pale Arrows: +15% Projectile Damage -> Piercing 1, +15%
+Projectile Speed
+• Star Seeker's Needle: Sniper 1, +5% Projectile Damage ->
+Skyseeker 1, +50% Projectile Speed
+• Marksman's Longshot: Sniper 1 -> +25% Projectile Speed
+• Scout's Heartseeker (Spectral): Sniper 1, +25% Projectile
+Speed -> First Strike 1, +10% Projectile Speed
+• Void-Dipped Arrow: +5% -> 0% Projectile Damage (no other
+changes)
+• Timetorn Arrow: Sniper 2, +50% Projectile Speed -> Adrenaline
+2, +50% Projectile Speed
+• Chillwind Bolt: Ice Aspect 2, -50% Projectile Speed -> Ice
+Aspect 2, Punch 1, -20% Projectile Speed• Silver Bolt: Ice
+Aspect 2, Fire Aspect 2, -15% Projectile Damage -> Ice Aspect 2,
+Fire Aspect 2, -30% Projectile Speed
+• Beastblood Quarrel: Bleeding 3 -> Bleeding 1, First Strike 1
+• Ix's Bolt: Bleeding 2 -> Bleeding 1
+• Ateoq Arrow: Bleeding 2 -> Bleeding 1
+• Serrated Arrow: Bleeding 1, Fire Aspect 1 -> Bleeding 1, First
+Strike 1
+• Stormsurge Quarrel: 6 -> 5 Abyssal (no other changes)
+&bRegion 3 Item Changes:&r
+• Intermittence (M4): 9.5 -> 9 Armor, 0 -> 2 Stamina
+• Starhungry Coriaceus (M4): 9.5 -> 10 Agility
+• Sanguinis (M4) (Rework): Quick Charge 1, Multishot, Bleeding
+2, Sustenance 2, Curse of Shrapnel 2, 27 Projectile Damage, 1
+Projectile Speed
+• Herald's Cruelty (M4): 2 -> 3 Quick Charge, 20 -> 17.5
+Projectile Damage
+• Witchbane Revolver (M4): 19 -> 20 Projectile Damage
+• Norvigut Skewer (M4): 30 -> 31 Projectile Damage
+• EX Bonepiercer (M4): Bleeding 3 -> 2, Fire Aspect 2 -> 3, 30
+-> 29 Projectile Damage
+• Ppanvel's Wolfbone Greatbow (M4): Sustenance 0 -> 1
+• Word of the Architect (M4): 23 -> 24 Projectile Damage
+• Wind's Gaze (M4): 32 -> 29.5 Projectile Damage, Skyseeker 0 ->
+2, 1 -> 2 Projectile Speed
+&bCharms:&r
+• Null Agglomerate: -90% -> -85% Blizzard Duration, #-60% ->
+#-65% Blizzard Damage
+• Origin of Void: -30% -> -60% Predator Strike Range
+• Mire's Influence: +15% -> +25% Judgement Chain Damage Boost
+• Lesser Charm of the Gorgon: +1 -> +10% Withering Gaze Damage
+• Greater Charm of the Gorgon: +2-> +20% Withering Gaze Damage
+• Focused Charm of the Gorgon: +3.5 -> +35% Withering Gaze
+Damage
+• Explosive Charm of the Gorgon: +1.5 -> +15% Withering Gaze
+Damage
+• Removed Bleed related stats from Fox Frenzy, Rusted Bracers,
+and Sedated Parasitic Charm
+• Replaced Focused Consecrated Charm with Swift Consecrated
+Charm: 2 Charm Power, +2% Sanctified Armor Resistance, -10%
+Sanctified Armor Cooldown
+  • &rThis charm was meant to have been item replaced with the
+Swift version in the previous balance patch.
+&b&oRegion 2 Item Changes:&r
+• Shell of Kokytos: 2 -> 1 Magic Protection
+• Locust's Sandals: 4.5 -> 5 Agility
+• Iza's Scales: 4 -> 5 Armor
+• Colossal Sabatons: 7.5 -> 8 Armor
+• Void Heart: 0.8 -> 1 Projectile Speed
+• Creation: Infinity 0 -> 1
+• Gargantuan Harpoon: Harpoon 0 -> 2
+• Ghastcaller's Gunblade (Rework): Kinetic Loading, First Strike
+3, 14 Attack Damage, 1.5 Attack Speed, 14 Projectile Damage, 0.8
+Projectile Speed, +10% Speed
+• Memory Maker: 9.5 -> 11 Projectile Damage, 1 -> 0 Piercing
+• Frigid Rupture: 0 -> 1 Quick Charge, 22 -> 19 Projectile
+Damage
+• Poacher's Rifle: 18.5 -> 22 Projectile Damage, 3 -> 1 Sniper
+• Embers of Thori'Dal: 21 -> 20.5 Projectile Damage
+&bRegion 1 Item Changes:&r
+• Roar of the Valley (Omenspeaker): 15 -> 16 Projectile Damage
+• Corrupted Steelsiege (Divine Steelsiege): 16 -> 13 Projectile
+Damage, Piercing 0 -> 1
+  • Developer Note: C'Steelsiege is here to provide a Piercing
+option that is not for Sniper.
+• Worn Viridian Hunter: 11 -> 12 Projectile Damage,
+• Screamcaller: 0 -> 5 Melee Damage, 4 -> 2 Attack Speed
+• Xanatull's Skystorm (Arcane Snowstorm): 13.5 -> 14 Projectile
+Damage
+• Quetzalcoatl's Fury: 13.5 -> 14 Projectile Damage
+• Arcane Storm: 12 -> 12.5 Projectile Damage&rThis month's
+roadmap for some of our upcoming balance projects;&o
+• &rA large-scale Alchemist update is expected to release in
+December, including several skill reworks and tweaks to address
+various issues within the class in regards to ability mechanics,
+skill point flexibility, bag design and more.&o
+• &rWe've begun tackling Instant Health potions across the game
+and moving to a healthier system, tentatively planned to release
+in 2026. They've been a painpoint of gameplay for some years
+now, with a notable discrepancy between playing with and without
+PI/II.&o
+• &rPlanning has started on a project to address overarching
+issues in Region 3 that have come to light over the years since
+its release, notably in terms of charms and enhancements, mobs
+and delves, and the general damage-hungry nature of the region,
+as classes and mobs have historically continued to one-up each
+other in the region.&o
+• &rDevelopment has picked up again on the Berserker and Shaman
+reworks, and we hope to release both in the winter.&o
+• &rA major Warlock rework is in the early conceptualizing
+phase. Updates on progress and potential release dates will be
+included in future balance roadmaps, for now it's too early to
+estimate.&o
 ### Feedback Fixes:
-• Left clicking an Eye of Viridia while in Isles now informs you
-about the current cycle (time remaining, caches claimed)
-• Increased the prices of potions sold in Galengarde
-• Danann nMagh in the Black Willows is no longer a vindicator
-and is now instead a Tuathan-skinned villager
-• Reworded Rush of Dissonance round count advancements to
-specify "Rounds" instead of "Waves"• Added Constellation
-Construct, Arcane Terror, Living Stardust, Bloodcrazed Beast,
-Mudburdened Rat, Skybound Remains, The Void Knight, Supercharged
-Obelisk, Progenitor of Void, Vanguard of Tarnished Silver,
-Mecha-Pelias, Eternal Gear to the Bestiary
-• Added Spawner Mimic to The Nadir's bestiary
-• Added Fathom's Reach mobs to the Bestiary
-• Updated Rush of Dissonance section of Bestiary to account for
-the reworked mobs
-• Twisteds took some swimming lessons from dolphins, and
-waterproofed their Looms
-### Bug Fixes:
-• Players who had just barely unlocked the Remnant of the Rose
-before last week's update are once again able to use it, without
-needing to visit the Rush lobby
-• Added Pass of Dissonance items to the API
-• Fixed Illuminate's direct hit counting as DoT for Hunts bosses
-and the enhancement's trail counting as not DoT
-• Re-added the Fateweaver trader to the new Rush lobby
-• The One way teleport at the end of Bewitched Dominion can no
-longer break
-• The Terth Trophy has been given a proper Trophy tag
-• You can no longer eat Silvered Sliver, Odious Husk, or
-Fractured Psyche
-• Two Handed now applies -40% speed while holding a non-
-Weightless offhand, as intended
-• Fixed Lyson's Head's stats being unnecessarily hidden and
-duplicated in its lore
-• The Celsian Seer has been taught cardinal directions, and will
-not point players south to seek Guardian's Gate to the west
-• Fixed typo and smart quote in Unraveled
-• Fixed numerous typos in Handbook advancement for Charms
-• A floating tree in Frostgate has been given some support
-• Orasomn, The Hand of Fate is no longer invisible, in order for
-its new resource pack model to work
-• Worm mobs can now have separate resource pack textures
-assigned to head, body and tail, fixing a bug with Skyseeker
-Wyvern's model
-• Fixed a spot in Rush lobby where you don't get added to the
-instance
-• Fixed a typo in Old Man Gunther's dialogue
-• Removed The Conductor (Scepter of Agony component trader) from
-the Bestiary
+• Added Indigo trades to the Fatekeeper
+• Updated Unyielding description to the new KBR format
+• Updated Infinity description to mention how it only works on
+vanilla arrows
+• Added Ad Astra to the API
+• Added Shield (Valley tier 2) to the API
+• Refit Mask of the Interim now has the Challenger Skin location
+tag
+• Added Refit Mask of the Interim to the API
+• Dye Traders now sell a chest containing all dyes, for
+convenience
+• Gave the Dye Trader in Sierhaven Circle his own loom
+• The Dye Trader in Castle Narsen now sells Glow Ink Sacs like
+the others
+• Added a treasure score spawner to the most recently added F2
+Zenith room
+• Added stairs to a F2 room### Bug Fixes:
+• Obliterated Shady Trader clones from the roofs of Sierhaven.
+• Fixed the Zenith F3 "Circle" room not &ractually&o having a
+treasure spawner
+• Fixed a few empty signs and player heads in the guild creation
+room in the Sierhaven Castle
+• Hunts no longer get stuck in the tab list if no one is on
+`ring`(-1) after the hunt begins
+• Fixed C'Shura's reflection holding her dagger in the wrong
+hand
+• Removed unobtainable entries from the Silver Knight's Remnants
+section of Bestiary
+• Fixed Starbound Sanctuary's Chest spawning early
+• Fixed recipes to turn quartz slabs and stairs back into quartz
+&rblocks&o, not raw quartz
+• The Odd Artist now properly has a trade to unskin Boots of
+Monshee
+• Unskinning Emblem of Chestey at the Odd Artist no longer
+requires completion of Bring Him Baack
+• Fixed Rush of Dissonance granting solo leaderboard position
+while playing in multiplayerUnfortunately, we've hit a critical
+problem last minute with the balance update, and have been
+&nforced to delay it until next week&r.
+Item changes have still gone through, but enchant & class
+changes will be delayed.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.Rush has been
-temporarily closed.Rush has been re-opened
+and select `I want to unlock this shop`.&r

@@ -1,8 +1,3 @@
-I'm happy to announce that @[MAID] ILoveCookies_ and
-@star_bright have joined Team Monumenta as content developers!
-They have both worked extensively on some upcoming content,
-which you will hopefully see soon™!
-Be sure to give them a congratulatory 🏓
 &bThe Architect's Ring: Indigo Wool Dungeon&r
 After nearly two years of planning and development, the third
 mainline, traditional-style dungeon for the Architect's Ring has
@@ -86,3 +81,50 @@ Overhaul/Rework! https://discord.com/channels/313066655494438922
 /313404193647886337/1430752656997220424
 We hope you give him only your most kind, respectful
 <:Ping:387017938055593985> s
+&b2026 Monumenta Roadmap&r
+Hello everyone! It's been a year since our last roadmap update,
+so we thought it would be a good time to address some of our
+priorities and upcoming projects as we look towards Monumenta
+development in 2026. This is mainly focused on our larger
+efforts, so if you don't see something here, it doesn't
+necessarily mean it isn't on our radar.
+• Over the last year, we've been rebuilding the early game from
+the ground up to better showcase Monumenta to our new players.
+Along with a full labs & tutorial rework, the swamp overworld
+has been entirely rebuilt with both new and returning pois,
+discoveries, secrets and remastered quests.
+• We're also revitalizing the early game by tweaking dungeon
+rewards & skill point progression, paired with full reworks of
+class ability descriptions for readability and comprehension,
+the return of natural spawns, and more friendly overworld death
+systems.
+• The near future will bring a finale expansion for Star Point,
+wrapping up the main Chapter 3 questline and bringing you face
+to face with the consequences of Aurora's actions within
+Phyrrys!
+• Our next overworld expansion has begun development! It is the
+team's top priority to release with several new POIs and quests
+alongside a traditional dungeon in late 2026. Taking what we've
+learned from the R1 Revamp, we hope to create a richer overworld
+with secrets, challenges and the return of natural spawns. We're
+also designing with expandability in mind, so that new story
+quests and major content can be released post launch without a
+significant build-overhead.
+• We know it's been a little while since there's been any news
+about Exalted dungeons. As 2025 draws to a close, we'll be
+prioritizing the R2 Exalted suite for releases all throughout
+2026, beginning with Lime and Pink early next year.
+• We also haven't forgotten about our next R3 strike release, as
+we're completing the final stages of boss development before
+entering testing. The full release is expected in 2026.
+• One of the most ambitious quests we've ever attempted to
+produce • a large scale "open zone" quest, on the scope of A
+Study in Crimson or beyond. A culmination of nearly two years in
+development aimed to bring several aspects of the story front
+and center, and push them forward into the future.
+• Beyond all the new content with new quests, we're also looking
+back at older quest lines that remain unfinished as of now.
+We're looking to finish at least one storyline, if not more, in
+2026, with the Duchess series being a primary focus to bring to
+a close next year.
+As always, thanks for your patience and support!
