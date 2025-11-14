@@ -1,200 +1,6 @@
-Rush has been re-openedHekawt has been temporarily closed
-&b(11.41.0)&r
-For the update on November 5, 2025
-• As a warning, this will be the last week that the Creeperween
-2025: Spirit Creeperween event will be active. Make sure to
-participate in the festivities while you still can!
-### Minor New Features:
-• Added a new item for Author Medal races: the Speedometer!
-Completing your first Author Medal race will reward you with a
-Speedometer, which will allow you to check your exact speed. If
-you've already beaten at least one Author Medal race before
-today, Flashy in Sierhaven will give you one for free, as well
-as selling more if you ever lose yours.
-• The Skills API now contains class/spec passives, as well as
-the simple descriptions for skills
-• Squire Aaron will temporarily offer refunds for Delve Arrows
-changed this update
-### Bleeding Rework:
-  • Bleeding now applies `level` bleeding stacks on hit. Stacks
-last 5s, apply 4% / 1% weak per stack to enemies / bosses
-respectively. At 5 / 20 stacks, the mob Hemorrhages, losing all
-stacks and taking 30% max health / `region &o 150` flat damage.
-  • Mobs suffer 30% weaken for 5 seconds after Hemorrhaging, and
-cannot gain stacks during this time.
-• Refraction (Steelsage) applies 1 stack of bleed
-• Esoteric Enhancements applies 35% slow
-• Counter Strike (u) no longer applies bleed
-• Volley (u) no longer applies bleed
-• Hunting Companion (u) applies 20% weaken instead of 20% bleed
-• Warlock damaging non-DoT abilities apply 1 stack of bleed when
-Sanguine Harvest is selected
-&bMisc Class Changes:&r
-• Pinning Shot no longer pops if the mob has projectile iframes
-• Judgement Chain damage buff is now additive with other class
-damages, damage buff at L1/L2 15% / 30% -> 25% / 50%
-• Chain Healing Wave's self-heal has been halved
-• Cursed Wound and Withering Gaze damage Ailment -> Magic
-• Sanguine Harvest passive no longer triggers on Damage Over
-Time
-• "Withering Gaze Dot" charm stat renamed to "Withering Gaze
-Damage Over Time"
-&bMisc Enchant Changes & Additions:&r
-• New enchantment, Kinetic Loading: Instantly load a crossbow /
-recharge a trident/snowball/throwing knife on successful melee
-crit
-• New enchantment, Harpoon: Pulls mobs towards you when struck
-by an arrow
-• New enchantment, Skyseeker: Do more damage to mobs above your
-height (For projectile weapons)
-• Reverb should no longer scale with vulnerability
-• Point Blank and Sniper now work on limpshots (at reduced
-efficiency)
-• Technique now measures 2.7 blocks from the edge of the mob's
-hitbox to you (should be neutral on zombie-like mobs)
-• Technique Projectile damage per level 7.5% -> 10%
-• Adrenaline triggers at half efficiency on projectile damage
-&bArrow Changes:&r
-• Luther's Bolt: Piercing 1, -30% Projectile Damage -> Wind
-Aspect 1
-• Star-Tipped Arrow: Piercing 2, -35% Projectile Damage -> Wind
-Aspect 1, Regicide 1
-• Proprietor's Present: Thunder Aspect 2, Piercing 1, -20%
-Projectile Damage -> Thunder Aspect 2, Decay 2
-• Sentry's Arrow: Point Blank 1, Piercing 1, -35% Projectile
-Damage -> Punch 2, Thunder Aspect 2
-• Askhii Quarrel: Sniper 1, Piercing 1, -35% Projectile Damage
--> Punch 2, +35% Projectile Speed
-• Keterborn Bolt: Point Blank 1, +5% Projectile Damage ->
-Technique 2
-• Fish Popper: Point Blank 1 -> Abyssal 1, Punch 1
-• Blackbearer's Bolt: Point Blank 2, -50% Projectile Speed ->
-Quake 1, -30% Projectile Speed
-• Pale Arrows: +15% Projectile Damage -> Piercing 1, +15%
-Projectile Speed
-• Star Seeker's Needle: Sniper 1, +5% Projectile Damage ->
-Skyseeker 1, +50% Projectile Speed
-• Marksman's Longshot: Sniper 1 -> +25% Projectile Speed
-• Scout's Heartseeker (Spectral): Sniper 1, +25% Projectile
-Speed -> First Strike 1, +10% Projectile Speed
-• Void-Dipped Arrow: +5% -> 0% Projectile Damage (no other
-changes)
-• Timetorn Arrow: Sniper 2, +50% Projectile Speed -> Adrenaline
-2, +50% Projectile Speed
-• Chillwind Bolt: Ice Aspect 2, -50% Projectile Speed -> Ice
-Aspect 2, Punch 1, -20% Projectile Speed• Silver Bolt: Ice
-Aspect 2, Fire Aspect 2, -15% Projectile Damage -> Ice Aspect 2,
-Fire Aspect 2, -30% Projectile Speed
-• Beastblood Quarrel: Bleeding 3 -> Bleeding 1, First Strike 1
-• Ix's Bolt: Bleeding 2 -> Bleeding 1
-• Ateoq Arrow: Bleeding 2 -> Bleeding 1
-• Serrated Arrow: Bleeding 1, Fire Aspect 1 -> Bleeding 1, First
-Strike 1
-• Stormsurge Quarrel: 6 -> 5 Abyssal (no other changes)
-&bRegion 3 Item Changes:&r
-• Intermittence (M4): 9.5 -> 9 Armor, 0 -> 2 Stamina
-• Starhungry Coriaceus (M4): 9.5 -> 10 Agility
-• Sanguinis (M4) (Rework): Quick Charge 1, Multishot, Bleeding
-2, Sustenance 2, Curse of Shrapnel 2, 27 Projectile Damage, 1
-Projectile Speed
-• Herald's Cruelty (M4): 2 -> 3 Quick Charge, 20 -> 17.5
-Projectile Damage
-• Witchbane Revolver (M4): 19 -> 20 Projectile Damage
-• Norvigut Skewer (M4): 30 -> 31 Projectile Damage
-• EX Bonepiercer (M4): Bleeding 3 -> 2, Fire Aspect 2 -> 3, 30
--> 29 Projectile Damage
-• Ppanvel's Wolfbone Greatbow (M4): Sustenance 0 -> 1
-• Word of the Architect (M4): 23 -> 24 Projectile Damage
-• Wind's Gaze (M4): 32 -> 29.5 Projectile Damage, Skyseeker 0 ->
-2, 1 -> 2 Projectile Speed
-&bCharms:&r
-• Null Agglomerate: -90% -> -85% Blizzard Duration, #-60% ->
-#-65% Blizzard Damage
-• Origin of Void: -30% -> -60% Predator Strike Range
-• Mire's Influence: +15% -> +25% Judgement Chain Damage Boost
-• Lesser Charm of the Gorgon: +1 -> +10% Withering Gaze Damage
-• Greater Charm of the Gorgon: +2-> +20% Withering Gaze Damage
-• Focused Charm of the Gorgon: +3.5 -> +35% Withering Gaze
-Damage
-• Explosive Charm of the Gorgon: +1.5 -> +15% Withering Gaze
-Damage
-• Removed Bleed related stats from Fox Frenzy, Rusted Bracers,
-and Sedated Parasitic Charm
-• Replaced Focused Consecrated Charm with Swift Consecrated
-Charm: 2 Charm Power, +2% Sanctified Armor Resistance, -10%
-Sanctified Armor Cooldown
-  • &rThis charm was meant to have been item replaced with the
-Swift version in the previous balance patch.
-&b&oRegion 2 Item Changes:&r
-• Shell of Kokytos: 2 -> 1 Magic Protection
-• Locust's Sandals: 4.5 -> 5 Agility
-• Iza's Scales: 4 -> 5 Armor
-• Colossal Sabatons: 7.5 -> 8 Armor
-• Void Heart: 0.8 -> 1 Projectile Speed
-• Creation: Infinity 0 -> 1
-• Gargantuan Harpoon: Harpoon 0 -> 2
-• Ghastcaller's Gunblade (Rework): Kinetic Loading, First Strike
-3, 14 Attack Damage, 1.5 Attack Speed, 14 Projectile Damage, 0.8
-Projectile Speed, +10% Speed
-• Memory Maker: 9.5 -> 11 Projectile Damage, 1 -> 0 Piercing
-• Frigid Rupture: 0 -> 1 Quick Charge, 22 -> 19 Projectile
-Damage
-• Poacher's Rifle: 18.5 -> 22 Projectile Damage, 3 -> 1 Sniper
-• Embers of Thori'Dal: 21 -> 20.5 Projectile Damage
-&bRegion 1 Item Changes:&r
-• Roar of the Valley (Omenspeaker): 15 -> 16 Projectile Damage
-• Corrupted Steelsiege (Divine Steelsiege): 16 -> 13 Projectile
-Damage, Piercing 0 -> 1
-  • Developer Note: C'Steelsiege is here to provide a Piercing
-option that is not for Sniper.
-• Worn Viridian Hunter: 11 -> 12 Projectile Damage,
-• Screamcaller: 0 -> 5 Melee Damage, 4 -> 2 Attack Speed
-• Xanatull's Skystorm (Arcane Snowstorm): 13.5 -> 14 Projectile
-Damage
-• Quetzalcoatl's Fury: 13.5 -> 14 Projectile Damage
-• Arcane Storm: 12 -> 12.5 Projectile Damage&rThis month's
-roadmap for some of our upcoming balance projects;&o
-• &rA large-scale Alchemist update is expected to release in
-December, including several skill reworks and tweaks to address
-various issues within the class in regards to ability mechanics,
-skill point flexibility, bag design and more.&o
-• &rWe've begun tackling Instant Health potions across the game
-and moving to a healthier system, tentatively planned to release
-in 2026. They've been a painpoint of gameplay for some years
-now, with a notable discrepancy between playing with and without
-PI/II.&o
-• &rPlanning has started on a project to address overarching
-issues in Region 3 that have come to light over the years since
-its release, notably in terms of charms and enhancements, mobs
-and delves, and the general damage-hungry nature of the region,
-as classes and mobs have historically continued to one-up each
-other in the region.&o
-• &rDevelopment has picked up again on the Berserker and Shaman
-reworks, and we hope to release both in the winter.&o
-• &rA major Warlock rework is in the early conceptualizing
-phase. Updates on progress and potential release dates will be
-included in future balance roadmaps, for now it's too early to
-estimate.&o
-### Feedback Fixes:
-• Added Indigo trades to the Fatekeeper
-• Updated Unyielding description to the new KBR format
-• Updated Infinity description to mention how it only works on
-vanilla arrows
-• Added Ad Astra to the API
-• Added Shield (Valley tier 2) to the API
-• Refit Mask of the Interim now has the Challenger Skin location
-tag
-• Added Refit Mask of the Interim to the API
-• Dye Traders now sell a chest containing all dyes, for
-convenience
-• Gave the Dye Trader in Sierhaven Circle his own loom
-• The Dye Trader in Castle Narsen now sells Glow Ink Sacs like
-the others
-• Added a treasure score spawner to the most recently added F2
-Zenith room
-• Added stairs to a F2 room### Bug Fixes:
+### Bug Fixes:
 • Obliterated Shady Trader clones from the roofs of Sierhaven.
-• Fixed the Zenith F3 "Circle" room not &ractually&o having a
+• Fixed the Zenith F3 "Circle" room not &oactually&r having a
 treasure spawner
 • Fixed a few empty signs and player heads in the guild creation
 room in the Sierhaven Castle
@@ -206,7 +12,7 @@ hand
 section of Bestiary
 • Fixed Starbound Sanctuary's Chest spawning early
 • Fixed recipes to turn quartz slabs and stairs back into quartz
-&rblocks&o, not raw quartz
+&oblocks&r, not raw quartz
 • The Odd Artist now properly has a trade to unskin Boots of
 Monshee
 • Unskinning Emblem of Chestey at the Odd Artist no longer
@@ -220,4 +26,119 @@ changes will be delayed.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.&r
+and select `I want to unlock this shop`.
+&bHotfix: (for daily restart)&r
+• Fixed Vengeance not working at all
+• Fixed Sirius not being damaged by blight mobs dying
+-# I definitely didn't forget to post this changelog message
+&bHotfix:&r
+• Fixed Tier 13 of the Pass of Dissonance rewards track (the
+Gaze of Winter dummy) giving absolutely nothing.
+-# &oPlayers who have already reached this tier of the Seasonal
+Pass before this hotfix (and therefore, didn't get the dummy)
+can reach out in moderator-help to have the dummy egg given to
+them.
+&b&r(11.42.0)&r
+For the update on November 5, 2025
+• The Creeperween event has ended for this year • this time
+around, at the correct moment! Creepers will no longer accept
+Tricky Candies from players. Creeper Fanatic Boris will still
+offer his quest and trades. Additionally, Sierhaven and the
+Sierhaven Apartments have returned to their original form. You
+know, maybe turning an apartment building into a pop-up store
+wasn't a great idea, anyways…
+### Minor New Features:
+• Item graves will now cap at 10, deleting the oldest upon
+creation of a new item grave. You will receive a warning for the
+7th or higher item grave of this impending action.
+• Completing the Celsian Isles Monument now offers an additional
+upgrade to selling station conversion rates! By completing both
+Monuments, selling stations will now offer rates equivalent to
+that of the Perfect Crystalizer
+• The Halloween Spirit has been exorcised from Sierhaven
+• Added a new seasonal pass item
+### &n Bleeding Changes &r
+&oWith the additional time we've had due to the delays, we've
+looked more closely at last balance's items, as well as items
+affected by the bleeding rework and adjusted them accordingly.
+Additionally, the enchant itself is being tweaked to allow us to
+be more flexible with the designs that utilize it in the
+future!&r
+• The amount of stacks required to hemorrhage enemies is
+increased to 8 stacks (from 5) for non-boss enemies.
+• Damage caps have been added/adjusted for hemorrhages on both
+non-bosses and bosses respectively:
+  • Regular Enemies : 35 x (Region)
+  • Bosses : 100 x (Region)
+• Weaken per bleed stack is reduced to 3% (from 4%)
+• Reduced hemorrhage health percentage to 25% (from 30%)### &n
+King's Valley &r
+• Bonepiercer : 12.5 -> 13 Projectile Damage, 1 -> 0 Bleeding
+• Chimera Maw : 0 -> 3 Thorns Damage, Bleeding 1 -> 0
+• Silver Knight's Failure : 1 -> 2 Bleeding
+• Archmage's Femur : 1 -> 2 Bleeding
+• Ateoq Arrow : Bleeding 1 -> Adrenaline 1
+• Ix's Bolt : Bleeding 1 -> Adrenaline 1
+• Beastblood Quarrel : Bleeding 1 -> Adrenaline 1
+### &n Celsian Isles &r
+• Ghastcaller's Gunblade : 1.4 -> 1.8 Attack Speed, 14 -> 10
+Attack Damage
+• Fleshbreaker (Sketched Fleshbreaker, Drinker of Mercy) : 2 ->
+3 Bleeding, 2 -> 3 Decay
+• C'thedrros : 2 -> 3 Bleeding
+### &n Architect's Ring &r
+• Sanguinis (M4) : 27 -> 29 Projectile Damage, 2 -> 3 Bleeding
+• Woolwoven Wand (M4) : 2 -> 1 Bleeding
+• Veinshredder (M4) : 2 -> 1 Bleeding
+• Air-Purified Thresher (M4) : 1 -> 2 Bleeding
+• Norvigut Skewer (M4) : 2 -> 3 Bleeding
+• EX Bonepiercer (M4) : 2 -> 3 Bleeding
+• Ravenclaws : 14.5 -> 15.5 Projectile Damage, 2 -> 1 Bleeding
+### Feedback Fixes:
+• Curse of Shrapnel will now mention its functionality on
+projectile and melee weaponry
+• Tweaked Idolatry's statlines to be slightly stronger overall
+with more pronounced Elite effects
+• Shade Hounds can now be seen from 8 blocks away (from 5)
+• Star Obelisks now have a 4 explosion radius (from 6)
+• Reduced Kaul's Celebrity advancement player requirement, from
+15 to 10 players spectating
+• Changed Raging Specter's reborn sound to be quieter
+• Loci's Respite now offers you to change the blocks to Glazed
+Terracotta to hopefully improve accessibility
+• Lingering potion clouds will now match the lingering potion's
+color
+• Depths item skins have received a new location tag separate
+from Depths items themselves
+• You can now find Artelus's Benediction in Alchemy Labs•
+Updated the sound, vanity, and particle effects of the following
+mobs: Alchemist of the Jungle, Aquarian Archer, Aquarian
+Warrior, Aquiren, Archer of the Jungle, Brute of the Jungle,
+Buried Remains, Corrupted Cultist, Corrupted Warlord, Exien,
+Gravemaker, Greyskull, Hateful Titan, Hellshire, Kaul's Keeper,
+Mimic, River's Will, Shieldcrusher Spider, Son of the Flame, Son
+of the Jungle, Vernal Warden
+### Bug Fixes:
+• Actually waterproofed the looms of Twisteds, and added harps
+to them
+• Fixed unicode corruption in our automation code • emoji and
+the like will no longer break on you
+• Banished a Fatekeeper clone to the shadow realm.
+• Fixed the New Antium gate breaking sometimes
+• Fixed a softlockable board in Loci's Respite
+• The Totem of Transposing giving mechanism is fixed, and is now
+more durable against item changes
+• Primirium Verdanne and Primirium Tybale will no longer be
+perpetually silent after completing Bad Moon Rising and Hexfall
+and speaking to Vedha
+• Fixed C'Shura's reflection in Ta'Eldim duplicating itself
+• Fixed the Twisted Tempest's Whirling Blade attack being able
+to steal and despawn items
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&bNotice:&r Candies were not properly removed from chests across
+Monumenta for this weekly update. Therefore, Tricky Creepers
+will still be enabled for this week. Enjoy the extra week of
+chaos!
