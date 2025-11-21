@@ -1,36 +1,3 @@
-### Bug Fixes:
-• Obliterated Shady Trader clones from the roofs of Sierhaven.
-• Fixed the Zenith F3 "Circle" room not &oactually&r having a
-treasure spawner
-• Fixed a few empty signs and player heads in the guild creation
-room in the Sierhaven Castle
-• Hunts no longer get stuck in the tab list if no one is on
-`ring`(-1) after the hunt begins
-• Fixed C'Shura's reflection holding her dagger in the wrong
-hand
-• Removed unobtainable entries from the Silver Knight's Remnants
-section of Bestiary
-• Fixed Starbound Sanctuary's Chest spawning early
-• Fixed recipes to turn quartz slabs and stairs back into quartz
-&oblocks&r, not raw quartz
-• The Odd Artist now properly has a trade to unskin Boots of
-Monshee
-• Unskinning Emblem of Chestey at the Odd Artist no longer
-requires completion of Bring Him Baack
-• Fixed Rush of Dissonance granting solo leaderboard position
-while playing in multiplayerUnfortunately, we've hit a critical
-problem last minute with the balance update, and have been
-&nforced to delay it until next week&r.
-Item changes have still gone through, but enchant & class
-changes will be delayed.
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix: (for daily restart)&r
-• Fixed Vengeance not working at all
-• Fixed Sirius not being damaged by blight mobs dying
--# I definitely didn't forget to post this changelog message
 &bHotfix:&r
 • Fixed Tier 13 of the Pass of Dissonance rewards track (the
 Gaze of Winter dummy) giving absolutely nothing.
@@ -142,3 +109,111 @@ and select `I want to unlock this shop`.
 Monumenta for this weekly update. Therefore, Tricky Creepers
 will still be enabled for this week. Enjoy the extra week of
 chaos!
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&b(11.43.0)&r
+For the update on November 19, 2025
+### Notices
+• Creeperween is now officially over, for real this time.
+Candies will no longer appear in chests, and Creepers are no
+longer able to be fed candies.
+• Squire Aaron will stop offering the Delve Arrow Refund after
+next weekly update
+• The Unicode fix has been temporarily reverted, as our
+automation bot is too far out of date to use the fix yet. We
+will work on getting the bot updated for next update.
+### Minor New Features
+• The plugin code to generate instances for the City of Shifting
+Water has been updated to our modern infrastructure; this
+&oshouldn't&r result in any differences players should notice,
+especially after testing all of the commands and a few tens of
+thousands of instances • but let us know if we're wrong!
+• Removed Dungeon Guard from Shifting pre-generation; reminder
+to generate your instance before attempting to leave
+### Feedback Fixes
+• Added the alias `/ignorelist` for `/chat player ignore list`
+• Made some SKR Ice Slider boards visible
+• Improved some stairs in Steelmeld.
+• The Harmonic Dissonance elite finisher now displays particles
+above your recent kills, not just your head, and plays each note
+3x at once to bypass Minecraft's volume limit
+• Helm of Immortals and Golden Fragment have received minor lore
+text adjustments
+• Thanatophobia (Marina Noir) has been reverted to hold the old
+Trichiliocosm texture
+• Experiment 71's worm spawners are now soul soil instead of
+mangrove roots
+• Cursed Wound and Withering Gaze will no longer Spoil Diamenean
+Hunts bosses
+• Withering Gaze will no longer proc Reflexes
+• Updated the sounds and vanity of the following mobs: Son of
+the Forest Dummy, Warden of the Forest
+• Elder Lytania will no longer be completely silent after
+completing Hexfall and speaking to the Vedha
+• Removing potions from potion barrels in bulk now leaves the
+last one in the barrel for organization reasons
+• Reduced volume of cleansing totem's pride cosmetic### Bug
+Fixes
+• Fixed the lingering rift attack left by Infected Carcass
+having an invisible interactable entity
+• Fixed Skyseeker and Celestial applying twice on projectile
+damage
+• Fixed the following enchantments / infusions being able to
+scale true / untyped / ailment / etc. damage:
+  • Abyssal
+  • Skyseeker
+  • Celestial
+  • Choler
+  • Vengeful
+• Fixed various m1/m2/m3 items having not been updated for their
+corresponding m4 item changes.
+• Fixed Ghastcaller's Gunblade having not been updated.
+• Removed some remaining Creeperween decorations from Sierhaven
+• Logging out / server restart no longer messes up Lowest %
+Speed races
+• Fixed Technique description being outdated
+• Removed an errant Zarek### Darkest Depths/Celestial Zenith
+Changes
+• Beast's Claw QoL Changes:
+  • Added an additional spherical damaging hitbox centered on
+the player for leniency, halfway through the claw animation
+  • The roar now immediately stuns nearby enemies (the claw
+still stuns, and is the only source of damage)
+  • Increased horizontal and vertical velocity
+  • Added full knockback resistance during the lunge
+### Item Changes
+• Akema's Old Crossbow: Infinity 1 -> 0, Retrieval 0 -> 10
+• Dead Adventurer's Crossbow: Infinity 1 -> 0, Retrieval 0 -> 10
+• Silverhook: Infinity 1 -> 0, Retrieval 0 -> 10
+• Updated the formatting of Coffee
+  • Coffee: -10% Bleed (1:00) -> 0% Bleed
+### Bleeding Changes
+&nRegion 1:&r
+• Ateoq Arrow: 1 -> 0 Adrenaline,  0 -> 1 Bleeding
+• Harvestman's Scythe (Divine Harvestman's Scythe): 0 -> 2
+Bleeding
+• Silver Knight's Failure: 2 -> 3 Bleeding
+• Archmage's Femur: 2 -> 3 Bleeding
+• Sickle of the Maker (Render's Ruthless Claw): 0 -> 2 Bleeding
+&nRegion 2:&r
+• Hammer of the Architect: 0 -> 1 Bleeding
+• Iron Pipe: 0 -> 2 Bleeding
+• Marauder's Haze (Spider's Crux): 0 -> 2 Bleeding
+• Bloody Fang: 2 -> 3 Bleeding
+• Talaya's Decay: 0 -> 2 Bleeding
+• Heartbeat Decanter: 1 -> 2 Bleeding
+• Malebolge Staff: 1 -> 2 Bleeding
+• Luck of the Draw: 1 -> 2 Bleeding
+• Molta's Labor: 0 -> 2 Bleeding
+&nRegion 3:&r
+• Bloodbinder: 0 -> 1 Bleeding
+• Corrupted Scalawag's Hatchet: 0 -> 2 Bleeding
+• Wrench of the Perfect Atrium: 0 -> 2 Bleeding
+• The Knucklebones: 0 -> 3 Bleeding
+• Witchbane Revolver: 0 -> 2 Bleeding
+• Blightblood Falchion: 2 -> 3 Bleeding
+• Twisted Pike: 2 -> 3 Bleeding
+• Veinshredder: 1 -> 2 Bleeding
+• Rivers of Blood: 2 -> 4 Bleeding
