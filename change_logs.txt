@@ -1,106 +1,3 @@
-&bHotfix:&r
-• Fixed Tier 13 of the Pass of Dissonance rewards track (the
-Gaze of Winter dummy) giving absolutely nothing.
--# &oPlayers who have already reached this tier of the Seasonal
-Pass before this hotfix (and therefore, didn't get the dummy)
-can reach out in moderator-help to have the dummy egg given to
-them.
-&b&r(11.42.0)&r
-For the update on November 5, 2025
-• The Creeperween event has ended for this year • this time
-around, at the correct moment! Creepers will no longer accept
-Tricky Candies from players. Creeper Fanatic Boris will still
-offer his quest and trades. Additionally, Sierhaven and the
-Sierhaven Apartments have returned to their original form. You
-know, maybe turning an apartment building into a pop-up store
-wasn't a great idea, anyways…
-### Minor New Features:
-• Item graves will now cap at 10, deleting the oldest upon
-creation of a new item grave. You will receive a warning for the
-7th or higher item grave of this impending action.
-• Completing the Celsian Isles Monument now offers an additional
-upgrade to selling station conversion rates! By completing both
-Monuments, selling stations will now offer rates equivalent to
-that of the Perfect Crystalizer
-• The Halloween Spirit has been exorcised from Sierhaven
-• Added a new seasonal pass item
-### &n Bleeding Changes &r
-&oWith the additional time we've had due to the delays, we've
-looked more closely at last balance's items, as well as items
-affected by the bleeding rework and adjusted them accordingly.
-Additionally, the enchant itself is being tweaked to allow us to
-be more flexible with the designs that utilize it in the
-future!&r
-• The amount of stacks required to hemorrhage enemies is
-increased to 8 stacks (from 5) for non-boss enemies.
-• Damage caps have been added/adjusted for hemorrhages on both
-non-bosses and bosses respectively:
-  • Regular Enemies : 35 x (Region)
-  • Bosses : 100 x (Region)
-• Weaken per bleed stack is reduced to 3% (from 4%)
-• Reduced hemorrhage health percentage to 25% (from 30%)### &n
-King's Valley &r
-• Bonepiercer : 12.5 -> 13 Projectile Damage, 1 -> 0 Bleeding
-• Chimera Maw : 0 -> 3 Thorns Damage, Bleeding 1 -> 0
-• Silver Knight's Failure : 1 -> 2 Bleeding
-• Archmage's Femur : 1 -> 2 Bleeding
-• Ateoq Arrow : Bleeding 1 -> Adrenaline 1
-• Ix's Bolt : Bleeding 1 -> Adrenaline 1
-• Beastblood Quarrel : Bleeding 1 -> Adrenaline 1
-### &n Celsian Isles &r
-• Ghastcaller's Gunblade : 1.4 -> 1.8 Attack Speed, 14 -> 10
-Attack Damage
-• Fleshbreaker (Sketched Fleshbreaker, Drinker of Mercy) : 2 ->
-3 Bleeding, 2 -> 3 Decay
-• C'thedrros : 2 -> 3 Bleeding
-### &n Architect's Ring &r
-• Sanguinis (M4) : 27 -> 29 Projectile Damage, 2 -> 3 Bleeding
-• Woolwoven Wand (M4) : 2 -> 1 Bleeding
-• Veinshredder (M4) : 2 -> 1 Bleeding
-• Air-Purified Thresher (M4) : 1 -> 2 Bleeding
-• Norvigut Skewer (M4) : 2 -> 3 Bleeding
-• EX Bonepiercer (M4) : 2 -> 3 Bleeding
-• Ravenclaws : 14.5 -> 15.5 Projectile Damage, 2 -> 1 Bleeding
-### Feedback Fixes:
-• Curse of Shrapnel will now mention its functionality on
-projectile and melee weaponry
-• Tweaked Idolatry's statlines to be slightly stronger overall
-with more pronounced Elite effects
-• Shade Hounds can now be seen from 8 blocks away (from 5)
-• Star Obelisks now have a 4 explosion radius (from 6)
-• Reduced Kaul's Celebrity advancement player requirement, from
-15 to 10 players spectating
-• Changed Raging Specter's reborn sound to be quieter
-• Loci's Respite now offers you to change the blocks to Glazed
-Terracotta to hopefully improve accessibility
-• Lingering potion clouds will now match the lingering potion's
-color
-• Depths item skins have received a new location tag separate
-from Depths items themselves
-• You can now find Artelus's Benediction in Alchemy Labs•
-Updated the sound, vanity, and particle effects of the following
-mobs: Alchemist of the Jungle, Aquarian Archer, Aquarian
-Warrior, Aquiren, Archer of the Jungle, Brute of the Jungle,
-Buried Remains, Corrupted Cultist, Corrupted Warlord, Exien,
-Gravemaker, Greyskull, Hateful Titan, Hellshire, Kaul's Keeper,
-Mimic, River's Will, Shieldcrusher Spider, Son of the Flame, Son
-of the Jungle, Vernal Warden
-### Bug Fixes:
-• Actually waterproofed the looms of Twisteds, and added harps
-to them
-• Fixed unicode corruption in our automation code • emoji and
-the like will no longer break on you
-• Banished a Fatekeeper clone to the shadow realm.
-• Fixed the New Antium gate breaking sometimes
-• Fixed a softlockable board in Loci's Respite
-• The Totem of Transposing giving mechanism is fixed, and is now
-more durable against item changes
-• Primirium Verdanne and Primirium Tybale will no longer be
-perpetually silent after completing Bad Moon Rising and Hexfall
-and speaking to Vedha
-• Fixed C'Shura's reflection in Ta'Eldim duplicating itself
-• Fixed the Twisted Tempest's Whirling Blade attack being able
-to steal and despawn items
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -217,3 +114,86 @@ Bleeding
 • Twisted Pike: 2 -> 3 Bleeding
 • Veinshredder: 1 -> 2 Bleeding
 • Rivers of Blood: 2 -> 4 Bleeding
+&bHotfix:&r
+• Reactivated Bleeding enchantment on projectiles
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&b(11.44.0)&r
+For the update on November 26, 2025
+### Notices
+• Squire Aaron will no longer offer the Delve Arrow Refund
+• Removed refunds for Malignant Neuron and Bewitching Lantern
+### Winter 2025 • Happy Koalidays:
+The air is getting colder, snowflakes are beginning to fall from
+the sky... clearly, it is time for the Winter event to begin
+once again!
+• Essences of Winter can now be found once again throughout most
+of Monumenta! Make use of them at the Snowman Embassy in
+Sierhaven to participate in previous years' minigames,
+challenges, trades, and more!
+• New this year: Snow Spirit now has a daily reward cache! These
+caches are only obtainable during Winter events, and contain a
+guaranteed Cryosphere and a higher chance for a Spirit of the
+Holidays.
+  • A Bucket of Cryospheres, which can be used to infuse an item
+with Festive once, can sometimes replace the guaranteed
+Cryosphere in these caches.
+### Minor New Features
+• Added one new discovery to the Architect's Ring
+• Added Twisted Intruder, its summons, and all Tormenteds to the
+Bestiary
+• Sirius is now obtainable in the Bestiary; your next Sirius
+kill will update your bestiary count to your wins score
+• Totem of Transposing has been ported to plugin and reworked!
+  • Increased the default range to 80 blocks
+  • Cooldown has changed to 5 seconds
+  • Keybind has changed to swap when in main or off hand
+  • You no longer need your partner's consent
+• Added Zenith, Sirius, Silver Knight Remnants, Hunts, Indigo,
+and Fathom's Reach rares to the Transmogrifier
+• Changed Celerity activation to only require not taking nor
+dealing damage within last 5 seconds.
+• Added an Ender Chest to the Twisted Intruder lobby### Feedback
+Fixes
+• The anticheat for Slow Falling potions in towns will now only
+clear slow falling if the potion has slow falling on it, instead
+of any potion splashed while slow falling is active (i.e.
+receiving a Heavenly Boon during Ethereal Ascension in
+Sirius/Gallery)
+• Frost Nova (u)'s ice effect now uses one block display instead
+of enough armor stands to cover the mob (which was potentially
+dozens or hundreds for large mobs)
+• Sign GUIs (i.e. market search, removing custom amount from
+wallet) will now place the menu sign three blocks above the
+player, to prevent issues with opening them on non-full blocks
+### Bug Fixes
+• Applied updates to the software our weekly update bot is built
+upon. Emoji are now properly preserved across weekly updates,
+without the errors that delayed our last update.
+• Fixed the Charms menu displaying stats such as -Cooldown % in
+red despite -Cooldown % being a beneficial stat
+• Fixed the Zenith Charms menu not displaying charm caps
+• Fixed Norvigut Skewer having incorrect stats
+• Fixed Rivers of Blood not being properly updated last week
+• Updated Dreadful Harvester (Harvestman's Scythe skin) and
+Nightshade Pickaxe (Molta's Labor skin) to their unskinned
+counterparts' stats
+• Remnants of the Empire will now reward you with Silver
+Armament (M2) and not Silver Armament (M4)
+• Dealing Impact damage to a training dummy will now properly
+display the source as Impact
+• Impact's handbook description now states that mobs lose (level
+&o 10)% Knockback Resistance, not (level)
+• Fixed a bug where firing an arrow then swapping to a Punch bow
+applied Punch
+• Capitalized "Architect's Ring" correctly on a Pass of
+Dissonance Week 4 mission
+• Fixed one of Starbound Sanctuary's teleporters
+• Removed floating signs in Blue.
+• Removed the floating shulker heads in the Flock and Key moving
+platform section
+• Fixed missing elipses in Forum ending cutscene
+• Death's Swiftness and Guarding the Guarded will no longer kill
+your Keeper Virtue upon starting&r
