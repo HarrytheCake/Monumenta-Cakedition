@@ -1,199 +1,310 @@
+Some highlights:
+### Base Class
+• The passive now allows you to use a "level 0" Gruesome, just
+like you've always had access to a "level 0" brutal!
+• Empowering Odor has been removed, and your base potion
+recharge time has been reduced to 1.5s.
+• In place of Empowering Odor, a new skill has been added and is
+ready to make things spicy • Volatile Reaction!
+• Some low-pickrate enhancements have been reworked: Gruesome,
+Alchemical Artillery, Bezoar, and Iron Tincture.
+• A new stat for bags has been added: Potion Recharge Rate. Your
+base potion recharge rate is now altered by your chosen bag's
+Potion Recharge Rate attribute. Swapping to another bag sets
+your potions to 0.
+### Apothecary
+• Transmutation Ring has been revamped. Panacea and Warding
+Remedy have been tweaked.
+### Harbinger
+• Scorched Earth has been revamped. Minor AI improvements to
+Esoteric Enhancements, plus changes to spawning. Taboo has been
+reworked.
+For full details, including notes:
+<https://docs.google.com/document/d/18pNzsmN-
+PNq51pVkXqJkm5vzbQA0colb9FpLIH13Ypc/edit?usp=sharing>
+## Shaman Rework
+The Shaman Rework is here, with changes to almost every skill in
+Shaman's kit. The rework has been worked on on-and-off for a
+long time, and aims to address many issues with Shaman's kit. We
+had a number of design goals:
+• To increase the interactivity of Shaman's gameplay while
+maintaining the core gameplay mechanic of using totems as a
+resource.
+• Reduce the amount of "cheesy" options shaman's current kit
+promotes.
+• Review the balance of Shaman in all three regions.
+• Create new charm stats to be tinkered with for Shaman.
+Shaman will likely need more ability reworks and tweaks as time
+goes on (on a smaller scale hopefully), but we are hoping that
+these changes place Shaman into a more healthy position in the
+long term. We hope the class provides some fun to those who dare
+to brave its web of skill triggers (customization is
+recommended).As a brief overview, we have:
+• Reworked Flame and Lightning Totems for more interactive
+gameplay.
+• Moved Totemic Projection to become a passive for the class,
+replacing the old one.
+• Removed the Spec Passives that previously provided mostly
+extra damage.
+• Moved Crystalline Combos to become a Soothsayer ability as
+"Spiritual Combos", replacing Sanctuary.
+• Introduced two new abilities for the base class, "Ignition
+Drive" and "Spiritualism".
+• Redesigned the way Earthen Tremor deals damage, now
+interacting with nearby totems and knocking mobs upwards.
+• Replaced Chain Healing Wave and Desecrating Shot with two new
+abilities, Totemic Consecration and Spiritcatcher Orbs
+respectively.
+• Overhauled almost every single Rare Shaman charm, or at least
+tweaked in other cases.
+• Reviewed the balance of the basic charms.
+• New enhancements for some skills, and tweaked many of the old
+class enhancements.
+• Made many other small tweaks to the balancing of the skills.
+For full details, the rework document can be found here:
+<https://docs.google.com/document/d/1fZ4I5tqSY4uf5mCqWcLWSqEAQFZ
+FIIH0RXjoyvxa8vE>
+## Berserker Rework
+After a few delays, the Berserker rework is here! Initially,
+Berserker was principally designed as a melee class. Over time
+however, its skills have shifted away from traditional melee
+gameplay towards a caster-like playstyle; a notable disconnect
+from the class' original identity. This rework aims to preserve
+and enhance the current movement-heavy gameplay of berserker,
+and promote using basic melees as a core part of its gameplay
+loop.
+## Specialization Passive :
+### Bloodlust (NEW)
+• Gain Bloodlust upon dealing 70/120 melee damage, stacking up
+to 10.
+-# Rampage ability damage is excluded from counting towards
+bloodlust.
+-# Maximum bloodlust stacks per tick is 3.
+-# 33% of melee damage from AoE contribute towards Bloodlust.###
+Glorious Battle
+• L1 : {Activation Trigger} lunges you forward at a velocity of
+1.5, granting knockback immunity (vertical velocity is capped at
+0.3). While airborne, colliding with nearby mobs deal 5 melee
+damage. Critically attacking during Glorious Battle or 1.5s
+after landing causes a large overhead swing, dealing 45% of your
+weapon's damage to all mobs within 2.5 blocks of the target and
+knocks them back. Critical strikes with Glorious Battle are
+considered AoE. Cost: 2x Bloodlust Stack
+• L2 : Glorious Battle now deals 8 melee damage on collision and
+50% weapon damage on its overhead swing. Vertical Cap has been
+removed. Additionally, the struck mob gains 2 stacks of
+Bleeding.
+### Meteor Slam
+• L1 : Pressing {Activation Trigger} vaults you upward at a
+velocity of 1.1 (reduced by 50% until landing), dealing 10 melee
+damage within a 4 block cone and knocking mobs downwards.
+Falling more than 3 blocks generates a slam where you land,
+dealing 3 melee damage per block fallen, capping at 7 blocks.
+Dealing any damage with Meteor Slam cancels all fall damage.
+Cooldown: 5s. Cost: 1x Bloodlust Stack.
+• L2 : Sneaking while midair (or using the custom trigger) now
+performs a ground pound attack, lunging you downward at a
+velocity of 2. Your next Meteor Slam is amplified:
+  • +1.5 damage per block fallen.
+  • +1.5 block radius.
+  • 5s of fire.
+  • 15% slowness for 2s.
+  • Knocks back mobs.
+Cost: 1x Bloodlust Stack.
+### Rampage
+• L1 : Press {Activation Trigger} to deal 6 melee damage and
+knocking all enemies back within a 4 block radius. For the next
+5s, you gain 20% more melee damage, and 5% max health regen per
+second. Gaining a Bloodlust stack while this effect is active
+extends its duration by 1s capping at 5 Bloodlust stacks. Cost:
+4x Bloodlust Stack
+• L2 : Rampage deals 10 damage. Grants 10% melee resistance, and
+Bloodlust stacks now extend the effect's duration by 1.5s
+each.## Berserker Charm Reworks :
+### Epic/Rare Charms :
+  • Bloodlust : 3 Charm Power, -15 Bloodlust Stack Threshold, +1
+Meteor Slam Cost, +1 Rampage Cost
+-# The aim here is to keep the design similar to its previous
+iteration, giving more Glorious Battle activations overall.
+  • Rocket Boots : 4 Charm Power, +2 Meteor Slam Ground Pound
+Additional Damage, +2 Meteor Slam Max Height, +50% Meteor Slam
+Ground Pound Additional Radius, +25% Meteor Slam Vault Velocity,
+-70% Meteor Slam Damage
+-# Rocket Boots prior to this rework was largely used in slam
+builds to deal large radius AOE damage and to cover for the base
+skill's poor base radius. The height and radius buffs will be
+preserved here, and its damage will now be concentrated in the
+Ground Pound portion of Meteor Slam.
+  • Loci's Hunger : 3 Charm Power, +30% Ramage Damage, +30%
+Rampage Radius, -1 Rampage Cost
+-# Similar deal to Bloodlust, keeping it similar in niche as
+before. More rampage activations, more damage output.
+  • Silver Pauldron : 3 Charm Power, +25% Rampage Healing, +10%
+Rampage Damage Buff, -30% Rampage Initial Duration, -30% Rampage
+Duration Per Stack
+-# The charm will keep its healing, but its ability damage will
+be converted into a damage buff as an alternative option to
+Loci's Hunger.
+  • Hydraulic Chausses : 4 Charm Power, -2 Meteor Slam Fall
+Requirement, -40% Meteor Slam Cooldown, +40% Meteor Slam Damage,
+-20% Meteor Slam Vault Velocity, -2 Meteor Slam Max Height
+-# Chausses' fall requirement is a staple stat of the charm,
+carrying onto the new version. Alongside it, the charm will
+decrease the required blocks to cap damage from 7 -> 5, while
+decreasing the cooldown drastically.### Tiered Charms :
+-# Many of the tiered Berserker charms are similar in function
+or are the same as before, but a few have gotten stat changes or
+reworks in accordance to the rework.
+  • Focused Reckless Charm : +30% -> +20% Glorious Battle Damage
+  • Greated Reckless Charm : +20% -> +10% Glorious Battle Damage
+  • Lesser Reckless Charm  : +10% -> +5% Glorious Battle Damage
+  • Distant Reckless Charm : 3 -> 2 Charm Power, +10% -> 0%
+Glorious Battle Damage, +50% -> +30% Glorious Battle Velocity
+  • Explosive Reckless Charm : +5% -> 0% Glorious Battle Damage
+  • Swift Meteor Charm (Rework) : 2 Charm Power, +15% Meteor
+Slam Damage, +15% Meteor Slam Vault Velocity
+  • Explosive Meteor Charm : +40% -> +25% Meteor Slam Radius
+  • Focused Rage Charm (Rework) : 3 Charm Power, +35% Rampage
+Damage, +1 Rampage Initial Duration
+  • Greater Rage Charm (Rework) : 2 Charm Power, +20% Rampage
+Damage, +0.5 Rampage Initial Duration
+  • Lesser Rage Charm (Rework) : 1 Charm Power, +10% Rampage
+Damage, +0.25 Rampage Initial Duration
+  • Fortified Rage Charm (Rework) : 3 Charm Power, +20% Rampage
+Knockback, +10% Rampage Melee Resistance, +1 Rampage Initial
+Duration
+  • Sustaining Rage Charm (Rework) : 2 Charm Power, +15% Rampage
+Healing
+&bScout Changes & Scout Charm Changes&r
+• Quickdraw no longer inherits enchantments, aside from Recoil
+and Aspects.
+-# Quickdraw's ability to inherit certain enchants, most notably
+Multishot, Piercing and Reverb, while ignoring other stats
+caused a large disparity in the skill's strength between
+weapons.• Quickdraw Volleys and Quickdraw Predator Strikes now
+use the damage stat of Quickdraw rather than the held weapon.
+-# This is technically a bug fix, but it has balance
+implications that make it more fitting to include here. Due to
+this bug and the above, certain weapons were used secondarily
+for the purpose of amplifying Quickdraw's strength with Volley
+and Predator Strike. For example, a high damage weapon could be
+balanced by having a slow charge time, but Quickdraw would
+simply bypass that downside and fire a full damage
+Volley/Predator Strike instantly with the weapon's stats instead
+of the Quickdraw's stats.
+• Volley (u) has been nerfed : 5 times as many arrows in a 360
+degree circle -> twice as many arrows in twice as wide an arc.
+-# Volley (u) has for a long time been an absurdly strong
+enhancement, so we're lowering its total area coverage
+significantly and keeping just the forward facing area wide.
+• Rending Razor : 6s / 4s -> 6s / 5s cooldown, 16+20 / 20+26 ->
+14+20 / 16+24 damage
+• Quickening Mycosis : -25% -> # -25% Rending Razor Embed
+Damage, -25% -> # • 25% Rending Razor Rend Damage, -50% -> -45%
+Rending Razor Cooldown
+-# Charm stacking for Rending Razor has pushed the ability to
+unhealthy extremes, so we've decided to lock Mycosis from most
+upgradable charms to prevent stacking but let the charm still
+remain powerful on its own.
+• Loci Carving : -6 -> -5 Volley Arrows
+• Fragmented Shaft : 1 -> 2 Charm Power
+• Flesh Laurel (Rework) : 2 Charm Power, +50% Split Arrow Range,
+-10% Split Arrow Damage
+• Starseeker's Emblem : -50% -> #-50% Whirling Blade Damage
+• Focused Lacerating Charm : 20% Embed / Rend Damage -> 15%
+Embed / Rend Damage
+• Lesser Rapacious Charm : +1 -> +0.5 Eagle Eye Refresh
+• Greater Rapacious Charm : +2 -> +1 Eagle Eye Refresh
+&bOther Charm Changes&r
+• Swirling Shoal : 60% -> 50% Smokescreen Enhancement Damage
+• Nadir Sporran : -25% -> -20% Bodkin Blitz Cooldown
+• Bermuda's Lost Ruler : 20% -> 15% Magma Shield/Frost Nova
+Range, 15% -> 10% Moonblade/Starfall Range/Radius
+• Spellbound Spearhead : # +50% -> +60% Mana Lance Cooldown
+&bEnchant Changes&r
+• Reverb : 5% highest damage source no longer counts on reverb
+chains
+### Item Changes:
+&bArchitect's Ring&r
+• EX Roar of the Valley (M4) (Rework) : Infinity, Ice Aspect 3,
+Fire Aspect 3, Thunder Aspect 3, Quake 3, Unbreakable, 30
+Projectile Damage, 1.3 Projectile Speed
+• The Watcher (Rework) : Thunder Aspect 3, Wind Aspect 3,
+Explosive 10, 33 Projectile Damage, 2 Projectile Speed
+• Shadowstone Ballista (M4) : 26.5 -> 27.5 Projectile Damage
+• Prismatic Enigma (M4) : 0 -> 1 Quick Charge, 6 -> 5 Reverb,
+32.5 -> 29.5 Projectile Damage
+• Arcane Rifle (M4) : 21.5 -> 20.5 Projectile Damage, 0 -> 2
+Sniper
+• Dreadwood Log (M4) : 3 -> 4 Quake, 23 -> 24 Attack Damage, 0.9
+-> 1 Attack Speed
+• Granzanber, Halberd of Ascension (M4) : 19 -> 20 Attack Damage
+• EX Reaper's Harvest (M4) : 24 -> 25 Attack Damage
+• The Vedha's Soulcrusher (M4) : 3 -> 2 Quake
+• Trichiliocosm (M4) : 6 -> 7 Quake, 27.5 -> 27 Attack Damage
+• Moonscarred Clockblade (M4) : 4 -> 3 Reverb, 15 -> 14.5 Attack
+Damage
+• Silent Night : 25 -> 28 Attack Damage, 2 -> 3 Life Drain
+• Midday Harbinger : 5 -> 6 Quake, 26 -> 28 Attack Damage
+&bCelsian Isles&r
+• Scarab's Bane : 2 -> 8 Attack Damage, 4 -> 2 Slayer, 3 -> 2
+Knockback, 4 -> 1.8 Attack Speed
+• Creation : 26.5 -> 27 Projectile Damage, 1 -> 2 Projectile
+Speed
+• Entcrusher (Shaman's Crusher) : 2 -> 3 Armor, 26 -> 24 Attack
+Damage
+• Luck of the Draw : 17 -> 18 Attack Damage
+• Betrayer of the Blackflame : 16 -> 17 Attack Damage
+• Veilcoral Bag has been changed to Artifact rarity
+• Veilcoral Bag can now be found in the Depths loot room
+• Veilcoral Bag now has a trade to convert it to 8 Voidstained
+Geodes like the other Depths artifacts### Mob Changes:
+• Eldrask Frostbite upper limit increased: 5.1 -> 6.5 blocks.
+• Frostbite first damage instance does not hurt the player.
+• Eldrask Greatsword Slam launch velocity increased to
+accommodate above changes.
+### Feedback Fixes:
+• Transfigured Spike and Twisted Lance (Mana Lance cosmetics)
+now respect the Size parameter of Mana Lance
+• Twisted Lance now "travels" forward instead of appearing all
+at once
+• Whirling Blade will now only play its end animation when all
+cycles are completed (instead of once per cycle)
+• Slightly tweaked Verdant Razor (Whirling Blade cosmetic)
+• Gave Harvir a small kitchen and a Lesser Fishing Cache
+• Adjusted the location of a certain new key fragment in the Bag
+of Hoarding
+### Bug Fixes:
+• Fixed a broken board in Loci's Respite
+• Fixed mangled json in Aleph Null vol. 2 & 3, Event Horizon,
+and Singularity
+• Fixed incorrect duration in Stamina handbook advancement
+• Fixed spawners in Temple to Kaul using the wrong outdated
+version of the Flower Tower elite mob
+• Fixed spawners in Light Blue using the wrong outdated version
+of the Dark Magic mob
+• Replaced an unnamed Creeper with a Foul one in the Black
+Willows
+• Fixed spacing errors in UMM / tablist effect displays
+• The summary GUI will now show grave timers in Zenith
+• Updated Knockback Resistance tablist display to the new 100%
+formatting
+• Fixed the sign for the mechanism layer in Nelfine's Curse not
+updating
+• You can no longer skip straight to the end in Crazy, Cupid,
+Love
+• Fixed Azacor targeting dead players with Fireball and Laser
+spell.
+• Fixed an error in Blade Dance’s description
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-&bNotice:&r Candies were not properly removed from chests across
-Monumenta for this weekly update. Therefore, Tricky Creepers
-will still be enabled for this week. Enjoy the extra week of
-chaos!
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&b(11.43.0)&r
-For the update on November 19, 2025
-### Notices
-• Creeperween is now officially over, for real this time.
-Candies will no longer appear in chests, and Creepers are no
-longer able to be fed candies.
-• Squire Aaron will stop offering the Delve Arrow Refund after
-next weekly update
-• The Unicode fix has been temporarily reverted, as our
-automation bot is too far out of date to use the fix yet. We
-will work on getting the bot updated for next update.
-### Minor New Features
-• The plugin code to generate instances for the City of Shifting
-Water has been updated to our modern infrastructure; this
-&oshouldn't&r result in any differences players should notice,
-especially after testing all of the commands and a few tens of
-thousands of instances • but let us know if we're wrong!
-• Removed Dungeon Guard from Shifting pre-generation; reminder
-to generate your instance before attempting to leave
-### Feedback Fixes
-• Added the alias `/ignorelist` for `/chat player ignore list`
-• Made some SKR Ice Slider boards visible
-• Improved some stairs in Steelmeld.
-• The Harmonic Dissonance elite finisher now displays particles
-above your recent kills, not just your head, and plays each note
-3x at once to bypass Minecraft's volume limit
-• Helm of Immortals and Golden Fragment have received minor lore
-text adjustments
-• Thanatophobia (Marina Noir) has been reverted to hold the old
-Trichiliocosm texture
-• Experiment 71's worm spawners are now soul soil instead of
-mangrove roots
-• Cursed Wound and Withering Gaze will no longer Spoil Diamenean
-Hunts bosses
-• Withering Gaze will no longer proc Reflexes
-• Updated the sounds and vanity of the following mobs: Son of
-the Forest Dummy, Warden of the Forest
-• Elder Lytania will no longer be completely silent after
-completing Hexfall and speaking to the Vedha
-• Removing potions from potion barrels in bulk now leaves the
-last one in the barrel for organization reasons
-• Reduced volume of cleansing totem's pride cosmetic### Bug
-Fixes
-• Fixed the lingering rift attack left by Infected Carcass
-having an invisible interactable entity
-• Fixed Skyseeker and Celestial applying twice on projectile
-damage
-• Fixed the following enchantments / infusions being able to
-scale true / untyped / ailment / etc. damage:
-  • Abyssal
-  • Skyseeker
-  • Celestial
-  • Choler
-  • Vengeful
-• Fixed various m1/m2/m3 items having not been updated for their
-corresponding m4 item changes.
-• Fixed Ghastcaller's Gunblade having not been updated.
-• Removed some remaining Creeperween decorations from Sierhaven
-• Logging out / server restart no longer messes up Lowest %
-Speed races
-• Fixed Technique description being outdated
-• Removed an errant Zarek### Darkest Depths/Celestial Zenith
-Changes
-• Beast's Claw QoL Changes:
-  • Added an additional spherical damaging hitbox centered on
-the player for leniency, halfway through the claw animation
-  • The roar now immediately stuns nearby enemies (the claw
-still stuns, and is the only source of damage)
-  • Increased horizontal and vertical velocity
-  • Added full knockback resistance during the lunge
-### Item Changes
-• Akema's Old Crossbow: Infinity 1 -> 0, Retrieval 0 -> 10
-• Dead Adventurer's Crossbow: Infinity 1 -> 0, Retrieval 0 -> 10
-• Silverhook: Infinity 1 -> 0, Retrieval 0 -> 10
-• Updated the formatting of Coffee
-  • Coffee: -10% Bleed (1:00) -> 0% Bleed
-### Bleeding Changes
-&nRegion 1:&r
-• Ateoq Arrow: 1 -> 0 Adrenaline,  0 -> 1 Bleeding
-• Harvestman's Scythe (Divine Harvestman's Scythe): 0 -> 2
-Bleeding
-• Silver Knight's Failure: 2 -> 3 Bleeding
-• Archmage's Femur: 2 -> 3 Bleeding
-• Sickle of the Maker (Render's Ruthless Claw): 0 -> 2 Bleeding
-&nRegion 2:&r
-• Hammer of the Architect: 0 -> 1 Bleeding
-• Iron Pipe: 0 -> 2 Bleeding
-• Marauder's Haze (Spider's Crux): 0 -> 2 Bleeding
-• Bloody Fang: 2 -> 3 Bleeding
-• Talaya's Decay: 0 -> 2 Bleeding
-• Heartbeat Decanter: 1 -> 2 Bleeding
-• Malebolge Staff: 1 -> 2 Bleeding
-• Luck of the Draw: 1 -> 2 Bleeding
-• Molta's Labor: 0 -> 2 Bleeding
-&nRegion 3:&r
-• Bloodbinder: 0 -> 1 Bleeding
-• Corrupted Scalawag's Hatchet: 0 -> 2 Bleeding
-• Wrench of the Perfect Atrium: 0 -> 2 Bleeding
-• The Knucklebones: 0 -> 3 Bleeding
-• Witchbane Revolver: 0 -> 2 Bleeding
-• Blightblood Falchion: 2 -> 3 Bleeding
-• Twisted Pike: 2 -> 3 Bleeding
-• Veinshredder: 1 -> 2 Bleeding
-• Rivers of Blood: 2 -> 4 Bleeding
-&bHotfix:&r
-• Reactivated Bleeding enchantment on projectiles
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&b(11.44.0)&r
-For the update on November 26, 2025
-### Notices
-• Squire Aaron will no longer offer the Delve Arrow Refund
-• Removed refunds for Malignant Neuron and Bewitching Lantern
-### Winter 2025 • Happy Koalidays:
-The air is getting colder, snowflakes are beginning to fall from
-the sky... clearly, it is time for the Winter event to begin
-once again!
-• Essences of Winter can now be found once again throughout most
-of Monumenta! Make use of them at the Snowman Embassy in
-Sierhaven to participate in previous years' minigames,
-challenges, trades, and more!
-• New this year: Snow Spirit now has a daily reward cache! These
-caches are only obtainable during Winter events, and contain a
-guaranteed Cryosphere and a higher chance for a Spirit of the
-Holidays.
-  • A Bucket of Cryospheres, which can be used to infuse an item
-with Festive once, can sometimes replace the guaranteed
-Cryosphere in these caches.
-### Minor New Features
-• Added one new discovery to the Architect's Ring
-• Added Twisted Intruder, its summons, and all Tormenteds to the
-Bestiary
-• Sirius is now obtainable in the Bestiary; your next Sirius
-kill will update your bestiary count to your wins score
-• Totem of Transposing has been ported to plugin and reworked!
-  • Increased the default range to 80 blocks
-  • Cooldown has changed to 5 seconds
-  • Keybind has changed to swap when in main or off hand
-  • You no longer need your partner's consent
-• Added Zenith, Sirius, Silver Knight Remnants, Hunts, Indigo,
-and Fathom's Reach rares to the Transmogrifier
-• Changed Celerity activation to only require not taking nor
-dealing damage within last 5 seconds.
-• Added an Ender Chest to the Twisted Intruder lobby### Feedback
-Fixes
-• The anticheat for Slow Falling potions in towns will now only
-clear slow falling if the potion has slow falling on it, instead
-of any potion splashed while slow falling is active (i.e.
-receiving a Heavenly Boon during Ethereal Ascension in
-Sirius/Gallery)
-• Frost Nova (u)'s ice effect now uses one block display instead
-of enough armor stands to cover the mob (which was potentially
-dozens or hundreds for large mobs)
-• Sign GUIs (i.e. market search, removing custom amount from
-wallet) will now place the menu sign three blocks above the
-player, to prevent issues with opening them on non-full blocks
-### Bug Fixes
-• Applied updates to the software our weekly update bot is built
-upon. Emoji are now properly preserved across weekly updates,
-without the errors that delayed our last update.
-• Fixed the Charms menu displaying stats such as -Cooldown % in
-red despite -Cooldown % being a beneficial stat
-• Fixed the Zenith Charms menu not displaying charm caps
-• Fixed Norvigut Skewer having incorrect stats
-• Fixed Rivers of Blood not being properly updated last week
-• Updated Dreadful Harvester (Harvestman's Scythe skin) and
-Nightshade Pickaxe (Molta's Labor skin) to their unskinned
-counterparts' stats
-• Remnants of the Empire will now reward you with Silver
-Armament (M2) and not Silver Armament (M4)
-• Dealing Impact damage to a training dummy will now properly
-display the source as Impact
-• Impact's handbook description now states that mobs lose (level
-&o 10)% Knockback Resistance, not (level)
-• Fixed a bug where firing an arrow then swapping to a Punch bow
-applied Punch
-• Capitalized "Architect's Ring" correctly on a Pass of
-Dissonance Week 4 mission
-• Fixed one of Starbound Sanctuary's teleporters
-• Removed floating signs in Blue.
-• Removed the floating shulker heads in the Flock and Key moving
-platform section
-• Fixed missing elipses in Forum ending cutscene
-• Death's Swiftness and Guarding the Guarded will no longer kill
-your Keeper Virtue upon starting&r
+&bHotfixes (after restart):&r
+• Fixed an issue related to the Pixie of Life dummy that caused
+consistent shard lag over time, in particular on playerplots
+• Disabled Morbid being selectable in the Ring Overworld
+• Fixed a bug with Brutal DoT reapplication damage calculation
+• Fixed Brine's Gambit making artillery explode instantly on
+cast
+• Fixed Toxic Steroid damage bonus not applying to level 1 Taboo
