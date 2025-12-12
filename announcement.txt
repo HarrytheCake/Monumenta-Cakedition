@@ -1,24 +1,3 @@
-&bThe Architect's Ring: Indigo Wool Dungeon&r
-After nearly two years of planning and development, the third
-mainline, traditional-style dungeon for the Architect's Ring has
-finally arrived! As the culmination of your adventure throughout
-Star Point, the time has come to break the seal to Phyrrys and
-attempt to claim the Indigo Wool for yourself!
-It won't be an easy endeavor though, as foes and former-allies
-alike will stand in your way, each with their own agenda • so
-prepare yourself for the challenge that awaits you within...
-Grab your friends and mark your calendars, because the dungeon
-will be live on <t:1752944400:F> !
-To accompany the dungeon's release, a new quest in Chapter 3,
-&bHolding Space&r, will be available immediately following
-weekly update! Requiring &oStarless Night&r, &oAll That
-Remains&r, and completion of any level of &oCelestial Zenith&r •
-the quest will be progressable up until the point that you
-discover the lobby...
-The team has poured an incredible amount of time and passion
-into this dungeon and everything surrounding it, and we can't
-wait for you all to enjoy! @everyone
-https://youtu.be/RL6Iuc2InlA
 &bHappy Depths-versary!&r
 It's that time of the year again• to celebrate the fourth
 anniversary of Darkest Depths release (July 17, 2021), six
@@ -128,3 +107,10 @@ We're looking to finish at least one storyline, if not more, in
 2026, with the Duchess series being a primary focus to bring to
 a close next year.
 As always, thanks for your patience and support!
+&bZenith Anniversary Event&r
+It's been two years since the Celestial Zenith launched on
+December 16, 2023, and it's once again time to celebrate! Gather
+your A-team and enter the dungeon with your friends between
+December 10th and December 24th to participate in 6-player
+Zenith!
+Good luck and have fun!
