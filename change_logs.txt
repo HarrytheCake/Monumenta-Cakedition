@@ -1,348 +1,152 @@
-&b(11.46.0)&r
-For the update on December 10, 2025
-### Minor New Features:
-• Added an API for Depths skills, accessible at
-https://api.playmonumenta.com/depths_skills (will become
-available sometime during weekly update)
-## Alchemist Rework Week 1 Changelog
-&bFixes:&r
-• Fixed Collapsing Fragment MW3 not having a Potion Recharge
-Rate stat
-• Fixed Insanity (Unstable Amalgam) charms having the wrong
-Knockback Speed stat, making it do nothing
-• Fixed base Volatile charms not being in the API
-• (hotfixed) Fixed Brine's Gambit making Alchemical Artillery
-explode instantly upon cast
-• (hotfixed) Fixed damage calculation for Brutal DoT refreshes
-&bNew changes:&r
-• Rebalanced Taboo:
-  • Level 1:
-    • Removed the Cast/Recast system. You once again activate
-Taboo, and decide when to deactivate it. Activating Taboo
-doesn't cost a potion anymore.
-    • You can now activate and deactivate Taboo without holding
-an Alchemist Bag.
-    • You now lose 2.5% of your HP every second, and every time
-this happens, the HP loss increases by 0.6%. If the health loss
-reaches 10% HP per second, you also start losing 10% of your max
-HP in absorption every second.
-    • Received new sounds that ramp up with the HP loss
-    • The health loss is now smoother instead of coming in big
-chunks.
-    • +25 -> +30% Magic Damage
-    • 10s Cooldown
-  • Level 2:
-    • +35 -> +40% Magic Damage
-    • Deactivating Taboo now gives you 1 absorption health (max
-of 10) for every 10% of your HP that is missing. The absorption
-lasts 8s.> Notes: A ramping HP loss is a much nicer design to
-prevent the "perma taboo" gameplay and actually putting a
-significant risk/reward factor into the gameplay loop of the
-ability. The potion cost of the ability really hurt slower bags,
-and it felt like an unnecessary "extra cost" when HP drain is
-already a pretty big cost by itself. The level 2 now offers a
-unique "bailout" mechanic which allows you to push Taboo even
-further and mitigate the bad consequences of doing so.
--# The Bell tolls warning Those who dare risk too much, for
-their Time is almost up…
-• Rebalanced Energizing Elixir:
-  • Level 1:
-    • The ability hotbar now shows how much time you have left
-on your elixir effect.
-    • Your potions now leave a faint 5 block high cloud, with
-125% of your potion's radius, that lingers for 1s. Immediately,
-and every 0.5s, standing in the cloud gives you the effects of
-elixir.
-  • Level 2:
-    • 10 -> 15% damage buff, 4 -> 8s duration. The effect is now
-applied by the cloud too.
-  • Enhancement:
-    • Gruesome potions now reduce all types of debuffs, not just
-Vanilla Potion ones.
-> Notes: This aims to address valid complaints about difficulty
-to use the new Elixir ability. The cylindrical hitbox and the
-added radius multiplier should help make it a lot more
-consistent and should also help players with high ping. The
-lingering cloud can help as sort of a delayed way to still gain
-the effects when you're just outside the hitbox, and move into
-it. Players can only be affected by one cloud at a time.
-• Rebalanced Volatile Reaction:
-  • The "level upgrade" effect has been moved to Level 1.
-  • Level 2's damage increase now also affects the damage of the
-first explosion, unlike previously.
-  • The AoE detonation damage is no longer applied to the mob
-that was detonated
-  • Mobs spreading the Enhancement's DoT can now spread it to
-themselves if they are the highest hp enemy in range• The
-Enhancement DoT spread no longer targets mobs immune to magic
-damage, or mobs that should be ignored by summons
-  • Fixed Volatile 1 (u) having two explosions.
-> Notes: I felt like level 2 was too loaded with effects, and
-triggering Volatile enemies with Gruesome while only having
-Level 1 didn't do much (just spreads Gruesome to nearby enemies,
-which you likely already hit with your first potion anyway).
-Moving the "level upgrade" effect to Volatile 1 makes it more
-appealing and fixes the Gruesome application problem, while
-keeping the appeal of two explosions on Level 2.
-• Bezoar:
-  • Enhancement: Philosopher's Stones now glow Red
-• Rebalanced Scorched Earth:
-  • Level 1: 50 -> 40% Scorched damage
-  • Level 2: 60 -> 50% Scorched Damage; the cooldown is no
-longer reduced
-> Notes: Just a slight nerf as the ability was overperforming
-just by itself.
-• Rebalanced Esoteric Enhancements:
-  • 4 -> 5s Cooldown
-> Notes: Just a small "nerf" as the ability really didn't need
-the cooldown decrease, and it was left in as an artefact of a
-previous change.
-&bAlchemist Item Changes:&r
-• Added a refund for Toxic Steroid at the Shady Salesman NPC in
-Galengarde
-• Brimstone Alembic (region 1): 7.5 -> 7 Potion Damage, 0.9 ->
-1.1 Potion Recharge Rate
-• Fensap Flask (MW4): 11 -> 10 Potion Damage
-• Mycelian Serum: -20 -> -10% Alchemist Potion Recharge Rate
-• Renamed "Taboo Self Damage" to "Taboo Base Self Damage"
-• Sustaining Forbidden Charm: reworked to 2 Power, -15% Taboo
-Base Self Damage, -10% Taboo Self Damage Increase, +5% Taboo
-Damage Modifier
-• Toxic Steroid: 0 -> 50% Taboo Self Damage Increase
-• Primeval Scale: 100 -> 50% Volatile Reaction Detonation
-Damage, 100 -> 25% Volatile Reaction Detonation Radius, -50 ->
--25% Volatile Reaction Main Damage
-• Mycelian Catalyst: 50 -> 75% Esoteric Enhancements Cooldown
-• Explosive Reagent: -25 -> -20% Esoteric Enhancements Cooldown•
-Lifewood Dew: 25 -> 50% Volatile Reaction Enhancement DoT
-Potency per Stack, -100 -> -50% Volatile Reaction Detonation
-Damage, 0 -> -50% Volatile Reaction Main Damage
-• Removed charm stat "Energizing Elixir Damage Amplifier
-Duration" (that value will now be affected by "Energizing Elixir
-Effect Duration", this way the duration is the same at level 1
-and level 2)
-## Shaman Rework Week 1 Changes
-• You can now disable Totemic Projection on Recast in your
-P.E.B.
-• Projection on Recast no longer requires the totem you're
-attempting to cast to be active • just on cooldown, so long as
-there is at least one totem active.
-• Cleaned up some of the default triggers to "no usable items"
-rather than "no pickaxe, no potions, no food, no blocks".
-• Fixed Summoning Rite (Totemic Projection cosmetic) not being
-usable.
-• Totemic Projection cooldown: 8s -> 5s.
-• Earthen Tremor knock-up has been &oslightly&r increased.
-• Earthen Tremor's Line of Sight check has been removed.
-• Earthen Tremor Enhancement Damage: 35%/20% -> 50%/35%. Radius:
-3 -> 4.
-• Flame Totem's Line of Sight check has been made more lenient.
-• Flame Totem's particles are now lowered to be less
-obstructive.
-• Flame Totem's Enhancement now correctly adds damage up to 6
-times as described.
-• Ignition Drive damage: 9 / 12 -> 11 / 15.
-• Decreased particles for Totemic Consecration.
-• Totems that are already marked as Sacred should now be
-completely ignored by Totemic Consecration's targeting.
-• Six-Pronged Sea Stone : -25% -> -35% Chain Lightning Cooldown
-• Aether Dart : -40% -> -55% Chain Lightning Cooldown
-• Withering Petal : -40% -> -25% Decayed Totem Pulse Delay
-• Thrilled Toadstool : 0% -> +10% Ignition Drive Radius##
-Berserker Rework Week 1 Changes
-&nRampage&r
-• Healing: 5%/s -> 1% / 0.25s
-• Damage: 20% / 20% -> 10 / 15 %
-• Initial Duration: 5s -> 3s
-• Duration Per Stack: 1s / 1.5s -> 1s / 1s
-• Max Duration: 5s / 7.5s -> 5s / 5s
-• Bloodlust Extension: 5 / 5 -> 3 / 5
-&nMeteor Slam&r
-Additional height beyond max height will have reduced scaling
-(25% of Meteor Slam’s damage per block fallen, slowly reduces)
- • DMG Per block: 3 -> 3.5
- • Ground Pound Velocity: 2 -> 1.75
-&nGlorious Battle&r
-Glorious battle does more damage on struck mob. Glorious Battle
-now no longer counts as AoE damage towards Bloodlust Stacks
-• L1: 50% / 75%
-• L2: 60% / 90%
--# AoE / Critical respectively
-### Charm Changes
-• Rocket Boots : 0% -> +100% Meteor Slam Ground Pound Damage, +2
--> +4 Meteor Slam Max Height, +25% -> +35% Meteor Slam Vault
-Velocity, +2 -> 0 Meteor Slam Damage Per Block Fallen
-• Bloodlust : -15 -> -20 Bloodlust Stack Threshold
-• Focused Rage Charm : +1 -> 0.5 Rampage Duration
-• Greater Rage Charm : +0.5 -> +0.25 Rampage Duration
-• Lesser Rage Charm : +0.25 -> +0 Rampage Duration
-### Feedback Fixes:
-• Added Class Passives to the cosmetic skills GUI
-• Replaced a far too easy board in Loci's Respite
-• Fixed Magic of the Bastion having a higher range than intended
-• Fixed tesseract of festivity(u) summons taking more damage
-than intended
-• For parity between the two, potion durations now aren't
-reduced on death in both Godspore and Intruder
-• Expanded the holes in the glass inside the orange section of
-Twisted Intruder
-• Twisted Moonweaver now places Prismatic Distortion 2 blocks
-from itself (from 8 blocks)
-• Removed vanilla slowness from Ent and Lingering Abomination
-• Earthquake Staff now uses pointed dripstone as its base item
-instead of warped fungus on a stick, allowing it to be stacked•
-Updated the descriptions of Alchemist's skills in the Alchemy
-Labs
-• Updated Cleric & Shaman's skill descriptions in the Alchemy
-Labs
-• Slightly adjusted a step in Empty Space
-• Updated the appearance of the Unused/TA'ELDIM teleporter to
-better match the nearby sign text
-• Adjusted the particles of the bounce out of Mysterious Cenote
-to be easier to spot
-• Shift-clicking the parrot vendor instantly opens the Parrot
-GUI
-• Added a cake to a chest in Mapleroot Town
-• Added Cherry-type wood to the stripped log trader in front of
-Sierhaven castle
-• Added a 32xp -> Healing Vial trade to Highwatch's Master
-Alchemist, the same as all other Valley towns' alchemists
-• Updated the sound, vanity, and particles of the following
-mobs:
-  • Malevolent Reverie: C'Axtal, Doomed Citizen, Doomed Guard,
-Harbinger of Fatigue, Harbinger of Hunger, Harbinger of
-Slowness, Harbinger of Weakness, Infernal Archer, Infernal Armor
-Stand, Infernal Berserker, Infernal Overseer, Soul, Scorching
-Spider
-  • Ephemeral Corridors: Animated Potions, Bipedal Spider, Child
-Mummy, Elder Archer, Flame Imp, Flaming Archer, Frost Wisp,
-Frostbitten Warrior, Frozen Cryptkeeper, Guardian Brawler, Ice
-Archer, Ice Ghoul, Keeper's Shade, Mansion Wraith, Mummy,
-Petrified Archer, Poltergeist, Possessed Esquire, Radiant Mummy,
-Scorchguard, Soulleather Banshee, Spider Queen, Spirit of the
-Drowned, Webbed Archer• King's Valley Overworld: Animated
-Archer, Animated Brute, Animated Gear, Animated Guard, Arachnid
-Spitter, Armored Hermit, Bastion Sniper, Blazing Stalker,
-Blazing Watcher, Blood Sorcerer, Burnt Foreman, Burnt Miner,
-Crusader of Aphelios, Demon Stinger, Devourer Worm, Dying
-Creeper, Elder Witch, Erinyes, Eternal Servant, Festive Ankle
-Biter, Forsworn Monk, Fungal Crawler, Gear Gremlin, Ghost, Ghost
-Brute, Ghost Ranger, Gleeful Creeper, Golden Golem, Grand
-Hunter, Graveyard Protector, Graveyard Sniper, Grove Arachnid,
-Grove Lurker, Grove Shade, Hadal Scavenger, Hate Knight,
-Illusion of the Mist, Inferno Spider, Jovial Combatant,
-Lighthouse Watcher, Lighthouse Warrior, Living Statue, Magma
-Charger, Magma Crawler, Murky Spirit, Noxious Aberration,
-Noxious Beast, Ominous Scout, Raging Minotaur, Resentful Hag,
-Rotten Host, Rotting Warrior, Rusted Gear, Scholar of Tides,
-Shieldbreaker Sprite, Sickening Spider, Stagnant Follower,
-Starseer, Star Spitter, Startouched Cultist, Sunken Corpse,
-Temple Skeleton, The Grinch, Thorn Sniper, Tinder Creeper, Toxic
-Carrier, Venomous Supplicant, Verdant Wanderer, Warped Follower,
-Warped Spectre, Warptouched Guardian, Weeping Barkling
-  • Snow Wool Spirit: Ghost of Holiday's Future, Ghost of
-Holiday's Past, Ghost of Holiday's Present, Holiday Elf,
-Sentient Coal
-### Bug Fixes:
-• Floating above the map in Ice Spleef due to mount issues with
-a certain mod will now disqualify you from Ice Spleef and inform
-you what to do about it
-• Removed some placeholder blocks from Lowtide
-• Cleansing Rain no longer breaks the Indigo Void TP
-• Entering the Teal race no longer damages (or potentially even
-kills) anyone currently falling
-• Fixed inconsistencies in Bleeding advancement
-• Intuition advancement now states that the XP buff is
-independent of level
-• Thoroughly terminated the treacherous twin Tirago
-• Protected a sleeping a fox in Galengarde• Fixed Holding
-Space's puzzle completion dialogue mixing up the Architect's
-Ring and the King's Valley
-• Cyan floor now applies non-vanilla slowness
-• Corrected order of trades in Squire Aaron
-• Fixed Cyan checkpoint signs not updating
-• Fixed vanilla armor on Helltorn Lancer
-• Upon Quorent's death they will now stop talking to you and
-trying to look at you
-• Picking up artifact materials in Indigo no longer tells you
-both that you collected it and that you have collected it
-already
-• Montana no longer hallucinates about being in a treehouse
-• Fixed compass entries in Starrier Night
-• Removed a floating block of stone from Creeper Tower
-• Fixed Refit Mask of the Interim only being buyable with a
-fully uninfused Mask of the Interim (and vice versa)
-• Fixed issues with Shrine of the Pit that sometimes allowed
-players to obtain infinitely many boons
-• Fixed a stuck spot near Farr
-• Fixed another stuck spot near Farr
-• RoD's -_• now lists people around it when starting a new
-instance
-• Professor Walthan responds again to players with Ghastroot in
-their inventories and actually takes them when you give them to
-him
-• Added Fathom's Reach advancement to website
-• Fixed stuck spot in Pass of Dissonance lobby
-• SKR scrolls now actually have a lower cooldown when near the
-entrance point
-• Orasomn in Fallen Forum and Borrowed Time is no longer an
-invisible vanilla enderman and now uses the new RP texture given
-for him
-• Removed vanilla armor from Bygone Adventure and Hulking
-Mutation
-• Starblood Ichor can now be removed from Aesir's Embrace and
-Artelus' Benediction, but both potions only remove their effect
-when pressing swap while holding them in the mainhand
-• Alric, Lord of Frosted Winds Dummy is now unpushable (eggify
-and re-place it to fix currently placed ones)
-• Leeton now only takes 1 pickaxe from you
-• A cat in the Pet Shop is no longer standing on the chair•
-Fixed build errors in Sierhaven, Blackflame Sanctuary, somewhere
-in the middle of Chillwind, Lowtide, The Undergrowth, and
-Chanterelle Village
-• Fixed dialogue issues in Silver Skinned, An Unlikely
-Partnership, the SKR 12 POI text, Find The Buttons SKR, Shuffle
-SKR, SKR scrolls, the Infusion GUI, An Unexpected Lesson, the
-Reverie Golem's dialogue, Shade Hunter's Log • Centurem Felix,
-and Mysterious Cenote's Bounty Text
-• Fixed the "Return to Dungeon Lobby" buttons sometimes not
-working
-• Adjusted the SKR 12 POI text to make clear you can’t run Nadir
-12 times in a row
-• A pirate armor stand in Mistport can no longer steal your
-items
-• Armory Page Upgrader Fragments are no longer considered Epic
-Crafting Materials
-• Added a compass entry for Fathom's Reach bounty
-• Added Sacrificial Dagger -> Kingslayer trade to Ta'Eldim Ami
-Udake
-• Fixed SKR book Axxil IV being unobtainable
-• Orasomn in The Olive Branch is no longer a floating wool head
-||???|| and is now a textured enderman
-• Restored Meteor Slam's icon
-• Fixed Best Chest's Lifetime Highest Win Streak leaderboard,
-and added a Best Chest Current Highest Win Streak leaderboard
-• Fixed a step in Empty Space being slightly outdated
-• Egginator no longer makes cats black
-• Removed a stray space in the custom regeneration effect's
-display
-• Tipped arrows that have been made Spectral in Ta'Eldim will
-now properly be updated by weekly updates
-• You can no longer accidentally leave the Guardian spec trial
-by hitting the button with an arrow
-• Fixed the Blighted Animal mob from Celestial Rampart playing
-the sheep footstep noises every single tick
-• Made the boat in Purple lobby invincible
-• Fixed Grove Arachnids not dealing the correct amount of damage
-or applying its weakness debuff
-• Fixed Rogue's skill description being fully bold in the
-Alchemy Labs
-• Fixed Svalgot and Beast of the Blackflame spamming their
-projectile spells
-• Fixed a respawning chest with a quest item in Anthill not
-working
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-• Sealed Remorse has been reopened.
+• Sealed Remorse has been reopened.The player market now has
+travel anchors to get from the center to the various player
+districts; this will become available the next time plots
+restarts, currently scheduled for the next time it empties out,
+or <t:1765602000:R>, whichever comes first.
+&bHotfix&r:
+• Fixed the travel anchors on plots flickeringNow the travel
+anchors in the player market all go up to a central location,
+and back down to anywhere on the island from there, with unique
+icons for each destination.
+&b(11.47.0)&r
+For the update on December 17, 2025
+### &nA Union Cross:&r
+A new quest, and the next installment in Region 3's Chapter J,
+has arrived • A Union Cross!
+A powerful nightmare has appeared within the dreamscape, one
+that threatens to draw the attention of Samara's demon and see
+it gain an indomitable boon. She requests your aid in dispelling
+it, but secrets lie dormant within the dream, and you'll be
+forced to make a decision that will set the course for the
+future of the entire Architect's Ring...
+A Union Cross is one of the largest and most ambitious quests
+we've ever attempted to make, and features a unique "open zone"
+style unseen in Monumenta quests prior, focusing heavily on
+exploration and utilizing the scenarios around you to progress.
+To begin the quest, you may speak to Reynart in the Exalted
+lobby after completion of External Corruption and Unconventional
+Methods!
+&o&nDev Commentary:&r It's hard to believe I'm actually able to
+finally write this changelog post. I've been planning, writing
+for, and developing this quest for over two years (first draft
+was in November 2023!!), and this release is the culmination of
+all that work. To quote Fang, "This is his Study in Crimson",
+and I certainly hope it lives up to that level of excitement.
+Thank you all in advance for playing and experiencing this story
+that I have poured so much of my time and energy into, and I
+hope you all enjoy. —Crondis&r### Class Abilities:
+• All class abilities have received an updated set of
+descriptions, in a completely new, fresh and unique style!
+  • These new descriptions aim to turn what was once one long
+block of unformatted text into organized, styled paragraphs and
+stats. With colors!
+  • Simple descriptions have been removed, and you will see more
+detailed information about the ability in that location instead,
+including a display for what charm effects you have for that
+ability.
+  • In addition to abilities, all classes and specializations
+have also received new descriptions, as well as all other items
+in the GUI! I suggest you hover over everything to check it all
+out.
+  • Some descriptions will dynamically update based on certain
+criteria, such as:
+    • Your current point assignment, or remaining points
+    • What region you're in
+    • What charms you have equipped
+  • Added a display and sound for attempting "blocked" actions
+like selecting skills without enough points, or selecting an
+enhancement without the ability first
+  • Depending on feedback, you may see other GUIs adopt this
+visual style in the future as well.
+  • More features are also planned to be added to this system in
+the future!
+https://media.discordapp.net/attachments/718659850065936425/1450
+363657480573111/image.png?ex=694243ea&is=6940f26a&hm=3c54663de43
+ea7f9697e19b0f03eeb1963638c248b3be3e1c12c8d9ba9af5bb5&=&format=w
+ebp&quality=lossless&width=1310&height=671 https://cdn.discordap
+p.com/attachments/718659850065936425/1450363657799205008/image.p
+ng?ex=694243ea&is=6940f26a&hm=2b3b65d4b4d7919a5db6651e8d4c8d41aa
+6fbf55205a51467773871f4a3f6329&### Berserker Miscellaneous
+Changes:
+• Various bosses with upper y limit have been changed to account
+for Meteor Slam.
+• (Hopefully) Fixed interaction in which ground pound does not
+trigger Meteor Slam.
+• UMM Rampage icon now changes if the buff is active.
+• Modified "in combat" criteria:
+  • 16 block radius mob check OR on attack -> 8 block radius mob
+IF they have aggro OR on attack
+-# Must be 12s of being out of combat to passively gain stacks.
+### Mob Changes:
+• Added a telegraph to Stellar Manifestation, and delayed its
+attacks by 0.75 seconds.
+### Feedback Fixes:
+• Players will now get a chat message when a friend joins or
+leaves
+• Updated the sound, vanity, and particles of the following
+mobs:
+  • Ephemeral Corridors: Mansion Wraith
+  • Forsworn Sanctum: Ceremonial Guardian
+  • Kaul: Air Vassal, Earth Elemental, Earth Vassal, Fire
+Vassal, Water Vassal
+  • Snow Wool Spirit: Ghost of Holiday's Past, Ghost of
+Holiday's Present
+• Tiinah in the hunts lodge can now tell the player when the
+last hunt took place
+• Items with the Owned infusion can no longer be sold on the
+market plugin
+• Added Transmogrifier location tag to Ancient Power Fragment,
+Flawless Magma Fragment and Melted Candle (mogged rares)
+• Added Thrilled Toadstool to API
+• Moved the "mission ends in" time to the clock next to the
+missions in the Pass GUI
+• Added a small recast delay (0.25s) to Shaman's totems to
+prevent double-casting issues at low ping
+• Adjusted a Floor 3 Zenith room to not use display entities
+• Aloc Acoc's frostbite bar initializes with less frostbite
+• Added more reverse-recipes related to deepslate, with more
+reverse recipes for other stone-like blocks planned### Bug
+Fixes:
+• Unstarved alive horses
+• Fixed Totemic Projection being castable even if there are no
+totems to move
+• Fish quality will no longer increase 100% of the time if you
+have any source of quality increase above 0%
+• Fix expedite not working properly with fervor (thanks @dayssky
+for contributing this fix to the public github)
+• Fixed Bottled Sunlight and Chaos Dagger glowing White instead
+of Yellow and Dark Purple respectively
+• A missing painting in Azacor's Mansion now properly resets on
+POI respawn
+• Hid an armor stand in the Eldrask Elevator
+• Karvail can open the New Antium Gate again
+• Fixed a bug with the Knick Knack Sack GUI not properly
+displaying names of some locked tabs
+• Fixed a chest in Jungle Mines having the wrong loot table
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.A post that was missed
+in this week's changelogs:
+&bCommunity Missions&r
+• In the spirit of the holidays, a new offshoot of the Seasonal
+Pass will kick off this week. Work together as a community to
+complete 3 large missions, unlocking 3 tiers of rewards to claim
+along the way!
+• Players can rack up their personal contribution amount to
+increase their reward multiplier, as well as earn
+&bCommunity Hero Points&r, a new leaderboard to flaunt your
+pride to Sierhaven
+• Completing all levels of the Community Missions will also
+unlock a new Ice Boat Spleef map! You will be able to access it
+in the original Ice Spleef lobby with a team of 2-4 players the
+moment that all missions are completed!
+• Talk to the Community Manager in the Season Pass Lobby to get
+started!
+• Note: This is &onot&r replacing the Seasonal Pass, and is more
+of a large-scale trial of the system for potential use cases in
+the future
