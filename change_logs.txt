@@ -1,17 +1,6 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• Sealed Remorse has been reopened.The player market now has
-travel anchors to get from the center to the various player
-districts; this will become available the next time plots
-restarts, currently scheduled for the next time it empties out,
-or <t:1765602000:R>, whichever comes first.
-&bHotfix&r:
-• Fixed the travel anchors on plots flickeringNow the travel
-anchors in the player market all go up to a central location,
-and back down to anywhere on the island from there, with unique
-icons for each destination.
+Now the travel anchors in the player market all go up to a
+central location, and back down to anywhere on the island from
+there, with unique icons for each destination.
 &b(11.47.0)&r
 For the update on December 17, 2025
 ### &nA Union Cross:&r
@@ -150,3 +139,17 @@ started!
 • Note: This is &onot&r replacing the Seasonal Pass, and is more
 of a large-scale trial of the system for potential use cases in
 the future
+&bHotfix:&r Following the 5.10.0 Resource Pack, two new hope
+skins have been added to Mastersmith Antonio's shop! Thank you
+very much to our patrons for your continued support!
+&bHotfixes:&r The following changes have been made to A Union
+Cross
+• ||You may now skip puzzles in the quest if you are on a
+replay. The skip option is available via the Rules button||
+• ||The top cube of the Azacor's Seal puzzle is now locked in
+its proper position and cannot be rotated||
+• ||The 5x5 varient of the Scattered to the Wind puzzle now has
+a locked 9 as part of its given number set||
+&bHotfix (applied at restart)&r:
+• Fixed players not being able to be invited to an Alchemy Labs
+instance if they had never made an instance before

@@ -1,42 +1,4 @@
-&bHappy Depths-versary!&r
-It's that time of the year again• to celebrate the fourth
-anniversary of Darkest Depths release (July 17, 2021), six
-player mode is making a return! Start a run with up to five
-other friends and compete for the special leaderboard spots for
-an extended run of two weeks. The event starts after the weekly
-update tomorrow, July 16, and runs until the weekly update of
-July 30. Good luck and have fun!World Bosses have been disabled
-for Indigo's release in 10 minutes.Right now seems like a
-wonderful time, for absolutely no reason whatsoever, to re-
-establish with our existing community (and well-inform our
-new/recent players) of Monumenta's financial gain stance:
-• Monumenta is a &ovolunteer&r-operated project. Our developers,
-moderators, and contributors do not get paid or otherwise make
-any profit from their work on Monumenta
-• Our funds that we receive from Patreon strictly go towards
-keeping the lights on, upgrading our infrastructure, and keeping
-our plugins online
-• We have long repeated this, but it is our vow to the community
-(and to ourselves, morally) that Monumenta will &nnever&r
-introduce pay-to-win (p2w) aspects, in any form, in an effort to
-extort more money from our community
-If you enjoy playing Monumenta, especially with the recent
-release of the Indigo dungeon, and would like to see more
-content like it, as well as desire potential infrasture boons
-that require fiscal means (eg, true-local EU and EA servers),
-then we ask only that you consider subscribing to our Patreon at
-https://www.patreon.com/MonumentaMMO . Our community is the
-reason for our continuity, and we hope to see this game forward
-for as long as we can!Happy to announce that @Chiinox_ has
-joined the Monumenta Leads team, stepping into the more
-"official" role of Balance Lead! Someone who needs no real
-introduction, Chiinox has been with TM for nearly 3 years now,
-and has recently taken heavy initiative to reframe our internal
-balance team.
-We've all seen the great strides he's made and believe him to be
-a strong guide for setting the direction of the game moving
-forward. Please make sure to give him the congratulatory 🏓The
-MONU discord tag has been re-enabled. Thanks everyone for
+The MONU discord tag has been re-enabled. Thanks everyone for
 boosting our discord, we really appreciate it!Please welcome
 @onion as our newest Moderator! Be sure to send them many
 congratulatory 🏓 s!If you are having trouble connecting to
@@ -113,4 +75,117 @@ December 16, 2023, and it's once again time to celebrate! Gather
 your A-team and enter the dungeon with your friends between
 December 10th and December 24th to participate in 6-player
 Zenith!
-Good luck and have fun!
+Good luck and have fun!Rounding out October and taking us into
+November, we saw the release of the major Rush of Dissonance
+overhaul! Originally released back in 2020, RoD's backend
+technicals and frontend gameplay mechanics had become bulky,
+bloated, and a product of their time. With this fresh coat of
+paint, the systems have become far more stabilized and the
+gameplay refined to reduce focus on spending more and more time
+fighting the same exact encounters over and over, as well as
+diversify and enhance the actual space in which you play the
+encounters! With it, we hope Rush now stands far more prominent
+and keeps you on your toes!
+Finally, we have reached December, where we have had quite the
+jampacked month. Starting it off came the release of the long
+awaited Alchemist, Shaman, and Berserk overhauls! Having taken
+much of our class team's focus for some time, these reworks
+aimed to more heavily refine and refocus the gameplay aspects
+that are most enjoyed about these classes, while cutting fluff
+and areas that didn't quite mesh. Following it off and wrapping
+the year out, we saw the release of A Union Cross, our largest
+and most ambitious quest to-date! The time has come to delve
+into the latest threat arising in the dreamscape, and unlock
+secrets of the past that have eluded you until now!
+And with that, 2025 has come to a wrap! This has been a
+phenomenal year for the game, and we didn't even have time to
+discuss so many other notable releases this year like Quest
+Resetting, the Friend System, Author Races, the Quest Compass
+Overhaul, Skill Description Rewrites, and more Region 1
+Overworld and POI overhauls than you can shake a stick at! We
+have come so far this year, and we can't wait for you all to see
+what we have in store for 2026!
+Thank you all for taking this journey with us! We wish you all
+very Merry Christmas, and a Happy New Year!In April, we took to
+focusing on some backend technical aspects of the game,
+specifically in regards to guilds! Not only were several QoL
+features added, but after many long years, guild plots were
+finally moved to their own shard/world instancing system! This
+crucial shift helped us expand well beyond the spacial
+limitations of the previous system, allowing us to eye an
+increase in player count without any worry!
+May saw the year's final dedicated boss release, the Twisted
+Intruder! In one of the darkest and most twisted encounters in
+the game, you are forced to face untold nightmares that lie in
+worlds beyond... It can see you, but can you perceive it long
+enough to stand against it?
+While Monumenta's main focus in realm of new content is largely
+in the Architect's Ring, it is very much our belief that all
+aspects of the game should remain fun and enjoyable at all
+levels. That's why with June, our balancing crew began a heavy
+effort to drastically diversify the item space across both the
+King's Valley and Celsian Isles. With the inclusion of
+backporting several R3 enchantments and stats into the regions,
+the design space for the regions has never been greater, and we
+look forward to what that offers us in the coming year with the
+Valley overhaul!
+July needs no real introduction, as it held the launch of our
+first wool dungeon in nearly years • Phyrrys, the City of Fallen
+Stars! In this breathtaking dungeon, you seek out the elusive
+Indigo Wool, all while in a race against time as your former
+allies dart for the wool as well, and a pestering darkness
+brewed on the horizon... We hope you all thorough enjoyed the
+vastness of this dungeon, and look forward to this story's epic
+conclusion in 2026!Something we haven't het focused on is 2025's
+quiet background focus on delve modifiers, including more
+experimental mods to further diversify your experience with
+dungeons and POIs! With August, they really took the forefront,
+with an additional five experimental mods and several overhauls,
+setting the stage for more additions, adjustments, and even
+replacements to come as we rounded out the year. This truly was
+a year of delves focus, as we hope it all felt worth that year
+spanning endeavor!
+With September, the Architect's Ring experienced something that
+had not occured since the release of Star Point, the launch of a
+brand new POI • Fathom's Reach! Featuring a an absolutely wild
+build style unlike anything Monumenta has seen prior, this
+release also set the precedent for us to ship POIs to the
+entrance uninhibited by the time restrictions that a full
+expansion would require, allowing us to provide more gameplay
+opprotunities much sooner! Something quite like it may be on the
+horizon soon...
+October saw the release of a long-awaited rework and replacement
+to one of Monumenta more underutilized specializations, Seraph!
+Functioning as a full on replacement to the previous Hierophant
+skill set, Seraph sports a combo of healing and utility
+playstyle unseen in other class move sets! The class development
+team had been cooking this rework for some time, and we hope you
+all found it worth it, though it wouldn't be the last of its
+kind this year...
+&bMerry Christmas from Team Monumenta!&r
+Merry Christmas everyone! I hope you all have had a wonderful
+year once again. While we are all settling in for the holidays
+and prepping ourselves for the new year to come, I always feel
+it is important for us to look back on the time that has passed
+us and how far we have come in that span. So join me once again
+as we look back on Monumenta in 2025!
+In January, we finally returned to weekly updates after nearly a
+2 months break away to update the server to Minecraft version
+1.20.4! It is Team Monumenta's continued belief that keeping the
+server updated is a prevelant factor in remaining relevant in
+the modern day, and we continue to keep an eye on opprotunities
+to upgrade further in 2026!
+With February came the first major new content launch of 2025,
+the Silver Knight Remnants! In this diversion-style raid, you
+were tasked reach distant and hostile lands, encounter unique
+challenges, and unlock secrets long forgotten to time... As a
+reward for completing other pieces of content around the server,
+we hope you continue to keep SKR in your sights any time a
+scroll finds its way to you!
+March continued the pacing, releasing the Diamenean Hunts! After
+a not-so-brief and rather quirky encounter with the Hunter's
+Lodge members, you were able to set off and find several unique
+overworld bosses to fight alongside other interested hunters!
+Sporting abilities and a spoil mechanic unseen in other bosses
+in Monumenta, the Diamenean Hunts are a fight you wouldn't want
+to miss out on!
