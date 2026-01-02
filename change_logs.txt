@@ -1,66 +1,4 @@
-Now the travel anchors in the player market all go up to a
-central location, and back down to anywhere on the island from
-there, with unique icons for each destination.
-&b(11.47.0)&r
-For the update on December 17, 2025
-### &nA Union Cross:&r
-A new quest, and the next installment in Region 3's Chapter J,
-has arrived • A Union Cross!
-A powerful nightmare has appeared within the dreamscape, one
-that threatens to draw the attention of Samara's demon and see
-it gain an indomitable boon. She requests your aid in dispelling
-it, but secrets lie dormant within the dream, and you'll be
-forced to make a decision that will set the course for the
-future of the entire Architect's Ring...
-A Union Cross is one of the largest and most ambitious quests
-we've ever attempted to make, and features a unique "open zone"
-style unseen in Monumenta quests prior, focusing heavily on
-exploration and utilizing the scenarios around you to progress.
-To begin the quest, you may speak to Reynart in the Exalted
-lobby after completion of External Corruption and Unconventional
-Methods!
-&o&nDev Commentary:&r It's hard to believe I'm actually able to
-finally write this changelog post. I've been planning, writing
-for, and developing this quest for over two years (first draft
-was in November 2023!!), and this release is the culmination of
-all that work. To quote Fang, "This is his Study in Crimson",
-and I certainly hope it lives up to that level of excitement.
-Thank you all in advance for playing and experiencing this story
-that I have poured so much of my time and energy into, and I
-hope you all enjoy. —Crondis&r### Class Abilities:
-• All class abilities have received an updated set of
-descriptions, in a completely new, fresh and unique style!
-  • These new descriptions aim to turn what was once one long
-block of unformatted text into organized, styled paragraphs and
-stats. With colors!
-  • Simple descriptions have been removed, and you will see more
-detailed information about the ability in that location instead,
-including a display for what charm effects you have for that
-ability.
-  • In addition to abilities, all classes and specializations
-have also received new descriptions, as well as all other items
-in the GUI! I suggest you hover over everything to check it all
-out.
-  • Some descriptions will dynamically update based on certain
-criteria, such as:
-    • Your current point assignment, or remaining points
-    • What region you're in
-    • What charms you have equipped
-  • Added a display and sound for attempting "blocked" actions
-like selecting skills without enough points, or selecting an
-enhancement without the ability first
-  • Depending on feedback, you may see other GUIs adopt this
-visual style in the future as well.
-  • More features are also planned to be added to this system in
-the future!
-https://media.discordapp.net/attachments/718659850065936425/1450
-363657480573111/image.png?ex=694243ea&is=6940f26a&hm=3c54663de43
-ea7f9697e19b0f03eeb1963638c248b3be3e1c12c8d9ba9af5bb5&=&format=w
-ebp&quality=lossless&width=1310&height=671 https://cdn.discordap
-p.com/attachments/718659850065936425/1450363657799205008/image.p
-ng?ex=694243ea&is=6940f26a&hm=2b3b65d4b4d7919a5db6651e8d4c8d41aa
-6fbf55205a51467773871f4a3f6329&### Berserker Miscellaneous
-Changes:
+### Berserker Miscellaneous Changes:
 • Various bosses with upper y limit have been changed to account
 for Meteor Slam.
 • (Hopefully) Fixed interaction in which ground pound does not
@@ -153,3 +91,121 @@ a locked 9 as part of its given number set||
 &bHotfix (applied at restart)&r:
 • Fixed players not being able to be invited to an Alchemy Labs
 instance if they had never made an instance before
+&b(11.48.0)&r
+For the update on December 31, 2025
+### Minor New Features:
+• The Community Trinket has been added to the Knick Knack Sack,
+next to the Seasonal Pass trinket. Other trinkets and items have
+been adjusted slightly to accommodate this.
+Happy belated blocks-ing day!
+• There are now reverse recipes for all (or at least most) of
+the stone/brick type blocks, back to their base materials, both
+in a crafting grid (by itself) and in a stonecutter
+• You can now add or remove the bark from logs in a stonecutter
+• Reminder that custom recipes are listed on our community wiki
+at <https://monumenta.wiki.gg/wiki/Custom_Recipes>
+• You can now remove Festive at Joyis while a Winter Event is
+active, there is no refund
+• You can now purchase Snow Spirit Snowglobe Chests for Snow
+Spirit Spoils Chests and Cryospheres at Koal. (Note: This is
+only a cosmetic change for chests that have been opened. Also,
+due to NBT weirdness, this trade only works for chests obtained
+after this update.)
+• There are now speed-dial chat commands, `/c0` through `/c9`,
+which you can set with `/chat player setdefaultchannel c<number>
+<channel name>`
+• Added a new trader to the second floor of the Workshop in
+Sierhaven, selling untextured vanilla armor for vanity purposes
+### Feedback Fixes:
+• Elemental Arrows will now be affected by Hex Eater and
+Chaotic, as well as Smite, Slayer, and Duelist on tridents only
+• Added a sorting bin to Alchemy Labs Lobby.
+• Shield Wall (and Prestigious Shield) now use glass pane
+display entities for their visual.
+• Improved the sound effects of Bloody Retaliation (Sanctified
+Armor cosmetic), greatly reducing its volume at distance
+• Anathema (Crusade cosmetic) has returned, following added
+support for class passive cosmetics. If you've already bought
+Sins of the Voracious, right click with it in hand to obtain the
+cosmetic
+• Added
+&bthree&r seats to the Zenith lobby, so you can sit down while
+waiting for your last teammate
+• Updated the particles of Decay• Updated the particles of
+generic Damage over Time
+• Decay and other Damage over Time particles are now Enemy Buff
+(e.g. Cursed Wound, Withering Gaze, etc.)
+• Reverb particles are now Player Active
+• Updated the description of Fractal, Resurrection and Expedite
+• Removed armor of Vengeful Manifestation and Hungering Inferno
+Core / Shard
+• The Depths skills API at
+https://api.playmonumenta.com/depths_skills should actually be
+available now
+• Reduced Pride Launcher's cooldown
+• Slightly adjusted the range of a few drop spawners in EC
+• Expedite will now proc Fervor even at max stacks
+• Improved bedrocking within the Eternal Vigil
+### Public Repository Bug Fixes:
+-# Monumenta maintains a [public
+version](<https://github.com/TeamMonumenta/monumenta-plugins-
+public>) of our plugin repository. Interested players may
+contribute by making pull requests to fix plugin-related bugs!
+_Contributed by @dayssky (dayssky):_
+• Stealth in Depths/Zenith will no longer be broken when
+swapping to a trident with melee damage
+• Arcane Strike will no longer (incorrectly) apply its bonus
+damage if the mob is struck with an Ice Aspect weapon
+• Curse of Lust will now decrease player damage by the correct
+amount
+• Prismatic Shield will now actually protect you from an exact-
+killing blow
+• Astrals will no longer prevent you from right-clicking near
+them
+• Extended Blade Dance's iframes to the correct length
+• Recasting Sanguine Harvest (u) clears Blighted ground properly
+and does not wipe the second cast early
+• Zenith charms with sword base items will no longer show base
+attributes
+• Crossbow-wielding enemies will no longer immediately fire at
+you when exiting Stealth
+• Disco Ball now spins correctly. It's always&o party time in
+the Celestial Zenith!
+-# &rInjuries from extremely bright disco balls not covered by
+insurance.
+• Broodmother's corpse can no longer Body Slam you and pop your
+Lifeline when the fight is over### Bug Fixes:
+• Updated Nightpyre Chains to its intended stats from a previous
+balance patch (intended was 9 armor and 35% magic damage, was
+mistakenly changed to 8 armor and 40% magic damage)
+• Fixed several typos in A Union Cross
+• Fixed a barrier gap in A Union Cross
+• ||Lucidity and Requiem of the Abyss|| have been given the
+Quest Reward location tag
+• Fixed being able to enter a certain building in A Union Cross
+• Removed a barrier in an SKR Ice Slider board
+• Made water in Exalted Yellow's 2nd part red.
+• Fixed the Sync Translation Sheet button not reappearing after
+pressing it
+• Errors from chat commands are no longer duplicated
+• Fixed a softlock in Raiding Party caused by not taking the
+explosive cache
+• Eagle Eye (u) will no longer falsely claim that the
+enhancement damage boost only applies to projectiles
+• Divine Justice will no longer falsely claim that Heretics must
+be killed with DJ for the DJ heal to activate
+• Cursed Wound (u)'s AoE will no longer spoil Hunts bosses and
+will interrupt Regeneration delve modifier healing
+• Killing a mob with Cursed Wound (u)'s magic AoE on a direct
+attack now stores the debuffs in your scythe
+• Heart of Astaroth should no longer despawn
+• Fixed a section of the Dissonance plot border not replacing
+the previously selected plot border
+• Fixed Snow Spirit allowing up to 8 players in
+• Hid bedrock throughout the Isles Overworld
+• Fixed various build errors throughout SKRs and AUC
+• The Tesseract of Emotion (u) once again works on barrels
+facing up/down; these are now rotated according to your look
+direction
+• Hopefully fixed a rare Impenetrable "stuck spot" where it
+could teleport somewhere near-impossible to reach
