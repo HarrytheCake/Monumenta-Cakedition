@@ -1,180 +1,4 @@
-### Berserker Miscellaneous Changes:
-• Various bosses with upper y limit have been changed to account
-for Meteor Slam.
-• (Hopefully) Fixed interaction in which ground pound does not
-trigger Meteor Slam.
-• UMM Rampage icon now changes if the buff is active.
-• Modified "in combat" criteria:
-  • 16 block radius mob check OR on attack -> 8 block radius mob
-IF they have aggro OR on attack
--# Must be 12s of being out of combat to passively gain stacks.
-### Mob Changes:
-• Added a telegraph to Stellar Manifestation, and delayed its
-attacks by 0.75 seconds.
-### Feedback Fixes:
-• Players will now get a chat message when a friend joins or
-leaves
-• Updated the sound, vanity, and particles of the following
-mobs:
-  • Ephemeral Corridors: Mansion Wraith
-  • Forsworn Sanctum: Ceremonial Guardian
-  • Kaul: Air Vassal, Earth Elemental, Earth Vassal, Fire
-Vassal, Water Vassal
-  • Snow Wool Spirit: Ghost of Holiday's Past, Ghost of
-Holiday's Present
-• Tiinah in the hunts lodge can now tell the player when the
-last hunt took place
-• Items with the Owned infusion can no longer be sold on the
-market plugin
-• Added Transmogrifier location tag to Ancient Power Fragment,
-Flawless Magma Fragment and Melted Candle (mogged rares)
-• Added Thrilled Toadstool to API
-• Moved the "mission ends in" time to the clock next to the
-missions in the Pass GUI
-• Added a small recast delay (0.25s) to Shaman's totems to
-prevent double-casting issues at low ping
-• Adjusted a Floor 3 Zenith room to not use display entities
-• Aloc Acoc's frostbite bar initializes with less frostbite
-• Added more reverse-recipes related to deepslate, with more
-reverse recipes for other stone-like blocks planned### Bug
-Fixes:
-• Unstarved alive horses
-• Fixed Totemic Projection being castable even if there are no
-totems to move
-• Fish quality will no longer increase 100% of the time if you
-have any source of quality increase above 0%
-• Fix expedite not working properly with fervor (thanks @dayssky
-for contributing this fix to the public github)
-• Fixed Bottled Sunlight and Chaos Dagger glowing White instead
-of Yellow and Dark Purple respectively
-• A missing painting in Azacor's Mansion now properly resets on
-POI respawn
-• Hid an armor stand in the Eldrask Elevator
-• Karvail can open the New Antium Gate again
-• Fixed a bug with the Knick Knack Sack GUI not properly
-displaying names of some locked tabs
-• Fixed a chest in Jungle Mines having the wrong loot table
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.A post that was missed
-in this week's changelogs:
-&bCommunity Missions&r
-• In the spirit of the holidays, a new offshoot of the Seasonal
-Pass will kick off this week. Work together as a community to
-complete 3 large missions, unlocking 3 tiers of rewards to claim
-along the way!
-• Players can rack up their personal contribution amount to
-increase their reward multiplier, as well as earn
-&bCommunity Hero Points&r, a new leaderboard to flaunt your
-pride to Sierhaven
-• Completing all levels of the Community Missions will also
-unlock a new Ice Boat Spleef map! You will be able to access it
-in the original Ice Spleef lobby with a team of 2-4 players the
-moment that all missions are completed!
-• Talk to the Community Manager in the Season Pass Lobby to get
-started!
-• Note: This is &onot&r replacing the Seasonal Pass, and is more
-of a large-scale trial of the system for potential use cases in
-the future
-&bHotfix:&r Following the 5.10.0 Resource Pack, two new hope
-skins have been added to Mastersmith Antonio's shop! Thank you
-very much to our patrons for your continued support!
-&bHotfixes:&r The following changes have been made to A Union
-Cross
-• ||You may now skip puzzles in the quest if you are on a
-replay. The skip option is available via the Rules button||
-• ||The top cube of the Azacor's Seal puzzle is now locked in
-its proper position and cannot be rotated||
-• ||The 5x5 varient of the Scattered to the Wind puzzle now has
-a locked 9 as part of its given number set||
-&bHotfix (applied at restart)&r:
-• Fixed players not being able to be invited to an Alchemy Labs
-instance if they had never made an instance before
-&b(11.48.0)&r
-For the update on December 31, 2025
-### Minor New Features:
-• The Community Trinket has been added to the Knick Knack Sack,
-next to the Seasonal Pass trinket. Other trinkets and items have
-been adjusted slightly to accommodate this.
-Happy belated blocks-ing day!
-• There are now reverse recipes for all (or at least most) of
-the stone/brick type blocks, back to their base materials, both
-in a crafting grid (by itself) and in a stonecutter
-• You can now add or remove the bark from logs in a stonecutter
-• Reminder that custom recipes are listed on our community wiki
-at <https://monumenta.wiki.gg/wiki/Custom_Recipes>
-• You can now remove Festive at Joyis while a Winter Event is
-active, there is no refund
-• You can now purchase Snow Spirit Snowglobe Chests for Snow
-Spirit Spoils Chests and Cryospheres at Koal. (Note: This is
-only a cosmetic change for chests that have been opened. Also,
-due to NBT weirdness, this trade only works for chests obtained
-after this update.)
-• There are now speed-dial chat commands, `/c0` through `/c9`,
-which you can set with `/chat player setdefaultchannel c<number>
-<channel name>`
-• Added a new trader to the second floor of the Workshop in
-Sierhaven, selling untextured vanilla armor for vanity purposes
-### Feedback Fixes:
-• Elemental Arrows will now be affected by Hex Eater and
-Chaotic, as well as Smite, Slayer, and Duelist on tridents only
-• Added a sorting bin to Alchemy Labs Lobby.
-• Shield Wall (and Prestigious Shield) now use glass pane
-display entities for their visual.
-• Improved the sound effects of Bloody Retaliation (Sanctified
-Armor cosmetic), greatly reducing its volume at distance
-• Anathema (Crusade cosmetic) has returned, following added
-support for class passive cosmetics. If you've already bought
-Sins of the Voracious, right click with it in hand to obtain the
-cosmetic
-• Added
-&bthree&r seats to the Zenith lobby, so you can sit down while
-waiting for your last teammate
-• Updated the particles of Decay• Updated the particles of
-generic Damage over Time
-• Decay and other Damage over Time particles are now Enemy Buff
-(e.g. Cursed Wound, Withering Gaze, etc.)
-• Reverb particles are now Player Active
-• Updated the description of Fractal, Resurrection and Expedite
-• Removed armor of Vengeful Manifestation and Hungering Inferno
-Core / Shard
-• The Depths skills API at
-https://api.playmonumenta.com/depths_skills should actually be
-available now
-• Reduced Pride Launcher's cooldown
-• Slightly adjusted the range of a few drop spawners in EC
-• Expedite will now proc Fervor even at max stacks
-• Improved bedrocking within the Eternal Vigil
-### Public Repository Bug Fixes:
--# Monumenta maintains a [public
-version](<https://github.com/TeamMonumenta/monumenta-plugins-
-public>) of our plugin repository. Interested players may
-contribute by making pull requests to fix plugin-related bugs!
-_Contributed by @dayssky (dayssky):_
-• Stealth in Depths/Zenith will no longer be broken when
-swapping to a trident with melee damage
-• Arcane Strike will no longer (incorrectly) apply its bonus
-damage if the mob is struck with an Ice Aspect weapon
-• Curse of Lust will now decrease player damage by the correct
-amount
-• Prismatic Shield will now actually protect you from an exact-
-killing blow
-• Astrals will no longer prevent you from right-clicking near
-them
-• Extended Blade Dance's iframes to the correct length
-• Recasting Sanguine Harvest (u) clears Blighted ground properly
-and does not wipe the second cast early
-• Zenith charms with sword base items will no longer show base
-attributes
-• Crossbow-wielding enemies will no longer immediately fire at
-you when exiting Stealth
-• Disco Ball now spins correctly. It's always&o party time in
-the Celestial Zenith!
--# &rInjuries from extremely bright disco balls not covered by
-insurance.
-• Broodmother's corpse can no longer Body Slam you and pop your
-Lifeline when the fight is over### Bug Fixes:
+### Bug Fixes:
 • Updated Nightpyre Chains to its intended stats from a previous
 balance patch (intended was 9 armor and 35% magic damage, was
 mistakenly changed to 8 armor and 40% magic damage)
@@ -209,3 +33,144 @@ facing up/down; these are now rotated according to your look
 direction
 • Hopefully fixed a rare Impenetrable "stuck spot" where it
 could teleport somewhere near-impossible to reach
+&bHotfix for daily restart&r:
+• The Polished Blackstone -> Blackstone crafting recipe has been
+changed to no longer replace the blackstone button recipe, now
+using the same shape as shears. This might not show up in your
+recipe book right away, but will be usable anyway pending the
+restart.
+&bHotfix&r:
+• Snow Spirit daily caches now correctly give Charcoal Key & Key
+Fragments once again
+• As a consequence of applying the fix for the above, the
+aforementioned crafting recipe now exists
+&b(11.49.0)&r
+For the update on January 7, 2025
+### Minor New Features:
+• Notice: This is the last week for the Winter event. Make sure
+to participate in the festivities & event trades while you still
+can! However, an upcoming winter storm is still on the
+horizon...
+• The Pink Wool Dungeon Lobby has been completely rebuilt from
+scratch
+• A hidden interaction has been added to multiple NPCs across
+the Ring when holding a certain reward from A Union Cross
+• Items that are locked to dungeon instances or strikes now are
+completely tied to the instance in which they are found in by a
+player (starting this update), and are removed if they are found
+elsewhere.
+• `/openenchantexplanations` and its aliases `/enchantments` and
+`/enchants` now take an optional search parameter that displays
+the description of an enchantment directly in chat
+### Item Changes:
+• EX Warden's Ruin (M4) : 0 -> 3 Projectile Protection, 3 -> 0
+Magic Protection
+• Irrus' Memory (M4) : 6.5 -> 7 Armor, 0 -> 2 Technique, 1 -> 0
+Life Drain
+• &oDeveloper Note: The balance update is particularly small
+this month as most work over the holidays has been focused on
+other projects in earlier phases of development, notably reworks
+to Warlock and Scout's base skills.&r
+### Feedback Fixes:
+• The Community Trinket has been moved to the very end of the
+Knick Knack Sack, restoring the previous trinket order that
+existed before the change
+• Voodoo Bindings is now CCI (mob that governs Voodoo Command in
+Hexfall)
+• Slightly adjusted a broken staircase in a SKR combat room.
+• Alchemical Artillery now applies Bleed from your mainhand
+potion
+• Added Lucidity, Requiem of the Abyss, and all A Union Cross
+quest items to the items API
+• The skills API (https://api.playmonumenta.com/skills) now
+contains formatted descriptions too, in addition to the old
+unformatted ones.
+• Twisted Gravecaller now grants bestiary kill credit to all
+players within 20 blocks at the end of its ritual• Iron and gold
+related blocks can now be mined with any pickaxe; using a better
+pickaxe material will still mine faster, however
+• Curse of Lust will now scale from 7 blocks up to 17 blocks,
+reducing damage by a maximum of 80%
+### Twisted Changes:
+• Twisted Shadestepper and Shadestepper Clones charge dodge
+window increased to 15 ticks (from 10)
+• Twisted Shadestepper's Cloaked Strike dodge window increased
+to 30 ticks (from 20), , now deals 60 damage (from 50), and now
+makes a sound when hitting players
+• Enhanced Trickshades no longer apply blindness on hit
+• Gravesoul Haunter no longer applies blindness on hit
+• Twisted Gravecaller no longer casts Grasping Claws during
+Communion Ritual
+• Dark Rune • Scatter now causes Twisted Gravecaller to channel
+it for 2s before returning to normal
+• Dark Rune • Scatter now lasts for 30s (from 15s)
+• Dark Rune • Scatter's pattern has been updated, and Twisted
+Gravecaller cannot cast Twisted  Grasping Claws during its
+duration
+• Twisted Grasping Claws radius reduced to 5 blocks (from 7)
+• Twisted Prosecutor now no longer gains additional damage in
+Dark Pact, and now deals 24 melee damage regardless of its
+current state
+• Fixed a bug where Twisted Prosecutor would deal its melee
+damage through player i-frames
+• Removed Twisted Eagle Eye from Twisted Deadeye
+• Twisted Split Arrow projectile speed reduced by 33%
+• Twisted Ninetails no longer inflicts slowness on dash
+• Twisted Ninetails now deals 2 slashes instead of 4 on its
+basic melee attack, damage per slash is increased to 8 (from 4)
+• Reduced the velocity of Twisted Ninetails jump by 20%
+• Twisted Ninetails walkspeed reduced from 0.35 (from 0.3)
+• Twisted Cloudpiercers now no longer despawn on their own
+• Twisted Cloudpiercer health buffed to 120 (from 75)
+• Twisted Cloudpiercers now deal splash damage• Twisted Bishop
+has been partially reworked.
+Increased HP to 4500 (from 1500)
+Angels now no longer despawn naturally, and killing one deals
+20% of the Bishop's maximum HP
+• Fixed a bug where Twisted Vanguard would activate Brute Force
+on his charge
+### Bug Fixes:
+• Fixed the player selector in the Yellow Dungeon Lobby missing
+some spots
+• Fixed a wrong warp from Labs to the White Lobby
+• Fixed Alchemy Labs' Dungeon Instance Bot not returning players
+to the dungeon
+• Fixed missing punctuation in the message you receive when
+trying to amplify Earth Shrine at a too low level
+• Fixed Kaul Ice Boat Spleef breaking and softlocking players
+easily, and Ice Boat Spleef will be reopened in the update
+• Fixed a starting cage in Kaul Ice Boat Spleef being open
+• Removed some duplicate ~~CBRSCI~~ ~~CBSRCI~~ ~~CBSCRI~~
+CBSRCRI Informants in Creeperjuice
+• Filled several air blocks behind trapdoors in AUC ||"The
+Below" 5x5 puzzle room|| with shroomlights
+• Fixed incorrect text coloring in Celestial Rampart's bounty
+text
+• Removed an extraneous chair in the Celestial Zenith lobby,
+because you only need three
+• Fixed a visual bug when certain code gives the player more
+items than they can carry
+• Fixed typos in A Union Cross compass entries and ||A Union
+Cross: Dark Fate interactions||
+• Fixed a build error in A Union Cross
+• Fixed a typo in Healthful Networking
+• Ellen in Healthful Networking will no longer grant two
+different versions of a quest item from different prompts
+• Removed Herald of Secret Stars Mount and an unobtainable entry
+from Exalted Light Blue's bestiary
+• Added Herald of Secret Stars to the bestiary
+• Mountain Mineshaft's bestiary now displays the correct mobs
+instead of the mobs from an older version of the PoI• Killing a
+Mutated Astral with endurance damage will now properly grant
+bestiary credit
+• Astrals' bullet hell bullets no longer persist when the area
+is unloaded
+• C'Shura now properly grants bestiary credit; your next Sanctum
+completion will update your kill count to your Sanctum
+completions scoreMasquerader's Ruin has been temporarily closed.
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&bHotfix:&r
+• The Harmonious Spirit in the Pink lobby now has dialogue again
