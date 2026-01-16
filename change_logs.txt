@@ -1,94 +1,6 @@
-### Bug Fixes:
-• Updated Nightpyre Chains to its intended stats from a previous
-balance patch (intended was 9 armor and 35% magic damage, was
-mistakenly changed to 8 armor and 40% magic damage)
-• Fixed several typos in A Union Cross
-• Fixed a barrier gap in A Union Cross
-• ||Lucidity and Requiem of the Abyss|| have been given the
-Quest Reward location tag
-• Fixed being able to enter a certain building in A Union Cross
-• Removed a barrier in an SKR Ice Slider board
-• Made water in Exalted Yellow's 2nd part red.
-• Fixed the Sync Translation Sheet button not reappearing after
-pressing it
-• Errors from chat commands are no longer duplicated
-• Fixed a softlock in Raiding Party caused by not taking the
-explosive cache
-• Eagle Eye (u) will no longer falsely claim that the
-enhancement damage boost only applies to projectiles
-• Divine Justice will no longer falsely claim that Heretics must
-be killed with DJ for the DJ heal to activate
-• Cursed Wound (u)'s AoE will no longer spoil Hunts bosses and
-will interrupt Regeneration delve modifier healing
-• Killing a mob with Cursed Wound (u)'s magic AoE on a direct
-attack now stores the debuffs in your scythe
-• Heart of Astaroth should no longer despawn
-• Fixed a section of the Dissonance plot border not replacing
-the previously selected plot border
-• Fixed Snow Spirit allowing up to 8 players in
-• Hid bedrock throughout the Isles Overworld
-• Fixed various build errors throughout SKRs and AUC
-• The Tesseract of Emotion (u) once again works on barrels
-facing up/down; these are now rotated according to your look
-direction
-• Hopefully fixed a rare Impenetrable "stuck spot" where it
-could teleport somewhere near-impossible to reach
-&bHotfix for daily restart&r:
-• The Polished Blackstone -> Blackstone crafting recipe has been
-changed to no longer replace the blackstone button recipe, now
-using the same shape as shears. This might not show up in your
-recipe book right away, but will be usable anyway pending the
-restart.
-&bHotfix&r:
-• Snow Spirit daily caches now correctly give Charcoal Key & Key
-Fragments once again
-• As a consequence of applying the fix for the above, the
-aforementioned crafting recipe now exists
-&b(11.49.0)&r
-For the update on January 7, 2025
-### Minor New Features:
-• Notice: This is the last week for the Winter event. Make sure
-to participate in the festivities & event trades while you still
-can! However, an upcoming winter storm is still on the
-horizon...
-• The Pink Wool Dungeon Lobby has been completely rebuilt from
-scratch
-• A hidden interaction has been added to multiple NPCs across
-the Ring when holding a certain reward from A Union Cross
-• Items that are locked to dungeon instances or strikes now are
-completely tied to the instance in which they are found in by a
-player (starting this update), and are removed if they are found
-elsewhere.
-• `/openenchantexplanations` and its aliases `/enchantments` and
-`/enchants` now take an optional search parameter that displays
-the description of an enchantment directly in chat
-### Item Changes:
-• EX Warden's Ruin (M4) : 0 -> 3 Projectile Protection, 3 -> 0
-Magic Protection
-• Irrus' Memory (M4) : 6.5 -> 7 Armor, 0 -> 2 Technique, 1 -> 0
-Life Drain
-• &oDeveloper Note: The balance update is particularly small
-this month as most work over the holidays has been focused on
-other projects in earlier phases of development, notably reworks
-to Warlock and Scout's base skills.&r
-### Feedback Fixes:
-• The Community Trinket has been moved to the very end of the
-Knick Knack Sack, restoring the previous trinket order that
-existed before the change
-• Voodoo Bindings is now CCI (mob that governs Voodoo Command in
-Hexfall)
-• Slightly adjusted a broken staircase in a SKR combat room.
-• Alchemical Artillery now applies Bleed from your mainhand
-potion
-• Added Lucidity, Requiem of the Abyss, and all A Union Cross
-quest items to the items API
-• The skills API (https://api.playmonumenta.com/skills) now
-contains formatted descriptions too, in addition to the old
-unformatted ones.
-• Twisted Gravecaller now grants bestiary kill credit to all
-players within 20 blocks at the end of its ritual• Iron and gold
-related blocks can now be mined with any pickaxe; using a better
-pickaxe material will still mine faster, however
+• Iron and gold related blocks can now be mined with any
+pickaxe; using a better pickaxe material will still mine faster,
+however
 • Curse of Lust will now scale from 7 blocks up to 17 blocks,
 reducing damage by a maximum of 80%
 ### Twisted Changes:
@@ -173,4 +85,89 @@ completions scoreMasquerader's Ruin has been temporarily closed.
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 &bHotfix:&r
-• The Harmonious Spirit in the Pink lobby now has dialogue again
+• The Harmonious Spirit in the Pink lobby now has dialogue
+again## Monumenta Website Overhaul
+A new and improved version of our website is now live for you
+all to discover!
+Check it out at <https://www.playmonumenta.com>
+There have been a lot of improvements to the code side of
+things, which meant being able to make lots of improvements to
+all the other aspects as well.
+Some of the changes:
+•
+&bCompletely new&r Classes page! You can view all the classes
+just like you would in-game, and even copy and share a direct
+url to the class you're currently viewing.
+• Improved Advancements page:
+  • you can now copy and share the direct url to the profile you
+are currently viewing;
+  • fixed a bunch of errors where content would be displayed
+weirdly or off-screen;
+  • improved mobile experience.
+• Improved Home page:
+  • the header now has a simpler design with just 2 cubes. It
+disappears when you scroll down, and reappears when you scroll
+up. Also, the text is now bigger;
+  • the side navigation bar has been slightly improved, and now
+contains an option to hide all the content, so you can freely
+look at the background;
+  • some of the images showcasing features have been updated;
+  • the dungeon gallery has been improved: it clearly
+communicates when an image is loading, and now directly changes
+the background of the page, so you can view it in full-screen;
+  • the appearance of the changelog section has been drastically
+improved. It now supports some discord formatting (like spoiler
+tags), and it now has a dark color palette to fit the rest of
+the website;
+  • lots of other appearance tweaks!
+&b(11.50.0)&r
+For the update on January 14, 2025
+### Minor New Features:
+• Added a new Zenith F1 Elite Room from Matoreichon!
+• The Winter event has come to a conclusion. We hope you enjoyed
+the festivities! However, a snowstorm still can be seen in the
+horizon... very curious, indeed.
+• Due to the value of the item, the Snow Strand trade has been
+made available year-round at Selholly Sprignos. Accessing this
+trade still requires completion of the quest Snow Man Left
+Behind.
+### Feedback Fixes:
+• The droppers for the plant food in Forum's Conservatory are
+now immune to mobs with Block Break
+• The Lanterns of Truth in Black Mist will now spawn on two
+separate pedestals, to be picked up by separate players
+• ToV no longer shows up in the coreprotect logs; players should
+have access to `/co lookup` on isles again soon; you will also
+no longer find two caches at the same location
+• Elite Finisher Dummy Spawner, and its Turbo version, are now
+silence-immune
+### Bug Fixes:
+• Properly updated the stats of EX Warden's Ruin and Irrus'
+Memory
+• Fixed Void Corruption ignoring immunity frames
+• Fixed mounted mobs failing to teleport during the Vesperidys'
+fight
+• Graves will now teleport above ground if stuck inside a block
+below the Vesperidys' arena
+• SKT Teal arena now has 12 hours in the clock instead of 16
+hours
+• Fixed a stuck spot in the Pink lobby
+• Fixed Fathom's Reach's spawners broken count not resetting on
+PoI respawn
+• Voodoo Bindings (mob that governs Voodoo Command in Hexfall)
+can no longer be silenced, for real this time
+• Fixed a few old Winter advancements still being obtainable
+from 2022 and 2023
+• Exiting a Pink instance no longer takes you to the old Pink
+lobby
+• Fixed a certain hidden room in Exalted Reverie blocking the
+use of White Tesseract
+• The advancement for Oversized's handbook entry is no longer
+hidden on the website
+&bHotfix:&r
+• Fixed chat being spammed for a player upon them simply
+existing in a dungeon shard
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.

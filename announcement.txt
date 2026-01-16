@@ -1,22 +1,7 @@
-If you are having trouble connecting to Monumenta: please ensure
-that you are
-&bNOT&r using `playmonumenta.com`
-NA proxy domains are:
-• `server.playmonumenta.com`
-• `play.playmonumenta.com` (points to `server`)
-• `server-na.playmonumenta.com`
-• `na.playmonumenta.com` (points to `server-na`)
-(Experimental) EU proxy domains are:
-• `server-eu.playmonumenta.com`
-• `eu.playmonumenta.com` (points to `server-eu`)
-The following domains work but are unsupported, as they are
-subject to change if we move hosts:
-• `m##.playmonmumenta.com`
-• `monumenta-##.playmonumenta.com`We're delighted to announce
-that @[Looking for Guild] cocopad has joined Team Monumenta as a
-full developer after leading the Rush of Dissonance
-Overhaul/Rework! https://discord.com/channels/313066655494438922
-/313404193647886337/1430752656997220424
+We're delighted to announce that @[Looking for Guild] cocopad
+has joined Team Monumenta as a full developer after leading the
+Rush of Dissonance Overhaul/Rework! https://discord.com/channels
+/313066655494438922/313404193647886337/1430752656997220424
 We hope you give him only your most kind, respectful
 <:Ping:387017938055593985> s
 &b2026 Monumenta Roadmap&r
@@ -222,4 +207,11 @@ this wonderful community, ones that I expect to have for years
 to come. There's so much more than could fit in a simple goodbye
 message, but all of it meant the world to me.
 A heartfelt thank you to all of our players for supporting the
-game and myself over the years, and have an amazing 2026!
+game and myself over the years, and have an amazing 2026!I'm
+proud to introduce @9o62 and @[MAID] LucyChroma as our newest
+full developers! 9o has been working hard as a member of our
+build team, releasing Anthill & Creeper Tower, as well as an
+important R1 POI rework coming very soon! Lucy has implemented 1
+trillion suggestions and bug fixes, and is working on Gallery
+stability and future upgrade infrastructure.
+As always, 🏓
