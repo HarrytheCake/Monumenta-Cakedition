@@ -1,173 +1,109 @@
-• Iron and gold related blocks can now be mined with any
-pickaxe; using a better pickaxe material will still mine faster,
-however
-• Curse of Lust will now scale from 7 blocks up to 17 blocks,
-reducing damage by a maximum of 80%
-### Twisted Changes:
-• Twisted Shadestepper and Shadestepper Clones charge dodge
-window increased to 15 ticks (from 10)
-• Twisted Shadestepper's Cloaked Strike dodge window increased
-to 30 ticks (from 20), , now deals 60 damage (from 50), and now
-makes a sound when hitting players
-• Enhanced Trickshades no longer apply blindness on hit
-• Gravesoul Haunter no longer applies blindness on hit
-• Twisted Gravecaller no longer casts Grasping Claws during
-Communion Ritual
-• Dark Rune • Scatter now causes Twisted Gravecaller to channel
-it for 2s before returning to normal
-• Dark Rune • Scatter now lasts for 30s (from 15s)
-• Dark Rune • Scatter's pattern has been updated, and Twisted
-Gravecaller cannot cast Twisted  Grasping Claws during its
-duration
-• Twisted Grasping Claws radius reduced to 5 blocks (from 7)
-• Twisted Prosecutor now no longer gains additional damage in
-Dark Pact, and now deals 24 melee damage regardless of its
-current state
-• Fixed a bug where Twisted Prosecutor would deal its melee
-damage through player i-frames
-• Removed Twisted Eagle Eye from Twisted Deadeye
-• Twisted Split Arrow projectile speed reduced by 33%
-• Twisted Ninetails no longer inflicts slowness on dash
-• Twisted Ninetails now deals 2 slashes instead of 4 on its
-basic melee attack, damage per slash is increased to 8 (from 4)
-• Reduced the velocity of Twisted Ninetails jump by 20%
-• Twisted Ninetails walkspeed reduced from 0.35 (from 0.3)
-• Twisted Cloudpiercers now no longer despawn on their own
-• Twisted Cloudpiercer health buffed to 120 (from 75)
-• Twisted Cloudpiercers now deal splash damage• Twisted Bishop
-has been partially reworked.
-Increased HP to 4500 (from 1500)
-Angels now no longer despawn naturally, and killing one deals
-20% of the Bishop's maximum HP
-• Fixed a bug where Twisted Vanguard would activate Brute Force
-on his charge
-### Bug Fixes:
-• Fixed the player selector in the Yellow Dungeon Lobby missing
-some spots
-• Fixed a wrong warp from Labs to the White Lobby
-• Fixed Alchemy Labs' Dungeon Instance Bot not returning players
-to the dungeon
-• Fixed missing punctuation in the message you receive when
-trying to amplify Earth Shrine at a too low level
-• Fixed Kaul Ice Boat Spleef breaking and softlocking players
-easily, and Ice Boat Spleef will be reopened in the update
-• Fixed a starting cage in Kaul Ice Boat Spleef being open
-• Removed some duplicate ~~CBRSCI~~ ~~CBSRCI~~ ~~CBSCRI~~
-CBSRCRI Informants in Creeperjuice
-• Filled several air blocks behind trapdoors in AUC ||"The
-Below" 5x5 puzzle room|| with shroomlights
-• Fixed incorrect text coloring in Celestial Rampart's bounty
-text
-• Removed an extraneous chair in the Celestial Zenith lobby,
-because you only need three
-• Fixed a visual bug when certain code gives the player more
-items than they can carry
-• Fixed typos in A Union Cross compass entries and ||A Union
-Cross: Dark Fate interactions||
-• Fixed a build error in A Union Cross
-• Fixed a typo in Healthful Networking
-• Ellen in Healthful Networking will no longer grant two
-different versions of a quest item from different prompts
-• Removed Herald of Secret Stars Mount and an unobtainable entry
-from Exalted Light Blue's bestiary
-• Added Herald of Secret Stars to the bestiary
-• Mountain Mineshaft's bestiary now displays the correct mobs
-instead of the mobs from an older version of the PoI• Killing a
-Mutated Astral with endurance damage will now properly grant
-bestiary credit
-• Astrals' bullet hell bullets no longer persist when the area
-is unloaded
-• C'Shura now properly grants bestiary credit; your next Sanctum
-completion will update your kill count to your Sanctum
-completions scoreMasquerader's Ruin has been temporarily closed.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-&bHotfix:&r
-• The Harmonious Spirit in the Pink lobby now has dialogue
-again## Monumenta Website Overhaul
-A new and improved version of our website is now live for you
-all to discover!
-Check it out at <https://www.playmonumenta.com>
-There have been a lot of improvements to the code side of
-things, which meant being able to make lots of improvements to
-all the other aspects as well.
-Some of the changes:
-•
-&bCompletely new&r Classes page! You can view all the classes
-just like you would in-game, and even copy and share a direct
-url to the class you're currently viewing.
-• Improved Advancements page:
-  • you can now copy and share the direct url to the profile you
-are currently viewing;
-  • fixed a bunch of errors where content would be displayed
-weirdly or off-screen;
-  • improved mobile experience.
-• Improved Home page:
-  • the header now has a simpler design with just 2 cubes. It
-disappears when you scroll down, and reappears when you scroll
-up. Also, the text is now bigger;
-  • the side navigation bar has been slightly improved, and now
-contains an option to hide all the content, so you can freely
-look at the background;
-  • some of the images showcasing features have been updated;
-  • the dungeon gallery has been improved: it clearly
-communicates when an image is loading, and now directly changes
-the background of the page, so you can view it in full-screen;
-  • the appearance of the changelog section has been drastically
-improved. It now supports some discord formatting (like spoiler
-tags), and it now has a dark color palette to fit the rest of
-the website;
-  • lots of other appearance tweaks!
-&b(11.50.0)&r
-For the update on January 14, 2025
+&bHotfix&r for daily restart:
+• Channel autojoin/visibility settings have been fixed
+&bHotfix&r:
+• Since ToV no longer leaves coreprotect logs, you can now use
+`/co l` on isles
+&bHotfixes&r:
+• Fixed a bug where the automation bot would sometimes stop
+working properly, which broke last night's daily restart
+• Daily restart, and various other bot commands to start/stop
+shards, now respond much faster
+• Added daily restart and scheduled maintenance to the list of
+events in the tab list and https://discord.com/channels/31306665
+5494438922/579190910567317514/1423127983589298226 • the
+formatting may appear strange until tomorrow night's restart
+&bHotfix&r for daily restart:
+• Whisper channels load again
+&b(11.51.0)&r
+For the update on January 21, 2025
+• The Pass of Dissonance has been extended by a week to make up
+for the missing time due to the day-long server outage that
+happened this week. These "Week 14" missions will be of similar
+difficulty as Week 13's missions, and will also provide the same
+point values (100/200/300 MP).
 ### Minor New Features:
-• Added a new Zenith F1 Elite Room from Matoreichon!
-• The Winter event has come to a conclusion. We hope you enjoyed
-the festivities! However, a snowstorm still can be seen in the
-horizon... very curious, indeed.
-• Due to the value of the item, the Snow Strand trade has been
-made available year-round at Selholly Sprignos. Accessing this
-trade still requires completion of the quest Snow Man Left
-Behind.
-### Feedback Fixes:
-• The droppers for the plant food in Forum's Conservatory are
-now immune to mobs with Block Break
-• The Lanterns of Truth in Black Mist will now spawn on two
-separate pedestals, to be picked up by separate players
-• ToV no longer shows up in the coreprotect logs; players should
-have access to `/co lookup` on isles again soon; you will also
-no longer find two caches at the same location
-• Elite Finisher Dummy Spawner, and its Turbo version, are now
-silence-immune
-### Bug Fixes:
-• Properly updated the stats of EX Warden's Ruin and Irrus'
-Memory
-• Fixed Void Corruption ignoring immunity frames
-• Fixed mounted mobs failing to teleport during the Vesperidys'
-fight
-• Graves will now teleport above ground if stuck inside a block
-below the Vesperidys' arena
-• SKT Teal arena now has 12 hours in the clock instead of 16
-hours
-• Fixed a stuck spot in the Pink lobby
-• Fixed Fathom's Reach's spawners broken count not resetting on
-PoI respawn
-• Voodoo Bindings (mob that governs Voodoo Command in Hexfall)
-can no longer be silenced, for real this time
-• Fixed a few old Winter advancements still being obtainable
-from 2022 and 2023
-• Exiting a Pink instance no longer takes you to the old Pink
+• With this weekly update, most race leaderboards have been soft
+reset, something that has been a long time coming at this point.
+This was done due to many factors • primarily because of the
+power of Dark Thunder, as well as player desire from a poll back
+in 2024 (see https://discord.com/channels/313066655494438922/337
+804190648893441/1260453584710008905).
+  • Most race leaderboards have been given a "reasonable
+completion time" that was better than Master time; every player
+who was faster than this time has been moved to it.
+  • With this soft reset, Dark Thunder has been legacied.
+• Added `/mail speeddial`, which keeps the recipients of your
+choice at the top of `/mail`, even when you haven't sent
+anything lately; this also moves mail from those recipients to
+the top of your mail GUI, if there is any
+• World bosses and strikes no longer accept keys if it is too
+close to a scheduled server stop
+• When in a Silver Knight Remnant, left-clicking your compass
+will display the room name and author(s)
+• Updated the book of SKR room credits near the Record-Keeper###
+Bug Fixes:
+• The advancement for Owned's handbook entry is no longer hidden
+on the website
+• Fixed more (and now hopefully all) ways to get to the old Pink
 lobby
-• Fixed a certain hidden room in Exalted Reverie blocking the
-use of White Tesseract
-• The advancement for Oversized's handbook entry is no longer
-hidden on the website
-&bHotfix:&r
-• Fixed chat being spammed for a player upon them simply
-existing in a dungeon shard
+• Removed a (mostly) unobtainable mob from the Rush section of
+the Bestiary
+• Fixed Damage Thresholds for Cloak and Dagger, Heavenly Boon
+and Bloodlust not counting Potion Effects on yourself and the
+enemy.
+  • To account for the class' own effect buffs (may be adjusted
+next balance patch):
+  • Cloak and Dagger 300/450 damage to bosses -> 320/480 damage
+to bosses.
+  • Bloodlust 70/120 damage -> 80/130 damage.
+• Fixed PEB options being mixed up for finisher glow/show
+• Ability Tridents will now (actually) not deal damage and
+knockback
+• Piglins should no longer...
+  • Ignore players in gold
+  • Target players while in stealth
+  • Attack while stunned
+  • Attack wither skeletons### Feedback Fixes:
+• The description of each advancement will now be redacted from
+the API until at least 5 players have obtained it
+• The advancements page on the website now has a "Spoiler
+Toggle" which allows you to see the description of advancements
+you haven't yet completed
+• The Trophies advancement tab on the website now always appears
+golden
+• The description for the "Patron Roguelike Event" trophy
+advancement from 2017 is no longer hidden on the website,
+despite it not meeting the player requirement for revealing the
+description
+• Added Hexfall to the Bestiary
+• Added Octapedal Creeper, Whirling Tempest, Vengeful
+Manifestation, and Tidecaller Orca to the Exalted Yellow
+Bestiary
+• Added Airborne Corruptor and Spirensis Statue to the SKR
+Pelias' Keep bestiary
+• Added Serpensia Berserker to the Exalted Orange Bestiary
+• Added Fortified Warden, Ferocious Warden, Hearthflame Warden,
+and Solitary Warden to the Gray Bestiary, and removed Reliquary
+Warden (old final boss)
+• Updated the display icons for some areas of the Bestiary
+• The untextured "Plain Armor" items no longer have enchantment
+glint
+• Reduced the frequency and volume of Keeper Virtue's and
+Vigilant Mothdragon's ambient sounds
+• Aquamarine will now only borrow your Sticks instead of taking
+them permanently during Woof!.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
+&bNotice&r (missed in changelogs):
+• There is a new set of Community Missions to complete this
+week! As opposed to the previous set back in December, this
+round will last for
+&btwo weeks&r. There is no "big" reward to unlock this time •
+note that the GUI incorrectly claims a new Ice Spleef map will
+come out. Good luck!
