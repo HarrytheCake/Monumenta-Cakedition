@@ -1,21 +1,3 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix&r for daily restart:
-• Channel autojoin/visibility settings have been fixed
-&bHotfix&r:
-• Since ToV no longer leaves coreprotect logs, you can now use
-`/co l` on isles
-&bHotfixes&r:
-• Fixed a bug where the automation bot would sometimes stop
-working properly, which broke last night's daily restart
-• Daily restart, and various other bot commands to start/stop
-shards, now respond much faster
-• Added daily restart and scheduled maintenance to the list of
-events in the tab list and https://discord.com/channels/31306665
-5494438922/579190910567317514/1423127983589298226 • the
-formatting may appear strange until tomorrow night's restart
 &bHotfix&r for daily restart:
 • Whisper channels load again
 &b(11.51.0)&r
@@ -107,3 +89,53 @@ round will last for
 &btwo weeks&r. There is no "big" reward to unlock this time •
 note that the GUI incorrectly claims a new Ice Spleef map will
 come out. Good luck!
+&bHotfix:&r
+• Fixed the daily restart tab list event timing out 10 seconds
+after each chat message
+&bHotfix&r:
+• Week 14, Mission 1's description now matches its requirements
+(1 strike, not 2)
+&b(11.52.0)&r
+For the update on January 28, 2025
+• The Seasonal Pass will be on hiatus for a few weeks. In the
+meantime, about a week remains on the current set of Community
+Missions, and there may be another set directly following the
+current one. The Seasonal Pass will be back soon!
+### Minor New Features:
+• Verdant Fortress and the surrounding area have been fully
+rebuilt!
+• Added a new Zenith F1 Normal Room from uurik
+• The Indigo dungeon and its boss now have music with version
+3.7.0+ of the music pack.
+### Feedback Fixes:
+• Apportation Runes now use the same check for mobs as White
+Tesseract, and will not be blocked by Hunting Companion and the
+like
+• Being banished from a Diamenean Hunt now displays a message in
+chat to yourself and other players in the fight
+• The Advancements page of the website will now show all the
+advancements even without inputting an username
+• Slightly edited the playerhead skin used for Replica Rose Wool
+• Raised the block-breaking hitbox of Pernicious mobs
+• Defiled Carving, Irrus' Memory, Nihilistic Convergence and
+Silver Heart's offhand stats no longer function in mainhand
+• Pride Launcher is now a Firework Star, preventing it from
+being loaded into crossbows
+• Indigo's Gauntlet is no longer affected by Delves
+### Bug Fixes:
+• Fixed Boss Infusion refunds being voided when the player's
+inventory is full
+• Fixed the Rush of Dissonance lobby advancement not being
+granted
+• The Plot Item Salesman's water and lava buckets now clarify
+that they can only be used on plots
+• Arclight and Royal Blue's quest guide entry will no longer
+sometimes incorrectly claim you do not meet the prerequisites
+• SKT Teal arena now has 12 hours in the clock instead of 16
+hours (for real this time)
+• Leaving the Willows lobby for the first time will no longer
+incorrectly unlock the Orange lobby in addition to Willows
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
