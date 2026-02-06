@@ -1,50 +1,3 @@
-&b2026 Monumenta Roadmap&r
-Hello everyone! It's been a year since our last roadmap update,
-so we thought it would be a good time to address some of our
-priorities and upcoming projects as we look towards Monumenta
-development in 2026. This is mainly focused on our larger
-efforts, so if you don't see something here, it doesn't
-necessarily mean it isn't on our radar.
-• Over the last year, we've been rebuilding the early game from
-the ground up to better showcase Monumenta to our new players.
-Along with a full labs & tutorial rework, the swamp overworld
-has been entirely rebuilt with both new and returning pois,
-discoveries, secrets and remastered quests.
-• We're also revitalizing the early game by tweaking dungeon
-rewards & skill point progression, paired with full reworks of
-class ability descriptions for readability and comprehension,
-the return of natural spawns, and more friendly overworld death
-systems.
-• The near future will bring a finale expansion for Star Point,
-wrapping up the main Chapter 3 questline and bringing you face
-to face with the consequences of Aurora's actions within
-Phyrrys!
-• Our next overworld expansion has begun development! It is the
-team's top priority to release with several new POIs and quests
-alongside a traditional dungeon in late 2026. Taking what we've
-learned from the R1 Revamp, we hope to create a richer overworld
-with secrets, challenges and the return of natural spawns. We're
-also designing with expandability in mind, so that new story
-quests and major content can be released post launch without a
-significant build-overhead.
-• We know it's been a little while since there's been any news
-about Exalted dungeons. As 2025 draws to a close, we'll be
-prioritizing the R2 Exalted suite for releases all throughout
-2026, beginning with Lime and Pink early next year.
-• We also haven't forgotten about our next R3 strike release, as
-we're completing the final stages of boss development before
-entering testing. The full release is expected in 2026.
-• One of the most ambitious quests we've ever attempted to
-produce • a large scale "open zone" quest, on the scope of A
-Study in Crimson or beyond. A culmination of nearly two years in
-development aimed to bring several aspects of the story front
-and center, and push them forward into the future.
-• Beyond all the new content with new quests, we're also looking
-back at older quest lines that remain unfinished as of now.
-We're looking to finish at least one storyline, if not more, in
-2026, with the Duchess series being a primary focus to bring to
-a close next year.
-As always, thanks for your patience and support!
 &bZenith Anniversary Event&r
 It's been two years since the Celestial Zenith launched on
 December 16, 2023, and it's once again time to celebrate! Gather
@@ -212,3 +165,14 @@ As always, 🏓
 &bImportant:&r
 Monumenta is currently down for maintenance. Please check
 <#579190910567317514> for the latest information.
+&bRules Update&r
+Market Rules:
+• Items with the "Owned" enchantment are not permitted to be
+sold in the market. This restriction does not apply to rentals.
+• Market stalls that are empty for an extended period of time
+are subject to removal after a warning from Moderators.
+General Rules:
+• Repeatedly AFKing in Strikes without the consent of the party
+is now considered Team Griefing and will carry a short term ban.
+• Making use of AFK spots in World Bosses is disallowed. This
+will result in a warning followed by a ban for repeat offenses.
