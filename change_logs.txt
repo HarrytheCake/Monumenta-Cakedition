@@ -1,82 +1,4 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix:&r
-• Removed a long-broken respawn mechanic related to Verdant
-Fortress from an older version of Unveiled/Highwatch
-&bHotfixes&r:
-• ⁨`/help wiki`⁩ links to the community maintained wiki (pending
-daily restart)
-• The link in ⁨`/help discord`⁩ is now clickable• Wands:
-  • Novice's Wand: 2 -> 2.5 Attack Damage
-  • Weak Wand: 2 -> 2.5 Attack Damage
-  • Flame Wand: 1.5 -> 2 Attack Damage, 2 -> 1 Knockback
-  • Consecrated Wand: 2 -> 1 Smite, 1.5 -> 2.5 Attack Damage
-  • Apprentice's Wand: 3 -> 3.5 Attack Damage
-  • Wand of Storms: +35% -> 30% Spell Power, 2.5 -> 3 Attack
-Damage
-  • Pyromancer's Staff: 3.5 -> 4 Attack Damage
-  • Warped Quarterstaff: 2.5 -> 3 Attack Damage
-  • Elemental Spellblade: 5 -> 5.5 Attack Damage
-  • Alchemic Caster: 2 -> 3 Attack Damage, 2 -> 1 Knockback
-  • Unstable Sparkler: +20% -> +30% Spell Power, 2.5 -> 3 Attack
-Damage, 3 -> 2 Fire Aspect
-  • Molten Fury: +40% -> +35% Spell Power, 2.5 -> 3 Attack
-Damage
-  • Fire Tempest: 3 -> 3.5 Attack Damage
-  • Blackroot's Hatred: 4 -> 5 Attack Damage
-  • Heartwood Wand: 3 -> 3.5 Attack Damage
-  • &oDeveloper Note: Minor adjustments to the power progression
-of wands in Region 1.&r
-### Healing Changes:
-&bHealing Changes:&r
-40% Instant Health is an ancient carry-over from early
-Monumenta. We're now trying to switch to a more flexible and
-less extreme system going forward.
-• New Potion Effect: Health over Time, heals a % of max health
-over a few seconds.
-  • 30% Health / 3s is the same hp/s as 10% Health / 1s.
-  • Quench does not interact with Health over Time.
-• Healing with Instant Health (IH%) or Health over Time (HoT)
-potions now incurs &nHealing Potion Sickness&r for 12 seconds.
-While debuffed, you cannot heal via IH% nor HoT potions.
-• Absorption Potions now incurs &nAbsorption Potion Sickness&r
-for 12s, blocking further potion usage.
-&b(11.53.0)&r
-For the update on February 4, 2025
-### Mage:
-• Arcane Strike:
-  • L1 Damage: 4 + 10% (+2 bonus on fire/slowed) -> 4 + 25% (+1
-bonus)
-  • L2 Damage: 7 + 20% (+3 bonus on fire/slowed) -> 6 + 35% (+2
-bonus)
-  • Added the same attack cooldown leniency that other abilities
-triggering from fully charged hits have. This should make it
-easier to cast Arcane Strike with wands with 1.6 attack speed or
-below.
-  • Now scales off of flat damage from the attack instead of
-attack damage on the wand (now includes smite, slayer, etc.)
-  • Charms:
-    • Lesser Arcane Charm: +15% -> 10% Arcane Strike Damage
-    • Greater Arcane Charm: +30% -> +20% Arcane Strike Damage
-    • Focused Arcane Charm: +45% Arcane Strike Damage -> +35%
-Arcane Strike Damage, +20% -> +15% Arcane Strike Bonus Damage
-    • Explosive Arcane Charm: -10% -> 0% Arcane Strike Cooldown
-    • &oDeveloper Note: The number changes to Arcane Strike
-overall provide an increase in damage for R3 wands, and a
-significant bonus for the dedicated melee wands, so we're
-bringing down the basic charms to the same standard as most
-other charms.&r
-• Spellshock:
-  • 30% Slowness for 0.5s -> 1.5s for clearing static with melee
-  • Charms:
-    • Spark Panel (Rework): 2 Charm Power, +1 Channeling Hits,
-+15% Arcane Strike Damage, +10% Spellshock Melee Amplifier
-    • Sedated Charm of Shock: +20% -> +10% Spellshock Slowness
-Amplifier
-    • Focused Charm of Shock: +20% -> +10% Spellshock Slowness
-Amplifier&nR1 Absorption Potions:&r
+&nR1 Absorption Potions:&r
 • Elemental Resin: Gained Absorption 10% (1:30)
 • Potion of Salvation:  Absorption 40% (0:30) -> Absorption 20%
 (0:20)
@@ -210,3 +132,65 @@ instead of vanilla Speed I
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
+&bNotice&r (missed in changelogs):
+&o Slightly changed the prerequisite for purchasing Chimera's
+Grace. If you've already completed all Hunts unspoiled but can't
+see the trade at Mellini, speak to Tiinah and select the option
+`[I have successfully hunted each of our quarries.]`
+&bHotfix:&r Fixed bugged double dialogue with Tiinah
+&b(11.54.0)&r
+For the update on February 11, 2025
+### Minor New Features:
+• The Gray lobby has been fully rebuilt, thanks to airtankcat!
+• A new Galos-biome combat has been added to the SKR pool, from
+Fireplace
+• A new Galos-biome long combat has been added to the SKR pool,
+from Qweun
+• Added Heartwarming, which automatically smelts mined blocks.
+It can applied onto pickaxes, axes, shovels and hoes by a new
+NPC in the Snow Spirit lobby
+• New posters have been added to the Brown Wool dungeon to help
+keep worker morale and productivity high
+### Healing Potion Changes:
+• Potion of Endurance: 25% -> 30% Health over 4s
+• Potion of Perseverance: 25% -> 30% Health over 4 -> 3s
+• Syrup: 25% Health over 2s -> 3s
+• Phantom's Dew: 25% -> 30% Health over 4s
+• Dichen Energy Brew: Regeneration II 12s -> 9s
+• Strong Dichen Energy Brew: Regeneration III 6s -> 5s
+• Dry-Aged Licorice: 10% Instant Health -> 15% Health over 2s
+### Healing Sickness Changes:
+• Splash and Lingering potions thrown by others no longer
+interact with Sickness
+• Non-potion consumables no longer apply Sickness
+• Fixed Absorption Sickness' warning message
+• Injector's Sickness Blocker now only blocks you from injecting
+potions that would _entirely_ be wasted
+• Injector now informs you of its cooldown### Feedback Fixes:
+• Added a "Random" option for both the big and small firework in
+the Pride Launcher
+• Made Dormant Sequence Scroll a currency
+• Clarified Shifting's Choice utility room's absorption effect
+• Players you've added to your mail speeddial are always shown
+in mail commands, not only when they're online
+• Added Indigo Music to the Record Player's Dungeon Soundtrack
+GUI
+• The "Transmogrificologist" advancement line now specifies
+usage of the King's Valley transmogrifier in their descriptions.
+### Bug Fixes:
+• Fixed Aspect of the Wand not providing its damage increase
+when swapping off of a wand during an ability cast.
+• Fixed an armor stand taking items in Valley
+• Fixed an empty spawner in Briarstone
+• Fixed minor build errors and stuck spots in Farr, Anthill, the
+Azacor lobby and the Valley Overworld
+• Fixed an invulnerable boss and softlock in Death's Swiftness,
+and added an emergency exit
+• Pride Launcher will now always be properly rebuyable after the
+quest (redoing the puzzle locked you out of the trade because of
+a scores issue)
+• Fixed possible unintended behaviour when dying in the Rush
+Hour SKR
+• Worldshaper's Loom's epic purchase message is now correctly
+broadcasted when you purchase Worldshaper's Loom and not Abisso
+AncestraleSKR has been reopened!&r
