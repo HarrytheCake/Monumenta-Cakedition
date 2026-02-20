@@ -1,137 +1,3 @@
-&nR1 Absorption Potions:&r
-• Elemental Resin: Gained Absorption 10% (1:30)
-• Potion of Salvation:  Absorption 40% (0:30) -> Absorption 20%
-(0:20)
-• Potion of Protection: Absorption 40% (1:30) -> Absorption 30%
-(1:00)
-• Divine Potion of Protection: Absorption 50% (1:30) ->
-Absorption 45% (1:30), Magic Resistance 10% (0:05) ->  Magic
-Resistance 10% (0:10)
-• Elixir of the Jaguar Absorption 60% (3:00) -> Absorption 50%
-(3:00)
-&nR1 Health Potions:&r
-• Hot Chocolate: Instant Health 20% -> Healing 20% over 3s
-• Eggnog: Instant Health 20% -> Healing 20% over 3s
-• Minor Healing Vial: Instant Health 20% -> Healing 20% over 4s
-•  Syrup: Instant Health 30% -> Healing 25% over 2s
-• Tlaxan Wine:  Instant Health 30% -> Healing 30% over 4s
-•  Potion of Restoration: Instant Health 40% -> Instant Health
-10%, Regeneration 1 (0:10) -> Healing 20% 4s
-• Sunfish Rum: Waterbreathing (1:30) -> Waterbreathing (2:30)
-• Phantom's Dew: Instant Health 40% -> Healing 25% over 4s
-• Healing Vial: Instant Health 40% -> Healing 30% over 3s
-• Red Potion: Instant Health 40% -> Healing 40% over 4s
-• Revenant's Potion: Instant Health 40% -> Healing 40% over 4s
-• C'Zanil's Transgression: Instant Health 40% -> Instant Health
-30%, Damage 30% (0:10) -> Damage 35% (0:15)
-&nVerdant Remnants Potions:&r
-• No Step Back: Damage 10% (0:15) -> damage 15% (0:15)
-&nR2 Healing Potions:&r
-• Minor Healing Potion:  Instant Health 20% -> Healing 20% over
-4s
-• Potion of Warcry: Instant Health 25% -> Healing 25% over 3s
-• Strong Potion of Warcry: Instant health 30% -> Healing 30%
-over 3s
-• Hangover Cure: Instant Health 20% -> Healing 30% over 5s,
-Regeneration 2 (0:20) -> Regeneration 1 (0:25)
-• Healing Potion: Instant Health 40% -> Healing 30% over 3s
-• Remedial Brew: Instant Health 40% -> Healing 30% over 3s
-• Carapace Champagne: Instant Health 50% -> Instant Health 40%,
-Absorption 50% (1:00) -> Absorption 40% (1:00), Gained Healing
-15% over 10s• Potion of Greater Salvation: Instant Health 40% ->
-Healing 35% over 3s
-• Potion of Redemption: Instant Health 40% -> Healing 40% over
-5s
-&nR3 Healing Potions:&r
-• Potion of Perseverance: Instant Health 40% -> Healing 25% over
-3s, Regeneration 1 (0:15) -> Regeneration 2 (0:05)
-• Potion of Endurance: Instant Health 40% -> Healing 25% over
-4s, Regeneration 1 (0:15) -> Regeneration 2 (0:03)
-• Deepwood Broth: Instant Health 40% -> Instant Health 10%,
-Healing 25% over 6s
-• Arboreal Grandeur: Instant Health 40% -> Instant Health 10%,
-Healing 25% over 6s
-• Agaric Ale: Instant Health 40% -> Instant Health 10%, Healing
-25% over 6s
-• Wolfswood Whiskey: Instant Health 40% -> Instant Health 10%,
-Healing 25% over 6s
-• Champaignon Cider: Instant Health 40% -> Instant Health 10%,
-Healing 25% over 6s
-&nR3 Miscellaneous Potions:&r
-• Usurper's Urn: Healing Rate 20% (40:00) -> Healing Rate 15%
-(40:00)
-We will likely be tuning numbers based on feedback in the near
-future.
-### Region Three Epic Costs:
-R3 has developed to the point we can comfortably swap in Mythic
-Shards in place of Har in Epic trades, as is standard in R1 &
-R2. Fecund Berry Basket, Nihilo Core, Iridium Injector, Bag of
-Hoarding, and armory remain as Har for accessible progression.
-• The Fatekeeper now sells &nMythic Shards&r for 1 Har + 4
-Pulsating Shards
-• Standardized&n Epic Charms&r to 16 Mythic Shards + 48 Epic
-Materials: Silver Strings, Unstable Reactor, Cry Havoc, Coven
-Vial, Hexcrafted Siphon, Final Herald's Lifeblood, Lunacrestum
-Pulsar, Bottled Font of Tuulen, Harrakfar's Roar, Malignant
-Neuron, Parasomnic Remnant, Lacryphagy, Aether Turbine, Rocket
-Boots, Gears of the King, Malhuer Reach, Toxic Steroid,
-Quickening Mycosis, Bewitching Lantern, Lifewood Dew, Ironwood
-Vambrace, Briar of Binding, Serebrian Lineage, Origin of Void,
-Null Agglomerate.
-• Standardized &nEpic Items&r to 24 Mythic Shards + 64 Epic
-Materials: Chimera's Grace, Veilripper, Worldshaper's Loom,
-Alcyoneus, Covenmourn Rend.&nAdditional Item Changes:&r
-• Ruby's Rose : 0 -> 2 Sweeping Edge, 1 -> 2 Fire Aspect
-• Witchbane Revolver (M4) (Rework) : Multi-Load 5, Reflexes 1,
-Retrieval 3, Unbreaking 5, 17.5 Projectile Damage, 1.2
-Projectile Speed, +10% Speed
-### Additional Balance Changes:
-• Lesser Remedy Charm: -7.5% -> -10% Warding Remedy Pulse Delay
-• Greater Remedy Charm: -15% -> -20% Warding Remedy Pulse Delay
-&oDeveloper note: This does not actually change the effect of
-either charm. We've fixed a rounding error with charms that
-modify durations, and as such these charms are being updated to
-act the same as before.&r
-• Rampage now has a 6s cooldown after its duration expires
-• Rampage's base duration is increased to 5s (from 3s)
-&oDeveloper Note: This change aims to reduce the number of times
-rampage needs to be activated in combat, and promote the use of
-Berserker's other abilities.&r
-• Glorious Battle now scales off of critical hit instead of base
-damage.
-  • AoE damage: 50% / 60% -> 30% / 40%
-  • Critical damage: 75% / 90% -> 50% / 60%
--# This does not influence the strength of Glorious Battle.
-### Feedback Fixes:
-• Potion Injector (and Iridium Injector) have undergone backend
-changes, please report any bugs or differences in functionality
-you find with them!
-• Added small platforms to a F1 Zenith room
-• Tweaked pathing of a F3 Zenith room
-• Removed Unbreakable from some Zenith talismans that didn't
-need it
-• Adjusted the price of the Snow Spirit Snowglobe chest trade
-• Added Spiritcatcher Orbs, Totemic Consecration, and Ignition
-Drive lesser charms, and Frog Cannon, to the API
-• Made Frog Cannon a legacy item
-• Added the Equipment Case tag "alch" for alchemist bags
-• Night vision potions now work with quick drink
-• Infinite vanilla effects from potions no longer show particles
-• Aspect of the Wand will no longer change your damage when
-swapping to a different spell power wand during an ability
-cast### Bug Fixes:
-• Fixed some players having non-zero base Knockback Resistance
-• Both basic creeper variants in Brown now have proper sounds
-for taking fall damage, and walking
-• Fixed typos in A Union Cross, A Sirius Problem, Unconventional
-Methods, Guilding Blocks, Dealbreaker, and a bounty message
-• Fixed some broken color formatting in Max's dialogue in Teal
-• Tesseract of the Body (u) now states that it grants +20% speed
-instead of vanilla Speed I
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
 &bNotice&r (missed in changelogs):
 &o Slightly changed the prerequisite for purchasing Chimera's
 Grace. If you've already completed all Hunts unspoiled but can't
@@ -139,7 +5,7 @@ see the trade at Mellini, speak to Tiinah and select the option
 `[I have successfully hunted each of our quarries.]`
 &bHotfix:&r Fixed bugged double dialogue with Tiinah
 &b(11.54.0)&r
-For the update on February 11, 2025
+For the update on February 11, 2026
 ### Minor New Features:
 • The Gray lobby has been fully rebuilt, thanks to airtankcat!
 • A new Galos-biome combat has been added to the SKR pool, from
@@ -193,4 +59,83 @@ a scores issue)
 Hour SKR
 • Worldshaper's Loom's epic purchase message is now correctly
 broadcasted when you purchase Worldshaper's Loom and not Abisso
-AncestraleSKR has been reopened!&r
+AncestraleSKR has been reopened!
+&bValentines Day:&r
+• The holiday of love is here once again! For this week only,
+take on two Kings Valley bounties every day.
+• Psychie is once again offering a Replica Cupid's Bow to anyone
+who can solve her maze over the next 3 weeks.
+These will both be active starting <t:1771002000:R> with the
+start of a new week
+&bHotfixes:&r
+• Added labels to the Gray Lobby's exit gates
+• Fixed a softlock in the Gray Lobby
+• Locked some item frames in the Gray Lobby
+• Fixed closing any booth in gray's lobby closing all booths
+&b(11.55.0)&r
+For the update on February 18, 2026
+### Seasonal Pass:
+• After the dissonance settled, the Seasonal Pass went on a
+small hiatus... until now! Get ready for a rerun of our oldest
+Seasonal Pass from February 2022! The Blackroot Pass returns in
+the
+&bBlackroot Pass: Redux&r Seasonal Pass!
+• This pass features a similar reward track as the original
+pass, tweaked to modern standards. Additionally, cosmetics which
+have already been unlocked previously will have alternate
+rewards, mostly in the form of Metamorphosis Tokens and Treasure
+Wheel Tokens! Additionally, those who already own the Plot
+Border on Tier 25 will get a special trophy... if they manage to
+complete the pass once again!
+• Buying cosmetics from the original Blackroot Pass has been
+disabled until the next Seasonal Pass begins.
+• Head to the Seasonal Lobby to start your adventure • which may
+be quite familiar to older players!
+### Mob Changes:
+• Twisted ||Intruder|| Replicants:
+  • 1.2x -> 1.4x base hp buff
+  • 1.4 -> 1.5x base damage buff
+### Feedback Fixes:
+• Heartwarming can now be applied to any item
+• It has been decided that sneaking isn't very heartwarming, so
+blocks are no longer smelted while sneaking with the
+Heartwarming infusion
+• Barking, Debarking, Rustworthy, Unrustworthy, Wax On, and Wax
+Off no longer apply while sneaking
+• Emblem of the Big Pig can now be used as a helmet vanity
+• Void Slasher now holds 2 frontward facing swords
+• Suncrashing Sovereign's meteor strike and charge spells now
+target the nearest player
+• Dying in the Tlaxan Ziggurat after completing the Winds of War
+race but before entering the White Lobby will respawn you
+outside the ZigguratOre recipe changes:
+• You can now use a stonecutter to turn iron, gold, and copper
+blocks and ingots back into their ore forms
+• To prevent players from exploiting the slowest xp farm ever,
+smelting these ores no longer gives xp
+• You can now smelt blocks of raw iron/gold/copper to save time
+• 9 ingots in the time it takes to smelt 8
+### Quests:
+• Mage's Legacy, Winds of War, A Crew To Remember, The Scout's
+Codex and Snow Man Left Behind have undergone backend changes.
+Report any bugs or unexpected behaviour! Related bugs fixed:
+  • Logging out in the Mage's Legacy cutscene no longer spawns
+you on the roof of the Academy
+  • The Mage's Legacy cutscene no longer breaks if people with
+certain quest progress try to view it at the same time
+  • Fixed unintended behaviour with A Crew to Remember's parrot
+puzzle when leaving the room briefly after starting listening
+  • Fixed the warehouse in The Scout's Codex having a lot less
+enemies than intended
+  • Fixed Laura in The Scout's Codex not giving you the TNT if
+your inventory is full
+  • Using the emergency escape in Snow Man Left Behind's
+cutscene now clears the 3 hours of blindness given
+### Bug Fixes:
+• Chiseled Bookshelves can no longer be stolen from in Adventure
+Mode areas
+• Fixed the gradient in the daily bounty messages
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.&r
