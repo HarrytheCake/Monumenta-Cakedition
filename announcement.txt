@@ -1,20 +1,13 @@
-&bZenith Anniversary Event&r
-It's been two years since the Celestial Zenith launched on
-December 16, 2023, and it's once again time to celebrate! Gather
-your A-team and enter the dungeon with your friends between
-December 10th and December 24th to participate in 6-player
-Zenith!
-Good luck and have fun!Rounding out October and taking us into
-November, we saw the release of the major Rush of Dissonance
-overhaul! Originally released back in 2020, RoD's backend
-technicals and frontend gameplay mechanics had become bulky,
-bloated, and a product of their time. With this fresh coat of
-paint, the systems have become far more stabilized and the
-gameplay refined to reduce focus on spending more and more time
-fighting the same exact encounters over and over, as well as
-diversify and enhance the actual space in which you play the
-encounters! With it, we hope Rush now stands far more prominent
-and keeps you on your toes!
+Rounding out October and taking us into November, we saw the
+release of the major Rush of Dissonance overhaul! Originally
+released back in 2020, RoD's backend technicals and frontend
+gameplay mechanics had become bulky, bloated, and a product of
+their time. With this fresh coat of paint, the systems have
+become far more stabilized and the gameplay refined to reduce
+focus on spending more and more time fighting the same exact
+encounters over and over, as well as diversify and enhance the
+actual space in which you play the encounters! With it, we hope
+Rush now stands far more prominent and keeps you on your toes!
 Finally, we have reached December, where we have had quite the
 jampacked month. Starting it off came the release of the long
 awaited Alchemist, Shaman, and Berserk overhauls! Having taken
@@ -175,4 +168,10 @@ General Rules:
 • Repeatedly AFKing in Strikes without the consent of the party
 is now considered Team Griefing and will carry a short term ban.
 • Making use of AFK spots in World Bosses is disallowed. This
-will result in a warning followed by a ban for repeat offenses.
+will result in a warning followed by a ban for repeat
+offenses.I'm proud to announce @jangbanano  and @[MAID]
+catgirlash_  as the newest Developers! Jang created the newly
+released Sporous Amalgam, and Ash has made many plugin features
+and fixes, including to item stats and cosmetics. Both are
+already involved in future projects that we hope you're looking
+forward to. Don't forget to give them their mandatory 🏓s!

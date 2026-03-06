@@ -1,75 +1,3 @@
-&bHotfixes:&r
-• Added labels to the Gray Lobby's exit gates
-• Fixed a softlock in the Gray Lobby
-• Locked some item frames in the Gray Lobby
-• Fixed closing any booth in gray's lobby closing all booths
-&b(11.55.0)&r
-For the update on February 18, 2026
-### Seasonal Pass:
-• After the dissonance settled, the Seasonal Pass went on a
-small hiatus... until now! Get ready for a rerun of our oldest
-Seasonal Pass from February 2022! The Blackroot Pass returns in
-the
-&bBlackroot Pass: Redux&r Seasonal Pass!
-• This pass features a similar reward track as the original
-pass, tweaked to modern standards. Additionally, cosmetics which
-have already been unlocked previously will have alternate
-rewards, mostly in the form of Metamorphosis Tokens and Treasure
-Wheel Tokens! Additionally, those who already own the Plot
-Border on Tier 25 will get a special trophy... if they manage to
-complete the pass once again!
-• Buying cosmetics from the original Blackroot Pass has been
-disabled until the next Seasonal Pass begins.
-• Head to the Seasonal Lobby to start your adventure • which may
-be quite familiar to older players!
-### Mob Changes:
-• Twisted ||Intruder|| Replicants:
-  • 1.2x -> 1.4x base hp buff
-  • 1.4 -> 1.5x base damage buff
-### Feedback Fixes:
-• Heartwarming can now be applied to any item
-• It has been decided that sneaking isn't very heartwarming, so
-blocks are no longer smelted while sneaking with the
-Heartwarming infusion
-• Barking, Debarking, Rustworthy, Unrustworthy, Wax On, and Wax
-Off no longer apply while sneaking
-• Emblem of the Big Pig can now be used as a helmet vanity
-• Void Slasher now holds 2 frontward facing swords
-• Suncrashing Sovereign's meteor strike and charge spells now
-target the nearest player
-• Dying in the Tlaxan Ziggurat after completing the Winds of War
-race but before entering the White Lobby will respawn you
-outside the ZigguratOre recipe changes:
-• You can now use a stonecutter to turn iron, gold, and copper
-blocks and ingots back into their ore forms
-• To prevent players from exploiting the slowest xp farm ever,
-smelting these ores no longer gives xp
-• You can now smelt blocks of raw iron/gold/copper to save time
-• 9 ingots in the time it takes to smelt 8
-### Quests:
-• Mage's Legacy, Winds of War, A Crew To Remember, The Scout's
-Codex and Snow Man Left Behind have undergone backend changes.
-Report any bugs or unexpected behaviour! Related bugs fixed:
-  • Logging out in the Mage's Legacy cutscene no longer spawns
-you on the roof of the Academy
-  • The Mage's Legacy cutscene no longer breaks if people with
-certain quest progress try to view it at the same time
-  • Fixed unintended behaviour with A Crew to Remember's parrot
-puzzle when leaving the room briefly after starting listening
-  • Fixed the warehouse in The Scout's Codex having a lot less
-enemies than intended
-  • Fixed Laura in The Scout's Codex not giving you the TNT if
-your inventory is full
-  • Using the emergency escape in Snow Man Left Behind's
-cutscene now clears the 3 hours of blindness given
-### Bug Fixes:
-• Chiseled Bookshelves can no longer be stolen from in Adventure
-Mode areas
-• Fixed the gradient in the daily bounty messages
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
 &bHotfix (upon nightly restart):&r Following the 5.11.0 resource
 pack update, two new hope skins have been added to Mastersmith
 Antonio's shop! Thank you very much to our patrons for you
@@ -176,3 +104,84 @@ of 3
 • Added a temporary trader next to Tiinah to upgrade MW2
 versions to MW3
 • You can no longer unmasterwork the MW3 version
+&b(11.57.0)&r
+For the update on March 4, 2026
+### Minor New Features:
+• Added a new infusion, Ammunition, that allows selection of a
+preferred arrow type on a projectile weapon, applied at Ekah.
+Thanks to a very syrupy community member (PacificLegend) for
+coding this infusion.
+• The cooldowns of abilities with charges now take into account
+modifiers (Aptitude, Ineptitude, cooldown reduction effects,
+etc.) when each charge is used instead of when the previous
+charge came off cooldown
+• Percent cooldown reduction (Swiftness, Ignition Drive,
+Windwalker Starblood Ichor) now uses the real initial cooldown
+instead of using stats at the time of reduction
+• Replaced all Mycotoxicosis at masterwork 2 with MW3
+&oDeveloper note: The item was meant to start at MW3, but due to
+a mixup was accidentally sold at MW2, which caused masterwork
+issues since Hunts items start at MW3.&r
+• Beast's Claw no longer launches you
+• Beast's Claw has received a minor range increase
+• The charm stat Beast's Claw Velocity has been converted into
+Beast's Claw Range
+### Sporous Amalgam Changes:
+• Increased resistance when not uprooted
+• Decreased vulnerability when uprooted, which now also scales
+negatively with player count
+• Uproot: 30 -> 50 damage, fixed requirement for vulnerability
+phase being looser than intended
+• Spore Release: 60 melee -> 80 blast damage, now does half
+damage if hit multiple times, adjusted particles, fixed death
+message having the wrong spell name
+• Spore Shower: 60 -> 90 damage (not in last phase), adjusted
+particles
+• Spore Lasers: 35 -> 45 damage
+• Removed temporary increase spawn rate for Sporous Amalgam
+### Balance Changes:
+• Hekawt Phase 1 melee damage: 30 -> 40
+• Hekawt Phase 2/3 melee damage: 67 -> 40
+• Kaul's Lightning Storm 0.5s -> 1s cooldown per player
+• Shield Wall will no longer trigger Reflexes
+• Ghastcaller's Gunblade: Knockback 0 -> 1### Feedback Fixes:
+• Upcoming events in the tab list are now displayed in minutes
+and seconds instead of total seconds when needed
+• SKR scroll "beam of light hint" particles are now all in the
+"own_active" particle category (previously the beam was
+"own_active" and the colored spirals indicating distance were
+"enemy")
+• Sporous Amalgam now rewards Brown Mushroom Blocks to have
+different block rewards than Godspore
+• Slightly tweaked the description of Decay and Spell Power
+### Bug Fixes:
+• Fixed ||Mycotoxicosis|| MW3 losing a level of ||Sweeping
+Edge||
+• Fixed Windwalker Starblood Ichor not updating cooldowns if the
+player is silenced
+• You can no longer scroll past the end of the rewards page of
+the season pass
+• Fixed the lower area of Tlaxan Ziggurat not being considered
+part of Tlaxan Ziggurat
+• Fixed Decay not reducing its duration when applied with non-
+fully charged melee hits
+• Fixed Quickdraw triggering aspect enchantments from both the
+item held when the damage is dealt and when the ability is used
+(instead of just when the ability is used)
+• Fixed Sporous Amalgam advancement being misnamed
+• Updated Celerity advancement
+• Fixed Unbound Eternal Shroud having 1 less Feather Falling
+than Departure
+• Fixed a three-year-old bug that disabled higher precision
+quest compass particles while moving
+• Fixed cerebral outburst casting in the air in Twisted
+||Intruder||'s final phase
+• Prevented Knockback from working on armor stands
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&bHotfix:&r
+• The teleporter to the White Wool Dungeon's lobby in the Tlaxan
+Ziggurat now works again. (The area may need to unload and load
+again first for this to apply.)
