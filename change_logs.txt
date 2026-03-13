@@ -1,103 +1,3 @@
-&bHotfix (upon nightly restart):&r Following the 5.11.0 resource
-pack update, two new hope skins have been added to Mastersmith
-Antonio's shop! Thank you very much to our patrons for you
-continued support!
-&o&nNote:&r CelicaWolf's new skin is applied at the shop to a
-Potion Injector, however the texture property is labeled for
-Heart of the Jungle. The property file will be corrected to
-align with the shop upon the next resource pack update, but you
-may pre-emptively apply the hope enchantment prior.
-&b&r(11.56.0)&r
-For the update on February 25, 2026
-### Sporous Amalgam
-• A new quarry has been spotted in the Ring! Meet veteran hunter
-Berteau in the Diamenean Lodge to learn about the Sporous
-Amalgam and its unique mechanics.
-• Sporous Amalgam will be added into the pool for Hunts quarries
-right after the update and for the next week, Sporous Amalgam
-will be hunted if the previous quarry hunted was not Sporous
-Amalgam.
-• Other than that, Sporous Amalgam will be treated the same as
-other Diamenean Hunts bosses: new items are available to
-purchase from Tiinah using the loot from the boss, and players
-who did not already complete all quarries unspoiled will need to
-complete Sporous Amalgam unspoiled in order to unlock the epic
-and infusion (players who already had access will not have it
-revoked).
-### Minor New Features:
-• /stuck is now enabled in playerplots, and will send you to the
-spawnpoint of the plot
-• The Harmonic Arboretum has received some minor tweaks to the
-dungeon's progression to better convey its story. The changes
-will only apply to instances created after this weekly update.
-• The Staff? now requires R1 Monument completion. This does not
-affect players who have already started or completed the quest
-and do not have a marked Monument completion.
-• To improve the worldbuilding of the Chillwind continent, a
-number of magical crystals found around the land have been
-damaged or destroyed.
-### Mob Changes:
-• Kaul has received a few changes:
-  • Earths Wrath has a circular hitbox now, and has an updated
-visual
-  • Arachnopocalypse now has telegraphs for its spider spawn
-locations
-  • Primordial bolt only shows explosion particles when breaking
-blocks
-  • Primordial bolt's charge-up bossbar now uses green instead
-of gold text colour
-  • Ground surge will not re-target another player already
-targeted by the initial cast
-  • Earthen Rupture now also uses block displays for its
-visuals• Twisted ||Intruder||:
-  • Fixed typos in charge-up bossbars
-  • Give damage immunity for 1s after cognitive distortion
-  • Fixed Teleporting out of Cognitive Distortion with thunder
-step (u)
-### Feedback Fixes:
-• Updated various armor stands to be more skeletal
-• Gravity Well 2s -> 2.5s charge-up, improved telegraph
-• Fixed Soul Shackle bossbar showing for all players
-• Soul Shackle bossbar now tells you the time remaining in its
-name
-• Removed the unused doors hidden behind Wispervale
-### Bug Fixes:
-• You can no longer die in front of ||Ekah||
-• Fixed Divine Justice appearing in the Ability Hotbar bossbar
-even when not enhanced
-• Fixed Fathom's Reach's spawners missing the particle effects
-used to mark special spawners
-• Fixed accidentally registering arbitrary `/c#` shortcuts as
-`/c`
-• Fixed inverted Teleporter Cutoffs option in PEB
-• Fixed inverted Trade Organisation option in PEB
-• Fixed Server Information page being incorrectly titled  "Sound
-Categories"
-• Fixed Cave of Secrets advancement coordinates being out of
-date
-• Reconstructed Brown Corp hangout spot #35.
-• Fixed a stuck spot in Sierhaven
-• Corrected an interaction area for one of the TNT charges
-during Scout's Codex
-• Updated the Scout's Codex compass to give no more wrong world
-warnings
-• Fixed a hidden interaction with the Dissonant Soul.
-• Fixed Heartwarming working on items that are not in your main
-hand
-• Entering the Darkest Depths or Celestial Zenith will no longer
-carry over attributes from your passives
-_Dev Note: There was a misconception that Aspect of the Axe was
-bugged to give an additional 15% ASPD. In reality, this was
-probably caused by players equipping speedsets to get around to
-the zenith lobby faster, which had swiftness 2 for the jump
-boost, which had the 15% ASPD bonus..._
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix:&r
-• Fix a bug with Kauls Judgement which suffocated players and
-did not return them to the normal arena
 &bHotfix:&r
 • Fixed Tiinah selling ||Mycotoxicosis|| at masterwork 2 instead
 of 3
@@ -185,3 +85,83 @@ and select `I want to unlock this shop`.
 • The teleporter to the White Wool Dungeon's lobby in the Tlaxan
 Ziggurat now works again. (The area may need to unload and load
 again first for this to apply.)
+&bHotfix (for daily restart):&r
+• Fix Tactical Maneuver and Wind Walk's charges using up too
+many charges
+• Fix charge display on Unoffical Monumenta Mod's Ability Icons
+• Fix Kaul's Putrid Plague spell randomly silently failing
+&bToV Hotfixes (for daily restart):&r
+• It should no longer be possible to prevent ToV caches from
+despawning
+• If a ToV cache from a previous cycle failed to despawn, you
+will no longer be able to open it
+• We now have the ability to disable ToV without closing the
+`isles` shard
+Some clarifications for the rest of this weekly update:
+• We do not have a good way to clean up previous ToV caches;
+they will stick around until they are selected again. This may
+make the ToV hunt for the rest of this update more confusing.
+• ToV is temporarily inaccessible until <t:1773032400:t>; there
+should be no message about ToV caches respawning at this time,
+however there should still be a fresh set of caches from the
+previous respawn cycle after this testing has concluded.### Bug
+Fixes
+• You can no longer keep Gallery health/speed buffs outside of a
+run
+• Fixed an issue where Newborn Islands had a missing attack
+sound
+• Fixed further issues with the Warehouse in The Scout's Codex
+• Fixed potential issues with the cutscene in Mage's Legacy
+• Removed a Zealot from a certain tower
+• Fixed respawn issues with Tlaxan Ziggurat
+• The Tlaxan Ziggurat can once again be conquered
+• Fixed incorrect charge and cooldown data being sent to UMM for
+abilities with multiple charges
+• Fixed Curse of Impatience putting abilities on cooldown
+multiple times instead of just adding to the cooldown
+• Fixed Encore restarting the cooldown of the ability it is used
+on
+• Fixed Whirlwind not working and playing a very loud sound
+• Fixed Multiplicity not refunding cooldown for the third spell
+cast
+• Fixed Bottled Sunlight not coming off cooldown if the bottle
+despawns after not being picked up
+&b(11.58.0)&r
+For the update on March 11, 2026
+### Minor New Features:
+• Advancements are now sorted in a defined order, rather than
+the default behavior of shuffling randomly on every restart
+(thanks mojang...)
+• Updated the display icons for several advancements
+• Ammunition is now explained when you talk to Ekah
+• Added an Enchantopedia entry for Ammunition
+• Architect Token (r3 starter gear item) now gives a Dichen
+Alchemist's Bag if you picked Alchemist
+• Added Basidiome Truffle, Fermented Spores, Dormant Spores to
+API
+### Feedback Fixes
+• Kaul win cutscene shortened from 20 to 5 seconds
+• The teleporter to Light Gray's loot room now works with the
+pressure plate placed directly on the command block, not just on
+top of a block above the command block
+• Curse of Ephemerality no longer has levels
+• Items with Spiritshot now destroy themselves when dropped
+  • Freedom: Curse of Ephemerality 2 -> 1
+• Reclassified Technique, Wind Aspect, Fractal, and Reverb's
+particles to OWN_ACTIVE
+• Updated the particles of Brutal Alchemy and reclassified them
+to OWN_ACTIVE
+• Fishing Minigames and SKR Scroll particles no longer respect
+particle settings, and always play in full
+### Sporous Amalgam Changes
+• Spore Infection has received a nerf in its base Spore
+infliction as well as its scaling. Also received visual
+improvements and timers have been tweaked.
+• Uproot has received an increase to its leniency.
+• The HP and resistance scaling of the boss have been tweaked to
+decrease fight length
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• The Gallery of Fear has been reopened.

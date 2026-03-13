@@ -1,41 +1,10 @@
-Rounding out October and taking us into November, we saw the
-release of the major Rush of Dissonance overhaul! Originally
-released back in 2020, RoD's backend technicals and frontend
-gameplay mechanics had become bulky, bloated, and a product of
-their time. With this fresh coat of paint, the systems have
-become far more stabilized and the gameplay refined to reduce
-focus on spending more and more time fighting the same exact
-encounters over and over, as well as diversify and enhance the
-actual space in which you play the encounters! With it, we hope
-Rush now stands far more prominent and keeps you on your toes!
-Finally, we have reached December, where we have had quite the
-jampacked month. Starting it off came the release of the long
-awaited Alchemist, Shaman, and Berserk overhauls! Having taken
-much of our class team's focus for some time, these reworks
-aimed to more heavily refine and refocus the gameplay aspects
-that are most enjoyed about these classes, while cutting fluff
-and areas that didn't quite mesh. Following it off and wrapping
-the year out, we saw the release of A Union Cross, our largest
-and most ambitious quest to-date! The time has come to delve
-into the latest threat arising in the dreamscape, and unlock
-secrets of the past that have eluded you until now!
-And with that, 2025 has come to a wrap! This has been a
-phenomenal year for the game, and we didn't even have time to
-discuss so many other notable releases this year like Quest
-Resetting, the Friend System, Author Races, the Quest Compass
-Overhaul, Skill Description Rewrites, and more Region 1
-Overworld and POI overhauls than you can shake a stick at! We
-have come so far this year, and we can't wait for you all to see
-what we have in store for 2026!
-Thank you all for taking this journey with us! We wish you all
-very Merry Christmas, and a Happy New Year!In April, we took to
-focusing on some backend technical aspects of the game,
-specifically in regards to guilds! Not only were several QoL
-features added, but after many long years, guild plots were
-finally moved to their own shard/world instancing system! This
-crucial shift helped us expand well beyond the spacial
-limitations of the previous system, allowing us to eye an
-increase in player count without any worry!
+In April, we took to focusing on some backend technical aspects
+of the game, specifically in regards to guilds! Not only were
+several QoL features added, but after many long years, guild
+plots were finally moved to their own shard/world instancing
+system! This crucial shift helped us expand well beyond the
+spacial limitations of the previous system, allowing us to eye
+an increase in player count without any worry!
 May saw the year's final dedicated boss release, the Twisted
 Intruder! In one of the darkest and most twisted encounters in
 the game, you are forced to face untold nightmares that lie in
@@ -175,3 +144,17 @@ released Sporous Amalgam, and Ash has made many plugin features
 and fixes, including to item stats and cosmetics. Both are
 already involved in future projects that we hope you're looking
 forward to. Don't forget to give them their mandatory 🏓s!
+&bRules Update&r
+• Chest Waypoints such as those in MMA are no longer permitted
+on Monumenta.
+  • The reason for this change is that chest waypoints have
+reached the point of being indistinguishable from ChestESP in
+both form and function.
+  • Waypoints are still allowed for non-chest purposes such as
+PoI locations.
+  • Treasures of Viridia chest waypoints are exempt from this
+rule.
+  • Enforcement of this rule will begin as a reminder and will
+become more strict over time.
+• Anti-Blindness Mods and Resource Packs are no longer permitted
+on Monumenta.
