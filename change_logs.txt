@@ -1,111 +1,4 @@
-&bHotfix:&r
-• Fixed Tiinah selling ||Mycotoxicosis|| at masterwork 2 instead
-of 3
-• Added a temporary trader next to Tiinah to upgrade MW2
-versions to MW3
-• You can no longer unmasterwork the MW3 version
-&b(11.57.0)&r
-For the update on March 4, 2026
-### Minor New Features:
-• Added a new infusion, Ammunition, that allows selection of a
-preferred arrow type on a projectile weapon, applied at Ekah.
-Thanks to a very syrupy community member (PacificLegend) for
-coding this infusion.
-• The cooldowns of abilities with charges now take into account
-modifiers (Aptitude, Ineptitude, cooldown reduction effects,
-etc.) when each charge is used instead of when the previous
-charge came off cooldown
-• Percent cooldown reduction (Swiftness, Ignition Drive,
-Windwalker Starblood Ichor) now uses the real initial cooldown
-instead of using stats at the time of reduction
-• Replaced all Mycotoxicosis at masterwork 2 with MW3
-&oDeveloper note: The item was meant to start at MW3, but due to
-a mixup was accidentally sold at MW2, which caused masterwork
-issues since Hunts items start at MW3.&r
-• Beast's Claw no longer launches you
-• Beast's Claw has received a minor range increase
-• The charm stat Beast's Claw Velocity has been converted into
-Beast's Claw Range
-### Sporous Amalgam Changes:
-• Increased resistance when not uprooted
-• Decreased vulnerability when uprooted, which now also scales
-negatively with player count
-• Uproot: 30 -> 50 damage, fixed requirement for vulnerability
-phase being looser than intended
-• Spore Release: 60 melee -> 80 blast damage, now does half
-damage if hit multiple times, adjusted particles, fixed death
-message having the wrong spell name
-• Spore Shower: 60 -> 90 damage (not in last phase), adjusted
-particles
-• Spore Lasers: 35 -> 45 damage
-• Removed temporary increase spawn rate for Sporous Amalgam
-### Balance Changes:
-• Hekawt Phase 1 melee damage: 30 -> 40
-• Hekawt Phase 2/3 melee damage: 67 -> 40
-• Kaul's Lightning Storm 0.5s -> 1s cooldown per player
-• Shield Wall will no longer trigger Reflexes
-• Ghastcaller's Gunblade: Knockback 0 -> 1### Feedback Fixes:
-• Upcoming events in the tab list are now displayed in minutes
-and seconds instead of total seconds when needed
-• SKR scroll "beam of light hint" particles are now all in the
-"own_active" particle category (previously the beam was
-"own_active" and the colored spirals indicating distance were
-"enemy")
-• Sporous Amalgam now rewards Brown Mushroom Blocks to have
-different block rewards than Godspore
-• Slightly tweaked the description of Decay and Spell Power
-### Bug Fixes:
-• Fixed ||Mycotoxicosis|| MW3 losing a level of ||Sweeping
-Edge||
-• Fixed Windwalker Starblood Ichor not updating cooldowns if the
-player is silenced
-• You can no longer scroll past the end of the rewards page of
-the season pass
-• Fixed the lower area of Tlaxan Ziggurat not being considered
-part of Tlaxan Ziggurat
-• Fixed Decay not reducing its duration when applied with non-
-fully charged melee hits
-• Fixed Quickdraw triggering aspect enchantments from both the
-item held when the damage is dealt and when the ability is used
-(instead of just when the ability is used)
-• Fixed Sporous Amalgam advancement being misnamed
-• Updated Celerity advancement
-• Fixed Unbound Eternal Shroud having 1 less Feather Falling
-than Departure
-• Fixed a three-year-old bug that disabled higher precision
-quest compass particles while moving
-• Fixed cerebral outburst casting in the air in Twisted
-||Intruder||'s final phase
-• Prevented Knockback from working on armor stands
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix:&r
-• The teleporter to the White Wool Dungeon's lobby in the Tlaxan
-Ziggurat now works again. (The area may need to unload and load
-again first for this to apply.)
-&bHotfix (for daily restart):&r
-• Fix Tactical Maneuver and Wind Walk's charges using up too
-many charges
-• Fix charge display on Unoffical Monumenta Mod's Ability Icons
-• Fix Kaul's Putrid Plague spell randomly silently failing
-&bToV Hotfixes (for daily restart):&r
-• It should no longer be possible to prevent ToV caches from
-despawning
-• If a ToV cache from a previous cycle failed to despawn, you
-will no longer be able to open it
-• We now have the ability to disable ToV without closing the
-`isles` shard
-Some clarifications for the rest of this weekly update:
-• We do not have a good way to clean up previous ToV caches;
-they will stick around until they are selected again. This may
-make the ToV hunt for the rest of this update more confusing.
-• ToV is temporarily inaccessible until <t:1773032400:t>; there
-should be no message about ToV caches respawning at this time,
-however there should still be a fresh set of caches from the
-previous respawn cycle after this testing has concluded.### Bug
-Fixes
+### Bug Fixes
 • You can no longer keep Gallery health/speed buffs outside of a
 run
 • Fixed an issue where Newborn Islands had a missing attack
@@ -165,3 +58,80 @@ decrease fight length
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 • The Gallery of Fear has been reopened.
+&bHotfix:&r
+• ToV chests &oactually&r despawn consistently now
+&b(11.59.0)&r
+For the update on March 18, 2026
+### Minor New Features:
+• New burrows have appeared in Pelias' Keep.
+• Cooldown increase/decrease effects are now listed as +/-X%
+Ability Cooldowns (and are now colored correctly instead of
+always being green)
+• Cooldown increase and decrease potion effects now apply
+multiplicatively with each other instead of being added together
+first (this is not a significant change; it is rare to have both
+potion effects active at once)
+### Feedback Fixes:
+• Added /plot leave [player], to revoke your access to other
+people's playerplots
+• The Knockback enchantment now applies in the direction you are
+facing, instead of the direction between you and the mob
+• Added Twisted Intruder to the list of leaderboards for weekly
+update purposes
+• Bottled Sunlight no longer restarts its cooldown when it is
+picked up
+• Reduced  the amount of damage indicator particles from
+meleeing mobs
+• Abhorrent Hallucination now has a fresh new look
+• Snowi at the Winter Embassy and the Silver Knight Remnants
+Record-Keeper now directly act as traders instead of being
+surrounded by hidden villagers### Bug Fixes:
+• Fixed Earthen Wrath applying cooldown modifiers at the time
+when the cooldown starts instead of when the ability is cast
+• Hans can no longer permanently remove your ability to reset
+quests
+• Fixed Twisted ||Intruder|| respawning after a restart and
+allowing you to start another boss
+• Fixed Dissonance plot border having an open sky roof. (Swap
+and swap-back your plotborder to see fix)
+• Locked more item frames in Gray's lobby
+• Legionary now works on Failed Dragons in Blue
+• Fixed a stuck spot in Black Mist's lobby
+• Fixed an explosive trap in Ex Light Blue
+• Fixed R2 potions in brewing stands in nskt and sskt
+• Fixed SKR Tarkir Arboretum showing bedrock boxes of other
+rooms
+• Fixed an item frame appearing in Blackthread Vault
+• Fixed bedrock appearing in Amped Overgrown Cave
+• Fixed AWOL barriers in AUC
+• Fixed gravity defying seagrass in Bandit Stronghold
+• Manaflowers in Ex Light Blue are now the correct level of
+magical
+• Anthill is no longer made of wool
+• Fathom's Reach is now slightly wetter
+• Pirate Corpse in Mistport will no longer steal your items, as
+it is dead
+• Guns in Hunts Lodge will no longer steal your items, as they
+are guns
+• Increased instaboom population in Orange and removed some
+vanilla creeper spawners
+• Deepbound Paladins once again have melee attack damage
+• Attempted to fix Twisted Gravecaller's Gravesoul Haunter not
+despawning upon death
+• Fixed a bug causing some particles to not show for Thunder
+Step and Bursting Roots
+• Fixed stuck spots outside the Ring SKT entrance
+• Fixed the Crimson/Teal wool next to Sevvet not being animated
+• Fixed invisible mobs becoming visible when silenced
+• Fixed invisible mobs being visible for 1 tick when spawned
+• Fixed Beast's Claw description and adjusted its inner hitbox
+to better match the swipe's arc
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.The Twisted ||Intruder||
+has been temporarily closed.The Twisted ||Intruder|| has been
+re-opened.
+&bHotfix: (for daily restart)&r
+• Fixed Abhorrent Hallucination appearing in the floor
+• Fixed Abhorrent Hallucination not teleporting
