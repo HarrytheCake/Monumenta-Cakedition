@@ -1,91 +1,4 @@
-### Bug Fixes
-• You can no longer keep Gallery health/speed buffs outside of a
-run
-• Fixed an issue where Newborn Islands had a missing attack
-sound
-• Fixed further issues with the Warehouse in The Scout's Codex
-• Fixed potential issues with the cutscene in Mage's Legacy
-• Removed a Zealot from a certain tower
-• Fixed respawn issues with Tlaxan Ziggurat
-• The Tlaxan Ziggurat can once again be conquered
-• Fixed incorrect charge and cooldown data being sent to UMM for
-abilities with multiple charges
-• Fixed Curse of Impatience putting abilities on cooldown
-multiple times instead of just adding to the cooldown
-• Fixed Encore restarting the cooldown of the ability it is used
-on
-• Fixed Whirlwind not working and playing a very loud sound
-• Fixed Multiplicity not refunding cooldown for the third spell
-cast
-• Fixed Bottled Sunlight not coming off cooldown if the bottle
-despawns after not being picked up
-&b(11.58.0)&r
-For the update on March 11, 2026
-### Minor New Features:
-• Advancements are now sorted in a defined order, rather than
-the default behavior of shuffling randomly on every restart
-(thanks mojang...)
-• Updated the display icons for several advancements
-• Ammunition is now explained when you talk to Ekah
-• Added an Enchantopedia entry for Ammunition
-• Architect Token (r3 starter gear item) now gives a Dichen
-Alchemist's Bag if you picked Alchemist
-• Added Basidiome Truffle, Fermented Spores, Dormant Spores to
-API
-### Feedback Fixes
-• Kaul win cutscene shortened from 20 to 5 seconds
-• The teleporter to Light Gray's loot room now works with the
-pressure plate placed directly on the command block, not just on
-top of a block above the command block
-• Curse of Ephemerality no longer has levels
-• Items with Spiritshot now destroy themselves when dropped
-  • Freedom: Curse of Ephemerality 2 -> 1
-• Reclassified Technique, Wind Aspect, Fractal, and Reverb's
-particles to OWN_ACTIVE
-• Updated the particles of Brutal Alchemy and reclassified them
-to OWN_ACTIVE
-• Fishing Minigames and SKR Scroll particles no longer respect
-particle settings, and always play in full
-### Sporous Amalgam Changes
-• Spore Infection has received a nerf in its base Spore
-infliction as well as its scaling. Also received visual
-improvements and timers have been tweaked.
-• Uproot has received an increase to its leniency.
-• The HP and resistance scaling of the boss have been tweaked to
-decrease fight length
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• The Gallery of Fear has been reopened.
-&bHotfix:&r
-• ToV chests &oactually&r despawn consistently now
-&b(11.59.0)&r
-For the update on March 18, 2026
-### Minor New Features:
-• New burrows have appeared in Pelias' Keep.
-• Cooldown increase/decrease effects are now listed as +/-X%
-Ability Cooldowns (and are now colored correctly instead of
-always being green)
-• Cooldown increase and decrease potion effects now apply
-multiplicatively with each other instead of being added together
-first (this is not a significant change; it is rare to have both
-potion effects active at once)
-### Feedback Fixes:
-• Added /plot leave [player], to revoke your access to other
-people's playerplots
-• The Knockback enchantment now applies in the direction you are
-facing, instead of the direction between you and the mob
-• Added Twisted Intruder to the list of leaderboards for weekly
-update purposes
-• Bottled Sunlight no longer restarts its cooldown when it is
-picked up
-• Reduced  the amount of damage indicator particles from
-meleeing mobs
-• Abhorrent Hallucination now has a fresh new look
-• Snowi at the Winter Embassy and the Silver Knight Remnants
-Record-Keeper now directly act as traders instead of being
-surrounded by hidden villagers### Bug Fixes:
+### Bug Fixes:
 • Fixed Earthen Wrath applying cooldown modifiers at the time
 when the cooldown starts instead of when the ability is cast
 • Hans can no longer permanently remove your ability to reset
@@ -135,3 +48,79 @@ re-opened.
 &bHotfix: (for daily restart)&r
 • Fixed Abhorrent Hallucination appearing in the floor
 • Fixed Abhorrent Hallucination not teleporting
+&bHotfix:&r (for daily restart)
+• Fixed the colors of custom effects shown in the tab list
+&b(11.60.0)&r
+For the update on March 25, 2026
+### Major New Features:
+• Dissonance stirs in the Isles... A new story is waiting to be
+told.
+### Minor New Features:
+• Added a new Delve artifact
+• Dread Admiral Elise now drops a Lantern of Truth upon death
+• Gave Heart of Astaroth a hookshot
+• Gave Astaroth a damage buff in phase 2
+• Added a chest to normal Reverie
+• Moved the Sirius teleport to Chantry of Repentance for
+consistency and in preparation for upcoming renovations
+• Added wallet integration into the vanilla trade gui
+### Advancements:
+• Trophies Tab: Valentine's Day 2022 is now hidden by default
+• Challenges Tab: Kaul, Azacor, Snow Spirit, Headless Horseman
+and Headless Horseman (Solo) are now hidden by default
+• Handbook Tab: Enchantment "Categories" no longer send messages
+for unlocking them
+• Removed Toasts from some advancements: Trophies (Root), R1
+Quests (Root), R2 Quests (Root), R3 Quests (Root), R1 Dungeons
+(Root), R2 Dungeons (Root), R3 Dungeons (Root), Handbook (Root)
+and the R1, R2, R3 roots in Handbook -> Important Locations
+-# Some of these are automatically granted, some of these are
+granted alongside others. Nothing is lost here, as these only
+serve as categories in the GUI.### Feedback Fixes:
+• You can now return to the Dissonant Realm from the ending of
+Pink
+• White's fan now plays on the Ambient volume slider instead of
+the Master volume slider
+• Various sound effects in Pink now play on the Player volume
+slider instead of the Master volume slider
+• The dialogue prompt to teleport to the Zenith lobby from
+Constellation Tower is now more lenient with "You moved too far
+away to be heard"
+• Updated `/help rp` and other resource pack-related messages to
+link to the official modpack and be more concise
+• Removed the "Resource Packs" NPC from the New Player Nexus
+• Abandoning Indigo instances now also abandons your delve
+bounty if it was started on a previous week
+• Revoked refund trades for R3 epic charms changed 3 months ago
+• Revoked Mist's Wake refund trade
+• Waterlogged barriers around Black Mist lobby
+• Most Frostborn abilities now place snow instead of ice
+### Bug Fixes:
+• Removed two empty and invisible item frames from Gray's lobby
+• Fixed the trade for Rat of Life not accepting Raw Rats
+properly
+• Fixed minor build errors in Hexfall, SKR Briarstone, Borrowed
+Time quest area
+• Fixed minor dialogue issues in Cadeus' dialogue, Breachpoint's
+Quest Guide, Starrier Night, City Planner
+• Fixed SKR Drillsite Cliff's book being unobtainable
+• Fixed issues with the Magistruction and Core of Balance
+lecterns in Forum
+• Fixed an ancient bug where Crimson Contract can sometimes
+lower the stored XP by 1 every usage
+• Fixed the Snow Spirit Snowglobe trade not working... again.
+Only chests obtained starting now will work for the trade
+• The White Tesseract can now be used in the Sporous Amalgam
+arena
+• Fixed the Winds of War Vault "Leave the Vault" button killing
+you instead of teleporting you
+• Fixed a stuck spot in the Exalted hub
+• Patched up some bedrock in Pink• Fixed some spacing errors in
+the Echoes of Oblivion cutscene.
+• It should no longer be possible to fall past the teleport
+trigger into Yellow's nightmare section
+• Fixed a stuck spot in the Zenith lobby
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.

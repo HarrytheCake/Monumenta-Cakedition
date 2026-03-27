@@ -1,41 +1,11 @@
-In April, we took to focusing on some backend technical aspects
-of the game, specifically in regards to guilds! Not only were
-several QoL features added, but after many long years, guild
-plots were finally moved to their own shard/world instancing
-system! This crucial shift helped us expand well beyond the
-spacial limitations of the previous system, allowing us to eye
-an increase in player count without any worry!
-May saw the year's final dedicated boss release, the Twisted
-Intruder! In one of the darkest and most twisted encounters in
-the game, you are forced to face untold nightmares that lie in
-worlds beyond... It can see you, but can you perceive it long
-enough to stand against it?
-While Monumenta's main focus in realm of new content is largely
-in the Architect's Ring, it is very much our belief that all
-aspects of the game should remain fun and enjoyable at all
-levels. That's why with June, our balancing crew began a heavy
-effort to drastically diversify the item space across both the
-King's Valley and Celsian Isles. With the inclusion of
-backporting several R3 enchantments and stats into the regions,
-the design space for the regions has never been greater, and we
-look forward to what that offers us in the coming year with the
-Valley overhaul!
-July needs no real introduction, as it held the launch of our
-first wool dungeon in nearly years • Phyrrys, the City of Fallen
-Stars! In this breathtaking dungeon, you seek out the elusive
-Indigo Wool, all while in a race against time as your former
-allies dart for the wool as well, and a pestering darkness
-brewed on the horizon... We hope you all thorough enjoyed the
-vastness of this dungeon, and look forward to this story's epic
-conclusion in 2026!Something we haven't het focused on is 2025's
-quiet background focus on delve modifiers, including more
-experimental mods to further diversify your experience with
-dungeons and POIs! With August, they really took the forefront,
-with an additional five experimental mods and several overhauls,
-setting the stage for more additions, adjustments, and even
-replacements to come as we rounded out the year. This truly was
-a year of delves focus, as we hope it all felt worth that year
-spanning endeavor!
+Something we haven't het focused on is 2025's quiet background
+focus on delve modifiers, including more experimental mods to
+further diversify your experience with dungeons and POIs! With
+August, they really took the forefront, with an additional five
+experimental mods and several overhauls, setting the stage for
+more additions, adjustments, and even replacements to come as we
+rounded out the year. This truly was a year of delves focus, as
+we hope it all felt worth that year spanning endeavor!
 With September, the Architect's Ring experienced something that
 had not occured since the release of Star Point, the launch of a
 brand new POI • Fathom's Reach! Featuring a an absolutely wild
@@ -157,4 +127,37 @@ rule.
   • Enforcement of this rule will begin as a reminder and will
 become more strict over time.
 • Anti-Blindness Mods and Resource Packs are no longer permitted
-on Monumenta.
+on Monumenta.## Announcing the Official Monumenta Modpack
+Hello everyone, I am pleased to announce the creation of the
+Official Monumenta Modpack. Throughout the years, many players
+have expressed frustration and confusion on how difficult it can
+be to set up the Monumenta resource packs, find useful
+modifications, or improve the Monumenta experience. The modpack
+aims to solve these issues by providing new and veteran players
+alike with a developer-curated set of modifications that work
+without extensive manual configuration and troubleshooting.
+&bThis modpack is not a requirement to join or play on
+Monumenta.&r To set up the modpack, download a third-party
+launcher such as the [Modrinth App](<https://modrinth.com/app>)
+or [Prism Launcher](<https://prismlauncher.org/>) and grab a
+copy of the modpack from the Modrinth page:
+https://modrinth.com/modpack/official-monumenta-modpack
+### Additional Notes
+Everyone here on Team Monumenta wishes to stress this modpack is
+not intended to take the place of community-made mods or
+modpacks that many dedicated players have set up. This modpack
+would not exist were it not for the inspiration we took from
+many of those modpacks. With that said, we are in the process of
+updating in-game links and information to point to it. Please
+let us know if there are places we missed after the weekly
+update.
+Some eagle-eyed scouts reading through the official modpack's
+Modrinth page may recognize it looks familiar to a previous
+modpack I created called Spy's Lightweight Monumenta. The
+official modpack is a rebrand of that project. When the team was
+discussing setting up an official modpack, I offered it up as
+its ethos of being lightweight with minimal setup time matched
+the official modpack's needs. Truly, I am thankful to everyone
+who used it throughout these last few years as I didn't expect
+it to become one of the main community-recommended modpacks. I
+hope the next phase of its life serves you all just as well.
