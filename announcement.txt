@@ -1,28 +1,3 @@
-Something we haven't het focused on is 2025's quiet background
-focus on delve modifiers, including more experimental mods to
-further diversify your experience with dungeons and POIs! With
-August, they really took the forefront, with an additional five
-experimental mods and several overhauls, setting the stage for
-more additions, adjustments, and even replacements to come as we
-rounded out the year. This truly was a year of delves focus, as
-we hope it all felt worth that year spanning endeavor!
-With September, the Architect's Ring experienced something that
-had not occured since the release of Star Point, the launch of a
-brand new POI • Fathom's Reach! Featuring a an absolutely wild
-build style unlike anything Monumenta has seen prior, this
-release also set the precedent for us to ship POIs to the
-entrance uninhibited by the time restrictions that a full
-expansion would require, allowing us to provide more gameplay
-opprotunities much sooner! Something quite like it may be on the
-horizon soon...
-October saw the release of a long-awaited rework and replacement
-to one of Monumenta more underutilized specializations, Seraph!
-Functioning as a full on replacement to the previous Hierophant
-skill set, Seraph sports a combo of healing and utility
-playstyle unseen in other class move sets! The class development
-team had been cooking this rework for some time, and we hope you
-all found it worth it, though it wouldn't be the last of its
-kind this year...
 &bMerry Christmas from Team Monumenta!&r
 Merry Christmas everyone! I hope you all have had a wonderful
 year once again. While we are all settling in for the holidays
@@ -160,4 +135,19 @@ its ethos of being lightweight with minimal setup time matched
 the official modpack's needs. Truly, I am thankful to everyone
 who used it throughout these last few years as I didn't expect
 it to become one of the main community-recommended modpacks. I
-hope the next phase of its life serves you all just as well.
+hope the next phase of its life serves you all just as well.###
+Coalrupted Sierhaven
+The King's Valley has been blasted with a sudden polar vortex
+this spring! Enjoy a snow-covered Sierhaven as the Winter event
+returns for a limited time again!
+Coalrupted Sierhaven is a new gamemode in the King's Valley.
+Enjoy fast-paced, strike-like gameplay while exploring a giant,
+open map with many secrets within. Gather coal from chests and
+deposit it while fighting against the clock. As you play, you'll
+unlock more and more Snow Perks that will open up new avenues of
+enjoying the content!
+Coalrupted Sierhaven will be available
+&bpermanently&r, even after the event ends! You can find
+Coalrupted Sierhaven at the Snow Spirit lobby, and completion of
+Snow Man Left Behind is required. Happy coal collecting!
+@everyone
