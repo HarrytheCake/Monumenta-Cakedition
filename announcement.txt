@@ -1,43 +1,17 @@
-&bMerry Christmas from Team Monumenta!&r
-Merry Christmas everyone! I hope you all have had a wonderful
-year once again. While we are all settling in for the holidays
-and prepping ourselves for the new year to come, I always feel
-it is important for us to look back on the time that has passed
-us and how far we have come in that span. So join me once again
-as we look back on Monumenta in 2025!
-In January, we finally returned to weekly updates after nearly a
-2 months break away to update the server to Minecraft version
-1.20.4! It is Team Monumenta's continued belief that keeping the
-server updated is a prevelant factor in remaining relevant in
-the modern day, and we continue to keep an eye on opprotunities
-to upgrade further in 2026!
-With February came the first major new content launch of 2025,
-the Silver Knight Remnants! In this diversion-style raid, you
-were tasked reach distant and hostile lands, encounter unique
-challenges, and unlock secrets long forgotten to time... As a
-reward for completing other pieces of content around the server,
-we hope you continue to keep SKR in your sights any time a
-scroll finds its way to you!
-March continued the pacing, releasing the Diamenean Hunts! After
-a not-so-brief and rather quirky encounter with the Hunter's
-Lodge members, you were able to set off and find several unique
-overworld bosses to fight alongside other interested hunters!
-Sporting abilities and a spoil mechanic unseen in other bosses
-in Monumenta, the Diamenean Hunts are a fight you wouldn't want
-to miss out on!We are pleased to announce that @lynx1240 has
-been promoted to Moderator Lead! Make sure to give him lots of
-🏓Hey everyone! After more than five years serving as a project
-lead for Monumenta, I've decided it's time to step down and
-focus on other interests and areas of life. It's been a truly
-incredible journey and one that has been immensely meaningful
-for me. The server has grown leaps and bounds since I joined-• I
-remember having neighbors on betaplots or even a tiny apartment
-in Sierhaven to hold my limited belongings; times when the
-online player count could be shown on one hand. When R2 released
-in 2019, I had just graduated college and was eager to
-contribute and give back to the game. After learning the ropes
-and leading my first full project, Echoes of Oblivion, I was
-asked to be a lead in 2020.
+We are pleased to announce that @lynx1240 has been promoted to
+Moderator Lead! Make sure to give him lots of 🏓Hey everyone!
+After more than five years serving as a project lead for
+Monumenta, I've decided it's time to step down and focus on
+other interests and areas of life. It's been a truly incredible
+journey and one that has been immensely meaningful for me. The
+server has grown leaps and bounds since I joined-• I remember
+having neighbors on betaplots or even a tiny apartment in
+Sierhaven to hold my limited belongings; times when the online
+player count could be shown on one hand. When R2 released in
+2019, I had just graduated college and was eager to contribute
+and give back to the game. After learning the ropes and leading
+my first full project, Echoes of Oblivion, I was asked to be a
+lead in 2020.
 Years later, I'm proud to say almost everyone here has played
 something I had a hand in, whether that be Teal, Depths/Zenith,
 the PORTAL series or just enjoying some Seasonal Pass missions.
@@ -150,4 +124,12 @@ Coalrupted Sierhaven will be available
 &bpermanently&r, even after the event ends! You can find
 Coalrupted Sierhaven at the Snow Spirit lobby, and completion of
 Snow Man Left Behind is required. Happy coal collecting!
-@everyone
+@everyoneI'm proud to introduce @ChargingUv as Monumenta's
+newest lead!
+A builder home-grown from build shard, Charging has undoubtedly
+left an indelible mark on the game. He saw SKR to completion,
+revamped countless R1 builds, and has driven content like
+Smallpoint, Coalrupted Sierhaven, and some upcoming releases...
+A true Renaissance Man, we're excited to have him join the Leads
+team!
+As always-• 🏓

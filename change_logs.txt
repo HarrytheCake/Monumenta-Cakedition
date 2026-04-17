@@ -1,186 +1,204 @@
-### <:scout:1106716859664965733> Scout Feedback Fixes/Bug Fixes
-• Added Light Blue to skill numbers to indicate regional scaling
-• Tweaked the Predator Strike cosmetic
-• Tweaked the Lockdown cosmetic
-• Swiftness (u) now makes a sound effect when blocking hits
-• Fixed Swiftness (u) not granting invulnerability frames
-• Swiftness double jump no longer works when Silenced
-• Gale Shot imbuement no longer instantly procs twice
-• Fixed Predator Strike triggering Quiver Storm with Multishot
-weapons
-### Item Changes (R1)
-• Old Ski Glove (Rework) : Tactician 3, 4.5 Armor, +5%
-Projectile Damage, +15% Speed
-• Solstice Greattree : 18 -> 19 Projectile Damage, 0 -> 2 Quake,
-1 -> 2 Armor
-• Decorated Antler : +30% -> +35% Spell Power
-• Reindeer Pelt : 0 -> 1 Stamina
-• Koal Kannon : 2 -> 4 Projectile Damage, -25% -> -15% Speed
-• The Sledshield : 1 -> 1.1 Attack Speed
-• Lacrimosa : 11.5 -> 12 Projectile Damage
-### Item Changes (R3)
-• Sonorous Shield (M4) : +15% -> +35% Attack Damage, +10% -> 0%
-Attack Speed
-• Bonecrusher (M4) : 2 -> 3 Melee Protection
-• Prismatic Enigma (M4) : 33 -> 35 Projectile Damage
-### Charm Changes
-• Limber Claw : 2 -> 1 Charm Power
-• Blightseeker's Boon : +1 -> 0 Quiver Storm Pierce
-• Loci's Hunger: -2 -> -35% Rampage Cooldown
-• Quickening Mycosis: +20% -> +30% Rending Razor Cooldown
-Amplifier### The Werehouse Feedback Changes:
-• Moved end chest of The Werehouse.
-• Few decoration pots in The Werehouse now hold some goodies.
-• Improved bedrocking in The Werehouse.
-• Added one additional chest to The Werehouse, and shifted
-around other chest placements.
-### The Werehouse Week 1 Mob Changes:
-• Pelias Keep's delve scaling now properly functions.
-• Dormant Effigy:
-> Increased Slow Start's slowness to 100%.
-> Increased Slow Start's duration by 30%.
-> Health reduced from 165 -> 140
-> Damage reduced from 36 -> 28
-• Ethereal Miners:
-> Now only applies Darkness on exiting stealth
-> Darkness duration reduced from 11 seconds to 5 seconds.
-> Increased particle density.
-• Lycan Deadeye:
-> Decreased pitch and volume from the Lycan Deadeye's death
-sound
-• Lycanpup:
-> Attack damage reduced from 30 -> 24
-> Speed decreased from 0.25 -> 0.22
-• Feral Berserker:
-> Can no longer be Chivalrous
-• Lycanmother:
-> Movement speed decreased from 0.2 -> 0.18.
-• Adjusted some spawner placements and ranges in The
-Werehouse.### Coalrupted Sierhaven
+&bHotfix: (for daily restart)&r
+• Fixed broken particles on mage cosmetic set
+• A change on Quiver storm:
+  • Quiver Storm: 25%/30% damage
+  • Quiver Storm: 1 -> 2 arrows
+  • Quiver Storm works with Impact and Explosive again
+• A missed change on Gale Shot:
+  • Gale shot now has a 0.6 block radius
+  • Added knockback to Gale Shot
+  • Increased the particle density of Gale Shot
+• Elusive 2.5% -> 5% resistance
+&bHotfix: (for daily restart)&r
+• Fixed Gale Shot doing the same projectile damage as your
+weapon
+&bHotfix&r: Issues with the Void Knight death bugging Indigo
+instances have been fixed.
+Indigo has been reopened.
+&b(11.63.0)&r
+For the update on April 15, 2026
+### Minor New Features:
+• Added a new merchant to Highwatch
+• Alchemy Labs no longer counts towards Seasonal Pass
+progression unless a mission specifically calls for completing
+it
+• Reduced fragment price of explorer rares to 4.
+• Increased drop rate of explorer rares.
+• Bounties from Isles/Valley has a chance to drop explorer
+fragments of their respective region.
+• Added explorer rares to the Valley and Isles Transmogrifiers.
+• Quest entries now use world names as a prerequisite for
+displaying, instead of appending a warning message if you're on
+the wrong world. Quests entries without world names specified
+will still display on any world
+• Added searching functionality to the Bag of Hoarding (and
+other wallets)
+### Coalrupted Sierhaven
 &bNew Additions:&r
-• A Memorial Hall has been added to honour Sniffy's death. He
+• A new memorial has been added to honour Sniffy 2's death. He
 was irreplaceable and may be never be forgotten.
-• Added Sniffy 2.
+• Added Elder Sniffy
 • Added a new advancement
-• Added a flat amount of bonus CXP to the first win of the day
 &bChanges:&r
 • Gameplay:
-  • Reworked the Ships section
-  • Adjusted Elite mob stats
-  • Improved Reset Chute locations
-  • Buffed most key items
-  • Removed recoil from End of Winter
-  • Key Items are now cleared upon death
-  • Raisin Cookie now grants Haste II for 12s
-  • The starting countdown no longer forces you to face north
+  • Decreased the amount of T2 chests in the boats area
+  • Removed decayed items. Lowered Essence of Winter in pre-
+rolled chests
 • Perks:
-  • Coal Launcher: Point cost reduced to 2.
-  • Carbon Capture: Coal dropped on ground now glows.
-  • Creeper Mistletoe: Made easier to unlock. Tweaked mechanics.
-  • Icicle Burst: Now also has increased explosion chance on
-both direct attack and projectile kills, and a guaranteed
-explosion on any Elite kill. Base chance buffed from 45%/25% to
-50%/30%.
-• Loot:
-  • Extra loot from loot room is now granted in a bonus gift to
-reduce inventory clutter
-  • CXP is now given first when opening a gift (less likely to
-be dropped on the ground with a near-full inventory)
-  • Decreased Essence of Winter output•
+  • Added a second page with 7 new Snow Perks! Win a run with at
+least 600 Coal deposited to unlock it.
+  • Icicle Burst: Radius buffed from 3 blocks to 4 blocks
+  • String Light Hook: Grappling buffed from 35 to 50
 &bBug Fixes:&r
-  • Adjusted Koal-lection Problem's description
-  • Fixed Kringol not dropping coal
-  • Fixed possible timer desync
-  • Fixed being able to get stuck in the center coal pile
-  • Fixed some stuck spots and minor build errors
-  • Fixed reset chute being able to kill you with high latency
-  • Fixed Coal Cart Memorial being targetable by skills
-  • Fixed Coal Insurance message being sent even if it does not
-insure any coal
-  • Fixed overtime messages claiming that Elites give time (This
-was originally a bug, but we're happy with the balancing of time
-as it is right now.)
-  • Fixed Coal not stacking properly in many different
-situations
-  • Fixed relogging being safe
-  • Fixed the Snow Point requirement on Dreaming Baker's trade
-not working
-  • Fixed a bug where selecting Coal Launcher would also give
-you the effects of Creeper Mistletoe
-  • Fixed a typo in Icicle Burst's description
-### Feedback Fixes:
-• Added Coalrupted Sierhaven artifacts, Exploration Rares,
-Salem's Regret, The Werehouse rares, Worst Wand, and missing
-Scout lesser charms to API
-• Added The Werehouse rares to the Pelias' Keep Rare Trader.
-• Removed the interaction where Twisted Deadeye would kill
-Hunting Companion
-• Added Hunting Companion Pounce Damage to Hunting Companion
-lesser charms
-• Louitte, Dichen Watchman now sells Steel Trap lesser charms
-• Added Swift Barrage Charm to Mariask, Lunacrest Scout's trades
-• Keloch, Jean Bay, and the Infusion Master have all had their
-dialogue updated to reflect current damage bonuses and
-terminology
-• Fixed Keloch and Jean Bay's infusion descriptions being out of
-order
-• Added a new non-kitten item to replace an outdated reference
-to reworked content; the old message was kept as flavor text•
-Pelias' throne at the racetrack outside the Sticks and Stones
-Tavern is now sittable
-• Added many sittable chairs to the player market
+• Fixed some empty spawners in Coalrupted
+• Fixed a chest in the creeper sewer room being pre-rolled
+• Fixed rotation being fixed during the countdown of Coalrupted
+• Fixed the detection circle for Transcendant Snowman not
+disappearing
+• Fixed the Holiday Artist's trades being locked after unlocking
+Coalrupted
+### Werehouse Week 2 Mob Changes:
+• Dormant Effigy:
+> Health: 140 -> 135
+• Ethereal Miner:
+> Health: 120 -> 90
+> Vanish Cooldown: 10s -> 11s
+• Lycan Deadeye:
+> Health: 85 -> 75## <:scout:1106716859664965733> Scout Changes
+• Gale Shot Changes
+   • Base Radius increased to 0.75 (previously 0.6)
+   • L1 damage decreased to 12 + 120% (previously 14 + 140%)
+  • L2 damage decreased to 14+ 140% (previously 16 + 160%)
+  • Gale Shot can now be fired without needing to fully charge
+your bow
+• Rending Razor Changes:
+   • Revamped its cosmetic look into a spinning razor blade
+display
+   • Rending Razor now infinitely pierces
+  • Radius increased to 2/2.5 (previously 1/1.5)
+  • R2 Damage decreased to 14 (previously 16)
+  • R3 Damage decreased to 18 (previously 20)
+• Steel Trap (u) now grants +10% Vulnerability instead of a
+damage increase
+• Sharpshooter (u) now grants 0.5% Throw Rate per sharpshooter
+stack
+• Swiftness (u) no longer has a vertical penalty
+• Swiftness (u) dash distance increased
+• Wind Bomb (u) duration increased to 5s (previously 3s)
+• Volley (u) now grants 3s of empowered shots instead of only 1
+shot
+• Shrapnel Bomb L2 now correctly deals 12 damage instead of 2
+• Hunting Companion now teleports to the staggered mob if there
+is no viable path### Charm Changes
+• Peakborn Windchime (Rework) : 1 Charm Power, +25% Gale Shot
+Size, +25% Rending Razor Size, +25% Tactical Maneuver Radius
+• Loci Carving (Rework) : 3 Charm Power, -25% Volley Cooldown,
++2 Volley Multishot Duration, -25% Volley Damage
+• Origin of Void : #-50% Predator Strike Damage -> #-40%
+Predator Strike Damage, -50% -> -40% Predator Strike Splinter
+Cone
+• Quickening Mycosis : -30% -> 0% Rending Razor Cooldown
+Reduction Duration, +30% -> +20% Rending Razor Cooldown
+Reduction Amplifier
+• Starseeker's Emblem : 4 -> 3 Charm Power, 0 -> +1 Gale Shot
+Landing Requirement
+• Limber Claw : 0% -> +50% Steel Trap Damage
+• Intrepid Stare : 2 -> 1 Charm Power, +15% -> +10% Parting Shot
+Reveal Vulnerability Amplifier
+• Sanguine Tendon : +60% -> +25% Volley Cooldown
+• Flesh Laurel : 0% -> +10% Steel Trap Vulnerability
+• Blade of the Sealed : 2 -> 3 Charm Power, +1 -> +3 Steel Trap
+Charges, +33% -> #+33% Steel Trap Cooldown, 0% -> -25% Steel
+Trap Damage, 0% -> -100% Steel Trap Stagger Duration
+• Dragon's Eye : +35% -> +4 Predator Strike Splinter Distance
+Requirement, +50% -> +100% Predator Strike Damage
+• Tolumaeus Nestfeather : -30% -> +15% Double Jump Strength, 2
+-> 3 Charm Power
+• Deathbound Cavaliers : +15% -> +25% Shrapnel Bomb Damage
+Boost, -40% -> -25% Shrapnel Bomb Damage, -40% -> -25% Shrapnel
+Bomb Shrapnel Damage
+• Tradesman's Cape : 0 -> +1 Tactical Maneuver Stagger Duration
+• Blightseeker's Boon : +1 -> +3 Predator Strike Enemies Pierced
+• Swift Barrage Charm : -15% -> -25% Quiver Storm Delay
+-# No functional change, visual fix
+• Fixed Focused Hunting Charm having incorrect stats### Feedback
+Fixes:
+• Quake's handbook entry now mentions projectile kills, and
+mentions the proper hitbox (sphere with radius 3, not a 3-block
+cube)
+• Adjusted Usurper's Gaze crown to be 1 block above your head to
+not block your view
+• Reduced particle count and fixed broken particles in
+||Stoneborn Transcendent||
+• Made backend changes to the cosmetic skill shop GUI; the only
+real changes should be minor, such as formatting
+• Hexfall now recommends a player group size of 4 instead of 1-4
+• Ascended Twilight's Mining Fatigue aura reduced to 1s from 3s
+• Reworked Twisted Omenspeaker's Earthen Tremor attack
+• Made the Twisted Primordialist's Elemental Spirits use display
+entities and made their hitbox wayyy smaller
+• Added Slow Falling to the launch out of Mysterious Cenote
+• Eye of Viridia throws are now slightly more accurate
 ### Bug Fixes:
-• Mobs should no longer be able to cast spells, show telegraphs,
-etc. after dying
-• Fixed multiple typos in Robot Finds Kitten's non-kitten items
-• Slayer will now apply to Sniffers
-• Fixed Jolly Enforcer having 2 armor
-• Removed remaining references to the defunct minecraft-
-server.net
-• The Werehouse weekly chest will now be given on first clear of
-the week
-• Fixed Werehouse fast travel/Lycan burrows being breakable
-• Fixed issues with The Werehouse's end chest
-• Fixed exposed mechs in Blue start
-• Race leaderboard colors have returned and are now nicely
-aligned.
-• Actually fixed Cave of Secrets open spawners being empty for
-realsies
-• Fixed minor build errors in Market, various overworlds and the
-Coalrupted lobby
-• Fixed duping dummies in Koal Lobby
-• Fixed double Orasomn during Olive Branch Cutscene and moved
-said Cutscene to happen directly above the lobby instead of an
-outdated copy
-• Added a POI advancement for Dissonant Shrine, obtained upon
-quest completion or retroactively when talking to Salazar in the
-Purple Lobby
-• Locked the rotation of item frames in Lie of the Igor
-• Fixed a typo in Warpstrike description
-• Fixed minor dialogue issues in A Crown of Majesty's cutscene,
-Salazar's Vision and its book
-• Fixed Sanguinis' Masterwork tiers having incorrect stats
-• Fixed typo in the lore of Ritual Raiment
-• Fixed the Shackled Earth's Boon -> Indigo Blightdust trade
-having the wrong version of the item
-• Whispering Woods' mimic will now always spawn
-• Fixed overworld mimics spawning the chest in the wrong
-orientation after failing to spawn• Fixed items not being
-updated when location tag colors were changed last week
-• Fixed Snow Man Left Behind failing to progress in some cases
-• Fixed Snow Spirit refusing to die
-• Logging out when on an Expedition Docks ship will now teleport
-you back onto the docks, to prevent getting stuck in boats when
-they change
-• Removed an unused mob from Galos Bestiary
+• Fixed being able to store arbitrary shulker boxes in Loadout
+Lockboxes. This was a bug introduced recently, not an intended
+feature, and people keep NBT banning themselves by trying this.
+"Special" shulker boxes are still allowed (Firmament,
+Worldshaper's Loom, Potion Injector), but there is now a limit
+of 2 total of these.
+• Fixed Quest Compasses never actually pointing to the correct
+location on other worlds
+• Fixed a Quest Compass log error
+• Fixed Oversized and Throwing Knife not accounting for Throw
+Rate % bonuses when calculating cooldown
+• Fixed projectiles sometimes not doing damage after passing
+through players or player summons (hunting companion, keeper
+virtue)
+• Fixed invalid particle data in certain mobs
+• Chaos Dagger no longer incorrectly claims to root bosses
+• Made an unbreakable spawner breakable.
+• Fixed Decorated Antler having incorrect stats
+• Fixed Tactician not triggering on root
+• An issue with Praetorer Strike that resulted in the post-quest
+interaction not working is fixed.
+• Fixed double spaces in Ghalkor/Svalgot and Hycenea dialogue
+• Fixed missing period in All That Remains• Fixed extra period
+in Hycenea dialogue
+• Fixed smart quotes in Hycenea, Samwell, and Sirius dialogue
+• Buckets and item frames now count as blocks for the purposes
+of ability triggers
+• Fixed exit button in another player's charm GUI not
+functioning
+• Super Eggnog can no longer be used as a water bottle to turn
+dirt to mud
+• Fixed Alcyoneus having outdated Knockback Resistance display
+• Void deaths in ||Dissonant Shrine|| will now properly respawn
+you in the POI
+• Fixed some cosmetic particles spawning as boss category
+• Removed a duplicate Artelus
+• Fixed some special Twisteds' death animations having broken
+particles
+• Fixed some empty spawners in Coalrupted
+• Fixed rotation being fixed during the countdown of Coalrupted
+• Fixed the detection circle for Transcendent Snowman not
+disappearing
+• Fixed the Holiday Artist's trades being locked after unlocking
+Coalrupted
+• Fixed an underwater current by Knight-Errant Reynart in
+Mistport
+• Fixed an empty spawner in Light Gray
+• Fixed ToV sea pickles sometimes not being cleared when
+removing a cache
+• Fixed R1 potions in Teal
+• Fixed a build error in Light Gray
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
 &bHotfix:&r
-• Fixed The Werehouse's end chest
-&bHotfix:&r
-• Fixed The Werehouse's end chest, for real this time (i ran
-/reloadquests instead of /reloadzones)
-&bHotfix:&r
-• take a guess ._. (please send help)
+• Tactical Maneuver 2 now applies weakness to the enemies,
+instead of yourself
+• Shrapnel Bomb will now explode Wind Bomb
+• Hunting Companion will no longer pounce on mobs if the skill
+had its stagger duration reduced to 0 by charms (see Steel Trap
+w/ Blade of the Sealed)
