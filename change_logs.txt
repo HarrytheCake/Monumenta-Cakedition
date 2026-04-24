@@ -1,20 +1,3 @@
-&bHotfix: (for daily restart)&r
-• Fixed broken particles on mage cosmetic set
-• A change on Quiver storm:
-  • Quiver Storm: 25%/30% damage
-  • Quiver Storm: 1 -> 2 arrows
-  • Quiver Storm works with Impact and Explosive again
-• A missed change on Gale Shot:
-  • Gale shot now has a 0.6 block radius
-  • Added knockback to Gale Shot
-  • Increased the particle density of Gale Shot
-• Elusive 2.5% -> 5% resistance
-&bHotfix: (for daily restart)&r
-• Fixed Gale Shot doing the same projectile damage as your
-weapon
-&bHotfix&r: Issues with the Void Knight death bugging Indigo
-instances have been fixed.
-Indigo has been reopened.
 &b(11.63.0)&r
 For the update on April 15, 2026
 ### Minor New Features:
@@ -201,4 +184,115 @@ instead of yourself
 • Shrapnel Bomb will now explode Wind Bomb
 • Hunting Companion will no longer pounce on mobs if the skill
 had its stagger duration reduced to 0 by charms (see Steel Trap
-w/ Blade of the Sealed)
+w/ Blade of the Sealed)### Bug Fixes:
+• Fixed a longstanding issue that caused many POIs to respawn
+incorrectly following daily restart.
+• Fixed The Werehouse not giving a weekly chest
+• Fixed T2 & T3 valley bounties having an extra experience
+bottle.
+• Fixed the Esoteric Enhancements creeper blocking white tess
+usage
+• Fixed Tactician handbook entry not displaying anywhere
+• Fixed Twisted Atomic Abberation not being delve scaled
+• Fixed the Volley Multishot Duration charm stat being in ticks
+instead of seconds, and not displaying in class GUI
+• Fixed a typo in Captain Tobias' dialogue
+• Fixed not being able to frag Mist artifacts
+• Fixed Cleansing Totem level two (and not enhanced) only
+cleansing once instead of twice by default
+• Fixed Celsian Isles region handbook advancement having an
+outdated damage reduction number and made this advancement now
+also imply that the debuffs are applied in R3 as well
+• Fixed message when consuming Token Dispenser incorrectly
+stating that tier 1 and tier 5 items can be turned into tokens
+• Fixed issues with the Celestial Blessing enhancement extension
+not working properly when multiple Celestial Blessing effects
+were applied at once (either by one player with cooldown
+reduction or by multiple players)
+• Fixed funny wording in Supply and Demand compass entry
+• Fixed wrongly colored {...} in Old Hermit dialogue
+• Fixed grammar in a Masquerader's Ruin message
+• Replaced sentence in Region 1 Monument handbook advancement
+which stated that the monument was required to access Region 2
+• Fixed Muddied Tincture not applying effects if thrown (rather
+than used from the inventory)
+• Fixed typo in dungeons status page
+• Fixed pluralization in delve modifier GUI
+• Fixed SKT Dungeon Guard sending messages when sneaking instead
+of just opening the GUI
+• Fixed missing {...} in SKT dialogue
+• Fixed grammar in All That Remains dialogue
+• Fixed Thunder Step Enhancement Duration charm effect not being
+reflected in the description
+• Fixed issues with Guarding the Guarded's combat
+• Fixed Iron Tincture charges not updating correctly in the
+client mod
+• Fixed typo in Memory Log • Silver Knight Tarri VI
+• Fixed Focused Orison Charm not being replaced
+• Fixed typo in Aloc Acoc spoil message
+• Fixed typo in A Crew to Remember
+• Fixed smart quotes in Aleph Null volumes 2 and 3
+• Fixed punctuation in Head Alchemist dialogue
+&b(11.64.0)&r
+For the update on April 22, 2026
+### Minor New Features:
+• Requiem of the Abyss is now repurchasable at Exalted Knight
+Reynart
+• Shifting Crystals can now be traded for Gleaming Dust and
+Flawless Magma Fragments at the Shifting Rare Trader/Jean Bay
+and Foreman Tyrian, respectively
+### Feedback Changes:
+• Ember of Greed has been replaced back to a piglin brute
+• Sporous Amalgam self damage on uproot received a major
+increase, now the most uproots that should be seen in a fight
+are 3-4, unless the party fails them
+• Killing all mobs in a wave during the Sporous Amalgam fight
+will result in the next wave spawning much faster than normal,
+reducing waiting time throughoutthe first phase of the boss
+• Players no longer need to respond to Walter Jr. to get new
+random dialog before starting A Pigculiar Problem
+• Replaced display entity block quake animations with falling
+blocks to make them smoother (Umbral Cannons, Earthen Tremor,
+Bloody Fang, etc)
+• Standardized KBR on charms to list the percent they add,
+similarly to what is listed in ability descriptions, gear, etc.
+This fixes Counterstrike and Taboo KBR charms not functioning,
+and Greater Charm of Equanimity has been changed from +0.5 to
++5% Phlegmatic Resolve Knocback Resistance (functionally the
+same)
+• Elemental Spirits cosmetic skills now say they are cosmetics
+for Elemental Spirits in the shop, as opposed to specifically
+Fire Elemental Spirit
+• Twisted Pike (M1): +15% -> +10% Speed
+### Coalrupted Sierhaven
+&bNew Additions:&r
+• A new memorial has been added to honour Elder Sniffy's death.
+He was irreplaceable and may he never be forgotten.
+• Sniffy has returned
+• The gates have opened to Port Sniffy
+&bChanges:&r
+• Gameplay:
+  • Vengant Gift Power 2 -> 3
+  • Added a new Elite in various locations
+• Perks:
+  • Luminite Drill: Point cost reduced from 5 to 4
+&bBug Fixes:&r
+• Fixed Ghasts not losing AI on charge-up
+• Fixed spelling of Transcendent Snowman
+• Removed vanilla armor points from Kringol
+• Added Transcendent Snowman and Kringol to the bestiary
+• Removed several unobtainable/technical mobs from the
+Coalrupted bestiary
+• Fixed many Coalrupted spawners containing a mob mount for a
+particular elite without the elite that was supposed to be
+mounted on it
+• Key items from Coalrupted Sierhaven are now cleared in armor
+slots and offhand upon death, rather than just the inventory
+• In Coalrupted Sierhaven, Snow Perks that give players starting
+key items, like an Ender Pearl, now should more likely stack
+properly with other copies
+• Fixed outdated Coalrupted tips claiming elite kills give time
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
