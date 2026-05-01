@@ -1,44 +1,6 @@
-We are pleased to announce that @lynx1240 has been promoted to
-Moderator Lead! Make sure to give him lots of 🏓Hey everyone!
-After more than five years serving as a project lead for
-Monumenta, I've decided it's time to step down and focus on
-other interests and areas of life. It's been a truly incredible
-journey and one that has been immensely meaningful for me. The
-server has grown leaps and bounds since I joined-• I remember
-having neighbors on betaplots or even a tiny apartment in
-Sierhaven to hold my limited belongings; times when the online
-player count could be shown on one hand. When R2 released in
-2019, I had just graduated college and was eager to contribute
-and give back to the game. After learning the ropes and leading
-my first full project, Echoes of Oblivion, I was asked to be a
-lead in 2020.
-Years later, I'm proud to say almost everyone here has played
-something I had a hand in, whether that be Teal, Depths/Zenith,
-the PORTAL series or just enjoying some Seasonal Pass missions.
-While I didn't do everything perfectly (and still don't), it
-warmed my heart seeing the reception to these projects and
-watching players get to experience them. There's nothing like
-the anticipation and excitement of spectating day one of your
-content launch, and it's great getting to see our newer
-developers sharing this experience these days. I still love
-Monumenta and always will, so I'll be back to play the new
-updates and content as long as the team is around and kicking.
-Rest assured, it's in good hands.
-Over the years I have had the privilege of leading a fantastic
-team of volunteer developers, defying expectations of what is
-possible every year. I've had hundreds of genuine and
-constructive interactions with passionate players, and learned a
-huge amount about game design and development while pushing the
-boundaries of what gameplay looks like in Monumenta. Like many
-of you all, I'm fortunate to have met some awesome friends from
-this wonderful community, ones that I expect to have for years
-to come. There's so much more than could fit in a simple goodbye
-message, but all of it meant the world to me.
-A heartfelt thank you to all of our players for supporting the
-game and myself over the years, and have an amazing 2026!I'm
-proud to introduce @9o62 and @[MAID] LucyChroma as our newest
-full developers! 9o has been working hard as a member of our
-build team, releasing Anthill & Creeper Tower, as well as an
+I'm proud to introduce @9o62 and @[MAID] LucyChroma as our
+newest full developers! 9o has been working hard as a member of
+our build team, releasing Anthill & Creeper Tower, as well as an
 important R1 POI rework coming very soon! Lucy has implemented 1
 trillion suggestions and bug fixes, and is working on Gallery
 stability and future upgrade infrastructure.
@@ -132,4 +94,48 @@ revamped countless R1 builds, and has driven content like
 Smallpoint, Coalrupted Sierhaven, and some upcoming releases...
 A true Renaissance Man, we're excited to have him join the Leads
 team!
-As always-• 🏓
+As always-• 🏓Happy to announce that @PaperBoxs has been promoted
+to Team Monumenta! Many of you already know him for his long
+history of art contributions in the community, and he recently
+has been doing some great work with us internally creating
+official art for the game, some more of which you may see very
+soon! Please give him the congratulatory 🏓
+&b&nStar Point: Mainline Finale&r&r
+Team Monumenta is extremely excited to announce the upcoming
+release of the conclusion to the Star Point mainline! As the
+finale to the Architect's Ring Chapter 3, we have a host of new
+content for you to explore and enjoy!
+&nNew Quest:&r
+&bDefying Gravity&r
+Following the events of Holding Space, and the claiming of the
+Indigo Wool from Phyrrys, it's time to track down Aurora and
+discover her ultimate endgoal. The Loamskattar has begun to stir
+once more, and you must follow the path of the empty space in
+order to uncover where she will appear. The skies can't be
+trusted though, for from above descends...
+&nNew POI:&r
+&bTemple of the Skylords&r
+Freed from the shackles of the Inverted City, the Temple of the
+Skylords looms large in the skies above Star Point. Unique to
+the Architect's Ring, the Temple is a progression-locked POI,
+only descending for those who have claimed the Indigo Wool.
+Reaching even higher than the Constellation Tower, you will
+fight your way through the hordes that guard the Empty One's
+place of rest • but watch your step, for one wrong step could
+send you plummeting to the world below. And it is here, at the
+precipice of the world, that you will find...
+&nNew Boss:&r
+&bAurora Lunacrestum&r
+Ally-turned-enemy, Aurora stands before you, seeking to end the
+long conflict with the Stars, but to what end? This powerful
+sorceress will use every trick she has available to be the last
+one standing. Unique to this bossfight is a customizable
+difficulty system, allowing you to adjust the fight's intensity
+to your own choosing. But how strong will Aurora be capable of
+becoming, and will you be able to stand against the ancient
+might of the Outside?
+The Star Point finale will be launching
+&bthis week&r, with Defying Gravity and the Temple of the
+Skylords being available immediately after weekly update! Aurora
+will arrive next weekend, <t:1777737600:F>! We hope to see you
+all there! @everyone

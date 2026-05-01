@@ -1,238 +1,3 @@
-&b(11.63.0)&r
-For the update on April 15, 2026
-### Minor New Features:
-• Added a new merchant to Highwatch
-• Alchemy Labs no longer counts towards Seasonal Pass
-progression unless a mission specifically calls for completing
-it
-• Reduced fragment price of explorer rares to 4.
-• Increased drop rate of explorer rares.
-• Bounties from Isles/Valley has a chance to drop explorer
-fragments of their respective region.
-• Added explorer rares to the Valley and Isles Transmogrifiers.
-• Quest entries now use world names as a prerequisite for
-displaying, instead of appending a warning message if you're on
-the wrong world. Quests entries without world names specified
-will still display on any world
-• Added searching functionality to the Bag of Hoarding (and
-other wallets)
-### Coalrupted Sierhaven
-&bNew Additions:&r
-• A new memorial has been added to honour Sniffy 2's death. He
-was irreplaceable and may be never be forgotten.
-• Added Elder Sniffy
-• Added a new advancement
-&bChanges:&r
-• Gameplay:
-  • Decreased the amount of T2 chests in the boats area
-  • Removed decayed items. Lowered Essence of Winter in pre-
-rolled chests
-• Perks:
-  • Added a second page with 7 new Snow Perks! Win a run with at
-least 600 Coal deposited to unlock it.
-  • Icicle Burst: Radius buffed from 3 blocks to 4 blocks
-  • String Light Hook: Grappling buffed from 35 to 50
-&bBug Fixes:&r
-• Fixed some empty spawners in Coalrupted
-• Fixed a chest in the creeper sewer room being pre-rolled
-• Fixed rotation being fixed during the countdown of Coalrupted
-• Fixed the detection circle for Transcendant Snowman not
-disappearing
-• Fixed the Holiday Artist's trades being locked after unlocking
-Coalrupted
-### Werehouse Week 2 Mob Changes:
-• Dormant Effigy:
-> Health: 140 -> 135
-• Ethereal Miner:
-> Health: 120 -> 90
-> Vanish Cooldown: 10s -> 11s
-• Lycan Deadeye:
-> Health: 85 -> 75## <:scout:1106716859664965733> Scout Changes
-• Gale Shot Changes
-   • Base Radius increased to 0.75 (previously 0.6)
-   • L1 damage decreased to 12 + 120% (previously 14 + 140%)
-  • L2 damage decreased to 14+ 140% (previously 16 + 160%)
-  • Gale Shot can now be fired without needing to fully charge
-your bow
-• Rending Razor Changes:
-   • Revamped its cosmetic look into a spinning razor blade
-display
-   • Rending Razor now infinitely pierces
-  • Radius increased to 2/2.5 (previously 1/1.5)
-  • R2 Damage decreased to 14 (previously 16)
-  • R3 Damage decreased to 18 (previously 20)
-• Steel Trap (u) now grants +10% Vulnerability instead of a
-damage increase
-• Sharpshooter (u) now grants 0.5% Throw Rate per sharpshooter
-stack
-• Swiftness (u) no longer has a vertical penalty
-• Swiftness (u) dash distance increased
-• Wind Bomb (u) duration increased to 5s (previously 3s)
-• Volley (u) now grants 3s of empowered shots instead of only 1
-shot
-• Shrapnel Bomb L2 now correctly deals 12 damage instead of 2
-• Hunting Companion now teleports to the staggered mob if there
-is no viable path### Charm Changes
-• Peakborn Windchime (Rework) : 1 Charm Power, +25% Gale Shot
-Size, +25% Rending Razor Size, +25% Tactical Maneuver Radius
-• Loci Carving (Rework) : 3 Charm Power, -25% Volley Cooldown,
-+2 Volley Multishot Duration, -25% Volley Damage
-• Origin of Void : #-50% Predator Strike Damage -> #-40%
-Predator Strike Damage, -50% -> -40% Predator Strike Splinter
-Cone
-• Quickening Mycosis : -30% -> 0% Rending Razor Cooldown
-Reduction Duration, +30% -> +20% Rending Razor Cooldown
-Reduction Amplifier
-• Starseeker's Emblem : 4 -> 3 Charm Power, 0 -> +1 Gale Shot
-Landing Requirement
-• Limber Claw : 0% -> +50% Steel Trap Damage
-• Intrepid Stare : 2 -> 1 Charm Power, +15% -> +10% Parting Shot
-Reveal Vulnerability Amplifier
-• Sanguine Tendon : +60% -> +25% Volley Cooldown
-• Flesh Laurel : 0% -> +10% Steel Trap Vulnerability
-• Blade of the Sealed : 2 -> 3 Charm Power, +1 -> +3 Steel Trap
-Charges, +33% -> #+33% Steel Trap Cooldown, 0% -> -25% Steel
-Trap Damage, 0% -> -100% Steel Trap Stagger Duration
-• Dragon's Eye : +35% -> +4 Predator Strike Splinter Distance
-Requirement, +50% -> +100% Predator Strike Damage
-• Tolumaeus Nestfeather : -30% -> +15% Double Jump Strength, 2
--> 3 Charm Power
-• Deathbound Cavaliers : +15% -> +25% Shrapnel Bomb Damage
-Boost, -40% -> -25% Shrapnel Bomb Damage, -40% -> -25% Shrapnel
-Bomb Shrapnel Damage
-• Tradesman's Cape : 0 -> +1 Tactical Maneuver Stagger Duration
-• Blightseeker's Boon : +1 -> +3 Predator Strike Enemies Pierced
-• Swift Barrage Charm : -15% -> -25% Quiver Storm Delay
--# No functional change, visual fix
-• Fixed Focused Hunting Charm having incorrect stats### Feedback
-Fixes:
-• Quake's handbook entry now mentions projectile kills, and
-mentions the proper hitbox (sphere with radius 3, not a 3-block
-cube)
-• Adjusted Usurper's Gaze crown to be 1 block above your head to
-not block your view
-• Reduced particle count and fixed broken particles in
-||Stoneborn Transcendent||
-• Made backend changes to the cosmetic skill shop GUI; the only
-real changes should be minor, such as formatting
-• Hexfall now recommends a player group size of 4 instead of 1-4
-• Ascended Twilight's Mining Fatigue aura reduced to 1s from 3s
-• Reworked Twisted Omenspeaker's Earthen Tremor attack
-• Made the Twisted Primordialist's Elemental Spirits use display
-entities and made their hitbox wayyy smaller
-• Added Slow Falling to the launch out of Mysterious Cenote
-• Eye of Viridia throws are now slightly more accurate
-### Bug Fixes:
-• Fixed being able to store arbitrary shulker boxes in Loadout
-Lockboxes. This was a bug introduced recently, not an intended
-feature, and people keep NBT banning themselves by trying this.
-"Special" shulker boxes are still allowed (Firmament,
-Worldshaper's Loom, Potion Injector), but there is now a limit
-of 2 total of these.
-• Fixed Quest Compasses never actually pointing to the correct
-location on other worlds
-• Fixed a Quest Compass log error
-• Fixed Oversized and Throwing Knife not accounting for Throw
-Rate % bonuses when calculating cooldown
-• Fixed projectiles sometimes not doing damage after passing
-through players or player summons (hunting companion, keeper
-virtue)
-• Fixed invalid particle data in certain mobs
-• Chaos Dagger no longer incorrectly claims to root bosses
-• Made an unbreakable spawner breakable.
-• Fixed Decorated Antler having incorrect stats
-• Fixed Tactician not triggering on root
-• An issue with Praetorer Strike that resulted in the post-quest
-interaction not working is fixed.
-• Fixed double spaces in Ghalkor/Svalgot and Hycenea dialogue
-• Fixed missing period in All That Remains• Fixed extra period
-in Hycenea dialogue
-• Fixed smart quotes in Hycenea, Samwell, and Sirius dialogue
-• Buckets and item frames now count as blocks for the purposes
-of ability triggers
-• Fixed exit button in another player's charm GUI not
-functioning
-• Super Eggnog can no longer be used as a water bottle to turn
-dirt to mud
-• Fixed Alcyoneus having outdated Knockback Resistance display
-• Void deaths in ||Dissonant Shrine|| will now properly respawn
-you in the POI
-• Fixed some cosmetic particles spawning as boss category
-• Removed a duplicate Artelus
-• Fixed some special Twisteds' death animations having broken
-particles
-• Fixed some empty spawners in Coalrupted
-• Fixed rotation being fixed during the countdown of Coalrupted
-• Fixed the detection circle for Transcendent Snowman not
-disappearing
-• Fixed the Holiday Artist's trades being locked after unlocking
-Coalrupted
-• Fixed an underwater current by Knight-Errant Reynart in
-Mistport
-• Fixed an empty spawner in Light Gray
-• Fixed ToV sea pickles sometimes not being cleared when
-removing a cache
-• Fixed R1 potions in Teal
-• Fixed a build error in Light Gray
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix:&r
-• Tactical Maneuver 2 now applies weakness to the enemies,
-instead of yourself
-• Shrapnel Bomb will now explode Wind Bomb
-• Hunting Companion will no longer pounce on mobs if the skill
-had its stagger duration reduced to 0 by charms (see Steel Trap
-w/ Blade of the Sealed)### Bug Fixes:
-• Fixed a longstanding issue that caused many POIs to respawn
-incorrectly following daily restart.
-• Fixed The Werehouse not giving a weekly chest
-• Fixed T2 & T3 valley bounties having an extra experience
-bottle.
-• Fixed the Esoteric Enhancements creeper blocking white tess
-usage
-• Fixed Tactician handbook entry not displaying anywhere
-• Fixed Twisted Atomic Abberation not being delve scaled
-• Fixed the Volley Multishot Duration charm stat being in ticks
-instead of seconds, and not displaying in class GUI
-• Fixed a typo in Captain Tobias' dialogue
-• Fixed not being able to frag Mist artifacts
-• Fixed Cleansing Totem level two (and not enhanced) only
-cleansing once instead of twice by default
-• Fixed Celsian Isles region handbook advancement having an
-outdated damage reduction number and made this advancement now
-also imply that the debuffs are applied in R3 as well
-• Fixed message when consuming Token Dispenser incorrectly
-stating that tier 1 and tier 5 items can be turned into tokens
-• Fixed issues with the Celestial Blessing enhancement extension
-not working properly when multiple Celestial Blessing effects
-were applied at once (either by one player with cooldown
-reduction or by multiple players)
-• Fixed funny wording in Supply and Demand compass entry
-• Fixed wrongly colored {...} in Old Hermit dialogue
-• Fixed grammar in a Masquerader's Ruin message
-• Replaced sentence in Region 1 Monument handbook advancement
-which stated that the monument was required to access Region 2
-• Fixed Muddied Tincture not applying effects if thrown (rather
-than used from the inventory)
-• Fixed typo in dungeons status page
-• Fixed pluralization in delve modifier GUI
-• Fixed SKT Dungeon Guard sending messages when sneaking instead
-of just opening the GUI
-• Fixed missing {...} in SKT dialogue
-• Fixed grammar in All That Remains dialogue
-• Fixed Thunder Step Enhancement Duration charm effect not being
-reflected in the description
-• Fixed issues with Guarding the Guarded's combat
-• Fixed Iron Tincture charges not updating correctly in the
-client mod
-• Fixed typo in Memory Log • Silver Knight Tarri VI
-• Fixed Focused Orison Charm not being replaced
-• Fixed typo in Aloc Acoc spoil message
-• Fixed typo in A Crew to Remember
-• Fixed smart quotes in Aleph Null volumes 2 and 3
-• Fixed punctuation in Head Alchemist dialogue
 &b(11.64.0)&r
 For the update on April 22, 2026
 ### Minor New Features:
@@ -296,3 +61,116 @@ properly with other copies
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
+&bHotfix:&r
+• Fixed Guarding the Guarded failing to reset properly after a
+player completed all waves
+&bHotfix&r since tonight's daily restart:
+• Fixed certain entities failing to despawn
+&b(11.65.0)&r
+For the update on April 29, 2026
+### Major New Features:
+&bNew R3 PoI • Temple of the Skylords&r
+• Freed from the shackles of the Inverted City, the Temple of
+the Skylords looms large in the skies above Star Point. Unique
+to the Architect's Ring, the Temple is a progression-locked POI,
+only descending for those who have claimed the Indigo Wool.
+&bNew Quest • Defying Gravity (Chapter 3 Finale)&r
+• Investigate the mysteries of the Temple of the Skylords, the
+Loamskattar, and Aurora's battle with the Stars, as you prepare
+for your final confrontation. The Empty One awaits and nothing
+will be the same. This quest can be started at Tuulen in the
+Celestial Zenith lobby, with completion of Holding Space, but
+cannot be fully completed until the release of the Aurora
+Lunacrestum boss encounter.
+&bAurora Lunacrestum&r
+• Ally-turned-enemy, Aurora stands before you, seeking to end
+the long conflict with the Stars, but to what end? This powerful
+sorceress will use every trick she has available to be the last
+one standing.
+• Unique to this bossfight is a customizable difficulty system,
+allowing you to adjust the fight's intensity to your own
+choosing. But how strong will Aurora be capable of becoming, and
+will you be able to stand against the ancient might of the
+Outside?
+• Aurora will launch
+&bthis weekend&r, <t:1777737600:F>### Minor New Features:
+• The "Daily Content Information" GUI in the P.E.B. menu has
+been reworked behind the scenes! Please report any bugs or
+inconsistencies that pop up with this new GUI.
+  • Every region now has its own page, as opposed to every daily
+entry being on a singular page. The page has also been
+reorganized to fit content more flexibly, and content icons
+borrow their content tag names and colors, with some exceptions.
+  • Added a new `/dailies <r1/r2/r3>` command as a shortcut to
+open this GUI. Leaving the region entry blank will default to
+Region 1.
+  • The GUI now features a clock showing the time left in the
+current day and week.
+  • Added the previously missing Snow Spirit to the GUI.
+• The polar vortex is beginning to calm down... the pseudo-
+Winter event will end with the next weekly update! Make sure to
+complete anything seasonal while you still can! Note that
+Coalrupted Sierhaven will remain fully playable, even outside
+the Winter event.
+• Existing Valley & Isles bounty chest no longer drops explorer
+fragments. New bounty chests will continue to drop them.
+• Replaced the secondary class display GUI used in some places
+(such as `/player details`) with the normal class selection GUI
+in read-only mode
+• Added a new command `/playerabilities [player]`, alias `/pa`,
+that allows viewing your own skills or another player's at any
+time
+### Feedback Fixes:
+• Lucidity now reveals spawners with a green coloured glow
+• You can now search by locations in wallets
+• Improved the telegraph and telegraph duration of the
+Transcendent elite duelist ability
+• Dehydrated the Memory Vault in Coalrupted Sierhaven
+• Added all remaining Coalrupted advancements to the API
+• Increased the drop rate of Dreadful Damassine### Bug Fixes:
+• Fixed Cookiefy elite finisher not being granted correctly; if
+you previously purchased it, contact a moderator to have it
+fixed
+• Fixed an issue causing labels on Coalrupted lootroom presents
+to attach to the wrong presents
+• Fixed a chest in Coalrupted having its loot table already
+rolled
+• Fixed errors in Rending Razor's description
+• Fixed Guard and Rebound not triggering when blocking mob spell
+damage which stuns shields
+• Prevented Gale Shot tridents from being pickuppable
+• Fixed Gale Shot tridents and snowballs not being properly
+hidden
+• Fixed capitalization in Wings of Alutana lore
+• Fixed typo in Crumpled Note
+• Removed out of date dialogue from Market Attendant
+• Fixed Chief Editor Sumona dialogue sending the first message
+again later
+• Fixed smart quotes in Construct Log I and Shade Hunter's Log •
+Silvic Quarry
+• Fixed Zenith wheel breaking when rolling orange with no trees
+available
+• Fixed Volley not properly giving a stack when it refreshes
+from Rush of Dissonance end of round
+• Fixed typo in Ekah dialogue
+• Maxwell Calder no longer grows half a meter when he reveals
+his intentions in Teal
+• Fixed Kaul Spleef being startable only before a daily restart,
+instead of any time &oexcept&r before a daily restart
+• Prevented Arclight and Royal Blue's Sixteen Puzzle from
+generating more and more and more and more and more and more
+entities
+• Fixed several typos and awkward wording in the Handbook
+• Fixed Veilripper not working correctly with several infusions
+(Rustworthy, Unrustworthy, Wax On, Wax Off, Barking, Debarking)
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&bHotfix (after nightly restart):&r
+• Following the 5.12.1 Resource Pack update, 3 new hope skins
+have been added to Mastersmith Antonio shop! Thank you very much
+to our patrons for your continued support!
+&bHotfix  (after nightly restart):&r
+• Fixed memory leak affecting playerplots
+• Fixed Snowy Owl Feather not working in Coalrupted
