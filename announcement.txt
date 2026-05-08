@@ -1,30 +1,3 @@
-I'm proud to introduce @9o62 and @[MAID] LucyChroma as our
-newest full developers! 9o has been working hard as a member of
-our build team, releasing Anthill & Creeper Tower, as well as an
-important R1 POI rework coming very soon! Lucy has implemented 1
-trillion suggestions and bug fixes, and is working on Gallery
-stability and future upgrade infrastructure.
-As always, 🏓
-&bImportant:&r
-Monumenta is currently down for maintenance. Please check
-<#579190910567317514> for the latest information.
-&bRules Update&r
-Market Rules:
-• Items with the "Owned" enchantment are not permitted to be
-sold in the market. This restriction does not apply to rentals.
-• Market stalls that are empty for an extended period of time
-are subject to removal after a warning from Moderators.
-General Rules:
-• Repeatedly AFKing in Strikes without the consent of the party
-is now considered Team Griefing and will carry a short term ban.
-• Making use of AFK spots in World Bosses is disallowed. This
-will result in a warning followed by a ban for repeat
-offenses.I'm proud to announce @jangbanano  and @[MAID]
-catgirlash_  as the newest Developers! Jang created the newly
-released Sporous Amalgam, and Ash has made many plugin features
-and fixes, including to item stats and cosmetics. Both are
-already involved in future projects that we hope you're looking
-forward to. Don't forget to give them their mandatory 🏓s!
 &bRules Update&r
 • Chest Waypoints such as those in MMA are no longer permitted
 on Monumenta.
@@ -139,3 +112,14 @@ The Star Point finale will be launching
 Skylords being available immediately after weekly update! Aurora
 will arrive next weekend, <t:1777737600:F>! We hope to see you
 all there! @everyone
+&bReminder:&r Our newest boss, Aurora Lunacrestum, releases at
+the top of the hour!Thank you to everyone who participated in
+our Day 1 release of the new Aurora Lunacrestum bossfight, and
+continue to do so! We hope you have all been having fun with the
+finale to Star Point! We've put together a little trailer to
+celebrate the occassion and showcase the boss a little • enjoy!
+https://youtu.be/TZyLJONLUzsHappy to announce that @ellie._ has
+been promoted to Team Monumenta! Ellie has done incredible mob
+work with truly unique designs for up coming exalteds as well as
+our next major content release :) Please give her the
+congratulatory 🏓
