@@ -1,228 +1,129 @@
-### Bug Fixes:
-• Fixed being able to get rewards after relogging in Hunts
-• Adjusted Aurora's dialogue in Defying Gravity
-• Fixed a missing biome in Defying Gravity
-• Fixed a zoning issue with Captain Indigo's ship
-• Fixed Lunar Ascension not displaying strength amplifier in
-effect list
-• Fixed some players keeping attributes from old Scout Swiftness
-• The Black Mist icon in the Dailies GUI now is what it is
-supposed to be instead of using the Sealed Remorse player head
-• Fixed Luminous Infusion charges being reset when relogging,
-changing shards, changing abilities, etc.
-• Temple of the Skylords now has a discovery advancement
-• Max in the Teal dungeon has come to realize that he no longer
-needs to wear a mask of his own face
-• The Aurora teleporter pad in Galengarde now properly triggers
-on all pressure plates
-• The Aurora instance key now displays the proper location tag
-• Unlocking Lowtide fast travel doesn't call the town Highwatch
-anymore
-• Fixed Divine Justice particles being in the active category
-instead of passive
-• Fixed many item frames in Farr being rotatable
-• Fixed Hekawt Curse effect not being removed on death
-• Fixed Wildcard abilities not being able to be received as
-Generosity gifts if the receiver has Convergence with space
-remaining. Similarly, fixed Convergence not being to be received
-as a Generosity gift if the receiver has a different Wildcard
-• Clarified in Curse of Gluttony description that only abilities
-up to Legendary can get removed
-• Fixed Shield Bash, Whirlwind Totem, Cosmic Moonblade,
-Windswept Combos, Skyhook, and Last Breath not correctly using
-the initial cooldown when calculating cooldown reduction
-• Fixed Soulweavers in Depths and Zenith not having dialogue and
-being able to take damage from some things like fire
-• Fixed typo in Wexley dialogue
-• Fixed thee typo with thee food store in Galengarde.
-• Izzy and Levyn now don't squat in the upstairs of the food
-store without being given permission first.||
-• Sunstar Vessel's projectiles + hitbox are now 3x larger and
-move 25% slower.
-• Sunstar Vessel's projectile attack now casts on a 5s cooldown
-(from 10s)
-• Galactic Vanguard's slam attack now charges in 0.75s (from
-1.5s)
-• Galactic Vanguard's slam attack now deals 65 melee damage
-(from 50)
-||
-### Minor New Features:
-• The Light Gray lobby has been fully rebuilt, thanks to
-HabisQweun!
-• A stargazer in Galengarde may now comment on recent happenings
-in the night sky
-• Added extensive Post-Quest Dialogue with Bhairavi after
-Defying Gravity that recaps the entirety of the Chapter 3
-storyline.
-• Slowed down some auto-dialogue in Defying Gravity to try and
-make it easier to read along.
-• Added token post-quest dialogue with Captain Indigo.## 🛠️
-Balance Changes:
-### <:cleric:1106716781160181822> Cleric
-• Ray of Moonlight : +25% -> 0% Holy Javelin Cooldown, +25% ->
-+35% Holy Javelin Divine Justice Damage Boost, +2 -> +1 Holy
-Javelin Stun Duration
-• Skylord's Judgement : -10% -> 0% Holy Javelin Damage, -10% ->
-0% Ethereal Ascension Duration
-• Crumbling Foundation : #+12 -> #+15 Illuminate Enhancement
-Damage, +150% -> #+100% Illuminate Enhancement Tick Rate
-• Bewitching Lantern: -40% -> -30% Keeper Virtue Harming Flare
-Cooldown
-• Pious Prism: +60% -> +50% Hallowed Beam Damage
-• Malignant Neuron: +20 -> +15 Ethereal Ascension Max Duration
-Extension
-• Poisoned Wisteria: -35% -> -25% Ethereal Ascension Orb Radius
-### <:mage:1106716826299289720> Mage
-• Rune of Inversion : 50% -> +100% Astral Omen Radius
-• Nullwick Lantern : 0% -> +25% Magma Shield Damage, +30% ->
-+25% Magma Shield Range
-• Looming Demise (Rework) : 3 Charm Power, +100% Starfall
-Radius, +50% Starfall Range, -50% Starfall Fall Speed
-### <:rogue:1106716844372537465> Rogue
-• Some Swordsage skills have received region scaling:
-  • &oThis change helps the base skill perform in the Ring
-without having to rely so heavily on its lesser charms.&r
-> Blade Dance : 6/9 (R2) -> 10/14 (R3)
-> Deadly Ronde : 4/6 (R2) -> 6/8 (R3)
-  • Ataraxian Echo: Bodkin Blitz Passthrough Damage hitbox is
-now based on the center of the player instead of their feet,
-slightly increased radius of hitbox
-  • Silverwind Distortion: Wind Walk Vulnerability now stacks
-with other vulnerability sources
-  • Silvari Blade Handle : +100% -> +50% Blade Dance Damage
-  • Explosive Spore : 3 -> 2 Charm Power
-  • Focused Charm of Dominion : +35% -> +20% Deadly Ronde Damage
-  • Greater Charm of Dominion : +20% -> +10% Deadly Ronde Damage
-  • Lesser Charm of Dominion : +10% -> +5% Deadly Ronde
-Damage### <:warrior:1106716892305035274> Warrior
-• Shield Bash now region scales:
-  • &oSimilar to the Swordsage changes, this should help Shield
-Bash feel more useful without heavy charm investment.&r
-> 8 (R1) / 12 (R2) / 16 (R3)
-  • Lesser Charm of Bashing : +20% -> +15% Shield Bash Damage
-  • Greater Charm of Bashing : +40% -> +30% Shield Bash Damage
-  • Focused Charm of Bashing : +70% -> +60% Shield Bash Damage
-  • Swift Charm of Bashing : +20% -> +10% Shield Bash Damage
-  • Distant Charm of Bashing : +20% -> +10% Shield Bash Damage
-  • Rune of Rejection : +60% -> +50% Shield Bash Damage
-• Lesser Force Charm : +10% -> +5% Brute Force Damage
-• Greater Force Charm : +20% -> +10% Brute Force Damage
-• Focused Force Charm : +35% -> +20% Brute Force Damage
-• Pressure Gauntlet :  3 -> 1 Charm Power, +10% -> +25% Brute
-Force Wave Damage Ratio, 0% -> +25% Brute Force Knockback, +20%
--> #-25% Brute Force Radius
-• Loci's Hunger : +50% -> +100% Rampage Damage, -30% -> -50%
-Rampage Cooldown, 0% -> -50% Rampage Healing
-• Duelist's Sigil : 2 -> 1 Charm Power, -1 -> +1 Riposte Sword
-Bonus Damage Duration, +50% -> +25% Riposte Sword Bonus Damage
-• Rootways Boulder : 0 -> +0.5 Challenge Absorption Health Per
-Mob
-• Rocket Boots : 4 -> 3 Charm Power
-• Rune of Dominion : 0% -> +25% Shield Bash Range
-• Will of Ganzir (Rework) : 3 Charm Power, #+15 Shield Wall
-Damage, #-80% Shield Wall Cooldown, #-80% Shield Wall Duration,
--20% Shield Wall Radius
-&oThis charm had an extremely strong pairing with Everlasting
-Hallucination, which allowed for extremely high uptime of Shield
-Wall without much player input. This change should keep it
-within its low-cooldown high damage niche.&r###
-<:scout:1106716859664965733> Scout
-  • Quiver Storm now inherits 35% of weapon enchantments (from
-25%)
--# &oThis change allows Quiver Storm to pierce if the projectile
-weapon has Piercing 3 instead of 4.&r
-  • Gale Shot L1 damage reduced from 12/120% -> 10/100%
-  • Gale Shot L2 damage reduced from 14/140% -> 12/120%
-  • Rending Razor L1 cooldown increased from 14s to 16s
-  • Hunting Companion Healing reduced from 10% -> 5% over 1s
-  • Steel Trap damage in R1 reduced from 7 -> 5
-  • Shrapnel Bomb damage in R1 reduced from 8/12 -> 6/9
-  • Shrapnel Bomb Shrapnel damage in R1 reduced from 5/8 -> 4/6
-  • Hunting Companion damage in R1 reduced from 7/10 -> 5/8
-  • Hunting Companion no longer interacts with First Strike or
-Shrapnel Bomb's L2/enhancement
-  • Swiftness double jump cooldown increased from 3s -> 4s
- • &oScout has been overperforming in R1, while having too much
-freedom of mobility in all regions due to Swiftness, diminishing
-Tactical Maneuver's usefulness. As for Ranger, it's seen a large
-increase in stats over the course of its release to help it find
-its place, but it has been overperforming even without the
-consideration of the overtuned Steel Trap charms.&r
-• Core Collapse : +40% -> +50% Wind Bomb Radius, 3 -> 2 Charm
-Power, #-60% -> -50% Wind Bomb Damage
-• Blade of the Sealed : +3 -> +2 Steel Trap Charges, #+33% ->
-#+75% Steel Trap Cooldown
-• Flesh Laurel : 2 -> 3 Charm Power
-• Limber Claw : +50% -> +25% Steel Trap Damage
-• Harrakfar's Roar : 0% -> +50% Wind Bomb Vortex Radius, 2 -> 1
-Charm Power, +25% Wind Bomb Cooldown
-### <:warlock:1106716877817913346> Warlock
-• Dark Pact now prioritizes cancelling the pact instead of re-
-applying, in the case that the skill is off cooldown and still
-active
-• Celestial Contract: +4 -> +6 Dark Pact Deactivation Damage
-Radius, now deals melee damage (was magic), includes absorption
-gained from Soul Rend, and hits in a sphere instead of a cube###
-⛰️ Quake Changes:
-&oThese changes aim to help the enchant feel more impactful per-
-level as an enchant without bloating item statistics, and to
-help some underperformers find more usage with a stronger
-Quake.&r
-  • 5% -> 10% Damage
-  • 3 -> 3.5 Radius
-• Quake Item Changes (R1) :
-  • Temblor : 4 -> 3 Quake
-  • Blackroot Branch (Blade of the Lost) : 4 -> 3 Quake
-  • Threadwarped Tkaa (Sketched Threadwarped Tkaa) : 2 -> 1
-Quake
-  • Gigantic Icicle : 6 -> 4 Quake
-• Quake Item Changes (R2) :
-  • Luck of the Draw : 4 -> 3 Quake
-  • Entcrusher (Shaman's Crusher) : 4 -> 3 Quake
-  • Phlogiston Fissure (Magma Cake) : 3 -> 2 Quake
-  • Plaguebaron's Scythe : 2 -> 1 Quake
-  • Notched Pickaxe : 2 -> 1 Quake
-  • Frost Giant's Crusher (Replica C'theddros) : 3 -> 2 Quake
- • Quake Item Changes (R3) :
-  • Trichiliocosm (M4) : 7 -> 4 Quake
-  • The Vedha’s Soulcrusher (M4) : 2 -> 1 Quake
-  • Dreadwood Log (M4) : 4 -> 2 Quake
-  • Cutter of Eons (M4) : 2 -> 1 Quake
-  • Last Respects (M4) : 18 -> 17 Attack Damage
-  • Lycanfang Gladius (M4) : 2 -> 1 Quake
-  • Veinshredder (M4) : 2 -> 1 Quake
-  • Oblivion (M4) : 2 -> 1 Quake
-  • Midday Harbinger : 6 -> 5 Quake
-  • Rivers of Blood : 5 -> 4 Quake
-### Other Item Changes
-• Speaker's Ward : 0 -> 1 Smite
-• Ritual Raiment : 3 -> 2 Ailment Fragility, 3.5 -> 4 Armor
-• Saccharine Sample : +18% -> +22% Projectile Damage
-• Wisdom : +3 -> +3.5 Armor
-• Arc of the Lunacrest : 1 -> 1.2 Attack Speed
-• EX Corrupted Scalawag's Hatchet (M4) : 1 -> 2 Curse of Anemia
-• Mycotoxicosis (M4) : 1 -> 0 Curse of Shrapnel, 0 -> 3 Ailment
-Fragility
-• Veilripper (M6) : 1.2 -> 1.3 Attack Speed
-• Shadowstone Ballista (M4) : 5 -> 4 Point Blank
-• Skypiercer (M4) : 0.9 -> 1 Throw Rate
-• Ravenclaws : 1 -> 2 Multishot
-• Alcyoneus (M6) : +50% -> +60% Knockback Resistance
-• Rebalanced Stoneborn Sculptor's Masterwork levels
+Aurora has been temporarily reclosed.Aurora has been reopened
 &bHotfix:&r
-• Shaman's Lightning Totem no longer deals damage 300 times per
-tick
-• ||Temple of the Skylord's|| Rares have been added to the
-Starpoint Rare traderAurora has been temporarily closedSnow
-Spirit has been reopened (and fixed)
-&bHotfixes:&r
-• Fixed Parting Shot not working
-• Fixed Intruder Steel Trap cosmetic not despawning
-• Fixed Wind Bomb not being detonatable with Shrapnel Bomb
-• Fixed Gale Shot not working with snowballs
-• Reverted Lightning Totem's damage scaling to pre-update
-• Fixed /showmydps not counting certain damage instances
-• Fixed resistance sometimes not working
-• Fixed Aurora dragging the party and herself into the void on
-occasion
-• Fixed Celestial Contract dealing wildly variable damage
+• Aurora no longer spawns 200 Rage levels of mobs at sub-200
+Rage
+• Stardust Detonation in Phase 4 now has the correct radiusKaul
+has been reopened.
+-# Kaul dreamed hard enough to awaken himself 3 days ago.
+&b(11.67.0)&r
+For the update on May 13, 2026
+&bNotices:&r
+• Refunds for epic charms have been removed
+&bMinor New Features:&r
+• Heart of Astaroth has been fully reworked
+• The Masked Man fight within Inner Sanctum has been completely
+reworked
+• The Masked Man fight within the Harbinger specialization quest
+has been completely reworked
+• Tweaked antiLR
+• Valley and Isles Explorer Caches should no longer be affected
+by antiLR
+• Running `/showmydps` without a parameter toggles between
+enable and disable
+• Reformatted the command feedback from `/showmydps`
+• There is now an unlockable shortcut in the Temple of the
+Skylords
+• `/showmydps` now gives the total time taken to kill the boss
+and shows dps accounting for downtimes which are longer than 1
+second
+• Added basic melee and projectile damage to the damage
+breakdown
+• Added a shortcut to the weekly Points of Interest clear list
+in the Dailies GUI by clicking the Ring Bounties icon.
+• Marina Noir & Sanguine Halls Waves Completed Leaderboards have
+been clamped to 100
+&bAurora Rage+ Mode Changes:&r
+Based on player feedback for Aurora's Rage+ Mode, the following
+changes have been made:
+• Rage+ mode is now a single-life experience. If your team wins
+the fight, all players (dead or not) will be restored to life as
+normal, but if a team fully wipes, the instance is ended and
+Aurora can no longer be challenged.
+• In the case of fullwipes, your team's reward payout is lowered
+to be equivalent to that of a 100% rage win • so think carefully
+about if you can take on that next rage challenge!
+• The reward payout for Rage+ mode has been adjusted to
+compensate for the increase in risk that now comes with the mode
+• The Highest Rage Achieved leaderboard has been reset following
+these changes, with any player who previously had >100 Rage now
+being set to exactly 100.
+&bAurora Boss Changes:&r
+• Actually added beta tester credits to the Aurora lobby
+• The overworld instance switcher in the Aurora lobby now has a
+nametag
+• Fixed Aurora's Skin not changing in Phase 3
+• Fixed being able to Judgement Chain Delfia's Focus
+• Fixed some attacks not properly reaching the edge of the arena
+• Fixed being able to camp below the arena
+• Tempest Dynamo 120 magic / 12 hits -> 90 melee / 10 hits
+• Galactic Vanguard Bash particles have been improved
+• ||Collapsing Connection|| gives more grace time for Star
+Shower now and has a stronger punishment for abandoning your
+soul mate!
+• Improved Stardust Detonation telegraph
+• Improved Frigid Collapse telegraph
+• Nerfed fodder mobs HP scaling
+• Fodder mobs now spawn at rate based on the number of alive
+players instead of the number of players initially
+• 140 rage now also reduces Spatial Shattering cooldown
+• Movement Abilities can no longer be cast in Supernova
+• Moved the Overworld Instance in Aurora lobby.
+&bFeedback Changes:&r
+• Rotated a chest in Reverie
+• Tormenteds now break in a 2x2x2 instead of 3x3x3
+• Improved the Twisted Omenspeaker telegraph
+• All-Seeing Seraphim now has 50% knockback resistance
+• Galactic Collider now bobs up and down
+• Voidmothers Eye beam damage reduced to 8% true damage/s (from
+15% true damage/s)
+• `/playerabilities` (`/pa`) will now send you to the page for
+the player's class first
+&bBug Fixes:&r
+• Fixed minor typoes in Collapsing Connection's dialogue
+• Fixed showmydps returning infinite DPS if you oneshot a boss
+• Fixed Phantasm's stats being incorrect
+• `<mainhand>`, `<offhand>`, `<equipment>`, and `<charms>`
+should no longer crash 1.20.5+ clients. We make no promises
+about any other issues affecting those versions.
+• Fixed Lucidity not working in the inventory
+• Fixed Lucidity revealed spawners sometimes not being removed
+• Fixed Idolatry not working on projectiles
+• Fixed First Strike not working on projectile and alchemist
+potions• Fixed Holy Javelin transferring less divine justice
+damage if activated by a non-critical hit
+• Fixed `/pa` showing the wrong specs enabled when viewing
+another player
+• Fixed `/showmydps` not respecting damage caps of bosses
+• A fern in Verdant Fortress found it's stem
+• Blighted trees in Defying Gravity are no longer made of spruce
+planks
+• Several builds in Defying Gravity now adhere to the laws of
+gravity
+• Fixed """exposed""" bedrock in The Werehouse
+• Removed a floating dark oak slab in Forsaken Manor
+• Ate some glow berries in Farr
+• Soul fire in Whitecliffe Citadel is now burning on ice instead
+of other fire
+• Turned several steves into grapes outside of Farr
+• Temples within Cave of Secrets are no longer made of wool
+• Anthill is no longer made of wool
+• Fixed the region items in the Dungeons GUI incorrectly
+mentioning "daily completions" instead of "weekly dungeon
+information".
+• Obliterated a flying beacon in Pelias' Keep
+• Fixed an issue where logging out in the Aurora arena after
+cashing out rewards will cause the abandon instance button to
+disappear when logging back in
+• A typo in the broadcast message for defeating Aurora at 100%
+rage for the first time has been corrected
+• Relentless Hallucination no longer deals specifically South-
+Eastern knockback
+• Fixed a spelling error in the Workshop hologram text
+• Fixed Steel Trap from Twisted Deadeye not despawning correctly
+• Fixed Choir Bells from Twisted Crusader not despawning
+correctly
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.[Original Message
+Deleted]
