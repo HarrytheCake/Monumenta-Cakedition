@@ -1,129 +1,132 @@
-Aurora has been temporarily reclosed.Aurora has been reopened
+Missed changelog entry from April 22, 2026:
+• Fixed fishing combats not checking the Miscellaneous Music
+toggle in the PEBMail has been temporarily disabled.
 &bHotfix:&r
-• Aurora no longer spawns 200 Rage levels of mobs at sub-200
-Rage
-• Stardust Detonation in Phase 4 now has the correct radiusKaul
-has been reopened.
--# Kaul dreamed hard enough to awaken himself 3 days ago.
-&b(11.67.0)&r
-For the update on May 13, 2026
-&bNotices:&r
-• Refunds for epic charms have been removed
-&bMinor New Features:&r
-• Heart of Astaroth has been fully reworked
-• The Masked Man fight within Inner Sanctum has been completely
-reworked
-• The Masked Man fight within the Harbinger specialization quest
-has been completely reworked
-• Tweaked antiLR
-• Valley and Isles Explorer Caches should no longer be affected
-by antiLR
-• Running `/showmydps` without a parameter toggles between
-enable and disable
-• Reformatted the command feedback from `/showmydps`
-• There is now an unlockable shortcut in the Temple of the
-Skylords
-• `/showmydps` now gives the total time taken to kill the boss
-and shows dps accounting for downtimes which are longer than 1
-second
-• Added basic melee and projectile damage to the damage
-breakdown
-• Added a shortcut to the weekly Points of Interest clear list
-in the Dailies GUI by clicking the Ring Bounties icon.
-• Marina Noir & Sanguine Halls Waves Completed Leaderboards have
-been clamped to 100
-&bAurora Rage+ Mode Changes:&r
-Based on player feedback for Aurora's Rage+ Mode, the following
-changes have been made:
-• Rage+ mode is now a single-life experience. If your team wins
-the fight, all players (dead or not) will be restored to life as
-normal, but if a team fully wipes, the instance is ended and
-Aurora can no longer be challenged.
-• In the case of fullwipes, your team's reward payout is lowered
-to be equivalent to that of a 100% rage win • so think carefully
-about if you can take on that next rage challenge!
-• The reward payout for Rage+ mode has been adjusted to
-compensate for the increase in risk that now comes with the mode
-• The Highest Rage Achieved leaderboard has been reset following
-these changes, with any player who previously had >100 Rage now
-being set to exactly 100.
-&bAurora Boss Changes:&r
-• Actually added beta tester credits to the Aurora lobby
-• The overworld instance switcher in the Aurora lobby now has a
-nametag
-• Fixed Aurora's Skin not changing in Phase 3
-• Fixed being able to Judgement Chain Delfia's Focus
-• Fixed some attacks not properly reaching the edge of the arena
-• Fixed being able to camp below the arena
-• Tempest Dynamo 120 magic / 12 hits -> 90 melee / 10 hits
-• Galactic Vanguard Bash particles have been improved
-• ||Collapsing Connection|| gives more grace time for Star
-Shower now and has a stronger punishment for abandoning your
-soul mate!
-• Improved Stardust Detonation telegraph
-• Improved Frigid Collapse telegraph
-• Nerfed fodder mobs HP scaling
-• Fodder mobs now spawn at rate based on the number of alive
-players instead of the number of players initially
-• 140 rage now also reduces Spatial Shattering cooldown
-• Movement Abilities can no longer be cast in Supernova
-• Moved the Overworld Instance in Aurora lobby.
-&bFeedback Changes:&r
-• Rotated a chest in Reverie
-• Tormenteds now break in a 2x2x2 instead of 3x3x3
-• Improved the Twisted Omenspeaker telegraph
-• All-Seeing Seraphim now has 50% knockback resistance
-• Galactic Collider now bobs up and down
-• Voidmothers Eye beam damage reduced to 8% true damage/s (from
-15% true damage/s)
-• `/playerabilities` (`/pa`) will now send you to the page for
-the player's class first
-&bBug Fixes:&r
-• Fixed minor typoes in Collapsing Connection's dialogue
-• Fixed showmydps returning infinite DPS if you oneshot a boss
-• Fixed Phantasm's stats being incorrect
-• `<mainhand>`, `<offhand>`, `<equipment>`, and `<charms>`
-should no longer crash 1.20.5+ clients. We make no promises
-about any other issues affecting those versions.
-• Fixed Lucidity not working in the inventory
-• Fixed Lucidity revealed spawners sometimes not being removed
-• Fixed Idolatry not working on projectiles
-• Fixed First Strike not working on projectile and alchemist
-potions• Fixed Holy Javelin transferring less divine justice
-damage if activated by a non-critical hit
-• Fixed `/pa` showing the wrong specs enabled when viewing
-another player
-• Fixed `/showmydps` not respecting damage caps of bosses
-• A fern in Verdant Fortress found it's stem
-• Blighted trees in Defying Gravity are no longer made of spruce
-planks
-• Several builds in Defying Gravity now adhere to the laws of
-gravity
-• Fixed """exposed""" bedrock in The Werehouse
-• Removed a floating dark oak slab in Forsaken Manor
-• Ate some glow berries in Farr
-• Soul fire in Whitecliffe Citadel is now burning on ice instead
-of other fire
-• Turned several steves into grapes outside of Farr
-• Temples within Cave of Secrets are no longer made of wool
-• Anthill is no longer made of wool
-• Fixed the region items in the Dungeons GUI incorrectly
-mentioning "daily completions" instead of "weekly dungeon
-information".
-• Obliterated a flying beacon in Pelias' Keep
-• Fixed an issue where logging out in the Aurora arena after
-cashing out rewards will cause the abandon instance button to
-disappear when logging back in
-• A typo in the broadcast message for defeating Aurora at 100%
-rage for the first time has been corrected
-• Relentless Hallucination no longer deals specifically South-
-Eastern knockback
-• Fixed a spelling error in the Workshop hologram text
-• Fixed Steel Trap from Twisted Deadeye not despawning correctly
-• Fixed Choir Bells from Twisted Crusader not despawning
-correctly
+• Fixed a Week 13 Seasonal Pass mission not counting as a Bonus
+Mission.• Fixed Smokescreen not working when used underwater
+• Fixed Smokescreen and Shrapnel Bomb not storing stats when
+cast properly
+• Fixed having Escape Artist causing projectiles to disappear
+when landing, which among other things makes Dummy Decoy not
+trigger
+• Fixed snowmen summoned by Tesseract of Festivity (unupgraded)
+counting as hostile mobs for abilities
+• Fixed grammar in Piece of Hate lore
+• Clarified Explosive advancement
+• Fixed smart quotes in Atheniel, Peter, and White dialogue
+• Fixed immortal passengers not damage transfering
+• Fixed Cloaked counting immortal mounts and passengers as
+enemies
+• Fixed Aurora doing a random teleport if she steps on certain
+slabs in the arena
+• Fixed Aurora's ||Such Destruction|| advancement requiring too
+many blocks to be achieved
+• Fixed Astral Greatsword not showing the red line telegraph to
+all players as the sword is about to launch forwards
+• Fixed various ToV spawning/despawning bugs. To make it more
+clear that any new bugs exist, please open new bug reports
+instead of reopening old ones.
+• In Aurora's Rage+ mode, leaderboard scores now properly track
+the highest rage defeated in any given run, rather than
+specifically highest wave that has been cashed out
+• Fixed player stats GUI not including Celerity as a conditional
+infusion
+• Clarified warning regarding having an item from an
+incompatible region in the player stats GUI
+• Fixed missing {...} in Guard Timmeh dialogue
+• Fixed double Sam Ludvic dialogue
+• Fixed Gallery Informant referring to coins as points
+• Fixed Dagger Throw dealing reduced damage regardless of
+whether it was recast
+• Fixed missing period in Death's Swiftness
+• Fixed grammar in Shattered action bar message
+• Fixed multiple stuck spots in Port Manteau's and Galengarde's
+trees.
+• Added safety ladders to Aurora Lobby.### Mob Changes
+• Twisted Tempest's Wind Walk has been updated, telegraphed by a
+swirling Gust particle
+• Twisted Omenspeaker now does one less volley of Twisted
+Earthspikes
+• Twisted Crusader's Luminous Infusion now deals 2 true damage
+per puse, ignoring iframes
+• Twisted Hexbreaker's Hexbombs have had their radius reduced to
+3 blocks (from 4)
+• Twisted Shadestepper's Cloaked Strike now deals 12 true damage
+(from 60 melee damage in R2)
+• Twisted Shadestepper's Trickshade Barrage has been reworked
+• Twisted Shadestepper now spawns 1 Clone (from 2) when damaged
+• Reduced the launch height of Guardian Cherubim's projectiles
+• Removed the Divine Entanglement wall from Guardian Cherubim
+• Twisted Revenant's jump slam cooldown has been increased to
+10s (from 7s)
+• Twisted Revenant no longer charges in response to:
+  • Predator Strike
+  • Rending Razor
+  • Alchemical Artillery
+• Twisted Gravecaller's Subjugate Rune is larger and now glows
+• Subjugate Rune now gives the player 5s to enter it (from 2.5s)
+• Subjugate Rune now glows purple
+• Subjugate Rune now indicates a red circle around the player if
+they would be hit by its effect
+• Coronary Artery damage increased from 8 to 12
+### Bug Fixes:
+• Fixed bugs related to `<mainhand>` and `<offhand>`
+• Fixed the server complaining that your hand doesn't have
+metadata if you used `<mainhand>` or `<offhand>` with an empty
+hand.
+• Fixed lucidity creating a permanent display if used twice on
+the same spawner
+• Fixed slow from Permafrost stacking with slows from other
+abilities/enchantments
+• Fixed weird interactions when negative slows or weakens are
+applied (usually due to charms, such as Abyssal Coral with level
+0 Gruesome Alchemy). Now, negative slows and weakens are applied
+independently of other slows or weakens
+• Fixed Twisted Omenspeaker's telegraph and damage hitbox for
+its Twisted Earthspike attack being inconsistent
+• Fixed Voidmother's Eye being an Elite
+&b(11.68.0)&r
+For the update on May 20, 2026
+### Event News
+• We hope you enjoyed revisiting the first ever Seasonal Pass
+with the Blackroot Pass: Redux! The next Seasonal Pass will drop
+next week... so stay tuned!
+### Minor New Features
+• Added a new skill cosmetic for Touch of Radiance, Psychic
+Connection, to the Awakened Cleric cosmetic set. Players who
+have already bought Sins of the Voracious may unlock the
+cosmetic by right clicking with the item in hand
+• There are now reverse recipes to turn concrete back into
+concrete powder, either one block at a time or 9 at a time
+• The Plot Architect's Concrete Supply Crate now has actual
+concrete, as well as a new Concrete Powder Crate (Concrete
+Powder Supply Crate doesn't fit in the chest GUI). If you have
+an existing Plot Architect, you will need to use an Egginator to
+turn it into a spawn egg, then place it again to access the new
+trades.
+• Shield Wall and Prestigious Wall have received a new look!
+• Recasting Shield Wall while it's &ooff&r cooldown now cancels
+the old Shield Wall
+### Feedback Changes
+• Lucidity now has a 4 second cooldown when there are no nearby
+spawners
+• Lucidity spawner highlights are 0.9 blocks wide and use
+glowing tinted glass now
+• Changed the name color of Crown of the Lost Beyond, Flesh
+Without Names, Crimson Tithe, Pureshard Adze, Eyes of the
+Loamskattar, Scopophobia, Blightpod Carapace
+• `/showmydps` no longer counts worm segments, immortal mounts,
+and immortal passengers
+• Exiting the arena bounds during Supernova now damages you
+again
+• Replaced blue stained glass boundary in market plots with
+waterlogged barriers
+• Events in the tab list are now zero-padded when two units of
+time are shown (ie `3m 05s` instead of `3m 5s`)
+• Changed Celestial Contract's sound effect
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.[Original Message
-Deleted]
+and select `I want to unlock this shop`.
+• Mail remains closed.Aurora has been temporarily closed.Kaul
+has been temporarily closed.Aurora has been reopened.
