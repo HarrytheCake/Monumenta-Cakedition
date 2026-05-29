@@ -1,132 +1,149 @@
-Missed changelog entry from April 22, 2026:
-• Fixed fishing combats not checking the Miscellaneous Music
-toggle in the PEBMail has been temporarily disabled.
-&bHotfix:&r
-• Fixed a Week 13 Seasonal Pass mission not counting as a Bonus
-Mission.• Fixed Smokescreen not working when used underwater
-• Fixed Smokescreen and Shrapnel Bomb not storing stats when
-cast properly
-• Fixed having Escape Artist causing projectiles to disappear
-when landing, which among other things makes Dummy Decoy not
-trigger
-• Fixed snowmen summoned by Tesseract of Festivity (unupgraded)
-counting as hostile mobs for abilities
-• Fixed grammar in Piece of Hate lore
-• Clarified Explosive advancement
-• Fixed smart quotes in Atheniel, Peter, and White dialogue
-• Fixed immortal passengers not damage transfering
-• Fixed Cloaked counting immortal mounts and passengers as
-enemies
-• Fixed Aurora doing a random teleport if she steps on certain
-slabs in the arena
-• Fixed Aurora's ||Such Destruction|| advancement requiring too
-many blocks to be achieved
-• Fixed Astral Greatsword not showing the red line telegraph to
-all players as the sword is about to launch forwards
-• Fixed various ToV spawning/despawning bugs. To make it more
-clear that any new bugs exist, please open new bug reports
-instead of reopening old ones.
-• In Aurora's Rage+ mode, leaderboard scores now properly track
-the highest rage defeated in any given run, rather than
-specifically highest wave that has been cashed out
-• Fixed player stats GUI not including Celerity as a conditional
-infusion
-• Clarified warning regarding having an item from an
-incompatible region in the player stats GUI
-• Fixed missing {...} in Guard Timmeh dialogue
-• Fixed double Sam Ludvic dialogue
-• Fixed Gallery Informant referring to coins as points
-• Fixed Dagger Throw dealing reduced damage regardless of
-whether it was recast
-• Fixed missing period in Death's Swiftness
-• Fixed grammar in Shattered action bar message
-• Fixed multiple stuck spots in Port Manteau's and Galengarde's
-trees.
-• Added safety ladders to Aurora Lobby.### Mob Changes
-• Twisted Tempest's Wind Walk has been updated, telegraphed by a
-swirling Gust particle
-• Twisted Omenspeaker now does one less volley of Twisted
-Earthspikes
-• Twisted Crusader's Luminous Infusion now deals 2 true damage
-per puse, ignoring iframes
-• Twisted Hexbreaker's Hexbombs have had their radius reduced to
-3 blocks (from 4)
-• Twisted Shadestepper's Cloaked Strike now deals 12 true damage
-(from 60 melee damage in R2)
-• Twisted Shadestepper's Trickshade Barrage has been reworked
-• Twisted Shadestepper now spawns 1 Clone (from 2) when damaged
-• Reduced the launch height of Guardian Cherubim's projectiles
-• Removed the Divine Entanglement wall from Guardian Cherubim
-• Twisted Revenant's jump slam cooldown has been increased to
-10s (from 7s)
-• Twisted Revenant no longer charges in response to:
-  • Predator Strike
-  • Rending Razor
-  • Alchemical Artillery
-• Twisted Gravecaller's Subjugate Rune is larger and now glows
-• Subjugate Rune now gives the player 5s to enter it (from 2.5s)
-• Subjugate Rune now glows purple
-• Subjugate Rune now indicates a red circle around the player if
-they would be hit by its effect
-• Coronary Artery damage increased from 8 to 12
+### Seasonal Pass:
+• The previous Seasonal Pass was a revisit on where the Seasonal
+Pass system began... now, the upcoming Seasonal Pass represents
+how far we've come as a server! To correspond with our other
+10th Anniversary celebrations, we introduce the brand-new
+&bDecade Pass&r!
+• Unlock brand new anniversary-related Titles, Mob Dummies &
+Plushies, Elite Finishers, and other rewards as you progress
+through the usual 13 weeks of pass missions.
+• Three new Seasonal Pass Artifacts have been added to the Relic
+Wheel pool!
+• Two new Sketched reskins have been added to the Seasonal Skin
+Manager!
+• You can now buy items from the original Blackroot Pass once
+again.
+• Head to the Seasonal Pass lobby to start celebrating the
+server's big milestone! The Decade Pass begins on
+<t:1780074000:F>!
+### Minor New Features:
+• Added 2 new King's Valley Transmogrifier Rares
+• Added a new page specifically for Seasonal Pass plot borders
+in the Plot Border selection GUI.
+• Applied minor tweaks to descriptions of a handful of pass
+borders in the Plot Border selection GUI, mainly punctuation
+changes.
+• Internal hotfix commands have changed, to reduce lag. Please
+report to moderators if loot scaling seems to be not working.
+• It is now possible to waterlog stacks of blocks by clicking
+them with a water bucket, and to unwaterlog them by clicking
+them with an empty bucket
+• Logging in on a playerplot that you no longer have access to
+will now transfer you to a plot you can access
+• Actually implemented the AntiLR tweaks from 2 weeks ago### Mob
+Changes:
+ • &nTemple of the Skylords&r:
+   • Vestige of the Skylords : Reduced slash range by 1 block,
+bullet hell phases no longer have additional bullets in the sky.
+The Augmented Stars (projectiles) can now be killed.
+   • Ascendant Stormsoldier : 115 -> 90 Health
+   • Reverent Stormsoldier : 135 -> 115 Health
+   • Starscorched Servant : 150 -> 130 Health
+   • Starthunder Zealot : 120 -> 95 Health
+   • Stormzone Capsule : 100 -> 80 Health
+   • Tempest Dynamo : 135 -> 110 Health
+• &nTormenteds&r:
+   • Twisted Crusader now has an additional third Luminous
+Infusion pulse
+   • Twisted Crusader now faces the player properly
+• Twisted Invoker's Grasping Beyonds (Vexes) now despawn on
+death
+• Twisted Sentinel's Last Companions (Foxes) now despawn on
+death
+• Twisted Spiritcaller's Rekindled Spirits and Hurricane
+Effigies now despawn on death
+• Yeigar, the Last Emperor's starfall telegraph has been made
+louder
+• Piercing Assimilation from Manipulating Hallucination now has
+a larger telegraph
+• Monstrous Spider (Light Blue) no longer has 40% resistance,
+and its health has been increased from 16 -> 20 to compensate
+• The following mobs now have their default sounds again:
+   • All creeper variants in brown (Plus/Minus Charged Short
+Circuiting Drones, Nuclear Creeper, Walking Pinata)
+   • Citizen Compliance Drone, Magnetic Colossus
+-# (Functionally, this means they have walking and chargeup (for
+Creepers) noises again)
+### Feedback Fixes:
+• Loot rates for cashing out Aurora loot during Rage+ Mode have
+been greatly increased to better incentivize the risk vs reward
+nature of the continuing the fight. This applies for both
+Artifact and Uncommon loot caches
+• Modernised Starfall's raycast
+• Improved Starfall's detonation logic
+• Slightly adjusted Prestigious Starfall's trace particles
+• The damage breakdown of /showmydps now displays damage sources
+in• Tweaked the display names of certain damage sources to
+display differently (i.e. Brute Force vs Brute Force AoE)
+• You can no longer use a cartographer table to duplicate maps
+with lore
+• Added a set of Twilight Stalker armor to the Molta T5 trader
+• Improved the path into the town on the southern side of
+Galengarde
+• Salieri the Swordsage, and Samwell are now players
+• Removed the Uncommon tag from the following potions:
+   • C'Axtal's Blessing, C'Shura's Fury, C'Zani's Transgression,
+Elemental Resin, Burn Panacea, Remnant Elixir, Viridescent Cure,
+Fury of the Elements, Earth's Might, Wind's Strength, Flame's
+Warmth, Water's Blessing, Dragonrage Brew, Bathypelagic Brew,
+Epipelagic Essence, Hadopelagic Tincture, Riftwalker Elixir,
+Spirits of the Song, Titanic Steel, Extract of the Eternal, and
+Glory to the Eternal
 ### Bug Fixes:
-• Fixed bugs related to `<mainhand>` and `<offhand>`
-• Fixed the server complaining that your hand doesn't have
-metadata if you used `<mainhand>` or `<offhand>` with an empty
-hand.
-• Fixed lucidity creating a permanent display if used twice on
-the same spawner
-• Fixed slow from Permafrost stacking with slows from other
-abilities/enchantments
-• Fixed weird interactions when negative slows or weakens are
-applied (usually due to charms, such as Abyssal Coral with level
-0 Gruesome Alchemy). Now, negative slows and weakens are applied
-independently of other slows or weakens
-• Fixed Twisted Omenspeaker's telegraph and damage hitbox for
-its Twisted Earthspike attack being inconsistent
-• Fixed Voidmother's Eye being an Elite
-&b(11.68.0)&r
-For the update on May 20, 2026
-### Event News
-• We hope you enjoyed revisiting the first ever Seasonal Pass
-with the Blackroot Pass: Redux! The next Seasonal Pass will drop
-next week... so stay tuned!
-### Minor New Features
-• Added a new skill cosmetic for Touch of Radiance, Psychic
-Connection, to the Awakened Cleric cosmetic set. Players who
-have already bought Sins of the Voracious may unlock the
-cosmetic by right clicking with the item in hand
-• There are now reverse recipes to turn concrete back into
-concrete powder, either one block at a time or 9 at a time
-• The Plot Architect's Concrete Supply Crate now has actual
-concrete, as well as a new Concrete Powder Crate (Concrete
-Powder Supply Crate doesn't fit in the chest GUI). If you have
-an existing Plot Architect, you will need to use an Egginator to
-turn it into a spawn egg, then place it again to access the new
-trades.
-• Shield Wall and Prestigious Wall have received a new look!
-• Recasting Shield Wall while it's &ooff&r cooldown now cancels
-the old Shield Wall
-### Feedback Changes
-• Lucidity now has a 4 second cooldown when there are no nearby
-spawners
-• Lucidity spawner highlights are 0.9 blocks wide and use
-glowing tinted glass now
-• Changed the name color of Crown of the Lost Beyond, Flesh
-Without Names, Crimson Tithe, Pureshard Adze, Eyes of the
-Loamskattar, Scopophobia, Blightpod Carapace
-• `/showmydps` no longer counts worm segments, immortal mounts,
-and immortal passengers
-• Exiting the arena bounds during Supernova now damages you
-again
-• Replaced blue stained glass boundary in market plots with
-waterlogged barriers
-• Events in the tab list are now zero-padded when two units of
-time are shown (ie `3m 05s` instead of `3m 5s`)
-• Changed Celestial Contract's sound effect
+• Fixed Headless Horseman not being able to use Reaper of Life
+if other magma cubes (i.e. Alchemical Artillery) are present
+• Fixed a potential issue where Infused Life (Ru'Ten) and Voodoo
+Bindings (Hycenea) could leave a player with permanent un-
+removable glowing; if you have permanent glowing not caused by
+the Glowing status effect, message a moderator to have it fixed
+• Elite Finisher Dummies can no longer spawn as chicken jockeys
+• Fixed Unwavering counting some mobs it shouldn't, such as
+Chivalrous mounts
+• Fixed mutating Convergence not removing all stored wildcard
+abilities before giving a new mutated ability
+• Fixed typo in Throwing Knife advancement
+• Fixed some delve worms and Intruder Veiltorn Helmith detaching
+their heads
+• Fixed Gallery waves increasing wither damage
+• Vulnerability from Reaper of Life (Horseman spell) is now
+visible in the tab effect display
+• Fixed Azacor, The Pig God, Sirius, Sporous Amalgam, Virius,
+and Xenotopsis not having the boss color in the bestiary• Fixed
+Deranged Head Alchemist and Starved Pirate being both an Elite
+and a Boss (now is just a Boss). I don't know what implications
+this actually has (-NobodyPi)
+• Starseeker, Guardian of the Tomb and Starseeker, Warden of
+Aurora are now properly considered Bosses
+• Fixed Idolatry Idols protecting some entities they shouldn't,
+such as armor stands and Wind Bombs
+• Fixed Totemic Consecration claiming to give +%p Resistance
+• Fixed rocks containing melon in The Werehouse.
+• Fixed Gem-Tipped Boilerdrill having flat KBR instead of %
+• Fixed typo in Bhairavi dialogue post-Unconventional Methods
+• Fixed item frame inside item frame on an Expedition Docks boat
+• Fixed air pocket in the wall that The Impenetrable could
+teleport into
+• Fixed floating vine in Magenta
+• Fixed punctuation in Uri dialogue
+• Fixed many smart quotes in dialogue in Isles
+• Calder in the Teal cutscene no longer has an outdated player
+head
+• Fixed Curse of Instability sometimes causing Dodging to go on
+cooldown even if a projectile was not actually blanked• Kaul has
+been reopened on
+&bvalley-1 only&r.
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-• Mail remains closed.Aurora has been temporarily closed.Kaul
-has been temporarily closed.Aurora has been reopened.
+• Mail remains closed.Masquerader's Ruin has been temporarily
+closed.Infusion and delve infusion stations have been
+temporarily closed.
+&bHotfixes&r:
+• You can no longer place waterlogged blocks outside of water
+except on plots using the loom
+• Waterlogged leaves no longer despawn when placed with a
+firmament or loom; you will need to apply water to them again
+for this to apply
+• Samwell's boss fight is no longer buggedMasquerader's Ruin has
+been reopened.
