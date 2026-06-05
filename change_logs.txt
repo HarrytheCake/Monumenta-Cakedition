@@ -1,149 +1,284 @@
-### Seasonal Pass:
-• The previous Seasonal Pass was a revisit on where the Seasonal
-Pass system began... now, the upcoming Seasonal Pass represents
-how far we've come as a server! To correspond with our other
-10th Anniversary celebrations, we introduce the brand-new
-&bDecade Pass&r!
-• Unlock brand new anniversary-related Titles, Mob Dummies &
-Plushies, Elite Finishers, and other rewards as you progress
-through the usual 13 weeks of pass missions.
-• Three new Seasonal Pass Artifacts have been added to the Relic
-Wheel pool!
-• Two new Sketched reskins have been added to the Seasonal Skin
-Manager!
-• You can now buy items from the original Blackroot Pass once
-again.
-• Head to the Seasonal Pass lobby to start celebrating the
-server's big milestone! The Decade Pass begins on
-<t:1780074000:F>!
-### Minor New Features:
-• Added 2 new King's Valley Transmogrifier Rares
-• Added a new page specifically for Seasonal Pass plot borders
-in the Plot Border selection GUI.
-• Applied minor tweaks to descriptions of a handful of pass
-borders in the Plot Border selection GUI, mainly punctuation
-changes.
-• Internal hotfix commands have changed, to reduce lag. Please
-report to moderators if loot scaling seems to be not working.
-• It is now possible to waterlog stacks of blocks by clicking
-them with a water bucket, and to unwaterlog them by clicking
-them with an empty bucket
-• Logging in on a playerplot that you no longer have access to
-will now transfer you to a plot you can access
-• Actually implemented the AntiLR tweaks from 2 weeks ago### Mob
-Changes:
- • &nTemple of the Skylords&r:
-   • Vestige of the Skylords : Reduced slash range by 1 block,
-bullet hell phases no longer have additional bullets in the sky.
-The Augmented Stars (projectiles) can now be killed.
-   • Ascendant Stormsoldier : 115 -> 90 Health
-   • Reverent Stormsoldier : 135 -> 115 Health
-   • Starscorched Servant : 150 -> 130 Health
-   • Starthunder Zealot : 120 -> 95 Health
-   • Stormzone Capsule : 100 -> 80 Health
-   • Tempest Dynamo : 135 -> 110 Health
-• &nTormenteds&r:
-   • Twisted Crusader now has an additional third Luminous
-Infusion pulse
-   • Twisted Crusader now faces the player properly
-• Twisted Invoker's Grasping Beyonds (Vexes) now despawn on
-death
-• Twisted Sentinel's Last Companions (Foxes) now despawn on
-death
-• Twisted Spiritcaller's Rekindled Spirits and Hurricane
-Effigies now despawn on death
-• Yeigar, the Last Emperor's starfall telegraph has been made
-louder
-• Piercing Assimilation from Manipulating Hallucination now has
-a larger telegraph
-• Monstrous Spider (Light Blue) no longer has 40% resistance,
-and its health has been increased from 16 -> 20 to compensate
-• The following mobs now have their default sounds again:
-   • All creeper variants in brown (Plus/Minus Charged Short
-Circuiting Drones, Nuclear Creeper, Walking Pinata)
-   • Citizen Compliance Drone, Magnetic Colossus
--# (Functionally, this means they have walking and chargeup (for
-Creepers) noises again)
+### <:mage:1106716826299289720> Mage
+• Cosmic Moonblade : 5% (max 0.5s)/10% (max 1s) + 7.5% (max
+0.75s) -> 0.5s/1s + 0.75s
+• Spellshock Melee Amplifier: 10% / 15% -> 20% / 30% at L1 / L2
+• Spellshock now only triggers on critical melee hits
+• Magna Luna (Rework) : 4 Charm Power, +300% Cosmic Moonblade
+Damage, +1 Cosmic Moonblade Cooldown Reduction, +1 Cosmic
+Moonblade On Kill Cooldown Reduction, +100% Cosmic Moonblade
+Range, #-1 Cosmic Moonblade Slashes
+• Swift Lunar Charm (Rework) : 4 Charm Power, +0.5 Cosmic
+Moonblade Cooldown Reduction, -10% Cosmic Moonblade Cooldown
+• Guiding Moonlight : -1% -> -0.25 Cosmic Moonblade Cooldown
+Reduction
+• Molldyer's Chalk : 4 -> 3 Charm Power
+• Spark Panel : 0% -> +35% Channeling Damage
+• Lesser Charm of Shock : +2.5% -> +5% Spellshock Melee
+Amplifier
+• Greater Charm of Shock : +5% -> +10% Spellshock Melee
+Amplifier
+• Focused Charm of Shock : 4 -> 3 Charm Power, +7.5% -> +15%
+Spellshock Melee Amplifier
+• Swift Charm of Shock : +5% -> +10% Spellshock Melee Amplifier
+• Sedated Charm of Shock : +2.5% -> +5% Spellshock Melee
+Amplifier
+### <:rogue:1106716844372537465> Rogue
+• Parasomnic Remnant (Rework) : 3 Charm Power, +3 Deadly Ronde
+Slashes, +100% Deadly Ronde Radius, +35% Deadly Ronde Angle,
+-60% Deadly Ronde Knockback, #-60% Deadly Ronde Damage, #-2
+Deadly Ronde Max Stacks
+• Deadly Ronde damage 35% -> 100% attack speed penalty
+• Ataraxian Echo : +25 -> +35 Bodkin Blitz Damage On
+Passthrough, -1 -> -50% Bodkin Blitz Stealth Duration
+• Orion's Shiv : #-60% -> #-40% Dagger Throw Cooldown, -0% ->
+-40% Dagger Throw Recast Damage Multiplier, 0% -> -100% Dagger
+Throw Silence Duration
+• Chronographic Hourglass : +15% -> 0% Advancing Shadows
+Cooldown
+• Focused Razor Charm : +35% -> +20% Blade Dance Damage
+• Greater Razor Charm : +20% -> +10% Blade Dance Damage
+• Lesser Razor Charm : +10% -> +5% Blade Dance Damage
+• Sedated Razor Charm : +20% -> +12.5% Blade Dance Damage
+• Swift Razor Charm : +10% -> +5% Blade Dance Damage###
+<:scout:1106716859664965733> Scout
+• Quiver Storm now queues additional arrows instead of firing
+instantly (up to 10 in a queue)
+• Sharpshooter no longer tracks the Grappling Hook enchantment
+• Predator Strike L1 now pierces up to 3 enemies before stopping
+• Predator Strike L2 now refunds 40% of its cooldown (from 25%)
+• Origin of Void : #-40% -> -40% Predator Strike Damage, #+72.5%
+-> #+57.5% Predator Strike Splinter Cooldown Reduction
+Multiplier
+• Dragon's Eye : +30% -> +50% Predator Strike Cooldown
+• Blightseeker's Boon : +3 -> 0 Predator Strike Enemies Pierced,
+0% -> +10% Lockdown Damage
+### <:shaman:1106716903784845363> Shaman
+• Cleansing Totem healing increased to 5%/s (from 4%/s)
+• Lesser Tide Charm : +1% -> +0.5% Cleansing Totem Healing
+• Greater Tide Charm : +2% -> +1% Cleansing Totem Healing
+• Swift Tide Charm : +2% -> +1% Cleansing Totem Healing
+• Explosive Tide Charm : +1% -> +0.5% Cleansing Totem Healing
+### <:warlock:1106716877817913346> Warlock
+• Withering Gaze 1 -> 2 / 3 base damage, now region scales
+• Voodoo Bonds spreads &non critical hit&r -> &non fully charged
+hit&r
+• Soul Rend (u)'s absorption now lasts for 10s (from 2.5s)
+• Celestial Contract : +4 -> +6 Dark Pact Damage Per Absorption
+On Deactivation, 0 -> +6 Dark Pact Absorption Health Cap
+• Scion of the Stars : 0 -> +2.5 Soul Rend Healing
+• Lesser Charm of Fracturing : 2 -> 1 Charm Power
+• Greater Charm of Fracturing : 4 -> 2 Charm Power
+### <:warrior:1106716892305035274> Warrior
+• Shield Bash changes:
+   • Now has a 3 block radius
+   • Now deals 5/9/11 damage (from 8/12/16, Shield Bash L2 still
+has these damages)
+   • Only stuns the target mob
+   • Now has a 10s cooldown (from 8s, Shield Bash L2 still has
+an 8s cooldown)
+ • Riposte's Axe effect now causes your next attack to stun mobs
+in a 2 block radius for 2s• Will of Ganzir (Rework) : 3 Charm
+Power,  -25% Shield Wall Bash Cooldown, +80% Shield Wall Damage,
++25% Shield Wall Bash Velocity, -100% Shield Wall Bash Stun
+Duration, -50% Shield Wall Durability
+• Architect's Aegis (Rework) : 2 Charm Power, +100% Shield Wall
+Angle, +50% Shield Wall Height, +50% Shield Wall Radius
+• Rootways Boulder : +3 -> +4 Challenge Max Mobs, +0.5 -> 0
+Challenge Absorption Health Per Mob
+• Everlasting Hallucination : 0 -> +1 Shield Wall Bash Stun
+Duration, +35% -> 0% Shield Wall Duration
+• Elgart's Iridium Buckle : -50% -> -35% Bodyguard Cooldown, 0%
+-> -25% Bodyguard Damage Transfer Duration, +50% -> 0% Bodyguard
+Stun Radius
+• Indomitable Prism (Rework) : 3 Charm Power, +25% Bodyguard
+Damage Transfer Amount, +100% Bodyguard Damage Transfer
+Duration, +100% Bodyguard Knockback Resistance Duration, -50%
+Bodyguard Absorption Health
+• Antares : +1 -> 0 Glorious Battle Bloodlust Cost
+• Rocket Boots (Rework) : 3 Charm Power, +50% Meteor Slam Ground
+Pound Damage Per Block Fallen, +50% Meteor Slam Ground Pound
+Additional Radius, +35% Meteor Slam Vault Velocity, +3 Meteor
+Slam Jump Boost, +25% Meteor Slam Cooldown
+• Silver Pauldron (Rework) : 3 Charm Power, -1 Rampage Bloodlust
+Cost, +4 Rampage Max Recast, -2 Rampage Duration Per Recast,
+-50% Rampage Damage
+• Loci's Hunger (Rework) : 2 Charm Power, +25% Rampage Healing,
+-50% Rampage Cooldown, -50% Rampage Initial Duration, -50%
+Rampage Duration Per Recast, -50% Rampage Max Duration
+• Bloodlust (Rework) : 2 Charm Power, +50% Glorious Battle
+Damage, +50% Glorious Battle Attack Radius, +15% Glorious Battle
+Velocity, +1 Glorious Battle Cost
+• Enormous Stalactite : +125% -> +85% Glorious Battle Collision
+Damage
+• Pressure Gauntlet : #-20% Brute Force Radius -> +25% Brute
+Force Radius, 1 -> 2 Charm Power
+• Deepslate Chunk : -100% -> #-50% Brute Force Radius
+• Lesser Rage Charm : 0 -> +0.5 Rampage Initial Duration
+• Greater Rage Charm : 0 -> +1 Rampage Initial Duration• Focused
+Rage Charm : 0 -> +2 Rampage Initial Duration
+• Sustaining Rage Charm (Rework) : 2 Charm Power, +1 Rampage
+Initial Duration, +1 Rampage Duration per Recast
+• Fortified Rage Charm (Rework) : 4 Charm Power,  +50% Rampage
+Knockback, +25% Rampage Damage, +25% Rampage Healing, +2 Rampage
+Initial Duration
+• Lesser Guardian Charm (Rework) : 2 Charm Power, +1 Bodyguard
+Absorption, +5% Bodyguard Damage Transfer Amount
+• Greater Guardian Charm (Rework) : 3 Charm Power, +2 Bodyguard
+Absorption, +10% Bodyguard Damage Transfer Amount
+• Distant Guardian Charm : 0% -> +35% Bodyguard Damage Transfer
+Radius, +25% -> +35% Bodyguard Range
+• Swift Meteor Charm : 0% -> -15% Meteor Slam Cooldown, +15% ->
++25% Meteor Slam Vault Velocity, +15% -> 0% Meteor Slam Damage
+• Lesser Shielding Charm : 0 -> +2 Shield Wall Durability
+• Greater Shielding Charm : 0 -> +4 Shield Wall Durability
+• Focused Shielding Charm : 0 -> +6 Shield Wall Durability
+• Swift Shielding Charm (Rework) : 2 Charm Power, +15% Shield
+Wall Damage, +15% Shield Wall Durability Recharge Rate
+• Lesser Charm of Bashing : +15% -> +10% Shield Bash Damage
+• Greater Charm of Bashing : +30% -> +20% Shield Bash Damage
+• Focused Charm of Bashing : +60% -> +35% Shield Bash Damage###
+Item Changes:
+• Symbiosis (Rework) (M4): Projectile Protection 2, Sustenance
+2, 8 Agility, +30% Attack Damage, +20% Knockback Resistance
+• Silence of the Waves (M4) : 0 -> 1 Steadfast, 0 -> 2
+Adrenaline, +25% -> 0% Attack Damage
+• Moonscarred Clockblade (M4) : 3 -> 4 Reverb, 14.5 -> 15 Attack
+Damage
+• Blade of Reclamation (M4) : 0 -> 3 Backstab, 0 -> 1 Tempo, 1
+-> 0 Reflexes
+• Arc of the Lunacrest (M4) : 2 -> 1 Wind Aspect
+• Tablet of Ruin (M4) : 3 -> 0 Curse of Crippling, +50% -> +60%
+Knockback Resistance, +5% -> 0% Max Health
+• Defiled Carving (M4) : 0% -> +15% Attack Speed, 0% -> +15%
+Attack Damage, 4 -> 2 First Strike, 8.5 -> 7 Agility
+• Shard of Skyfall (M4) : 0 -> 1 Adaptability, 9.5 -> 8.5 Armor
+• Versatile Vase (M4) : 28 -> 27 Projectile Damage
+• Pelias' Warden (M4) : +15% -> +25% Max Health, 4.5 -> 4
+Agility, 4 -> 3 Regeneration
+• Darkstar Pauldron (M4) : 4.5 -> 5.5 Agility, +50% -> +40%
+Attack Damage
+• Aggripa's Gearshredder (M4) : 4.5 -> 6 Agility, +30% -> +25%
+Attack Damage, 2 -> 1 Melee Protection
+• Shrouded Sabatons (M4) : 8 -> 9 Agility, +25% -> +15% Attack
+Damage
+• Hexcrafted Barrier (M4) : 7 -> 7.5 Agility
+• EX Shimmering Veil (M4) : 5 -> 5.5 Agility
+• Rotting Skullcap (M4) : 0 -> +20% Knockback Resistance
+• EX Primordial Flames (M4) : 5 -> 6 Agility, +20% -> +15% Speed
+• Sonorous Shield (M4) : 0 -> 2 Thunder Aspect
+• Aurora Mirror (Andromeda Fragment, rorriM araruA) : 0 -> 3
+Rebound
+• Poacher's Rifle : 0 -> 1 Piercing, 22 -> 21 Projectile Damage
+• Blade of Exaltation : 0 -> 2 Magic Protection, 9 -> 10.5
+Attack Damage
+• Betrayer of the Blackflame : 1.3 -> 1.4 Attack Speed, 17 -> 18
+Attack Damage
+• Moon's Judgement : 12.5 -> 14 Attack Damage
+• Frodian Light of Unbalance : 22 -> 25 Attack Damage
+• Frost Giant's Staff : 0.8 -> 1 Attack Speed, 1 -> 2 Knockback,
+20 -> 19 Attack Damage
+• Thundering Legacy (M4) : 15.5 -> 18 Attack Damage, 1.6 -> 1.3
+Attack Speed, 0 -> 2 Tactician• Molldyer's Greatstaff (M4) : 0
+-> 1 Shielding, +75% -> +80% Spell Power, 6 -> 8 Inferno
+• Thalassic Cinders (M4) : 0.9 -> 1.2 Attack Speed, 21 -> 18
+Attack Damage
+• Withering Hydrangea (M4) : +82% -> +88% Spell Power
+• God Tamer (M4) : 1 -> 2 Magic Protection
+• Steaming Stave (M4) : 0 -> 1 Adrenaline
+• Caduceus (M4) : 0 -> 2 Technique, +88% -> +78% Spell Power, 2
+-> 0 Hex Eater
+• Dream Beast Set : +20% -> +30% Knockback Resistance (Per
+Piece)
+### Delves:
+• Challenge Delve presets have been adjusted:
+  • Light Gray: Twisted 5 -> Tormented 3, Vengeance 17 -> 16
+  • Purple: Tormented 3 -> Twisted 5, Pernicious 7 -> 8
+  • Brown: Tormented 3 -> Twisted 5, Spectral 4 -> 5
+  • Indigo: Twisted 5  -> Tormented 3, Infernal 7 -> 6
+&oDeveloper note: We've adjusted the points for certain
+challenge presets to hopefully even out the difficulty range.
+Light Gray and Indigo have been two of the easiest challenge
+delves, while Purple and Brown were made significantly more
+difficult with the introduction of Tormented to their presets,
+due to the combination of Tormented and Haunted.&r
+### Rebound:
+• Rebound has been reworked:
+  • Rebound: Upon shield stun, enemies within 4 blocks of you
+are knocked away and take (level &o 5) damage. Aspect
+enchantments, Decay, Bleed, and Impact are also applied.
+Knockback levels increase the force of the rebound.
+  • Additionally, Rebound's knockback has been reworked to be in
+the direction you are facing, akin to Aeroblast.
 ### Feedback Fixes:
-• Loot rates for cashing out Aurora loot during Rage+ Mode have
-been greatly increased to better incentivize the risk vs reward
-nature of the continuing the fight. This applies for both
-Artifact and Uncommon loot caches
-• Modernised Starfall's raycast
-• Improved Starfall's detonation logic
-• Slightly adjusted Prestigious Starfall's trace particles
-• The damage breakdown of /showmydps now displays damage sources
-in• Tweaked the display names of certain damage sources to
-display differently (i.e. Brute Force vs Brute Force AoE)
-• You can no longer use a cartographer table to duplicate maps
-with lore
-• Added a set of Twilight Stalker armor to the Molta T5 trader
-• Improved the path into the town on the southern side of
-Galengarde
-• Salieri the Swordsage, and Samwell are now players
-• Removed the Uncommon tag from the following potions:
-   • C'Axtal's Blessing, C'Shura's Fury, C'Zani's Transgression,
-Elemental Resin, Burn Panacea, Remnant Elixir, Viridescent Cure,
-Fury of the Elements, Earth's Might, Wind's Strength, Flame's
-Warmth, Water's Blessing, Dragonrage Brew, Bathypelagic Brew,
-Epipelagic Essence, Hadopelagic Tincture, Riftwalker Elixir,
-Spirits of the Song, Titanic Steel, Extract of the Eternal, and
-Glory to the Eternal
+• Shielding now accounts for mob hitboxes, checking from the
+center of the player's hitbox
+• Reginn's Endless Ephemeral Corridor key cost is now 15 (from
+16), to allow for an even split across 3 players
+• Refurbished Deadly Ronde's base and cosmetics' visuals
+• Reworked the Crystal Connections bossfight
+• The Sealed Remorse epic miniboss now has a spawn message and
+sound, as well as a death sound
+• Earth Elementals have received new sounds and vanity• Newborn
+Islands now have a 1 block reach (from 1.5) and now make sounds
+when hitting the player
+• Guardian of Life and Disgraced Master now have a max follow
+range of 30 so they won't follow the player after death
+• Sporebound Titan is no longer invisible
+• Twisted Shadow's smoke bomb now makes a hissing sound when
+midair
+• Swapped the name colors of Twisted Leviathan and Twisted
+Sentinel
+• Twisted Shadow's dodge now reduces 50% of damage instead of
+100%
+• Adjusted the spawner ranges of 2 creeper spawners in the Light
+Gray dungeon cathedral
+• Tweaked the indicator symbols for Hycenea's Voodoo Bindings
+• Lucidity Displays now remove on unload
+• The entrance for Core Elemental is more obvious
+• Words Upon Hushed Lips is now described as medium-long in
+length instead of short-medium when started
+• Added an Overworld Instance swapper to the R3 Bounty area
+• Added Plush King's Sabatons to the API
+• Added April Fools 2026 items to the API
+• Added 10th Anniversary items and Decade Pass items to the API
 ### Bug Fixes:
-• Fixed Headless Horseman not being able to use Reaper of Life
-if other magma cubes (i.e. Alchemical Artillery) are present
-• Fixed a potential issue where Infused Life (Ru'Ten) and Voodoo
-Bindings (Hycenea) could leave a player with permanent un-
-removable glowing; if you have permanent glowing not caused by
-the Glowing status effect, message a moderator to have it fixed
-• Elite Finisher Dummies can no longer spawn as chicken jockeys
-• Fixed Unwavering counting some mobs it shouldn't, such as
-Chivalrous mounts
-• Fixed mutating Convergence not removing all stored wildcard
-abilities before giving a new mutated ability
-• Fixed typo in Throwing Knife advancement
-• Fixed some delve worms and Intruder Veiltorn Helmith detaching
-their heads
-• Fixed Gallery waves increasing wither damage
-• Vulnerability from Reaper of Life (Horseman spell) is now
-visible in the tab effect display
-• Fixed Azacor, The Pig God, Sirius, Sporous Amalgam, Virius,
-and Xenotopsis not having the boss color in the bestiary• Fixed
-Deranged Head Alchemist and Starved Pirate being both an Elite
-and a Boss (now is just a Boss). I don't know what implications
-this actually has (-NobodyPi)
-• Starseeker, Guardian of the Tomb and Starseeker, Warden of
-Aurora are now properly considered Bosses
-• Fixed Idolatry Idols protecting some entities they shouldn't,
-such as armor stands and Wind Bombs
-• Fixed Totemic Consecration claiming to give +%p Resistance
-• Fixed rocks containing melon in The Werehouse.
-• Fixed Gem-Tipped Boilerdrill having flat KBR instead of %
-• Fixed typo in Bhairavi dialogue post-Unconventional Methods
-• Fixed item frame inside item frame on an Expedition Docks boat
-• Fixed air pocket in the wall that The Impenetrable could
-teleport into
-• Fixed floating vine in Magenta
-• Fixed punctuation in Uri dialogue
-• Fixed many smart quotes in dialogue in Isles
-• Calder in the Teal cutscene no longer has an outdated player
-head
-• Fixed Curse of Instability sometimes causing Dodging to go on
-cooldown even if a projectile was not actually blanked• Kaul has
-been reopened on
-&bvalley-1 only&r.
+• Fixed Guard applying on all hits
+• Sternly told the Sierhaven carrots to stop levitating
+• Fixed Dawnbringer Ichor not working on Heart of the Jungle
+• Impact no longer has 1 tick delay before activating
+• Fixed AbsorbingBarrier removing the wrong amount of absorption
+in rare cases
+• Fixed Spellshock not being magic damage, hence not interacting
+with Trivium among other damage buffs
+• Fixed Trivium being labelled merely as an Unscalable
+Enchantment in `/showmydps`
+• Fixed Skirmisher playing its sound on all damage instances
+instead of only melee
+• Fixed Fervid Chimera and its rider having disagreements about
+who should die first
+• Fixed a grammatical error in Arc of the Lunacrest's lore text
+• Overhydrated Seedlings now die upon attacking Parting Shot's
+dummy
+• Removed a levitating glow lichen from Fathom's Reach
+• Removed a stray soul sand in Yellow and EX Yellow
+• Fixed Arena of Terth vanilla swords/axes dealing 1 damage•
+Gently rotated an oak log on an Expedition Docks ship
+• Explosive Stalker Charm is now actually obtainable in the game
+from Mariask
+• Fixed Burnt Foreman having 2 armor
+• Removed exposed bedrock in Temple of the Skylords
+• Fixed Borealis (Bercilak's Skin) having incorrect stats
+• Fixed Galeblades of Nalatia dealing 1 damage (they now deal
+26)
+• Removed "a" from The Werehouse
+• Fixed Frosthewn Ward not being Unbreakable
+• Fixed fake player nametags disappearing
+• Fixed ToV failing to clean up chests/pickles with blocks on
+top
+• Fixed nametags detaching in Hexfall
+• Fixed First Strike not working on thrown Alchemist potions
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-• Mail remains closed.Masquerader's Ruin has been temporarily
-closed.Infusion and delve infusion stations have been
-temporarily closed.
-&bHotfixes&r:
-• You can no longer place waterlogged blocks outside of water
-except on plots using the loom
-• Waterlogged leaves no longer despawn when placed with a
-firmament or loom; you will need to apply water to them again
-for this to apply
-• Samwell's boss fight is no longer buggedMasquerader's Ruin has
-been reopened.
+• Mail remains closed.&r
