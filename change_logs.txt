@@ -1,143 +1,4 @@
-### <:mage:1106716826299289720> Mage
-• Cosmic Moonblade : 5% (max 0.5s)/10% (max 1s) + 7.5% (max
-0.75s) -> 0.5s/1s + 0.75s
-• Spellshock Melee Amplifier: 10% / 15% -> 20% / 30% at L1 / L2
-• Spellshock now only triggers on critical melee hits
-• Magna Luna (Rework) : 4 Charm Power, +300% Cosmic Moonblade
-Damage, +1 Cosmic Moonblade Cooldown Reduction, +1 Cosmic
-Moonblade On Kill Cooldown Reduction, +100% Cosmic Moonblade
-Range, #-1 Cosmic Moonblade Slashes
-• Swift Lunar Charm (Rework) : 4 Charm Power, +0.5 Cosmic
-Moonblade Cooldown Reduction, -10% Cosmic Moonblade Cooldown
-• Guiding Moonlight : -1% -> -0.25 Cosmic Moonblade Cooldown
-Reduction
-• Molldyer's Chalk : 4 -> 3 Charm Power
-• Spark Panel : 0% -> +35% Channeling Damage
-• Lesser Charm of Shock : +2.5% -> +5% Spellshock Melee
-Amplifier
-• Greater Charm of Shock : +5% -> +10% Spellshock Melee
-Amplifier
-• Focused Charm of Shock : 4 -> 3 Charm Power, +7.5% -> +15%
-Spellshock Melee Amplifier
-• Swift Charm of Shock : +5% -> +10% Spellshock Melee Amplifier
-• Sedated Charm of Shock : +2.5% -> +5% Spellshock Melee
-Amplifier
-### <:rogue:1106716844372537465> Rogue
-• Parasomnic Remnant (Rework) : 3 Charm Power, +3 Deadly Ronde
-Slashes, +100% Deadly Ronde Radius, +35% Deadly Ronde Angle,
--60% Deadly Ronde Knockback, #-60% Deadly Ronde Damage, #-2
-Deadly Ronde Max Stacks
-• Deadly Ronde damage 35% -> 100% attack speed penalty
-• Ataraxian Echo : +25 -> +35 Bodkin Blitz Damage On
-Passthrough, -1 -> -50% Bodkin Blitz Stealth Duration
-• Orion's Shiv : #-60% -> #-40% Dagger Throw Cooldown, -0% ->
--40% Dagger Throw Recast Damage Multiplier, 0% -> -100% Dagger
-Throw Silence Duration
-• Chronographic Hourglass : +15% -> 0% Advancing Shadows
-Cooldown
-• Focused Razor Charm : +35% -> +20% Blade Dance Damage
-• Greater Razor Charm : +20% -> +10% Blade Dance Damage
-• Lesser Razor Charm : +10% -> +5% Blade Dance Damage
-• Sedated Razor Charm : +20% -> +12.5% Blade Dance Damage
-• Swift Razor Charm : +10% -> +5% Blade Dance Damage###
-<:scout:1106716859664965733> Scout
-• Quiver Storm now queues additional arrows instead of firing
-instantly (up to 10 in a queue)
-• Sharpshooter no longer tracks the Grappling Hook enchantment
-• Predator Strike L1 now pierces up to 3 enemies before stopping
-• Predator Strike L2 now refunds 40% of its cooldown (from 25%)
-• Origin of Void : #-40% -> -40% Predator Strike Damage, #+72.5%
--> #+57.5% Predator Strike Splinter Cooldown Reduction
-Multiplier
-• Dragon's Eye : +30% -> +50% Predator Strike Cooldown
-• Blightseeker's Boon : +3 -> 0 Predator Strike Enemies Pierced,
-0% -> +10% Lockdown Damage
-### <:shaman:1106716903784845363> Shaman
-• Cleansing Totem healing increased to 5%/s (from 4%/s)
-• Lesser Tide Charm : +1% -> +0.5% Cleansing Totem Healing
-• Greater Tide Charm : +2% -> +1% Cleansing Totem Healing
-• Swift Tide Charm : +2% -> +1% Cleansing Totem Healing
-• Explosive Tide Charm : +1% -> +0.5% Cleansing Totem Healing
-### <:warlock:1106716877817913346> Warlock
-• Withering Gaze 1 -> 2 / 3 base damage, now region scales
-• Voodoo Bonds spreads &non critical hit&r -> &non fully charged
-hit&r
-• Soul Rend (u)'s absorption now lasts for 10s (from 2.5s)
-• Celestial Contract : +4 -> +6 Dark Pact Damage Per Absorption
-On Deactivation, 0 -> +6 Dark Pact Absorption Health Cap
-• Scion of the Stars : 0 -> +2.5 Soul Rend Healing
-• Lesser Charm of Fracturing : 2 -> 1 Charm Power
-• Greater Charm of Fracturing : 4 -> 2 Charm Power
-### <:warrior:1106716892305035274> Warrior
-• Shield Bash changes:
-   • Now has a 3 block radius
-   • Now deals 5/9/11 damage (from 8/12/16, Shield Bash L2 still
-has these damages)
-   • Only stuns the target mob
-   • Now has a 10s cooldown (from 8s, Shield Bash L2 still has
-an 8s cooldown)
- • Riposte's Axe effect now causes your next attack to stun mobs
-in a 2 block radius for 2s• Will of Ganzir (Rework) : 3 Charm
-Power,  -25% Shield Wall Bash Cooldown, +80% Shield Wall Damage,
-+25% Shield Wall Bash Velocity, -100% Shield Wall Bash Stun
-Duration, -50% Shield Wall Durability
-• Architect's Aegis (Rework) : 2 Charm Power, +100% Shield Wall
-Angle, +50% Shield Wall Height, +50% Shield Wall Radius
-• Rootways Boulder : +3 -> +4 Challenge Max Mobs, +0.5 -> 0
-Challenge Absorption Health Per Mob
-• Everlasting Hallucination : 0 -> +1 Shield Wall Bash Stun
-Duration, +35% -> 0% Shield Wall Duration
-• Elgart's Iridium Buckle : -50% -> -35% Bodyguard Cooldown, 0%
--> -25% Bodyguard Damage Transfer Duration, +50% -> 0% Bodyguard
-Stun Radius
-• Indomitable Prism (Rework) : 3 Charm Power, +25% Bodyguard
-Damage Transfer Amount, +100% Bodyguard Damage Transfer
-Duration, +100% Bodyguard Knockback Resistance Duration, -50%
-Bodyguard Absorption Health
-• Antares : +1 -> 0 Glorious Battle Bloodlust Cost
-• Rocket Boots (Rework) : 3 Charm Power, +50% Meteor Slam Ground
-Pound Damage Per Block Fallen, +50% Meteor Slam Ground Pound
-Additional Radius, +35% Meteor Slam Vault Velocity, +3 Meteor
-Slam Jump Boost, +25% Meteor Slam Cooldown
-• Silver Pauldron (Rework) : 3 Charm Power, -1 Rampage Bloodlust
-Cost, +4 Rampage Max Recast, -2 Rampage Duration Per Recast,
--50% Rampage Damage
-• Loci's Hunger (Rework) : 2 Charm Power, +25% Rampage Healing,
--50% Rampage Cooldown, -50% Rampage Initial Duration, -50%
-Rampage Duration Per Recast, -50% Rampage Max Duration
-• Bloodlust (Rework) : 2 Charm Power, +50% Glorious Battle
-Damage, +50% Glorious Battle Attack Radius, +15% Glorious Battle
-Velocity, +1 Glorious Battle Cost
-• Enormous Stalactite : +125% -> +85% Glorious Battle Collision
-Damage
-• Pressure Gauntlet : #-20% Brute Force Radius -> +25% Brute
-Force Radius, 1 -> 2 Charm Power
-• Deepslate Chunk : -100% -> #-50% Brute Force Radius
-• Lesser Rage Charm : 0 -> +0.5 Rampage Initial Duration
-• Greater Rage Charm : 0 -> +1 Rampage Initial Duration• Focused
-Rage Charm : 0 -> +2 Rampage Initial Duration
-• Sustaining Rage Charm (Rework) : 2 Charm Power, +1 Rampage
-Initial Duration, +1 Rampage Duration per Recast
-• Fortified Rage Charm (Rework) : 4 Charm Power,  +50% Rampage
-Knockback, +25% Rampage Damage, +25% Rampage Healing, +2 Rampage
-Initial Duration
-• Lesser Guardian Charm (Rework) : 2 Charm Power, +1 Bodyguard
-Absorption, +5% Bodyguard Damage Transfer Amount
-• Greater Guardian Charm (Rework) : 3 Charm Power, +2 Bodyguard
-Absorption, +10% Bodyguard Damage Transfer Amount
-• Distant Guardian Charm : 0% -> +35% Bodyguard Damage Transfer
-Radius, +25% -> +35% Bodyguard Range
-• Swift Meteor Charm : 0% -> -15% Meteor Slam Cooldown, +15% ->
-+25% Meteor Slam Vault Velocity, +15% -> 0% Meteor Slam Damage
-• Lesser Shielding Charm : 0 -> +2 Shield Wall Durability
-• Greater Shielding Charm : 0 -> +4 Shield Wall Durability
-• Focused Shielding Charm : 0 -> +6 Shield Wall Durability
-• Swift Shielding Charm (Rework) : 2 Charm Power, +15% Shield
-Wall Damage, +15% Shield Wall Durability Recharge Rate
-• Lesser Charm of Bashing : +15% -> +10% Shield Bash Damage
-• Greater Charm of Bashing : +30% -> +20% Shield Bash Damage
-• Focused Charm of Bashing : +60% -> +35% Shield Bash Damage###
-Item Changes:
+### Item Changes:
 • Symbiosis (Rework) (M4): Projectile Protection 2, Sustenance
 2, 8 Agility, +30% Attack Damage, +20% Knockback Resistance
 • Silence of the Waves (M4) : 0 -> 1 Steadfast, 0 -> 2
@@ -281,4 +142,76 @@ top
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
-• Mail remains closed.&r
+• Mail remains closed.
+&b(11.71.0)&r
+For the update on June 10, 2026
+### Major New Features:
+• The player chat hover and Player Level have been revamped!
+  • The player chat hover now shows a visual of all the wool
+dungeons you've conquered so far
+  • Added styling to the player title, class, specialization,
+and current shard on the player chat hover
+  • Player Level is now based off of how many wool dungeons
+you've conquered, instead of being based off of a combination of
+skill/spec/enhance points and charm power
+  • Amplifying Hex has been set to 6/9/12 damage per region
+instead of scaling with player level
+### Minor New Features:
+• Bulk trades for Delve Mob Potion Carriers can now be purchased
+from Squire Ariya
+• Reimplemented Quiver Storm's arrow queueing
+### Feedback Fixes:
+• Removed Gravesoul Shackle from Twisted Gravecaller
+• Twisted Bishop's angels now float to the ground instead of
+hovering in the air
+• Twisted Bezoar's poison now only lasts for 2s (from 5s)
+• Rekindled Spirits now have 75 health (from 100)
+• Twisted Bishop health reduced to 3500 (from 4500)
+• Nuclear Amalgam now has a model
+• Added Backstab to the Handbook/Enchantopedia
+• From the Stars now uses falling block entities instead of
+block displays### Bug Fixes:
+• Sierhaven has increased their sittable chair budget
+• You can no longer sit on a cat chair in Sierhaven
+• Fixed the Tesseract of Balance (Pink Tesseract) and other
+growables replacing certain valuable blocks
+• Fixed a chest in Infested House missing its loot table
+• Fixed exposed bedrock in Teal
+• Fixed a building error in Arx Spirensis
+• Fixed corrupted player heads in Koalrupted Sierhaven
+• Fixed Werehouse delved chests being able to give Doomed
+Encampment rares
+• ToV now despawns and spawns earlier to account for the
+CoreProtect-proof update running slower
+• Thorns no longer iframes melee and projectile damage (and
+itself), instead only doing damage if the attack actually caused
+the player to take damage
+• Fixed Loom dynamic mode forgetting which mode it's acting like
+when it comes time to place the blocks
+• Fixed Cosmic Moonblade CDR charm to correctly modify the
+cooldown refresh
+• Fixed Shield Wall Lv. 2 not reducing the cooldown
+• Fixed Shield Wall taking durability from player projectiles
+• Fixed Shield Wall blocking projectiles stuck on the ground
+• Fixed "Bodyguard Damage Transfer Amount" charm to be additive
+• Fixed Cosmic Moonblade's level 2 description crossing out the
+wrong value
+• Fixed First Strike not working on Divine Justice
+• Fixed mutating an ability in Depths/Zenith removing your
+wildcard abilities (they are only supposed to be removed if you
+mutated Convergence)
+• Fixed Aurora not changing skins after minibosses
+• Fixed Indomitable Prism having incorrect stats
+• Fixed Rogue Planet having incorrect stats
+• Fixed Will of Ganzir having incorrect stats
+• Added the missing Architect Ring Overworld fragment -> Silver
+Dust trade at the R3 Infusion Master
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• Mail remains closed.
+&bHotfix: (For daily restart)&r
+• Fixed missing Keeper Virtue, Elemental Ice Spirit, Dodging (u)
+abilities
+• Fixed Shaman icon being the wrong base item&r
