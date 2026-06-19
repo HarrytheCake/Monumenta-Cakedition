@@ -1,143 +1,3 @@
-### Item Changes:
-• Symbiosis (Rework) (M4): Projectile Protection 2, Sustenance
-2, 8 Agility, +30% Attack Damage, +20% Knockback Resistance
-• Silence of the Waves (M4) : 0 -> 1 Steadfast, 0 -> 2
-Adrenaline, +25% -> 0% Attack Damage
-• Moonscarred Clockblade (M4) : 3 -> 4 Reverb, 14.5 -> 15 Attack
-Damage
-• Blade of Reclamation (M4) : 0 -> 3 Backstab, 0 -> 1 Tempo, 1
--> 0 Reflexes
-• Arc of the Lunacrest (M4) : 2 -> 1 Wind Aspect
-• Tablet of Ruin (M4) : 3 -> 0 Curse of Crippling, +50% -> +60%
-Knockback Resistance, +5% -> 0% Max Health
-• Defiled Carving (M4) : 0% -> +15% Attack Speed, 0% -> +15%
-Attack Damage, 4 -> 2 First Strike, 8.5 -> 7 Agility
-• Shard of Skyfall (M4) : 0 -> 1 Adaptability, 9.5 -> 8.5 Armor
-• Versatile Vase (M4) : 28 -> 27 Projectile Damage
-• Pelias' Warden (M4) : +15% -> +25% Max Health, 4.5 -> 4
-Agility, 4 -> 3 Regeneration
-• Darkstar Pauldron (M4) : 4.5 -> 5.5 Agility, +50% -> +40%
-Attack Damage
-• Aggripa's Gearshredder (M4) : 4.5 -> 6 Agility, +30% -> +25%
-Attack Damage, 2 -> 1 Melee Protection
-• Shrouded Sabatons (M4) : 8 -> 9 Agility, +25% -> +15% Attack
-Damage
-• Hexcrafted Barrier (M4) : 7 -> 7.5 Agility
-• EX Shimmering Veil (M4) : 5 -> 5.5 Agility
-• Rotting Skullcap (M4) : 0 -> +20% Knockback Resistance
-• EX Primordial Flames (M4) : 5 -> 6 Agility, +20% -> +15% Speed
-• Sonorous Shield (M4) : 0 -> 2 Thunder Aspect
-• Aurora Mirror (Andromeda Fragment, rorriM araruA) : 0 -> 3
-Rebound
-• Poacher's Rifle : 0 -> 1 Piercing, 22 -> 21 Projectile Damage
-• Blade of Exaltation : 0 -> 2 Magic Protection, 9 -> 10.5
-Attack Damage
-• Betrayer of the Blackflame : 1.3 -> 1.4 Attack Speed, 17 -> 18
-Attack Damage
-• Moon's Judgement : 12.5 -> 14 Attack Damage
-• Frodian Light of Unbalance : 22 -> 25 Attack Damage
-• Frost Giant's Staff : 0.8 -> 1 Attack Speed, 1 -> 2 Knockback,
-20 -> 19 Attack Damage
-• Thundering Legacy (M4) : 15.5 -> 18 Attack Damage, 1.6 -> 1.3
-Attack Speed, 0 -> 2 Tactician• Molldyer's Greatstaff (M4) : 0
--> 1 Shielding, +75% -> +80% Spell Power, 6 -> 8 Inferno
-• Thalassic Cinders (M4) : 0.9 -> 1.2 Attack Speed, 21 -> 18
-Attack Damage
-• Withering Hydrangea (M4) : +82% -> +88% Spell Power
-• God Tamer (M4) : 1 -> 2 Magic Protection
-• Steaming Stave (M4) : 0 -> 1 Adrenaline
-• Caduceus (M4) : 0 -> 2 Technique, +88% -> +78% Spell Power, 2
--> 0 Hex Eater
-• Dream Beast Set : +20% -> +30% Knockback Resistance (Per
-Piece)
-### Delves:
-• Challenge Delve presets have been adjusted:
-  • Light Gray: Twisted 5 -> Tormented 3, Vengeance 17 -> 16
-  • Purple: Tormented 3 -> Twisted 5, Pernicious 7 -> 8
-  • Brown: Tormented 3 -> Twisted 5, Spectral 4 -> 5
-  • Indigo: Twisted 5  -> Tormented 3, Infernal 7 -> 6
-&oDeveloper note: We've adjusted the points for certain
-challenge presets to hopefully even out the difficulty range.
-Light Gray and Indigo have been two of the easiest challenge
-delves, while Purple and Brown were made significantly more
-difficult with the introduction of Tormented to their presets,
-due to the combination of Tormented and Haunted.&r
-### Rebound:
-• Rebound has been reworked:
-  • Rebound: Upon shield stun, enemies within 4 blocks of you
-are knocked away and take (level &o 5) damage. Aspect
-enchantments, Decay, Bleed, and Impact are also applied.
-Knockback levels increase the force of the rebound.
-  • Additionally, Rebound's knockback has been reworked to be in
-the direction you are facing, akin to Aeroblast.
-### Feedback Fixes:
-• Shielding now accounts for mob hitboxes, checking from the
-center of the player's hitbox
-• Reginn's Endless Ephemeral Corridor key cost is now 15 (from
-16), to allow for an even split across 3 players
-• Refurbished Deadly Ronde's base and cosmetics' visuals
-• Reworked the Crystal Connections bossfight
-• The Sealed Remorse epic miniboss now has a spawn message and
-sound, as well as a death sound
-• Earth Elementals have received new sounds and vanity• Newborn
-Islands now have a 1 block reach (from 1.5) and now make sounds
-when hitting the player
-• Guardian of Life and Disgraced Master now have a max follow
-range of 30 so they won't follow the player after death
-• Sporebound Titan is no longer invisible
-• Twisted Shadow's smoke bomb now makes a hissing sound when
-midair
-• Swapped the name colors of Twisted Leviathan and Twisted
-Sentinel
-• Twisted Shadow's dodge now reduces 50% of damage instead of
-100%
-• Adjusted the spawner ranges of 2 creeper spawners in the Light
-Gray dungeon cathedral
-• Tweaked the indicator symbols for Hycenea's Voodoo Bindings
-• Lucidity Displays now remove on unload
-• The entrance for Core Elemental is more obvious
-• Words Upon Hushed Lips is now described as medium-long in
-length instead of short-medium when started
-• Added an Overworld Instance swapper to the R3 Bounty area
-• Added Plush King's Sabatons to the API
-• Added April Fools 2026 items to the API
-• Added 10th Anniversary items and Decade Pass items to the API
-### Bug Fixes:
-• Fixed Guard applying on all hits
-• Sternly told the Sierhaven carrots to stop levitating
-• Fixed Dawnbringer Ichor not working on Heart of the Jungle
-• Impact no longer has 1 tick delay before activating
-• Fixed AbsorbingBarrier removing the wrong amount of absorption
-in rare cases
-• Fixed Spellshock not being magic damage, hence not interacting
-with Trivium among other damage buffs
-• Fixed Trivium being labelled merely as an Unscalable
-Enchantment in `/showmydps`
-• Fixed Skirmisher playing its sound on all damage instances
-instead of only melee
-• Fixed Fervid Chimera and its rider having disagreements about
-who should die first
-• Fixed a grammatical error in Arc of the Lunacrest's lore text
-• Overhydrated Seedlings now die upon attacking Parting Shot's
-dummy
-• Removed a levitating glow lichen from Fathom's Reach
-• Removed a stray soul sand in Yellow and EX Yellow
-• Fixed Arena of Terth vanilla swords/axes dealing 1 damage•
-Gently rotated an oak log on an Expedition Docks ship
-• Explosive Stalker Charm is now actually obtainable in the game
-from Mariask
-• Fixed Burnt Foreman having 2 armor
-• Removed exposed bedrock in Temple of the Skylords
-• Fixed Borealis (Bercilak's Skin) having incorrect stats
-• Fixed Galeblades of Nalatia dealing 1 damage (they now deal
-26)
-• Removed "a" from The Werehouse
-• Fixed Frosthewn Ward not being Unbreakable
-• Fixed fake player nametags disappearing
-• Fixed ToV failing to clean up chests/pickles with blocks on
-top
-• Fixed nametags detaching in Hexfall
-• Fixed First Strike not working on thrown Alchemist potions
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
@@ -214,4 +74,92 @@ and select `I want to unlock this shop`.
 &bHotfix: (For daily restart)&r
 • Fixed missing Keeper Virtue, Elemental Ice Spirit, Dodging (u)
 abilities
-• Fixed Shaman icon being the wrong base item&r
+• Fixed Shaman icon being the wrong base item
+&b(11.72.0)&r
+For the update on June 17, 2026
+### New Quest • Norvigutouille
+Can you smell it? Within the walls of Chantry of Repentance, a
+new aroma is forming. Skrrka, a friendly Norvigut, is looking
+for your assistance with a very special dish they have in mind.
+Help them retrieve ingredients across Starpoint, and get a taste
+of what they have to offer! The quest can be started at Skrrka
+in Chantry of Repentance.
+Monumenta's 10th Anniversary Event will end with next weekly
+update. Make sure to claim your special rewards, sign the guest
+list, and do other event-related activities before it is too
+late!
+### Minor New Features:
+• A new screen has appeared in the Cradle of the Broken God…
+• Added a display to the pre-tutorial lobby and Sierhaven
+allowing players to check that they've correctly installed the
+resource pack
+• The guest book in the Developer Hall got a style upgrade, now
+with scrolling text for every adventurer who signed
+• Changed red cross banners and decorations to green cross to
+prevent disputes regarding the Red Cross in following locations:
+  • Ellen's house (Seraph Spec Quest NPC)
+  • Frostgate
+  • Mistport
+  • Nyr
+  • Farr
+  • Sierhaven (Nurse Deidre)
+  • New Antium
+### Feedback Fixes:
+• Renamed `/help core` to `/help coreprotect`
+• Telekinesis' (Ethereal Ascension cosmetic) item display is now
+a passenger on the player, making its animation much smoother
+• Iron Maiden is no longer an insta-kill ability, and now pulls
+players in if they are between 15-18 blocks from its center,
+regardless of knockback resistance.
+• Some Bosses and Elites now take knockback from projectiles
+again (and no longer freeze for 2 ticks), now ignoring Punch and
+Knockback enchantments instead
+• Twisted Tempest's dash has been reverted to its old variant
+• Tweaked Bodkin Blitz Passthrough to deal damage after
+teleporting
+• Pulsar Radiation now visually is 200 blocks long
+• Moonlight Slash plays a louder sound when reducing her
+cooldowns• Spectator boxes now prevent mobs from targeting you
+• Stardust Detonation now only shows flame particles if there
+will be an explosion
+• The travel anchor UI is now skipped if there is only one
+destination available
+• The signs in Purgatory have been updated to mention shards
+start back up automatically
+• Made some further adjustments to The Olive Branch to restore
+the post-puzzle cutscene to its original glory. This involves
+some visibility pre-requisites to a lot of characters in the
+lobby, so please bug report (and ping Fangride) if any of the
+following NPCs have issues in R2 that were missed • Antigone,
+Bhairavi, Brayllur, Keller, Pten, Torbran, Wexley, and Zarek.
+### Bug Fixes:
+• Fixed bossbars under some circumstances refusing to start at
+100%
+• Fixed Whalefall not having the Elite tag
+• Fixed Spiritualism not working
+• Fixed alchemy puzzle reset button not working in Beasts of Men
+• Fixed various armor stands stealing items
+• Fixed a bug that could cause players to be unable to emergency
+exit Zenith instances
+• Fixed First Strike bypassing its cooldown when using alchemist
+potions
+• Fixed the delve bounty leaderboard not being refreshed
+properly during weekly updates
+• Fixed Aurora sometimes being able to spawn a blackhole after
+the party dies
+• The guild banner display is now unlikely to duplicate itself
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+• Mail remains closed.• Following newfound technology, the smog
+covering the Celsian Isles has settled, and the daylight cycle
+has been enabled with an hour-long duration
+  • Undead mobs can no longer burn by sunlight
+  • The book Eternal Night no longer mentions a smog covering
+the Isles
+  • Updated sky colors of Chillwind biomes (only noticeably
+different in daytime)• Fixed Celestial Rampart and Starbound
+Sanctuary having the wrong bounty and compass text. This was
+fixed a while ago but only at the bounty and at some point
+accidentally got swapped back. This should fix both spots now!
