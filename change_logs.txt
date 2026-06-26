@@ -1,76 +1,3 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• Mail remains closed.
-&b(11.71.0)&r
-For the update on June 10, 2026
-### Major New Features:
-• The player chat hover and Player Level have been revamped!
-  • The player chat hover now shows a visual of all the wool
-dungeons you've conquered so far
-  • Added styling to the player title, class, specialization,
-and current shard on the player chat hover
-  • Player Level is now based off of how many wool dungeons
-you've conquered, instead of being based off of a combination of
-skill/spec/enhance points and charm power
-  • Amplifying Hex has been set to 6/9/12 damage per region
-instead of scaling with player level
-### Minor New Features:
-• Bulk trades for Delve Mob Potion Carriers can now be purchased
-from Squire Ariya
-• Reimplemented Quiver Storm's arrow queueing
-### Feedback Fixes:
-• Removed Gravesoul Shackle from Twisted Gravecaller
-• Twisted Bishop's angels now float to the ground instead of
-hovering in the air
-• Twisted Bezoar's poison now only lasts for 2s (from 5s)
-• Rekindled Spirits now have 75 health (from 100)
-• Twisted Bishop health reduced to 3500 (from 4500)
-• Nuclear Amalgam now has a model
-• Added Backstab to the Handbook/Enchantopedia
-• From the Stars now uses falling block entities instead of
-block displays### Bug Fixes:
-• Sierhaven has increased their sittable chair budget
-• You can no longer sit on a cat chair in Sierhaven
-• Fixed the Tesseract of Balance (Pink Tesseract) and other
-growables replacing certain valuable blocks
-• Fixed a chest in Infested House missing its loot table
-• Fixed exposed bedrock in Teal
-• Fixed a building error in Arx Spirensis
-• Fixed corrupted player heads in Koalrupted Sierhaven
-• Fixed Werehouse delved chests being able to give Doomed
-Encampment rares
-• ToV now despawns and spawns earlier to account for the
-CoreProtect-proof update running slower
-• Thorns no longer iframes melee and projectile damage (and
-itself), instead only doing damage if the attack actually caused
-the player to take damage
-• Fixed Loom dynamic mode forgetting which mode it's acting like
-when it comes time to place the blocks
-• Fixed Cosmic Moonblade CDR charm to correctly modify the
-cooldown refresh
-• Fixed Shield Wall Lv. 2 not reducing the cooldown
-• Fixed Shield Wall taking durability from player projectiles
-• Fixed Shield Wall blocking projectiles stuck on the ground
-• Fixed "Bodyguard Damage Transfer Amount" charm to be additive
-• Fixed Cosmic Moonblade's level 2 description crossing out the
-wrong value
-• Fixed First Strike not working on Divine Justice
-• Fixed mutating an ability in Depths/Zenith removing your
-wildcard abilities (they are only supposed to be removed if you
-mutated Convergence)
-• Fixed Aurora not changing skins after minibosses
-• Fixed Indomitable Prism having incorrect stats
-• Fixed Rogue Planet having incorrect stats
-• Fixed Will of Ganzir having incorrect stats
-• Added the missing Architect Ring Overworld fragment -> Silver
-Dust trade at the R3 Infusion Master
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• Mail remains closed.
 &bHotfix: (For daily restart)&r
 • Fixed missing Keeper Virtue, Elemental Ice Spirit, Dodging (u)
 abilities
@@ -163,3 +90,82 @@ different in daytime)• Fixed Celestial Rampart and Starbound
 Sanctuary having the wrong bounty and compass text. This was
 fixed a while ago but only at the bounty and at some point
 accidentally got swapped back. This should fix both spots now!
+&b(11.73.0)&r
+For the update on June 24, 2026
+• Monumenta's 10th Anniversary event has officially ended! The
+Anniversary decorations in Sierhaven have been cleared, except
+for the Seasonal Event Hub, which remains in its' decorated
+state. The Developer Hall can continue to be accessed through
+the Seasonal Event Hub. Additionally, the wools can now only be
+found in their intended forms.
+### Minor New Features:
+• Updated ViaVersion to 5.10.0, improving support for clients
+using newer MC versions.
+• Custom shulker box names have been temporarily disabled for
+performance reasons. The names still exist, you just can't see
+them • they will return automatically once we change the way
+names are implemented.
+• Added customizable ability triggers for Defensive Line and
+Shield Bash
+### Norvigutouille Fixes:
+• Fixed the quest reward not having a tier.
+• Fixed a spelling error and added three more periods...
+• Fixed the quest compass displaying text post-quest .
+• Fixed being able to steal an armor stand's head.
+• Fixed ||Exit-8 having several flowers on the ground||.
+• Fixed a zone overlap on ||the combat for the Rooticcini||.
+• Fixed issues with logging out and dying in quest areas.### Mob
+Changes:
+• Twisted Revenant's slam now descends at a 0.4 velocity (from
+0.6)
+• Twisted Revenant's slam particles have been reworked
+• Twisted Revenant can now no longer melee while he is mid-slam
+• Twisted Revenant's slam now has a lower Y hitbox
+• Twisted Revenant's Twisted Rampage has been reworked
+• All tormenteds now have a playerscale coefficient of 0.5 (from
+0.4)
+-# Effectively decreases the resistance that Tormenteds receive
+from facing multiple players
+• Twisted Cloudpiercer : 120 -> 105 Health, 5 -> 4 Quick Charge,
+updated visuals
+• Hexbombs now spawn in sets of 2 instead of 4
+• Eradication Totems no longer apply antiheal, and radius is
+reduced from 6 to 5
+• Fixed Bull Stomp being incorrectly region scaled (Now should
+do far less damage in R2, and more damage in R3)
+• Twisted Vanguard bodyguard range reduced to 16 (from 32), and
+requires line of sight.
+• Rekindled Spirits now have 90 health (from 75), but no longer
+playerscale
+• Hurricane Effigy health reduced from 300 to 250, and no longer
+playerscales.
+• Fire Elemental now properly delve scales, charge telegraph
+duration is now 30 ticks (from 20 ticks)
+• Fixed Twisted Moonweaver's moon not disappearing on its death
+• Fixed Lunar Omen dealing almost double the intended damage
+• Twisted Artillery damage increased from 20 to 30
+• Twisted Abomination's scorched earth attack now inflicts 20%
+vulnerability while inside
+• Twisted Deadeye and Atomic Aberration will now die upon their
+respective summoner's death
+• Panicking Hallucination teleport-behind damage required
+increased from 50 to 100
+• Panicking Hallucination now slows itself by 50% right after
+teleporting behind the player
+• CShrua, Azacor, and Aurora's minibosses are now resistant to
+punch and knockback
+• Faceless Ones are no longer immune to all crowd control, only
+knockback and punch### Feedback Fixes:
+• Improved Wind Walk hitbox and prevented it from expiring
+immediately for players who do not live right next to the
+servers
+• Replaced some mud near Sirius arena with basalt
+### Bug Fixes:
+• Fixed Arcane Spellshock (u) DoT, Riposte, and Steel Trap
+spoiling Hunts bosses
+• Fixed a spelling mistake in AuC
+• Fixed a broken armor stand in The Tolumaeus POI• The mail and
+guild GUIs have returned. There is now a rate limit in place to
+prevent prior network issues, which should not significantly
+affect normal use, but will slow down the user interface
+slightly.
