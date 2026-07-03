@@ -1,121 +1,4 @@
-&bHotfix: (For daily restart)&r
-• Fixed missing Keeper Virtue, Elemental Ice Spirit, Dodging (u)
-abilities
-• Fixed Shaman icon being the wrong base item
-&b(11.72.0)&r
-For the update on June 17, 2026
-### New Quest • Norvigutouille
-Can you smell it? Within the walls of Chantry of Repentance, a
-new aroma is forming. Skrrka, a friendly Norvigut, is looking
-for your assistance with a very special dish they have in mind.
-Help them retrieve ingredients across Starpoint, and get a taste
-of what they have to offer! The quest can be started at Skrrka
-in Chantry of Repentance.
-Monumenta's 10th Anniversary Event will end with next weekly
-update. Make sure to claim your special rewards, sign the guest
-list, and do other event-related activities before it is too
-late!
-### Minor New Features:
-• A new screen has appeared in the Cradle of the Broken God…
-• Added a display to the pre-tutorial lobby and Sierhaven
-allowing players to check that they've correctly installed the
-resource pack
-• The guest book in the Developer Hall got a style upgrade, now
-with scrolling text for every adventurer who signed
-• Changed red cross banners and decorations to green cross to
-prevent disputes regarding the Red Cross in following locations:
-  • Ellen's house (Seraph Spec Quest NPC)
-  • Frostgate
-  • Mistport
-  • Nyr
-  • Farr
-  • Sierhaven (Nurse Deidre)
-  • New Antium
-### Feedback Fixes:
-• Renamed `/help core` to `/help coreprotect`
-• Telekinesis' (Ethereal Ascension cosmetic) item display is now
-a passenger on the player, making its animation much smoother
-• Iron Maiden is no longer an insta-kill ability, and now pulls
-players in if they are between 15-18 blocks from its center,
-regardless of knockback resistance.
-• Some Bosses and Elites now take knockback from projectiles
-again (and no longer freeze for 2 ticks), now ignoring Punch and
-Knockback enchantments instead
-• Twisted Tempest's dash has been reverted to its old variant
-• Tweaked Bodkin Blitz Passthrough to deal damage after
-teleporting
-• Pulsar Radiation now visually is 200 blocks long
-• Moonlight Slash plays a louder sound when reducing her
-cooldowns• Spectator boxes now prevent mobs from targeting you
-• Stardust Detonation now only shows flame particles if there
-will be an explosion
-• The travel anchor UI is now skipped if there is only one
-destination available
-• The signs in Purgatory have been updated to mention shards
-start back up automatically
-• Made some further adjustments to The Olive Branch to restore
-the post-puzzle cutscene to its original glory. This involves
-some visibility pre-requisites to a lot of characters in the
-lobby, so please bug report (and ping Fangride) if any of the
-following NPCs have issues in R2 that were missed • Antigone,
-Bhairavi, Brayllur, Keller, Pten, Torbran, Wexley, and Zarek.
-### Bug Fixes:
-• Fixed bossbars under some circumstances refusing to start at
-100%
-• Fixed Whalefall not having the Elite tag
-• Fixed Spiritualism not working
-• Fixed alchemy puzzle reset button not working in Beasts of Men
-• Fixed various armor stands stealing items
-• Fixed a bug that could cause players to be unable to emergency
-exit Zenith instances
-• Fixed First Strike bypassing its cooldown when using alchemist
-potions
-• Fixed the delve bounty leaderboard not being refreshed
-properly during weekly updates
-• Fixed Aurora sometimes being able to spawn a blackhole after
-the party dies
-• The guild banner display is now unlikely to duplicate itself
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-• Mail remains closed.• Following newfound technology, the smog
-covering the Celsian Isles has settled, and the daylight cycle
-has been enabled with an hour-long duration
-  • Undead mobs can no longer burn by sunlight
-  • The book Eternal Night no longer mentions a smog covering
-the Isles
-  • Updated sky colors of Chillwind biomes (only noticeably
-different in daytime)• Fixed Celestial Rampart and Starbound
-Sanctuary having the wrong bounty and compass text. This was
-fixed a while ago but only at the bounty and at some point
-accidentally got swapped back. This should fix both spots now!
-&b(11.73.0)&r
-For the update on June 24, 2026
-• Monumenta's 10th Anniversary event has officially ended! The
-Anniversary decorations in Sierhaven have been cleared, except
-for the Seasonal Event Hub, which remains in its' decorated
-state. The Developer Hall can continue to be accessed through
-the Seasonal Event Hub. Additionally, the wools can now only be
-found in their intended forms.
-### Minor New Features:
-• Updated ViaVersion to 5.10.0, improving support for clients
-using newer MC versions.
-• Custom shulker box names have been temporarily disabled for
-performance reasons. The names still exist, you just can't see
-them • they will return automatically once we change the way
-names are implemented.
-• Added customizable ability triggers for Defensive Line and
-Shield Bash
-### Norvigutouille Fixes:
-• Fixed the quest reward not having a tier.
-• Fixed a spelling error and added three more periods...
-• Fixed the quest compass displaying text post-quest .
-• Fixed being able to steal an armor stand's head.
-• Fixed ||Exit-8 having several flowers on the ground||.
-• Fixed a zone overlap on ||the combat for the Rooticcini||.
-• Fixed issues with logging out and dying in quest areas.### Mob
-Changes:
+### Mob Changes:
 • Twisted Revenant's slam now descends at a 0.4 velocity (from
 0.6)
 • Twisted Revenant's slam particles have been reworked
@@ -168,4 +51,142 @@ spoiling Hunts bosses
 guild GUIs have returned. There is now a rate limit in place to
 prevent prior network issues, which should not significantly
 affect normal use, but will slow down the user interface
-slightly.
+slightly.• Azacor has been temporarily closed.• Fixed the season
+pass gui's list of passes rendering incorrectly
+• Fixed some guild permissions falsely assuming you're not in
+your own guild in some cases, and denying access
+&b(11.74.0)&r
+For the update on July 1, 2026
+### Minor New Features:
+• New features have been added to the Mechanical Armory:
+  • You may now store ability keybinds under the class section
+of a loadout
+  • You may now store cosmetic skills under the class section of
+a loadout
+  • You may now retrieve any item from within your equipment
+cases via using the swap key while hovering over the retrieve
+items button
+  • You may now set Depths/Zenith tree preferences by right
+clicking on the glass pane next to the set class button
+## Balance Changes:
+### <:mage:1106716826299289720> Mage
+• Magna Luna : +100% -> +50% Cosmic Moonblade Range, +1 -> +0
+Cosmic Moonblade On Kill Cooldown Reduction
+• Spellbound Spearhead : +100% -> +50% Mana Lance Damage, 1 -> 2
+Charm Power
+• Nullwick Lantern : +25% -> +10% Magma Shield Damage
+### <:rogue:1106716844372537465> Rogue
+• Escape Death now triggers at 40% health (from 10 flat)
+• Emerald Ascension (Rework) : 2 Charm Power, +2 Escape Death
+Jump Boost Amplifier, +2 Escape Death Absorption Health, #-60%
+Escape Death Cooldown, +50% Escape Death Buff Duration, +50%
+Escape Death Health Threshold, -50% Escape Death Stun Duration
+### <:scout:1106716859664965733> Scout
+• Origin of Void : +100% -> +50% Predator Strike Splinter
+Radius, -40% -> -60% Predator Strike Damage
+• Tolumaeus Nestfeather : 3 -> 2 Charm Power, +15% -> 0%
+Swiftness Enhancement Vulnerability Amplifier
+### <:warlock:1106716877817913346> Warlock
+• Dark Pact now has a boss damage clause for absorption gain at
+200/300 damage for r2/r3.
+• Celestial Contract Bomb occurs even if Pact was not
+deactivated manually.### <:warrior:1106716892305035274> Warrior
+• Shield Wall Bash can now be cast without it being up
+• Shield Wall now stays up even when the player has no shield
+equipped in either hand
+• Bloodlust now regenerates up to 2 stacks when out of combat
+again
+• Challenge L1 now grants 2 absorption per mob (mirroring the
+L2)
+• Loci's Hunger (Rework) : 2 Charm Power, +25% Rampage Healing,
+-50% Rampage Cooldown, +1 Rampage Recast Bloodlust Cost, +1
+Rampage Bloodlust Cost
+• Rocket Boots : +50% -> +100% Meteor Slam Ground Pound
+Additional Radius, +50% -> +100% Meteor Slam Ground Pound Damage
+Per Block Fallen, +25% -> +40% Meteor Slam Cooldown
+• Silver Pauldron : 0% -> +5% Rampage Damage Amplifier Per
+Recast, 0 -> +5% Rampage Speed Amplifier Per Recast, +4 -> 0
+Rampage Max Recast, -2 -> 0 Rampage Duration Per Recast
+• Hydraulic Chausses : 4 -> 3 Charm Power, -40% -> -25% Meteor
+Slam Cooldown
+• Lesser Meteor Charm : +10% -> +7.5% Meteor Slam Damage
+• Greater Meteor Charm : +20% -> +15% Meteor Slam Damage
+• Focused Meteor Charm : +35% -> +25% Meteor Slam Damage
+### Item Changes
+• Versatile Vase (M4) : 1 -> 0 Oversized, 27 -> 20 Projectile
+Damage, 0.7 -> 0.6 Projectile Speed
+• Starsunder Ward (M6) : 1 -> 2 Poise
+• Coral Carapace : 9.5 -> 8.5 Armor
+• Paradigm (M4) : 0 -> 1 Second Wind
+• Epoch Hammer (M4) : 21 -> 22 Attack Damage
+• Elder Scales : 0% -> +40% Knockback Resistance, 4.5 -> 5
+Armor, 0 -> 1 Abyssal, 0 -> 2 Unbreaking
+• Corrupted Jeweled Tiara (Sketched Corrupted Jeweled Tiara,
+Teewie's Flower Crown) : 4 -> 6 Unbreaking
+• Imperial Boots : 4 -> 6 Unbreaking
+• Lodestar Boots : 5 -> 8 Unbreaking
+• Soulbinder's Combat Boots : 5 -> 8 Unbreaking
+• Furious Footfalls : 6 -> 9 Unbreaking
+• Faintest Footsteps : 6 -> 9 Unbreaking
+• Breaking Wave : 0 -> 2 Unbreaking
+•  Firestorm Robe : 5 -> 8 Unbreaking
+•  Marmothhide Leggings : 5 -> 8 Unbreaking
+• Robes of the Secret Sun : 5 -> 8 Unbreaking
+• Robes of the Core : 5 -> 8 Unbreaking• Threads of the Thicket
+: 5 -> 8 Unbreaking
+• Sulfuric Robes : 0 -> 3 Unbreaking
+• Soulbinder's Leggings : 5 -> 8 Unbreaking
+• Desert Explorer (Sketched Desert Explorer) : 5 -> 9 Unbreaking
+• Ghoulskin Shroud : 5 -> 8 Unbreaking
+• Petrified Runeplate : 5 -> 8 Unbreaking
+• Soulbinder's Cuirass : 5 -> 8 Unbreaking
+• Warded Vestment (Sketched Warded Vestment) : 5 -> 8 Unbreaking
+• Warden's Ruin : 0 -> 1 Unbreaking
+• Stoneborn Tunic : 4 -> 6 Unbreaking
+•  Exoskelehelm : 5 -> 8 Unbreaking
+•  Nightleaf Visage : 5 -> 8 Unbreaking
+•  Silversilk Visage : 5 -> 8 Unbreaking
+•  Visage of the Lost : 5 -> 8 Unbreaking
+• Blackroot Branch (Blade of the Lost) : 2 -> 5 Unbreaking
+• Smouldering Flame : 15 -> 20 Unbreaking
+• Thawed Frozen Mallet : 1 -> 3 Unbreaking
+• Coldsteel Blunt : 2 -> 3 Unbreaking, 5.5 -> 6.5 Attack Damage,
+2 -> 1.6 Attack Speed
+• Roots' Repose : 1 -> 2 Unbreaking
+• Jungle's Requiem : 1 -> 2 Unbreaking
+• Jeans of the Fire Eagle : 0 -> 2 Unbreaking
+### Starblood Ichor Balance Changes
+• Shadowdancer (Rework) : If there are 3 mobs or any Elite/Boss
+mobs within 7 blocks, gain Technique 1 innately for 16 seconds,
+otherwise gain First Strike 1 innately for 10 seconds.
+• Dawnbringer (Rework) : You and up to 3 other players within 10
+blocks gain 10% healing rate for 5s, halved when taking damage.
+• Earthbound : Detection Duration: 6s -> 8s
+• Flamecaller : Magic Damage Duration: 8s -> 10s
+• Steelsage : Projectile Damage Duration: 8s -> 10s, 8% -> 10%
+Damage
+• Tidied up the grammar of some of the ichor descriptions &
+fixed some potion effects displaying as red### Feedback Fixes:
+• Tempest Dynamo no longer is invisible or glows, and has a
+trail particle in addition to a passive noise to announce its
+approach
+• Reworked Sidereal Scholar's Sidereal Shards attack, and
+reduced their hitbox size
+• Aurora's Star Pillars now also use glazed teracotta to
+indicate their colour
+• Absorbing Barrier damage taken window reduced to 3s (from 4s).
+Now generates
+absorption over 4s (from 3s).
+• Norvigutouille: Ingredient minigames are now replayable.
+### Bug Fixes:
+• Fixed Stoneborn Transcendent's stomp rift attack being 200x
+louder than intended
+• Fixed knockback & punch not working on 100% resistance mobs
+• Fix Stoneborn Immortal being able to be killed by other mobs
+• Fixed Vargos Dummy showing |npc_XXX as his name, egg and unegg
+him if he is already placed on your plot
+• Norvigutouille: Fixed a post-quest grammar error.
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
