@@ -1,60 +1,3 @@
-### Mob Changes:
-• Twisted Revenant's slam now descends at a 0.4 velocity (from
-0.6)
-• Twisted Revenant's slam particles have been reworked
-• Twisted Revenant can now no longer melee while he is mid-slam
-• Twisted Revenant's slam now has a lower Y hitbox
-• Twisted Revenant's Twisted Rampage has been reworked
-• All tormenteds now have a playerscale coefficient of 0.5 (from
-0.4)
--# Effectively decreases the resistance that Tormenteds receive
-from facing multiple players
-• Twisted Cloudpiercer : 120 -> 105 Health, 5 -> 4 Quick Charge,
-updated visuals
-• Hexbombs now spawn in sets of 2 instead of 4
-• Eradication Totems no longer apply antiheal, and radius is
-reduced from 6 to 5
-• Fixed Bull Stomp being incorrectly region scaled (Now should
-do far less damage in R2, and more damage in R3)
-• Twisted Vanguard bodyguard range reduced to 16 (from 32), and
-requires line of sight.
-• Rekindled Spirits now have 90 health (from 75), but no longer
-playerscale
-• Hurricane Effigy health reduced from 300 to 250, and no longer
-playerscales.
-• Fire Elemental now properly delve scales, charge telegraph
-duration is now 30 ticks (from 20 ticks)
-• Fixed Twisted Moonweaver's moon not disappearing on its death
-• Fixed Lunar Omen dealing almost double the intended damage
-• Twisted Artillery damage increased from 20 to 30
-• Twisted Abomination's scorched earth attack now inflicts 20%
-vulnerability while inside
-• Twisted Deadeye and Atomic Aberration will now die upon their
-respective summoner's death
-• Panicking Hallucination teleport-behind damage required
-increased from 50 to 100
-• Panicking Hallucination now slows itself by 50% right after
-teleporting behind the player
-• CShrua, Azacor, and Aurora's minibosses are now resistant to
-punch and knockback
-• Faceless Ones are no longer immune to all crowd control, only
-knockback and punch### Feedback Fixes:
-• Improved Wind Walk hitbox and prevented it from expiring
-immediately for players who do not live right next to the
-servers
-• Replaced some mud near Sirius arena with basalt
-### Bug Fixes:
-• Fixed Arcane Spellshock (u) DoT, Riposte, and Steel Trap
-spoiling Hunts bosses
-• Fixed a spelling mistake in AuC
-• Fixed a broken armor stand in The Tolumaeus POI• The mail and
-guild GUIs have returned. There is now a rate limit in place to
-prevent prior network issues, which should not significantly
-affect normal use, but will slow down the user interface
-slightly.• Azacor has been temporarily closed.• Fixed the season
-pass gui's list of passes rendering incorrectly
-• Fixed some guild permissions falsely assuming you're not in
-your own guild in some cases, and denying access
 &b(11.74.0)&r
 For the update on July 1, 2026
 ### Minor New Features:
@@ -190,3 +133,71 @@ him if he is already placed on your plot
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
+&b(11.75.0)&r
+For the update on July 8, 2026
+### Minor New Features:
+• Damage Splashes and Health Displays for enemies have been
+added as a new option inside the P.E.B's "Gameplay Options"
+  • Damage Splashes can be configured to show only the damage
+number or the damage number with damage types
+  • Enemy health displays can be viewed from 3.5 blocks away
+initially, then from 64 blocks away (not through blocks) after
+the mob is damaged. They can be configured to hide the mob name,
+showing "ʙᴏss" or "ᴇʟɪᴛᴇ" tags instead. Completely invisible
+enemies do not show the health display.
+• Mobs that are invisible past a certain range from the player
+no longer have an extra 0.25s of invisibility
+• The Cyan lobby has been fully rebuilt, thanks to Sw0ut!
+• The Endless Ephemeral Corridors Floors Completed leaderboard
+has been soft reset by clamping 20+ runs to 20, with the
+previous scores archived
+### Aurora Changes:
+• Pulsar Radiation is now 1 block tall
+• Reduced randomness in Focused Moonbeams (Phase change laser
+crystal)
+• Starlight Surge plays a more obvious debuff sound
+• Loamskattar Catalyst repair cube is now centered on the player
+instead of being just below them
+• Delfia's Focus now scales damage to it based on player
+distance (decreasing from ~5 blocks to 16 blocks), instead of
+negating damage from 8 blocks away.
+• Fixed Star Pillars having weird dark block displays
+• Fixed being able to use movement abilities during Supernova###
+Feedback Fixes:
+• Removed the cooldown for quick drink from the inventory for
+regeneration, resistance, healing & absorption potions
+• Guardian Cherubim now dies upon Twisted Bishop's death
+consistently
+• Reworked All-Knowing Seraphim's model and attacks
+• Removed the flash particles from All-Seeing Seraphim's Final
+Judgement attack
+• All-Powerful Seraphim's display no longer can block melee hits
+• Reduced the hitbox size of Twisted Ninetail's dash
+• Bodkin Blitz teleport no longer resets pitch and yaw when
+teleporting
+• Added a hidden cake back to Gray's lobby 🍰
+### Bug Fixes:
+• Fixed projectile iframes not being fully independent of melee
+iframes
+• Fixed Starscorched Huntress dealing double the intended damage
+• Fixed Twisted Watchman dashing too far when scaled by multiple
+players
+• Fixed Twisted Tempest layering casts of Hurricane Dance when
+scaled by multiple players
+• Fixed smart furnaces not detecting shift clicks correctly
+• Fixed smart furnaces not detecting items being added to
+inventories immediately
+• Fixed travel anchors failing to save on shard restarts
+• Fixed Twisted Ninetail's landing swipe attack not being a
+delve mob
+• Fixed a partially erased chest in Tangled Grove
+• Fixed not being able to reach ||Andromeda in Into Thin Air||,
+and fixed the compass pointing in the wrong direction.
+• Fixed ||Virius boss fight in Clear as Glass|| not starting
+correctly.
+• Fixed entity scores failing to save on shard restarts
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.SKR has been temporarily
+closed.SKR has been reopened!
