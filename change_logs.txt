@@ -1,203 +1,99 @@
-&b(11.74.0)&r
-For the update on July 1, 2026
-### Minor New Features:
-• New features have been added to the Mechanical Armory:
-  • You may now store ability keybinds under the class section
-of a loadout
-  • You may now store cosmetic skills under the class section of
-a loadout
-  • You may now retrieve any item from within your equipment
-cases via using the swap key while hovering over the retrieve
-items button
-  • You may now set Depths/Zenith tree preferences by right
-clicking on the glass pane next to the set class button
-## Balance Changes:
-### <:mage:1106716826299289720> Mage
-• Magna Luna : +100% -> +50% Cosmic Moonblade Range, +1 -> +0
-Cosmic Moonblade On Kill Cooldown Reduction
-• Spellbound Spearhead : +100% -> +50% Mana Lance Damage, 1 -> 2
-Charm Power
-• Nullwick Lantern : +25% -> +10% Magma Shield Damage
-### <:rogue:1106716844372537465> Rogue
-• Escape Death now triggers at 40% health (from 10 flat)
-• Emerald Ascension (Rework) : 2 Charm Power, +2 Escape Death
-Jump Boost Amplifier, +2 Escape Death Absorption Health, #-60%
-Escape Death Cooldown, +50% Escape Death Buff Duration, +50%
-Escape Death Health Threshold, -50% Escape Death Stun Duration
-### <:scout:1106716859664965733> Scout
-• Origin of Void : +100% -> +50% Predator Strike Splinter
-Radius, -40% -> -60% Predator Strike Damage
-• Tolumaeus Nestfeather : 3 -> 2 Charm Power, +15% -> 0%
-Swiftness Enhancement Vulnerability Amplifier
-### <:warlock:1106716877817913346> Warlock
-• Dark Pact now has a boss damage clause for absorption gain at
-200/300 damage for r2/r3.
-• Celestial Contract Bomb occurs even if Pact was not
-deactivated manually.### <:warrior:1106716892305035274> Warrior
-• Shield Wall Bash can now be cast without it being up
-• Shield Wall now stays up even when the player has no shield
-equipped in either hand
-• Bloodlust now regenerates up to 2 stacks when out of combat
-again
-• Challenge L1 now grants 2 absorption per mob (mirroring the
-L2)
-• Loci's Hunger (Rework) : 2 Charm Power, +25% Rampage Healing,
--50% Rampage Cooldown, +1 Rampage Recast Bloodlust Cost, +1
-Rampage Bloodlust Cost
-• Rocket Boots : +50% -> +100% Meteor Slam Ground Pound
-Additional Radius, +50% -> +100% Meteor Slam Ground Pound Damage
-Per Block Fallen, +25% -> +40% Meteor Slam Cooldown
-• Silver Pauldron : 0% -> +5% Rampage Damage Amplifier Per
-Recast, 0 -> +5% Rampage Speed Amplifier Per Recast, +4 -> 0
-Rampage Max Recast, -2 -> 0 Rampage Duration Per Recast
-• Hydraulic Chausses : 4 -> 3 Charm Power, -40% -> -25% Meteor
-Slam Cooldown
-• Lesser Meteor Charm : +10% -> +7.5% Meteor Slam Damage
-• Greater Meteor Charm : +20% -> +15% Meteor Slam Damage
-• Focused Meteor Charm : +35% -> +25% Meteor Slam Damage
-### Item Changes
-• Versatile Vase (M4) : 1 -> 0 Oversized, 27 -> 20 Projectile
-Damage, 0.7 -> 0.6 Projectile Speed
-• Starsunder Ward (M6) : 1 -> 2 Poise
-• Coral Carapace : 9.5 -> 8.5 Armor
-• Paradigm (M4) : 0 -> 1 Second Wind
-• Epoch Hammer (M4) : 21 -> 22 Attack Damage
-• Elder Scales : 0% -> +40% Knockback Resistance, 4.5 -> 5
-Armor, 0 -> 1 Abyssal, 0 -> 2 Unbreaking
-• Corrupted Jeweled Tiara (Sketched Corrupted Jeweled Tiara,
-Teewie's Flower Crown) : 4 -> 6 Unbreaking
-• Imperial Boots : 4 -> 6 Unbreaking
-• Lodestar Boots : 5 -> 8 Unbreaking
-• Soulbinder's Combat Boots : 5 -> 8 Unbreaking
-• Furious Footfalls : 6 -> 9 Unbreaking
-• Faintest Footsteps : 6 -> 9 Unbreaking
-• Breaking Wave : 0 -> 2 Unbreaking
-•  Firestorm Robe : 5 -> 8 Unbreaking
-•  Marmothhide Leggings : 5 -> 8 Unbreaking
-• Robes of the Secret Sun : 5 -> 8 Unbreaking
-• Robes of the Core : 5 -> 8 Unbreaking• Threads of the Thicket
-: 5 -> 8 Unbreaking
-• Sulfuric Robes : 0 -> 3 Unbreaking
-• Soulbinder's Leggings : 5 -> 8 Unbreaking
-• Desert Explorer (Sketched Desert Explorer) : 5 -> 9 Unbreaking
-• Ghoulskin Shroud : 5 -> 8 Unbreaking
-• Petrified Runeplate : 5 -> 8 Unbreaking
-• Soulbinder's Cuirass : 5 -> 8 Unbreaking
-• Warded Vestment (Sketched Warded Vestment) : 5 -> 8 Unbreaking
-• Warden's Ruin : 0 -> 1 Unbreaking
-• Stoneborn Tunic : 4 -> 6 Unbreaking
-•  Exoskelehelm : 5 -> 8 Unbreaking
-•  Nightleaf Visage : 5 -> 8 Unbreaking
-•  Silversilk Visage : 5 -> 8 Unbreaking
-•  Visage of the Lost : 5 -> 8 Unbreaking
-• Blackroot Branch (Blade of the Lost) : 2 -> 5 Unbreaking
-• Smouldering Flame : 15 -> 20 Unbreaking
-• Thawed Frozen Mallet : 1 -> 3 Unbreaking
-• Coldsteel Blunt : 2 -> 3 Unbreaking, 5.5 -> 6.5 Attack Damage,
-2 -> 1.6 Attack Speed
-• Roots' Repose : 1 -> 2 Unbreaking
-• Jungle's Requiem : 1 -> 2 Unbreaking
-• Jeans of the Fire Eagle : 0 -> 2 Unbreaking
-### Starblood Ichor Balance Changes
-• Shadowdancer (Rework) : If there are 3 mobs or any Elite/Boss
-mobs within 7 blocks, gain Technique 1 innately for 16 seconds,
-otherwise gain First Strike 1 innately for 10 seconds.
-• Dawnbringer (Rework) : You and up to 3 other players within 10
-blocks gain 10% healing rate for 5s, halved when taking damage.
-• Earthbound : Detection Duration: 6s -> 8s
-• Flamecaller : Magic Damage Duration: 8s -> 10s
-• Steelsage : Projectile Damage Duration: 8s -> 10s, 8% -> 10%
-Damage
-• Tidied up the grammar of some of the ichor descriptions &
-fixed some potion effects displaying as red### Feedback Fixes:
-• Tempest Dynamo no longer is invisible or glows, and has a
-trail particle in addition to a passive noise to announce its
-approach
-• Reworked Sidereal Scholar's Sidereal Shards attack, and
-reduced their hitbox size
-• Aurora's Star Pillars now also use glazed teracotta to
-indicate their colour
-• Absorbing Barrier damage taken window reduced to 3s (from 4s).
-Now generates
-absorption over 4s (from 3s).
-• Norvigutouille: Ingredient minigames are now replayable.
-### Bug Fixes:
-• Fixed Stoneborn Transcendent's stomp rift attack being 200x
-louder than intended
-• Fixed knockback & punch not working on 100% resistance mobs
-• Fix Stoneborn Immortal being able to be killed by other mobs
-• Fixed Vargos Dummy showing |npc_XXX as his name, egg and unegg
-him if he is already placed on your plot
-• Norvigutouille: Fixed a post-quest grammar error.
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&b(11.75.0)&r
-For the update on July 8, 2026
-### Minor New Features:
-• Damage Splashes and Health Displays for enemies have been
-added as a new option inside the P.E.B's "Gameplay Options"
-  • Damage Splashes can be configured to show only the damage
-number or the damage number with damage types
-  • Enemy health displays can be viewed from 3.5 blocks away
-initially, then from 64 blocks away (not through blocks) after
-the mob is damaged. They can be configured to hide the mob name,
-showing "ʙᴏss" or "ᴇʟɪᴛᴇ" tags instead. Completely invisible
-enemies do not show the health display.
-• Mobs that are invisible past a certain range from the player
-no longer have an extra 0.25s of invisibility
-• The Cyan lobby has been fully rebuilt, thanks to Sw0ut!
-• The Endless Ephemeral Corridors Floors Completed leaderboard
-has been soft reset by clamping 20+ runs to 20, with the
-previous scores archived
-### Aurora Changes:
-• Pulsar Radiation is now 1 block tall
-• Reduced randomness in Focused Moonbeams (Phase change laser
-crystal)
-• Starlight Surge plays a more obvious debuff sound
-• Loamskattar Catalyst repair cube is now centered on the player
-instead of being just below them
-• Delfia's Focus now scales damage to it based on player
-distance (decreasing from ~5 blocks to 16 blocks), instead of
-negating damage from 8 blocks away.
-• Fixed Star Pillars having weird dark block displays
-• Fixed being able to use movement abilities during Supernova###
-Feedback Fixes:
-• Removed the cooldown for quick drink from the inventory for
-regeneration, resistance, healing & absorption potions
-• Guardian Cherubim now dies upon Twisted Bishop's death
-consistently
-• Reworked All-Knowing Seraphim's model and attacks
-• Removed the flash particles from All-Seeing Seraphim's Final
-Judgement attack
-• All-Powerful Seraphim's display no longer can block melee hits
-• Reduced the hitbox size of Twisted Ninetail's dash
-• Bodkin Blitz teleport no longer resets pitch and yaw when
-teleporting
-• Added a hidden cake back to Gray's lobby 🍰
-### Bug Fixes:
-• Fixed projectile iframes not being fully independent of melee
-iframes
-• Fixed Starscorched Huntress dealing double the intended damage
-• Fixed Twisted Watchman dashing too far when scaled by multiple
-players
-• Fixed Twisted Tempest layering casts of Hurricane Dance when
-scaled by multiple players
-• Fixed smart furnaces not detecting shift clicks correctly
-• Fixed smart furnaces not detecting items being added to
-inventories immediately
-• Fixed travel anchors failing to save on shard restarts
-• Fixed Twisted Ninetail's landing swipe attack not being a
-delve mob
-• Fixed a partially erased chest in Tangled Grove
-• Fixed not being able to reach ||Andromeda in Into Thin Air||,
-and fixed the compass pointing in the wrong direction.
-• Fixed ||Virius boss fight in Clear as Glass|| not starting
-correctly.
-• Fixed entity scores failing to save on shard restarts
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.SKR has been temporarily
-closed.SKR has been reopened!
+closed.SKR has been reopened!• The gold ingot -> nether gold ore
+has been replaced. It was originally intended to be skipped
+completely due to its interactions with Fortune, but since it
+was already in the game, you can now convert 1 gold block into 2
+nether gold ore. This means it is no longer possible to gamble
+with Fortune 5 to mine more gold nuggets out of the ore than you
+put in.
+&bHotfix:&r
+• Fixed the `Focus.` SKR puzzle showing no green cube
+&b(11.76.0)&r
+For the update on July 15, 2026
+### Happy Depths-versary!
+Hard to believe it, but it's Darkest Depths 5th birthday! (July
+17, 2021) And with Monumenta celebrating it's 10th anniversary
+this year, that means it's almost the midpoint in our history..
+in any case, 6-player mode will be making another return! Start
+a run with up to five other friends and compete for the special
+leaderboard spots for the next two weeks. The event will run
+until the weekly update of July 29th. Good luck and have fun!
+### Skill Descriptions:
+• Skill descriptions have received a backend refactor! This
+should not affect any base functionality, but report any issues
+if you see them! There are also some new changes as well:
+  • Added a system to display extra info for certain abilities
+in the class GUI! They can be viewed by pressing F (swap hands)
+over the ability icon, and contain auxiliary info such as:
+region scaling, applying aspects, having extra customizable
+triggers, and explaining keywords or other complex mechanics
+    • For resource pack users, there is also a new feature that
+will highlight the abilities with extra info when in viewing
+mode
+  • Region-scaled values are now colored light yellow, light
+blue, or light pink depending on which region's value is
+currently being displayed
+  • Class/spec blurbs in their descriptions now are center-
+aligned
+  • Center-aligned text is now always perfectly aligned instead
+of being slightly off
+  • Changed the default appearance of descriptions to have a new
+style of dashed line and slightly more padding
+  • Changed list items to use a bullet icon instead of a dash
+  • A plentitude of skills have had their descriptions adjusted,
+fixing typos, poor line breaks, incorrect level behavior, or
+flipped charm coloring### Minor New Features:
+• Added a new epic cosmetic skill set for Scout, which can be
+obtained from a certain NPS after breaking into the Cradle's
+weapons factory
+• The Light Blue lobby has been fully rebuilt, thanks to Sw0ut!
+### Feedback Fixes:
+• Experimental modifier
+&bRot&r has been tweaked:
+  • Instead of capping Saturation at 0.3 points (out of 20),
+saturation-accelerated healing is simply disabled.
+  • Points / level: 3 -> 4
+  • Max level: 2 -> 4
+• Experimental modifiers Chance Cubes, Rot, Gravity,
+Regenerating, Bloodlust, and Cloaked will be available until
+<t:1784865600:f>
+• Smoothened item display animations of Wind Bomb, Pan Bomb
+(Wind Bomb cosmetic), Telekinesis (Ethereal Ascension cosmetic)
+and Sinkhole
+• Fixed Gale Shot disabling Elusive when selected at any level
+  • Elusive has been nerfed 5% -> 2.5% resistance per stack as a
+result, as Ranger was performing well enough without it
+• Added support for specialization passive cosmetics
+• Bloodthirsty coordinated attack leaps are now very accurate
+• Stoneborn immortals now have 99999 health to display their
+might
+• Made some more chairs in the King's Valley sittable
+### Bug Fixes:
+• Fixed Quiver Storm visuals not working properly for tridents
+• Fixed Tactical Maneuver and Prestigious Maneuver trail
+particles stacking on recast until hitting ground
+• Actually fixed ||Virius boss fight in Clear as Glass|| not
+starting correctly
+• Fixed being unable to dye armor in some conditions
+• Fixed Galos Outlook SKR puzzle having health displays• Fixed
+on kill effects in DarkPact cosmetics happening when the ability
+is not active
+• Fixed Lingering Potions applying Healing / Absorption Sickness
+• Fixed Healing / Absorption Sickness applying within the Arena
+of Terth
+• Fixed some Arena of Terth items doing 1 damage
+• Fixed Alchemist abilities and some other abilities not
+processing enchantments granted by effects (e.g. shadowdancer
+ichor effect)
+• Fixed Cyan Tesseract puzzle not showing red glowing colour
+• Removed a sneaky command block hiding atop a tree in Mistport
+• Removed the need to teleport into Dockmaster Robbin's room at
+the Mistport docks
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.• Increased the memory
+available to the brown shard to improve performance
