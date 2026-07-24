@@ -1,16 +1,3 @@
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.SKR has been temporarily
-closed.SKR has been reopened!• The gold ingot -> nether gold ore
-has been replaced. It was originally intended to be skipped
-completely due to its interactions with Fortune, but since it
-was already in the game, you can now convert 1 gold block into 2
-nether gold ore. This means it is no longer possible to gamble
-with Fortune 5 to mine more gold nuggets out of the ore than you
-put in.
-&bHotfix:&r
-• Fixed the `Focus.` SKR puzzle showing no green cube
 &b(11.76.0)&r
 For the update on July 15, 2026
 ### Happy Depths-versary!
@@ -96,4 +83,67 @@ the Mistport docks
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.• Increased the memory
-available to the brown shard to improve performance
+available to the brown shard to improve performance• Fixed four
+memory leaks related to the Haunted modifier in Brown• Fixed the
+sorting bin and leaderboard signs in the updated Light Blue
+lobby
+&bHotfix (after nightly restart):&r Following the 6.0.0 and
+6.1.0 Resource Pack updates, 3 new Hope Skins have been added to
+Mastersmith Antonio's shop! Thank you very much to our patrons
+for your continued support!
+&b(11.77.0)&r
+For the update on July 22, 2026
+### Minor New Features:
+• Added a Delve Bounty Status visual to the bottom right corner
+of the `/dungeons` GUI. If you have the Resource Pack, you will
+also see a flashing exclamation point on this icon if you have a
+bounty to start for the week!
+• Aurora's Supernova attack is now a brief parkour with an 80
+second time limit, hitting Delfia's Focus once ends the attack
+• Idols now very rarely drop their heads
+• Vargos now sells Charcoal Keys for 1 Jewel of the Blackroot
+and 24 Coal
+### Feedback Fixes:
+• Master of Clucks now also offers to make you immune to
+clucking
+• Mobs with 100% resistance show white coloured health
+• Gave C'Vaatk in the Exalted Lobby some unique effects to make
+his existence look less weird
+• Removed some pressure plates from the dungeon lobbies, making
+more space to stand next to `-_-` before entering a dungeon
+• The Dungeons GUI now calls dungeons by their exact name### Bug
+Fixes:
+• Fixed Health Displays remaining after death in some scenarios
+• Fixed Heal Splashes showing for passive mobs
+• Fixed Heal Splashes showing for players who have not enabled
+them
+• Fixed invisible charged creepers not showing health displays
+• Fixed Touch of Radiance making player nametags visible
+• Fixed Gyrhaeddant not showing a health display
+• Fixed Light Blue lobby frag plate not working
+• Fixed ways to get stuck in the ground of LB lobby or getting
+to the old lobby
+• Fixed the "Found <Dungeon> Lobby" advancements not being
+granted for the updated lobbies
+• Fixed an issue with the Brown Lobby's -_• selector
+• Fixed Depths Toughness removing its buff on relog
+• Fixed various mobs glowing as white instead of light purple
+• Fixed drowned mobs not attacking during the day
+• Fixed Manifested Winged Titan Body not being a boss
+• Fixed Such Destruction being granted below 90% block
+destruction
+• It is no longer possible for the second puzzle of A Union
+Cross to steal your held items
+• Assisted Dreaming no longer prevents progression after
+defeating the boss
+• Fixed spelling mistake in A Union Cross
+• Fixed some excess structure void at the top of the Anniversary
+Pass Border. Applying it again after weekly update will fix any
+stray blocks. In the meantime, you can apply the void border
+temporarily to clean them up.
+• Fixed some blocks popping into items in plot borders
+• Un-rolled a rolled chest in Brown
+• Fixed various stuck spots, typos, and grammar issues across
+the game
+• Fixed certain parts of the Rush arena allowing equipment
+damage
