@@ -1,92 +1,7 @@
-&b(11.76.0)&r
-For the update on July 15, 2026
-### Happy Depths-versary!
-Hard to believe it, but it's Darkest Depths 5th birthday! (July
-17, 2021) And with Monumenta celebrating it's 10th anniversary
-this year, that means it's almost the midpoint in our history..
-in any case, 6-player mode will be making another return! Start
-a run with up to five other friends and compete for the special
-leaderboard spots for the next two weeks. The event will run
-until the weekly update of July 29th. Good luck and have fun!
-### Skill Descriptions:
-• Skill descriptions have received a backend refactor! This
-should not affect any base functionality, but report any issues
-if you see them! There are also some new changes as well:
-  • Added a system to display extra info for certain abilities
-in the class GUI! They can be viewed by pressing F (swap hands)
-over the ability icon, and contain auxiliary info such as:
-region scaling, applying aspects, having extra customizable
-triggers, and explaining keywords or other complex mechanics
-    • For resource pack users, there is also a new feature that
-will highlight the abilities with extra info when in viewing
-mode
-  • Region-scaled values are now colored light yellow, light
-blue, or light pink depending on which region's value is
-currently being displayed
-  • Class/spec blurbs in their descriptions now are center-
-aligned
-  • Center-aligned text is now always perfectly aligned instead
-of being slightly off
-  • Changed the default appearance of descriptions to have a new
-style of dashed line and slightly more padding
-  • Changed list items to use a bullet icon instead of a dash
-  • A plentitude of skills have had their descriptions adjusted,
-fixing typos, poor line breaks, incorrect level behavior, or
-flipped charm coloring### Minor New Features:
-• Added a new epic cosmetic skill set for Scout, which can be
-obtained from a certain NPS after breaking into the Cradle's
-weapons factory
-• The Light Blue lobby has been fully rebuilt, thanks to Sw0ut!
-### Feedback Fixes:
-• Experimental modifier
-&bRot&r has been tweaked:
-  • Instead of capping Saturation at 0.3 points (out of 20),
-saturation-accelerated healing is simply disabled.
-  • Points / level: 3 -> 4
-  • Max level: 2 -> 4
-• Experimental modifiers Chance Cubes, Rot, Gravity,
-Regenerating, Bloodlust, and Cloaked will be available until
-<t:1784865600:f>
-• Smoothened item display animations of Wind Bomb, Pan Bomb
-(Wind Bomb cosmetic), Telekinesis (Ethereal Ascension cosmetic)
-and Sinkhole
-• Fixed Gale Shot disabling Elusive when selected at any level
-  • Elusive has been nerfed 5% -> 2.5% resistance per stack as a
-result, as Ranger was performing well enough without it
-• Added support for specialization passive cosmetics
-• Bloodthirsty coordinated attack leaps are now very accurate
-• Stoneborn immortals now have 99999 health to display their
-might
-• Made some more chairs in the King's Valley sittable
-### Bug Fixes:
-• Fixed Quiver Storm visuals not working properly for tridents
-• Fixed Tactical Maneuver and Prestigious Maneuver trail
-particles stacking on recast until hitting ground
-• Actually fixed ||Virius boss fight in Clear as Glass|| not
-starting correctly
-• Fixed being unable to dye armor in some conditions
-• Fixed Galos Outlook SKR puzzle having health displays• Fixed
-on kill effects in DarkPact cosmetics happening when the ability
-is not active
-• Fixed Lingering Potions applying Healing / Absorption Sickness
-• Fixed Healing / Absorption Sickness applying within the Arena
-of Terth
-• Fixed some Arena of Terth items doing 1 damage
-• Fixed Alchemist abilities and some other abilities not
-processing enchantments granted by effects (e.g. shadowdancer
-ichor effect)
-• Fixed Cyan Tesseract puzzle not showing red glowing colour
-• Removed a sneaky command block hiding atop a tree in Mistport
-• Removed the need to teleport into Dockmaster Robbin's room at
-the Mistport docks
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.• Increased the memory
-available to the brown shard to improve performance• Fixed four
-memory leaks related to the Haunted modifier in Brown• Fixed the
-sorting bin and leaderboard signs in the updated Light Blue
-lobby
+• Increased the memory available to the brown shard to improve
+performance• Fixed four memory leaks related to the Haunted
+modifier in Brown• Fixed the sorting bin and leaderboard signs
+in the updated Light Blue lobby
 &bHotfix (after nightly restart):&r Following the 6.0.0 and
 6.1.0 Resource Pack updates, 3 new Hope Skins have been added to
 Mastersmith Antonio's shop! Thank you very much to our patrons
@@ -147,3 +62,39 @@ temporarily to clean them up.
 the game
 • Fixed certain parts of the Rush arena allowing equipment
 damage
+&b(11.78.0)&r
+For the update on July 29, 2026
+### Feedback Fixes:
+• Nerfed some hard jumps in Aurora's Supernova parkour,
+alternate path is now magenta to indicate it is harder
+• Added Aurora to the bestiary
+• Centered the location for `/spawn` to match respawn location
+• Players no longer shatter on death when in a Race
+• Players now cannot ride any mount except a boat or a minecart
+when in a Race
+• Ghost of Holidays Present's laser is now quieter
+### Bug Fixes:
+• Fixed Aurora not counting players in respawn stasis in rage
+scaling
+• Fixed mobs which glow dark colors glowing as white if showing
+health displays
+• Delfia's Focus no longer dies to flame
+• Fixed Aurora's Supernova sometimes forcing you to take anti-
+cheese damage
+• Fixed Aurora showing white hp after minibosses
+• Fixed explosions killing item frames
+• Fixed Anti Speed zones setting you to the wrong speed
+• Fix wrong speed in anti speed zones due to speed effects
+• Fixed Grasping Claws losing its "scythe or projectile weapon"
+trigger restriction being replaced with only a scythe
+restriction
+• The remaining plot borders no longer have blocks that decay
+into items, at least within the time they were tested. This
+resulted in some differences from their prior appearance, but on
+the other hand, it's better than having those blocks disappear
+over time.
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.Aurora has been
+temporarily closed.Aurora has been reopened.
