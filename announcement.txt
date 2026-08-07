@@ -1,9 +1,8 @@
-&bReminder:&r Our newest boss, Aurora Lunacrestum, releases at
-the top of the hour!Thank you to everyone who participated in
-our Day 1 release of the new Aurora Lunacrestum bossfight, and
-continue to do so! We hope you have all been having fun with the
-finale to Star Point! We've put together a little trailer to
-celebrate the occassion and showcase the boss a little • enjoy!
+Thank you to everyone who participated in our Day 1 release of
+the new Aurora Lunacrestum bossfight, and continue to do so! We
+hope you have all been having fun with the finale to Star Point!
+We've put together a little trailer to celebrate the occassion
+and showcase the boss a little • enjoy!
 https://youtu.be/TZyLJONLUzsHappy to announce that @ellie._ has
 been promoted to Team Monumenta! Ellie has done incredible mob
 work with truly unique designs for up coming exalteds as well as
@@ -105,3 +104,13 @@ https://findmcserver.com/server/monumentaPlease welcome
 developers! They created our most recent quest, Norvigutouille,
 as well as contributions towards many of our events. Be sure to
 give them cong&orat&rulatory pings! 🏓
+&bExalted Lime Launch!&r
+After a long hiatus, we're happy to announce the return of
+exalted dungeons, beginning with Ex-Lime!
+For those still out of the loop, Exalteds are ports of our
+dungeons from older regions, with mobs and items rebalanced for
+the experience of Region 3 • allowing your highest level of
+gear, skill enhancements, specs, and charms.
+This dungeon will be open for everyone at out usual launch
+window on Saturday, <t:1786809600:f>. We look forward to seeing
+you all there!  @everyone 🐸
