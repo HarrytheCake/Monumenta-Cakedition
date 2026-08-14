@@ -1,95 +1,4 @@
-&b(11.77.0)&r
-For the update on July 22, 2026
-### Minor New Features:
-• Added a Delve Bounty Status visual to the bottom right corner
-of the `/dungeons` GUI. If you have the Resource Pack, you will
-also see a flashing exclamation point on this icon if you have a
-bounty to start for the week!
-• Aurora's Supernova attack is now a brief parkour with an 80
-second time limit, hitting Delfia's Focus once ends the attack
-• Idols now very rarely drop their heads
-• Vargos now sells Charcoal Keys for 1 Jewel of the Blackroot
-and 24 Coal
-### Feedback Fixes:
-• Master of Clucks now also offers to make you immune to
-clucking
-• Mobs with 100% resistance show white coloured health
-• Gave C'Vaatk in the Exalted Lobby some unique effects to make
-his existence look less weird
-• Removed some pressure plates from the dungeon lobbies, making
-more space to stand next to `-_-` before entering a dungeon
-• The Dungeons GUI now calls dungeons by their exact name### Bug
-Fixes:
-• Fixed Health Displays remaining after death in some scenarios
-• Fixed Heal Splashes showing for passive mobs
-• Fixed Heal Splashes showing for players who have not enabled
-them
-• Fixed invisible charged creepers not showing health displays
-• Fixed Touch of Radiance making player nametags visible
-• Fixed Gyrhaeddant not showing a health display
-• Fixed Light Blue lobby frag plate not working
-• Fixed ways to get stuck in the ground of LB lobby or getting
-to the old lobby
-• Fixed the "Found <Dungeon> Lobby" advancements not being
-granted for the updated lobbies
-• Fixed an issue with the Brown Lobby's -_• selector
-• Fixed Depths Toughness removing its buff on relog
-• Fixed various mobs glowing as white instead of light purple
-• Fixed drowned mobs not attacking during the day
-• Fixed Manifested Winged Titan Body not being a boss
-• Fixed Such Destruction being granted below 90% block
-destruction
-• It is no longer possible for the second puzzle of A Union
-Cross to steal your held items
-• Assisted Dreaming no longer prevents progression after
-defeating the boss
-• Fixed spelling mistake in A Union Cross
-• Fixed some excess structure void at the top of the Anniversary
-Pass Border. Applying it again after weekly update will fix any
-stray blocks. In the meantime, you can apply the void border
-temporarily to clean them up.
-• Fixed some blocks popping into items in plot borders
-• Un-rolled a rolled chest in Brown
-• Fixed various stuck spots, typos, and grammar issues across
-the game
-• Fixed certain parts of the Rush arena allowing equipment
-damage
-&b(11.78.0)&r
-For the update on July 29, 2026
-### Feedback Fixes:
-• Nerfed some hard jumps in Aurora's Supernova parkour,
-alternate path is now magenta to indicate it is harder
-• Added Aurora to the bestiary
-• Centered the location for `/spawn` to match respawn location
-• Players no longer shatter on death when in a Race
-• Players now cannot ride any mount except a boat or a minecart
-when in a Race
-• Ghost of Holidays Present's laser is now quieter
-### Bug Fixes:
-• Fixed Aurora not counting players in respawn stasis in rage
-scaling
-• Fixed mobs which glow dark colors glowing as white if showing
-health displays
-• Delfia's Focus no longer dies to flame
-• Fixed Aurora's Supernova sometimes forcing you to take anti-
-cheese damage
-• Fixed Aurora showing white hp after minibosses
-• Fixed explosions killing item frames
-• Fixed Anti Speed zones setting you to the wrong speed
-• Fix wrong speed in anti speed zones due to speed effects
-• Fixed Grasping Claws losing its "scythe or projectile weapon"
-trigger restriction being replaced with only a scythe
-restriction
-• The remaining plot borders no longer have blocks that decay
-into items, at least within the time they were tested. This
-resulted in some differences from their prior appearance, but on
-the other hand, it's better than having those blocks disappear
-over time.
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.Aurora has been
-temporarily closed.Aurora has been reopened.### Rogue:
+### Rogue:
 • Vicious Combos : 1s/2s -> 1s/1.5s Cooldown Reduction
   • Cooldowns of some abilities have been adjusted to
 compensate: Dagger Throw (12s -> 10s), By My Blade (10s -> 8s),
@@ -178,4 +87,93 @@ plots shards
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
+and select `I want to unlock this shop`.Monumenta's voting page
+on the official Minecraft modlist has been added to the in-game
+`/vote` command list, and you are now rewarded in-game currency
+for voting there!
+&b(11.80.0)&r
+For the update on August 12, 2026
+### Major New Features:
+• A strange new corridor has opened in the Exalted Lobby. Those
+who have completed the Celsian Isles Monument may ascend and see
+what lies beyond…
+### Exalted Lime:
+• Exalted Salazar's Folly has been added to the Exalted Hall.
+Take on brand new challenges in Region 2's first exalted
+dungeon, and purchase remastered versions of iconic items from
+it!
+• This dungeon will be made available this weekend, opening up
+at our usual launch window at  <t:1786809600:f>.
+• As a reminder, Exalted Dungeons count as your instance of that
+dungeon for the week, so you cannot run a non-Exalted and an
+Exalted version of the same dungeon in one week. Additionally,
+Exalted Dungeons can be done to complete Season Pass objectives
+and Delve Bounties, and the leaderboard for completions is
+shared between Exalted and basic versions.
+### New Experimental Modifier: Infantilize:
+• Worth 3pts, all mobs that have a baby version always spawn as
+babies.
+• Available for the next 2 weeks
+### Minor New Features:
+• Exalted Challenge Delves no longer give the special rewards of
+their R1/R2 counterparts
+• C'Vaatk will no longer appear in the Exalted Lobby immediately
+after completion of Exalted Magenta
+• A new cutscene now plays out upon entering the Exalted Lobby
+for the first time after completion of both A Union Cross and
+all seven Region 1 exalted dungeons
+• Two new cosmetic skills have been added to the Mechanized
+Scout cosmetic skill set, Hunter Exoskeleton (Deadeye) and
+Ranger Exoskeleton (Elusive). Players who have already bought
+Aethertech Weaponry can unlock them by right-clicking with the
+item in hand.
+-# The cosmetics will not be visible until the next resource
+pack update.### Feedback Fixes:
+• Updated and optimized infusion information given by Keloch,
+Jean Bay, and Infusion Master
+• Replaced magenta stained glass in Aurora's Supernova phase to
+be light blue for increased visibility
+• Reduced Transcendent Combos particle count
+• Vicious Combos now spawns particles in the passive ability
+category
+• Faceless One particle ring now sends less particles its
+detection uses a cylinder
+• Cognitive Distortion changes:
+  • Liminal Shadow on hit 5s -> 2s Slowness, 0.4 -> 0.2 true
+knockback, 1 -> 0.6 Knockback Resistance, base mob is now an
+enderman
+  • Liminal Shadow count reduced from 15 to 12 per cast,  a
+particle pillar telegraphs where they will spawn ~1s later
+  • Lights on 25 -> 20 Liminal Shadow kill requirement
+  • Time limit has been increased from 10s to 15s, darkness
+effect removed.
+  • In duo, the other player is hidden and a vibration particle
+and a particle line is shown
+  • In solo, the pillar at the center has been removed, a random
+location will instead be selected for the player to go to.
+• Fixed Faceless One group targeting
+• Fixed Intruder sound sources
+• Fixed Amalgamating Dreamscape running after losing to the boss
+• Sourceless gaze no longer melees you### Bug Fixes:
+• Fixed Requiem of the Abyss, Lesser Chorale Charm, Greater
+Chorale Charm and Automatic Distillery not being updated
+• Fixed Antumbral Stalker flying into the sky
+• Fixed Training Dummy DPS displays remaining after being
+egginated
+• Fixed Sands of Time (and potentially other spells) that change
+the glowing color of bosses not working
+• Fixed stuck spots created by the puzzle in Nelfine's Curse.
+Standing on the green concrete for too long will now teleport
+the player to a safe spot.
+• Fixed a bug that could cause infinite mob duplication in
+Exalted Yellow in rare cases
+• Fixed hits being blocked by training dummy DPS display
+• Actually fixed projectile Iframes not being independent of
+melee iframes
+• Fixed Tempo only setting its timer for true damage
+• The Vedha now tells you the correct cost of a Covenmourn Rend.
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.Twisted Intruder has
+been temporarily closed.
