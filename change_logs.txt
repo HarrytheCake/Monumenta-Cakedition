@@ -1,96 +1,6 @@
-### Rogue:
-• Vicious Combos : 1s/2s -> 1s/1.5s Cooldown Reduction
-  • Cooldowns of some abilities have been adjusted to
-compensate: Dagger Throw (12s -> 10s), By My Blade (10s -> 8s),
-Advancing Shadows (20s -> 15s), Escape Death (60s -> 55s).
-&oOnly base skills had their cooldowns reduced, but they are
-reduced generously to compensate for the fact that other skills'
-cooldowns remain unchanged. A side-effect of this should be that
-Rogue should feel more active in Region 1 without boosting its
-potential in other regions too much. This should also be true of
-content with fewer mobs to help trigger Vicious Combos.&r
-  • Deadly Ronde : 4/6 -> 4/5 (R2 scaling), 6/8 -> 6/7 (R3
-scaling)
-  • Lordtomb Fragment : +0.5s -> 0.3s Vicious Combos Cooldown
-Reduction
-  • Lesser/Greater Charms : +0.15s/+0.3s -> +0.1s/+0.2s Vicious
-Combos Cooldown Reduction
-• Smokescreen Changes: &oChanged smokescreen's niche from a
-long-form de-buffing skill to a skill that can be used more
-reactively in gameplay.&r
-  • Smokescreen now provides 1s of Blind at both levels.
-  • 8s -> 4s Weaken/Slow Duration
-  • 20%/40% -> 20%/30% Weaken Effect
-  • 20s -> 20s/16s Cooldown
-  • Swirling Shoal : +0% -> -100% Smokescreen Blind Duration
-  • Ancient Shadowstone : +20% -> +0% Smokescreen Cooldown, +0
--> +0.25s Blind Duration
-• By My Blade : 12/24 -> 16/24 Damage
-• Dodging : 12s/10s -> 12s/9s Cooldown
-• Dagger Throw : Now does region scaling damage, 4/8 -> {4/8,
-5/8, 6/10} (R1/R2/R3)
-  • Spearpoint Shoot : +100% Dagger Throw Damage -> +60% Dagger
-Throw Damage
-  • Spring-Loaded Sheath : +10% -> +0% Dagger Throw Damage
-&b(11.79.0)&r
-For the update on August 5, 2026
-### Zenith:
-• Added a new F1 Elite room from LaMDaKiS
-• Added a new F1 Normal room from LaMDaKiS
-• Added a new F1 Normal room from Vinnya
-• Added a new F1 Elite room from HabisQweun
-• Added a new F1 Normal room from buniior
-• Added a new F2 Elite room from LaMDaKiS
-• Added a new F2 Normal room from LaMDaKiS
-• Added a new F2 Normal room from buniior & _dicey
-• Added a new F2 Normal room from buniior & _dicey
-• Added a new F2 Elite room from buniior & _dicey
-• Added a new F3 Elite room from LaMDaKiS
-• Added a new F3 Normal room from LaMDaKiS
-### Infusions:
-• Infusion and delve infusion refunds now grant Infusion
-Crystals of different tiers instead of experience, Soulbound to
-the infuser of the item.
-  • These crystals can be used as a substitute for experience in
-infusions, if they are Soulbound to you.
-  • All infusion and delve infusions costs have been
-standardized to 40/50/60/70 levels.
-  • These refunds will remain 100% efficient, and the wording of
-infusion refunds has been clarified.### Balance Changes:
-• Veilripper 18 -> 21 Attack Damage, 0 -> 2 Quake
-• Requiem of the Abyss (M4): 3 -> 2 Hex Eater, 10 -> 8 Decay
-• Lesser Chorale Charm: -10% -> -5% Choir Bells Cooldown
-• Greater Chorale Charm: -20% -> -10% Choir Bells Cooldown
-• Automatic Distillery: +10% -> +7.5% Heavenly Boon Potion
-Chance, -20% -> -25% Heavenly Boon Healing
-### Feedback Fixes:
-• Harpoon is now very accurate
-• Immortal mobs now have bold and Aqua health displays (instead
-of white)
-• Stoneborn Immortal 99999 -> 999 hp
-• Returned 5s of Poison to Elder Pufferfish
-• You can now craft emeralds into emerald ore. In exchange,
-fortune no longer works on emerald ore.
-### Bug Fixes:
-• Iron Tincture enhancement description now mentions that Elites
-and Bosses are not stunned
-• Fixed creeper training dummies trying to explode (eggify and
-replace existing dummies to see changes)
-• Added Norvigutouille quest advancement to the API
-• Added Tactician handbook advancement to the API
-• Fixed Starscorched Hunter targeting players in spectator box
-• Fixed horse enemies damaging you after death
-• Fixed Anti Speed zone giving you less than 100 speed (for real
-this time)
-• Training Dummy dps displays no longer count to the mob cap on
-plots shards
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.Monumenta's voting page
-on the official Minecraft modlist has been added to the in-game
-`/vote` command list, and you are now rewarded in-game currency
-for voting there!
+Monumenta's voting page on the official Minecraft modlist has
+been added to the in-game `/vote` command list, and you are now
+rewarded in-game currency for voting there!
 &b(11.80.0)&r
 For the update on August 12, 2026
 ### Major New Features:
@@ -177,3 +87,45 @@ melee iframes
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.Twisted Intruder has
 been temporarily closed.
+&bHotfix:&r
+• Fixed snowballs not doing damage
+• Fixed Intruder voiding rewards if reincarnation is triggered
+before defeating the boss
+• Intruder closed due to another rewards bug
+&bHotfix: &r
+• Intruder no longer cancels its win cutscene when killing it
+with divine justice
+• Intruder has been reopened
+&b(11.81.0)&r
+For the update on August 19, 2026
+### Minor New Features:
+• You can no longer run dungeon races in exalted dungeons. A
+leaderboard reset to times feasible in the dungeons' native
+regions will soon follow.
+• Added a Skill Selection Altar to dungeon loot rooms
+### Feedback Fixes:
+• Switching your Crimson Contract between death will now result
+in any experienced stored through Phylactery being transferred
+to the Crimson Contract directly
+• Villagers no longer show you their trades when you hold items
+in your hotbar
+• The Calculation Region item in /ps now explains situational
+scaling
+• Added a refund trade for Rat of Perfection to Wulfric Warrden
+### Bug Fixes:
+• Veiltorn Helminth no longer flies through walls
+• Fixed a stuck spot in the exalted lobby
+• Fixed Elite Creeper Training Dummy not being eggifyable
+• Fixed a missing period in Starlight Surge's vuln application
+• Fixed a typo in Nightmarish Carvings III
+• Fixed players losing potion effects on death when in races
+• The buff "-X% Ability Cooldowns" will no longer be lost on
+death
+• Added Sequence Spawners handbook advancement to the API
+• Fixed Whirling Ripsaw doing 0 damage
+• Fixed various tormented spells not delve scaling properly
+• Fixed floating point precision error in 100% kbr checks
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
