@@ -1,92 +1,4 @@
-Monumenta's voting page on the official Minecraft modlist has
-been added to the in-game `/vote` command list, and you are now
-rewarded in-game currency for voting there!
-&b(11.80.0)&r
-For the update on August 12, 2026
-### Major New Features:
-• A strange new corridor has opened in the Exalted Lobby. Those
-who have completed the Celsian Isles Monument may ascend and see
-what lies beyond…
-### Exalted Lime:
-• Exalted Salazar's Folly has been added to the Exalted Hall.
-Take on brand new challenges in Region 2's first exalted
-dungeon, and purchase remastered versions of iconic items from
-it!
-• This dungeon will be made available this weekend, opening up
-at our usual launch window at  <t:1786809600:f>.
-• As a reminder, Exalted Dungeons count as your instance of that
-dungeon for the week, so you cannot run a non-Exalted and an
-Exalted version of the same dungeon in one week. Additionally,
-Exalted Dungeons can be done to complete Season Pass objectives
-and Delve Bounties, and the leaderboard for completions is
-shared between Exalted and basic versions.
-### New Experimental Modifier: Infantilize:
-• Worth 3pts, all mobs that have a baby version always spawn as
-babies.
-• Available for the next 2 weeks
-### Minor New Features:
-• Exalted Challenge Delves no longer give the special rewards of
-their R1/R2 counterparts
-• C'Vaatk will no longer appear in the Exalted Lobby immediately
-after completion of Exalted Magenta
-• A new cutscene now plays out upon entering the Exalted Lobby
-for the first time after completion of both A Union Cross and
-all seven Region 1 exalted dungeons
-• Two new cosmetic skills have been added to the Mechanized
-Scout cosmetic skill set, Hunter Exoskeleton (Deadeye) and
-Ranger Exoskeleton (Elusive). Players who have already bought
-Aethertech Weaponry can unlock them by right-clicking with the
-item in hand.
--# The cosmetics will not be visible until the next resource
-pack update.### Feedback Fixes:
-• Updated and optimized infusion information given by Keloch,
-Jean Bay, and Infusion Master
-• Replaced magenta stained glass in Aurora's Supernova phase to
-be light blue for increased visibility
-• Reduced Transcendent Combos particle count
-• Vicious Combos now spawns particles in the passive ability
-category
-• Faceless One particle ring now sends less particles its
-detection uses a cylinder
-• Cognitive Distortion changes:
-  • Liminal Shadow on hit 5s -> 2s Slowness, 0.4 -> 0.2 true
-knockback, 1 -> 0.6 Knockback Resistance, base mob is now an
-enderman
-  • Liminal Shadow count reduced from 15 to 12 per cast,  a
-particle pillar telegraphs where they will spawn ~1s later
-  • Lights on 25 -> 20 Liminal Shadow kill requirement
-  • Time limit has been increased from 10s to 15s, darkness
-effect removed.
-  • In duo, the other player is hidden and a vibration particle
-and a particle line is shown
-  • In solo, the pillar at the center has been removed, a random
-location will instead be selected for the player to go to.
-• Fixed Faceless One group targeting
-• Fixed Intruder sound sources
-• Fixed Amalgamating Dreamscape running after losing to the boss
-• Sourceless gaze no longer melees you### Bug Fixes:
-• Fixed Requiem of the Abyss, Lesser Chorale Charm, Greater
-Chorale Charm and Automatic Distillery not being updated
-• Fixed Antumbral Stalker flying into the sky
-• Fixed Training Dummy DPS displays remaining after being
-egginated
-• Fixed Sands of Time (and potentially other spells) that change
-the glowing color of bosses not working
-• Fixed stuck spots created by the puzzle in Nelfine's Curse.
-Standing on the green concrete for too long will now teleport
-the player to a safe spot.
-• Fixed a bug that could cause infinite mob duplication in
-Exalted Yellow in rare cases
-• Fixed hits being blocked by training dummy DPS display
-• Actually fixed projectile Iframes not being independent of
-melee iframes
-• Fixed Tempo only setting its timer for true damage
-• The Vedha now tells you the correct cost of a Covenmourn Rend.
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.Twisted Intruder has
-been temporarily closed.
+Twisted Intruder has been temporarily closed.
 &bHotfix:&r
 • Fixed snowballs not doing damage
 • Fixed Intruder voiding rewards if reincarnation is triggered
@@ -125,6 +37,114 @@ death
 • Fixed Whirling Ripsaw doing 0 damage
 • Fixed various tormented spells not delve scaling properly
 • Fixed floating point precision error in 100% kbr checks
+&bImportant:&r
+• The player market has been locked following this week's
+update. In order to unlock your shop talk to the shop shulker
+and select `I want to unlock this shop`.
+&b(11.82.0)&r
+For the update on August 26, 2026
+### Seasonal Pass:
+• Thanks for taking part in our 10th Anniversary celebrations by
+participating in the Decade Pass! Now that the party is over,
+we've got a lot of cleaning up to do... would you like any
+leftover cake? We've got plenty, after all... it's certainly
+enough to host an afterparty. So, because of that... the next
+Seasonal Pass is the
+&bAnniversary Pass: Afterparty!&r
+• This pass features a similar reward track as the original
+Anniversary Pass, tweaked to modern standards. Additionally,
+cosmetics which have already been unlocked previously will have
+alternate rewards, mostly in the form of Metamorphosis Tokens
+and Treasure Wheel Tokens! Those who already own the Plot Border
+on Tier 25 will get a special trophy... if they manage to
+complete the pass once again!
+• The Permafrost Construct Dummy was missing in the Anniversary
+Pass rewards track due to renaming of the item that occurred
+shortly after the Anniversary Pass ended, and has now been
+restored. Fun fact • this means that the dummy was unobtainable
+for over
+&bfour years&r, unless you were around when the Anniversary Pass
+originally happened!
+• Buying cosmetics from the original Anniversary Pass has been
+disabled until the next Seasonal Pass begins.
+• Head to the Seasonal Pass Hub to begin the afterparty
+celebrations! The Anniversary Pass: Afterparty begins on
+<t:1787936400:F>!### Minor New Features:
+• Orange now uses a custom biome
+• The Grove Witch's ledge has received a new test biome! We're
+looking for feedback before applying to the entire Grove.
+• Your friends list will now show you the last time your friends
+were online
+  • `/friend list_raw` will now sort offline friends by last
+seen
+  • Friends that have not logged onto Monumenta after this
+update's last online will default to today
+• Moderators that are friends now show up in the friend section
+of the tab list
+### Feedback Fixes:
+• Classes are no longer disabled when waiting for a Hunt
+• All Viridian High Evolutionary forms now delve scale stats
+• Viridian High Evolutionary • Form M : 600 -> 700 Health, 0.3
+-> 0.25 Speed
+• Ōgama : 8 -> 16 Block crit-jump range
+• Kelp Boomers move 30% slower
+• Entombed Viperfish Health 5000 -> 4500
+• Entombed Viperfish now has Block Break on Conduit Ram Attack
+• Added recipe to turn tinted glass into normal glass
+• Added recipes to craft stained terracotta into glazed
+terracotta and back
+• Lowered frequency of Refound Knowledge in Ex Lime
+• In solo Cognitive Distortion, a circle now appears at the
+target location when standing within its radius, totem particles
+centered on the player have been reduced
+• The option in Orin to move your world spawn is no longer the
+last option where possible, and has a confirmation message
+before it applies
+• Added Exalted Lime to the bestiary### Bug Fixes:
+• Under some circumstances when worm mobs would previously
+partially despawn and become unkillable, they will now die when
+being dealt any damage. Please report any remaining instances of
+immortal worm mobs
+• Fixed Spectral Arrows not working
+• Fixed C'Zanil, the Soulcrusher Dummy missing from the API
+• Fixed some entities, such as Unstable Amalgam, glowing red in
+Rush of Dissonance when there are few mobs left, as well as
+preventing the round from ending until they disappear
+• Fixed Parrot GUI claiming you had completed -1 Corridors
+floors if you had never attempted the dungeon
+• Fixed outdated Orbital description in Delve Infusion GUI
+• Fixed missing space in Seneca dialogue
+• Fixed typo in Temple of the Skylords bounty message
+• Fixed typo in Coalrupted Sierhaven timer bossbar
+• Fixed typo in Astralli dialogue
+• Updated Celerity description in infusion GUI
+• Copper Missiles and Mounted Minigun no longer show health
+displays
+• Fixed smart apostrophes in many charm trader dialogues
+• Rebound advancement now specifies how it handles Thunder
+Aspect
+• Removed irrelevant and incorrect text from the Efficiency
+advancement
+• Updated Multishot advancement to mention what levels above 1
+do
+• Fixed Ignition Drive using live stats instead of stats when
+cast
+• Fixed Ignition Drive not applying Inferno
+• Fixed incorrect icon for King's Valley Exploration advancement
+tab when in Valley
+• Fixed missing period in An Unexpected Lesson compass entry
+• Fixed Spectral and Dreadful triggering on worm bodies
+• Fixed incorrect durations for Vesperidys tracks in music GUI
+• Updated Absorbing Barrier advancement
+• Fixed Twisted Scyphozoa not despawning on unload
+• Renamed the passenger on Stackaboom to Stackaboom Rider to
+resolve an issue causing it to sometimes not be named
+• Updated the base item of Beastly Soul's held Purified Claw to
+stone sword so its texture appliesAdditional Changes:
+• Dying while wearing shatter III no longer shatters items in
+your inventory
+• Dying while wearing no armor no longer shatters items in your
+inventory
 &bImportant:&r
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
