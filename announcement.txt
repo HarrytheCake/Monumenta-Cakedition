@@ -1,39 +1,10 @@
-Happy to announce that @ellie._ has been promoted to Team
-Monumenta! Ellie has done incredible mob work with truly unique
-designs for up coming exalteds as well as our next major content
-release :) Please give her the congratulatory 🏓#
-&bA Decade of Monumenta:&r
-On May 28th, 2016, a Discord server was created for the
-development of what was, at the time, known as Project Epic.
-Over the next year, this group worked on builds, quests, and
-items, eventually leading into the announcement of the project a
-year later, and what it was called: Monumenta. A server that
-took the genre of Complete the Monument adventure maps, and
-converted it into a MMO experience. The founding of this
-original discord marks the start of Monumenta's development •
-and therefore, the server has now been in existence
-&bfor an entire decade!&r 🎉
-Without all of you, our community, we would not be in this
-position today. The developer team has changed heavily over the
-past decade, with members joining and leaving constantly, but
-every single one of us had one goal in mind •
-&bto create an experience worth playing&r... and it has been so
-amazing seeing how far we've come over the years.
-Starting with this weekly update, we have a couple of activities
-and gifts for you to experience during our 10th Anniversary
-Event, which will last 3-4 weeks. Come celebrate with us in-game
-over the next few weeks!
-One of our oldest developers also has some of their own thoughts
-to share regarding their time developing for the server, which
-will follow this message. Thank you for ten years, and here's to
-many more!
-&b-Team Monumenta&rHi all. I wrote a small piece about my
-recollections of the early days of Monumenta and how much it's
-meant to me over the years. Seeing something grow and change
-into a brand new creation is really incredible. So little
-remains from the very beginning, but without those beginnings we
-wouldn't be here ten years later. Thanks for finding us and
-being a part of our shared history.
+Hi all. I wrote a small piece about my recollections of the
+early days of Monumenta and how much it's meant to me over the
+years. Seeing something grow and change into a brand new
+creation is really incredible. So little remains from the very
+beginning, but without those beginnings we wouldn't be here ten
+years later. Thanks for finding us and being a part of our
+shared history.
 https://docs.google.com/document/d/10MluvMgV2Ki88D-MOhsKC4oHoHC_
 Hf_inDZNnfaxzis/edit?usp=drivesdk# Call for Moderator
 Applications
@@ -114,3 +85,32 @@ newest developer! Lamda has crushed it after joining the team
 not too long ago; working on both major upcoming Region 1
 improvements and new Region 3 content. Please give him a
 congratulatory ping in <#313403865389203468> 🏓
+&bThe Architect's Ring: The Wanderer's Fortune&r
+After over three years of planning and development, Team
+Monumenta is incredibly excited to announce the release of a new
+dungeon coming to Region 3,
+&bThe Wanderer's Fortune&r! A strange new stall has appeared in
+Port Manteau, where a crier speaks of unclaimed Gold in a casino
+far off the coast of the Ring...
+Not all is as it seems in this gambler's paradise though, and
+you'll have to risk it all for a chance at the jackpot. Do you
+dare test your luck in a place such as this, for fortune only
+favors the bold...
+The dungeon is set to launch during our standard content window
+of <t:1788624000:F>, and is accessible to those who have
+completed the Brown Wool Dungeon!
+To accompany the dungeon's release, a new quest is also being
+added,
+&bFighting Gold&r, which will be available immediately following
+this week's update! Requiring the completion of &oMechs
+Machina&r, the quest will be completable up until the point that
+you discover the dungeon lobby...
+We're so excited for you to all experience the dungeon, and we
+hope to see you all there! In the meantime, please enjoy this
+teaser for what is to come:
+@everyone
+https://youtu.be/qyb4h3dbAaECongratulations to @ian1kv
+@HabisQweun @fog voice for being promoted to Developer! All
+three helped make Fortune's release possible, with numerous
+additional contributions to the R1 Rework and other projects.
+Please give them all a congratulatory ping 🏓 !

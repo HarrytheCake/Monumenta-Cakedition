@@ -1,13 +1,3 @@
-Twisted Intruder has been temporarily closed.
-&bHotfix:&r
-• Fixed snowballs not doing damage
-• Fixed Intruder voiding rewards if reincarnation is triggered
-before defeating the boss
-• Intruder closed due to another rewards bug
-&bHotfix: &r
-• Intruder no longer cancels its win cutscene when killing it
-with divine justice
-• Intruder has been reopened
 &b(11.81.0)&r
 For the update on August 19, 2026
 ### Minor New Features:
@@ -149,3 +139,54 @@ inventory
 • The player market has been locked following this week's
 update. In order to unlock your shop talk to the shop shulker
 and select `I want to unlock this shop`.
+&b(11.83.0)&r
+For the update on September 2, 2026
+## The Wanderer's Fortune
+A brand new dungeon has made its way to the Architect's Ring!
+Travel to a wandering island brimming with luxury, invade a
+casino full of gamblers gone mad, and claim the Golden jackpot!
+The Wanderer's Fortune will unlock at <t:1788624000:F> to those
+who have completed the Brown Wool dungeon. Enjoy!
+The release is accompanied by a new quest:
+&bFighting Gold&r! A mysterious crier has arrived at the docks
+of Port Manteau, inviting visitors to a glittering island of
+gold. An extravagant casino promises riches beyond imagination,
+but beneath the glitz and glamour, something is terribly
+wrong...
+Fighting Gold requires completion of Mechs Machina and the Brown
+Wool dungeon, but cannot be finished until the release of the
+dungeon.### Minor New Features:
+• Following the 6.2.0 Resource Pack update, two new hope skins
+have been added to Mastersmith Antonio's shop! Thank you very
+much to our patrons for your continued support!
+• Added `/monumenta recipes` to list our custom recipes in a
+GUI.
+### Feedback Fixes:
+• Adjusted the vanity of Forum Magus and Tome Keeper to make
+them easier to tell apart from each other and Dark Magus
+• Fixed Zenith room f2r29 (elite room with several treasure
+spawners) having an abnormally high spawner requirement
+• Diorite Dan, Andesite Andy, and Granite Greg now sell stacks
+of slabs for 2cxp (was 4cxp)
+• Twisted Vanguard's brute force attack now has 2.5 radius and
+2.5 range (from 4 and 4)
+• Lunacrest Captain can now gain Transcendental Missile from the
+Transcendent delve modifier
+### Balance Changes:
+• Emerald Ascension : 0% -> -50% Escape Death Healing
+• Heavenly Boon boss damage clause: 100/200/300 -> 100/250/500
+  • &oDeveloper Note: Larger changes to address Cleric's self-
+sustain will be coming in the near future.&r
+### Bug Fixes:
+• Fixed Basidiome Truffle's -100% Escape Death Elite Hunt Radius
+setting the radius to 0.1 instead of 0
+• Fixed Guardian passive (Endurance) not working
+• Fixed Soulbound currencies not sorting correctly in a Bag of
+Hoarding
+• Fixed weekly item updates visually removing Soulbound (or
+other infusions) from currency items in a Bag of Hoarding
+• "Official Maps" can now be placed in item frames
+• Fixed 2 stuck spots in SierhavenHotfix (as soon as the depths
+shards are back up):
+• Fixed `f2r32` having a ton of unused space above it due to a
+typo
