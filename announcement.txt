@@ -1,23 +1,8 @@
-Please welcome @[Sorrow] Skelematt and @[Sorrow] skelajon as our
-newest developers! They created our most recent quest,
-Norvigutouille, as well as contributions towards many of our
-events. Be sure to give them cong&orat&rulatory pings! 🏓
-&bExalted Lime Launch!&r
-After a long hiatus, we're happy to announce the return of
-exalted dungeons, beginning with Ex-Lime!
-For those still out of the loop, Exalteds are ports of our
-dungeons from older regions, with mobs and items rebalanced for
-the experience of Region 3 • allowing your highest level of
-gear, skill enhancements, specs, and charms.
-This dungeon will be open for everyone at out usual launch
-window on Saturday, <t:1786809600:f>. We look forward to seeing
-you all there!  @everyone 🐸A reminder that our latest release,
-the Exalted Lime dungeon, launches today <t:1786809643:R> ! We
-hope to see you all there!Congratulations to @lamdakis  as our
-newest developer! Lamda has crushed it after joining the team
-not too long ago; working on both major upcoming Region 1
-improvements and new Region 3 content. Please give him a
-congratulatory ping in <#313403865389203468> 🏓
+Congratulations to @lamdakis  as our newest developer! Lamda has
+crushed it after joining the team not too long ago; working on
+both major upcoming Region 1 improvements and new Region 3
+content. Please give him a congratulatory ping in
+<#313403865389203468> 🏓
 &bThe Architect's Ring: The Wanderer's Fortune&r
 After over three years of planning and development, Team
 Monumenta is incredibly excited to announce the release of a new
@@ -64,4 +49,66 @@ cdn.discordapp.com/attachments/364164419162210304/15467496323471
 as our newest moderator! 🎉
 We're happy to have them as our newest moderator! Make sure to
 give them a warm welcome 🐦  And don't forget to send them lots
-of pings!!! 🏓
+of pings!!! 🏓As a consequence of the recent data center boom,
+Monumenta's regular server hosting costs are expected to roughly
+double over the next year. We've managed to delay this somewhat
+by paying for the entire next year in advance this weekend,
+which basically locked in our current rate.
+However, this cost the majority of our saved funds, generously
+donated by you all over the last decade.
+We generally break even between your donations and our server
+costs, and save the excess for just this kind of occasion.
+We're not in danger of running out of money today, but with
+costs increasing we unfortunately have to think about the future
+and building up these financial reserves again.
+If any of you are able and willing, [please consider supporting
+Monumenta financially through our Patreon!
+](https://www.patreon.com/MonumentaMMO)
+Your support will not only keep the game running as-is, but keep
+the lights on for all the other cool stuff currently in the
+works! Such as:
+• Our Dungeon Instancing Tech™ is being overhauled, which should
+increase performance in general and may allow us to create
+European and East Asian shards to host on! &oNickNackGus may
+elaborate more on this soon.&r
+• Two more wool dungeons have significant progress made, with
+yet another bonus dungeon in the works!
+• Exalted Pink and Gray dungeons have tons of work done and
+should release together!
+• Phase 1 of the early-game revamp should be out soon!
+However you are able to help, please know that anything you
+contribute -money, code, hype, quality feedback, or even just
+kindness and community • it all goes towards keeping the game
+going and enabling us to continue to develop and expand this
+wonderful game we all love.
+Thank you for your time and support!For anyone unfamiliar with
+our financial model,
+&bMonumenta is a 100% volunteer project&r.
+None of the devs or mods have or will receive money donated to
+the game. All of it goes to the expenses necessary for Monumenta
+to run, mostly server hosting.
+As thanks for your financial generosity, active Patreon
+subscriptions do come with some perks!
+&bTier 1&r ($5/month)
+• Stat Tracking Infusion on gear (track things like spawners
+destroyed or mobs killed with an item).
+• Customize your grave with poses.
+• Patron-exclusive parrot to ride on your shoulder.
+&bTier 2&r ($10/month)
+• Daily use of the Patreon Shrine to buff the whole server with
+40 minutes with a buff of your choice!
+• Patron-exclusive plot borders.
+• Special in-game particle emojis.
+&bTier 3&r ($20/month)
+• 2 Patreon Shrine charges a day.
+• Unlimited Vanity (skip the in-game currency cost entirely)!
+&oAny donation of any amount gets your player head in the
+Patreon hall of Sierhaven's castle, the Discord role (the Patron
+channel gets content sneak peaks) and in-game gold name
+forever!&rOn a related note, we're overhauling how dungeons and
+such are instanced. This will make better use of our server
+resources, allow for shards hosted internationally, and all
+sorts of other features we've wanted in the game for a long time
+• look for the ⭐ starred boxes to for an idea of what you should
+be excited for! (This may be easier to read on desktop than on
+mobile.)
