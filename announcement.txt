@@ -1,38 +1,4 @@
-Congratulations to @lamdakis  as our newest developer! Lamda has
-crushed it after joining the team not too long ago; working on
-both major upcoming Region 1 improvements and new Region 3
-content. Please give him a congratulatory ping in
-<#313403865389203468> 🏓
-&bThe Architect's Ring: The Wanderer's Fortune&r
-After over three years of planning and development, Team
-Monumenta is incredibly excited to announce the release of a new
-dungeon coming to Region 3,
-&bThe Wanderer's Fortune&r! A strange new stall has appeared in
-Port Manteau, where a crier speaks of unclaimed Gold in a casino
-far off the coast of the Ring...
-Not all is as it seems in this gambler's paradise though, and
-you'll have to risk it all for a chance at the jackpot. Do you
-dare test your luck in a place such as this, for fortune only
-favors the bold...
-The dungeon is set to launch during our standard content window
-of <t:1788624000:F>, and is accessible to those who have
-completed the Brown Wool Dungeon!
-To accompany the dungeon's release, a new quest is also being
-added,
-&bFighting Gold&r, which will be available immediately following
-this week's update! Requiring the completion of &oMechs
-Machina&r, the quest will be completable up until the point that
-you discover the dungeon lobby...
-We're so excited for you to all experience the dungeon, and we
-hope to see you all there! In the meantime, please enjoy this
-teaser for what is to come:
-@everyone
-https://youtu.be/qyb4h3dbAaECongratulations to @ian1kv
-@HabisQweun @fog voice for being promoted to Developer! All
-three helped make Fortune's release possible, with numerous
-additional contributions to the R1 Rework and other projects.
-Please give them all a congratulatory ping 🏓 !A reminder that
-our latest dungeon,
+A reminder that our latest dungeon,
 &bThe Wanderer's Fortune&r, goes live at the top of the hour! We
 hope to see you all there!We are happy to finally showcase off
 the new Monumenta standard logo, created by @PaperBoxs, which
@@ -112,3 +78,18 @@ sorts of other features we've wanted in the game for a long time
 • look for the ⭐ starred boxes to for an idea of what you should
 be excited for! (This may be easier to read on desktop than on
 mobile.)
+&bRegion One Revamp: Part 1&r
+We've created an entirely new Introduction, overhauled class
+progression beginning in tutorial, reworked tutorial to keep
+your inventory on completion, and updated Temple to Kaul to
+match the rebuild! Furthermore, the Alchemy Labs Dungeon has
+been rebuilt from scratch, complete with Delves, an Infusion,
+new Rares, and an Epic!
+&nBecause of this, existing Alchemy Labs instances will be
+removed on weekly update! Please complete your instances before
+<t:1790218800:F>!&rCongratulations to @kevinboiii for being
+promoted to Developer! Kevin has been absolutely essential for
+our upcoming R1 Revamp, working on mechs for Labs, Tutorial and
+more. Please give him a congratulatory ping 🏓  !![For those who
+want to see the new tutorial introduction without an account
+reset.](https://youtu.be/nrgN82Potm8)

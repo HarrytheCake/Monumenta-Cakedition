@@ -1,209 +1,173 @@
-&b(11.85.0)&r
-For the update on September 16, 2026
-### Minor New Features:
-• Experimental Delve Modifier
-&bRot&r has been tweaked: 4 levels, 2pt / level
-  • Level 1: Saturation heal rate halved
-  • Level 2: And healing is cut by 30%
-  • Level 3: Saturation heal rate halved again
-  • Level 4: And healing is cut by 60% instead
-Rot will be available for 2 weeks, starting September 18th,
-2026!
-• Added a leaderboard to Snake
-• You can now use `/mail send mod` or `/mod send mod as guild`
-to send items to the moderator team, and they can send items to
-you in return.
-• Cushion Salesmen have come to visit their Dye Trader friends.
-They'll now happily trade ordinary wool for the Seats of the
-Future ™, with a full refund policy.
-• All existing `Sit` entities throughout the server are now
-cushions
-• Orin has finished his Master's Degree in Teleportation. As his
-capstone project, he has set up an experiment in teleporting to
-specific parts of distant lands, and implemented a proof of
-concept in teleporting to the player market from any region.###
-Wanderer's Fortune Secret Boss ||The Gilded Sentinels||:
-||General Changes:
-• Increased the vertical hitbox of most spells
-• General Damage Multiplier decreased to 1.4 (1.5 -> 1.4)
-• True Damage Multiplier decreased to 1.1 (1.5 -> 1.1)
-• Per player health scaling decreased to +50% (60% -> 50%)
-• Armor Crush maximum stacks increased to 100 (50 -> 100)
-• Armor Crush decay time increased to 20 ticks (16 -> 20)
-• Armor Crush anti heal per stack decreased to 0.75% (1 -> 0.75)
-• Armor Crush anti absorption per stack increased to 0.75% (0 ->
-0.75)
-• Many sources of Armor Crush application have been adjusted.
-• Auric Aegis target dps decreased to 170 (190 -> 170)
-• Auric Aegis target dps adjusted to +55% per additional player
-(45% -> 55%)
-• Auric Aegis's target dps is now dynamic with players alive.
-• Knight Duo Phase Health decreased to 11400 (~15500 -> 11400)
-• Horse Duo Phase Health decreased to 9200 (~12000 -> 9200)
-• Knight Solo Phase Health increased to 24400 (~15500 -> 24400)
-• Horse Solo Phase Health increased to 24400 (~12000 -> 24400)
-• Fixed a bug where the controller entity was not considered a
-Boss
-• Fixed a bug where players could enter the fight without being
-considered fight participants
-• Placed a barrier
-Duo Phase • Mounted:
-• Gilded Maul now has two variants it may choose from
-• Gilded Maul's knockback has been mostly removed
-• Flying Slash has been replaced with a new spell
-• Golden Cavalry's telegraph has been adjusted to more
-accurately represent its hitboxes
-• Golden Cavalry is now slightly slower and slightly wider
-Duo Phase • Dismounted:
-• Golden Upheaval now causes the knight to dash on occasion
-• Flying Slash (Orbiting) no longer causes the horse to dash.
-• Added a new horse charge pattern to Spin Sweep
-Solo Phase • Knight:
-• Now transitions into a new phase at 55% HP
-• Arena restriction size increased (~10.5 -> 11)
-Solo Phase • Horse:
-• This section of the fight has been partially reworked.||###
-Feedback Fixes:
-• Jackpot now counts your hotbar items as "equipped" for the
-sake of it granting infusion effects (so it won't grant
-redundant infusions from your hotbar either).
-• Fighting Gold: ||Added post-quest dialogue to Dockmaster
-Alainn. He hadn't noticed that Argon was defeated||
-• Fortune: ||Added some blue-toned particles to jump pads,
-hopefully this improved visibility. Looking for feedback!||
-• Replaced dubious barriers in SKR Path of the Mind with real
-blocks
-• Removed some some barriers in Intruder Arena
-• Adjusted the formatting of the lore of Sins of the Voracious,
-Scepter of Agony, Very Old Rock, Remnant of the Vision, and
-Freshly Baken Cookie for consistency
-• Added Very Old Rock to the API
-• Added Momentum handbook entry to the API
-• The advancements leaderboard API is now paginated, and
-supports name and rank
-• Added the Star Point location tag to Stellar Core
-• Fixed Armory not swapping cosmetics properly
-• Added separate buttons to set a loadout's keybinds and
-cosmetic skills separately from its class. These only work if
-your class matches the loadout's class (i.e. can't set Scout
-cosmetics on a Mage loadout)
-• Changing a loadout's skill points will no longer change its
-keybinds or cosmetic skills, unless the loadout's class has also
-changed
-### Balance Changes:
-• Vexes are no longer excluded from Legionary triggers.
-• Hyperexperience Aberration now hovers 3 blocks above the
-ground (from 8)
-• Skyfallen Beamer has been reworked
-• Removed Knockback from Advancing Shadows on Level 2
-• Removed Advancing Shadows Knockback charm stats from Malhuer
-Reach and Explosive Umbral Charm
-• Twisted Revenant's Rampage's damaging zone has been made
-clearer and reduced in radius (25 -> 20), and now deals 2 fire
-damage (from 5)### Bug Fixes:
-• Fixed Curse of Lust healing enemies when far enough away from
-allies
-• Fixed Curse of Shrapnel not working in the offhand and armor
-slots
-• Fixed Divine Justice including the 50% melee crit bonus when
-triggered by projectiles, allowing it to deal up to nearly 50%
-more damage than intended
-• The automation will no longer display the date incorrectly on
-the 11st, 12nd, and 13rd of the month...er, make those all th's
-of the month
-• Fixed Twisted Bishop and Twisted Gravecaller leaving behind a
-stinky armor stand when going into their second phases
-• Fixed Twisted Shadestepper's Cloaked Strike persisting after
-death
-• Fixed Twisted Vanguard's Iron Maiden not disappearing on
-player death/unload
-• Fixed the Fortune Cookie tarot fortune not sending one of the
-messages if the card rolled was a King of Cups
-• Fixed Legionary having a lower trigger chance than intended
-• Bonus mobs from Delve Multiplier now receive custom spawner
-effects
-• Fixed Twisted Artillery Grenade not properly delve scaling
-• Fixed Whirling Ripsaw not properly delve scaling
-• Fixed Gravesoul Spawn not properly delve scaling
-• Fixed players being able to set animals on fire on plots with
-flame bows
-• Fixed the reset booth being inaccessible after weekly update
-• Fixed being able to permanently lock the reset booth by
-logging out inside it
-• Added some extra safeguards to the reset booth
-• Fixed a typo on a sign in the area you are sent to after
-resetting your profile
-• Exoskeletons from the Mechanized Scout cosmetic set are now
-visible to all players
-• Viridian High Evolutionary is now obtainable in the bestiary
-• Fixed defeating Onyx Crownbearer not progressing the quest
-• Fixed typos in the lore of Putrid Maw, Blackflame Remains, and
-Otherworldly Gem
-• Fixed an issue with Fortune's dungeon race
-• Reopened Fortune's dungeon race
-• Fixed players not being given credit for setting mobs on fire
-with projectiles that deal fire damage• ||Dauntless (M4) : 3 ->
-5 Armor, 0 -> 2 Second Wind||
-• Pachinko Lever (Rework) : Melee Protection 3, Kinetic Loading,
-Multi-Load 1, Multishot, Retrieval 3, Unbreaking 5, 10 Attack
-Damage, 1.6 Attack Speed, 23 Projectile Damage, 1 Projectile
-Speed, +15% Speed
-• Bouncing Billiards (Rework) : 3 Charm Power, +20 Steel Trap
-Tether Damage, +20 Steel Trap Tether Range, +3 Steel Trap
-Duration, -100% Steel Trap Priming Duration, -100% Steel Trap
-Trigger Radius
-  • Bouncing Billiards’ lines damage tick speed has been doubled
-• Double Down : -10% -> -20% Max Health
-• Loaded Dice : 0% -> -20% By My Blade Attack Speed Amplifier,
-0% -> -20% By My Blade Damage
-• Crimson Coin : 4 -> 5 Charm Power, #-40% -> #-50% Magma Shield
-Cooldown, #-40% Magma Shield Damage -> #-50% Magma Shield Damage
-&nElite Health Reduction&r
-The following elites had their health reduced:
-• Temple of the Skylords
-  • Prophet of the Fallen Ones: 550 -> 480
-• Indigo
-  • Gravity Suppression Mechanism: 650 -> 570
-  • Deflector Mage: 450 -> 390
-  • Fathomless Quasar: 550 -> 480
-  • Empyreal Predator: 550 -> 480
-  • Matter Agglomerator: 400 -> 350
-  • Outworld Beholder: 450 -> 395
-  • Spacetime Manipulator: 400 -> 350
-  • Voidmother: 1,000 -> 875
-• Exalted Lime
-  • Ogama • 450 -> 325
-  • Gillman Acolyte • 550 -> 450
-  • Forgotten Hero • 750 -> 500
-  • Siren of the Viridescent • 500 -> 350
-  • Lost Millennium Dweller • 600 -> 400
-  • Luminescent Scyphozoa • 450 -> 350
-  • Viridian High Evolutionary: 2500 -> 2100
-  • VHE • Form A: 500 -> 440
-  • VHE • Form M: 700 -> 615
-  • VHE • Form P: 500 -> 440
-  • VHE • Form S: 500 -> 440
-  • VHE • Form T: 1000 -> 875
-• The Wanderer's Fortune
-  • 9-K Technician • 550 -> 450
-  • Heart of the Cards • 375 -> 380 <:kappa:313743789468418048>
-  • King of Diamonds • 500 -> 380
-  • Queen of Hearts • 600 -> 450
-  • Hyper Crystalline Guard • 450 -> 400
-  • High Roller • 550 -> 450
-  • Hypercharged Security Turret • 500 -> 450
-&bImportant:&r
-• The player market has been locked following this week's
-update. In order to unlock your shop talk to the shop shulker
-and select `I want to unlock this shop`.
-&bHotfix:&r
-• Fixed Guilded Sentinel missing spells in dismount phase
- For after daily restart:
-• Reworked Delve Presets to 12/18/22 points, there are 7 presets
-with 12 points and 7 with 18 points
-• Completing any delved Daily Bounty in Region 3 now gives the
-maximal bounty rewardSirius, The Final Herald has been
-temporarily closed.
 &bHotfix (at xx:00):&r
 • Fixed certain bosses breaking when trying to send NPC messages
 to the playerSirius, The Final Herald has been reopened.
+&bHotfixes&r for daily restart:
+• Additional mobs from stat multipliers are no longer affected
+by custom spawner effects.
+• Fixed Deep Delve not running this week.
+• Cushions can now be placed
+&b(11.86.0)&r
+For the update on September 23, 2026
+### Region One Rework Part 1:
+&oThis is part one of two of our planned Region one early game
+revamp. Part two will be completely rebuilding the swamp,
+overworld deaths, earlygame quests, and more&r
+&nDream Sequence&r
+• Upon first login, players will now land in an introduction
+sequence replacing The Julia Room ™
+• The Julia Room ™ has been obliterated
+• Upon completion of the sequence, players will select a class
+before entering the Tutorial (Temple to Kaul)
+&nTutorial and Temple to Kaul&r
+• The Tutorial and Temple to Kaul have been rebuilt!
+&oNote: This rebuild aims to maintain the layout and spirit of
+the prior version&r
+• The player now has a class for their clear of tutorial
+• All mobs have had their stats adjusted for class gameplay
+• The Masked Man cutscene has had its audio and visual effects
+completely rewritten
+• The ability bar is now on by default if UMM is not installed
+&nThe Alchemy Labs&r
+• The Alchemy Labs has been entirely rebuilt from the ground up!
+&oNote: The opening section of the Alchemy Labs rebuild has been
+designed to fit a new final entrance location in the Swamp, set
+to release in Part 2 of the rework&r
+• An instance can only be opened once a week, to match other
+dungeons
+• Alchemy Labs now has five new rare items found in loot rooms
+&oNote: Expect more rares and changes to their obtainment in
+part 2&r
+• A new utility unique can be found within the dungeon to help
+with potion management
+• Alchemy Labs can now be delved upon completion of the
+monument, including a new challenge variant and delve bounty
+• Alchemy Labs delves now give an epic crafting material, which
+can be used for an infusion and an epic, or purchasing twisted
+strands
+• Old completions and race times have been legacied
+• New food items can be found within the dungeon
+• Added two discoveries in Alchemy Labs&nEarlygame Progression
+Rework&r
+• The Fallen Menagerie and Arcane Rivalry no longer grant skill
+points upon first completion. Instead, the player begins with 3
+skill points, and earns a fourth on the completion of mage's
+legacy
+• Each class begins with four unlocked skills, and four locked
+skills
+• Two skills are unlocked upon first completion of The Fallen
+Menagerie, and Two more on first completion of Arcane Rivalry
+&nItem Changes&r
+• Bandit's & Crimson Mage Sets (T2) are now both armor, from
+agility
+• Tempered Ironwood Blade (T2) is now armor, instead of agility
+• Significantly increased the expected rate of Scythes from T1
+T2 and T3 chests.
+• Peasant's scythe Unbreaking 1 -> 2
+• Ruffian's Scythe Unbreaking 2 -> 3
+• Salubric Scythe Unbreaking 0 -> 3
+&nAdditional Changes&r
+• Various dialogue has been tweaked to reflect new progression
+• The confirmation button in the labs access GUI will now warn
+you that you cannot join other instances if you create your own
+• Shaman is now locked behind Tlaxan Troubles
+&oNote: If you had previously selected Shaman, but had not yet
+completed Tlaxan Troubles, you will be unable to modify your
+skill points until you complete the quest or change your class&r
+• Warlock is no longer locked behind Sons of the Forest
+• Obliterated [-_-] text wall in the Alchemy Labs lobby on first
+interaction with the bot
+• Added a "Party Finder" NPC in the labs lobby, who informs
+players of how multiplayer works on monumenta.
+• Added an ignore list so we can prevent certain vanilla or
+redundant enchants from popping up
+• Limited the sound and tooltip message to play only once per
+tick for enchantopedia
+• Handbook entries for enchantments no longer give advancement
+toasts. We have custom notifications from /enchants
+• Added several NPCs around the Academy who can give you tips
+about each class. Sybil can give you a compass waypoint to the
+NPC for your currently selected class.### Minor New Features:
+• Arrows fired from a dispenser now deal true damage
+• Explanations for Weakness and Vulnerability have been added to
+the Extra Information tooltips! Press F (swap hands) while
+hovering over the ability icons to view.
+• Increased cost of Essence of the Above -> Pulsating Diamond
+trade from 4 -> 12 mats per pulsating diamond
+### Wanderer's Fortune Secret Boss ||The Gilded Sentinels||
+Fixes:
+||• Fixed an issue where Sky Sunder's shockwave expired sooner
+than intended
+• Fixed an issue with Sky Sunder's falling sword spawn radius
+used the wrong number
+• Changed the color of the `/` in Gilded Maul to be white due to
+visibility issues
+• Fixed a few issues with Skyshatter's speed normalizer behaving
+weirdly in certain edge cases
+• Added a cast bar to Temporal Reversal
+• Restricted playable area for Orbiting Flying Slashes is now
+smaller
+• The Vessel is now 10% slower during Orbiting Flying Slashes
+• The Knight orbits the arena at an increased radius.
+• Fixed fall damage not being prevented within the arena.
+• Fixed Skyshatter Stance being named Skysunder Stance.||
+### Feedback Fixes:
+• Added a cushion to the market
+• Standardized POI icon materials between daily bounties and
+advancements
+• After feedback from multiple developers, Sit entities in towns
+are invisible by default again. If you see a visible cushion in
+towns, it was placed there on purpose.
+• On a related note, using a glass pane on a cushion will now
+turn it invisible; something we forgot to add to the last
+changelog is that you can right click a cushion with a dye to
+change its color without consuming the dye, which now turns
+invisible cushions visible again. There is no direct trade for
+invisible cushions at this time, you will need to "dye" a
+visible cushion with glass panes, then dye it visible again if
+you want a refund.• Charms with snowballs as their base item can
+no longer be thrown
+• Removed Infinity from Table Tennis Ball (was a temp fix for
+the above bug)
+• Century-Aged Liquor's base item has been changed to dragon
+breath
+• Glass bottles with lore can no longer take water from a
+cauldron
+### Mob Changes:
+• Argon, Casino Mastermind : 10000 -> 7500 Health
+• Twisted Moonweaver:
+  • Telegraphs have been improved
+  • Can no longer move around while telegraphing Nova/Magma
+spells
+  • Nova/Magma spell cooldowns: 160 -> 220
+  • Nova spell damage: 20 -> 25
+  • Magma spell damage: 22 -> 28
+• Vestige of the Loamskattar:
+  • Reduced the bullet speed and density of bullet hell attacks
+  • Augmented Star projectile damage reduced to 40 (from 50)
+  • Vestigial Projection beam damage reduced to 35 (from 50)
+• Updated the vanity of Lord of Wind
+### Bug Fixes:
+• Fixed Pachinko Lever mistakenly having Technique  and
+Knockback Resistance
+• Fixed Apex of Alchemy and Crusader's Holy Hammer not
+despawning when their respective Tormented is killed
+• Fixed Indigo gauntlet void killing (and shattering)
+• Fixed Controlled Bulbshooter loading its crossbow with 3
+cocopads instead of arrows
+• Fixed a patch of blackstone walls in the ceiling of the Core
+Elemental arena
+• Fixed the Scepter of Agony purchase announcement having a
+different trader name than the actual trader
+• Fixed a typo in the lore of Magnetized Needle
+• Fixed Kinetic Loading not working with partially loaded Multi-
+Load crossbows
+• Fixed Recoil enchantment advancement not acknowledging the
+existance of melee weapons with recoil
+&bHotfix&r: Alchemy Labs should now properly count for Delve-
+related Seasonal Pass missions. This will not apply
+retroactively to anyone who has already done the dungeon for
+this week.
+&bHotfix&r: Fixed a broken handbook advancement for Thorns
+Damage. This might have led to a loss of the advancement, but it
+can be re-obtained by grabbing an item with Thorns Damage once
+again.
