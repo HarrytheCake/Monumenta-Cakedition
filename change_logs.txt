@@ -1,173 +1,125 @@
-&bHotfix (at xx:00):&r
-• Fixed certain bosses breaking when trying to send NPC messages
-to the playerSirius, The Final Herald has been reopened.
-&bHotfixes&r for daily restart:
-• Additional mobs from stat multipliers are no longer affected
-by custom spawner effects.
-• Fixed Deep Delve not running this week.
-• Cushions can now be placed
-&b(11.86.0)&r
-For the update on September 23, 2026
-### Region One Rework Part 1:
-&oThis is part one of two of our planned Region one early game
-revamp. Part two will be completely rebuilding the swamp,
-overworld deaths, earlygame quests, and more&r
-&nDream Sequence&r
-• Upon first login, players will now land in an introduction
-sequence replacing The Julia Room ™
-• The Julia Room ™ has been obliterated
-• Upon completion of the sequence, players will select a class
-before entering the Tutorial (Temple to Kaul)
-&nTutorial and Temple to Kaul&r
-• The Tutorial and Temple to Kaul have been rebuilt!
-&oNote: This rebuild aims to maintain the layout and spirit of
-the prior version&r
-• The player now has a class for their clear of tutorial
-• All mobs have had their stats adjusted for class gameplay
-• The Masked Man cutscene has had its audio and visual effects
-completely rewritten
-• The ability bar is now on by default if UMM is not installed
-&nThe Alchemy Labs&r
-• The Alchemy Labs has been entirely rebuilt from the ground up!
-&oNote: The opening section of the Alchemy Labs rebuild has been
-designed to fit a new final entrance location in the Swamp, set
-to release in Part 2 of the rework&r
-• An instance can only be opened once a week, to match other
-dungeons
-• Alchemy Labs now has five new rare items found in loot rooms
-&oNote: Expect more rares and changes to their obtainment in
-part 2&r
-• A new utility unique can be found within the dungeon to help
-with potion management
-• Alchemy Labs can now be delved upon completion of the
-monument, including a new challenge variant and delve bounty
-• Alchemy Labs delves now give an epic crafting material, which
-can be used for an infusion and an epic, or purchasing twisted
-strands
-• Old completions and race times have been legacied
-• New food items can be found within the dungeon
-• Added two discoveries in Alchemy Labs&nEarlygame Progression
-Rework&r
-• The Fallen Menagerie and Arcane Rivalry no longer grant skill
-points upon first completion. Instead, the player begins with 3
-skill points, and earns a fourth on the completion of mage's
-legacy
-• Each class begins with four unlocked skills, and four locked
-skills
-• Two skills are unlocked upon first completion of The Fallen
-Menagerie, and Two more on first completion of Arcane Rivalry
-&nItem Changes&r
-• Bandit's & Crimson Mage Sets (T2) are now both armor, from
-agility
-• Tempered Ironwood Blade (T2) is now armor, instead of agility
-• Significantly increased the expected rate of Scythes from T1
-T2 and T3 chests.
-• Peasant's scythe Unbreaking 1 -> 2
-• Ruffian's Scythe Unbreaking 2 -> 3
-• Salubric Scythe Unbreaking 0 -> 3
-&nAdditional Changes&r
-• Various dialogue has been tweaked to reflect new progression
-• The confirmation button in the labs access GUI will now warn
-you that you cannot join other instances if you create your own
-• Shaman is now locked behind Tlaxan Troubles
-&oNote: If you had previously selected Shaman, but had not yet
-completed Tlaxan Troubles, you will be unable to modify your
-skill points until you complete the quest or change your class&r
-• Warlock is no longer locked behind Sons of the Forest
-• Obliterated [-_-] text wall in the Alchemy Labs lobby on first
-interaction with the bot
-• Added a "Party Finder" NPC in the labs lobby, who informs
-players of how multiplayer works on monumenta.
-• Added an ignore list so we can prevent certain vanilla or
-redundant enchants from popping up
-• Limited the sound and tooltip message to play only once per
-tick for enchantopedia
-• Handbook entries for enchantments no longer give advancement
-toasts. We have custom notifications from /enchants
-• Added several NPCs around the Academy who can give you tips
-about each class. Sybil can give you a compass waypoint to the
-NPC for your currently selected class.### Minor New Features:
-• Arrows fired from a dispenser now deal true damage
-• Explanations for Weakness and Vulnerability have been added to
-the Extra Information tooltips! Press F (swap hands) while
-hovering over the ability icons to view.
-• Increased cost of Essence of the Above -> Pulsating Diamond
-trade from 4 -> 12 mats per pulsating diamond
-### Wanderer's Fortune Secret Boss ||The Gilded Sentinels||
-Fixes:
-||• Fixed an issue where Sky Sunder's shockwave expired sooner
-than intended
-• Fixed an issue with Sky Sunder's falling sword spawn radius
-used the wrong number
-• Changed the color of the `/` in Gilded Maul to be white due to
-visibility issues
-• Fixed a few issues with Skyshatter's speed normalizer behaving
-weirdly in certain edge cases
-• Added a cast bar to Temporal Reversal
-• Restricted playable area for Orbiting Flying Slashes is now
-smaller
-• The Vessel is now 10% slower during Orbiting Flying Slashes
-• The Knight orbits the arena at an increased radius.
-• Fixed fall damage not being prevented within the arena.
-• Fixed Skyshatter Stance being named Skysunder Stance.||
-### Feedback Fixes:
-• Added a cushion to the market
-• Standardized POI icon materials between daily bounties and
-advancements
-• After feedback from multiple developers, Sit entities in towns
-are invisible by default again. If you see a visible cushion in
-towns, it was placed there on purpose.
-• On a related note, using a glass pane on a cushion will now
-turn it invisible; something we forgot to add to the last
-changelog is that you can right click a cushion with a dye to
-change its color without consuming the dye, which now turns
-invisible cushions visible again. There is no direct trade for
-invisible cushions at this time, you will need to "dye" a
-visible cushion with glass panes, then dye it visible again if
-you want a refund.• Charms with snowballs as their base item can
-no longer be thrown
-• Removed Infinity from Table Tennis Ball (was a temp fix for
-the above bug)
-• Century-Aged Liquor's base item has been changed to dragon
-breath
-• Glass bottles with lore can no longer take water from a
-cauldron
-### Mob Changes:
-• Argon, Casino Mastermind : 10000 -> 7500 Health
-• Twisted Moonweaver:
-  • Telegraphs have been improved
-  • Can no longer move around while telegraphing Nova/Magma
-spells
-  • Nova/Magma spell cooldowns: 160 -> 220
-  • Nova spell damage: 20 -> 25
-  • Magma spell damage: 22 -> 28
-• Vestige of the Loamskattar:
-  • Reduced the bullet speed and density of bullet hell attacks
-  • Augmented Star projectile damage reduced to 40 (from 50)
-  • Vestigial Projection beam damage reduced to 35 (from 50)
-• Updated the vanity of Lord of Wind
-### Bug Fixes:
-• Fixed Pachinko Lever mistakenly having Technique  and
-Knockback Resistance
-• Fixed Apex of Alchemy and Crusader's Holy Hammer not
-despawning when their respective Tormented is killed
-• Fixed Indigo gauntlet void killing (and shattering)
-• Fixed Controlled Bulbshooter loading its crossbow with 3
-cocopads instead of arrows
-• Fixed a patch of blackstone walls in the ceiling of the Core
-Elemental arena
-• Fixed the Scepter of Agony purchase announcement having a
-different trader name than the actual trader
-• Fixed a typo in the lore of Magnetized Needle
-• Fixed Kinetic Loading not working with partially loaded Multi-
-Load crossbows
-• Fixed Recoil enchantment advancement not acknowledging the
-existance of melee weapons with recoil
-&bHotfix&r: Alchemy Labs should now properly count for Delve-
-related Seasonal Pass missions. This will not apply
-retroactively to anyone who has already done the dungeon for
-this week.
 &bHotfix&r: Fixed a broken handbook advancement for Thorns
 Damage. This might have led to a loss of the advancement, but it
 can be re-obtained by grabbing an item with Thorns Damage once
-again.
+again.Fortune's race has been disabled again
+&bWebsite Changes&r
+• Added location endpoint to get name, display name, and text
+color
+&b(11.87.0)&r
+For the update on September 30, 2026
+### Minor New Features:
+• Added the `/removegilded` command which can be used to remove
+the gilded infusion from an item (which you infused yourself).
+• Most mobs with legs will now play step sounds
+• Mobs that used to play step sounds on a timer will now play
+them based on distance walked
+• Effects and abilities now update every tick instead of every
+five ticks
+• Ability cooldowns no longer round to the nearest five ticks
+• Projectile iframes now last exactly 10 ticks
+• Usurper's Gaze (Touch of Radiance) now draws its crown every
+tick
+• Bodyguard's damage transfer line is now drawn every tick
+### Delve Changes:
+• Removed speed scaling from both Stat Multipliers
+### Alchemy Labs Changes and Fixes:
+• Added particle effects to the button that activates the ladder
+shortcut
+• Increased the particles displayed by standing in the potion
+water
+• Added unique sound effects to each type of potion water
+• Added all new Labs items to the API
+• Reduced spawner count in the 2nd floor of study hall slightly
+• Changed delve scaling from 1.9 -> 1.65
+• Fixed old Alchemy Labs completion score showing up in the
+Dungeons GUI
+• Fixed a fake book in a lectern
+• Fixed being unable to re-enter Labs lootroom
+• Fixed lootrooms potentially occasionally not giving the first
+completion shulker box reward
+• Fixed completion leaderboard being incremented by race mode
+completions
+• Fixed the Labs Dungeon Informant giving incorrect
+information### Feedback Fixes:
+• Training dummy dps displays now use text displays like player
+nametags/titles
+• The damage breakdown in `/showmydps` now shows each source's %
+of your total damage and is sorted highest to lowest
+• Clarified that auto-share of LOOTBOX shares does not function
+if the player is alone
+• Improved look and feel of some Stellar Core cosmetics:||
+  • Galactic Cloak (Smokescreen)
+  • Starburst (Vicious Combos)
+  • Galactic Rain (Coup de Grace)
+  • Solar Eruption (Bodkin Blitz) (With Ataraxian Echo)
+  • Cosmic Cleave (Deadly Ronde) (SFX changed)||
+&nExalted Lime Mob Rebalances&r
+• Gigantic Bullfrog : 210 -> 200 Health
+• Viridian Infantry : 0.23 -> 0.2 Movement Speed
+• Kelp Boomer (middle and top) : 0.2 -> 0.18 Movement Speed
+• Viridian High Evolutionary • Form P : 0 -> 40t Dodge Cooldown
+• Viridian Arbalest : 4 -> 2 Poison Amplifier
+• Ogama : 3.0 -> 2.5 Jumpcrit Velocity
+### Bug Fixes:
+• Fixed teleporting back to the end of Temple to Kaul putting
+you inside a wall
+• Fixed skipping the tutorial when resetting only giving you 2
+skill points
+• Fixed an incorrectly flipped trapdoor in Sierhaven
+• Fixed Resource Pack Head not responding in Sierhaven
+• Teleporting to the player market from shards other than
+`plots` now works correctly
+• Fixed Twisted Artillery from Twisted Abomination not scaling
+by region and by delve points
+• Fixed Viridian High Evolutionary not properly despawning when
+evolving into its Projectile form
+• Fixed Prepared Meal's tpbehind not working
+• Fixed Alric, Lord of Frosted Winds dealing 0 melee damage and
+having invalid particles on his Shield Wall
+• Fixed one of the Silver Knights in the Eternal Vigil having
+their scythe replaced with a sword• Tactician's handbook
+advancement now correctly reflects that it gives the higher
+damage bonus to Frozen mobs (as well as Stunned mobs)
+• Fixed an advancement for Catalyze missing from the handbook
+• Fixed Coalrupted Sierhaven being in the wrong place in the
+Bestiary
+• Fixed Rusty Shield still having non-full durability
+• Fixed momentum effect remaining after switching equipment
+• Fixed Momentum not deactivating the sprint timer when swapping
+weapons
+• Adjusted the bounty message for Fathom's Reach
+• Fixed a formatting error in Fathom's Reach bounty waypoint
+• Added missing bounty waypoints for Temple of the Skylords and
+The Werehouse
+• Fixed a formatting error in The Werehouse's floating POI text
+• Fixed typos in A Union Cross, Defying Gravity, Mechs Machina,
+and the Exalted Hub
+• Fixed partially loaded Multi-Load crossbows forgetting that
+quivers exist
+• Fixed some incorrect biomes in Indigo
+• Fixed the Kaul Ice Spleef leaderboard sign not working
+• Fixed challenge Magenta's 80% spawner check comparing against
+the total spawner amount of base Magenta
+• Fixed a discovery in the Isles giving pre-1.20.4 Tundra Trout
+• Added missing lore for Bloodflame Fungus (quest item)
+• Fixed a book in Star Point referring to Granzanber as
+"Gamzanber"• Fixed typos or formatting issues in the lore of
+Caramel-Covered Staff, Break of Dawn, Chains of Entropy,
+Clockwork Enigma, Motherboard Calibrator, Visage of Emptiness,
+Astral Tuner, Golden Fragment, Encumbering Void, Dusk Honeycomb,
+Shattered Crown, Basil Leaf, Prophetic Moonbeam, Moonbound
+Gleamstone, Snowtrodden Boots, Levyn's Pirate Hat, Xeno's Pirate
+Hat, Uncharged C.A.L.D.E.R. Dimensional Wand, Ex Nihilo (all),
+Marauder's Haze, Magic Mirror, Corrupted Key 3, Energetic
+Powder, Darkened Lodestone, Ballad of a Hero, Distillation
+Column, Pure Fluff, Essence of the Spirits, Stilldreamer's
+Draught, Thermal Reagent, Unavailing Potion, Dreadwood Log, Seal
+of Revival, Pestilence Vial, Scalawag's Hatchet, Fading Horizon,
+Piece of Hate, Ixchtek of C'Axtal, Divine Brush (Body), Ishnir's
+Moon, Shivering Siphon, Hycenea's Will, and Shaman's Quiver
+&bHotfix (xx:30)&r
+• Fixed Hunts not giving rewards upon completion
+• Fixed issues when ending Spirit ArcheryDiamenean Hunts have
+been reopened.
+&bWebsite Changes&r
+• Added API endpoints for leaderboards

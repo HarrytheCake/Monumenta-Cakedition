@@ -1,9 +1,7 @@
-A reminder that our latest dungeon,
-&bThe Wanderer's Fortune&r, goes live at the top of the hour! We
-hope to see you all there!We are happy to finally showcase off
-the new Monumenta standard logo, created by @PaperBoxs, which
-aligns our designs with more recent art such as the Region 3 and
-Star Point promotional logos!
+We are happy to finally showcase off the new Monumenta standard
+logo, created by @PaperBoxs, which aligns our designs with more
+recent art such as the Region 3 and Star Point promotional
+logos!
 Highest res versions since Discord compressed the attached ones:
 https://discord.com/channels/313066655494438922/3134038653892034
 68/1546564544661553292We appreciate all the feedback we received
@@ -92,4 +90,43 @@ promoted to Developer! Kevin has been absolutely essential for
 our upcoming R1 Revamp, working on mechs for Labs, Tutorial and
 more. Please give him a congratulatory ping 🏓  !![For those who
 want to see the new tutorial introduction without an account
-reset.](https://youtu.be/nrgN82Potm8)
+reset.](https://youtu.be/nrgN82Potm8)Salutations everyone!
+Some of you may recall, back in March 26th 2025 https://discord.
+com/channels/313066655494438922/313404193647886337/1354652815133
+249756, we released Monumenta: Runestones • TCG (Trading Card
+Game) as an "alpha" test. It was an interesting concept, but the
+main limitation really was the fact that it wasn't in Monumenta
+itself. And thus, Runestones faded and was forgotten with
+time...
+Except, in the background, there has been some slow progress •
+slowly but surely chipping away at the task of implementing it
+&oin-game&r! But I believe I am in need of some help (on the
+Card Art department).
+I think it will be cooler if we can rally the community's
+artists / screenshot / glamour experts to help out on this
+project!
+We got &o246 cards&r that needs card art and implementation.
+There's plenty of room for contribution. Have a look at the
+Google Sheets to see what's needed.
+For the
+&bMain Art&r, we will be accepting Screenshots, since these are
+relatively easier to take.
+For the
+&bAlternate Art&r (Rarer, "shiny" variants of a card), we will
+be using actual Arts, if we got any.
+Recommend: Have the main subject be higher up on the screenshot
+/ art, such that card effects won't block it.
+Resolutions of Card Arts are (H x V): 320 x 480
+Just the screenshot / art (background art) will do, I will add
+in the description boxes and such as needed.
+Card List: [Monumenta: Runestones Art Submissions Card List
+(Google Sheets)](https://docs.google.com/spreadsheets/d/1re0B9Cf
+YlzDbnh_vhL9cFygIVYWw1-eW-ZEPta11ckU/edit?usp=sharing)
+Card Art / Screenshot Submissions: [Google Forms Card
+Submissions](https://forms.gle/iuFwG6V8exurate68)
+Or: https://discord.com/channels/313066655494438922/155538114408
+4676639/1555384433777840148
+If your screenshot / art gets picked, it will be added in-game
+via the Monumenta: Runestones TCG resource pack and you will be
+credited. Thanks for helping out!
+Discuss about Runestones here: <#1555381033514569738>
