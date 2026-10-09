@@ -1,125 +1,211 @@
-&bHotfix&r: Fixed a broken handbook advancement for Thorns
-Damage. This might have led to a loss of the advancement, but it
-can be re-obtained by grabbing an item with Thorns Damage once
-again.Fortune's race has been disabled again
+&bHotifx:&r
+• Fix stun, stagger, and silence freezing mobs in place
+• Fixed Keeper Virtue leaving copies behind on shard transfer
 &bWebsite Changes&r
-• Added location endpoint to get name, display name, and text
-color
-&b(11.87.0)&r
-For the update on September 30, 2026
-### Minor New Features:
-• Added the `/removegilded` command which can be used to remove
-the gilded infusion from an item (which you infused yourself).
-• Most mobs with legs will now play step sounds
-• Mobs that used to play step sounds on a timer will now play
-them based on distance walked
-• Effects and abilities now update every tick instead of every
-five ticks
-• Ability cooldowns no longer round to the nearest five ticks
-• Projectile iframes now last exactly 10 ticks
-• Usurper's Gaze (Touch of Radiance) now draws its crown every
-tick
-• Bodyguard's damage transfer line is now drawn every tick
-### Delve Changes:
-• Removed speed scaling from both Stat Multipliers
-### Alchemy Labs Changes and Fixes:
-• Added particle effects to the button that activates the ladder
-shortcut
-• Increased the particles displayed by standing in the potion
-water
-• Added unique sound effects to each type of potion water
-• Added all new Labs items to the API
-• Reduced spawner count in the 2nd floor of study hall slightly
-• Changed delve scaling from 1.9 -> 1.65
-• Fixed old Alchemy Labs completion score showing up in the
-Dungeons GUI
-• Fixed a fake book in a lectern
-• Fixed being unable to re-enter Labs lootroom
-• Fixed lootrooms potentially occasionally not giving the first
-completion shulker box reward
-• Fixed completion leaderboard being incremented by race mode
-completions
-• Fixed the Labs Dungeon Informant giving incorrect
-information### Feedback Fixes:
-• Training dummy dps displays now use text displays like player
-nametags/titles
-• The damage breakdown in `/showmydps` now shows each source's %
-of your total damage and is sorted highest to lowest
-• Clarified that auto-share of LOOTBOX shares does not function
-if the player is alone
-• Improved look and feel of some Stellar Core cosmetics:||
-  • Galactic Cloak (Smokescreen)
-  • Starburst (Vicious Combos)
-  • Galactic Rain (Coup de Grace)
-  • Solar Eruption (Bodkin Blitz) (With Ataraxian Echo)
-  • Cosmic Cleave (Deadly Ronde) (SFX changed)||
-&nExalted Lime Mob Rebalances&r
-• Gigantic Bullfrog : 210 -> 200 Health
-• Viridian Infantry : 0.23 -> 0.2 Movement Speed
-• Kelp Boomer (middle and top) : 0.2 -> 0.18 Movement Speed
-• Viridian High Evolutionary • Form P : 0 -> 40t Dodge Cooldown
-• Viridian Arbalest : 4 -> 2 Poison Amplifier
-• Ogama : 3.0 -> 2.5 Jumpcrit Velocity
-### Bug Fixes:
-• Fixed teleporting back to the end of Temple to Kaul putting
-you inside a wall
-• Fixed skipping the tutorial when resetting only giving you 2
-skill points
-• Fixed an incorrectly flipped trapdoor in Sierhaven
-• Fixed Resource Pack Head not responding in Sierhaven
-• Teleporting to the player market from shards other than
-`plots` now works correctly
-• Fixed Twisted Artillery from Twisted Abomination not scaling
-by region and by delve points
-• Fixed Viridian High Evolutionary not properly despawning when
-evolving into its Projectile form
-• Fixed Prepared Meal's tpbehind not working
-• Fixed Alric, Lord of Frosted Winds dealing 0 melee damage and
-having invalid particles on his Shield Wall
-• Fixed one of the Silver Knights in the Eternal Vigil having
-their scythe replaced with a sword• Tactician's handbook
-advancement now correctly reflects that it gives the higher
-damage bonus to Frozen mobs (as well as Stunned mobs)
-• Fixed an advancement for Catalyze missing from the handbook
-• Fixed Coalrupted Sierhaven being in the wrong place in the
-Bestiary
-• Fixed Rusty Shield still having non-full durability
-• Fixed momentum effect remaining after switching equipment
-• Fixed Momentum not deactivating the sprint timer when swapping
-weapons
-• Adjusted the bounty message for Fathom's Reach
-• Fixed a formatting error in Fathom's Reach bounty waypoint
-• Added missing bounty waypoints for Temple of the Skylords and
-The Werehouse
-• Fixed a formatting error in The Werehouse's floating POI text
-• Fixed typos in A Union Cross, Defying Gravity, Mechs Machina,
-and the Exalted Hub
-• Fixed partially loaded Multi-Load crossbows forgetting that
-quivers exist
-• Fixed some incorrect biomes in Indigo
-• Fixed the Kaul Ice Spleef leaderboard sign not working
-• Fixed challenge Magenta's 80% spawner check comparing against
-the total spawner amount of base Magenta
-• Fixed a discovery in the Isles giving pre-1.20.4 Tundra Trout
-• Added missing lore for Bloodflame Fungus (quest item)
-• Fixed a book in Star Point referring to Granzanber as
-"Gamzanber"• Fixed typos or formatting issues in the lore of
-Caramel-Covered Staff, Break of Dawn, Chains of Entropy,
-Clockwork Enigma, Motherboard Calibrator, Visage of Emptiness,
-Astral Tuner, Golden Fragment, Encumbering Void, Dusk Honeycomb,
-Shattered Crown, Basil Leaf, Prophetic Moonbeam, Moonbound
-Gleamstone, Snowtrodden Boots, Levyn's Pirate Hat, Xeno's Pirate
-Hat, Uncharged C.A.L.D.E.R. Dimensional Wand, Ex Nihilo (all),
-Marauder's Haze, Magic Mirror, Corrupted Key 3, Energetic
-Powder, Darkened Lodestone, Ballad of a Hero, Distillation
-Column, Pure Fluff, Essence of the Spirits, Stilldreamer's
-Draught, Thermal Reagent, Unavailing Potion, Dreadwood Log, Seal
-of Revival, Pestilence Vial, Scalawag's Hatchet, Fading Horizon,
-Piece of Hate, Ixchtek of C'Axtal, Divine Brush (Body), Ishnir's
-Moon, Shivering Siphon, Hycenea's Will, and Shaman's Quiver
-&bHotfix (xx:30)&r
-• Fixed Hunts not giving rewards upon completion
-• Fixed issues when ending Spirit ArcheryDiamenean Hunts have
-been reopened.
-&bWebsite Changes&r
-• Added API endpoints for leaderboards
+• Added `locationId` field to items
+• Added documentation to existing routes (which can be seen
+[here](https://api.playmonumenta.com/docs))### Minor New
+Features:
+• Refactored some backend for damage displays, healthdisplays,
+fake players, and other packet modifiers.
+• Fixed Health Displays sometimes remaining after a mob is
+killed
+• Shulker Boxes show custom names again
+• Fixed some big Shulkers/Ender Chests kicking players on
+1.20.5+
+• Added a PEB toggle for Worldshaper's Loom's placement preview
+(PEB -> Gameplay Options -> Toggle Loom's preview), showing a
+preview where Worldshaper's Loom will place blocks
+• Reworked the mechs for White Tesseract
+• White Tesseract now requires you to be at 90% health or above,
+rather than exactly 100%
+• Removed the restriction on using shattered White Tesseracts
+### Class Changes:
+## <:cleric:1106716781160181822> Cleric
+  • Divine Justice now applies per-player invulnerability frames
+for 0.5s.
+  • Divine Justice Healing has been reduced: 5% -> 2.5% HP over
+1s
+  • Divine Justice Damage has been reduced:
+    • R1: 2 + 15% / 3 + 30% -> 2 + 15% / 3 + 25%
+    • R2: 2 + 20% / 3 + 40% -> 3 + 20% / 4 + 30%
+    • R3: 2 + 25% / 3 + 45% -> 4 + 25% / 5 + 35%
+• Heavenly Boon:
+  • Boss damage clause has been removed
+  • Healing: 20% HP over 2s -> 15% HP over 3s
+  • L2: No longer increases base potion chance, instead speeds
+up chance increase: +1% every 2s -> +1% every 1.2s
+-# (Effectively a nerf to potion chance for the first 15
+seconds, buff thereafter.)
+### Charms:
+• Bloodpact Pendant: +30% -> +25% Divine Justice Damage
+• Automatic Distillery: +7.5% -> +5% Heavenly Boon Potion
+Chance, 0% -> -5% Heavenly Boon Resistance Amplifier
+• Lesser Boon Charm: +1.5% -> +1% Heavenly Boon Potion Chance
+• Greater Boon Charm: +3% -> +2% Heavenly Boon Potion Chance
+• Distant Boon Charm: +1.5% -> +1% Heavenly Boon Potion Chance
+• Focused Boon Charm: +3% -> +2% Heavenly Boon Potion Chance
+&b(11.88.0)&r
+For the update on October 7, 2026
+### Dungeon Instancing Rework (DIR) changes/update:
+• The dev team has abbreviated this overhaul to DIR, as the full
+name was rather unwieldy.
+• Fixed weekly update failing to move you to safety (the cause
+of last week's long post-update delay).
+• Fixed several cases where players failed to move back to the
+overworld after playing quests or instanced content on the same
+shard.• Fortified Rage Charm : 2 Charm Power, +15% Rampage
+Healing, +25% Rampage Max Duration
+• Sustaining Rage Charm : 2 Charm Power, +5% Rampage Healing,
++0.5 Rampage Duration Per Bloodlust Spent
+• Deepslate Chunk : +75% -> +100% Brute Force Damage, #-50% ->
+-100% Brute Force Radius, 1 -> 2 Charm Power
+• Pressure Gauntlet : +25% -> +10% Brute Force Radius
+## 📚 Enchant Changes:
+• Life Drain now scales with weapon attack speed.
+  • Scaling Formula: `1.5 &o sqrt(level) / (attack speed)^1.5`
+-# (Minimum cap is 0.74 HP at 1.6 and above, maximum cap is 4.2
+HP at 0.5 and below. This means your health gained is always
+proportionate to your current attack speed.)
+• Retaliation will now activate for the entire duration of the
+shield break + 2 additional seconds when your shield is broken.
+• Multishot's spread on alchemist bags is increased by 33%.
+• Hemorrhage will now interrupt Unyielding's healing
+•
+&bAdded a new enchant&r :
+   • Scorch: Fully charged melee and projectile attacks inflict
+(level) stacks of Scorch, capping at 15. Melee and projectile
+ability damage inflicts 1 stack. Each stack makes Inferno deal
+its damage 1 tick faster, and each Inferno damage tick deals 3%
+more damage per stack of Scorch and consumes one stack.
+-# Developer Note: This new enchant should act as a way for
+fully-invested Inferno builds to achieve meaningful DPS against
+single targets with sufficient effort from the player.##
+<:mage:1106716826299289720>  Mage
+• Arcane Strike no longer requires a fully charged melee attack
+to trigger.
+• Arcane Strike now explicitly mentions that its melee scaling
+component scales off of attack charge.
+• Arcane Strike can now trigger Spellshock.
+• Updated the following base visuals of Spellshock:
+  • Spellshock passive effect
+  • Triggering Spellshock on melee attack
+  • Thunder Spellshock (u)'s base visuals
+### Charms:
+• Wheel of Fortune : +2% -> +1.5% Sage's Insight Damage Modifier
+Per Stack
+• Bottled Font of Tuulen : -20% -> 0% Sage's Insight Decay
+Duration
+• Prismatic Aegis : -40% -> #-40% Prismatic Shield Cooldown
+## <:rogue:1106716844372537465>  Rogue
+• Vicious Combos Enhancement now only works on fully charged
+hits.
+### Charms:
+• Silvari Blade Handle (Rework) : 3 Charm Power, +0.75 Blade
+Dance Root Duration, #+0.75 Blade Dance Resistance Duration,
+-70% Blade Dance Damage
+## <:warrior:1106716892305035274>  Warrior
+• Bloodlust damage requirement: 80/130 -> 60/100.
+-# (R2/R3 respectively)
+• Meteor Slam now costs 2 bloodlust to cast.
+• Removed sneak time requirement for triggering ground pound.
+### Rampage Rework:
+• L1: Grants healing while Rampage is active. Each Bloodlust
+stack spent adds 1s to Rampage's duration.
+> Healing: 1% HP every 0.25s.
+• L2: Each second of Rampage grants additional damage and speed.
+> Effect: +2.5% Melee Damage per second
+> Effect: +2.5% Speed per second
+### Charms:
+• Silver Pauldron : 3 Charm Power, +1.5% Rampage Damage
+Amplifier Per Second, +1.5% Rampage Speed Amplifier Per Second
+• Loci's Hunger : 2 Charm Power, +50% Rampage Healing, -50%
+Rampage Duration Per Bloodlust Spent
+• Golden Soul : +2.5% Rampage Speed Amplifier Per Recast ->
++1.5% Rampage Speed Amplifier Per Second
+• Lesser Rage Charm : 1 Charm Power, +7.5% Rampage Healing
+• Greater Rage Charm : 2 Charm Power, +15% Rampage Healing
+• Focused Rage Charm : 3 Charm Power, +25% Rampage Healing###
+Mob Changes:
+• Removed Twisted Revenant's ability to recast Meteor Slam off
+of dealing damage to players
+• Twisted Ninetails now only has one ram, and has an increased
+telegraph duration for ram
+• Atomic Aberration's delay before jumping has been increased
+(60 -> 100)
+• Atomic Aberration's time between jumps has been increased (40
+-> 60)
+• Security Drone is now knockback immune
+• Security Drone's propeller now no longer counts as a mob
+• Luck Sprite is no longer glowing, no longer has passive
+particles, and is no longer invisible
+### Feedback Fixes:
+• Fixed the torches near the Sacred Mirror in Light Gray being
+(visually) lit by default
+• Tweaked Zenith's floor one weapon aspect room and floor three
+lobby.
+• Rearranged the order of many Handbook advancements; the
+Defenses category has been split into
+situationals/protections/other, situational damage enchantments
+have been moved to a separate row in the Weapons category, and
+fragilities have been moved to their own row in the Curses
+category
+• Added a handbook advancement for Situationals explaining the
+calculation formula, and simplified the descriptions of
+situational defense enchantments
+• Slowed down some dialogue in the Tutorial dream sequence
+• Slightly slowed down and polished animations of class icons in
+Tutorial dream sequence
+• Clarified the lore of Healing Syringe
+• Added Temple of the Skylords to the bestiary### Bug Fixes:
+• Fixed Shulker shortcuts thinking the shulker is 1 slot smaller
+than it actually is
+• Fixed shulkers refusing to fill up the last slot's stack of
+items
+• Fixed Change log API not fetching recent change logs
+• Fixed race leaderboards being reversed in the API
+• Fixed logging out during some parts of the Tutorial causing
+softlocks
+• Clarified some text regarding skill unlocks
+• Fixed Witchbane Revolver gaining six "ghost multiload arrows"
+when masterworked to MW4 for the first time
+• Fixed the "stash gear" button in Mechanical Armory clearing
+keybinds and cosmetic skills
+• Fixed Armory loadouts with no spec displaying a vanilla item
+instead of the base class's icon
+• Fixed ailment damage getting scaled by most damage buffs### 🔥
+Scorch Item Changes:
+  • Veinshredder (M4) : 0 -> 3 Scorch
+  • Molldyer's Greatstaff (M4): Inferno 8 -> 6, Scorch 0 -> 5
+  • Envoy of Dreams : 0 -> 4 Scorch, 0 -> 2 Fire Aspect, 3 -> 4
+Inferno
+  • Tome of Epiphany: Scorch 0 -> 3
+  • Blasphemer's Sickle : 0 -> 3 Scorch, 8 -> 14 Attack Damage,
+2 -> 1 Attack Speed, 4 -> 3 Inferno
+  • Blackflame Gauntlet (Infernal Gauntlet): 6 -> 8 Attack
+Damage, 4 -> 2 Attack Speed, Fire Aspect 0 -> 2, Scorch 0 -> 2
+  • Incendiary Inferno : 0 -> 4 Scorch, 3 -> 4 Inferno, 0 -> 1
+Quake, 23 -> 21 Projectile Damage
+  • Forlorn Flames : 0 -> 2 Scorch, 1 -> 1.2 Attack Speed
+  • Combustion Staff: 4.5 -> 6.5 Attack Damage, 4 -> 1.6 Attack
+Speed, Scorch 0 -> 1
+  • Cavewalker Scythe (Rework) : Fire Aspect 3, Scorch 2,
+Sweeping Edge 2, Unbreaking 4, 6 Attack Damage, 1.8 Attack Speed
+  • Wanderer's Wick : 0 -> 2 Scorch
+  • Fire Tempest: 3.5 -> 5 Attack Damage, 4 -> 1.6 Attack Speed,
+Scorch 0 -> 2
+## ⚔️ Item Changes:
+• Seasoaked Runeblade: First Strike 1 -> 0, 0% -> +5% Magic
+Damage, 7 -> 6.5 Attack Damage
+• Sulfuric Robes : 3 -> 3.5 Armor
+• Belt of the Tyrant (M4) : 4 -> 3 Stamina
+• Sack of Greed (M4) : 13.5 -> 14.5 Potion Damage, 2 -> 3
+Thunder Aspect
+• Hycenea's Vinelash (M4): +5 -> +6 Max Health
+### 🪄 Wand Item Changes
+-# Developer Note: Mages after casting spells are more
+susceptible to being overwhelmed, or may find themselves with a
+lack of firepower, especially in the earlier parts of the game.
+These wand changes should help wands function as better melee
+weapons overall. All related changes can be found in the text
+file below.&r
