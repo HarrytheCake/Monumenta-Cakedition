@@ -15,7 +15,7 @@ final class HelperLauncher {
 
 	private HelperLauncher() {}
 
-	static void launch(Path gameDir, String packUrl) throws IOException {
+	static void launch(Path gameDir, String packUrl, String language, String name) throws IOException {
 		// Run the helper from a temp copy: the update may replace this mod's jar, and Windows
 		// can't overwrite a jar that a running process has open.
 		Path modJar = FabricLoader.getInstance().getModContainer(CakeUpdater.MOD_ID).orElseThrow()
@@ -26,10 +26,11 @@ final class HelperLauncher {
 		List<String> command = new ArrayList<>();
 		if (WINDOWS) {
 			// Java starts child processes without a window; "start" gives the helper its own console.
-			command.addAll(List.of("cmd.exe", "/c", "start", "Cakedition Updater"));
+			command.addAll(List.of("cmd.exe", "/c", "start", name + " Updater"));
 		}
 		command.addAll(List.of(consoleJava(), "-cp", copy.toString(), Helper.class.getName(),
-				Long.toString(ProcessHandle.current().pid()), gameDir.toAbsolutePath().toString(), packUrl));
+				Long.toString(ProcessHandle.current().pid()), gameDir.toAbsolutePath().toString(), packUrl,
+				language, name));
 		CakeUpdater.LOGGER.info("Starting updater: {}", command);
 		new ProcessBuilder(command).directory(gameDir.toFile()).start();
 	}

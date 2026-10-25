@@ -3,10 +3,6 @@ package io.github.harrythecake.cakeupdater;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -30,37 +26,25 @@ final class UpdateCheck {
 	record Result(String remoteVersion, String localVersion, String remoteHash, boolean available) {}
 
 	private static final Pattern VERSION = Pattern.compile("^version\\s*=\\s*\"([^\"]*)\"", Pattern.MULTILINE);
-	private static final HttpClient HTTP = HttpClient.newBuilder()
-			.connectTimeout(Duration.ofSeconds(10))
-			.followRedirects(HttpClient.Redirect.NORMAL)
-			.build();
 
 	private UpdateCheck() {}
 
 	/** Completes with null if the check failed (offline, GitHub down, ...). */
 	static CompletableFuture<Result> runAsync(String packUrl, Path gameDir) {
-		HttpRequest request = HttpRequest.newBuilder(URI.create(packUrl))
-				.timeout(Duration.ofSeconds(15))
-				.header("User-Agent", "cakeupdater")
-				.GET()
-				.build();
-		return HTTP.sendAsync(request, HttpResponse.BodyHandlers.ofByteArray())
-				.thenApply(response -> {
-					if (response.statusCode() != 200) {
-						throw new IllegalStateException("HTTP " + response.statusCode() + " from " + packUrl);
-					}
-					Result result = compare(response.body(), gameDir);
-					CakeUpdater.LOGGER.info("Update check: {}", result);
+		return Net.get(packUrl, Duration.ofSeconds(15))
+				.thenApply(body -> {
+					Result result = compare(body, gameDir);
+					CakeUpdater.LOGGER.info("Modpack update check: {}", result);
 					return result;
 				})
 				.exceptionally(e -> {
-					CakeUpdater.LOGGER.warn("Update check failed: {}", e.toString());
+					CakeUpdater.LOGGER.warn("Modpack update check failed: {}", e.toString());
 					return null;
 				});
 	}
 
 	static Result compare(byte[] packToml, Path gameDir) {
-		String remoteHash = sha256(packToml);
+		String remoteHash = hash("SHA-256", packToml);
 		Matcher m = VERSION.matcher(new String(packToml, StandardCharsets.UTF_8));
 		String remoteVersion = m.find() ? m.group(1) : "?";
 		String localVersion = readLocalVersion(gameDir);
@@ -101,9 +85,9 @@ final class UpdateCheck {
 		}
 	}
 
-	static String sha256(byte[] data) {
+	static String hash(String algorithm, byte[] data) {
 		try {
-			return HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(data));
+			return HexFormat.of().formatHex(MessageDigest.getInstance(algorithm).digest(data));
 		} catch (Exception e) {
 			throw new IllegalStateException(e);
 		}
