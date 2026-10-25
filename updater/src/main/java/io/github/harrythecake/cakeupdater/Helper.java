@@ -72,6 +72,11 @@ public final class Helper {
 		Console console = System.console();
 		messages = pickLanguage(args.length > 3 ? args[3] : "en_us", console);
 
+		if (console != null && !System.getProperty("os.name").toLowerCase().startsWith("windows")) {
+			// macOS/Linux terminals take their window title from this escape sequence.
+			System.out.print("\033]0;" + name + " Updater\007");
+		}
+
 		int exitCode;
 		try {
 			say(text("title", name));
@@ -160,7 +165,7 @@ public final class Helper {
 		return bootstrap;
 	}
 
-	/** Remove helper copies left in the temp folder by earlier updates (they can't delete themselves). */
+	/** Remove helper jars and launch scripts left in the temp folder by earlier updates (they can't delete themselves). */
 	private static void cleanOldCopies() {
 		Path self;
 		try {
@@ -168,7 +173,7 @@ public final class Helper {
 		} catch (Exception e) {
 			return;
 		}
-		try (DirectoryStream<Path> copies = Files.newDirectoryStream(self.getParent(), "cakeupdater-helper-*.jar")) {
+		try (DirectoryStream<Path> copies = Files.newDirectoryStream(self.getParent(), "cakeupdater-helper-*")) {
 			for (Path copy : copies) {
 				if (!copy.equals(self)) {
 					Files.deleteIfExists(copy);

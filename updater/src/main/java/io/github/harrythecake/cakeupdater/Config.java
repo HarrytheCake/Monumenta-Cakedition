@@ -42,7 +42,8 @@ final class Config {
 			  // Modpack updates through packwiz-installer.
 			  "packwiz": {
 			    "enabled": true,
-			    // Public URL of your pack.toml (on GitHub: the raw.githubusercontent.com link). Must not contain "&".
+			    // Public URL of your pack.toml (on GitHub: the raw.githubusercontent.com link).
+			    // On Windows this and chatPrefix must not contain & ^ | < > (they pass through cmd).
 			    "packUrl": "https://raw.githubusercontent.com/HarrytheCake/Monumenta-Cakedition/packwiz/pack/pack.toml"
 			  },
 
