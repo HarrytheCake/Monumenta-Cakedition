@@ -1,0 +1,13 @@
+name = "Monumenta Item Dictionary"
+filename = "monumenta-item-dictionary-1.20.4-1.6.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/hPMhSlYB/versions/2k84QUpG/monumenta-item-dictionary-1.20.4-1.6.0.jar"
+hash-format = "sha512"
+hash = "aec6e329e0c658ffa377ecfce4615b1ceb647a176acb4301309eb9ef237f6a0b325983d00bd6d5d131c71e8551e78c6100c0f741952c45a4e2f6f3a93f78b01e"
+
+[update]
+[update.modrinth]
+mod-id = "hPMhSlYB"
+version = "2k84QUpG"

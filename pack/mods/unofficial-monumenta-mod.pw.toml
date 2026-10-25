@@ -1,0 +1,13 @@
+name = "Unofficial Monumenta Mod"
+filename = "unofficial-monumenta-mod-mc1.20.4-1.10.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/5GO3q639/versions/mbs17xsz/unofficial-monumenta-mod-mc1.20.4-1.10.jar"
+hash-format = "sha512"
+hash = "ae7eb40b4e1cfb2236d05558e716d91c59999bfcbb9e50f6e4be8fe153937bdb2ca50b8c6165567e3803d789d15ac6af93086480e580c316f4b72f11cc9cd73e"
+
+[update]
+[update.modrinth]
+mod-id = "5GO3q639"
+version = "mbs17xsz"

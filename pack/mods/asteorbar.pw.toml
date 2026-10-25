@@ -1,0 +1,13 @@
+name = "AsteorBar"
+filename = "asteorbar-fabric-1.20.4-1.5.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/QMWG8bVO/versions/FnbAdvf0/asteorbar-fabric-1.20.4-1.5.3.jar"
+hash-format = "sha512"
+hash = "c62fa67d9f8d78536409695ec7653c59ae7cf4396a0686aa9e215330fcf91dee850bf9f7cb28f5bba9005d554cba54b0b0721a6297dd72a5207d09160e456565"
+
+[update]
+[update.modrinth]
+mod-id = "QMWG8bVO"
+version = "FnbAdvf0"

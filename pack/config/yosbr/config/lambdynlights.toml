@@ -1,0 +1,124 @@
+# LambDynamicLights configuration.
+# The dynamic lights mode
+mode = "fancy"
+
+# Light sources settings.
+[light_sources]
+	# Enable entities light source.
+	entities = true
+	# Enable first-person player light source.
+	self = true
+	# Enable block entities light source.
+	block_entities = true
+	# Enables water-sensitive light sources check. This means that water-sensitive items will not light up when submerged in water.
+	water_sensitive_check = true
+	# Creeper lighting mode. May be off, simple or fancy.
+	creeper = "simple"
+	# TNT lighting mode. May be off, simple or fancy.
+	tnt = "off"
+
+	[light_sources.settings]
+
+		[light_sources.settings.entities]
+
+			[light_sources.settings.entities.minecraft]
+				glow_item_frame = false
+				player = true
+				armor_stand = true
+				fox = true
+				parrot = true
+				arrow = true
+				villager = true
+				wither_skeleton = true
+				fishing_bobber = true
+				vindicator = true
+				item_frame = true
+				zombie = true
+				area_effect_cloud = true
+				shulker = true
+				polar_bear = true
+				panda = true
+				painting = true
+				firework_rocket = true
+				item = true
+				axolotl = true
+				tropical_fish = true
+				chicken = true
+				wolf = true
+				magma_cube = true
+				slime = true
+				snowball = true
+				lightning_bolt = true
+				giant = true
+				pig = true
+				iron_golem = true
+				vex = true
+				potion = true
+				experience_orb = true
+				boat = true
+				horse = true
+				drowned = true
+				guardian = true
+				ghast = true
+				fireball = true
+				creeper = true
+				trident = true
+				blaze = true
+				skeleton = true
+				small_fireball = true
+				spider = true
+				bee = true
+				stray = true
+				husk = true
+				silverfish = true
+				zoglin = true
+				elder_guardian = true
+				pufferfish = true
+				pillager = true
+				experience_bottle = true
+				evoker = true
+				hoglin = true
+				zombie_villager = true
+				shulker_bullet = true
+				cat = true
+				tnt_minecart = true
+				minecart = true
+				donkey = true
+				mule = true
+				llama = true
+				salmon = true
+				cod = true
+				cave_spider = true
+				witch = true
+				ravager = true
+				turtle = true
+				evoker_fangs = true
+				spectral_arrow = true
+				ocelot = true
+				piglin_brute = true
+				zombified_piglin = true
+				enderman = true
+				dolphin = true
+				phantom = true
+				snow_golem = true
+				furnace_minecart = true
+				frog = true
+				strider = true
+				wither_skull = true
+				skeleton_horse = true
+				zombie_horse = true
+				illusioner = true
+				sheep = true
+				cow = true
+				endermite = true
+				ender_pearl = true
+				allay = true
+				bat = true
+				leash_knot = true
+				mooshroom = true
+				camel = true
+				rabbit = true
+				piglin = true
+				glow_squid = true
+				squid = true
+

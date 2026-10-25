@@ -1,0 +1,104 @@
+{
+  "features": {
+    "enableHpIndicators": true,
+    "enableTimerAndStats": true,
+    "enableVanillaEffectInUMMHud": false,
+    "enableVanityDurability": true,
+    "inventoryOverlay": {
+      "enable": true,
+      "enableRarity": false,
+      "enableCZCharmRarity": false,
+      "enableCooldown": true,
+      "enableCZCharmPower": false,
+      "enablePICount": true,
+      "enableLoomFirmCount": false,
+      "updateDelayTicks": 5
+    },
+    "sidebarToggles": {
+      "enable": true,
+      "enableProxy": true,
+      "enableShard": true,
+      "enableIp": true,
+      "enableIpElision": true,
+      "situationals": true
+    },
+    "enableDebug": false,
+    "suppressDebugWarning": true,
+    "versionCheck": false,
+    "versionCheckIncludeBeta": false,
+    "contractCheck": false,
+    "contractCheckText": "Switch your contract",
+    "contractThreshold": 40,
+    "waypoint": {
+      "enable": false,
+      "recordChests": false,
+      "disableInPlots": true,
+      "skipBrokenChests": false,
+      "color": 65280,
+      "disabledWorlds": []
+    }
+  },
+  "appearance": {
+    "bracketColor": 12041720,
+    "tagColor": 13017334,
+    "tagText": "MAID",
+    "textColor": 16047062,
+    "numericColor": 15961000,
+    "detailColor": 7106437,
+    "playerNameColor": 15703926,
+    "altTextColor": 11845374,
+    "errorColor": 15091027,
+    "warningColor": 14650909
+  },
+  "hpIndicator": {
+    "enableGlowingPlayer": true,
+    "enableHitboxColoring": true,
+    "countAbsorptionAsHp": true,
+    "disableSelf": true,
+    "disableInHycenea": true,
+    "smoothColor": false,
+    "goodHpPercent": 70,
+    "mediumHpPercent": 50,
+    "lowHpPercent": 25,
+    "goodHpColor": 3403567,
+    "mediumHpColor": 14282543,
+    "lowHpColor": 15704623,
+    "criticalHpColor": 15681325
+  },
+  "chat": {
+    "meowingChannel": "wc",
+    "meowingText": "meow"
+  },
+  "portal": {
+    "enablePortalButtonIndicator": true,
+    "nodeSplit": true,
+    "soulsSplit": true,
+    "startBossSplit": true,
+    "phase1Split": false,
+    "phase2Split": false,
+    "phase3Split": false,
+    "bossSplit": true,
+    "enableIotaFix": true
+  },
+  "ruin": {
+    "soulsSplit": true,
+    "startBossSplit": true,
+    "daggerSplit": false,
+    "dpsSplit": false,
+    "bossSplit": true
+  },
+  "zenith": {
+    "enableCustomCharmInfo": true,
+    "disableMonumentaLore": true,
+    "peliCompatibilityMode": false,
+    "compactLore": false,
+    "compactUpgrade": false,
+    "disableBudget": false,
+    "displayAverageRolls": false,
+    "enableStatBreakdown": false,
+    "displayRollValue": true,
+    "displayEffectRarity": false,
+    "displayUUID": false,
+    "ignoredAbilities": []
+  }
+}

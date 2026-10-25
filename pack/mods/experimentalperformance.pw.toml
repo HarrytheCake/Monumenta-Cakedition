@@ -1,0 +1,13 @@
+name = "Experimental Performance"
+filename = "experimentalPerformance-0.1.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/pYFi4eeH/versions/ANMOedQP/experimentalPerformance-0.1.1.jar"
+hash-format = "sha512"
+hash = "7f1a21c3bc6d59531ea4740e55da36e47f3c79162de07385cf2e710dfd5532d194d72fcc0159d92763234b2625d4da696e3fcab00fac17d2a7ff594fde72ed87"
+
+[update]
+[update.modrinth]
+mod-id = "pYFi4eeH"
+version = "ANMOedQP"

@@ -1,0 +1,18 @@
+name = "Xaero's Minimap (Fair-Play)"
+filename = "Xaeros_Minimap_FP24.2.0_Fabric_1.20.4.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/JkSi2Fzx/versions/bJG9Xt9N/Xaeros_Minimap_FP24.2.0_Fabric_1.20.4.jar"
+hash-format = "sha512"
+hash = "1d3c8e044e1b84bff46f88e67bee2d16dfbd699a61344b1c9164e922406365d3b6c9d4651b5d56b35b9877e755fc8809117e8be7a191d331895eacaec5cd51fd"
+
+[option]
+optional = true
+default = false
+description = "Minimap (Fair-Play edition, allowed on Monumenta)."
+
+[update]
+[update.modrinth]
+mod-id = "JkSi2Fzx"
+version = "bJG9Xt9N"

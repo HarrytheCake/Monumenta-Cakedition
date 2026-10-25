@@ -1,0 +1,8 @@
+# Only the packwiz pack and its tooling are tracked.
+# Everything else (instance.cfg, .minecraft/, saves, jars, CLAUDE.md...) stays local.
+/*
+!/.gitignore
+!/.gitattributes
+!/pack/
+!/tools/
+__pycache__/

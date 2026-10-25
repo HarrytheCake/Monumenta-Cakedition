@@ -1,0 +1,13 @@
+name = "TslatEntityStatus"
+filename = "TES-fabric-1.20.4-1.5.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/4A86JsDZ/versions/dpNAttAb/TES-fabric-1.20.4-1.5.1.jar"
+hash-format = "sha512"
+hash = "0d16105ad14c9cb6192281785fcf5b8590428adf14f91995f903173c05cf0e72876699f5fddc86d163aa8d9025ccf27599c5d6748476cbaeffe7fabe108a704e"
+
+[update]
+[update.modrinth]
+mod-id = "4A86JsDZ"
+version = "dpNAttAb"

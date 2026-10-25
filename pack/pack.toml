@@ -1,0 +1,13 @@
+name = "Monumenta Cakedition"
+author = "Harry_BC"
+version = "2.2.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "6c46a749c8d7c922d421bf9d5fe62ef418001c6fe03e04b1083a6366976ab643"
+
+[versions]
+fabric = "0.18.6"
+minecraft = "1.20.4"

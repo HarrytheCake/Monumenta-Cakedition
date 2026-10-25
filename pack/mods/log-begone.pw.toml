@@ -1,0 +1,13 @@
+name = "Log Begone"
+filename = "logbegone-fabric-1.20.4-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/9ON3zv6e/versions/uRFndWtZ/logbegone-fabric-1.20.4-1.0.0.jar"
+hash-format = "sha512"
+hash = "780593e3880fa007284c39e311b7da5fcef31f5b138a54c9da6c84fdcf822eed60a56ae45a32dd91abcf32fc0985a0143a20d280787cd93576289a3c4bca299e"
+
+[update]
+[update.modrinth]
+mod-id = "9ON3zv6e"
+version = "uRFndWtZ"

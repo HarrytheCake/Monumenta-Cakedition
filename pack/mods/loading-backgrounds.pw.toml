@@ -1,0 +1,13 @@
+name = "Loading Backgrounds"
+filename = "loadingbackgrounds-2.0.0-fabric-1.20.X_and_1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/dH40biZd/versions/Oh1sHz39/loadingbackgrounds-2.0.0-fabric-1.20.X_and_1.21.1.jar"
+hash-format = "sha512"
+hash = "00051fd5bce1e24e34d449e24977c2b496d28c7e2c4d09a71f2e8cddab5da7bd3bcf3fc26db49c324b1944496c7bf9475ec4e573b71603b28bf07f7b12643cdc"
+
+[update]
+[update.modrinth]
+mod-id = "dH40biZd"
+version = "Oh1sHz39"

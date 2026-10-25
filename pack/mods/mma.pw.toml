@@ -1,0 +1,13 @@
+name = "Monumenta Addons"
+filename = "mma-1.9.2+mc1.20.4.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/LOnFvju0/versions/fdFpNlGO/mma-1.9.2%2Bmc1.20.4.jar"
+hash-format = "sha512"
+hash = "5a976bbd7b70d618dbb2e6c0356bbf0d0e1df1ea347d686c539c7853230a72860cce589bcffbd2addd39d5ca04a9a281a91411ad8cb2231479a6e6a40afe3922"
+
+[update]
+[update.modrinth]
+mod-id = "LOnFvju0"
+version = "fdFpNlGO"

@@ -1,0 +1,13 @@
+name = "Amecs"
+filename = "amecs-bundle-1.6.3+mc1.20.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/rcLriA4v/versions/ZMrHuYCn/amecs-bundle-1.6.3%2Bmc1.20.4.jar"
+hash-format = "sha512"
+hash = "8542febb18335fad4fffafe673fbcd87f49469468abccb8f040f5d9e27b42fade81777628507a2f88bea8f4b4f0e6b7d73f7567adae29f5b42070e4399f38d3b"
+
+[update]
+[update.modrinth]
+mod-id = "rcLriA4v"
+version = "ZMrHuYCn"
