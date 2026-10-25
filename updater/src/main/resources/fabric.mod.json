@@ -1,0 +1,21 @@
+{
+	"schemaVersion": 1,
+	"id": "cakeupdater",
+	"version": "${version}",
+	"name": "Cakedition Updater",
+	"description": "Tells you in chat when a Monumenta Cakedition update is out and installs it with packwiz-installer after you close the game.",
+	"authors": ["HarrytheCake"],
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/Monumenta-Cakedition"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": ["io.github.harrythecake.cakeupdater.CakeUpdater"]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

@@ -1,8 +1,17 @@
-# Only the packwiz pack and its tooling are tracked.
+# Only the packwiz pack, its tooling and the updater mod source are tracked.
 # Everything else (instance.cfg, .minecraft/, saves, jars, CLAUDE.md...) stays local.
 /*
 !/.gitignore
 !/.gitattributes
 !/pack/
 !/tools/
+!/updater/
 __pycache__/
+updater/.gradle/
+updater/build/
+updater/run/
+updater/bin/
+updater/.vscode/
+updater/.settings/
+updater/.project
+updater/.classpath

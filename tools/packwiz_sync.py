@@ -164,7 +164,16 @@ def check_personal():
     return not hits
 
 
+def write_pack_version():
+    """Cakedition Updater compares this with the published pack.toml on installs without packwiz.json."""
+    version = re.search(r'^version = "([^"]*)"', (PACK / "pack.toml").read_text(encoding="utf-8"), re.M).group(1)
+    out = PACK / "config" / "cakeupdater" / "pack-version.txt"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_bytes((version + "\n").encode("utf-8"))
+
+
 def refresh():
+    write_pack_version()
     entries = []
     for path in sorted(PACK.rglob("*"), key=lambda p: p.relative_to(PACK).as_posix()):
         rel = path.relative_to(PACK).as_posix()

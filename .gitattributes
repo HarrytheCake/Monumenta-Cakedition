@@ -1,3 +1,8 @@
 # packwiz hashes the raw bytes of every file in the pack, so git must never rewrite
 # line endings there (this machine has core.autocrlf=true).
 pack/** -text
+
+# Updater mod source
+updater/gradlew text eol=lf
+updater/gradlew.bat text eol=crlf
+*.jar binary

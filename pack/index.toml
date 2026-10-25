@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/cakeupdater/pack-version.txt"
+hash = "c4a2383a03bdb6739d16a0e24058e4b9c7da4e63d203e0be2f448868cc03c530"
+
+[[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
 hash = "4069ce1a439d8c37453c1b1e9f2037e0942674c7e48723a39b37eab245792ad4"
 
@@ -284,6 +288,10 @@ metafile = true
 file = "mods/c2me-fabric.pw.toml"
 hash = "70b2a115b12368173e9ddc8d9eda97198dfa3fd39aef92fc4c94d104eaef0474"
 metafile = true
+
+[[files]]
+file = "mods/cakeupdater-1.0.0.jar"
+hash = "229a530ba6e9c457a8ba0f4b07c9d4521697d910f70ee88f530bc5a4904544a4"
 
 [[files]]
 file = "mods/capes.pw.toml"
