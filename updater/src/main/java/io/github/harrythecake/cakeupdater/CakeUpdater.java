@@ -13,9 +13,11 @@ import net.minecraft.text.HoverEvent;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +66,7 @@ public class CakeUpdater implements ClientModInitializer {
 						.then(literal("onclose").executes(ctx -> scheduleOnClose(ctx.getSource())))
 						.then(literal("now").executes(ctx -> updateNow(ctx.getSource())))
 						.then(literal("cancel").executes(ctx -> cancel(ctx.getSource())))
+						.then(literal("folder").executes(ctx -> openGameFolder()))
 						.then(literal("resourcepacks").executes(ctx -> updateResourcePacks(ctx.getSource())))));
 
 		ClientLifecycleEvents.CLIENT_STOPPING.register(client -> {
@@ -99,6 +102,9 @@ public class CakeUpdater implements ClientModInitializer {
 			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.pack.uptodate").formatted(Formatting.GRAY)));
 			return 1;
 		}
+		if (bootstrapMissing(source)) {
+			return 1;
+		}
 		source.sendFeedback(prefix().append(Text.translatable("cakeupdater.pack.choose", result.remoteVersion())
 				.formatted(Formatting.YELLOW)));
 		source.sendFeedback(Text.literal("  ").append(button("cakeupdater.pack.onclose", "/cakeupdate onclose", Formatting.GREEN)));
@@ -106,7 +112,32 @@ public class CakeUpdater implements ClientModInitializer {
 		return 1;
 	}
 
+	/**
+	 * The mod never downloads the installer: it runs the packwiz-installer-bootstrap.jar a packwiz install already
+	 * has in the game folder. Without it (e.g. a .mrpack install), say so and point to the folder and download page.
+	 */
+	private static boolean bootstrapMissing(FabricClientCommandSource source) {
+		if (Files.exists(gameDir().resolve(Helper.BOOTSTRAP))) {
+			return false;
+		}
+		source.sendFeedback(prefix().append(Text.translatable("cakeupdater.pack.no_installer", Helper.BOOTSTRAP)
+				.formatted(Formatting.YELLOW)));
+		source.sendFeedback(Text.literal("  ")
+				.append(button("cakeupdater.pack.folder", "/cakeupdate folder", Formatting.GREEN))
+				.append(" ")
+				.append(link("cakeupdater.pack.download_page", Helper.BOOTSTRAP_PAGE)));
+		return true;
+	}
+
+	private static int openGameFolder() {
+		Util.getOperatingSystem().open(gameDir().toFile());
+		return 1;
+	}
+
 	private static int scheduleOnClose(FabricClientCommandSource source) {
+		if (bootstrapMissing(source)) {
+			return 1;
+		}
 		updateOnClose = true;
 		source.sendFeedback(prefix()
 				.append(Text.translatable("cakeupdater.pack.scheduled").formatted(Formatting.GREEN))
@@ -122,6 +153,9 @@ public class CakeUpdater implements ClientModInitializer {
 	}
 
 	private static int updateNow(FabricClientCommandSource source) {
+		if (bootstrapMissing(source)) {
+			return 1;
+		}
 		updateOnClose = true;
 		source.sendFeedback(prefix().append(Text.translatable("cakeupdater.pack.closing").formatted(Formatting.YELLOW)));
 		MinecraftClient client = source.getClient();
@@ -207,6 +241,15 @@ public class CakeUpdater implements ClientModInitializer {
 				.withUnderline(true)
 				.withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, command))
 				.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.translatable(key + ".hover"))));
+	}
+
+	/** A link that opens a web page (Minecraft asks the player to confirm first). */
+	private static MutableText link(String key, String url) {
+		return Text.translatable(key).styled(style -> style
+				.withColor(Formatting.AQUA)
+				.withUnderline(true)
+				.withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, url))
+				.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.literal(url))));
 	}
 
 	static Path gameDir() {

@@ -19,7 +19,7 @@ updater/
 └── src/main/
     ├── resources/
     │   ├── fabric.mod.json                     # environment: client; depends on fabric-api
-    │   └── assets/cakeupdater/lang/            # en_us.json, zh_cn.json, zh_tw.json (same 22 keys)
+    │   └── assets/cakeupdater/lang/            # en_us.json, zh_cn.json, zh_tw.json (same 26 keys)
     └── java/io/github/harrythecake/cakeupdater/
         ├── CakeUpdater.java          # entrypoint: events, /cakeupdate command, all chat text
         ├── Config.java               # config/cakeupdater/config.json5 (template + lenient Gson load)
@@ -54,7 +54,7 @@ ClientLifecycleEvents.CLIENT_STOPPING
 Helper.main
  1. wait for the game PID to exit (+2 s for Windows file locks)
  2. delete old cakeupdater-helper-* temp files
- 3. ensure .minecraft/packwiz-installer-bootstrap.jar (download v0.0.3, sha256-pinned)
+ 3. .minecraft/packwiz-installer-bootstrap.jar missing → print where to get it, exit 1 (never downloaded)
  4. java -jar packwiz-installer-bootstrap.jar -s client <url>   (GUI mode: optional-mod dialog works)
  5. print "Update finished! Start Minecraft again…" (or failure + exit code); wait for Enter
     no console → JOptionPane dialog instead
@@ -79,10 +79,11 @@ The old zip is **kept, disabled**. packwiz-installer manages that file: deleting
 
 | Command | Effect |
 |---|---|
-| `/cakeupdate` | Show the two modpack update options (or "up to date") |
+| `/cakeupdate` | Show the two modpack update options (or "up to date"; or, without the bootstrap jar, [Open game folder] + [Download page]) |
 | `/cakeupdate onclose` | Update after the player quits |
 | `/cakeupdate now` | Disconnect cleanly, quit, then update |
 | `/cakeupdate cancel` | Undo `onclose` |
+| `/cakeupdate folder` | Open the game folder (where packwiz-installer-bootstrap.jar goes) |
 | `/cakeupdate resourcepacks` | Apply all pending resource pack updates |
 
 The chat buttons are `ClickEvent.RUN_COMMAND` with these commands. Fabric's client-command API catches them before they're sent to the server.
@@ -140,7 +141,7 @@ The pack must only point at a release that already exists, which is why step 4 w
 - **Java's `ProcessBuilder` starts children with no window (`CREATE_NO_WINDOW`).** That's why the Windows branch uses `cmd /c start`.
 - **`packwiz.json` `packFileHash`** is exactly `sha256` of the `pack.toml` bytes (verified).
 - **Modrinth** expects a project-identifying User-Agent (`Net.USER_AGENT`).
-- **Helper download pin:** bootstrap v0.0.3, sha256 `a8fbb24d…116c`. Change it only together with the URL.
+- **The mod downloads no code (1.3.0+).** It runs the `packwiz-installer-bootstrap.jar` a packwiz install already has in `.minecraft` (the launcher's pre-launch command needs it). Without it (e.g. a `.mrpack` install), `/cakeupdate`, `onclose` and `now` show [Open game folder] + [Download page] (`Helper.BOOTSTRAP_PAGE`) instead of updating, and `Helper` prints the same advice. Before 1.3.0 `Helper` downloaded bootstrap v0.0.3 itself; this was removed for mod-site rules. Its only network use is the update check (`pack.toml`, Modrinth API) and resource packs the player chooses to update.
 - **Logging:** Minecraft's log format omits logger names, so search logs for message text ("Modpack update check", "Resource pack update", "Starting updater").
 
 ## Testing

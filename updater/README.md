@@ -22,6 +22,7 @@ Chat text and the updater window are in English, Simplified Chinese and Traditio
 - Minecraft 1.20.4, Fabric Loader 0.15+, Java 17+
 - [Fabric API](https://modrinth.com/mod/fabric-api)
 - For modpack updates: an install made with packwiz-installer (it reads `packwiz.json`), or a `.mrpack` install that includes `config/cakeupdater/pack-version.txt`
+- For modpack updates: `packwiz-installer-bootstrap.jar` in the game folder. A packwiz install already has it, because the launcher's pre-launch command runs it. The mod never downloads it; if it's missing, the chat offers **[Open game folder]** and **[Download page]** instead of the update buttons.
 
 ## Commands
 
@@ -33,6 +34,7 @@ All are client-side; the chat buttons run them for you.
 | `/cakeupdate onclose` | Update after you quit |
 | `/cakeupdate now` | Quit now and update |
 | `/cakeupdate cancel` | Cancel `onclose` |
+| `/cakeupdate folder` | Open the game folder |
 | `/cakeupdate resourcepacks` | Apply pending resource pack updates |
 
 ## Using it in your own modpack
