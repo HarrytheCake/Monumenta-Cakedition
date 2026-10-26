@@ -1,0 +1,13 @@
+name = "CakeText Translator"
+filename = "caketext-translator-0.1.0.jar"
+side = "client"
+
+[download]
+url = "https://github.com/HarrytheCake/CakeText/releases/download/v0.1.0/caketext-translator-0.1.0.jar"
+hash-format = "sha512"
+hash = "13d0207a9315b82640aed85def745e86d18f262edfaacf229bf7ef711e0e688cb50f20b398dd267e00ff0a8568d9667f8ae2e84d8d28f5b679296a76bef20d5b"
+
+[option]
+optional = true
+default = false
+description = "Translates server text into Simplified or Traditional Chinese (string files, or a model on your PC that you download from its settings). Off by default."

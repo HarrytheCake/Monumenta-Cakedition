@@ -290,8 +290,13 @@ hash = "70b2a115b12368173e9ddc8d9eda97198dfa3fd39aef92fc4c94d104eaef0474"
 metafile = true
 
 [[files]]
+file = "mods/caketext-translator.pw.toml"
+hash = "ec70165134ed4a4a10af99312891f7cd2499a91a08bd162ec108b0a7007eb0e5"
+metafile = true
+
+[[files]]
 file = "mods/cakeupdater.pw.toml"
-hash = "d822a16223883df5648e53539ba031cc9c134708f516679c9712b13e3279e438"
+hash = "e9a2132cfe0fca0d7ca3855a364c4de9a3f0c874c4b74f773d93852e9e081bf9"
 metafile = true
 
 [[files]]

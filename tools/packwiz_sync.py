@@ -3,17 +3,20 @@
     python tools/packwiz_sync.py from-instance   # pull mods + yosbr defaults from .minecraft, then refresh
     python tools/packwiz_sync.py refresh         # rebuild pack/index.toml and the index hash in pack/pack.toml
     python tools/packwiz_sync.py modrinth <folder> <version-id>   # add/replace a Modrinth file (e.g. a resource pack)
-    python tools/packwiz_sync.py github <folder> <owner/repo> <tag>   # point at a GitHub release jar (our own mods)
+    python tools/packwiz_sync.py github <folder> <owner/repo> <tag> [jar-prefix] [--optional="<description>"]
+        # point at a GitHub release jar (our own mods); the prefix picks one jar from a multi-jar release
 
 `refresh` does the same job as `packwiz refresh`, so either can be used.
 """
 import hashlib
+import io
 import json
 import pathlib
 import re
 import shutil
 import sys
 import urllib.request
+import zipfile
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PACK = ROOT / "pack"
@@ -148,21 +151,31 @@ def modrinth(folder, version_id):
     print(f"wrote {out.relative_to(PACK).as_posix()} -> {f['filename']}")
 
 
-def github(folder, repo, tag):
-    """Point a metafile at the jar attached to a GitHub release (our own mods, built by CI)."""
+def github(folder, repo, tag, prefix=None, optional=None):
+    """Point a metafile at a jar attached to a GitHub release (our own mods, built by CI).
+    `prefix` picks one jar from a release with several; `optional` (a description) makes a new metafile
+    optional and off by default. An existing metafile keeps its [option] block."""
     req = urllib.request.Request(f"https://api.github.com/repos/{repo}/releases/tags/{tag}",
                                  headers={"User-Agent": "Monumenta-Cakedition packwiz_sync"})
     with urllib.request.urlopen(req) as r:
         release = json.load(r)
-    asset = next(a for a in release["assets"] if a["name"].endswith(".jar"))
+    jars = [a for a in release["assets"]
+            if a["name"].endswith(".jar") and (not prefix or a["name"].startswith(prefix + "-"))]
+    if len(jars) != 1:
+        sys.exit(f"{repo} {tag}: expected one matching jar, found {[a['name'] for a in jars]}; pass a jar prefix")
+    asset = jars[0]
     with urllib.request.urlopen(asset["browser_download_url"]) as r:
         data = r.read()
     if len(data) != asset["size"]:
         sys.exit(f"{asset['name']}: got {len(data)} bytes, release says {asset['size']}")
-    slug = repo.split("/")[1].lower()
+    with zipfile.ZipFile(io.BytesIO(data)) as jar:
+        mod = json.loads(jar.read("fabric.mod.json"))
+    slug = mod["id"]
     out = PACK / folder / f"{slug}.pw.toml"
     option = parse_toml(out.read_text(encoding="utf-8")).get("option") if out.exists() else None
-    write_metafile(out, release["name"] or slug, asset["name"], "client", asset["browser_download_url"],
+    if option is None and optional:
+        option = {"optional": True, "default": False, "description": optional}
+    write_metafile(out, mod["name"], asset["name"], "client", asset["browser_download_url"],
                    "sha512", hashlib.sha512(data).hexdigest(), option=option)
     for old in (PACK / folder).glob(f"{slug}-*.jar"):  # a bundled jar this metafile replaces
         old.unlink()
@@ -235,8 +248,10 @@ if __name__ == "__main__":
     elif cmd == "modrinth" and len(sys.argv) == 4:
         modrinth(sys.argv[2], sys.argv[3])
         refresh()
-    elif cmd == "github" and len(sys.argv) == 5:
-        github(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif cmd == "github" and 5 <= len(sys.argv) <= 7:
+        args = [a for a in sys.argv[2:] if not a.startswith("--optional=")]
+        opt = next((a.split("=", 1)[1] for a in sys.argv[2:] if a.startswith("--optional=")), None)
+        github(*args, optional=opt)
         refresh()
     else:
         sys.exit(__doc__)
