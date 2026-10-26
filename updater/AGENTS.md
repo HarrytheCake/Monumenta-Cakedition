@@ -5,7 +5,7 @@ Client-only Fabric mod (`cakeupdater`, package `io.github.harrythecake.cakeupdat
 1. **Modpack updates (packwiz).** It tells the player in chat when the published packwiz pack has changed. When the player chooses, it runs packwiz-installer **after the game closes**, in a terminal window, and then asks the player to start the game again. It never restarts the game itself; that's a deliberate design decision.
 2. **Resource pack updates (Modrinth).** It tells the player in a **separate** chat message when a newer version of an enabled Modrinth resource pack exists. On click, it downloads the new version and reloads resources **live**, with no restart.
 
-The mod ships inside the Monumenta Cakedition pack as `pack/mods/cakeupdater-<version>.jar`, a bundled jar rather than a Modrinth metafile. Other modpacks can reuse it through its config file.
+The mod ships inside the Monumenta Cakedition pack as `pack/mods/cakeupdater.pw.toml`, a metafile pointing at the jar on this repo's GitHub release (`HarrytheCake/CakeUpdater`, built by CI). No built jar is committed anywhere. Other modpacks can reuse it through its config file.
 
 ## Files
 
@@ -15,6 +15,7 @@ updater/
 ├── gradle.properties       # MC 1.20.4, Yarn 1.20.4+build.3, Loader 0.16.9, Fabric API 0.97.3, mod_version
 ├── settings.gradle
 ├── gradlew / gradlew.bat   # Gradle 8.14.3 wrapper
+├── .github/workflows/build.yml  # CI (active only in the standalone CakeUpdater repo): build + test, release on a new mod_version
 └── src/main/
     ├── resources/
     │   ├── fabric.mod.json                     # environment: client; depends on fabric-api
@@ -116,12 +117,16 @@ On Windows, `packUrl` and `chatPrefix` pass through `cmd /c start`, so they must
 cd updater
 JAVA_HOME="<JDK 21>" ./gradlew build        # output: build/libs/cakeupdater-<mod_version>.jar (Java 17 bytecode)
 ```
+**CI** (`.github/workflows/build.yml`, GitHub only runs it in the standalone `HarrytheCake/CakeUpdater` repo, where this folder is the root): every push and pull request builds and tests on JDK 21 and uploads the jar as a workflow artifact. A push to `main` whose `mod_version` has no `v<mod_version>` release yet creates that release with `cakeupdater-<mod_version>.jar` attached. Pushing again with the same version builds but releases nothing.
+
 To release inside the pack:
-1. Bump `mod_version`.
-2. Build.
-3. Replace the old jar in `../pack/mods/`.
-4. Run `python ../tools/packwiz_sync.py refresh`. This also regenerates `pack/config/cakeupdater/pack-version.txt` from `pack.toml`.
-5. Commit and `git push`. The local `main` publishes to the remote `packwiz` branch.
+1. Bump `mod_version` and build/test locally.
+2. Commit, then push this folder: `git subtree push --prefix=updater updater main` (from the repo root).
+3. Wait for the CI release `v<mod_version>` (https://github.com/HarrytheCake/CakeUpdater/releases).
+4. From the repo root: `python tools/packwiz_sync.py github mods HarrytheCake/CakeUpdater v<mod_version>`. It downloads the release jar, writes `pack/mods/cakeupdater.pw.toml` with its sha512, and runs `refresh`.
+5. Commit and push the pack (`tools/push_all.py`). The local `main` publishes to the remote `packwiz` branch.
+
+The pack must only point at a release that already exists, which is why step 4 waits for CI.
 
 ## Invariants and gotchas
 

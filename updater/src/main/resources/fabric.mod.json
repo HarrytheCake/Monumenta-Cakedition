@@ -6,7 +6,7 @@
 	"description": "Tells you in chat when a Monumenta Cakedition update is out and installs it with packwiz-installer after you close the game.",
 	"authors": ["HarrytheCake"],
 	"contact": {
-		"sources": "https://github.com/HarrytheCake/Monumenta-Cakedition"
+		"sources": "https://github.com/HarrytheCake/CakeUpdater"
 	},
 	"environment": "client",
 	"entrypoints": {
