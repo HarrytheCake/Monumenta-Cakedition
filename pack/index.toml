@@ -290,8 +290,9 @@ hash = "70b2a115b12368173e9ddc8d9eda97198dfa3fd39aef92fc4c94d104eaef0474"
 metafile = true
 
 [[files]]
-file = "mods/cakeupdater-1.2.0.jar"
-hash = "4c210133a4ec9bbe9d4b0c1d93a96f53c2e87d6a214ff9482df1e1ba82f823aa"
+file = "mods/cakeupdater.pw.toml"
+hash = "d822a16223883df5648e53539ba031cc9c134708f516679c9712b13e3279e438"
+metafile = true
 
 [[files]]
 file = "mods/capes.pw.toml"

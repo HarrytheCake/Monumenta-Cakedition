@@ -3,6 +3,7 @@
     python tools/packwiz_sync.py from-instance   # pull mods + yosbr defaults from .minecraft, then refresh
     python tools/packwiz_sync.py refresh         # rebuild pack/index.toml and the index hash in pack/pack.toml
     python tools/packwiz_sync.py modrinth <folder> <version-id>   # add/replace a Modrinth file (e.g. a resource pack)
+    python tools/packwiz_sync.py github <folder> <owner/repo> <tag>   # point at a GitHub release jar (our own mods)
 
 `refresh` does the same job as `packwiz refresh`, so either can be used.
 """
@@ -54,7 +55,7 @@ def q(s):
     return json.dumps(s, ensure_ascii=False)
 
 
-def write_metafile(path, name, filename, side, url, hash_format, hash_, mod_id, version, option=None):
+def write_metafile(path, name, filename, side, url, hash_format, hash_, mod_id=None, version=None, option=None):
     lines = [
         f"name = {q(name)}",
         f"filename = {q(filename)}",
@@ -70,7 +71,9 @@ def write_metafile(path, name, filename, side, url, hash_format, hash_, mod_id, 
                   f"default = {str(option.get('default', False)).lower()}"]
         if option.get("description"):
             lines.append(f"description = {q(option['description'])}")
-    lines += ["", "[update]", "[update.modrinth]", f"mod-id = {q(mod_id)}", f"version = {q(version)}", ""]
+    if mod_id:
+        lines += ["", "[update]", "[update.modrinth]", f"mod-id = {q(mod_id)}", f"version = {q(version)}"]
+    lines.append("")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes("\n".join(lines).encode("utf-8"))
 
@@ -101,7 +104,9 @@ def sync_mods():
                        m["download"]["hash-format"], m["download"]["hash"], mr["mod-id"], mr["version"], option)
         seen.add(meta_path.name)
     for stale in dst.glob("*.pw.toml"):
-        if stale.name not in seen:
+        # Only Modrinth metafiles come from Prism; others (e.g. our GitHub release jars) are kept.
+        modrinth_meta = "modrinth" in parse_toml(stale.read_text(encoding="utf-8")).get("update", {})
+        if stale.name not in seen and modrinth_meta:
             print(f"removed mods/{stale.name}")
             stale.unlink()
 
@@ -141,6 +146,28 @@ def modrinth(folder, version_id):
     write_metafile(out, p["title"], f["filename"], "client", f["url"], "sha512", f["hashes"]["sha512"],
                    p["id"], v["id"], option)
     print(f"wrote {out.relative_to(PACK).as_posix()} -> {f['filename']}")
+
+
+def github(folder, repo, tag):
+    """Point a metafile at the jar attached to a GitHub release (our own mods, built by CI)."""
+    req = urllib.request.Request(f"https://api.github.com/repos/{repo}/releases/tags/{tag}",
+                                 headers={"User-Agent": "Monumenta-Cakedition packwiz_sync"})
+    with urllib.request.urlopen(req) as r:
+        release = json.load(r)
+    asset = next(a for a in release["assets"] if a["name"].endswith(".jar"))
+    with urllib.request.urlopen(asset["browser_download_url"]) as r:
+        data = r.read()
+    if len(data) != asset["size"]:
+        sys.exit(f"{asset['name']}: got {len(data)} bytes, release says {asset['size']}")
+    slug = repo.split("/")[1].lower()
+    out = PACK / folder / f"{slug}.pw.toml"
+    option = parse_toml(out.read_text(encoding="utf-8")).get("option") if out.exists() else None
+    write_metafile(out, release["name"] or slug, asset["name"], "client", asset["browser_download_url"],
+                   "sha512", hashlib.sha512(data).hexdigest(), option=option)
+    for old in (PACK / folder).glob(f"{slug}-*.jar"):  # a bundled jar this metafile replaces
+        old.unlink()
+        print(f"removed {folder}/{old.name}")
+    print(f"wrote {out.relative_to(PACK).as_posix()} -> {asset['name']}")
 
 
 # Things that identify a player and must not ship: cached avatars (UUIDs), spark activity, last joined server.
@@ -207,6 +234,9 @@ if __name__ == "__main__":
         refresh()
     elif cmd == "modrinth" and len(sys.argv) == 4:
         modrinth(sys.argv[2], sys.argv[3])
+        refresh()
+    elif cmd == "github" and len(sys.argv) == 5:
+        github(sys.argv[2], sys.argv[3], sys.argv[4])
         refresh()
     else:
         sys.exit(__doc__)
