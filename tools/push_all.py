@@ -101,8 +101,8 @@ def main():
     if not is_ancestor(upd_remote, split):
         fail(f"{upd_remote} has commits that aren't in updater/ here. It must only be written from this repo.")
 
-    pack_log = git("log", "--format=  %h %s", f"{pack_remote}..main")
-    upd_log = git("log", "--format=  %h %s", f"{upd_remote}..{split}")
+    pack_log = git("log", "--format=%h %s", f"{pack_remote}..main").replace("\n", "\n  ")
+    upd_log = git("log", "--format=%h %s", f"{upd_remote}..{split}").replace("\n", "\n  ")
     if not pack_log and not upd_log:
         print("\nNothing to push: both remotes are up to date.")
         return
@@ -117,8 +117,8 @@ def main():
     remote_version = re.search(r'^version = "([^"]*)"', git("show", f"{pack_remote}:pack/pack.toml"), re.M).group(1)
     print(f"\nPack version: {remote_version} -> {version}" if version != remote_version
           else f"\nPack version: {version} (unchanged)")
-    print(f"\n{PACK_REMOTE} {PACK_BRANCH} (players get this on next launch):\n{pack_log or '  up to date'}")
-    print(f"\n{UPDATER_REMOTE} {UPDATER_BRANCH} (CakeUpdater source):\n{upd_log or '  up to date'}")
+    print(f"\n{PACK_REMOTE} {PACK_BRANCH} (players get this on next launch):\n  {pack_log or 'up to date'}")
+    print(f"\n{UPDATER_REMOTE} {UPDATER_BRANCH} (CakeUpdater source):\n  {upd_log or 'up to date'}")
 
     if check_only:
         print("\nAll checks passed (--check: nothing pushed).")
