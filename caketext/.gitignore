@@ -1,0 +1,14 @@
+# Gradle / Loom build output and IDE files
+.gradle/
+build/
+run/
+bin/
+.vscode/
+.settings/
+.project
+.classpath
+.idea/
+*.iml
+# config folders the tests create (fabric-loader-junit runs in each module folder)
+/*/config/
+/*/logs/

@@ -1,0 +1,19 @@
+{
+	"caketext.surface.chat": "聊天欄",
+	"caketext.surface.action_bar": "動作列",
+	"caketext.surface.title": "標題",
+	"caketext.surface.subtitle": "副標題",
+	"caketext.surface.scoreboard": "計分板",
+	"caketext.surface.boss_bar": "Boss 血條",
+	"caketext.surface.tab_list": "Tab 列表頁首/頁尾",
+	"caketext.surface.tooltip": "物品提示",
+	"caketext.surface.screen_title": "選單標題",
+	"caketext.surface.nameplate": "名牌與浮空字",
+	"modmenu.descriptionTranslation.caketext-core": "CakeText 收集器與 CakeText 翻譯器共用的程式碼。",
+	"caketext.exchange.done": "已把 %s 個檔案轉換為 %s 個檔案，放在 exchange/converted（點擊開啟）。",
+	"caketext.exchange.empty": "沒有可轉換的檔案。請把 .json、.json.gz、.po 或 .pot 檔案放進 %s 後再執行一次（點擊開啟）。",
+	"caketext.exchange.failed": "轉換失敗：%s",
+	"caketext.exchange.tip": "轉換 config/caketext/exchange 中的所有檔案：我們的 .json/.json.gz 轉成 Crowdin 的 .po/.pot，.po/.pot 轉回 .json。結果放在 exchange/converted。",
+	"caketext.ignored_items": "忽略的物品（以逗號分隔，* 代表任意字元）",
+	"caketext.ignored_items.tip": "這些物品的提示不會被翻譯（仍會被收集）。預設：*sign（所有告示牌與懸掛式告示牌）、*book（所有書）、*shulker_box（所有界伏盒）。不寫命名空間時，會比對任何模組的物品。"
+}

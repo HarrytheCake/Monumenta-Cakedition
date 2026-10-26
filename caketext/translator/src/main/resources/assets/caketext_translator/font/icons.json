@@ -1,0 +1,11 @@
+{
+	"providers": [
+		{
+			"type": "bitmap",
+			"file": "caketext_translator:font/icons.png",
+			"ascent": 7,
+			"height": 8,
+			"chars": ["\uE100\uE101"]
+		}
+	]
+}

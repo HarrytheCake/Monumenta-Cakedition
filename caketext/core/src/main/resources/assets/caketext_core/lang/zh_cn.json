@@ -1,0 +1,19 @@
+{
+	"caketext.surface.chat": "聊天栏",
+	"caketext.surface.action_bar": "动作栏",
+	"caketext.surface.title": "标题",
+	"caketext.surface.subtitle": "副标题",
+	"caketext.surface.scoreboard": "计分板",
+	"caketext.surface.boss_bar": "Boss 血条",
+	"caketext.surface.tab_list": "Tab 列表页眉/页脚",
+	"caketext.surface.tooltip": "物品提示",
+	"caketext.surface.screen_title": "菜单标题",
+	"caketext.surface.nameplate": "名牌与悬浮字",
+	"modmenu.descriptionTranslation.caketext-core": "CakeText 收集器与 CakeText 翻译器共用的代码。",
+	"caketext.exchange.done": "已把 %s 个文件转换为 %s 个文件，放在 exchange/converted（点击打开）。",
+	"caketext.exchange.empty": "没有可转换的文件。请把 .json、.json.gz、.po 或 .pot 文件放进 %s 后再运行一次（点击打开）。",
+	"caketext.exchange.failed": "转换失败：%s",
+	"caketext.exchange.tip": "转换 config/caketext/exchange 中的所有文件：我们的 .json/.json.gz 转成 Crowdin 的 .po/.pot，.po/.pot 转回 .json。结果放在 exchange/converted。",
+	"caketext.ignored_items": "忽略的物品（用逗号分隔，* 代表任意字符）",
+	"caketext.ignored_items.tip": "这些物品的提示不会被翻译（仍会被收集）。默认：*sign（所有告示牌和悬挂式告示牌）、*book（所有书）、*shulker_box（所有潜影盒）。不写命名空间时，会匹配任何模组的物品。"
+}

@@ -1,0 +1,15 @@
+pluginManagement {
+	repositories {
+		maven {
+			name = 'Fabric'
+			url = 'https://maven.fabricmc.net/'
+		}
+		mavenCentral()
+		gradlePluginPortal()
+	}
+}
+
+rootProject.name = 'caketext'
+
+// core: shared library (text templates, strings files, context, modules), bundled inside both mods
+include 'core', 'collector', 'translator'

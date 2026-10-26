@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.harrythecake.caketext.collector.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"BossBarHudAccessor",
+		"InGameHudMixin",
+		"PlayerListHudAccessor",
+		"TextDisplayAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

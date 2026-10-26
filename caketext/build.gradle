@@ -1,0 +1,94 @@
+plugins {
+	id 'fabric-loom' version '1.10.5' apply false
+}
+
+subprojects {
+	apply plugin: 'fabric-loom'
+
+	version = rootProject.mod_version
+	group = rootProject.maven_group
+
+	base {
+		archivesName = "caketext-${project.name}"
+	}
+
+	repositories {
+		maven {
+			name = 'TerraformersMC'
+			url = 'https://maven.terraformersmc.com/releases/'
+		}
+	}
+
+	dependencies {
+		minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+		mappings "net.fabricmc:yarn:${rootProject.yarn_mappings}:v2"
+		modImplementation "net.fabricmc:fabric-loader:${rootProject.loader_version}"
+		modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_version}"
+
+		testImplementation "org.junit.jupiter:junit-jupiter:5.10.2"
+		testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+	}
+
+	processResources {
+		inputs.property "version", project.version
+		filesMatching("fabric.mod.json") {
+			expand "version": project.version
+		}
+	}
+
+	tasks.withType(JavaCompile).configureEach {
+		it.options.release = 17
+		it.options.encoding = "UTF-8"
+	}
+
+	java {
+		sourceCompatibility = JavaVersion.VERSION_17
+		targetCompatibility = JavaVersion.VERSION_17
+	}
+
+	test {
+		useJUnitPlatform()
+		maxHeapSize = '3g'
+		// Model tests need the converted opus-mt files; they are skipped when this is not set.
+		systemProperty 'caketext.hfModel', System.getProperty('caketext.hfModel', '')
+		systemProperty 'caketext.hfReference', System.getProperty('caketext.hfReference', '')
+		systemProperty 'caketext.workDir', System.getProperty('caketext.workDir', '')
+		systemProperty 'caketext.downloadTest', System.getProperty('caketext.downloadTest', 'false')
+		// a real local LLM server for ServerEngineTest (e.g. Ollama with Hunyuan-MT-7B); skipped when empty
+		systemProperty 'caketext.serverUrl', System.getProperty('caketext.serverUrl', '')
+		systemProperty 'caketext.serverModel', System.getProperty('caketext.serverModel', '')
+		systemProperty 'caketext.serverProtocol', System.getProperty('caketext.serverProtocol', 'OLLAMA')
+		testLogging {
+			events "passed", "skipped", "failed"
+			showStandardStreams = true
+			exceptionFormat = 'full'
+		}
+	}
+}
+
+// Both mods bundle core (jar-in-jar); Fabric loads one copy when both are installed.
+configure([project(':collector'), project(':translator')]) {
+	dependencies {
+		implementation project(path: ':core', configuration: 'namedElements')
+		include project(':core')
+		// only the config-screen API; its own dependencies aren't all published
+		modCompileOnly("com.terraformersmc:modmenu:${rootProject.modmenu_version}") {
+			transitive = false
+		}
+		// runs tests inside Fabric's class loader, so mixins are applied and can be checked
+		testImplementation "net.fabricmc:fabric-loader-junit:${rootProject.loader_version}"
+	}
+}
+
+// The two-way exchanger outside the game:
+//   ./gradlew :core:exchange --args="path/to/file.json path/to/file.po --out path/to/folder"
+// .json/.json.gz become Gettext PO (Crowdin), .po/.pot become our .json. Relative paths start at caketext/.
+project(':core') {
+	tasks.register('exchange', JavaExec) {
+		group = 'caketext'
+		description = 'Converts strings files between our JSON and Gettext PO (Crowdin).'
+		classpath = sourceSets.main.runtimeClasspath
+		mainClass = 'io.github.harrythecake.caketext.core.strings.Exchanger'
+		workingDir = rootProject.projectDir
+	}
+}

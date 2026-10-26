@@ -1,0 +1,19 @@
+{
+	"caketext.surface.chat": "Chat",
+	"caketext.surface.action_bar": "Action bar",
+	"caketext.surface.title": "Titles",
+	"caketext.surface.subtitle": "Subtitles",
+	"caketext.surface.scoreboard": "Scoreboard",
+	"caketext.surface.boss_bar": "Boss bars",
+	"caketext.surface.tab_list": "Tab list header/footer",
+	"caketext.surface.tooltip": "Item tooltips",
+	"caketext.surface.screen_title": "Menu titles",
+	"caketext.surface.nameplate": "Nameplates & holograms",
+	"modmenu.descriptionTranslation.caketext-core": "Shared code for CakeText Collector and CakeText Translator.",
+	"caketext.exchange.done": "Converted %s files into %s files in exchange/converted (click to open).",
+	"caketext.exchange.empty": "Nothing to convert. Put .json, .json.gz, .po or .pot files into %s and run this again (click to open).",
+	"caketext.exchange.failed": "Conversion failed: %s",
+	"caketext.exchange.tip": "Converts every file in config/caketext/exchange: our .json/.json.gz into Crowdin .po/.pot files, and .po/.pot back into .json. Results go to exchange/converted.",
+	"caketext.ignored_items": "Ignored items (comma-separated, * = anything)",
+	"caketext.ignored_items.tip": "Item ids whose tooltips are never translated (they are still collected). Default: *sign (all signs and hanging signs), *book (all books), *shulker_box (all shulker boxes). Without a namespace a pattern matches any mod's items."
+}

@@ -6,6 +6,7 @@
 !/pack/
 !/tools/
 !/updater/
+!/caketext/
 __pycache__/
 updater/.gradle/
 updater/build/
