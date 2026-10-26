@@ -36,6 +36,16 @@ subprojects {
 		}
 	}
 
+	// every jar carries its license: the Translator is Apache-2.0 (with NOTICE), core and the Collector MIT
+	jar {
+		if (project.name == 'translator') {
+			from(project.file('LICENSE')) { rename { 'LICENSE_caketext-translator' } }
+			from(project.file('NOTICE')) { rename { 'NOTICE_caketext-translator' } }
+		} else {
+			from(rootProject.file('LICENSE')) { rename { "LICENSE_caketext-${project.name}" } }
+		}
+	}
+
 	tasks.withType(JavaCompile).configureEach {
 		it.options.release = 17
 		it.options.encoding = "UTF-8"

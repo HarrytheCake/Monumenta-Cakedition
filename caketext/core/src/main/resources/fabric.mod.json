@@ -5,6 +5,7 @@
 	"name": "CakeText Core",
 	"description": "Shared code for CakeText Collector and CakeText Translator: text templates, strings files, game context and modules.",
 	"authors": ["HarrytheCake"],
+	"license": "MIT",
 	"contact": {
 		"sources": "https://github.com/HarrytheCake/CakeText"
 	},

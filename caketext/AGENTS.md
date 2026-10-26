@@ -10,7 +10,7 @@ Two client-only Fabric mods for Minecraft **1.20.4**, plus a shared library, in 
 
 Either mod works alone. With both installed, Fabric loads one copy of core.
 
-Package root: `io.github.harrythecake.caketext`. Everything both mods write lives in `config/caketext/`.
+Package root: `io.github.harrythecake.caketext`. Licenses: `translator/` Apache-2.0 (`translator/LICENSE` + `NOTICE`), `core/` and `collector/` MIT (root `LICENSE`); each jar carries its file (`LICENSE_caketext-<module>`), and `fabric.mod.json` has a matching `license` field. Everything both mods write lives in `config/caketext/`.
 
 ## Build and test
 

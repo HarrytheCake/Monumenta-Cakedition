@@ -61,3 +61,10 @@ The jars are written to `collector/build/libs/` and `translator/build/libs/`. Th
 GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with both jars.
 
 This repository is a mirror of the [`caketext/` folder](https://github.com/HarrytheCake/Monumenta-Cakedition/tree/packwiz/caketext) of Monumenta-Cakedition, where development happens.
+
+## License
+
+- **CakeText Translator** (`translator/`): [Apache License 2.0](translator/LICENSE). See [translator/NOTICE](translator/NOTICE) for the projects its translation engine is modelled on.
+- **CakeText Collector** (`collector/`) and the shared **core** (`core/`): [MIT](LICENSE).
+
+Human translations made with CakeText are separate from this code; see their own repository for their license.

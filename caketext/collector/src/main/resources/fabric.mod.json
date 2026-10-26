@@ -5,6 +5,7 @@
 	"name": "CakeText Collector",
 	"description": "Collects the text a server shows (chat, scoreboard, tooltips, titles, boss bars, nameplates, menus) into local strings files for translators, with where it was seen. Player names and player chat are never stored, and nothing is uploaded.",
 	"authors": ["HarrytheCake"],
+	"license": "MIT",
 	"contact": {
 		"sources": "https://github.com/HarrytheCake/CakeText"
 	},

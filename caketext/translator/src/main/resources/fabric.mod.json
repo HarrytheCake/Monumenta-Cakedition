@@ -5,6 +5,7 @@
 	"name": "CakeText Translator",
 	"description": "Translates server text (chat, scoreboard, tooltips, titles, boss bars, nameplates) from string files, and with a local opus-mt model for strings that aren't translated yet. An icon shows where each translation came from.",
 	"authors": ["HarrytheCake"],
+	"license": "Apache-2.0",
 	"contact": {
 		"sources": "https://github.com/HarrytheCake/CakeText"
 	},

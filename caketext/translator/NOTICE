@@ -1,0 +1,19 @@
+CakeText Translator
+Copyright 2026 HarrytheCake
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE in
+this folder). The rest of CakeText (core/ and collector/) is under the MIT
+License (see LICENSE in the repository root).
+
+The machine-translation engine (io.github.harrythecake.caketext.translator.mt)
+is an independent Java implementation of the algorithms of the following
+projects, checked against their output. No code from them is included.
+- Hugging Face Transformers (MarianMTModel and its generation code)
+  Copyright The HuggingFace Team. Apache License 2.0.
+- SentencePiece (unigram tokenizer and normalization)
+  Copyright Google Inc. Apache License 2.0.
+- darts-clone (double-array trie used by SentencePiece's character map)
+  Copyright Susumu Yata. BSD 2-Clause License.
+
+The opus-mt-en-zh model (Helsinki-NLP, Apache License 2.0) is not included.
+Players download it themselves from Hugging Face.
