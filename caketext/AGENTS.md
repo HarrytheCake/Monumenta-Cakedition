@@ -38,7 +38,7 @@ Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so 
 | translator `DictionaryTest` | – | scope priority, `box`, whitespace-forgiving lookup, human beats machine |
 | translator `MachineTranslatorTest` | (real-model case: `caketext.workDir`) | template ↔ model mapping, fallbacks, icons, Chinese punctuation |
 | translator `mt.OpusMtReferenceTest` | `caketext.hfModel`, `caketext.hfReference`, `caketext.workDir` | Java port vs Hugging Face |
-| translator `ModelInstallTest` | `-Dcaketext.downloadTest=true` (downloads 312 MB) | real download → verify → convert → load |
+| translator `ModelInstallTest` | `-Dcaketext.downloadTest=true` (the test downloads 312 MB, playing the player) | missing file → MISSING with the name; all files → check → convert → delete originals → load → translate |
 
 `caketext.hfModel` = a downloaded `Helsinki-NLP/opus-mt-en-zh` folder (with `flax_model.msgpack`); `caketext.hfReference` = JSON from a Hugging Face script (token ids, greedy and 4-beam outputs per sentence); `caketext.workDir` = where converted models are cached. Pass them as `-D` options to `gradlew`.
 
@@ -117,7 +117,7 @@ Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so 
 - A miss is queued for the model if it's installed, enabled and the line looks English (Latin letters, no Han). Chat lines are swapped in place when the model finishes (`ChatHud.messages` + `refresh()`); other surfaces re-render every frame, so they update by themselves; text displays only when re-created.
 - Item tooltips: the first line (item name) is not translated unless `translateItemNames` (default off). Items matching `ignoredItems` (`core/template/ItemFilter`, id globs, default `*sign`, `*book`, `*shulker_box`; edited in the Where-to-translate screen) are never translated. The collector still collects them (user's choice, 2026-10-27).
 - Display settings: `chatDisplay` (server text in chat, default ORIGINAL), `playerChatDisplay` (default ORIGINAL), `display` (tooltips and HUD, default TRANSLATED; HUD shows nothing translated when ORIGINAL).
-- Settings `translator.json` (language `zh_cn`/`zh_tw`, display, chat display, player chat on/off and its display, machine on/off, quality `best`/`fast`, markers, tooltip footer, per-surface). Screen via Mod Menu or `/cttranslate`. Commands: `status`, `reload`, `test <text>`, `model install`, `model delete`.
+- Settings `translator.json` (language `zh_cn`/`zh_tw`, display, chat display, player chat on/off and its display, machine on/off, quality `best`/`fast`, markers, tooltip footer, per-surface). Screen via Mod Menu or `/cttranslate`. Commands: `status`, `reload`, `test <text>`, `cache clear`, `exchange`, `model folder`, `model install`, `model delete`.
 
 ### Engines (`TranslationEngine`)
 
@@ -137,7 +137,7 @@ Setting `engine`: `OPUS_MT` (built in, below) or `SERVER` (`ServerEngine`, an LL
 
 ### Local model (`translator/mt`, pure Java, no native code)
 
-- Model: `Helsinki-NLP/opus-mt-en-zh` (Apache-2.0), pinned revision `408d9bc4…`. `ModelManager` downloads `config.json`, `vocab.json`, `source.spm`, `flax_model.msgpack` (312 MB, each SHA-256-checked), converts to `models/opus-mt-en-zh-int8/model.ctm` (77 MB: int8 matrices with a scale per row, float biases/norms) + `source.spm`, deletes the download. Measured: download 16–19 s, convert ~1 s, load ~0.2 s.
+- Model: `Helsinki-NLP/opus-mt-en-zh` (Apache-2.0), pinned revision `408d9bc4…`. **The mod downloads nothing (0.2.0+, for mod-site rules).** The engine screen has [Model download page] (`ModelManager.PAGE_URL`, the Hugging Face file list at the pinned revision), [Open model folder] (`importDir()` = `config/caketext/models/opus-mt-en-zh/`) and [Install from folder]; `/cttranslate model folder` opens the folder and prints the page as a link. The player downloads `config.json`, `vocab.json`, `source.spm`, `flax_model.msgpack` (312 MB) there. Install checks size + SHA-256 of each (state CHECKING; a missing file → MISSING with `model.incomplete` naming it; a wrong one → FAILED `model.bad_file`), converts to `models/opus-mt-en-zh-int8/model.ctm` (77 MB: int8 matrices with a scale per row, float biases/norms) + `source.spm`, and deletes the four originals (only those; a file Windows still has mapped is deleted on the next load, as is the `download/` folder of 0.1.0). Measured: check ~2.5 s, convert ~1 s, load ~0.2 s.
 - `Msgpack` reads the Flax checkpoint (plain data, no pickle). `SentencePiece` parses the `.spm` protobuf and applies its precompiled `nmt_nfkc` charsmap (darts-clone trie) + unigram Viterbi. `Marian` = HF `MarianMTModel` (post-norm, swish, sinusoidal positions with sin|cos halves, scaled tied embeddings, `final_logits_bias`) with HF's greedy and beam search (log-softmax, pad banned, renormalized, length penalty 1, early_stopping false).
 - Verified against transformers 4.49: tokenizer 16/16 identical ids; float32 weights 16/16 identical greedy **and** 4-beam token ids; int8 weights 13/16 identical outputs (the rest are synonyms).
 - Speed (28-core desktop, 4 worker threads at min priority): `best` (int8 weights, float activations, 4 beams) ~0.6 s per line; `fast` (int8 activations too, greedy) ~0.08 s per line but rougher (e.g. "Back" → "后退( E)"). Heap ~110 MB once loaded.
@@ -149,7 +149,7 @@ Setting `engine`: `OPUS_MT` (built in, below) or `SERVER` (`ServerEngine`, an LL
 - The collector must never store player chat or player names, and never upload anything.
 - Player chat translations are never written to disk, and the prefix/name part of a player line is never sent to the model.
 - The translator must never throw into the game: `TranslatorMod.translate` returns the original on any error.
-- Nothing is downloaded until the player asks (button or `/cttranslate model install`).
+- The translator downloads nothing. Its only network use is the local LLM server the player configures (default `127.0.0.1`).
 - Mixins only touch client classes; text displays check `world.isClient`.
 
 ## Status (2026-10-27)

@@ -2,16 +2,11 @@ package io.github.harrythecake.caketext.translator;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.time.Duration;
+import java.util.ArrayList;
 import java.util.HexFormat;
 import java.util.List;
 import java.util.stream.Stream;
@@ -19,20 +14,23 @@ import java.util.stream.Stream;
 import io.github.harrythecake.caketext.core.CakeText;
 import io.github.harrythecake.caketext.translator.mt.OpusMt;
 import net.minecraft.text.Text;
+import net.minecraft.util.Util;
 import org.jetbrains.annotations.Nullable;
 
 /**
  * The local translation model: opus-mt-en-zh (Helsinki-NLP, Apache-2.0), converted to int8 on the player's PC.
  *
- * <p>Install = download the Hugging Face files at a pinned revision (~312 MB), check each SHA-256, convert to
- * {@code model.ctm} (~75 MB), delete the download. Nothing is downloaded until the player presses the button
- * (or runs {@code /cttranslate model install}).
+ * <p>The mod downloads nothing. The player downloads the four Hugging Face files of a pinned revision (~312 MB,
+ * {@link #PAGE_URL}) into {@link #importDir()} and presses Install (or runs {@code /cttranslate model install}):
+ * each file's size and SHA-256 are checked, they're converted to {@code model.ctm} (~75 MB), and then deleted.
  */
 public final class ModelManager {
 	public static final String ID = "opus-mt-en-zh-int8";
 	public static final String LABEL = "opus-mt-en-zh int8";
 	private static final String REPO = "Helsinki-NLP/opus-mt-en-zh";
 	private static final String REVISION = "408d9bc410a388e1d9aef112a2daba955b945255";
+	/** Where the player downloads the files: the model's file list at the pinned revision. */
+	public static final String PAGE_URL = "https://huggingface.co/" + REPO + "/tree/" + REVISION;
 
 	private record Remote(String name, String sha256, long size) {
 	}
@@ -43,12 +41,14 @@ public final class ModelManager {
 			new Remote("source.spm", "5775ddc9e3ff2fae91554da56468ad35ff56edaba870fea74447bc7234bfdaa8", 806435),
 			new Remote("flax_model.msgpack", "de82e23a535e25896ebdf433ec2b72706a428fb8e47bb87ef72531426edee8c3", 309944974));
 
-	/** Total download in bytes, for the button text. */
+	/** Total size of the files the player downloads, for the UI. */
 	public static final long DOWNLOAD_BYTES = FILES.stream().mapToLong(Remote::size).sum();
+	/** The file names, for the UI. */
+	public static final String FILE_NAMES = String.join(", ", FILES.stream().map(Remote::name).toList());
 
 	public enum State {
 		MISSING,
-		DOWNLOADING,
+		CHECKING,
 		CONVERTING,
 		LOADING,
 		READY,
@@ -57,12 +57,29 @@ public final class ModelManager {
 
 	private volatile State state = State.MISSING;
 	private volatile long done;
-	private volatile @Nullable String error;
+	private volatile @Nullable Text error;
+	/** Files still missing from {@link #importDir()} after the last Install, or null. */
+	private volatile @Nullable String missingFiles;
 	private volatile @Nullable OpusMt model;
 	private Thread worker;
 
 	public static Path dir() {
 		return CakeText.dir().resolve("models").resolve(ID);
+	}
+
+	/** Where the player puts the downloaded files ({@code config/caketext/models/opus-mt-en-zh}). */
+	public static Path importDir() {
+		return CakeText.dir().resolve("models").resolve("opus-mt-en-zh");
+	}
+
+	/** Creates {@link #importDir()} and opens it in the file manager. */
+	public static void openImportDir() {
+		try {
+			Files.createDirectories(importDir());
+		} catch (IOException ignored) {
+			// opening still shows what exists
+		}
+		Util.getOperatingSystem().open(importDir().toFile());
 	}
 
 	public State state() {
@@ -80,12 +97,14 @@ public final class ModelManager {
 	/** One line for the settings screen and {@code /cttranslate status}. */
 	public Text describe() {
 		return switch (state) {
-			case MISSING -> Text.translatable("caketext_translator.model.missing", DOWNLOAD_BYTES >> 20);
-			case DOWNLOADING -> Text.translatable("caketext_translator.model.downloading", done >> 20, DOWNLOAD_BYTES >> 20);
+			case MISSING -> missingFiles != null
+					? Text.translatable("caketext_translator.model.incomplete", missingFiles)
+					: Text.translatable("caketext_translator.model.missing", DOWNLOAD_BYTES >> 20);
+			case CHECKING -> Text.translatable("caketext_translator.model.checking", done >> 20, DOWNLOAD_BYTES >> 20);
 			case CONVERTING -> Text.translatable("caketext_translator.model.converting");
 			case LOADING -> Text.translatable("caketext_translator.model.loading");
 			case READY -> Text.translatable("caketext_translator.model.ready", LABEL);
-			case FAILED -> Text.translatable("caketext_translator.model.failed", String.valueOf(error));
+			case FAILED -> Text.translatable("caketext_translator.model.failed", error == null ? Text.literal("?") : error);
 		};
 	}
 
@@ -96,14 +115,14 @@ public final class ModelManager {
 		}
 	}
 
-	/** Downloads, converts and loads, in the background. */
+	/** Checks the files in {@link #importDir()}, converts and loads them, in the background. */
 	public synchronized void install() {
-		if (state == State.DOWNLOADING || state == State.CONVERTING || state == State.LOADING) {
+		if (state == State.CHECKING || state == State.CONVERTING || state == State.LOADING) {
 			return;
 		}
 		start(() -> {
-			if (!installed()) {
-				download();
+			if (!installed() && !importFiles()) {
+				return;
 			}
 			load();
 		});
@@ -127,9 +146,9 @@ public final class ModelManager {
 			try {
 				job.run();
 			} catch (Throwable t) {
-				error = t.getMessage() == null ? t.getClass().getSimpleName() : t.getMessage();
+				error = Text.literal(t.getMessage() == null ? t.getClass().getSimpleName() : t.getMessage());
 				state = State.FAILED;
-				CakeText.LOG.warn("Translation model: {}", error, t);
+				CakeText.LOG.warn("Translation model: {}", error.getString(), t);
 			}
 		}, "CakeText-model");
 		worker.setDaemon(true);
@@ -139,11 +158,13 @@ public final class ModelManager {
 
 	private void load() throws IOException {
 		state = State.LOADING;
-		// a download folder left by an earlier install (Windows keeps a memory-mapped file locked until it's released)
-		Path leftover = dir().resolve("download");
-		if (Files.exists(leftover) && installed()) {
+		missingFiles = null;
+		// source files an earlier install couldn't delete (Windows keeps a memory-mapped file locked until it's
+		// released), and the download folder of versions before 0.2.0
+		if (installed()) {
 			System.gc();
-			deleteTree(leftover);
+			deleteSources();
+			deleteTree(dir().resolve("download"));
 		}
 		long t = System.nanoTime();
 		model = OpusMt.load(dir());
@@ -152,48 +173,50 @@ public final class ModelManager {
 				model.weightBytes() >> 20);
 	}
 
-	private void download() throws Exception {
-		state = State.DOWNLOADING;
+	/** Checks the player's files and converts them; false (state MISSING or FAILED) if they aren't all right. */
+	private boolean importFiles() throws Exception {
+		state = State.CHECKING;
 		done = 0;
-		Path tmp = dir().resolve("download");
-		Files.createDirectories(tmp);
-		HttpClient http = HttpClient.newBuilder().followRedirects(HttpClient.Redirect.NORMAL)
-				.connectTimeout(Duration.ofSeconds(20)).build();
+		Path src = importDir();
+		Files.createDirectories(src);
+		List<String> missing = new ArrayList<>();
 		for (Remote f : FILES) {
-			Path target = tmp.resolve(f.name);
-			if (Files.exists(target) && Files.size(target) == f.size && f.sha256.equals(sha256(target))) {
-				done += f.size;
-				continue;
-			}
-			URI uri = URI.create("https://huggingface.co/" + REPO + "/resolve/" + REVISION + "/" + f.name);
-			HttpRequest request = HttpRequest.newBuilder(uri).header("User-Agent", "CakeText-Translator")
-					.timeout(Duration.ofMinutes(30)).GET().build();
-			HttpResponse<InputStream> response = http.send(request, HttpResponse.BodyHandlers.ofInputStream());
-			if (response.statusCode() != 200) {
-				response.body().close();
-				throw new IOException(f.name + ": HTTP " + response.statusCode());
-			}
-			MessageDigest digest = MessageDigest.getInstance("SHA-256");
-			try (InputStream in = response.body(); OutputStream out = Files.newOutputStream(target)) {
-				byte[] buf = new byte[1 << 16];
-				int n;
-				while ((n = in.read(buf)) > 0) {
-					out.write(buf, 0, n);
-					digest.update(buf, 0, n);
-					done += n;
-				}
-			}
-			String got = HexFormat.of().formatHex(digest.digest());
-			if (!got.equals(f.sha256)) {
-				Files.deleteIfExists(target);
-				throw new IOException(f.name + ": checksum mismatch");
+			if (!Files.isRegularFile(src.resolve(f.name))) {
+				missing.add(f.name);
 			}
 		}
+		if (!missing.isEmpty()) {
+			missingFiles = String.join(", ", missing);
+			state = State.MISSING;
+			return false;
+		}
+		missingFiles = null;
+		for (Remote f : FILES) {
+			Path file = src.resolve(f.name);
+			if (Files.size(file) != f.size || !f.sha256.equals(sha256(file))) {
+				error = Text.translatable("caketext_translator.model.bad_file", f.name);
+				state = State.FAILED;
+				return false;
+			}
+			done += f.size;
+		}
 		state = State.CONVERTING;
-		OpusMt.convert(tmp, dir(), true, LABEL, REPO + "@" + REVISION);
+		OpusMt.convert(src, dir(), true, LABEL, REPO + "@" + REVISION);
 		// the converter memory-maps the checkpoint; let the mapping go before deleting it (load() retries)
 		System.gc();
-		deleteTree(tmp);
+		deleteSources();
+		return true;
+	}
+
+	/** Deletes the player's four files once they're converted (only those: the folder may hold other things). */
+	private static void deleteSources() {
+		for (Remote f : FILES) {
+			try {
+				Files.deleteIfExists(importDir().resolve(f.name));
+			} catch (IOException e) {
+				CakeText.LOG.warn("Could not delete {} (deleted on the next load)", f.name);
+			}
+		}
 	}
 
 	private static String sha256(Path file) throws IOException {

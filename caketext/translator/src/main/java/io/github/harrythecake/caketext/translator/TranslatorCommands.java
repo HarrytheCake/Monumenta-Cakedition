@@ -20,7 +20,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
 /**
- * {@code /cttranslate} [settings | status | reload | cache clear | exchange | test <text> | model install | model delete]
+ * {@code /cttranslate} [settings | status | reload | cache clear | exchange | test <text> | model folder | model install | model delete]
  */
 final class TranslatorCommands {
 	private TranslatorCommands() {
@@ -51,10 +51,17 @@ final class TranslatorCommands {
 					return 1;
 				}))
 				.then(literal("model")
+						.then(literal("folder").executes(c -> {
+							ModelManager.openImportDir();
+							c.getSource().sendFeedback(Text.translatable("caketext_translator.command.model_folder",
+									ModelManager.FILE_NAMES, Text.literal(ModelManager.PAGE_URL).styled(s -> s
+											.withColor(Formatting.AQUA).withUnderline(true)
+											.withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, ModelManager.PAGE_URL)))));
+							return 1;
+						}))
 						.then(literal("install").executes(c -> {
 							TranslatorMod.service().models().install();
-							c.getSource().sendFeedback(Text.translatable("caketext_translator.command.model_install",
-									ModelManager.DOWNLOAD_BYTES >> 20));
+							c.getSource().sendFeedback(Text.translatable("caketext_translator.command.model_install"));
 							return 1;
 						}))
 						.then(literal("delete").executes(c -> {

@@ -13,14 +13,14 @@ Each mod works on its own, and you can install both. They share a small core lib
 
 - **String files first.** Human translations in `config/caketext/translations/<zh_cn|zh_tw>/` always win. Both our JSON format and the `.po` files Crowdin returns are read. An entry can be scoped to one place (a menu, a shard, an area or a box of blocks) when the same English text means different things.
 - **Machine translation for the rest**, on your own PC:
-  - **Built in:** the opus-mt-en-zh model (Helsinki-NLP, Apache-2.0), run in pure Java. It's downloaded only when you click the button: about 312 MB to download, then about 77 MB on disk and 110 MB of memory. Each line takes 0.1–0.6 s and is remembered.
+  - **Built in:** the opus-mt-en-zh model (Helsinki-NLP, Apache-2.0), run in pure Java. The mod doesn't download it: the settings have a **Model download page** button and an **Open model folder** button. Download its 4 files (about 312 MB) into that folder and press **Install from folder**. They're checked, converted to about 77 MB, and the originals deleted. It uses about 110 MB of memory. Each line takes 0.1–0.6 s and is remembered.
   - **Local server:** a bigger model you run yourself through Ollama, llama.cpp or LM Studio. The default is Hunyuan-MT-7B, which translates much better but needs a GPU with about 8 GB. The mod never downloads or ships it. Its license (Tencent Hunyuan Community License) doesn't cover the EU, UK or South Korea.
 - **You can see where each translation came from:** a book icon marks string translations and a chip marks machine ones. Hovering a translation in chat shows the original.
 - **Display modes,** set separately for server chat, player chat and tooltips/HUD: translation only, both, or original with the translation on hover. Chat defaults to the original with the translation on hover, and tooltips and HUD to the translation.
 - **Player chat** can be machine-translated too. Only the message is translated: the channel, rank and name are never sent. These translations stay in memory and are never saved.
 - Item names, signs, books and shulker boxes are left untranslated by default.
 - Settings are in Mod Menu or `/cttranslate`.
-  - Commands: `/cttranslate status`, `reload`, `test <text>`, `cache clear`, `exchange`, `model install`, `model delete`.
+  - Commands: `/cttranslate status`, `reload`, `test <text>`, `cache clear`, `exchange`, `model folder`, `model install`, `model delete`.
 
 ## CakeText Collector
 
@@ -56,7 +56,7 @@ Get the jars from [Releases](https://github.com/HarrytheCake/CakeText/releases).
 ./gradlew build     # needs JDK 21 to run Gradle; the jars target Java 17
 ```
 
-The jars are written to `collector/build/libs/` and `translator/build/libs/`. The build runs the tests. Tests that need a downloaded model or a running LLM server are skipped unless given the `-Dcaketext.*` options described in [AGENTS.md](AGENTS.md), which also documents formats, hooks and invariants.
+The jars are written to `collector/build/libs/` and `translator/build/libs/`. The build runs the tests. Tests that need the real model (they download it themselves) or a running LLM server are skipped unless given the `-Dcaketext.*` options described in [AGENTS.md](AGENTS.md), which also documents formats, hooks and invariants.
 
 GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with both jars.
 

@@ -12,6 +12,7 @@ import io.github.harrythecake.caketext.translator.TranslationService;
 import io.github.harrythecake.caketext.translator.TranslatorConfig;
 import io.github.harrythecake.caketext.translator.TranslatorMod;
 import net.minecraft.text.Text;
+import net.minecraft.util.Util;
 
 /** Which engine translates new lines: the built-in opus-mt model, or an LLM in a local server (e.g. Hunyuan-MT-7B). */
 final class EngineScreen extends OptionsScreen {
@@ -44,7 +45,12 @@ final class EngineScreen extends OptionsScreen {
 				clearAndInit();
 			}));
 		} else {
-			add(tip(button(Text.translatable(key("option.model_install"), ModelManager.DOWNLOAD_BYTES >> 20), b -> {
+			// the mod downloads nothing: the player fetches the files from the page into the folder, then installs
+			add(tip(button(Text.translatable(key("option.model_page")), b -> Util.getOperatingSystem().open(ModelManager.PAGE_URL)),
+					Text.translatable(key("option.model_page.tip"), ModelManager.FILE_NAMES, ModelManager.DOWNLOAD_BYTES >> 20)));
+			add(tip(button(Text.translatable(key("option.model_folder")), b -> ModelManager.openImportDir()),
+					Text.translatable(key("option.model_folder.tip"), ModelManager.FILE_NAMES)));
+			add(tip(button(Text.translatable(key("option.model_install")), b -> {
 				models.install();
 				b.active = false;
 			}), Text.translatable(key("option.model_install.tip"))));
