@@ -20,6 +20,8 @@ JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build          # jars in */bu
 JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build -x test  # jars only
 ```
 
+**CI and releases:** `.github/workflows/build.yml` (GitHub only runs it in the standalone `HarrytheCake/CakeText` repo, where this folder is the root) builds and tests every push and pull request on JDK 21. A push to `main` whose `mod_version` has no `v<mod_version>` release yet publishes one with `caketext-collector-<v>.jar` and `caketext-translator-<v>.jar` (core is inside both). No built jar is committed anywhere. To release: bump `mod_version`, commit, `git subtree push --prefix=caketext caketext main` from the repo root, wait for the release, then (for the pack, which ships only the Translator, optional and off) `python tools/packwiz_sync.py github mods HarrytheCake/CakeText v<v> caketext-translator`, commit, `tools/push_all.py`.
+
 Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so mixins are applied. Model tests are skipped unless given files:
 
 | Test | Needs | Proves |
