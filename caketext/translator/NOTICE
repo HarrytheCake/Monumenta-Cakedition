@@ -17,3 +17,11 @@ projects, checked against their output. No code from them is included.
 
 The opus-mt-en-zh model (Helsinki-NLP, Apache License 2.0) is not included.
 Players download it themselves from Hugging Face.
+
+Translations
+Human translation strings made for CakeText (string files and the .po files
+of the CakeText translation project) are licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0); see
+LICENSE-translations in the repository root. This covers the translators'
+work only: the original English text belongs to its owners (for Monumenta,
+the Monumenta team).

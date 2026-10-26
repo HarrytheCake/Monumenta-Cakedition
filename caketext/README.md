@@ -67,4 +67,4 @@ This repository is a mirror of the [`caketext/` folder](https://github.com/Harry
 - **CakeText Translator** (`translator/`): [Apache License 2.0](translator/LICENSE). See [translator/NOTICE](translator/NOTICE) for the projects its translation engine is modelled on.
 - **CakeText Collector** (`collector/`) and the shared **core** (`core/`): [MIT](LICENSE).
 
-Human translations made with CakeText are separate from this code; see their own repository for their license.
+- **Human translations** (CakeText string files and the `.po` files of the CakeText translation project): [CC BY-SA 4.0](LICENSE-translations). This covers the translators' work; the original English text belongs to its owners (for Monumenta, the Monumenta team).
