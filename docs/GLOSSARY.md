@@ -60,6 +60,14 @@ _Avoid_: Withdraw (a purge goes further), rollback
 A release that installs on a withdrawn or purged version must take as soon as possible, announced more strongly than a normal update.
 _Avoid_: Hotfix, forced update (nothing is ever forced)
 
+**Changelog**:
+What changed in one pack version, written once and shown in game after an update, on its GitHub release and on the platforms; read in the player's game language, else English.
+_Avoid_: Patch notes, update log
+
+**Release notes**:
+The whole page that comes with a release: install info, credits and that version's changelog.
+_Avoid_: Changelog (that is only one part of it)
+
 **Pack file**:
 One downloadable file that installs a single pack version in a launcher, in a platform's modpack format (Modrinth `.mrpack`, CurseForge modpack file).
 _Avoid_: mrpack (as the general term), export
