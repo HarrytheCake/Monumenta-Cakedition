@@ -4,6 +4,7 @@
     python tools/bench/bench.py gpu igpu|default       # Windows GPU preference for the bench JDK only
     python tools/bench/bench.py batch <sets.json> [--repeats N] [--name NAME]
     python tools/bench/bench.py report <batch name>    # docs/benchmarks/<batch name>.md
+    python tools/bench/bench.py serve                  # the bench server alone, to look around by hand
 
 A batch starts the local server, then for each mod set and repeat: resets the bench instance to the pack's mods and
 configs, applies the set (mods added/removed, config files), launches it through Prism (which joins the server), and
@@ -122,8 +123,9 @@ def setup_server():
     (SERVER / "server.properties").write_text("\n".join([
         f"server-port={PORT}", "server-ip=127.0.0.1", "online-mode=false", "enforce-secure-profile=false",
         "spawn-protection=0", "view-distance=12", "simulation-distance=12", "max-players=100",
-        "level-seed=cakedition-bench", "difficulty=easy", "spawn-monsters=false", "spawn-animals=false",
-        "spawn-npcs=false", "allow-flight=true", "motd=Cakedition bench", "sync-chunk-writes=false",
+        # spawn-animals/spawn-npcs=false would delete the scene's animals and villagers; doMobSpawning stops spawning
+        "level-seed=cakedition-bench", "difficulty=easy", "spawn-monsters=true", "spawn-animals=true",
+        "spawn-npcs=true", "allow-flight=true", "motd=Cakedition bench", "sync-chunk-writes=false",
         # Carpet looks up each fake player's profile from Mojang on the server thread; a slow lookup isn't a crash
         "max-tick-time=-1", ""]))
     write_datapack(SERVER / "world" / "datapacks" / "cakebench")
@@ -142,7 +144,7 @@ def write_datapack(dp):
             '{id:"minecraft:iron_chestplate",Count:1b},{id:"minecraft:iron_helmet",Count:1b}]'
 
     def mob(kind, x, y, z, i):
-        return (f'summon minecraft:{kind} {x} {y} {z} {{NoAI:1b,PersistenceRequired:1b,Silent:1b,Invulnerable:1b,'
+        return (f'summon minecraft:{kind} {x} {y} {z} {{NoAI:1b,PersistenceRequired:1b,Silent:1b,Invulnerable:1b,Tags:["cb"],'
                 f'CustomName:\'"Elite {kind.title()} {i}"\',CustomNameVisible:1b,ArmorItems:{armor},'
                 f'HandItems:[{{id:"minecraft:iron_sword",Count:1b}},{{}}]}}')
 
@@ -156,7 +158,7 @@ def write_datapack(dp):
     animals = ["cow", "sheep", "pig", "chicken", "villager"]
     for i in range(20):
         x, z = -12 + (i % 5) * 6, -12 + (i // 5) * 6
-        c.append(f"summon minecraft:{animals[i % 5]} {x} 121 {z} {{NoAI:1b,PersistenceRequired:1b,Silent:1b,Invulnerable:1b}}")
+        c.append(f"summon minecraft:{animals[i % 5]} {x} 121 {z} {{NoAI:1b,PersistenceRequired:1b,Silent:1b,Invulnerable:1b,Tags:[\"cb\"]}}")
     for i in range(15):
         c.append(f"setblock {-14 + i * 2} 121 14 minecraft:chest[facing=north]")
         c.append(sign(-14 + i * 2, 121, -14, i, 0))
@@ -209,6 +211,14 @@ def write_datapack(dp):
             c.append(sign(7982 + i, 123, z, 1000 + row * 15 + i))
             c.append(sign(7982 + i, 121, z + 1, 2000 + row * 15 + i, 0))
     (fn / "build_mixed.mcfunction").write_text("\n".join(c) + "\n")
+
+    # entities in their own function, so a scene that lost them can be re-summoned without rebuilding it
+    for build in list(fn.glob("build_*.mcfunction")):
+        lines = build.read_text().splitlines()
+        build.write_text("\n".join(l for l in lines if not l.startswith("summon ")) + "\n")
+        summons = [l for l in lines if l.startswith("summon ")]
+        if summons:
+            (fn / build.name.replace("build_", "summon_")).write_text("\n".join(summons) + "\n")
 
     (fn / "tick.mcfunction").write_text(
         "execute if entity @a[x=7950,y=0,z=-50,dx=100,dy=300,dz=100] run particle minecraft:flame 8000 124 0 12 2 12 0.02 40 normal\n"
@@ -319,14 +329,76 @@ class Server:
         for s in SCENES:
             x, z = int(s["x"]), int(s["z"])
             self.send(f"forceload add {x - 40} {z - 40} {x + 40} {z + 40}")
-        time.sleep(15)  # let the forced chunks generate and load
-        if not built:
-            for name in ["normal", "mobs", "market", "players", "mixed"]:
-                self.send(f"function cakebench:build_{name}")
-                time.sleep(3)
-            (SERVER / "world" / "cakebench-built").write_text("built\n")
+            # a build into chunks that aren't loaded yet fails silently, so wait until the whole area is
+            for cx, cz in [(x - 40, z - 40), (x + 40, z + 40), (x - 40, z + 40), (x + 40, z - 40)]:
+                self.wait_until(f"execute if loaded {cx} 120 {cz}", 300)
+            if not built:
+                self.send(f"function cakebench:build_{s['name']}")
+                time.sleep(2)
+        time.sleep(5)  # entity storage loads after the chunk itself
+        self.summon_missing()
+        self.verify()
+        (SERVER / "world" / "cakebench-built").write_text("built\n")
         self.spawn_bots()
         return self
+
+    def wait_until(self, test, timeout):
+        """Repeat an `execute if ...` test on the console until it passes."""
+        end = time.time() + timeout
+        while time.time() < end:
+            if self.test(test) is not None:
+                return
+            time.sleep(1)
+        sys.exit(f"server: '{test}' never passed")
+
+    def test(self, test):
+        """Run an `execute if ...` test; returns the count when it passes, else None."""
+        mark = len(self.lines)
+        self.send(test)
+        end = time.time() + 5
+        while time.time() < end:
+            for line in self.lines[mark:]:
+                m = re.search(r"Test passed(?:, count: (\d+))?", line)
+                if m:
+                    return int(m.group(1) or 1)
+                if "Test failed" in line:
+                    return None
+            time.sleep(0.1)
+        return None
+
+    # scene -> (box corner x, z) and how many entities it holds (60 x 40 x 60 box from y=110)
+    ENTITIES = {"normal": ((-30, -30), 20), "mobs": ((1970, -30), 300), "mixed": ((7970, -30), 100)}
+
+    def count(self, scene):
+        (x, z), _ = self.ENTITIES[scene]
+        return self.test(f"execute if entity @e[tag=cb,x={x},y=110,z={z},dx=60,dy=40,dz=60]") or 0
+
+    def summon_missing(self):
+        """Summoned entities can be lost while a chunk's entity storage is still loading; put back what's missing."""
+        for scene, ((x, z), want) in self.ENTITIES.items():
+            for _ in range(3):
+                if self.count(scene) == want:
+                    break
+                self.send(f"kill @e[tag=cb,x={x},y=110,z={z},dx=60,dy=40,dz=60]")
+                self.send(f"function cakebench:summon_{scene}")
+                time.sleep(3)
+
+    def verify(self):
+        """Every scene must hold what it was built with; stop rather than measure a half-built scene."""
+        problems = []
+        for scene, (_, want) in self.ENTITIES.items():
+            got = self.count(scene)
+            print(f"  scene check: {scene} entities {got}/{want}")
+            if got != want:
+                problems.append(f"{scene}: {got} entities instead of {want}")
+        for pos, block in [("3970 121 -30", "barrel"), ("3989 123 6", "barrel"), ("3989 124 6", "oak_sign"),
+                           ("3970 121 7", "oak_sign"), ("1983 127 -17", "stone_bricks"), ("8001 122 17", "barrel"),
+                           ("-14 121 14", "chest"), ("6020 120 20", "smooth_stone")]:
+            if self.test(f"execute if block {pos} minecraft:{block}") is None:
+                problems.append(f"no {block} at {pos}")
+        if problems:
+            sys.exit("bench world is incomplete (delete tools/bench/work/server/world and run setup):\n  "
+                     + "\n  ".join(problems))
 
     def spawn_bots(self):
         armor = ["diamond_helmet", "diamond_chestplate", "netherite_leggings", "iron_boots"]
@@ -444,31 +516,77 @@ def cmd_batch(args):
     batch = args.name or f"{datetime.date.today().isoformat()}-{pathlib.Path(args.sets).stem}"
     measure, warmup = sets.get("measureSeconds", 30), sets.get("warmupSeconds", 10)
     per_run = 90 + len(SCENES) * (warmup + measure)
-    repeats = {s["name"]: s.get("repeats", args.repeats) for s in sets["sets"]}  # a set may ask for more
+    # a cool laptop boosts harder: the first run of a batch only warms it up and isn't reported
+    all_sets = [{"name": "_warmup", "why": "warms the laptop up; not reported"}] + sets["sets"]
+    repeats = {s["name"]: s.get("repeats", args.repeats) for s in all_sets}  # a set may ask for more
     total = sum(repeats.values()) * per_run
-    print(f"Batch {batch}: {len(sets['sets'])} sets, {sum(repeats.values())} runs, about {total / 3600:.1f} h")
+    print(f"Batch {batch}: {len(all_sets)} sets, {sum(repeats.values())} runs, about {total / 3600:.1f} h")
     with Server() as server:
-        for s in sets["sets"]:
+        for s in all_sets:
             for r in range(1, repeats[s["name"]] + 1):
                 run = f"{s['name']}#{r}"
                 if (RESULTS / batch / run / "summary.json").exists():
                     continue  # resume a stopped batch
                 reset_instance(s)
-                print(f"  {run} ...", flush=True)
+                power = power_state()
+                print(f"  {run} ({power}) ...", flush=True)
                 result = run_client(server, {"batch": batch, "run": run, "scenes": SCENES, "measureSeconds": measure,
-                                             "warmupSeconds": warmup, "notes": {"set": s}}, timeout=per_run + 300)
+                                             "warmupSeconds": warmup, "notes": {"set": s, "power": power}},
+                                    timeout=per_run + 300)
                 if result:
-                    print("   ", {k: v["avgFps"] for k, v in result["scenes"].items()})
+                    print("   ", {k: v["avgFps"] for k, v in result["scenes"].items()},
+                          *(["FLAGGED: " + "; ".join(flags(result))] if flags(result) else []))
     print(f"Done. python tools/bench/bench.py report {batch}")
+
+
+def cmd_serve(args):
+    """The bench server with every scene and fake player, for looking around by hand; stops when work/stop exists."""
+    stop = WORK / "stop"
+    stop.unlink(missing_ok=True)
+    with Server():
+        print(f"Bench server up on 127.0.0.1:{PORT}. Scenes (use /tp in game):")
+        for s in SCENES:
+            print(f"  {s['name']}: /tp @s {s['x']} {s['y']} {s['z']} {s['yaw']} {s['pitch']}")
+        print(f"Create {stop} to stop it.", flush=True)
+        while not stop.exists():
+            time.sleep(2)
+    stop.unlink(missing_ok=True)
+
+
+def power_state():
+    """'AC 100%' or 'battery 63%': a laptop on battery throttles, so such runs aren't comparable."""
+    out = ps("Add-Type -AssemblyName System.Windows.Forms; $p = [System.Windows.Forms.SystemInformation]::PowerStatus; "
+             "\"$($p.PowerLineStatus) $([int]($p.BatteryLifePercent * 100))\"").stdout.split()
+    if len(out) < 2:
+        return "unknown"
+    return f"{'AC' if out[0] == 'Online' else 'battery'} {out[1]}%"
+
+
+def flags(result):
+    """Reasons a run can't be compared with the others."""
+    out = []
+    power = result.get("notes", {}).get("power", "")
+    if power and not power.startswith("AC"):
+        out.append(f"power: {power}")
+    for name, sc in result["scenes"].items():
+        if sc.get("unfocusedFrames") or sc.get("minimizedFrames"):
+            out.append(f"{name}: window unfocused {sc.get('unfocusedFrames', 0)} / minimized "
+                       f"{sc.get('minimizedFrames', 0)} of {sc['frames']} frames")
+    return out
 
 
 # --- report ----------------------------------------------------------------------------------------------------
 
 def cmd_report(args):
     base = RESULTS / args.batch
-    runs = {}
+    runs, flagged = {}, []
     for summary in sorted(base.glob("*/summary.json")):
         s = json.loads(summary.read_text())
+        if s["run"].startswith("_"):
+            continue
+        if flags(s):
+            flagged.append((s["run"], flags(s)))
+            continue  # left out of the medians
         runs.setdefault(s["run"].split("#")[0], []).append(s)
     if not runs:
         sys.exit(f"no results in {base}")
@@ -501,6 +619,8 @@ def cmd_report(args):
                 cells.append(cell)
             lines.append(f"| {name} | {len(rs)} | " + " | ".join(cells) + " |")
         lines.append("")
+    if flagged:
+        lines += ["## Left out", ""] + [f"- {run}: {'; '.join(why)}" for run, why in flagged] + [""]
     lines += ["## Sets", ""]
     for name, rs in runs.items():
         s = rs[0]["notes"].get("set", {})
@@ -524,10 +644,11 @@ def main():
     b.add_argument("sets")
     b.add_argument("--repeats", type=int, default=1)
     b.add_argument("--name")
+    sub.add_parser("serve")
     r = sub.add_parser("report")
     r.add_argument("batch")
     args = p.parse_args()
-    {"setup": cmd_setup, "gpu": cmd_gpu, "batch": cmd_batch, "report": cmd_report}[args.cmd](args)
+    {"setup": cmd_setup, "gpu": cmd_gpu, "batch": cmd_batch, "serve": cmd_serve, "report": cmd_report}[args.cmd](args)
 
 
 if __name__ == "__main__":

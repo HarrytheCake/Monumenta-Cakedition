@@ -13,6 +13,7 @@ import net.minecraft.client.gui.screen.multiplayer.ConnectScreen;
 import net.minecraft.client.network.ServerAddress;
 import net.minecraft.client.network.ServerInfo;
 import net.minecraft.client.network.ClientPlayerEntity;
+import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -65,6 +66,7 @@ public final class CakeBench implements ClientModInitializer {
 	private static int frameCount;
 	private static long gcCount0, gcMillis0;
 	private static long heapPeak;
+	private static int unfocusedFrames, minimizedFrames;
 	private static final Map<String, Object> results = new LinkedHashMap<>();
 
 	@Override
@@ -132,6 +134,8 @@ public final class CakeBench implements ClientModInitializer {
 				if (elapsed >= plan.warmupSeconds) {
 					frameCount = 0;
 					heapPeak = 0;
+					unfocusedFrames = 0;
+					minimizedFrames = 0;
 					long[] gc = gc();
 					gcCount0 = gc[0];
 					gcMillis0 = gc[1];
@@ -141,6 +145,13 @@ public final class CakeBench implements ClientModInitializer {
 			case MEASURE -> {
 				turn(player, plan.warmupSeconds + elapsed);
 				record(dt / 1e6f);
+				// a covered, minimized or unfocused window renders differently: count it so such runs can be flagged
+				if (!client.isWindowFocused()) {
+					unfocusedFrames++;
+				}
+				if (GLFW.glfwGetWindowAttrib(client.getWindow().getHandle(), GLFW.GLFW_ICONIFIED) != 0) {
+					minimizedFrames++;
+				}
 				if ((frameCount & 63) == 0) {
 					Runtime rt = Runtime.getRuntime();
 					heapPeak = Math.max(heapPeak, rt.totalMemory() - rt.freeMemory());
@@ -186,6 +197,11 @@ public final class CakeBench implements ClientModInitializer {
 		r.put("gcCount", gc[0] - gcCount0);
 		r.put("gcMillis", gc[1] - gcMillis0);
 		r.put("heapPeakMB", heapPeak >> 20);
+		r.put("unfocusedFrames", unfocusedFrames);
+		r.put("minimizedFrames", minimizedFrames);
+		// what the client actually had: an empty or half-built scene shows here
+		r.put("entitiesLoaded", client.world.getRegularEntityCount());
+		r.put("entitiesDebug", client.worldRenderer.getEntitiesDebugString());
 		results.put(s.name(), r);
 		Path dir = Path.of(plan.out, plan.run);
 		try {
