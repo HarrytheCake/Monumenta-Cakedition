@@ -296,7 +296,7 @@ metafile = true
 
 [[files]]
 file = "mods/cakeupdater.pw.toml"
-hash = "94da361f3db2f1e0b0f2a5e7aac620c841d335e3e44fe51eb17fdf9026385e33"
+hash = "ef7430fb9551f7df7bbcb2c1cc2a4972012d3c8d2bb5e105e873e78ddb24d331"
 metafile = true
 
 [[files]]
