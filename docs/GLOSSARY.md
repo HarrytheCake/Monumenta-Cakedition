@@ -44,6 +44,18 @@ _Avoid_: Minimum specs, potato
 A fixed place and activity on Monumenta where client lag is measured before and after a change: a crowded hub, a shard with many mobs, a dungeon fight full of particles, the Market shard full of barrels and signs.
 _Avoid_: Test world, benchmark (alone)
 
+**Render phase**:
+One named part of drawing a frame, as the game's own profiler names it (terrain, entities, block entities, GUI, presenting the frame); client lag is broken down by render phase to see where a frame's time goes.
+_Avoid_: Render pass, stage
+
+**Timed run**:
+A benchmark run that measures FPS and frame times with no measuring tools attached; only timed runs are compared with each other.
+_Avoid_: Benchmark (alone)
+
+**Breakdown run**:
+A benchmark run with a measuring tool attached (GPU timers per render phase, a CPU profiler), done to explain a timed run's numbers; its own FPS is never compared, since the tool costs some.
+_Avoid_: Profiling run (when GPU timers are meant), debug run
+
 **Dev instance**:
 The pack author's local launcher instance, where the pack is changed and tried first.
 _Avoid_: Instance (alone), workspace
