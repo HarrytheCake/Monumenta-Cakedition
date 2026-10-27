@@ -50,6 +50,8 @@ public final class CakeBench implements ClientModInitializer {
 		int warmupSeconds = 20;
 		int measureSeconds = 60;
 		float turnDegreesPerSecond = 6;
+		boolean gpuTimers; // per-phase GPU/CPU time (GpuTimer); off for timed runs, the queries cost a little
+		int gpuTimerDepth = 4;
 		List<Scene> scenes = List.of();
 		Map<String, Object> notes = Map.of();
 	}
@@ -82,6 +84,9 @@ public final class CakeBench implements ClientModInitializer {
 			return;
 		}
 		LOG.info("CakeBench plan '{}': {} scenes", plan.run, plan.scenes.size());
+		if (plan.gpuTimers) {
+			GpuTimer.enable(plan.gpuTimerDepth);
+		}
 		// 1.20 ignores the launcher's --server argument, so join the bench server from the title screen ourselves
 		ScreenEvents.AFTER_INIT.register((client, screen, w, h) -> {
 			if (screen instanceof TitleScreen && phase == Phase.IDLE && !connecting && plan.server != null) {
@@ -139,6 +144,7 @@ public final class CakeBench implements ClientModInitializer {
 					long[] gc = gc();
 					gcCount0 = gc[0];
 					gcMillis0 = gc[1];
+					GpuTimer.start();
 					start(Phase.MEASURE);
 				}
 			}
@@ -193,6 +199,7 @@ public final class CakeBench implements ClientModInitializer {
 		Scene s = plan.scenes.get(scene);
 		float[] f = Arrays.copyOf(frames, frameCount);
 		long[] gc = gc();
+		Map<String, Object> gpu = GpuTimer.stop();
 		Map<String, Object> r = stats(f, seconds);
 		r.put("gcCount", gc[0] - gcCount0);
 		r.put("gcMillis", gc[1] - gcMillis0);
@@ -202,6 +209,9 @@ public final class CakeBench implements ClientModInitializer {
 		// what the client actually had: an empty or half-built scene shows here
 		r.put("entitiesLoaded", client.world.getRegularEntityCount());
 		r.put("entitiesDebug", client.worldRenderer.getEntitiesDebugString());
+		if (gpu != null) {
+			r.put("gpu", gpu);
+		}
 		results.put(s.name(), r);
 		Path dir = Path.of(plan.out, plan.run);
 		try {

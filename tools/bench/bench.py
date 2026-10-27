@@ -2,7 +2,7 @@
 
     python tools/bench/bench.py setup                  # server + Carpet, bench JDK copy, "Cakedition Bench" instance
     python tools/bench/bench.py gpu igpu|default       # Windows GPU preference for the bench JDK only
-    python tools/bench/bench.py batch <sets.json> [--repeats N] [--name NAME]
+    python tools/bench/bench.py batch <sets.json> [--repeats N] [--name NAME] [--gpu-timers]
     python tools/bench/bench.py report <batch name>    # docs/benchmarks/<batch name>.md
     python tools/bench/bench.py serve                  # the bench server alone, to look around by hand
 
@@ -461,6 +461,9 @@ def reset_instance(mod_set):
             shutil.rmtree(MC / part)
         shutil.copytree(STATE / part, MC / part)
     shutil.copy(STATE / "options.txt", MC / "options.txt")
+    for old in (MC / "mods").glob("cakebench-*.jar"):  # the newest CakeBench build, not the one primed with
+        old.unlink()
+    shutil.copy(bench_jar(), MC / "mods" / bench_jar().name)
     for prefix in mod_set.get("remove", []):
         hits = [p for p in (MC / "mods").glob("*.jar") if p.name.lower().startswith(prefix.lower())]
         if not hits:
@@ -515,6 +518,8 @@ def cmd_batch(args):
     sets = json.loads(pathlib.Path(args.sets).read_text(encoding="utf-8"))
     batch = args.name or f"{datetime.date.today().isoformat()}-{pathlib.Path(args.sets).stem}"
     measure, warmup = sets.get("measureSeconds", 30), sets.get("warmupSeconds", 10)
+    # per-phase GPU/CPU time: a breakdown batch of its own, since the queries cost a little FPS
+    gpu_timers = args.gpu_timers or sets.get("gpuTimers", False)
     per_run = 90 + len(SCENES) * (warmup + measure)
     # a cool laptop boosts harder: the first run of a batch only warms it up and isn't reported
     all_sets = [{"name": "_warmup", "why": "warms the laptop up; not reported"}] + sets["sets"]
@@ -531,7 +536,8 @@ def cmd_batch(args):
                 power = power_state()
                 print(f"  {run} ({power}) ...", flush=True)
                 result = run_client(server, {"batch": batch, "run": run, "scenes": SCENES, "measureSeconds": measure,
-                                             "warmupSeconds": warmup, "notes": {"set": s, "power": power}},
+                                             "warmupSeconds": warmup, "gpuTimers": gpu_timers,
+                                             "notes": {"set": s, "power": power, "gpuTimers": gpu_timers}},
                                     timeout=per_run + 300)
                 if result:
                     print("   ", {k: v["avgFps"] for k, v in result["scenes"].items()},
@@ -619,6 +625,7 @@ def cmd_report(args):
                 cells.append(cell)
             lines.append(f"| {name} | {len(rs)} | " + " | ".join(cells) + " |")
         lines.append("")
+    lines += gpu_report(runs, scenes)
     if flagged:
         lines += ["## Left out", ""] + [f"- {run}: {'; '.join(why)}" for run, why in flagged] + [""]
     lines += ["## Sets", ""]
@@ -633,6 +640,36 @@ def cmd_report(args):
     print(out.relative_to(ROOT).as_posix())
 
 
+def gpu_report(runs, scenes, rows=15):
+    """Per scene: the phases with the most GPU time, 'GPU / CPU' ms per frame for each set (medians over repeats)."""
+    if not any("gpu" in sc for rs in runs.values() for r in rs for sc in r["scenes"].values()):
+        return []
+    lines = ["## Time per render phase (GPU timers)", "",
+             "> These runs had GPU timer queries on, so their FPS isn't comparable with timed batches. Each cell is",
+             "> GPU / CPU ms per frame. A GPU interval also holds time the GPU spent waiting for the CPU: GPU well",
+             "> above CPU means the phase is GPU-bound; about equal means the GPU kept up. Approximate on Intel.", ""]
+    for sc in scenes:
+        def phase(rs, name, key):
+            vals = [r["scenes"][sc]["gpu"]["phases"][name][key] for r in rs
+                    if "gpu" in r["scenes"].get(sc, {}) and name in r["scenes"][sc]["gpu"]["phases"]]
+            return statistics.median(vals) if vals else None
+        names = {n for rs in runs.values() for r in rs for n in r["scenes"].get(sc, {}).get("gpu", {}).get("phases", {})}
+        if not names:
+            continue
+        order = sorted(names, key=lambda n: -max(phase(rs, n, "gpuMs") or 0 for rs in runs.values()))[:rows]
+        lines += [f"### {sc}", "", "| Phase | " + " | ".join(runs) + " |", "|---|" + "---|" * len(runs)]
+        for n in order:
+            cells = []
+            for rs in runs.values():
+                g, c = phase(rs, n, "gpuMs"), phase(rs, n, "cpuMs")
+                cells.append("–" if g is None else f"{g:.2f} / {c:.2f}")
+            lines.append(f"| `{n}` | " + " | ".join(cells) + " |")
+        dropped = sum(r["scenes"][sc]["gpu"]["framesDropped"] for rs in runs.values() for r in rs if "gpu" in r["scenes"].get(sc, {}))
+        read = sum(r["scenes"][sc]["gpu"]["framesRead"] for rs in runs.values() for r in rs if "gpu" in r["scenes"].get(sc, {}))
+        lines += ["", f"{read} frames read back, {dropped} dropped (results late, or too many sections in one frame).", ""]
+    return lines
+
+
 def main():
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -644,6 +681,7 @@ def main():
     b.add_argument("sets")
     b.add_argument("--repeats", type=int, default=1)
     b.add_argument("--name")
+    b.add_argument("--gpu-timers", action="store_true", help="per-phase GPU/CPU time (CakeBench GpuTimer)")
     sub.add_parser("serve")
     r = sub.add_parser("report")
     r.add_argument("batch")
