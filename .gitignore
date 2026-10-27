@@ -8,6 +8,8 @@
 !/updater/
 !/caketext/
 !/.github/
+!/GLOSSARY-MAP.md
+!/docs/
 __pycache__/
 updater/.gradle/
 updater/build/

@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "c4a2383a03bdb6739d16a0e24058e4b9c7da4e63d203e0be2f448868cc03c530"
+hash = "fe650098093fad42070e8a2cacfb216a6c416af57bd26dd6ff479fef69f8bc71"
 
 [[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
