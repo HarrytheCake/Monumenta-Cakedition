@@ -23,3 +23,4 @@ tools/bench/work/
 tools/bench/mod/.gradle/
 tools/bench/mod/build/
 tools/bench/mod/run/
+tools/bench/mod/bin/
