@@ -19,3 +19,7 @@ updater/.vscode/
 updater/.settings/
 updater/.project
 updater/.classpath
+tools/bench/work/
+tools/bench/mod/.gradle/
+tools/bench/mod/build/
+tools/bench/mod/run/

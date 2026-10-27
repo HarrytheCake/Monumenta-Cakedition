@@ -1,0 +1,9 @@
+{
+	"required": true,
+	"package": "io.github.harrythecake.cakebench.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"client": ["MinecraftClientMixin"],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

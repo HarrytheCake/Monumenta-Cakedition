@@ -1,0 +1,81 @@
+{
+ "measureSeconds": 30,
+ "sets": [
+  {
+   "name": "baseline",
+   "why": "the 2.2.1 pack as shipped; 3 runs to measure the noise",
+   "repeats": 3
+  },
+  {
+   "name": "+entityculling",
+   "why": "skip mobs and block entities behind walls",
+   "add": [
+    "7w0DgYXF"
+   ]
+  },
+  {
+   "name": "+ferritecore",
+   "why": "less memory, fewer GC pauses",
+   "add": [
+    "pguEMpy9"
+   ]
+  },
+  {
+   "name": "+dynamicfps",
+   "why": "no in-game gain expected; must not cost focused FPS",
+   "add": [
+    "TBg9M5dN"
+   ]
+  },
+  {
+   "name": "+badoptimizations",
+   "why": "small render and lightmap savings",
+   "add": [
+    "2j7ZpIyw"
+   ]
+  },
+  {
+   "name": "-lithium",
+   "why": "mostly server-side logic",
+   "remove": [
+    "lithium-fabric"
+   ]
+  },
+  {
+   "name": "-c2me",
+   "why": "mostly world generation and chunk IO",
+   "remove": [
+    "c2me-fabric"
+   ]
+  },
+  {
+   "name": "-fasterrandom",
+   "why": "small gain at best",
+   "remove": [
+    "fasterrandom"
+   ]
+  },
+  {
+   "name": "-experimentalperformance",
+   "why": "unclear gain",
+   "remove": [
+    "experimentalPerformance"
+   ]
+  },
+  {
+   "name": "-lambdynamiclights",
+   "why": "cosmetic; Q74: optional if it costs over 10%",
+   "remove": [
+    "lambdynamiclights"
+   ]
+  },
+  {
+   "name": "imf-signbuffer",
+   "why": "ImmediatelyFast experimental sign text buffering on",
+   "files": {
+    "config/immediatelyfast.json": "{\n  \"REGULAR_INFO\": \"----- Regular config values below -----\",\n  \"font_atlas_resizing\": true,\n  \"map_atlas_generation\": true,\n  \"hud_batching\": true,\n  \"fast_text_lookup\": true,\n  \"fast_buffer_upload\": true,\n  \"COSMETIC_INFO\": \"----- Cosmetic only config values below (Does not optimize anything) -----\",\n  \"dont_add_info_into_debug_hud\": false,\n  \"EXPERIMENTAL_INFO\": \"----- Experimental config values below (Rendering glitches may occur) -----\",\n  \"experimental_disable_error_checking\": true,\n  \"experimental_disable_resource_pack_conflict_handling\": true,\n  \"experimental_sign_text_buffering\": true,\n  \"experimental_screen_batching\": false,\n  \"DEBUG_INFO\": \"----- Debug only config values below (Do not touch) -----\",\n  \"debug_only_and_not_recommended_disable_universal_batching\": false,\n  \"debug_only_and_not_recommended_disable_mod_conflict_handling\": false,\n  \"debug_only_and_not_recommended_disable_hardware_conflict_handling\": false,\n  \"debug_only_print_additional_error_information\": false,\n  \"debug_only_use_last_usage_for_batch_ordering\": false\n}"
+   }
+  }
+ ],
+ "warmupSeconds": 10
+}

@@ -1,0 +1,21 @@
+{
+	"schemaVersion": 1,
+	"id": "cakebench",
+	"version": "${version}",
+	"name": "CakeBench",
+	"description": "Benchmark harness for Monumenta Cakedition: follows config/cakebench/plan.json through the scenes, records every frame's time and quits. Does nothing without a plan. Never shipped in the pack.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["io.github.harrythecake.cakebench.BenchServer"],
+		"client": ["io.github.harrythecake.cakebench.CakeBench"]
+	},
+	"mixins": ["cakebench.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

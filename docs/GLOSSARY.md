@@ -32,6 +32,18 @@ _Avoid_: Using it for the mod (that is always "CakeText Translator" in full)
 Our optional mod that shows translations in game; always named in full in player-facing text.
 _Avoid_: The Translator, translator mod
 
+**Client lag**:
+Slowness the player's own machine causes: mainly low FPS and stutter (frame-time spikes); slow shard switches and memory pauses only when severe. Ping and server lag are not client lag.
+_Avoid_: Lag (alone)
+
+**Low tier**:
+The modest machine the pack's shipped defaults must run smoothly on: integrated graphics, 8 GB RAM, 4 GB of it for Minecraft.
+_Avoid_: Minimum specs, potato
+
+**Benchmark scene**:
+A fixed place and activity on Monumenta where client lag is measured before and after a change: a crowded hub, a shard with many mobs, a dungeon fight full of particles, the Market shard full of barrels and signs.
+_Avoid_: Test world, benchmark (alone)
+
 **Dev instance**:
 The pack author's local launcher instance, where the pack is changed and tried first.
 _Avoid_: Instance (alone), workspace
