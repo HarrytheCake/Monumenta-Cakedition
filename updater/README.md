@@ -19,6 +19,8 @@ After the game exits, a terminal window runs packwiz-installer and tells you whe
 
 **Default files.** Files in `config/cakeupdater/defaults/` are copied into the game folder when they don't exist yet, like YOSBR does for configs. Ship `servers.dat` this way in a `.mrpack`, and a launcher update will never replace a player's server list.
 
+**Updating a `.mrpack` install.** packwiz-installer only manages files it installed itself, so on a `.mrpack` install's first update it would leave renamed jars next to their new versions (two copies of a mod, and the game won't start) and reset optional mods to the pack's defaults. Ship `config/cakeupdater/adoption.json` in the `.mrpack`: every file it installs, in `packwiz.json`'s form (the Cakedition pack's `tools/mrpack.py` writes it). Before that first update the mod writes `packwiz.json` from it, with each optional mod on exactly when its file is there, so mods update in place, removed mods go, the player's choices stay and files the pack didn't ship are never touched.
+
 Chat text and the updater window are in English, Simplified Chinese and Traditional Chinese.
 
 ## Requirements
@@ -26,7 +28,7 @@ Chat text and the updater window are in English, Simplified Chinese and Traditio
 - Minecraft 1.20.4, Fabric Loader 0.15+, Java 17+
 - [Fabric API](https://modrinth.com/mod/fabric-api)
 - Optional: [Mod Menu](https://modrinth.com/mod/modmenu) for the backups screen (`/cakeupdate backups` works without it)
-- For modpack updates: an install made with packwiz-installer (it reads `packwiz.json`), or a `.mrpack` install that includes `config/cakeupdater/pack-version.txt`
+- For modpack updates: an install made with packwiz-installer (it reads `packwiz.json`), or a `.mrpack` install that includes `config/cakeupdater/pack-version.txt` (and `adoption.json`, see above)
 - For modpack updates: `packwiz-installer-bootstrap.jar` in the game folder. A packwiz install already has it, because the launcher's pre-launch command runs it. The mod never downloads it; if it's missing, the chat offers **[Open game folder]** and **[Download page]** instead of the update buttons.
 
 ## Commands

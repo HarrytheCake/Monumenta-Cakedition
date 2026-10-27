@@ -8,6 +8,9 @@
   files (servers.dat): they go to config/cakeupdater/defaults/, so a launcher's update never replaces them.
 - packwiz-installer-bootstrap.jar (MIT, pinned v0.0.3) is added as an override with its license, so
   Cakedition Updater can update a .mrpack install without downloading anything itself.
+- config/cakeupdater/adoption.json lists every file the .mrpack installs, in packwiz.json's form. Cakedition
+  Updater 1.4.1+ turns it into packwiz.json before the install's first update, so packwiz-installer replaces renamed
+  jars instead of adding a second copy, and keeps the player's optional-mod choices.
 """
 import hashlib
 import json
@@ -25,6 +28,7 @@ BOOTSTRAP = "packwiz-installer-bootstrap.jar"
 BOOTSTRAP_URL = "https://github.com/packwiz/packwiz-installer-bootstrap/releases/download/v0.0.3/" + BOOTSTRAP
 BOOTSTRAP_SHA256 = "a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
 BOOTSTRAP_LICENSE_URL = "https://raw.githubusercontent.com/packwiz/packwiz-installer-bootstrap/v0.0.3/LICENSE"
+ADOPTION = "config/cakeupdater/adoption.json"
 
 
 def fetch(url, data=None):
@@ -44,9 +48,14 @@ def env(meta):
 def main():
     pack = packwiz_sync.parse_toml((PACK / "pack.toml").read_text(encoding="utf-8"))
     version = pack["version"]
-    # index.toml lists every file in the pack (`file = "..."` once per [[files]] entry)
-    rels = [line.split("=", 1)[1].strip().strip('"') for line in (PACK / "index.toml").read_text(encoding="utf-8").splitlines()
-            if line.startswith("file = ")]
+    # index.toml lists every file in the pack: `file = "..."` then its sha256 `hash = "..."`, once per [[files]] entry
+    index_hash = {}
+    for line in (PACK / "index.toml").read_text(encoding="utf-8").splitlines():
+        if line.startswith("file = "):
+            rel = line.split("=", 1)[1].strip().strip('"')
+        elif line.startswith("hash = "):
+            index_hash[rel] = line.split("=", 1)[1].strip().strip('"')
+    rels = list(index_hash)
 
     metas = {}
     overrides = []
@@ -60,6 +69,7 @@ def main():
     known = json.loads(fetch("https://api.modrinth.com/v2/version_files",
                              json.dumps({"hashes": list(by_sha512), "algorithm": "sha512"}).encode()))
     files = []
+    adoption = {}
     for rel, m in sorted(metas.items()):
         dl = m["download"]
         info = None
@@ -79,6 +89,16 @@ def main():
             "downloads": [dl["url"]],
             "fileSize": size,
         })
+        if m.get("side", "both") != "server":
+            adoption[rel] = {
+                "hash": {"type": "sha256", "value": index_hash[rel]},
+                "linkedFileHash": {"type": dl["hash-format"], "value": dl["hash"]},
+                "cachedLocation": files[-1]["path"],
+                **({"isOptional": True} if m.get("option", {}).get("optional", False) else {}),
+            }
+    for rel in overrides:
+        if rel not in packwiz_sync.PRESERVE:  # installed elsewhere (defaults), so packwiz-installer must not own it
+            adoption[rel] = {"hash": {"type": "sha256", "value": index_hash[rel]}, "cachedLocation": rel}
 
     bootstrap = fetch(BOOTSTRAP_URL)
     if hashlib.sha256(bootstrap).hexdigest() != BOOTSTRAP_SHA256:
@@ -105,7 +125,8 @@ def main():
             z.write(PACK / rel, f"overrides/{dst}")
         z.writestr(f"overrides/{BOOTSTRAP}", bootstrap)
         z.writestr("overrides/packwiz-installer-bootstrap-LICENSE.txt", bootstrap_license)
-    print(f"{out.relative_to(packwiz_sync.ROOT).as_posix()}: {len(files)} downloads, {len(overrides) + 2} overrides, "
+        z.writestr(f"overrides/{ADOPTION}", json.dumps({"files": adoption}, indent=1, ensure_ascii=False))
+    print(f"{out.relative_to(packwiz_sync.ROOT).as_posix()}: {len(files)} downloads, {len(overrides) + 3} overrides, "
           f"{out.stat().st_size >> 10} KB")
 
 

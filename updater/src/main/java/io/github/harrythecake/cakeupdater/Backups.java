@@ -47,7 +47,7 @@ final class Backups {
 	private static final long MAX_FILE = 4L << 20;
 	/** Pack-managed or regenerated files. Restoring pack-version.txt would bring the update notice back. */
 	private static final List<String> SKIP = List.of("yosbr/", "cakeupdater/pack-version.txt", "cakeupdater/defaults/",
-			"caketext/models/");
+			"cakeupdater/adoption.json", "caketext/models/");
 	private static final DateTimeFormatter NAME = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
 
 	/** A dated backup. {@code kind} is "update" (made before a modpack update) or "restore" (made before a restore). */

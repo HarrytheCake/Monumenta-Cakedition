@@ -64,6 +64,10 @@ _Avoid_: Hotfix, forced update (nothing is ever forced)
 One downloadable file that installs a single pack version in a launcher, in a platform's modpack format (Modrinth `.mrpack`, CurseForge modpack file).
 _Avoid_: mrpack (as the general term), export
 
+**Adoption**:
+The one-time step where an install made from a pack file starts following the update channel, keeping the player's optional-mod choices and never touching files the pack didn't ship.
+_Avoid_: Conversion, migration
+
 **Platform**:
 A site that lists the pack and hosts its pack files for players to find and install: Modrinth, and later CurseForge.
 _Avoid_: Store, launcher (a launcher only installs)

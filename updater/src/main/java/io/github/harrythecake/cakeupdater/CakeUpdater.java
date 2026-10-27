@@ -110,6 +110,11 @@ public class CakeUpdater implements ClientModInitializer {
 			}
 			if (updateOnClose) {
 				try {
+					Adoption.adopt(gameDir());
+				} catch (Exception e) {
+					LOGGER.error("Could not prepare the pack file install for its first update", e);
+				}
+				try {
 					HelperLauncher.launch(gameDir(), config.packwiz.packUrl, client.options.language, config.chatPrefix);
 				} catch (Exception e) {
 					LOGGER.error("Could not start the updater", e);

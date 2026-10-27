@@ -25,6 +25,7 @@ updater/
         ├── CakeUpdater.java          # entrypoint: events, /cakeupdate command, all chat text
         ├── CakeUpdaterPreLaunch.java # preLaunch entrypoint: leftover config restore, defaults (no Minecraft classes!)
         ├── Backups.java              # snapshot on close, update detection, restore, defaults, pruning (plain Java)
+        ├── Adoption.java             # .mrpack install's first update: packwiz.json from adoption.json (no MC classes)
         ├── BackupsScreen.java        # backups list with restore buttons (Mod Menu / /cakeupdate backups)
         ├── ModMenuEntry.java         # Mod Menu's configure button → BackupsScreen (Mod Menu optional, compileOnly)
         ├── Config.java               # config/cakeupdater/config.json5 (template + lenient Gson load)
@@ -51,7 +52,8 @@ ClientPlayConnectionEvents.JOIN (every join)
            ├─ /cakeupdate onclose  → updateOnClose = true   (+ [Cancel] → /cakeupdate cancel)
            └─ /cakeupdate now      → updateOnClose = true; client.send(disconnect + scheduleStop)
 ClientLifecycleEvents.CLIENT_STOPPING
- └─ if updateOnClose → HelperLauncher.launch(gameDir, packUrl, language, prefix)
+ └─ if updateOnClose → Adoption.adopt(gameDir)   (only if packwiz.json is missing and adoption.json exists; see below)
+                     → HelperLauncher.launch(gameDir, packUrl, language, prefix)
       1. copy mod jar → %TEMP%/cakeupdater-helper-*.jar   (so the update can replace the real jar)
       2. Windows: cmd /c start "<prefix> Updater" java.exe -cp <copy> Helper <pid> <gameDir> <url> <lang> <prefix>
          macOS:   temp .command script → open -a Terminal <script>
@@ -64,6 +66,15 @@ Helper.main
  5. print "Update finished! Start Minecraft again…" (or failure + exit code); wait for Enter
     no console → JOptionPane dialog instead
 ```
+
+### Adoption (1.4.1+): a `.mrpack` install's first update
+
+packwiz-installer only manages files listed in its own `packwiz.json`, which a `.mrpack` install doesn't have. Read in its source (`DownloadTask.kt`, `UpdateManager.kt`) and reproduced end to end on 2026-10-28, its first run there:
+- leaves a jar the pack has since renamed (a mod update) and adds the new one: **two copies of a mod, Fabric won't start**;
+- leaves mods the pack removed;
+- opens the optional-mod window with the pack's defaults, and deletes an optional mod the player had on unless they tick it again.
+
+So `tools/mrpack.py` ships `config/cakeupdater/adoption.json` = `{"files": {<index path>: <packwiz.json cachedFiles entry>}}` for every file the `.mrpack` installs: `hash` (the index's sha256), `linkedFileHash` + `cachedLocation` for metafiles, `isOptional` for optional ones (not `servers.dat`: the `.mrpack` puts it in defaults). `Adoption.adopt` writes `packwiz.json` from it: optional files are on (`optionValue: true`) when their file exists, else `{isOptional: true, optionValue: false}` (what packwiz-installer itself stores for an off option). **No `packFileHash`**, so `UpdateCheck.installedIdentity` stays `version:…` until packwiz-installer finishes and writes the hash; a failed update can't pass for a done one. Once `packwiz.json` exists, adoption never runs again.
 
 ### Backups (server list and configs)
 ```
@@ -176,6 +187,7 @@ The pack must only point at a release that already exists, which is why step 4 w
 - **`packwiz.json` `packFileHash`** is exactly `sha256` of the `pack.toml` bytes (verified).
 - **Modrinth** expects a project-identifying User-Agent (`Net.USER_AGENT`).
 - **Pre-launch must not load Minecraft classes** (they'd load before mixins apply). `CakeUpdaterPreLaunch` and `Backups` use their own slf4j logger and only the inlined `CakeUpdater.MOD_ID` constant; never `CakeUpdater.LOGGER` or `Config` there.
+- **Adoption is only as good as `adoption.json`:** it must describe exactly the `.mrpack` it ships in. A `.mrpack` without one (the 2.2.0 one, or another pack's) updates the old way, with the problems above.
 - **Never restore `pack-version.txt`** or yosbr defaults: the update notice would come back and pack defaults would go stale (`Backups.SKIP`).
 - **The mod downloads no code (1.3.0+).** It runs the `packwiz-installer-bootstrap.jar` a packwiz install already has in `.minecraft` (the launcher's pre-launch command needs it). Without it (e.g. a `.mrpack` install), `/cakeupdate`, `onclose` and `now` show [Open game folder] + [Download page] (`Helper.BOOTSTRAP_PAGE`) instead of updating, and `Helper` prints the same advice. Before 1.3.0 `Helper` downloaded bootstrap v0.0.3 itself; this was removed for mod-site rules. Its only network use is the update check (`pack.toml`, Modrinth API) and resource packs the player chooses to update.
 - **Logging:** Minecraft's log format omits logger names, so search logs for message text ("Modpack update check", "Resource pack update", "Starting updater").
@@ -192,6 +204,7 @@ Proven:
   - the `sh` script quoting
 - In game (Windows, Prism): the modpack "update now" flow and the resource pack 6.2.0 → 6.3.0 live swap.
 
+- Adoption end to end (2026-10-28): a 2.2.1 `.mrpack` installed like a launcher does (Iris on, minimap off, a player's own jar, an edited `servers.dat`), then updated by the real bootstrap + packwiz-installer (window mode, as `Helper` runs it) from a locally served pack with the Cakedition Updater jar renamed, Log Begone removed and the version bumped. Without adoption: two Cakedition Updater jars, Log Begone left. With adoption: one jar, Log Begone deleted, Iris kept, minimap still off, the player's jar and server list untouched, no option window, `packFileHash` written.
 - `Backups` out of game (2026-10-27, 41 checks in a fake game folder): snapshot skips, incremental sync and deletions, update detection once per change, server and config restore with safety backups, cancel, defaults only when missing, per-kind pruning.
 
 Not proven:
