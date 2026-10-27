@@ -87,7 +87,7 @@ The jar is written to `build/libs/cakeupdater-<version>.jar`.
 
 ## Releases
 
-GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with the jar. Download the mod from [Releases](https://github.com/HarrytheCake/CakeUpdater/releases).
+GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with the jar and its SHA-256 in the release notes. Download the mod from [Releases](https://github.com/HarrytheCake/CakeUpdater/releases).
 
 This repository is a mirror of the [`updater/` folder](https://github.com/HarrytheCake/Monumenta-Cakedition/tree/packwiz/updater) of Monumenta-Cakedition, where development happens. Developer notes are in [AGENTS.md](AGENTS.md).
 

@@ -1,5 +1,6 @@
 # Builds the .mrpack from pack/ (tools/mrpack.py) on every push to the packwiz branch that changes the pack,
-# and publishes it as release v<pack version>. Later pushes with the same version replace the file.
+# and publishes it as release v<pack version> with its SHA-256 in the notes. A released pack file never changes
+# (docs/adr/0002): later pushes with the same version only refresh the notes.
 name: mrpack
 
 on:
@@ -39,10 +40,18 @@ jobs:
           VERSION: ${{ steps.build.outputs.version }}
           FILE: ${{ steps.build.outputs.file }}
         run: |
+          NOTES="$RUNNER_TEMP/notes.md"
+          cp .github/release-notes.md "$NOTES"
           if gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
-            gh release upload "v$VERSION" "$FILE" --repo "$GITHUB_REPOSITORY" --clobber
-            gh release edit "v$VERSION" --repo "$GITHUB_REPOSITORY" --notes-file .github/release-notes.md
+            # A released pack file never changes (docs/adr/0002): keep it, refresh only the notes, with its own hash.
+            echo "::warning::v$VERSION is already released, so its pack file stays as it is; bump the version to publish pack changes."
+            gh release download "v$VERSION" --repo "$GITHUB_REPOSITORY" --pattern "*.mrpack" --dir "$RUNNER_TEMP/released"
+            FILE=$(ls "$RUNNER_TEMP"/released/*.mrpack)
+          fi
+          printf '\n---\n\n**SHA-256**\n```\n%s\n```\n' "$(cd "$(dirname "$FILE")" && sha256sum "$(basename "$FILE")")" >> "$NOTES"
+          if [ -n "$(ls "$RUNNER_TEMP"/released/*.mrpack 2>/dev/null)" ]; then
+            gh release edit "v$VERSION" --repo "$GITHUB_REPOSITORY" --notes-file "$NOTES"
           else
             gh release create "v$VERSION" "$FILE" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
-              --title "Monumenta Cakedition $VERSION" --notes-file .github/release-notes.md
+              --title "Monumenta Cakedition $VERSION" --notes-file "$NOTES"
           fi

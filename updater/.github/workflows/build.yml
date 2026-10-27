@@ -61,6 +61,9 @@ jobs:
             echo "v$VERSION is already released; bump mod_version for a new release."
             exit 0
           fi
+          # --notes goes before the generated notes
+          SUMS=$(sha256sum "cakeupdater-$VERSION.jar")
           gh release create "v$VERSION" "cakeupdater-$VERSION.jar" \
             --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
-            --title "Cakedition Updater $VERSION" --generate-notes
+            --title "Cakedition Updater $VERSION" --generate-notes \
+            --notes "$(printf '**SHA-256**\n```\n%s\n```\n' "$SUMS")"

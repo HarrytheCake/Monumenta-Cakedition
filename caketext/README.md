@@ -58,7 +58,7 @@ Get the jars from [Releases](https://github.com/HarrytheCake/CakeText/releases).
 
 The jars are written to `collector/build/libs/` and `translator/build/libs/`. The build runs the tests. Tests that need the real model (they download it themselves) or a running LLM server are skipped unless given the `-Dcaketext.*` options described in [AGENTS.md](AGENTS.md), which also documents formats, hooks and invariants.
 
-GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with both jars.
+GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with both jars and their SHA-256 in the release notes.
 
 This repository is a mirror of the [`caketext/` folder](https://github.com/HarrytheCake/Monumenta-Cakedition/tree/packwiz/caketext) of Monumenta-Cakedition, where development happens.
 

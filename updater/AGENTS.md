@@ -163,7 +163,7 @@ On Windows, `packUrl` and `chatPrefix` pass through `cmd /c start`, so they must
 cd updater
 JAVA_HOME="<JDK 21>" ./gradlew build        # output: build/libs/cakeupdater-<mod_version>.jar (Java 17 bytecode)
 ```
-**CI** (`.github/workflows/build.yml`, GitHub only runs it in the standalone `HarrytheCake/CakeUpdater` repo, where this folder is the root): every push and pull request builds and tests on JDK 21 and uploads the jar as a workflow artifact. A push to `main` whose `mod_version` has no `v<mod_version>` release yet creates that release with `cakeupdater-<mod_version>.jar` attached. Pushing again with the same version builds but releases nothing.
+**CI** (`.github/workflows/build.yml`, GitHub only runs it in the standalone `HarrytheCake/CakeUpdater` repo, where this folder is the root): every push and pull request builds and tests on JDK 21 and uploads the jar as a workflow artifact. A push to `main` whose `mod_version` has no `v<mod_version>` release yet creates that release with `cakeupdater-<mod_version>.jar` attached and its SHA-256 at the top of the notes. Pushing again with the same version builds but releases nothing.
 
 To release inside the pack:
 1. Bump `mod_version` and build/test locally.

@@ -63,8 +63,12 @@ jobs:
             echo "v$VERSION is already released; bump mod_version for a new release."
             exit 0
           fi
+          # --notes goes before the generated notes; file names without their build folders
+          SUMS=$( (cd collector/build/libs && sha256sum "caketext-collector-$VERSION.jar") && \
+                  (cd translator/build/libs && sha256sum "caketext-translator-$VERSION.jar") )
           gh release create "v$VERSION" \
             "collector/build/libs/caketext-collector-$VERSION.jar" \
             "translator/build/libs/caketext-translator-$VERSION.jar" \
             --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
-            --title "CakeText $VERSION" --generate-notes
+            --title "CakeText $VERSION" --generate-notes \
+            --notes "$(printf '**SHA-256**\n```\n%s\n```\n' "$SUMS")"
