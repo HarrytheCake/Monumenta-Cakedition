@@ -4,7 +4,8 @@
 
 - Every *.pw.toml becomes a download entry (Modrinth CDN or our GitHub releases), never a bundled jar.
   sha1 and the size come from Modrinth's API, or from downloading the file when it isn't on Modrinth.
-- Every other file in the pack becomes an override, like packwiz-installer would install it.
+- Every other file in the pack becomes an override, like packwiz-installer would install it, except preserve=true
+  files (servers.dat): they go to config/cakeupdater/defaults/, so a launcher's update never replaces them.
 - packwiz-installer-bootstrap.jar (MIT, pinned v0.0.3) is added as an override with its license, so
   Cakedition Updater can update a .mrpack install without downloading anything itself.
 """
@@ -98,7 +99,10 @@ def main():
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("modrinth.index.json", json.dumps(manifest, indent=1, ensure_ascii=False))
         for rel in overrides:
-            z.write(PACK / rel, f"overrides/{rel}")
+            # A launcher's update rewrites overrides; preserve=true files (servers.dat) go to Cakedition Updater's
+            # defaults instead, which it copies into place only when missing.
+            dst = f"config/cakeupdater/defaults/{rel}" if rel in packwiz_sync.PRESERVE else rel
+            z.write(PACK / rel, f"overrides/{dst}")
         z.writestr(f"overrides/{BOOTSTRAP}", bootstrap)
         z.writestr("overrides/packwiz-installer-bootstrap-LICENSE.txt", bootstrap_license)
     print(f"{out.relative_to(packwiz_sync.ROOT).as_posix()}: {len(files)} downloads, {len(overrides) + 2} overrides, "

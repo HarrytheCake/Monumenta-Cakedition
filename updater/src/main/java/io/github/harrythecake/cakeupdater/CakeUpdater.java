@@ -17,11 +17,14 @@ import net.minecraft.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.mojang.brigadier.arguments.StringArgumentType;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
+import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.argument;
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal;
 
 public class CakeUpdater implements ClientModInitializer {
@@ -37,12 +40,31 @@ public class CakeUpdater implements ClientModInitializer {
 	private static String notifiedPacks;
 	private static boolean applyingPacks;
 
+	private static Backups backups;
+	/** The backup made at this start because the pack changed since the last one; announced once, on join. */
+	private static volatile Backups.Backup updateBackup;
+	private static boolean restoreHookAdded;
+
 	@Override
 	public void onInitializeClient() {
 		config = Config.load();
+		backups = new Backups(gameDir());
+		if (config.backups.enabled) {
+			try {
+				updateBackup = backups.detectUpdate(UpdateCheck.installedIdentity(gameDir()),
+						UpdateCheck.readLocalVersion(gameDir()), config.backups.keep);
+			} catch (Exception e) {
+				LOGGER.error("Could not compare the modpack with the last start", e);
+			}
+		}
 
 		// Check on every join, so an update released mid-session still shows up.
 		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+			if (updateBackup != null) {
+				Backups.Backup made = updateBackup;
+				updateBackup = null;
+				client.send(() -> announceUpdated(client, made));
+			}
 			if (config.packwiz.enabled && config.packwiz.packUrl != null && !config.packwiz.packUrl.isBlank()) {
 				UpdateCheck.runAsync(config.packwiz.packUrl, gameDir()).thenAccept(result -> {
 					if (result != null) {
@@ -67,9 +89,25 @@ public class CakeUpdater implements ClientModInitializer {
 						.then(literal("now").executes(ctx -> updateNow(ctx.getSource())))
 						.then(literal("cancel").executes(ctx -> cancel(ctx.getSource())))
 						.then(literal("folder").executes(ctx -> openGameFolder()))
+						.then(literal("backups").executes(ctx -> openBackups()))
+						.then(literal("quit").executes(ctx -> quit(ctx.getSource())))
+						.then(literal("restore")
+								.then(literal("servers").then(argument("backup", StringArgumentType.word())
+										.executes(ctx -> restoreServers(ctx.getSource(), StringArgumentType.getString(ctx, "backup")))))
+								.then(literal("configs").then(argument("backup", StringArgumentType.word())
+										.executes(ctx -> restoreConfigs(ctx.getSource(), StringArgumentType.getString(ctx, "backup")))))
+								.then(literal("cancel").executes(ctx -> cancelRestore(ctx.getSource()))))
 						.then(literal("resourcepacks").executes(ctx -> updateResourcePacks(ctx.getSource())))));
 
 		ClientLifecycleEvents.CLIENT_STOPPING.register(client -> {
+			// before the updater starts: this snapshot is what a backup holds if the pack changes before the next start
+			if (config.backups.enabled) {
+				try {
+					backups.snapshot();
+				} catch (Exception e) {
+					LOGGER.error("Could not save the server list and configs", e);
+				}
+			}
 			if (updateOnClose) {
 				try {
 					HelperLauncher.launch(gameDir(), config.packwiz.packUrl, client.options.language, config.chatPrefix);
@@ -158,7 +196,17 @@ public class CakeUpdater implements ClientModInitializer {
 		}
 		updateOnClose = true;
 		source.sendFeedback(prefix().append(Text.translatable("cakeupdater.pack.closing").formatted(Formatting.YELLOW)));
-		MinecraftClient client = source.getClient();
+		closeGame(source.getClient());
+		return 1;
+	}
+
+	private static int quit(FabricClientCommandSource source) {
+		closeGame(source.getClient());
+		return 1;
+	}
+
+	/** Leaves the world cleanly and quits. */
+	static void closeGame(MinecraftClient client) {
 		// Queue it: disconnecting from inside the command handler would tear down the connection mid-packet.
 		client.send(() -> {
 			if (client.world != null) {
@@ -172,7 +220,103 @@ public class CakeUpdater implements ClientModInitializer {
 			}
 			client.scheduleStop();
 		});
+	}
+
+	// --- Backups (server list and configs) ---
+
+	private static void announceUpdated(MinecraftClient client, Backups.Backup made) {
+		if (client.player == null) {
+			return;
+		}
+		Text updated = made.from().equals(made.to())
+				? Text.translatable("cakeupdater.updated.same", made.to())
+				: Text.translatable("cakeupdater.updated", made.from(), made.to());
+		client.player.sendMessage(prefix().append(updated.copy().formatted(Formatting.YELLOW)), false);
+		MutableText buttons = Text.literal("  ");
+		if (made.hasServers()) {
+			buttons.append(button("cakeupdater.restore.servers", "/cakeupdate restore servers " + made.name(), Formatting.GREEN)).append(" ");
+		}
+		if (made.hasConfigs()) {
+			buttons.append(button("cakeupdater.restore.configs", "/cakeupdate restore configs " + made.name(), Formatting.GREEN)).append(" ");
+		}
+		buttons.append(button("cakeupdater.backups.open", "/cakeupdate backups", Formatting.AQUA));
+		client.player.sendMessage(buttons, false);
+	}
+
+	private static int openBackups() {
+		MinecraftClient client = MinecraftClient.getInstance();
+		// next tick: the chat screen closes after this command returns
+		client.send(() -> client.setScreen(new BackupsScreen(null)));
 		return 1;
+	}
+
+	private static int restoreServers(FabricClientCommandSource source, String name) {
+		try {
+			backups.restoreServers(name, config.backups.keep);
+			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.restore.servers.done", BackupsScreen.date(name))
+					.formatted(Formatting.GREEN)));
+		} catch (Exception e) {
+			LOGGER.error("Server list restore failed", e);
+			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.restore.failed", String.valueOf(e.getMessage()))
+					.formatted(Formatting.RED)));
+		}
+		return 1;
+	}
+
+	private static int restoreConfigs(FabricClientCommandSource source, String name) {
+		try {
+			scheduleConfigRestore(name);
+			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.restore.configs.scheduled", BackupsScreen.date(name))
+					.formatted(Formatting.YELLOW)));
+			source.sendFeedback(Text.literal("  ")
+					.append(button("cakeupdater.quit", "/cakeupdate quit", Formatting.RED))
+					.append(" ")
+					.append(button("cakeupdater.restore.cancel", "/cakeupdate restore cancel", Formatting.GRAY)));
+		} catch (Exception e) {
+			LOGGER.error("Config restore failed", e);
+			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.restore.failed", String.valueOf(e.getMessage()))
+					.formatted(Formatting.RED)));
+		}
+		return 1;
+	}
+
+	private static int cancelRestore(FabricClientCommandSource source) {
+		try {
+			backups.cancelConfigRestore();
+		} catch (Exception e) {
+			LOGGER.warn("Could not cancel the config restore: {}", e.toString());
+		}
+		source.sendFeedback(prefix().append(Text.translatable("cakeupdater.restore.cancelled").formatted(Formatting.GRAY)));
+		return 1;
+	}
+
+	static Backups backups() {
+		return backups;
+	}
+
+	static int keep() {
+		return config.backups.keep;
+	}
+
+	/**
+	 * Configs are copied back once the game has closed, after every mod has saved its own files (a mod would
+	 * otherwise write its in-memory settings over the restored file). If the hook can't run, the next start does it.
+	 */
+	static void scheduleConfigRestore(String name) throws java.io.IOException {
+		backups.scheduleConfigRestore(name);
+		if (!restoreHookAdded) {
+			restoreHookAdded = true;
+			Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+				try {
+					int restored = backups.applyPendingConfigRestore(config.backups.keep);
+					if (restored >= 0) {
+						LOGGER.info("Restored {} config files from a backup", restored);
+					}
+				} catch (Exception e) {
+					LOGGER.error("Config restore failed; it is tried again at the next start", e);
+				}
+			}, "CakeUpdater restore"));
+		}
 	}
 
 	// --- Resource packs (Modrinth) ---

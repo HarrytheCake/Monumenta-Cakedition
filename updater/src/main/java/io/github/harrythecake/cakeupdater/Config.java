@@ -18,6 +18,7 @@ final class Config {
 	String chatPrefix = "Cakedition";
 	Packwiz packwiz = new Packwiz();
 	List<ResourcePack> resourcePacks = new ArrayList<>(List.of(new ResourcePack()));
+	BackupSettings backups = new BackupSettings();
 
 	static final class Packwiz {
 		boolean enabled = true;
@@ -29,6 +30,11 @@ final class Config {
 		String modrinthProject = "Yj53Rs56";
 		List<String> gameVersions = new ArrayList<>();
 		List<String> versionTypes = new ArrayList<>(List.of("release"));
+	}
+
+	static final class BackupSettings {
+		boolean enabled = true;
+		int keep = 5;
 	}
 
 	private static final String TEMPLATE = """
@@ -59,7 +65,15 @@ final class Config {
 			      // Release channels to accept: "release", "beta", "alpha".
 			      "versionTypes": ["release"]
 			    }
-			  ]
+			  ],
+
+			  // Every game close saves the server list and configs, and the save from before a modpack update is kept
+			  // in cakeupdater-backups/. Restore it from Mod Menu, /cakeupdate backups or the chat message after an update.
+			  "backups": {
+			    "enabled": true,
+			    // How many backups to keep (the oldest are deleted).
+			    "keep": 5
+			  }
 			}
 			""";
 
@@ -78,6 +92,9 @@ final class Config {
 				}
 				if (config.packwiz == null) {
 					config.packwiz = new Packwiz();
+				}
+				if (config.backups == null) {
+					config.backups = new BackupSettings();
 				}
 				if (config.resourcePacks == null) {
 					config.resourcePacks = new ArrayList<>();

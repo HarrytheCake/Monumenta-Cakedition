@@ -15,12 +15,17 @@ After the game exits, a terminal window runs packwiz-installer and tells you whe
 
 **Resource pack updates.** If a newer Modrinth version of an enabled resource pack exists (MonumentaRP by default), a separate chat message offers to update it. One click downloads it, checks its hash, puts it in the same place in your pack list and reloads resources. No restart needed.
 
+**Backups.** Before every modpack update your server list and configs are saved, whether the update came from this mod, Prism's packwiz pre-launch command or your launcher updating a `.mrpack`. After the update a chat message offers **[Restore server list]** and **[Restore configs]**, and the Mod Menu settings button (or `/cakeupdate backups`) lists every backup. Configs are restored as the game closes, after every mod has saved its own files; the files a restore replaces are saved first. Backups live in `cakeupdater-backups/` in the game folder.
+
+**Default files.** Files in `config/cakeupdater/defaults/` are copied into the game folder when they don't exist yet, like YOSBR does for configs. Ship `servers.dat` this way in a `.mrpack`, and a launcher update will never replace a player's server list.
+
 Chat text and the updater window are in English, Simplified Chinese and Traditional Chinese.
 
 ## Requirements
 
 - Minecraft 1.20.4, Fabric Loader 0.15+, Java 17+
 - [Fabric API](https://modrinth.com/mod/fabric-api)
+- Optional: [Mod Menu](https://modrinth.com/mod/modmenu) for the backups screen (`/cakeupdate backups` works without it)
 - For modpack updates: an install made with packwiz-installer (it reads `packwiz.json`), or a `.mrpack` install that includes `config/cakeupdater/pack-version.txt`
 - For modpack updates: `packwiz-installer-bootstrap.jar` in the game folder. A packwiz install already has it, because the launcher's pre-launch command runs it. The mod never downloads it; if it's missing, the chat offers **[Open game folder]** and **[Download page]** instead of the update buttons.
 
@@ -35,6 +40,10 @@ All are client-side; the chat buttons run them for you.
 | `/cakeupdate now` | Quit now and update |
 | `/cakeupdate cancel` | Cancel `onclose` |
 | `/cakeupdate folder` | Open the game folder |
+| `/cakeupdate backups` | Open the backups screen |
+| `/cakeupdate restore servers <backup>` | Restore a backup's server list |
+| `/cakeupdate restore configs <backup>` | Restore a backup's configs when the game closes |
+| `/cakeupdate restore cancel` | Cancel a config restore |
 | `/cakeupdate resourcepacks` | Apply pending resource pack updates |
 
 ## Using it in your own modpack
@@ -55,7 +64,8 @@ On first launch the mod writes `config/cakeupdater/config.json5` with comments. 
       "gameVersions": [],            // [] = the running Minecraft version
       "versionTypes": ["release"]    // "release", "beta", "alpha"
     }
-  ]
+  ],
+  "backups": { "enabled": true, "keep": 5 }  // backups kept per kind
 }
 ```
 
@@ -78,3 +88,7 @@ The jar is written to `build/libs/cakeupdater-<version>.jar`.
 GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with the jar. Download the mod from [Releases](https://github.com/HarrytheCake/CakeUpdater/releases).
 
 This repository is a mirror of the [`updater/` folder](https://github.com/HarrytheCake/Monumenta-Cakedition/tree/packwiz/updater) of Monumenta-Cakedition, where development happens. Developer notes are in [AGENTS.md](AGENTS.md).
+
+## License
+
+[MIT](LICENSE)

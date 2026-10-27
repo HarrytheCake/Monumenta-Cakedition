@@ -61,7 +61,17 @@ final class UpdateCheck {
 		return new Result(remoteVersion, localVersion, remoteHash, available);
 	}
 
-	private static String readInstalledHash(Path gameDir) {
+	/** What is installed, to notice an update between two starts: the packwiz.json hash, else the pack version. */
+	static String installedIdentity(Path gameDir) {
+		String hash = readInstalledHash(gameDir);
+		if (hash != null) {
+			return "packwiz:" + hash;
+		}
+		String version = readLocalVersion(gameDir);
+		return version == null ? null : "version:" + version;
+	}
+
+	static String readInstalledHash(Path gameDir) {
 		try {
 			Path manifest = gameDir.resolve("packwiz.json");
 			if (!Files.exists(manifest)) {
@@ -76,7 +86,7 @@ final class UpdateCheck {
 		}
 	}
 
-	private static String readLocalVersion(Path gameDir) {
+	static String readLocalVersion(Path gameDir) {
 		try {
 			Path file = gameDir.resolve("config").resolve(CakeUpdater.MOD_ID).resolve("pack-version.txt");
 			return Files.exists(file) ? Files.readString(file).trim() : null;

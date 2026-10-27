@@ -3,14 +3,17 @@
 	"id": "cakeupdater",
 	"version": "${version}",
 	"name": "Cakedition Updater",
-	"description": "Tells you in chat when a Monumenta Cakedition update is out and installs it with packwiz-installer after you close the game.",
+	"description": "Tells you in chat when a Monumenta Cakedition update is out and installs it with packwiz-installer after you close the game. Keeps a backup of your server list and configs from before each update, which you can restore from its settings screen.",
 	"authors": ["HarrytheCake"],
+	"license": "MIT",
 	"contact": {
 		"sources": "https://github.com/HarrytheCake/CakeUpdater"
 	},
 	"environment": "client",
 	"entrypoints": {
-		"client": ["io.github.harrythecake.cakeupdater.CakeUpdater"]
+		"preLaunch": ["io.github.harrythecake.cakeupdater.CakeUpdaterPreLaunch"],
+		"client": ["io.github.harrythecake.cakeupdater.CakeUpdater"],
+		"modmenu": ["io.github.harrythecake.cakeupdater.ModMenuEntry"]
 	},
 	"depends": {
 		"fabricloader": ">=0.15.0",
