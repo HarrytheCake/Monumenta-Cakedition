@@ -44,7 +44,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"false"
-resourcePacks:["vanilla","fabric","file/MonumentaRP_v6.3.0.zip","file/Paperbox_embeded1.0.0.zip"]
+resourcePacks:["vanilla","fabric","file/SodiumTranslations.zip","file/MonumentaRP_v6.3.0.zip","file/Paperbox_embeded1.0.0.zip"]
 incompatibleResourcePacks:["appleskin","attributefix","controlling","modernfix","packetfixer","searchables","spark","tslatentitystatus","xaerominimapfair","xaeroworldmap","yet_another_config_lib_v3","file/Paperbox_embeded1.0.0.zip"]
 lastServer:
 lang:en_us

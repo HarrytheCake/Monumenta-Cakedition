@@ -238,7 +238,7 @@ hash = "60a78fe1b271ce9b53e295235eb5a7cdb3a8692ca583fdaa7f5bc09f9049e2f4"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "882fa1d19aec297d36122590b721b6d7935824b37fee80fae06804b138e134bc"
+hash = "bee55a2dd2a5d89b55c148b9b10cd40aab7ad6f8c519c4de970988131fc09d53"
 
 [[files]]
 file = "icon.png"
@@ -510,6 +510,11 @@ hash = "181bfe0cfc3bd30e07dc328dac9fed42705ef5cd1977ee86e48942e8d0e47ee1"
 metafile = true
 
 [[files]]
+file = "mods/rrls.pw.toml"
+hash = "7bc33ad1e752b8ccb749bd6aec6485e19ceeef54be207b11af559c7318e9396a"
+metafile = true
+
+[[files]]
 file = "mods/screenshot-to-clipboard.pw.toml"
 hash = "964da9ed4bdd490258a05d249e13b8d90d82f71591c793bc93e29840e4e9fe1b"
 metafile = true
@@ -600,6 +605,11 @@ hash = "cd3c1e83db05bf0a08288feecff3735847d4826057d55f4b059fe7d976c8cc68"
 [[files]]
 file = "resourcepacks/monumenta-mmo-resource-pack.pw.toml"
 hash = "7d0ec54892f97861a1016f22e94f3c735b43c4339c6375da196a45834c9876ca"
+metafile = true
+
+[[files]]
+file = "resourcepacks/translations-for-sodium.pw.toml"
+hash = "c35023baaf723eeea67228e39ac96914a0dbcd667a53907b7665b0554355c888"
 metafile = true
 
 [[files]]
