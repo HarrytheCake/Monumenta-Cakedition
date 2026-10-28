@@ -29,7 +29,7 @@ Make Monumenta Cakedition
 │   └── 💤 Q84 GUI benchmark scene
 ├── 5 Our own mods
 │   ├── ✅ 1.4.0 backups checked in game (2026-10-28)
-│   ├── ⏳ Q45 urgent-update flag + Q59–62 in-game changelog + Q69 heap warning
+│   ├── ⏳ Q45 urgent-update flag + Q59–62 in-game changelog + Q69 heap warning: Cakedition Updater 1.5.0 built + 12 tests (Q88–Q91 settled 2026-10-28); in-game test next
 │   ├── ⏳ Q35–39, Q44 Default changes (per file; options.txt per key; changed keybinds always announced)
 │   ├── ⛔ Q47 multi-loader / multi-version ← own Modrinth project + a request from outside the pack
 │   └── ⏳ Q48 CakeText's own grilling session; its test steps 10–11

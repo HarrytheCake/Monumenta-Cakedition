@@ -8,6 +8,11 @@ Client-only Fabric mod (`cakeupdater`, package `io.github.harrythecake.cakeupdat
 
 The mod ships inside the Monumenta Cakedition pack as `pack/mods/cakeupdater.pw.toml`, a metafile pointing at the jar on this repo's GitHub release (`HarrytheCake/CakeUpdater`, built by CI). No built jar is committed anywhere. Other modpacks can reuse it through its config file.
 
+1.5.0 adds, on top of those three:
+- **Urgent updates.** The published pack lists withdrawn versions in `config/cakeupdater/withdrawn.json`; an install on one gets a red notice with the reason on every join and a toast on the title screen. Never forced.
+- **In-game changelog.** The pack ships `config/cakeupdater/changelog/<version>/<lang>.md`; the "Modpack updated" message shows what every version the update brought changed, with a [Changelog] screen.
+- **Memory warning.** One chat warning when the game's max heap is outside 3–12 GB (configurable).
+
 ## Files
 
 ```
@@ -20,7 +25,8 @@ updater/
 └── src/main/
     ├── resources/
     │   ├── fabric.mod.json                     # environment: client; depends on fabric-api
-    │   └── assets/cakeupdater/lang/            # en_us.json, zh_cn.json, zh_tw.json (same 52 keys)
+    │   └── assets/cakeupdater/lang/            # en_us.json, zh_cn.json, zh_tw.json (same 63 keys)
+    └── (src/test/java/…)                       # JUnit 5: ChangelogTest, UrgentAndMemoryTest (run by `gradlew build`)
     └── java/io/github/harrythecake/cakeupdater/
         ├── CakeUpdater.java          # entrypoint: events, /cakeupdate command, all chat text
         ├── CakeUpdaterPreLaunch.java # preLaunch entrypoint: leftover config restore, defaults (no Minecraft classes!)
@@ -28,6 +34,10 @@ updater/
         ├── Adoption.java             # .mrpack install's first update: packwiz.json from adoption.json (no MC classes)
         ├── BackupsScreen.java        # backups list with restore buttons (Mod Menu / /cakeupdate backups)
         ├── ModMenuEntry.java         # Mod Menu's configure button → BackupsScreen (Mod Menu optional, compileOnly)
+        ├── Changelog.java            # changelog/<version>/<lang>.md: versions between two, language fallback, parse (plain Java)
+        ├── ChangelogScreen.java      # scrollable changelog (/cakeupdate changelog, the [Changelog] button)
+        ├── Withdrawn.java            # withdrawn.json next to the published pack.toml: is the installed version withdrawn?
+        ├── MemoryCheck.java          # max heap outside the configured range → warn once per setting (plain Java)
         ├── Config.java               # config/cakeupdater/config.json5 (template + lenient Gson load)
         ├── Net.java                  # shared HttpClient, User-Agent, GET/POST JSON helpers
         ├── UpdateCheck.java          # modpack: is the published pack.toml newer than what is installed?
@@ -47,7 +57,11 @@ ClientPlayConnectionEvents.JOIN (every join)
      ├─ packwiz.json exists → available = packFileHash.value != sha256(pack.toml)
      ├─ else pack-version.txt exists → available = its text != pack.toml `version`
      └─ else → not available (unknown install)
+ │   └─ update available + pack-version.txt known → GET <pack.toml folder>/config/cakeupdater/withdrawn.json
+ │      (404 / bad JSON = nothing withdrawn); installed version listed → Result.withdrawn = its reasons → urgent
  └─ chat: "[<prefix>] Modpack update available (a → b) [Click to update]"   (once per remote hash)
+     urgent instead: red "Urgent update: version a was withdrawn. Please update to b." + the reason line, EVERY join
+CLIENT_STARTED → the same check; urgent → SystemToast (PERIODIC_NOTIFICATION) on the TitleScreen, once per start
       └─ /cakeupdate            → two buttons:
            ├─ /cakeupdate onclose  → updateOnClose = true   (+ [Cancel] → /cakeupdate cancel)
            └─ /cakeupdate now      → updateOnClose = true; client.send(disconnect + scheduleStop)
@@ -86,7 +100,9 @@ onInitializeClient (every start)
  └─ Backups.detectUpdate(UpdateCheck.installedIdentity, pack-version.txt, keep)
      identity = "packwiz:<packwiz.json hash>" or "version:<pack-version.txt>"; kept in cakeupdater-backups/state.properties
      changed since the last start → last-close/ is moved to cakeupdater-backups/<yyyy-MM-dd_HH-mm-ss>/ (kind=update, from, to)
- └─ JOIN (once): chat "Modpack updated (a → b)…" [Restore server list] [Restore configs] [Backups]
+ └─ JOIN (once): chat "Modpack updated (a → b)…", then up to 5 changelog items (all versions after a up to b,
+    newest first) + "…and N more", then [Changelog] [Restore server list] [Restore configs] [Backups]
+    (the changelog rides on this message, so it needs backups.enabled; a → a, or an unknown b, shows none)
 /cakeupdate restore servers <backup>  → copied back now (MultiplayerScreen re-reads servers.dat when opened)
 /cakeupdate restore configs <backup>  → cakeupdater-backups/restore-configs.txt + a shutdown hook: copied back after
                                         the game has closed and mods have saved; [Close Minecraft now] [Cancel]
@@ -97,6 +113,15 @@ CakeUpdaterPreLaunch                  → applies a restore the hook couldn't (c
 - Pruning keeps the newest `backups.keep` of each kind, so restores never push out a pre-update backup.
 - The `.mrpack` (`tools/mrpack.py`) ships `servers.dat` as `config/cakeupdater/defaults/servers.dat`, so a launcher's update never replaces the player's list. packwiz keeps it at the root with `preserve = true`.
 - The first start with 1.4.0 only records the pack; there's nothing to back up yet.
+
+### Changelog files (1.5.0+)
+`config/cakeupdater/changelog/<version>/<lang>.md`, shipped in the pack, every version's folder kept forever (a player who skips versions sees them all). Lines: `**Heading**` or `## Heading` → heading; `- item` / `* item` → item (only these appear in chat); anything else → plain text; `---` dropped; links become their text, `**` and backticks are removed. Versions sort by their numbers (`2.10.0` > `2.9.1`, `2.3.0-beta` < `2.3.0`). Language: the game's, then `zh_hk → zh_tw`, any `zh_* → zh_cn`, then `en_us`. The pack's CI (`.github/workflows/mrpack.yml`) puts `en_us.md` + `zh_cn.md` of the released version at the top of the GitHub release notes.
+
+### Withdrawn versions (1.5.0+)
+`config/cakeupdater/withdrawn.json`: `{"<version>": {"en_us": "<reason>", "zh_cn": "…", "zh_tw": "…"}}` (a plain string means English; `{}` means no reason). Always read from the **published** pack (the folder of `packwiz.packUrl`), never the local copy, so a version can be withdrawn after release. Urgent only when an update is available. Reason language: same fallback as the changelog, else any reason given.
+
+### Memory warning (1.5.0+)
+First join of each start: `Runtime.maxMemory()` in MB vs `memory.minGb` (with 5 % room: `-Xmx3G` reports a little under 3072 MB) and `memory.maxGb`; `0` = no limit. Warned values are kept in `config/cakeupdater/memory-warned.txt`, so the same setting warns once; back in range deletes it.
 
 ### Resource pack update
 ```
@@ -123,6 +148,7 @@ The old zip is **kept, disabled**. packwiz-installer manages that file: deleting
 | `/cakeupdate cancel` | Undo `onclose` |
 | `/cakeupdate folder` | Open the game folder (where packwiz-installer-bootstrap.jar goes) |
 | `/cakeupdate backups` | Open the backups screen |
+| `/cakeupdate changelog` | Open the changelog of this start's update (else every shipped changelog) |
 | `/cakeupdate restore servers <backup>` | Restore that backup's server list now |
 | `/cakeupdate restore configs <backup>` | Restore that backup's configs when the game closes |
 | `/cakeupdate restore cancel` | Cancel a pending config restore |
@@ -147,6 +173,9 @@ The mod writes it with comments on first launch (`Config.TEMPLATE`). Gson reads 
 | `resourcePacks[].versionTypes` | `["release"]` | Accepted Modrinth version types |
 | `backups.enabled` | `true` | Snapshot on close + backup before updates |
 | `backups.keep` | `5` | Backups kept per kind (update / restore) |
+| `memory.enabled` | `true` | Memory warning on/off |
+| `memory.minGb` / `memory.maxGb` | `3` / `12` | Warn outside this range (`0` = no limit) |
+| `memory.guideUrl` | Cakedition install guide | Linked from the warning (`""` = no link) |
 
 On Windows, `packUrl` and `chatPrefix` pass through `cmd /c start`, so they must not contain `& ^ | < >`. On macOS and Linux everything is single-quoted (`HelperLauncher.shellQuote`).
 
@@ -207,8 +236,11 @@ Proven:
 - Adoption end to end (2026-10-28): a 2.2.1 `.mrpack` installed like a launcher does (Iris on, minimap off, a player's own jar, an edited `servers.dat`), then updated by the real bootstrap + packwiz-installer (window mode, as `Helper` runs it) from a locally served pack with the Cakedition Updater jar renamed, Log Begone removed and the version bumped. Without adoption: two Cakedition Updater jars, Log Begone left. With adoption: one jar, Log Begone deleted, Iris kept, minimap still off, the player's jar and server list untouched, no option window, `packFileHash` written.
 - `Backups` out of game (2026-10-27, 41 checks in a fake game folder): snapshot skips, incremental sync and deletions, update detection once per change, server and config restore with safety backups, cancel, defaults only when missing, per-kind pruning.
 
+- 1.5.0 out of game (2026-10-28, JUnit, 12 tests): version order, skipped versions newest first, unknown/same versions, zh_tw → zh_cn → en fallback, Markdown parsing, withdrawn lookup and reasons, memory range and warn-once.
+
 Not proven:
-- the backups chat message, screen and restores in game
+- the backups chat message, screen and restores in game (the user reported 2026-10-28 that the config backup works)
+- 1.5.0 in game: urgent notice + toast, changelog lines + screen, memory warning
 - the "update when I close" button
 - Terminal.app on macOS
 - Linux terminals and Flatpak
