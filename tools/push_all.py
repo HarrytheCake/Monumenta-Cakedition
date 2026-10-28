@@ -1,15 +1,20 @@
-"""Release in one go: push main to the packwiz branch and mirror updater/ to its own repo.
+"""Release in one go: push main to the packwiz branch at both update-channel addresses (GitHub, GitLab)
+and mirror updater/ and caketext/ to their own repos.
 
-    python tools/push_all.py           # check, show what goes out, ask, then push both
+    python tools/push_all.py           # check, show what goes out, ask, then push everything
     python tools/push_all.py --check   # only run the checks, push nothing
     python tools/push_all.py --yes     # don't ask before pushing
 
 Nothing is pushed unless every check passes:
   - the working tree is clean (commit first),
   - pack/index.toml and the hash in pack/pack.toml are up to date (`refresh` changes nothing),
-  - neither remote has commits that main doesn't,
+  - no remote has commits that main (or the split folder) doesn't,
   - outgoing commits use a no-reply identity and add no personal data (emails, local paths,
-    your username, player UUIDs, `lastServer`, profiler links).
+    your username, player UUIDs, `lastServer`, profiler links),
+  - a dry-run push to every remote succeeds (so a login problem on one address stops all of them).
+
+The update channel is one channel at two addresses (docs/adr/0003): GitHub and GitLab always get the
+same packwiz branch in the same run, so they never drift apart.
 """
 import getpass
 import pathlib
@@ -20,9 +25,11 @@ import sys
 import packwiz_sync
 
 ROOT = packwiz_sync.ROOT
-PACK_REMOTE, PACK_BRANCH = "github", "packwiz"  # main -> packwiz via the remote's push refspec
-UPDATER_REMOTE, UPDATER_BRANCH = "updater", "main"
-UPDATER_PREFIX = "updater"
+PACK_BRANCH = "packwiz"
+PACK_REMOTES = ["github", "gitlab"]  # update channel addresses, primary first
+MIRRORS = [("updater", "updater", "CakeUpdater source"),  # (remote, prefix, label); pushed to <remote> main
+           ("caketext", "caketext", "CakeText source")]
+MIRROR_BRANCH = "main"
 NOREPLY = re.compile(r"@(users\.noreply\.github\.com|anthropic\.com)$")
 
 
@@ -39,6 +46,10 @@ def fail(msg):
 
 def is_ancestor(old, new):
     return subprocess.run(["git", "merge-base", "--is-ancestor", old, new], cwd=ROOT).returncode == 0
+
+
+def has_ref(ref):
+    return subprocess.run(["git", "rev-parse", "-q", "--verify", ref], cwd=ROOT, capture_output=True).returncode == 0
 
 
 def personal_patterns():
@@ -78,6 +89,13 @@ def main():
     check_only = "--check" in sys.argv
     yes = "--yes" in sys.argv
 
+    remotes = git("remote").split()
+    missing = [r for r in PACK_REMOTES + [m[0] for m in MIRRORS] if r not in remotes]
+    if missing:
+        fail(f"remote(s) not set up: {', '.join(missing)}. For GitLab:\n"
+             f"  git remote add gitlab https://gitlab.com/<user>/Monumenta-Cakedition.git\n"
+             f"  git config remote.gitlab.push refs/heads/main:refs/heads/{PACK_BRANCH}")
+
     print("Checking working tree...")
     if git("status", "--porcelain"):
         fail("uncommitted changes. Commit (or stash) them first:\n" + git("status", "--short"))
@@ -87,38 +105,57 @@ def main():
     if git("status", "--porcelain", "--", "pack"):
         fail("pack/index.toml was out of date. `refresh` has fixed it; review and commit, then run this again.")
 
+    # (label, local commit, remote, remote ref it updates, remote-tracking ref)
+    targets = []
     print("Fetching remotes...")
-    git("fetch", "-q", PACK_REMOTE, PACK_BRANCH)
-    git("fetch", "-q", UPDATER_REMOTE, UPDATER_BRANCH)
-    pack_remote = f"{PACK_REMOTE}/{PACK_BRANCH}"
-    upd_remote = f"{UPDATER_REMOTE}/{UPDATER_BRANCH}"
+    for remote in PACK_REMOTES:
+        git("fetch", "-q", remote)  # a missing packwiz branch (first push to a new address) is fine
+        targets.append((f"{remote} {PACK_BRANCH} (update channel: players get this on next launch)",
+                        "main", remote, PACK_BRANCH, f"{remote}/{PACK_BRANCH}"))
+    for remote, prefix, label in MIRRORS:
+        git("fetch", "-q", remote)
+        print(f"Splitting {prefix}/...")
+        split = git("subtree", "split", f"--prefix={prefix}")
+        targets.append((f"{remote} {MIRROR_BRANCH} ({label})", split, remote, MIRROR_BRANCH, f"{remote}/{MIRROR_BRANCH}"))
 
-    print("Splitting updater/...")
-    split = git("subtree", "split", f"--prefix={UPDATER_PREFIX}")
-
-    if not is_ancestor(pack_remote, "main"):
-        fail(f"{pack_remote} has commits that main doesn't. Look at them before pushing.")
-    if not is_ancestor(upd_remote, split):
-        fail(f"{upd_remote} has commits that aren't in updater/ here. It must only be written from this repo.")
-
-    pack_log = git("log", "--format=%h %s", f"{pack_remote}..main").replace("\n", "\n  ")
-    upd_log = git("log", "--format=%h %s", f"{upd_remote}..{split}").replace("\n", "\n  ")
-    if not pack_log and not upd_log:
-        print("\nNothing to push: both remotes are up to date.")
+    # The base for a first push to a new pack address is what the primary address already has public.
+    primary = f"{PACK_REMOTES[0]}/{PACK_BRANCH}"
+    outgoing = []
+    for label, local, remote, branch, tracking in targets:
+        if has_ref(tracking):
+            if not is_ancestor(tracking, local):
+                fail(f"{tracking} has commits that aren't here. It must only be written from this repo.")
+            base = tracking
+        elif branch == PACK_BRANCH and has_ref(primary):
+            base = primary
+        else:
+            fail(f"{tracking} doesn't exist. Make the first push of that repo by hand, after a personal-data check.")
+        log = git("log", "--format=%h %s", f"{base}..{local}")
+        if log or base != tracking:
+            outgoing.append((label, local, remote, branch, base, log or f"(new branch, same commits as {base})"))
+    if not outgoing:
+        print("\nNothing to push: every remote is up to date.")
         return
 
     print("Scanning outgoing commits for personal data...")
     pats = personal_patterns()
-    hits = scan(pack_remote, "main", pats) + scan(upd_remote, split, pats)
+    hits = [h for _, local, _, _, base, _ in outgoing for h in scan(base, local, pats)]
     if hits:
         fail("possible personal data in outgoing commits:\n  " + "\n  ".join(dict.fromkeys(hits)))
 
     version = re.search(r'^version = "([^"]*)"', (ROOT / "pack" / "pack.toml").read_text(encoding="utf-8"), re.M).group(1)
-    remote_version = re.search(r'^version = "([^"]*)"', git("show", f"{pack_remote}:pack/pack.toml"), re.M).group(1)
+    remote_version = re.search(r'^version = "([^"]*)"', git("show", f"{primary}:pack/pack.toml"), re.M).group(1)
     print(f"\nPack version: {remote_version} -> {version}" if version != remote_version
           else f"\nPack version: {version} (unchanged)")
-    print(f"\n{PACK_REMOTE} {PACK_BRANCH} (players get this on next launch):\n  {pack_log or 'up to date'}")
-    print(f"\n{UPDATER_REMOTE} {UPDATER_BRANCH} (CakeUpdater source):\n  {upd_log or 'up to date'}")
+    for label, *_, log in outgoing:
+        print(f"\n{label}:\n  " + log.replace("\n", "\n  "))
+
+    print("\nChecking every remote accepts the push (dry run)...")
+    for label, local, remote, branch, *_ in outgoing:
+        r = subprocess.run(["git", "push", "--dry-run", remote, f"{local}:refs/heads/{branch}"], cwd=ROOT,
+                           capture_output=True)
+        if r.returncode:
+            fail(f"{remote} refused a dry-run push:\n{r.stderr.decode(errors='replace')}")
 
     if check_only:
         print("\nAll checks passed (--check: nothing pushed).")
@@ -127,12 +164,12 @@ def main():
         print("Cancelled, nothing pushed.")
         return
 
-    if pack_log:
-        print(f"\nPushing {PACK_REMOTE}...")
-        git("push", PACK_REMOTE)  # configured refspec: main:packwiz
-    if upd_log:
-        print(f"Pushing {UPDATER_REMOTE}...")
-        git("push", UPDATER_REMOTE, f"{split}:refs/heads/{UPDATER_BRANCH}")
+    for label, local, remote, branch, *_ in outgoing:
+        print(f"Pushing {remote} {branch}...")
+        r = subprocess.run(["git", "push", remote, f"{local}:refs/heads/{branch}"], cwd=ROOT, capture_output=True)
+        if r.returncode:
+            fail(f"push to {remote} failed (any pushes listed above it did go out); fix it and run this "
+                 f"again so every address matches:\n{r.stderr.decode(errors='replace')}")
     print("Done.")
 
 
