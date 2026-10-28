@@ -6,7 +6,9 @@ A Fabric 1.20.4 client modpack for the [Monumenta](https://www.playmonumenta.com
 
 - **Modrinth:** [modrinth.com/modpack/monucake](https://modrinth.com/modpack/monucake)
 - **Newest pack file:** [GitHub Releases](https://github.com/HarrytheCake/Monumenta-Cakedition/releases/latest)
-- **Bug reports:** [Issues](https://github.com/HarrytheCake/Monumenta-Cakedition/issues), in English or Chinese
+- **Install guide:** [Wiki](https://github.com/HarrytheCake/Monumenta-Cakedition/wiki/Install-Guide)
+- **Bug reports and suggestions:** [Issues](https://github.com/HarrytheCake/Monumenta-Cakedition/issues/new/choose), in English or Chinese
+- **Questions and chat:** [Monumenta Discord](https://discord.gg/monumenta), or the [Unofficial Monumenta QQ group](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=HuISJO6q-9qxvbFKs-zh6_cL8E4ESf8p&authKey=v%2B8i%2Be%2BtXWfa4gB%2BjS1q0UeG7TmroP9hMEiwbW7xCLV3VkIwGeOFAzUyrKi3TMNu&noverify=0&group_code=588414395)
 
 ## What's inside
 
@@ -66,7 +68,9 @@ Monumenta Cakedition is a fan-made modpack, not an official Monumenta product.
 
 - **Modrinth：** [modrinth.com/modpack/monucake](https://modrinth.com/modpack/monucake)
 - **最新整合包文件：** [GitHub Releases](https://github.com/HarrytheCake/Monumenta-Cakedition/releases/latest)
-- **反馈问题：** [Issues](https://github.com/HarrytheCake/Monumenta-Cakedition/issues)，中文或英文均可
+- **安装指南：** [Wiki](https://github.com/HarrytheCake/Monumenta-Cakedition/wiki/安装指南)（[繁體中文](https://github.com/HarrytheCake/Monumenta-Cakedition/wiki/安裝指南)）
+- **反馈问题与建议：** [Issues](https://github.com/HarrytheCake/Monumenta-Cakedition/issues/new/choose)，中文或英文均可
+- **提问与交流：** [Monumenta 非官方 QQ 群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=HuISJO6q-9qxvbFKs-zh6_cL8E4ESf8p&authKey=v%2B8i%2Be%2BtXWfa4gB%2BjS1q0UeG7TmroP9hMEiwbW7xCLV3VkIwGeOFAzUyrKi3TMNu&noverify=0&group_code=588414395)，或 [Monumenta Discord](https://discord.gg/monumenta)
 
 ### 包含内容
 

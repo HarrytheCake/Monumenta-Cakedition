@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Install guide / 安装指南
+    url: https://github.com/HarrytheCake/Monumenta-Cakedition/wiki
+    about: How to install and update the pack. / 如何安装和更新整合包。
+  - name: Questions and chat (Monumenta Discord) / 提问与交流（Monumenta Discord）
+    url: https://discord.gg/monumenta
+    about: Ask questions or just talk about the pack. / 提问，或聊聊整合包。
+  - name: Unofficial Monumenta QQ group / Monumenta 非官方 QQ 群
+    url: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=HuISJO6q-9qxvbFKs-zh6_cL8E4ESf8p&authKey=v%2B8i%2Be%2BtXWfa4gB%2BjS1q0UeG7TmroP9hMEiwbW7xCLV3VkIwGeOFAzUyrKi3TMNu&noverify=0&group_code=588414395
+    about: 中文玩家交流群。 / For Chinese-speaking players.

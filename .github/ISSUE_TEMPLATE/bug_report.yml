@@ -1,0 +1,74 @@
+name: Bug report / 问题反馈
+description: Something in the pack or in Cakedition Updater / CakeText doesn't work. / 整合包、Cakedition Updater 或 CakeText 出了问题。
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write in English or Chinese, one problem per report. Please report pack problems here, not to the mod authors or to Monumenta.
+
+        请用中文或英文填写，每份报告只写一个问题。整合包的问题请在这里反馈，不要报告给模组作者或 Monumenta。
+  - type: input
+    id: version
+    attributes:
+      label: Pack version / 整合包版本
+      description: "In your launcher's instance name, or in `.minecraft/config/cakeupdater/pack-version.txt`. / 见启动器里的实例名称，或 `.minecraft/config/cakeupdater/pack-version.txt`。"
+      placeholder: "2.2.2"
+    validations:
+      required: true
+  - type: dropdown
+    id: launcher
+    attributes:
+      label: Launcher / 启动器
+      options:
+        - Prism Launcher
+        - Modrinth App
+        - Other / 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you install the pack? / 安装方式
+      options:
+        - Pack file (.mrpack) / 整合包文件（.mrpack）
+        - Prism pre-launch command / Prism 启动前命令
+        - Not sure / 不确定
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system / 操作系统
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? / 发生了什么？
+      description: What you expected, and what happened instead. Screenshots help. / 你预期的结果，以及实际发生的情况。可以附上截图。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      placeholder: |
+        1. Join Monumenta / 进入 Monumenta
+        2. ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log or crash report / 日志或崩溃报告
+      description: |
+        Drag `logs/latest.log`, or the newest file in `crash-reports/`, into this box. Logs show your Minecraft name; edit it out if you like.
+        把 `logs/latest.log` 或 `crash-reports/` 里最新的文件拖进这个框。日志里有你的 Minecraft 名称，可以自行删掉。
+  - type: input
+    id: own-mods
+    attributes:
+      label: Mods you added or removed yourself / 你自己添加或删除的模组
+      placeholder: "None / 无"

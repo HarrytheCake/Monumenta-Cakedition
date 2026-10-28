@@ -1,0 +1,33 @@
+name: Suggestion / 建议
+description: A mod to add or remove, a setting to change, or a feature idea. / 建议添加或删除模组、修改设置，或新功能想法。
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A mod can only join the pack if it has a Fabric 1.20.4 build, is allowed by Monumenta's mod rules, can be listed on Modrinth, and doesn't do the same job as a mod already in the pack.
+
+        模组需要满足以下条件才能加入整合包：有 Fabric 1.20.4 版本、符合 Monumenta 的模组规则、可以在 Modrinth 上发布，并且与包内已有模组的功能不重复。
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you suggest? / 你的建议是什么？
+      description: For a mod, add its Modrinth link. / 如果是模组，请附上它的 Modrinth 链接。
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why? / 原因
+      description: What it would make better, and for whom. / 它能改善什么，对谁有帮助。
+    validations:
+      required: true
+  - type: dropdown
+    id: allowed
+    attributes:
+      label: For a mod, is it allowed on Monumenta? / 如果是模组，Monumenta 允许使用吗？
+      options:
+        - Not a mod / 不是模组
+        - "Yes / 是"
+        - "No / 否"
+        - Not sure / 不确定
