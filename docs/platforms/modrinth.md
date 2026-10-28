@@ -54,8 +54,6 @@ The full list is on each version's page.
 - [Monumenta Wiki](https://monumenta.wiki.gg/wiki/Monumenta_Wiki) for quest data.
 - Every mod belongs to its authors.
 
-Most of the code of our own mods and of the pack's tools was written with the help of an AI assistant (Claude).
-
 **Disclaimer:** this is a fan-made modpack, not affiliated with Monumenta, the Unofficial Monumenta Mod or any included mod.
 
 ---
@@ -133,7 +131,7 @@ Changelog, compared with 2.2.0 on Modrinth (2025-07-19):
 - Complementary Reimagined shaders are optional, together with Iris.
 - Monumenta resource pack 5.7.0 → 6.3.0, now turned on for new installs (2.2.0's setting named an older file, so it stayed off).
 - Paperbox loading-screen artwork 1.1.0.
-- Fabric Loader 0.16.9 → 0.18.6, and most mods updated.
+- Fabric Loader 0.16.9 → 0.18.6, and 17 mods updated, among them Entity Model Features 2.4.1 → 3.0.17 and Entity Texture Features 6.2.9 → 7.0.13.
 - Monumenta is in the server list for new installs.
 
 ---
@@ -156,6 +154,6 @@ Changelog, compared with 2.2.0 on Modrinth (2025-07-19):
 - Complementary Reimagined 光影与 Iris 一样改为可选。
 - Monumenta 资源包 5.7.0 → 6.3.0，新安装现在会默认启用（2.2.0 的设置指向了旧文件名，所以没有生效）。
 - Paperbox 加载界面插画更新至 1.1.0。
-- Fabric Loader 0.16.9 → 0.18.6，大部分模组已更新。
+- Fabric Loader 0.16.9 → 0.18.6，更新了 17 个模组，其中包括 Entity Model Features 2.4.1 → 3.0.17 和 Entity Texture Features 6.2.9 → 7.0.13。
 - 新安装的服务器列表中已包含 Monumenta。
 ````
