@@ -1,0 +1,15 @@
+# Gradle / Loom build output and IDE files
+.gradle/
+build/
+run/
+bin/
+.vscode/
+.settings/
+.project
+.classpath
+.idea/
+*.iml
+
+# written by the tests (logs carry the local user path)
+/logs/
+/config/
