@@ -3,7 +3,7 @@
 	"id": "cakebench",
 	"version": "${version}",
 	"name": "CakeBench",
-	"description": "Benchmark harness for Monumenta Cakedition: follows config/cakebench/plan.json through the scenes, records every frame's time and quits. Does nothing without a plan. Never shipped in the pack.",
+	"description": "Benchmark harness for Monumenta Cakedition: follows config/cakebench/plan.json through the scenes, records every frame's time and quits. Without a plan, /cakebench start ... stop records frame times, GPU timers and a spark profile while you play. Never shipped in the pack.",
 	"authors": ["HarrytheCake"],
 	"license": "MIT",
 	"environment": "*",

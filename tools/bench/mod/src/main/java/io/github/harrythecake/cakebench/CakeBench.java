@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mojang.blaze3d.platform.GlDebugInfo;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.loader.api.FabricLoader;
@@ -43,10 +44,13 @@ import java.util.TreeMap;
  * With {@code spark} set, each scene's measurement is also profiled by spark's client profiler, started and stopped
  * through Fabric's client command dispatcher (runs locally; never sent to the server) and saved with
  * {@code --save-to-file} (never uploaded), then copied next to the scene's frame times.
+ * <p>
+ * Without a plan, {@code /cakebench start} … {@code stop} records while you play ({@link Play}).
  */
 public final class CakeBench implements ClientModInitializer {
 	private static final Logger LOG = LoggerFactory.getLogger("cakebench");
-	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+	static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+	static final int GPU_TIMER_DEPTH = 4;
 
 	record Scene(String name, double x, double y, double z, float yaw, float pitch) {}
 
@@ -61,7 +65,7 @@ public final class CakeBench implements ClientModInitializer {
 		float turnDegreesPerSecond = 6;
 		boolean gpuTimers; // per-phase GPU/CPU time (GpuTimer); off for timed runs, the queries cost a little
 		boolean spark; // a spark CPU profile per scene; also a breakdown-run tool
-		int gpuTimerDepth = 4;
+		int gpuTimerDepth = GPU_TIMER_DEPTH;
 		List<Scene> scenes = List.of();
 		Map<String, Object> notes = Map.of();
 	}
@@ -91,6 +95,12 @@ public final class CakeBench implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
+		ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> Play.register(dispatcher));
+		ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
+			if (Play.recording()) {
+				Play.stop(client);
+			}
+		});
 		Path file = FabricLoader.getInstance().getConfigDir().resolve("cakebench").resolve("plan.json");
 		if (!Files.exists(file)) {
 			return;
@@ -128,6 +138,7 @@ public final class CakeBench implements ClientModInitializer {
 		long now = System.nanoTime();
 		long dt = now - lastFrame;
 		lastFrame = now;
+		Play.onFrame(client, dt);
 		if (plan == null || phase == Phase.IDLE || phase == Phase.DONE) {
 			return;
 		}
@@ -195,7 +206,7 @@ public final class CakeBench implements ClientModInitializer {
 			case SAVING -> {
 				// spark writes the file in the background: wait until it appears, then a moment for the write to end
 				if (sparkSaved == null) {
-					sparkSaved = newestProfile();
+					sparkSaved = newestProfile(sparkStartMillis);
 					sparkSeenAt = now;
 				} else if ((now - sparkSeenAt) / 1e9 >= 2) {
 					Path dir = Path.of(plan.out, plan.run);
@@ -221,7 +232,7 @@ public final class CakeBench implements ClientModInitializer {
 	 * Runs a client-side command (spark's /sparkc) through Fabric's client dispatcher. It never reaches the server:
 	 * a command the dispatcher doesn't know just fails here.
 	 */
-	private static void clientCommand(MinecraftClient client, String command) {
+	static void clientCommand(MinecraftClient client, String command) {
 		var dispatcher = net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.getActiveDispatcher();
 		if (dispatcher == null || client.getNetworkHandler() == null) {
 			LOG.error("CakeBench: no client command dispatcher for '{}'; nothing was sent", command);
@@ -235,15 +246,20 @@ public final class CakeBench implements ClientModInitializer {
 		}
 	}
 
-	/** The spark profile saved since this measurement started, if any (config/spark/profile-*.sparkprofile). */
-	private static Path newestProfile() {
+	/** A plan is driving the game (between its join and its end). */
+	static boolean planActive() {
+		return plan != null && phase != Phase.IDLE && phase != Phase.DONE;
+	}
+
+	/** The spark profile saved since {@code since} (epoch ms), if any (config/spark/profile-*.sparkprofile). */
+	static Path newestProfile(long since) {
 		Path dir = FabricLoader.getInstance().getConfigDir().resolve("spark");
 		if (!Files.isDirectory(dir)) {
 			return null;
 		}
 		try (var files = Files.list(dir)) {
 			return files.filter(f -> f.getFileName().toString().endsWith(".sparkprofile"))
-					.filter(f -> f.toFile().lastModified() >= sparkStartMillis)
+					.filter(f -> f.toFile().lastModified() >= since)
 					.max(java.util.Comparator.comparingLong(f -> f.toFile().lastModified()))
 					.orElse(null);
 		} catch (IOException e) {
@@ -294,13 +310,7 @@ public final class CakeBench implements ClientModInitializer {
 		r.put("heapPeakMB", heapPeak >> 20);
 		r.put("unfocusedFrames", unfocusedFrames);
 		r.put("minimizedFrames", minimizedFrames);
-		// what the client actually had: an empty or half-built scene shows here
-		r.put("entitiesLoaded", client.world.getRegularEntityCount());
-		r.put("entitiesDebug", client.worldRenderer.getEntitiesDebugString());
-		// on a live server the scene is whatever is there: where, and how many other players were around
-		r.put("dimension", client.world.getRegistryKey().getValue().toString());
-		r.put("position", String.format(Locale.ROOT, "%.0f %.0f %.0f", client.player.getX(), client.player.getY(), client.player.getZ()));
-		r.put("playersNearby", client.world.getPlayers().size() - 1);
+		describeWorld(client, r);
 		if (gpu != null) {
 			r.put("gpu", gpu);
 		}
@@ -365,10 +375,36 @@ public final class CakeBench implements ClientModInitializer {
 		return r;
 	}
 
+	/** What the client actually had at the end of a measurement (empty when it's no longer in a world). */
+	static void describeWorld(MinecraftClient client, Map<String, Object> r) {
+		if (client.world == null || client.player == null) {
+			return;
+		}
+		// an empty or half-built scene shows here
+		r.put("entitiesLoaded", client.world.getRegularEntityCount());
+		r.put("entitiesDebug", client.worldRenderer.getEntitiesDebugString());
+		// on a live server the scene is whatever is there: where, and how many other players were around
+		r.put("dimension", client.world.getRegistryKey().getValue().toString());
+		r.put("position", String.format(Locale.ROOT, "%.0f %.0f %.0f", client.player.getX(), client.player.getY(), client.player.getZ()));
+		r.put("playersNearby", client.world.getPlayers().size() - 1);
+	}
+
 	private static void writeSummary(MinecraftClient client, Path dir) {
 		Map<String, Object> out = new LinkedHashMap<>();
 		out.put("run", plan.run);
 		out.put("notes", plan.notes);
+		out.putAll(environment(client));
+		out.put("scenes", results);
+		try {
+			Files.writeString(dir.resolve("summary.json"), GSON.toJson(out));
+		} catch (IOException e) {
+			LOG.error("Could not write the summary", e);
+		}
+	}
+
+	/** The renderer, Java, settings and mods a recording ran with. */
+	static Map<String, Object> environment(MinecraftClient client) {
+		Map<String, Object> out = new LinkedHashMap<>();
 		out.put("renderer", GlDebugInfo.getRenderer());
 		out.put("glVersion", GlDebugInfo.getVersion());
 		out.put("java", System.getProperty("java.version"));
@@ -385,15 +421,10 @@ public final class CakeBench implements ClientModInitializer {
 			}
 		});
 		out.put("mods", mods);
-		out.put("scenes", results);
-		try {
-			Files.writeString(dir.resolve("summary.json"), GSON.toJson(out));
-		} catch (IOException e) {
-			LOG.error("Could not write the summary", e);
-		}
+		return out;
 	}
 
-	private static long[] gc() {
+	static long[] gc() {
 		long count = 0, millis = 0;
 		for (GarbageCollectorMXBean b : ManagementFactory.getGarbageCollectorMXBeans()) {
 			count += Math.max(0, b.getCollectionCount());

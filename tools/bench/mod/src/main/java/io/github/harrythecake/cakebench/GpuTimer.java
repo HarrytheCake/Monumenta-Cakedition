@@ -69,9 +69,14 @@ public final class GpuTimer implements Profiler {
 		this.limit = maxDepth;
 	}
 
-	/** Called once from the plan; does nothing until {@link #wrap} finds timer queries on the render thread. */
+	/**
+	 * Called from the plan, or by {@code /cakebench start}; only the first call counts. Does nothing until
+	 * {@link #wrap} finds timer queries on the render thread (the next frame).
+	 */
 	static void enable(int depth) {
-		instance = new GpuTimer(Math.max(1, depth));
+		if (instance == null) {
+			instance = new GpuTimer(Math.max(1, depth));
+		}
 	}
 
 	/** Called by the mixin with the profiler the client is about to use for the next frame. */

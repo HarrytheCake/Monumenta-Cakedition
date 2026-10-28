@@ -5,6 +5,7 @@
     python tools/bench/bench.py batch <sets.json> [--repeats N] [--name NAME] [--gpu-timers]
     python tools/bench/bench.py report <batch name>    # docs/benchmarks/<batch name>.md
     python tools/bench/bench.py serve                  # the bench server alone, to look around by hand
+    python tools/bench/bench.py play [folder]          # read a /cakebench start ... stop recording made while playing
 
 A batch starts the local server, then for each mod set and repeat: resets the bench instance to the pack's mods and
 configs, applies the set (mods added/removed, config files), launches it through Prism (which joins the server), and
@@ -706,6 +707,54 @@ def cmd_report(args):
     print(out.relative_to(ROOT).as_posix())
 
 
+def cmd_play(args):
+    """A recording made while playing (CakeBench 0.5.0+: /cakebench start [name] ... /cakebench stop): frame times,
+    the costliest render phases and, if spark was installed, where the render thread's CPU time went by mod.
+    The folder is a recording, or anything above one (an instance's .minecraft): then the newest recording in it."""
+    folder = pathlib.Path(args.folder) if args.folder else ROOT / ".minecraft"
+    if not (folder / "summary.json").exists():
+        found = sorted(folder.glob("**/cakebench-results/play/*/summary.json")) + sorted(folder.glob("play/*/summary.json")) + sorted(folder.glob("*/summary.json"))
+        if not found:
+            sys.exit(f"no recording under {folder} (looked for cakebench-results/play/*/summary.json)")
+        folder = max(found, key=lambda f: f.stat().st_mtime).parent
+    s = json.loads((folder / "summary.json").read_text(encoding="utf-8"))
+    r = s["scenes"]["play"]
+    print(f"{folder.name}: {r['seconds']} s on {s['renderer']}, Java {s['java']}, heap {s['maxHeapMB']} MB, "
+          f"render distance {s['renderDistance']}")
+    print(f"  avg {r['avgFps']} FPS, 1% low {r['onePercentLowFps']}, median frame {r['medianFrameMs']} ms, "
+          f"worst {r['maxFrameMs']} ms, {r['framesOver100ms']} frames over 100 ms")
+    where = f"; ended at {r['position']} in {r['dimension']} with {r['playersNearby']} players near" if 'position' in r else ""
+    print(f"  GC {r['gcCount']}x / {r['gcMillis']} ms, heap peak {r['heapPeakMB']} MB{where}")
+    noted = [f"{r[k]} {what}" for k, what in [("unfocusedFrames", "unfocused"), ("minimizedFrames", "minimized"),
+                                              ("screenFrames", "with a menu open")] if r.get(k)]
+    if noted:
+        print(f"  of {r['frames']} frames: " + ", ".join(noted))
+    phases = r.get("gpu", {}).get("phases", {})
+    if phases:
+        print(f"\nRender phases, ms per frame (GPU / CPU; the larger one is what that phase costs):")
+        for name, v in sorted(phases.items(), key=lambda kv: -max(kv[1]["gpuMs"], kv[1]["cpuMs"]))[:args.top]:
+            print(f"  {v['gpuMs']:7.2f} / {v['cpuMs']:7.2f}  {name}")
+        g = r["gpu"]
+        print(f"  ({g['framesRead']} frames read back, {g['framesDropped']} dropped)")
+    profile = folder / "play.sparkprofile"
+    if profile.exists():
+        import sparkprofile
+        threads, class_sources, method_sources = sparkprofile.read(str(profile))
+        match = [t for t in threads if t["name"] == args.thread]
+        if not match:
+            print(f"\nspark: no thread '{args.thread}'; threads: {', '.join(t['name'] for t in threads)}")
+            return
+        total, by_mod, by_method = sparkprofile.breakdown(match[0], class_sources, method_sources)
+        print(f"\nspark, {args.thread}: {total / 1000:.1f} s sampled. By mod (self time):")
+        for mod, ms in sorted(by_mod.items(), key=lambda kv: -kv[1])[:args.top]:
+            print(f"  {ms / total * 100:5.1f}%  {mod}")
+        print("Top methods (self time):")
+        for m, ms in sorted(by_method.items(), key=lambda kv: -kv[1])[:args.top]:
+            print(f"  {ms / total * 100:5.1f}%  {m}")
+    else:
+        print("\n(no spark profile in this recording)")
+
+
 def gpu_report(runs, scenes, rows=15):
     """Per scene: the phases with the most GPU time, 'GPU / CPU' ms per frame for each set (medians over repeats)."""
     if not any("gpu" in sc for rs in runs.values() for r in rs for sc in r["scenes"].values()):
@@ -764,9 +813,13 @@ def main():
     sub.add_parser("serve")
     r = sub.add_parser("report")
     r.add_argument("batch")
+    pl = sub.add_parser("play", help="read a recording made while playing (/cakebench start ... stop)")
+    pl.add_argument("folder", nargs="?", help="a recording, or a folder above one (default: the dev instance)")
+    pl.add_argument("--thread", default="Render thread")
+    pl.add_argument("--top", type=int, default=15)
     args = p.parse_args()
     {"setup": cmd_setup, "gpu": cmd_gpu, "batch": cmd_batch, "live": cmd_live, "serve": cmd_serve,
-     "report": cmd_report}[args.cmd](args)
+     "report": cmd_report, "play": cmd_play}[args.cmd](args)
 
 
 if __name__ == "__main__":
