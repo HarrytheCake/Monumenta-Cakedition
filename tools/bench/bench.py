@@ -265,6 +265,9 @@ def bench_jar():
 
 
 def cmd_setup(args):
+    # A running Prism forgets the instance once it's deleted and rebuilt, so `--launch` finds nothing.
+    if "prismlauncher.exe" in subprocess.run(["tasklist"], capture_output=True, text=True).stdout.lower():
+        sys.exit("Close Prism Launcher first: it loses track of the instance this rebuilds, so the priming launch fails.")
     if not JDK.exists():
         shutil.copytree(JDK_SRC, JDK)  # its own copy, so the GPU preference only hits the bench
     setup_server()
