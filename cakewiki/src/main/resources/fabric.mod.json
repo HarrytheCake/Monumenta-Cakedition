@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "cakewiki",
+	"version": "${version}",
+	"name": "CakeWiki",
+	"description": "Reads the Monumenta Wiki (monumenta.wiki.gg) inside the game. Pages are fetched from the wiki when you open them; wiki text is CC BY-SA 4.0 and each page links back to its source.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"icon": "assets/cakewiki/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeWiki"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": ["io.github.harrythecake.cakewiki.CakeWiki"]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
