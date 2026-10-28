@@ -27,7 +27,7 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 - Whole wiki for now; may later be cut to the pages players need.
 - Bookmarks (user's request, 2026-10-29): ☆/★ in the bar or Ctrl+D toggles the page; ☰ lists them (click opens, ✕ removes).
 - **CakeText Translator integration** (user's request 2026-10-29): pages translated, **special nouns (mainly the linked ones) keep their original names**. Done in 0.1.0 (see "Translation" below).
-- Whether the pack ships it: decided later.
+- **Ships in the pack since 2.3.0** (on by default; `pack/mods/cakewiki.pw.toml` → the GitHub release; no Modrinth project for now, the user's choice 2026-10-29).
 
 ## Files
 

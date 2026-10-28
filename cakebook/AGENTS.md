@@ -7,7 +7,7 @@ Decisions made with the user (2026-10-28):
 - Opened from the pause menu button, an inventory button, a key binding (unbound by default), `/cakebook` and Mod Menu.
 - Pages are Markdown files per language, read from resource packs **and** from `<game folder>/cakebook/books/`. The jar is a reusable engine plus a short help book; the Cakedition pages ship with the pack, so text changes need only a pack update. The books folder exists because a resource pack in the pack would have to be turned on in each player's `options.txt`, which existing installs never get (yosbr only copies missing files).
 - Notes: write/edit, insert location (UMM area + shard + coordinates), links between notes and pages, search.
-- License MIT. Ships in the Cakedition pack **on by default** once released (Monumenta's mod rules must allow it; the user asks them).
+- License MIT. **Ships in the Cakedition pack since 2.3.0 (2026-10-29), on by default** (`pack/mods/cakebook.pw.toml` → the v0.1.0 GitHub release).
 
 ## Files
 
@@ -97,8 +97,8 @@ The classes marked plain Java use no Minecraft classes (Gson in `Library` is fin
 
 ## The Cakedition pack guide
 
-Drafted 2026-10-28 in the dev instance at `.minecraft/cakebook/books/cakedition/` (local, not tracked; a copy is in the test instance): book.json + 13 pages per language (index, first-steps, keys, updates, performance-tips, help, mods/{index,monumenta,performance,visuals,hud,chat,convenience,tools}). It passes `-Dcakebook.checkBooks`, and all 21 key ids exist in the live `options.txt`. Facts come from the pack's metafiles, Modrinth summaries, the shipped `options.txt` key lines, the mods' own lang files and CakeUpdater's lang files (button names). When CakeBook ships, the folder goes to `pack/cakebook/books/cakedition/**` (owned by the session that owns `pack/`). The Monumenta gameplay guide is not started: the user writes it, or it's written with them.
+Drafted 2026-10-28 in the dev instance at `.minecraft/cakebook/books/cakedition/` (local, not tracked; a copy is in the test instance): book.json + 13 pages per language (index, first-steps, keys, updates, performance-tips, help, mods/{index,monumenta,performance,visuals,hud,chat,convenience,tools}). It passes `-Dcakebook.checkBooks`, and all 21 key ids exist in the live `options.txt`. Facts come from the pack's metafiles, Modrinth summaries, the shipped `options.txt` key lines, the mods' own lang files and CakeUpdater's lang files (button names). **Shipped in 2.3.0** as `pack/cakebook/books/cakedition/**` (a CakeWiki entry and its key were added then). The dev instance's folder stays the source: edit there, copy to `pack/cakebook/books/` by hand, `refresh`. Moe_block's `monumenta-zh` book is not shipped until its permission is recorded. The Monumenta gameplay guide is not started: the user writes it, or it's written with them.
 
 ## Release
 
-Same as CakeUpdater: bump `mod_version`, commit `cakebook/` only, push (only when the user asks), CI publishes `v<mod_version>` with the jar; then `packwiz_sync.py github mods HarrytheCake/CakeBook v<version>`. Standalone repo `HarrytheCake/CakeBook` (+ GitLab copy) still to be created by the user.
+Same as CakeUpdater: bump `mod_version`, commit `cakebook/` only, push (only when the user asks), CI publishes `v<mod_version>` with the jar; then `packwiz_sync.py github mods HarrytheCake/CakeBook v<version>`. Standalone repo `HarrytheCake/CakeBook` (remote `cakebook`, first pushed 2026-10-29; no GitLab copy yet).
