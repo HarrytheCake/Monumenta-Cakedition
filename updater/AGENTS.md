@@ -13,6 +13,8 @@ The mod ships inside the Monumenta Cakedition pack as `pack/mods/cakeupdater.pw.
 - **In-game changelog.** The pack ships `config/cakeupdater/changelog/<version>/<lang>.md`; the "Modpack updated" message shows what every version the update brought changed, with a [Changelog] screen.
 - **Memory warning.** One chat warning when the game's max heap is outside 3–12 GB (configurable).
 
+1.6.0 (user's request 2026-10-29, `docs/adr/0004`): **updates come from Modrinth first**, so they count as Modrinth downloads; then GitHub, then GitLab. The `.mrpack` carries the packwiz pack (`config/cakeupdater/packwiz/`, added by `tools/mrpack.py`), so the helper rebuilds it on disk and runs packwiz-installer as before. Also: the bootstrap runs with `--bootstrap-no-update` once `packwiz-installer.jar` exists, so an update needs no GitHub API call.
+
 ## Files
 
 ```
@@ -53,12 +55,17 @@ updater/
 ### Modpack update
 ```
 ClientPlayConnectionEvents.JOIN (every join)
- └─ UpdateCheck.runAsync(packUrl)            GET pack.toml (background)
-     ├─ packwiz.json exists → available = packFileHash.value != sha256(pack.toml)
-     ├─ else pack-version.txt exists → available = its text != pack.toml `version`
-     └─ else → not available (unknown install)
- │   └─ update available + pack-version.txt known → GET <pack.toml folder>/config/cakeupdater/withdrawn.json
- │      (404 / bad JSON = nothing withdrawn); installed version listed → Result.withdrawn = its reasons → urgent
+ └─ UpdateCheck.runAsync(config.packwiz)     (background; the first source that answers wins)
+     ├─ 1. Modrinth (packwiz.modrinth() set + pack-version.txt known):
+     │     GET api.modrinth.com/v2/project/<p>/version?loaders=["fabric"]&game_versions=["<mc>"]
+     │     → newest version_type "release" with a .mrpack primary file; available = Changelog.compare(it, installed) > 0;
+     │       Result.mrpack = {versionId, url, sha512}, remoteHash = "modrinth:<versionId>"
+     ├─ 2. each packwiz.packUrls() (packUrl, then fallbackUrls: GitHub, then GitLab): GET pack.toml
+     │     ├─ packwiz.json exists → available = packFileHash.value != sha256(pack.toml)
+     │     ├─ else pack-version.txt exists → available = its text != pack.toml `version`
+     │     └─ else → not available (unknown install);  Result.packUrl = the address that answered
+ │   └─ update available + pack-version.txt known → GET <pack.toml folder>/config/cakeupdater/withdrawn.json at each
+ │      address in turn (404 / bad JSON everywhere = nothing withdrawn); installed version listed → urgent
  └─ chat: "[<prefix>] Modpack update available (a → b) [Click to update]"   (once per remote hash)
      urgent instead: red "Urgent update: version a was withdrawn. Please update to b." + the reason line, EVERY join
 CLIENT_STARTED → the same check; urgent → SystemToast (PERIODIC_NOTIFICATION) on the TitleScreen, once per start
@@ -67,19 +74,29 @@ CLIENT_STARTED → the same check; urgent → SystemToast (PERIODIC_NOTIFICATION
            └─ /cakeupdate now      → updateOnClose = true; client.send(disconnect + scheduleStop)
 ClientLifecycleEvents.CLIENT_STOPPING
  └─ if updateOnClose → Adoption.adopt(gameDir)   (only if packwiz.json is missing and adoption.json exists; see below)
-                     → HelperLauncher.launch(gameDir, packUrl, language, prefix)
+                     → HelperLauncher.launch(gameDir, latest.mrpack, packUrls (the one that answered first), language, prefix)
+                       (on Windows a source with & ^ | < > % " is left out: it would pass through cmd)
       1. copy mod jar → %TEMP%/cakeupdater-helper-*.jar   (so the update can replace the real jar)
       2. Windows: cmd /c start "<prefix> Updater" java.exe -cp <copy> Helper <pid> <gameDir> <url> <lang> <prefix>
+                  [--mrpack <url> <sha512>] [--fallback <url>]...
          macOS:   temp .command script → open -a Terminal <script>
          Linux:   temp .sh script → first terminal on PATH (see LINUX_TERMINALS); none / Flatpak → run headless
 Helper.main
  1. wait for the game PID to exit (+2 s for Windows file locks)
  2. delete old cakeupdater-helper-* temp files
  3. .minecraft/packwiz-installer-bootstrap.jar missing → print where to get it, exit 1 (never downloaded)
- 4. java -jar packwiz-installer-bootstrap.jar -s client <url>   (GUI mode: optional-mod dialog works)
+ 4. for each source until one finishes (exit 0), saying which in the window:
+     a. Modrinth: download the .mrpack, check sha512, MrpackPack.rebuild into %TEMP%/cakeupdater-pack-* (see below)
+        → <that folder>/pack.toml; the folder is deleted afterwards
+     b. the pack.toml URL, then each --fallback
+    java -jar packwiz-installer-bootstrap.jar [--bootstrap-no-update] -s client <pack.toml path or URL>
+    (GUI mode: optional-mod dialog works; --bootstrap-no-update when packwiz-installer.jar is already there)
  5. print "Update finished! Start Minecraft again…" (or failure + exit code); wait for Enter
     no console → JOptionPane dialog instead
 ```
+
+### Updating from the `.mrpack` (1.6.0+, `MrpackPack`)
+`tools/mrpack.py` puts the packwiz pack in the `.mrpack` at `overrides/config/cakeupdater/packwiz/`: `pack.toml`, `index.toml`, every `*.pw.toml` at its pack path, and `files.tsv` = one line per other pack file: `<path>	<sha256>	mrpack:<zip entry>` (bundled override; preserve=true files are at their `config/cakeupdater/defaults/` entry) or `	url:<url>` (files over 1 MB, i.e. the Paperbox zips, linked from raw.githubusercontent.com at the commit that last changed them). `rebuild` writes the metadata and every file into the work folder, checking each against its sha256; a `url:` file the install already has with the right hash is copied from the game folder, so only changed ones are downloaded. Paths that would land outside the work folder are refused. packwiz-installer reads a local `pack.toml` path (checked 2026-10-29: plain path and `file:` URL both install fully). A `.mrpack` without `files.tsv` (built before 1.6.0) fails the Modrinth source, and the helper goes on to GitHub.
 
 ### Adoption (1.4.1+): a `.mrpack` install's first update
 
@@ -165,7 +182,9 @@ The mod writes it with comments on first launch (`Config.TEMPLATE`). Gson reads 
 |---|---|---|
 | `chatPrefix` | `"Cakedition"` | Chat prefix `[…]`; also the updater window title |
 | `packwiz.enabled` | `true` | Modpack update check on/off |
-| `packwiz.packUrl` | Cakedition `packwiz` branch `pack.toml` | Published pack.toml URL |
+| `packwiz.modrinthProject` | absent → Cakedition's `Yx4XUCFJ` when `packUrl` is Cakedition's, else none | Modrinth project to update from first (`""` = don't) |
+| `packwiz.packUrl` | Cakedition `packwiz` branch `pack.toml` | Published pack.toml URL (after Modrinth) |
+| `packwiz.fallbackUrls` | absent → Cakedition's GitLab copy when `packUrl` is Cakedition's, else none | More pack.toml addresses, in order |
 | `resourcePacks[]` | one entry for MonumentaRP | Modrinth packs to keep updated (`[]` = off) |
 | `resourcePacks[].enabled` | `true` | |
 | `resourcePacks[].modrinthProject` | `"Yj53Rs56"` | Project ID or slug |
@@ -177,7 +196,7 @@ The mod writes it with comments on first launch (`Config.TEMPLATE`). Gson reads 
 | `memory.minGb` / `memory.maxGb` | `3` / `12` | Warn outside this range (`0` = no limit) |
 | `memory.guideUrl` | Cakedition install guide | Linked from the warning (`""` = no link) |
 
-On Windows, `packUrl` and `chatPrefix` pass through `cmd /c start`, so they must not contain `& ^ | < >`. On macOS and Linux everything is single-quoted (`HelperLauncher.shellQuote`).
+The "absent" defaults matter: config files written before 1.6.0 have neither key, and another modpack's config must not start checking Cakedition's Modrinth project. On Windows, `packUrl`, the fallbacks, the `.mrpack` URL and `chatPrefix` pass through `cmd /c start`, so they must not contain `& ^ | < > %`. On macOS and Linux everything is single-quoted (`HelperLauncher.shellQuote`).
 
 ## Translations
 
@@ -218,7 +237,7 @@ The pack must only point at a release that already exists, which is why step 4 w
 - **Pre-launch must not load Minecraft classes** (they'd load before mixins apply). `CakeUpdaterPreLaunch` and `Backups` use their own slf4j logger and only the inlined `CakeUpdater.MOD_ID` constant; never `CakeUpdater.LOGGER` or `Config` there.
 - **Adoption is only as good as `adoption.json`:** it must describe exactly the `.mrpack` it ships in. A `.mrpack` without one (the 2.2.0 one, or another pack's) updates the old way, with the problems above.
 - **Never restore `pack-version.txt`** or yosbr defaults: the update notice would come back and pack defaults would go stale (`Backups.SKIP`).
-- **The mod downloads no code (1.3.0+).** It runs the `packwiz-installer-bootstrap.jar` a packwiz install already has in `.minecraft` (the launcher's pre-launch command needs it). Without it (e.g. a `.mrpack` install), `/cakeupdate`, `onclose` and `now` show [Open game folder] + [Download page] (`Helper.BOOTSTRAP_PAGE`) instead of updating, and `Helper` prints the same advice. Before 1.3.0 `Helper` downloaded bootstrap v0.0.3 itself; this was removed for mod-site rules. Its only network use is the update check (`pack.toml`, Modrinth API) and resource packs the player chooses to update.
+- **The mod downloads no code (1.3.0+).** It runs the `packwiz-installer-bootstrap.jar` a packwiz install already has in `.minecraft` (the launcher's pre-launch command needs it). Without it (e.g. a `.mrpack` install), `/cakeupdate`, `onclose` and `now` show [Open game folder] + [Download page] (`Helper.BOOTSTRAP_PAGE`) instead of updating, and `Helper` prints the same advice. Before 1.3.0 `Helper` downloaded bootstrap v0.0.3 itself; this was removed for mod-site rules. Its network use: the update check (Modrinth API, `pack.toml`, `withdrawn.json`), the `.mrpack` and the pack files it links (data, not code) when the player updates, and resource packs the player chooses to update.
 - **Logging:** Minecraft's log format omits logger names, so search logs for message text ("Modpack update check", "Resource pack update", "Starting updater").
 
 ## Testing
@@ -237,6 +256,8 @@ Proven:
 - `Backups` out of game (2026-10-27, 41 checks in a fake game folder): snapshot skips, incremental sync and deletions, update detection once per change, server and config restore with safety backups, cancel, defaults only when missing, per-kind pruning.
 
 - 1.5.0 out of game (2026-10-28, JUnit, 12 tests): version order, skipped versions newest first, unknown/same versions, zh_tw → zh_cn → en fallback, Markdown parsing, withdrawn lookup and reasons, memory range and warn-once.
+
+- 1.6.0 (2026-10-29): JUnit 19 tests (7 new: config defaults only for Cakedition's own `packUrl`, Modrinth answer parsing and version order, the query URL, cmd-safe arguments, `.mrpack` rebuild with only changed linked files downloaded, refused bad hashes / unsafe paths / pre-1.6.0 pack files / a wrong download). **End to end** with the real helper, bootstrap and packwiz-installer (window mode): a 2.2.3 install (from GitHub at `62d9877`) updated from a locally served 2.3.0 `.mrpack` came out byte-identical to a clean 2.3.0 install, `packFileHash` included; with a wrong sha512 the helper fell back to the next pack.toml address and gave the same result. Not tried: the real Modrinth CDN (the first released pack after this does it), the in-game check against the real Modrinth API.
 
 Not proven:
 - the backups chat message, screen and restores in game (the user reported 2026-10-28 that the config backup works)

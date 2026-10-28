@@ -22,8 +22,38 @@ final class Config {
 	MemorySettings memory = new MemorySettings();
 
 	static final class Packwiz {
+		static final String CAKEDITION_PACK_URL = "https://raw.githubusercontent.com/HarrytheCake/Monumenta-Cakedition/packwiz/pack/pack.toml";
+		static final String CAKEDITION_GITLAB_URL = "https://gitlab.com/HarrytheCake/Monumenta-Cakedition/-/raw/packwiz/pack/pack.toml";
+		static final String CAKEDITION_MODRINTH = "Yx4XUCFJ";
+
 		boolean enabled = true;
-		String packUrl = "https://raw.githubusercontent.com/HarrytheCake/Monumenta-Cakedition/packwiz/pack/pack.toml";
+		String packUrl = CAKEDITION_PACK_URL;
+		/** Modrinth project whose newest version is the update (its .mrpack, with the packwiz pack inside). null: Cakedition's
+		 * when packUrl is Cakedition's (config files from before 1.6.0 don't have this key), else none. "": none. */
+		String modrinthProject;
+		/** pack.toml addresses tried after packUrl. null: Cakedition's GitLab copy when packUrl is Cakedition's, else none. */
+		List<String> fallbackUrls;
+
+		boolean cakedition() {
+			return CAKEDITION_PACK_URL.equals(packUrl);
+		}
+
+		String modrinth() {
+			String project = modrinthProject != null ? modrinthProject : cakedition() ? CAKEDITION_MODRINTH : "";
+			return project.trim();
+		}
+
+		/** packUrl, then the fallbacks, without blanks or repeats. */
+		List<String> packUrls() {
+			List<String> urls = new ArrayList<>();
+			List<String> fallbacks = fallbackUrls != null ? fallbackUrls : cakedition() ? List.of(CAKEDITION_GITLAB_URL) : List.of();
+			for (String url : java.util.stream.Stream.concat(java.util.stream.Stream.of(packUrl), fallbacks.stream()).toList()) {
+				if (url != null && !url.isBlank() && !urls.contains(url.trim())) {
+					urls.add(url.trim());
+				}
+			}
+			return urls;
+		}
 	}
 
 	static final class ResourcePack {
@@ -56,9 +86,14 @@ final class Config {
 			  // Modpack updates through packwiz-installer.
 			  "packwiz": {
 			    "enabled": true,
-			    // Public URL of your pack.toml (on GitHub: the raw.githubusercontent.com link).
-			    // On Windows this and chatPrefix must not contain & ^ | < > (they pass through cmd).
-			    "packUrl": "https://raw.githubusercontent.com/HarrytheCake/Monumenta-Cakedition/packwiz/pack/pack.toml"
+			    // Modrinth project whose newest version is the update: its .mrpack must carry the packwiz pack in
+			    // config/cakeupdater/packwiz/ (Cakedition's tools/mrpack.py adds it). Tried first; "" = don't use Modrinth.
+			    "modrinthProject": "Yx4XUCFJ",
+			    // Public URL of your pack.toml (on GitHub: the raw.githubusercontent.com link), used when Modrinth fails.
+			    // On Windows these and chatPrefix must not contain & ^ | < > % (they pass through cmd).
+			    "packUrl": "https://raw.githubusercontent.com/HarrytheCake/Monumenta-Cakedition/packwiz/pack/pack.toml",
+			    // Copies of the same pack.toml, tried in order when packUrl fails.
+			    "fallbackUrls": ["https://gitlab.com/HarrytheCake/Monumenta-Cakedition/-/raw/packwiz/pack/pack.toml"]
 			  },
 
 			  // Resource packs to keep up to date from Modrinth. Only packs the player has turned on are checked.

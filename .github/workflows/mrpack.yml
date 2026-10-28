@@ -24,6 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # tools/mrpack.py links large pack files at the commit that last changed them, so it needs the history
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:

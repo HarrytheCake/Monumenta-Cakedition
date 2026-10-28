@@ -11,7 +11,15 @@
 - config/cakeupdater/adoption.json lists every file the .mrpack installs, in packwiz.json's form. Cakedition
   Updater 1.4.1+ turns it into packwiz.json before the install's first update, so packwiz-installer replaces renamed
   jars instead of adding a second copy, and keeps the player's optional-mod choices.
+- Pack files over LARGE bytes (the Paperbox art zips) are not bundled: they become downloads from
+  raw.githubusercontent.com pinned to the commit being built (the build refuses if the file differs from that commit),
+  so the .mrpack, which Cakedition Updater 1.6.0+ downloads for every update, stays small.
+- config/cakeupdater/packwiz/ holds the packwiz pack itself (pack.toml, index.toml, every metafile) and files.tsv,
+  where each other pack file is: `<path>\t<sha256>\tmrpack:<entry>` or `\turl:<url>`. Cakedition Updater rebuilds the
+  pack from it and runs packwiz-installer on that, so an update from Modrinth works exactly like one from GitHub.
 """
+import os
+import subprocess
 import hashlib
 import json
 import pathlib
@@ -29,6 +37,23 @@ BOOTSTRAP_URL = "https://github.com/packwiz/packwiz-installer-bootstrap/releases
 BOOTSTRAP_SHA256 = "a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
 BOOTSTRAP_LICENSE_URL = "https://raw.githubusercontent.com/packwiz/packwiz-installer-bootstrap/v0.0.3/LICENSE"
 ADOPTION = "config/cakeupdater/adoption.json"
+PACKWIZ = "config/cakeupdater/packwiz"
+LARGE = 1 << 20
+RAW = "https://raw.githubusercontent.com/HarrytheCake/Monumenta-Cakedition"
+
+
+def commit_of(rel):
+    """The last commit that changed pack/<rel> (already on GitHub when CI builds), after checking that the file on disk
+    is what that commit has. Its raw URL then always serves exactly these bytes."""
+    root = packwiz_sync.ROOT
+    head = os.environ.get("GITHUB_SHA") or "HEAD"
+    commit = subprocess.run(["git", "log", "-1", "--format=%H", head, "--", f"pack/{rel}"], cwd=root,
+                            capture_output=True, text=True, check=True).stdout.strip()
+    committed = subprocess.run(["git", "rev-parse", f"{commit}:pack/{rel}"], cwd=root, capture_output=True, text=True)
+    on_disk = subprocess.run(["git", "hash-object", str(PACK / rel)], cwd=root, capture_output=True, text=True, check=True)
+    if committed.returncode or committed.stdout.strip() != on_disk.stdout.strip():
+        sys.exit(f"pack/{rel} differs from commit {commit[:7]}: commit it first (the .mrpack links to it there)")
+    return commit
 
 
 def fetch(url, data=None):
@@ -100,6 +125,23 @@ def main():
         if rel not in packwiz_sync.PRESERVE:  # installed elsewhere (defaults), so packwiz-installer must not own it
             adoption[rel] = {"hash": {"type": "sha256", "value": index_hash[rel]}, "cachedLocation": rel}
 
+    # large files become downloads (see the module docstring); the rest stay overrides
+    linked = {}
+    for rel in overrides:
+        if rel not in packwiz_sync.PRESERVE and (PACK / rel).stat().st_size > LARGE:
+            data = (PACK / rel).read_bytes()
+            linked[rel] = f"{RAW}/{commit_of(rel)}/pack/{rel}"
+            files.append({"path": rel, "hashes": {"sha1": hashlib.sha1(data).hexdigest(),
+                                                   "sha512": hashlib.sha512(data).hexdigest()},
+                          "env": {"client": "required", "server": "required"}, "downloads": [linked[rel]],
+                          "fileSize": len(data)})
+    bundled = [rel for rel in overrides if rel not in linked]
+    tsv = []
+    for rel in overrides:
+        where = f"url:{linked[rel]}" if rel in linked else \
+            "mrpack:overrides/" + (f"config/cakeupdater/defaults/{rel}" if rel in packwiz_sync.PRESERVE else rel)
+        tsv.append(f"{rel}\t{index_hash[rel]}\t{where}")
+
     bootstrap = fetch(BOOTSTRAP_URL)
     if hashlib.sha256(bootstrap).hexdigest() != BOOTSTRAP_SHA256:
         sys.exit(f"{BOOTSTRAP}: unexpected hash")
@@ -118,7 +160,7 @@ def main():
     out = OUT / f"{pack['name'].replace(' ', '-')}-{version}.mrpack"
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("modrinth.index.json", json.dumps(manifest, indent=1, ensure_ascii=False))
-        for rel in overrides:
+        for rel in bundled:
             # A launcher's update rewrites overrides; preserve=true files (servers.dat) go to Cakedition Updater's
             # defaults instead, which it copies into place only when missing.
             dst = f"config/cakeupdater/defaults/{rel}" if rel in packwiz_sync.PRESERVE else rel
@@ -126,7 +168,14 @@ def main():
         z.writestr(f"overrides/{BOOTSTRAP}", bootstrap)
         z.writestr("overrides/packwiz-installer-bootstrap-LICENSE.txt", bootstrap_license)
         z.writestr(f"overrides/{ADOPTION}", json.dumps({"files": adoption}, indent=1, ensure_ascii=False))
-    print(f"{out.relative_to(packwiz_sync.ROOT).as_posix()}: {len(files)} downloads, {len(overrides) + 3} overrides, "
+        # the packwiz pack itself, for Cakedition Updater's updates from Modrinth
+        z.write(PACK / "pack.toml", f"overrides/{PACKWIZ}/pack.toml")
+        z.write(PACK / "index.toml", f"overrides/{PACKWIZ}/index.toml")
+        for rel in metas:
+            z.write(PACK / rel, f"overrides/{PACKWIZ}/{rel}")
+        z.writestr(f"overrides/{PACKWIZ}/files.tsv", "\n".join(tsv) + "\n")
+    print(f"{out.relative_to(packwiz_sync.ROOT).as_posix()}: {len(files)} downloads ({len(linked)} linked pack files), "
+          f"{len(bundled) + 3} overrides + the packwiz pack, "
           f"{out.stat().st_size >> 10} KB")
 
 

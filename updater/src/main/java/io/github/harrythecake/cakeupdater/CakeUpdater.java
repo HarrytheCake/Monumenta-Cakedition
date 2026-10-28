@@ -73,7 +73,7 @@ public class CakeUpdater implements ClientModInitializer {
 		// An urgent update is also shown before joining: a toast on the title screen.
 		ClientLifecycleEvents.CLIENT_STARTED.register(client -> {
 			if (packwizEnabled()) {
-				UpdateCheck.runAsync(config.packwiz.packUrl, gameDir()).thenAccept(result -> {
+				UpdateCheck.runAsync(config.packwiz, gameDir()).thenAccept(result -> {
 					if (result != null && result.urgent()) {
 						urgentAtStart = result;
 						client.send(() -> {
@@ -103,7 +103,7 @@ public class CakeUpdater implements ClientModInitializer {
 				client.send(() -> checkMemory(client));
 			}
 			if (packwizEnabled()) {
-				UpdateCheck.runAsync(config.packwiz.packUrl, gameDir()).thenAccept(result -> {
+				UpdateCheck.runAsync(config.packwiz, gameDir()).thenAccept(result -> {
 					if (result != null) {
 						latest = result;
 						client.send(() -> announcePack(client, result));
@@ -153,7 +153,8 @@ public class CakeUpdater implements ClientModInitializer {
 					LOGGER.error("Could not prepare the pack file install for its first update", e);
 				}
 				try {
-					HelperLauncher.launch(gameDir(), config.packwiz.packUrl, client.options.language, config.chatPrefix);
+					HelperLauncher.launch(gameDir(), latest != null ? latest.mrpack() : null, packUrlsFirst(latest),
+							client.options.language, config.chatPrefix);
 				} catch (Exception e) {
 					LOGGER.error("Could not start the updater", e);
 				}
@@ -162,6 +163,15 @@ public class CakeUpdater implements ClientModInitializer {
 	}
 
 	// --- Modpack (packwiz) ---
+
+	/** The pack.toml addresses, the one that answered the last check first (it worked a moment ago). */
+	private static List<String> packUrlsFirst(UpdateCheck.Result result) {
+		List<String> urls = new ArrayList<>(config.packwiz.packUrls());
+		if (result != null && result.packUrl() != null && urls.remove(result.packUrl())) {
+			urls.add(0, result.packUrl());
+		}
+		return urls;
+	}
 
 	private static boolean packwizEnabled() {
 		return config.packwiz.enabled && config.packwiz.packUrl != null && !config.packwiz.packUrl.isBlank();

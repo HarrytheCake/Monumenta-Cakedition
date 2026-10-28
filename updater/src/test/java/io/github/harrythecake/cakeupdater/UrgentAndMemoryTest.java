@@ -28,7 +28,7 @@ class UrgentAndMemoryTest {
 		Files.createDirectories(version.getParent());
 		Files.writeString(version, installed);
 		byte[] packToml = ("name = \"Pack\"\nversion = \"" + published + "\"\n").getBytes(StandardCharsets.UTF_8);
-		return UpdateCheck.withWithdrawn(UpdateCheck.compare(packToml, game), WITHDRAWN);
+		return UpdateCheck.withWithdrawn(UpdateCheck.compare(packToml, game, "https://example.org/pack.toml"), WITHDRAWN);
 	}
 
 	@Test
