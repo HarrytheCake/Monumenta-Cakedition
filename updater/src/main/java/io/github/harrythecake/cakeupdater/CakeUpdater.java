@@ -5,9 +5,12 @@ import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallba
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.MessageScreen;
+import net.minecraft.client.gui.screen.TitleScreen;
+import net.minecraft.client.toast.SystemToast;
 import net.minecraft.text.ClickEvent;
 import net.minecraft.text.HoverEvent;
 import net.minecraft.text.MutableText;
@@ -30,6 +33,8 @@ import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.lit
 public class CakeUpdater implements ClientModInitializer {
 	public static final String MOD_ID = "cakeupdater";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	/** Changelog items shown in chat after an update; the rest are behind [Changelog]. */
+	private static final int CHAT_ITEMS = 5;
 
 	private static Config config;
 	private static volatile UpdateCheck.Result latest;
@@ -43,7 +48,14 @@ public class CakeUpdater implements ClientModInitializer {
 	private static Backups backups;
 	/** The backup made at this start because the pack changed since the last one; announced once, on join. */
 	private static volatile Backups.Backup updateBackup;
+	/** The update this start announced; /cakeupdate changelog shows its versions. */
+	private static Backups.Backup announcedUpdate;
 	private static boolean restoreHookAdded;
+
+	/** An urgent update found at start, shown as a toast on the title screen (once per start). */
+	private static volatile UpdateCheck.Result urgentAtStart;
+	private static boolean urgentToastShown;
+	private static boolean memoryChecked;
 
 	@Override
 	public void onInitializeClient() {
@@ -58,6 +70,27 @@ public class CakeUpdater implements ClientModInitializer {
 			}
 		}
 
+		// An urgent update is also shown before joining: a toast on the title screen.
+		ClientLifecycleEvents.CLIENT_STARTED.register(client -> {
+			if (packwizEnabled()) {
+				UpdateCheck.runAsync(config.packwiz.packUrl, gameDir()).thenAccept(result -> {
+					if (result != null && result.urgent()) {
+						urgentAtStart = result;
+						client.send(() -> {
+							if (client.currentScreen instanceof TitleScreen) {
+								showUrgentToast(client);
+							}
+						});
+					}
+				});
+			}
+		});
+		ScreenEvents.AFTER_INIT.register((client, screen, scaledWidth, scaledHeight) -> {
+			if (screen instanceof TitleScreen) {
+				showUrgentToast(client);
+			}
+		});
+
 		// Check on every join, so an update released mid-session still shows up.
 		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
 			if (updateBackup != null) {
@@ -65,7 +98,11 @@ public class CakeUpdater implements ClientModInitializer {
 				updateBackup = null;
 				client.send(() -> announceUpdated(client, made));
 			}
-			if (config.packwiz.enabled && config.packwiz.packUrl != null && !config.packwiz.packUrl.isBlank()) {
+			if (!memoryChecked) {
+				memoryChecked = true;
+				client.send(() -> checkMemory(client));
+			}
+			if (packwizEnabled()) {
 				UpdateCheck.runAsync(config.packwiz.packUrl, gameDir()).thenAccept(result -> {
 					if (result != null) {
 						latest = result;
@@ -90,6 +127,7 @@ public class CakeUpdater implements ClientModInitializer {
 						.then(literal("cancel").executes(ctx -> cancel(ctx.getSource())))
 						.then(literal("folder").executes(ctx -> openGameFolder()))
 						.then(literal("backups").executes(ctx -> openBackups()))
+						.then(literal("changelog").executes(ctx -> openChangelog()))
 						.then(literal("quit").executes(ctx -> quit(ctx.getSource())))
 						.then(literal("restore")
 								.then(literal("servers").then(argument("backup", StringArgumentType.word())
@@ -125,8 +163,20 @@ public class CakeUpdater implements ClientModInitializer {
 
 	// --- Modpack (packwiz) ---
 
+	private static boolean packwizEnabled() {
+		return config.packwiz.enabled && config.packwiz.packUrl != null && !config.packwiz.packUrl.isBlank();
+	}
+
 	private static void announcePack(MinecraftClient client, UpdateCheck.Result result) {
-		if (!result.available() || updateOnClose || result.remoteHash().equals(notifiedHash) || client.player == null) {
+		if (!result.available() || updateOnClose || client.player == null) {
+			return;
+		}
+		if (result.urgent()) {
+			// repeated on every join until the player updates
+			announceUrgent(client, result);
+			return;
+		}
+		if (result.remoteHash().equals(notifiedHash)) {
 			return;
 		}
 		notifiedHash = result.remoteHash();
@@ -137,6 +187,30 @@ public class CakeUpdater implements ClientModInitializer {
 				.append(available.copy().formatted(Formatting.YELLOW))
 				.append(" ")
 				.append(button("cakeupdater.pack.click", "/cakeupdate", Formatting.GREEN)), false);
+	}
+
+	/** The installed version was withdrawn: a red notice with the reason. Never forced; the same two choices follow. */
+	private static void announceUrgent(MinecraftClient client, UpdateCheck.Result result) {
+		client.player.sendMessage(prefix()
+				.append(Text.translatable("cakeupdater.pack.urgent", result.localVersion(), result.remoteVersion())
+						.formatted(Formatting.RED, Formatting.BOLD))
+				.append(" ")
+				.append(button("cakeupdater.pack.click", "/cakeupdate", Formatting.GREEN)), false);
+		String reason = Withdrawn.pick(result.withdrawn(), client.options.language);
+		if (!reason.isEmpty()) {
+			client.player.sendMessage(Text.literal("  " + reason).formatted(Formatting.RED), false);
+		}
+	}
+
+	private static void showUrgentToast(MinecraftClient client) {
+		UpdateCheck.Result result = urgentAtStart;
+		if (result == null || urgentToastShown) {
+			return;
+		}
+		urgentToastShown = true;
+		client.getToastManager().add(SystemToast.create(client, SystemToast.Type.PERIODIC_NOTIFICATION,
+				Text.translatable("cakeupdater.pack.urgent.toast.title").formatted(Formatting.RED),
+				Text.translatable("cakeupdater.pack.urgent.toast", result.localVersion())));
 	}
 
 	private static int showOptions(FabricClientCommandSource source) {
@@ -237,7 +311,20 @@ public class CakeUpdater implements ClientModInitializer {
 				? Text.translatable("cakeupdater.updated.same", made.to())
 				: Text.translatable("cakeupdater.updated", made.from(), made.to());
 		client.player.sendMessage(prefix().append(updated.copy().formatted(Formatting.YELLOW)), false);
+		announcedUpdate = made;
+		List<Changelog.Entry> changes = Changelog.between(gameDir(), made.from(), made.to(), client.options.language);
+		List<String> items = changes.stream().flatMap(e -> e.items().stream()).toList();
+		for (String item : items.subList(0, Math.min(CHAT_ITEMS, items.size()))) {
+			client.player.sendMessage(Text.literal("  • " + item).formatted(Formatting.WHITE), false);
+		}
+		if (items.size() > CHAT_ITEMS) {
+			client.player.sendMessage(Text.literal("  ")
+					.append(Text.translatable("cakeupdater.changelog.more", items.size() - CHAT_ITEMS).formatted(Formatting.GRAY)), false);
+		}
 		MutableText buttons = Text.literal("  ");
+		if (!changes.isEmpty()) {
+			buttons.append(button("cakeupdater.changelog.open", "/cakeupdate changelog", Formatting.AQUA)).append(" ");
+		}
 		if (made.hasServers()) {
 			buttons.append(button("cakeupdater.restore.servers", "/cakeupdate restore servers " + made.name(), Formatting.GREEN)).append(" ");
 		}
@@ -246,6 +333,39 @@ public class CakeUpdater implements ClientModInitializer {
 		}
 		buttons.append(button("cakeupdater.backups.open", "/cakeupdate backups", Formatting.AQUA));
 		client.player.sendMessage(buttons, false);
+	}
+
+	/** The versions the update announced this start brought, else every changelog the pack ships. */
+	private static int openChangelog() {
+		MinecraftClient client = MinecraftClient.getInstance();
+		Backups.Backup made = announcedUpdate;
+		List<Changelog.Entry> entries = made != null
+				? Changelog.between(gameDir(), made.from(), made.to(), client.options.language)
+				: Changelog.between(gameDir(), null, null, client.options.language);
+		client.send(() -> client.setScreen(new ChangelogScreen(null, entries)));
+		return 1;
+	}
+
+	// --- Memory ---
+
+	private static void checkMemory(MinecraftClient client) {
+		Config.MemorySettings memory = config.memory;
+		if (!memory.enabled || client.player == null) {
+			return;
+		}
+		long maxMb = Runtime.getRuntime().maxMemory() / (1024 * 1024);
+		MemoryCheck.Problem problem = MemoryCheck.warnOnce(gameDir(), maxMb, memory.minGb, memory.maxGb);
+		if (problem == null) {
+			return;
+		}
+		Text warning = problem == MemoryCheck.Problem.LOW
+				? Text.translatable("cakeupdater.memory.low", MemoryCheck.gb(maxMb), memory.minGb)
+				: Text.translatable("cakeupdater.memory.high", MemoryCheck.gb(maxMb), memory.maxGb);
+		MutableText message = prefix().append(warning.copy().formatted(Formatting.YELLOW));
+		if (memory.guideUrl != null && !memory.guideUrl.isBlank()) {
+			message.append(" ").append(link("cakeupdater.memory.guide", memory.guideUrl));
+		}
+		client.player.sendMessage(message, false);
 	}
 
 	private static int openBackups() {

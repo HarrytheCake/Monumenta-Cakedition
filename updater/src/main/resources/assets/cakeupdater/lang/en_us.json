@@ -50,5 +50,16 @@
   "cakeupdater.backups.configs": "Configs",
   "cakeupdater.backups.configs.tip": "Restore these configs when you close Minecraft (the current ones are saved first)",
   "cakeupdater.backups.folder": "Open folder",
-  "cakeupdater.backups.cancel": "Cancel restore"
+  "cakeupdater.backups.cancel": "Cancel restore",
+  "cakeupdater.pack.urgent": "Urgent update: version %s was withdrawn. Please update to %s.",
+  "cakeupdater.pack.urgent.toast.title": "Urgent modpack update",
+  "cakeupdater.pack.urgent.toast": "Version %s was withdrawn. Join a world or server to update.",
+  "cakeupdater.changelog.open": "[Changelog]",
+  "cakeupdater.changelog.open.hover": "Everything that changed in this update",
+  "cakeupdater.changelog.more": "…and %s more",
+  "cakeupdater.changelog.title": "Changelog",
+  "cakeupdater.changelog.none": "This update has no changelog.",
+  "cakeupdater.memory.low": "Minecraft has only %s GB of memory. Below %s GB it may stutter or run out of memory: raise it in your launcher's settings.",
+  "cakeupdater.memory.high": "Minecraft has %s GB of memory. More than %s GB doesn't make it faster and causes longer pauses: lower it in your launcher's settings.",
+  "cakeupdater.memory.guide": "[How to change it]"
 }

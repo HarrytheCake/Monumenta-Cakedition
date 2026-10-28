@@ -50,5 +50,16 @@
   "cakeupdater.backups.configs": "設定",
   "cakeupdater.backups.configs.tip": "在關閉 Minecraft 時還原這些設定（會先儲存目前的設定）",
   "cakeupdater.backups.folder": "開啟資料夾",
-  "cakeupdater.backups.cancel": "取消還原"
+  "cakeupdater.backups.cancel": "取消還原",
+  "cakeupdater.pack.urgent": "緊急更新：版本 %s 已被撤回，請更新到 %s。",
+  "cakeupdater.pack.urgent.toast.title": "模組包緊急更新",
+  "cakeupdater.pack.urgent.toast": "版本 %s 已被撤回。進入世界或伺服器即可更新。",
+  "cakeupdater.changelog.open": "[更新日誌]",
+  "cakeupdater.changelog.open.hover": "查看這次更新的所有內容",
+  "cakeupdater.changelog.more": "……還有 %s 項",
+  "cakeupdater.changelog.title": "更新日誌",
+  "cakeupdater.changelog.none": "這次更新沒有更新日誌。",
+  "cakeupdater.memory.low": "Minecraft 只分配了 %s GB 記憶體。低於 %s GB 可能會卡頓或記憶體不足，請在啟動器設定中調高。",
+  "cakeupdater.memory.high": "Minecraft 分配了 %s GB 記憶體。超過 %s GB 並不會讓遊戲變快，反而會讓停頓更久，請在啟動器設定中調低。",
+  "cakeupdater.memory.guide": "[如何調整]"
 }

@@ -9,6 +9,7 @@ Nothing is pushed unless every check passes:
   - the working tree is clean (commit first),
   - pack/index.toml and the hash in pack/pack.toml are up to date (`refresh` changes nothing),
   - no remote has commits that main (or the split folder) doesn't,
+  - pack files changed only together with a new pack version (a released version never changes),
   - outgoing commits use a no-reply identity and add no personal data (emails, local paths,
     your username, player UUIDs, `lastServer`, profiler links),
   - a dry-run push to every remote succeeds (so a login problem on one copy stops all of them).
@@ -140,14 +141,20 @@ def main():
         print("\nNothing to push: every remote is up to date.")
         return
 
+    # A released pack version never changes (docs/adr/0002): changed pack files need a new version.
+    version = re.search(r'^version = "([^"]*)"', (ROOT / "pack" / "pack.toml").read_text(encoding="utf-8"), re.M).group(1)
+    remote_version = re.search(r'^version = "([^"]*)"', git("show", "github/packwiz:pack/pack.toml"), re.M).group(1)
+    changed = git("diff", "--name-only", "github/packwiz", "main", "--", "pack")
+    if changed and version == remote_version:
+        fail(f"pack files changed but the version is still {version}, which is already released. Bump `version` in "
+             f"pack/pack.toml (then `refresh` and commit). Changed:\n  " + changed.replace("\n", "\n  "))
+
     print("Scanning outgoing commits for personal data...")
     pats = personal_patterns()
     hits = [h for _, local, _, _, base, _ in outgoing for h in scan(base, local, pats)]
     if hits:
         fail("possible personal data in outgoing commits:\n  " + "\n  ".join(dict.fromkeys(hits)))
 
-    version = re.search(r'^version = "([^"]*)"', (ROOT / "pack" / "pack.toml").read_text(encoding="utf-8"), re.M).group(1)
-    remote_version = re.search(r'^version = "([^"]*)"', git("show", "github/packwiz:pack/pack.toml"), re.M).group(1)
     print(f"\nPack version: {remote_version} -> {version}" if version != remote_version
           else f"\nPack version: {version} (unchanged)")
     for label, *_, log in outgoing:

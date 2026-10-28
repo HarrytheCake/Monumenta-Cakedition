@@ -19,6 +19,7 @@ final class Config {
 	Packwiz packwiz = new Packwiz();
 	List<ResourcePack> resourcePacks = new ArrayList<>(List.of(new ResourcePack()));
 	BackupSettings backups = new BackupSettings();
+	MemorySettings memory = new MemorySettings();
 
 	static final class Packwiz {
 		boolean enabled = true;
@@ -35,6 +36,13 @@ final class Config {
 	static final class BackupSettings {
 		boolean enabled = true;
 		int keep = 5;
+	}
+
+	static final class MemorySettings {
+		boolean enabled = true;
+		int minGb = 3;
+		int maxGb = 12;
+		String guideUrl = "https://github.com/HarrytheCake/Monumenta-Cakedition/wiki/Install-Guide#before-you-start";
 	}
 
 	private static final String TEMPLATE = """
@@ -73,6 +81,16 @@ final class Config {
 			    "enabled": true,
 			    // How many backups to keep (the oldest are deleted).
 			    "keep": 5
+			  },
+
+			  // A chat warning when Minecraft's maximum memory (set in the launcher) is outside this range.
+			  // It shows once, and again only after the setting changes. 0 = no limit on that side.
+			  "memory": {
+			    "enabled": true,
+			    "minGb": 3,
+			    "maxGb": 12,
+			    // Page explaining how to change it, linked from the warning ("" = no link).
+			    "guideUrl": "https://github.com/HarrytheCake/Monumenta-Cakedition/wiki/Install-Guide#before-you-start"
 			  }
 			}
 			""";
@@ -95,6 +113,9 @@ final class Config {
 				}
 				if (config.backups == null) {
 					config.backups = new BackupSettings();
+				}
+				if (config.memory == null) {
+					config.memory = new MemorySettings();
 				}
 				if (config.resourcePacks == null) {
 					config.resourcePacks = new ArrayList<>();

@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.time.Duration;
 import java.util.HexFormat;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,7 +24,14 @@ import java.util.regex.Pattern;
  * </ul>
  */
 final class UpdateCheck {
-	record Result(String remoteVersion, String localVersion, String remoteHash, boolean available) {}
+	/** {@code withdrawn}: the installed version's withdrawal reasons by language when an update is available and the
+	 * published pack lists that version as withdrawn (an urgent update), else null. */
+	record Result(String remoteVersion, String localVersion, String remoteHash, boolean available,
+			Map<String, String> withdrawn) {
+		boolean urgent() {
+			return available && withdrawn != null;
+		}
+	}
 
 	private static final Pattern VERSION = Pattern.compile("^version\\s*=\\s*\"([^\"]*)\"", Pattern.MULTILINE);
 
@@ -32,8 +40,20 @@ final class UpdateCheck {
 	/** Completes with null if the check failed (offline, GitHub down, ...). */
 	static CompletableFuture<Result> runAsync(String packUrl, Path gameDir) {
 		return Net.get(packUrl, Duration.ofSeconds(15))
-				.thenApply(body -> {
+				.thenCompose(body -> {
 					Result result = compare(body, gameDir);
+					if (!result.available() || result.localVersion() == null) {
+						return CompletableFuture.completedFuture(result);
+					}
+					// A missing file (404) or a bad one just means no version is withdrawn.
+					return Net.get(Withdrawn.url(packUrl), Duration.ofSeconds(15))
+							.thenApply(json -> withWithdrawn(result, new String(json, StandardCharsets.UTF_8)))
+							.exceptionally(e -> {
+								CakeUpdater.LOGGER.info("No withdrawn versions list: {}", e.toString());
+								return result;
+							});
+				})
+				.thenApply(result -> {
 					CakeUpdater.LOGGER.info("Modpack update check: {}", result);
 					return result;
 				})
@@ -41,6 +61,11 @@ final class UpdateCheck {
 					CakeUpdater.LOGGER.warn("Modpack update check failed: {}", e.toString());
 					return null;
 				});
+	}
+
+	static Result withWithdrawn(Result result, String withdrawnJson) {
+		Map<String, String> reasons = Withdrawn.reasons(withdrawnJson, result.localVersion());
+		return new Result(result.remoteVersion(), result.localVersion(), result.remoteHash(), result.available(), reasons);
 	}
 
 	static Result compare(byte[] packToml, Path gameDir) {
@@ -58,7 +83,7 @@ final class UpdateCheck {
 		} else {
 			available = false;
 		}
-		return new Result(remoteVersion, localVersion, remoteHash, available);
+		return new Result(remoteVersion, localVersion, remoteHash, available, null);
 	}
 
 	/** What is installed, to notice an update between two starts: the packwiz.json hash, else the pack version. */

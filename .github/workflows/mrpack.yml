@@ -1,5 +1,6 @@
 # Builds the .mrpack from pack/ (tools/mrpack.py) on every push to the packwiz branch that changes the pack,
-# and publishes it as release v<pack version> with its SHA-256 in the notes. A released pack file never changes
+# and publishes it as release v<pack version> with its changelog (pack/config/cakeupdater/changelog/<version>/)
+# and SHA-256 in the notes. A released pack file never changes
 # (docs/adr/0002): later pushes with the same version only refresh the notes.
 name: mrpack
 
@@ -41,7 +42,19 @@ jobs:
           FILE: ${{ steps.build.outputs.file }}
         run: |
           NOTES="$RUNNER_TEMP/notes.md"
-          cp .github/release-notes.md "$NOTES"
+          # This version's changelog (the same text players see in game) goes first, English then 简体中文.
+          CHANGES="pack/config/cakeupdater/changelog/$VERSION"
+          : > "$NOTES"
+          if [ -f "$CHANGES/en_us.md" ]; then
+            { printf '## Changes in %s\n\n' "$VERSION"; cat "$CHANGES/en_us.md"; printf '\n\n'; } >> "$NOTES"
+          fi
+          if [ -f "$CHANGES/zh_cn.md" ]; then
+            { printf '## %s 更新内容\n\n' "$VERSION"; cat "$CHANGES/zh_cn.md"; printf '\n\n'; } >> "$NOTES"
+          fi
+          if [ -s "$NOTES" ]; then
+            printf -- '---\n\n' >> "$NOTES"
+          fi
+          cat .github/release-notes.md >> "$NOTES"
           if gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
             # A released pack file never changes (docs/adr/0002): keep it, refresh only the notes, with its own hash.
             echo "::warning::v$VERSION is already released, so its pack file stays as it is; bump the version to publish pack changes."
