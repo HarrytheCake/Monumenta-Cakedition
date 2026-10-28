@@ -29,7 +29,7 @@ Make Monumenta Cakedition
 │   └── 💤 Q84 GUI benchmark scene
 ├── 5 Our own mods
 │   ├── ✅ 1.4.0 backups checked in game (2026-10-28)
-│   ├── ⏳ Q45 urgent-update flag + Q59–62 in-game changelog + Q69 heap warning: Cakedition Updater 1.5.0 built + 12 tests (Q88–Q91 settled 2026-10-28); in-game test next
+│   ├── ⏳ Q45 urgent-update flag + Q59–62 in-game changelog + Q69 heap warning: Cakedition Updater 1.5.0 built, 12 tests, in-game test passed 2026-10-28 (title-screen toast not confirmed); not released yet
 │   ├── ⏳ Q35–39, Q44 Default changes (per file; options.txt per key; changed keybinds always announced)
 │   ├── ⛔ Q47 multi-loader / multi-version ← own Modrinth project + a request from outside the pack
 │   └── ⏳ Q48 CakeText's own grilling session; its test steps 10–11
@@ -54,7 +54,7 @@ Make Monumenta Cakedition
 ### Stage B: the first release with an in-game changelog
 
 7. **Cakedition Updater 1.5.0:** urgent-update flag, changelog, heap warning together, since all touch the "Modpack updated" message. Changelog text ships in the pack, one entry per version, also appended to the GitHub release by CI.
-8. **Client-lag phase 1**, in parallel: baseline moved to 2.2.2, step-1 rerun on AC power with the FO set, then the Q87 breakdown runs; winners go to Monumenta for a mod-rules OK.
+8. **Client-lag phase 1**, in parallel (⏸ waiting for a ~70 min idle slot on the laptop): baseline moved to 2.2.2, step-1 rerun on AC power with the FO set, then the Q87 breakdown runs; winners go to Monumenta for a mod-rules OK.
 9. **Pack 2.3.0:** the phase-1 mod changes + Cakedition Updater 1.5.0. Its changelog is the first one players see in game.
 
 ### Stage C: independence and reach
