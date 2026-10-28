@@ -10,7 +10,7 @@ What gets done in which order, and why. It follows the design tree from the gril
 Make Monumenta Cakedition
 ├── 1 Publish platforms
 │   ├── ✅ Q15 first Modrinth upload by hand; auto-publish from the version after
-│   ├── ⏳ Upload the v2.2.2 pack file (one page, English + 简体中文, AI-content on, 2.0.0E kept)
+│   ├── ⏳ Upload the v2.2.2 pack file (one page, English + 简体中文, AI-content on, old versions kept; Modrinth's newest is a 2025 "2.2.0", not our GitHub v2.2.0)
 │   ├── ⏳ Q17 Modrinth projects for Cakedition Updater + CakeText → pack metafiles point at Modrinth
 │   └── ⏳ Q16 CurseForge audit → CurseForge pack file + projects for our mods
 ├── 2 Distribution
@@ -18,7 +18,7 @@ Make Monumenta Cakedition
 │   ├── ⏳ Q24 install guide on the GitHub wiki (en / zh_cn / zh_tw), with the Q58 promise
 │   └── ⛔ Q40–42 GitLab fallback ← our mods on Modrinth + packwiz-installer.jar in the pack file
 ├── 3 GitHub management
-│   ├── ⏳ Q29 no force-push / no deletion on packwiz (GitHub + GitLab) and both mirrors' main
+│   ├── ✅ Q29 GitHub rulesets: no force-push / no deletion on packwiz + both mirrors' main (2026-10-28); GitLab protected branches ⏳
 │   ├── ✅ Q28 push_all mirrors caketext/ and pushes the packwiz branch to GitLab too (ADR 0003)
 │   ├── ⏳ Q30 issue templates, English + 简体中文, all reports on Monumenta-Cakedition
 │   └── ✅ Q31 README on main (English + 简体中文, 2026-10-28)
@@ -44,8 +44,8 @@ Make Monumenta Cakedition
 
 ### Stage A: protect what is out there, then reach "2.2.x is done" (Q4)
 
-1. ⏳ **Branch protection** (Q29). One GitHub ruleset per repo: block force pushes and deletion. GitLab: protect `packwiz` with force push off. Everything after this is a release that can't be taken back.
-2. ✅ **push_all mirrors caketext/ and pushes both update-channel addresses** (Q28, ADR 0003). A dry-run push to every remote must pass before anything goes out. It refuses to run until the `gitlab` remote is added.
+1. ✅ **Branch protection** (Q29). GitHub: one ruleset per repo blocking force pushes and deletion (checked through the API). ⏳ GitLab: protect `packwiz` / `main` with force push off (can't be checked without a login).
+2. ✅ **push_all mirrors caketext/ and pushes every repo to GitHub and its GitLab copy** (Q28, ADR 0003). A dry-run push to every remote must pass before anything goes out; all six remotes are set up.
 3. ✅ **1.4.0 backup checks in game.** No bugs, so no 1.4.2.
 4. ✅ **README on main** (Q31). The README is the one file written to `main` from here (in a separate worktree, pushed `HEAD:main`); the Friday bot owns the rest. Once the Discord link (Q52) and the install guide (Q24) exist, link them from it.
 5. ⏳ **Upload the v2.2.2 pack file to Modrinth** (by hand), with the install guide (Q24, English + 简体中文 first) for the page to link to.
