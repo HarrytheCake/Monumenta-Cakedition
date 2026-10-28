@@ -1,5 +1,6 @@
 """Release in one go: push main to the packwiz branch at both update-channel addresses (GitHub, GitLab)
-and mirror updater/ and caketext/ to their own repos (each on GitHub, with a backup copy on GitLab).
+and mirror updater/, caketext/, cakewiki/, cakechat/ and cakebook/ to their own repos (each on GitHub; the
+first two also have a backup copy on GitLab).
 
     python tools/push_all.py           # check, show what goes out, ask, then push everything
     python tools/push_all.py --check   # only run the checks, push nothing
@@ -39,6 +40,13 @@ TARGETS = [
     ("CakeText source", "caketext", "main", [
         ("caketext", "https://github.com/HarrytheCake/CakeText.git"),
         ("gitlab-caketext", f"{GITLAB}/CakeText.git")]),
+    # no GitLab copies yet: add ("gitlab-<mod>", f"{GITLAB}/<Repo>.git") to each once they exist
+    ("CakeWiki source", "cakewiki", "main", [
+        ("cakewiki", "https://github.com/HarrytheCake/CakeWiki.git")]),
+    ("CakeChat source", "cakechat", "main", [
+        ("cakechat", "https://github.com/HarrytheCake/CakeChat.git")]),
+    ("CakeBook source", "cakebook", "main", [
+        ("cakebook", "https://github.com/HarrytheCake/CakeBook.git")]),
 ]
 NOREPLY = re.compile(r"@(users\.noreply\.github\.com|anthropic\.com)$")
 
@@ -67,9 +75,9 @@ def personal_patterns():
     so they never get written into this (tracked) file."""
     pats = [re.compile(rx.pattern.decode()) for rx in packwiz_sync.PERSONAL]
     pats += [
-        re.compile(r"[\w.+-]+@(?!users\.noreply\.github\.com|anthropic\.com)[\w-]+\.[\w.-]*[a-z]", re.I),
+        re.compile(r"[\w.+-]+@(?!users\.noreply\.github\.com|anthropic\.com|example\.(?:org|com|net)\b)[\w-]+\.[\w.-]*[a-z]", re.I),
         re.compile(r"[A-Za-z]:[\\/]+Users[\\/]+(?!Public)", re.I),
-        re.compile(r"/(home|Users)/[a-z]", re.I),
+        re.compile(r"/(home|Users)/[a-z]"),  # case-sensitive: "Home/End" in docs isn't a path
     ]
     for word in {getpass.getuser(), git("config", "--global", "user.email", check=False)}:
         if len(word) >= 4:
@@ -78,10 +86,11 @@ def personal_patterns():
 
 
 def scan(base, head, pats):
-    """Personal-data hits in lines added by base..head and in its commit messages."""
+    """Personal-data hits in lines added by each commit of base..head and in its commit messages. Each commit on its
+    own, not the net diff: a file added and deleted later is still published in the history."""
     hits = []
     file = None
-    for line in git("diff", "-U0", f"{base}..{head}").splitlines():
+    for line in git("log", "-p", "-U0", "--format=", f"{base}..{head}").splitlines():
         if line.startswith("+++ "):
             file = line[6:]
         elif line.startswith("+"):

@@ -9,3 +9,7 @@ bin/
 .classpath
 .idea/
 *.iml
+
+# written by the tests (logs carry the local user path)
+/logs/
+/config/
