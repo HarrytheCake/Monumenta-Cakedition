@@ -30,7 +30,8 @@ import net.minecraft.text.Text;
  * no system prompt, top_k 20, top_p 0.6, repetition penalty 1.05, temperature 0.7.
  *
  * <p>The server is checked in the background (every 15 s until it answers, then every minute): it must answer and
- * list the configured model.
+ * list the configured model. With {@code serverApiKey} set (OpenAI-compatible only) every request carries
+ * {@code Authorization: Bearer <key>}, so online LLM services work too; such a server isn't {@link #local()}.
  */
 final class ServerEngine implements TranslationEngine {
 	private static final Gson GSON = new Gson();
@@ -94,12 +95,48 @@ final class ServerEngine implements TranslationEngine {
 		return URI.create(base + path);
 	}
 
+	private HttpRequest.Builder withKey(HttpRequest.Builder b, TranslatorConfig cfg) {
+		return ollama() || cfg.serverApiKey.isBlank() ? b : b.header("Authorization", "Bearer " + cfg.serverApiKey.trim());
+	}
+
+	@Override
+	public boolean local() {
+		return isLocal(config.serverUrl);
+	}
+
+	/** This PC or a private network (10/8, 172.16/12, 192.168/16, link-local, .local): not the internet. */
+	static boolean isLocal(String url) {
+		String host;
+		try {
+			host = URI.create(url.trim()).getHost();
+		} catch (IllegalArgumentException e) {
+			return false;
+		}
+		if (host == null) {
+			return false;
+		}
+		host = host.toLowerCase(Locale.ROOT);
+		if (host.startsWith("[")) {
+			host = host.substring(1, host.length() - 1);
+		}
+		if (host.equals("localhost") || host.endsWith(".local") || host.equals("::1")
+				|| host.startsWith("fe80:") || host.startsWith("fc") || host.startsWith("fd")) {
+			return true;
+		}
+		String[] p = host.split("\\.");
+		if (p.length != 4 || !host.matches("[0-9.]+")) {
+			return false;
+		}
+		int a = Integer.parseInt(p[0]), b = Integer.parseInt(p[1]);
+		return a == 127 || a == 10 || a == 192 && b == 168 || a == 172 && b >= 16 && b <= 31 || a == 169 && b == 254;
+	}
+
 	/** Is the server up and does it have the model? */
 	void check() {
 		TranslatorConfig cfg = config;
 		boolean ok = false;
 		try {
-			HttpRequest request = HttpRequest.newBuilder(uri(ollama() ? "/api/tags" : "/v1/models"))
+			HttpRequest request = withKey(HttpRequest.newBuilder(uri(ollama() ? "/api/tags" : "/v1/models")), cfg)
 					.timeout(Duration.ofSeconds(5)).GET().build();
 			HttpResponse<String> response = http.send(request, HttpResponse.BodyHandlers.ofString());
 			if (response.statusCode() != 200) {
@@ -179,7 +216,7 @@ final class ServerEngine implements TranslationEngine {
 			body.addProperty("max_tokens", maxTokens);
 			body.add("stop", GSON.toJsonTree(cfg.serverStop));
 		}
-		HttpRequest request = HttpRequest.newBuilder(uri(ollama() ? "/api/generate" : "/v1/chat/completions"))
+		HttpRequest request = withKey(HttpRequest.newBuilder(uri(ollama() ? "/api/generate" : "/v1/chat/completions")), cfg)
 				.timeout(Duration.ofSeconds(120)).header("Content-Type", "application/json")
 				.POST(HttpRequest.BodyPublishers.ofString(GSON.toJson(body))).build();
 		HttpResponse<String> response = http.send(request, HttpResponse.BodyHandlers.ofString());

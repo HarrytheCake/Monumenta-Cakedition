@@ -38,7 +38,9 @@ public final class TranslatorConfig {
 		/** Built in: opus-mt-en-zh int8, downloaded on request, runs in Java. */
 		OPUS_MT,
 		/** An LLM in a local server (Ollama, llama.cpp, LM Studio), e.g. Hunyuan-MT-7B. */
-		SERVER
+		SERVER,
+		/** An online translation service with the player's own API key ({@link OnlineService}). */
+		ONLINE
 	}
 
 	public enum Protocol {
@@ -46,8 +48,36 @@ public final class TranslatorConfig {
 		OPENAI
 	}
 
+	/** Online translation services; each needs the player's own key (LibreTranslate: a server address, key optional). */
+	public enum OnlineService {
+		GOOGLE,
+		DEEPL,
+		MICROSOFT,
+		LIBRETRANSLATE
+	}
+
+	/** What holding Alt does in an item tooltip. */
+	public enum TooltipAlt {
+		/** Tooltips are translated (per {@link #display}); holding Alt shows the original. */
+		ORIGINAL_ON_ALT,
+		/** Tooltips stay original; holding Alt shows them translated (nothing is translated until Alt is held). */
+		TRANSLATION_ON_ALT,
+		OFF
+	}
+
 	public Engine engine = Engine.OPUS_MT;
+	public OnlineService onlineService = OnlineService.GOOGLE;
+	/** The player's own key for the online service. Never shipped in a pack: it lives only in this file. */
+	public String onlineApiKey = "";
+	/** Microsoft only: the resource's region (e.g. {@code westeurope}); empty for a global resource. */
+	public String onlineRegion = "";
+	/** LibreTranslate only: the server (a public instance, or one you run). */
+	public String onlineUrl = "https://libretranslate.com";
+	/** Characters sent to the online service per game session before it stops (services bill per character). 0 = no limit. */
+	public int onlineCharLimit = 200_000;
 	public Protocol serverProtocol = Protocol.OLLAMA;
+	/** OpenAI-compatible only: sent as {@code Authorization: Bearer <key>} (online LLM services); empty for local servers. */
+	public String serverApiKey = "";
 	/** Ollama listens on 11434; llama.cpp's llama-server on 8080; LM Studio on 1234. */
 	public String serverUrl = "http://127.0.0.1:11434";
 	/** As the server names it. This one is {@code ollama pull hf.co/mradermacher/Hunyuan-MT-7B-GGUF:Q4_K_M}. */
@@ -83,10 +113,15 @@ public final class TranslatorConfig {
 	public List<String> ignoredItems = new ArrayList<>(ItemFilter.DEFAULT);
 	/** In item tooltips, one line at the bottom says where the translations came from. */
 	public boolean tooltipFooter = true;
+	public TooltipAlt tooltipAlt = TooltipAlt.ORIGINAL_ON_ALT;
 	public Map<String, Boolean> surfaces = new LinkedHashMap<>();
 
+	/** Pages in other mods' readers that use {@link io.github.harrythecake.caketext.translator.api.TranslatorApi} (CakeWiki). */
+	public static final String WIKI = "wiki";
+
 	/** Surfaces the translator can change (the tab list is collected but not translated). */
-	public static final List<String> SURFACES = Surfaces.BUILT_IN.stream().filter(s -> !s.equals(Surfaces.TAB_LIST)).toList();
+	public static final List<String> SURFACES = java.util.stream.Stream.concat(
+			Surfaces.BUILT_IN.stream().filter(s -> !s.equals(Surfaces.TAB_LIST)), java.util.stream.Stream.of(WIKI)).toList();
 
 	public boolean surface(String id) {
 		return surfaces.getOrDefault(id, true);
@@ -114,6 +149,27 @@ public final class TranslatorConfig {
 		}
 		if (c.serverProtocol == null) {
 			c.serverProtocol = d.serverProtocol;
+		}
+		if (c.serverApiKey == null) {
+			c.serverApiKey = "";
+		}
+		if (c.onlineService == null) {
+			c.onlineService = d.onlineService;
+		}
+		if (c.onlineApiKey == null) {
+			c.onlineApiKey = "";
+		}
+		if (c.onlineRegion == null) {
+			c.onlineRegion = "";
+		}
+		if (c.onlineUrl == null || c.onlineUrl.isBlank()) {
+			c.onlineUrl = d.onlineUrl;
+		}
+		if (c.onlineCharLimit < 0) {
+			c.onlineCharLimit = 0;
+		}
+		if (c.tooltipAlt == null) {
+			c.tooltipAlt = d.tooltipAlt;
 		}
 		if (c.serverUrl == null || c.serverUrl.isBlank()) {
 			c.serverUrl = d.serverUrl;

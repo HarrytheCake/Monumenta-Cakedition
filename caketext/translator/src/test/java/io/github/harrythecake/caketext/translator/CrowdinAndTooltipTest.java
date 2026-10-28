@@ -51,6 +51,7 @@ class CrowdinAndTooltipTest {
 		TranslatorConfig config = new TranslatorConfig();
 		config.language = LANG;
 		config.markers = TranslatorConfig.Markers.OFF;
+		config.tooltipAlt = TranslatorConfig.TooltipAlt.OFF; // TooltipAltAndPartsTest covers Alt
 		service = new TranslationService(config);
 		service.reload();
 	}
@@ -67,7 +68,7 @@ class CrowdinAndTooltipTest {
 		for (String l : lines) {
 			texts.add(Text.literal(l));
 		}
-		service.translateTooltip(stack, texts);
+		service.translateTooltip(stack, texts, false);
 		return texts.stream().map(Text::getString).toList();
 	}
 

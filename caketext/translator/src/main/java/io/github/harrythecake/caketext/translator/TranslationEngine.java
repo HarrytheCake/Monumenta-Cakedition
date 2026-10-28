@@ -22,4 +22,9 @@ public interface TranslationEngine {
 
 	/** Translates {@code text}; throws when the engine fails (the line is then retried later). */
 	String translate(String text, TranslatorConfig config) throws Exception;
+
+	/** Runs on this PC or the home network. Player chat is only ever sent to such an engine, never to the internet. */
+	default boolean local() {
+		return true;
+	}
 }

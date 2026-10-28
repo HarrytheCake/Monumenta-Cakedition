@@ -3,7 +3,7 @@
 	"id": "caketext-translator",
 	"version": "${version}",
 	"name": "CakeText Translator",
-	"description": "Translates server text (chat, scoreboard, tooltips, titles, boss bars, nameplates) from string files, and with a local opus-mt model for strings that aren't translated yet. An icon shows where each translation came from.",
+	"description": "Translates server text (chat, scoreboard, tooltips, titles, boss bars, nameplates) and other mods' pages (CakeWiki) from string files; strings not translated yet go to a local opus-mt model, a local LLM server or an online service with your own key. An icon shows where each translation came from.",
 	"authors": ["HarrytheCake"],
 	"license": "Apache-2.0",
 	"contact": {

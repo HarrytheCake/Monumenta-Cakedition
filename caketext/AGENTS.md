@@ -6,7 +6,7 @@ Two client-only Fabric mods for Minecraft **1.20.4**, plus a shared library, in 
 |---|---|---|---|
 | `core` | `caketext-core` | bundled inside both mods (jar-in-jar) | text templates, strings files, game context, module API, settings screen base |
 | `collector` | `caketext-collector` | `caketext-collector-0.1.0.jar` | records the text a server shows, with where it was seen, into local strings files |
-| `translator` | `caketext-translator` | `caketext-translator-0.1.0.jar` | replaces server text with translations from strings files; strings no file has go to a local opus-mt model |
+| `translator` | `caketext-translator` | `caketext-translator-0.3.0.jar` | replaces server text with translations from strings files; strings no file has go to an engine (local opus-mt model, local LLM server, or an online service with the player's key) |
 
 Either mod works alone. With both installed, Fabric loads one copy of core.
 
@@ -30,6 +30,8 @@ Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so 
 | core `ExchangerTest` | – | JSON ↔ PO round trip (scope ↔ msgctxt, comments ↔ contexts/counts), reading Crowdin-style PO (fuzzy, obsolete, continuation lines), Crowdin layout + `crowdin.yml`, folder converter, item filter patterns |
 | translator `CrowdinAndTooltipTest` | – | a Crowdin `.po` in `translations/<lang>/` is used; item names untouched by default; signs/books/shulker boxes not translated |
 | core `PlayerChatTest` | – | where a player's message starts (tags, rank, name, separator); server lines aren't player chat; styled split |
+| translator `OnlineEngineTest` | – | exact Google / DeepL / Microsoft / LibreTranslate requests against a fake service on 127.0.0.1 (key in a header, DeepL free host, region, targets), 401/403 stops, 429 pauses, session character limit, `ServerEngine.isLocal` |
+| translator `TooltipAltAndPartsTest` | – | Alt in tooltips both ways round and off; `translateParts` (kept parts move with the translation, numbers through `{~}`, misses, surface off) |
 | translator `ServerEngineTest` | (real-server case: `caketext.serverUrl`, `caketext.serverModel`, `caketext.serverProtocol`) | exact Ollama raw / OpenAI requests, response parsing and clean-up, model/server checks |
 | translator `MachineCacheTest` | – | machine results saved per engine and reloaded; another engine doesn't reuse them; player chat never reaches disk |
 | translator `ChatLineTest` | – | chat display modes, hover cards, player chat keeps prefix/name, item-link hovers survive |
@@ -115,13 +117,17 @@ Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so 
   - menu titles (`ScreenEvents.AFTER_INIT` + `@Mutable` title accessor)
 - Markers: a font `caketext_translator:icons` with `\uE100` (book = string translation) and `\uE101` (chip = model). Chat: icon in front. Other HUD text: icon after (no hover possible there). Setting `markers`: all / machine only / off; the hover on chat text stays either way. HUD text (scoreboard, titles, boss bars, nameplates, menus, action bar) shows the translation unless `display` is ORIGINAL.
 - A miss is queued for the model if it's installed, enabled and the line looks English (Latin letters, no Han). Chat lines are swapped in place when the model finishes (`ChatHud.messages` + `refresh()`); other surfaces re-render every frame, so they update by themselves; text displays only when re-created.
+- **Alt in tooltips** (`tooltipAlt`): `ORIGINAL_ON_ALT` (default: translated per `display`, Alt held = the untranslated tooltip), `TRANSLATION_ON_ALT` (untranslated; Alt held = translated as TRANSLATED; nothing is queued for the engine until Alt is held, which saves an online service's characters), `OFF`. A grey hint line says what Alt does (only with `tooltipFooter`, never while Alt is held). `translateTooltip(stack, lines, alt)` is the testable overload.
 - Item tooltips: the first line (item name) is not translated unless `translateItemNames` (default off). Items matching `ignoredItems` (`core/template/ItemFilter`, id globs, default `*sign`, `*book`, `*shulker_box`; edited in the Where-to-translate screen) are never translated. The collector still collects them (user's choice, 2026-10-27).
 - Display settings: `chatDisplay` (server text in chat, default ORIGINAL), `playerChatDisplay` (default ORIGINAL), `display` (tooltips and HUD, default TRANSLATED; HUD shows nothing translated when ORIGINAL).
 - Settings `translator.json` (language `zh_cn`/`zh_tw`, display, chat display, player chat on/off and its display, machine on/off, quality `best`/`fast`, markers, tooltip footer, per-surface). Screen via Mod Menu or `/cttranslate`. Commands: `status`, `reload`, `test <text>`, `cache clear`, `exchange`, `model folder`, `model install`, `model delete`.
 
 ### Engines (`TranslationEngine`)
 
-Setting `engine`: `OPUS_MT` (built in, below) or `SERVER` (`ServerEngine`, an LLM the player runs, e.g. Hunyuan-MT-7B in Ollama). Both get the same chunks from `MachineTranslator` (stand-in numbers for placeholders) and both are checked by the same placeholder rules.
+Setting `engine`: `OPUS_MT` (built in, below), `SERVER` (`ServerEngine`, an LLM the player runs, e.g. Hunyuan-MT-7B in Ollama) or `ONLINE` (`OnlineEngine`, 0.3.0). All get the same chunks from `MachineTranslator` (stand-in numbers for placeholders) and all are checked by the same placeholder rules. `TranslationEngine.local()`: the engine runs on this PC or a private network; **player chat is only submitted when the active engine is local** (`TranslationService.playerChat`). The engine screen shows only the active engine's settings (OptionsScreen doesn't scroll) and rebuilds on a switch; key fields render as stars.
+
+- `OnlineEngine` (user's request 2026-10-29), `onlineService`: `GOOGLE` (Cloud Translation v2, key in the `X-goog-api-key` header, target zh-CN/zh-TW), `DEEPL` (`DeepL-Auth-Key` header; keys ending `:fx` → api-free.deepl.com; ZH-HANS/ZH-HANT), `MICROSOFT` (v3, `Ocp-Apim-Subscription-Key` + optional `-Region` = `onlineRegion`; zh-Hans/zh-Hant), `LIBRETRANSLATE` (`onlineUrl`, key optional in the body). `onlineApiKey` lives only in `translator.json`. Never `local()`. Ready as soon as it's configured (no health check: asking costs requests). 401/403 → stopped until the settings change (`use`); 429/456 → paused 60 s; `onlineCharLimit` (default 200,000, 0 = none) characters per game session, then stopped. Requests/answers are static (`request`, `parse`) and tested against a fake service; **not tried against the real services** (needs the player's keys). Cache file `_machine/online-<service>.json.gz`.
+- `ServerEngine.local()` = `isLocal(serverUrl)`: localhost, 127/8, 10/8, 172.16/12, 192.168/16, 169.254/16, ::1, fc/fd/fe80, `.local`. `serverApiKey` (OpenAI protocol only) is sent as `Authorization: Bearer` on the model check and on every request, so online OpenAI-compatible services work; such a URL isn't local, so no player chat.
 
 - `ServerEngine`, protocol `OLLAMA` (default, `http://127.0.0.1:11434`): `/api/generate` with `raw: true` and the model's own chat format around the prompt (`serverRawTemplate`, default Hunyuan's `<|startoftext|>{prompt}<|extra_0|>` from its tokenizer_config), because Ollama doesn't know Hunyuan's template. `OPENAI`: `/v1/chat/completions` (llama.cpp `llama-server --jinja`, LM Studio), the server applies the template.
 - Defaults from Tencent's model card: prompt `把下面的文本翻译成{language}，不要额外解释。\n\n{text}` ({language} = 中文 / 繁体中文), no system prompt, top_k 20, top_p 0.6, repetition penalty 1.05, temperature 0.7, stops `<|eos|>` `<|extra_0|>` `<|startoftext|>`. Default model `hf.co/mradermacher/Hunyuan-MT-7B-GGUF:Q4_K_M` (4.31 GB).
@@ -144,12 +150,17 @@ Setting `engine`: `OPUS_MT` (built in, below) or `SERVER` (`ServerEngine`, an LL
 - `MachineTranslator`: newest first, queue cap 300; bad outputs are not retried this session, engine errors are. Runs whose style is in the `keep` set (item links, unless `translateItemNames`) are copied unchanged. `clearCache()` (`/cttranslate cache clear`, engine screen button) drops the active engine's cache file. Machine entries whose source has `§` are ignored on load (made before § codes were styles). A template is split at `{cN}`; in each run `{~}`/`{n}` become stand-ins 7301, 7302… which must come back exactly once, otherwise the text between placeholders is translated separately. Private-use characters (resource-pack icons) are never sent. `ChineseText.tidy`: full-width punctuation next to Han, stray spaces removed.
 - Model quality is limited: "Total Damage" → 损失总额, "[Quest]" → [查询]. That's why human strings always win and machine lines carry the chip icon.
 
+### API for other mods (`api/TranslatorApi`, version 1, 0.3.0)
+
+Plain Java types only, so callers use reflection and don't depend on CakeText (CakeWiki's `CakeTextBridge`). Game thread. `version()`, `active(surface)`, `language()`, `changes()` (an `AtomicLong` in `TranslationService`, bumped on every engine result and on reload: poll it and redraw), `pending()`, `translate(surface, String[] parts, boolean[] keep)` → `Object[]` of Strings (translated text) and Integers (index of a kept part, wherever the translation puts it), or null = show the original (queued if the engine can take it). `TranslationService.translateParts` builds the template: kept parts → `{n}` (stand-ins, never sent to an engine), numbers → `{~}` (so `+12% Attack Speed` hits a human `+{~}% Attack Speed`), literals escaped; dictionary lookup with `GameContext.of(surface, null)`; style markers in a human `dst` are dropped. Surface `wiki` (`TranslatorConfig.WIKI`, in `SURFACES`, on by default, lang key `caketext.surface.wiki` in the translator's files). Wiki results go into the same machine cache as server text.
+
 ## Invariants
 
 - The collector must never store player chat or player names, and never upload anything.
 - Player chat translations are never written to disk, and the prefix/name part of a player line is never sent to the model.
 - The translator must never throw into the game: `TranslatorMod.translate` returns the original on any error.
-- The translator downloads nothing. Its only network use is the local LLM server the player configures (default `127.0.0.1`).
+- The translator downloads nothing. Its network use is the LLM server the player configures (default `127.0.0.1`) and, only when the player picks it and enters their own key, an online translation service (0.3.0).
+- Player chat goes only to an engine whose `local()` is true (this PC or a private network), never to an online service.
 - Mixins only touch client classes; text displays check `world.isClient`.
 
 ## Status (2026-10-27)

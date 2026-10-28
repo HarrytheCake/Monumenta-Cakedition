@@ -63,6 +63,9 @@ public final class TranslatorScreen extends OptionsScreen {
 				Text.translatable(key("option.markers.tip"))));
 		add(tip(toggle(Text.translatable(key("option.tooltip_footer")), config.tooltipFooter, v -> config.tooltipFooter = v),
 				Text.translatable(key("option.tooltip_footer.tip"))));
+		add(tip(cycle(Text.translatable(key("option.tooltip_alt")), Arrays.asList(TranslatorConfig.TooltipAlt.values()),
+				config.tooltipAlt, a -> Text.translatable(key("tooltip_alt." + a.name().toLowerCase(Locale.ROOT))),
+				v -> config.tooltipAlt = v), Text.translatable(key("option.tooltip_alt.tip"))));
 		add(button(Text.translatable(key("option.engine")), b -> client.setScreen(new EngineScreen(this, config))));
 		add(button(Text.translatable(key("option.surfaces")), b -> client.setScreen(new SurfacesScreen(this, config))));
 		add(button(Text.translatable(key("option.reload")), b -> {

@@ -34,7 +34,10 @@ public final class TranslationService {
 	private final ModelManager models = new ModelManager();
 	private final OpusEngine opus = new OpusEngine(models);
 	private final ServerEngine server;
+	private final OnlineEngine online;
 	private final MachineTranslator machine;
+	/** Goes up whenever translations may have changed (a model result, a reload): readers of other mods redraw. */
+	private final java.util.concurrent.atomic.AtomicLong changes = new java.util.concurrent.atomic.AtomicLong();
 	private volatile TranslatorConfig config;
 	private volatile ItemFilter itemFilter;
 	private volatile Dictionary dictionary = new Dictionary();
@@ -45,12 +48,26 @@ public final class TranslationService {
 		this.config = config;
 		this.itemFilter = ItemFilter.of(config.ignoredItems);
 		this.server = new ServerEngine(config);
+		this.online = new OnlineEngine(config);
 		this.machine = new MachineTranslator(this::engine, this::machineDone);
 	}
 
-	/** The engine for lines no string file has: the built-in model or the local server. */
+	/** The engine for lines no string file has: the built-in model, the local server or an online service. */
 	public TranslationEngine engine() {
-		return config.engine == TranslatorConfig.Engine.SERVER ? server : opus;
+		return switch (config.engine) {
+			case SERVER -> server;
+			case ONLINE -> online;
+			default -> opus;
+		};
+	}
+
+	/** The online service's state, whether or not it's the active engine. */
+	public Text onlineStatus() {
+		return online.describe();
+	}
+
+	public long changes() {
+		return changes.get();
 	}
 
 	/** The local server's state, whether or not it's the active engine. */
@@ -86,6 +103,7 @@ public final class TranslationService {
 		dictionary = dict;
 		machine.use(dict, config);
 		pendingChat.clear();
+		changes.incrementAndGet();
 		CakeText.isTranslated = dict::hasHuman;
 		CakeText.LOG.info("CakeText dictionaries ({}): {} files, {} strings, {} machine", config.language, dict.files(),
 				dict.humanCount(), dict.machineCount());
@@ -96,6 +114,7 @@ public final class TranslationService {
 		this.config = config;
 		this.itemFilter = ItemFilter.of(config.ignoredItems);
 		server.use(config);
+		online.use(config);
 		config.save();
 		if (languageChanged) {
 			reload();
@@ -132,6 +151,11 @@ public final class TranslationService {
 	 * nothing to translate, or turned off). Misses are queued for the model when it's installed and enabled.
 	 */
 	public @Nullable Result translate(Text text, String surface, @Nullable Vec3d pos) {
+		return translate(text, surface, pos, true);
+	}
+
+	/** Like {@link #translate(Text, String, Vec3d)}; {@code queue} false only looks (nothing is sent to the engine). */
+	public @Nullable Result translate(Text text, String surface, @Nullable Vec3d pos, boolean queue) {
 		TranslatorConfig cfg = config;
 		if (text == null || !cfg.enabled || !cfg.surface(surface) || Translated.is(text)) {
 			return null;
@@ -141,7 +165,7 @@ public final class TranslationService {
 			return null;
 		}
 		Result r = lookup(text, t, surface, pos);
-		if (r == null && cfg.machine && modelCanTake(t)) {
+		if (r == null && queue && cfg.machine && modelCanTake(t)) {
 			machine.submit(t.template(), false, keep(t));
 		}
 		return r;
@@ -226,7 +250,8 @@ public final class TranslationService {
 			}
 		}
 		if (hit == null) {
-			if (modelCanTake(t) && machine.submit(t.template(), true, keep(t))) {
+			// other people's words go to an engine on this PC or network only, never to an online service
+			if (engine().local() && modelCanTake(t) && machine.submit(t.template(), true, keep(t))) {
 				waitFor(t.template(), message);
 			}
 			return message;
@@ -262,6 +287,7 @@ public final class TranslationService {
 
 	/** Called on the worker thread when the model finished (or gave up on) a template: update chat lines already shown. */
 	private void machineDone(String template) {
+		changes.incrementAndGet();
 		List<WeakReference<Text>> refs = pendingChat.remove(template);
 		if (refs == null) {
 			return;
@@ -298,12 +324,28 @@ public final class TranslationService {
 
 	// ---- tooltips ----
 
-	/** Translates tooltip lines (per the display mode) and adds a footer naming the sources. */
+	/**
+	 * Translates tooltip lines (per the display mode) and adds a footer naming the sources. Holding Alt swaps between
+	 * translation and original ({@code tooltipAlt}); in {@code TRANSLATION_ON_ALT} nothing goes to the engine until
+	 * Alt is held.
+	 */
 	public void translateTooltip(ItemStack stack, List<Text> lines) {
+		translateTooltip(stack, lines, net.minecraft.client.gui.screen.Screen.hasAltDown());
+	}
+
+	void translateTooltip(ItemStack stack, List<Text> lines, boolean alt) {
 		TranslatorConfig cfg = config;
 		if (lines.isEmpty() || !cfg.enabled || !cfg.surface(Surfaces.TOOLTIP) || itemFilter.matches(stack)) {
 			return;
 		}
+		TranslatorConfig.TooltipAlt mode = cfg.tooltipAlt;
+		boolean showTranslated = switch (mode) {
+			case ORIGINAL_ON_ALT -> !alt;
+			case TRANSLATION_ON_ALT -> alt;
+			case OFF -> true;
+		};
+		Display display = mode == TranslatorConfig.TooltipAlt.TRANSLATION_ON_ALT ? Display.TRANSLATED : cfg.display;
+		boolean queue = mode != TranslatorConfig.TooltipAlt.TRANSLATION_ON_ALT || alt;
 		// the first line is the item name: kept as it is unless item names are turned on
 		int first = cfg.translateItemNames ? 0 : 1;
 		boolean anyMachine = false;
@@ -312,8 +354,8 @@ public final class TranslationService {
 		List<Text> out = new ArrayList<>(lines.size() + 4);
 		for (int i = 0; i < lines.size(); i++) {
 			Text line = lines.get(i);
-			Result r = i < first ? null : translate(line, Surfaces.TOOLTIP, null);
-			if (r == null) {
+			Result r = i < first ? null : translate(line, Surfaces.TOOLTIP, null, queue);
+			if (r == null || !showTranslated) {
 				out.add(line);
 				continue;
 			}
@@ -322,7 +364,7 @@ public final class TranslationService {
 				engines.add(r.hit().engine());
 			}
 			anyHuman |= !r.hit().machine();
-			switch (cfg.display) {
+			switch (display) {
 				case TRANSLATED -> out.add(Translated.mark(r.text()));
 				case BOTH -> {
 					out.add(Translated.mark(r.text()));
@@ -350,8 +392,91 @@ public final class TranslationService {
 			}
 			out.add(Translated.mark(footer));
 		}
+		// say what Alt does, unless it's held (then the player knows)
+		if (cfg.tooltipFooter && !alt && mode != TranslatorConfig.TooltipAlt.OFF) {
+			if (showTranslated && (anyMachine || anyHuman)) {
+				out.add(Translated.mark(Text.translatable("caketext_translator.tooltip.alt_original").formatted(Formatting.DARK_GRAY)));
+			} else if (!showTranslated && lines.size() > first) {
+				out.add(Translated.mark(Text.translatable("caketext_translator.tooltip.alt_translation").formatted(Formatting.DARK_GRAY)));
+			}
+		}
 		lines.clear();
 		lines.addAll(out);
+	}
+
+	// ---- other mods (api.TranslatorApi) ----
+
+	/**
+	 * A text in parts, where {@code keep[i]} parts (names, links) stay exactly as they are and the rest is translated.
+	 * Returns the translation as Strings (translated text) and Integers (the index of a kept part, wherever the
+	 * translation puts it), or null to show the original: nothing to translate, turned off, or not translated yet
+	 * (then it's queued for the engine when {@code queue}). Numbers in translated parts become {@code {~}}, so they
+	 * match the string files and come back as they were.
+	 */
+	public @Nullable Object[] translateParts(String surface, String[] parts, boolean[] keep, boolean queue) {
+		TranslatorConfig cfg = config;
+		if (!cfg.enabled || !cfg.surface(surface) || parts.length != keep.length) {
+			return null;
+		}
+		StringBuilder template = new StringBuilder();
+		List<Integer> kept = new ArrayList<>();
+		List<String> numbers = new ArrayList<>();
+		boolean words = false;
+		for (int i = 0; i < parts.length; i++) {
+			if (keep[i]) {
+				template.append("{n}");
+				kept.add(i);
+				continue;
+			}
+			java.util.regex.Matcher m = NUMBER.matcher(parts[i]);
+			int at = 0;
+			while (m.find()) {
+				template.append(escape(parts[i].substring(at, m.start()))).append("{~}");
+				numbers.add(m.group());
+				at = m.end();
+			}
+			template.append(escape(parts[i].substring(at)));
+			words |= parts[i].chars().anyMatch(c -> c < 128 && Character.isLetter(c));
+		}
+		if (!words) {
+			return null;
+		}
+		String src = template.toString();
+		Dictionary.Hit hit = dictionary.lookup(src, () -> GameContext.of(surface, null));
+		if (hit == null || hit.machine() && !cfg.machine) {
+			if (hit == null && queue && cfg.machine && engine().ready()
+					&& src.codePoints().noneMatch(cp -> Character.UnicodeScript.of(cp) == Character.UnicodeScript.HAN)) {
+				machine.submit(src, false, java.util.Set.of());
+			}
+			return null;
+		}
+		List<Object> out = new ArrayList<>();
+		int names = 0, nums = 0;
+		for (TextTemplate.Token t : TextTemplate.parse(hit.dst())) {
+			if (t instanceof TextTemplate.Token.Literal lit) {
+				out.add(lit.text());
+			} else if (t instanceof TextTemplate.Token.NameRef ref) {
+				int k = ref.index() > 0 ? ref.index() - 1 : names++;
+				if (k >= kept.size()) {
+					return null;
+				}
+				out.add(kept.get(k));
+			} else if (t instanceof TextTemplate.Token.NumberRef ref) {
+				int k = ref.index() > 0 ? ref.index() - 1 : nums++;
+				if (k >= numbers.size()) {
+					return null;
+				}
+				out.add(numbers.get(k));
+			}
+			// a style marker in a human translation has nothing to point at here: dropped
+		}
+		return out.toArray();
+	}
+
+	private static final java.util.regex.Pattern NUMBER = java.util.regex.Pattern.compile("\\d+(?:[.,]\\d+)*");
+
+	private static String escape(String s) {
+		return s.replace("{", "{{").replace("}", "}}");
 	}
 
 	/** Saves the machine cache (on exit). */
