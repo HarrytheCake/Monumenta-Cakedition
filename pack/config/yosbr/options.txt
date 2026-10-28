@@ -133,12 +133,6 @@ key_asteorbar.key.toggle_overlay:key.keyboard.f8
 key_asteorbar.key.toggle_mob_bar:key.keyboard.unknown
 key_key.clickthrough.toggle:key.keyboard.f9
 key_key.feytweaks.openConfigKey:key.keyboard.unknown
-key_key.fma.meow:key.keyboard.unknown
-key_key.fma.playerstats:key.mouse.middle
-key_key.fma.togglePlayerHpIndicator:key.keyboard.b
-key_key.fma.cz_copy_stats:key.keyboard.i
-key_key.fma.toggleChestWaypointRecording:key.keyboard.k
-key_key.fma.toggleChestWaypoint:key.keyboard.n
 key_key.gamma_utils.gamma_toggle:key.keyboard.g
 key_key.gamma_utils.increase_gamma:key.keyboard.0
 key_key.gamma_utils.decrease_gamma:key.keyboard.minus
