@@ -15,7 +15,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.Instant;
 import java.util.HexFormat;
-import java.util.Locale;
 import java.util.Optional;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
@@ -69,12 +68,10 @@ public final class PageCache {
 		return dir.resolve(key(title) + ".json.gz");
 	}
 
-	/** MediaWiki titles ignore underscores vs spaces and the case of the first letter. */
+	/** One file per page as MediaWiki sees it ({@link Titles#normalize}). */
 	static String key(String title) {
-		String t = title.replace('_', ' ').trim().replaceAll(" +", " ");
-		if (!t.isEmpty()) t = t.substring(0, 1).toUpperCase(Locale.ROOT) + t.substring(1);
 		try {
-			byte[] hash = MessageDigest.getInstance("SHA-1").digest(t.getBytes(StandardCharsets.UTF_8));
+			byte[] hash = MessageDigest.getInstance("SHA-1").digest(Titles.normalize(title).getBytes(StandardCharsets.UTF_8));
 			return HexFormat.of().formatHex(hash);
 		} catch (NoSuchAlgorithmException e) {
 			throw new IllegalStateException(e);

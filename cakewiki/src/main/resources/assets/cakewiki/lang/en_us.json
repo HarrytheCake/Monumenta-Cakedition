@@ -18,5 +18,10 @@
 	"cakewiki.search": "Search the wiki…",
 	"cakewiki.show": "Show",
 	"cakewiki.hide": "Hide",
-	"cakewiki.missing": "This page doesn't exist on the wiki yet."
+	"cakewiki.missing": "This page doesn't exist on the wiki yet.",
+	"cakewiki.bookmark.add": "Bookmark this page (Ctrl+D)",
+	"cakewiki.bookmark.remove": "Remove bookmark (Ctrl+D)",
+	"cakewiki.bookmarks": "Bookmarks",
+	"cakewiki.bookmarks.empty": "No bookmarks yet: press ☆ on a page.",
+	"cakewiki.bookmarks.delete": "Remove bookmark"
 }

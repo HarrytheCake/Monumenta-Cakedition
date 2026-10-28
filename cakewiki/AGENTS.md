@@ -21,10 +21,11 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 
 ## Decisions (user, 2026-10-28)
 
-- Opened by a key (default **H**; the shipped defaults leave only H and J free) and `/wiki <page>`.
+- Opened by a key (default **K**, the user's choice 2026-10-29; H was the first default) and `/wiki <page>`.
 - The same key over an item in a container screen opens that item's page (`WikiClient.resolve`: exact title or redirect, else the top search hit).
 - Search box with suggestions as you type (`opensearch`).
 - Whole wiki for now; may later be cut to the pages players need.
+- Bookmarks (user's request, 2026-10-29): ☆/★ in the bar or Ctrl+D toggles the page; ☰ lists them (click opens, ✕ removes).
 - CakeText Translator integration: later.
 - Whether the pack ships it: decided later.
 
@@ -32,11 +33,12 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 
 ```
 src/main/java/io/github/harrythecake/cakewiki/
-├── CakeWiki.java           # entrypoint: H key (KeyBinding "key.cakewiki.open"), /wiki [page] with live suggestions, lookupItem
-├── Reader.java             # one per game: client, Pages, WikiImages, converter, back/forward history, last page
+├── CakeWiki.java           # entrypoint: K key (KeyBinding "key.cakewiki.open"), /wiki [page] with live suggestions, lookupItem
+├── Reader.java             # one per game: client, Pages, WikiImages, converter, Bookmarks, back/forward history, last page
+├── Bookmarks.java          # config/cakewiki/bookmarks.json, newest first; unreadable file → bookmarks.json.bad
 ├── WikiScreen.java         # the reader: bar (◀ ▶ search ⟳ ↗), page area, loading/error states, links, tooltips
 ├── DevShots.java           # dev only: screenshot tour (runClient -PdevShot=…), inert in a normal game
-├── mixin/HandledScreenMixin.java  # H over an item in a container → its page
+├── mixin/HandledScreenMixin.java  # K over an item in a container → its page
 ├── layout/                 # no Minecraft classes: unit-tested with fake Metrics
 │   ├── Metrics.java        # text width, line height, loaded picture size, labels
 │   ├── Layout.java         # Document → Laid; colours (dark theme), tables, infobox, collapsibles, tabs, wrapping
@@ -54,7 +56,8 @@ src/main/java/io/github/harrythecake/cakewiki/
 └── net/                    # no Minecraft classes either
     ├── WikiClient.java     # API calls (parse, opensearch, search, resolve); Transport interface for tests
     ├── WikiException.java  # MediaWiki error code (missingtitle, …) or "http"
-    ├── PageCache.java      # gzipped JSON per title; key = SHA-1 of the MediaWiki-normalised title
+    ├── Titles.java         # MediaWiki title matching (underscores = spaces, first letter case-insensitive)
+    ├── PageCache.java      # gzipped JSON per title; key = SHA-1 of Titles.normalize
     └── Pages.java          # cache while fresh (24 h), else fetch; stale copy when offline, not for missingtitle
 ```
 
@@ -70,8 +73,8 @@ src/main/java/io/github/harrythecake/cakewiki/
 
 ### Reader behaviour
 
-- **Opening:** H in the world opens the last page read (the main page "Monumenta Wiki" the first time); `/wiki <page>` opens a page (suggestions come from `opensearch`, completed on the game thread). The screen is opened with `MinecraftClient.send` so the closing chat screen doesn't close it.
-- **Item lookup:** `HandledScreenMixin` injects at the first `KeyBinding.matchesKey` in `HandledScreen.keyPressed` (the inventory-key check). Vanilla reaches it only after `super.keyPressed` turned the key down, so text fields (anvil, creative search, recipe book) keep their H. The item's name (formatting stripped) goes through `WikiClient.resolve`. From the player's own inventory the reader returns to it on close; any other container is closed first with `closeHandledScreen()` (tells the server), and the reader returns to the game.
+- **Opening:** K in the world opens the last page read (the main page "Monumenta Wiki" the first time); `/wiki <page>` opens a page (suggestions come from `opensearch`, completed on the game thread). The screen is opened with `MinecraftClient.send` so the closing chat screen doesn't close it.
+- **Item lookup:** `HandledScreenMixin` injects at the first `KeyBinding.matchesKey` in `HandledScreen.keyPressed` (the inventory-key check). Vanilla reaches it only after `super.keyPressed` turned the key down, so text fields (anvil, creative search, recipe book) keep their K. The item's name (formatting stripped) goes through `WikiClient.resolve`. From the player's own inventory the reader returns to it on close; any other container is closed first with `closeHandledScreen()` (tells the server), and the reader returns to the game.
 - **Loading:** `Pages.load` → convert on `Util.getMainWorkerExecutor()` → shown on the game thread if it's still the latest request. `missingtitle` → `resolve` (search) → that page, else "not found".
 - **Layout:** in GUI pixels, content at most 560 wide. Header = title (H1), "Monumenta Wiki ↗ · CC BY-SA 4.0 ↗" (attribution + licence, both links), a "saved copy" note when stale. Laid out again on resize, on a collapsible/tab click (same scroll), and when a picture of guessed size has loaded (`Laid.unknownSizes` + `WikiImages.version()`).
 - **Infobox float:** when the column is at least 2 × 220 + 20 wide, the infobox sits on the right; paragraphs, headings, lists, indents and rules flow beside it, anything else (tables, tabs, galleries, collapsibles, pictures) starts below it.
@@ -79,7 +82,8 @@ src/main/java/io/github/harrythecake/cakewiki/
 - **Tables:** column widths from content (min = widest unbreakable group, capped at 100; max = unwrapped), squeezed proportionally when too wide; grid slots no cell covers get the cell colour.
 - **Pictures:** wiki px × 0.5 (`Layout.IMAGE_SCALE`); inline pictures up to 32 px tall are icons at text height. Colours that would be unreadable (contrast < 2) on their background fall back to ours.
 - **Links:** page → navigate (history); `#anchor` on this page → scroll; `Special:`/`Category:` and external → browser through `ConfirmLinkScreen`; missing → nothing, tooltip explains.
-- **Keys in the reader:** H closes (unless typing), Ctrl+F search, Enter submits (exact suggestion, else `resolve`), Esc leaves the search box first, Backspace/mouse 4 back, mouse 5 forward, arrows/PgUp/PgDn/Space/Home/End scroll.
+- **Bookmarks:** stored in `config/` (not the cache), so CakeUpdater's config backups cover them; canonical titles (after redirects), matched with `Titles.normalize`. The ☰ dropdown is drawn above the page like the search suggestions, scrolls with the wheel, and closes on Esc or a click elsewhere.
+- **Keys in the reader:** K closes (unless typing), Ctrl+D bookmark, Ctrl+F search, Enter submits (exact suggestion, else `resolve`), Esc leaves the search box first, Backspace/mouse 4 back, mouse 5 forward, arrows/PgUp/PgDn/Space/Home/End scroll.
 
 ### Measured on the live wiki (2026-10-28)
 
@@ -94,7 +98,7 @@ Opt-in, against the real wiki (`LiveWikiTest`, skipped by default):
 - `... --tests '*LiveWikiTest.dumpPage' -Dcakewiki.liveTest=true -Dcakewiki.dump="<title>"` prints a page as an outline (`DocumentDump`) for checking by eye.
 
 Screenshot tour in the dev client (opens a game window; `run/options.txt` presets GUI scale 3 and skips the accessibility screen):
-`./gradlew runClient -PdevShot="Monumenta Wiki|item:Snegovik Boots|Moonscarred Clockblade@380|Turtle Set!open" --args="--width 1600 --height 900"` → `run/screenshots/cakewiki-<n>.png`. `item:` = item lookup, `@y` = scroll, `!open` = open all top-level collapsibles.
+`./gradlew runClient -PdevShot="Monumenta Wiki|item:Snegovik Boots|Moonscarred Clockblade@380|Turtle Set!open" --args="--width 1600 --height 900"` → `run/screenshots/cakewiki-<n>.png`. `item:` = item lookup, `@y` = scroll, `!open` = open all top-level collapsibles, `!marks` = bookmark the page and open the list (writes `run/config/cakewiki/bookmarks.json`).
 
 ## Rules
 

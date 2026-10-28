@@ -56,7 +56,9 @@ public final class WikiScreen extends Screen {
 
 	private TextFieldWidget search;
 	private String searchText = "";
-	private ButtonWidget backButton, forwardButton, refreshButton, browserButton, retryButton;
+	private ButtonWidget backButton, forwardButton, bookmarkButton, bookmarksButton, refreshButton, browserButton, retryButton;
+	private boolean bookmarksOpen;
+	private int bookmarksScroll;
 	private List<String> suggestions = List.of();
 	private String suggestedFor = "";
 	private long typedAt;
@@ -144,6 +146,13 @@ public final class WikiScreen extends Screen {
 		openAllOnLoad = true;
 	}
 
+	private boolean markOnLoad;
+
+	/** {@link DevShots}: bookmark the next page shown and open the bookmarks list. */
+	void devMark() {
+		markOnLoad = true;
+	}
+
 	private void show(Converted c, String anchor, int restoreScroll) {
 		title = c.loaded().page().title();
 		doc = c.doc();
@@ -152,6 +161,12 @@ public final class WikiScreen extends Screen {
 		if (openAllOnLoad) {
 			for (Block b : doc.blocks()) if (b instanceof Block.Collapsible col && !view.isOpen(col)) view.toggle(col);
 			openAllOnLoad = false;
+		}
+		if (markOnLoad) {
+			markOnLoad = false;
+			phase = Phase.READY;
+			if (!reader.bookmarks.contains(title)) toggleBookmark();
+			bookmarksOpen = true;
 		}
 		laid = null;
 		phase = Phase.READY;
@@ -189,11 +204,18 @@ public final class WikiScreen extends Screen {
 				.dimensions(left, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.back"))).build());
 		forwardButton = addDrawableChild(ButtonWidget.builder(Text.literal("▶"), b -> goForward())
 				.dimensions(left + 22, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.forward"))).build());
+		bookmarkButton = addDrawableChild(ButtonWidget.builder(Text.literal("☆"), b -> toggleBookmark())
+				.dimensions(right - 86, MARGIN, 20, 20).build());
+		bookmarksButton = addDrawableChild(ButtonWidget.builder(Text.literal("☰"), b -> {
+					bookmarksOpen = !bookmarksOpen;
+					bookmarksScroll = 0;
+				})
+				.dimensions(right - 64, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.bookmarks"))).build());
 		refreshButton = addDrawableChild(ButtonWidget.builder(Text.literal("⟳"), b -> refresh())
 				.dimensions(right - 42, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.refresh"))).build());
 		browserButton = addDrawableChild(ButtonWidget.builder(Text.literal("↗"), b -> openInBrowser(reader.client.pageUrl(title)))
 				.dimensions(right - 20, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.browser"))).build());
-		search = new TextFieldWidget(textRenderer, left + 46, MARGIN + 1, right - 46 - (left + 46), 18, Text.translatable("cakewiki.search"));
+		search = new TextFieldWidget(textRenderer, left + 46, MARGIN + 1, right - 90 - (left + 46), 18, Text.translatable("cakewiki.search"));
 		search.setPlaceholder(Text.translatable("cakewiki.search").formatted(Formatting.GRAY));
 		search.setMaxLength(200);
 		search.setText(searchText);
@@ -215,6 +237,107 @@ public final class WikiScreen extends Screen {
 		refreshButton.active = title != null && phase != Phase.LOADING;
 		browserButton.active = title != null;
 		retryButton.visible = phase == Phase.ERROR && retry != null;
+		boolean marked = title != null && reader.bookmarks.contains(title);
+		bookmarkButton.active = title != null && phase == Phase.READY;
+		bookmarkButton.setMessage(marked ? Text.literal("★").formatted(Formatting.GOLD) : Text.literal("☆"));
+		bookmarkButton.setTooltip(Tooltip.of(Text.translatable(marked ? "cakewiki.bookmark.remove" : "cakewiki.bookmark.add")));
+	}
+
+	// ---- bookmarks --------------------------------------------------------------------------------------
+
+	private void toggleBookmark() {
+		if (title == null || phase != Phase.READY) return;
+		try {
+			reader.bookmarks.toggle(title);
+		} catch (java.io.IOException e) {
+			CakeWiki.LOG.warn("Couldn't save bookmarks: {}", e.toString());
+		}
+		updateButtons();
+	}
+
+	private static final int ROW = 12, REMOVE_W = 12;
+
+	private int bookmarksPanelWidth() {
+		return Math.min(220, contentWidth());
+	}
+
+	private int bookmarksPanelX() {
+		return bookmarksButton.getX() + bookmarksButton.getWidth() - bookmarksPanelWidth();
+	}
+
+	private int bookmarksPanelY() {
+		return bookmarksButton.getY() + bookmarksButton.getHeight() + 1;
+	}
+
+	/** Rows the panel shows at once (at least 1, for the "no bookmarks" line). */
+	private int bookmarkRows() {
+		int fit = Math.max(1, (height - bookmarksPanelY() - MARGIN) / ROW);
+		return Math.max(1, Math.min(reader.bookmarks.all().size(), fit));
+	}
+
+	/** -2 outside the open panel, -1 inside but on no bookmark, else the bookmark's index. */
+	private int bookmarkAt(double mx, double my) {
+		if (!bookmarksOpen) return -2;
+		int x = bookmarksPanelX(), y = bookmarksPanelY();
+		if (mx < x || mx >= x + bookmarksPanelWidth() || my < y || my >= y + bookmarkRows() * ROW) return -2;
+		int i = bookmarksScroll + (int) ((my - y) / ROW);
+		return i < reader.bookmarks.all().size() ? i : -1;
+	}
+
+	private void drawBookmarks(DrawContext ctx, int mx, int my) {
+		if (!bookmarksOpen) return;
+		List<Bookmarks.Bookmark> all = reader.bookmarks.all();
+		int x = bookmarksPanelX(), y = bookmarksPanelY(), w = bookmarksPanelWidth(), rows = bookmarkRows();
+		ctx.getMatrices().push();
+		ctx.getMatrices().translate(0, 0, 300); // above the page
+		ctx.fill(x - 1, y - 1, x + w + 1, y + rows * ROW + 1, 0xFF000000);
+		if (all.isEmpty()) {
+			ctx.fill(x, y, x + w, y + ROW, 0xFF202030);
+			ctx.drawText(textRenderer, textRenderer.trimToWidth(I18n.translate("cakewiki.bookmarks.empty"), w - 6), x + 3, y + 2, 0xFF9C9CAC, false);
+		}
+		int hover = bookmarkAt(mx, my);
+		for (int r = 0; r < rows && bookmarksScroll + r < all.size(); r++) {
+			int i = bookmarksScroll + r, ry = y + r * ROW;
+			boolean onRemove = hover == i && mx >= x + w - REMOVE_W;
+			ctx.fill(x, ry, x + w, ry + ROW, hover == i ? 0xFF3A3A60 : 0xFF202030);
+			ctx.drawText(textRenderer, textRenderer.trimToWidth(all.get(i).title(), w - REMOVE_W - 6), x + 3, ry + 2, 0xFFE0E0E0, false);
+			ctx.drawText(textRenderer, "✕", x + w - REMOVE_W + 2, ry + 2, onRemove ? 0xFFFF7070 : 0xFF808090, false);
+		}
+		if (all.size() > rows) { // scroll position
+			int h = rows * ROW, barH = Math.max(6, h * rows / all.size());
+			int barY = y + (h - barH) * bookmarksScroll / Math.max(1, all.size() - rows);
+			ctx.fill(x + w - 1, barY, x + w, barY + barH, 0xFF777777);
+		}
+		ctx.getMatrices().pop();
+		if (hover >= 0) {
+			ctx.drawTooltip(textRenderer, List.of(mx >= x + w - REMOVE_W ? Text.translatable("cakewiki.bookmarks.delete")
+					: Text.literal(all.get(hover).title())), mx, my);
+		}
+	}
+
+	/** A click while the panel is open: true if the panel used it. */
+	private boolean clickBookmarks(double mx, double my, int button) {
+		int i = bookmarkAt(mx, my);
+		if (i == -2) {
+			if (!bookmarksButton.isMouseOver(mx, my)) bookmarksOpen = false; // a click elsewhere closes it
+			return false;
+		}
+		if (i >= 0 && button == 0) {
+			String page = reader.bookmarks.all().get(i).title();
+			if (mx >= bookmarksPanelX() + bookmarksPanelWidth() - REMOVE_W) {
+				try {
+					reader.bookmarks.remove(page);
+				} catch (java.io.IOException e) {
+					CakeWiki.LOG.warn("Couldn't save bookmarks: {}", e.toString());
+				}
+				bookmarksScroll = Math.max(0, Math.min(bookmarksScroll, reader.bookmarks.all().size() - bookmarkRows()));
+				updateButtons();
+			} else {
+				bookmarksOpen = false;
+				navigate(page, null);
+			}
+		}
+		return true;
 	}
 
 	private void goBack() {
@@ -367,7 +490,9 @@ public final class WikiScreen extends Screen {
 		if (phase == Phase.READY) {
 			ensureLayout();
 			int ox = left + PAD, oy = top + PAD - scroll;
-			if (inContent(mouseX, mouseY) && !overSuggestions(mouseX, mouseY)) hovered = laid.linkAt(mouseX - ox, mouseY - oy);
+			if (inContent(mouseX, mouseY) && !overSuggestions(mouseX, mouseY) && bookmarkAt(mouseX, mouseY) == -2) {
+				hovered = laid.linkAt(mouseX - ox, mouseY - oy);
+			}
 			ctx.enableScissor(left, top, right, bottom);
 			drawPage(ctx, ox, oy, top - oy, bottom - oy, hovered);
 			ctx.disableScissor();
@@ -385,6 +510,7 @@ public final class WikiScreen extends Screen {
 
 		drawSuggestions(ctx, mouseX, mouseY);
 		if (hovered != null) ctx.drawTooltip(textRenderer, tooltip(hovered), mouseX, mouseY);
+		drawBookmarks(ctx, mouseX, mouseY);
 	}
 
 	private void drawPage(DrawContext ctx, int ox, int oy, int visibleTop, int visibleBottom, Link hovered) {
@@ -462,6 +588,7 @@ public final class WikiScreen extends Screen {
 
 	@Override
 	public boolean mouseClicked(double mx, double my, int button) {
+		if (bookmarksOpen && clickBookmarks(mx, my, button)) return true;
 		int s = suggestionAt(mx, my);
 		if (s >= 0 && button == 0) {
 			String page = suggestions.get(s);
@@ -524,6 +651,11 @@ public final class WikiScreen extends Screen {
 
 	@Override
 	public boolean mouseScrolled(double mx, double my, double horizontal, double vertical) {
+		if (bookmarkAt(mx, my) != -2) {
+			int max = Math.max(0, reader.bookmarks.all().size() - bookmarkRows());
+			bookmarksScroll = Math.max(0, Math.min(max, bookmarksScroll - (int) Math.signum(vertical)));
+			return true;
+		}
 		scroll = Math.max(0, Math.min(maxScroll(), scroll - (int) (vertical * SCROLL_STEP)));
 		return true;
 	}
@@ -541,6 +673,14 @@ public final class WikiScreen extends Screen {
 				return true;
 			}
 			return super.keyPressed(key, scan, modifiers);
+		}
+		if (bookmarksOpen && key == GLFW.GLFW_KEY_ESCAPE) { // first Esc closes the bookmarks list
+			bookmarksOpen = false;
+			return true;
+		}
+		if (key == GLFW.GLFW_KEY_D && (modifiers & GLFW.GLFW_MOD_CONTROL) != 0) {
+			toggleBookmark();
+			return true;
 		}
 		if (CakeWiki.openKey.matchesKey(key, scan)) {
 			close();

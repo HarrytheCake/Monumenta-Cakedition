@@ -27,13 +27,16 @@ public final class Reader {
 	public final Pages pages;
 	public final WikiImages images;
 	public final HtmlConverter converter;
+	public final Bookmarks bookmarks;
 
 	final Deque<Visit> back = new ArrayDeque<>();
 	final Deque<Visit> forward = new ArrayDeque<>();
 	/** The page shown when the reader last closed, or null before the first page. */
 	Visit last;
 
-	Reader(String modVersion, Path cacheDir) {
+	/** {@code cacheDir}: pages and pictures (can be deleted any time); {@code configDir}: the player's bookmarks. */
+	Reader(String modVersion, Path cacheDir, Path configDir) {
+		this.bookmarks = new Bookmarks(configDir.resolve("bookmarks.json"));
 		WikiClient.Transport http = WikiClient.http(modVersion);
 		this.client = new WikiClient(WikiClient.MONUMENTA_WIKI, http);
 		this.pages = new Pages(client, new PageCache(cacheDir.resolve("pages")), Clock.systemUTC(), Duration.ofHours(24),

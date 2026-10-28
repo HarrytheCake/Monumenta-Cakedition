@@ -32,10 +32,11 @@ public class CakeWiki implements ClientModInitializer {
 	public void onInitializeClient() {
 		String version = FabricLoader.getInstance().getModContainer(MOD_ID)
 				.map(m -> m.getMetadata().getVersion().getFriendlyString()).orElse("dev");
-		reader = new Reader(version, FabricLoader.getInstance().getGameDir().resolve("cakewiki").resolve("cache"));
+		reader = new Reader(version, FabricLoader.getInstance().getGameDir().resolve("cakewiki").resolve("cache"),
+				FabricLoader.getInstance().getConfigDir().resolve("cakewiki"));
 
 		openKey = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakewiki.open", InputUtil.Type.KEYSYM,
-				GLFW.GLFW_KEY_H, "key.categories.cakewiki"));
+				GLFW.GLFW_KEY_K, "key.categories.cakewiki"));
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			while (openKey.wasPressed()) {
 				if (client.currentScreen == null) open(null);

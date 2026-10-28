@@ -18,5 +18,10 @@
 	"cakewiki.search": "搜索 Wiki…",
 	"cakewiki.show": "展开",
 	"cakewiki.hide": "收起",
-	"cakewiki.missing": "Wiki 上还没有这个页面。"
+	"cakewiki.missing": "Wiki 上还没有这个页面。",
+	"cakewiki.bookmark.add": "收藏此页 (Ctrl+D)",
+	"cakewiki.bookmark.remove": "取消收藏 (Ctrl+D)",
+	"cakewiki.bookmarks": "收藏夹",
+	"cakewiki.bookmarks.empty": "还没有收藏：在页面上点 ☆ 即可收藏。",
+	"cakewiki.bookmarks.delete": "取消收藏"
 }

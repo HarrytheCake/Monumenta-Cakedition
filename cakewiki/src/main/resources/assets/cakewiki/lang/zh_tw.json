@@ -18,5 +18,10 @@
 	"cakewiki.search": "搜尋 Wiki…",
 	"cakewiki.show": "展開",
 	"cakewiki.hide": "收合",
-	"cakewiki.missing": "Wiki 上還沒有這個頁面。"
+	"cakewiki.missing": "Wiki 上還沒有這個頁面。",
+	"cakewiki.bookmark.add": "將此頁加入書籤 (Ctrl+D)",
+	"cakewiki.bookmark.remove": "移除書籤 (Ctrl+D)",
+	"cakewiki.bookmarks": "書籤",
+	"cakewiki.bookmarks.empty": "還沒有書籤：在頁面上點 ☆ 即可加入。",
+	"cakewiki.bookmarks.delete": "移除書籤"
 }

@@ -13,7 +13,8 @@ import java.util.Deque;
  * Development only: with {@code -Dcakewiki.devShot=Page|item:Name|Page@300|Page!open} (set through
  * {@code ./gradlew runClient -PdevShot=...}) the dev client opens each page from the title screen, waits for it
  * and its pictures, saves {@code screenshots/cakewiki-<n>.png} and finally quits. Does nothing in a normal game.
- * {@code item:} looks a name up like the item key does; {@code @y} scrolls; {@code !open} opens every collapsible.
+ * {@code item:} looks a name up like the item key does; {@code @y} scrolls; {@code !open} opens every collapsible;
+ * {@code !marks} bookmarks the page and opens the bookmarks list.
  */
 final class DevShots {
 	private final Deque<String> steps;
@@ -65,6 +66,8 @@ final class DevShots {
 		int scroll = 0;
 		boolean openAll = step.endsWith("!open");
 		if (openAll) step = step.substring(0, step.length() - 5);
+		boolean mark = step.endsWith("!marks");
+		if (mark) step = step.substring(0, step.length() - 6);
 		int at = step.lastIndexOf('@');
 		if (at > 0) {
 			scroll = Integer.parseInt(step.substring(at + 1));
@@ -76,5 +79,6 @@ final class DevShots {
 		if (step.startsWith("item:")) screen.lookup(step.substring(5));
 		else screen.reopen(new Reader.Visit(step, scroll));
 		if (openAll) screen.devOpenAll();
+		if (mark) screen.devMark();
 	}
 }
