@@ -529,6 +529,7 @@ def cmd_batch(args):
     measure, warmup = sets.get("measureSeconds", 30), sets.get("warmupSeconds", 10)
     # per-phase GPU/CPU time: a breakdown batch of its own, since the queries cost a little FPS
     gpu_timers = args.gpu_timers or sets.get("gpuTimers", False)
+    spark = args.spark or sets.get("spark", False)
     per_run = 90 + len(SCENES) * (warmup + measure)
     # a cool laptop boosts harder: the first run of a batch only warms it up and isn't reported
     all_sets = [{"name": "_warmup", "why": "warms the laptop up; not reported"}] + sets["sets"]
@@ -545,8 +546,9 @@ def cmd_batch(args):
                 power = power_state()
                 print(f"  {run} ({power}) ...", flush=True)
                 result = run_client(server, {"batch": batch, "run": run, "scenes": SCENES, "measureSeconds": measure,
-                                             "warmupSeconds": warmup, "gpuTimers": gpu_timers,
-                                             "notes": {"set": s, "power": power, "gpuTimers": gpu_timers}},
+                                             "warmupSeconds": warmup, "gpuTimers": gpu_timers, "spark": spark,
+                                             "notes": {"set": s, "power": power, "gpuTimers": gpu_timers,
+                                                       "spark": spark}},
                                     timeout=per_run + 300)
                 if result:
                     print("   ", {k: v["avgFps"] for k, v in result["scenes"].items()},
@@ -563,8 +565,9 @@ def cmd_live(args):
     settle, warmup, measure = args.settle, args.warmup, args.measure
     per_run = 90 + settle + warmup + measure
     tiers = args.tiers.split(",")
-    order = [(sets["sets"][0], "_warmup", 1)] + [(s, s["name"], r) for r in range(1, args.repeats + 1)
-                                                 for s in sets["sets"]]
+    order = ([] if args.no_warmup_run else [(sets["sets"][0], "_warmup", 1)]) + \
+        [(s, s["name"], r) for r in range(1, args.repeats + 1) for s in sets["sets"]]
+    per_run += 30 if args.spark else 0  # spark saves the profile before the game quits
     print(f"Live batch {batch} on {args.server}: {len(tiers)} tiers x {len(order)} runs, "
           f"about {len(tiers) * len(order) * per_run / 60:.0f} min")
     try:
@@ -580,7 +583,9 @@ def cmd_live(args):
                 result = run_client(None, {"batch": batch, "run": run, "server": args.server, "live": True,
                                            "scenes": [{"name": "market", "x": 0, "y": 0, "z": 0, "yaw": 0, "pitch": 0}],
                                            "settleSeconds": settle, "warmupSeconds": warmup, "measureSeconds": measure,
-                                           "notes": {"set": s, "tier": tier, "power": power}},
+                                           "gpuTimers": args.gpu_timers, "spark": args.spark,
+                                           "notes": {"set": s, "tier": tier, "power": power,
+                                                     "gpuTimers": args.gpu_timers, "spark": args.spark}},
                                     timeout=per_run + 300)
                 if result:
                     m = result["scenes"].get("market", {})
@@ -743,6 +748,7 @@ def main():
     b.add_argument("--repeats", type=int, default=1)
     b.add_argument("--name")
     b.add_argument("--gpu-timers", action="store_true", help="per-phase GPU/CPU time (CakeBench GpuTimer)")
+    b.add_argument("--spark", action="store_true", help="a spark CPU profile per scene (saved, never uploaded)")
     lv = sub.add_parser("live", help="runs on a real server: no commands, the camera only turns")
     lv.add_argument("sets")
     lv.add_argument("--server", default="server.playmonumenta.com")
@@ -752,6 +758,9 @@ def main():
     lv.add_argument("--warmup", type=int, default=15)
     lv.add_argument("--measure", type=int, default=60)
     lv.add_argument("--name")
+    lv.add_argument("--gpu-timers", action="store_true", help="breakdown run: per-phase GPU/CPU time")
+    lv.add_argument("--spark", action="store_true", help="breakdown run: a spark CPU profile (saved, never uploaded)")
+    lv.add_argument("--no-warmup-run", action="store_true", help="skip the discarded first run (breakdown runs)")
     sub.add_parser("serve")
     r = sub.add_parser("report")
     r.add_argument("batch")

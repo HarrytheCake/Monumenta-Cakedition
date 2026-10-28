@@ -39,6 +39,10 @@ import java.util.TreeMap;
  * A {@code live} plan joins a real server (e.g. Monumenta) instead: it sends <b>no chat and no commands</b>, needs no
  * operator rights and never moves; its one scene starts from wherever the character stands and only turns the camera.
  * The server's resource pack is declined, so a prompt can't block the join.
+ * <p>
+ * With {@code spark} set, each scene's measurement is also profiled by spark's client profiler, started and stopped
+ * through Fabric's client command dispatcher (runs locally; never sent to the server) and saved with
+ * {@code --save-to-file} (never uploaded), then copied next to the scene's frame times.
  */
 public final class CakeBench implements ClientModInitializer {
 	private static final Logger LOG = LoggerFactory.getLogger("cakebench");
@@ -56,12 +60,16 @@ public final class CakeBench implements ClientModInitializer {
 		int measureSeconds = 60;
 		float turnDegreesPerSecond = 6;
 		boolean gpuTimers; // per-phase GPU/CPU time (GpuTimer); off for timed runs, the queries cost a little
+		boolean spark; // a spark CPU profile per scene; also a breakdown-run tool
 		int gpuTimerDepth = 4;
 		List<Scene> scenes = List.of();
 		Map<String, Object> notes = Map.of();
 	}
 
-	private enum Phase { IDLE, SETTLE, WARMUP, MEASURE, DONE }
+	private enum Phase { IDLE, SETTLE, WARMUP, MEASURE, SAVING, DONE }
+
+	/** spark saves the profile asynchronously; give it this long before carrying on without one. */
+	private static final double SAVE_TIMEOUT_SECONDS = 30;
 
 	private static Plan plan;
 	private static Phase phase = Phase.IDLE;
@@ -76,6 +84,9 @@ public final class CakeBench implements ClientModInitializer {
 	private static int unfocusedFrames, minimizedFrames;
 	/** Where the camera turns from: the scene's angles, or in a live run the character's own. */
 	private static float baseYaw, basePitch;
+	private static long sparkStartMillis;
+	private static Path sparkSaved;
+	private static long sparkSeenAt;
 	private static final Map<String, Object> results = new LinkedHashMap<>();
 
 	@Override
@@ -156,6 +167,10 @@ public final class CakeBench implements ClientModInitializer {
 					gcCount0 = gc[0];
 					gcMillis0 = gc[1];
 					GpuTimer.start();
+					if (plan.spark) {
+						sparkStartMillis = System.currentTimeMillis();
+						clientCommand(client, "sparkc profiler start --thread *");
+					}
 					start(Phase.MEASURE);
 				}
 			}
@@ -177,7 +192,62 @@ public final class CakeBench implements ClientModInitializer {
 					finishScene(client, elapsed);
 				}
 			}
+			case SAVING -> {
+				// spark writes the file in the background: wait until it appears, then a moment for the write to end
+				if (sparkSaved == null) {
+					sparkSaved = newestProfile();
+					sparkSeenAt = now;
+				} else if ((now - sparkSeenAt) / 1e9 >= 2) {
+					Path dir = Path.of(plan.out, plan.run);
+					try {
+						Files.createDirectories(dir);
+						Files.copy(sparkSaved, dir.resolve(plan.scenes.get(scene).name() + ".sparkprofile"),
+								java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+					} catch (IOException e) {
+						LOG.error("Could not copy the spark profile", e);
+					}
+					nextScene(client);
+				}
+				if (phase == Phase.SAVING && elapsed >= SAVE_TIMEOUT_SECONDS) {
+					LOG.warn("CakeBench: no spark profile appeared within {} s", SAVE_TIMEOUT_SECONDS);
+					nextScene(client);
+				}
+			}
 			default -> {}
+		}
+	}
+
+	/**
+	 * Runs a client-side command (spark's /sparkc) through Fabric's client dispatcher. It never reaches the server:
+	 * a command the dispatcher doesn't know just fails here.
+	 */
+	private static void clientCommand(MinecraftClient client, String command) {
+		var dispatcher = net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.getActiveDispatcher();
+		if (dispatcher == null || client.getNetworkHandler() == null) {
+			LOG.error("CakeBench: no client command dispatcher for '{}'; nothing was sent", command);
+			return;
+		}
+		try {
+			dispatcher.execute(command, (net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource)
+					client.getNetworkHandler().getCommandSource());
+		} catch (com.mojang.brigadier.exceptions.CommandSyntaxException e) {
+			LOG.error("CakeBench: client command '{}' failed (nothing was sent to the server): {}", command, e.getMessage());
+		}
+	}
+
+	/** The spark profile saved since this measurement started, if any (config/spark/profile-*.sparkprofile). */
+	private static Path newestProfile() {
+		Path dir = FabricLoader.getInstance().getConfigDir().resolve("spark");
+		if (!Files.isDirectory(dir)) {
+			return null;
+		}
+		try (var files = Files.list(dir)) {
+			return files.filter(f -> f.getFileName().toString().endsWith(".sparkprofile"))
+					.filter(f -> f.toFile().lastModified() >= sparkStartMillis)
+					.max(java.util.Comparator.comparingLong(f -> f.toFile().lastModified()))
+					.orElse(null);
+		} catch (IOException e) {
+			return null;
 		}
 	}
 
@@ -247,11 +317,21 @@ public final class CakeBench implements ClientModInitializer {
 			LOG.error("Could not write frame times", e);
 		}
 		LOG.info("CakeBench scene '{}': {}", s.name(), r);
+		if (plan.spark) {
+			clientCommand(client, "sparkc profiler stop --save-to-file");
+			sparkSaved = null;
+			start(Phase.SAVING);
+		} else {
+			nextScene(client);
+		}
+	}
+
+	private static void nextScene(MinecraftClient client) {
 		if (scene + 1 < plan.scenes.size()) {
 			enterScene(client, scene + 1);
 		} else {
 			phase = Phase.DONE;
-			writeSummary(client, dir);
+			writeSummary(client, Path.of(plan.out, plan.run));
 			client.scheduleStop();
 		}
 	}
