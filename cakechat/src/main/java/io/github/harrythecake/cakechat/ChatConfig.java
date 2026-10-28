@@ -26,6 +26,7 @@ public final class ChatConfig {
 	public History history = new History();
 	public Compact compact = new Compact();
 	public Timestamps timestamps = new Timestamps();
+	public Scroll scroll = new Scroll();
 
 	public static final class History {
 		/** Lines kept per window; 0 = no limit (what More Chat History gave the pack). */
@@ -68,6 +69,13 @@ public final class ChatConfig {
 		}
 	}
 
+	public static final class Scroll {
+		/** Lines per mouse-wheel notch (Shift: always 1). Vanilla: 7. */
+		public int linesPerNotch = 7;
+		public boolean invert = false;
+		public boolean scrollbar = true;
+	}
+
 	/** Reads the file, or returns the defaults when it doesn't exist. A broken file is kept aside as {@code .broken}. */
 	public static ChatConfig load(Path file) {
 		if (!Files.exists(file)) {
@@ -107,6 +115,7 @@ public final class ChatConfig {
 		if (timestamps == null) timestamps = defaults.timestamps;
 		if (timestamps.placement == null) timestamps.placement = defaults.timestamps.placement;
 		if (timestamps.pattern == null) timestamps.pattern = defaults.timestamps.pattern;
+		if (scroll == null) scroll = defaults.scroll;
 		return this;
 	}
 }

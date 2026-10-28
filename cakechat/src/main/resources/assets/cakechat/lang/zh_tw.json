@@ -29,5 +29,12 @@
 	"cakechat.config.timestamps.placement.desc": "懸停時、訊息前或訊息後。",
 	"cakechat.config.timestamps.placement.hover": "懸停時",
 	"cakechat.config.timestamps.placement.before": "訊息前",
-	"cakechat.config.timestamps.placement.after": "訊息後"
+	"cakechat.config.timestamps.placement.after": "訊息後",
+	"cakechat.config.scroll": "捲動",
+	"cakechat.config.scroll.linesPerNotch": "每格滾輪行數",
+	"cakechat.config.scroll.linesPerNotch.desc": "滾輪每捲動一格移動的行數。按住 Shift 時為一行。原版：7。",
+	"cakechat.config.scroll.invert": "反向捲動",
+	"cakechat.config.scroll.invert.desc": "反轉聊天的捲動方向。",
+	"cakechat.config.scroll.scrollbar": "捲軸",
+	"cakechat.config.scroll.scrollbar.desc": "聊天開啟且內容超出時顯示捲軸。向上捲動時收到新訊息，捲軸會變紅。"
 }

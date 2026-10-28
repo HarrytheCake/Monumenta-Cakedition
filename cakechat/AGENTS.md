@@ -23,13 +23,22 @@ cakechat/
 └── src/
     ├── main/resources/
     │   ├── fabric.mod.json          # client; depends fabric-api + yet_another_config_lib_v3 >=3.6.0; conflicts chatplus
+    │   ├── cakechat.mixins.json     # ChatHudMixin, ChatScreenMixin, InGameHudMixin
     │   └── assets/cakechat/         # icon.png (placeholder, drawn by script), lang/{en_us,zh_cn,zh_tw}.json (same keys)
     ├── main/java/io/github/harrythecake/cakechat/
     │   ├── CakeChat.java        # entrypoint: loads config, /cakechat opens the settings
     │   ├── ChatConfig.java      # config/cakechat/config.json (Gson, plain Java; temp-file save; broken file → .broken)
+    │   ├── Compactor.java       # duplicate matcher + counter text (plain Java)
+    │   ├── ChatEntry.java       # one message: content (replaceable), signature, indicator, tick, millis, compact key, count
+    │   ├── ChatStore.java       # history (oldest first), compacting, history limit, mirroring vanilla's in-place swaps
+    │   ├── ChatView.java        # wrapped lines, drawing (vanilla's layout + fade), scroll, hover style, indicator
     │   ├── SettingsScreen.java  # YACL screen; labels cakechat.config.<key>, tooltips <key>.desc
-    │   └── ModMenuEntry.java    # Mod Menu configure button → SettingsScreen
-    └── test/java/…/ChatConfigTest.java   # JUnit 5, run by `gradlew build`
+    │   ├── ModMenuEntry.java    # Mod Menu configure button → SettingsScreen
+    │   └── mixin/
+    │       ├── ChatHudMixin.java     # addMessage TAIL → store; refresh TAIL → swaps; clear HEAD; reset → re-wrap; render/scroll/resetScroll/getTextStyleAt/getIndicatorAt → view (cancelled)
+    │       ├── InGameHudMixin.java   # @WrapWithCondition on InGameHud.clear → ChatHud.clear(true): skipped when keepOnDisconnect
+    │       └── ChatScreenMixin.java  # mouseScrolled: lines per notch (vanilla 7.0), invert
+    └── test/java/…/             # JUnit 5, run by `gradlew build`: ChatConfigTest, CompactorTest, LangTest (same keys in all 3 languages)
 ```
 
 Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakechat/`.
@@ -43,6 +52,12 @@ Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakechat/`
 
 ## Design
 
+- **Store vs vanilla:** vanilla's `ChatHud` is the way in and keeps its own 100 `messages` (other mods read and change them); CakeChat keeps its own `ChatStore` and draws it. Vanilla changes a line in place by `messages.set(i, …)` + `refresh()` (server deletion → "deleted" marker, CakeText's late translation, matched by `line.content() == original`). `ChatStore.onRefresh` keeps a shadow copy of vanilla's list and an identity map vanilla line → entry, and copies every replaced line's content into its entry. So CakeText 0.2.0 works unchanged; no API needed so far.
+- **Geometry (M1):** width, heights, scale, opacity, background and line spacing come from Minecraft's Chat Settings (`ChatHud.getWidth()` etc.), and the layout is vanilla's (bottom-left, 40 px up), so vanilla's own mouse code (the delayed-message bar click) still lines up. Own positions/sizes per window come with M2.
+- **Keep on disconnect:** `InGameHud.clear()` runs on disconnect **and** on `enterReconfiguration` (a 1.20.2+ proxy server switch: Monumenta shard switches). CakeChat skips its `ChatHud.clear(true)` call; F3+D calls `ChatHud.clear(false)` directly and still clears.
+- **Compacting:** a repeat removes the earlier entry and arrives as a new one at the bottom with count + 1 (fade restarts). Key = `getString()` (or the JSON with styles). Blank lines never merge (Monumenta sends spacer lines). Timestamps and counters are added when wrapping, never stored, so changing the settings applies to old lines too.
+- **Timestamps on hover** go only on runs without a hover of their own: in CakeText's ORIGINAL display every run carries the translation hover, so the time doesn't show there (use before/after).
+- **Other mods touching chat in the pack** (checked 2026-10-28 via refmaps): UMM injects in `InGameHud.render` right after the `ChatHud.render` call (skills HUD) — unaffected by cancelling `ChatHud.render`. BetterF3, Language Reload and Xaero's World Map call `addMessage`. CIT Resewn hooks `ChatScreen.keyPressed`. ChatPlus, More Chat History, Don't Clear Chat History must be removed (ChatPlus also replaces drawing).
 - **Where lines come in:** the public `ChatHud.addMessage(Text, MessageSignatureData, MessageIndicator)` (every chat line passes it once; `refresh()` uses another overload). CakeChat reads the line at **TAIL**, so it sees what CakeText Translator's `@ModifyVariable` at HEAD made of it (icons, hover translations stay).
 - **CakeText bridge (planned):** CakeText swaps a chat line when a machine translation arrives late (`ChatHud.messages` + `refresh()`). CakeChat keeps its own store, so it will offer a small optional API that CakeText calls when CakeChat is installed (both mods are ours; CakeText must still work without CakeChat).
 - **Monumenta chat** is `<channel> [tag] Name » text`: default tabs can split by channel.
@@ -53,7 +68,7 @@ Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakechat/`
 Status marks: `[x]` done, `[ ]` open.
 
 - [x] **M0 skeleton:** builds, loads config, YACL settings screen, Mod Menu entry, `/cakechat`, 3 languages, tests.
-- [ ] **M1 one window:** own message store (unlimited, kept on disconnect), CakeChat draws the chat instead of vanilla (size, text scale, opacity, line spacing, position), scrolling + scrollbar + scroll keys, timestamps, compact duplicates.
+- [x] **M1 one window** (tested in game by the user 2026-10-28, test instance on Monumenta: look/fade/hover/clicks, >100 lines + red scrollbar, kept on shard switch + relog, F3+D clears, compacting, timestamps in all 3 placements, CakeText icons/hovers, UMM skill HUD): own message store (unlimited, kept on disconnect), CakeChat draws the chat instead of vanilla (size, text scale, opacity, line spacing, position), scrolling + scrollbar + scroll keys, timestamps, compact duplicates.
 - [ ] **M2 windows and tabs:** several windows, tabs with regex rules (priority, always add, skip others, auto prefix), Monumenta channel tabs by default, unread counts, move/resize mode.
 - [ ] **M3 find, copy, peek, hide:** find bar (contains/regex, ignore case, highlight matches), copy a message (plain or formatted), peek-chat and hide-chat keys.
 - [ ] **M4 ChatPlus import:** read the newest `config/chatplus/chatplus-v*.json`, convert windows/tabs/patterns/compact/timestamps/keys; offered once when that file exists and no CakeChat setup has been made, and from a settings button. Never changes ChatPlus's files. Test fixtures are made up, never a player's real file.

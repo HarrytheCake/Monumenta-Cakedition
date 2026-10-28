@@ -29,5 +29,12 @@
 	"cakechat.config.timestamps.placement.desc": "On hover, before the message or after it.",
 	"cakechat.config.timestamps.placement.hover": "On hover",
 	"cakechat.config.timestamps.placement.before": "Before",
-	"cakechat.config.timestamps.placement.after": "After"
+	"cakechat.config.timestamps.placement.after": "After",
+	"cakechat.config.scroll": "Scrolling",
+	"cakechat.config.scroll.linesPerNotch": "Lines per wheel step",
+	"cakechat.config.scroll.linesPerNotch.desc": "How many lines one mouse-wheel step scrolls. Hold Shift for one line. Minecraft: 7.",
+	"cakechat.config.scroll.invert": "Invert scrolling",
+	"cakechat.config.scroll.invert.desc": "Scroll the chat the other way round.",
+	"cakechat.config.scroll.scrollbar": "Scrollbar",
+	"cakechat.config.scroll.scrollbar.desc": "Show a scrollbar while the chat is open and longer than the box. It turns red when new messages arrive while you are scrolled up."
 }

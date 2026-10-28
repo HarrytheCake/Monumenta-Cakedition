@@ -19,6 +19,8 @@ public final class CakeChat implements ClientModInitializer {
 
 	private static final Path CONFIG_FILE = FabricLoader.getInstance().getConfigDir().resolve(MOD_ID).resolve("config.json");
 	private static ChatConfig config = new ChatConfig();
+	private static ChatView view;
+	private static ChatStore store;
 
 	@Override
 	public void onInitializeClient() {
@@ -40,7 +42,25 @@ public final class CakeChat implements ClientModInitializer {
 		return config;
 	}
 
+	/** The chat box; created on first use, once the client exists. */
+	public static ChatView view() {
+		if (view == null) {
+			view = new ChatView(MinecraftClient.getInstance());
+			store = new ChatStore(view);
+			view.attach(store);
+		}
+		return view;
+	}
+
+	public static ChatStore store() {
+		view();
+		return store;
+	}
+
 	public static void saveConfig() {
+		if (view != null) {
+			view.invalidate();
+		}
 		try {
 			config.save(CONFIG_FILE);
 		} catch (IOException e) {
