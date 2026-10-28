@@ -21,7 +21,7 @@ Make Monumenta Cakedition
 │   ├── ⏳ Q29 no force-push / no deletion on packwiz (GitHub + GitLab) and both mirrors' main
 │   ├── ✅ Q28 push_all mirrors caketext/ and pushes the packwiz branch to GitLab too (ADR 0003)
 │   ├── ⏳ Q30 issue templates, English + 简体中文, all reports on Monumenta-Cakedition
-│   └── ⏳ Q31 README on main (English + 简体中文)
+│   └── ✅ Q31 README on main (English + 简体中文, 2026-10-28)
 ├── 4 Pack contents
 │   ├── ✅ 2.2.2: RRLS, Translations for Sodium, Paperbox 1.1.0
 │   ├── ⏸ Client-lag phase 1: step-1 rerun + FO set (Q83), spark pass + GPU-timer batch (Q87)
@@ -45,9 +45,9 @@ Make Monumenta Cakedition
 ### Stage A: protect what is out there, then reach "2.2.x is done" (Q4)
 
 1. ⏳ **Branch protection** (Q29). One GitHub ruleset per repo: block force pushes and deletion. GitLab: protect `packwiz` with force push off. Everything after this is a release that can't be taken back.
-2. ✅ **push_all mirrors caketext/ and pushes both update-channel addresses** (Q28, ADR 0003). A dry-run push to every remote must pass before anything goes out.
+2. ✅ **push_all mirrors caketext/ and pushes both update-channel addresses** (Q28, ADR 0003). A dry-run push to every remote must pass before anything goes out. It refuses to run until the `gitlab` remote is added.
 3. ✅ **1.4.0 backup checks in game.** No bugs, so no 1.4.2.
-4. ⏳ **README on main** (Q31). The README is the one file written to `main` from here; the Friday bot owns the rest.
+4. ✅ **README on main** (Q31). The README is the one file written to `main` from here (in a separate worktree, pushed `HEAD:main`); the Friday bot owns the rest. Once the Discord link (Q52) and the install guide (Q24) exist, link them from it.
 5. ⏳ **Upload the v2.2.2 pack file to Modrinth** (by hand), with the install guide (Q24, English + 简体中文 first) for the page to link to.
 6. ⏳ **Issue templates** (Q30). GitHub reads them from the default branch (`main`), so they need the same exception as the README.
 
