@@ -269,8 +269,8 @@ def cmd_setup(args):
         shutil.copytree(JDK_SRC, JDK)  # its own copy, so the GPU preference only hits the bench
     setup_server()
     mrpack = pathlib.Path(args.mrpack) if args.mrpack else cached(
-        "https://github.com/HarrytheCake/Monumenta-Cakedition/releases/download/v2.2.1/Monumenta-Cakedition-2.2.1.mrpack",
-        "Monumenta-Cakedition-2.2.1.mrpack")
+        "https://github.com/HarrytheCake/Monumenta-Cakedition/releases/download/v2.2.2/Monumenta-Cakedition-2.2.2.mrpack",
+        "Monumenta-Cakedition-2.2.2.mrpack")
     setup_instance(mrpack)
     print(f"Instance '{INSTANCE_NAME}' ready; restart Prism if it is open so it lists the instance.")
     # priming run: yosbr copies the shipped defaults in, mods write their configs; that state is every run's start

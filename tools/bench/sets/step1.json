@@ -3,7 +3,7 @@
  "sets": [
   {
    "name": "baseline",
-   "why": "the 2.2.1 pack as shipped; 3 runs to measure the noise",
+   "why": "the 2.2.2 pack as shipped; 3 runs to measure the noise",
    "repeats": 3
   },
   {
