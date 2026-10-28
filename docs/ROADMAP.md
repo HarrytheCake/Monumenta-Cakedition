@@ -15,12 +15,12 @@ Make Monumenta Cakedition
 │   └── ⏳ Q16 CurseForge audit → CurseForge pack file + projects for our mods
 ├── 2 Distribution
 │   ├── ✅ Q56 adoption (Cakedition Updater 1.4.1); Q22 pack files never carry player state
-│   ├── ⏳ Q24 install guide on the GitHub wiki (en / zh_cn / zh_tw), with the Q58 promise
+│   ├── ✅ Q24 install guide on the GitHub wiki (Install-Guide / 安装指南 / 安裝指南, 2026-10-28)
 │   └── ⛔ Q40–42 GitLab fallback ← our mods on Modrinth + packwiz-installer.jar in the pack file
 ├── 3 GitHub management
 │   ├── ✅ Q29 GitHub rulesets: no force-push / no deletion on packwiz + both mirrors' main (2026-10-28); GitLab protected branches ⏳
 │   ├── ✅ Q28 push_all mirrors caketext/ and pushes the packwiz branch to GitLab too (ADR 0003)
-│   ├── ⏳ Q30 issue templates, English + 简体中文, all reports on Monumenta-Cakedition
+│   ├── ✅ Q30 issue templates (bug report, suggestion; English + 简体中文) on main, 2026-10-28
 │   └── ✅ Q31 README on main (English + 简体中文, 2026-10-28)
 ├── 4 Pack contents
 │   ├── ✅ 2.2.2: RRLS, Translations for Sodium, Paperbox 1.1.0
@@ -48,8 +48,8 @@ Make Monumenta Cakedition
 2. ✅ **push_all mirrors caketext/ and pushes every repo to GitHub and its GitLab copy** (Q28, ADR 0003). A dry-run push to every remote must pass before anything goes out; all six remotes are set up.
 3. ✅ **1.4.0 backup checks in game.** No bugs, so no 1.4.2.
 4. ✅ **README on main** (Q31). The README is the one file written to `main` from here (in a separate worktree, pushed `HEAD:main`); the Friday bot owns the rest. Once the Discord link (Q52) and the install guide (Q24) exist, link them from it.
-5. ⏳ **Upload the v2.2.2 pack file to Modrinth** (by hand), with the install guide (Q24, English + 简体中文 first) for the page to link to.
-6. ⏳ **Issue templates** (Q30). GitHub reads them from the default branch (`main`), so they need the same exception as the README.
+5. ⏳ **Upload the v2.2.2 pack file to Modrinth** (by hand). Page text, project settings and the version's changelog are ready in [platforms/modrinth.md](platforms/modrinth.md); the install guide is on the wiki in all three languages.
+6. ✅ **Issue templates** (Q30) on `main`, the same exception as the README, plus contact links (wiki, Monumenta Discord, QQ group).
 
 ### Stage B: the first release with an in-game changelog
 
