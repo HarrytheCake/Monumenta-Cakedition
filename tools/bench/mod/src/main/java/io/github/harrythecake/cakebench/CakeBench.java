@@ -35,6 +35,10 @@ import java.util.TreeMap;
  * (the driver ops the player from the server console), then for each scene: teleports there, turns slowly through
  * warm-up and measurement, records every frame's time while measuring, and finally writes the results and quits.
  * Without a plan it does nothing.
+ * <p>
+ * A {@code live} plan joins a real server (e.g. Monumenta) instead: it sends <b>no chat and no commands</b>, needs no
+ * operator rights and never moves; its one scene starts from wherever the character stands and only turns the camera.
+ * The server's resource pack is declined, so a prompt can't block the join.
  */
 public final class CakeBench implements ClientModInitializer {
 	private static final Logger LOG = LoggerFactory.getLogger("cakebench");
@@ -46,6 +50,7 @@ public final class CakeBench implements ClientModInitializer {
 		String run = "run";
 		String out = "cakebench-results";
 		String server;
+		boolean live;
 		int settleSeconds = 15;
 		int warmupSeconds = 20;
 		int measureSeconds = 60;
@@ -69,6 +74,8 @@ public final class CakeBench implements ClientModInitializer {
 	private static long gcCount0, gcMillis0;
 	private static long heapPeak;
 	private static int unfocusedFrames, minimizedFrames;
+	/** Where the camera turns from: the scene's angles, or in a live run the character's own. */
+	private static float baseYaw, basePitch;
 	private static final Map<String, Object> results = new LinkedHashMap<>();
 
 	@Override
@@ -91,8 +98,11 @@ public final class CakeBench implements ClientModInitializer {
 		ScreenEvents.AFTER_INIT.register((client, screen, w, h) -> {
 			if (screen instanceof TitleScreen && phase == Phase.IDLE && !connecting && plan.server != null) {
 				connecting = true;
-				client.send(() -> ConnectScreen.connect(screen, client, ServerAddress.parse(plan.server),
-						new ServerInfo("CakeBench", plan.server, ServerInfo.ServerType.OTHER), false));
+				ServerInfo info = new ServerInfo("CakeBench", plan.server, ServerInfo.ServerType.OTHER);
+				if (plan.live) {
+					info.setResourcePackPolicy(ServerInfo.ResourcePackPolicy.DISABLED);
+				}
+				client.send(() -> ConnectScreen.connect(screen, client, ServerAddress.parse(plan.server), info, false));
 			}
 		});
 		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
@@ -118,7 +128,8 @@ public final class CakeBench implements ClientModInitializer {
 		switch (phase) {
 			case SETTLE -> {
 				// the driver ops the player when it sees the join; wait for that and for the first chunks
-				if (elapsed >= plan.settleSeconds && player.hasPermissionLevel(2)) {
+				// (a live server never ops anyone: just wait)
+				if (elapsed >= plan.settleSeconds && (plan.live || player.hasPermissionLevel(2))) {
 					if (plan.scenes.isEmpty()) { // a priming run: only lets yosbr and the mods write their files
 						phase = Phase.DONE;
 						Path dir = Path.of(plan.out, plan.run);
@@ -173,19 +184,26 @@ public final class CakeBench implements ClientModInitializer {
 	private static void enterScene(MinecraftClient client, int index) {
 		scene = index;
 		Scene s = plan.scenes.get(index);
-		client.player.networkHandler.sendChatCommand(String.format(Locale.ROOT, "tp @s %.2f %.2f %.2f %.1f %.1f",
-				s.x(), s.y(), s.z(), s.yaw(), s.pitch()));
+		if (plan.live) {
+			// a real server: never send anything, start from where the character already looks
+			baseYaw = client.player.getYaw();
+			basePitch = client.player.getPitch();
+		} else {
+			client.player.networkHandler.sendChatCommand(String.format(Locale.ROOT, "tp @s %.2f %.2f %.2f %.1f %.1f",
+					s.x(), s.y(), s.z(), s.yaw(), s.pitch()));
+			baseYaw = s.yaw();
+			basePitch = s.pitch();
+		}
 		LOG.info("CakeBench scene '{}'", s.name());
 		start(Phase.WARMUP);
 	}
 
 	private static void turn(ClientPlayerEntity player, double seconds) {
-		Scene s = plan.scenes.get(scene);
-		float yaw = (float) (s.yaw() + plan.turnDegreesPerSecond * seconds);
+		float yaw = (float) (baseYaw + plan.turnDegreesPerSecond * seconds);
 		player.prevYaw = yaw;
 		player.setYaw(yaw);
-		player.prevPitch = s.pitch();
-		player.setPitch(s.pitch());
+		player.prevPitch = basePitch;
+		player.setPitch(basePitch);
 	}
 
 	private static void record(float ms) {
@@ -209,6 +227,10 @@ public final class CakeBench implements ClientModInitializer {
 		// what the client actually had: an empty or half-built scene shows here
 		r.put("entitiesLoaded", client.world.getRegularEntityCount());
 		r.put("entitiesDebug", client.worldRenderer.getEntitiesDebugString());
+		// on a live server the scene is whatever is there: where, and how many other players were around
+		r.put("dimension", client.world.getRegistryKey().getValue().toString());
+		r.put("position", String.format(Locale.ROOT, "%.0f %.0f %.0f", client.player.getX(), client.player.getY(), client.player.getZ()));
+		r.put("playersNearby", client.world.getPlayers().size() - 1);
 		if (gpu != null) {
 			r.put("gpu", gpu);
 		}

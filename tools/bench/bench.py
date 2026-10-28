@@ -290,15 +290,20 @@ def cmd_setup(args):
     print("Primed; baseline state saved.")
 
 
-def cmd_gpu(args):
+def set_gpu(mode):
+    """Windows' per-app GPU choice for the bench's own Java: igpu = the Intel GPU (low tier), dgpu = the NVIDIA one."""
     key = r"HKCU:\Software\Microsoft\DirectX\UserGpuPreferences"
     exe = str(JDK / "bin" / "javaw.exe").replace("/", "\\")
-    if args.mode == "igpu":
+    if mode in ("igpu", "dgpu"):
         r = ps(f"New-Item -Path '{key}' -Force | Out-Null; "
-               f"Set-ItemProperty -Path '{key}' -Name '{exe}' -Value 'GpuPreference=1;'")
+               f"Set-ItemProperty -Path '{key}' -Name '{exe}' -Value 'GpuPreference={1 if mode == 'igpu' else 2};'")
     else:
         r = ps(f"Remove-ItemProperty -Path '{key}' -Name '{exe}' -ErrorAction SilentlyContinue")
-    print(r.stdout or r.stderr or f"GPU preference for {exe}: {args.mode}")
+    print(r.stdout or r.stderr or f"GPU preference for {exe}: {mode}")
+
+
+def cmd_gpu(args):
+    set_gpu(args.mode)
 
 
 # --- server ----------------------------------------------------------------------------------------------------
@@ -496,11 +501,12 @@ def run_client(server, plan, timeout):
     summary = out_dir / plan["run"] / "summary.json"
     if summary.exists():
         summary.unlink()
-    server.joined.clear()
+    if server:
+        server.joined.clear()
     subprocess.Popen([str(PRISM), "--launch", INSTANCE_NAME])
     end, pinned = time.time() + timeout, set()
     while time.time() < end:
-        if server.proc.poll() is not None:
+        if server and server.proc.poll() is not None:
             for pid in game_pids():
                 ps(f"Stop-Process -Id {pid} -Force")
             server.check()
@@ -545,6 +551,44 @@ def cmd_batch(args):
                 if result:
                     print("   ", {k: v["avgFps"] for k, v in result["scenes"].items()},
                           *(["FLAGGED: " + "; ".join(flags(result))] if flags(result) else []))
+    print(f"Done. python tools/bench/bench.py report {batch}")
+
+
+def cmd_live(args):
+    """Runs on a real server (e.g. the Monumenta Market): no local server, no commands; the character stays where it
+    logged out and only turns the camera. Per GPU tier: a discarded warm-up run, then the sets in turn (A B A B), so
+    the live scene's changes (players coming and going) hit every set alike. Leaves the GPU preference on igpu."""
+    sets = json.loads(pathlib.Path(args.sets).read_text(encoding="utf-8"))
+    batch = args.name or f"{datetime.date.today().isoformat()}-live-{pathlib.Path(args.sets).stem}"
+    settle, warmup, measure = args.settle, args.warmup, args.measure
+    per_run = 90 + settle + warmup + measure
+    tiers = args.tiers.split(",")
+    order = [(sets["sets"][0], "_warmup", 1)] + [(s, s["name"], r) for r in range(1, args.repeats + 1)
+                                                 for s in sets["sets"]]
+    print(f"Live batch {batch} on {args.server}: {len(tiers)} tiers x {len(order)} runs, "
+          f"about {len(tiers) * len(order) * per_run / 60:.0f} min")
+    try:
+        for tier in tiers:
+            set_gpu(tier)
+            for s, name, r in order:
+                run = f"_{tier}-warmup#1" if name == "_warmup" else f"{tier}-{name}#{r}"
+                if (RESULTS / batch / run / "summary.json").exists():
+                    continue  # resume a stopped batch
+                reset_instance(s)
+                power = power_state()
+                print(f"  {run} ({power}) ...", flush=True)
+                result = run_client(None, {"batch": batch, "run": run, "server": args.server, "live": True,
+                                           "scenes": [{"name": "market", "x": 0, "y": 0, "z": 0, "yaw": 0, "pitch": 0}],
+                                           "settleSeconds": settle, "warmupSeconds": warmup, "measureSeconds": measure,
+                                           "notes": {"set": s, "tier": tier, "power": power}},
+                                    timeout=per_run + 300)
+                if result:
+                    m = result["scenes"].get("market", {})
+                    print(f"    {result['renderer']}: avg {m.get('avgFps')} FPS, 1% low {m.get('onePercentLowFps')}, "
+                          f"{m.get('playersNearby')} players near, at {m.get('position')} in {m.get('dimension')}",
+                          *(["FLAGGED: " + "; ".join(flags(result))] if flags(result) else []))
+    finally:
+        set_gpu("igpu")
     print(f"Done. python tools/bench/bench.py report {batch}")
 
 
@@ -600,8 +644,13 @@ def cmd_report(args):
     if not runs:
         sys.exit(f"no results in {base}")
     first = next(iter(runs.values()))[0]
-    scenes = [s["name"] for s in SCENES]
-    baseline = runs.get("baseline")
+    found = {sc for rs in runs.values() for r in rs for sc in r["scenes"]}
+    scenes = [s["name"] for s in SCENES if s["name"] in found] + sorted(found - {s["name"] for s in SCENES})
+    live = any(r["notes"].get("tier") for rs in runs.values() for r in rs)
+
+    def baseline_of(name):  # "dgpu-fo-settings" is compared with "dgpu-baseline"
+        tier = name.split("-", 1)[0] + "-" if name.startswith(("igpu-", "dgpu-")) else ""
+        return None if name == tier + "baseline" else runs.get(tier + "baseline")
 
     def med(rs, scene, key):
         vals = [r["scenes"][scene][key] for r in rs if scene in r["scenes"]]
@@ -611,8 +660,16 @@ def cmd_report(args):
              f"- Renderer: {first['renderer']} ({first['glVersion']})",
              f"- Java {first['java']}, heap {first['maxHeapMB']} MB, {first['cpus']} CPUs visible to the game",
              f"- Render distance {first['renderDistance']}, graphics {first['graphics']}, max FPS {first['maxFps']}",
-             "- Scenes are synthetic (tools/bench/bench.py); medians over repeats; 1% low = average FPS of the slowest 1% of frames.",
-             ""]
+             ("- Live server (`bench.py live`): the character stands still and only turns; medians over repeats; "
+              if live else "- Scenes are synthetic (tools/bench/bench.py); medians over repeats; ")
+             + "1% low = average FPS of the slowest 1% of frames.", ""]
+    if live:
+        lines += ["| Set | GPU | players nearby (per run) | position |", "|---|---|---|---|"]
+        for name, rs in runs.items():
+            m = [r["scenes"].get("market", {}) for r in rs]
+            lines.append(f"| {name} | {rs[0]['renderer']} | {', '.join(str(x.get('playersNearby')) for x in m)} | "
+                         f"{m[0].get('position')} ({m[0].get('dimension')}) |")
+        lines.append("")
     for key, title in [("avgFps", "Average FPS"), ("onePercentLowFps", "1% low FPS"), ("maxFrameMs", "Worst frame (ms)")]:
         lines += [f"## {title}", "", "| Set | runs | " + " | ".join(scenes) + " |",
                   "|---|---|" + "---|" * len(scenes)]
@@ -621,7 +678,8 @@ def cmd_report(args):
             for sc in scenes:
                 v = med(rs, sc, key)
                 cell = "–" if v is None else f"{v:g}"
-                if baseline and name != "baseline" and v is not None and key != "maxFrameMs":
+                baseline = baseline_of(name)
+                if baseline and v is not None and key != "maxFrameMs":
                     b = med(baseline, sc, key)
                     if b:
                         cell += f" ({(v - b) / b * 100:+.0f}%)"
@@ -679,17 +737,27 @@ def main():
     s = sub.add_parser("setup")
     s.add_argument("--mrpack")
     g = sub.add_parser("gpu")
-    g.add_argument("mode", choices=["igpu", "default"])
+    g.add_argument("mode", choices=["igpu", "dgpu", "default"])
     b = sub.add_parser("batch")
     b.add_argument("sets")
     b.add_argument("--repeats", type=int, default=1)
     b.add_argument("--name")
     b.add_argument("--gpu-timers", action="store_true", help="per-phase GPU/CPU time (CakeBench GpuTimer)")
+    lv = sub.add_parser("live", help="runs on a real server: no commands, the camera only turns")
+    lv.add_argument("sets")
+    lv.add_argument("--server", default="server.playmonumenta.com")
+    lv.add_argument("--tiers", default="igpu,dgpu", help="igpu = low tier (Intel), dgpu = high tier (NVIDIA)")
+    lv.add_argument("--repeats", type=int, default=2)
+    lv.add_argument("--settle", type=int, default=40, help="seconds after joining before the warm-up")
+    lv.add_argument("--warmup", type=int, default=15)
+    lv.add_argument("--measure", type=int, default=60)
+    lv.add_argument("--name")
     sub.add_parser("serve")
     r = sub.add_parser("report")
     r.add_argument("batch")
     args = p.parse_args()
-    {"setup": cmd_setup, "gpu": cmd_gpu, "batch": cmd_batch, "serve": cmd_serve, "report": cmd_report}[args.cmd](args)
+    {"setup": cmd_setup, "gpu": cmd_gpu, "batch": cmd_batch, "live": cmd_live, "serve": cmd_serve,
+     "report": cmd_report}[args.cmd](args)
 
 
 if __name__ == "__main__":
