@@ -1,5 +1,5 @@
 """Release in one go: push main to the packwiz branch at both update-channel addresses (GitHub, GitLab)
-and mirror updater/ and caketext/ to their own repos.
+and mirror updater/ and caketext/ to their own repos (each on GitHub, with a backup copy on GitLab).
 
     python tools/push_all.py           # check, show what goes out, ask, then push everything
     python tools/push_all.py --check   # only run the checks, push nothing
@@ -11,7 +11,8 @@ Nothing is pushed unless every check passes:
   - no remote has commits that main (or the split folder) doesn't,
   - outgoing commits use a no-reply identity and add no personal data (emails, local paths,
     your username, player UUIDs, `lastServer`, profiler links),
-  - a dry-run push to every remote succeeds (so a login problem on one address stops all of them).
+  - a dry-run push to every remote succeeds (so a login problem on one copy stops all of them).
+A copy that doesn't have the branch yet gets its first push here, scanned from what GitHub already has public.
 
 The update channel is one channel at two addresses (docs/adr/0003): GitHub and GitLab always get the
 same packwiz branch in the same run, so they never drift apart.
@@ -25,11 +26,19 @@ import sys
 import packwiz_sync
 
 ROOT = packwiz_sync.ROOT
-PACK_BRANCH = "packwiz"
-PACK_REMOTES = ["github", "gitlab"]  # update channel addresses, primary first
-MIRRORS = [("updater", "updater", "CakeUpdater source"),  # (remote, prefix, label); pushed to <remote> main
-           ("caketext", "caketext", "CakeText source")]
-MIRROR_BRANCH = "main"
+GITLAB = "https://gitlab.com/HarrytheCake"
+# (label, folder to split or None for the whole of main, branch, remotes: GitHub first, then its GitLab copy)
+TARGETS = [
+    ("update channel: players get this on next launch", None, "packwiz", [
+        ("github", "https://github.com/HarrytheCake/Monumenta-Cakedition.git"),
+        ("gitlab", f"{GITLAB}/Monumenta-Cakedition.git")]),
+    ("CakeUpdater source", "updater", "main", [
+        ("updater", "https://github.com/HarrytheCake/CakeUpdater.git"),
+        ("gitlab-updater", f"{GITLAB}/CakeUpdater.git")]),
+    ("CakeText source", "caketext", "main", [
+        ("caketext", "https://github.com/HarrytheCake/CakeText.git"),
+        ("gitlab-caketext", f"{GITLAB}/CakeText.git")]),
+]
 NOREPLY = re.compile(r"@(users\.noreply\.github\.com|anthropic\.com)$")
 
 
@@ -90,11 +99,9 @@ def main():
     yes = "--yes" in sys.argv
 
     remotes = git("remote").split()
-    missing = [r for r in PACK_REMOTES + [m[0] for m in MIRRORS] if r not in remotes]
+    missing = [(name, url) for *_, rs in TARGETS for name, url in rs if name not in remotes]
     if missing:
-        fail(f"remote(s) not set up: {', '.join(missing)}. For GitLab:\n"
-             f"  git remote add gitlab https://gitlab.com/<user>/Monumenta-Cakedition.git\n"
-             f"  git config remote.gitlab.push refs/heads/main:refs/heads/{PACK_BRANCH}")
+        fail("remote(s) not set up. Add them with:\n" + "\n".join(f"  git remote add {n} {u}" for n, u in missing))
 
     print("Checking working tree...")
     if git("status", "--porcelain"):
@@ -105,34 +112,30 @@ def main():
     if git("status", "--porcelain", "--", "pack"):
         fail("pack/index.toml was out of date. `refresh` has fixed it; review and commit, then run this again.")
 
-    # (label, local commit, remote, remote ref it updates, remote-tracking ref)
-    targets = []
     print("Fetching remotes...")
-    for remote in PACK_REMOTES:
-        git("fetch", "-q", remote)  # a missing packwiz branch (first push to a new address) is fine
-        targets.append((f"{remote} {PACK_BRANCH} (update channel: players get this on next launch)",
-                        "main", remote, PACK_BRANCH, f"{remote}/{PACK_BRANCH}"))
-    for remote, prefix, label in MIRRORS:
-        git("fetch", "-q", remote)
-        print(f"Splitting {prefix}/...")
-        split = git("subtree", "split", f"--prefix={prefix}")
-        targets.append((f"{remote} {MIRROR_BRANCH} ({label})", split, remote, MIRROR_BRANCH, f"{remote}/{MIRROR_BRANCH}"))
-
-    # The base for a first push to a new pack address is what the primary address already has public.
-    primary = f"{PACK_REMOTES[0]}/{PACK_BRANCH}"
-    outgoing = []
-    for label, local, remote, branch, tracking in targets:
-        if has_ref(tracking):
-            if not is_ancestor(tracking, local):
-                fail(f"{tracking} has commits that aren't here. It must only be written from this repo.")
-            base = tracking
-        elif branch == PACK_BRANCH and has_ref(primary):
-            base = primary
-        else:
-            fail(f"{tracking} doesn't exist. Make the first push of that repo by hand, after a personal-data check.")
-        log = git("log", "--format=%h %s", f"{base}..{local}")
-        if log or base != tracking:
-            outgoing.append((label, local, remote, branch, base, log or f"(new branch, same commits as {base})"))
+    outgoing = []  # (label, local commit, remote, branch, scan base, log)
+    for label, prefix, branch, rs in TARGETS:
+        for name, _ in rs:
+            git("fetch", "-q", name)  # a missing branch (first push to a new copy) is handled below
+        if prefix:
+            print(f"Splitting {prefix}/...")
+        local = git("subtree", "split", f"--prefix={prefix}") if prefix else "main"
+        # A copy's first push gets the same commits the GitHub repo already has public, so scan from there.
+        primary = f"{rs[0][0]}/{branch}"
+        for name, _ in rs:
+            tracking = f"{name}/{branch}"
+            if has_ref(tracking):
+                if not is_ancestor(tracking, local):
+                    fail(f"{tracking} has commits that aren't here. It must only be written from this repo.")
+                base = tracking
+            elif has_ref(primary):
+                base = primary
+            else:
+                fail(f"{tracking} doesn't exist. Make the first push of that repo by hand, after a personal-data check.")
+            log = git("log", "--format=%h %s", f"{base}..{local}")
+            if log or base != tracking:
+                outgoing.append((f"{name} {branch} ({label})", local, name, branch, base,
+                                 log or f"(new branch, same commits as {base})"))
     if not outgoing:
         print("\nNothing to push: every remote is up to date.")
         return
@@ -144,7 +147,7 @@ def main():
         fail("possible personal data in outgoing commits:\n  " + "\n  ".join(dict.fromkeys(hits)))
 
     version = re.search(r'^version = "([^"]*)"', (ROOT / "pack" / "pack.toml").read_text(encoding="utf-8"), re.M).group(1)
-    remote_version = re.search(r'^version = "([^"]*)"', git("show", f"{primary}:pack/pack.toml"), re.M).group(1)
+    remote_version = re.search(r'^version = "([^"]*)"', git("show", "github/packwiz:pack/pack.toml"), re.M).group(1)
     print(f"\nPack version: {remote_version} -> {version}" if version != remote_version
           else f"\nPack version: {version} (unchanged)")
     for label, *_, log in outgoing:
