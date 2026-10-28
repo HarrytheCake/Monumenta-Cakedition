@@ -1,7 +1,7 @@
 # Builds the .mrpack from pack/ (tools/mrpack.py) on every push to the packwiz branch that changes the pack,
 # and publishes it as release v<pack version> with its changelog (pack/config/cakeupdater/changelog/<version>/)
-# and SHA-256 in the notes. A released pack file never changes
-# (docs/adr/0002): later pushes with the same version only refresh the notes.
+# and SHA-256 in the notes, and as a new Modrinth version (tools/modrinth_publish.py; other runs only dry-run it).
+# A released pack file never changes (docs/adr/0002): later pushes with the same version only refresh the notes.
 name: mrpack
 
 on:
@@ -11,6 +11,7 @@ on:
       - "pack/**"
       - "tools/mrpack.py"
       - "tools/packwiz_sync.py"
+      - "tools/modrinth_publish.py"
       - ".github/workflows/mrpack.yml"
       - ".github/release-notes.md"
   workflow_dispatch:
@@ -36,6 +37,7 @@ jobs:
           echo "file=$(ls mrpack/*.mrpack)" >> "$GITHUB_OUTPUT"
 
       - name: Publish release
+        id: release
         env:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ steps.build.outputs.version }}
@@ -64,7 +66,25 @@ jobs:
           printf '\n---\n\n**SHA-256**\n```\n%s\n```\n' "$(cd "$(dirname "$FILE")" && sha256sum "$(basename "$FILE")")" >> "$NOTES"
           if [ -n "$(ls "$RUNNER_TEMP"/released/*.mrpack 2>/dev/null)" ]; then
             gh release edit "v$VERSION" --repo "$GITHUB_REPOSITORY" --notes-file "$NOTES"
+            echo "new=false" >> "$GITHUB_OUTPUT"
           else
             gh release create "v$VERSION" "$FILE" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
               --title "Monumenta Cakedition $VERSION" --notes-file "$NOTES"
+            echo "new=true" >> "$GITHUB_OUTPUT"
+          fi
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+
+      # A new release also becomes a Modrinth version (the first one, 2.2.2, was uploaded by hand: Q15).
+      # Every other run is a dry run: it builds the request and checks the token without creating anything.
+      - name: Modrinth
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          VERSION: ${{ steps.build.outputs.version }}
+          FILE: ${{ steps.release.outputs.file }}
+          NEW: ${{ steps.release.outputs.new }}
+        run: |
+          if [ "$NEW" = "true" ]; then
+            python tools/modrinth_publish.py "$VERSION" "$FILE" --publish
+          else
+            python tools/modrinth_publish.py "$VERSION" "$FILE"
           fi
