@@ -1,4 +1,4 @@
-# Only the packwiz pack, its tooling and the updater mod source are tracked.
+# Only the packwiz pack, its tooling and our mods' sources are tracked.
 # Everything else (instance.cfg, .minecraft/, saves, jars, CLAUDE.md...) stays local.
 /*
 !/.gitignore
@@ -7,6 +7,9 @@
 !/tools/
 !/updater/
 !/caketext/
+!/cakewiki/
+!/cakechat/
+!/cakebook/
 !/.github/
 # docs/ and GLOSSARY-MAP.md (roadmap, glossary, ADRs, benchmark reports) stay local: never pushed (user's rule, 2026-10-28)
 __pycache__/
