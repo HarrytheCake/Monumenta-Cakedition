@@ -8,8 +8,7 @@
 !/updater/
 !/caketext/
 !/.github/
-!/GLOSSARY-MAP.md
-!/docs/
+# docs/ and GLOSSARY-MAP.md (roadmap, glossary, ADRs, benchmark reports) stay local: never pushed (user's rule, 2026-10-28)
 __pycache__/
 updater/.gradle/
 updater/build/
