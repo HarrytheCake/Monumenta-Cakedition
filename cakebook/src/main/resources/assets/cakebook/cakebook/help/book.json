@@ -1,0 +1,9 @@
+{
+  "title": {
+    "en_us": "CakeBook help",
+    "zh_cn": "CakeBook 帮助",
+    "zh_tw": "CakeBook 說明"
+  },
+  "order": 9000,
+  "icon": "minecraft:knowledge_book"
+}
