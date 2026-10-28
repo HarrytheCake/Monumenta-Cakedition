@@ -25,14 +25,24 @@ public final class ChatStore {
 	/** Vanilla's {@code messages} as of the last sync, and which entry each of its lines belongs to. */
 	private List<ChatHudLine> shadow = List.of();
 	private final Map<ChatHudLine, ChatEntry> byVanillaLine = new IdentityHashMap<>();
-	private final ChatView view;
+	private final ChatWindows windows;
+	/** The text of the line now entering {@code addMessage}, from before other mods changed it (see {@link #arriving}). */
+	private String arrivingText;
 
-	ChatStore(ChatView view) {
-		this.view = view;
+	ChatStore(ChatWindows windows) {
+		this.windows = windows;
 	}
 
 	public List<ChatEntry> entries() {
 		return entries;
+	}
+
+	/**
+	 * A line is entering {@code addMessage}; called before other mods change it, so tabs match the server's own text
+	 * even when CakeText Translator shows the translation instead.
+	 */
+	public void arriving(Text message) {
+		arrivingText = TabRules.routingText(message.getString());
 	}
 
 	/** A line vanilla just stored as {@code vanillaMessages.get(0)}. */
@@ -42,6 +52,7 @@ public final class ChatStore {
 		}
 		ChatHudLine line = vanillaMessages.get(0);
 		if (byVanillaLine.containsKey(line)) {
+			arrivingText = null;
 			return;
 		}
 		ChatConfig config = CakeChat.config();
@@ -52,16 +63,21 @@ public final class ChatStore {
 		int dup = Compactor.findDuplicate(Lists.reverse(entries), key, now, config.compact);
 		if (dup >= 0) {
 			ChatEntry old = entries.remove(entries.size() - 1 - dup);
-			view.removed(old);
+			windows.removed(old);
 			count = old.count + 1;
 		}
 		ChatEntry entry = new ChatEntry(line.content(), line.signature(), line.indicator(), line.creationTick(), now, key, count);
+		if (arrivingText != null) {
+			entry.text = arrivingText;
+			arrivingText = null;
+		}
+		entry.tabs = windows.rules().route(entry.text);
 		entries.add(entry);
-		view.added(entry);
+		windows.added(entry);
 
 		int max = config.history.maxMessages;
 		while (max > 0 && entries.size() > max) {
-			view.removed(entries.remove(0));
+			windows.removed(entries.remove(0));
 		}
 		sync(vanillaMessages);
 		byVanillaLine.put(line, entry);
@@ -78,14 +94,23 @@ public final class ChatStore {
 				}
 				ChatEntry entry = byVanillaLine.get(before);
 				if (entry != null) {
+					// tabs stay as they were: a translation must not move a message to another tab
 					entry.content = now.content();
 					entry.signature = now.signature();
 					byVanillaLine.put(now, entry);
-					view.changed(entry);
+					windows.changed(entry);
 				}
 			}
 		}
 		sync(vanillaMessages);
+	}
+
+	/** Tab rules changed: sort every message into the tabs again. */
+	public void reroute() {
+		TabRules rules = windows.rules();
+		for (ChatEntry entry : entries) {
+			entry.tabs = rules.route(entry.text);
+		}
 	}
 
 	/** F3+D, or any other caller of {@code ChatHud.clear}. Leaving a server doesn't get here when chat is kept. */
@@ -93,7 +118,7 @@ public final class ChatStore {
 		entries.clear();
 		shadow = List.of();
 		byVanillaLine.clear();
-		view.cleared();
+		windows.cleared();
 	}
 
 	private void sync(List<ChatHudLine> vanillaMessages) {

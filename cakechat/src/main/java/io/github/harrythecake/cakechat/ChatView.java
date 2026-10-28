@@ -24,18 +24,27 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * The chat box CakeChat draws instead of vanilla's. Size, scale, opacity and line spacing still come from
- * Minecraft's own Chat Settings, and the layout and fade match vanilla, so mouse handling that vanilla's
- * {@code ChatScreen} does from those settings (the delayed-message bar) lines up.
+ * One chat window: the messages of its selected tab, drawn like vanilla's chat box (layout, fade, indicator bar),
+ * at the window's own position and size, with a tab bar under it while the chat is open.
+ * Scale, opacity, background and line spacing come from Minecraft's Chat Settings for every window.
  */
 public final class ChatView {
+	/** Height of the tab bar under the box, in GUI pixels. */
+	static final int TAB_BAR_HEIGHT = 12;
+	/** Size of the resize grip at the box's top-right corner. */
+	static final int GRIP = 6;
+	private static final int MIN_WIDTH = 60;
+	private static final int MIN_HEIGHT = 20;
+	private static final int MIN_BOTTOM = 14 + TAB_BAR_HEIGHT + 2;
+
 	private record Line(ChatEntry entry, OrderedText text, boolean endOfEntry) {
 	}
 
 	private final MinecraftClient client;
-	/** Wrapped lines, oldest first; {@link #newest} indexes from the bottom like vanilla's visibleMessages. */
+	private final ChatWindows windows;
+	final int index;
+	/** Wrapped lines of the selected tab, oldest first; {@link #newest} indexes from the bottom like vanilla's visibleMessages. */
 	private final List<Line> lines = new ArrayList<>();
-	private ChatStore store;
 	private int scrolledLines;
 	private boolean hasUnreadNewMessages;
 	/** Width the lines were wrapped for; -1 = wrap everything again before the next draw. */
@@ -43,23 +52,145 @@ public final class ChatView {
 	private String timePattern;
 	private DateTimeFormatter timeFormat;
 
-	ChatView(MinecraftClient client) {
+	ChatView(MinecraftClient client, ChatWindows windows, int index) {
 		this.client = client;
+		this.windows = windows;
+		this.index = index;
 	}
 
-	void attach(ChatStore store) {
-		this.store = store;
+	ChatConfig.Window window() {
+		return CakeChat.config().windows.get(index);
 	}
 
-	/** Settings changed: wrap everything again (timestamps, counters) before the next draw. */
+	/** Settings or the selected tab changed: wrap everything again before the next draw. */
 	public void invalidate() {
 		wrapWidth = -1;
+	}
+
+	private boolean shows(ChatEntry entry) {
+		return entry.tabs.get(windows.rules().index(index, selected()));
+	}
+
+	/** Whether the tab shows on this server (its {@code server} pattern). */
+	boolean tabShown(int tab) {
+		return windows.onServer(window().tabs.get(tab).server);
+	}
+
+	/** The selected tab, or the first shown one when it's hidden on this server. */
+	int selected() {
+		ChatConfig.Window w = window();
+		if (tabShown(w.selectedTab)) {
+			return w.selectedTab;
+		}
+		for (int t = 0; t < w.tabs.size(); t++) {
+			if (tabShown(t)) {
+				return t;
+			}
+		}
+		return w.selectedTab;
+	}
+
+	// ---- geometry (GUI pixels) ----
+
+	int boxX() {
+		return window().x;
+	}
+
+	/** GUI y of the box's bottom edge. */
+	int boxBottom() {
+		return client.getWindow().getScaledHeight() - window().bottom;
+	}
+
+	int boxWidth() {
+		int w = window().width;
+		return w >= 0 ? w : hud().getWidth();
+	}
+
+	int boxHeight(boolean focused) {
+		int h = focused ? window().height : window().unfocusedHeight;
+		if (h >= 0) {
+			return h;
+		}
+		double option = focused ? client.options.getChatHeightFocused().getValue() : client.options.getChatHeightUnfocused().getValue();
+		return (int) (ChatHud.getHeight(option) * scale());
+	}
+
+	int boxTop() {
+		return boxBottom() - boxHeight(true);
+	}
+
+	private int visibleLineCount(boolean focused) {
+		return Math.max(1, (int) (boxHeight(focused) / (lineHeight() * scale())));
+	}
+
+	int visibleLineCount() {
+		return visibleLineCount(isChatFocused());
+	}
+
+	boolean inBox(double x, double y) {
+		return x >= boxX() && x < boxX() + boxWidth() && y >= boxTop() && y < boxBottom();
+	}
+
+	boolean inGrip(double x, double y) {
+		int right = boxX() + boxWidth();
+		return x >= right - GRIP && x < right + 2 && y >= boxTop() - 2 && y < boxTop() + GRIP;
+	}
+
+	boolean inTabBar(double x, double y) {
+		int top = boxBottom() + 1;
+		return y >= top && y < top + TAB_BAR_HEIGHT && x >= boxX() && x < boxX() + Math.max(boxWidth(), tabsWidth());
+	}
+
+	/** The tab under the point, or -1. */
+	int tabAt(double x, double y) {
+		if (!inTabBar(x, y)) {
+			return -1;
+		}
+		int left = boxX();
+		List<ChatConfig.Tab> tabs = window().tabs;
+		for (int t = 0; t < tabs.size(); t++) {
+			if (!tabShown(t)) {
+				continue;
+			}
+			int w = tabWidth(t);
+			if (x >= left && x < left + w) {
+				return t;
+			}
+			left += w + 1;
+		}
+		return -1;
+	}
+
+	/** Rectangle of the delayed-message bar ("N chat messages waiting"), main window only: below the tab bar. */
+	boolean inQueueBar(double x, double y) {
+		int top = boxBottom() + 1 + TAB_BAR_HEIGHT + 1;
+		return index == 0 && x >= boxX() && x < boxX() + boxWidth() && y >= top && y < top + 9;
+	}
+
+	void move(int x, int bottom) {
+		int screenW = client.getWindow().getScaledWidth();
+		int screenH = client.getWindow().getScaledHeight();
+		ChatConfig.Window w = window();
+		w.x = MathHelper.clamp(x, 0, Math.max(0, screenW - boxWidth()));
+		// keep the box on screen and its tab bar above the input line (14 px high at the bottom)
+		w.bottom = MathHelper.clamp(bottom, MIN_BOTTOM, Math.max(MIN_BOTTOM, screenH - boxHeight(true)));
+	}
+
+	void resize(int width, int height) {
+		ChatConfig.Window w = window();
+		int screenW = client.getWindow().getScaledWidth();
+		// a window that followed Chat Settings keeps its closed height
+		int unfocused = boxHeight(false);
+		w.width = MathHelper.clamp(width, MIN_WIDTH, Math.max(MIN_WIDTH, screenW - w.x));
+		w.height = MathHelper.clamp(height, MIN_HEIGHT, Math.max(MIN_HEIGHT, boxBottom()));
+		w.unfocusedHeight = Math.min(unfocused, w.height);
+		invalidate();
 	}
 
 	// ---- store events ----
 
 	void added(ChatEntry entry) {
-		if (wrapWidth < 0) {
+		if (wrapWidth < 0 || !shows(entry)) {
 			return;
 		}
 		List<Line> wrapped = wrap(entry);
@@ -77,7 +208,7 @@ public final class ChatView {
 
 	void changed(ChatEntry entry) {
 		if (wrapWidth >= 0) {
-			replace(entry, wrap(entry));
+			replace(entry, shows(entry) ? wrap(entry) : List.of());
 		}
 	}
 
@@ -119,14 +250,16 @@ public final class ChatView {
 	}
 
 	private void ensureWrapped() {
-		int width = MathHelper.floor(hud().getWidth() / hud().getChatScale());
+		int width = MathHelper.floor(boxWidth() / scale());
 		if (width == wrapWidth) {
 			return;
 		}
 		wrapWidth = width;
 		lines.clear();
-		for (ChatEntry entry : store.entries()) {
-			lines.addAll(wrap(entry));
+		for (ChatEntry entry : CakeChat.store().entries()) {
+			if (shows(entry)) {
+				lines.addAll(wrap(entry));
+			}
 		}
 		scroll(0);
 	}
@@ -186,28 +319,35 @@ public final class ChatView {
 		return out;
 	}
 
-	// ---- drawing (vanilla's ChatHud.render, on CakeChat's lines) ----
+	// ---- drawing (vanilla's ChatHud.render, on this window's lines and box) ----
 
-	public void render(DrawContext context, int currentTick, int mouseX, int mouseY) {
+	public void render(DrawContext context, int currentTick, int mouseX, int mouseY, boolean highlighted) {
 		if (isChatHidden()) {
 			return;
 		}
 		ensureWrapped();
-		ChatHud hud = hud();
-		int visibleLineCount = hud.getVisibleLineCount();
+		boolean focused = isChatFocused();
+		if (focused) {
+			renderTabBar(context, mouseX, mouseY);
+			renderGrip(context, mouseX, mouseY, highlighted);
+		}
+		if (index == 0) {
+			renderQueueBar(context);
+		}
+		int visibleLineCount = visibleLineCount(focused);
 		int lineCount = lines.size();
 		if (lineCount <= 0) {
 			return;
 		}
-		boolean focused = isChatFocused();
-		float scale = (float) hud.getChatScale();
-		int width = MathHelper.ceil(hud.getWidth() / scale);
+		float scale = (float) scale();
+		int width = MathHelper.ceil(boxWidth() / scale);
 		context.getMatrices().push();
+		context.getMatrices().translate((float) boxX(), 0.0F, 0.0F);
 		context.getMatrices().scale(scale, scale, 1.0F);
 		context.getMatrices().translate(4.0F, 0.0F, 0.0F);
-		int bottom = MathHelper.floor((context.getScaledWindowHeight() - 40) / scale);
+		int bottom = MathHelper.floor(boxBottom() / scale);
 		int hoveredEntry = messageIndex(toChatLineX(mouseX), toChatLineY(mouseY));
-		double textOpacity = client.options.getChatOpacity().getValue() * 0.9F + 0.1F;
+		double textOpacity = textOpacity();
 		double backgroundOpacity = client.options.getTextBackgroundOpacity().getValue();
 		double spacing = client.options.getChatLineSpacing().getValue();
 		int lineHeight = lineHeight();
@@ -244,18 +384,6 @@ public final class ChatView {
 			}
 		}
 
-		long queued = client.getMessageHandler().getUnprocessedMessageCount();
-		if (queued > 0L) {
-			int alpha = (int) (128.0 * textOpacity);
-			int backgroundAlpha = (int) (255.0 * backgroundOpacity);
-			context.getMatrices().push();
-			context.getMatrices().translate(0.0F, (float) bottom, 50.0F);
-			context.fill(-2, 0, width + 4, 9, backgroundAlpha << 24);
-			context.getMatrices().translate(0.0F, 0.0F, 50.0F);
-			context.drawTextWithShadow(client.textRenderer, Text.translatable("chat.queue", queued), 0, 1, 0xFFFFFF + (alpha << 24));
-			context.getMatrices().pop();
-		}
-
 		if (focused && CakeChat.config().scroll.scrollbar) {
 			int total = lineCount * lineHeight;
 			int shown = drawn * lineHeight;
@@ -272,16 +400,112 @@ public final class ChatView {
 		context.getMatrices().pop();
 	}
 
+	private void renderTabBar(DrawContext context, int mouseX, int mouseY) {
+		int top = boxBottom() + 1;
+		int left = boxX();
+		int background = (int) (255.0 * client.options.getTextBackgroundOpacity().getValue());
+		List<ChatConfig.Tab> tabs = window().tabs;
+		int hovered = tabAt(mouseX, mouseY);
+		context.getMatrices().push();
+		context.getMatrices().translate(0.0F, 0.0F, 100.0F);
+		int selectedTab = selected();
+		for (int t = 0; t < tabs.size(); t++) {
+			if (!tabShown(t)) {
+				continue;
+			}
+			int w = tabWidth(t);
+			boolean selected = t == selectedTab;
+			int alpha = Math.min(255, background + (selected ? 96 : t == hovered ? 48 : 0));
+			context.fill(left, top, left + w, top + TAB_BAR_HEIGHT, alpha << 24);
+			if (selected) {
+				context.fill(left, top + TAB_BAR_HEIGHT - 1, left + w, top + TAB_BAR_HEIGHT, 0xFFFFFFFF);
+			}
+			int textX = left + 4;
+			String name = CakeChat.tabName(tabs.get(t));
+			context.drawTextWithShadow(client.textRenderer, name, textX, top + 2, selected ? 0xFFFFFF : 0xAAAAAA);
+			int unread = windows.unread(index, t);
+			if (unread > 0) {
+				context.drawTextWithShadow(client.textRenderer, unreadLabel(unread), textX + client.textRenderer.getWidth(name) + 3, top + 2, 0xFFFF55);
+			}
+			left += w + 1;
+		}
+		context.getMatrices().pop();
+	}
+
+	private void renderGrip(DrawContext context, int mouseX, int mouseY, boolean highlighted) {
+		int right = boxX() + boxWidth();
+		int top = boxTop();
+		boolean hot = highlighted || inGrip(mouseX, mouseY);
+		int color = hot ? 0xFFFFFFFF : 0x80FFFFFF;
+		context.getMatrices().push();
+		context.getMatrices().translate(0.0F, 0.0F, 100.0F);
+		context.fill(right - GRIP, top, right, top + 1, color);
+		context.fill(right - 1, top, right, top + GRIP, color);
+		if (highlighted) {
+			// the whole box while it's being moved or resized
+			int left = boxX();
+			int bottom = boxBottom();
+			context.fill(left, top, right, top + 1, 0x60FFFFFF);
+			context.fill(left, bottom - 1, right, bottom, 0x60FFFFFF);
+			context.fill(left, top, left + 1, bottom, 0x60FFFFFF);
+			context.fill(right - 1, top, right, bottom, 0x60FFFFFF);
+		}
+		context.getMatrices().pop();
+	}
+
+	private void renderQueueBar(DrawContext context) {
+		long queued = client.getMessageHandler().getUnprocessedMessageCount();
+		if (queued <= 0L) {
+			return;
+		}
+		int top = boxBottom() + 1 + TAB_BAR_HEIGHT + 1;
+		int alpha = (int) (128.0 * textOpacity());
+		int background = (int) (255.0 * client.options.getTextBackgroundOpacity().getValue());
+		context.getMatrices().push();
+		context.getMatrices().translate(0.0F, 0.0F, 100.0F);
+		context.fill(boxX(), top, boxX() + boxWidth(), top + 9, background << 24);
+		context.drawTextWithShadow(client.textRenderer, Text.translatable("chat.queue", queued), boxX() + 2, top + 1, 0xFFFFFF + (alpha << 24));
+		context.getMatrices().pop();
+	}
+
+	private int tabWidth(int tab) {
+		ChatConfig.Tab t = window().tabs.get(tab);
+		int w = client.textRenderer.getWidth(CakeChat.tabName(t)) + 8;
+		int unread = windows.unread(index, tab);
+		if (unread > 0) {
+			w += client.textRenderer.getWidth(unreadLabel(unread)) + 3;
+		}
+		return w;
+	}
+
+	private int tabsWidth() {
+		int w = 0;
+		for (int t = 0; t < window().tabs.size(); t++) {
+			if (tabShown(t)) {
+				w += tabWidth(t) + 1;
+			}
+		}
+		return w;
+	}
+
+	private static String unreadLabel(int unread) {
+		return unread > 99 ? "99+" : Integer.toString(unread);
+	}
+
+	private double textOpacity() {
+		return client.options.getChatOpacity().getValue() * 0.9F + 0.1F;
+	}
+
 	private static double opacityMultiplier(int age) {
 		double d = MathHelper.clamp((1.0 - age / 200.0) * 10.0, 0.0, 1.0);
 		return d * d;
 	}
 
-	// ---- input (vanilla's ChatHud methods, on CakeChat's lines) ----
+	// ---- input (vanilla's ChatHud methods, on this window) ----
 
 	public void scroll(int amount) {
 		scrolledLines += amount;
-		int max = lines.size() - hud().getVisibleLineCount();
+		int max = lines.size() - visibleLineCount();
 		if (scrolledLines > max) {
 			scrolledLines = max;
 		}
@@ -332,12 +556,11 @@ public final class ChatView {
 	}
 
 	private double toChatLineX(double x) {
-		return x / hud().getChatScale() - 4.0;
+		return (x - boxX()) / scale() - 4.0;
 	}
 
 	private double toChatLineY(double y) {
-		double fromBottom = client.getWindow().getScaledHeight() - y - 40.0;
-		return fromBottom / (hud().getChatScale() * lineHeight());
+		return (boxBottom() - y) / (scale() * lineHeight());
 	}
 
 	/** The bottom line of the entry under the point (where vanilla draws the indicator icon), or -1. */
@@ -356,10 +579,10 @@ public final class ChatView {
 		if (!isChatFocused() || client.options.hudHidden || isChatHidden()) {
 			return -1;
 		}
-		if (lineX < -4.0 || lineX > MathHelper.floor(hud().getWidth() / hud().getChatScale())) {
+		if (lineX < -4.0 || lineX > MathHelper.floor(boxWidth() / scale())) {
 			return -1;
 		}
-		int shown = Math.min(hud().getVisibleLineCount(), lines.size());
+		int shown = Math.min(visibleLineCount(true), lines.size());
 		if (lineY >= 0.0 && lineY < shown) {
 			int j = MathHelper.floor(lineY + scrolledLines);
 			if (j >= 0 && j < lines.size()) {
@@ -367,6 +590,10 @@ public final class ChatView {
 			}
 		}
 		return -1;
+	}
+
+	private double scale() {
+		return hud().getChatScale();
 	}
 
 	private int lineHeight() {

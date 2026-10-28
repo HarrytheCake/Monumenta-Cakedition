@@ -3,8 +3,11 @@ package io.github.harrythecake.cakechat;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ServerInfo;
+import net.minecraft.client.resource.language.I18n;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +22,7 @@ public final class CakeChat implements ClientModInitializer {
 
 	private static final Path CONFIG_FILE = FabricLoader.getInstance().getConfigDir().resolve(MOD_ID).resolve("config.json");
 	private static ChatConfig config = new ChatConfig();
-	private static ChatView view;
+	private static ChatWindows windows;
 	private static ChatStore store;
 
 	@Override
@@ -28,6 +31,11 @@ public final class CakeChat implements ClientModInitializer {
 		if (!Files.exists(CONFIG_FILE)) {
 			saveConfig();
 		}
+
+		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+			ServerInfo entry = client.getCurrentServerEntry();
+			windows().joined(entry == null ? "" : entry.address);
+		});
 
 		ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> dispatcher.register(
 				ClientCommandManager.literal(MOD_ID).executes(context -> {
@@ -42,25 +50,39 @@ public final class CakeChat implements ClientModInitializer {
 		return config;
 	}
 
-	/** The chat box; created on first use, once the client exists. */
-	public static ChatView view() {
-		if (view == null) {
-			view = new ChatView(MinecraftClient.getInstance());
-			store = new ChatStore(view);
-			view.attach(store);
-		}
-		return view;
+	/** The chat windows; created with the store on first use, once the client exists. */
+	public static ChatWindows windows() {
+		init();
+		return windows;
 	}
 
 	public static ChatStore store() {
-		view();
+		init();
 		return store;
 	}
 
-	public static void saveConfig() {
-		if (view != null) {
-			view.invalidate();
+	private static void init() {
+		if (windows == null) {
+			windows = new ChatWindows(MinecraftClient.getInstance());
+			store = new ChatStore(windows);
 		}
+	}
+
+	/** A tab's name as shown: the default tabs' names are translation keys. */
+	public static String tabName(ChatConfig.Tab tab) {
+		return tab.name.startsWith(ChatConfig.Tab.KEY_PREFIX) ? I18n.translate(tab.name) : tab.name;
+	}
+
+	/** The settings screen saved: windows, tabs and rules may have changed. */
+	public static void saveConfig() {
+		if (windows != null) {
+			windows.rebuild();
+		}
+		saveConfigFile();
+	}
+
+	/** Only the file: a window moved or resized, a tab selected. */
+	public static void saveConfigFile() {
 		try {
 			config.save(CONFIG_FILE);
 		} catch (IOException e) {
