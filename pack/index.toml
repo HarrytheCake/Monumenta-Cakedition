@@ -1,8 +1,20 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/cakeupdater/changelog/2.2.3/en_us.md"
+hash = "0cd7658ecbfc45d211639f48205ec68c29ecb398bd9dd2f4366c39b059f6dbbe"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.2.3/zh_cn.md"
+hash = "064efa3832fab1b55939f27229ac3a4d55451ac1766ce2430f60e900f96ef589"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.2.3/zh_tw.md"
+hash = "57f07f1af0aa32df81b5d66b3e98f6bb4d893348465b5eb1656d88a01463e28f"
+
+[[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "91930425f31d5132e78e0ad7195620e435121a2fdf87cf655f8323aa45ae0468"
+hash = "4d66ce434c5ffb80f286227e918f77e14a9bc80e7bcc445353c02d484c33b699"
 
 [[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
