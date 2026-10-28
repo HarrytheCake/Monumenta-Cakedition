@@ -105,9 +105,12 @@ public final class GpuTimer implements Profiler {
 		return instance;
 	}
 
-	/** Starts counting with the next frame. */
+	/**
+	 * Starts counting with the next frame. Also before {@link #wrap} has checked the driver (the first recording of a
+	 * session): counting then starts once the check passes, and nothing happens if it fails.
+	 */
 	static void start() {
-		if (instance != null && supported) {
+		if (instance != null && (supported || !checked)) {
 			instance.totals.clear();
 			instance.framesRead = 0;
 			instance.framesLate = 0;
