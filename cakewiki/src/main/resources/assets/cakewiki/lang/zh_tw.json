@@ -23,5 +23,9 @@
 	"cakewiki.bookmark.remove": "移除書籤 (Ctrl+D)",
 	"cakewiki.bookmarks": "書籤",
 	"cakewiki.bookmarks.empty": "還沒有書籤：在頁面上點 ☆ 即可加入。",
-	"cakewiki.bookmarks.delete": "移除書籤"
+	"cakewiki.bookmarks.delete": "移除書籤",
+	"cakewiki.translate.on": "由 CakeText Translator 翻譯。點擊查看原文。",
+	"cakewiki.translate.off": "原文。點擊翻譯（CakeText Translator）。",
+	"cakewiki.translate.off_in_cakeText": "CakeText Translator 的「翻譯範圍」中關閉了維基頁面。",
+	"cakewiki.translated": "由 CakeText Translator 翻譯：優先使用字串檔，其餘由翻譯引擎處理。帶連結的名稱保留英文。點擊 文 查看原文。"
 }

@@ -18,6 +18,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.UnaryOperator;
 
 /**
  * Lays a {@link Document} out for a given width. Pure arithmetic over {@link Metrics}: no Minecraft classes,
@@ -54,6 +55,8 @@ public final class Layout {
 	private final List<Item> items = new ArrayList<>();
 	private final Map<String, Integer> anchors;
 	private boolean unknownSizes;
+	/** Applied to every line of text before it's laid out: the translation (CakeText), or nothing. */
+	private UnaryOperator<List<Inline>> words = UnaryOperator.identity();
 
 	private Layout(Metrics m, ViewState state, boolean bold, Map<String, Integer> anchors) {
 		this.m = m;
@@ -65,15 +68,27 @@ public final class Layout {
 
 	/** Lays out {@code header} (title, attribution) and then the page, {@code width} GUI pixels wide. */
 	public static Laid page(List<Block> header, Document doc, int width, Metrics m, ViewState state) {
+		return page(header, doc, width, m, state, UnaryOperator.identity());
+	}
+
+	/**
+	 * Like {@link #page(List, Document, int, Metrics, ViewState)}, with every line of the page (not the header, not
+	 * the infobox title: those are the page's name) passed through {@code words} first.
+	 */
+	public static Laid page(List<Block> header, Document doc, int width, Metrics m, ViewState state,
+			UnaryOperator<List<Inline>> words) {
 		Layout l = new Layout(m, state, false, new HashMap<>());
 		int y = l.blocks(header, 0, 0, width, PAGE_BG);
+		l.words = words;
 		y = l.blocks(doc.blocks(), 0, header.isEmpty() ? y : y + GAP * 2, width, PAGE_BG);
 		return new Laid(List.copyOf(l.items), Map.copyOf(l.anchors), y, l.unknownSizes);
 	}
 
 	/** A layout for a table cell or similar, drawn at (0,0) and shifted into place by the caller. */
 	private Layout child(boolean boldText) {
-		return new Layout(m, state, boldText, new HashMap<>());
+		Layout c = new Layout(m, state, boldText, new HashMap<>());
+		c.words = words;
+		return c;
 	}
 
 	// ---- blocks -------------------------------------------------------------------------------------------
@@ -238,7 +253,11 @@ public final class Layout {
 		int cy = y + 1;
 		if (!box.title().isEmpty()) {
 			int s = items.size();
+			// the infobox title is the thing's name: never translated
+			UnaryOperator<List<Inline>> pageWords = words;
+			words = UnaryOperator.identity();
 			int end = text(box.title(), x + 4, cy + 3, iw - 8, HEADER_BG, true, HEADING);
+			words = pageWords;
 			items.add(s, new Fill(x + 1, cy, iw - 2, end + 3 - cy, HEADER_BG));
 			cy = end + 3;
 		}
@@ -521,7 +540,7 @@ public final class Layout {
 
 	private List<Token> tokens(List<Inline> line, boolean boldText) {
 		List<Token> out = new ArrayList<>();
-		for (Inline in : line) {
+		for (Inline in : words.apply(line)) {
 			if (in instanceof LineBreak) {
 				out.add(new Token(null, null, null, null, true, false, false));
 			} else if (in instanceof InlineImage img) {
@@ -538,13 +557,47 @@ public final class Layout {
 						int j = str.indexOf(' ', i);
 						if (j < 0) j = str.length();
 						// a non-breaking space joins words; it is drawn as a plain space
-						out.add(new Token(str.substring(i, j).replace('\u00A0', ' '), s, null, null, false, false, touches(out)));
+						word(out, str.substring(i, j).replace('\u00A0', ' '), s);
 						i = j;
 					}
 				}
 			}
 		}
 		return out;
+	}
+
+	/**
+	 * Adds a word (no spaces in it). Chinese and Japanese have no spaces: a line may break between two such characters,
+	 * except before closing punctuation (\uFF0C\u3002\uFF09\u2026) and after opening punctuation (\uFF08\u300C\u2026).
+	 */
+	private static void word(List<Token> out, String word, Style s) {
+		int start = 0;
+		boolean first = true;
+		for (int k = 1; k < word.length(); k++) {
+			if (breakBetween(word.charAt(k - 1), word.charAt(k))) {
+				out.add(new Token(word.substring(start, k), s, null, null, false, false, first && touches(out)));
+				first = false;
+				start = k;
+			}
+		}
+		out.add(new Token(word.substring(start), s, null, null, false, false, first && touches(out)));
+	}
+
+	private static final String NO_BREAK_BEFORE = "\uFF0C\u3002\u3001\uFF1B\uFF1A\uFF01\uFF1F\uFF09\u300D\u300F\u3011\u300B\u3009\u3015\u2026\u00B7\uFF05,.;:!?)]}%";
+	private static final String NO_BREAK_AFTER = "\uFF08\u300C\u300E\u3010\u300A\u3008\u3014([{";
+
+	static boolean breakBetween(char a, char b) {
+		return (cjk(a) || cjk(b)) && NO_BREAK_BEFORE.indexOf(b) < 0 && NO_BREAK_AFTER.indexOf(a) < 0;
+	}
+
+	private static boolean cjk(char c) {
+		Character.UnicodeScript script = Character.UnicodeScript.of(c);
+		if (script == Character.UnicodeScript.HAN || script == Character.UnicodeScript.HIRAGANA
+				|| script == Character.UnicodeScript.KATAKANA || script == Character.UnicodeScript.HANGUL) {
+			return true;
+		}
+		Character.UnicodeBlock block = Character.UnicodeBlock.of(c);
+		return block == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION || block == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS;
 	}
 
 	private static boolean touches(List<Token> before) {

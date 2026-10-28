@@ -5,6 +5,7 @@ import io.github.harrythecake.cakewiki.image.WikiImages;
 import io.github.harrythecake.cakewiki.net.PageCache;
 import io.github.harrythecake.cakewiki.net.Pages;
 import io.github.harrythecake.cakewiki.net.WikiClient;
+import io.github.harrythecake.cakewiki.translate.CakeTextBridge;
 
 import java.nio.file.Path;
 import java.time.Clock;
@@ -28,6 +29,10 @@ public final class Reader {
 	public final WikiImages images;
 	public final HtmlConverter converter;
 	public final Bookmarks bookmarks;
+	/** CakeText Translator, when installed (0.3.0+), else null. */
+	public final CakeTextBridge cakeText = CakeTextBridge.find();
+	/** The reader's translate button: pages translated (when CakeText is there and on for wiki pages), this session. */
+	boolean translate = true;
 
 	final Deque<Visit> back = new ArrayDeque<>();
 	final Deque<Visit> forward = new ArrayDeque<>();

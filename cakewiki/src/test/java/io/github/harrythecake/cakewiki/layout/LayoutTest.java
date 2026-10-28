@@ -278,4 +278,28 @@ class LayoutTest {
 	private static List<Inline> line(String s) {
 		return List.of(new Text(s, Style.PLAIN));
 	}
+
+	@Test
+	void chineseBreaksBetweenCharactersButNotBeforePunctuation() {
+		// 5 characters a line; "，" and "。" stay with the character before them
+		List<Run> runs = runs(lay(30, para("由凯尔掉落的剑，很强。")));
+		assertEquals(List.of("由凯尔掉落", "的剑，很", "强。"), runs.stream().map(Run::text).toList());
+		assertTrue(Layout.breakBetween('剑', 'a'));
+		assertFalse(Layout.breakBetween('（', '剑'));
+		assertFalse(Layout.breakBetween('a', 'b'), "English still breaks only at spaces");
+	}
+
+	@Test
+	void translationHookSkipsHeaderAndInfoboxTitle() {
+		java.util.function.UnaryOperator<List<Inline>> upper = l -> l.stream()
+				.map(i -> i instanceof Text t ? (Inline) new Text(t.text().toUpperCase(), t.style()) : i).toList();
+		Infobox box = new Infobox(List.of(new Text("Blade", Style.PLAIN)), List.of(),
+				List.of(new InfoRow(List.of(new Text("Tier", Style.PLAIN)), List.of(para("Rare")))));
+		Laid l = Layout.page(List.of(para("Page title")), new Document("T", List.of(box, para("intro"))), 200, m,
+				new ViewState(), upper);
+		List<String> texts = runs(l).stream().map(Run::text).toList();
+		assertTrue(texts.contains("Page title"), texts.toString());
+		assertTrue(texts.contains("Blade"), texts.toString());
+		assertTrue(texts.contains("TIER") && texts.contains("RARE") && texts.contains("INTRO"), texts.toString());
+	}
 }

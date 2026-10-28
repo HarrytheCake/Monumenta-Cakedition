@@ -23,5 +23,9 @@
 	"cakewiki.bookmark.remove": "取消收藏 (Ctrl+D)",
 	"cakewiki.bookmarks": "收藏夹",
 	"cakewiki.bookmarks.empty": "还没有收藏：在页面上点 ☆ 即可收藏。",
-	"cakewiki.bookmarks.delete": "取消收藏"
+	"cakewiki.bookmarks.delete": "取消收藏",
+	"cakewiki.translate.on": "由 CakeText Translator 翻译。点击查看原文。",
+	"cakewiki.translate.off": "原文。点击翻译（CakeText Translator）。",
+	"cakewiki.translate.off_in_cakeText": "CakeText Translator 的“翻译范围”中关闭了维基页面。",
+	"cakewiki.translated": "由 CakeText Translator 翻译：优先使用字符串文件，其余由翻译引擎处理。带链接的名称保留英文。点击 文 查看原文。"
 }

@@ -11,6 +11,7 @@ import io.github.harrythecake.cakewiki.layout.Metrics;
 import io.github.harrythecake.cakewiki.layout.ViewState;
 import io.github.harrythecake.cakewiki.net.Pages;
 import io.github.harrythecake.cakewiki.net.WikiException;
+import io.github.harrythecake.cakewiki.translate.PageTranslator;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ConfirmLinkScreen;
@@ -30,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletionException;
+import java.util.function.UnaryOperator;
 
 /** The reader: a top bar (back, forward, search, refresh, browser) over a scrolling page. */
 public final class WikiScreen extends Screen {
@@ -57,6 +59,11 @@ public final class WikiScreen extends Screen {
 	private TextFieldWidget search;
 	private String searchText = "";
 	private ButtonWidget backButton, forwardButton, bookmarkButton, bookmarksButton, refreshButton, browserButton, retryButton;
+	private ButtonWidget translateButton;
+	/** This page's translation (CakeText), made at its first layout; null when not translating. */
+	private PageTranslator words;
+	private boolean laidTranslated;
+	private long laidAt;
 	private boolean bookmarksOpen;
 	private int bookmarksScroll;
 	private List<String> suggestions = List.of();
@@ -158,6 +165,7 @@ public final class WikiScreen extends Screen {
 		doc = c.doc();
 		stale = c.loaded().stale();
 		view = new ViewState();
+		words = null;
 		if (openAllOnLoad) {
 			for (Block b : doc.blocks()) if (b instanceof Block.Collapsible col && !view.isOpen(col)) view.toggle(col);
 			openAllOnLoad = false;
@@ -206,6 +214,17 @@ public final class WikiScreen extends Screen {
 				.dimensions(left + 22, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.forward"))).build());
 		bookmarkButton = addDrawableChild(ButtonWidget.builder(Text.literal("☆"), b -> toggleBookmark())
 				.dimensions(right - 86, MARGIN, 20, 20).build());
+		// only with CakeText Translator installed: translation on/off
+		int searchRight = right - 90;
+		if (reader.cakeText != null) {
+			translateButton = addDrawableChild(ButtonWidget.builder(Text.literal("文"), b -> {
+						reader.translate = !reader.translate;
+						laid = null;
+						updateButtons();
+					})
+					.dimensions(right - 108, MARGIN, 20, 20).build());
+			searchRight -= 22;
+		}
 		bookmarksButton = addDrawableChild(ButtonWidget.builder(Text.literal("☰"), b -> {
 					bookmarksOpen = !bookmarksOpen;
 					bookmarksScroll = 0;
@@ -215,7 +234,7 @@ public final class WikiScreen extends Screen {
 				.dimensions(right - 42, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.refresh"))).build());
 		browserButton = addDrawableChild(ButtonWidget.builder(Text.literal("↗"), b -> openInBrowser(reader.client.pageUrl(title)))
 				.dimensions(right - 20, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.browser"))).build());
-		search = new TextFieldWidget(textRenderer, left + 46, MARGIN + 1, right - 90 - (left + 46), 18, Text.translatable("cakewiki.search"));
+		search = new TextFieldWidget(textRenderer, left + 46, MARGIN + 1, searchRight - (left + 46), 18, Text.translatable("cakewiki.search"));
 		search.setPlaceholder(Text.translatable("cakewiki.search").formatted(Formatting.GRAY));
 		search.setMaxLength(200);
 		search.setText(searchText);
@@ -241,6 +260,17 @@ public final class WikiScreen extends Screen {
 		bookmarkButton.active = title != null && phase == Phase.READY;
 		bookmarkButton.setMessage(marked ? Text.literal("★").formatted(Formatting.GOLD) : Text.literal("☆"));
 		bookmarkButton.setTooltip(Tooltip.of(Text.translatable(marked ? "cakewiki.bookmark.remove" : "cakewiki.bookmark.add")));
+		if (translateButton != null) {
+			boolean on = translating();
+			translateButton.setMessage(on ? Text.literal("文").formatted(Formatting.GOLD) : Text.literal("A"));
+			translateButton.setTooltip(Tooltip.of(Text.translatable(on ? "cakewiki.translate.on"
+					: reader.translate ? "cakewiki.translate.off_in_cakeText" : "cakewiki.translate.off")));
+		}
+	}
+
+	/** Pages are shown translated: CakeText is there, on for wiki pages, and the player hasn't turned it off here. */
+	private boolean translating() {
+		return reader.cakeText != null && reader.translate && reader.cakeText.active();
 	}
 
 	// ---- bookmarks --------------------------------------------------------------------------------------
@@ -448,10 +478,20 @@ public final class WikiScreen extends Screen {
 		if (doc == null) return;
 		int w = contentWidth() - 2 * PAD;
 		boolean imagesChanged = laid != null && laid.unknownSizes() && laidImages != reader.images.version();
-		if (laid != null && laidWidth == w && !imagesChanged) return;
+		boolean translating = translating();
+		if (translating && words == null) words = new PageTranslator(reader.cakeText);
+		// translations arriving: lay out again, at most twice a second
+		long now = Util.getMeasuringTimeMs();
+		boolean translated = laid != null && translating && now - laidAt > 500 && words.refresh();
+		if (laid != null && laidWidth == w && !imagesChanged && !translated && laidTranslated == translating) return;
 		laidImages = reader.images.version();
-		laid = Layout.page(header(), doc, w, metrics, view);
+		laid = Layout.page(header(), doc, w, metrics, view, translating ? words : UnaryOperator.identity());
 		laidWidth = w;
+		laidAt = now;
+		if (laidTranslated != translating) {
+			laidTranslated = translating;
+			updateButtons();
+		}
 		if (pendingAnchor != null) {
 			Integer y = laid.anchors().get(pendingAnchor);
 			if (y == null) y = laid.anchors().get(pendingAnchor.replace(' ', '_'));
@@ -474,6 +514,7 @@ public final class WikiScreen extends Screen {
 				new Inline.Text(" · ", muted),
 				new Inline.Text(I18n.translate("cakewiki.attribution.license"), muted.withLink(new Link.External(Reader.LICENSE_URL))))));
 		if (stale) h.add(new Block.Paragraph(List.of(new Inline.Text(I18n.translate("cakewiki.stale"), Inline.Style.PLAIN.withColor(0xFFB347)))));
+		if (translating()) h.add(new Block.Paragraph(List.of(new Inline.Text(I18n.translate("cakewiki.translated"), muted))));
 		return h;
 	}
 

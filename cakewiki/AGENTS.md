@@ -26,7 +26,7 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 - Search box with suggestions as you type (`opensearch`).
 - Whole wiki for now; may later be cut to the pages players need.
 - Bookmarks (user's request, 2026-10-29): ☆/★ in the bar or Ctrl+D toggles the page; ☰ lists them (click opens, ✕ removes).
-- CakeText Translator integration: later.
+- **CakeText Translator integration** (user's request 2026-10-29): pages translated, **special nouns (mainly the linked ones) keep their original names**. Done in 0.1.0 (see "Translation" below).
 - Whether the pack ships it: decided later.
 
 ## Files
@@ -39,6 +39,10 @@ src/main/java/io/github/harrythecake/cakewiki/
 ├── WikiScreen.java         # the reader: bar (◀ ▶ search ⟳ ↗), page area, loading/error states, links, tooltips
 ├── DevShots.java           # dev only: screenshot tour (runClient -PdevShot=…), inert in a normal game
 ├── mixin/HandledScreenMixin.java  # K over an item in a container → its page
+├── translate/              # CakeText Translator (optional); no Minecraft classes except the bridge
+│   ├── Translator.java     # parts + keep flags → Strings/Integers (kept-part index), or null; changes() counter
+│   ├── PageTranslator.java # a line of inlines → its translation; what's kept; per-line memo until refresh()
+│   └── CakeTextBridge.java # TranslatorApi (CakeText 0.3.0+) by reflection; null when not installed
 ├── layout/                 # no Minecraft classes: unit-tested with fake Metrics
 │   ├── Metrics.java        # text width, line height, loaded picture size, labels
 │   ├── Layout.java         # Document → Laid; colours (dark theme), tables, infobox, collapsibles, tabs, wrapping
@@ -85,6 +89,17 @@ src/main/java/io/github/harrythecake/cakewiki/
 - **Bookmarks:** stored in `config/` (not the cache), so CakeUpdater's config backups cover them; canonical titles (after redirects), matched with `Titles.normalize`. The ☰ dropdown is drawn above the page like the search suggestions, scrolls with the wheel, and closes on Esc or a click elsewhere.
 - **Keys in the reader:** K closes (unless typing), Ctrl+D bookmark, Ctrl+F search, Enter submits (exact suggestion, else `resolve`), Esc leaves the search box first, Backspace/mouse 4 back, mouse 5 forward, arrows/PgUp/PgDn/Space/Home/End scroll.
 
+### Translation (`translate/`, with CakeText Translator 0.3.0+)
+
+- **Soft dependency:** `suggests caketext-translator >=0.3.0`; `CakeTextBridge.find()` looks up `io.github.harrythecake.caketext.translator.api.TranslatorApi` with `MethodHandles` (`version()` ≥ 1, `active`, `changes`, `translate`), so CakeWiki builds and runs without CakeText. Any failed call turns translation off for the session and logs once. Surface `wiki`, which the player can turn off in CakeText's "Where to translate".
+- **Hook:** `Layout.page(..., UnaryOperator<List<Inline>> words)` passes every text line of the page through `words` in `tokens()` (so measuring and drawing see the same text); the header (title, attribution) and the infobox title are laid out without it: they're the page's name. Block identities don't change, so `ViewState` (open collapsibles, tabs) survives re-translation.
+- **What stays in English (`PageTranslator.kept`):** links of any kind (a link split by a style change is one name), coloured runs of up to 4 words with a letter (tiers, regions, item names are coloured on this wiki; longer coloured text such as lore is translated), inline pictures. Kept parts reach CakeText as `{n}` stand-ins and never reach an engine; they come back wherever the translation puts them. Numbers go through CakeText's `{~}`.
+- **Units:** a line is split at `LineBreak`s, then into sentences (`. ! ? : ;` + spaces + a capital, digit, quote or bracket), each translated and cached alone. Plain runs merge; the merged text takes the style covering most of it (bold/italic inside a sentence is lost in translation).
+- **Not translated yet** → the original line (the same list object); CakeText queues it. `WikiScreen.ensureLayout` polls `changes()` and lays out again at most every 500 ms when it moved (`PageTranslator.refresh()` drops the memo). An answer that can't be mapped back (a kept index out of range, an empty part) shows the original.
+- **UI:** 文 button left of ☆, only with CakeText installed (gold = translated; tooltip says when CakeText has wiki pages off); per session in `Reader.translate`, default on. A muted header line says the page is translated and that linked names stay in English.
+- **Line breaking for Chinese** (`Layout.word`/`breakBetween`): a line may break between two CJK characters (Han, kana, Hangul, CJK punctuation, full-width forms), not before closing punctuation (`，。、；：！？）」』】》…％` and ASCII closers) or after opening punctuation. English still breaks only at spaces. This also helps Chinese text already on the wiki.
+- Not tried in game yet (needs CakeText 0.3.0 in the same instance).
+
 ### Measured on the live wiki (2026-10-28)
 
 Fetch about 0.3 s per page. Conversion is under 50 ms for most pages, but some item pages are 1.1 MB (Turtle Set, Snegovik Boots) because of one huge navigation box; those take 100–200 ms. So: convert off the render thread, and lay out a collapsible only when it's opened. Navigation boxes use dark backgrounds (`#0D091A`) with light text, so the reader uses a dark background. Inline item icons in text are common.
@@ -103,5 +118,6 @@ Screenshot tour in the dev client (opens a game window; `run/options.txt` preset
 ## Rules
 
 - The mod downloads no code. Wiki pages and images are data, fetched only when the player opens them.
+- Translation goes only through CakeText Translator (whose settings decide the engine); CakeWiki itself sends wiki text nowhere.
 - Every UI string in `en_us`, `zh_cn` and `zh_tw`, same keys.
 - JUnit tests for all logic outside the game. Test HTML is hand-written in the wiki's shapes: no real wiki text in the repo (the live tests fetch it at run time).

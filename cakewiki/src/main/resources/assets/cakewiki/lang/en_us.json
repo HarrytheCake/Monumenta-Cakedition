@@ -23,5 +23,9 @@
 	"cakewiki.bookmark.remove": "Remove bookmark (Ctrl+D)",
 	"cakewiki.bookmarks": "Bookmarks",
 	"cakewiki.bookmarks.empty": "No bookmarks yet: press ☆ on a page.",
-	"cakewiki.bookmarks.delete": "Remove bookmark"
+	"cakewiki.bookmarks.delete": "Remove bookmark",
+	"cakewiki.translate.on": "Translated by CakeText Translator. Click for the original.",
+	"cakewiki.translate.off": "Original. Click to translate (CakeText Translator).",
+	"cakewiki.translate.off_in_cakeText": "Wiki pages are turned off in CakeText Translator (Where to translate).",
+	"cakewiki.translated": "Translated by CakeText Translator: string files first, then its engine. Linked names stay in English. 文 shows the original."
 }
