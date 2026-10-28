@@ -31,7 +31,7 @@ cakechat/
     │   ├── Compactor.java       # duplicate matcher + counter text (plain Java)
     │   ├── ChatEntry.java       # one message: content (replaceable), signature, indicator, tick, millis, compact key, count
     │   ├── ChatStore.java       # history (oldest first), compacting, history limit, mirroring vanilla's in-place swaps, routing into tabs
-    │   ├── Channels.java        # tab → server channel: /join on a channel tab, /leave back on a tab without one; player's own /join or /leave wins (plain Java)
+    │   ├── Channels.java        # tab → server channel: /join on a channel tab, /join of the player's own channel back on a tab without one (never /leave); hides replies to its own joins; remembers the own channel (plain Java)
     │   ├── TabRules.java        # which tabs take a message (priority, skip others, always add); routing text (plain Java)
     │   ├── ChatWindows.java     # all windows: views, rules, unread counts, mouse routing, move/resize/tab drags, send prefix
     │   ├── ChatView.java        # one window: its tab's wrapped lines, drawing (vanilla's layout + fade), tab bar, grip, queue bar, scroll, hover
@@ -87,7 +87,7 @@ Status marks: `[x]` done, `[ ]` open.
 
 ## Invariants
 
-- Commands go to the server only from a player's click on a tab (`/join`, `/leave`) or a tab prefix on a message the player sends; never automatically.
+- Commands go to the server only from a player's click on a tab (`/join`; never `/leave`) or a tab prefix on a message the player sends; never automatically.
 - Nothing in the store or the config holds player chat on disk.
 - Every UI string in en_us, zh_cn and zh_tw, same keys.
 - `ChatConfig` stays plain Java (no Minecraft classes), so tests can load it.
