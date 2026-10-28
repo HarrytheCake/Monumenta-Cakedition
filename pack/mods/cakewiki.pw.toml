@@ -1,0 +1,8 @@
+name = "CakeWiki"
+filename = "cakewiki-0.1.0.jar"
+side = "client"
+
+[download]
+url = "https://github.com/HarrytheCake/CakeWiki/releases/download/v0.1.0/cakewiki-0.1.0.jar"
+hash-format = "sha512"
+hash = "0ea5955acd91c269f3a9e90d7ad066cd3932cb94082f11268bb1c9299a12195cdb9c440ee999e4a81584b10afbb51b5024ad7781a922d537fe40a5c1c732919e"

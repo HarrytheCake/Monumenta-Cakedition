@@ -1,6 +1,178 @@
 hash-format = "sha256"
 
 [[files]]
+file = "cakebook/books/cakedition/book.json"
+hash = "c72e48f4c1273a96795967ef0d793b5ee6be3c490acd6e1c00eaed8b75ca8f5a"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/first-steps.md"
+hash = "60bae34a500a5e01d05557bb837fbe249a4cf21ca0629c743098a9b1535176a1"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/help.md"
+hash = "d3220c31877814e07c31d15655d8be3801d802ca8242e0cbe1e612445c9b9663"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/index.md"
+hash = "d25281234b7e1aaa2f9884d77361e1825e02f7ed8165f610a3a2830dcf77d232"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/keys.md"
+hash = "00b5a10cc08b1ce2b485b48bfeee06132beffa6fae56f1f39498f68d9bf381fd"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/mods/chat.md"
+hash = "e04bf438a99889c02c8ab6c080fb3ab2b3eeb8f4401fe32b833abac0a9dd1fe8"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/mods/convenience.md"
+hash = "670953754f7aa6716fedf15c8c859fcf18b217679314a3f710cb7343837d80cb"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/mods/hud.md"
+hash = "b7e3fe92f06e62c33fc630b2fa27b36fb39fc610872360ee088131c4ffc260b0"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/mods/index.md"
+hash = "f3ebb2e88f17f5ae96638c4b0ad0ae0b56f32fb367a20e66f7c6f283e9e3dd9a"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/mods/monumenta.md"
+hash = "865f5a92297c5614a083e3975687d04a6d247c1579ffa9ce4e1df1adc269fad8"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/mods/performance.md"
+hash = "b33b8c4a53a61e1fe0ca8f663d7cd61f431eeb64cd9bea14422682a051ff9131"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/mods/tools.md"
+hash = "2975a753f3dd85cb86f97c2a951273ac37b316e8139d20dff5cc91285bb4c152"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/mods/visuals.md"
+hash = "415e8dae1693f020c9fc55e120aede84a2f6d0841113b47b9adfd8d89e55dd9b"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/performance-tips.md"
+hash = "d2367c3e826d6f553df23fef369c9d5a6fdf732e6b693613d29bdb4f7d3517cd"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/updates.md"
+hash = "48b0dd7179cc94e40eb0270d0b70d3157691316372aeaf4afebfad79bb3b9a77"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/first-steps.md"
+hash = "7ace1e8c53e3154e547ae0f0ddda1861d8d2b926061356cc03621772b9000e7e"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/help.md"
+hash = "d5f45aab293b530781fd3575483df9a383381d07527285734a6c9a113679ad6e"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/index.md"
+hash = "bc329b80c832121788bfd79d4d17beca8e3a4a75f3ea7c153cf907ee159f506f"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/keys.md"
+hash = "f31fd4bdbfcad557b6b7e2e9f17b6f4a68c061dcb737ed368b94bd70a92f5f03"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/mods/chat.md"
+hash = "60bab48645ea82b610fca73e3c1e682bd4249a1f748b014d7170795f24b9980c"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/mods/convenience.md"
+hash = "4cfdfc6ae3371212ecf6480503b8485090b63f0fa73927375815d9fc9575d8b6"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/mods/hud.md"
+hash = "867b794886ae2dcaed0a215e10bf720acaf848d0181930e551ebd8748f73a743"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/mods/index.md"
+hash = "4a0c295ffb6f88bc60f995d2b0d81d642c01f9f98205c031baa918cf463b2e41"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/mods/monumenta.md"
+hash = "b329f6c7cda12e02c4fea2d090e7c4525c6c5bee19bb15ff33df8776e7cdf2c7"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/mods/performance.md"
+hash = "b3603a1a8bb96c05fb3e2afc1ccf2af67744cc047efedef2d263bf79ae5eaabc"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/mods/tools.md"
+hash = "83334017d9205e9726f0102d951cc8b4990554dfe2e7db9b16644d38778c6379"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/mods/visuals.md"
+hash = "37124709b0766420915c2822c6eaceea5cfe3a5e20d0c2674d7d21ef75c64f15"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/performance-tips.md"
+hash = "ae804155d9b492e625db2beddac91629c5a7a7b02203317eaef132c1d66e2683"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/updates.md"
+hash = "48f7fc3839be591733c7b7be5289e79d1182d68e177a1afda4afdafd3b96dc24"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/first-steps.md"
+hash = "0476e65bf969074587ce8a54b437b1ea73a089832aa27f58807b6a0eccb31937"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/help.md"
+hash = "885896734bec5fbb708d8ce716f362b37cada9dc12a01657139bb4c47340f600"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/index.md"
+hash = "b21f822328c6b8e8c96bfc6e6e7a92a0c8e02ca39674854f26027ecb26d6848d"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/keys.md"
+hash = "598e26f9a77aff998b367b01a1a2f689d5b06ecae0f57e989b457bdd7fd1f7ff"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/mods/chat.md"
+hash = "5664811e4966d15a44c4de3e5407d87d28f9bac1498322cb43309f51462eec00"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/mods/convenience.md"
+hash = "8aa940892db29ab03b7275451a55ed9fe391f88e5a8a409d66c43274ae1a2fdd"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/mods/hud.md"
+hash = "05019f5ce90d437a699d621d2216639b69d9ee8656c4ff243712ce62494a2e38"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/mods/index.md"
+hash = "3eede8ccffc764ddec40c221db68f0480ee80eb1e76bb94844e393c88a706b21"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/mods/monumenta.md"
+hash = "96ef88c93ff636e82e4b75284a053939e126690f8103bd28760d80f90405b429"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/mods/performance.md"
+hash = "91b8619271829f528db88ac223177440a500e22a6015653270f56615f3e8362f"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/mods/tools.md"
+hash = "a3b741ecd693ee08ead01feb083fc72f8f79e07d6c3be5e0839904fd687717ff"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/mods/visuals.md"
+hash = "e1b4461958f08d4fa8774548f80d9d261c711f0afd28714aa065f485eeaa7c70"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/performance-tips.md"
+hash = "90b6b78372b31d9bb73b22de174c2b186cd3a4c0457542b35a2798115308b163"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/updates.md"
+hash = "62becab0aeaf0946845090b29c2b72412bf198db5e3182b73de1f4f4af0c6cc6"
+
+[[files]]
 file = "config/cakeupdater/changelog/2.2.3/en_us.md"
 hash = "0cd7658ecbfc45d211639f48205ec68c29ecb398bd9dd2f4366c39b059f6dbbe"
 
@@ -13,8 +185,20 @@ file = "config/cakeupdater/changelog/2.2.3/zh_tw.md"
 hash = "57f07f1af0aa32df81b5d66b3e98f6bb4d893348465b5eb1656d88a01463e28f"
 
 [[files]]
+file = "config/cakeupdater/changelog/2.3.0/en_us.md"
+hash = "908af819c3ab256da500a73de726ec095f0beb8ff5d04cb33e177db1c946da5e"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.3.0/zh_cn.md"
+hash = "acb4ec36cad6a8c407307f399e5f640fc6d3b1c93d8ed4e007c29b0d1e77d220"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.3.0/zh_tw.md"
+hash = "03d8e1d29159e2f58ae207bfc54f287447f8203ea35a2c6f2dbae49b3c471745"
+
+[[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "4d66ce434c5ffb80f286227e918f77e14a9bc80e7bcc445353c02d484c33b699"
+hash = "a42caf4a54bbbe27aa45b6efbc6356c5e299b19763e728b6cdb7201b02ebbe36"
 
 [[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
@@ -302,6 +486,11 @@ hash = "70b2a115b12368173e9ddc8d9eda97198dfa3fd39aef92fc4c94d104eaef0474"
 metafile = true
 
 [[files]]
+file = "mods/cakebook.pw.toml"
+hash = "77afe058dd87cb3e851c8a07c85b54f43c2fadf9098e0ce4b475ac2e7c96cf70"
+metafile = true
+
+[[files]]
 file = "mods/caketext-translator.pw.toml"
 hash = "5df76ed45116a0dab340cedbb3d56067dc2336e4629cb1aa4ff53524fe0007e8"
 metafile = true
@@ -309,6 +498,11 @@ metafile = true
 [[files]]
 file = "mods/cakeupdater.pw.toml"
 hash = "ef7430fb9551f7df7bbcb2c1cc2a4972012d3c8d2bb5e105e873e78ddb24d331"
+metafile = true
+
+[[files]]
+file = "mods/cakewiki.pw.toml"
+hash = "7e480e33964222b391e5d417527c33e95ef3eee698e55db6e8050a01ebf2be6f"
 metafile = true
 
 [[files]]
