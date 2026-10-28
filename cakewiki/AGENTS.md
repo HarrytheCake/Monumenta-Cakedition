@@ -32,7 +32,19 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 
 ```
 src/main/java/io/github/harrythecake/cakewiki/
-├── CakeWiki.java           # client entrypoint
+├── CakeWiki.java           # entrypoint: H key (KeyBinding "key.cakewiki.open"), /wiki [page] with live suggestions, lookupItem
+├── Reader.java             # one per game: client, Pages, WikiImages, converter, back/forward history, last page
+├── WikiScreen.java         # the reader: bar (◀ ▶ search ⟳ ↗), page area, loading/error states, links, tooltips
+├── DevShots.java           # dev only: screenshot tour (runClient -PdevShot=…), inert in a normal game
+├── mixin/HandledScreenMixin.java  # H over an item in a container → its page
+├── layout/                 # no Minecraft classes: unit-tested with fake Metrics
+│   ├── Metrics.java        # text width, line height, loaded picture size, labels
+│   ├── Layout.java         # Document → Laid; colours (dark theme), tables, infobox, collapsibles, tabs, wrapping
+│   ├── Laid.java           # positioned Run/Pic/Fill/Control + anchors + height; linkAt/controlAt
+│   └── ViewState.java      # open collapsibles and selected tabs, keyed by block identity
+├── image/
+│   ├── ImageDecoder.java   # ImageIO → ARGB frames; GIF composed by hand (no Graphics2D/AWT); max 1024 px side
+│   └── WikiImages.java     # textures: fetched on first draw, ≤6 downloads, disk cache, pixel-budget LRU
 ├── doc/                    # page model + HTML conversion (no Minecraft classes: unit-testable)
 │   ├── Document, Block, Inline, Link, Image   # sealed model: Heading, Paragraph, ListBlock, ImageBlock, Gallery,
 │   │                                          # Table/Row/Cell, Infobox (ImageTab, InfoRow, InfoHeader),
@@ -56,6 +68,19 @@ src/main/java/io/github/harrythecake/cakewiki/
 - Tabber: panels labelled by `data-mw-tab-title`/`data-title`, else `aria-labelledby`, else the nth `.tabber__tab`.
 - Nested tables keep their rows (only the table's own `tr`, through `thead`/`tbody`/`tfoot`).
 
+### Reader behaviour
+
+- **Opening:** H in the world opens the last page read (the main page "Monumenta Wiki" the first time); `/wiki <page>` opens a page (suggestions come from `opensearch`, completed on the game thread). The screen is opened with `MinecraftClient.send` so the closing chat screen doesn't close it.
+- **Item lookup:** `HandledScreenMixin` injects at the first `KeyBinding.matchesKey` in `HandledScreen.keyPressed` (the inventory-key check). Vanilla reaches it only after `super.keyPressed` turned the key down, so text fields (anvil, creative search, recipe book) keep their H. The item's name (formatting stripped) goes through `WikiClient.resolve`. From the player's own inventory the reader returns to it on close; any other container is closed first with `closeHandledScreen()` (tells the server), and the reader returns to the game.
+- **Loading:** `Pages.load` → convert on `Util.getMainWorkerExecutor()` → shown on the game thread if it's still the latest request. `missingtitle` → `resolve` (search) → that page, else "not found".
+- **Layout:** in GUI pixels, content at most 560 wide. Header = title (H1), "Monumenta Wiki ↗ · CC BY-SA 4.0 ↗" (attribution + licence, both links), a "saved copy" note when stale. Laid out again on resize, on a collapsible/tab click (same scroll), and when a picture of guessed size has loaded (`Laid.unknownSizes` + `WikiImages.version()`).
+- **Infobox float:** when the column is at least 2 × 220 + 20 wide, the infobox sits on the right; paragraphs, headings, lists, indents and rules flow beside it, anything else (tables, tabs, galleries, collapsibles, pictures) starts below it.
+- **Wrapping:** breaks only at spaces. Text that touches the previous word without a space (a link and its punctuation, a style change mid-word, a non-breaking space) is `glued` and moves to the next line with it; only a group wider than the whole line is broken by characters. Spaces at line ends are dropped.
+- **Tables:** column widths from content (min = widest unbreakable group, capped at 100; max = unwrapped), squeezed proportionally when too wide; grid slots no cell covers get the cell colour.
+- **Pictures:** wiki px × 0.5 (`Layout.IMAGE_SCALE`); inline pictures up to 32 px tall are icons at text height. Colours that would be unreadable (contrast < 2) on their background fall back to ours.
+- **Links:** page → navigate (history); `#anchor` on this page → scroll; `Special:`/`Category:` and external → browser through `ConfirmLinkScreen`; missing → nothing, tooltip explains.
+- **Keys in the reader:** H closes (unless typing), Ctrl+F search, Enter submits (exact suggestion, else `resolve`), Esc leaves the search box first, Backspace/mouse 4 back, mouse 5 forward, arrows/PgUp/PgDn/Space/Home/End scroll.
+
 ### Measured on the live wiki (2026-10-28)
 
 Fetch about 0.3 s per page. Conversion is under 50 ms for most pages, but some item pages are 1.1 MB (Turtle Set, Snegovik Boots) because of one huge navigation box; those take 100–200 ms. So: convert off the render thread, and lay out a collapsible only when it's opened. Navigation boxes use dark backgrounds (`#0D091A`) with light text, so the reader uses a dark background. Inline item icons in text are common.
@@ -67,6 +92,9 @@ Fetch about 0.3 s per page. Conversion is under 50 ms for most pages, but some i
 Opt-in, against the real wiki (`LiveWikiTest`, skipped by default):
 - `./gradlew test --tests '*LiveWikiTest.convertsRealPages' -Dcakewiki.liveTest=true` converts known and random pages and prints sizes, block counts and timings.
 - `... --tests '*LiveWikiTest.dumpPage' -Dcakewiki.liveTest=true -Dcakewiki.dump="<title>"` prints a page as an outline (`DocumentDump`) for checking by eye.
+
+Screenshot tour in the dev client (opens a game window; `run/options.txt` presets GUI scale 3 and skips the accessibility screen):
+`./gradlew runClient -PdevShot="Monumenta Wiki|item:Snegovik Boots|Moonscarred Clockblade@380|Turtle Set!open" --args="--width 1600 --height 900"` → `run/screenshots/cakewiki-<n>.png`. `item:` = item lookup, `@y` = scroll, `!open` = open all top-level collapsibles.
 
 ## Rules
 

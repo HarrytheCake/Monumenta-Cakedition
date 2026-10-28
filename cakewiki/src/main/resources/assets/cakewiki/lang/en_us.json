@@ -1,3 +1,22 @@
 {
-	"cakewiki.attribution": "From the Monumenta Wiki (monumenta.wiki.gg), CC BY-SA 4.0"
+	"key.categories.cakewiki": "CakeWiki",
+	"key.cakewiki.open": "Open wiki / look up hovered item",
+	"cakewiki.title": "Monumenta Wiki",
+	"cakewiki.attribution": "From the Monumenta Wiki (monumenta.wiki.gg), CC BY-SA 4.0",
+	"cakewiki.attribution.wiki": "Monumenta Wiki ↗",
+	"cakewiki.attribution.license": "CC BY-SA 4.0 ↗",
+	"cakewiki.loading": "Loading %s…",
+	"cakewiki.finding": "Looking up %s…",
+	"cakewiki.error": "Couldn't load %s: %s",
+	"cakewiki.notfound": "No wiki page found for “%s”.",
+	"cakewiki.stale": "Saved copy: the wiki couldn't be reached.",
+	"cakewiki.retry": "Retry",
+	"cakewiki.back": "Back",
+	"cakewiki.forward": "Forward",
+	"cakewiki.refresh": "Reload from the wiki",
+	"cakewiki.browser": "Open in browser",
+	"cakewiki.search": "Search the wiki…",
+	"cakewiki.show": "Show",
+	"cakewiki.hide": "Hide",
+	"cakewiki.missing": "This page doesn't exist on the wiki yet."
 }

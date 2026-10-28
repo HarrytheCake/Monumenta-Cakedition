@@ -34,6 +34,15 @@ dependencies {
 	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }
 
+loom {
+	runs {
+		client {
+			// ./gradlew runClient -PdevShot="Page|item:Name|Page@300|Page!open": screenshot tour, see DevShots
+			if (project.hasProperty("devShot")) property("cakewiki.devShot", project.property("devShot").toString())
+		}
+	}
+}
+
 test {
 	useJUnitPlatform()
 	// opt-in tests: -Dcakewiki.liveTest=true talks to the real wiki

@@ -1,3 +1,22 @@
 {
-	"cakewiki.attribution": "內容來自 Monumenta Wiki（monumenta.wiki.gg），CC BY-SA 4.0"
+	"key.categories.cakewiki": "CakeWiki",
+	"key.cakewiki.open": "開啟 Wiki / 查詢滑鼠所指物品",
+	"cakewiki.title": "Monumenta Wiki",
+	"cakewiki.attribution": "內容來自 Monumenta Wiki（monumenta.wiki.gg），CC BY-SA 4.0",
+	"cakewiki.attribution.wiki": "Monumenta Wiki ↗",
+	"cakewiki.attribution.license": "CC BY-SA 4.0 ↗",
+	"cakewiki.loading": "正在載入 %s…",
+	"cakewiki.finding": "正在查詢 %s…",
+	"cakewiki.error": "無法載入 %s：%s",
+	"cakewiki.notfound": "找不到「%s」的 Wiki 頁面。",
+	"cakewiki.stale": "已儲存的副本：無法連線到 Wiki。",
+	"cakewiki.retry": "重試",
+	"cakewiki.back": "上一頁",
+	"cakewiki.forward": "下一頁",
+	"cakewiki.refresh": "從 Wiki 重新載入",
+	"cakewiki.browser": "在瀏覽器中開啟",
+	"cakewiki.search": "搜尋 Wiki…",
+	"cakewiki.show": "展開",
+	"cakewiki.hide": "收合",
+	"cakewiki.missing": "Wiki 上還沒有這個頁面。"
 }
