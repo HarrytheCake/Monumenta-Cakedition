@@ -37,6 +37,8 @@ public final class ChatConfig {
 	public List<Window> windows = new ArrayList<>(List.of(Window.main()));
 	/** The player's own chat channel per server address (see {@link Channels}), so All can join it again after a restart. */
 	public Map<String, String> channelMemory = new HashMap<>();
+	/** Set on CakeChat's first start when a ChatPlus setup worth importing exists; the first join offers it, once. */
+	public boolean chatPlusOffer = false;
 
 	public static final class History {
 		/** Messages kept; 0 = no limit (what More Chat History gave the pack). */

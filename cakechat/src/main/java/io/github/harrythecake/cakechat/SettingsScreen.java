@@ -107,6 +107,11 @@ final class SettingsScreen {
 						.option(bool("scroll.invert", d.scroll.invert, () -> c.scroll.invert, v -> c.scroll.invert = v))
 						.option(bool("scroll.scrollbar", d.scroll.scrollbar, () -> c.scroll.scrollbar, v -> c.scroll.scrollbar = v))
 						.build())
+				.category(ConfigCategory.createBuilder()
+						.name(Text.translatable("cakechat.config.chatplus"))
+						.option(confirmedButton(parent, "import", Text.translatable("cakechat.config.import.confirm"),
+								CakeChat::importChatPlus, CakeChat.chatPlusSetup().isPresent()))
+						.build())
 				.save(CakeChat::saveConfig)
 				.build()
 				.generateScreen(parent);
@@ -168,7 +173,7 @@ final class SettingsScreen {
 							.build());
 			if (window.tabs.size() > 1) {
 				group.option(confirmedButton(parent, "tab.remove", Text.translatable("cakechat.config.tab.remove.confirm", CakeChat.tabName(tab)),
-						() -> window.tabs.remove(tabIndex)));
+						() -> window.tabs.remove(tabIndex), true));
 			}
 			category.group(group.build());
 		}
@@ -187,7 +192,7 @@ final class SettingsScreen {
 		category.option(button(parent, "window.add", () -> c.windows.add(ChatConfig.Window.extra(c.windows.size()))));
 		if (w > 0) {
 			category.option(confirmedButton(parent, "window.remove", Text.translatable("cakechat.config.window.remove.confirm", w + 1),
-					() -> c.windows.remove(w)));
+					() -> c.windows.remove(w), true));
 		}
 		return category.build();
 	}
@@ -212,13 +217,14 @@ final class SettingsScreen {
 	}
 
 	/**
-	 * Like {@link #button}, for removing things: Minecraft's confirm screen first. Cancel goes back to the same
-	 * settings screen as it was; Remove makes the change and rebuilds it.
+	 * Like {@link #button}, for removing or replacing things: Minecraft's confirm screen first. Cancel goes back to the
+	 * same settings screen as it was; confirming makes the change and rebuilds it.
 	 */
-	private static ButtonOption confirmedButton(Screen parent, String key, Text question, Runnable change) {
+	private static ButtonOption confirmedButton(Screen parent, String key, Text question, Runnable change, boolean available) {
 		return ButtonOption.createBuilder()
-				.name(Text.translatable("cakechat.config." + key).formatted(Formatting.RED))
+				.name(Text.translatable("cakechat.config." + key).formatted(available ? Formatting.RED : Formatting.GRAY))
 				.description(desc(key))
+				.available(available)
 				.action((screen, option) -> {
 					MinecraftClient client = MinecraftClient.getInstance();
 					client.setScreen(new ConfirmScreen(confirmed -> {

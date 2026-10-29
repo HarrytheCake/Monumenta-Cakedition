@@ -93,5 +93,18 @@
 	"cakechat.hide.off": "Chat shown.",
 	"key.categories.cakechat": "CakeChat",
 	"key.cakechat.peek": "Peek at chat (hold)",
-	"key.cakechat.hide": "Hide/show chat"
+	"key.cakechat.hide": "Hide/show chat",
+	"cakechat.import.offer": "CakeChat found your ChatPlus setup. %s to use its windows and tabs. To keep CakeChat's Monumenta tabs, do nothing: you can still import later in CakeChat's settings.",
+	"cakechat.import.offer.button": "[Import]",
+	"cakechat.import.offer.hover": "Replaces CakeChat's windows and tabs with your ChatPlus ones. ChatPlus's files are not changed.",
+	"cakechat.import.none": "No ChatPlus settings found",
+	"cakechat.import.done": "Imported from ChatPlus",
+	"cakechat.import.done.count": "%s window(s), %s tab(s)",
+	"cakechat.import.formatted": "Check these tabs' patterns:",
+	"cakechat.import.skipped": "Not imported (invalid pattern):",
+	"cakechat.config.chatplus": "ChatPlus",
+	"cakechat.config.import": "Import from ChatPlus",
+	"cakechat.config.import.desc": "Replaces your CakeChat windows and tabs with the ones in your ChatPlus settings (config/chatplus) and takes over its history, compacting, timestamp, scrolling and find settings. ChatPlus's files are not changed. Greyed out when there are no ChatPlus settings.",
+	"cakechat.config.import.confirm": "Import your ChatPlus setup?",
+	"cakechat.config.import.confirm.message": "Your CakeChat windows and tabs are replaced by your ChatPlus ones. Your unsaved changes are saved first."
 }

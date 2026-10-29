@@ -93,5 +93,18 @@
 	"cakechat.hide.off": "聊天已顯示。",
 	"key.categories.cakechat": "CakeChat",
 	"key.cakechat.peek": "查看聊天（按住）",
-	"key.cakechat.hide": "隱藏/顯示聊天"
+	"key.cakechat.hide": "隱藏/顯示聊天",
+	"cakechat.import.offer": "CakeChat 找到了你的 ChatPlus 設定。%s 以使用其中的視窗和分頁。想保留 CakeChat 的 Monumenta 分頁就無需操作，之後也可以在 CakeChat 設定中匯入。",
+	"cakechat.import.offer.button": "[匯入]",
+	"cakechat.import.offer.hover": "以你的 ChatPlus 視窗和分頁取代 CakeChat 的。不會修改 ChatPlus 的檔案。",
+	"cakechat.import.none": "找不到 ChatPlus 設定",
+	"cakechat.import.done": "已從 ChatPlus 匯入",
+	"cakechat.import.done.count": "%s 個視窗，%s 個分頁",
+	"cakechat.import.formatted": "請檢查這些分頁的表達式：",
+	"cakechat.import.skipped": "未匯入（表達式無效）：",
+	"cakechat.config.chatplus": "ChatPlus",
+	"cakechat.config.import": "從 ChatPlus 匯入",
+	"cakechat.config.import.desc": "以 ChatPlus 設定（config/chatplus）中的視窗和分頁取代 CakeChat 的，並沿用其歷史紀錄、合併重複訊息、時間戳記、捲動和尋找設定。不會修改 ChatPlus 的檔案。沒有 ChatPlus 設定時為灰色。",
+	"cakechat.config.import.confirm": "匯入你的 ChatPlus 設定？",
+	"cakechat.config.import.confirm.message": "你的 CakeChat 視窗和分頁將被 ChatPlus 的取代。未儲存的變更會先儲存。"
 }
