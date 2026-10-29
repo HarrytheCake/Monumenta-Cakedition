@@ -10,7 +10,7 @@ It was made for the [Monumenta Cakedition](https://github.com/HarrytheCake/Monum
 - **Your notes.** Write notes in game, insert where you're standing (area and shard with Unofficial Monumenta Mod), and link to book pages or other notes.
 - **One search** over every page and note, in English and Chinese.
 
-Open it with the book button in the pause menu or next to your inventory, a key (set it in Controls), `/cakebook`, or Mod Menu.
+Open it with the book button in the pause menu or next to your inventory, a key (B at first; change it in Controls), `/cakebook`, or Mod Menu.
 
 Languages: English, 简体中文, 繁體中文.
 

@@ -5,8 +5,8 @@ Two client-only Fabric mods for Minecraft **1.20.4**, plus a shared library, in 
 | Project | Mod id | Jar | What it does |
 |---|---|---|---|
 | `core` | `caketext-core` | bundled inside both mods (jar-in-jar) | text templates, strings files, game context, module API, settings screen base |
-| `collector` | `caketext-collector` | `caketext-collector-0.1.0.jar` | records the text a server shows, with where it was seen, into local strings files |
-| `translator` | `caketext-translator` | `caketext-translator-0.3.0.jar` | replaces server text with translations from strings files; strings no file has go to an engine (local opus-mt model, local LLM server, or an online service with the player's key) |
+| `collector` | `caketext-collector` | `caketext-collector-0.3.1.jar` | records the text a server shows, with where it was seen, into local strings files |
+| `translator` | `caketext-translator` | `caketext-translator-0.3.1.jar` | replaces server text with translations from strings files; strings no file has go to an engine (local opus-mt model, local LLM server, or an online service with the player's key) |
 
 Either mod works alone. With both installed, Fabric loads one copy of core.
 
