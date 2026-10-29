@@ -221,6 +221,18 @@ file = "config/cakeupdater/changelog/2.4.1/zh_tw.md"
 hash = "7ce665f2f602805683781d2f2c64d64fe06171c99fa9d756ea88e17075d4887c"
 
 [[files]]
+file = "config/cakeupdater/changelog/2.4.2/en_us.md"
+hash = "26b9f6b27899b1b735993d7391bf8853a6a69493946c071b7face4c8deaee30b"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.2/zh_cn.md"
+hash = "e8f0deea0672281d6649c9ebb52e1a3e00b8a9758f3666cb9360b30ee0fd1376"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.2/zh_tw.md"
+hash = "a90627fe34bf8d4bd9c96521cf551fa7ac1fc8b0f3c5d4327633ba3fcd6072c9"
+
+[[files]]
 file = "config/cakeupdater/pack-version.txt"
 hash = "6d850e3ac42d0dd06bfdcce9151c1e6b40f4cf5272778f63eececea27c78f0b6"
 
@@ -531,7 +543,7 @@ metafile = true
 
 [[files]]
 file = "mods/cakeupdater.pw.toml"
-hash = "709706f7aed7b54f74f3bc4a5e1dcff2d714ce3aff8c32c9c693bb0178578248"
+hash = "4d9c2558371cbd195d950e2add9c882652c79224cb1672cc6902404898a3bf45"
 metafile = true
 
 [[files]]
