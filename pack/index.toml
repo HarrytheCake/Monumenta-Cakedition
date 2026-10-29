@@ -222,19 +222,19 @@ hash = "7ce665f2f602805683781d2f2c64d64fe06171c99fa9d756ea88e17075d4887c"
 
 [[files]]
 file = "config/cakeupdater/changelog/2.4.2/en_us.md"
-hash = "c85cf6534be1bdbf9b0cc76c7e2c69c354c9900c3f3aea97daa6139810c27641"
+hash = "d7fdba5fb42ada4d5f4e43d17e6501c735cf57811c0d4b31cbbadb235ebc0f20"
 
 [[files]]
 file = "config/cakeupdater/changelog/2.4.2/zh_cn.md"
-hash = "b90f560e6abb048c101a713646b3f0c90eb0f50a4018169a7b13a687a06ec325"
+hash = "251c92567f92a5fae270e7b76cde14a86396e30f724fe4ef39ef829289320ea4"
 
 [[files]]
 file = "config/cakeupdater/changelog/2.4.2/zh_tw.md"
-hash = "99ffeb539245e187c26bd30ecc15b3aa8a05e99a29b596c5b1cf536d3cb17d03"
+hash = "2c5000beeaf93aef91e310411e605dc538e273dc72c7e6fd872214050dc42e06"
 
 [[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "6d850e3ac42d0dd06bfdcce9151c1e6b40f4cf5272778f63eececea27c78f0b6"
+hash = "7df73b8e407cc08ce7babfd544ab4ad92a7f62cf73a21468d2bfae85c0508c7c"
 
 [[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
@@ -528,7 +528,7 @@ metafile = true
 
 [[files]]
 file = "mods/cakechat.pw.toml"
-hash = "ac3a46d7772d9b27dfc1b6444d656a8cca4093370c3396fb6d21012d380099e3"
+hash = "a5f74f4563b56b521194367a5b19bcb99b23997a505d27cc2dbd394b5e40f482"
 metafile = true
 
 [[files]]

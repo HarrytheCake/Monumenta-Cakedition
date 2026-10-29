@@ -1,8 +1,8 @@
 name = "CakeChat"
-filename = "cakechat-0.2.0.jar"
+filename = "cakechat-0.2.1.jar"
 side = "client"
 
 [download]
-url = "https://github.com/HarrytheCake/CakeChat/releases/download/v0.2.0/cakechat-0.2.0.jar"
+url = "https://github.com/HarrytheCake/CakeChat/releases/download/v0.2.1/cakechat-0.2.1.jar"
 hash-format = "sha512"
-hash = "dcb016cf8e9f224b201d40a8c7e9aeecff7e214b8f96a4bcc2d2e37b67fb6abb1b6bfd4ffabcaa7af0a0f439f279f0bc543deaa3b296ce32a2f860298a0429d6"
+hash = "777f60cfb1ed7c7327234524a9460a0da1ac02daa3f487132f3c07099b26ebbd8c94bf01ffdc2544c9c8f43820c3005e5d4b9a9a0d80bd85aab6432f6dc8ef22"
