@@ -12,6 +12,7 @@ import net.minecraft.client.network.ServerInfo;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.client.resource.language.I18n;
+import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +20,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-/** Client entrypoint: loads the config, registers {@code /cakechat} and the peek and hide keys (both unbound by default). */
+/** Client entrypoint: loads the config, registers {@code /cakechat}, the peek key (Left Alt) and the hide key (unbound). */
 public final class CakeChat implements ClientModInitializer {
 	public static final String MOD_ID = "cakechat";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
@@ -36,7 +37,7 @@ public final class CakeChat implements ClientModInitializer {
 			saveConfig();
 		}
 
-		KeyBinding peek = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakechat.peek", InputUtil.UNKNOWN_KEY.getCode(), "key.categories.cakechat"));
+		KeyBinding peek = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakechat.peek", GLFW.GLFW_KEY_LEFT_ALT, "key.categories.cakechat"));
 		KeyBinding hide = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakechat.hide", InputUtil.UNKNOWN_KEY.getCode(), "key.categories.cakechat"));
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			windows().setPeeking(peek.isPressed() && client.currentScreen == null);
