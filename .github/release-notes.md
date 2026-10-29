@@ -6,7 +6,7 @@ Download the `.mrpack` below and import it:
 - **Prism Launcher:** Add Instance → Import → choose the file.
 - **Modrinth App:** Add instance → Import from file.
 
-Mods are downloaded from Modrinth and from the Cakedition GitHub releases while the pack installs. Iris Shaders, Xaero's Minimap, the Complementary Reimagined shaders and CakeText Translator are optional.
+Mods are downloaded from Modrinth and from the Cakedition GitHub releases while the pack installs. Iris Shaders, Xaero's Minimap, the Complementary Reimagined shaders, LambDynamicLights, CakeText Translator and CakeText Collector are optional.
 
 ## Updates
 
@@ -29,7 +29,7 @@ Cakedition Updater tells you in chat when a newer version of the pack is out, an
 - **Prism Launcher：** 添加实例 → 导入 → 选择该文件。
 - **Modrinth App：** 添加实例 → 从文件导入。
 
-安装时，模组会从 Modrinth 和 Cakedition 的 GitHub 发布页下载。Iris 光影、Xaero 小地图、Complementary Reimagined 光影包和 CakeText Translator 为可选内容。
+安装时，模组会从 Modrinth 和 Cakedition 的 GitHub 发布页下载。Iris 光影、Xaero 小地图、Complementary Reimagined 光影包、LambDynamicLights、CakeText Translator 和 CakeText Collector 为可选内容。
 
 ### 更新
 

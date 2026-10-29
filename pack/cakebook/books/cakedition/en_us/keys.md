@@ -41,6 +41,9 @@ With the optional minimap, it starts with: Z enlarge the minimap, U waypoint lis
 - Sounds Be Gone! settings: {key:soundsbegone.config}
 - This book: {key:key.cakebook.open} (no key at first)
 - Monumenta Wiki (CakeWiki), also over an item: {key:key.cakewiki.open}
+- Peek at the chat while playing (CakeChat, hold): {key:key.cakechat.peek}
+- Hide or show the chat (CakeChat): {key:key.cakechat.hide} (no key at first)
+- Search the chat: Ctrl+F in the open chat
 
 ## Keys that do two things
 

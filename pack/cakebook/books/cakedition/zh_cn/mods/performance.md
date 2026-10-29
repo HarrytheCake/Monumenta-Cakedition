@@ -14,6 +14,8 @@ order: 2
 - **ModernFix**：更快的启动速度、更少的内存占用，并修复许多 bug。
 - **ImmediatelyFast**：更快地绘制文字、HUD 等内容。
 - **More Culling**：不绘制你看不到的东西。
+- **Entity Culling**：不绘制被墙挡住的生物和箱子；在人多的地方效果最明显。
+- **Ixeris**：在单独的线程里读取鼠标和键盘，让游戏反应更流畅。
 - **Enhanced Block Entities**：更快的箱子、告示牌、床等方块。
 - **FeyTweaks**：更快的告示牌和信标。
 - **Experimental Performance** 和 **Faster Random**：多处细小的提速。

@@ -6,7 +6,7 @@ hash = "c72e48f4c1273a96795967ef0d793b5ee6be3c490acd6e1c00eaed8b75ca8f5a"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/first-steps.md"
-hash = "60bae34a500a5e01d05557bb837fbe249a4cf21ca0629c743098a9b1535176a1"
+hash = "297c0105da622ebc7f677fbf1beb2bbdf015fdb1a37f51d63bbf9f2a0e8ccb3a"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/help.md"
@@ -18,11 +18,11 @@ hash = "d25281234b7e1aaa2f9884d77361e1825e02f7ed8165f610a3a2830dcf77d232"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/keys.md"
-hash = "00b5a10cc08b1ce2b485b48bfeee06132beffa6fae56f1f39498f68d9bf381fd"
+hash = "66af5cd0b1a8615503d6276ae68ebf97f706e36be5a26e0b64358bf7a3ee265a"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/chat.md"
-hash = "e04bf438a99889c02c8ab6c080fb3ab2b3eeb8f4401fe32b833abac0a9dd1fe8"
+hash = "e4760f46f412c159dfe023e681eedfbaca1ea249880c055ecf8a3803a9a63f8f"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/convenience.md"
@@ -42,7 +42,7 @@ hash = "865f5a92297c5614a083e3975687d04a6d247c1579ffa9ce4e1df1adc269fad8"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/performance.md"
-hash = "b33b8c4a53a61e1fe0ca8f663d7cd61f431eeb64cd9bea14422682a051ff9131"
+hash = "4d9e1650ef64ffc9dbeedfa2c0e2a1dd2c29b800cef32d24762a6d04ce01d7ca"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/tools.md"
@@ -50,11 +50,11 @@ hash = "2975a753f3dd85cb86f97c2a951273ac37b316e8139d20dff5cc91285bb4c152"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/visuals.md"
-hash = "415e8dae1693f020c9fc55e120aede84a2f6d0841113b47b9adfd8d89e55dd9b"
+hash = "baf15af0ae1fff80c072ce56533617a70c875f0c0f2883c6813be803b252117c"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/performance-tips.md"
-hash = "d2367c3e826d6f553df23fef369c9d5a6fdf732e6b693613d29bdb4f7d3517cd"
+hash = "ba1457e1ffda3b3563d526685e357361db8ff051054f2400f7d27c40b250d682"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/updates.md"
@@ -62,7 +62,7 @@ hash = "48b0dd7179cc94e40eb0270d0b70d3157691316372aeaf4afebfad79bb3b9a77"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/first-steps.md"
-hash = "7ace1e8c53e3154e547ae0f0ddda1861d8d2b926061356cc03621772b9000e7e"
+hash = "be1204d5b2de0f8f5fa12065361a35f7bd21f806d8f46917415bebcd50ccd6c0"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/help.md"
@@ -74,11 +74,11 @@ hash = "bc329b80c832121788bfd79d4d17beca8e3a4a75f3ea7c153cf907ee159f506f"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/keys.md"
-hash = "f31fd4bdbfcad557b6b7e2e9f17b6f4a68c061dcb737ed368b94bd70a92f5f03"
+hash = "1f2a8069cd196a5ec9b80714391d80d20e72a23a94b8ee6f1e25ad78e339ab69"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/chat.md"
-hash = "60bab48645ea82b610fca73e3c1e682bd4249a1f748b014d7170795f24b9980c"
+hash = "e1c2a913b94b8449af905ad05fea2f2acbce54fbabd34a49a44d2f0a1d948b83"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/convenience.md"
@@ -98,7 +98,7 @@ hash = "b329f6c7cda12e02c4fea2d090e7c4525c6c5bee19bb15ff33df8776e7cdf2c7"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/performance.md"
-hash = "b3603a1a8bb96c05fb3e2afc1ccf2af67744cc047efedef2d263bf79ae5eaabc"
+hash = "d94e9a8230ba036869d5996f76c7ce6cd98666af2dffeb67595fc0a597ecba7c"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/tools.md"
@@ -106,11 +106,11 @@ hash = "83334017d9205e9726f0102d951cc8b4990554dfe2e7db9b16644d38778c6379"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/visuals.md"
-hash = "37124709b0766420915c2822c6eaceea5cfe3a5e20d0c2674d7d21ef75c64f15"
+hash = "40dcaa758f1495ff383ca204dfc993bba4eb24498e0e6bdd1a550111d65dbb54"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/performance-tips.md"
-hash = "ae804155d9b492e625db2beddac91629c5a7a7b02203317eaef132c1d66e2683"
+hash = "173fe5b601f55be08fab60a8324242636b6a7becbb98869d419036ba2e99a45c"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/updates.md"
@@ -118,7 +118,7 @@ hash = "48f7fc3839be591733c7b7be5289e79d1182d68e177a1afda4afdafd3b96dc24"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/first-steps.md"
-hash = "0476e65bf969074587ce8a54b437b1ea73a089832aa27f58807b6a0eccb31937"
+hash = "1a1336988d51bb2b74b0935c1387689bba26620f22778d5f888e39c7c8be3a47"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/help.md"
@@ -130,11 +130,11 @@ hash = "b21f822328c6b8e8c96bfc6e6e7a92a0c8e02ca39674854f26027ecb26d6848d"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/keys.md"
-hash = "598e26f9a77aff998b367b01a1a2f689d5b06ecae0f57e989b457bdd7fd1f7ff"
+hash = "829638988651ae7fabb1a486f115d3148d307c7e423bb9866e51401f8bcf414d"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/chat.md"
-hash = "5664811e4966d15a44c4de3e5407d87d28f9bac1498322cb43309f51462eec00"
+hash = "abba4ec91315923ecf3b1f7b4bcd207be4d28bfc80bf795d52140c606833fd40"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/convenience.md"
@@ -154,7 +154,7 @@ hash = "96ef88c93ff636e82e4b75284a053939e126690f8103bd28760d80f90405b429"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/performance.md"
-hash = "91b8619271829f528db88ac223177440a500e22a6015653270f56615f3e8362f"
+hash = "df221aadf8311b4a65cfe20b01d1f1bc4880ef71fa390f9e70ab52da4b5fa480"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/tools.md"
@@ -162,11 +162,11 @@ hash = "a3b741ecd693ee08ead01feb083fc72f8f79e07d6c3be5e0839904fd687717ff"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/visuals.md"
-hash = "e1b4461958f08d4fa8774548f80d9d261c711f0afd28714aa065f485eeaa7c70"
+hash = "839e58199d785bec9ba965f3e7278643e9e840eb7e9b97c5e841f03ac049278d"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/performance-tips.md"
-hash = "90b6b78372b31d9bb73b22de174c2b186cd3a4c0457542b35a2798115308b163"
+hash = "f72d457b79d157b6016ea868903c89a008b3c978af037889465b631fcf045da5"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/updates.md"
@@ -197,8 +197,20 @@ file = "config/cakeupdater/changelog/2.3.0/zh_tw.md"
 hash = "03d8e1d29159e2f58ae207bfc54f287447f8203ea35a2c6f2dbae49b3c471745"
 
 [[files]]
+file = "config/cakeupdater/changelog/2.4.0/en_us.md"
+hash = "49c291e7ef76fc54cd4231d64f7e2e82959e4a58e9c3b37ad1c5c266c14bd8e5"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.0/zh_cn.md"
+hash = "3c10d398d73437d49a6219c348fa9686072fc87e6cde41666013874f6dc9bb8b"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.0/zh_tw.md"
+hash = "4cbb4ea7722206fcafefbebd428065ca00d9964469984e070290cf7cdb44c765"
+
+[[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "a42caf4a54bbbe27aa45b6efbc6356c5e299b19763e728b6cdb7201b02ebbe36"
+hash = "2ad7b0c3f0ede58c3165b7a8a5479e890a758d39bfe8683eaef50ce6afad7232"
 
 [[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
@@ -302,7 +314,7 @@ hash = "f5b80ec5e2e645b087b9453f510c3bbce625738adc155b76761b09921df914e3"
 
 [[files]]
 file = "config/yosbr/config/immediatelyfast.json"
-hash = "ac7f5cc35ed0f04b08630a667f2d60dc4678eb9794137efa3b77abe034e29fc6"
+hash = "db6e048d8681daeba9809bec720535658389dd827f806b8af30f4c857f64d196"
 
 [[files]]
 file = "config/yosbr/config/iris.properties"
@@ -358,7 +370,7 @@ hash = "ced3f63cb236ab65000213b07f03cda69a8f80ff37ac3f526deee447c33d3fca"
 
 [[files]]
 file = "config/yosbr/config/nvidium-config.json"
-hash = "826e17c62fc941fbfa353e151fe383bcf1176a89f8f15b6f7732f30bec79e8c2"
+hash = "3cc2bbe73f7b3339a3efef6f3b3b5e2259759d641c87936bdc41fb540ff4e4bc"
 
 [[files]]
 file = "config/yosbr/config/packetfixer.properties"
@@ -390,7 +402,7 @@ hash = "077b549db6024f9fbd17f1eaaee0b515aa2f70f5bc5287cbed70fe7019c443f6"
 
 [[files]]
 file = "config/yosbr/config/spark/config.json"
-hash = "992ba9f3a4a7ce3de112eb95575328956fdc3ce6781c455ebce7b23db7e7da42"
+hash = "230ef74f58b4ebfb809cc474e881be3462ede61d56a86437e935b4a3a1ac99f3"
 
 [[files]]
 file = "config/yosbr/config/tslatentitystatus.json"
@@ -398,7 +410,7 @@ hash = "d33319441290ab259ca2617af199fabd6e1dccc6e6a35987d4cb32fc35df45f8"
 
 [[files]]
 file = "config/yosbr/config/unofficial-monumenta-mod.json"
-hash = "34ccd4a385c88c0b59c2a5b2c0857c8ecc6bffebc70efba72d58c1daba38be71"
+hash = "64cc02e6361e26ffda1a35bca9266978d9323616700490772250674b90cf6a67"
 
 [[files]]
 file = "config/yosbr/config/xaerominimap-common.txt"
@@ -491,13 +503,23 @@ hash = "77afe058dd87cb3e851c8a07c85b54f43c2fadf9098e0ce4b475ac2e7c96cf70"
 metafile = true
 
 [[files]]
+file = "mods/cakechat.pw.toml"
+hash = "ac3a46d7772d9b27dfc1b6444d656a8cca4093370c3396fb6d21012d380099e3"
+metafile = true
+
+[[files]]
+file = "mods/caketext-collector.pw.toml"
+hash = "85ac00f84f0aa7ad79bb46b512bf69afdf2899e9e4d3e72e381c82bb18d0dd4d"
+metafile = true
+
+[[files]]
 file = "mods/caketext-translator.pw.toml"
-hash = "5df76ed45116a0dab340cedbb3d56067dc2336e4629cb1aa4ff53524fe0007e8"
+hash = "8cdebb4f4e668fb1827f59a3058cc3efbb673edf0fb922c5d42ce6688f692b29"
 metafile = true
 
 [[files]]
 file = "mods/cakeupdater.pw.toml"
-hash = "ef7430fb9551f7df7bbcb2c1cc2a4972012d3c8d2bb5e105e873e78ddb24d331"
+hash = "709706f7aed7b54f74f3bc4a5e1dcff2d714ce3aff8c32c9c693bb0178578248"
 metafile = true
 
 [[files]]
@@ -508,11 +530,6 @@ metafile = true
 [[files]]
 file = "mods/capes.pw.toml"
 hash = "157b2335b6bd4af70e30c2808bd2e9b3332f8d2c40528aefe7320ebfbba983f8"
-metafile = true
-
-[[files]]
-file = "mods/chat-plus.pw.toml"
-hash = "b2c68a75a6a02b848af83381139906ef633a9dcacb48942a1a528d7f4ac4456b"
 metafile = true
 
 [[files]]
@@ -551,11 +568,6 @@ hash = "5f7537e9f19357e3a5bcc077725f15a1694fb9f67c4cdfd96f3b993a85e397f1"
 metafile = true
 
 [[files]]
-file = "mods/dcch.pw.toml"
-hash = "8bb42e10b9186eab74b247c4c5b44d43b5f75c930fccca1b9ed1de508e18218d"
-metafile = true
-
-[[files]]
 file = "mods/ebe.pw.toml"
 hash = "21d41d6e5b14a067287e52f2f0caed27ee6c72efedf74b1261ce175823affb86"
 metafile = true
@@ -563,6 +575,11 @@ metafile = true
 [[files]]
 file = "mods/entity-model-features.pw.toml"
 hash = "2b3239a0fe4b86b35e2ad9ab048d7bffea4aefdbf302e3e5c7473ba2f2ebd718"
+metafile = true
+
+[[files]]
+file = "mods/entityculling.pw.toml"
+hash = "cfad590fd48bb3745d627b4644e0473dd2dd118c835d0fc2e38ab44ad8e9ae8d"
 metafile = true
 
 [[files]]
@@ -632,7 +649,7 @@ metafile = true
 
 [[files]]
 file = "mods/lambdynamiclights.pw.toml"
-hash = "eddd674d049de54d9dafdbb9200ffb2e333cef4349a0fd080767d2dff09b6729"
+hash = "268cd02c8b08b8e6a32b31a978cfa7c6747ddab58f3305b0f35b3c60a19e693e"
 metafile = true
 
 [[files]]
@@ -678,11 +695,6 @@ metafile = true
 [[files]]
 file = "mods/monumenta-item-dictionary.pw.toml"
 hash = "4c76ad43713d804c49540d67dcb2565d8009f23ff8b0134ad10c705910972c95"
-metafile = true
-
-[[files]]
-file = "mods/morechathistory.pw.toml"
-hash = "3dc86c0b4d31199f6f8579b8460686201ce8b9c87e1be5afaf50be9995add1e0"
 metafile = true
 
 [[files]]

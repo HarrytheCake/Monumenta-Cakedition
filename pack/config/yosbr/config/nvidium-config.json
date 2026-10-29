@@ -1,5 +1,5 @@
 {
-  "extra_rd": 100,
+  "extra_rd": 0,
   "enable_temporal_coherence": true,
   "max_geometry_memory": 2048,
   "automatic_memory": true,

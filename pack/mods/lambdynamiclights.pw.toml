@@ -7,6 +7,11 @@ url = "https://cdn.modrinth.com/data/yBW8D80W/versions/mrQ8ZiyU/lambdynamiclight
 hash-format = "sha512"
 hash = "fe30491cf6f94c9672aa8a3941231773349268da7e06108d98e43f59d9c0323cbb5cebd9fabfde52bcd01dd061a4ffb2a69e02f8203aeb13f8a7fd4e8d0a3cdb"
 
+[option]
+optional = true
+default = false
+description = "Torches and other light sources light up the area while held or dropped. Off by default: it costs a lot of FPS in busy places like the Market."
+
 [update]
 [update.modrinth]
 mod-id = "yBW8D80W"

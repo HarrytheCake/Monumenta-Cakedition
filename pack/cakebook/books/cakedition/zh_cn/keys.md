@@ -41,6 +41,9 @@ order: 2
 - Sounds Be Gone! 设置：{key:soundsbegone.config}
 - 这本书：{key:key.cakebook.open}（默认没有按键）
 - Monumenta Wiki（CakeWiki），也可对着物品按：{key:key.cakewiki.open}
+- 在游戏中查看聊天（CakeChat，按住）：{key:key.cakechat.peek}
+- 隐藏或显示聊天（CakeChat）：{key:key.cakechat.hide}（默认没有按键）
+- 搜索聊天：打开聊天时按 Ctrl+F
 
 ## 一键多用
 

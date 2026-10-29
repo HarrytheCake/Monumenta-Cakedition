@@ -14,6 +14,8 @@ These make the game faster and smoother. You don't need to touch them.
 - **ModernFix**: faster start-up, less memory and many bug fixes.
 - **ImmediatelyFast**: faster drawing of text, HUD and similar things.
 - **More Culling**: skips drawing what you can't see.
+- **Entity Culling**: skips drawing mobs and chests hidden behind walls; helps most in busy places.
+- **Ixeris**: reads mouse and keyboard on a thread of its own, so the game reacts more smoothly.
 - **Enhanced Block Entities**: faster chests, signs, beds and similar blocks.
 - **FeyTweaks**: faster signs and beacons.
 - **Experimental Performance** and **Faster Random**: small speed-ups in several places.
