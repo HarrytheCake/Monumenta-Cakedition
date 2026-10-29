@@ -86,7 +86,7 @@ public final class TextTemplate {
 			String s = runTexts.get(i).toString();
 			original.append(s);
 			int style = styles.indexOf(runStyles.get(i)) + 1;
-			String piece = templatize(s, playerNames, numbers, names);
+			String piece = templatize(s, withStyleName(playerNames, runStyles.get(i)), numbers, names);
 			runs.add(new Run(style, piece));
 			if (styles.size() > 1) {
 				template.append("{c").append(style).append('}');
@@ -147,6 +147,44 @@ public final class TextTemplate {
 			}
 		}
 		return out;
+	}
+
+	private static final Pattern MESSAGE_COMMAND = Pattern.compile("/(?:msg|tell|w|whisper|m|pm|dm)\\s+(\\S+).*",
+			Pattern.CASE_INSENSITIVE);
+
+	/**
+	 * The player name a style points at, or null: servers mark names with a player hover, a shift-click insertion or
+	 * a click that starts a private message. This catches players who aren't in the tab list (other shards).
+	 */
+	static @Nullable String styleName(Style style) {
+		net.minecraft.text.HoverEvent hover = style.getHoverEvent();
+		net.minecraft.text.HoverEvent.EntityContent entity = hover == null ? null
+				: hover.getValue(net.minecraft.text.HoverEvent.Action.SHOW_ENTITY);
+		if (entity != null && entity.entityType == net.minecraft.entity.EntityType.PLAYER && entity.name.isPresent()
+				&& PlayerNames.valid(entity.name.get().getString())) {
+			return entity.name.get().getString();
+		}
+		if (PlayerNames.valid(style.getInsertion())) {
+			return style.getInsertion();
+		}
+		net.minecraft.text.ClickEvent click = style.getClickEvent();
+		if (click != null) {
+			Matcher m = MESSAGE_COMMAND.matcher(click.getValue().trim());
+			if (m.matches() && PlayerNames.valid(m.group(1))) {
+				return m.group(1);
+			}
+		}
+		return null;
+	}
+
+	/** {@code playerNames} plus the name this run's style points at, if any. */
+	private static @Nullable Pattern withStyleName(@Nullable Pattern playerNames, Style style) {
+		String name = styleName(style);
+		if (name == null || playerNames != null && playerNames.matcher(name).matches()) {
+			return playerNames;
+		}
+		String one = "(?<![A-Za-z0-9_])" + Pattern.quote(name) + "(?![A-Za-z0-9_])";
+		return Pattern.compile(playerNames == null ? one : one + "|" + playerNames.pattern());
 	}
 
 	private static String templatize(String s, @Nullable Pattern playerNames, List<String> numbers, List<String> names) {

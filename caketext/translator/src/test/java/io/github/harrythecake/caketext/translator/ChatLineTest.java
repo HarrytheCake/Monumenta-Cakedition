@@ -1,6 +1,7 @@
 package io.github.harrythecake.caketext.translator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -121,6 +122,30 @@ class ChatLineTest {
 		Text line = Text.literal("<Steve> ").append(Text.literal("anyone selling a key?").styled(s -> s.withHoverEvent(item)));
 		Text shown = service.chatLine(line, true);
 		assertTrue(runs(shown).get(1).endsWith("Item card"), runs(shown).toString());
+	}
+
+	@Test
+	/** Names the server marks (hover, insertion, /msg click) never reach an engine, even when not in the tab list. */
+	void styledNamesAreRemovedWithoutTheTabList() {
+		// a player on another shard: not in the tab list, but the server marks the name
+		java.util.UUID id = java.util.UUID.randomUUID();
+		Text hover = Text.literal("qwertfox").setStyle(Style.EMPTY.withHoverEvent(new HoverEvent(
+				HoverEvent.Action.SHOW_ENTITY, new HoverEvent.EntityContent(
+						net.minecraft.entity.EntityType.PLAYER, id, Text.literal("qwertfox")))));
+		Text insertion = Text.literal("[AB] zxcvbnm").setStyle(Style.EMPTY.withInsertion("zxcvbnm"));
+		Text click = Text.literal("Mock_Pl4yer").setStyle(Style.EMPTY.withClickEvent(
+				new net.minecraft.text.ClickEvent(net.minecraft.text.ClickEvent.Action.SUGGEST_COMMAND, "/msg Mock_Pl4yer ")));
+		Text line = Text.empty().append(hover).append(Text.literal(" and ")).append(insertion).append(Text.literal(" met "))
+				.append(click).append(Text.literal(" in Sierhaven"));
+		io.github.harrythecake.caketext.core.template.TextTemplate t = io.github.harrythecake.caketext.core.template.TextTemplate.of(line, null);
+		assertEquals(List.of("qwertfox", "zxcvbnm", "Mock_Pl4yer"), t.names());
+		assertFalse(t.template().contains("qwertfox") || t.template().contains("zxcvbnm") || t.template().contains("Mock_Pl4yer"));
+		assertTrue(t.template().contains("[AB] {n}"));
+		assertEquals(line.getString(), t.render(t.template()).getString());
+		// a non-player hover or a non-message click is no name
+		Text npc = Text.literal("Aledar").setStyle(Style.EMPTY.withClickEvent(
+				new net.minecraft.text.ClickEvent(net.minecraft.text.ClickEvent.Action.RUN_COMMAND, "/join lfg")));
+		assertEquals("Aledar", io.github.harrythecake.caketext.core.template.TextTemplate.of(npc, null).template());
 	}
 
 	@Test

@@ -44,7 +44,7 @@ public final class PlayerNames {
 	}
 
 	public static void update(Collection<String> candidates) {
-		Set<String> valid = candidates.stream().filter(n -> n != null && VALID.matcher(n).matches())
+		Set<String> valid = candidates.stream().filter(PlayerNames::valid)
 				.collect(Collectors.toCollection(TreeSet::new));
 		if (valid.equals(names)) {
 			return;
@@ -54,6 +54,11 @@ public final class PlayerNames {
 				+ valid.stream().sorted(Comparator.comparingInt(String::length).reversed())
 						.map(Pattern::quote).collect(Collectors.joining("|"))
 				+ ")(?![A-Za-z0-9_])");
+	}
+
+	/** True for a string shaped like a Minecraft name. */
+	public static boolean valid(@Nullable String name) {
+		return name != null && VALID.matcher(name).matches();
 	}
 
 	public static @Nullable Pattern pattern() {
