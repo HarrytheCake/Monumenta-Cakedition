@@ -626,6 +626,11 @@ hash = "bf472556497d831635fe823acc9180b2d512fb9abb44d65740808899a13630fb"
 metafile = true
 
 [[files]]
+file = "mods/ixeris.pw.toml"
+hash = "e927d563660fda9b01af92b7197d9bb584e69c5b49b784526581327850608762"
+metafile = true
+
+[[files]]
 file = "mods/lambdynamiclights.pw.toml"
 hash = "eddd674d049de54d9dafdbb9200ffb2e333cef4349a0fd080767d2dff09b6729"
 metafile = true
