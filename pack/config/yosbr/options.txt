@@ -176,7 +176,7 @@ key_zoomify.key.zoom:key.keyboard.c
 key_zoomify.key.zoom.secondary:key.keyboard.f6
 key_key.craftpresence.config_keycode.name:key.keyboard.unknown
 key_iris.keybind.reload:key.keyboard.r
-key_iris.keybind.shaderPackSelection:key.keyboard.unknown
+key_iris.keybind.shaderPackSelection:key.keyboard.o
 key_iris.keybind.toggleShaders:key.keyboard.unknown
 key_iris.keybind.wireframe:key.keyboard.unknown
 key_key.cakebook.open:key.keyboard.b

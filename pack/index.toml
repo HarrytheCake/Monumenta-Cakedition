@@ -222,15 +222,15 @@ hash = "7ce665f2f602805683781d2f2c64d64fe06171c99fa9d756ea88e17075d4887c"
 
 [[files]]
 file = "config/cakeupdater/changelog/2.4.2/en_us.md"
-hash = "26b9f6b27899b1b735993d7391bf8853a6a69493946c071b7face4c8deaee30b"
+hash = "c85cf6534be1bdbf9b0cc76c7e2c69c354c9900c3f3aea97daa6139810c27641"
 
 [[files]]
 file = "config/cakeupdater/changelog/2.4.2/zh_cn.md"
-hash = "e8f0deea0672281d6649c9ebb52e1a3e00b8a9758f3666cb9360b30ee0fd1376"
+hash = "b90f560e6abb048c101a713646b3f0c90eb0f50a4018169a7b13a687a06ec325"
 
 [[files]]
 file = "config/cakeupdater/changelog/2.4.2/zh_tw.md"
-hash = "a90627fe34bf8d4bd9c96521cf551fa7ac1fc8b0f3c5d4327633ba3fcd6072c9"
+hash = "99ffeb539245e187c26bd30ecc15b3aa8a05e99a29b596c5b1cf536d3cb17d03"
 
 [[files]]
 file = "config/cakeupdater/pack-version.txt"
@@ -338,7 +338,7 @@ hash = "f5b80ec5e2e645b087b9453f510c3bbce625738adc155b76761b09921df914e3"
 
 [[files]]
 file = "config/yosbr/config/immediatelyfast.json"
-hash = "db6e048d8681daeba9809bec720535658389dd827f806b8af30f4c857f64d196"
+hash = "ac7f5cc35ed0f04b08630a667f2d60dc4678eb9794137efa3b77abe034e29fc6"
 
 [[files]]
 file = "config/yosbr/config/iris.properties"
@@ -470,7 +470,7 @@ hash = "60a78fe1b271ce9b53e295235eb5a7cdb3a8692ca583fdaa7f5bc09f9049e2f4"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "614b0ef4faf15283774729a5de1a98b1c7fb80c4d1023f1218ece4017b4816df"
+hash = "7378a792c0bf0a65df54d096aeb224f94a97ecdf9763972e0b0f40d5e3e52b42"
 
 [[files]]
 file = "icon.png"
