@@ -4,7 +4,7 @@ order: 1
 # First steps
 
 1. **Join Monumenta.** The server list already has it.
-2. **Check your keys.** The pack moves a few of them: hotbar slots 1 and 2 are on {key:key.hotbar.1} and {key:key.hotbar.2}. See [Keys](keys.md).
+2. **Check your keys.** [Keys](keys.md) lists the keys of the pack's mods, as your game has them set.
 3. **Use Java 21 and give Minecraft enough memory** in your launcher's settings. 4 GB is the smallest amount we test with; more than 12 GB doesn't help and can make pauses longer. See [Java and memory](performance-tips.md#java-and-memory).
 4. **Optional mods** were offered in a window during the first install, all off unless you picked them:
    - Iris Shaders with the Complementary Reimagined shader pack

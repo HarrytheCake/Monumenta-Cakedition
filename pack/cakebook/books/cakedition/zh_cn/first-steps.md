@@ -4,7 +4,7 @@ order: 1
 # 新手须知
 
 1. **加入 Monumenta。**服务器列表里已经有它了。
-2. **检查你的按键。**整合包改动了几个按键：快捷栏第 1、2 格分别是 {key:key.hotbar.1} 和 {key:key.hotbar.2}。详见[按键](keys.md)。
+2. **检查你的按键。**[按键](keys.md)列出了整合包中模组的按键，显示的是你游戏里当前的设置。
 3. **在启动器设置里使用 Java 21，并给 Minecraft 足够的内存。**我们测试的最低值是 4 GB；超过 12 GB 没有好处，反而可能让卡顿更长。详见[Java 和内存](performance-tips.md#java-和内存)。
 4. **可选模组**会在首次安装时的窗口里询问，除非你勾选，否则都是关闭的：
    - Iris 光影加载器，附带 Complementary Reimagined 光影包

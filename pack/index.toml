@@ -6,7 +6,7 @@ hash = "c72e48f4c1273a96795967ef0d793b5ee6be3c490acd6e1c00eaed8b75ca8f5a"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/first-steps.md"
-hash = "297c0105da622ebc7f677fbf1beb2bbdf015fdb1a37f51d63bbf9f2a0e8ccb3a"
+hash = "1c085fee6cd98b1815fdc7d21b2b320311bcbad97099e47fe5845e293cebfa74"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/help.md"
@@ -18,7 +18,7 @@ hash = "d25281234b7e1aaa2f9884d77361e1825e02f7ed8165f610a3a2830dcf77d232"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/keys.md"
-hash = "66af5cd0b1a8615503d6276ae68ebf97f706e36be5a26e0b64358bf7a3ee265a"
+hash = "c4dc6cb4a95ae27c100e7e88f3f3b6c31d14649ad303277457b6f0db36e047e6"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/chat.md"
@@ -62,7 +62,7 @@ hash = "48b0dd7179cc94e40eb0270d0b70d3157691316372aeaf4afebfad79bb3b9a77"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/first-steps.md"
-hash = "be1204d5b2de0f8f5fa12065361a35f7bd21f806d8f46917415bebcd50ccd6c0"
+hash = "50d957cb0dc31291ff43e8581fcfa78e8d8380c8a055bb6a93527a1096beb791"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/help.md"
@@ -74,7 +74,7 @@ hash = "bc329b80c832121788bfd79d4d17beca8e3a4a75f3ea7c153cf907ee159f506f"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/keys.md"
-hash = "1f2a8069cd196a5ec9b80714391d80d20e72a23a94b8ee6f1e25ad78e339ab69"
+hash = "972a739a7295b048dd51b6e518edf49c3572d3067561be6ade1c10463522f7ab"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/chat.md"
@@ -118,7 +118,7 @@ hash = "48f7fc3839be591733c7b7be5289e79d1182d68e177a1afda4afdafd3b96dc24"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/first-steps.md"
-hash = "1a1336988d51bb2b74b0935c1387689bba26620f22778d5f888e39c7c8be3a47"
+hash = "e5ebbe295b4b2e3f1c2058edc58851bb82abbf0cfa33be398a121f8d154fd1f7"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/help.md"
@@ -130,7 +130,7 @@ hash = "b21f822328c6b8e8c96bfc6e6e7a92a0c8e02ca39674854f26027ecb26d6848d"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/keys.md"
-hash = "829638988651ae7fabb1a486f115d3148d307c7e423bb9866e51401f8bcf414d"
+hash = "88006bd0b87ddbb4df7e984cf039b39da81b54ba061f38062ec5b3cfff8dc1cd"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/chat.md"
@@ -207,6 +207,18 @@ hash = "3c10d398d73437d49a6219c348fa9686072fc87e6cde41666013874f6dc9bb8b"
 [[files]]
 file = "config/cakeupdater/changelog/2.4.0/zh_tw.md"
 hash = "4cbb4ea7722206fcafefbebd428065ca00d9964469984e070290cf7cdb44c765"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.1/en_us.md"
+hash = "34313f4f057239d82dc2264585f34d4925511ec02cb3d2394d85e41face23f22"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.1/zh_cn.md"
+hash = "f5c3a3197bfa8cfa43d91669fb66013cd52ed64c02079ed4641c7cce59e4bc44"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.1/zh_tw.md"
+hash = "379c448da68c46840b65d79ea9036bae83a5e2a280aee6457efb9723faa76ae0"
 
 [[files]]
 file = "config/cakeupdater/pack-version.txt"
@@ -446,7 +458,7 @@ hash = "60a78fe1b271ce9b53e295235eb5a7cdb3a8692ca583fdaa7f5bc09f9049e2f4"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "4944f77eed3b67e83ebd6ac8038c779e6d191236a72e35456d2370e857ada98c"
+hash = "614b0ef4faf15283774729a5de1a98b1c7fb80c4d1023f1218ece4017b4816df"
 
 [[files]]
 file = "icon.png"
@@ -799,7 +811,7 @@ metafile = true
 
 [[files]]
 file = "mods/xaeros-world-map.pw.toml"
-hash = "78a003a3ba0249d276caa3e75c5336e6032bf9bfe19b2edd1706cd1042dacb75"
+hash = "e62f235d7ee66939a6825447f6ecf03775e843ea354784a1a8e4a716ef1f9edb"
 metafile = true
 
 [[files]]

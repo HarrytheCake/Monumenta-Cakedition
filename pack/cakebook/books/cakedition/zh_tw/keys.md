@@ -5,7 +5,9 @@ order: 2
 
 下面顯示的是*你的*遊戲目前使用的按鍵。可以在 選項 → 控制 中修改；那裡的搜尋框（來自 Controlling）能按名稱找到按鍵。
 
-## 與原版不同的按鍵
+## 快捷欄
+
+2.4.1 之前的安裝初始時快捷欄第 1、2 格在 R 和 F 上；新安裝保留 Minecraft 原本的 1 和 2。
 
 - 快捷欄第 1 格：{key:key.hotbar.1}
 - 快捷欄第 2 格：{key:key.hotbar.2}
@@ -17,6 +19,7 @@ order: 2
 - 玩家屬性（Monumenta Addons）：{key:key.mma.playerstats}
 - 開關玩家血量指示（Monumenta Addons）：{key:key.mma.togglePlayerHpIndicator}
 - 複製護符屬性（Monumenta Addons）：{key:key.mma.cz_copy_stats}
+- 移動 UMM 的介面元素：{key:njols-ui-framework.key.editHud}
 
 ## 地圖
 
@@ -24,7 +27,7 @@ order: 2
 - 地圖設定：{key:gui.xaero_open_settings}
 - 快速手動確認：{key:gui.xaero_quick_confirm}
 
-安裝了選用的小地圖時，初始按鍵為：Z 放大小地圖，U 路徑點清單，B 新增路徑點，數字鍵盤 + 快速路徑點，Y 小地圖設定。
+安裝了選用的小地圖時，初始按鍵為：Z 放大小地圖，U 路徑點清單，J 新增路徑點（2.4.1 之前的安裝是 B），數字鍵盤 + 快速路徑點，Y 小地圖設定。
 
 ## 看得更清楚
 
@@ -39,12 +42,12 @@ order: 2
 - 開關自動跳躍（Amecs）：{key:key.amecs.toggle_auto_jump}
 - 開關穿透點擊告示牌和物品展示框：{key:key.clickthrough.toggle}
 - Sounds Be Gone! 設定：{key:soundsbegone.config}
-- 這本書：{key:key.cakebook.open}（預設沒有按鍵）
+- 這本書：{key:key.cakebook.open}
 - Monumenta Wiki（CakeWiki），也可對著物品按：{key:key.cakewiki.open}
 - 在遊戲中查看聊天（CakeChat，按住）：{key:key.cakechat.peek}
-- 隱藏或顯示聊天（CakeChat）：{key:key.cakechat.hide}（預設沒有按鍵）
+- 隱藏或顯示聊天（CakeChat）：{key:key.cakechat.hide}
 - 搜尋聊天：開啟聊天時按 Ctrl+F
 
 ## 一鍵多用
 
-模組包初始時有好幾個操作都在 **B** 上：自動跳躍、玩家血量指示、Sounds Be Gone! 設定，以及（安裝小地圖時）新增路徑點。滑鼠中鍵既是選取方塊，也是顯示玩家屬性。如果其中某個妨礙了你，就幫它換一個按鍵。
+2.4.1 之前的安裝初始時有好幾個操作都在 **B** 上：自動跳躍、玩家血量指示、Sounds Be Gone! 設定，以及（安裝小地圖時）新增路徑點。滑鼠中鍵既是選取方塊，也是顯示玩家屬性。如果其中某個妨礙了你，就幫它換一個按鍵。
