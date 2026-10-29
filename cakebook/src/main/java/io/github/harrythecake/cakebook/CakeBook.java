@@ -80,9 +80,9 @@ public class CakeBook implements ClientModInitializer {
 					}
 				});
 
-		// Unbound by default: Monumenta and the pack's mods use most keys. The buttons and /cakebook always work.
+		// B by default (free in Monumenta Cakedition). The buttons and /cakebook always work.
 		openKey = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakebook.open", InputUtil.Type.KEYSYM,
-				GLFW.GLFW_KEY_UNKNOWN, "key.categories.cakebook"));
+				GLFW.GLFW_KEY_B, "key.categories.cakebook"));
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			while (openKey.wasPressed()) {
 				if (client.currentScreen == null) {

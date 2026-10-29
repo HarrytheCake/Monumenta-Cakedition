@@ -4,7 +4,7 @@ Client-only Fabric mod (`cakebook`, package `io.github.harrythecake.cakebook`) f
 
 Decisions made with the user (2026-10-28):
 - Content: a pack guide, a Monumenta gameplay guide (both written by the pack, not by the mod) and player notes. Not copied wiki pages.
-- Opened from the pause menu button, an inventory button, a key binding (unbound by default), `/cakebook` and Mod Menu.
+- Opened from the pause menu button, an inventory button, a key binding (B by default), `/cakebook` and Mod Menu.
 - Pages are Markdown files per language, read from resource packs **and** from `<game folder>/cakebook/books/`. The jar is a reusable engine plus a short help book; the Cakedition pages ship with the pack, so text changes need only a pack update. The books folder exists because a resource pack in the pack would have to be turned on in each player's `options.txt`, which existing installs never get (yosbr only copies missing files).
 - Notes: write/edit, insert location (UMM area + shard + coordinates), links between notes and pages, search.
 - License MIT. **Ships in the Cakedition pack since 2.3.0 (2026-10-29), on by default** (`pack/mods/cakebook.pw.toml` → the v0.1.0 GitHub release).

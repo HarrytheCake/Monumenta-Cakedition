@@ -6,7 +6,7 @@ CakeBook is a guide book and a small wiki that lives in your game. It reads the 
 
 - The **book button** next to *Back to Game* in the pause menu
 - The **book button** to the right of your inventory
-- A key: set *Open guide book* in Options → Controls (it has no key at first). Yours now: {key:key.cakebook.open}
+- A key: *Open guide book* (B at first; change it in Options → Controls). Yours now: {key:key.cakebook.open}
 - The command `/cakebook`
 
 The book opens where you left it.
