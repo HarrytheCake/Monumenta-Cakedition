@@ -1,11 +1,11 @@
 name = "CakeText Translator"
-filename = "caketext-translator-0.3.0.jar"
+filename = "caketext-translator-0.3.1.jar"
 side = "client"
 
 [download]
-url = "https://github.com/HarrytheCake/CakeText/releases/download/v0.3.0/caketext-translator-0.3.0.jar"
+url = "https://github.com/HarrytheCake/CakeText/releases/download/v0.3.1/caketext-translator-0.3.1.jar"
 hash-format = "sha512"
-hash = "495be4a58df40e38541dc48dfb6c4177cfd6c80edd491c206ed38d613f7ceed9564eb0032cee585f7970e303ded3dc9d7d74a991782d806ce28a927f4014dc16"
+hash = "5f2a528ffd693749c85d28ab33f7fb77ea545c1dbe8261e1b74130b640a1c8f40f84aeda963b5e67fc8b94efe5f585a2314e7d4208e9005f960e58dec9efb2a5"
 
 [option]
 optional = true

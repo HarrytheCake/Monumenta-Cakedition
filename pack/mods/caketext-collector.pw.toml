@@ -1,11 +1,11 @@
 name = "CakeText Collector"
-filename = "caketext-collector-0.3.0.jar"
+filename = "caketext-collector-0.3.1.jar"
 side = "client"
 
 [download]
-url = "https://github.com/HarrytheCake/CakeText/releases/download/v0.3.0/caketext-collector-0.3.0.jar"
+url = "https://github.com/HarrytheCake/CakeText/releases/download/v0.3.1/caketext-collector-0.3.1.jar"
 hash-format = "sha512"
-hash = "b107e4c272eb83000c1ab6ad109e4b8b4ae48ea343e5da946f04bd4d5f6980f54437202cc2eeef044150b5923e48a032af968f70b6a5e9af9a36aa7bedc3c3a4"
+hash = "3a300de83c03f6432f86ac337280e2aff50da3b70fe16fa13c478bd6ee181fbeaa8f70cf03f9c0169f6bf7ff0d7353eb9c7216e762ea4ea5a3ceb4710bee2de4"
 
 [option]
 optional = true
