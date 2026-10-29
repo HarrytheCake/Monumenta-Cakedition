@@ -167,7 +167,11 @@ public final class ChatView {
 	}
 
 	/** Rectangle of the delayed-message bar ("N chat messages waiting"), main window only: below the tab bar. */
+	/** Only while the bar is drawn: processing an empty queue throws (vanilla checks the count too). */
 	boolean inQueueBar(double x, double y) {
+		if (client.getMessageHandler().getUnprocessedMessageCount() <= 0L) {
+			return false;
+		}
 		int top = boxBottom() + 1 + TAB_BAR_HEIGHT + 1;
 		return index == 0 && x >= boxX() && x < boxX() + boxWidth() && y >= top && y < top + 9;
 	}
