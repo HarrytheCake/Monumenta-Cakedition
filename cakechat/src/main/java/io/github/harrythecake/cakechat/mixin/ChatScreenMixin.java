@@ -17,8 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
  * The open chat: mouse-wheel speed and direction, clicks/drags on tabs, tab bars and resize grips, and the selected
- * tab's prefix in front of a sent chat message. Extends {@code Screen} to add the drag and release handlers
- * {@code ChatScreen} doesn't override.
+ * tab's prefix in front of a sent chat message. Drags and releases are in {@link MouseMixin}.
  */
 @Mixin(ChatScreen.class)
 public abstract class ChatScreenMixin extends Screen {
@@ -42,16 +41,6 @@ public abstract class ChatScreenMixin extends Screen {
 		if (CakeChat.windows().mouseClicked(mouseX, mouseY, button)) {
 			cir.setReturnValue(true);
 		}
-	}
-
-	@Override
-	public boolean mouseDragged(double mouseX, double mouseY, int button, double deltaX, double deltaY) {
-		return CakeChat.windows().mouseDragged(mouseX, mouseY, button) || super.mouseDragged(mouseX, mouseY, button, deltaX, deltaY);
-	}
-
-	@Override
-	public boolean mouseReleased(double mouseX, double mouseY, int button) {
-		return CakeChat.windows().mouseReleased(mouseX, mouseY, button) || super.mouseReleased(mouseX, mouseY, button);
 	}
 
 	/** A command you typed: your own /join or /leave ends CakeChat's channel switch (see Channels). */
