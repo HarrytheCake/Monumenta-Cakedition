@@ -4,6 +4,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.MessageIndicator;
 import net.minecraft.text.Style;
+import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -18,7 +19,8 @@ import java.util.regex.PatternSyntaxException;
 
 /**
  * All chat windows: one {@link ChatView} per configured window, the tab rules, unread counts per tab, and the mouse
- * (which window a hover, click or scroll is for; moving, resizing and tab clicks while the chat is open).
+ * (which window a hover, click or scroll is for; moving, resizing and tab clicks while the chat is open), the find bar,
+ * the copy menu (right-click a message), and the peek and hide keys.
  */
 public final class ChatWindows {
 	private enum Drag { NONE, TAB, MOVE, RESIZE }
@@ -29,6 +31,12 @@ public final class ChatWindows {
 	private final MinecraftClient client;
 	private final List<ChatView> views = new ArrayList<>();
 	private final Channels channels = new Channels();
+	private final FindBar findBar;
+	private final CopyMenu copyMenu;
+	/** The peek key is held (set every frame by CakeChat). */
+	private boolean peeking;
+	/** The hide key turned the chat off (memory only: a restart shows it again). */
+	private boolean hidden;
 	/** Address of the server we're on ("" in singleplayer), for the tabs' {@code server} patterns. */
 	private String server = "";
 	private final Map<String, Pattern> serverPatterns = new HashMap<>();
@@ -49,6 +57,40 @@ public final class ChatWindows {
 
 	ChatWindows(MinecraftClient client) {
 		this.client = client;
+		this.findBar = new FindBar(client, this);
+		this.copyMenu = new CopyMenu(client);
+	}
+
+	public FindBar findBar() {
+		return findBar;
+	}
+
+	public CopyMenu copyMenu() {
+		return copyMenu;
+	}
+
+	boolean peeking() {
+		return peeking;
+	}
+
+	void setPeeking(boolean peeking) {
+		this.peeking = peeking;
+	}
+
+	boolean hidden() {
+		return hidden;
+	}
+
+	/** The hide key: chat off or on again; says so in the action bar. */
+	void toggleHidden(Text key) {
+		hidden = !hidden;
+		client.inGameHud.setOverlayMessage(hidden ? Text.translatable("cakechat.hide.on", key) : Text.translatable("cakechat.hide.off"), false);
+	}
+
+	/** The chat screen closed: the search and the copy menu end. */
+	public void chatClosed() {
+		findBar.chatClosed();
+		copyMenu.close();
 	}
 
 	/** The windows or tabs in the config changed: new views and rules, every message sorted into tabs again. */
@@ -88,6 +130,7 @@ public final class ChatWindows {
 	// ---- store events ----
 
 	void added(ChatEntry entry) {
+		findBar.added(entry);
 		List<ChatConfig.Window> config = CakeChat.config().windows;
 		for (int w = 0; w < views.size(); w++) {
 			ChatView view = views.get(w);
@@ -103,6 +146,8 @@ public final class ChatWindows {
 	}
 
 	void removed(ChatEntry entry) {
+		findBar.removed(entry);
+		copyMenu.removed(entry);
 		views.forEach(v -> v.removed(entry));
 	}
 
@@ -111,6 +156,7 @@ public final class ChatWindows {
 	}
 
 	void cleared() {
+		copyMenu.close();
 		views.forEach(ChatView::cleared);
 		Arrays.fill(unread, 0);
 	}
@@ -154,9 +200,26 @@ public final class ChatWindows {
 
 	// ---- mouse in the open chat (ChatScreen) ----
 
-	/** True when CakeChat used the click (tab, tab bar, grip, delayed-message bar). */
+	/** True when CakeChat used the click (copy menu, tab, tab bar, grip, delayed-message bar, right-click on a message). */
 	public boolean mouseClicked(double x, double y, int button) {
 		rules();
+		if (copyMenu.isOpen()) {
+			// any click closes the menu; one on an item copies first
+			boolean used = copyMenu.click(x, y);
+			copyMenu.close();
+			if (used) {
+				return true;
+			}
+		}
+		if (button == 1) {
+			ChatView view = viewAt(x, y);
+			ChatEntry entry = view == null ? null : view.entryAt(x, y);
+			if (entry != null) {
+				copyMenu.open(entry, x, y);
+				return true;
+			}
+			return false;
+		}
 		if (button != 0) {
 			return false;
 		}

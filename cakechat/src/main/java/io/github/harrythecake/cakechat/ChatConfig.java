@@ -32,6 +32,7 @@ public final class ChatConfig {
 	public Compact compact = new Compact();
 	public Timestamps timestamps = new Timestamps();
 	public Scroll scroll = new Scroll();
+	public FindOptions find = new FindOptions();
 	/** The first window is the main one (where the delayed-message bar shows); there is always at least one. */
 	public List<Window> windows = new ArrayList<>(List.of(Window.main()));
 	/** The player's own chat channel per server address (see {@link Channels}), so All can join it again after a restart. */
@@ -83,6 +84,12 @@ public final class ChatConfig {
 		public int linesPerNotch = 7;
 		public boolean invert = false;
 		public boolean scrollbar = true;
+	}
+
+	/** The find bar's toggles (Ctrl+F in the open chat), kept for next time. */
+	public static final class FindOptions {
+		public boolean regex = false;
+		public boolean matchCase = false;
 	}
 
 	/**
@@ -226,6 +233,7 @@ public final class ChatConfig {
 		if (timestamps.placement == null) timestamps.placement = defaults.timestamps.placement;
 		if (timestamps.pattern == null) timestamps.pattern = defaults.timestamps.pattern;
 		if (scroll == null) scroll = defaults.scroll;
+		if (find == null) find = defaults.find;
 		if (channelMemory == null) channelMemory = new HashMap<>();
 		if (windows == null) windows = new ArrayList<>();
 		windows.removeIf(Objects::isNull);

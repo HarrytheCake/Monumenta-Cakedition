@@ -67,8 +67,13 @@ public final class ChatView {
 		wrapWidth = -1;
 	}
 
+	/** In the selected tab, and found by the find bar while it searches. */
 	private boolean shows(ChatEntry entry) {
-		return entry.tabs.get(windows.rules().index(index, selected()));
+		if (!entry.tabs.get(windows.rules().index(index, selected()))) {
+			return false;
+		}
+		FindBar findBar = windows.findBar();
+		return !findBar.searching() || findBar.find().matches(entry.content.getString());
 	}
 
 	/** Whether the tab shows on this server (its {@code server} pattern). */
@@ -124,7 +129,7 @@ public final class ChatView {
 	}
 
 	int visibleLineCount() {
-		return visibleLineCount(isChatFocused());
+		return visibleLineCount(isChatFocused() || windows.peeking());
 	}
 
 	boolean inBox(double x, double y) {
@@ -277,10 +282,13 @@ public final class ChatView {
 		return out;
 	}
 
-	/** The entry as shown: compact counter and timestamp added. */
+	/** The entry as shown: find matches highlighted, compact counter and timestamp added. */
 	private Text display(ChatEntry entry) {
 		ChatConfig config = CakeChat.config();
 		Text text = entry.content;
+		if (windows.findBar().searching()) {
+			text = highlight(text, windows.findBar().find().ranges(text.getString()));
+		}
 		if (entry.count > 1) {
 			text = Text.empty().append(text)
 					.append(Text.literal(Compactor.counter(config.compact.format, entry.count)).formatted(Formatting.GRAY));
@@ -309,6 +317,39 @@ public final class ChatView {
 		}
 	}
 
+	/** Yellow and underlined where the find bar found something; clicks and hovers stay. */
+	private static Text highlight(Text text, List<Find.Range> ranges) {
+		if (ranges.isEmpty()) {
+			return text;
+		}
+		MutableText out = Text.empty();
+		int[] at = {0};
+		text.visit((style, string) -> {
+			int start = at[0];
+			int end = start + string.length();
+			int pos = start;
+			for (Find.Range range : ranges) {
+				int from = Math.max(range.start(), start);
+				int to = Math.min(range.end(), end);
+				if (from >= to) {
+					continue;
+				}
+				if (from > pos) {
+					out.append(Text.literal(string.substring(pos - start, from - start)).setStyle(style));
+				}
+				out.append(Text.literal(string.substring(from - start, to - start))
+						.setStyle(style.withColor(Formatting.YELLOW).withUnderline(true)));
+				pos = to;
+			}
+			if (pos < end) {
+				out.append(Text.literal(string.substring(pos - start)).setStyle(style));
+			}
+			at[0] = end;
+			return Optional.empty();
+		}, Style.EMPTY);
+		return out;
+	}
+
 	/** Puts {@code hover} on every run that has no hover of its own (item links, CakeText translations keep theirs). */
 	private static Text withHoverWhereMissing(Text text, HoverEvent hover) {
 		MutableText out = Text.empty();
@@ -325,9 +366,14 @@ public final class ChatView {
 		if (isChatHidden()) {
 			return;
 		}
+		boolean open = isChatFocused();
+		// peeking draws the chat as if it were open (no fade, full height), without the tab bar
+		boolean focused = open || windows.peeking();
+		if (!focused && windows.hidden()) {
+			return;
+		}
 		ensureWrapped();
-		boolean focused = isChatFocused();
-		if (focused) {
+		if (open) {
 			renderTabBar(context, mouseX, mouseY);
 			renderGrip(context, mouseX, mouseY, highlighted);
 		}
@@ -525,6 +571,13 @@ public final class ChatView {
 		double lineX = toChatLineX(x);
 		int i = lineIndex(lineX, toChatLineY(y));
 		return i >= 0 ? client.textRenderer.getTextHandler().getStyleAt(newest(i).text, MathHelper.floor(lineX)) : null;
+	}
+
+	/** The message under the point in the open chat (for the copy menu), or null. */
+	@Nullable
+	ChatEntry entryAt(double x, double y) {
+		int i = lineIndex(toChatLineX(x), toChatLineY(y));
+		return i >= 0 ? newest(i).entry : null;
 	}
 
 	@Nullable

@@ -79,5 +79,19 @@
 	"cakechat.config.tab.remove.confirm": "删除标签页“%s”？",
 	"cakechat.config.tab.remove.confirm.message": "它的设置会被删除，消息仍保留在其他标签页中。你未保存的更改会先被保存。",
 	"cakechat.config.window.remove.confirm": "删除窗口 %s？",
-	"cakechat.config.window.remove.confirm.message": "此窗口、它的位置和所有标签页都会被删除，消息仍保留在其他窗口中。你未保存的更改会先被保存。"
+	"cakechat.config.window.remove.confirm.message": "此窗口、它的位置和所有标签页都会被删除，消息仍保留在其他窗口中。你未保存的更改会先被保存。",
+	"cakechat.find.hint": "在聊天中查找",
+	"cakechat.find.count": "找到 %s 条",
+	"cakechat.find.invalid": "表达式无效",
+	"cakechat.find.case.desc": "区分大小写。关闭时不区分大小写。",
+	"cakechat.find.regex.desc": "正则表达式（Java）。关闭时按普通文字查找。",
+	"cakechat.copy.text": "复制文字",
+	"cakechat.copy.codes": "复制（带颜色代码 §）",
+	"cakechat.copy.json": "复制为 JSON",
+	"cakechat.copy.done": "已复制",
+	"cakechat.hide.on": "聊天已隐藏。按 %s 重新显示。",
+	"cakechat.hide.off": "聊天已显示。",
+	"key.categories.cakechat": "CakeChat",
+	"key.cakechat.peek": "查看聊天（按住）",
+	"key.cakechat.hide": "隐藏/显示聊天"
 }

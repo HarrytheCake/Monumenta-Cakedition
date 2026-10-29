@@ -79,5 +79,19 @@
 	"cakechat.config.tab.remove.confirm": "刪除分頁「%s」？",
 	"cakechat.config.tab.remove.confirm.message": "它的設定會被刪除，訊息仍保留在其他分頁中。你未儲存的變更會先被儲存。",
 	"cakechat.config.window.remove.confirm": "刪除視窗 %s？",
-	"cakechat.config.window.remove.confirm.message": "此視窗、它的位置和所有分頁都會被刪除，訊息仍保留在其他視窗中。你未儲存的變更會先被儲存。"
+	"cakechat.config.window.remove.confirm.message": "此視窗、它的位置和所有分頁都會被刪除，訊息仍保留在其他視窗中。你未儲存的變更會先被儲存。",
+	"cakechat.find.hint": "在聊天中尋找",
+	"cakechat.find.count": "找到 %s 則",
+	"cakechat.find.invalid": "表達式無效",
+	"cakechat.find.case.desc": "區分大小寫。關閉時不區分大小寫。",
+	"cakechat.find.regex.desc": "正規表達式（Java）。關閉時以一般文字尋找。",
+	"cakechat.copy.text": "複製文字",
+	"cakechat.copy.codes": "複製（含顏色代碼 §）",
+	"cakechat.copy.json": "複製為 JSON",
+	"cakechat.copy.done": "已複製",
+	"cakechat.hide.on": "聊天已隱藏。按 %s 重新顯示。",
+	"cakechat.hide.off": "聊天已顯示。",
+	"key.categories.cakechat": "CakeChat",
+	"key.cakechat.peek": "查看聊天（按住）",
+	"key.cakechat.hide": "隱藏/顯示聊天"
 }

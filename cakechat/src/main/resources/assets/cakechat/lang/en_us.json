@@ -79,5 +79,19 @@
 	"cakechat.config.tab.remove.confirm": "Remove the tab \"%s\"?",
 	"cakechat.config.tab.remove.confirm.message": "Its settings are deleted. The messages stay in the other tabs. Your unsaved changes are saved first.",
 	"cakechat.config.window.remove.confirm": "Remove Window %s?",
-	"cakechat.config.window.remove.confirm.message": "The window, its position and all its tabs are deleted. The messages stay in the other windows. Your unsaved changes are saved first."
+	"cakechat.config.window.remove.confirm.message": "The window, its position and all its tabs are deleted. The messages stay in the other windows. Your unsaved changes are saved first.",
+	"cakechat.find.hint": "Find in chat",
+	"cakechat.find.count": "%s found",
+	"cakechat.find.invalid": "Invalid pattern",
+	"cakechat.find.case.desc": "Match case. Off: upper and lower case are the same.",
+	"cakechat.find.regex.desc": "Regular expression (Java). Off: plain text.",
+	"cakechat.copy.text": "Copy text",
+	"cakechat.copy.codes": "Copy with colour codes (§)",
+	"cakechat.copy.json": "Copy as JSON",
+	"cakechat.copy.done": "Copied",
+	"cakechat.hide.on": "Chat hidden. Press %s to show it again.",
+	"cakechat.hide.off": "Chat shown.",
+	"key.categories.cakechat": "CakeChat",
+	"key.cakechat.peek": "Peek at chat (hold)",
+	"key.cakechat.hide": "Hide/show chat"
 }

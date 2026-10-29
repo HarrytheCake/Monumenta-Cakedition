@@ -3,10 +3,14 @@ package io.github.harrythecake.cakechat;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ServerInfo;
+import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.util.InputUtil;
 import net.minecraft.client.resource.language.I18n;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +19,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-/** Client entrypoint: loads the config and registers {@code /cakechat}. */
+/** Client entrypoint: loads the config, registers {@code /cakechat} and the peek and hide keys (both unbound by default). */
 public final class CakeChat implements ClientModInitializer {
 	public static final String MOD_ID = "cakechat";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
@@ -31,6 +35,15 @@ public final class CakeChat implements ClientModInitializer {
 		if (!Files.exists(CONFIG_FILE)) {
 			saveConfig();
 		}
+
+		KeyBinding peek = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakechat.peek", InputUtil.UNKNOWN_KEY.getCode(), "key.categories.cakechat"));
+		KeyBinding hide = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakechat.hide", InputUtil.UNKNOWN_KEY.getCode(), "key.categories.cakechat"));
+		ClientTickEvents.END_CLIENT_TICK.register(client -> {
+			windows().setPeeking(peek.isPressed() && client.currentScreen == null);
+			while (hide.wasPressed()) {
+				windows().toggleHidden(hide.getBoundKeyLocalizedText());
+			}
+		});
 
 		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
 			ServerInfo entry = client.getCurrentServerEntry();
