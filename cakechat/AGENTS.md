@@ -10,7 +10,9 @@ Client-only Fabric mod (`cakechat`, package `io.github.harrythecake.cakechat`) f
 
 **ChatPlus is GPL-3.0: never copy or translate its code.** CakeChat is MIT and written from scratch; only the feature ideas and ChatPlus's *config format* (for the import) are used. The user decided on 2026-10-28 that CakeChat replaces ChatPlus, and that it can import a player's ChatPlus setup into CakeChat's own format.
 
-The mod's standalone repo will be `HarrytheCake/CakeChat` (not created yet). Source of truth is this folder in the Monumenta-Cakedition repo; see the repo's `docs/NEW-MOD-GUIDE.md` for the steps to release and ship.
+The mod's standalone repo is `HarrytheCake/CakeChat` (remote `cakechat`, `git subtree push --prefix=cakechat cakechat main`; CI releases `v<mod_version>`). Source of truth is this folder in the Monumenta-Cakedition repo; never commit in the standalone repo.
+
+**Releases:** v0.1.0 (2026-10-29), v0.2.0 (2026-10-29, M2–M4; in the pack since 2.4.0, replacing the three mods above), **v0.2.1** (2026-10-30, in the pack since 2.4.2): a left click just above the input line crashed the game (`NoSuchElementException` from `MessageHandler.process()`), because the delayed-message bar's hit area (`ChatView.inQueueBar`) was live while nothing was queued; it now answers only while the bar is drawn. Built and tested out of game; not yet tried in game.
 
 ## Files
 
@@ -102,3 +104,4 @@ Status marks: `[x]` done, `[ ]` open.
 - Every UI string in en_us, zh_cn and zh_tw, same keys.
 - `ChatConfig` stays plain Java (no Minecraft classes), so tests can load it.
 - Test data uses made-up names (`qwertfox`, `Mock_Pl4yer`, …).
+- A click area answers only while its element is drawn (the delayed-message bar: only with messages queued; vanilla's `process()` throws on an empty queue).
