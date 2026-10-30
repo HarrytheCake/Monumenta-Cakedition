@@ -233,8 +233,20 @@ file = "config/cakeupdater/changelog/2.4.2/zh_tw.md"
 hash = "2c5000beeaf93aef91e310411e605dc538e273dc72c7e6fd872214050dc42e06"
 
 [[files]]
+file = "config/cakeupdater/changelog/2.4.3/en_us.md"
+hash = "171cf3218e8d2687c4524c8a42d80afd3359cf2c8991dbcd588b28545ab7f794"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.3/zh_cn.md"
+hash = "31a7acdf51d9c87259d9bbd3e971eba2608488a74b888a962f6457e2019c10ed"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.4.3/zh_tw.md"
+hash = "1be68857e67e328990ec7b557483d18512b7158ab5e32c91533e660bafa7310d"
+
+[[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "7df73b8e407cc08ce7babfd544ab4ad92a7f62cf73a21468d2bfae85c0508c7c"
+hash = "e4cf0f13257be2accc4bcb9613548624c13b7f1857229ed43e967fce34171b9a"
 
 [[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
