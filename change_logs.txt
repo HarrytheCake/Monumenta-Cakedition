@@ -1,86 +1,3 @@
-&b(11.89.0)&r
-For the update on October 14, 2026
-## Creeperween 2026: One Wish Black Willows 🎃
-• It's that time of year again • spooky season returns! The
-Creeperween event is active now on Monumenta, with the same
-tricks and treats as previous years.
-• Throughout the game, find the Creeper's Delight, a tasty snack
-for Creepers that they would &olove&r to eat! They might even
-grant you a &ofinal wish&r if you hug them without a shield
-after feeding them... so try it, if you dare! They will leave
-behind a treat • a Bag of Tricks, which can be used for event
-items!
-• Meet Creeper Fanatic Boris in Sierhaven's recently established
-branch of The Green Creeper in the Apartments Building to earn a
-new seasonal advancement! In exchange for Bag of Tricks, you may
-purchase all previous and
-&b2 new event items&r!
-• Make sure to feed all of your Creeper's Delights to Creepers
-before the event ends in mid-November! Creepers will stop
-accepting candy outside of Creeperween, since the spooky season
-is what makes eating the candy so special to them.
-### Minor New Features:
-• Tlaxan Crafter recipes you've used after tonight's update now
-appear in the recipes GUI
-• All rare, artifact, and epic charms have received lore text!
-Additionally, artifact charms, as well as epic charms with pink
-stats, now include explanations of their effects below their
-lore text, similarly to Wheel of Fortune.
-• Returning to an overworld within 30 minutes without specifying
-a specific instance will return you to your last visited
-instance, unless that instance has low health. Note that if you
-logged out on an overworld before this weekly update, this
-memory system will not start working until you've moved to a
-different shard or world. (DIR task 27)
-• Added 8 new Aurora's Endgame themed cosmetics to the cosmetic
-skill shop purchasable for 64 Essence of the Above and 3 Twisted
-Pigments each### Feedback Fixes:
-• Shop Upkeep Token and Guild Upkeep Token are now tagged as
-currency
-• Steadfast and second wind (same button) situationals now
-display a more accurate EHP and defense value in the ps gui
-• Training dummies will now drop their spawn egg if they are
-somehow killed
-• Celestial Contract now does a maximum of 5000 damage
-• Twisted Tempest's Hurricane Dance damage radius and telegraph
-have been made clearer, and now produce 60% less particles
-• Updated lifedrain description to be more clear about the
-attack speed range that is considered
-• Added Runic Hammer, Iceborn Hammer, and Cryomancer's Cudgel to
-the API
-• Reversed a trapdoor in Fortune### Bug Fixes:
-• Fixed North Pole (Elemental Wrath skin) having the same stats
-as Corrupted Siershen's Caster
-• Fix swapping projectile weapons inheriting punch and impact
-• Fixed not seeing basic charm textures in shulker previews
-• Fixed normal shulkers not showing a custom name
-• Fixed Spirit Archery checking for the old Labs scoreboard
-  • Players will need a completion of new Labs to play Spirit
-Archery
-• Fixed Loamskattar Catalyst and Aurora Loom having wrong
-charges text formatting
-• Fixed not being able to see charms and loom modes textures in
-shulkers/other player hands
-• Fixed Twisted Omenspeaker's Hexbombs blanking melee hits
-• Fixed Twisted Deadeye's Predator Missiles leaving behind armor
-stands
-• Fixed the Tlaxan Crafter playing sounds at only one location
-when crafting
-• Fixed selecting Portuguese at Babel or in the language GUI
-attempting to change your language to "Portugese" instead
-• Fixed several typos in Babel's dialogue
-• Fixed a bug causing players on 1.21.2+ to be kicked while
-attempting to interact with boss reward chests
-• Fixed an issue potentially preventing players from being added
-to a Purple instance if they hadn't played it before
-• Fixed players being able to access the `/nbtglowing` command
-• Using Calming Incense or pressing swap while holding Aesir's
-Embrace will now properly clear glowing caused by the Glowing
-NBT tag in addition to clearing the effect
-• Removed LostMilleniumDwellerMount from the Bestiary
-&bHotfix:&r
-• Fixed White Tesseract not working in Sirius and Sporous
-Amalgam arenas
 &bHotfix:&r
 • Fixed a chat formatting bug where a player's shard would fail
 to display when hovering over their name if they were on certain
@@ -177,3 +94,87 @@ working on fixing this.
 &bHotfix&r for daily restart
 • Actually fixed music duplication, as tested somewhere that
 music is definitely supposed to loop
+&b(11.91.0)&r
+For the update on October 28, 2026
+### Minor New Features:
+• Added location tags to all lore books from Reverie, Sanctum,
+Verdant, Lime, Pink, Gray, Light Gray, Purple, Teal, Forum,
+Shifting, Depths, Mist, TOV, the Hoard, SKR, Star Point, Indigo,
+and Fortune
+• Added Exalted Lime Key to the API
+• Restocked the gumball machine in the Wanderer's Fortune
+• Added two new default plot borders
+### Feedback Fixes:
+• Tweaked looks of some Aurora's Endgame themed cosmetics:
+ || • Convergence (Astral Omen)
+    • Intercession (Bodyguard)
+    • Solstice (Illuminate)||
+• Replaced a double chest in Fortune with two single chests,
+pending a longer term fix for an unknown issue with double chest
+loot scaling
+• Blade of the Lost: Unbreaking 5 -> 10, to compensate for
+having a base item with lower durability than Blackroot Branch
+• Illusioners now show health display nametags while its mirror
+spell is not active### Temple of the Skylords Changes:
+• The elite spawner next to the checkpoint in Temple of the
+Skylords has been un-shielded
+• Reworked Skyfallen Beamer
+• Starthunder Channeler's now slams 1s faster after exiting its
+storm
+• Starthunder Channeler's storm sound frequency has been reduced
+by 8x
+• Increased the jump spell height of Prophet of the Fallen Ones
+by 25%
+• Made the Stormzone Capsule's damage zone clearer
+• Stormzone Capsule : 80 -> 50 Health
+• Ascendant Stormsoldier : 90 -> 70 Health, 30 -> 34 Damage
+• Reverent Stormsoldier : 115 -> 90 Health, 31 -> 35 Damage
+• Starscorched Huntress now only volleys at a targeted player
+instead of only closest
+• Starscorched Huntress : 105 -> 80 Health, 12 -> 15 Volley
+Damage
+• Starscorched Servant : 33 -> 30 Damage
+• Starscorched Trapper : 90 -> 65 Health, 29 -> 32 Damage
+• Starthunder Zealot is now slowed by 40% while casting its
+projectile spell
+• Starthunder Zealot : 95 -> 75 Health, 27 -> 30 Damage
+• Tempest Dynamo's spell now deals 12 (from 8) damage per swing,
+but now does 7 (from 12) hits and lasts much shorter
+• Tempest Dynamo : 110 -> 85 Health
+• Vestige of the Skylords changes:
+  • Health reduced to 2750 (from 4000)
+  • Augmented Star damage reduced to 35 (from 50)
+  • Slash cooldown doubled
+  • Slash damage reduced to 30 (from 35)
+  • Beam damage reduced to 35 (from 50)
+  • Beam telegraph delay increased to 1.5s (from 1s)
+  • Time between beams increased to 2.5s (from 1.5s)
+  • Vestigial Servant HP reduced to 120 (from 150)
+  • Vestigial Servant KBR reduced to 0% (from 60%)
+• Extended the edge of platforms in Temple of the Skylords
+• Added a chest to Temple of the Skylords### Bug Fixes:
+• Fixed several lore books sorting incorrectly in chests
+• Removed a sneaky unlocked invisible item frame in the Light
+Blue Lobby
+• Fixed several typos in A Union Cross
+• Tried to fix some team exceptions and kicks
+• Fixed an issue with `boss_capdamage` that occasionally caused
+it override existing projectile immunity frames. (Reported due
+to some users noticing this on sentinels with volley.)
+• Fixed Golden Dice from Fortune having vanilla armor
+• Fixed chests in Fortune with wrong filler loot
+• Fixed <mainhand> and <offhand> once again kicking players on
+higher versions
+• Fixed <equipment> sending the entire NBT of all equipped items
+in the hover event of the text in the hover event (thanks
+bukkit...)
+• Replaced empty item frame armrests in Sierhaven castle with
+signs to prevent players from placing items where they can't be
+retrieved
+• Fixed a bug with attempting to eat FoL from offhand
+• Fixed vanilla cave spiders in Lime that should have been
+Gillman Mounts### Server Version Changes
+• Monumenta now only allows Minecraft versions 1.20.4 and
+1.21.5-26.3, due to recurring client issues on versions 1.20.5
+through 1.21.4.
+• 1.20.4 remains our sole fully-supported version.
