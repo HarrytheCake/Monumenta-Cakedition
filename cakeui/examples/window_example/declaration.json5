@@ -1,0 +1,9 @@
+// Seen by every part and subwindow of this layout.
+{
+  "$schema": "../../schema/declaration.schema.json",
+  "constants": {
+    "accent": "#ffb000",
+    "paper": "#f2f2ee",
+    "ink": "#1b1f2a",
+  },
+}

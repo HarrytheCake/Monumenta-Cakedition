@@ -1,0 +1,14 @@
+{
+  "example.title": "CAKEDITION",
+  "example.subtitle": "CakeUI 範例版面",
+  "example.play": "單人遊戲",
+  "example.play.sub": "你的世界",
+  "example.online": "多人遊戲",
+  "example.online.sub": "Monumenta 與朋友們",
+  "example.options": "選項",
+  "example.mods": "模組",
+  "example.quit": "退出",
+  "example.news": "公告",
+  "example.news.title": "公告",
+  "example.news.body": "這個面板是一個子視窗，有自己的變數。左邊屬於主選單的「公告」按鈕可以開關它。",
+}

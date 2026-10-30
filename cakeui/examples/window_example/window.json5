@@ -1,0 +1,10 @@
+// The CakeUI example layout. Copy this folder to <game>/cakeui/layouts/ and set
+// layoutPath: "cakeui/layouts/window_example" in config/cakeui/config.json5.
+{
+  "$schema": "../../schema/window.schema.json",
+  "format": 1,
+  // Positions below are in pixels of a 1920×1080 screen ("r" units), scaled to the real one.
+  "design": [1920, 1080],
+  "scale": "fit",
+  "perspective": 1400,
+}

@@ -1,0 +1,974 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CakeUI layout.json5 (a part or a subwindow)",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "length": {
+      "description": "A length. A number is design pixels (r). Text may use units and expressions: \"12r\", \"20px\", \"50%\", \"50% - 10\", \"mouse.x * 8\".",
+      "type": [
+        "number",
+        "string"
+      ]
+    },
+    "number": {
+      "description": "A number, or an expression like \"1 + 0.05 * sin(time * 4)\".",
+      "type": [
+        "number",
+        "string"
+      ]
+    },
+    "color": {
+      "description": "A colour: \"#RGB\", \"#RRGGBB\", \"#RRGGBBAA\" (alpha last), a declared name, or an expression.",
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+    "boolean": {
+      "description": "true/false, or an expression like \"player.health < 6\".",
+      "type": [
+        "boolean",
+        "string"
+      ]
+    },
+    "text": {
+      "description": "Text with {expressions}: \"HP {player.health}\". {t:key} is a layout language string. Start with = for one whole expression.",
+      "type": "string"
+    },
+    "anchor": {
+      "description": "Which point of the parent the element is placed from.",
+      "anyOf": [
+        {
+          "enum": [
+            "top_left",
+            "top",
+            "top_right",
+            "left",
+            "center",
+            "right",
+            "bottom_left",
+            "bottom",
+            "bottom_right"
+          ]
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rotateX": {
+          "$ref": "#/definitions/number",
+          "description": "Degrees around the horizontal axis (3D)."
+        },
+        "rotateY": {
+          "$ref": "#/definitions/number",
+          "description": "Degrees around the vertical axis (3D)."
+        },
+        "rotateZ": {
+          "$ref": "#/definitions/number",
+          "description": "Degrees in the screen plane, clockwise."
+        },
+        "scale": {
+          "$ref": "#/definitions/number"
+        },
+        "scaleX": {
+          "$ref": "#/definitions/number"
+        },
+        "scaleY": {
+          "$ref": "#/definitions/number"
+        },
+        "skewX": {
+          "$ref": "#/definitions/number"
+        },
+        "skewY": {
+          "$ref": "#/definitions/number"
+        },
+        "z": {
+          "$ref": "#/definitions/length",
+          "description": "Depth toward the viewer (3D)."
+        },
+        "pivotX": {
+          "$ref": "#/definitions/number",
+          "description": "0..1 across the element (default 0.5)."
+        },
+        "pivotY": {
+          "$ref": "#/definitions/number",
+          "description": "0..1 down the element (default 0.5)."
+        }
+      }
+    },
+    "parallax": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Follow the mouse (screens with a cursor only).",
+      "properties": {
+        "move": {
+          "$ref": "#/definitions/length",
+          "description": "How far it moves at the screen edge."
+        },
+        "tilt": {
+          "$ref": "#/definitions/number",
+          "description": "Degrees it turns at the screen edge."
+        },
+        "smoothing": {
+          "$ref": "#/definitions/number",
+          "description": "Seconds to catch up with the mouse (0 = at once)."
+        }
+      }
+    },
+    "transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "duration": {
+          "$ref": "#/definitions/number",
+          "description": "Seconds."
+        },
+        "easing": {
+          "description": "The curve.",
+          "anyOf": [
+            {
+              "enum": [
+                "linear",
+                "ease",
+                "ease_in",
+                "ease_out",
+                "ease_in_out",
+                "back_out",
+                "elastic_out",
+                "bounce_out"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    "sounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hover": {
+          "type": "string",
+          "description": "Sound id, e.g. minecraft:ui.button.click"
+        },
+        "click": {
+          "type": "string",
+          "description": "Sound id (buttons click by default)."
+        }
+      }
+    },
+    "action": {
+      "description": "What a button does (client-side only).",
+      "anyOf": [
+        {
+          "enum": [
+            "singleplayer",
+            "multiplayer",
+            "realms",
+            "options",
+            "language",
+            "accessibility",
+            "modmenu",
+            "quit",
+            "back"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "connect"
+          ],
+          "properties": {
+            "connect": {
+              "type": "string",
+              "description": "Server address."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "url"
+          ],
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "https:// link (vanilla asks first)."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "set"
+          ],
+          "properties": {
+            "set": {
+              "type": "object",
+              "description": "{ name: value } for this folder's own variables."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "toggle"
+          ],
+          "properties": {
+            "toggle": {
+              "type": "string",
+              "description": "A true/false variable of this folder."
+            }
+          }
+        }
+      ]
+    },
+    "element": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "color": {
+          "$ref": "#/definitions/color"
+        },
+        "shadow": {
+          "$ref": "#/definitions/boolean"
+        },
+        "size": {
+          "$ref": "#/definitions/length",
+          "description": "Text height (default 9px)."
+        },
+        "font": {
+          "type": "string",
+          "description": "A font from window.json5, or a resource-pack font id like minecraft:uniform."
+        },
+        "textAlign": {
+          "description": "Alignment inside the width.",
+          "anyOf": [
+            {
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "wrap": {
+          "$ref": "#/definitions/boolean"
+        },
+        "lineHeight": {
+          "$ref": "#/definitions/length"
+        },
+        "src": {
+          "type": "string",
+          "description": "PNG path inside assets/."
+        },
+        "tint": {
+          "$ref": "#/definitions/color"
+        },
+        "slice": {
+          "description": "Nine-slice borders in texture pixels: one number or [left, top, right, bottom].",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 4,
+              "maxItems": 4
+            }
+          ]
+        },
+        "sliceScale": {
+          "$ref": "#/definitions/number"
+        },
+        "fit": {
+          "description": "How the image fills its box.",
+          "anyOf": [
+            {
+              "enum": [
+                "stretch",
+                "contain",
+                "cover",
+                "tile"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "frames": {
+          "$ref": "#/definitions/number",
+          "description": "Sprite sheet frame count."
+        },
+        "fps": {
+          "$ref": "#/definitions/number"
+        },
+        "frameLayout": {
+          "description": "How frames are stacked in the sheet.",
+          "anyOf": [
+            {
+              "enum": [
+                "vertical",
+                "horizontal"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "pixelated": {
+          "$ref": "#/definitions/boolean"
+        },
+        "color2": {
+          "$ref": "#/definitions/color",
+          "description": "Gradient end colour."
+        },
+        "gradient": {
+          "description": "Gradient direction.",
+          "anyOf": [
+            {
+              "enum": [
+                "vertical",
+                "horizontal"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "outline": {
+          "$ref": "#/definitions/color"
+        },
+        "outlineWidth": {
+          "$ref": "#/definitions/length"
+        },
+        "value": {
+          "$ref": "#/definitions/number",
+          "description": "0..1"
+        },
+        "background": {
+          "description": "A colour, or an element drawn under the children at full size.",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/color"
+            },
+            {
+              "$ref": "#/definitions/element"
+            }
+          ]
+        },
+        "direction": {
+          "description": "Which way it fills.",
+          "anyOf": [
+            {
+              "enum": [
+                "right",
+                "left",
+                "up",
+                "down"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "image": {
+          "type": "string",
+          "description": "Fill image inside assets/."
+        },
+        "item": {
+          "type": "string",
+          "description": "Item id, e.g. minecraft:diamond_sword"
+        },
+        "count": {
+          "$ref": "#/definitions/number"
+        },
+        "action": {
+          "$ref": "#/definitions/action"
+        },
+        "type": {
+          "enum": [
+            "text",
+            "image",
+            "rect",
+            "bar",
+            "item",
+            "button",
+            "group"
+          ]
+        },
+        "anchor": {
+          "$ref": "#/definitions/anchor"
+        },
+        "origin": {
+          "$ref": "#/definitions/anchor",
+          "description": "Which point of the element sits on the anchor (default: same as anchor)."
+        },
+        "x": {
+          "$ref": "#/definitions/length"
+        },
+        "y": {
+          "$ref": "#/definitions/length"
+        },
+        "width": {
+          "$ref": "#/definitions/length"
+        },
+        "height": {
+          "$ref": "#/definitions/length"
+        },
+        "visible": {
+          "$ref": "#/definitions/boolean"
+        },
+        "opacity": {
+          "$ref": "#/definitions/number"
+        },
+        "order": {
+          "$ref": "#/definitions/number",
+          "description": "Lower draws first."
+        },
+        "layer": {
+          "description": "Top-level main menu elements: under (back) or over (front) the vanilla buttons.",
+          "anyOf": [
+            {
+              "enum": [
+                "back",
+                "front"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "enabled": {
+          "$ref": "#/definitions/boolean"
+        },
+        "tooltip": {
+          "$ref": "#/definitions/text"
+        },
+        "transform": {
+          "$ref": "#/definitions/transform"
+        },
+        "parallax": {
+          "$ref": "#/definitions/parallax"
+        },
+        "transition": {
+          "$ref": "#/definitions/transition"
+        },
+        "sounds": {
+          "$ref": "#/definitions/sounds"
+        },
+        "states": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hover": {
+              "type": "object",
+              "description": "Properties that change in this state."
+            },
+            "pressed": {
+              "type": "object",
+              "description": "Properties that change in this state."
+            },
+            "disabled": {
+              "type": "object",
+              "description": "Properties that change in this state."
+            }
+          }
+        },
+        "elements": {
+          "$ref": "#/definitions/elements"
+        },
+        "arrange": {
+          "description": "Stack children in a row or column.",
+          "anyOf": [
+            {
+              "enum": [
+                "none",
+                "row",
+                "column"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "gap": {
+          "$ref": "#/definitions/length"
+        },
+        "padding": {
+          "$ref": "#/definitions/length"
+        },
+        "align": {
+          "description": "Cross-axis alignment when arranged.",
+          "anyOf": [
+            {
+              "enum": [
+                "start",
+                "center",
+                "end"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "perspective": {
+          "$ref": "#/definitions/length",
+          "description": "Camera distance for 3D children."
+        }
+      },
+      "description": "text, image, rect, bar, item, button or group. CakeUI checks which properties fit which type when it loads."
+    },
+    "elements": {
+      "type": "object",
+      "description": "Elements by name, drawn in this order.",
+      "additionalProperties": {
+        "$ref": "#/definitions/element"
+      }
+    },
+    "buttons": {
+      "type": "object",
+      "description": "Vanilla/mod buttons by id (label translation key, text, #index, or * for all others). Dev mode can show the ids.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "anchor": {
+            "$ref": "#/definitions/anchor"
+          },
+          "origin": {
+            "$ref": "#/definitions/anchor"
+          },
+          "x": {
+            "$ref": "#/definitions/length"
+          },
+          "y": {
+            "$ref": "#/definitions/length"
+          },
+          "width": {
+            "$ref": "#/definitions/length"
+          },
+          "height": {
+            "$ref": "#/definitions/length"
+          },
+          "visible": {
+            "$ref": "#/definitions/boolean"
+          },
+          "opacity": {
+            "$ref": "#/definitions/number"
+          },
+          "text": {
+            "$ref": "#/definitions/text",
+            "description": "New label."
+          },
+          "skin": {
+            "$ref": "#/definitions/elements",
+            "description": "Elements drawn instead of the vanilla look."
+          },
+          "states": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "hover": {
+                "type": "object",
+                "description": "Properties that change in this state."
+              },
+              "pressed": {
+                "type": "object",
+                "description": "Properties that change in this state."
+              },
+              "disabled": {
+                "type": "object",
+                "description": "Properties that change in this state."
+              }
+            }
+          },
+          "transition": {
+            "$ref": "#/definitions/transition"
+          },
+          "sounds": {
+            "$ref": "#/definitions/sounds"
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "anchor": {
+      "$ref": "#/definitions/anchor"
+    },
+    "origin": {
+      "$ref": "#/definitions/anchor",
+      "description": "Which point of the element sits on the anchor (default: same as anchor)."
+    },
+    "x": {
+      "$ref": "#/definitions/length"
+    },
+    "y": {
+      "$ref": "#/definitions/length"
+    },
+    "width": {
+      "$ref": "#/definitions/length"
+    },
+    "height": {
+      "$ref": "#/definitions/length"
+    },
+    "visible": {
+      "$ref": "#/definitions/boolean"
+    },
+    "opacity": {
+      "$ref": "#/definitions/number"
+    },
+    "order": {
+      "$ref": "#/definitions/number",
+      "description": "Lower draws first."
+    },
+    "layer": {
+      "description": "Top-level main menu elements: under (back) or over (front) the vanilla buttons.",
+      "anyOf": [
+        {
+          "enum": [
+            "back",
+            "front"
+          ]
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "enabled": {
+      "$ref": "#/definitions/boolean"
+    },
+    "tooltip": {
+      "$ref": "#/definitions/text"
+    },
+    "transform": {
+      "$ref": "#/definitions/transform"
+    },
+    "parallax": {
+      "$ref": "#/definitions/parallax"
+    },
+    "transition": {
+      "$ref": "#/definitions/transition"
+    },
+    "sounds": {
+      "$ref": "#/definitions/sounds"
+    },
+    "states": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hover": {
+          "type": "object",
+          "description": "Properties that change in this state."
+        },
+        "pressed": {
+          "type": "object",
+          "description": "Properties that change in this state."
+        },
+        "disabled": {
+          "type": "object",
+          "description": "Properties that change in this state."
+        }
+      }
+    },
+    "elements": {
+      "$ref": "#/definitions/elements"
+    },
+    "arrange": {
+      "description": "Stack children in a row or column.",
+      "anyOf": [
+        {
+          "enum": [
+            "none",
+            "row",
+            "column"
+          ]
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "gap": {
+      "$ref": "#/definitions/length"
+    },
+    "padding": {
+      "$ref": "#/definitions/length"
+    },
+    "align": {
+      "description": "Cross-axis alignment when arranged.",
+      "anyOf": [
+        {
+          "enum": [
+            "start",
+            "center",
+            "end"
+          ]
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "background": {
+      "description": "A colour, or an element drawn under the children at full size.",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/color"
+        },
+        {
+          "$ref": "#/definitions/element"
+        }
+      ]
+    },
+    "outline": {
+      "$ref": "#/definitions/color"
+    },
+    "outlineWidth": {
+      "$ref": "#/definitions/length"
+    },
+    "perspective": {
+      "$ref": "#/definitions/length",
+      "description": "Camera distance for 3D children."
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "ports": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Vanilla pieces this part changes (main_menu: background, logo, splash, version, buttons).",
+      "properties": {
+        "background": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          }
+        },
+        "logo": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          }
+        },
+        "bar": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          }
+        },
+        "splash": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            },
+            "list": {
+              "description": "Own splashes: a list, or a file like splashes.txt in this folder.",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "mixVanilla": {
+              "$ref": "#/definitions/boolean",
+              "description": "Also use vanilla's splashes (default true)."
+            },
+            "anchor": {
+              "$ref": "#/definitions/anchor"
+            },
+            "origin": {
+              "$ref": "#/definitions/anchor"
+            },
+            "color": {
+              "$ref": "#/definitions/color"
+            },
+            "size": {
+              "$ref": "#/definitions/length"
+            },
+            "font": {
+              "type": "string"
+            },
+            "shadow": {
+              "$ref": "#/definitions/boolean"
+            },
+            "text": {
+              "$ref": "#/definitions/text"
+            },
+            "transform": {
+              "$ref": "#/definitions/transform"
+            },
+            "parallax": {
+              "$ref": "#/definitions/parallax"
+            }
+          }
+        },
+        "version": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            },
+            "text": {
+              "$ref": "#/definitions/text",
+              "description": "The line; {menu.version} is vanilla's text."
+            },
+            "color": {
+              "$ref": "#/definitions/color"
+            }
+          }
+        },
+        "buttons": {
+          "$ref": "#/definitions/buttons"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"key.categories.cakeui": "CakeUI",
+	"key.cakeui.reload": "重新載入版面",
+	"key.cakeui.buttonIds": "顯示按鈕 ID（開發模式）",
+	"cakeui.overlay.header": "CakeUI：版面 %1$s 有 %2$s 個問題",
+	"cakeui.overlay.kept": "CakeUI：版面 %1$s 有 %2$s 個問題，因此仍使用上一個版本",
+	"cakeui.overlay.more": "……還有 %s 個（全部記錄在 logs/latest.log）"
+}

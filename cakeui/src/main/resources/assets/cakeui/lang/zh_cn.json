@@ -1,0 +1,8 @@
+{
+	"key.categories.cakeui": "CakeUI",
+	"key.cakeui.reload": "重新加载布局",
+	"key.cakeui.buttonIds": "显示按钮 ID（开发模式）",
+	"cakeui.overlay.header": "CakeUI：布局 %1$s 有 %2$s 个问题",
+	"cakeui.overlay.kept": "CakeUI：布局 %1$s 有 %2$s 个问题，因此仍使用上一个版本",
+	"cakeui.overlay.more": "……还有 %s 个（全部记录在 logs/latest.log）"
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "../../../schema/layout.schema.json",
+  "ports": {
+    // Our own background: two image layers that follow the mouse at different depths.
+    "background": {
+      "hide": true,
+      "elements": {
+        "sky": { "type": "image", "src": "bg.png", "width": "100%", "height": "100%", "fit": "cover",
+                 "transform": { "scale": 1.06 }, "parallax": { "move": 18, "smoothing": 0.3 } },
+        "city": { "type": "image", "src": "far.png", "width": "100%", "height": "100%", "fit": "cover",
+                  "transform": { "scale": 1.1 }, "parallax": { "move": 42, "smoothing": 0.3 } },
+        "shade": { "type": "rect", "color": "#00000000", "color2": "#000000a0" },
+      },
+    },
+    "logo": { "hide": true },
+    "splash": {
+      "list": "splashes.txt", "mixVanilla": false,
+      "anchor": "top_left", "origin": "left", "x": 128, "y": 352, "size": 34, "color": "accent", "shadow": true,
+      "transform": { "rotateZ": -3, "scale": "1 + 0.03 * sin(time * 5)" },
+    },
+    "version": { "text": "{menu.version} + CakeUI" },
+    "buttons": {
+      // Our tiles do these jobs, so the vanilla buttons are hidden.
+      "menu.singleplayer": { "visible": false },
+      "menu.multiplayer": { "visible": false },
+      "menu.online": { "visible": false },
+      "menu.options": { "visible": false },
+      "menu.quit": { "visible": false },
+      "modmenu.title": { "visible": false },
+      // The two icon buttons move to the bottom left and get a skin.
+      "options.language": { "anchor": "bottom_left", "origin": "bottom_left", "x": 128, "y": -40, "width": "20px", "height": "20px",
+        "skin": {
+          "bg": { "type": "rect", "color": "#00000080", "outline": "accent", "outlineWidth": "1px",
+                  "states": { "hover": { "color": "#ffb000c0" } }, "transition": { "duration": 0.12 } },
+          "label": { "type": "text", "text": "文A", "anchor": "center", "size": "9px", "color": "paper" },
+        } },
+      "options.accessibility": { "anchor": "bottom_left", "origin": "bottom_left", "x": 200, "y": -40, "width": "20px", "height": "20px",
+        "skin": {
+          "bg": { "type": "rect", "color": "#00000080", "outline": "accent", "outlineWidth": "1px",
+                  "states": { "hover": { "color": "#ffb000c0" } }, "transition": { "duration": 0.12 } },
+          "label": { "type": "text", "text": "♿", "anchor": "center", "size": "9px", "color": "paper" },
+        } },
+    },
+  },
+  "elements": {
+    "title": { "type": "text", "text": "{t:example.title}", "x": 120, "y": 180, "size": 120, "color": "paper", "shadow": true,
+               "parallax": { "move": 24, "smoothing": 0.2 } },
+    "spark": { "type": "image", "src": "spark.png", "frames": 8, "fps": 12, "pixelated": true,
+               "x": 64, "y": 168, "width": 48, "height": 48, "parallax": { "move": 30, "smoothing": 0.2 } },
+    "subtitle": { "type": "text", "text": "{t:example.subtitle}", "x": 128, "y": 300, "size": 30, "color": "#ffffffc0" },
+    "news": { "type": "button", "action": { "toggle": "newsOpen" }, "x": 128, "y": 440, "width": 180, "height": 56,
+              "background": "= newsOpen ? '#ffb000e0' : '#00000080'", "outline": "accent", "outlineWidth": 2,
+              "states": { "hover": { "transform": { "scale": 1.06 } } }, "transition": { "duration": 0.15, "easing": "back_out" },
+              "elements": { "label": { "type": "text", "text": "{t:example.news}", "anchor": "center", "size": 30, "color": "paper", "shadow": true } } },
+    "beat": { "type": "bar", "x": 128, "y": 410, "width": 420, "height": 6, "value": "mod(time / 4, 1)",
+              "color": "accent", "background": "#ffffff30" },
+  },
+}

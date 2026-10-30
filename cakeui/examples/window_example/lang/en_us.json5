@@ -1,0 +1,14 @@
+{
+  "example.title": "CAKEDITION",
+  "example.subtitle": "A CakeUI example layout",
+  "example.play": "Singleplayer",
+  "example.play.sub": "Your worlds",
+  "example.online": "Multiplayer",
+  "example.online.sub": "Monumenta and friends",
+  "example.options": "Options",
+  "example.mods": "Mods",
+  "example.quit": "Quit",
+  "example.news": "News",
+  "example.news.title": "News",
+  "example.news.body": "This panel is a subwindow with its own variable. The News button on the left, which belongs to the main menu, shows and hides it.",
+}

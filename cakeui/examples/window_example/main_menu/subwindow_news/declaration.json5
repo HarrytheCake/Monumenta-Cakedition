@@ -1,0 +1,7 @@
+{
+  "$schema": "../../../../schema/declaration.schema.json",
+  "variables": {
+    // Computed every frame: blinks the dot.
+    "blink": "= mod(time, 1) < 0.5",
+  },
+}

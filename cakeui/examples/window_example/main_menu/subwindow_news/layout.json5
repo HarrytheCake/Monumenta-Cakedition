@@ -1,0 +1,14 @@
+// A panel the main menu's News button shows and hides. newsOpen is declared by the main menu, so only
+// the main menu's own elements can set it; this subwindow can only read it.
+{
+  "$schema": "../../../../schema/layout.schema.json",
+  "visible": "newsOpen",
+  "anchor": "bottom_left", "origin": "bottom_left", "x": 120, "y": -170, "width": 620, "height": 220,
+  "background": "#000000a0", "outline": "accent", "outlineWidth": 2, "padding": 24,
+  "transform": { "rotateY": 10 },
+  "elements": {
+    "title": { "type": "text", "text": "{t:example.news.title}", "size": 40, "color": "accent" },
+    "dot": { "type": "rect", "visible": "blink", "x": 150, "y": 14, "width": 14, "height": 14, "color": "#ff5050" },
+    "body": { "type": "text", "text": "{t:example.news.body}", "y": 64, "size": 26, "color": "paper", "wrap": true, "width": "100%" },
+  },
+}

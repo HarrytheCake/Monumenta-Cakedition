@@ -1,0 +1,8 @@
+{
+	"key.categories.cakeui": "CakeUI",
+	"key.cakeui.reload": "Reload layout",
+	"key.cakeui.buttonIds": "Show button ids (dev mode)",
+	"cakeui.overlay.header": "CakeUI: %2$s problem(s) in layout %1$s",
+	"cakeui.overlay.kept": "CakeUI: %2$s problem(s) in layout %1$s, so the previous version stays active",
+	"cakeui.overlay.more": "… and %s more (all are in logs/latest.log)"
+}

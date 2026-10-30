@@ -1,0 +1,11 @@
+// Seen by the main menu and its subwindows, not by other parts.
+{
+  "$schema": "../../../schema/declaration.schema.json",
+  "constants": {
+    "tileGap": 18,
+  },
+  "variables": {
+    // Set by the main menu's News button; the news subwindow reads it.
+    "newsOpen": true,
+  },
+}

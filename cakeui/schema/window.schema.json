@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CakeUI window.json5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "format": {
+      "const": 1,
+      "description": "Layout format version."
+    },
+    "design": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "[width, height] of the design screen; r units are its pixels."
+    },
+    "scale": {
+      "enum": [
+        "fit",
+        "fill",
+        "stretch"
+      ],
+      "description": "How the design screen fits the real one."
+    },
+    "perspective": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Camera distance for 3D, in design pixels (default 1000)."
+    },
+    "fonts": {
+      "type": "object",
+      "description": "Fonts from assets/, by name.",
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "file"
+            ],
+            "properties": {
+              "file": {
+                "type": "string",
+                "description": "Path inside assets/, e.g. fonts/x.ttf"
+              },
+              "size": {
+                "type": "number",
+                "description": "Base size (default 11)."
+              },
+              "oversample": {
+                "type": "number",
+                "description": "Sharpness; 0 = automatic."
+              },
+              "shift": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            }
+          }
+        ]
+      }
+    },
+    "icon": {
+      "description": "Window icon (coming in M3)."
+    },
+    "title": {
+      "description": "Window title (coming in M3)."
+    },
+    "border": {
+      "description": "Title bar colour (coming in M3)."
+    }
+  }
+}

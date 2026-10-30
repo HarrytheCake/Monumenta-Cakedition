@@ -1,0 +1,43 @@
+// The tile panel on the right, turned toward the centre like a wall. Tiles are CakeUI buttons.
+{
+  "$schema": "../../../../schema/layout.schema.json",
+  "anchor": "right", "origin": "right", "x": -110, "y": 30, "width": 880, "height": 520,
+  "transform": { "rotateY": -16 },
+  "parallax": { "move": 16, "tilt": 5, "smoothing": 0.18 },
+  "elements": {
+    "play": { "type": "button", "action": "singleplayer", "x": 0, "y": 0, "width": 560, "height": 230,
+      "states": { "hover": { "transform": { "scale": 1.04 } }, "pressed": { "transform": { "scale": 0.98 } } },
+      "transition": { "duration": 0.18, "easing": "back_out" },
+      "background": { "type": "image", "src": "panel.png", "slice": 12, "sliceScale": 2,
+                      "states": { "hover": { "tint": "#fff2cc" } }, "transition": { "duration": 0.18 } },
+      "elements": {
+        "label": { "type": "text", "text": "{t:example.play}", "x": 32, "y": 40, "size": 64, "color": "ink" },
+        "sub": { "type": "text", "text": "{t:example.play.sub}", "x": 36, "y": 130, "size": 28, "color": "#1b1f2aa0" },
+        "icon": { "type": "item", "item": "minecraft:grass_block", "anchor": "right", "origin": "right", "x": -36, "width": 96, "height": 96 },
+      } },
+    "online": { "type": "button", "action": "multiplayer", "x": 578, "y": 0, "width": 302, "height": 230,
+      "states": { "hover": { "transform": { "scale": 1.04 } }, "pressed": { "transform": { "scale": 0.98 } } },
+      "transition": { "duration": 0.18, "easing": "back_out" },
+      "background": { "type": "rect", "color": "#1c8fd6f0", "states": { "hover": { "color": "#35a8eef0" } }, "transition": { "duration": 0.18 } },
+      "elements": {
+        "label": { "type": "text", "text": "{t:example.online}", "x": 26, "y": 40, "size": 38, "color": "paper", "wrap": true, "width": 260 },
+        "sub": { "type": "text", "text": "{t:example.online.sub}", "x": 28, "y": 150, "size": 22, "color": "#ffffffb0", "wrap": true, "width": 250 },
+      } },
+    "row": { "type": "group", "x": 0, "y": 248, "width": 880, "height": 160, "arrange": "row", "gap": "tileGap",
+      "elements": {
+        "options": { "type": "button", "action": "options", "width": 431, "height": 160,
+          "states": { "hover": { "transform": { "scale": 1.05 } } }, "transition": { "duration": 0.15, "easing": "back_out" },
+          "background": { "type": "rect", "color": "#f2f2eef0", "states": { "hover": { "color": "#fff6dcf0" } }, "transition": { "duration": 0.15 } },
+          "elements": { "label": { "type": "text", "text": "{t:example.options}", "anchor": "left", "x": 28, "size": 44, "color": "ink" } } },
+        "mods": { "type": "button", "action": "modmenu", "width": 431, "height": 160,
+          "states": { "hover": { "transform": { "scale": 1.05 } } }, "transition": { "duration": 0.15, "easing": "back_out" },
+          "background": { "type": "rect", "color": "#f2f2eef0", "states": { "hover": { "color": "#fff6dcf0" } }, "transition": { "duration": 0.15 } },
+          "elements": { "label": { "type": "text", "text": "{t:example.mods}", "anchor": "left", "x": 28, "size": 44, "color": "ink" } } },
+      } },
+    "quit": { "type": "button", "action": "quit", "x": 0, "y": 426, "width": 880, "height": 90,
+      "states": { "hover": { "transform": { "scale": 1.02 } } }, "transition": { "duration": 0.15 },
+      "background": { "type": "rect", "color": "#1b1f2ad0", "outline": "#ffffff40", "outlineWidth": 2,
+                      "states": { "hover": { "color": "#a8323ae0" } }, "transition": { "duration": 0.15 } },
+      "elements": { "label": { "type": "text", "text": "{t:example.quit}", "anchor": "center", "size": 40, "color": "paper" } } },
+  },
+}

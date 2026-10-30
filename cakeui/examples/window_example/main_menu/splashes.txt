@@ -1,0 +1,5 @@
+# One splash per line; lines starting with # are skipped.
+Now with layouts!
+Tilt your head!
+Hot reload!
+Made of JSON5!

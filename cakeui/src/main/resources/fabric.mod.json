@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "cakeui",
+	"version": "${version}",
+	"name": "CakeUI",
+	"description": "Redraw Minecraft's main menu, loading screens, HUD and game window from layout folders: elements, variables, 3D tilt, parallax and hot reload, no Java needed. A library for modpacks; it changes nothing until a layout is chosen.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"icon": "assets/cakeui/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeUI"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": ["io.github.harrythecake.cakeui.CakeUI"]
+	},
+	"mixins": ["cakeui.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
