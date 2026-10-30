@@ -250,7 +250,7 @@ hash = "ae87f2d1b38dfd4b1e0767dfeb539261deaaf4fd2eb73692afcbaac7147855b9"
 
 [[files]]
 file = "config/yosbr/config/asteorbar.json5"
-hash = "107b3accaf76ce9c2138b37cf497fd7e4ac5e9f1f3f8b54b9667d568bc91890e"
+hash = "9505f8e74111208bcbb01d0c45cd27b2b0f3cf2510aa97fd45b5c6d352626c0a"
 
 [[files]]
 file = "config/yosbr/config/attributefix.json"
