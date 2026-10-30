@@ -346,7 +346,7 @@ hash = "e1b59c428193bc9390ba88ba7dcadc1e9a0922789ddacf406d535671a10666b6"
 
 [[files]]
 file = "config/yosbr/config/lambdynlights.toml"
-hash = "f3144de12df98b33173e4451d78db308bafda03cd4daa5174e3f72c08466e4a0"
+hash = "bb2cb1705fe12693f6d8baebb6aea8b88e140ff0bcd249ec45dda481e86f2558"
 
 [[files]]
 file = "config/yosbr/config/languagereload.json"
