@@ -1,12 +1,12 @@
 name = "Monumenta Cakedition"
 author = "Harry_BC"
-version = "2.4.3"
+version = "2.5.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "eb90de45db903e3bf73524738026467ee094bff88e33ae1b48eded4ebf25b927"
+hash = "6c9acd3236585ebe45a278e41bfc0d1198205a19d916161a07b7f5cbcab27e57"
 
 [versions]
 fabric = "0.18.6"

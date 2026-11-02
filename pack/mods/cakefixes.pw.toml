@@ -1,0 +1,8 @@
+name = "CakeFixes"
+filename = "cakefixes-0.3.0.jar"
+side = "client"
+
+[download]
+url = "https://github.com/HarrytheCake/CakeFixes/releases/download/v0.3.0/cakefixes-0.3.0.jar"
+hash-format = "sha512"
+hash = "0d98fe7940d4f301f1b0f40ed154b9e44a7973b7dae425a3eaa3ac1c79f01da6eb741e2758f2920e4d4a0e2b2dcbdddcabc7d817de36ffd1f874a5751ed6fd62"

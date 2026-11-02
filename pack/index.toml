@@ -245,8 +245,20 @@ file = "config/cakeupdater/changelog/2.4.3/zh_tw.md"
 hash = "1be68857e67e328990ec7b557483d18512b7158ab5e32c91533e660bafa7310d"
 
 [[files]]
+file = "config/cakeupdater/changelog/2.5.0/en_us.md"
+hash = "621531a4e4416a09d3b094a78c4bfb499e296a94e84fa886733b3b1e11a43d17"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.5.0/zh_cn.md"
+hash = "212c82ae71ae6b6a4e60ebfb7ffd29f1fbeedacd621c04eb49a8aef77516d1ff"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.5.0/zh_tw.md"
+hash = "acc219c8d9f8ebedd9fa7038ba335e2a1f79838c55fa30397f9b7d0cad1aae7e"
+
+[[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "e4cf0f13257be2accc4bcb9613548624c13b7f1857229ed43e967fce34171b9a"
+hash = "732f64d874f90788c0199b0c19bfd9b3b6436e140114e53e462832532d74c61c"
 
 [[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
@@ -544,6 +556,11 @@ hash = "a5f74f4563b56b521194367a5b19bcb99b23997a505d27cc2dbd394b5e40f482"
 metafile = true
 
 [[files]]
+file = "mods/cakefixes.pw.toml"
+hash = "23b05250d4585ffd55a331f8bd80b308c898a8d26a1c27358f82a247cb3df327"
+metafile = true
+
+[[files]]
 file = "mods/caketext-collector.pw.toml"
 hash = "33e2af7856acc0fb42b32ed6a078109dfd08e2706cf4db9436858b2dd05c21ea"
 metafile = true
@@ -654,6 +671,11 @@ hash = "9dc337ffb127f1b1f24c57f8c3fc739e21b2139050d41baf55357fad8b42c83b"
 metafile = true
 
 [[files]]
+file = "mods/fzzy-config.pw.toml"
+hash = "a7d5e5969d8f903cf9e4782eb993a868092bb3d016bd79cd326a8492d6e39ebf"
+metafile = true
+
+[[files]]
 file = "mods/gamma-utils.pw.toml"
 hash = "0e73af2de952dd444428cbcfcff80f91fa04aa93f31483be9145629f90034152"
 metafile = true
@@ -756,6 +778,11 @@ metafile = true
 [[files]]
 file = "mods/packet-fixer.pw.toml"
 hash = "ef0c8813eef47e8ffdce023dfee08152a5099817960dce86623b9a21e8b14be2"
+metafile = true
+
+[[files]]
+file = "mods/particle-core.pw.toml"
+hash = "4ec7258cd5df22ddb9d99c2aa6855b582c4e389ede7b1c38ad3f214a3bec6183"
 metafile = true
 
 [[files]]
