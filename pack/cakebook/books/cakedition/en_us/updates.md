@@ -25,3 +25,7 @@ When a newer Monumenta resource pack is on Modrinth, a separate chat message off
 Every time you close the game, your **server list** and **settings** (the config folder) are saved. After a pack update, a chat message offers **[Restore server list]** and **[Restore configs]**, in case the update changed something you liked. The server list comes back at once; configs are put back when you close the game. Whatever you have now is saved first.
 
 All backups: Mod Menu → Cakedition Updater → the settings button, or `/cakeupdate backups`. The last 5 are kept.
+
+## Moving in from another pack
+
+Cakedition Updater can bring your keybinds, settings, maps and server list over from another pack or launcher: see [Moving in from another pack](cake/updater.md#moving-in-from-another-pack).

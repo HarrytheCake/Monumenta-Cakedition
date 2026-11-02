@@ -15,5 +15,5 @@ order: 6
 - **Language Reload**：切换游戏语言更快。
 - **Screenshot to Clipboard**：截图（F2）会自动复制，可以直接粘贴。
 - **Sounds Be Gone!**：关闭你不喜欢的单个声音（{key:soundsbegone.config}）。
-- **CakeBook**：这本书和你的笔记。为本整合包制作。
-- **CakeWiki**：在游戏内阅读 Monumenta Wiki：按 {key:key.cakewiki.open}（或输入 `/wiki <页面>`），或在物品栏、箱子里把鼠标放在物品上按它，打开该物品的页面。支持搜索和书签。为本整合包制作。
+- **CakeBook**：这本书和你的笔记。为本整合包制作：见 [CakeBook](../cake/book.md)。
+- **CakeWiki**：在游戏里看 Monumenta Wiki（{key:key.cakewiki.open}，也可以对着物品按）。为本整合包制作：见 [CakeWiki](../cake/wiki.md)。

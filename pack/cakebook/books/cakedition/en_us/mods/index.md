@@ -13,4 +13,6 @@ The pack has about 70 mods. Most work on their own; a few have settings worth kn
 - [Convenience](convenience.md)
 - [Tools and libraries](tools.md)
 
+The mods made for this pack have a chapter of their own: [Cakedition's own mods](../cake/).
+
 Mods marked *optional* are off unless you picked them during the first install.

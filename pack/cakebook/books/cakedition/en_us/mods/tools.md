@@ -3,7 +3,7 @@ order: 7
 ---
 # Tools and libraries
 
-- **Cakedition Updater**: updates the pack and the Monumenta resource pack, and keeps backups (see [Updates and backups](../updates.md)). Made for this pack.
+- **Cakedition Updater**: updates the pack and the Monumenta resource pack, keeps backups and imports your settings from another pack. Made for this pack: see [Cakedition Updater](../cake/updater.md).
 - **Mod Menu**: the list of mods and their settings.
 - **spark**: measures what slows the game down (see [Performance tips](../performance-tips.md)).
 - **CraftPresence**: shows what you're playing in your Discord status.

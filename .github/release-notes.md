@@ -15,6 +15,7 @@ Cakedition Updater tells you in chat when a newer version of the pack is out, an
 ## Credits
 
 - Loading-screen artwork by Paperbox, used with permission. The Silver Destiny artwork belongs to Monumenta.
+- The Chinese guide book "Monumenta 中文翻译" (classes, specializations, enchantments, The Celestial Zenith) is by Moe_block, used with permission.
 - `packwiz-installer-bootstrap.jar` is by the packwiz contributors, under the MIT License (included as `packwiz-installer-bootstrap-LICENSE.txt`).
 
 ---
@@ -38,4 +39,5 @@ Cakedition Updater tells you in chat when a newer version of the pack is out, an
 ### 致谢
 
 - 加载界面插画由 Paperbox 创作，已获授权使用。Silver Destiny 插画版权归 Monumenta 所有。
+- 中文指南书《Monumenta 中文翻译》（职业、专精、附魔、The Celestial Zenith）由 Moe_block 编写，已获授权使用。
 - `packwiz-installer-bootstrap.jar` 由 packwiz 贡献者开发，采用 MIT 许可证（附带于 `packwiz-installer-bootstrap-LICENSE.txt`）。

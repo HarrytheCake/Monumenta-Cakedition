@@ -15,5 +15,5 @@ order: 6
 - **Language Reload**: switching the game language is quicker.
 - **Screenshot to Clipboard**: screenshots (F2) are copied, ready to paste.
 - **Sounds Be Gone!**: turn off single sounds you don't like ({key:soundsbegone.config}).
-- **CakeBook**: this book and your notes. Made for this pack.
-- **CakeWiki**: reads the Monumenta Wiki inside the game: press {key:key.cakewiki.open} (or `/wiki <page>`), or press it over an item in your inventory or a chest to open that item's page. Search and bookmarks. Made for this pack.
+- **CakeBook**: this book and your notes. Made for this pack: see [CakeBook](../cake/book.md).
+- **CakeWiki**: the Monumenta Wiki inside the game ({key:key.cakewiki.open}, also over an item). Made for this pack: see [CakeWiki](../cake/wiki.md).

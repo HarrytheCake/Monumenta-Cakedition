@@ -1,8 +1,8 @@
 name = "Cakedition Updater"
-filename = "cakeupdater-1.6.0.jar"
+filename = "cakeupdater-1.7.0.jar"
 side = "client"
 
 [download]
-url = "https://github.com/HarrytheCake/CakeUpdater/releases/download/v1.6.0/cakeupdater-1.6.0.jar"
+url = "https://github.com/HarrytheCake/CakeUpdater/releases/download/v1.7.0/cakeupdater-1.7.0.jar"
 hash-format = "sha512"
-hash = "d8b417b292708dae2ff338a96e3c071fb63d2fa57d5def9880d16d6bed62a58e532a4d1c13a039299c510578327f163b5e8f458ebf831b483d4785a383bd3d33"
+hash = "6a5e0b86127426cf84f075b5117d6966a8e7c7392627e9401db7e0f82a758e1993c4c64087b73627f891f8cc9a6cc6991ef38d59ce428d4332b0e3d6aade1ad2"

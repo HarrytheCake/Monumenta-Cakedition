@@ -19,5 +19,6 @@ order: 2
 - **Enhanced Block Entities**：更快的箱子、告示牌、床等方塊。
 - **FeyTweaks**：更快的告示牌和烽火台。
 - **Experimental Performance** 和 **Faster Random**：多處細小的加速。
+- **CakeFixes**：修正 Minecraft 和其他模組造成的卡頓與變慢。為本模組包製作：見 [CakeFixes](../cake/fixes.md)。
 - **Packet Fixer**：修正一些連線問題和逾時。
 - **Log Begone**：讓無用的訊息不進入遊戲記錄檔。

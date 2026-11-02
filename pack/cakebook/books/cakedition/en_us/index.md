@@ -7,6 +7,7 @@ Welcome! Cakedition is a client modpack for the Monumenta MMORPG server: a faste
 - [First steps](first-steps.md): what to check after installing
 - [Keys](keys.md): the pack's keys, and which ones changed
 - [Updates and backups](updates.md): how the pack updates itself
+- [Cakedition's own mods](cake/): the mods made for this pack, one page each
 - [Mods in the pack](mods/): what each mod does
 - [Performance tips](performance-tips.md): more FPS, less stutter
 - [Getting help](help.md): where to report a problem

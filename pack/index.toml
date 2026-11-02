@@ -5,6 +5,38 @@ file = "cakebook/books/cakedition/book.json"
 hash = "c72e48f4c1273a96795967ef0d793b5ee6be3c490acd6e1c00eaed8b75ca8f5a"
 
 [[files]]
+file = "cakebook/books/cakedition/en_us/cake/book.md"
+hash = "1ffaedbbc95f02c95abb711c10401de7415afc1f9822238022862b682184871e"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/cake/chat.md"
+hash = "33a76db81d7981ed2f239ab23cc64f53e2f3e82be57c3663c856f4b8168d19dd"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/cake/collector.md"
+hash = "ef416b58f8d8f619903f1c9b5114c0a8836d6221bad0f5985a47e4be75bd786a"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/cake/fixes.md"
+hash = "5a75e30205794c39348bc2b132d30af2ad2355f5950f1239152d877f75fdd038"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/cake/index.md"
+hash = "30901622776f8a974619d2294d79f9d25186ac49776b4acea02990217b8d4970"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/cake/translator.md"
+hash = "d6f4f28b5c240d9c929bb2207ee83902ceac6d470dfd444759fa88c136d43928"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/cake/updater.md"
+hash = "bf4a7bef5bff3b600512875272bba5812fab9098dbe9c4af58b908e57e31be2c"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/cake/wiki.md"
+hash = "5fea8d43a1c70a489dae07ca618e79697d82e4f448bb7647c78659c2b974f476"
+
+[[files]]
 file = "cakebook/books/cakedition/en_us/first-steps.md"
 hash = "1c085fee6cd98b1815fdc7d21b2b320311bcbad97099e47fe5845e293cebfa74"
 
@@ -14,7 +46,7 @@ hash = "d3220c31877814e07c31d15655d8be3801d802ca8242e0cbe1e612445c9b9663"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/index.md"
-hash = "d25281234b7e1aaa2f9884d77361e1825e02f7ed8165f610a3a2830dcf77d232"
+hash = "abd7db6c28fc59e9ec64e8ab0acc4128388e2a094492a1d71352544b2c4d7b35"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/keys.md"
@@ -22,11 +54,11 @@ hash = "c4dc6cb4a95ae27c100e7e88f3f3b6c31d14649ad303277457b6f0db36e047e6"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/chat.md"
-hash = "e4760f46f412c159dfe023e681eedfbaca1ea249880c055ecf8a3803a9a63f8f"
+hash = "9eeddc46778ce69f9c9f21790aefd8a26925a46cde08bb1257f80f8544e34f41"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/convenience.md"
-hash = "670953754f7aa6716fedf15c8c859fcf18b217679314a3f710cb7343837d80cb"
+hash = "3867b9c27df112e87b6871b73a18ffa14ae460ea9f36dce8c9c425d9953c7fbf"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/hud.md"
@@ -34,7 +66,7 @@ hash = "b7e3fe92f06e62c33fc630b2fa27b36fb39fc610872360ee088131c4ffc260b0"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/index.md"
-hash = "f3ebb2e88f17f5ae96638c4b0ad0ae0b56f32fb367a20e66f7c6f283e9e3dd9a"
+hash = "0987500ac4acad7343021c63cc3918536aade762d3fe6c1d67aba0dd8519b318"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/monumenta.md"
@@ -42,11 +74,11 @@ hash = "865f5a92297c5614a083e3975687d04a6d247c1579ffa9ce4e1df1adc269fad8"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/performance.md"
-hash = "4d9e1650ef64ffc9dbeedfa2c0e2a1dd2c29b800cef32d24762a6d04ce01d7ca"
+hash = "d57e41e45e96216bfc31b30caeeb9e3abfe10fe9fdd9aaf54b41b29b68e39dcf"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/tools.md"
-hash = "2975a753f3dd85cb86f97c2a951273ac37b316e8139d20dff5cc91285bb4c152"
+hash = "62cc126de99ea6ea96e0492ba639c3a8309962cc19594fb4db9d653933e870f6"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/mods/visuals.md"
@@ -58,7 +90,39 @@ hash = "ba1457e1ffda3b3563d526685e357361db8ff051054f2400f7d27c40b250d682"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/updates.md"
-hash = "48b0dd7179cc94e40eb0270d0b70d3157691316372aeaf4afebfad79bb3b9a77"
+hash = "704dc2bd2ceff3ca5f6147336ca77a5c1666e62937368ade300bb7a343244cee"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/book.md"
+hash = "6dcf482afa97a44c77857b3f62b7d578c06df5c074c35e330b20c5d21ea582c2"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/chat.md"
+hash = "ea99eca96114f73d81bce820284f7cf976ed2d994fe1aa6e039698688adc9753"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/collector.md"
+hash = "ccff8fd91e6835945ffe356f0732c8a8c79c2590a876bcac1c37974e5ef382a7"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/fixes.md"
+hash = "62a311ec6a79bcc3ee81de06afea5bce4c4ad3c913554fab38b9ea53ea26a851"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/index.md"
+hash = "e7497b96aafb56bea879046a2a111cf93e2e1aec5494e027f342b32352ee3707"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/translator.md"
+hash = "0825e0f010789e6155e1b0061be6ebab3784123a7cec1881e253d5a9b7ba704c"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/updater.md"
+hash = "fba3eb85bece38790db0a865f2382955e85b55191472462c1232b9b750763808"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/wiki.md"
+hash = "b63ab6f926ab7ea4e8284ff1a32a95b3e5cfdc978b75464f1eb2f58485cb462b"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/first-steps.md"
@@ -70,7 +134,7 @@ hash = "d5f45aab293b530781fd3575483df9a383381d07527285734a6c9a113679ad6e"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/index.md"
-hash = "bc329b80c832121788bfd79d4d17beca8e3a4a75f3ea7c153cf907ee159f506f"
+hash = "90d1d62af11fde422d0675998368417d44ef254fd00eddce16938115fea24a02"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/keys.md"
@@ -78,11 +142,11 @@ hash = "972a739a7295b048dd51b6e518edf49c3572d3067561be6ade1c10463522f7ab"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/chat.md"
-hash = "e1c2a913b94b8449af905ad05fea2f2acbce54fbabd34a49a44d2f0a1d948b83"
+hash = "67590686b377b78ad914982ec71c9d2c3c3c6a7672061c3194e8910a35394821"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/convenience.md"
-hash = "4cfdfc6ae3371212ecf6480503b8485090b63f0fa73927375815d9fc9575d8b6"
+hash = "7c3eac287e7737b005b162d75346a10b4a7a99535fd8617d5149cad0a9e0f2bd"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/hud.md"
@@ -90,7 +154,7 @@ hash = "867b794886ae2dcaed0a215e10bf720acaf848d0181930e551ebd8748f73a743"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/index.md"
-hash = "4a0c295ffb6f88bc60f995d2b0d81d642c01f9f98205c031baa918cf463b2e41"
+hash = "452b724e09963f7b33cc6122b53e8e68c3c6873317e368e3954b605177857c0d"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/monumenta.md"
@@ -98,11 +162,11 @@ hash = "b329f6c7cda12e02c4fea2d090e7c4525c6c5bee19bb15ff33df8776e7cdf2c7"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/performance.md"
-hash = "d94e9a8230ba036869d5996f76c7ce6cd98666af2dffeb67595fc0a597ecba7c"
+hash = "d8bfee3c4365de91c59654292dee93ec9abe2eff71f62e842b86ecf765bc46ee"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/tools.md"
-hash = "83334017d9205e9726f0102d951cc8b4990554dfe2e7db9b16644d38778c6379"
+hash = "72b73f9db15b2d0635fb33a2e8bac27c5b1202f59a6d0808fb87963ae96b29a7"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/mods/visuals.md"
@@ -114,7 +178,39 @@ hash = "173fe5b601f55be08fab60a8324242636b6a7becbb98869d419036ba2e99a45c"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/updates.md"
-hash = "48f7fc3839be591733c7b7be5289e79d1182d68e177a1afda4afdafd3b96dc24"
+hash = "b020786e32d021ae7d59b98cc8157520d1e23a6167fc55a67e712a21d7b47373"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/book.md"
+hash = "75092506baae739f4adabdd5e13d2362a43f64c2ca66caab1e78f7abd91cdc1b"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/chat.md"
+hash = "d6ad36fdbfc92f3a1473693f54d9f64cf861af510a9d8f015b53059d9bc71cc9"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/collector.md"
+hash = "e9b59ac2db8d2a508849980924d3d109f569e3384088eb19ae0b8b8e2475228b"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/fixes.md"
+hash = "58e3b04dcacd0f2dda41a3766a2b156ab103cd223ed0c4dc1ca46cc4781e1aba"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/index.md"
+hash = "123a7ef0b0c10a889de4bbe86fd73b5149b5a12f14bfaa2214bad03a35205688"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/translator.md"
+hash = "6706c948c2d46a991235a985b36aa39f8d2da6cfdab0a525c2fded00f11bf3d9"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/updater.md"
+hash = "6c8bf536473cd66bf51d490fed6afd86bac63ebd8917aae10b40133b045cd927"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/wiki.md"
+hash = "7a825301f262faaa348de416dd0c2d3e2226207111ea2f02e31a5e991d857314"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/first-steps.md"
@@ -126,7 +222,7 @@ hash = "885896734bec5fbb708d8ce716f362b37cada9dc12a01657139bb4c47340f600"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/index.md"
-hash = "b21f822328c6b8e8c96bfc6e6e7a92a0c8e02ca39674854f26027ecb26d6848d"
+hash = "8f257f3ed357dd67860618e493b597d9a967c7f5a44dfb0fcc4a5a0537fe420b"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/keys.md"
@@ -134,11 +230,11 @@ hash = "88006bd0b87ddbb4df7e984cf039b39da81b54ba061f38062ec5b3cfff8dc1cd"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/chat.md"
-hash = "abba4ec91315923ecf3b1f7b4bcd207be4d28bfc80bf795d52140c606833fd40"
+hash = "1629429e425294279a7732853dda1a895a3eb6e1bae0bfe8eda163b563d8bf35"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/convenience.md"
-hash = "8aa940892db29ab03b7275451a55ed9fe391f88e5a8a409d66c43274ae1a2fdd"
+hash = "0e2d2afc95bf73aa6b490503bb5207ea9698f056313a6bf9cb7d933fa6fef2a8"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/hud.md"
@@ -146,7 +242,7 @@ hash = "05019f5ce90d437a699d621d2216639b69d9ee8656c4ff243712ce62494a2e38"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/index.md"
-hash = "3eede8ccffc764ddec40c221db68f0480ee80eb1e76bb94844e393c88a706b21"
+hash = "9af3a23cb03185680d62beedf0046f90a9f0e964f083b06b5b1195d4db51d8d9"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/monumenta.md"
@@ -154,11 +250,11 @@ hash = "96ef88c93ff636e82e4b75284a053939e126690f8103bd28760d80f90405b429"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/performance.md"
-hash = "df221aadf8311b4a65cfe20b01d1f1bc4880ef71fa390f9e70ab52da4b5fa480"
+hash = "68eb98aeaad51eb4b01ab515c7e5573e266d2cc56c5f4da8b4f226b9daed2c96"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/tools.md"
-hash = "a3b741ecd693ee08ead01feb083fc72f8f79e07d6c3be5e0839904fd687717ff"
+hash = "c2375558ce1f60eb5320e9229c6b92ac13a07f74ad29e3dae96b9977375c6afb"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/mods/visuals.md"
@@ -170,7 +266,211 @@ hash = "f72d457b79d157b6016ea868903c89a008b3c978af037889465b631fcf045da5"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/updates.md"
-hash = "62becab0aeaf0946845090b29c2b72412bf198db5e3182b73de1f4f4af0c6cc6"
+hash = "794e26235b990faa1314ca48c9a5a451802eecc836fcc19f5358e2fc4d41c739"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/book.json"
+hash = "09ec27a053ffc782dc0bd06cec9ee84f469dfc9acbe4fd63f155fb309b00a4c6"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/aspects.md"
+hash = "b9610206c8be8deeff76d07d2cdd5ca5c1731b7505ed1058924ebfa35141afc4"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/curses.md"
+hash = "9f1f9803da4b5e090bec4d09d9627308258ae4b682f7bf691fa5023ffcd1df8e"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/dawnbringer.md"
+hash = "695e7bd032d955943dbbb6d585f5f52bffba1b6a5c026b179b614f9539ffa66d"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/earthbound.md"
+hash = "ef393fd781c4982b0f2ccfea783ad864554353b307f5c29e35378e9438c1f93f"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/flamecaller.md"
+hash = "47606b474fc0b2f89c47f4c838cdc8536c43cc653cd1504d3e9851e83bf71278"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/frostborn.md"
+hash = "b1d6159035448d5f32fc85c39ab833a142ba88dedfa87588c7c821bcf465e40f"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/gifts.md"
+hash = "95ebc7e5d143f9784565a3ad0b7255a4e211650afe767d848af81df3e4ff4ca4"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/index.md"
+hash = "a0d8e852ef4d5ed4f674bfd39e1dbfa3adfb83ff0f7d423e66ee4449f356555d"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/prismatic.md"
+hash = "1e81b0478c770c6ee2d229cee15002ef42fcd34d03b8f2f2b48acce0ff9eb9d0"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/shadowdancer.md"
+hash = "01d6b15ddc354f571a1ec7db5ac2e8b068d06a9c6fbff049e2d1292f7d537484"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/steelsage.md"
+hash = "8973b4567ea775cd437e253d157d3a71df8f8cc897a3210ca56ea84898d995a7"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/celestial-zenith/windwalker.md"
+hash = "e5dabb5250697de70721f9b428435a55caa1252b35c2d17800a54870cfc76746"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/alchemist.md"
+hash = "c12773b9132f1145b8925302cec4700fdab25e0d65ccb4741e7e1a679e8c6d0e"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/cleric.md"
+hash = "c079615967a7b7541591dee6ad21184282d09bae26db986506cc62568c6bcff0"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/index.md"
+hash = "d494753d5906434738eae7a277fced18308b8dc06d36957deda6a9b692442653"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/mage.md"
+hash = "284239c5d4566289f8093c9e0eaf2544c706a57d72f8dc5791d5cc2c97025780"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/rogue.md"
+hash = "b637aea6d94d099eba827239eaa135ab5dac01a1a047e30295529b7ddc77b430"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/scout.md"
+hash = "2c06e5960e22c7c204cb24ab79e9670909c3885db231d43be4079e93c32e11b5"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/shaman.md"
+hash = "e2f1a8b2603ba2a61cf77e6d24e6924e8a72228f4d15161fec9e435aeca5806b"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/warlock.md"
+hash = "0397b80ba38c63cc3e86543add1df63d2067c0431980bacb1ced59a1e14a46d1"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/classes/warrior.md"
+hash = "d91c9ecd2d0e545bcd51f344b0cceb6e638c7a8da1cb30b7a295cbe550ba67df"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/consumable.md"
+hash = "f8ceec96c5db7593a12feed17aaee90873b1811d1cb500ff5df850bbd20a08ea"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/curses.md"
+hash = "9be3a2463bf17c82b3249700d04fe6f817fead2abc09910c03d43c431d024cb5"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/defensive.md"
+hash = "55ca6fc557755a8f45e0de952f761f6c13ab7af133d085c8caa1244bb261c75c"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/delve-infusions.md"
+hash = "737ce5e54f427dd7a2387946d6f02cb0a6eaf63f16b2116ff67e1145db9c6d94"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/index.md"
+hash = "1ce10d6a8c581b7808cf9e903657552b73c89451f2907bad3a4f392b6195f309"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/infusions.md"
+hash = "b94726acbb063889fa07c0b74abe1bbbe13a2ba553d9a0d75a6c827cab03b11c"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/passive.md"
+hash = "15190e6430c58f4309d41b5d8b41f7a36adad0ac7de894fe4528d21425cb9bea"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/tool.md"
+hash = "e6db0d87a7f627d3e6b06ced73728ac2c7f69a17e71cc3b444e2c5efb660a51f"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/enchantments/weapon.md"
+hash = "2aeb28c53e1d20b02c1de50fdb908acd0c5a767449857065ac4361186c5ca09c"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/index.md"
+hash = "672cb6ea1fffade7c6a0c332d922efe99b855e2525fafa0234cdbaf9727b22f1"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/apothecary.md"
+hash = "191323877dfeed8c25a2d58cff11f809a37ee5cd2e95cd0b7bef58bb1d361f35"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/arcanist.md"
+hash = "79b9f3ba191882e7b86e812a11a797a84af4fd71d41dfd16c4fa851416f39f1b"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/assassin.md"
+hash = "f788e3451f31e50c54a70606574c321b2570ef5b9db74e47b53cca1d25ff0ef4"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/berserker.md"
+hash = "382246a79a824d6f4dde2fa4468c4417652a78789040b309f646b62549eecfcf"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/elementalist.md"
+hash = "20fc6e8d36bf0613216f544c0b7695a1e05fcb8199efcbee954d44cd9263dd91"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/guardian.md"
+hash = "90b83495a4eee3237df4230915e9bd551cc7fe75d4fae46e3fb095439bc52206"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/harbinger.md"
+hash = "b841c3d2aa2e7ee10c3790576c80f9c92e644e5bd79e6717287bafd5bd3714cb"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/hexbreaker.md"
+hash = "c828acfbb13b992b10a66262a03c33e6faf76b33ea4998e60c48e71a3e9d337e"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/hunter.md"
+hash = "9eb4bb1f16c91a6c0eef01316cdbd56dedbfb90bb743d7cbe882d4d8ca22c289"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/index.md"
+hash = "6532f51cdf2f93a957917436d672aa0189ead948bb65e4bef1d2a59de48a0236"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/paladin.md"
+hash = "e8c9a5b0fdfdbc02aa906b449f515fa4dac26c15768d86fa7317a5483582f0e8"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/ranger.md"
+hash = "0bcac248bc47f1c8b77b692a95f5a5b02682ee3f21c94c8e4c7ac0462067c97b"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/reaper.md"
+hash = "f211aeb2c89e6dd9fd2903ee1bbfec166a5dbdf6280aed34f2bad47296d82325"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/seraph.md"
+hash = "758171c458fc3428582b1a6f0cd0d8ffe7d555fd502e35119db933abe739515a"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/soothsayer.md"
+hash = "e845ef5cdc14b2944984ffc80a26a5cfe554b08c187e9f8cf1dabf3fb3ef4bc1"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/swordsage.md"
+hash = "4ec1506c0663c130d64dbec40ea3c85708c541f08581da5344f12afdea19f55c"
+
+[[files]]
+file = "cakebook/books/monumenta-zh/zh_cn/specializations/tenebrist.md"
+hash = "8bed0ed587e3c8037686238e95736e06a0c3eb201642aa0cf375a8dbe26a9e6c"
+
+[[files]]
+file = "config/attributefix.json"
+hash = "7ed2b89186f9a46511555c715e83218757edaf05559bbb75debb6b15194b3e50"
+
+[[files]]
+file = "config/c2me.toml"
+hash = "871fac34636be48ff3915b2800f9fdd10867287f76e3f1461369f833478559e9"
 
 [[files]]
 file = "config/cakeupdater/changelog/2.2.3/en_us.md"
@@ -257,8 +557,116 @@ file = "config/cakeupdater/changelog/2.5.0/zh_tw.md"
 hash = "acc219c8d9f8ebedd9fa7038ba335e2a1f79838c55fa30397f9b7d0cad1aae7e"
 
 [[files]]
+file = "config/cakeupdater/changelog/2.6.0/en_us.md"
+hash = "dc319b6ac9b50798c106df0449e926cf2ea68105795c16d4aa87c9c33fbffb5e"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.6.0/zh_cn.md"
+hash = "41050a2869c102f610c0bbf83e777804fa6a180ecd8403455fe2b12fdbca41b2"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.6.0/zh_tw.md"
+hash = "7bd653377dffb3f7d0028e574266a7d029d49686f1d030a8bc44420db06b5d21"
+
+[[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "732f64d874f90788c0199b0c19bfd9b3b6436e140114e53e462832532d74c61c"
+hash = "6693435eadb673dda297a0652d241e293e361200bc40db949cf2501d18dd01ee"
+
+[[files]]
+file = "config/citresewn-defaults.json"
+hash = "0b333b0bf9a0e573fa14f81610a621b488d5277c9e8f8c6a4c81e6a6cb37e482"
+
+[[files]]
+file = "config/citresewn.json"
+hash = "401a0faa0c746baa7116cc9b6d5d97ae71d7546dcec1565f514dc9b3e34ee61e"
+
+[[files]]
+file = "config/crowdin.txt"
+hash = "fadbd1094e4079597c631b59da43ea2e315aa610c47282045384e888894ecc41"
+
+[[files]]
+file = "config/enhanced_bes.properties"
+hash = "f927ce969f7d06fd1874d73fc0915c0c1fa5d294aed2a42e38a0581c86de76ca"
+
+[[files]]
+file = "config/etf_warnings.json"
+hash = "a5ba22e63061c1fb67f0f895f17681351eaeccc225faef966c29ee630593275e"
+
+[[files]]
+file = "config/experimentalperformance.properties"
+hash = "96a34ad9ed7b9c701532d2a7826bda6012beb5f8d38c68af8348714f1afe6888"
+
+[[files]]
+file = "config/fabric/indigo-renderer.properties"
+hash = "a6f20b9bcc90f1c87a6cd3a8b3058688283da34fea539c91e497617286891eeb"
+
+[[files]]
+file = "config/feytweaks.json"
+hash = "f83b0465d8f1cd38e8232f679b8fe4270a7c7ddcde7e1591592e6ca8043b56c1"
+
+[[files]]
+file = "config/forgeconfigapiport.toml"
+hash = "abf30004dcd23ed2bfb88652a2f2317dd216b1997badd3703e790bccb8d2f622"
+
+[[files]]
+file = "config/immediatelyfast.json"
+hash = "ac7f5cc35ed0f04b08630a667f2d60dc4678eb9794137efa3b77abe034e29fc6"
+
+[[files]]
+file = "config/lithium.properties"
+hash = "e43418225d39d0b505a6db70a40c3b40f9ebf9e8e7af1573f5d841a0ba175c48"
+
+[[files]]
+file = "config/logbegone.toml"
+hash = "8fe86f1fc8d7f8959487903ede8b1f31a39371f50bb4d472d425c5fc52a5cb8b"
+
+[[files]]
+file = "config/midnightlib.json"
+hash = "6b52769b3358f87b591871a4444f3cef8124a9dced0da1755f18db2f47adf4f3"
+
+[[files]]
+file = "config/modelfix-client.json"
+hash = "f01defd869c0d33cea30d81baae5fe16093755b2b28570417fe6baaef17b96ac"
+
+[[files]]
+file = "config/modernfix-mixins.properties"
+hash = "401677775997bd1fcbeb41bed934671590d998fa2f29f005cddadd224f0abd24"
+
+[[files]]
+file = "config/moreculling.toml"
+hash = "c8faffa81dafc818510fb332b0b02144fec5b9d111f136d91ca61d4cef1b7f3c"
+
+[[files]]
+file = "config/nvidium-config.json"
+hash = "3cc2bbe73f7b3339a3efef6f3b3b5e2259759d641c87936bdc41fb540ff4e4bc"
+
+[[files]]
+file = "config/packetfixer.properties"
+hash = "5ed9d2fd4655f96216971db14ced6661874c789b0f84c2cf04be59408ae21dfa"
+
+[[files]]
+file = "config/rrp.properties"
+hash = "97cb93377421fd15109543cacb0f8037e99c60f4589bf4764452fb8a5bd52f83"
+
+[[files]]
+file = "config/sodium-extra.properties"
+hash = "a2f1b47c1eaa119ab34727f1d43c2506cb3d7f17ba8fb4efb49e20c8e0b58e70"
+
+[[files]]
+file = "config/sodium-mixins.properties"
+hash = "051558518a6f3350fadb1546346d937e7f78f69834a075bf91b59921f151cc26"
+
+[[files]]
+file = "config/spark/config.json"
+hash = "230ef74f58b4ebfb809cc474e881be3462ede61d56a86437e935b4a3a1ac99f3"
+
+[[files]]
+file = "config/xaeropatreon.txt"
+hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+[[files]]
+file = "config/yacl.json5"
+hash = "d26a63d3cdf326412ba86dcc2781060bc53ed6c74ac7808e65325452e264e820"
 
 [[files]]
 file = "config/yosbr/config/MouseTweaks.cfg"
@@ -277,28 +685,12 @@ file = "config/yosbr/config/asteorbar.json5"
 hash = "9505f8e74111208bcbb01d0c45cd27b2b0f3cf2510aa97fd45b5c6d352626c0a"
 
 [[files]]
-file = "config/yosbr/config/attributefix.json"
-hash = "7ed2b89186f9a46511555c715e83218757edaf05559bbb75debb6b15194b3e50"
-
-[[files]]
 file = "config/yosbr/config/betterpingdisplay.json"
 hash = "d9b413555ca6e7add44924c507e5ec5dc8db060f9b04fdfefcd505e61faec0e0"
 
 [[files]]
-file = "config/yosbr/config/c2me.toml"
-hash = "871fac34636be48ff3915b2800f9fdd10867287f76e3f1461369f833478559e9"
-
-[[files]]
 file = "config/yosbr/config/capes.json5"
 hash = "5ea04ef3d2fc4f1de763207ca40372b0597acaba800d8bba74247f9145bd40bc"
-
-[[files]]
-file = "config/yosbr/config/citresewn-defaults.json"
-hash = "0b333b0bf9a0e573fa14f81610a621b488d5277c9e8f8c6a4c81e6a6cb37e482"
-
-[[files]]
-file = "config/yosbr/config/citresewn.json"
-hash = "401a0faa0c746baa7116cc9b6d5d97ae71d7546dcec1565f514dc9b3e34ee61e"
 
 [[files]]
 file = "config/yosbr/config/clickthrough.json"
@@ -309,16 +701,8 @@ file = "config/yosbr/config/craftpresence.json"
 hash = "6d49ec4f8fe5d15264a743c2c6c7def2bd045438aff8c3e95cd46dee9019e1d3"
 
 [[files]]
-file = "config/yosbr/config/crowdin.txt"
-hash = "fadbd1094e4079597c631b59da43ea2e315aa610c47282045384e888894ecc41"
-
-[[files]]
 file = "config/yosbr/config/disabled_sounds.json"
 hash = "5af97dceda8c4c643f777470f5c19c4719a5dccc3ef6c0389f4bbb45c084e565"
-
-[[files]]
-file = "config/yosbr/config/enhanced_bes.properties"
-hash = "f927ce969f7d06fd1874d73fc0915c0c1fa5d294aed2a42e38a0581c86de76ca"
 
 [[files]]
 file = "config/yosbr/config/entity_model_features.json"
@@ -329,28 +713,8 @@ file = "config/yosbr/config/entity_texture_features.json"
 hash = "5fb01731f2ee32d9b3df8c8dfc7de5f6adf0f9849cbe790d8cffbe70e333c7fc"
 
 [[files]]
-file = "config/yosbr/config/etf_warnings.json"
-hash = "a5ba22e63061c1fb67f0f895f17681351eaeccc225faef966c29ee630593275e"
-
-[[files]]
-file = "config/yosbr/config/experimentalperformance.properties"
-hash = "96a34ad9ed7b9c701532d2a7826bda6012beb5f8d38c68af8348714f1afe6888"
-
-[[files]]
-file = "config/yosbr/config/fabric/indigo-renderer.properties"
-hash = "a6f20b9bcc90f1c87a6cd3a8b3058688283da34fea539c91e497617286891eeb"
-
-[[files]]
-file = "config/yosbr/config/feytweaks.json"
-hash = "f83b0465d8f1cd38e8232f679b8fe4270a7c7ddcde7e1591592e6ca8043b56c1"
-
-[[files]]
 file = "config/yosbr/config/fma.json"
 hash = "b8c82caf1edde05676a15c85b97c2ab92b61a3d2ed9d0114c8a3f9fc4483aa93"
-
-[[files]]
-file = "config/yosbr/config/forgeconfigapiport.toml"
-hash = "abf30004dcd23ed2bfb88652a2f2317dd216b1997badd3703e790bccb8d2f622"
 
 [[files]]
 file = "config/yosbr/config/gamma_utils.json5"
@@ -359,10 +723,6 @@ hash = "efcc86a78384511fa02a71dfa0e8fc4ca107ba12e7ac85982b85be075dfbda5c"
 [[files]]
 file = "config/yosbr/config/highlighter-common.toml"
 hash = "f5b80ec5e2e645b087b9453f510c3bbce625738adc155b76761b09921df914e3"
-
-[[files]]
-file = "config/yosbr/config/immediatelyfast.json"
-hash = "ac7f5cc35ed0f04b08630a667f2d60dc4678eb9794137efa3b77abe034e29fc6"
 
 [[files]]
 file = "config/yosbr/config/iris.properties"
@@ -377,26 +737,6 @@ file = "config/yosbr/config/languagereload.json"
 hash = "45917b0566815b02c6b25db24ad9091e0a2d944ff38c8f9d5d6802a7331215e7"
 
 [[files]]
-file = "config/yosbr/config/lithium.properties"
-hash = "e43418225d39d0b505a6db70a40c3b40f9ebf9e8e7af1573f5d841a0ba175c48"
-
-[[files]]
-file = "config/yosbr/config/logbegone.toml"
-hash = "8fe86f1fc8d7f8959487903ede8b1f31a39371f50bb4d472d425c5fc52a5cb8b"
-
-[[files]]
-file = "config/yosbr/config/midnightlib.json"
-hash = "6b52769b3358f87b591871a4444f3cef8124a9dced0da1755f18db2f47adf4f3"
-
-[[files]]
-file = "config/yosbr/config/modelfix-client.json"
-hash = "f01defd869c0d33cea30d81baae5fe16093755b2b28570417fe6baaef17b96ac"
-
-[[files]]
-file = "config/yosbr/config/modernfix-mixins.properties"
-hash = "401677775997bd1fcbeb41bed934671590d998fa2f29f005cddadd224f0abd24"
-
-[[files]]
 file = "config/yosbr/config/modmenu.json"
 hash = "503f96151dab202359895d267084c5ca81604cf9a3455446c20a5c0c69ec7cdb"
 
@@ -409,48 +749,16 @@ file = "config/yosbr/config/monumenta/texture-spoof.json"
 hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
 
 [[files]]
-file = "config/yosbr/config/moreculling.toml"
-hash = "c8faffa81dafc818510fb332b0b02144fec5b9d111f136d91ca61d4cef1b7f3c"
-
-[[files]]
 file = "config/yosbr/config/nnvf.json"
 hash = "ced3f63cb236ab65000213b07f03cda69a8f80ff37ac3f526deee447c33d3fca"
-
-[[files]]
-file = "config/yosbr/config/nvidium-config.json"
-hash = "3cc2bbe73f7b3339a3efef6f3b3b5e2259759d641c87936bdc41fb540ff4e4bc"
-
-[[files]]
-file = "config/yosbr/config/packetfixer.properties"
-hash = "5ed9d2fd4655f96216971db14ced6661874c789b0f84c2cf04be59408ae21dfa"
-
-[[files]]
-file = "config/yosbr/config/rrp.properties"
-hash = "97cb93377421fd15109543cacb0f8037e99c60f4589bf4764452fb8a5bd52f83"
 
 [[files]]
 file = "config/yosbr/config/sodium-extra-options.json"
 hash = "cfc9ad8d1dbd80dd0d6f6191998eedabcac30d6f2d02ca577a32c154856d42dc"
 
 [[files]]
-file = "config/yosbr/config/sodium-extra.properties"
-hash = "a2f1b47c1eaa119ab34727f1d43c2506cb3d7f17ba8fb4efb49e20c8e0b58e70"
-
-[[files]]
-file = "config/yosbr/config/sodium-fingerprint.json"
-hash = "60dc12cbb855aee1e07ad2202bbb2592e9f5a9db3a773042034db4f022f79884"
-
-[[files]]
-file = "config/yosbr/config/sodium-mixins.properties"
-hash = "051558518a6f3350fadb1546346d937e7f78f69834a075bf91b59921f151cc26"
-
-[[files]]
 file = "config/yosbr/config/sodium-options.json"
 hash = "077b549db6024f9fbd17f1eaaee0b515aa2f70f5bc5287cbed70fe7019c443f6"
-
-[[files]]
-file = "config/yosbr/config/spark/config.json"
-hash = "230ef74f58b4ebfb809cc474e881be3462ede61d56a86437e935b4a3a1ac99f3"
 
 [[files]]
 file = "config/yosbr/config/tslatentitystatus.json"
@@ -473,20 +781,12 @@ file = "config/yosbr/config/xaerominimap_entities.json"
 hash = "b11f7cd35def986ed18e7fe0ad8084b019500298bda10f9a347d480a3de6084f"
 
 [[files]]
-file = "config/yosbr/config/xaeropatreon.txt"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
 file = "config/yosbr/config/xaeroworldmap-common.txt"
 hash = "f02ca95d7246bd4b9c7de895c46108fff42fd5fcf9d56816b7bdba821597b58f"
 
 [[files]]
 file = "config/yosbr/config/xaeroworldmap.txt"
 hash = "705d0bca5d145209251c9c72cf097bafa3d6a11f6be4cd2166b4c8f5a961a0a5"
-
-[[files]]
-file = "config/yosbr/config/yacl.json5"
-hash = "d26a63d3cdf326412ba86dcc2781060bc53ed6c74ac7808e65325452e264e820"
 
 [[files]]
 file = "config/yosbr/config/zoomify.json"
@@ -552,7 +852,7 @@ metafile = true
 
 [[files]]
 file = "mods/cakechat.pw.toml"
-hash = "a5f74f4563b56b521194367a5b19bcb99b23997a505d27cc2dbd394b5e40f482"
+hash = "887bbbae4e54e29984e08f16b9c94c49df05c7a2f774bc2f93dcd520217e6599"
 metafile = true
 
 [[files]]
@@ -572,7 +872,7 @@ metafile = true
 
 [[files]]
 file = "mods/cakeupdater.pw.toml"
-hash = "4d9c2558371cbd195d950e2add9c882652c79224cb1672cc6902404898a3bf45"
+hash = "881a4a2ad2bbe18152169e602c7d2633702e1bd57e8ecad4eb3ee7168eea89a5"
 metafile = true
 
 [[files]]

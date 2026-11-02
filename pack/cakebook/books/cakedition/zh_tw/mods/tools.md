@@ -3,7 +3,7 @@ order: 7
 ---
 # 工具和前置函式庫
 
-- **Cakedition Updater**：更新模組包和 Monumenta 資源包，並保存備份（見[更新與備份](../updates.md)）。為本模組包製作。
+- **Cakedition Updater**：更新模組包和 Monumenta 資源包，保存備份，並從別的模組包匯入你的設定。為本模組包製作：見 [Cakedition Updater](../cake/updater.md)。
 - **Mod Menu**：模組清單及其設定。
 - **spark**：找出拖慢遊戲的原因（見[效能建議](../performance-tips.md)）。
 - **CraftPresence**：在 Discord 狀態裡顯示你正在玩什麼。

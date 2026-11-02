@@ -3,7 +3,7 @@ order: 7
 ---
 # 工具和前置库
 
-- **Cakedition Updater**：更新整合包和 Monumenta 资源包，并保存备份（见[更新与备份](../updates.md)）。为本整合包制作。
+- **Cakedition Updater**：更新整合包和 Monumenta 资源包，保存备份，并从别的整合包导入你的设置。为本整合包制作：见 [Cakedition Updater](../cake/updater.md)。
 - **Mod Menu**：模组列表及其设置。
 - **spark**：找出拖慢游戏的原因（见[性能建议](../performance-tips.md)）。
 - **CraftPresence**：在 Discord 状态里显示你正在玩什么。

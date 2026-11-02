@@ -1,0 +1,9 @@
+{
+  "title": {
+    "en_us": "Monumenta (Chinese, by Moe_block)",
+    "zh_cn": "Monumenta 中文翻译（Moe_block）",
+    "zh_tw": "Monumenta 中文翻译（Moe_block）"
+  },
+  "order": 10,
+  "icon": "minecraft:enchanted_book"
+}
