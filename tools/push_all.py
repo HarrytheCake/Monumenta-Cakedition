@@ -1,5 +1,5 @@
 """Release in one go: push main to the packwiz branch at both update-channel addresses (GitHub, GitLab)
-and mirror updater/, caketext/, cakewiki/, cakechat/ and cakebook/ to their own repos (each on GitHub; the
+and mirror updater/, caketext/, cakewiki/, cakechat/, cakebook/ and cakefixes/ to their own repos (each on GitHub; the
 first two also have a backup copy on GitLab).
 
     python tools/push_all.py           # check, show what goes out, ask, then push everything
@@ -47,6 +47,8 @@ TARGETS = [
         ("cakechat", "https://github.com/HarrytheCake/CakeChat.git")]),
     ("CakeBook source", "cakebook", "main", [
         ("cakebook", "https://github.com/HarrytheCake/CakeBook.git")]),
+    ("CakeFixes source", "cakefixes", "main", [
+        ("cakefixes", "https://github.com/HarrytheCake/CakeFixes.git")]),
 ]
 NOREPLY = re.compile(r"@(users\.noreply\.github\.com|anthropic\.com)$")
 

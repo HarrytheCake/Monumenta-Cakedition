@@ -1,0 +1,15 @@
+{
+  "modmenu.nameTranslation.cakefixes": "CakeFixes",
+  "modmenu.descriptionTranslation.cakefixes": "针对在 Monumenta 上影响体验的原版和模组 bug 的小型客户端修复，每项修复都有单独的开关。修复：服务器把玩家移出其并不在的队伍时游戏卡住；AppleSkin 的 HUD 每帧都让游戏等待显卡驱动。选项（默认关闭）：缩短旗帜的绘制距离。",
+  "cakefixes.config.title": "CakeFixes",
+  "cakefixes.fix.teamRemovalFix": "修复队伍移除卡顿",
+  "cakefixes.fix.teamRemovalFix.tooltip": "服务器有时会把玩家移出其并不在的队伍。原版每次都会因此生成一份崩溃报告，让游戏卡住 100–500 毫秒（在地下城里常常每隔几秒一次）。开启：改为跳过这次移除。",
+  "cakefixes.fix.teamRemovalFix.count": "本次已跳过：%s 次",
+  "cakefixes.fix.appleSkinBlendQueryFix": "修复 AppleSkin HUD 拖慢帧率",
+  "cakefixes.fix.appleSkinBlendQueryFix.tooltip": "AppleSkin 每一帧都会向显卡驱动询问混合是否开启，这会让游戏等待驱动（在 NVIDIA 显卡上约占帧时间的 5%）。开启：改为直接读取 Minecraft 自己记录的状态。画面不会有任何变化。未安装 AppleSkin 时不起作用。",
+  "cakefixes.fix.appleSkinBlendQueryFix.count": "本次已省去的驱动查询：%s 次",
+  "cakefixes.fix.bannerDrawDistance": "旗帜绘制距离",
+  "cakefixes.fix.bannerDrawDistance.tooltip": "旗帜只是装饰，但在旗帜很多的地下城里会占用 3–4% 的帧时间。超出此距离的旗帜不会被绘制。关闭：与原版相同（最远 64 格）。这会改变你看到的画面，所以默认关闭。",
+  "cakefixes.fix.bannerDrawDistance.count": "本次已跳过的旗帜绘制：%s 次",
+  "cakefixes.fix.bannerDrawDistance.value": "%s 格"
+}

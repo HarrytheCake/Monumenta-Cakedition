@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "cakefixes",
+	"version": "${version}",
+	"name": "CakeFixes",
+	"description": "Small client-side fixes for vanilla and mod bugs that hurt on Monumenta. Each fix has its own switch. Fixes: freezes when the server removes a player from a team they are not on; AppleSkin's HUD making the game wait for the graphics driver every frame. Option (off by default): a shorter banner draw distance.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"icon": "assets/cakefixes/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeFixes"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"modmenu": ["io.github.harrythecake.cakefixes.ModMenuEntry"]
+	},
+	"mixins": ["cakefixes.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.harrythecake.cakefixes.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"AppleSkinHudOverlayMixin",
+		"BannerBlockEntityRendererMixin",
+		"ClientPlayNetworkHandlerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

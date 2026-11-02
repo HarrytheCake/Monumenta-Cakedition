@@ -1,0 +1,15 @@
+{
+  "modmenu.nameTranslation.cakefixes": "CakeFixes",
+  "modmenu.descriptionTranslation.cakefixes": "Small client-side fixes for vanilla and mod bugs that hurt on Monumenta. Each fix has its own switch. Fixes: freezes when the server removes a player from a team they are not on; AppleSkin's HUD making the game wait for the graphics driver every frame. Option (off by default): a shorter banner draw distance.",
+  "cakefixes.config.title": "CakeFixes",
+  "cakefixes.fix.teamRemovalFix": "Team removal freeze fix",
+  "cakefixes.fix.teamRemovalFix.tooltip": "The server sometimes removes a player from a team they are not on. Vanilla then builds a crash report each time, which freezes the game for 100–500 ms (often every few seconds in dungeons). On: skip that removal instead.",
+  "cakefixes.fix.teamRemovalFix.count": "Skipped this session: %s",
+  "cakefixes.fix.appleSkinBlendQueryFix": "AppleSkin HUD slowdown fix",
+  "cakefixes.fix.appleSkinBlendQueryFix.tooltip": "AppleSkin asks the graphics driver every frame whether blending is on, which makes the game wait for the driver (about 5% of frame time on NVIDIA). On: answer from Minecraft's own record instead. Nothing on screen changes. Does nothing without AppleSkin.",
+  "cakefixes.fix.appleSkinBlendQueryFix.count": "Driver queries saved this session: %s",
+  "cakefixes.fix.bannerDrawDistance": "Banner draw distance",
+  "cakefixes.fix.bannerDrawDistance.tooltip": "Banners are decoration but cost 3–4% of frame time in banner-heavy dungeons. Banners farther than this aren't drawn. Off: vanilla (up to 64 blocks). This changes what you see, so it's off by default.",
+  "cakefixes.fix.bannerDrawDistance.count": "Banner draws skipped this session: %s",
+  "cakefixes.fix.bannerDrawDistance.value": "%s blocks"
+}
