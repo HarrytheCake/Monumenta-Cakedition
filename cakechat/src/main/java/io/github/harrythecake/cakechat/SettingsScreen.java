@@ -107,11 +107,6 @@ final class SettingsScreen {
 						.option(bool("scroll.invert", d.scroll.invert, () -> c.scroll.invert, v -> c.scroll.invert = v))
 						.option(bool("scroll.scrollbar", d.scroll.scrollbar, () -> c.scroll.scrollbar, v -> c.scroll.scrollbar = v))
 						.build())
-				.category(ConfigCategory.createBuilder()
-						.name(Text.translatable("cakechat.config.chatplus"))
-						.option(confirmedButton(parent, "import", Text.translatable("cakechat.config.import.confirm"),
-								CakeChat::importChatPlus, CakeChat.chatPlusSetup().isPresent()))
-						.build())
 				.save(CakeChat::saveConfig)
 				.build()
 				.generateScreen(parent);

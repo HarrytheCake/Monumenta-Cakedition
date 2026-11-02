@@ -27,7 +27,7 @@ public final class ChatConfig {
 	static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
 	/** Bumped when a field changes meaning, so {@link #load} can migrate old files. */
-	public int configVersion = 2;
+	public int configVersion = 3;
 	public History history = new History();
 	public Compact compact = new Compact();
 	public Timestamps timestamps = new Timestamps();
@@ -37,8 +37,6 @@ public final class ChatConfig {
 	public List<Window> windows = new ArrayList<>(List.of(Window.main()));
 	/** The player's own chat channel per server address (see {@link Channels}), so All can join it again after a restart. */
 	public Map<String, String> channelMemory = new HashMap<>();
-	/** Set on CakeChat's first start when a ChatPlus setup worth importing exists; the first join offers it, once. */
-	public boolean chatPlusOffer = false;
 
 	public static final class History {
 		/** Messages kept; 0 = no limit (what More Chat History gave the pack). */
@@ -120,8 +118,8 @@ public final class ChatConfig {
 					Tab.monumenta("lfg", "^<lfg> ", "lfg"),
 					Tab.monumenta("trade", "^<tr> ", "tr"),
 					Tab.monumenta("zh", "^<zh> ", "zh"),
-					// a guild's channel: any <name> except the shared ones, then a [guild tag]
-					Tab.monumenta("guild", "^(?!<(?:lfg|tr|zh|es|mh)>)<.{2,5}.*>.*\\[.{2,5}\\]", ""),
+					// a guild's channel: any <name> except the shared ones, then a [guild tag]; joins the tag from the tab list
+					Tab.monumenta("guild", "^(?!<(?:lfg|tr|zh|es|mh)>)<.{2,5}.*>.*\\[.{2,5}\\]", GuildTag.PLACEHOLDER),
 					Tab.monumenta("whisper", "whispers? to", "")));
 			return w;
 		}
@@ -151,7 +149,10 @@ public final class ChatConfig {
 		public boolean alwaysAdd = false;
 		/** Put in front of what you send from this tab (e.g. "/g "); commands you type are sent unchanged. */
 		public String prefix = "";
-		/** Server chat channel this tab switches to ({@code /join <channel>}; back on a tab without one: {@code /leave}). See {@link Channels}. */
+		/**
+		 * Server chat channel this tab switches to ({@code /join <channel>}; a tab without one joins the player's own
+		 * channel again). {@link GuildTag#PLACEHOLDER} = the player's guild channel from the tab list. See {@link Channels}.
+		 */
 		public String channel = "";
 		/** Java regex found in the server's address; the tab only shows (and joins) there. Empty = every server. */
 		public String server = "";
@@ -204,7 +205,10 @@ public final class ChatConfig {
 		Files.move(tmp, file, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
 	}
 
-	/** Older files: 1 → 2 adds the Chinese channel tab after Trade in a main window that has the default tabs. */
+	/**
+	 * Older files: 1 → 2 adds the Chinese channel tab after Trade in a main window that has the default tabs;
+	 * 2 → 3 gives the default Guild tab the guild channel, unless the player set a channel on it.
+	 */
 	private ChatConfig migrate() {
 		if (configVersion < 2) {
 			List<Tab> tabs = windows.get(0).tabs;
@@ -220,6 +224,14 @@ public final class ChatConfig {
 				if (windows.get(0).selectedTab > trade) windows.get(0).selectedTab++;
 			}
 			configVersion = 2;
+		}
+		if (configVersion < 3) {
+			for (Tab tab : windows.get(0).tabs) {
+				if (tab.name.equals(Tab.KEY_PREFIX + "guild") && tab.channel.isBlank()) {
+					tab.channel = GuildTag.PLACEHOLDER;
+				}
+			}
+			configVersion = 3;
 		}
 		return this;
 	}

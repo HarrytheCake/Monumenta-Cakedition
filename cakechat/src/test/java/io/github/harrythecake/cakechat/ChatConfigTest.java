@@ -90,12 +90,37 @@ class ChatConfigTest {
 		old.save(file);
 
 		ChatConfig config = ChatConfig.load(file);
-		assertEquals(2, config.configVersion);
+		assertEquals(3, config.configVersion);
 		List<ChatConfig.Tab> tabs = config.windows.get(0).tabs;
 		assertEquals("cakechat.tab.trade", tabs.get(3).name);
 		assertEquals("cakechat.tab.zh", tabs.get(4).name);
 		assertEquals("zh", tabs.get(4).channel);
 		assertEquals(6, config.windows.get(0).selectedTab, "still on the same tab");
+	}
+
+	@Test
+	void version2GuildTabGetsTheGuildChannel() throws IOException {
+		Path file = dir.resolve("config.json");
+		ChatConfig old = new ChatConfig();
+		old.configVersion = 2;
+		old.windows.get(0).tabs.get(5).channel = "";
+		old.save(file);
+
+		ChatConfig config = ChatConfig.load(file);
+		assertEquals(3, config.configVersion);
+		assertEquals("cakechat.tab.guild", config.windows.get(0).tabs.get(5).name);
+		assertEquals(GuildTag.PLACEHOLDER, config.windows.get(0).tabs.get(5).channel);
+	}
+
+	@Test
+	void version2KeepsAGuildChannelThePlayerSet() throws IOException {
+		Path file = dir.resolve("config.json");
+		ChatConfig old = new ChatConfig();
+		old.configVersion = 2;
+		old.windows.get(0).tabs.get(5).channel = "XYZ";
+		old.save(file);
+
+		assertEquals("XYZ", ChatConfig.load(file).windows.get(0).tabs.get(5).channel);
 	}
 
 	@Test

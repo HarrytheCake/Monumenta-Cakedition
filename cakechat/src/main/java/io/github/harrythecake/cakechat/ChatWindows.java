@@ -1,8 +1,11 @@
 package io.github.harrythecake.cakechat;
 
+import io.github.harrythecake.cakechat.mixin.PlayerListHudAccessor;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.MessageIndicator;
+import net.minecraft.client.gui.hud.PlayerListHud;
+import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
@@ -299,10 +302,37 @@ public final class ChatWindows {
 		view.resetScroll();
 		view.invalidate();
 		if (client.player != null) {
-			for (String command : channels.select(window.tabs.get(tab).channel, System.currentTimeMillis())) {
+			String channel = window.tabs.get(tab).channel;
+			if (GuildTag.isPlaceholder(channel)) {
+				channel = guildChannel();
+				if (channel == null) {
+					client.inGameHud.setOverlayMessage(Text.translatable("cakechat.guild.unknown"), false);
+					return;
+				}
+			}
+			for (String command : channels.select(channel, System.currentTimeMillis())) {
 				client.player.networkHandler.sendChatCommand(command);
 			}
 		}
+	}
+
+	/** The player's guild channel from the tab list (read now), or null. */
+	@Nullable
+	private String guildChannel() {
+		return GuildTag.find(tabListLines(), client.getSession().getUsername());
+	}
+
+	/** The tab list's lines as text, in the order the game shows them; empty when not in a world. */
+	public List<String> tabListLines() {
+		List<String> lines = new ArrayList<>();
+		if (client.player == null) {
+			return lines;
+		}
+		PlayerListHud hud = client.inGameHud.getPlayerListHud();
+		for (PlayerListEntry entry : ((PlayerListHudAccessor) hud).cakechat$collectPlayerEntries()) {
+			lines.add(hud.getPlayerName(entry).getString());
+		}
+		return lines;
 	}
 
 	/** A command the player typed (without the slash): their own {@code /join} becomes their channel. */

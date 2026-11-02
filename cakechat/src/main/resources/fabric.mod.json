@@ -3,7 +3,7 @@
 	"id": "cakechat",
 	"version": "${version}",
 	"name": "CakeChat",
-	"description": "Chat windows and tabs with your own rules, unlimited history that survives server switches, compacted duplicate messages, regex search and timestamps. Can import your ChatPlus setup.",
+	"description": "Chat windows and tabs with your own rules, unlimited history that survives server switches, compacted duplicate messages, regex search and timestamps. Cakedition Updater can import your ChatPlus setup into it.",
 	"authors": ["HarrytheCake"],
 	"license": "MIT",
 	"icon": "assets/cakechat/icon.png",
