@@ -1,6 +1,6 @@
 """Keep the packwiz pack in pack/ in sync with this Prism instance.
 
-    python tools/packwiz_sync.py from-instance   # pull mods + yosbr defaults from .minecraft, then refresh
+    python tools/packwiz_sync.py from-instance   # pull mods + yosbr defaults + pack-owned configs from .minecraft, then refresh
     python tools/packwiz_sync.py refresh         # rebuild pack/index.toml and the index hash in pack/pack.toml
     python tools/packwiz_sync.py modrinth <folder> <version-id>   # add/replace a Modrinth file (e.g. a resource pack)
     python tools/packwiz_sync.py github <folder> <owner/repo> <tag> [jar-prefix] [--optional="<description>"]
@@ -26,7 +26,40 @@ MC = ROOT / ".minecraft"
 PRESERVE = {"servers.dat"}
 SKIP = {"pack.toml", "index.toml", ".packwizignore"}
 # Per-player state and caches in .minecraft/config/yosbr that must not ship (paths relative to yosbr/).
-YOSBR_EXCLUDE = ("config/mid", "config/spark/activity.json", "config/monumenta/persistent.json")
+YOSBR_EXCLUDE = ("config/mid", "config/spark/activity.json", "config/monumenta/persistent.json",
+                 "config/sodium-fingerprint.json")
+# Pack-owned configs (ADR 0007): background settings (performance, compatibility, libraries) the pack replaces on
+# every update, so changes reach existing players. Edited like the rest in .minecraft/config/yosbr, but shipped to
+# pack/<path> instead of pack/config/yosbr/<path>. Player preferences (keys, HUD, look) stay yosbr defaults. Taking
+# a file off this list: delete pack/<path> by hand (from-instance then ships it through yosbr again).
+PACK_OWNED = (
+    "config/attributefix.json",
+    "config/c2me.toml",
+    "config/citresewn-defaults.json",
+    "config/citresewn.json",
+    "config/crowdin.txt",
+    "config/enhanced_bes.properties",
+    "config/etf_warnings.json",
+    "config/experimentalperformance.properties",
+    "config/fabric/indigo-renderer.properties",
+    "config/feytweaks.json",
+    "config/forgeconfigapiport.toml",
+    "config/immediatelyfast.json",
+    "config/lithium.properties",
+    "config/logbegone.toml",
+    "config/midnightlib.json",
+    "config/modelfix-client.json",
+    "config/modernfix-mixins.properties",
+    "config/moreculling.toml",
+    "config/nvidium-config.json",
+    "config/packetfixer.properties",
+    "config/rrp.properties",
+    "config/sodium-extra.properties",
+    "config/sodium-mixins.properties",
+    "config/spark/config.json",
+    "config/xaeropatreon.txt",
+    "config/yacl.json5",
+)
 
 
 def parse_toml(text):
@@ -115,7 +148,7 @@ def sync_mods():
 
 
 def sync_yosbr():
-    """Mirror .minecraft/config/yosbr into pack/config/yosbr file by file."""
+    """Mirror .minecraft/config/yosbr into pack/config/yosbr file by file; PACK_OWNED files go to pack/<path>."""
     src, dst = MC / "config" / "yosbr", PACK / "config" / "yosbr"
 
     def wanted(rel):
@@ -123,6 +156,14 @@ def sync_yosbr():
 
     keep = {p.relative_to(src).as_posix() for p in src.rglob("*") if p.is_file()}
     keep = {rel for rel in keep if wanted(rel)}
+    for rel in PACK_OWNED:
+        if rel in keep:
+            keep.discard(rel)
+            (PACK / rel).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(src / rel, PACK / rel)
+        else:
+            print(f"PACK_OWNED file missing from .minecraft/config/yosbr: {rel}")
+            (PACK / rel).unlink(missing_ok=True)
     for p in sorted(dst.rglob("*"), reverse=True) if dst.exists() else []:
         rel = p.relative_to(dst).as_posix()
         if p.is_file() and rel not in keep:
