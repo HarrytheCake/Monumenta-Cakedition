@@ -3,9 +3,10 @@
 	"id": "cakeupdater",
 	"version": "${version}",
 	"name": "Cakedition Updater",
-	"description": "Tells you in chat when a Monumenta Cakedition update is out and installs it with packwiz-installer after you close the game. Keeps a backup of your server list and configs from before each update, which you can restore from its settings screen.",
+	"description": "Tells you in chat when a Monumenta Cakedition update is out and installs it with packwiz-installer after you close the game. Keeps a backup of your server list and configs from before each update, which you can restore from its settings screen. Moving in from another pack? It imports your options and keybinds, UMM, Monumenta Addons, ChatPlus tabs (for CakeChat), Xaero's waypoints and map, and your server list.",
 	"authors": ["HarrytheCake"],
 	"license": "MIT",
+	"icon": "assets/cakeupdater/icon.png",
 	"contact": {
 		"sources": "https://github.com/HarrytheCake/CakeUpdater"
 	},

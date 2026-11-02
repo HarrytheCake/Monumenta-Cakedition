@@ -15,6 +15,8 @@ The mod ships inside the Monumenta Cakedition pack as `pack/mods/cakeupdater.pw.
 
 1.6.0 (user's request 2026-10-29, `docs/adr/0004`): **updates come from Modrinth first**, so they count as Modrinth downloads; then GitHub, then GitLab. The `.mrpack` carries the packwiz pack (`config/cakeupdater/packwiz/`, added by `tools/mrpack.py`), so the helper rebuilds it on disk and runs packwiz-installer as before. Also: the bootstrap runs with `--bootstrap-no-update` once `packwiz-installer.jar` exists, so an update needs no GitHub API call.
 
+1.7.0 (user's request 2026-11-03; tested in game by the user the same day: import, icon, guide line): **import from another install** ("moving in", `MoveIn`): a join message offers it each start until turned off; the player picks their old `.minecraft` in the system's folder window and gets options.txt (whole), UMM's settings and locked slots, Monumenta Addons, Xaero's waypoints and map, new servers, and their ChatPlus setup converted for CakeChat (`ChatPlusImport`, moved here from CakeChat 0.3.0). Every replaced file goes into an "import" backup first. Also in 1.7.0: a **mod icon** (`assets/cakeupdater/icon.png`, 128 px pixel art: the family's layered cake on a brown tile with a green download badge) and the **guide line** (`GuideNotice`): on the first launch and once after every pack update, chat points to the pack guide's "Cakedition's own mods" chapter with [Open the guide] (`/cakebook open cakedition/cake/index`).
+
 ## Files
 
 ```
@@ -27,8 +29,8 @@ updater/
 └── src/main/
     ├── resources/
     │   ├── fabric.mod.json                     # environment: client; depends on fabric-api
-    │   └── assets/cakeupdater/lang/            # en_us.json, zh_cn.json, zh_tw.json (same 63 keys)
-    └── (src/test/java/…)                       # JUnit 5: ChangelogTest, UrgentAndMemoryTest (run by `gradlew build`)
+    │   └── assets/cakeupdater/lang/            # en_us.json, zh_cn.json, zh_tw.json (same 100 keys; LangTest checks)
+    └── (src/test/java/…)                       # JUnit 5: ChangelogTest, UrgentAndMemoryTest, ModrinthUpdateTest, MoveInTest, ChatPlusImportTest, GuideNoticeTest, LangTest (run by `gradlew build`)
     └── java/io/github/harrythecake/cakeupdater/
         ├── CakeUpdater.java          # entrypoint: events, /cakeupdate command, all chat text
         ├── CakeUpdaterPreLaunch.java # preLaunch entrypoint: leftover config restore, defaults (no Minecraft classes!)
@@ -40,6 +42,9 @@ updater/
         ├── ChangelogScreen.java      # scrollable changelog (/cakeupdate changelog, the [Changelog] button)
         ├── Withdrawn.java            # withdrawn.json next to the published pack.toml: is the installed version withdrawn?
         ├── MemoryCheck.java          # max heap outside the configured range → warn once per setting (plain Java)
+        ├── MoveIn.java               # import from another install: scan, stage, apply after close / at pre-launch (plain Java)
+        ├── ChatPlusImport.java       # ChatPlus setup → patch for CakeChat's config.json (plain Java, Gson)
+        ├── GuideNotice.java          # first launch / after an update → the guide line, once per pack version (plain Java)
         ├── Config.java               # config/cakeupdater/config.json5 (template + lenient Gson load)
         ├── Net.java                  # shared HttpClient, User-Agent, GET/POST JSON helpers
         ├── UpdateCheck.java          # modpack: is the published pack.toml newer than what is installed?
@@ -140,6 +145,39 @@ CakeUpdaterPreLaunch                  → applies a restore the hook couldn't (c
 ### Memory warning (1.5.0+)
 First join of each start: `Runtime.maxMemory()` in MB vs `memory.minGb` (with 5 % room: `-Xmx3G` reports a little under 3072 MB) and `memory.maxGb`; `0` = no limit. Warned values are kept in `config/cakeupdater/memory-warned.txt`, so the same setting warns once; back in range deletes it.
 
+### Import from another install (1.7.0+, `MoveIn`, `ChatPlusImport`)
+```
+JOIN (first of each start) → MoveIn.takeDone: "Imported N files from <old>. What they replaced is in the backup of <date>. [Backups]"
+                           else, unless config/cakeupdater/import-offer-off.txt or a staged import exists:
+                           "Coming from another pack or launcher? …"  [Import from my old .minecraft] [Don't show again]
+/cakeupdate import       → TinyFileDialogs.tinyfd_selectFolderDialog on its own daemon thread (LWJGL tinyfd ships with
+                           Minecraft; starts in the launcher's instances folder; can open behind a fullscreen game)
+                         → MoveIn.gameFolder: a picked instance folder → its .minecraft / minecraft; this install → refused
+                         → MoveIn.scan: options.txt, config/unofficial-monumenta-mod.json, config/monumenta/lockedSlots.json,
+                           config/fma.json, XaeroWaypoints/ XaeroWorldMap/ xaero/, servers.dat, and (CakeChat loaded +
+                           ChatPlusImport.worthImporting) the newest config/chatplus/chatplus-v*.json
+                         → chat list + [Import these] [Cancel]  (servers: only addresses we don't have, ignoring case)
+/cakeupdate import confirm → Backups.newImportBackup(label) (kind=import, from = the old instance's folder name)
+                           → servers: our servers.dat saved into it, new entries added now (ServerList + NbtIo)
+                           → ChatPlus: ChatPlusImport.convert(setup, GUI height now) → patch + CakeChat keys
+                           → cakeupdater-backups/import.json {source, backup, copy[], cakechat, keys}; offer turned off
+                           → [Close Minecraft now] [Cancel]
+shutdown hook (shared with config restores; after every mod saved) or, if that didn't run, CakeUpdaterPreLaunch
+                         → MoveIn.apply: each copy path (files, or every file in a folder) → saved into the import backup
+                           if ours exists (first copy only), then copied over; CakeChat's config.json merged with the
+                           patch (objects key by key, windows replaced); ChatPlus keys set in options.txt
+                           (key_key.cakechat.peek / .hide); import.json deleted last; import-done.properties for the join
+/cakeupdate import cancel → import.json deleted (servers already added stay; the import backup has the old list)
+/cakeupdate import off    → import-offer-off.txt
+```
+- **What and why** (user's choices 2026-11-03): the whole options.txt (video settings and resource packs too), UMM settings + locked slots, Monumenta Addons, Xaero's waypoints and map, server list (merge, never removes). ChatPlus's tabs replace CakeChat's (same rule as CakeChat's old import: only when the setup gives more than one All tab). The old install is only read.
+- **Why after close:** Minecraft, UMM, Xaero and CakeChat keep these in memory and write them back (Xaero on world leave / exit, options.txt on change). Copying while running would be overwritten. The server list is the exception: Minecraft re-reads it whenever the multiplayer screen opens.
+- **Import backups** hold files outside `config/` too (options.txt, Xaero). Restoring any backup now copies back every file in it except `backup.properties` and `servers.dat` (paths are checked to stay inside the game folder), so the screen's "Configs" button restores those too. Pruning keeps `backups.keep` per kind: update, restore, import.
+- ChatPlus conversion rules (unchanged from CakeChat's M4): newest `chatplus-v<version>.json` by version number; 2.7+ rules in `settings[]` (several → `(?:a)|(?:b)`), 2.5 on the tab; match-all → `""`, anything else → `^(?:p)$`; invalid patterns skipped, `formatted: true` listed; windows from `renderer` (y = bottom edge from the top → `bottom` = GUI height − y, clamped), disabled windows skipped, none → CakeChat's stay; history, compact, timestamps, scroll, find; peek key (unless ChatPlus's default P) and hide key (no modifier). The patch uses CakeChat's `ChatConfig` field names: keep them in step.
+
+### Guide line (1.7.0+, `GuideNotice`)
+First join of each start (after the update and memory messages, before the import offer): `GuideNotice.check(gameDir, pack-version.txt, cakebook loaded)`. Shown only when CakeBook is installed **and** the pack ships `cakebook/books/cakedition/en_us/cake/index.md` (so another pack using this mod never sees it). `config/cakeupdater/guide-shown.txt` holds the version it was last shown for: missing → WELCOME ("Welcome to Monumenta Cakedition! …"), different → UPDATED ("The pack was updated. …"), same → nothing. The button runs CakeBook's client command `/cakebook open cakedition/cake/index`. An unknown version counts as "?".
+
 ### Resource pack update
 ```
 JOIN → snapshot enabled pack names (render thread) → ResourcePackUpdater.check (background)
@@ -171,6 +209,10 @@ The old zip is **kept, disabled**. packwiz-installer manages that file: deleting
 | `/cakeupdate restore cancel` | Cancel a pending config restore |
 | `/cakeupdate quit` | Leave the world and quit (the button after scheduling a config restore) |
 | `/cakeupdate resourcepacks` | Apply all pending resource pack updates |
+| `/cakeupdate import` | Pick the old install's folder and list what can be imported |
+| `/cakeupdate import confirm` | Add the new servers now; copy the rest when the game closes |
+| `/cakeupdate import cancel` | Cancel a staged import |
+| `/cakeupdate import off` | Stop the join message offering the import |
 
 The chat buttons are `ClickEvent.RUN_COMMAND` with these commands. Fabric's client-command API catches them before they're sent to the server.
 

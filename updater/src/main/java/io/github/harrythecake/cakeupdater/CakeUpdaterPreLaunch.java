@@ -6,8 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Runs before other mods initialize. Applies a config restore that couldn't run when the game closed (crash, killed
- * process) and copies missing default files (config/cakeupdater/defaults/). No Minecraft classes may load here.
+ * Runs before other mods initialize. Applies a config restore or an import (MoveIn) that couldn't run when the game
+ * closed (crash, killed process) and copies missing default files (config/cakeupdater/defaults/). No Minecraft classes
+ * may load here.
  */
 public final class CakeUpdaterPreLaunch implements PreLaunchEntrypoint {
 	private static final Logger LOG = LoggerFactory.getLogger(CakeUpdater.MOD_ID);
@@ -19,6 +20,10 @@ public final class CakeUpdaterPreLaunch implements PreLaunchEntrypoint {
 			int restored = backups.applyPendingConfigRestore(Integer.MAX_VALUE);
 			if (restored >= 0) {
 				LOG.info("Restored {} config files from a backup", restored);
+			}
+			int imported = MoveIn.apply(FabricLoader.getInstance().getGameDir(), backups, Integer.MAX_VALUE);
+			if (imported >= 0) {
+				LOG.info("Imported {} files from another install", imported);
 			}
 			int copied = backups.applyDefaults();
 			if (copied > 0) {

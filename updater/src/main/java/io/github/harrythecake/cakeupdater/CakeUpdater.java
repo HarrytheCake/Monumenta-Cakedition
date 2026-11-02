@@ -10,6 +10,12 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.MessageScreen;
 import net.minecraft.client.gui.screen.TitleScreen;
+import net.minecraft.client.network.ServerInfo;
+import net.minecraft.client.option.ServerList;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtElement;
+import net.minecraft.nbt.NbtIo;
+import net.minecraft.nbt.NbtList;
 import net.minecraft.client.toast.SystemToast;
 import net.minecraft.text.ClickEvent;
 import net.minecraft.text.HoverEvent;
@@ -17,6 +23,7 @@ import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Util;
+import org.lwjgl.util.tinyfd.TinyFileDialogs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +32,10 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.argument;
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal;
@@ -56,6 +66,16 @@ public class CakeUpdater implements ClientModInitializer {
 	private static volatile UpdateCheck.Result urgentAtStart;
 	private static boolean urgentToastShown;
 	private static boolean memoryChecked;
+
+	/** The guide line (GuideNotice) is checked on the first join of each start. */
+	private static boolean guideChecked;
+	/** The import offer shows on the first join of each start (see MoveIn). */
+	private static boolean importOffered;
+	/** The folder window is open (it runs on its own thread). */
+	private static volatile boolean picking;
+	/** What the last picked folder has, waiting for [Import these]. */
+	private record Scan(Path old, List<MoveIn.Found> found, List<ServerInfo> newServers) {}
+	private static Scan scanned;
 
 	@Override
 	public void onInitializeClient() {
@@ -102,6 +122,14 @@ public class CakeUpdater implements ClientModInitializer {
 				memoryChecked = true;
 				client.send(() -> checkMemory(client));
 			}
+			if (!guideChecked) {
+				guideChecked = true;
+				client.send(() -> announceGuide(client));
+			}
+			if (!importOffered) {
+				importOffered = true;
+				client.send(() -> announceImport(client));
+			}
 			if (packwizEnabled()) {
 				UpdateCheck.runAsync(config.packwiz, gameDir()).thenAccept(result -> {
 					if (result != null) {
@@ -135,7 +163,11 @@ public class CakeUpdater implements ClientModInitializer {
 								.then(literal("configs").then(argument("backup", StringArgumentType.word())
 										.executes(ctx -> restoreConfigs(ctx.getSource(), StringArgumentType.getString(ctx, "backup")))))
 								.then(literal("cancel").executes(ctx -> cancelRestore(ctx.getSource()))))
-						.then(literal("resourcepacks").executes(ctx -> updateResourcePacks(ctx.getSource())))));
+						.then(literal("resourcepacks").executes(ctx -> updateResourcePacks(ctx.getSource())))
+						.then(literal("import").executes(ctx -> pickFolder(ctx.getSource()))
+								.then(literal("confirm").executes(ctx -> confirmImport(ctx.getSource())))
+								.then(literal("cancel").executes(ctx -> cancelImport(ctx.getSource())))
+								.then(literal("off").executes(ctx -> importOff(ctx.getSource()))))));
 
 		ClientLifecycleEvents.CLIENT_STOPPING.register(client -> {
 			// before the updater starts: this snapshot is what a backup holds if the pack changes before the next start
@@ -338,7 +370,7 @@ public class CakeUpdater implements ClientModInitializer {
 		if (made.hasServers()) {
 			buttons.append(button("cakeupdater.restore.servers", "/cakeupdate restore servers " + made.name(), Formatting.GREEN)).append(" ");
 		}
-		if (made.hasConfigs()) {
+		if (made.hasFiles()) {
 			buttons.append(button("cakeupdater.restore.configs", "/cakeupdate restore configs " + made.name(), Formatting.GREEN)).append(" ");
 		}
 		buttons.append(button("cakeupdater.backups.open", "/cakeupdate backups", Formatting.AQUA));
@@ -439,19 +471,266 @@ public class CakeUpdater implements ClientModInitializer {
 	 */
 	static void scheduleConfigRestore(String name) throws java.io.IOException {
 		backups.scheduleConfigRestore(name);
-		if (!restoreHookAdded) {
-			restoreHookAdded = true;
-			Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-				try {
-					int restored = backups.applyPendingConfigRestore(config.backups.keep);
-					if (restored >= 0) {
-						LOGGER.info("Restored {} config files from a backup", restored);
-					}
-				} catch (Exception e) {
-					LOGGER.error("Config restore failed; it is tried again at the next start", e);
-				}
-			}, "CakeUpdater restore"));
+		addCloseHook();
+	}
+
+	/** One shutdown hook for a pending config restore and a staged import (see MoveIn), in that order. */
+	private static void addCloseHook() {
+		if (restoreHookAdded) {
+			return;
 		}
+		restoreHookAdded = true;
+		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+			try {
+				int restored = backups.applyPendingConfigRestore(config.backups.keep);
+				if (restored >= 0) {
+					LOGGER.info("Restored {} config files from a backup", restored);
+				}
+			} catch (Exception e) {
+				LOGGER.error("Config restore failed; it is tried again at the next start", e);
+			}
+			try {
+				int imported = MoveIn.apply(gameDir(), backups, config.backups.keep);
+				if (imported >= 0) {
+					LOGGER.info("Imported {} files from another install", imported);
+				}
+			} catch (Exception e) {
+				LOGGER.error("Import failed; it is tried again at the next start", e);
+			}
+		}, "CakeUpdater restore"));
+	}
+
+	// --- Pack guide (GuideNotice) ---
+
+	/** First launch, or the first join after a pack update: a line with a button opening the guide's own-mods chapter. */
+	private static void announceGuide(MinecraftClient client) {
+		if (client.player == null) {
+			return;
+		}
+		GuideNotice.Kind kind = GuideNotice.check(gameDir(), UpdateCheck.readLocalVersion(gameDir()),
+				FabricLoader.getInstance().isModLoaded("cakebook"));
+		if (kind == null) {
+			return;
+		}
+		Text text = Text.translatable(kind == GuideNotice.Kind.WELCOME ? "cakeupdater.guide.welcome" : "cakeupdater.guide.updated");
+		client.player.sendMessage(prefix().append(text.copy().formatted(Formatting.YELLOW)).append(" ")
+				.append(button("cakeupdater.guide.open", "/cakebook open " + GuideNotice.PAGE, Formatting.AQUA)), false);
+	}
+
+	// --- Import from another install (MoveIn) ---
+
+	/** First join of each start: the result of a finished import, else the offer (until turned off). */
+	private static void announceImport(MinecraftClient client) {
+		if (client.player == null) {
+			return;
+		}
+		MoveIn.Done done = MoveIn.takeDone(gameDir());
+		if (done != null) {
+			client.player.sendMessage(prefix().append(Text.translatable("cakeupdater.import.done", done.files(),
+					MoveIn.label(Path.of(done.source())), BackupsScreen.date(done.backup())).formatted(Formatting.GREEN))
+					.append(" ").append(button("cakeupdater.backups.open", "/cakeupdate backups", Formatting.AQUA)), false);
+			return;
+		}
+		if (MoveIn.offerOff(gameDir()) || MoveIn.pending(gameDir()) != null) {
+			return;
+		}
+		client.player.sendMessage(prefix().append(Text.translatable("cakeupdater.import.offer").formatted(Formatting.YELLOW)), false);
+		client.player.sendMessage(Text.literal("  ")
+				.append(button("cakeupdater.import.offer.pick", "/cakeupdate import", Formatting.GREEN))
+				.append(" ")
+				.append(button("cakeupdater.import.offer.off", "/cakeupdate import off", Formatting.GRAY)), false);
+	}
+
+	/** Opens the system's folder window on its own thread (it blocks until the player chooses). */
+	private static int pickFolder(FabricClientCommandSource source) {
+		if (picking) {
+			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.import.picking.busy").formatted(Formatting.GRAY)));
+			return 1;
+		}
+		picking = true;
+		MinecraftClient client = source.getClient();
+		source.sendFeedback(prefix().append(Text.translatable("cakeupdater.import.picking").formatted(Formatting.YELLOW)));
+		String title = Text.translatable("cakeupdater.import.picker.title").getString();
+		// a launcher's instances folder, where the old install most likely is
+		Path start = gameDir().toAbsolutePath().getParent();
+		if (start != null && start.getParent() != null) {
+			start = start.getParent();
+		}
+		String startPath = start == null ? "" : start.toString() + java.io.File.separator;
+		Thread thread = new Thread(() -> {
+			String chosen = null;
+			try {
+				chosen = TinyFileDialogs.tinyfd_selectFolderDialog(title, startPath);
+			} catch (Throwable t) {
+				LOGGER.error("Could not open the folder window", t);
+			}
+			String result = chosen;
+			client.send(() -> {
+				picking = false;
+				picked(client, result);
+			});
+		}, "CakeUpdater import folder");
+		thread.setDaemon(true);
+		thread.start();
+		return 1;
+	}
+
+	private static void picked(MinecraftClient client, String chosen) {
+		if (client.player == null) {
+			return;
+		}
+		if (chosen == null || chosen.isBlank()) {
+			client.player.sendMessage(prefix().append(Text.translatable("cakeupdater.import.nofolder").formatted(Formatting.GRAY)), false);
+			return;
+		}
+		Path old = MoveIn.gameFolder(Path.of(chosen));
+		if (MoveIn.sameFolder(old, gameDir())) {
+			client.player.sendMessage(prefix().append(Text.translatable("cakeupdater.import.self").formatted(Formatting.RED)), false);
+			return;
+		}
+		List<MoveIn.Found> found = new ArrayList<>(MoveIn.scan(old, FabricLoader.getInstance().isModLoaded("cakechat")));
+		List<ServerInfo> newServers = List.of();
+		if (found.removeIf(f -> f.kind() == MoveIn.Kind.SERVERS)) {
+			newServers = newServers(client, old.resolve(MoveIn.SERVERS));
+		}
+		String label = MoveIn.label(old);
+		if (found.isEmpty() && newServers.isEmpty()) {
+			client.player.sendMessage(prefix().append(Text.translatable("cakeupdater.import.nothing", label).formatted(Formatting.YELLOW)), false);
+			return;
+		}
+		scanned = new Scan(old, found, newServers);
+		client.player.sendMessage(prefix().append(Text.translatable("cakeupdater.import.found", label).formatted(Formatting.YELLOW)), false);
+		for (MoveIn.Found f : found) {
+			Text item = switch (f.kind()) {
+				case XAERO -> Text.translatable("cakeupdater.import.item.xaero", f.path(), f.files(),
+						String.format(Locale.ROOT, "%.1f", f.bytes() / 1048576.0));
+				default -> Text.translatable("cakeupdater.import.item." + f.kind().name().toLowerCase(Locale.ROOT));
+			};
+			client.player.sendMessage(Text.literal("  • ").append(item).formatted(Formatting.WHITE), false);
+		}
+		if (!newServers.isEmpty()) {
+			client.player.sendMessage(Text.literal("  • ").append(Text.translatable("cakeupdater.import.item.servers", newServers.size()))
+					.formatted(Formatting.WHITE), false);
+		}
+		client.player.sendMessage(Text.literal("  ")
+				.append(button("cakeupdater.import.confirm", "/cakeupdate import confirm", Formatting.GREEN))
+				.append(" ")
+				.append(button("cakeupdater.import.cancel", "/cakeupdate import cancel", Formatting.GRAY)), false);
+	}
+
+	/** The old server list's entries this one doesn't have (by address, ignoring case). */
+	private static List<ServerInfo> newServers(MinecraftClient client, Path oldServers) {
+		List<ServerInfo> added = new ArrayList<>();
+		try {
+			NbtCompound root = NbtIo.read(oldServers);
+			if (root == null) {
+				return added;
+			}
+			ServerList ours = new ServerList(client);
+			ours.loadFile();
+			List<String> known = new ArrayList<>();
+			for (int i = 0; i < ours.size(); i++) {
+				known.add(ours.get(i).address.toLowerCase(Locale.ROOT));
+			}
+			NbtList servers = root.getList("servers", NbtElement.COMPOUND_TYPE);
+			for (int i = 0; i < servers.size(); i++) {
+				ServerInfo info = ServerInfo.fromNbt(servers.getCompound(i));
+				String address = info.address == null ? "" : info.address.toLowerCase(Locale.ROOT);
+				if (!address.isBlank() && !known.contains(address) && ours.get(info.address) == null) {
+					known.add(address);
+					added.add(info);
+				}
+			}
+		} catch (Exception e) {
+			LOGGER.warn("Could not read the old server list {}: {}", oldServers, e.toString());
+		}
+		return added;
+	}
+
+	/** Adds the new servers now, stages the rest for the close and turns the offer off. */
+	private static int confirmImport(FabricClientCommandSource source) {
+		Scan scan = scanned;
+		scanned = null;
+		MinecraftClient client = source.getClient();
+		if (scan == null) {
+			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.import.choose_first").formatted(Formatting.GRAY))
+					.append(" ").append(button("cakeupdater.import.offer.pick", "/cakeupdate import", Formatting.GREEN)));
+			return 1;
+		}
+		try {
+			String label = MoveIn.label(scan.old());
+			String backup = backups.newImportBackup(label);
+			if (!scan.newServers().isEmpty()) {
+				backups.saveBeforeReplace(backup, MoveIn.SERVERS);
+				ServerList ours = new ServerList(client);
+				ours.loadFile();
+				for (ServerInfo info : scan.newServers()) {
+					ours.add(info, false);
+				}
+				ours.saveFile();
+				source.sendFeedback(prefix().append(Text.translatable("cakeupdater.import.servers.added", scan.newServers().size())
+						.formatted(Formatting.GREEN)));
+			}
+			List<String> copy = new ArrayList<>();
+			com.google.gson.JsonObject cakechat = null;
+			Map<String, String> keys = new LinkedHashMap<>();
+			for (MoveIn.Found f : scan.found()) {
+				if (f.kind() == MoveIn.Kind.CHATPLUS) {
+					com.google.gson.JsonObject setup = ChatPlusImport.read(scan.old().resolve(f.path())).orElse(null);
+					if (setup != null) {
+						ChatPlusImport.Result r = ChatPlusImport.convert(setup, client.getWindow().getScaledHeight());
+						cakechat = r.patch();
+						if (r.peekKey() != null) {
+							keys.put(ChatPlusImport.PEEK_OPTION, r.peekKey());
+						}
+						if (r.hideKey() != null) {
+							keys.put(ChatPlusImport.HIDE_OPTION, r.hideKey());
+						}
+						LOGGER.info("ChatPlus for CakeChat: {} window(s), {} tab(s); formatted patterns: {}; skipped: {}",
+								r.windows(), r.tabs(), r.formattedTabs(), r.skippedTabs());
+					}
+				} else {
+					copy.add(f.path());
+				}
+			}
+			MoveIn.turnOfferOff(gameDir());
+			if (copy.isEmpty() && cakechat == null) {
+				return 1;
+			}
+			MoveIn.stage(gameDir(), new MoveIn.Pending(scan.old().toAbsolutePath().normalize().toString(), backup, copy, cakechat, keys));
+			addCloseHook();
+			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.import.scheduled").formatted(Formatting.YELLOW)));
+			source.sendFeedback(Text.literal("  ")
+					.append(button("cakeupdater.import.quit", "/cakeupdate quit", Formatting.RED))
+					.append(" ")
+					.append(button("cakeupdater.import.cancel", "/cakeupdate import cancel", Formatting.GRAY)));
+		} catch (Exception e) {
+			LOGGER.error("Import failed", e);
+			source.sendFeedback(prefix().append(Text.translatable("cakeupdater.import.failed", String.valueOf(e.getMessage()))
+					.formatted(Formatting.RED)));
+		}
+		return 1;
+	}
+
+	private static int cancelImport(FabricClientCommandSource source) {
+		scanned = null;
+		try {
+			MoveIn.cancel(gameDir());
+		} catch (Exception e) {
+			LOGGER.warn("Could not cancel the import: {}", e.toString());
+		}
+		source.sendFeedback(prefix().append(Text.translatable("cakeupdater.import.cancelled").formatted(Formatting.GRAY)));
+		return 1;
+	}
+
+	private static int importOff(FabricClientCommandSource source) {
+		try {
+			MoveIn.turnOfferOff(gameDir());
+		} catch (Exception e) {
+			LOGGER.warn("Could not turn the import offer off: {}", e.toString());
+		}
+		source.sendFeedback(prefix().append(Text.translatable("cakeupdater.import.off").formatted(Formatting.GRAY)));
+		return 1;
 	}
 
 	// --- Resource packs (Modrinth) ---

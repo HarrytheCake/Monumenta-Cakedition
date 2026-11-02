@@ -13,7 +13,7 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Util;
 import org.jetbrains.annotations.Nullable;
 
-/** The backups list (Mod Menu's configure button, or /cakeupdate backups): restore the server list or configs. */
+/** The backups list (Mod Menu's configure button, or /cakeupdate backups): restore the server list or the other files. */
 final class BackupsScreen extends Screen {
 	private static final int ROW = 24;
 	private static final int TOP = 52;
@@ -63,7 +63,7 @@ final class BackupsScreen extends Screen {
 				}
 				clearAndInit();
 			}).dimensions(width / 2 + 144, y, 90, 20).tooltip(Tooltip.of(Text.translatable("cakeupdater.backups.configs.tip"))).build();
-			configs.active = b.hasConfigs();
+			configs.active = b.hasFiles();
 			addDrawableChild(configs);
 			y += ROW;
 		}
@@ -101,9 +101,11 @@ final class BackupsScreen extends Screen {
 		}
 		int y = TOP;
 		for (Backups.Backup b : shown) {
-			Text label = "update".equals(b.kind())
-					? Text.translatable("cakeupdater.backups.update", date(b.name()), b.from(), b.to())
-					: Text.translatable("cakeupdater.backups.restore", date(b.name()));
+			Text label = switch (b.kind()) {
+				case "update" -> Text.translatable("cakeupdater.backups.update", date(b.name()), b.from(), b.to());
+				case "import" -> Text.translatable("cakeupdater.backups.import", date(b.name()), b.from());
+				default -> Text.translatable("cakeupdater.backups.restore", date(b.name()));
+			};
 			context.drawTextWithShadow(textRenderer, label, width / 2 - 234, y + 6, 0xFFFFFF);
 			y += ROW;
 		}

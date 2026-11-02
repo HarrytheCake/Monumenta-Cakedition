@@ -28,9 +28,10 @@ import org.slf4j.LoggerFactory;
  * {@code cakeupdater-backups/last-close/} (only changed files are copied), and the next start compares the installed
  * pack with the one seen before: if it changed, that snapshot becomes a dated backup of the state before the update.
  *
- * <p>Restoring the server list is immediate (Minecraft reads it each time the multiplayer screen opens). Configs are
- * restored after the game has closed and every mod has saved its own files (a shutdown hook), or, if that didn't run,
- * at the next start before mods load ({@link CakeUpdaterPreLaunch}). Either restore first saves the files it replaces.
+ * <p>Restoring the server list is immediate (Minecraft reads it each time the multiplayer screen opens). Other files
+ * (configs; for an import backup also options.txt and Xaero's data) are restored after the game has closed and every
+ * mod has saved its own files (a shutdown hook), or, if that didn't run, at the next start before mods load
+ * ({@link CakeUpdaterPreLaunch}). Either restore first saves the files it replaces.
  *
  * <p>Plain Java, no Minecraft classes: the pre-launch entrypoint and the shutdown hook use it too.
  */
@@ -50,8 +51,14 @@ final class Backups {
 			"cakeupdater/adoption.json", "caketext/models/");
 	private static final DateTimeFormatter NAME = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
 
-	/** A dated backup. {@code kind} is "update" (made before a modpack update) or "restore" (made before a restore). */
-	record Backup(String name, String kind, String from, String to, boolean hasServers, boolean hasConfigs) {}
+	/**
+	 * A dated backup. {@code kind} is "update" (made before a modpack update), "restore" (made before a restore) or
+	 * "import" (made before an import from another install; {@code from} names that install). {@code hasFiles}: files
+	 * besides servers.dat, restored on close.
+	 */
+	record Backup(String name, String kind, String from, String to, boolean hasServers, boolean hasFiles) {}
+
+	static final List<String> KINDS = List.of("update", "restore", "import");
 
 	private final Path gameDir;
 
@@ -156,7 +163,26 @@ final class Backups {
 	private Backup info(Path dir) {
 		Properties p = read(dir.resolve(INFO));
 		return new Backup(dir.getFileName().toString(), p.getProperty("kind", "update"), p.getProperty("from", "?"),
-				p.getProperty("to", "?"), Files.isRegularFile(dir.resolve(SERVERS)), Files.isDirectory(dir.resolve("config")));
+				p.getProperty("to", "?"), Files.isRegularFile(dir.resolve(SERVERS)), !restorable(dir).isEmpty());
+	}
+
+	/** The backup's files restored on close, relative to it: everything but its info and servers.dat. */
+	private static List<String> restorable(Path dir) {
+		List<String> files = new ArrayList<>();
+		if (!Files.isDirectory(dir)) {
+			return files;
+		}
+		try (Stream<Path> walk = Files.walk(dir)) {
+			for (Path file : (Iterable<Path>) walk.filter(Files::isRegularFile)::iterator) {
+				String rel = dir.relativize(file).toString().replace('\\', '/');
+				if (!rel.equals(INFO) && !rel.equals(SERVERS)) {
+					files.add(rel);
+				}
+			}
+		} catch (IOException e) {
+			LOG.warn("Could not list {}: {}", dir, e.toString());
+		}
+		return files;
 	}
 
 	// --- Restoring ---
@@ -177,9 +203,9 @@ final class Backups {
 		prune(keep);
 	}
 
-	/** Configs are restored once the game has closed (or at the next start); see the class comment. */
+	/** Configs (and other files) are restored once the game has closed (or at the next start); see the class comment. */
 	void scheduleConfigRestore(String name) throws IOException {
-		if (!Files.isDirectory(root().resolve(name).resolve("config"))) {
+		if (restorable(root().resolve(name)).isEmpty()) {
 			throw new IOException("no configs in " + name);
 		}
 		Files.writeString(root().resolve(PENDING), name, StandardCharsets.UTF_8);
@@ -200,35 +226,33 @@ final class Backups {
 	}
 
 	/**
-	 * Copies the pending backup's config files over config/ (files the backup doesn't have are left alone), after
-	 * saving the files it replaces in a "restore" backup. Returns the number of files restored, or -1 if none pending.
+	 * Copies the pending backup's files (all but servers.dat) back into the game folder (files the backup doesn't have
+	 * are left alone), after saving the files it replaces in a "restore" backup. Returns the number of files restored,
+	 * or -1 if none pending.
 	 */
 	int applyPendingConfigRestore(int keep) throws IOException {
 		String name = pendingConfigRestore();
 		if (name == null) {
 			return -1;
 		}
-		Path src = root().resolve(name).resolve("config");
-		if (!Files.isDirectory(src)) {
+		Path src = root().resolve(name);
+		List<String> files = restorable(src);
+		if (files.isEmpty()) {
 			Files.delete(root().resolve(PENDING));
 			return -1;
 		}
 		Path safety = newBackupDir();
 		writeInfo(safety, "restore", "", "");
 		int count = 0;
-		try (Stream<Path> walk = Files.walk(src)) {
-			for (Path file : (Iterable<Path>) walk.filter(Files::isRegularFile)::iterator) {
-				Path rel = src.relativize(file);
-				Path target = configDir().resolve(rel.toString());
-				if (Files.isRegularFile(target)) {
-					Path save = safety.resolve("config").resolve(rel.toString());
-					Files.createDirectories(save.getParent());
-					Files.copy(target, save, StandardCopyOption.COPY_ATTRIBUTES);
-				}
-				Files.createDirectories(target.getParent());
-				Files.copy(file, target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
-				count++;
+		for (String rel : files) {
+			Path target = inGameDir(rel);
+			if (target == null) {
+				continue;
 			}
+			saveBefore(safety, rel, target);
+			Files.createDirectories(target.getParent());
+			Files.copy(src.resolve(rel), target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
+			count++;
 		}
 		// only now: if copying failed, the next start tries again
 		Files.delete(root().resolve(PENDING));
@@ -263,7 +287,39 @@ final class Backups {
 		return count;
 	}
 
+	// --- Imports (see MoveIn) ---
+
+	/** A new "import" backup, filled by the import with the files it replaces; returns its name. */
+	String newImportBackup(String from) throws IOException {
+		Path dir = newBackupDir();
+		writeInfo(dir, "import", from, "");
+		return dir.getFileName().toString();
+	}
+
+	/** Saves the game folder's file {@code rel} into the named backup before it's replaced (once: the first copy is the original). */
+	void saveBeforeReplace(String backup, String rel) throws IOException {
+		Path target = inGameDir(rel);
+		if (target != null) {
+			saveBefore(root().resolve(backup), rel, target);
+		}
+	}
+
 	// --- Helpers ---
+
+	/** {@code rel} inside the game folder, or null if it would point outside it. */
+	Path inGameDir(String rel) {
+		Path base = gameDir.toAbsolutePath().normalize();
+		Path target = base.resolve(rel).normalize();
+		return target.startsWith(base) && !target.equals(base) ? target : null;
+	}
+
+	private static void saveBefore(Path backup, String rel, Path target) throws IOException {
+		Path save = backup.resolve(rel);
+		if (Files.isRegularFile(target) && !Files.exists(save)) {
+			Files.createDirectories(save.getParent());
+			Files.copy(target, save, StandardCopyOption.COPY_ATTRIBUTES);
+		}
+	}
 
 	private Path newBackupDir() throws IOException {
 		Path dir = freeBackupName();
@@ -285,8 +341,8 @@ final class Backups {
 	 * Keeps the newest {@code keep} backups of each kind, so restoring a few times never pushes out the backup
 	 * from before an update.
 	 */
-	private void prune(int keep) {
-		for (String kind : List.of("update", "restore")) {
+	void prune(int keep) {
+		for (String kind : KINDS) {
 			List<Backup> ofKind = list().stream().filter(b -> b.kind().equals(kind)).toList();
 			for (Backup old : ofKind.subList(Math.min(Math.max(keep, 1), ofKind.size()), ofKind.size())) {
 				deleteTree(root().resolve(old.name()));
