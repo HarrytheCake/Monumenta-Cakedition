@@ -1,10 +1,10 @@
 # CakeUI
 
-A client-only Fabric mod for Minecraft 1.20.4 that lets modpacks redraw the main menu, the pause menu and the inventory, and later the loading screens, HUD and game window, from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
+A client-only Fabric mod for Minecraft 1.20.4 that lets modpacks redraw the game window, Mojang's launch screen, the main menu, the loading screens, the pause menu and the inventory, and later the HUD, from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
 
 With no layout chosen (the default), CakeUI changes nothing. It also leaves alone any piece of vanilla that the active layout doesn't mention, so other mods' buttons and screens keep working.
 
-**Status:** 0.1.0 (in development). The main menu, the pause menu and the player's inventory work (milestone 3 of 5 under way). The game launching screen, loading screens, HUD and window come next.
+**Status:** 0.1.0 (in development). The window, the game launching screen, the main menu, the loading screens, the pause menu and the player's inventory work (milestones 1–3 of 5). The HUD comes next.
 
 ## Using a layout
 
@@ -28,6 +28,8 @@ window_<name>/
 ├── declaration.json5     # constants and variables for the whole layout
 ├── assets/               # PNG images, fonts/*.ttf
 ├── lang/en_us.json5      # layout strings: {t:key}; zh_cn.json5, zh_tw.json5, …
+├── game_launch/          # Mojang's loading overlay (start, resource reloads)
+├── loading_screen/       # connecting, loading terrain, preparing a world, saving, …
 ├── main_menu/
 │   ├── layout.json5      # ports + elements
 │   ├── declaration.json5 # constants and variables for the main menu
@@ -49,8 +51,13 @@ Files are JSON5: comments, trailing commas and unquoted keys are fine. For autoc
   "scale": "fit",           // fit | fill | stretch
   "perspective": 1000,      // camera distance for 3D, in design pixels
   "fonts": { "title": { "file": "fonts/MyFont.ttf", "size": 11 } },
+  "title": "My pack {pack.version} · {window.title}",   // the window title; {window.title} is vanilla's
+  "icon": ["icon_16.png", "icon_32.png"],              // window icon, PNGs in assets/ (Windows, Linux)
+  "border": { "dark": true, "color": "#1b1f2a", "text": "#ffffff", "outline": "#ffb000" },
 }
 ```
+
+`border` is the Windows title bar: `dark` needs Windows 10 2004 or newer, the colours Windows 11; other systems ignore it. Anything left out stays as the system draws it, and switching to a layout without it puts the default back. The title can use any value and follows it (for example `{server.name}`).
 
 ### Declarations: constants and variables
 
@@ -123,6 +130,23 @@ Game values include `time`, `mouse.x`/`mouse.y` (−1…1 from the centre), `scr
 ```
 
 A button is named by its label's translation key (`menu.multiplayer`), its text, or `#index`. **Show button ids** prints each id next to its button. A button the layout doesn't name stays where vanilla put it.
+
+### Game launching screen
+
+`game_launch/` redraws Mojang's overlay, at start and on every resource reload. Ports: `background` (the red fill; hide it and draw your own), `logo`, `bar` (hide, x, y, scale). `{launch.progress}` is 0…1, `{launch.fade}` follows the overlay's fade, `{launch.reloading}` is true on reloads. **At the very first start Minecraft's own font isn't loaded yet**: use images, rects and bars here, or text in a layout font.
+
+### Loading screens
+
+`loading_screen/` covers every "please wait" screen. `{loading.kind}` says which: `connecting`, `terrain` (loading terrain, also on Monumenta's shard switches), `reconfiguring`, `world` (preparing a singleplayer world), `progress`, `message` (saving, …). `{loading.progress}` is 0…1 where the screen knows it, else −1; `{loading.text}` is vanilla's text.
+
+```json5
+"ports": {
+  "background": { "hide": true, "elements": { … } },
+  "text": { "color": "#ffb000", "y": 60 },   // vanilla's lines: hide, x, y, scale, color, opacity
+  "map": { "hide": true },                    // the chunk map while a world is prepared
+  "buttons": { "gui.cancel": { … } },         // Cancel while connecting, Disconnect while reconfiguring
+}
+```
 
 ### Pause menu and inventory
 

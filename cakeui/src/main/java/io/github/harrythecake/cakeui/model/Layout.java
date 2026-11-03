@@ -28,6 +28,10 @@ public final class Layout {
 	public double perspective = 1000;
 	public final Map<String, FontSpec> fonts = new LinkedHashMap<>();
 	public final Map<String, Node> parts = new LinkedHashMap<>();
+	/** The window's own settings: props `title`, `border.dark`, `border.color`, `border.text`, `border.outline` (never null after loading). */
+	public Node window;
+	/** Window icon PNGs (several sizes allowed), empty = vanilla's icon. */
+	public final List<Path> icons = new java.util.ArrayList<>();
 	/** Layout strings: language code → key → text. */
 	public final Map<String, Map<String, String>> lang = new LinkedHashMap<>();
 	public final Problems problems = new Problems();

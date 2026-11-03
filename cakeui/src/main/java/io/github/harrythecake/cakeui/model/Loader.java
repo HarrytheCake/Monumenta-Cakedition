@@ -32,7 +32,7 @@ public final class Loader {
 	public static final Map<String, List<String>> PORTS = Map.of(
 			"main_menu", List.of("background", "logo", "splash", "version", "buttons"),
 			"game_launch", List.of("background", "bar", "logo"),
-			"loading_screen", List.of("background", "buttons"),
+			"loading_screen", List.of("background", "text", "map", "buttons"),
 			"hud", List.of(),
 			"hud/pause", List.of("background", "buttons"),
 			"hud/inventory", List.of("background", "panel", "player", "title", "buttons"));
@@ -89,6 +89,7 @@ public final class Loader {
 			return;
 		}
 		readDeclaration(root.resolve("declaration.json5"), layout.scope);
+		readWindowLook(window);
 		readLang();
 		try (Stream<Path> entries = Files.list(root)) {
 			for (Path p : entries.sorted().toList()) {
@@ -183,6 +184,58 @@ public final class Loader {
 			problem(file, fonts.line, "'fonts' must be an object: { title: { file: \"fonts/x.ttf\", size: 11 } }");
 		}
 		return true;
+	}
+
+	private static final Set<String> BORDER_KEYS = Set.of("dark", "color", "text", "outline");
+
+	/** icon, title and border: read after the root declaration, so they can use its constants. */
+	private void readWindowLook(JValue.JObject w) {
+		String file = "window.json5";
+		Node win = new Node("window", "window", layout.scope, file, w.line);
+		JValue icon = w.get("icon");
+		if (icon instanceof JValue.JString s) {
+			readIcon(s);
+		} else if (icon instanceof JValue.JArray a && !a.list.isEmpty()) {
+			for (JValue item : a.list) {
+				if (item instanceof JValue.JString s) {
+					readIcon(s);
+				} else {
+					problem(file, item.line, "icon entries must be file names like \"icon_32.png\"");
+				}
+			}
+		} else if (icon != null) {
+			problem(file, icon.line, "'icon' must be a PNG in assets/ (\"icon.png\") or a list of sizes ([\"icon_16.png\", \"icon_32.png\"])");
+		}
+		JValue title = w.get("title");
+		if (title != null) {
+			setPortProp(win, "title", PropKinds.Kind.TEXT, title, file, w.keyLine("title"));
+		}
+		JValue border = w.get("border");
+		if (border instanceof JValue.JObject bo) {
+			for (Map.Entry<String, JValue> e : bo.map.entrySet()) {
+				String key = e.getKey();
+				int line = bo.keyLine(key);
+				if (!BORDER_KEYS.contains(key)) {
+					problem(file, line, "'" + key + "' isn't a border setting (dark, color, text, outline)" + PropKinds.suggest(key, BORDER_KEYS));
+					continue;
+				}
+				setPortProp(win, "border." + key, key.equals("dark") ? PropKinds.Kind.BOOL : PropKinds.Kind.COLOR, e.getValue(), file, line);
+			}
+		} else if (border != null) {
+			problem(file, border.line, "'border' must be an object: { dark: true, color: \"#1b1f2a\" }");
+		}
+		layout.window = win;
+	}
+
+	private void readIcon(JValue.JString s) {
+		Path path = root.resolve("assets").resolve(s.value).normalize();
+		if (!path.startsWith(root.resolve("assets").normalize()) || !Files.isRegularFile(path)) {
+			problem("window.json5", s.line, "icon not found: assets/" + s.value);
+		} else if (!s.value.toLowerCase(Locale.ROOT).endsWith(".png")) {
+			problem("window.json5", s.line, "the icon must be a PNG: " + s.value);
+		} else {
+			layout.icons.add(path);
+		}
 	}
 
 	private void readFont(String name, JValue v) {
@@ -859,6 +912,8 @@ public final class Loader {
 		boolean splash = name.equals("splash");
 		// ports of a vanilla text line: their own text and colour
 		boolean version = name.equals("version") || name.equals("title");
+		// the loading screen's lines: their colour (several lines, so no single replacement text)
+		boolean colored = version || name.equals("text");
 		for (Map.Entry<String, JValue> e : o.map.entrySet()) {
 			String key = e.getKey();
 			JValue v = e.getValue();
@@ -871,7 +926,7 @@ public final class Loader {
 				setPortProp(port, key, PropKinds.Kind.BOOL, v, file, kl);
 				continue;
 			}
-			if ((splash && SPLASH_STYLE_KEYS.contains(key)) || (version && (key.equals("text") || key.equals("color")))) {
+			if ((splash && SPLASH_STYLE_KEYS.contains(key)) || (version && key.equals("text")) || (colored && key.equals("color"))) {
 				if (splash) {
 					port.customStyle = true;
 				}
@@ -886,6 +941,8 @@ public final class Loader {
 				Set<String> all = new LinkedHashSet<>(PORT_KEYS);
 				if (version) {
 					all.add("text");
+				}
+				if (colored) {
 					all.add("color");
 				}
 				if (splash) {

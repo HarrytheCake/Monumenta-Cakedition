@@ -7,4 +7,9 @@
   "design": [1920, 1080],
   "scale": "fit",
   "perspective": 1400,
+  // The game window. {window.title} is vanilla's title ("Minecraft* 1.20.4 - Multiplayer").
+  "title": "Cakedition example · {window.title}",
+  "icon": ["icon_16.png", "icon_32.png", "icon_48.png"],
+  // Windows only: dark mode (Windows 10 2004+), colours (Windows 11).
+  "border": { "dark": true, "color": "#1b1f2a", "text": "#f2f2ee", "outline": "#ffb000" },
 }

@@ -36,6 +36,9 @@ public final class ScreenPorts {
 	/** The player's inventory (survival; the creative inventory is a different screen). */
 	public static final ScreenPorts INVENTORY = new ScreenPorts(() -> Ui.builtin("hud", "inventory"));
 
+	/** Connecting, loading terrain, preparing a world, and the like (LoadingPart.kind). */
+	public static final ScreenPorts LOADING = new ScreenPorts(() -> Ui.part("loading_screen"));
+
 	private final Supplier<Node> node;
 
 	public ScreenPorts(Supplier<Node> node) {
@@ -52,6 +55,9 @@ public final class ScreenPorts {
 		}
 		if (screen instanceof InventoryScreen) {
 			return INVENTORY;
+		}
+		if (LoadingPart.kind(screen) != null) {
+			return LOADING;
 		}
 		return null;
 	}
@@ -111,14 +117,15 @@ public final class ScreenPorts {
 	/** A port's x, y (GUI pixels) and scale, for moving a vanilla piece by hand. */
 	public double[] offset(String name) {
 		Node p = port(name);
-		Screen screen = MinecraftClient.getInstance().currentScreen;
-		if (p == null || screen == null) {
+		if (p == null) {
 			return new double[] {0, 0, 1};
 		}
 		Renderer r = Ui.renderer();
+		double w = MinecraftClient.getInstance().getWindow().getScaledWidth();
+		double h = MinecraftClient.getInstance().getWindow().getScaledHeight();
 		return new double[] {
-			r.length(p, null, "x", Env.AXIS_X, screen.width, screen.height, 0),
-			r.length(p, null, "y", Env.AXIS_Y, screen.width, screen.height, 0),
+			r.length(p, null, "x", Env.AXIS_X, w, h, 0),
+			r.length(p, null, "y", Env.AXIS_Y, w, h, 0),
 			r.number(p, "scale", 1)};
 	}
 
@@ -159,9 +166,9 @@ public final class ScreenPorts {
 		if (r.bool(p, "hide", false)) {
 			return false;
 		}
-		Screen screen = MinecraftClient.getInstance().currentScreen;
-		double w = screen == null ? 0 : screen.width;
-		double h = screen == null ? 0 : screen.height;
+		// the window's GUI size (= any screen's size; there is no screen under the launch overlay)
+		double w = MinecraftClient.getInstance().getWindow().getScaledWidth();
+		double h = MinecraftClient.getInstance().getWindow().getScaledHeight();
 		double x = r.length(p, null, "x", Env.AXIS_X, w, h, 0);
 		double y = r.length(p, null, "y", Env.AXIS_Y, w, h, 0);
 		double s = r.number(p, "scale", 1);

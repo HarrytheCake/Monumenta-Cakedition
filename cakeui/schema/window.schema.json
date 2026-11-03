@@ -78,13 +78,53 @@
       }
     },
     "icon": {
-      "description": "Window icon (coming in M3)."
+      "description": "Window icon: a PNG in assets/, or several sizes. Windows and Linux (X11); macOS keeps its icon.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      ]
     },
     "title": {
-      "description": "Window title (coming in M3)."
+      "type": "string",
+      "description": "Window title, with {expressions}; {window.title} is vanilla's title."
     },
     "border": {
-      "description": "Title bar colour (coming in M3)."
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Windows title bar. dark: Windows 10 2004+; colours: Windows 11. Other systems ignore it.",
+      "properties": {
+        "dark": {
+          "description": "Dark title bar.",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "color": {
+          "type": "string",
+          "description": "Title bar colour."
+        },
+        "text": {
+          "type": "string",
+          "description": "Title text colour."
+        },
+        "outline": {
+          "type": "string",
+          "description": "Window outline colour."
+        }
+      }
     }
   }
 }

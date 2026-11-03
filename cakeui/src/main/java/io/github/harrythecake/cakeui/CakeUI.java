@@ -40,9 +40,19 @@ public final class CakeUI implements ClientModInitializer {
 				Ui.config().showButtonIds = !Ui.config().showButtonIds;
 			}
 			Ui.tick();
+			WindowPart.tick(client);
 		});
 		HudRenderCallback.EVENT.register((context, delta) -> Overlay.draw(context));
 		ScreenEvents.AFTER_INIT.register((client, screen, width, height) -> {
+			ScreenPorts ports = ScreenPorts.of(screen);
+			if (ports == ScreenPorts.LOADING) {
+				// several vanilla screens, one without a render method of its own: Fabric events instead of mixins
+				ScreenEvents.beforeRender(screen).register((s, context, mouseX, mouseY, delta) -> LoadingPart.beginFrame(s, mouseX, mouseY));
+				ScreenEvents.afterRender(screen).register((s, context, mouseX, mouseY, delta) -> {
+					ScreenPorts.LOADING.drawElements(s, context, "front", 1);
+					ScreenPorts.drawButtonIds(s, context);
+				});
+			}
 			ScreenEvents.afterRender(screen).register((s, context, mouseX, mouseY, delta) -> Overlay.draw(context));
 			ScreenKeyboardEvents.afterKeyPress(screen).register((s, key, scancode, modifiers) -> {
 				if (reloadKey.matchesKey(key, scancode)) {
@@ -51,7 +61,6 @@ public final class CakeUI implements ClientModInitializer {
 					Ui.config().showButtonIds = !Ui.config().showButtonIds;
 				}
 			});
-			ScreenPorts ports = ScreenPorts.of(screen);
 			if (ports != null) {
 				ports.afterInit(screen);
 				ScreenMouseEvents.allowMouseClick(screen).register((s, mouseX, mouseY, button) -> !ports.click(s, button));

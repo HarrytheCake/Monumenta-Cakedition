@@ -237,4 +237,27 @@ class LoaderTest {
 		assertTrue(hasProblem(l, "hud/subwindow_pause/layout.json5", 5, "unknown port 'logo' in hud/pause"), problems(l));
 		assertEquals(1, l.problems.list().size(), problems(l));
 	}
+
+	@Test
+	void windowTitleIconAndBorder() throws IOException {
+		write("window.json5", """
+				{
+				  format: 1,
+				  title: "My pack {accent}",
+				  icon: ["icon_16.png", "missing.png"],
+				  border: { dark: true, color: "accent", glow: 1 },
+				}
+				""");
+		write("declaration.json5", "{ constants: { accent: '#ffb000' } }");
+		write("assets/icon_16.png", "not checked until it is set");
+		Layout l = Loader.load(dir).layout();
+
+		assertTrue(l.window.has("title"), problems(l));
+		assertTrue(l.window.has("border.dark"));
+		assertTrue(l.window.has("border.color"), "border colours can use the root declaration");
+		assertEquals(1, l.icons.size());
+		assertTrue(hasProblem(l, "window.json5", 4, "icon not found: assets/missing.png"), problems(l));
+		assertTrue(hasProblem(l, "window.json5", 5, "'glow' isn't a border setting"), problems(l));
+		assertEquals(2, l.problems.list().size(), problems(l));
+	}
 }

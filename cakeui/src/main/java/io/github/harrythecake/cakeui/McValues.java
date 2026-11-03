@@ -63,6 +63,13 @@ final class McValues {
 		reg("menu.fade", TitleMenu::fade);
 		reg("menu.splash", TitleMenu::splash);
 		reg("menu.version", TitleMenu::version);
+		reg("window.title", WindowPart::vanillaTitle);
+		reg("loading.kind", LoadingPart::kind);
+		reg("loading.progress", LoadingPart::progress);
+		reg("loading.text", LoadingPart::text);
+		reg("launch.progress", LaunchPart::progress);
+		reg("launch.fade", LaunchPart::fade);
+		reg("launch.reloading", LaunchPart::reloading);
 
 		reg("server.name", () -> {
 			ServerInfo s = mc().getCurrentServerEntry();

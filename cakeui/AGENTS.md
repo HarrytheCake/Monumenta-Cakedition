@@ -34,6 +34,10 @@ cakeui/
     ├── McValues.java        # game values: time, mouse.*, screen.*, fps, lang, mc/pack version, server.*, world.*, player.*, menu.*
     ├── ScreenPorts.java     # one per redrawable vanilla screen (TitleMenu.PORTS, PAUSE, INVENTORY; `of(screen)`): beginFrame, port helpers (vanilla piece,
     │                        #   offset, text/colour, elements in a box), background + back layer, buttons port (move/resize/hide/relabel/skins), clicks, button ids
+    ├── WindowPart.java      # window: title (getWindowTitle mixin, refreshed twice a second), icon (GLFW, Windows/X11; vanilla's back when unset),
+    │                        #   title bar via dwmapi DwmSetWindowAttribute (LWJGL JNI.callPPI; dark 20, caption 35, text 36, border 34; reset what was set)
+    ├── LaunchPart.java      # game_launch: Mojang's SplashOverlay (background/logo/bar ports, launch.* values)
+    ├── LoadingPart.java     # loading_screen: which vanilla screens count (loading.kind), loading.progress/text
     ├── TitleMenu.java       # main menu only: splash pick/draw, version text, fade (buttons etc. through TitleMenu.PORTS)
     ├── Overlay.java         # dev mode: problems in the top-left of every screen and the HUD
     ├── SelfTest.java        # only with -Dcakeui.selftest: title screen shots; =world: opens run/saves/cakeui-selftest, gives a few items, shots of pause + inventory; quits
@@ -48,10 +52,12 @@ cakeui/
     └── mixin/               # TitleScreenMixin (WrapOperation on panorama, overlay, logo, splash, version line, super.render; HEAD/TAIL),
                              #   GameMenuScreenMixin (pause: background, back/front), HandledScreenMixin (container dim, only via ScreenPorts.of),
                              #   InventoryScreenMixin (panel texture, drawEntity, title drawText, front before drawMouseoverTooltip),
+                             #   ScreenMixin (Screen.render's renderBackground call, loading screens only), LoadingScreensMixin (5 screens' text lines),
+                             #   LevelLoadingScreenMixin (chunk map) + accessors, SplashOverlayMixin (clear/fill/logo/bar), MinecraftClientMixin (title),
                              #   ClickableWidgetMixin (skins: wraps renderWidget in render), accessors for fonts/splash, MouseInvoker (self-test)
 ```
 
-Tests (`./gradlew build`, 23): Json5Test, ExprTest (units, folding, templates, errors), LoaderTest (whole layout, problems with file:line, scoping, own-folder writes, cycles, fatal window, built-in pause subwindow), GeometryTest (anchors, design scale, the hit-test unproject against the projection, the GL projection matrix, easings), ExampleLayoutTest (with the real McValues list), SchemaTest (props, groups, every port in `Loader.PORTS`).
+Tests (`./gradlew build`, 26: also CjkTest, window settings): Json5Test, ExprTest (units, folding, templates, errors), LoaderTest (whole layout, problems with file:line, scoping, own-folder writes, cycles, fatal window, built-in pause subwindow), GeometryTest (anchors, design scale, the hit-test unproject against the projection, the GL projection matrix, easings), ExampleLayoutTest (with the real McValues list), SchemaTest (props, groups, every port in `Loader.PORTS`).
 
 Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. Dev client: `./gradlew runClient -Dcakeui.selftest=1` (or `=world` for pause + inventory, about a minute; needs `run/options.txt` with `onboardAccessibility:false` and `run/config/cakeui/config.json5` pointing at a layout; `run/` is ignored). It opens a window for about 30 s.
 
@@ -63,6 +69,9 @@ Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. 
 - **Why buffers:** vanilla's `VertexConsumer.vertex(Matrix4f, …)` drops `w`, so a perspective matrix on the MatrixStack can't work.
 - **States:** `Prop.pick(hovered, pressed, disabled)`. Number, length and colour props with states ease through `NodeState.Anim` when `transition.duration > 0`.
 - **Clicks:** the topmost hovered enabled `button` of the frame takes the click (`ScreenMouseEvents.allowMouseClick` returns false). The action runs on press.
+- **Loading screens:** six vanilla screens (`LoadingPart.kind`). Their background is one hook on `Screen.render`'s `renderBackground` call; per-frame start and the front layer use Fabric's `ScreenEvents.before/afterRender` (ReconfiguringScreen has no render method to mix into).
+- **Launch overlay:** `SplashOverlay` draws no screen of its own: no clicks, no cursor. First start: vanilla clears the window (a hidden background clears to black); reloads: a fading fill, whose alpha the background elements use. Minecraft's font only exists after the first load: layout fonts work, vanilla-font text doesn't.
+- **Window:** applied on the first client tick (the window exists) and after every reload; game values in title/border are re-read twice a second (`env.frame` is bumped, since nothing is drawn there).
 - **Built-in subwindows** (`Loader.BUILTIN_SUBWINDOWS`: `hud/subwindow_pause`, `hud/subwindow_inventory`): loaded as type `part` into `part.builtins`, never `children`, so the HUD won't draw them. Ports per screen in `Loader.PORTS` (`hud/pause`, `hud/inventory`). Drawn like a part (`drawPart`, back/front) while their screen is open. Pause: only `showMenu` (F3+Esc stays vanilla). Inventory: back layer after the dim, panel port elements right after the panel texture via `drawElementsIn` (panel box, follows the recipe book), title port elements + front layer just before the item tooltip.
 - **Skins:** `ScreenPorts.applyButtons` (every frame) moves, resizes, hides and relabels buttons and registers skins. `ClickableWidgetMixin` draws the skin instead of `renderWidget`, so the vanilla button still handles input. Inside a skin, every element's hover = the button's hover.
 - **Small CJK text** (`readable`, default true): in Minecraft's bitmap font, text containing CJK (`Renderer.hasCjk`) is enlarged to at least 2 screen px per font unit (vanilla's GUI scale 2): its 16×16 glyphs sit in 8 units, so below that nearest sampling drops whole rows ("squeezed" Chinese, reported by the user 2026-11-04 at 852×475). Linear filtering was tried and rejected: soft but still unreadable at ~11 px. Latin text and layout TTFs keep the design size. `-Dcakeui.size=852x475` runs the dev client at that size.
@@ -78,6 +87,5 @@ Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. 
 ## Status
 
 - **M0** (repo folder, CI, glossary) and **M1** (config, loading, declarations, expressions, game values, hot reload, error overlay, schema) are done.
-- **M3** (in progress, 2026-11-04): **pause menu** and **inventory** done; self-tested in the dev client (`-Dcakeui.selftest=world`) and **passed the user's in-game test 2026-11-04** (F3+Esc stays vanilla too). Small CJK text fixed after the user's report (see `readable`). Also fixed: the main menu `version` port's `color` was accepted but ignored. Next in M3: loading screen, game launching screen, window (icon/title/border).
-- **M2** (rendering on the main menu) is **done and self-tested in a dev client 2026-10-30**: screenshots show the example layout, hover with transitions through a 3D tilt, skins, parallax, TTF and zh_cn. **Passed the user's in-game test 2026-11-04** in the test instance: the example layout, hot reload via the watcher, the reload key, the URL/connect actions and Mod Menu's button id.
-- **Next:** rest of M3, M4 (HUD ports + CakeBench), M5 (API, Mod Menu screen, polish).
+- **M3** (in progress, 2026-11-04): **pause menu** and **inventory** done; self-tested in the dev client (`-Dcakeui.selftest=world`) and **passed the user's in-game test 2026-11-04** (F3+Esc stays vanilla too). Small CJK text fixed after the user's report (see `readable`). **Window, loading screen and game launching screen done** and self-tested in the dev client (2026-11-04: title bar dark + colours + icon + title read back from the real window; loading `world`/`terrain`/`progress`; launch at start and on a reload; 0 problems). **Waiting for the user's in-game test**; then M3 is done. Also fixed: the main menu `version` port's `color` was accepted but ignored. - **M2** (rendering on the main menu) is **done and self-tested in a dev client 2026-10-30**: screenshots show the example layout, hover with transitions through a 3D tilt, skins, parallax, TTF and zh_cn. **Passed the user's in-game test 2026-11-04** in the test instance: the example layout, hot reload via the watcher, the reload key, the URL/connect actions and Mod Menu's button id.
+- **Next:** the in-game check of the M3 window/loading/launch parts, then M4 (HUD ports + CakeBench), M5 (API, Mod Menu screen, polish).

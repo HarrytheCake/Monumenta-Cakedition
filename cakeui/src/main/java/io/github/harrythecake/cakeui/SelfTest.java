@@ -2,6 +2,7 @@ package io.github.harrythecake.cakeui;
 
 import io.github.harrythecake.cakeui.mixin.MouseInvoker;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.GameMenuScreen;
 import net.minecraft.client.gui.screen.TitleScreen;
@@ -17,7 +18,7 @@ import net.minecraft.world.gen.WorldPresets;
  * Development only, off unless the JVM runs with -Dcakeui.selftest (Loom's runClient passes it on
  * request). On the title screen it takes screenshots with the mouse in a few places. With
  * -Dcakeui.selftest=world it then opens a test world ("cakeui-selftest" in run/saves) and takes
- * more of the pause menu and the inventory. Then it quits.
+ * more of the loading screens on the way (one per kind), the pause menu and the inventory. Then it quits.
  */
 final class SelfTest {
 	/** {seconds, mouse x, mouse y as fractions of the window, or -1 to leave it}. */
@@ -37,6 +38,12 @@ final class SelfTest {
 	};
 	private static final String WORLD = "cakeui-selftest";
 	private static boolean worldMode;
+	private static boolean enabled;
+	private static boolean reloaded;
+	private static int launchFrames;
+	private static boolean launchReloading;
+	private static final java.util.Set<String> LAUNCH_SHOTS = new java.util.HashSet<>();
+	private static final java.util.Set<String> SHOT_KINDS = new java.util.HashSet<>();
 	private static int ticks;
 	private static int step;
 	private static int worldTicks;
@@ -54,8 +61,26 @@ final class SelfTest {
 			return;
 		}
 		worldMode = mode.equals("world");
+		enabled = true;
 		CakeUI.LOGGER.info("CakeUI self-test: title screen{}, then quit", worldMode ? ", pause menu and inventory" : "");
 		ClientTickEvents.END_CLIENT_TICK.register(SelfTest::tick);
+		if (worldMode) {
+			// while a world loads the game renders without ticking: shoot loading screens from their own render event
+			ScreenEvents.AFTER_INIT.register((client, screen, w, h) -> {
+				String kind = LoadingPart.kind(screen);
+				if (kind == null) {
+					return;
+				}
+				int[] frames = {0};
+				ScreenEvents.afterRender(screen).register((s, ctx, mx, my, delta) -> {
+					if (++frames[0] == 8 && SHOT_KINDS.add(kind)) {
+						ctx.draw();
+						ScreenshotRecorder.saveScreenshot(client.runDirectory, "cakeui-selftest-loading-" + kind + ".png", client.getFramebuffer(),
+								text -> CakeUI.LOGGER.info("CakeUI self-test: {}", text.getString()));
+					}
+				});
+			});
+		}
 	}
 
 	private static void tick(MinecraftClient client) {
@@ -74,6 +99,15 @@ final class SelfTest {
 				step++;
 			}
 		} else if (seconds >= TITLE[TITLE.length - 1][0] + 2) {
+			if (!reloaded) {
+				// a resource reload shows the launch overlay again, over the title screen
+				reloaded = true;
+				client.reloadResources();
+				return;
+			}
+			if (client.getOverlay() != null) {
+				return;
+			}
 			if (worldMode) {
 				worldStarted = true;
 				openWorld(client);
@@ -130,6 +164,23 @@ final class SelfTest {
 			} else {
 				done(client);
 			}
+		}
+	}
+
+	/** Each frame of the launch overlay (LaunchPart): one shot at start, one during the reload. */
+	static void launchFrame(boolean reloading) {
+		if (!enabled) {
+			return;
+		}
+		if (reloading != launchReloading) {
+			launchReloading = reloading;
+			launchFrames = 0;
+		}
+		String name = reloading ? "reload" : "start";
+		if (++launchFrames == 40 && LAUNCH_SHOTS.add(name)) {
+			MinecraftClient client = MinecraftClient.getInstance();
+			ScreenshotRecorder.saveScreenshot(client.runDirectory, "cakeui-selftest-launch-" + name + ".png", client.getFramebuffer(),
+					text -> CakeUI.LOGGER.info("CakeUI self-test: launch {}", name));
 		}
 	}
 

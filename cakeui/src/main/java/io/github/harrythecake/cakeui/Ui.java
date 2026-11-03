@@ -112,6 +112,7 @@ public final class Ui {
 			stopWatcher();
 		}
 		reinitScreen();
+		WindowPart.apply();
 	}
 
 	private static void swap(Renderer next) {
