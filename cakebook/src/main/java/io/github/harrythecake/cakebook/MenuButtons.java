@@ -17,7 +17,7 @@ import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableTextContent;
 
-/** The small book buttons: next to "Back to Game" in the pause menu, and to the right of the inventory. */
+/** The small book buttons: next to "Back to Game" in the pause menu, and to the left of the inventory. */
 final class MenuButtons {
 	private MenuButtons() {}
 
@@ -65,11 +65,22 @@ final class MenuButtons {
 		Screens.getButtons(screen).add(new BookButton(x, y, b -> client.setScreen(new BookScreen(screen, null, null))));
 	}
 
+	/** Width of the open recipe book, and how far vanilla shifts it left of the centre (RecipeBookWidget). */
+	private static final int RECIPE_BOOK_WIDTH = 147;
+	private static final int RECIPE_BOOK_SHIFT = 86;
+
 	private static void addToInventory(MinecraftClient client, Screen screen) {
 		HandledScreenAccessor inventory = (HandledScreenAccessor) screen;
+		InventoryScreen inv = (InventoryScreen) screen;
 		BookButton button = new BookButton(0, 0, b -> client.setScreen(new BookScreen(screen, null, null)));
-		Runnable place = () -> button.setPosition(inventory.cakebook$x() + inventory.cakebook$backgroundWidth() + 2,
-				inventory.cakebook$y());
+		// left of the inventory (the right side is where vanilla lists status effects); left of the recipe book while it is open
+		Runnable place = () -> {
+			int left = inventory.cakebook$x();
+			if (inv.getRecipeBookWidget().isOpen()) {
+				left = Math.min(left, (screen.width - RECIPE_BOOK_WIDTH) / 2 - RECIPE_BOOK_SHIFT);
+			}
+			button.setPosition(Math.max(2, left - 22), inventory.cakebook$y());
+		};
 		place.run();
 		Screens.getButtons(screen).add(button);
 		// the inventory moves sideways when the recipe book opens or closes

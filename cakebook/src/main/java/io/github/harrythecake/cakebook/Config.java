@@ -19,7 +19,7 @@ final class Config {
 			{
 			  // A book button next to "Back to Game" in the pause menu.
 			  "pauseMenuButton": true,
-			  // A book button to the right of the inventory.
+			  // A book button to the left of the inventory.
 			  "inventoryButton": true,
 			  // The book opened the first time (its folder name, e.g. "cakedition"). "" = the first in the list.
 			  "firstBook": ""

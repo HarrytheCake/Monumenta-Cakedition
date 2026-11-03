@@ -78,7 +78,7 @@ The classes marked plain Java use no Minecraft classes (Gson in `Library` is fin
 - `BookScreen`: history (`BACK`/`FORWARD`), the last page and its scroll, and expanded sidebar entries are static, so they survive closing the screen until the game quits. The sidebar shows books (expand arrow; click opens the home page), each book's contents (folders collapse), then "My notes"; while the search box has text it shows hits instead (tooltip = book + snippet).
 - Keys: Ctrl+F search, arrows/PgUp/PgDn/Space/Home/End scroll, Backspace back, mouse buttons 4/5 back/forward, the open key closes.
 - Links: the page's text carries `cakebook:link:<raw target>` in the style insertion; `BookScreen` resolves it relative to the shown page on click.
-- Buttons: pause menu (only when the full menu shows) 24 px left of "Back to Game" (found by its translation key; falls back to 4,4); inventory (`InventoryScreen` only) right of the background, re-placed every frame because the recipe book moves it.
+- Buttons: pause menu (only when the full menu shows) 24 px left of "Back to Game" (found by its translation key; falls back to 4,4); inventory (`InventoryScreen` only) left of the background (left of the recipe book while it is open; since 0.1.2, the right side was under vanilla's status effects), re-placed every frame because the recipe book moves it.
 - Commands (client-side): `/cakebook`, `open <page>` (suggests every `book/path` and `note:id`), `search <text>`, `note <title>`, `reload`, `folder`.
 
 ## Invariants
