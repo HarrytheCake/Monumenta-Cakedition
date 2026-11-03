@@ -260,4 +260,27 @@ class LoaderTest {
 		assertTrue(hasProblem(l, "window.json5", 5, "'glow' isn't a border setting"), problems(l));
 		assertEquals(2, l.problems.list().size(), problems(l));
 	}
+
+	@Test
+	void hudPorts() throws IOException {
+		write("window.json5", "{ format: 1, design: [640, 360] }");
+		write("hud/layout.json5", """
+				{
+				  ports: {
+				    hotbar: { y: -4, opacity: 0.8 },
+				    experience: { hide: true, elements: { xp: { type: "bar", value: "player.xp" } } },
+				    title: { scale: 0.5, text: "nope" },
+				    chat: { hide: true },
+				  },
+				  elements: { coords: { type: "text", text: "{fmt(player.y, 0)}" } },
+				}
+				""");
+		Layout l = Loader.load(dir).layout();
+		Node hud = l.part("hud");
+		assertEquals(3, hud.ports.size(), problems(l));
+		assertEquals(1, hud.ports.get("experience").children.size());
+		assertTrue(hasProblem(l, "hud/layout.json5", 5, "'text' isn't a setting of the title port"), problems(l));
+		assertTrue(hasProblem(l, "hud/layout.json5", 6, "unknown port 'chat' in hud"), problems(l));
+		assertEquals(2, l.problems.list().size(), problems(l));
+	}
 }

@@ -775,7 +775,7 @@
     "ports": {
       "type": "object",
       "additionalProperties": false,
-      "description": "Vanilla pieces this part changes (main_menu: background, logo, splash, version, buttons; game_launch: background, bar, logo; loading_screen: background, text, map, buttons; hud/subwindow_pause: background, buttons; hud/subwindow_inventory: background, panel, player, title, buttons).",
+      "description": "Vanilla pieces this part changes (main_menu: background, logo, splash, version, buttons; game_launch: background, bar, logo; loading_screen: background, text, map, buttons; hud/subwindow_pause: background, buttons; hud/subwindow_inventory: background, panel, player, title, buttons; hud: hotbar, crosshair, bossBars, health, armor, hunger, air, mountHealth, experience, heldItemName, statusEffects, scoreboard, tabList, actionBar, title, vignette, spyglass, pumpkin).",
       "properties": {
         "background": {
           "type": "object",
@@ -1061,7 +1061,7 @@
               "$ref": "#/definitions/color"
             }
           },
-          "description": "Inventory: the title line. Its elements are drawn in the panel's box."
+          "description": "Inventory: the title line (text, color). HUD: the title and subtitle ({hud.title}, {hud.subtitle}; hide, x, y, scale, opacity)."
         },
         "buttons": {
           "$ref": "#/definitions/buttons"
@@ -1126,6 +1126,499 @@
             }
           },
           "description": "Loading screen: the chunk map while a singleplayer world is prepared."
+        },
+        "hotbar": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the hotbar (with off-hand and attack indicator)."
+        },
+        "crosshair": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the crosshair."
+        },
+        "bossBars": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: boss bars."
+        },
+        "health": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: hearts."
+        },
+        "armor": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: armor points."
+        },
+        "hunger": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: food."
+        },
+        "air": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: air bubbles."
+        },
+        "mountHealth": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: a mount's hearts."
+        },
+        "experience": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the XP bar and level."
+        },
+        "heldItemName": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the held item's name."
+        },
+        "statusEffects": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: status effect icons (top right)."
+        },
+        "scoreboard": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the scoreboard sidebar."
+        },
+        "tabList": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the player list (Tab)."
+        },
+        "actionBar": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the action bar text ({hud.actionbar})."
+        },
+        "vignette": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the vignette."
+        },
+        "spyglass": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the spyglass overlay."
+        },
+        "pumpkin": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            }
+          },
+          "description": "HUD: the carved pumpkin overlay."
         }
       }
     }

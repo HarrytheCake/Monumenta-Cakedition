@@ -1,10 +1,10 @@
 # CakeUI
 
-A client-only Fabric mod for Minecraft 1.20.4 that lets modpacks redraw the game window, Mojang's launch screen, the main menu, the loading screens, the pause menu and the inventory, and later the HUD, from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
+A client-only Fabric mod for Minecraft 1.20.4 that lets modpacks redraw the game window, Mojang's launch screen, the main menu, the loading screens, the pause menu, the inventory and the in-game HUD from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
 
 With no layout chosen (the default), CakeUI changes nothing. It also leaves alone any piece of vanilla that the active layout doesn't mention, so other mods' buttons and screens keep working.
 
-**Status:** 0.1.0 (in development). The window, the game launching screen, the main menu, the loading screens, the pause menu and the player's inventory work (milestones 1–3 of 5). The HUD comes next.
+**Status:** 0.1.0 (in development). The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work (milestones 1–4 of 5). An API for other mods and a Mod Menu screen come next.
 
 ## Using a layout
 
@@ -36,6 +36,7 @@ window_<name>/
 │   ├── splashes.txt      # optional splash list
 │   └── subwindow_<name>/ # panels: layout.json5 + declaration.json5, nested as deep as you like
 └── hud/
+    ├── layout.json5          # HUD ports + elements
     ├── subwindow_pause/      # built in: the pause menu (Esc)
     └── subwindow_inventory/  # built in: the player's inventory (E, survival)
 ```
@@ -148,6 +149,21 @@ A button is named by its label's translation key (`menu.multiplayer`), its text,
 }
 ```
 
+### HUD
+
+`hud/layout.json5` redraws the in-game HUD. Every vanilla piece except chat and F3 is a port: `hotbar`, `crosshair`, `bossBars`, `health`, `armor`, `hunger`, `air`, `mountHealth`, `experience` (bar and level), `heldItemName`, `statusEffects`, `scoreboard`, `tabList`, `actionBar`, `title` (with the subtitle), `vignette`, `spyglass`, `pumpkin`. Each takes `hide`, `x`, `y`, `scale`, `opacity` and `elements`. A port's elements are drawn whenever vanilla would draw the piece, so a hidden piece can be replaced:
+
+```json5
+"ports": {
+  "hotbar": { "y": "-4px", "opacity": 0.9 },
+  "experience": { "hide": true, "elements": { "bar": { "type": "bar", "value": "player.xp", … } } },
+  "title": { "scale": 0.75 },
+},
+"elements": { … },   // the HUD's own elements and subwindows (layer back = under the hotbar, front = on top)
+```
+
+Use `px` for HUD sizes: they match vanilla's HUD at every GUI scale. A piece the layout doesn't name stays exactly as vanilla (or another mod) draws it; a mod that replaces a piece entirely (say, the health and hunger bars) also takes it out of CakeUI's hands. Values: `hud.actionbar`, `hud.title`, `hud.subtitle`, `hud.hidden` (F1), and the `player.*` values. Nothing is drawn with F1.
+
 ### Pause menu and inventory
 
 `hud/subwindow_pause/` and `hud/subwindow_inventory/` are **built-in subwindows**: each stands for a vanilla screen, covers the whole screen and is drawn only while that screen is open. Like a part, its `layout.json5` has `ports` and `elements` (`layer: "back"` behind the vanilla buttons and slots, `"front"` in front of them but under tooltips).
@@ -180,7 +196,7 @@ F3+Esc's "Game Paused" screen (no buttons) stays vanilla.
 
 ## Building
 
-`JAVA_HOME=<JDK 21> ./gradlew build` (JUnit tests included). `./gradlew runClient -Dcakeui.selftest=1` opens a dev client that screenshots the title screen into `run/screenshots/` and quits; `-Dcakeui.selftest=world` also opens a test world and screenshots the pause menu and the inventory.
+`JAVA_HOME=<JDK 21> ./gradlew build` (JUnit tests included). `./gradlew runClient -Dcakeui.selftest=1` opens a dev client that screenshots the title screen into `run/screenshots/` and quits; `-Dcakeui.selftest=world` also opens a test world, screenshots the loading screens, pause menu, inventory and HUD, and times the HUD with and without the layout.
 
 ## License
 

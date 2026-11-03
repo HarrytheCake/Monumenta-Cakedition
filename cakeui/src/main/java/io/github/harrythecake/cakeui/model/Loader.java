@@ -33,7 +33,8 @@ public final class Loader {
 			"main_menu", List.of("background", "logo", "splash", "version", "buttons"),
 			"game_launch", List.of("background", "bar", "logo"),
 			"loading_screen", List.of("background", "text", "map", "buttons"),
-			"hud", List.of(),
+			"hud", List.of("hotbar", "crosshair", "bossBars", "health", "armor", "hunger", "air", "mountHealth", "experience", "heldItemName",
+					"statusEffects", "scoreboard", "tabList", "actionBar", "title", "vignette", "spyglass", "pumpkin"),
 			"hud/pause", List.of("background", "buttons"),
 			"hud/inventory", List.of("background", "panel", "player", "title", "buttons"));
 	/** Subwindows that stand for a vanilla screen: part id → names. They cover the whole screen, have ports and are drawn only while that screen is open. */
@@ -902,18 +903,19 @@ public final class Loader {
 			if (name.equals("buttons")) {
 				part.ports.put(name, readButtons(part, po, file, line));
 			} else {
-				part.ports.put(name, readPort(part, name, po, file, line));
+				part.ports.put(name, readPort(part, partId, name, po, file, line));
 			}
 		}
 	}
 
-	private Node readPort(Node part, String name, JValue.JObject o, String file, int line) {
+	private Node readPort(Node part, String partId, String name, JValue.JObject o, String file, int line) {
 		Node port = new Node(name, "port", part.scope, file, line);
 		boolean splash = name.equals("splash");
 		// ports of a vanilla text line: their own text and colour
-		boolean version = name.equals("version") || name.equals("title");
+		// ports of one vanilla text line: their own text and colour
+		boolean version = name.equals("version") || (name.equals("title") && partId.equals("hud/inventory"));
 		// the loading screen's lines: their colour (several lines, so no single replacement text)
-		boolean colored = version || name.equals("text");
+		boolean colored = version || (name.equals("text") && partId.equals("loading_screen"));
 		for (Map.Entry<String, JValue> e : o.map.entrySet()) {
 			String key = e.getKey();
 			JValue v = e.getValue();

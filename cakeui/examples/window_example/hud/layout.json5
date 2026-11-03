@@ -1,0 +1,30 @@
+// The in-game HUD. Every vanilla piece but chat and F3 is a port; pieces not named here stay
+// exactly as vanilla (or another mod) draws them. A port's elements are drawn whenever vanilla
+// would draw the piece, so a hidden piece can be replaced. Sizes in px match vanilla's HUD.
+{
+  "$schema": "../../../schema/layout.schema.json",
+  "ports": {
+    "hotbar": { "opacity": 0.92 },
+    // vanilla's text, moved and scaled: the action bar a little higher, titles smaller
+    "actionBar": { "y": "-8px" },
+    "title": { "scale": 0.75, "y": "-20px" },
+    // vanilla's XP bar out, a slim one in its place
+    "experience": {
+      "hide": true,
+      "elements": {
+        "bar": { "type": "bar", "anchor": "bottom", "origin": "bottom", "y": "-25px", "width": "182px", "height": "3px",
+                 "value": "player.xp", "color": "accent", "background": "#00000080" },
+        "level": { "type": "text", "text": "{player.level}", "anchor": "bottom", "origin": "bottom", "y": "-29px", "size": "9px",
+                   "color": "accent", "shadow": true, "visible": "= player.level > 0" },
+      },
+    },
+  },
+  "elements": {
+    "info": { "type": "group", "x": "4px", "y": "4px", "width": "96px", "height": "25px", "arrange": "column", "gap": "1px", "padding": "3px",
+              "background": "#00000060",
+      "elements": {
+        "where": { "type": "text", "text": "{fmt(player.x, 0)} {fmt(player.y, 0)} {fmt(player.z, 0)}", "size": "9px", "color": "paper" },
+        "fps": { "type": "text", "text": "{fps} fps", "size": "9px", "color": "#ffffffa0" },
+      } },
+  },
+}

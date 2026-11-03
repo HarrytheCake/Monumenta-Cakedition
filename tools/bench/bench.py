@@ -3,6 +3,7 @@
     python tools/bench/bench.py setup                  # server + Carpet, bench JDK copy, "Cakedition Bench" instance
     python tools/bench/bench.py gpu igpu|default       # Windows GPU preference for the bench JDK only
     python tools/bench/bench.py batch <sets.json> [--repeats N] [--name NAME] [--gpu-timers]
+                                                       # a set: add (Modrinth version ids), jars (local paths), remove, files, options
     python tools/bench/bench.py report <batch name>    # docs/benchmarks/<batch name>.md
     python tools/bench/bench.py serve                  # the bench server alone, to look around by hand
     python tools/bench/bench.py play [folder]          # read a /cakebench start ... stop recording made while playing
@@ -481,6 +482,11 @@ def reset_instance(mod_set):
             p.unlink()
     for version_id in mod_set.get("add", []):
         jar = modrinth_version(version_id)
+        shutil.copy(jar, MC / "mods" / jar.name)
+    for rel in mod_set.get("jars", []):  # local builds (our mods before they are released), relative to the repo
+        jar = ROOT / rel
+        if not jar.is_file():
+            sys.exit(f"set {mod_set['name']}: {rel} not found (build it first)")
         shutil.copy(jar, MC / "mods" / jar.name)
     for rel, content in mod_set.get("files", {}).items():
         p = MC / rel

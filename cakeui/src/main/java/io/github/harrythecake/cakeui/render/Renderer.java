@@ -82,8 +82,11 @@ public final class Renderer {
 		mouseY = my;
 		cursor = hasCursor;
 		now = Util.getMeasuringTimeMs() / 1000.0;
-		dt = lastNow < 0 ? 0 : Math.min(0.25, now - lastNow);
-		lastNow = now;
+		// the HUD and an open screen both begin a frame: the second start in the same frame keeps the time step
+		if (lastNow < 0 || now - lastNow >= 0.002) {
+			dt = lastNow < 0 ? 0 : Math.min(0.25, now - lastNow);
+			lastNow = now;
+		}
 		double[] s = layout.designScale(width, height);
 		env.rx = s[0];
 		env.ry = s[1];

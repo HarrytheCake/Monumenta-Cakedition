@@ -1,0 +1,33 @@
+{
+ "measureSeconds": 30,
+ "sets": [
+  {
+   "name": "baseline",
+   "why": "the pack as shipped (no CakeUI); 3 runs to measure the noise",
+   "repeats": 3
+  },
+  {
+   "name": "+cakeui-nolayout",
+   "why": "CakeUI installed, no layout chosen: must cost nothing (ADR 0006)",
+   "jars": [
+    "cakeui/build/libs/cakeui-0.1.0.jar"
+   ],
+   "files": {
+    "config/cakeui/config.json5": "{\n  layoutPath: \"\",\n}\n"
+   }
+  },
+  {
+   "name": "+cakeui-hud",
+   "why": "CakeUI with the example HUD (XP bar replaced, info box, moved action bar/title); target: under 0.5 ms/frame on the low tier",
+   "jars": [
+    "cakeui/build/libs/cakeui-0.1.0.jar"
+   ],
+   "files": {
+    "config/cakeui/config.json5": "{\n  layoutPath: \"cakeui/layouts/window_bench\",\n  devMode: false,\n}\n",
+    "cakeui/layouts/window_bench/window.json5": "{\n  \"format\": 1,\n  \"design\": [1920, 1080],\n  \"scale\": \"fit\",\n}\n",
+    "cakeui/layouts/window_bench/declaration.json5": "// Seen by every part and subwindow of this layout.\n{\n  \"$schema\": \"../../schema/declaration.schema.json\",\n  \"constants\": {\n    \"accent\": \"#ffb000\",\n    \"paper\": \"#f2f2ee\",\n    \"ink\": \"#1b1f2a\",\n  },\n}\n",
+    "cakeui/layouts/window_bench/hud/layout.json5": "// The in-game HUD. Every vanilla piece but chat and F3 is a port; pieces not named here stay\n// exactly as vanilla (or another mod) draws them. A port's elements are drawn whenever vanilla\n// would draw the piece, so a hidden piece can be replaced. Sizes in px match vanilla's HUD.\n{\n  \"$schema\": \"../../../schema/layout.schema.json\",\n  \"ports\": {\n    \"hotbar\": { \"opacity\": 0.92 },\n    // vanilla's text, moved and scaled: the action bar a little higher, titles smaller\n    \"actionBar\": { \"y\": \"-8px\" },\n    \"title\": { \"scale\": 0.75, \"y\": \"-20px\" },\n    // vanilla's XP bar out, a slim one in its place\n    \"experience\": {\n      \"hide\": true,\n      \"elements\": {\n        \"bar\": { \"type\": \"bar\", \"anchor\": \"bottom\", \"origin\": \"bottom\", \"y\": \"-25px\", \"width\": \"182px\", \"height\": \"3px\",\n                 \"value\": \"player.xp\", \"color\": \"accent\", \"background\": \"#00000080\" },\n        \"level\": { \"type\": \"text\", \"text\": \"{player.level}\", \"anchor\": \"bottom\", \"origin\": \"bottom\", \"y\": \"-29px\", \"size\": \"9px\",\n                   \"color\": \"accent\", \"shadow\": true, \"visible\": \"= player.level > 0\" },\n      },\n    },\n  },\n  \"elements\": {\n    \"info\": { \"type\": \"group\", \"x\": \"4px\", \"y\": \"4px\", \"width\": \"96px\", \"height\": \"25px\", \"arrange\": \"column\", \"gap\": \"1px\", \"padding\": \"3px\",\n              \"background\": \"#00000060\",\n      \"elements\": {\n        \"where\": { \"type\": \"text\", \"text\": \"{fmt(player.x, 0)} {fmt(player.y, 0)} {fmt(player.z, 0)}\", \"size\": \"9px\", \"color\": \"paper\" },\n        \"fps\": { \"type\": \"text\", \"text\": \"{fps} fps\", \"size\": \"9px\", \"color\": \"#ffffffa0\" },\n      } },\n  },\n}\n"
+   }
+  }
+ ]
+}

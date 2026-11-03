@@ -11,6 +11,7 @@ import net.minecraft.client.util.ScreenshotRecorder;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.text.Text;
 import net.minecraft.world.gen.GeneratorOptions;
 import net.minecraft.world.gen.WorldPresets;
 
@@ -18,7 +19,8 @@ import net.minecraft.world.gen.WorldPresets;
  * Development only, off unless the JVM runs with -Dcakeui.selftest (Loom's runClient passes it on
  * request). On the title screen it takes screenshots with the mouse in a few places. With
  * -Dcakeui.selftest=world it then opens a test world ("cakeui-selftest" in run/saves) and takes
- * more of the loading screens on the way (one per kind), the pause menu and the inventory. Then it quits.
+ * more of the loading screens on the way (one per kind), the pause menu, the inventory and the HUD, and
+ * times the HUD with and without the layout. Then it quits.
  */
 final class SelfTest {
 	/** {seconds, mouse x, mouse y as fractions of the window, or -1 to leave it}. */
@@ -50,6 +52,8 @@ final class SelfTest {
 	private static int screenTicks;
 	private static int screenStep;
 	private static int phase;
+	private static boolean pauseOnLostFocus = true;
+	private static double[] hudOn = {0, 0};
 	private static boolean worldStarted;
 
 	private SelfTest() {
@@ -140,11 +144,19 @@ final class SelfTest {
 						p.getInventory().insertStack(new ItemStack(Items.BREAD, 12));
 						p.getInventory().insertStack(new ItemStack(Items.TORCH, 64));
 					}
+					if (p != null && p.experienceLevel == 0) {
+						p.addExperienceLevels(7);
+						p.addExperience(40);
+					}
 				});
 			}
 			client.setScreen(new GameMenuScreen(true));
 		}
 		if (worldTicks < 60) {
+			return;
+		}
+		if (phase == 2) {
+			hudTick(client);
 			return;
 		}
 		double[][] steps = phase == 0 ? PAUSE : INVENTORY;
@@ -162,8 +174,42 @@ final class SelfTest {
 				screenStep = 0;
 				client.setScreen(new InventoryScreen(client.player));
 			} else {
-				done(client);
+				phase = 2;
+				screenTicks = 0;
+				// the dev window is often in the background: it must not pause itself while the HUD is measured
+				pauseOnLostFocus = client.options.pauseOnLostFocus;
+				client.options.pauseOnLostFocus = false;
+				client.setScreen(null);
 			}
+		}
+	}
+
+	/** HUD: a screenshot, then InGameHud.render timed for 10 s with the layout's HUD and 10 s with it off. */
+	private static void hudTick(MinecraftClient client) {
+		screenTicks++;
+		if (screenTicks == 10) {
+			client.inGameHud.setOverlayMessage(Text.literal("Action bar from the self-test"), false);
+			client.inGameHud.setTitleTicks(5, 60, 10);
+			client.inGameHud.setTitle(Text.literal("Title"));
+			client.inGameHud.setSubtitle(Text.literal("and its subtitle"));
+		} else if (screenTicks == 40) {
+			ScreenshotRecorder.saveScreenshot(client.runDirectory, "cakeui-selftest-hud.png", client.getFramebuffer(),
+					text -> CakeUI.LOGGER.info("CakeUI self-test: {}", text.getString()));
+		} else if (screenTicks == 60) {
+			HudTiming.enabled = true;
+			HudTiming.reset();
+		} else if (screenTicks == 260) {
+			hudOn = HudTiming.result();
+			HudPart.benchOff = true;
+			HudTiming.reset();
+		} else if (screenTicks == 460) {
+			double[] off = HudTiming.result();
+			HudPart.benchOff = false;
+			HudTiming.enabled = false;
+			CakeUI.LOGGER.info("CakeUI self-test: HUD bench: with the layout's HUD {} ms/frame ({} frames), without {} ms/frame ({} frames), CakeUI adds {} ms",
+					String.format("%.4f", hudOn[0]), (long) hudOn[1], String.format("%.4f", off[0]), (long) off[1], String.format("%.4f", hudOn[0] - off[0]));
+			client.options.pauseOnLostFocus = pauseOnLostFocus;
+			done(client);
 		}
 	}
 

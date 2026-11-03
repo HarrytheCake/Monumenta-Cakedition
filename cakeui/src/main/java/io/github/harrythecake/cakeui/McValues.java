@@ -70,6 +70,10 @@ final class McValues {
 		reg("launch.progress", LaunchPart::progress);
 		reg("launch.fade", LaunchPart::fade);
 		reg("launch.reloading", LaunchPart::reloading);
+		reg("hud.hidden", () -> mc().options.hudHidden);
+		reg("hud.actionbar", HudPart::actionBar);
+		reg("hud.title", HudPart::title);
+		reg("hud.subtitle", HudPart::subtitle);
 
 		reg("server.name", () -> {
 			ServerInfo s = mc().getCurrentServerEntry();
