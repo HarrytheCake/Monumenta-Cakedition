@@ -25,7 +25,7 @@ cakeui/
 ├── GLOSSARY.md             # CakeUI's terms (listed in the root's local GLOSSARY-MAP.md)
 ├── README.md               # the layout guide (public)
 ├── schema/*.schema.json    # JSON Schemas for layout/declaration/window files; SchemaTest keeps them in step with PropKinds
-├── examples/window_example # the example layout: main menu, hud/subwindow_pause, hud/subwindow_inventory (generated art; ExampleLayoutTest loads it with 0 problems)
+├── examples/window_example # the example layout: main menu, hud/subwindow_pause, hud/subwindow_inventory (generated art, except `window_icon_*.png` = the Monumenta Cakedition pack icon from `pack/icon.png`; ExampleLayoutTest loads it with 0 problems)
 ├── .github/workflows/build.yml   # CI: build + test; release v<mod_version> once per version
 └── src/main/java/io/github/harrythecake/cakeui/
     ├── CakeUI.java          # entrypoint: values, keys (reload, button ids; unbound), Ui.reload, screen/HUD/tick events

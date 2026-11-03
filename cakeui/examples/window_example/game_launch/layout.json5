@@ -17,7 +17,7 @@
     "bar": { "hide": true },
   },
   "elements": {
-    "cake": { "type": "image", "src": "icon_48.png", "pixelated": true, "anchor": "center", "y": -40, "width": 192, "height": 192,
+    "cake": { "type": "image", "src": "cake.png", "pixelated": true, "anchor": "center", "y": -40, "width": 192, "height": 192,
               "transform": { "scale": "1 + 0.04 * sin(time * 4)" } },
     "track": { "type": "rect", "anchor": "center", "y": 140, "width": 640, "height": 10, "color": "#ffffff30", "layer": "front" },
     "bar": { "type": "bar", "anchor": "center", "y": 140, "width": 640, "height": 10, "value": "launch.progress", "color": "accent", "layer": "front" },
