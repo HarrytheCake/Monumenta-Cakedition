@@ -15,7 +15,7 @@
     "logo": { "hide": true },
     "splash": {
       "list": "splashes.txt", "mixVanilla": false,
-      "anchor": "top_left", "origin": "left", "x": 128, "y": 352, "size": 34, "color": "accent", "shadow": true,
+      "anchor": "top_left", "origin": "left", "x": 128, "y": 372, "size": 34, "color": "accent", "shadow": true,
       "transform": { "rotateZ": -3, "scale": "1 + 0.03 * sin(time * 5)" },
     },
     "version": { "text": "{menu.version} + CakeUI" },
@@ -32,7 +32,8 @@
         "skin": {
           "bg": { "type": "rect", "color": "#00000080", "outline": "accent", "outlineWidth": "1px",
                   "states": { "hover": { "color": "#ffb000c0" } }, "transition": { "duration": 0.12 } },
-          "label": { "type": "text", "text": "文A", "anchor": "center", "size": "9px", "color": "paper" },
+          // an icon, not a sentence: keep it inside its 20px button even in small windows
+          "label": { "type": "text", "text": "文A", "anchor": "center", "size": "9px", "color": "paper", "readable": false },
         } },
       "options.accessibility": { "anchor": "bottom_left", "origin": "bottom_left", "x": 200, "y": -40, "width": "20px", "height": "20px",
         "skin": {

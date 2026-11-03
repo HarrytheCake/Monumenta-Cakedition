@@ -1,0 +1,31 @@
+// The pause menu (Esc in a world). Vanilla's buttons stay where they are and keep working;
+// "*" gives every one of them the same skin. The title is a text widget, so it is a "button" too.
+{
+  "$schema": "../../../../schema/layout.schema.json",
+  "ports": {
+    "background": {
+      "hide": true,
+      "elements": {
+        "shade": { "type": "rect", "color": "#1b1f2a90", "color2": "#000000d0", "gradient": "horizontal" },
+        "stripe": { "type": "rect", "width": 8, "height": "100%", "color": "accent" },
+      },
+    },
+    "buttons": {
+      "menu.game": { "visible": false },
+      "*": {
+        "skin": {
+          "bg": { "type": "rect", "color": "#00000090", "outline": "#ffffff30", "outlineWidth": "1px",
+                  "states": { "hover": { "color": "#ffb000d0", "outline": "accent" }, "disabled": { "color": "#00000050" } },
+                  "transition": { "duration": 0.12 } },
+          "label": { "type": "text", "text": "{self.text}", "anchor": "center", "size": "9px", "color": "paper",
+                     "states": { "hover": { "color": "ink" }, "disabled": { "color": "#ffffff50" } }, "transition": { "duration": 0.12 } },
+        },
+      },
+    },
+  },
+  "elements": {
+    "title": { "type": "text", "text": "{t:example.paused}", "anchor": "top", "origin": "top", "y": 90, "size": 72, "color": "paper", "shadow": true },
+    "health": { "type": "text", "text": "❤ {fmt(player.health, 0)} / {fmt(player.maxHealth, 0)}", "anchor": "top", "origin": "top", "y": 172,
+                "size": 30, "color": "#ff7070" },
+  },
+}

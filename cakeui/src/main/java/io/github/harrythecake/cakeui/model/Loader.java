@@ -33,7 +33,11 @@ public final class Loader {
 			"main_menu", List.of("background", "logo", "splash", "version", "buttons"),
 			"game_launch", List.of("background", "bar", "logo"),
 			"loading_screen", List.of("background", "buttons"),
-			"hud", List.of());
+			"hud", List.of(),
+			"hud/pause", List.of("background", "buttons"),
+			"hud/inventory", List.of("background", "panel", "player", "title", "buttons"));
+	/** Subwindows that stand for a vanilla screen: part id → names. They cover the whole screen, have ports and are drawn only while that screen is open. */
+	public static final Map<String, List<String>> BUILTIN_SUBWINDOWS = Map.of("hud", List.of("pause", "inventory"));
 	private static final Set<String> PORT_KEYS = Set.of("hide", "x", "y", "scale", "opacity", "elements", "order");
 	private static final Set<String> SPLASH_STYLE_KEYS = Set.of("anchor", "origin", "color", "size", "font", "transform", "shadow", "text", "parallax");
 	private static final Set<String> BUTTON_KEYS = Set.of("anchor", "origin", "x", "y", "width", "height", "visible", "text",
@@ -427,13 +431,37 @@ public final class Loader {
 		layout.parts.put(id, part);
 	}
 
+	/** `hud/subwindow_pause/` and friends: like a part (whole screen, ports), kept apart so the part never draws it as a child. */
+	private void readBuiltin(Node part, Path dir, String name) {
+		Scope scope = new Scope(part.scope, rel(dir));
+		readDeclaration(dir.resolve("declaration.json5"), scope);
+		Path file = dir.resolve("layout.json5");
+		JValue.JObject o = readObject(file, false);
+		String r = rel(file);
+		Node node = new Node(name, "part", scope, r, o == null ? 0 : o.line);
+		if (o != null) {
+			fill(node, o, r);
+			JValue ports = o.get("ports");
+			if (ports instanceof JValue.JObject po) {
+				readPorts(node, part.name + "/" + name, po, r);
+			} else if (ports != null) {
+				problem(r, ports.line, "'ports' must be an object");
+			}
+		}
+		readSubwindows(node, dir, scope);
+		part.builtins.put(name, node);
+	}
+
 	private void readSubwindows(Node parent, Path dir, Scope parentScope) {
 		try (Stream<Path> entries = Files.list(dir)) {
 			for (Path p : entries.sorted().toList()) {
 				String n = p.getFileName().toString();
 				if (Files.isDirectory(p)) {
-					if (n.startsWith("subwindow_") && n.length() > 10) {
-						readSubwindow(parent, p, parentScope, n.substring(10));
+					String sub = n.length() > 10 ? n.substring(10) : "";
+					if (n.startsWith("subwindow_") && parent.type.equals("part") && BUILTIN_SUBWINDOWS.getOrDefault(parent.name, List.of()).contains(sub)) {
+						readBuiltin(parent, p, sub);
+					} else if (n.startsWith("subwindow_") && n.length() > 10) {
+						readSubwindow(parent, p, parentScope, sub);
 					} else {
 						problem(rel(p) + "/", 0, "unknown folder (subwindows are named subwindow_<name>)");
 					}
@@ -829,7 +857,8 @@ public final class Loader {
 	private Node readPort(Node part, String name, JValue.JObject o, String file, int line) {
 		Node port = new Node(name, "port", part.scope, file, line);
 		boolean splash = name.equals("splash");
-		boolean version = name.equals("version");
+		// ports of a vanilla text line: their own text and colour
+		boolean version = name.equals("version") || name.equals("title");
 		for (Map.Entry<String, JValue> e : o.map.entrySet()) {
 			String key = e.getKey();
 			JValue v = e.getValue();
@@ -855,6 +884,10 @@ public final class Loader {
 			}
 			if (!PORT_KEYS.contains(key)) {
 				Set<String> all = new LinkedHashSet<>(PORT_KEYS);
+				if (version) {
+					all.add("text");
+					all.add("color");
+				}
 				if (splash) {
 					all.addAll(SPLASH_STYLE_KEYS);
 					all.add("list");

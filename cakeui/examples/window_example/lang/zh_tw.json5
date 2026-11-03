@@ -11,4 +11,7 @@
   "example.news": "公告",
   "example.news.title": "公告",
   "example.news.body": "這個面板是一個子視窗，有自己的變數。左邊屬於主選單的「公告」按鈕可以開關它。",
+  "example.paused": "已暫停",
+  "example.inventory": "合成",
+  "example.level": "等級",
 }

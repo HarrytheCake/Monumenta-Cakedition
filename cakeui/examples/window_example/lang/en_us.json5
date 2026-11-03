@@ -11,4 +11,7 @@
   "example.news": "News",
   "example.news.title": "News",
   "example.news.body": "This panel is a subwindow with its own variable. The News button on the left, which belongs to the main menu, shows and hides it.",
+  "example.paused": "Paused",
+  "example.inventory": "Craft",
+  "example.level": "Level",
 }

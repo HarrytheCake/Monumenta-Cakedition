@@ -35,6 +35,12 @@ class SchemaTest {
 			}
 			assertTrue(layout.map.containsKey(key), "schema layout lacks '" + key + "'");
 		}
+		JValue.JObject ports = obj(schema, "properties", "ports", "properties");
+		for (var e : io.github.harrythecake.cakeui.model.Loader.PORTS.entrySet()) {
+			for (String port : e.getValue()) {
+				assertTrue(ports.map.containsKey(port), "schema ports lack '" + port + "' (" + e.getKey() + ")");
+			}
+		}
 		for (String group : PropKinds.GROUPS) {
 			JValue.JObject g = obj(schema, "definitions", group, "properties");
 			for (String key : PropKinds.groupKeys(group)) {

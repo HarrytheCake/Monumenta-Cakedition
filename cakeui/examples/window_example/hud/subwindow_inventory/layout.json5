@@ -1,0 +1,26 @@
+// The player's inventory (E in survival). Slots never move; the layout only restyles around them.
+// Elements of the panel port are drawn in the panel's box (176×166 GUI pixels) and follow it when
+// the recipe book pushes it aside, so they use px and %, not design pixels.
+{
+  "$schema": "../../../../schema/layout.schema.json",
+  "ports": {
+    "background": {
+      "hide": true,
+      "elements": {
+        "shade": { "type": "rect", "color": "#1b1f2a90", "color2": "#000000d0", "gradient": "horizontal" },
+        "stripe": { "type": "rect", "width": 8, "height": "100%", "color": "accent" },
+      },
+    },
+    "panel": {
+      "elements": {
+        "frame": { "type": "rect", "x": "-3px", "y": "-3px", "width": "100% + 6px", "height": "100% + 6px",
+                   "color": "#00000000", "outline": "accent", "outlineWidth": "2px" },
+      },
+    },
+    "title": { "text": "{t:example.inventory}", "color": "#8a5a00" },
+  },
+  "elements": {
+    "level": { "type": "text", "text": "{t:example.level} {player.level}", "anchor": "center", "origin": "bottom", "y": "-92px",
+               "size": "9px", "color": "accent", "shadow": true, "layer": "front" },
+  },
+}

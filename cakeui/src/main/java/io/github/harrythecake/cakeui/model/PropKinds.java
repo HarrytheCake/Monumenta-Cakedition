@@ -46,7 +46,7 @@ public final class PropKinds {
 				"transform.scaleX", "transform.scaleY", "transform.skewX", "transform.skewY", "transform.pivotX", "transform.pivotY",
 				"parallax.tilt", "parallax.smoothing", "transition.duration", "fps", "frames", "sliceScale", "value", "count");
 		kind(Kind.COLOR, "color", "color2", "tint", "outline", "background");
-		kind(Kind.BOOL, "visible", "enabled", "shadow", "wrap", "pixelated");
+		kind(Kind.BOOL, "visible", "enabled", "shadow", "wrap", "pixelated", "readable");
 		kind(Kind.TEXT, "text", "tooltip");
 		kind(Kind.WORD, "anchor", "origin", "arrange", "align", "font", "src", "fit", "frameLayout", "direction", "gradient", "item",
 				"transition.easing", "sounds.hover", "sounds.click", "layer", "image", "textAlign");
@@ -55,7 +55,7 @@ public final class PropKinds {
 				"enabled", "transform", "parallax", "states", "transition", "sounds", "tooltip"));
 		CONTAINER.addAll(List.of("elements", "arrange", "gap", "padding", "align", "background", "outline", "outlineWidth", "perspective"));
 
-		type("text", "text", "color", "shadow", "size", "font", "textAlign", "wrap", "lineHeight");
+		type("text", "text", "color", "shadow", "size", "font", "textAlign", "wrap", "lineHeight", "readable");
 		type("image", "src", "tint", "slice", "sliceScale", "fit", "frames", "fps", "frameLayout", "pixelated");
 		type("rect", "color", "color2", "gradient", "outline", "outlineWidth");
 		type("bar", "value", "color", "background", "direction", "image");

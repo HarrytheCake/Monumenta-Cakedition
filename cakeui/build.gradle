@@ -21,7 +21,9 @@ loom {
 		client {
 			// ./gradlew runClient -Dcakeui.selftest=1: screenshots of the title screen, then quit (see SelfTest)
 			property("cakeui.selftest", System.getProperty("cakeui.selftest", ""))
-			programArgs("--width", "1280", "--height", "720")
+			// -Dcakeui.size=852x475 for another window size
+			def size = System.getProperty("cakeui.size", "1280x720").split("x")
+			programArgs("--width", size[0], "--height", size[1])
 		}
 	}
 }

@@ -2,7 +2,7 @@ package io.github.harrythecake.cakeui.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import io.github.harrythecake.cakeui.TitleMenu;
+import io.github.harrythecake.cakeui.ScreenPorts;
 import io.github.harrythecake.cakeui.Ui;
 import io.github.harrythecake.cakeui.model.Node;
 import net.minecraft.client.gui.DrawContext;
@@ -22,7 +22,7 @@ public abstract class ClickableWidgetMixin {
 
 	@WrapOperation(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/ClickableWidget;renderWidget(Lnet/minecraft/client/gui/DrawContext;IIF)V"))
 	private void cakeui$skin(ClickableWidget self, DrawContext context, int mouseX, int mouseY, float delta, Operation<Void> original) {
-		Node skin = TitleMenu.skin(self);
+		Node skin = ScreenPorts.skin(self);
 		if (skin == null) {
 			original.call(self, context, mouseX, mouseY, delta);
 			return;

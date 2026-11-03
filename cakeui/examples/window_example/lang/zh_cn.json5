@@ -11,4 +11,7 @@
   "example.news": "公告",
   "example.news.title": "公告",
   "example.news.body": "这个面板是一个子窗口，有自己的变量。左边属于主菜单的“公告”按钮可以开关它。",
+  "example.paused": "已暂停",
+  "example.inventory": "合成",
+  "example.level": "等级",
 }

@@ -2,6 +2,7 @@ package io.github.harrythecake.cakeui.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import io.github.harrythecake.cakeui.ScreenPorts;
 import io.github.harrythecake.cakeui.TitleMenu;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
@@ -118,8 +119,9 @@ public abstract class TitleScreenMixin extends Screen {
 			return original.call(context, textRenderer, text, x, y, color);
 		}
 		String shown = TitleMenu.versionText(text);
+		int shownColor = TitleMenu.PORTS.color("version", color);
 		int[] out = {0};
-		TitleMenu.vanillaPiece("version", context, x, y, () -> out[0] = original.call(context, textRenderer, shown, x, y, color));
+		TitleMenu.vanillaPiece("version", context, x, y, () -> out[0] = original.call(context, textRenderer, shown, x, y, shownColor));
 		TitleMenu.drawPortElements("version", context, ((color >>> 24) & 255) / 255.0F);
 		return out[0];
 	}
@@ -134,6 +136,6 @@ public abstract class TitleScreenMixin extends Screen {
 		if (cakeui$fade() > 0) {
 			TitleMenu.drawElements(this, context, "front", cakeui$fade());
 		}
-		TitleMenu.drawButtonIds(this, context);
+		ScreenPorts.drawButtonIds(this, context);
 	}
 }

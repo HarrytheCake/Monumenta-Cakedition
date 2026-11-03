@@ -1,10 +1,10 @@
 # CakeUI
 
-A client-only Fabric mod for Minecraft 1.20.4 that lets modpacks redraw the main menu, and later the loading screens, HUD and game window, from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
+A client-only Fabric mod for Minecraft 1.20.4 that lets modpacks redraw the main menu, the pause menu and the inventory, and later the loading screens, HUD and game window, from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
 
 With no layout chosen (the default), CakeUI changes nothing. It also leaves alone any piece of vanilla that the active layout doesn't mention, so other mods' buttons and screens keep working.
 
-**Status:** 0.1.0 (in development). The main menu works (milestone 2 of 5). The game launching screen, loading screens, pause menu, inventory, HUD and window come next.
+**Status:** 0.1.0 (in development). The main menu, the pause menu and the player's inventory work (milestone 3 of 5 under way). The game launching screen, loading screens, HUD and window come next.
 
 ## Using a layout
 
@@ -28,11 +28,14 @@ window_<name>/
 ├── declaration.json5     # constants and variables for the whole layout
 ├── assets/               # PNG images, fonts/*.ttf
 ├── lang/en_us.json5      # layout strings: {t:key}; zh_cn.json5, zh_tw.json5, …
-└── main_menu/
-    ├── layout.json5      # ports + elements
-    ├── declaration.json5 # constants and variables for the main menu
-    ├── splashes.txt      # optional splash list
-    └── subwindow_<name>/ # panels: layout.json5 + declaration.json5, nested as deep as you like
+├── main_menu/
+│   ├── layout.json5      # ports + elements
+│   ├── declaration.json5 # constants and variables for the main menu
+│   ├── splashes.txt      # optional splash list
+│   └── subwindow_<name>/ # panels: layout.json5 + declaration.json5, nested as deep as you like
+└── hud/
+    ├── subwindow_pause/      # built in: the pause menu (Esc)
+    └── subwindow_inventory/  # built in: the player's inventory (E, survival)
 ```
 
 Files are JSON5: comments, trailing commas and unquoted keys are fine. For autocomplete in VS Code, keep keys quoted, map `*.json5` to `jsonc` and add `"$schema": "…/schema/layout.schema.json"` (see [`schema/`](schema/)).
@@ -98,6 +101,7 @@ Game values include `time`, `mouse.x`/`mouse.y` (−1…1 from the centre), `scr
 - **Types:** `text`, `image` (nine-slice `slice`, `fit` stretch/contain/cover/tile, sprite sheets with `frames` + `fps`), `rect` (gradients with `color2`, `outline`), `bar` (`value` 0…1), `item` (`item: "minecraft:diamond"`), `button`, `group`.
 - **Place:** `anchor` (9 points), `origin`, `x`, `y`, `width`, `height`. Containers (`group`, `button`, subwindows) can also stack children with `arrange: "row" | "column"`, `gap`, `padding` and `align`.
 - **Look:** `opacity`, `visible`, `order`, `layer` (`back` or `front` of the vanilla buttons).
+- **Small windows:** Minecraft's Chinese, Japanese and Korean glyphs are 16×16 pixel art and break up when drawn small, so text containing them is never drawn smaller than vanilla's GUI scale 2 (it may then be larger than in your design). For an icon that must stay inside its box, set `readable: false`. Layout TTF fonts are always drawn at the design size.
 - **3D and motion:** `transform` (`rotateX`, `rotateY`, `rotateZ`, `scale`, `skewX`, `z`, `pivotX`, …) with `perspective` on a container. `parallax: { move, tilt, smoothing }` follows the mouse. Clicks follow the tilt.
 - **States:** `states: { hover, pressed, disabled }` override any property, eased by `transition`. `sounds: { hover, click }` take sound ids.
 - **Button actions** (client-side only, never chat or commands): `singleplayer`, `multiplayer`, `realms`, `options`, `language`, `accessibility`, `modmenu`, `quit`, `back`, `{ connect: "address" }`, `{ url: "https://…" }` (vanilla asks first), `{ set: { name: value } }`, `{ toggle: "name" }`.
@@ -120,9 +124,39 @@ Game values include `time`, `mouse.x`/`mouse.y` (−1…1 from the centre), `scr
 
 A button is named by its label's translation key (`menu.multiplayer`), its text, or `#index`. **Show button ids** prints each id next to its button. A button the layout doesn't name stays where vanilla put it.
 
+### Pause menu and inventory
+
+`hud/subwindow_pause/` and `hud/subwindow_inventory/` are **built-in subwindows**: each stands for a vanilla screen, covers the whole screen and is drawn only while that screen is open. Like a part, its `layout.json5` has `ports` and `elements` (`layer: "back"` behind the vanilla buttons and slots, `"front"` in front of them but under tooltips).
+
+```json5
+// hud/subwindow_pause/layout.json5
+"ports": {
+  "background": { "hide": true, "elements": { … } },   // vanilla's dim; or "opacity": 0.5
+  "buttons": {
+    "menu.game": { "visible": false },                  // the "Game Menu" title is a text widget, named like a button
+    "*": { "skin": { … } },                              // every other button
+  },
+}
+```
+
+F3+Esc's "Game Paused" screen (no buttons) stays vanilla.
+
+```json5
+// hud/subwindow_inventory/layout.json5
+"ports": {
+  "background": { "hide": true, "elements": { … } },
+  "panel": { "elements": { "frame": { "type": "rect", "x": "-3px", "y": "-3px", "width": "100% + 6px", "height": "100% + 6px", … } } },
+  "player": { "x": "4px", "scale": 0.9 },              // or "hide": true
+  "title": { "text": "Craft", "color": "#8a5a00" },     // "Crafting"; also hide, x, y, scale
+  "buttons": { "#0": { … } },                           // the recipe-book button (it has no label)
+}
+```
+
+**Inventory slots never move.** The `panel` port's elements (and the `title` port's) are drawn in the panel's box, 176×166 GUI pixels, and follow it when the recipe book pushes it aside, so give them sizes in `px` and `%`. With `panel: { "hide": true }` the slot frames go too (they are part of vanilla's texture), so draw your own. The creative inventory is a different screen and stays vanilla for now.
+
 ## Building
 
-`JAVA_HOME=<JDK 21> ./gradlew build` (JUnit tests included). `./gradlew runClient -Dcakeui.selftest=1` opens a dev client that screenshots the title screen into `run/screenshots/` and quits.
+`JAVA_HOME=<JDK 21> ./gradlew build` (JUnit tests included). `./gradlew runClient -Dcakeui.selftest=1` opens a dev client that screenshots the title screen into `run/screenshots/` and quits; `-Dcakeui.selftest=world` also opens a test world and screenshots the pause menu and the inventory.
 
 ## License
 

@@ -49,6 +49,12 @@ public final class Ui {
 		return renderer == null ? null : renderer.layout.part(id);
 	}
 
+	/** A built-in subwindow of a part (`hud`, `pause`), or null. */
+	public static Node builtin(String partId, String name) {
+		Node part = part(partId);
+		return part == null ? null : part.builtins.get(name);
+	}
+
 	public static boolean devMode() {
 		return config.devMode;
 	}

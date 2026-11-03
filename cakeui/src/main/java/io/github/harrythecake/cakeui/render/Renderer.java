@@ -171,6 +171,20 @@ public final class Renderer {
 		drawChildren(c, container, container.children, screenW, screenH, null);
 	}
 
+	/** Draws the elements of a port inside a box in GUI pixels (the inventory panel, say): % and anchors are the box's. */
+	public void drawElementsIn(DrawContext dc, Node container, int x, int y, int w, int h, double alpha) {
+		if (container.children.isEmpty()) {
+			return;
+		}
+		Ctx c = rootCtx(dc, screenOwner, alpha);
+		MatrixStack m = dc.getMatrices();
+		m.push();
+		m.translate(x, y, 0);
+		c.flat = new Geometry.Mat().translate(x, y, 0);
+		drawChildren(c, container, container.children, w, h, null);
+		m.pop();
+	}
+
 	/** Draws one node (a custom splash, say) over the whole screen. */
 	public void drawSingle(DrawContext dc, Node node, double alpha, String text) {
 		Ctx c = rootCtx(dc, screenOwner, alpha);
@@ -295,6 +309,11 @@ public final class Renderer {
 
 	public double number(Node n, String key, double def) {
 		return num(n, null, key, def);
+	}
+
+	/** A colour prop as ARGB (no states). */
+	public int colorValue(Node n, String key, int def) {
+		return color(n, null, key, def);
 	}
 
 	public String word(Node n, String key, String def) {
@@ -675,6 +694,19 @@ public final class Renderer {
 		tl.renderer = tr;
 		tl.scale = size / base;
 		tl.lineHeight = n.has("lineHeight") ? length(n, st, "lineHeight", Env.AXIS_Y, pw, ph, size) : size * (base == 9 ? 1.0 : 1.15);
+		if (tr == client.textRenderer && bool(n, "readable", true) && hasCjk(str)) {
+			// Minecraft's CJK glyphs are 16×16 pixel art in 8 font units: under 2 screen pixels per
+			// unit whole rows and columns drop out, so such text never goes below vanilla's GUI scale 2
+			Matrix4f mat = c.dc.getMatrices().peek().getPositionMatrix();
+			double matrixScale = Math.sqrt(mat.m00() * mat.m00() + mat.m01() * mat.m01());
+			double pixelsPerUnit = tl.scale * matrixScale * client.getWindow().getScaleFactor();
+			if (pixelsPerUnit > 0 && pixelsPerUnit < MIN_CJK_PIXELS_PER_UNIT) {
+				double grow = MIN_CJK_PIXELS_PER_UNIT / pixelsPerUnit;
+				size *= grow;
+				tl.scale *= grow;
+				tl.lineHeight *= grow;
+			}
+		}
 		Text t = Text.literal(str).setStyle(style);
 		tl.lines = new ArrayList<>();
 		if (bool(n, "wrap", false) && n.has("width")) {
@@ -721,6 +753,27 @@ public final class Renderer {
 			c.dc.drawText(tl.renderer, tl.lines.get(i), 0, 0, color, shadow);
 			m.pop();
 		}
+	}
+
+	/** Screen pixels per font unit below which CJK text in Minecraft's bitmap font is enlarged (`readable`). */
+	private static final double MIN_CJK_PIXELS_PER_UNIT = 2;
+
+	/** Chinese, Japanese or Korean characters (Han, kana, hangul, bopomofo, CJK punctuation and full-width forms). */
+	static boolean hasCjk(String s) {
+		for (int i = 0; i < s.length(); ) {
+			int cp = s.codePointAt(i);
+			i += Character.charCount(cp);
+			if (cp < 0x2E80) {
+				continue;
+			}
+			Character.UnicodeScript script = Character.UnicodeScript.of(cp);
+			if (script == Character.UnicodeScript.HAN || script == Character.UnicodeScript.HIRAGANA || script == Character.UnicodeScript.KATAKANA
+					|| script == Character.UnicodeScript.HANGUL || script == Character.UnicodeScript.BOPOMOFO
+					|| (cp >= 0x3000 && cp <= 0x303F) || (cp >= 0xFF00 && cp <= 0xFFEF)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private void drawImage(Node n, NodeState st, Matrix4f m, double w, double h, double opacity) {

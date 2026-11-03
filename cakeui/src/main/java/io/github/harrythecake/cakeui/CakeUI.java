@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenMouseEvents;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
@@ -52,9 +51,10 @@ public final class CakeUI implements ClientModInitializer {
 					Ui.config().showButtonIds = !Ui.config().showButtonIds;
 				}
 			});
-			if (screen instanceof TitleScreen) {
-				TitleMenu.afterInit(screen);
-				ScreenMouseEvents.allowMouseClick(screen).register((s, mouseX, mouseY, button) -> !TitleMenu.click(s, button));
+			ScreenPorts ports = ScreenPorts.of(screen);
+			if (ports != null) {
+				ports.afterInit(screen);
+				ScreenMouseEvents.allowMouseClick(screen).register((s, mouseX, mouseY, button) -> !ports.click(s, button));
 				ScreenMouseEvents.afterMouseRelease(screen).register((s, mouseX, mouseY, button) -> {
 					if (Ui.renderer() != null) {
 						Ui.renderer().mouseReleased();

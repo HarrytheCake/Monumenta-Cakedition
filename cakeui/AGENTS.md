@@ -2,7 +2,7 @@
 
 Client-only Fabric library mod (`cakeui`, package `io.github.harrythecake.cakeui`) for Minecraft **1.20.4**. Layout folders, written by pack developers with no Java, redraw the game window, launching screen, main menu, loading screens and HUD. Terms are in [`GLOSSARY.md`](GLOSSARY.md): layout, part, window, subwindow, element, port, declaration, game value, design pixel, skin, dev mode. The user-facing guide is [`README.md`](README.md); keep both files current.
 
-The standalone repo will be `HarrytheCake/CakeUI` (remote `cakeui`, not created yet; MIT). The source of truth is this folder in the Monumenta-Cakedition repo; never commit in the standalone repo.
+The standalone repo is `HarrytheCake/CakeUI` (remote `cakeui`, a `git subtree` mirror pushed by `tools/push_all`; MIT; public since 2026-11-04). The source of truth is this folder in the Monumenta-Cakedition repo; never commit in the standalone repo. **Not in the pack** (user, 2026-11-04) until a Cakedition layout exists.
 
 ## Decisions (grilled with the user 2026-10-30, Q1–Q35)
 
@@ -20,21 +20,23 @@ The standalone repo will be `HarrytheCake/CakeUI` (remote `cakeui`, not created 
 
 ```
 cakeui/
-├── build.gradle            # Loom 1.10.5; Java 17; Mod Menu compileOnly; runClient: -Dcakeui.selftest, 1280×720
+├── build.gradle            # Loom 1.10.5; Java 17; Mod Menu compileOnly; runClient: -Dcakeui.selftest(=world), 1280×720
 ├── gradle.properties       # MC 1.20.4, Yarn build.3, Loader 0.16.9, Fabric API 0.97.3, mod_version
 ├── GLOSSARY.md             # CakeUI's terms (listed in the root's local GLOSSARY-MAP.md)
 ├── README.md               # the layout guide (public)
 ├── schema/*.schema.json    # JSON Schemas for layout/declaration/window files; SchemaTest keeps them in step with PropKinds
-├── examples/window_example # the example layout (generated art; ExampleLayoutTest loads it with 0 problems)
+├── examples/window_example # the example layout: main menu, hud/subwindow_pause, hud/subwindow_inventory (generated art; ExampleLayoutTest loads it with 0 problems)
 ├── .github/workflows/build.yml   # CI: build + test; release v<mod_version> once per version
 └── src/main/java/io/github/harrythecake/cakeui/
     ├── CakeUI.java          # entrypoint: values, keys (reload, button ids; unbound), Ui.reload, screen/HUD/tick events
     ├── Config.java          # config/cakeui/config.json5: layoutPath, devMode, showButtonIds (JSON5 reader)
     ├── Ui.java              # active layout + renderer; reload (keep previous on problems); dev-mode WatchService thread
     ├── McValues.java        # game values: time, mouse.*, screen.*, fps, lang, mc/pack version, server.*, world.*, player.*, menu.*
-    ├── TitleMenu.java       # main menu part: ports background/logo/splash/version/buttons, skins, button ids
+    ├── ScreenPorts.java     # one per redrawable vanilla screen (TitleMenu.PORTS, PAUSE, INVENTORY; `of(screen)`): beginFrame, port helpers (vanilla piece,
+    │                        #   offset, text/colour, elements in a box), background + back layer, buttons port (move/resize/hide/relabel/skins), clicks, button ids
+    ├── TitleMenu.java       # main menu only: splash pick/draw, version text, fade (buttons etc. through TitleMenu.PORTS)
     ├── Overlay.java         # dev mode: problems in the top-left of every screen and the HUD
-    ├── SelfTest.java        # only with -Dcakeui.selftest: screenshots the title screen with the mouse in 3 places, quits
+    ├── SelfTest.java        # only with -Dcakeui.selftest: title screen shots; =world: opens run/saves/cakeui-selftest, gives a few items, shots of pause + inventory; quits
     ├── json/                # Json5 (comments, trailing commas, unquoted keys, lines kept), JValue, Json5Exception
     ├── expr/                # Parser (precedence climbing, names bound at compile time), Ops, Functions, Template ({…}, {t:key}, "="), Values, Px, Env
     ├── model/               # Loader (folders → Nodes, every problem with file:line + "did you mean"), Layout, Node, Prop (base + hover/pressed/disabled),
@@ -44,12 +46,14 @@ cakeui/
     │                        #   Paint (float quads), Textures (assets PNGs → dynamic textures, freed on reload), Fonts (TTF via TrueTypeFont, fallback to
     │                        #   Minecraft's fonts), Layers (offscreen buffers + perspective composite), Actions
     └── mixin/               # TitleScreenMixin (WrapOperation on panorama, overlay, logo, splash, version line, super.render; HEAD/TAIL),
+                             #   GameMenuScreenMixin (pause: background, back/front), HandledScreenMixin (container dim, only via ScreenPorts.of),
+                             #   InventoryScreenMixin (panel texture, drawEntity, title drawText, front before drawMouseoverTooltip),
                              #   ClickableWidgetMixin (skins: wraps renderWidget in render), accessors for fonts/splash, MouseInvoker (self-test)
 ```
 
-Tests (`./gradlew build`, 22): Json5Test, ExprTest (units, folding, templates, errors), LoaderTest (whole layout, problems with file:line, scoping, own-folder writes, cycles, fatal window), GeometryTest (anchors, design scale, the hit-test unproject against the projection, the GL projection matrix, easings), ExampleLayoutTest, SchemaTest.
+Tests (`./gradlew build`, 23): Json5Test, ExprTest (units, folding, templates, errors), LoaderTest (whole layout, problems with file:line, scoping, own-folder writes, cycles, fatal window, built-in pause subwindow), GeometryTest (anchors, design scale, the hit-test unproject against the projection, the GL projection matrix, easings), ExampleLayoutTest (with the real McValues list), SchemaTest (props, groups, every port in `Loader.PORTS`).
 
-Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. Dev client: `./gradlew runClient -Dcakeui.selftest=1` (needs `run/options.txt` with `onboardAccessibility:false` and `run/config/cakeui/config.json5` pointing at a layout; `run/` is ignored). It opens a window for about 30 s.
+Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. Dev client: `./gradlew runClient -Dcakeui.selftest=1` (or `=world` for pause + inventory, about a minute; needs `run/options.txt` with `onboardAccessibility:false` and `run/config/cakeui/config.json5` pointing at a layout; `run/` is ignored). It opens a window for about 30 s.
 
 ## How drawing works
 
@@ -59,7 +63,9 @@ Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. 
 - **Why buffers:** vanilla's `VertexConsumer.vertex(Matrix4f, …)` drops `w`, so a perspective matrix on the MatrixStack can't work.
 - **States:** `Prop.pick(hovered, pressed, disabled)`. Number, length and colour props with states ease through `NodeState.Anim` when `transition.duration > 0`.
 - **Clicks:** the topmost hovered enabled `button` of the frame takes the click (`ScreenMouseEvents.allowMouseClick` returns false). The action runs on press.
-- **Skins:** `TitleMenu.applyButtons` (every frame) moves, resizes, hides and relabels buttons and registers skins. `ClickableWidgetMixin` draws the skin instead of `renderWidget`, so the vanilla button still handles input. Inside a skin, every element's hover = the button's hover.
+- **Built-in subwindows** (`Loader.BUILTIN_SUBWINDOWS`: `hud/subwindow_pause`, `hud/subwindow_inventory`): loaded as type `part` into `part.builtins`, never `children`, so the HUD won't draw them. Ports per screen in `Loader.PORTS` (`hud/pause`, `hud/inventory`). Drawn like a part (`drawPart`, back/front) while their screen is open. Pause: only `showMenu` (F3+Esc stays vanilla). Inventory: back layer after the dim, panel port elements right after the panel texture via `drawElementsIn` (panel box, follows the recipe book), title port elements + front layer just before the item tooltip.
+- **Skins:** `ScreenPorts.applyButtons` (every frame) moves, resizes, hides and relabels buttons and registers skins. `ClickableWidgetMixin` draws the skin instead of `renderWidget`, so the vanilla button still handles input. Inside a skin, every element's hover = the button's hover.
+- **Small CJK text** (`readable`, default true): in Minecraft's bitmap font, text containing CJK (`Renderer.hasCjk`) is enlarged to at least 2 screen px per font unit (vanilla's GUI scale 2): its 16×16 glyphs sit in 8 units, so below that nearest sampling drops whole rows ("squeezed" Chinese, reported by the user 2026-11-04 at 852×475). Linear filtering was tried and rejected: soft but still unreadable at ~11 px. Latin text and layout TTFs keep the design size. `-Dcakeui.size=852x475` runs the dev client at that size.
 - **Fonts:** a layout TTF is built per sharpness step (oversample 1/2/4/8/16 by on-screen scale). Minecraft's fonts are borrowed as fallbacks (wrapped so closing ours never closes theirs), and everything is rebuilt when Minecraft reloads its fonts. Tested in game with Bahnschrift + Chinese fallback (dev run, 2026-10-30).
 
 ## Invariants
@@ -72,6 +78,6 @@ Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. 
 ## Status
 
 - **M0** (repo folder, CI, glossary) and **M1** (config, loading, declarations, expressions, game values, hot reload, error overlay, schema) are done.
-- **M2** (rendering on the main menu) is **done and self-tested in a dev client 2026-10-30**: screenshots show the example layout, hover with transitions through a 3D tilt, skins, parallax, TTF and zh_cn. **Waiting for the user's in-game test** in the test instance (jar + `cakeui/layouts/window_example` + `config/cakeui/config.json5` with devMode copied there 2026-10-30).
-- Not yet tried in game: hot reload via the watcher, the reload key, the URL/connect actions, Mod Menu's button id (`modmenu.title` is a guess in the example).
-- **Next:** M3 (pause and inventory subwindows, loading screen, game launching screen, window icon/title/border), M4 (HUD ports + CakeBench), M5 (API, Mod Menu screen, polish).
+- **M3** (in progress, 2026-11-04): **pause menu** and **inventory** done; self-tested in the dev client (`-Dcakeui.selftest=world`) and **passed the user's in-game test 2026-11-04** (F3+Esc stays vanilla too). Small CJK text fixed after the user's report (see `readable`). Also fixed: the main menu `version` port's `color` was accepted but ignored. Next in M3: loading screen, game launching screen, window (icon/title/border).
+- **M2** (rendering on the main menu) is **done and self-tested in a dev client 2026-10-30**: screenshots show the example layout, hover with transitions through a 3D tilt, skins, parallax, TTF and zh_cn. **Passed the user's in-game test 2026-11-04** in the test instance: the example layout, hot reload via the watcher, the reload key, the URL/connect actions and Mod Menu's button id.
+- **Next:** rest of M3, M4 (HUD ports + CakeBench), M5 (API, Mod Menu screen, polish).

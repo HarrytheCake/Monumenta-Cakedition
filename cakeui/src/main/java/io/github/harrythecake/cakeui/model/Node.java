@@ -26,6 +26,8 @@ public final class Node {
 	public Action action;
 	/** Ports of a part, by name. */
 	public final Map<String, Node> ports = new LinkedHashMap<>();
+	/** A part's built-in subwindows (`pause` in the HUD), by name; never drawn as children. */
+	public final Map<String, Node> builtins = new LinkedHashMap<>();
 	/** Button overrides of a `buttons` port, by button id. */
 	public final Map<String, Node> buttons = new LinkedHashMap<>();
 	/** Splash list of a `splash` port (null = vanilla's). */

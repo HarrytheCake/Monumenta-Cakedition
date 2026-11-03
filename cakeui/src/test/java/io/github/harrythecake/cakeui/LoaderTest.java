@@ -206,4 +206,35 @@ class LoaderTest {
 		assertTrue(loader.fatal);
 		assertTrue(hasProblem(loader.layout(), "window.json5", 1, "newer CakeUI"), problems(loader.layout()));
 	}
+
+	@Test
+	void pauseIsABuiltinSubwindowWithPorts() throws IOException {
+		write("window.json5", "{ format: 1, design: [640, 360] }");
+		write("hud/declaration.json5", "{ constants: { accent: '#ffb000' } }");
+		write("hud/subwindow_pause/declaration.json5", "{ variables: { open: false } }");
+		write("hud/subwindow_pause/layout.json5", """
+				{
+				  ports: {
+				    background: { hide: true, elements: { dim: { type: "rect", color: "#80000000" } } },
+				    buttons: { "menu.returnToGame": { y: 40, skin: { bg: { type: "rect", color: "accent" } } } },
+				    logo: { hide: true },
+				  },
+				  elements: { panel: { type: "rect", color: "accent", width: 200, height: 100, anchor: "center" } },
+				}
+				""");
+		write("hud/subwindow_pause/subwindow_side/layout.json5", "{ elements: { t: { type: 'text', text: '{open}' } } }");
+		write("hud/subwindow_compass/layout.json5", "{ elements: { t: { type: 'text', text: 'N' } } }");
+		Layout l = Loader.load(dir).layout();
+
+		Node hud = l.part("hud");
+		Node pause = hud.builtins.get("pause");
+		assertNotNull(pause, problems(l));
+		assertEquals(1, hud.children.size(), "the HUD draws its own subwindows, never the pause menu");
+		assertEquals("compass", hud.children.get(0).name);
+		assertTrue(pause.ports.get("background").has("hide"));
+		assertEquals(1, pause.ports.get("buttons").buttons.size());
+		assertEquals(2, pause.children.size(), "panel + subwindow_side");
+		assertTrue(hasProblem(l, "hud/subwindow_pause/layout.json5", 5, "unknown port 'logo' in hud/pause"), problems(l));
+		assertEquals(1, l.problems.list().size(), problems(l));
+	}
 }
