@@ -1,5 +1,9 @@
 package io.github.harrythecake.cakeui.render;
 
+import io.github.harrythecake.cakeui.CakeUI;
+import io.github.harrythecake.cakeui.api.CakeUIApi;
+import io.github.harrythecake.cakeui.api.ElementContext;
+import io.github.harrythecake.cakeui.api.ElementType;
 import io.github.harrythecake.cakeui.expr.Env;
 import io.github.harrythecake.cakeui.expr.Expr;
 import io.github.harrythecake.cakeui.expr.Values;
@@ -55,6 +59,8 @@ public final class Renderer {
 	private NodeState topButton;
 	private NodeState pressed;
 	private String language = "en_us";
+	/** Mod elements that threw once: listed once, then quietly skipped in the log. */
+	private final java.util.Set<Node> failedTypes = java.util.Collections.newSetFromMap(new java.util.IdentityHashMap<>());
 
 	public Renderer(Layout layout) {
 		this.layout = layout;
@@ -425,7 +431,10 @@ public final class Renderer {
 			case "item" -> 16 * env.rx;
 			case "button" -> 200 * env.rx;
 			case "bar" -> 100 * env.rx;
-			default -> pw;
+			default -> {
+				ElementType custom = CakeUIApi.element(n.type);
+				yield custom != null ? custom.defaultWidth() * env.rx : pw;
+			}
 		};
 	}
 
@@ -444,7 +453,10 @@ public final class Renderer {
 			case "item" -> 16 * env.ry;
 			case "button" -> 40 * env.ry;
 			case "bar" -> 8 * env.ry;
-			default -> ph;
+			default -> {
+				ElementType custom = CakeUIApi.element(n.type);
+				yield custom != null ? custom.defaultHeight() * env.ry : ph;
+			}
 		};
 	}
 
@@ -614,6 +626,13 @@ public final class Renderer {
 
 	private void drawContent(Ctx c, Node n, NodeState st, double w, double h, double opacity, TextLayout tl) {
 		env.self = st;
+		if (n.type.indexOf(':') > 0) {
+			ElementType custom = CakeUIApi.element(n.type);
+			if (custom != null) {
+				drawCustom(c, n, st, custom, w, h, opacity);
+			}
+			return;
+		}
 		Matrix4f m = c.dc.getMatrices().peek().getPositionMatrix();
 		switch (n.type) {
 			case "text" -> drawText(c, n, st, w, opacity, tl);
@@ -644,6 +663,77 @@ public final class Renderer {
 				}
 			}
 		}
+	}
+
+	/** A mod's element type (API): it draws itself; a failure is listed once and the element skipped. */
+	private void drawCustom(Ctx c, Node n, NodeState st, ElementType type, double w, double h, double opacity) {
+		ElementContext ec = new ElementContext() {
+			@Override
+			public DrawContext drawContext() {
+				return c.dc;
+			}
+
+			@Override
+			public double width() {
+				return w;
+			}
+
+			@Override
+			public double height() {
+				return h;
+			}
+
+			@Override
+			public float opacity() {
+				return (float) opacity;
+			}
+
+			@Override
+			public boolean hovered() {
+				return st.hovered;
+			}
+
+			@Override
+			public boolean pressed() {
+				return st.pressed;
+			}
+
+			@Override
+			public double designScale() {
+				return env.rx;
+			}
+
+			@Override
+			public double number(String key, double fallback) {
+				PropKinds.Kind kind = PropKinds.kind(key);
+				return kind == PropKinds.Kind.LENGTH ? length(n, st, key, Env.AXIS_NONE, w, h, fallback) : num(n, st, key, fallback);
+			}
+
+			@Override
+			public int color(String key, int fallback) {
+				return Paint.withAlpha(Renderer.this.color(n, st, key, fallback), opacity);
+			}
+
+			@Override
+			public boolean bool(String key, boolean fallback) {
+				return Renderer.this.bool(n, key, fallback);
+			}
+
+			@Override
+			public String text(String key, String fallback) {
+				return word(n, key, fallback);
+			}
+		};
+		try {
+			type.draw(ec);
+		} catch (RuntimeException e) {
+			if (!failedTypes.contains(n)) {
+				failedTypes.add(n);
+				CakeUI.LOGGER.warn("CakeUI: element type {} failed to draw {}", n.type, n, e);
+				layout.problems.add(n.file, n.line, "element type '" + n.type + "' failed: " + e);
+			}
+		}
+		env.self = st;
 	}
 
 	private void outline(Node n, NodeState st, Matrix4f m, double w, double h, double opacity) {

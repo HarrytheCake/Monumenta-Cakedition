@@ -58,6 +58,20 @@ public final class Config {
 		return c;
 	}
 
+	/** Writes the settings back (the Mod Menu screen); the file is rewritten from the template, so its comments stay. */
+	public void save() {
+		String text = TEMPLATE
+				.replace("layoutPath: \"\",", "layoutPath: \"" + layoutPath.replace("\\", "/").replace("\"", "") + "\",")
+				.replace("devMode: false,", "devMode: " + devMode + ",")
+				.replace("showButtonIds: false,", "showButtonIds: " + showButtonIds + ",");
+		try {
+			Files.createDirectories(file().getParent());
+			Files.writeString(file(), text, StandardCharsets.UTF_8);
+		} catch (Exception e) {
+			CakeUI.LOGGER.error("CakeUI: could not save {}: {}", file(), e.toString());
+		}
+	}
+
 	/** The layout folder, or null when none is chosen. */
 	public Path layoutFolder() {
 		if (layoutPath.isEmpty()) {

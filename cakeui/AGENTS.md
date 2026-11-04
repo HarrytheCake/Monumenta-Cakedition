@@ -36,6 +36,12 @@ cakeui/
     │                        #   offset, text/colour, elements in a box), background + back layer, buttons port (move/resize/hide/relabel/skins), clicks, button ids
     ├── WindowPart.java      # window: title (getWindowTitle mixin, refreshed twice a second), icon (GLFW, Windows/X11; vanilla's back when unset),
     │                        #   title bar via dwmapi DwmSetWindowAttribute (LWJGL JNI.callPPI; dark 20, caption 35, text 36, border 34; reset what was set)
+    ├── api/                 # public API v1 (CakeUIApi.VERSION): CakeUIPlugin ("cakeui" entrypoint, called before the first load), CakeUIApi
+    │                        #   (registerValue "mod.x", registerElement "mod:type", registerAction "mod:name", reload), ElementType, ElementContext,
+    │                        #   ButtonAction, PropKind. Custom types: PropKinds.registerType (a key keeps one kind everywhere); Renderer.drawCustom
+    ├── ConfigScreen.java    # Mod Menu settings: layout (cakeui/layouts/* + the configured path), dev mode, button ids, reload, open folder;
+    │                        #   every change = Config.save() + Ui.reload(); status line from Ui
+    ├── ModMenuIntegration.java  # "modmenu" entrypoint (Mod Menu is compileOnly)
     ├── HudPart.java         # hud: per-frame Port cache (hide/x/y/scale/opacity read once), piece(), translate() for action bar/title, layers
     ├── HudTiming.java       # self-test only: InGameHud.render CPU time
     ├── LaunchPart.java      # game_launch: Mojang's SplashOverlay (background/logo/bar ports, launch.* values)
@@ -61,7 +67,7 @@ cakeui/
                              #   ClickableWidgetMixin (skins: wraps renderWidget in render), accessors for fonts/splash, MouseInvoker (self-test)
 ```
 
-Tests (`./gradlew build`, 27: also CjkTest, window settings, HUD ports): Json5Test, ExprTest (units, folding, templates, errors), LoaderTest (whole layout, problems with file:line, scoping, own-folder writes, cycles, fatal window, built-in pause subwindow), GeometryTest (anchors, design scale, the hit-test unproject against the projection, the GL projection matrix, easings), ExampleLayoutTest (with the real McValues list), SchemaTest (props, groups, every port in `Loader.PORTS`).
+Tests (`./gradlew build`, 29: also CjkTest, window settings, HUD ports, ApiTest): Json5Test, ExprTest (units, folding, templates, errors), LoaderTest (whole layout, problems with file:line, scoping, own-folder writes, cycles, fatal window, built-in pause subwindow), GeometryTest (anchors, design scale, the hit-test unproject against the projection, the GL projection matrix, easings), ExampleLayoutTest (with the real McValues list), SchemaTest (props, groups, every port in `Loader.PORTS`).
 
 Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. Dev client: `./gradlew runClient -Dcakeui.selftest=1` (or `=world` for pause + inventory, about a minute; needs `run/options.txt` with `onboardAccessibility:false` and `run/config/cakeui/config.json5` pointing at a layout; `run/` is ignored). It opens a window for about 30 s.
 
@@ -94,4 +100,5 @@ Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakeui/`. 
 - **M0** (repo folder, CI, glossary) and **M1** (config, loading, declarations, expressions, game values, hot reload, error overlay, schema) are done.
 - **M3** (in progress, 2026-11-04): **pause menu** and **inventory** done; self-tested in the dev client (`-Dcakeui.selftest=world`) and **passed the user's in-game test 2026-11-04** (F3+Esc stays vanilla too). Small CJK text fixed after the user's report (see `readable`). **Window, loading screen and game launching screen done** and self-tested in the dev client (2026-11-04: title bar dark + colours + icon + title read back from the real window; loading `world`/`terrain`/`progress`; launch at start and on a reload; 0 problems). **Passed the user's in-game test 2026-11-04: M3 is done.** The example's window icon is now the pack icon (user's wish). Also fixed: the main menu `version` port's `color` was accepted but ignored. - **M2** (rendering on the main menu) is **done and self-tested in a dev client 2026-10-30**: screenshots show the example layout, hover with transitions through a 3D tilt, skins, parallax, TTF and zh_cn. **Passed the user's in-game test 2026-11-04** in the test instance: the example layout, hot reload via the watcher, the reload key, the URL/connect actions and Mod Menu's button id.
 - **M4** (HUD, 2026-11-04): all ports done; self-tested in the dev client (info box, XP bar replaced, action bar and title moved/scaled; 0 problems). HUD bench in the self-test: **CakeUI adds 0.07–0.09 ms/frame** CPU with the example HUD (InGameHud.render 0.56 → 0.62 ms vs 0.49 → 0.52 without; this laptop, dev client). **Passed the user's in-game test 2026-11-04** (Monumenta). Still to do: the low-tier CakeBench run: `python tools/bench/bench.py batch tools/bench/sets/cakeui-hud.json` (baseline ×3, CakeUI without layout, CakeUI with the example HUD; laptop on AC and idle).
-- **Next:** M5 (API, Mod Menu screen, polish).
+- **M5** (2026-11-04): API v1 (values, element types, actions; plugins via the `cakeui` entrypoint), Mod Menu settings screen, README "For mod developers", glossary "Plugin". Self-tested: ApiTest, settings screen screenshot (layout, dev mode, ids, reload, open folder, status line). Not yet tried in game: clicking through the settings screen (Mod Menu is only in the test instance).
+- **Then:** the low-tier CakeBench run (M4); a Cakedition layout (its look is a separate grilling, ADR/Q32) before CakeUI goes into the pack; chests and other screens later (Q20).

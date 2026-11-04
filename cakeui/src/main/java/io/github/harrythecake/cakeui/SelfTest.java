@@ -42,6 +42,7 @@ final class SelfTest {
 	private static boolean worldMode;
 	private static boolean enabled;
 	private static boolean reloaded;
+	private static int configTicks;
 	private static int launchFrames;
 	private static boolean launchReloading;
 	private static final java.util.Set<String> LAUNCH_SHOTS = new java.util.HashSet<>();
@@ -88,6 +89,16 @@ final class SelfTest {
 	}
 
 	private static void tick(MinecraftClient client) {
+		if (client.currentScreen instanceof ConfigScreen) {
+			// the settings screen (Mod Menu's button opens it): one shot, then back to the title screen
+			if (++configTicks == 40) {
+				ScreenshotRecorder.saveScreenshot(client.runDirectory, "cakeui-selftest-config.png", client.getFramebuffer(),
+						text -> CakeUI.LOGGER.info("CakeUI self-test: {}", text.getString()));
+			} else if (configTicks == 50) {
+				client.currentScreen.close();
+			}
+			return;
+		}
 		if (client.currentScreen instanceof TitleScreen && !worldStarted) {
 			titleTick(client);
 		} else if (worldStarted && client.world != null && client.player != null) {
@@ -103,6 +114,10 @@ final class SelfTest {
 				step++;
 			}
 		} else if (seconds >= TITLE[TITLE.length - 1][0] + 2) {
+			if (configTicks == 0) {
+				client.setScreen(new ConfigScreen(client.currentScreen));
+				return;
+			}
 			if (!reloaded) {
 				// a resource reload shows the launch overlay again, over the title screen
 				reloaded = true;

@@ -1,6 +1,8 @@
 package io.github.harrythecake.cakeui.render;
 
 import io.github.harrythecake.cakeui.CakeUI;
+import io.github.harrythecake.cakeui.api.ButtonAction;
+import io.github.harrythecake.cakeui.api.CakeUIApi;
 import io.github.harrythecake.cakeui.expr.Values;
 import io.github.harrythecake.cakeui.model.Node;
 import net.fabricmc.loader.api.FabricLoader;
@@ -65,6 +67,10 @@ final class Actions {
 					}
 				}
 				default -> {
+					ButtonAction custom = CakeUIApi.action(a.kind());
+					if (custom != null) {
+						custom.run(a.argument(), screen);
+					}
 				}
 			}
 		} catch (RuntimeException e) {

@@ -27,6 +27,8 @@ public final class PropKinds {
 	public static final List<String> EASINGS = List.of("linear", "ease", "ease_in", "ease_out", "ease_in_out", "back_out", "elastic_out", "bounce_out");
 
 	private static final Map<String, Kind> KINDS = new HashMap<>();
+	/** Element types other mods registered through the API ("mymod:gauge"). */
+	private static final Set<String> CUSTOM_TYPES = new LinkedHashSet<>();
 	private static final Map<String, Set<String>> BY_TYPE = new HashMap<>();
 	/** Keys that hold objects and are flattened into "group.key". */
 	public static final Set<String> GROUPS = Set.of("transform", "parallax", "transition", "sounds");
@@ -76,6 +78,38 @@ public final class PropKinds {
 	}
 
 	private PropKinds() {
+	}
+
+	/**
+	 * An element type from the API: the common keys plus its own. A key another type already uses
+	 * must keep its kind (one key, one kind everywhere).
+	 */
+	public static synchronized void registerType(String type, Map<String, Kind> extra) {
+		for (Map.Entry<String, Kind> e : extra.entrySet()) {
+			Kind existing = KINDS.get(e.getKey());
+			if (existing != null && existing != e.getValue()) {
+				throw new IllegalArgumentException("property '" + e.getKey() + "' is already a " + existing + ", not a " + e.getValue());
+			}
+			if (GROUPS.contains(e.getKey()) || e.getKey().contains(".")) {
+				throw new IllegalArgumentException("property '" + e.getKey() + "' can't be a group or contain a dot");
+			}
+		}
+		extra.forEach(KINDS::put);
+		Set<String> set = new LinkedHashSet<>(COMMON);
+		set.addAll(extra.keySet());
+		BY_TYPE.put(type, set);
+		CUSTOM_TYPES.add(type);
+	}
+
+	public static boolean isElementType(String type) {
+		return ELEMENT_TYPES.contains(type) || CUSTOM_TYPES.contains(type);
+	}
+
+	/** Built-in and registered element types, for messages. */
+	public static List<String> elementTypes() {
+		List<String> all = new java.util.ArrayList<>(ELEMENT_TYPES);
+		all.addAll(CUSTOM_TYPES);
+		return all;
 	}
 
 	public static Kind kind(String flatKey) {

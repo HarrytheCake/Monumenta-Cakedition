@@ -1,6 +1,8 @@
 package io.github.harrythecake.cakeui.model;
 
+import io.github.harrythecake.cakeui.api.CakeUIApi;
 import io.github.harrythecake.cakeui.expr.Env;
+import io.github.harrythecake.cakeui.expr.Values;
 import io.github.harrythecake.cakeui.expr.Expr;
 import io.github.harrythecake.cakeui.expr.ExprException;
 import io.github.harrythecake.cakeui.expr.Parser;
@@ -640,11 +642,12 @@ public final class Loader {
 		} else if (o.get("type") == null && name.equals("background")) {
 			type = o.get("src") != null ? "image" : "rect";
 		} else {
-			problem(file, line, "element '" + name + "' needs a type (" + String.join(", ", PropKinds.ELEMENT_TYPES) + ")");
+			problem(file, line, "element '" + name + "' needs a type (" + String.join(", ", PropKinds.elementTypes()) + ")");
 			return null;
 		}
-		if (!PropKinds.ELEMENT_TYPES.contains(type)) {
-			problem(file, line, "element '" + name + "' has unknown type '" + type + "'" + PropKinds.suggest(type, PropKinds.ELEMENT_TYPES));
+		if (!PropKinds.isElementType(type)) {
+			problem(file, line, "element '" + name + "' has unknown type '" + type + "'" + PropKinds.suggest(type, PropKinds.elementTypes())
+					+ (type.contains(":") ? " (a mod's type: is that mod installed?)" : ""));
 			return null;
 		}
 		Node node = new Node(name, type, scope, file, line);
@@ -799,10 +802,19 @@ public final class Loader {
 		return null;
 	}
 
+	private static String modActions() {
+		java.util.Set<String> names = CakeUIApi.actionNames();
+		return names.isEmpty() ? "" : " (mods registered: " + String.join(", ", names) + ")";
+	}
+
 	private Node.Action readAction(Node node, JValue v, String file) {
 		if (v instanceof JValue.JString s) {
-			if (Node.Action.SCREENS.contains(s.value)) {
+			if (Node.Action.SCREENS.contains(s.value) || CakeUIApi.action(s.value) != null) {
 				return new Node.Action(s.value, null, null);
+			}
+			if (s.value.contains(":")) {
+				problem(file, s.line, "unknown action '" + s.value + "': no installed mod registered it" + modActions());
+				return null;
 			}
 			problem(file, s.line, "unknown action '" + s.value + "' (" + String.join(", ", Node.Action.SCREENS)
 					+ ", or { connect: … }, { url: … }, { set: { … } }, { toggle: … })" + PropKinds.suggest(s.value, Node.Action.SCREENS));
@@ -813,6 +825,20 @@ public final class Loader {
 			return null;
 		}
 		Map.Entry<String, JValue> e = o.map.entrySet().iterator().next();
+		if (e.getKey().contains(":")) {
+			if (CakeUIApi.action(e.getKey()) == null) {
+				problem(file, o.keyLine(e.getKey()), "unknown action '" + e.getKey() + "': no installed mod registered it" + modActions());
+				return null;
+			}
+			if (e.getValue() instanceof JValue.JString arg) {
+				return new Node.Action(e.getKey(), arg.value, null);
+			}
+			if (e.getValue() instanceof JValue.JNumber || e.getValue() instanceof JValue.JBool) {
+				return new Node.Action(e.getKey(), String.valueOf(e.getValue() instanceof JValue.JNumber n ? Values.format(n.value) : ((JValue.JBool) e.getValue()).value), null);
+			}
+			problem(file, e.getValue().line, "the argument of '" + e.getKey() + "' must be text, a number or true/false");
+			return null;
+		}
 		switch (e.getKey()) {
 			case "connect", "url" -> {
 				if (e.getValue() instanceof JValue.JString s && !s.value.isBlank()) {

@@ -4,7 +4,7 @@ A client-only Fabric mod for Minecraft 1.20.4 that lets modpacks redraw the game
 
 With no layout chosen (the default), CakeUI changes nothing. It also leaves alone any piece of vanilla that the active layout doesn't mention, so other mods' buttons and screens keep working.
 
-**Status:** 0.1.0 (in development). The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work (milestones 1–4 of 5). An API for other mods and a Mod Menu screen come next.
+**Status:** 0.1.0. The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work, with a settings screen in Mod Menu and an API for other mods (milestones 1–5 of 5). Chests and other screens may come later.
 
 ## Using a layout
 
@@ -17,6 +17,8 @@ With no layout chosen (the default), CakeUI changes nothing. It also leaves alon
    }
    ```
 3. Start the game. With `devMode` on, saving any file in the layout reloads it at once. Problems are listed in the top-left corner with file and line. A reload with problems keeps the previous version on screen.
+
+With [Mod Menu](https://modrinth.com/mod/modmenu), CakeUI's config button opens its settings: pick a layout from `cakeui/layouts/`, turn dev mode and button ids on or off, reload, or open the layouts folder. Every change applies at once.
 
 Controls → CakeUI has two unbound keys: **Reload layout**, and **Show button ids** (dev mode).
 
@@ -193,6 +195,42 @@ F3+Esc's "Game Paused" screen (no buttons) stays vanilla.
 ```
 
 **Inventory slots never move.** The `panel` port's elements (and the `title` port's) are drawn in the panel's box, 176×166 GUI pixels, and follow it when the recipe book pushes it aside, so give them sizes in `px` and `%`. With `panel: { "hide": true }` the slot frames go too (they are part of vanilla's texture), so draw your own. The creative inventory is a different screen and stays vanilla for now.
+
+## For mod developers
+
+Other mods can add game values, element types and button actions. Add a `cakeui` entrypoint (CakeUI calls it before the first layout loads, so load order doesn't matter):
+
+```json
+"entrypoints": { "cakeui": ["com.example.MyCakeUIPlugin"] }
+```
+
+```java
+public class MyCakeUIPlugin implements CakeUIPlugin {
+    @Override
+    public void register(CakeUIApi api) {
+        // {mymod.mana} in any expression
+        api.registerValue("mymod.mana", () -> MyMod.mana());
+        // { "type": "mymod:gauge", "level": "= mymod.mana / 100", "tone": "#40a0ff" }
+        api.registerElement("mymod:gauge", new ElementType() {
+            public Map<String, PropKind> properties() { return Map.of("level", PropKind.NUMBER, "tone", PropKind.COLOR); }
+            public double defaultWidth() { return 120; }   // design pixels
+            public double defaultHeight() { return 12; }
+            public void draw(ElementContext c) {
+                int w = (int) (c.width() * c.number("level", 0));
+                c.drawContext().fill(0, 0, w, (int) c.height(), c.color("tone", 0xFFFFFFFF));
+            }
+        });
+        // "action": "mymod:open_map"  or  { "mymod:open_map": "argument" }
+        api.registerAction("mymod:open_map", (argument, screen) -> MyMod.openMap(argument));
+    }
+}
+```
+
+- Value names use dots (`mymod.mana`); element types and actions need a namespace (`mymod:…`), so they never clash with CakeUI's.
+- An element type gets every common property (place, size, transform, states, opacity, …) plus the ones it declares; a property name must keep the kind it has everywhere else (`color` is always a colour). CakeUI places the element and calls `draw` with the matrix at its top-left corner; `ElementContext` gives its size, state and property values (eased between states like built-in ones).
+- Suppliers and `draw` run on the render thread, often every frame: keep them cheap. A `draw` that throws is listed once as a layout problem and skipped.
+- CakeUI's own actions never send chat or commands; an action a mod registers is that mod's responsibility.
+- Make CakeUI an optional dependency: the plugin class is only loaded when CakeUI is installed. Registering later works too (`CakeUIApi.get()`), and is used from the next `reload()`.
 
 ## Building
 

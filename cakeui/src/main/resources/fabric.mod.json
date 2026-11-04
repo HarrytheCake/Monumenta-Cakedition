@@ -12,7 +12,8 @@
 	},
 	"environment": "client",
 	"entrypoints": {
-		"client": ["io.github.harrythecake.cakeui.CakeUI"]
+		"client": ["io.github.harrythecake.cakeui.CakeUI"],
+		"modmenu": ["io.github.harrythecake.cakeui.ModMenuIntegration"]
 	},
 	"mixins": ["cakeui.mixins.json"],
 	"depends": {

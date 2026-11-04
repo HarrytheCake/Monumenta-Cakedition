@@ -44,6 +44,10 @@ _Avoid_: Reference pixel, virtual pixel
 Elements a layout draws in place of a vanilla button's look, while the vanilla button keeps handling clicks.
 _Avoid_: Style (that is any restyling), theme
 
+**Plugin**:
+Another mod's `cakeui` entrypoint, which adds game values, element types and button actions through the API before the first layout loads.
+_Avoid_: Addon, extension
+
 **Dev mode**:
 The setting under which CakeUI reloads a layout when its files change and shows the error overlay.
 _Avoid_: Debug mode, editor mode

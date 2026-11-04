@@ -1,6 +1,10 @@
 package io.github.harrythecake.cakeui;
 
+import io.github.harrythecake.cakeui.api.CakeUIApi;
+import io.github.harrythecake.cakeui.api.CakeUIPlugin;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.entrypoint.EntrypointContainer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
@@ -27,6 +31,15 @@ public final class CakeUI implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		McValues.register();
+		CakeUIApi.setReloader(Ui::reload);
+		// mods' plugins register their values, elements and actions before the first layout is read
+		for (EntrypointContainer<CakeUIPlugin> plugin : FabricLoader.getInstance().getEntrypointContainers("cakeui", CakeUIPlugin.class)) {
+			try {
+				plugin.getEntrypoint().register(CakeUIApi.get());
+			} catch (RuntimeException | LinkageError e) {
+				LOGGER.error("CakeUI: the plugin of {} failed", plugin.getProvider().getMetadata().getId(), e);
+			}
+		}
 		reloadKey = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakeui.reload", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, "key.categories.cakeui"));
 		buttonIdsKey = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.cakeui.buttonIds", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, "key.categories.cakeui"));
 		Ui.reload();
