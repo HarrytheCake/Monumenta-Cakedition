@@ -1,6 +1,6 @@
 # CakeFixes
 
-Small client-side fixes for vanilla Minecraft 1.20.4 and mod bugs that hurt on [Monumenta](https://www.playmonumenta.com/). Part of [Monumenta Cakedition](https://github.com/HarrytheCake/Monumenta-Cakedition). Fabric, client only. Needs Fabric Loader 0.15 or newer; no Fabric API.
+Small client-side fixes for vanilla Minecraft and mod bugs that hurt on [Monumenta](https://www.playmonumenta.com/). Part of [Monumenta Cakedition](https://github.com/HarrytheCake/Monumenta-Cakedition). Client only, for Fabric and NeoForge on Minecraft 1.20.4, 1.21.1 and 26.1.2. On Fabric it needs Fabric Loader 0.15 or newer and no Fabric API.
 
 Each fix has its own switch and is on by default. Turning a fix off gives exact vanilla behaviour. **Options** change what you see, so they're off by default.
 
@@ -38,10 +38,12 @@ English, 简体中文, 繁體中文.
 ## Build
 
 ```
-./gradlew build
+JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build
 ```
 
-Needs JDK 21 to run Gradle; the mod targets Java 17. A push to `main` with a new `mod_version` publishes GitHub release `v<mod_version>` with the jar (see `.github/workflows/build.yml`).
+Builds Fabric and NeoForge jars for Minecraft 1.20.4, 1.21.1 and 26.1.2 into `build/libs/`
+(`cakefixes-<loader>-<mc>-<version>.jar`; `cakefixes-<version>.jar` is the Fabric 1.20.4 one). Gradle runs on
+JDK 25; each version compiles with its own Java (17, 21, 25). One version only: `-Pcake.versions=1.21.1`.
 
 ## License
 

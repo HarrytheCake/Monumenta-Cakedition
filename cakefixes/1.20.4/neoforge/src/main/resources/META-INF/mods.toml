@@ -1,0 +1,30 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_range}"
+license = "MIT"
+issueTrackerURL = "https://github.com/HarrytheCake/CakeFixes/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+logoFile = "assets/cakefixes/icon.png"
+authors = "HarrytheCake"
+displayURL = "https://github.com/HarrytheCake/CakeFixes"
+description = '''Small client-side fixes for vanilla and mod bugs that hurt on Monumenta. Each fix has its own switch. Fixes: freezes when the server removes a player from a team they are not on; AppleSkin's HUD making the game wait for the graphics driver every frame. Option (off by default): a shorter banner draw distance.'''
+
+[[mixins]]
+config = "cakefixes.mixins.json"
+
+[[dependencies.cakefixes]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoforge_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.cakefixes]]
+modId = "minecraft"
+type = "required"
+versionRange = "${neoforge_mc_range}"
+ordering = "NONE"
+side = "CLIENT"

@@ -1,0 +1,20 @@
+// <mod>/<mc>/common: Minecraft-facing code shared by both loaders, compiled against vanilla Minecraft
+// (Mojang names, through ModDevGradle's vanilla mode) to check that it doesn't use loader classes.
+// The loader projects compile these sources again themselves.
+plugins {
+	id 'cake-base'
+	id 'net.neoforged.moddev'
+}
+
+neoForge {
+	neoFormVersion = project.property('neo_form_version')
+}
+
+dependencies {
+	compileOnly 'org.spongepowered:mixin:0.8.5'
+	compileOnly "io.github.llamalad7:mixinextras-common:${project.property('mixinextras_version')}"
+	annotationProcessor "io.github.llamalad7:mixinextras-common:${project.property('mixinextras_version')}"
+}
+
+// the common jar is never shipped
+tasks.named('jar', Jar) { archiveClassifier = 'common-only' }

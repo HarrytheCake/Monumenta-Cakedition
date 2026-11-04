@@ -1,0 +1,39 @@
+// <mod>/core: plain Java without Minecraft imports (parsers, stores, formats, logic) and the shared
+// assets. Compiled here only for its unit tests; every loader project compiles these sources again
+// with its own Minecraft version's Java. Gson and SLF4J are what Minecraft ships (compile-only).
+plugins {
+	id 'java-library'
+}
+
+group = rootProject.property('mod_group')
+version = rootProject.property('mod_version')
+
+java {
+	toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = 'UTF-8'
+	options.release = 17
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compileOnly 'com.google.code.gson:gson:2.10.1'
+	compileOnly 'org.slf4j:slf4j-api:2.0.9'
+	compileOnly 'org.jetbrains:annotations:24.1.0'
+	testImplementation 'com.google.code.gson:gson:2.10.1'
+	testImplementation 'org.slf4j:slf4j-api:2.0.9'
+	testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.9'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test', Test) {
+	useJUnitPlatform()
+}
+
+tasks.named('jar', Jar) { archiveClassifier = 'core-only' }
