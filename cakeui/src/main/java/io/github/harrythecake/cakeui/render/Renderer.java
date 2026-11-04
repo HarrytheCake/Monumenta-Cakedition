@@ -212,9 +212,7 @@ public final class Renderer {
 		m.translate(x, y, 0);
 		c.flat = new Geometry.Mat().translate(x, y, 0);
 		for (Node child : override.children) {
-			NodeState st = state(widget, child);
-			st.text = text;
-			st.enabled = active;
+			skinState(widget, child, text, active);
 		}
 		NodeState self = state(widget, override);
 		self.hovered = hovered;
@@ -224,6 +222,19 @@ public final class Renderer {
 		self.height = h;
 		drawChildren(c, override, override.children, w, h, self);
 		m.pop();
+	}
+
+	/** Every element of a skin, nested ones too, sees the button's label ({self.text}) and whether it is active. */
+	private void skinState(Object widget, Node n, String text, boolean active) {
+		NodeState st = state(widget, n);
+		st.text = text;
+		st.enabled = active;
+		for (Node child : n.children) {
+			skinState(widget, child, text, active);
+		}
+		if (n.background != null) {
+			skinState(widget, n.background, text, active);
+		}
 	}
 
 	// ---- state ----
