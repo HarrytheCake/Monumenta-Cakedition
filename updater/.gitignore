@@ -9,4 +9,7 @@ bin/
 .classpath
 .idea/
 *.iml
-logs/
+# logs and config the tests create
+/logs/
+/config/
+smoke-gradle.log

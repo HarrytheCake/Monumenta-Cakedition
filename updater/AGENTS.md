@@ -1,6 +1,6 @@
 # Cakedition Updater — agent reference
 
-Client-only Fabric mod (`cakeupdater`, package `io.github.harrythecake.cakeupdater`) for Minecraft **1.20.4**. It does three things:
+Client-only mod (`cakeupdater`, package `io.github.harrythecake.cakeupdater`) for **Fabric and NeoForge on Minecraft 1.20.4, 1.21.1 and 26.1.2** (Cake multiloader layout, see "Multiloader status"). The Cakedition pack ships the Fabric 1.20.4 jar. It does three things:
 
 1. **Modpack updates (packwiz).** It tells the player in chat when the published packwiz pack has changed. When the player chooses, it runs packwiz-installer **after the game closes**, in a terminal window, and then asks the player to start the game again. It never restarts the game itself; that's a deliberate design decision.
 2. **Resource pack updates (Modrinth).** It tells the player in a **separate** chat message when a newer version of an enabled Modrinth resource pack exists. On click, it downloads the new version and reloads resources **live**, with no restart.
@@ -19,50 +19,59 @@ The mod ships inside the Monumenta Cakedition pack as `pack/mods/cakeupdater.pw.
 
 ## Files
 
+Cake multiloader layout (kit: `tools/multiloader/README.md` in the main repo; `settings.gradle`, `build.gradle`, `buildSrc/`, `gradlew*`, `gradle/` and `<mc>/version.properties` are the kit's: re-run `apply_kit.py`, don't edit them here). Mojang names everywhere.
+
 ```
 updater/
-├── build.gradle            # Fabric Loom 1.10.5; Java release 17; UTF-8 sources (lang strings are CJK)
-├── gradle.properties       # MC 1.20.4, Yarn 1.20.4+build.3, Loader 0.16.9, Fabric API 0.97.3, mod_version
-├── settings.gradle
-├── gradlew / gradlew.bat   # Gradle 8.14.3 wrapper
-├── .github/workflows/build.yml  # CI (active only in the standalone CakeUpdater repo): build + test, release on a new mod_version
-└── src/main/
-    ├── resources/
-    │   ├── fabric.mod.json                     # environment: client; depends on fabric-api
-    │   └── assets/cakeupdater/lang/            # en_us.json, zh_cn.json, zh_tw.json (same 100 keys; LangTest checks)
-    └── (src/test/java/…)                       # JUnit 5: ChangelogTest, UrgentAndMemoryTest, ModrinthUpdateTest, MoveInTest, ChatPlusImportTest, GuideNoticeTest, LangTest (run by `gradlew build`)
-    └── java/io/github/harrythecake/cakeupdater/
-        ├── CakeUpdater.java          # entrypoint: events, /cakeupdate command, all chat text
-        ├── CakeUpdaterPreLaunch.java # preLaunch entrypoint: leftover config restore, defaults (no Minecraft classes!)
-        ├── Backups.java              # snapshot on close, update detection, restore, defaults, pruning (plain Java)
-        ├── Adoption.java             # .mrpack install's first update: packwiz.json from adoption.json (no MC classes)
-        ├── BackupsScreen.java        # backups list with restore buttons (Mod Menu / /cakeupdate backups)
-        ├── ModMenuEntry.java         # Mod Menu's configure button → BackupsScreen (Mod Menu optional, compileOnly)
-        ├── Changelog.java            # changelog/<version>/<lang>.md: versions between two, language fallback, parse (plain Java)
-        ├── ChangelogScreen.java      # scrollable changelog (/cakeupdate changelog, the [Changelog] button)
-        ├── Withdrawn.java            # withdrawn.json next to the published pack.toml: is the installed version withdrawn?
-        ├── MemoryCheck.java          # max heap outside the configured range → warn once per setting (plain Java)
-        ├── MoveIn.java               # import from another install: scan, stage, apply after close / at pre-launch (plain Java)
-        ├── ChatPlusImport.java       # ChatPlus setup → patch for CakeChat's config.json (plain Java, Gson)
-        ├── GuideNotice.java          # first launch / after an update → the guide line, once per pack version (plain Java)
-        ├── Config.java               # config/cakeupdater/config.json5 (template + lenient Gson load)
-        ├── Net.java                  # shared HttpClient, User-Agent, GET/POST JSON helpers
-        ├── UpdateCheck.java          # modpack: is the published pack.toml newer than what is installed?
-        ├── ResourcePackUpdater.java  # resource packs: Modrinth lookup, download, swap, reload
-        ├── HelperLauncher.java       # starts Helper in a terminal that outlives the game (per OS)
-        └── Helper.java               # standalone main(): waits for game exit, runs packwiz-installer
+├── gradle.properties       # mod_id, mod_name, mod_version, mod_group (+ Gradle memory settings)
+├── .github/workflows/build.yml  # CI (active only in the standalone CakeUpdater repo); not yet updated for the multiloader build
+├── core/                   # plain Java, no Minecraft or loader classes; compiled into every jar
+│   ├── src/main/java/io/github/harrythecake/cakeupdater/
+│   │   ├── platform/Platform.java, Services.java  # what the loader gives: game/config dir, mod loaded, mod version, mod file
+│   │   ├── CakeUpdaterMod.java       # MOD_ID, LOGGER, gameDir(); minecraftVersion(), loader(), cakeditionTarget()
+│   │   ├── CakeUpdaterPreLaunch.java # pre-launch tasks: leftover config restore / import, defaults (run(gameDir), once)
+│   │   ├── Backups.java              # snapshot on close, update detection, restore, defaults, pruning
+│   │   ├── Adoption.java             # .mrpack install's first update: packwiz.json from adoption.json
+│   │   ├── Changelog.java            # changelog/<version>/<lang>.md: versions between two, language fallback, parse
+│   │   ├── Withdrawn.java            # withdrawn.json next to the published pack.toml: is the installed version withdrawn?
+│   │   ├── MemoryCheck.java          # max heap outside the configured range → warn once per setting
+│   │   ├── MoveIn.java               # import from another install: scan, stage, apply after close / at pre-launch
+│   │   ├── ChatPlusImport.java       # ChatPlus setup → patch for CakeChat's config.json (Gson)
+│   │   ├── GuideNotice.java          # first launch / after an update → the guide line, once per pack version
+│   │   ├── Config.java               # config/cakeupdater/config.json5 (template + lenient Gson load)
+│   │   ├── Net.java                  # shared HttpClient, User-Agent, GET/POST JSON helpers
+│   │   ├── UpdateCheck.java          # modpack: is the published pack.toml newer than what is installed?
+│   │   ├── MrpackPack.java           # rebuilds the packwiz pack from a .mrpack (run by Helper)
+│   │   ├── HelperLauncher.java       # starts Helper in a terminal that outlives the game (per OS)
+│   │   └── Helper.java               # standalone main(): waits for game exit, runs packwiz-installer
+│   ├── src/main/resources/assets/cakeupdater/  # icon.png, lang/en_us|zh_cn|zh_tw.json (same keys; LangTest checks)
+│   └── src/test/java/…       # JUnit 5: ChangelogTest, UrgentAndMemoryTest, ModrinthUpdateTest, MoveInTest, ChatPlusImportTest, GuideNoticeTest, LangTest
+└── <mc>/                   # 1.20.4, 1.21.1, 26.1.2: one folder per Minecraft version
+    ├── common/src/main/java/io/github/harrythecake/cakeupdater/
+    │   ├── CakeUpdater.java          # client side for both loaders: init(), event hooks, command(), all chat text
+    │   ├── ResourcePackUpdater.java  # resource packs: Modrinth lookup, download, swap, reload
+    │   ├── BackupsScreen.java        # backups list with restore buttons (Mod Menu / NeoForge Config / /cakeupdate backups)
+    │   ├── ChangelogScreen.java      # scrollable changelog (/cakeupdate changelog, the [Changelog] button)
+    │   └── SelfTest.java             # dev self-test (-Dcakeupdater.selftest=1), see Testing
+    ├── fabric/               # CakeUpdaterFabric (client entrypoint: Fabric API events → CakeUpdater), FabricPreLaunch
+    │                         # (preLaunch), ModMenuEntry, FabricPlatform, fabric.mod.json (depends on fabric-api)
+    └── neoforge/             # CakeUpdaterNeoForge (@Mod: NeoForge events → CakeUpdater, config screen), EarlyStart
+                              # (mixin config plugin = pre-launch), NeoForgePlatform, cakeupdater.neoforge.mixins.json,
+                              # META-INF/mods.toml (1.20.4) / neoforge.mods.toml; 1.20.4 also mixin/ClientPacketListenerMixin
 ```
 
-`Helper` must stay **plain Java**: no Minecraft, Fabric or Gson classes, and no references to other mod classes. It runs in a separate JVM with only a temp copy of the mod jar on the classpath.
+`Helper` must stay **plain Java**: no Minecraft, loader or Gson classes, and no references to other mod classes except `MrpackPack`. It runs in a separate JVM with only a temp copy of the mod jar on the classpath.
 
 ## Runtime flow
+
+Event names below are Fabric API's; the NeoForge equivalents are in "Multiloader status".
 
 ### Modpack update
 ```
 ClientPlayConnectionEvents.JOIN (every join)
  └─ UpdateCheck.runAsync(config.packwiz)     (background; the first source that answers wins)
      ├─ 1. Modrinth (packwiz.modrinth() set + pack-version.txt known):
-     │     GET api.modrinth.com/v2/project/<p>/version?loaders=["fabric"]&game_versions=["<mc>"]
+     │     GET api.modrinth.com/v2/project/<p>/version?loaders=["<running loader>"]&game_versions=["<mc>"]
      │     → newest version_type "release" with a .mrpack primary file; available = Changelog.compare(it, installed) > 0;
      │       Result.mrpack = {versionId, url, sha512}, remoteHash = "modrinth:<versionId>"
      ├─ 2. each packwiz.packUrls() (packUrl, then fallbackUrls: GitHub, then GitLab): GET pack.toml
@@ -76,7 +85,7 @@ ClientPlayConnectionEvents.JOIN (every join)
 CLIENT_STARTED → the same check; urgent → SystemToast (PERIODIC_NOTIFICATION) on the TitleScreen, once per start
       └─ /cakeupdate            → two buttons:
            ├─ /cakeupdate onclose  → updateOnClose = true   (+ [Cancel] → /cakeupdate cancel)
-           └─ /cakeupdate now      → updateOnClose = true; client.send(disconnect + scheduleStop)
+           └─ /cakeupdate now      → updateOnClose = true; client.tell(disconnect + stop)
 ClientLifecycleEvents.CLIENT_STOPPING
  └─ if updateOnClose → Adoption.adopt(gameDir)   (only if packwiz.json is missing and adoption.json exists; see below)
                      → HelperLauncher.launch(gameDir, latest.mrpack, packUrls (the one that answered first), language, prefix)
@@ -125,7 +134,7 @@ onInitializeClient (every start)
  └─ JOIN (once): chat "Modpack updated (a → b)…", then up to 5 changelog items (all versions after a up to b,
     newest first) + "…and N more", then [Changelog] [Restore server list] [Restore configs] [Backups]
     (the changelog rides on this message, so it needs backups.enabled; a → a, or an unknown b, shows none)
-/cakeupdate restore servers <backup>  → copied back now (MultiplayerScreen re-reads servers.dat when opened)
+/cakeupdate restore servers <backup>  → copied back now (JoinMultiplayerScreen re-reads servers.dat when opened)
 /cakeupdate restore configs <backup>  → cakeupdater-backups/restore-configs.txt + a shutdown hook: copied back after
                                         the game has closed and mods have saved; [Close Minecraft now] [Cancel]
 CakeUpdaterPreLaunch                  → applies a restore the hook couldn't (crash/kill), then copies
@@ -188,8 +197,8 @@ JOIN → snapshot enabled pack names (render thread) → ResourcePackUpdater.che
  → chat per pack: "[<prefix>] Resource pack update: <title> a → b [Update resource pack]"   (once per pending set)
 /cakeupdate resourcepacks → ResourcePackUpdater.apply
  1. download to resourcepacks/<file>.part, check sha512, move into place (skip if already present + valid)
- 2. render thread: scanPacks(); replace old "file/x.zip" with the new one AT THE SAME INDEX;
-    setEnabledProfiles(); options.refreshResourcePacks(manager)  → saves options.txt + reloads
+ 2. render thread: PackRepository.reload(); replace old "file/x.zip" with the new one AT THE SAME INDEX;
+    setSelected(); options.updateResourcePacks(repository)  → saves options.txt + reloads
 ```
 The old zip is **kept, disabled**. packwiz-installer manages that file: deleting it would make the installer download it again. The next pack release that bumps the metafile removes it.
 
@@ -214,7 +223,7 @@ The old zip is **kept, disabled**. packwiz-installer manages that file: deleting
 | `/cakeupdate import cancel` | Cancel a staged import |
 | `/cakeupdate import off` | Stop the join message offering the import |
 
-The chat buttons are `ClickEvent.RUN_COMMAND` with these commands. Fabric's client-command API catches them before they're sent to the server.
+The chat buttons are run-command click events with these commands. `CakeUpdater.command()` builds the tree for either loader's client dispatcher (Fabric API's client commands; NeoForge's `RegisterClientCommandsEvent`), which catches them before they're sent to the server (on NeoForge 1.20.4 only with our `ClientPacketListenerMixin`, see Multiloader status). Command feedback goes straight into the chat window (what Fabric's `sendFeedback` does).
 
 ## Config: `config/cakeupdater/config.json5`
 
@@ -242,18 +251,21 @@ The "absent" defaults matter: config files written before 1.6.0 have neither key
 
 ## Translations
 
-- In-game text: `Text.translatable("cakeupdater.…")`, with files in `assets/cakeupdater/lang/`. Each button key `k` has a tooltip key `k.hover`.
+- In-game text: `Component.translatable("cakeupdater.…")`, with files in `assets/cakeupdater/lang/`. Each button key `k` has a tooltip key `k.hover`.
 - **Invariant:** every language file has the same keys and the same number of `%s` in each value.
-- The updater window can't use Minecraft's lang system, so `Helper.MESSAGES` holds its own en_us/zh_cn/zh_tw copies. The language comes from `client.options.language`, which the mod passes in. zh_hk uses zh_tw, anything else falls back to en_us, and it also switches to en_us if the console charset can't encode the text.
+- The updater window can't use Minecraft's lang system, so `Helper.MESSAGES` holds its own en_us/zh_cn/zh_tw copies. The language comes from `client.options.languageCode`, which the mod passes in. zh_hk uses zh_tw, anything else falls back to en_us, and it also switches to en_us if the console charset can't encode the text.
 - To add a language, add a lang JSON **and** a `Helper.MESSAGES` entry.
 
 ## Build
 
 ```bash
 cd updater
-JAVA_HOME="<JDK 21>" ./gradlew build        # output: build/libs/cakeupdater-<mod_version>.jar (Java 17 bytecode)
+JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build                          # every version and loader + tests
+JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build -Pcake.versions=1.20.4   # one version (+ core)
 ```
-**CI** (`.github/workflows/build.yml`, GitHub only runs it in the standalone `HarrytheCake/CakeUpdater` repo, where this folder is the root): every push and pull request builds and tests on JDK 21 and uploads the jar as a workflow artifact. A push to `main` whose `mod_version` has no `v<mod_version>` release yet creates that release with `cakeupdater-<mod_version>.jar` attached and its SHA-256 at the top of the notes. Pushing again with the same version builds but releases nothing.
+Gradle runs on JDK 25; 1.20.4 compiles with Java 17, 1.21.1 with 21, 26.1.2 with 25. Jars in `build/libs/`: `cakeupdater-<fabric|neoforge>-<mc>-<mod_version>.jar` (6), plus `cakeupdater-<mod_version>.jar` = the Fabric 1.20.4 jar (the pack's file name). Dev client: `./gradlew :1.21.1:neoforge:runClient -Pcake.versions=1.21.1` (run folder `<mc>/<loader>/run/`).
+
+**CI** (`.github/workflows/build.yml`, GitHub only runs it in the standalone `HarrytheCake/CakeUpdater` repo, where this folder is the root): still the pre-multiloader workflow (JDK 21, `build/libs/cakeupdater-<mod_version>.jar`); it needs JDK 25 before the next release from this layout (the lead updates mirror CI). A push to `main` whose `mod_version` has no `v<mod_version>` release yet creates that release with `cakeupdater-<mod_version>.jar` attached and its SHA-256 at the top of the notes. Pushing again with the same version builds but releases nothing.
 
 To release inside the pack:
 1. Bump `mod_version` and build/test locally.
@@ -268,15 +280,15 @@ The pack must only point at a release that already exists, which is why step 4 w
 
 - **Threading:**
   - Network and hashing run on background threads (`CompletableFuture`).
-  - Anything that touches the client (chat, `ResourcePackManager`, options) goes through `client.send` or `client.submit`.
-  - Read `getEnabledNames()` on the render thread, before going async.
-- **Quitting from a command:** use `client.send(...)` (queued), not `execute`. Disconnecting inside the command handler breaks the connection mid-packet.
+  - Anything that touches the client (chat, `PackRepository`, options) goes through `client.tell` (26.1: `schedule`) or `client.submit`.
+  - Read `getSelectedIds()` on the render thread, before going async.
+- **Quitting from a command:** use `client.tell(...)` (always queued; on 26.1 `client.schedule(...)`: 26.1's `execute` runs at once on the render thread), not a direct call. Disconnecting inside the command handler breaks the connection mid-packet.
 - **Temp jar copy:** Windows can't replace a jar a running JVM has open. Never run `Helper` from the real mod jar.
 - **`java.exe`, not `javaw.exe`:** on Windows, `javaw` has no console. `HelperLauncher.consoleJava()` swaps it.
 - **Java's `ProcessBuilder` starts children with no window (`CREATE_NO_WINDOW`).** That's why the Windows branch uses `cmd /c start`.
 - **`packwiz.json` `packFileHash`** is exactly `sha256` of the `pack.toml` bytes (verified).
 - **Modrinth** expects a project-identifying User-Agent (`Net.USER_AGENT`).
-- **Pre-launch must not load Minecraft classes** (they'd load before mixins apply). `CakeUpdaterPreLaunch` and `Backups` use their own slf4j logger and only the inlined `CakeUpdater.MOD_ID` constant; never `CakeUpdater.LOGGER` or `Config` there.
+- **Pre-launch must not load Minecraft classes** (they'd load before mixins apply). `CakeUpdaterPreLaunch` (core) runs from Fabric's `FabricPreLaunch` and NeoForge's `EarlyStart` mixin plugin with the game folder passed in; it and `Backups` use their own slf4j logger and `CakeUpdaterMod.MOD_ID`; never `CakeUpdater` (common), `Services` or `Config` there.
 - **Adoption is only as good as `adoption.json`:** it must describe exactly the `.mrpack` it ships in. A `.mrpack` without one (the 2.2.0 one, or another pack's) updates the old way, with the problems above.
 - **Never restore `pack-version.txt`** or yosbr defaults: the update notice would come back and pack defaults would go stale (`Backups.SKIP`).
 - **The mod downloads no code (1.3.0+).** It runs the `packwiz-installer-bootstrap.jar` a packwiz install already has in `.minecraft` (the launcher's pre-launch command needs it). Without it (e.g. a `.mrpack` install), `/cakeupdate`, `onclose` and `now` show [Open game folder] + [Download page] (`Helper.BOOTSTRAP_PAGE`) instead of updating, and `Helper` prints the same advice. Before 1.3.0 `Helper` downloaded bootstrap v0.0.3 itself; this was removed for mod-site rules. Its network use: the update check (Modrinth API, `pack.toml`, `withdrawn.json`), the `.mrpack` and the pack files it links (data, not code) when the player updates, and resource packs the player chooses to update.
@@ -308,13 +320,41 @@ Not proven:
 - Terminal.app on macOS
 - Linux terminals and Flatpak
 
-**Out-of-game harness:** run the compiled classes (`build/classes/java/main`) with Gson, Fabric Loader, the `com.mojang` libraries and the Yarn-named `minecraft-merged` jar from `~/.gradle/caches/fabric-loom/minecraftMaven/…` on the classpath. Call package-private methods by reflection. Don't use the copy in the project's `.gradle/loom-cache`: that path is over 260 characters on Windows, and Java's classpath rejects the `\\?\` form.
+**Out-of-game harness:** the plain-Java classes are in `core/` now; run `core/build/classes/java/main` with Gson and SLF4J on the classpath (no Minecraft needed). Call package-private methods by reflection.
 
-## Possible future work (discussed, not started)
+## Multiloader status
 
-- **Forge/NeoForge:** move to Mojang mappings and a common module plus per-loader glue (entrypoint, client command registration, join/stop events, paths), probably with Architectury Loom. First check that `RUN_COMMAND` clicks reach Forge/NeoForge client commands.
-- **Multiple MC versions (1.12.2 → 26.x):**
-  - Make the core Java 8 compatible. `ProcessHandle`, `HttpClient`, records, text blocks and `HexFormat` would all need replacing.
-  - Add thin per-version adapters, e.g. with Stonecutter.
-  - Prioritise 1.20.1, 1.21.1 and the newest version.
-  - 1.12.2 is the most expensive: no Brigadier, MCP names, an old resource pack system.
+Ported 2026-11-04 (one build: Fabric + NeoForge × 1.20.4 / 1.21.1 / 26.1.2). Fabric 1.20.4 behaves as before (same mod id, config, commands, lang keys, files); only the entry class names in `fabric.mod.json` changed.
+
+**How each Fabric hook is done on NeoForge** (`CakeUpdaterNeoForge`):
+
+| Fabric | NeoForge | Difference |
+|---|---|---|
+| `preLaunch` entrypoint | `EarlyStart`, the plugin of `cakeupdater.neoforge.mixins.json` (`onLoad`); the mod constructor calls `CakeUpdaterPreLaunch.run` again (no-op if it ran) | Runs on the main thread before mods are constructed and before Minecraft reads options.txt, like preLaunch (checked: "Copied 1 default files" logged 3 s after launch, before mod construction) |
+| `client` entrypoint | the `@Mod` constructor | |
+| `CLIENT_STARTED` (start the urgent check) | `FMLClientSetupEvent` | Fires during the loading screen, a little earlier; the toast still waits for the title screen |
+| `ScreenEvents.AFTER_INIT` | `ScreenEvent.Init.Post` | |
+| `ClientPlayConnectionEvents.JOIN` | `ClientPlayerNetworkEvent.LoggingIn` | |
+| `CLIENT_STOPPING` | `GameShuttingDownEvent` | Fired when the game is asked to stop (`Minecraft.stop()`), a frame before Fabric's; the world is still loaded in both |
+| client command API | `RegisterClientCommandsEvent` | 1.20.4: NeoForge 20.4 runs client commands typed in chat but sends chat-button clicks (`sendUnsignedCommand`) to the server; `ClientPacketListenerMixin` (neoforge 1.20.4 only) runs `/cakeupdate…` clicks on the client. 21.1+ handles clicks itself |
+| Mod Menu entry | `ConfigScreenHandler` (1.20.4) / `IConfigScreenFactory` (1.21+) → BackupsScreen | |
+| `FabricLoader` (dirs, mod loaded/version, mod jar) | `FMLPaths`, `ModList` (`NeoForgePlatform`) | |
+
+**Away from the Cakedition pack** (any NeoForge game, Fabric 1.21.1 / 26.1.2): `CakeUpdaterMod.cakeditionTarget()` is false, so with the default (Cakedition) pack addresses the modpack check is off: no pack.toml / Modrinth requests, no update offer (installing Cakedition there would put Fabric 1.20.4 mods into another game). A pack creator's own `packUrl` still works there; the Modrinth query asks for the running loader. Still active: backups on close (`cakeupdater-backups/`), the import offer on the first join of each start (until "Don't show again"), the memory warning, resource-pack updates for enabled Modrinth packs (MonumentaRP for the running version, if enabled), defaults from `config/cakeupdater/defaults/`. The guide line needs CakeBook and the pack's book, so it doesn't show. None of it writes outside the game folder.
+
+| Target | Build + tests | Smoke (dev client, `--world` + `-Dcakeupdater.selftest=1`) | Gaps |
+|---|---|---|---|
+| 1.20.4 Fabric | ✓ (36 core tests, run once per build) | PASS: all chat messages, toast, both chat buttons ran on the client, screens in screenshots | none (this is the pack's jar) |
+| 1.20.4 NeoForge | ✓ | PASS (same; the click mixin works) | pack check off (see above) |
+| 1.21.1 Fabric | ✓ | PASS | pack check off |
+| 1.21.1 NeoForge | ✓ | PASS; early hook checked | pack check off |
+| 26.1.2 Fabric | ✓ | PASS (world upgraded to 26.1; clicks through `sendUnattendedCommand`) | pack check off |
+| 26.1.2 NeoForge | ✓ | PASS (world upgraded to 26.1; clicks through `sendUnattendedCommand`) | pack check off |
+
+Not tried on the new targets: the real update flow (`/cakeupdate now` → helper → packwiz-installer), resource-pack download, import, restores. They share the core code with Fabric 1.20.4; only the event wiring differs.
+
+Per-version code differences in `common/`: 1.21.1 `GenericMessageScreen` (the dirt screen is gone); 26.1.2 `GuiGraphicsExtractor` / `extractRenderState` / `text` / `centeredText` with alpha colours, `ClickEvent.RunCommand` / `OpenUrl(URI)` / `HoverEvent.ShowText` records, `LocalPlayer.sendSystemMessage` instead of `displayClientMessage(…, false)`, `ChatComponent.addClientSystemMessage`, `Minecraft.disconnectFromWorld`, `getToastManager`, `CompoundTag.getListOrEmpty`, `net.minecraft.util.Util`, `schedule` instead of `tell` (not `execute`: it runs at once on the render thread).
+
+## Testing (multiloader)
+
+`python tools/multiloader/smoke.py updater <mc> <loader> --world=<1.20.4 world> --jvm=-Dcakeupdater.selftest=1 "--done=cakeupdater self-test done"` (set `PYTHONIOENCODING=utf-8` on Windows). The self-test (`SelfTest`, after the first join) shows every chat message with made-up versions 9.9.8 → 9.9.9 and the urgent toast, then opens a chat screen and clicks [Changelog] and [Backups] the way the chat screen does (26.1: what `Screen.clickCommandAction` does) and checks the screen opened, i.e. the click ran on the client and didn't go to the server. Log: `cakeupdater self-test done: 2 of 2 chat buttons ran on the client`; screenshots `run/screenshots/cakeupdater-selftest-{chat,ChangelogScreen,BackupsScreen}.png`. It never schedules an update; it writes a made-up `config/cakeupdater/changelog/9.9.9/en_us.md` and one "import" backup in the dev run folder only.

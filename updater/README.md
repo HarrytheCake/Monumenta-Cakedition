@@ -25,9 +25,8 @@ Chat text and the updater window are in English, Simplified Chinese and Traditio
 
 ## Requirements
 
-- Minecraft 1.20.4, Fabric Loader 0.15+, Java 17+
-- [Fabric API](https://modrinth.com/mod/fabric-api)
-- Optional: [Mod Menu](https://modrinth.com/mod/modmenu) for the backups screen (`/cakeupdate backups` works without it)
+- Minecraft 1.20.4, 1.21.1 or 26.1.2, on Fabric (Loader 0.15+, with [Fabric API](https://modrinth.com/mod/fabric-api)) or NeoForge. The Monumenta Cakedition pack itself is Fabric 1.20.4; on any other game the mod doesn't check Cakedition's pack (its other features work).
+- Optional on Fabric: [Mod Menu](https://modrinth.com/mod/modmenu) for the backups screen (`/cakeupdate backups` works without it; on NeoForge: Mods → Config)
 - For modpack updates: an install made with packwiz-installer (it reads `packwiz.json`), or a `.mrpack` install that includes `config/cakeupdater/pack-version.txt` (and `adoption.json`, see above)
 - For modpack updates: `packwiz-installer-bootstrap.jar` in the game folder. A packwiz install already has it, because the launcher's pre-launch command runs it. The mod never downloads it; if it's missing, the chat offers **[Open game folder]** and **[Download page]** instead of the update buttons.
 
@@ -80,10 +79,11 @@ Tested in game on Windows (Prism Launcher). The macOS (Terminal.app) and Linux t
 ## Building
 
 ```bash
-./gradlew build     # needs JDK 21 to run Gradle; the jar targets Java 17
+JAVA_HOME=<JDK 25> ./gradlew build                         # every Minecraft version and loader
+JAVA_HOME=<JDK 25> ./gradlew build -Pcake.versions=1.20.4  # one version
 ```
 
-The jar is written to `build/libs/cakeupdater-<version>.jar`.
+Gradle runs on JDK 25; each Minecraft version compiles with its own Java (17 / 21 / 25, found by Gradle's toolchains). The jars are written to `build/libs/`: `cakeupdater-<fabric|neoforge>-<minecraft>-<version>.jar`, plus `cakeupdater-<version>.jar` (the Fabric 1.20.4 one, the jar the Cakedition pack uses).
 
 ## Releases
 

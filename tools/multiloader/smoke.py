@@ -59,7 +59,9 @@ def kill_tree(pid):
 
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    # log lines may hold characters the Windows console code page can't show (→, CJK)
+    sys.stdout.reconfigure(errors='replace')
+    args =[a for a in sys.argv[1:] if not a.startswith('--')]
     opts = [a for a in sys.argv[1:] if a.startswith('--')]
     mod, mc, loader = Path(args[0]).resolve(), args[1], args[2]
     jvm = [o.split('=', 1)[1] for o in opts if o.startswith('--jvm=')]
