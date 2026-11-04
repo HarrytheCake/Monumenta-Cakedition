@@ -45,7 +45,7 @@ Elements a layout draws in place of a vanilla button's look, while the vanilla b
 _Avoid_: Style (that is any restyling), theme
 
 **Plugin**:
-Another mod's `cakeui` entrypoint, which adds game values, element types and button actions through the API before the first layout loads.
+Another mod's `cakeui` entrypoint, which adds game values, element types and button actions through the API before the first layout loads, may fill a port the active layout doesn't mention, and may add HUD pieces (ports of the HUD part, like vanilla's).
 _Avoid_: Addon, extension
 
 **Dev mode**:

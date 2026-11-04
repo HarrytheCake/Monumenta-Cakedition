@@ -2,7 +2,21 @@
 
 A client-only Fabric mod for Minecraft 1.20.4 that reads the [Monumenta Wiki](https://monumenta.wiki.gg/) inside the game. Made for the Monumenta Cakedition modpack.
 
-**Status: in development (0.1.0, not released).**
+**Status: in development (0.2.0, not released).**
+
+## Other sites
+
+The reader can also show other wikis and guides: list them in `config/cakewiki/sites.json` (MediaWiki sites, or static sites built with VuePress 2). Without that file it reads only the Monumenta Wiki. With more than one site, the ⇄ button switches between them and `/wiki <id>:<page>` opens a page of a given site. Each site's own name and license are shown on its pages; only add sites whose content you may read this way.
+
+```json
+{
+  "sites": [
+    {"id": "monumenta", "type": "mediawiki", "name": "Monumenta Wiki", "url": "https://monumenta.wiki.gg",
+     "mainPage": "Monumenta Wiki", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"},
+    {"id": "guide", "type": "vuepress", "name": "Some Guide", "url": "https://guide.example.org", "license": "© Its Author"}
+  ]
+}
+```
 
 ## Translation
 

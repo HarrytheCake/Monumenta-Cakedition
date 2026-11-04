@@ -14,13 +14,13 @@ import java.util.function.Supplier;
 import java.util.regex.Pattern;
 
 /**
- * What other mods can add to CakeUI: game values, element types and button actions. Register from
+ * What other mods can add to CakeUI: game values, element types, button actions and port fillers. Register from
  * a {@link CakeUIPlugin} (before the first layout loads); anything registered later is used from
  * the next reload ({@link #reload()}).
  */
 public final class CakeUIApi {
-	/** Changes when the API changes in a way plugins must know about. */
-	public static final int VERSION = 1;
+	/** Changes when the API changes in a way plugins must know about. 2: {@link #fillPort}, {@link #addHudPiece} (CakeUI 0.2.0). */
+	public static final int VERSION = 2;
 	private static final CakeUIApi INSTANCE = new CakeUIApi();
 	private static final Pattern VALUE_NAME = Pattern.compile("[a-z0-9_]+(\\.[a-zA-Z0-9_]+)+");
 	private static final Pattern NAMESPACED = Pattern.compile("[a-z0-9_.-]+:[a-z0-9_/.-]+");
@@ -71,6 +71,32 @@ public final class CakeUIApi {
 			throw new IllegalArgumentException("CakeUI actions need a namespace, like 'mymod:open_map': " + name);
 		}
 		ACTIONS.put(name, Objects.requireNonNull(action, "action"));
+		return this;
+	}
+
+	/**
+	 * Draws a port in vanilla's place whenever the active layout doesn't mention that port, also
+	 * with no layout at all (a layout that mentions it wins). Ports: "main_menu/background" (the
+	 * panorama and its overlay), "loading_screen/background" (every loading screen's background).
+	 * One filler per port: a second one throws IllegalStateException. {@code owner} is your mod id,
+	 * for logs.
+	 */
+	public CakeUIApi fillPort(String port, String owner, PortFiller filler) {
+		Objects.requireNonNull(owner, "owner");
+		io.github.harrythecake.cakeui.PluginPorts.register(port, owner, Objects.requireNonNull(filler, "filler"));
+		return this;
+	}
+
+	/**
+	 * A HUD piece of your own, like a minimap. CakeUI draws it every HUD frame (not with F1) and a
+	 * layout's "hud" part can name it as a port ({@code "ports": { "minimap": { "x": 10 } }}) to
+	 * hide, move, scale or fade it and draw elements with it, just like vanilla's pieces. {@code name}
+	 * is one word, not a vanilla port's; one piece per name (a second throws IllegalStateException).
+	 * Register it from your plugin so layouts that name it load without a problem.
+	 */
+	public CakeUIApi addHudPiece(String name, String owner, HudPiece piece) {
+		Objects.requireNonNull(owner, "owner");
+		io.github.harrythecake.cakeui.PluginHud.register(name, owner, Objects.requireNonNull(piece, "piece"));
 		return this;
 	}
 

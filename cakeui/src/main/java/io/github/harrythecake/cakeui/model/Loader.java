@@ -914,6 +914,11 @@ public final class Loader {
 
 	private void readPorts(Node part, String partId, JValue.JObject o, String file) {
 		List<String> known = PORTS.getOrDefault(partId, List.of());
+		if (partId.equals("hud")) {
+			List<String> withPlugins = new java.util.ArrayList<>(known);
+			withPlugins.addAll(io.github.harrythecake.cakeui.PluginHud.names());
+			known = withPlugins;
+		}
 		for (Map.Entry<String, JValue> e : o.map.entrySet()) {
 			String name = e.getKey();
 			int line = o.keyLine(name);

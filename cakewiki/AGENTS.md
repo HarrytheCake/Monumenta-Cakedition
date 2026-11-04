@@ -1,10 +1,10 @@
 # CakeWiki: reference for agents
 
-In-game reader for https://monumenta.wiki.gg/ (client-only Fabric 1.20.4 mod, id `cakewiki`, MIT). This folder is the source of truth; the standalone repo `HarrytheCake/CakeWiki` is written only by `git subtree push` / `tools/push_all.py` from the Monumenta-Cakedition repo. Keep this file current when changing the mod.
+In-game reader for https://monumenta.wiki.gg/, plus any other MediaWiki or VuePress site the player lists in `config/cakewiki/sites.json` (client-only Fabric 1.20.4 mod, id `cakewiki`, MIT). This folder is the source of truth; the standalone repo `HarrytheCake/CakeWiki` is written only by `git subtree push` / `tools/push_all.py` from the Monumenta-Cakedition repo. Keep this file current when changing the mod.
 
 ## Design
 
-- **Fetch:** MediaWiki API at `https://monumenta.wiki.gg/api.php`, `action=parse` (rendered HTML). Send a descriptive User-Agent and cache on disk.
+- **Fetch:** MediaWiki API at `https://monumenta.wiki.gg/api.php`, `action=parse` (rendered HTML). Send a descriptive User-Agent and cache on disk. Other sites come from the site list (see "Sites" below); everything after fetching is shared.
 - **Parse:** jsoup, bundled in the jar with Loom `include` (MIT).
 - **Model + layout:** our own document model (headings, styled text, links, lists, images, tables, infoboxes, collapsibles) laid out for Minecraft's `TextRenderer`. Unknown elements fall back to their text.
 - **Render:** vanilla `Screen` and widgets. No UI-library dependency.
@@ -34,10 +34,11 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 ```
 src/main/java/io/github/harrythecake/cakewiki/
 ├── CakeWiki.java           # entrypoint: K key (KeyBinding "key.cakewiki.open"), /wiki [page] with live suggestions, lookupItem
-├── Reader.java             # one per game: client, Pages, WikiImages, converter, Bookmarks, back/forward history, last page
+├── Reader.java             # one per game: Sources (Site + Pages + converter per site, current one), WikiImages, Bookmarks, back/forward history, last page
 ├── Bookmarks.java          # config/cakewiki/bookmarks.json, newest first; unreadable file → bookmarks.json.bad
 ├── WikiScreen.java         # the reader: bar (◀ ▶ search ⟳ ↗), page area, loading/error states, links, tooltips
 ├── DevShots.java           # dev only: screenshot tour (runClient -PdevShot=…), inert in a normal game
+│                           # (CakeWiki.target: "<site id>:<page>" for /wiki and the tour)
 ├── mixin/HandledScreenMixin.java  # K over an item in a container → its page
 ├── translate/              # CakeText Translator (optional); no Minecraft classes except the bridge
 │   ├── Translator.java     # parts + keep flags → Strings/Integers (kept-part index), or null; changes() counter
@@ -47,7 +48,8 @@ src/main/java/io/github/harrythecake/cakewiki/
 │   ├── Metrics.java        # text width, line height, loaded picture size, labels
 │   ├── Layout.java         # Document → Laid; colours (dark theme), tables, infobox, collapsibles, tabs, wrapping
 │   ├── Laid.java           # positioned Run/Pic/Fill/Control + anchors + height; linkAt/controlAt
-│   └── ViewState.java      # open collapsibles and selected tabs, keyed by block identity
+│   ├── ViewState.java      # open collapsibles and selected tabs, keyed by block identity
+│   └── Contents.java       # contents panel: open groups (by identity), reveal(page), visible rows
 ├── image/
 │   ├── ImageDecoder.java   # ImageIO → ARGB frames; GIF composed by hand (no Graphics2D/AWT); max 1024 px side
 │   └── WikiImages.java     # textures: fetched on first draw, ≤6 downloads, disk cache, pixel-budget LRU
@@ -58,7 +60,11 @@ src/main/java/io/github/harrythecake/cakewiki/
 │   ├── HtmlConverter.java  # jsoup → model
 │   └── CssColor.java       # inline CSS colours → 0xRRGGBB
 └── net/                    # no Minecraft classes either
-    ├── WikiClient.java     # API calls (parse, opensearch, search, resolve); Transport interface for tests
+    ├── Site.java           # one site: info, ready, parse, suggest, resolve, pageUrl, link (URL → page link), navigation, browserOnly
+    ├── NavItem.java        # a contents entry: text, page key, collapsible, children
+    ├── SiteConfig.java     # config/cakewiki/sites.json → Entry list (Monumenta Wiki when missing/unusable); never written
+    ├── WikiClient.java     # the MediaWiki Site: API calls (parse, opensearch, search, resolve); Transport interface for tests
+    ├── VuePressSite.java   # the VuePress Site: HTML pages, title index from the route table / sitemap, kept on disk
     ├── WikiException.java  # MediaWiki error code (missingtitle, …) or "http"
     ├── Titles.java         # MediaWiki title matching (underscores = spaces, first letter case-insensitive)
     ├── PageCache.java      # gzipped JSON per title; key = SHA-1 of Titles.normalize
@@ -89,6 +95,17 @@ src/main/java/io/github/harrythecake/cakewiki/
 - **Bookmarks:** stored in `config/` (not the cache), so CakeUpdater's config backups cover them; canonical titles (after redirects), matched with `Titles.normalize`. The ☰ dropdown is drawn above the page like the search suggestions, scrolls with the wheel, and closes on Esc or a click elsewhere.
 - **Keys in the reader:** K closes (unless typing), Ctrl+D bookmark, Ctrl+F search, Enter submits (exact suggestion, else `resolve`), Esc leaves the search box first, Backspace/mouse 4 back, mouse 5 forward, arrows/PgUp/PgDn/Space/Home/End scroll.
 
+### Sites (0.2.0, the user's request 2026-11-03)
+
+- **Site list:** `config/cakewiki/sites.json`, `{"sites": [...]}`, comments allowed (Gson lenient). Entry: `id` (`[a-z0-9_-]`, for `/wiki <id>:<page>` and bookmarks), `type` (`mediawiki` default, or `vuepress`), `name` (attribution line), `url` (origin), `mainPage` (`Main Page` / `/`), `license` + `licenseUrl` (attribution; empty = not shown), `content` (VuePress: CSS selector of the text, default `#markdown-content`). Bad entries are skipped and logged; no file or nothing usable = just the Monumenta Wiki. The mod never writes the file and the pack ships none, so players see one site.
+- **The first site is the default:** first opening, item lookups (K over an item switches to it). Each page's links stay on its own site.
+- **Switching:** ⇄ button after ▶ (only with 2+ sites; tooltip names the current and next site) opens the next site's main page. `/wiki <id>:<page>` (`/wiki <id>:` = main page); suggestions complete site ids and that site's titles. A page's site is in history (`Visit.site`), `reader.last`, and bookmarks (`site` field; entries without one = `monumenta`). The ☰ list shows the current site's bookmarks.
+- **Cache:** the Monumenta Wiki keeps `cakewiki/cache/pages/`; other sites `cakewiki/cache/sites/<id>/pages/` and `index.json`.
+- **VuePress sites** (2.x, Theme Hope shapes): no API. Page = GET `<url><path>`; text = `content` (an empty one, as on a home layout, falls back to `<main>`); links and pictures made absolute before caching; SVG pictures dropped (not decodable); `.vp-hero-actions` buttons get ` · ` between them; title from `.vp-page-title h1`, else `<title>` before ` | `. HTTP 404 → `missingtitle`.
+- **VuePress names:** the index comes from the home page's `app-*.js` route table (`["/path",{loader:…,meta:{title:"…"}}]`, read as text with a regex, never run; paths percent-decoded), else `sitemap.xml` (paths only). A page's key is its title, unless the title is empty or already taken (then its path); `/…` keys always work. Titles match ignoring case. Suggestions/resolve: titles starting with the text, then containing it, then paths containing it. The index is loaded on first use (`Site.ready()`, which `Pages.load` waits for, so cached pages link the same way), kept 24 h on disk, and used however old when offline; without any index, pages go by path.
+- **Contents panel** (the site's sidebar; the user's request 2026-11-03): `Site.navigation(title)` → a `NavItem` tree (text, page key, collapsible, children); MediaWiki has none. VuePress: Theme Hope's sidebar config (a `JSON.parse('…')` string in the app script, `sidebar` or `locales["/"].sidebar`, keyed by part of the site such as `/guide/`) plus its folder lists for `"children":"structure"` groups (an object `{"/dir/":["page",…]}` in the script); string entries and `link`s resolve against `prefix` like the theme (`x` → `x.html` or `x/`, `README`/`index` → folder), entries naming no page are left out. Kept in `index.json` (`format` 2; an older file is fetched again). The longest matching prefix picks the tree; outside them (e.g. the home page) there is none. In the reader: ▤ button first in the bar (only when the page has contents; gold = open; open by default, per session) toggles a panel on the left of the page (`layout/Contents`: non-collapsible groups always open, groups on the way to the shown page opened, shown page highlighted and scrolled into view; open groups survive between pages while the tree is the same). Click: a group without a page or its ▸/▾ toggles, a page opens (on the shown page's site); the wheel scrolls the panel; cut-off names get a tooltip. While open, the page is narrower and starts right of the panel.
+- **Not possible:** pages whose text the site renders only in the browser (empty in the static HTML) show just their header lines.
+
 ### Translation (`translate/`, with CakeText Translator 0.3.0+)
 
 - **Soft dependency:** `suggests caketext-translator >=0.3.0`; `CakeTextBridge.find()` looks up `io.github.harrythecake.caketext.translator.api.TranslatorApi` with `MethodHandles` (`version()` ≥ 1, `active`, `changes`, `translate`), so CakeWiki builds and runs without CakeText. Any failed call turns translation off for the session and logs once. Surface `wiki`, which the player can turn off in CakeText's "Where to translate".
@@ -113,11 +130,13 @@ Opt-in, against the real wiki (`LiveWikiTest`, skipped by default):
 - `... --tests '*LiveWikiTest.dumpPage' -Dcakewiki.liveTest=true -Dcakewiki.dump="<title>"` prints a page as an outline (`DocumentDump`) for checking by eye.
 
 Screenshot tour in the dev client (opens a game window; `run/options.txt` presets GUI scale 3 and skips the accessibility screen):
-`./gradlew runClient -PdevShot="Monumenta Wiki|item:Snegovik Boots|Moonscarred Clockblade@380|Turtle Set!open" --args="--width 1600 --height 900"` → `run/screenshots/cakewiki-<n>.png`. `item:` = item lookup, `@y` = scroll, `!open` = open all top-level collapsibles, `!marks` = bookmark the page and open the list (writes `run/config/cakewiki/bookmarks.json`).
+`./gradlew runClient -PdevShot="Monumenta Wiki|item:Snegovik Boots|Moonscarred Clockblade@380|Turtle Set!open" --args="--width 1600 --height 900"` → `run/screenshots/cakewiki-<n>.png`. `item:` = item lookup, `@y` = scroll, `!open` = open all top-level collapsibles, `!marks` = bookmark the page and open the list (writes `run/config/cakewiki/bookmarks.json`), `<site id>:<page>` = a page of another site in `run/config/cakewiki/sites.json` (`<site id>:` = its main page).
+
+VuePress sites, opt-in against a real site (nothing site-specific in the repo): `./gradlew test --tests '*LiveVuePressTest' -Dcakewiki.liveTest=true -Dcakewiki.vuepress=<url> [-Dcakewiki.pages=8 -Dcakewiki.from=0 | -Dcakewiki.dump=<title or /path> | -Dcakewiki.nav=<title or /path>]` (`nav` prints the contents tree) lists the pages and converts them. In Git Bash set `MSYS_NO_PATHCONV=1`, or `/paths` in `-D…`/`-P…` arguments become Windows paths.
 
 ## Rules
 
-- The mod downloads no code. Wiki pages and images are data, fetched only when the player opens them.
+- The mod downloads no code. Wiki pages and images are data, fetched only when the player opens them. A VuePress site's app script is read as text for its route table, never run.
 - Translation goes only through CakeText Translator (whose settings decide the engine); CakeWiki itself sends wiki text nowhere.
 - Every UI string in `en_us`, `zh_cn` and `zh_tw`, same keys.
 - JUnit tests for all logic outside the game. Test HTML is hand-written in the wiki's shapes: no real wiki text in the repo (the live tests fetch it at run time).

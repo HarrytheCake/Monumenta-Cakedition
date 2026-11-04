@@ -50,13 +50,24 @@ public class CakeWiki implements ClientModInitializer {
 							return 1;
 						})
 						.then(argument("page", StringArgumentType.greedyString())
-								.suggests((ctx, builder) -> reader.client.suggest(builder.getRemaining(), 10)
-										.handle((titles, error) -> {
-											if (titles != null) titles.forEach(builder::suggest);
-											return builder.build();
-										})
-										// the chat box reads suggestions on the game thread
-										.thenApplyAsync(s -> s, MinecraftClient.getInstance()))
+								.suggests((ctx, builder) -> {
+									String typed = builder.getRemaining();
+									Target t = target(typed);
+									String prefix = t.site() == null ? "" : t.site().id() + ":";
+									Reader.Source site = t.site() != null ? t.site() : reader.source();
+									if (t.site() == null && reader.sources.size() > 1) { // offer the other sites' prefixes
+										for (Reader.Source s : reader.sources) {
+											if (!typed.isEmpty() && s.id().startsWith(typed.toLowerCase(java.util.Locale.ROOT))) builder.suggest(s.id() + ":");
+										}
+									}
+									return site.site().suggest(t.page(), 10)
+											.handle((titles, error) -> {
+												if (titles != null) titles.forEach(title -> builder.suggest(prefix + title));
+												return builder.build();
+											})
+											// the chat box reads suggestions on the game thread
+											.thenApplyAsync(s -> s, MinecraftClient.getInstance());
+								})
 								.executes(ctx -> {
 									String page = StringArgumentType.getString(ctx, "page");
 									later(() -> open(page));
@@ -75,16 +86,34 @@ public class CakeWiki implements ClientModInitializer {
 		MinecraftClient.getInstance().send(r);
 	}
 
-	/** Opens the reader at {@code page}, or where the player left off (the main page the first time). */
+	/** {@code /wiki <site id>:<page>}: the site named before the first colon, when the site list has it; else the current site. */
+	record Target(Reader.Source site, String page) {}
+
+	static Target target(String typed) {
+		int colon = typed.indexOf(':');
+		if (colon > 0) {
+			Reader.Source s = reader.source(typed.substring(0, colon).trim().toLowerCase(java.util.Locale.ROOT));
+			if (s != null) return new Target(s, typed.substring(colon + 1).trim());
+		}
+		return new Target(null, typed);
+	}
+
+	/**
+	 * Opens the reader at {@code page} (of the current site, or {@code <site id>:<page>}; just {@code <site id>:} is
+	 * its main page), or where the player left off (the default site's main page the first time).
+	 */
 	public static void open(String page) {
 		WikiScreen screen = new WikiScreen(reader, () -> MinecraftClient.getInstance().setScreen(null));
 		MinecraftClient.getInstance().setScreen(screen);
 		if (page != null) {
-			screen.navigate(page, null);
+			Target t = target(page);
+			if (t.site() == null) screen.navigate(page, null);
+			else if (t.page().isEmpty()) screen.home(t.site());
+			else screen.navigate(t.site(), t.page(), null);
 		} else if (reader.last != null) {
 			screen.reopen(reader.last);
 		} else {
-			screen.navigate(Reader.MAIN_PAGE, null);
+			screen.home(reader.sources.get(0));
 		}
 	}
 
@@ -107,6 +136,7 @@ public class CakeWiki implements ClientModInitializer {
 		}
 		WikiScreen screen = new WikiScreen(reader, onClose);
 		mc.setScreen(screen);
+		reader.use(reader.sources.get(0)); // items are looked up on the default site
 		screen.lookup(name);
 	}
 }

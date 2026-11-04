@@ -11,33 +11,38 @@ import java.util.concurrent.CompletionException;
 import java.util.function.Consumer;
 
 /**
- * Where the reader gets pages: the disk cache while it's fresh, the wiki otherwise.
+ * Where the reader gets pages of one site: the disk cache while it's fresh, the site otherwise.
  * When the wiki can't be reached, an old cached copy is still shown, marked {@code stale}.
  */
 public final class Pages {
 	/** {@code stale}: the wiki couldn't be reached and this is an older saved copy. */
 	public record Loaded(Page page, boolean stale) {}
 
-	private final WikiClient client;
+	private final Site site;
 	private final PageCache cache;
 	private final Clock clock;
 	private final Duration maxAge;
 	private final Consumer<Throwable> onCacheError;
 
-	public Pages(WikiClient client, PageCache cache, Clock clock, Duration maxAge, Consumer<Throwable> onCacheError) {
-		this.client = client;
+	public Pages(Site site, PageCache cache, Clock clock, Duration maxAge, Consumer<Throwable> onCacheError) {
+		this.site = site;
 		this.cache = cache;
 		this.clock = clock;
 		this.maxAge = maxAge;
 		this.onCacheError = onCacheError;
 	}
 
+	/** After {@link Site#ready()}, so a page converted from the cache links the way a fetched one does. */
 	public CompletableFuture<Loaded> load(String title) {
+		return site.ready().thenCompose(v -> loadNow(title));
+	}
+
+	private CompletableFuture<Loaded> loadNow(String title) {
 		Optional<PageCache.Entry> cached = cache.get(title);
 		if (cached.isPresent() && cached.get().fetched().plus(maxAge).isAfter(clock.instant())) {
 			return CompletableFuture.completedFuture(new Loaded(cached.get().page(), false));
 		}
-		return client.parse(title).handle((page, error) -> {
+		return site.parse(title).handle((page, error) -> {
 			if (error == null) {
 				try {
 					cache.put(title, page, clock.instant());
@@ -56,7 +61,7 @@ public final class Pages {
 
 	/** Always asks the wiki (the reader's Refresh button). */
 	public CompletableFuture<Loaded> refresh(String title) {
-		return client.parse(title).thenApply(page -> {
+		return site.parse(title).thenApply(page -> {
 			try {
 				cache.put(title, page, clock.instant());
 			} catch (IOException e) {

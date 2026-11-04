@@ -5,10 +5,12 @@ import io.github.harrythecake.cakewiki.doc.Document;
 import io.github.harrythecake.cakewiki.doc.Image;
 import io.github.harrythecake.cakewiki.doc.Inline;
 import io.github.harrythecake.cakewiki.doc.Link;
+import io.github.harrythecake.cakewiki.layout.Contents;
 import io.github.harrythecake.cakewiki.layout.Laid;
 import io.github.harrythecake.cakewiki.layout.Layout;
 import io.github.harrythecake.cakewiki.layout.Metrics;
 import io.github.harrythecake.cakewiki.layout.ViewState;
+import io.github.harrythecake.cakewiki.net.NavItem;
 import io.github.harrythecake.cakewiki.net.Pages;
 import io.github.harrythecake.cakewiki.net.WikiException;
 import io.github.harrythecake.cakewiki.translate.PageTranslator;
@@ -33,7 +35,10 @@ import java.util.Optional;
 import java.util.concurrent.CompletionException;
 import java.util.function.UnaryOperator;
 
-/** The reader: a top bar (back, forward, search, refresh, browser) over a scrolling page. */
+/**
+ * The reader: a top bar (contents, back, forward, site, search, refresh, browser) over a scrolling page, with the
+ * site's contents in a panel on the left when it has them.
+ */
 public final class WikiScreen extends Screen {
 	private static final int BAR = 28, MARGIN = 6, PAD = 4, MAX_WIDTH = 560, SCROLL_STEP = 24, SUGGESTIONS = 8;
 
@@ -45,6 +50,8 @@ public final class WikiScreen extends Screen {
 	private Phase phase = Phase.LOADING;
 	private Text status = Text.empty();
 	private String title;
+	/** The site {@link #title} is on; set with it. */
+	private Reader.Source shown;
 	private Document doc;
 	private boolean stale;
 	private ViewState view = new ViewState();
@@ -59,7 +66,12 @@ public final class WikiScreen extends Screen {
 	private TextFieldWidget search;
 	private String searchText = "";
 	private ButtonWidget backButton, forwardButton, bookmarkButton, bookmarksButton, refreshButton, browserButton, retryButton;
-	private ButtonWidget translateButton;
+	private ButtonWidget translateButton, siteButton, contentsButton;
+	/** The shown page's site contents (sidebar), or null when it has none. */
+	private Contents contents;
+	/** Scroll the contents panel to the shown page at the next drawing. */
+	private boolean revealPending;
+	private List<Text> contentsTooltip;
 	/** This page's translation (CakeText), made at its first layout; null when not translating. */
 	private PageTranslator words;
 	private boolean laidTranslated;
@@ -79,40 +91,57 @@ public final class WikiScreen extends Screen {
 
 	// ---- opening pages ----------------------------------------------------------------------------------
 
-	/** Opens a page, adding the current one to the back history. */
+	/** Opens a page of the current site, adding the shown one to the back history. */
 	void navigate(String page, String anchor) {
+		navigate(reader.source(), page, anchor);
+	}
+
+	/** Opens a page of {@code site}, adding the shown one to the back history. */
+	void navigate(Reader.Source site, String page, String anchor) {
 		if (title != null && phase == Phase.READY) {
-			reader.back.push(new Reader.Visit(title, scroll));
+			reader.back.push(new Reader.Visit(shown.id(), title, scroll));
 			reader.forward.clear();
 		}
-		load(page, anchor, 0, false);
+		load(site, page, anchor, 0, false);
+	}
+
+	/** Opens the main page of {@code site}. */
+	void home(Reader.Source site) {
+		navigate(site, site.info().mainPage(), null);
 	}
 
 	/** Shows the page the reader was closed on, where it was left, without touching the history. */
 	void reopen(Reader.Visit visit) {
-		load(visit.title(), null, visit.scroll(), false);
+		Reader.Source site = reader.source(visit.site());
+		if (site == null) home(reader.sources.get(0)); // its site was taken out of the site list
+		else load(site, visit.title(), null, visit.scroll(), false);
 	}
 
-	/** Finds the page for an item's name and opens it. */
+	/** Finds the page for a name (an item's, the search box's) on the current site and opens it. */
 	void lookup(String name) {
+		Reader.Source site = reader.source();
 		int id = ++request;
 		showStatus(Phase.LOADING, Text.translatable("cakewiki.finding", name));
 		retry = () -> lookup(name);
-		reader.client.resolve(name).whenComplete((found, error) -> client().execute(() -> {
+		site.site().resolve(name).whenComplete((found, error) -> client().execute(() -> {
 			if (id != request) return;
 			if (error != null) showError(name, error);
-			else if (found.isPresent()) navigate(found.get(), null);
+			else if (found.isPresent()) navigate(site, found.get(), null);
 			else showStatus(Phase.ERROR, Text.translatable("cakewiki.notfound", name));
 		}));
 	}
 
-	/** Shows {@code page} (from the cache when fresh, unless {@code force}) and scrolls to the anchor or {@code restoreScroll}. */
-	private void load(String page, String anchor, int restoreScroll, boolean force) {
+	/**
+	 * Shows {@code page} of {@code site} (from the cache when fresh, unless {@code force}) and scrolls to the anchor or
+	 * {@code restoreScroll}. The reader is on that site from now on, even if the page fails.
+	 */
+	private void load(Reader.Source site, String page, String anchor, int restoreScroll, boolean force) {
 		int id = ++request;
+		reader.use(site);
 		showStatus(Phase.LOADING, Text.translatable("cakewiki.loading", page));
-		retry = () -> load(page, anchor, restoreScroll, force);
-		(force ? reader.pages.refresh(page) : reader.pages.load(page))
-				.thenApplyAsync(loaded -> new Converted(loaded, reader.converter.convert(loaded.page().displayTitle(), loaded.page().html())),
+		retry = () -> load(site, page, anchor, restoreScroll, force);
+		(force ? site.pages().refresh(page) : site.pages().load(page))
+				.thenApplyAsync(loaded -> new Converted(site, loaded, site.converter().convert(loaded.page().displayTitle(), loaded.page().html())),
 						Util.getMainWorkerExecutor())
 				.whenComplete((converted, error) -> client().execute(() -> {
 					if (id != request) return; // the player went somewhere else meanwhile
@@ -122,11 +151,11 @@ public final class WikiScreen extends Screen {
 					}
 					Throwable cause = cause(error);
 					if (cause instanceof WikiException w && w.code().equals("missingtitle")) {
-						// not an exact title: let the wiki's search find the page
-						reader.client.resolve(page).whenComplete((found, e2) -> client().execute(() -> {
+						// not an exact title: let the site's search find the page
+						site.site().resolve(page).whenComplete((found, e2) -> client().execute(() -> {
 							if (id != request) return;
 							Optional<String> other = found != null ? found.filter(t -> !t.equals(page)) : Optional.empty();
-							if (other.isPresent()) load(other.get(), anchor, 0, false);
+							if (other.isPresent()) load(site, other.get(), anchor, 0, false);
 							else showStatus(Phase.ERROR, Text.translatable("cakewiki.notfound", page));
 						}));
 					} else {
@@ -135,7 +164,7 @@ public final class WikiScreen extends Screen {
 				}));
 	}
 
-	private record Converted(Pages.Loaded loaded, Document doc) {}
+	private record Converted(Reader.Source site, Pages.Loaded loaded, Document doc) {}
 
 	private boolean openAllOnLoad;
 
@@ -162,6 +191,7 @@ public final class WikiScreen extends Screen {
 
 	private void show(Converted c, String anchor, int restoreScroll) {
 		title = c.loaded().page().title();
+		shown = c.site();
 		doc = c.doc();
 		stale = c.loaded().stale();
 		view = new ViewState();
@@ -173,15 +203,16 @@ public final class WikiScreen extends Screen {
 		if (markOnLoad) {
 			markOnLoad = false;
 			phase = Phase.READY;
-			if (!reader.bookmarks.contains(title)) toggleBookmark();
+			if (!reader.bookmarks.contains(shown.id(), title)) toggleBookmark();
 			bookmarksOpen = true;
 		}
 		laid = null;
 		phase = Phase.READY;
 		pendingAnchor = anchor;
 		pendingScroll = restoreScroll;
-		reader.last = new Reader.Visit(title, restoreScroll);
+		reader.last = new Reader.Visit(shown.id(), title, restoreScroll);
 		updateButtons();
+		updateContents();
 	}
 
 	private void showStatus(Phase p, Text message) {
@@ -207,7 +238,16 @@ public final class WikiScreen extends Screen {
 
 	@Override
 	protected void init() {
-		int left = contentLeft(), right = contentRight();
+		int left = barLeft(), right = contentRight();
+		if (contents != null) { // only for pages whose site has contents
+			contentsButton = addDrawableChild(ButtonWidget.builder(Text.literal("▤"), b -> {
+						reader.contentsOpen = !reader.contentsOpen;
+						revealPending = true;
+						clearAndInit(); // the page gets narrower or wider
+					})
+					.dimensions(left, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.contents"))).build());
+			left += 22;
+		}
 		backButton = addDrawableChild(ButtonWidget.builder(Text.literal("◀"), b -> goBack())
 				.dimensions(left, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.back"))).build());
 		forwardButton = addDrawableChild(ButtonWidget.builder(Text.literal("▶"), b -> goForward())
@@ -232,9 +272,16 @@ public final class WikiScreen extends Screen {
 				.dimensions(right - 64, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.bookmarks"))).build());
 		refreshButton = addDrawableChild(ButtonWidget.builder(Text.literal("⟳"), b -> refresh())
 				.dimensions(right - 42, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.refresh"))).build());
-		browserButton = addDrawableChild(ButtonWidget.builder(Text.literal("↗"), b -> openInBrowser(reader.client.pageUrl(title)))
+		browserButton = addDrawableChild(ButtonWidget.builder(Text.literal("↗"), b -> openInBrowser(shown.site().pageUrl(title)))
 				.dimensions(right - 20, MARGIN, 20, 20).tooltip(Tooltip.of(Text.translatable("cakewiki.browser"))).build());
-		search = new TextFieldWidget(textRenderer, left + 46, MARGIN + 1, searchRight - (left + 46), 18, Text.translatable("cakewiki.search"));
+		// only with more than one site in config/cakewiki/sites.json: the next site's main page
+		int searchLeft = left + 46;
+		if (reader.sources.size() > 1) {
+			siteButton = addDrawableChild(ButtonWidget.builder(Text.literal("⇄"), b -> home(reader.next()))
+					.dimensions(left + 44, MARGIN, 20, 20).build());
+			searchLeft += 22;
+		}
+		search = new TextFieldWidget(textRenderer, searchLeft, MARGIN + 1, searchRight - searchLeft, 18, Text.translatable("cakewiki.search"));
 		search.setPlaceholder(Text.translatable("cakewiki.search").formatted(Formatting.GRAY));
 		search.setMaxLength(200);
 		search.setText(searchText);
@@ -256,10 +303,16 @@ public final class WikiScreen extends Screen {
 		refreshButton.active = title != null && phase != Phase.LOADING;
 		browserButton.active = title != null;
 		retryButton.visible = phase == Phase.ERROR && retry != null;
-		boolean marked = title != null && reader.bookmarks.contains(title);
+		boolean marked = title != null && reader.bookmarks.contains(shown.id(), title);
 		bookmarkButton.active = title != null && phase == Phase.READY;
 		bookmarkButton.setMessage(marked ? Text.literal("★").formatted(Formatting.GOLD) : Text.literal("☆"));
 		bookmarkButton.setTooltip(Tooltip.of(Text.translatable(marked ? "cakewiki.bookmark.remove" : "cakewiki.bookmark.add")));
+		if (contentsButton != null) {
+			contentsButton.setMessage(reader.contentsOpen ? Text.literal("▤").formatted(Formatting.GOLD) : Text.literal("▤"));
+		}
+		if (siteButton != null) {
+			siteButton.setTooltip(Tooltip.of(Text.translatable("cakewiki.site", reader.source().info().name(), reader.next().info().name())));
+		}
 		if (translateButton != null) {
 			boolean on = translating();
 			translateButton.setMessage(on ? Text.literal("文").formatted(Formatting.GOLD) : Text.literal("A"));
@@ -278,7 +331,7 @@ public final class WikiScreen extends Screen {
 	private void toggleBookmark() {
 		if (title == null || phase != Phase.READY) return;
 		try {
-			reader.bookmarks.toggle(title);
+			reader.bookmarks.toggle(shown.id(), title);
 		} catch (java.io.IOException e) {
 			CakeWiki.LOG.warn("Couldn't save bookmarks: {}", e.toString());
 		}
@@ -302,7 +355,7 @@ public final class WikiScreen extends Screen {
 	/** Rows the panel shows at once (at least 1, for the "no bookmarks" line). */
 	private int bookmarkRows() {
 		int fit = Math.max(1, (height - bookmarksPanelY() - MARGIN) / ROW);
-		return Math.max(1, Math.min(reader.bookmarks.all().size(), fit));
+		return Math.max(1, Math.min(reader.bookmarks.all(reader.source().id()).size(), fit));
 	}
 
 	/** -2 outside the open panel, -1 inside but on no bookmark, else the bookmark's index. */
@@ -311,12 +364,12 @@ public final class WikiScreen extends Screen {
 		int x = bookmarksPanelX(), y = bookmarksPanelY();
 		if (mx < x || mx >= x + bookmarksPanelWidth() || my < y || my >= y + bookmarkRows() * ROW) return -2;
 		int i = bookmarksScroll + (int) ((my - y) / ROW);
-		return i < reader.bookmarks.all().size() ? i : -1;
+		return i < reader.bookmarks.all(reader.source().id()).size() ? i : -1;
 	}
 
 	private void drawBookmarks(DrawContext ctx, int mx, int my) {
 		if (!bookmarksOpen) return;
-		List<Bookmarks.Bookmark> all = reader.bookmarks.all();
+		List<Bookmarks.Bookmark> all = reader.bookmarks.all(reader.source().id());
 		int x = bookmarksPanelX(), y = bookmarksPanelY(), w = bookmarksPanelWidth(), rows = bookmarkRows();
 		ctx.getMatrices().push();
 		ctx.getMatrices().translate(0, 0, 300); // above the page
@@ -353,14 +406,14 @@ public final class WikiScreen extends Screen {
 			return false;
 		}
 		if (i >= 0 && button == 0) {
-			String page = reader.bookmarks.all().get(i).title();
+			String page = reader.bookmarks.all(reader.source().id()).get(i).title();
 			if (mx >= bookmarksPanelX() + bookmarksPanelWidth() - REMOVE_W) {
 				try {
-					reader.bookmarks.remove(page);
+					reader.bookmarks.remove(reader.source().id(), page);
 				} catch (java.io.IOException e) {
 					CakeWiki.LOG.warn("Couldn't save bookmarks: {}", e.toString());
 				}
-				bookmarksScroll = Math.max(0, Math.min(bookmarksScroll, reader.bookmarks.all().size() - bookmarkRows()));
+				bookmarksScroll = Math.max(0, Math.min(bookmarksScroll, reader.bookmarks.all(reader.source().id()).size() - bookmarkRows()));
 				updateButtons();
 			} else {
 				bookmarksOpen = false;
@@ -372,20 +425,25 @@ public final class WikiScreen extends Screen {
 
 	private void goBack() {
 		if (reader.back.isEmpty()) return;
-		if (title != null) reader.forward.push(new Reader.Visit(title, scroll));
-		Reader.Visit v = reader.back.pop();
-		load(v.title(), null, v.scroll(), false);
+		if (title != null) reader.forward.push(new Reader.Visit(shown.id(), title, scroll));
+		visit(reader.back.pop());
 	}
 
 	private void goForward() {
 		if (reader.forward.isEmpty()) return;
-		if (title != null) reader.back.push(new Reader.Visit(title, scroll));
-		Reader.Visit v = reader.forward.pop();
-		load(v.title(), null, v.scroll(), false);
+		if (title != null) reader.back.push(new Reader.Visit(shown.id(), title, scroll));
+		visit(reader.forward.pop());
+	}
+
+	/** A page from the history; one whose site was taken out of the site list opens the default site. */
+	private void visit(Reader.Visit v) {
+		Reader.Source site = reader.source(v.site());
+		if (site != null) load(site, v.title(), null, v.scroll(), false);
+		else home(reader.sources.get(0));
 	}
 
 	private void refresh() {
-		if (title != null) load(title, null, scroll, true);
+		if (title != null) load(shown, title, null, scroll, true);
 	}
 
 	private void submitSearch() {
@@ -409,7 +467,7 @@ public final class WikiScreen extends Screen {
 			if (q.isEmpty()) {
 				suggestions = List.of();
 			} else {
-				reader.client.suggest(q, SUGGESTIONS).whenComplete((list, e) -> client().execute(() -> {
+				reader.source().site().suggest(q, SUGGESTIONS).whenComplete((list, e) -> client().execute(() -> {
 					if (q.equals(suggestedFor)) suggestions = list != null ? list : List.of();
 				}));
 			}
@@ -418,12 +476,27 @@ public final class WikiScreen extends Screen {
 
 	// ---- geometry ---------------------------------------------------------------------------------------
 
-	private int contentWidth() {
-		return Math.min(width - 2 * MARGIN - 8, MAX_WIDTH);
+	private boolean contentsShown() {
+		return contents != null && reader.contentsOpen;
 	}
 
+	private int panelWidth() {
+		return Math.max(110, Math.min(180, width / 4));
+	}
+
+	private int contentWidth() {
+		return Math.min(width - 2 * MARGIN - 8 - (contentsShown() ? panelWidth() + 8 : 0), MAX_WIDTH);
+	}
+
+	/** Centred; right of the contents panel when it is shown. */
 	private int contentLeft() {
-		return (width - contentWidth()) / 2;
+		int centred = (width - contentWidth()) / 2;
+		return contentsShown() ? Math.max(centred, MARGIN + panelWidth() + 8) : centred;
+	}
+
+	/** The bar spans the panel and the page. */
+	private int barLeft() {
+		return contentsShown() ? MARGIN : contentLeft();
 	}
 
 	private int contentRight() {
@@ -504,15 +577,20 @@ public final class WikiScreen extends Screen {
 		scroll = Math.max(0, Math.min(scroll, maxScroll()));
 	}
 
-	/** Title, source and licence (CC BY-SA asks for both), and a note when showing a saved copy. */
+	/** Title, source and licence (CC BY-SA asks for both; from the site list), and a note when showing a saved copy. */
 	private List<Block> header() {
 		List<Block> h = new ArrayList<>();
 		h.add(new Block.Heading(1, List.of(new Inline.Text(doc.title(), Inline.Style.PLAIN)), null));
 		Inline.Style muted = Inline.Style.PLAIN.withColor(Layout.MUTED & 0xFFFFFF);
-		h.add(new Block.Paragraph(List.of(
-				new Inline.Text(I18n.translate("cakewiki.attribution.wiki"), muted.withLink(new Link.External(reader.client.pageUrl(title)))),
-				new Inline.Text(" · ", muted),
-				new Inline.Text(I18n.translate("cakewiki.attribution.license"), muted.withLink(new Link.External(Reader.LICENSE_URL))))));
+		var info = shown.info();
+		List<Inline> source = new ArrayList<>();
+		source.add(new Inline.Text(info.name() + " ↗", muted.withLink(new Link.External(shown.site().pageUrl(title)))));
+		if (!info.license().isEmpty()) {
+			source.add(new Inline.Text(" · ", muted));
+			source.add(info.licenseUrl().isEmpty() ? new Inline.Text(info.license(), muted)
+					: new Inline.Text(info.license() + " ↗", muted.withLink(new Link.External(info.licenseUrl()))));
+		}
+		h.add(new Block.Paragraph(source));
 		if (stale) h.add(new Block.Paragraph(List.of(new Inline.Text(I18n.translate("cakewiki.stale"), Inline.Style.PLAIN.withColor(0xFFB347)))));
 		if (translating()) h.add(new Block.Paragraph(List.of(new Inline.Text(I18n.translate("cakewiki.translated"), muted))));
 		return h;
@@ -549,8 +627,11 @@ public final class WikiScreen extends Screen {
 		}
 		retryButton.render(ctx, mouseX, mouseY, delta); // drawn again so it sits above the page area
 
+		contentsTooltip = null;
+		drawContents(ctx, mouseX, mouseY);
 		drawSuggestions(ctx, mouseX, mouseY);
 		if (hovered != null) ctx.drawTooltip(textRenderer, tooltip(hovered), mouseX, mouseY);
+		else if (contentsTooltip != null && !overSuggestions(mouseX, mouseY)) ctx.drawTooltip(textRenderer, contentsTooltip, mouseX, mouseY);
 		drawBookmarks(ctx, mouseX, mouseY);
 	}
 
@@ -592,6 +673,107 @@ public final class WikiScreen extends Screen {
 		return List.of(Text.translatable("cakewiki.missing").formatted(Formatting.RED));
 	}
 
+	// ---- contents panel ---------------------------------------------------------------------------------
+
+	private static final int NAV_ROW = 12;
+
+	/** The contents of the shown page's site (kept in the reader, so open groups survive), opened on the way to the page. */
+	private void updateContents() {
+		List<NavItem> roots = shown == null ? List.of() : shown.site().navigation(title);
+		boolean had = contents != null;
+		if (roots.isEmpty()) {
+			contents = null;
+		} else {
+			if (reader.contents == null || reader.contents.roots() != roots) {
+				reader.contents = new Contents(roots);
+				reader.contentsScroll = 0;
+			}
+			contents = reader.contents;
+			contents.reveal(title);
+			revealPending = true;
+		}
+		if (had != (contents != null)) clearAndInit(); // the ▤ button and the page's width change
+	}
+
+	private int navMaxScroll(int rows) {
+		return Math.max(0, rows * NAV_ROW + 4 - (contentBottom() - contentTop()));
+	}
+
+	/** -2 outside the panel, -1 inside but on no row, else the row's index. */
+	private int navRowAt(double mx, double my, int count) {
+		if (!contentsShown()) return -2;
+		if (mx < MARGIN || mx >= MARGIN + panelWidth() || my < contentTop() || my >= contentBottom()) return -2;
+		int i = (int) Math.floor((my - contentTop() - 2 + reader.contentsScroll) / NAV_ROW);
+		return i >= 0 && i < count ? i : -1;
+	}
+
+	private void drawContents(DrawContext ctx, int mx, int my) {
+		if (!contentsShown()) return;
+		int x = MARGIN, top = contentTop(), bottom = contentBottom(), w = panelWidth();
+		ctx.fill(x - 1, top - 1, x + w + 1, bottom + 1, Layout.BORDER);
+		ctx.fill(x, top, x + w, bottom, Layout.PAGE_BG);
+		List<Contents.Row> rows = contents.rows();
+		int view = bottom - top - 4;
+		if (revealPending) { // the shown page in view, a third of the way down
+			revealPending = false;
+			for (int i = 0; i < rows.size(); i++) {
+				if (title == null || !title.equals(rows.get(i).item().key())) continue;
+				int ry = i * NAV_ROW;
+				if (ry < reader.contentsScroll || ry + NAV_ROW > reader.contentsScroll + view) reader.contentsScroll = ry - view / 3;
+				break;
+			}
+		}
+		int max = navMaxScroll(rows.size());
+		reader.contentsScroll = Math.max(0, Math.min(max, reader.contentsScroll));
+		int hover = navRowAt(mx, my, rows.size());
+		ctx.enableScissor(x, top, x + w, bottom);
+		for (int i = 0; i < rows.size(); i++) {
+			int ry = top + 2 + i * NAV_ROW - reader.contentsScroll;
+			if (ry + NAV_ROW < top || ry > bottom) continue;
+			Contents.Row r = rows.get(i);
+			NavItem it = r.item();
+			boolean current = title != null && title.equals(it.key());
+			boolean clickable = it.key() != null || it.collapsible();
+			if (current) ctx.fill(x, ry, x + w, ry + NAV_ROW, 0xFF2C2C4A);
+			else if (hover == i && clickable) ctx.fill(x, ry, x + w, ry + NAV_ROW, 0xFF3A3A60);
+			int indent = 4 + r.depth() * 8, arrow = it.group() && it.collapsible() ? 12 : 0, avail = w - indent - arrow - 4;
+			boolean heading = it.group() && !it.collapsible();
+			int color = current ? 0xFFFFD27F : heading ? 0xFFE8C872 : it.key() != null || it.group() ? 0xFFE0E0E0 : 0xFF9C9CAC;
+			Text label = heading ? Text.literal(it.text()).formatted(Formatting.BOLD) : Text.literal(it.text());
+			boolean cut = textRenderer.getWidth(label) > avail;
+			String shownText = cut ? textRenderer.trimToWidth(it.text(), avail - textRenderer.getWidth("…")) + "…" : it.text();
+			ctx.drawText(textRenderer, heading ? Text.literal(shownText).formatted(Formatting.BOLD) : Text.literal(shownText),
+					x + indent, ry + 2, color, false);
+			if (arrow > 0) ctx.drawText(textRenderer, r.open() ? "▾" : "▸", x + w - 11, ry + 2, 0xFF9C9CAC, false);
+			if (hover == i && cut) contentsTooltip = List.of(Text.literal(it.text()));
+		}
+		ctx.disableScissor();
+		if (max > 0) { // scroll position
+			int h = bottom - top, barH = Math.max(10, h * h / (h + max));
+			int barY = top + (int) ((long) (h - barH) * reader.contentsScroll / max);
+			ctx.fill(x + w - 2, barY, x + w, barY + barH, 0xFF777777);
+		}
+	}
+
+	/** A click on the panel: a group opens or closes (its arrow, or the whole row when it is no page), a page opens. */
+	private boolean clickContents(double mx, double my, int button) {
+		if (!contentsShown()) return false;
+		List<Contents.Row> rows = contents.rows();
+		int i = navRowAt(mx, my, rows.size());
+		if (i == -2) return false;
+		if (i >= 0 && button == 0) {
+			NavItem it = rows.get(i).item();
+			boolean onArrow = mx >= MARGIN + panelWidth() - 14;
+			if (it.group() && it.collapsible() && (it.key() == null || onArrow)) {
+				contents.toggle(it);
+			} else if (it.key() != null) {
+				if (it.group() && !contents.isOpen(it)) contents.toggle(it);
+				if (!it.key().equals(title)) navigate(shown, it.key(), null); // the panel's pages are on the shown page's site
+			}
+		}
+		return true;
+	}
+
 	// ---- suggestions dropdown ---------------------------------------------------------------------------
 
 	private boolean suggestionsVisible() {
@@ -631,6 +813,7 @@ public final class WikiScreen extends Screen {
 	public boolean mouseClicked(double mx, double my, int button) {
 		if (bookmarksOpen && clickBookmarks(mx, my, button)) return true;
 		int s = suggestionAt(mx, my);
+		if (s < 0 && clickContents(mx, my, button)) return true;
 		if (s >= 0 && button == 0) {
 			String page = suggestions.get(s);
 			suggestions = List.of();
@@ -693,8 +876,13 @@ public final class WikiScreen extends Screen {
 	@Override
 	public boolean mouseScrolled(double mx, double my, double horizontal, double vertical) {
 		if (bookmarkAt(mx, my) != -2) {
-			int max = Math.max(0, reader.bookmarks.all().size() - bookmarkRows());
+			int max = Math.max(0, reader.bookmarks.all(reader.source().id()).size() - bookmarkRows());
 			bookmarksScroll = Math.max(0, Math.min(max, bookmarksScroll - (int) Math.signum(vertical)));
+			return true;
+		}
+		if (contents != null && navRowAt(mx, my, 0) != -2) {
+			int max = navMaxScroll(contents.rows().size());
+			reader.contentsScroll = Math.max(0, Math.min(max, reader.contentsScroll - (int) (vertical * 3 * NAV_ROW)));
 			return true;
 		}
 		scroll = Math.max(0, Math.min(maxScroll(), scroll - (int) (vertical * SCROLL_STEP)));
@@ -754,10 +942,10 @@ public final class WikiScreen extends Screen {
 			if (p.title().isEmpty() || p.title().equals(title)) {
 				Integer y = p.anchor() != null && laid != null ? laid.anchors().get(p.anchor()) : null;
 				if (y != null) scroll = Math.min(y, maxScroll());
-			} else if (p.title().startsWith("Special:") || p.title().startsWith("Category:")) {
-				openInBrowser(reader.client.pageUrl(p.title())); // the parse API doesn't list category members
+			} else if (shown.site().browserOnly(p.title())) {
+				openInBrowser(shown.site().pageUrl(p.title())); // e.g. MediaWiki's category lists
 			} else {
-				navigate(p.title(), p.anchor());
+				navigate(shown, p.title(), p.anchor()); // a page's links are to its own site
 			}
 		} else if (link instanceof Link.External e) {
 			openInBrowser(e.url());
@@ -775,7 +963,7 @@ public final class WikiScreen extends Screen {
 
 	@Override
 	public void close() {
-		if (title != null) reader.last = new Reader.Visit(title, scroll);
+		if (title != null) reader.last = new Reader.Visit(shown.id(), title, scroll);
 		onClose.run();
 	}
 

@@ -69,6 +69,20 @@ final class SelfTest {
 		enabled = true;
 		CakeUI.LOGGER.info("CakeUI self-test: title screen{}, then quit", worldMode ? ", pause menu and inventory" : "");
 		ClientTickEvents.END_CLIENT_TICK.register(SelfTest::tick);
+		if (Boolean.getBoolean("cakeui.selftest.fill")) {
+			// a stand-in plugin: gradients behind the main menu (purple) and loading screens (teal)
+			io.github.harrythecake.cakeui.api.CakeUIApi api = io.github.harrythecake.cakeui.api.CakeUIApi.get();
+			api.fillPort(PluginPorts.MAIN_MENU_BACKGROUND, "cakeui-selftest", (ctx, screen, alpha) -> {
+				int a = Math.round(alpha * 255) << 24;
+				ctx.fillGradient(0, 0, screen.width, screen.height, a | 0x6a2c91, a | 0x1b0b2e);
+				return true;
+			});
+			api.fillPort(PluginPorts.LOADING_BACKGROUND, "cakeui-selftest", (ctx, screen, alpha) -> {
+				ctx.fillGradient(0, 0, screen.width, screen.height, 0xff1f8a7a, 0xff06231f);
+				return true;
+			});
+			CakeUI.LOGGER.info("CakeUI self-test: test fillers on {}", PluginPorts.FILLABLE);
+		}
 		if (worldMode) {
 			// while a world loads the game renders without ticking: shoot loading screens from their own render event
 			ScreenEvents.AFTER_INIT.register((client, screen, w, h) -> {

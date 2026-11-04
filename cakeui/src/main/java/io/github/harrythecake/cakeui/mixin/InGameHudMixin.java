@@ -52,6 +52,7 @@ public abstract class InGameHudMixin {
 
 	@Inject(method = "render", at = @At("TAIL"))
 	private void cakeui$front(DrawContext context, float tickDelta, CallbackInfo ci) {
+		io.github.harrythecake.cakeui.PluginHud.drawAll(context, tickDelta);
 		HudPart.drawLateElements(context, "actionBar", "title");
 		HudPart.drawLayer(context, "front");
 		HudTiming.end();

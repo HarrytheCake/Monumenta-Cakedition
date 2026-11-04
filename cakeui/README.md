@@ -198,7 +198,7 @@ F3+Esc's "Game Paused" screen (no buttons) stays vanilla.
 
 ## For mod developers
 
-Other mods can add game values, element types and button actions. Add a `cakeui` entrypoint (CakeUI calls it before the first layout loads, so load order doesn't matter):
+Other mods can add game values, element types and button actions, and fill a background the active layout doesn't redraw. Add a `cakeui` entrypoint (CakeUI calls it before the first layout loads, so load order doesn't matter):
 
 ```json
 "entrypoints": { "cakeui": ["com.example.MyCakeUIPlugin"] }
@@ -222,6 +222,14 @@ public class MyCakeUIPlugin implements CakeUIPlugin {
         });
         // "action": "mymod:open_map"  or  { "mymod:open_map": "argument" }
         api.registerAction("mymod:open_map", (argument, screen) -> MyMod.openMap(argument));
+        // the main menu's background whenever the active layout doesn't redraw it (also with no layout)
+        api.fillPort("main_menu/background", "mymod", (context, screen, alpha) -> {
+            if (!MyMod.hasPicture()) return false;   // false: vanilla's panorama as usual
+            MyMod.drawPicture(context, screen.width, screen.height, alpha);
+            return true;
+        });
+        // a HUD piece of your own: layouts can name it as a port of the "hud" part, like vanilla's pieces
+        api.addHudPiece("minimap", "mymod", (context, screenWidth, screenHeight, tickDelta) -> MyMod.drawMinimap(context));
     }
 }
 ```
@@ -229,6 +237,8 @@ public class MyCakeUIPlugin implements CakeUIPlugin {
 - Value names use dots (`mymod.mana`); element types and actions need a namespace (`mymod:…`), so they never clash with CakeUI's.
 - An element type gets every common property (place, size, transform, states, opacity, …) plus the ones it declares; a property name must keep the kind it has everywhere else (`color` is always a colour). CakeUI places the element and calls `draw` with the matrix at its top-left corner; `ElementContext` gives its size, state and property values (eased between states like built-in ones).
 - Suppliers and `draw` run on the render thread, often every frame: keep them cheap. A `draw` that throws is listed once as a layout problem and skipped.
+- **Port fillers** (API version 2, CakeUI 0.2.0): `main_menu/background` (the panorama and its dark overlay) and `loading_screen/background` (connecting, loading terrain, preparing a world, …). The filler runs only while the active layout doesn't mention that port: a layout's own background always wins. One mod per port; a second `fillPort` for the same port throws. A filler that throws is logged once and vanilla draws.
+- **HUD pieces** (API version 2, CakeUI 0.2.0): `addHudPiece(name, owner, piece)` adds a piece CakeUI draws every HUD frame (not with F1), after vanilla's pieces and before the layout's front layer. A layout's `hud` part can name it under `ports` (`hide`, `x`, `y`, `scale`, `opacity`, `elements`) exactly like vanilla's pieces; `HudPiece.pivotX/Y` is the point `scale` grows from. Names are one word, not a vanilla port's, one mod each; register from the plugin so layouts that name it load cleanly. A piece that throws is logged once and switched off. First user: CakeMap (`minimap`, `waypoints`).
 - CakeUI's own actions never send chat or commands; an action a mod registers is that mod's responsibility.
 - Make CakeUI an optional dependency: the plugin class is only loaded when CakeUI is installed. Registering later works too (`CakeUIApi.get()`), and is used from the next `reload()`.
 

@@ -5,6 +5,7 @@ import io.github.harrythecake.cakewiki.doc.Inline.InlineImage;
 import io.github.harrythecake.cakewiki.doc.Inline.LineBreak;
 import io.github.harrythecake.cakewiki.doc.Inline.Style;
 import io.github.harrythecake.cakewiki.doc.Inline.Text;
+import io.github.harrythecake.cakewiki.net.WikiClient;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
@@ -16,11 +17,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+import java.util.function.Function;
 
 /**
  * Turns the HTML that MediaWiki's {@code action=parse} returns into a {@link Document}.
  * Recognises the structures the Monumenta Wiki uses (Portable Infobox, TabberNeue, collapsibles, wikitables,
- * galleries, thumbnails); anything else keeps its text.
+ * galleries, thumbnails); anything else keeps its text. Other sites' pages (VuePress) go through the same rules,
+ * with their own rule for which links are pages.
  */
 public final class HtmlConverter {
 	private static final Set<String> SKIP_TAGS = Set.of("script", "style", "link", "meta", "noscript", "input",
@@ -32,10 +35,17 @@ public final class HtmlConverter {
 			"header", "footer", "nav", "main");
 
 	private final String base;
+	private final Function<String, Link> pageLinks;
 
-	/** {@code base} is the wiki's origin without a trailing slash, e.g. {@code https://monumenta.wiki.gg}. */
+	/** A MediaWiki at {@code base} (its origin, e.g. {@code https://monumenta.wiki.gg}): {@code /wiki/Title} links are pages. */
 	public HtmlConverter(String base) {
+		this(base, null);
+	}
+
+	/** {@code pageLinks}: an absolute URL → a page link of the site, or null for an outside link ({@code Site::link}). */
+	public HtmlConverter(String base, Function<String, Link> pageLinks) {
 		this.base = base.endsWith("/") ? base.substring(0, base.length() - 1) : base;
+		this.pageLinks = pageLinks != null ? pageLinks : url -> WikiClient.link(this.base, url);
 	}
 
 	public Document convert(String title, String html) {
@@ -73,6 +83,8 @@ public final class HtmlConverter {
 					Image i = image(img);
 					// links around pictures mostly go to the File: page, which the reader doesn't need
 					if (i != null) out.inline(new InlineImage(i, e.hasClass("image") ? null : link(e)));
+				} else if (e.hasClass("header-anchor")) {
+					children(e, out, s); // VuePress: a heading's link to itself
 				} else {
 					Link l = link(e);
 					children(e, out, l != null ? s.withLink(l) : s);
@@ -353,13 +365,8 @@ public final class HtmlConverter {
 		}
 		if (href.startsWith("#")) return new Link.Page("", decode(href.substring(1)));
 		String url = absolute(href);
-		if (url.startsWith(base + "/wiki/")) {
-			String path = url.substring((base + "/wiki/").length());
-			int hash = path.indexOf('#');
-			String anchor = hash >= 0 ? decode(path.substring(hash + 1)) : null;
-			if (hash >= 0) path = path.substring(0, hash);
-			return new Link.Page(decode(path).replace('_', ' '), anchor);
-		}
+		Link page = pageLinks.apply(url);
+		if (page != null) return page;
 		return url.startsWith("http://") || url.startsWith("https://") ? new Link.External(url) : null;
 	}
 

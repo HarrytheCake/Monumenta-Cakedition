@@ -2,6 +2,8 @@ package io.github.harrythecake.cakeui.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.llamalad7.mixinextras.sugar.Local;
+import io.github.harrythecake.cakeui.PluginPorts;
 import io.github.harrythecake.cakeui.ScreenPorts;
 import io.github.harrythecake.cakeui.TitleMenu;
 import net.minecraft.client.font.TextRenderer;
@@ -34,6 +36,8 @@ public abstract class TitleScreenMixin extends Screen {
 	@Shadow
 	@Final
 	private boolean doBackgroundFade;
+	/** This frame's background came from a plugin (ADR 0008): skip vanilla's overlay too. */
+	private boolean cakeui$filled;
 
 	protected TitleScreenMixin(Text title) {
 		super(title);
@@ -67,8 +71,14 @@ public abstract class TitleScreenMixin extends Screen {
 	}
 
 	@WrapOperation(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/RotatingCubeMapRenderer;render(FF)V"))
-	private void cakeui$panorama(RotatingCubeMapRenderer renderer, float delta, float alpha, Operation<Void> original) {
-		if (TitleMenu.port("background") == null || TitleMenu.vanillaBackground()) {
+	private void cakeui$panorama(RotatingCubeMapRenderer renderer, float delta, float alpha, Operation<Void> original,
+			@Local(argsOnly = true) DrawContext context) {
+		boolean mentioned = TitleMenu.port("background") != null;
+		cakeui$filled = PluginPorts.fill(PluginPorts.MAIN_MENU_BACKGROUND, mentioned, context, this, alpha);
+		if (cakeui$filled) {
+			return;
+		}
+		if (!mentioned || TitleMenu.vanillaBackground()) {
 			original.call(renderer, delta, alpha);
 		}
 	}
@@ -77,7 +87,9 @@ public abstract class TitleScreenMixin extends Screen {
 	private void cakeui$overlay(DrawContext context, Identifier texture, int x, int y, int w, int h, float u, float v, int rw, int rh, int tw, int th,
 			Operation<Void> original) {
 		if (TitleMenu.port("background") == null) {
-			original.call(context, texture, x, y, w, h, u, v, rw, rh, tw, th);
+			if (!cakeui$filled) {
+				original.call(context, texture, x, y, w, h, u, v, rw, rh, tw, th);
+			}
 			return;
 		}
 		if (TitleMenu.vanillaBackground()) {

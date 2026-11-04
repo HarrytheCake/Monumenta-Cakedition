@@ -4,8 +4,10 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import io.github.harrythecake.cakewiki.doc.Link;
 
 import java.net.URI;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -20,8 +22,8 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
-/** The MediaWiki API calls CakeWiki makes. Everything is asynchronous; nothing here touches the game. */
-public final class WikiClient {
+/** A MediaWiki site: the API calls CakeWiki makes. Everything is asynchronous; nothing here touches the game. */
+public final class WikiClient implements Site {
 	public static final String MONUMENTA_WIKI = "https://monumenta.wiki.gg";
 
 	/** One HTTP GET; the body for status 200, otherwise a failed future. */
@@ -32,25 +34,40 @@ public final class WikiClient {
 	/** A page as the API returned it. {@code title} is the canonical title after redirects. */
 	public record Page(String title, String displayTitle, long revision, String html) {}
 
+	private final SiteConfig.Entry info;
 	private final String base;
 	private final Transport transport;
 
-	public WikiClient(String base, Transport transport) {
-		this.base = base.endsWith("/") ? base.substring(0, base.length() - 1) : base;
+	public WikiClient(SiteConfig.Entry info, Transport transport) {
+		this.info = info;
+		this.base = info.url().endsWith("/") ? info.url().substring(0, info.url().length() - 1) : info.url();
 		this.transport = transport;
 	}
 
+	/** A wiki at {@code base}, described like the Monumenta Wiki (tests, live tests). */
+	public WikiClient(String base, Transport transport) {
+		this(new SiteConfig.Entry(SiteConfig.MONUMENTA.id(), SiteConfig.MEDIAWIKI, SiteConfig.MONUMENTA.name(), base,
+				SiteConfig.MONUMENTA.mainPage(), SiteConfig.MONUMENTA.license(), SiteConfig.MONUMENTA.licenseUrl(), ""), transport);
+	}
+
+	@Override
+	public SiteConfig.Entry info() {
+		return info;
+	}
+
+	@Override
 	public String base() {
 		return base;
 	}
 
-	/** The page's address in a browser, for "open in browser" and attribution. */
+	@Override
 	public String pageUrl(String title) {
 		return base + "/wiki/" + URLEncoder.encode(title.replace(' ', '_'), StandardCharsets.UTF_8)
 				.replace("%2F", "/").replace("%3A", ":").replace("+", "%20");
 	}
 
 	/** Rendered HTML of one page, following redirects. */
+	@Override
 	public CompletableFuture<Page> parse(String title) {
 		return call(params("action", "parse", "page", title, "prop", "text|displaytitle|revid",
 				"redirects", "1", "disableeditsection", "1", "disablelimitreport", "1")).thenApply(json -> {
@@ -62,6 +79,7 @@ public final class WikiClient {
 	}
 
 	/** Page titles starting with {@code prefix}, best first (the search box's suggestions). */
+	@Override
 	public CompletableFuture<List<String>> suggest(String prefix, int limit) {
 		if (prefix.isBlank()) return CompletableFuture.completedFuture(List.of());
 		return call(params("action", "opensearch", "search", prefix, "limit", String.valueOf(limit),
@@ -90,6 +108,7 @@ public final class WikiClient {
 	 * The page for a name, such as an item's: the exact title (or what it redirects to) if it exists,
 	 * otherwise the top search hit, otherwise empty.
 	 */
+	@Override
 	public CompletableFuture<Optional<String>> resolve(String name) {
 		if (name.isBlank()) return CompletableFuture.completedFuture(Optional.empty());
 		return call(params("action", "query", "titles", name, "redirects", "1")).thenCompose(json -> {
@@ -102,6 +121,36 @@ public final class WikiClient {
 			}
 			return search(name, 1).thenApply(hits -> hits.stream().findFirst());
 		});
+	}
+
+	/** {@code <base>/wiki/Title#anchor} → that page (underscores → spaces, percent-decoded, {@code +} kept). */
+	@Override
+	public Link link(String url) {
+		return link(base, url);
+	}
+
+	/** {@link #link(String)} for a MediaWiki at {@code base}. */
+	public static Link link(String base, String url) {
+		if (!url.startsWith(base + "/wiki/")) return null;
+		String path = url.substring((base + "/wiki/").length());
+		int hash = path.indexOf('#');
+		String anchor = hash >= 0 ? decode(path.substring(hash + 1)) : null;
+		if (hash >= 0) path = path.substring(0, hash);
+		return new Link.Page(decode(path).replace('_', ' '), anchor);
+	}
+
+	/** The parse API doesn't list category members or show special pages. */
+	@Override
+	public boolean browserOnly(String title) {
+		return title.startsWith("Special:") || title.startsWith("Category:");
+	}
+
+	static String decode(String s) {
+		try {
+			return URLDecoder.decode(s.replace("+", "%2B"), StandardCharsets.UTF_8);
+		} catch (IllegalArgumentException e) {
+			return s; // a stray % that isn't an escape
+		}
 	}
 
 	// ---- plumbing ---------------------------------------------------------------------------------------
@@ -148,7 +197,7 @@ public final class WikiClient {
 		return uri -> client.sendAsync(HttpRequest.newBuilder(uri).timeout(Duration.ofSeconds(20))
 						.header("User-Agent", userAgent).header("Accept-Encoding", "identity").GET().build(),
 				HttpResponse.BodyHandlers.ofByteArray()).thenApply(response -> {
-			if (response.statusCode() != 200) throw new WikiException("http", "HTTP " + response.statusCode() + " from " + uri.getHost());
+			if (response.statusCode() != 200) throw WikiException.http(response.statusCode(), uri.getHost());
 			return response.body();
 		});
 	}

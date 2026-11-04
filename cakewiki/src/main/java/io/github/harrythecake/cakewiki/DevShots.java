@@ -77,7 +77,11 @@ final class DevShots {
 		screen = new WikiScreen(CakeWiki.reader(), () -> mc.setScreen(null));
 		mc.setScreen(screen);
 		if (step.startsWith("item:")) screen.lookup(step.substring(5));
-		else screen.reopen(new Reader.Visit(step, scroll));
+		else { // "<site id>:<page>" like /wiki; "<site id>:" is its main page
+			CakeWiki.Target t = CakeWiki.target(step);
+			Reader.Source site = t.site() != null ? t.site() : CakeWiki.reader().sources.get(0);
+			screen.reopen(new Reader.Visit(site.id(), t.page().isEmpty() ? site.info().mainPage() : t.page(), scroll));
+		}
 		if (openAll) screen.devOpenAll();
 		if (mark) screen.devMark();
 	}
