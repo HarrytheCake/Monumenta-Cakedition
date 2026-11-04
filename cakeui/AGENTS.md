@@ -2,7 +2,7 @@
 
 Client-only library mod (`cakeui`, package `io.github.harrythecake.cakeui`) for **Fabric and NeoForge on Minecraft 1.20.4, 1.21.1 and 26.1.2** (Cake multiloader layout, see `../tools/multiloader/README.md`; the Cakedition pack ships the Fabric 1.20.4 jar). Layout folders, written by pack developers with no Java, redraw the game window, launching screen, main menu, loading screens and HUD. Terms are in [`GLOSSARY.md`](GLOSSARY.md): layout, part, window, subwindow, element, port, declaration, game value, design pixel, skin, dev mode. The user-facing guide is [`README.md`](README.md); keep both files current.
 
-The standalone repo is `HarrytheCake/CakeUI` (remote `cakeui`, a `git subtree` mirror pushed by `tools/push_all`; MIT; public since 2026-11-04). The source of truth is this folder in the Monumenta-Cakedition repo; never commit in the standalone repo. **Not in the pack yet:** the next pack release ships the newest CakeUI (0.2.0, no layout) together with CakeCosmetic (user, 2026-11-04).
+The standalone repo is `HarrytheCake/CakeUI` (remote `cakeui`, a `git subtree` mirror pushed by `tools/push_all`; MIT; public since 2026-11-04). The source of truth is this folder in the Monumenta-Cakedition repo; never commit in the standalone repo. **Not in the pack yet:** the next pack release ships the newest CakeUI (0.2.0, no layout) together with CakeCosmetic (user, 2026-11-04). **Release v0.2.0** (multiloader, all six jars) was published from the mirror CI on 2026-11-05 at the user's request, ahead of CakeCosmetic.
 
 ## Decisions (grilled with the user 2026-10-30, Q1–Q35)
 
@@ -25,7 +25,8 @@ cakeui/
 ├── settings.gradle, build.gradle, buildSrc/, gradlew, gradle/   # the Cake multiloader kit (apply_kit.py copies it; don't edit here)
 ├── gradle.properties       # mod_id, mod_name, mod_version, mod_group (+ Gradle memory settings)
 ├── GLOSSARY.md, README.md (the public layout guide), schema/*.schema.json, examples/window_example
-├── .github/workflows/build.yml   # mirror CI (not yet updated for the multiloader build)
+├── .github/workflows/build.yml   # mirror CI: JDK 17+21+25, ./gradlew build, a push to main with an unreleased
+│                                 #   mod_version publishes v<version> with all 6 jars + cakeui-<version>.jar (= Fabric 1.20.4)
 ├── core/                   # plain Java, no Minecraft imports; compiled into every jar
 │   ├── src/main/java/…/cakeui/
 │   │   ├── CakeUI.java          # MOD_ID, LOGGER
