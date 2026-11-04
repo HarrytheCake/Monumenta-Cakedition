@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.harrythecake.cakeui.fabric.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"InGameHudMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

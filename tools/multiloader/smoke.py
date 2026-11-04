@@ -113,13 +113,15 @@ def main():
     verdict = 1
     try:
         while time.time() - start < timeout:
-            if p.poll() is not None:
-                break
+            exited = p.poll() is not None
+            # read the log even when the game just quit by itself (a self-test that ends the game)
             if log.exists():
                 text = log.read_text(encoding='utf-8', errors='replace')
                 if re.search(done, text):
                     reached = time.time()
                     break
+            if exited:
+                break
             time.sleep(3)
         if reached and not keep:
             time.sleep(linger)

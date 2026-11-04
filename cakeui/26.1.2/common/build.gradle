@@ -1,0 +1,14 @@
+plugins {
+	id 'cake-common'
+}
+
+// the API/plugin tests need Minecraft's classes; they read examples/ from the mod folder
+neoForge {
+	addModdingDependenciesTo sourceSets.test
+}
+dependencies {
+	testCompileOnly 'org.spongepowered:mixin:0.8.5'
+}
+tasks.named('test', Test) {
+	workingDir = rootProject.projectDir
+}

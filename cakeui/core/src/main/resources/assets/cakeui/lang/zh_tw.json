@@ -1,0 +1,23 @@
+{
+	"key.categories.cakeui": "CakeUI",
+	"key.category.cakeui.main": "CakeUI",
+	"key.cakeui.reload": "重新載入版面",
+	"key.cakeui.buttonIds": "顯示按鈕 ID（開發模式）",
+	"cakeui.overlay.header": "CakeUI：版面 %1$s 有 %2$s 個問題",
+	"cakeui.overlay.kept": "CakeUI：版面 %1$s 有 %2$s 個問題，因此仍使用上一個版本",
+	"cakeui.overlay.more": "……還有 %s 個（全部記錄在 logs/latest.log）",
+	"cakeui.config.title": "CakeUI",
+	"cakeui.config.layout": "介面佈局",
+	"cakeui.config.layout.none": "無（原版）",
+	"cakeui.config.devMode": "開發模式",
+	"cakeui.config.devMode.tooltip": "佈局檔案變更時自動重新載入，並在螢幕上列出佈局的問題。",
+	"cakeui.config.buttonIds": "按鈕 ID",
+	"cakeui.config.buttonIds.tooltip": "開發模式下，在每個按鈕旁顯示它的 ID（用於佈局的 buttons 連接埠）。",
+	"cakeui.config.reload": "重新載入佈局",
+	"cakeui.config.openFolder": "開啟佈局資料夾",
+	"cakeui.config.status.none": "未選擇佈局：遊戲維持原版外觀。",
+	"cakeui.config.status.loaded": "已載入佈局 %s，%s 個問題。",
+	"cakeui.config.status.kept": "%1$s 有 %2$s 個問題，所以仍使用之前的版本。",
+	"cakeui.config.status.failed": "無法載入佈局 %s（%s 個問題）。",
+	"cakeui.config.status.hint": "開發模式會在螢幕上列出問題；全部問題都在 logs/latest.log 中。"
+}

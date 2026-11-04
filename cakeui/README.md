@@ -1,10 +1,10 @@
 # CakeUI
 
-A client-only Fabric mod for Minecraft 1.20.4 that lets modpacks redraw the game window, Mojang's launch screen, the main menu, the loading screens, the pause menu, the inventory and the in-game HUD from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
+A client-only mod for **Fabric and NeoForge on Minecraft 1.20.4, 1.21.1 and 26.1.2** that lets modpacks redraw the game window, Mojang's launch screen, the main menu, the loading screens, the pause menu, the inventory and the in-game HUD from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
 
 With no layout chosen (the default), CakeUI changes nothing. It also leaves alone any piece of vanilla that the active layout doesn't mention, so other mods' buttons and screens keep working.
 
-**Status:** 0.1.0. The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work, with a settings screen in Mod Menu and an API for other mods (milestones 1–5 of 5). Chests and other screens may come later.
+**Status:** 0.2.0. The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work, with a settings screen (Mod Menu on Fabric, the mod list's Config button on NeoForge) and an API for other mods (milestones 1–5 of 5). Chests and other screens may come later. What differs between Minecraft versions and loaders is listed under [Versions](#versions).
 
 ## Using a layout
 
@@ -18,7 +18,7 @@ With no layout chosen (the default), CakeUI changes nothing. It also leaves alon
    ```
 3. Start the game. With `devMode` on, saving any file in the layout reloads it at once. Problems are listed in the top-left corner with file and line. A reload with problems keeps the previous version on screen.
 
-With [Mod Menu](https://modrinth.com/mod/modmenu), CakeUI's config button opens its settings: pick a layout from `cakeui/layouts/`, turn dev mode and button ids on or off, reload, or open the layouts folder. Every change applies at once.
+With [Mod Menu](https://modrinth.com/mod/modmenu) on Fabric, or the Config button in NeoForge's mod list, CakeUI opens its settings: pick a layout from `cakeui/layouts/`, turn dev mode and button ids on or off, reload, or open the layouts folder. Every change applies at once.
 
 Controls → CakeUI has two unbound keys: **Reload layout**, and **Show button ids** (dev mode).
 
@@ -198,11 +198,16 @@ F3+Esc's "Game Paused" screen (no buttons) stays vanilla.
 
 ## For mod developers
 
-Other mods can add game values, element types and button actions, and fill a background the active layout doesn't redraw. Add a `cakeui` entrypoint (CakeUI calls it before the first layout loads, so load order doesn't matter):
+Other mods can add game values, element types and button actions, and fill a background the active layout doesn't redraw. Register a `CakeUIPlugin` (a public no-argument constructor); CakeUI calls it before the first layout loads, so load order doesn't matter:
 
-```json
-"entrypoints": { "cakeui": ["com.example.MyCakeUIPlugin"] }
-```
+- **Fabric:** a `cakeui` entrypoint in `fabric.mod.json`:
+
+  ```json
+  "entrypoints": { "cakeui": ["com.example.MyCakeUIPlugin"] }
+  ```
+- **NeoForge:** a Java service file in your jar, `META-INF/services/io.github.harrythecake.cakeui.api.CakeUIPlugin`, holding one line: `com.example.MyCakeUIPlugin`.
+
+The API's package and class names are the same in every version; only Minecraft's own types in it follow the version (`GuiGraphics` on 1.20.4/1.21.1, `GuiGraphicsExtractor` on 26.1.2), so build your plugin against the CakeUI jar of the same Minecraft version and loader.
 
 ```java
 public class MyCakeUIPlugin implements CakeUIPlugin {
@@ -242,9 +247,20 @@ public class MyCakeUIPlugin implements CakeUIPlugin {
 - CakeUI's own actions never send chat or commands; an action a mod registers is that mod's responsibility.
 - Make CakeUI an optional dependency: the plugin class is only loaded when CakeUI is installed. Registering later works too (`CakeUIApi.get()`), and is used from the next `reload()`.
 
+## Versions
+
+| | 1.20.4 | 1.21.1 | 26.1.2 |
+|---|---|---|---|
+| Everything above | Fabric, NeoForge | Fabric, NeoForge | Fabric, NeoForge |
+| 3D tilt (`rotateX`, `rotateY`, `z`) | true perspective | true perspective | drawn as the closest flat (affine) shape: it turns and shrinks, without foreshortening |
+| `opacity` on a vanilla piece's port | yes | yes | only where CakeUI passes the colour (text lines, the inventory panel, the launch logo); other vanilla pieces are shown or hidden |
+| `item` elements on the first main menu | yes | yes | appear once the game's data is loaded (after the first world) |
+
+On NeoForge the game launching screen (`game_launch`) shows on resource reloads (F3+T, resource packs) and, on 26.1.2, at start too; on 1.20.4 and 1.21.1 NeoForge's own loading screen covers the first start. The main menu's `version` port has no effect on NeoForge, which draws its own branding lines.
+
 ## Building
 
-`JAVA_HOME=<JDK 21> ./gradlew build` (JUnit tests included). `./gradlew runClient -Dcakeui.selftest=1` opens a dev client that screenshots the title screen into `run/screenshots/` and quits; `-Dcakeui.selftest=world` also opens a test world, screenshots the loading screens, pause menu, inventory and HUD, and times the HUD with and without the layout.
+One Gradle build makes all six jars (the Cake multiloader layout): `JAVA_HOME=<JDK 25> ./gradlew build` → `build/libs/cakeui-<fabric|neoforge>-<mc>-<version>.jar` (JUnit tests included). One version only: `-Pcake.versions=1.21.1`. Dev client: `./gradlew :<mc>:<fabric|neoforge>:runClient -Pcake.runJvmArgs=-Dcakeui.selftest=1` screenshots the title screen into `<mc>/<loader>/run/screenshots/` and quits; `-Dcakeui.selftest=world` also opens the world `run/saves/cakeui-selftest`, screenshots the loading screens, pause menu, inventory and HUD, and times the HUD with and without the layout.
 
 ## License
 

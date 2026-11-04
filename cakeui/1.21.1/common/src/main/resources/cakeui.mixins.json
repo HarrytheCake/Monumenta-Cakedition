@@ -1,0 +1,31 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.harrythecake.cakeui.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"ClickableWidgetMixin",
+		"FontStorageAccessor",
+		"GameMenuScreenMixin",
+		"HandledScreenMixin",
+		"GuiCameraOverlaysMixin",
+		"InGameHudAccessor",
+		"InventoryScreenMixin",
+		"LevelLoadingScreenAccessor",
+		"LevelLoadingScreenMixin",
+		"LoadingScreensMixin",
+		"MinecraftClientMixin",
+		"MouseInvoker",
+		"ProgressScreenAccessor",
+		"ScreenAccessor",
+		"ScreenMixin",
+		"SplashOverlayMixin",
+		"SplashTextRendererAccessor",
+		"SplashTextResourceSupplierAccessor",
+		"TextRendererAccessor",
+		"TitleScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

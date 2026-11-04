@@ -1,0 +1,8 @@
+plugins {
+	id 'cake-core'
+}
+
+// the tests read examples/ and schema/ from the mod folder
+tasks.named('test', Test) {
+	workingDir = rootProject.projectDir
+}
