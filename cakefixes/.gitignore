@@ -8,6 +8,7 @@ bin/
 .project
 .classpath
 .idea/
+.eclipse/
 *.iml
 # logs and config the tests create
 /logs/
