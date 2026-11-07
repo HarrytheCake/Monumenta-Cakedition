@@ -102,6 +102,7 @@ public final class HudElementScreen extends Screen {
 	protected void init() {
 		fields.clear();
 		picks.clear();
+		filter = null;
 		lastExpressionField = null;
 		int left = width / 2 - 150;
 		int x = left + 100;
@@ -127,6 +128,50 @@ public final class HudElementScreen extends Screen {
 				y = field("color", "cakeui.element.color", x, y, 80, false, false);
 				y = field("background", "cakeui.element.background", x, y, 80, false, false);
 			}
+			case "crosshair" -> {
+				String shape = str("shape");
+				if (shape.equals("image")) {
+					List<String> files = images(imagesDir());
+					String src = str("src");
+					if (!files.contains(src)) {
+						files.add(0, src);
+					}
+					addRenderableWidget(CycleButton.<String>builder(s -> Component.literal(s.isEmpty() ? "—" : s), src)
+							.withValues(files)
+							.displayOnlyValue()
+							.create(x, y, w - 64, 18, Component.translatable("cakeui.element.image"), (b, v) -> set("src", v)));
+					addRenderableWidget(Button.builder(Component.translatable("cakeui.element.openFolder"), b -> openImages())
+							.bounds(x + w - 60, y, 60, 18).build());
+					y += ROW;
+				}
+				y = field("size", "cakeui.element.crosshairSize", x, y, 40, false, false);
+				if (shape.equals("cross")) {
+					y = field("gap", "cakeui.element.gap", x, y, 40, false, false);
+				}
+				if (!shape.equals("dot") && !shape.equals("image")) {
+					y = field("thickness", "cakeui.element.thickness", x, y, 40, false, false);
+				}
+				y = field("color", "cakeui.element.color", x, y, 80, false, false);
+				addRenderableWidget(CycleButton.onOffBuilder(!str("invert").equals("false"))
+						.withTooltip(v -> net.minecraft.client.gui.components.Tooltip.create(Component.translatable("cakeui.element.invert.tooltip")))
+						.create(x, y, 120, 18, Component.translatable("cakeui.element.invert"), (b, v) -> set("invert", v)));
+				y += ROW;
+			}
+			case "item" -> {
+				y = field("item", "cakeui.element.item", x, y, w, false, false);
+				y = sizeRow(x, y);
+				y = toggles(x, y);
+			}
+			case "inventory" -> {
+				y = field("slots", "cakeui.element.slots", x, y, w, false, false);
+				y = field("columns", "cakeui.element.columns", x, y, 40, false, false);
+				y = field("gap", "cakeui.element.gap", x, y, 40, false, false);
+				addRenderableWidget(CycleButton.<String>builder(s -> Component.translatable("cakeui.element.slotBackground." + s), str("slotBackground").isEmpty() ? "vanilla" : str("slotBackground"))
+						.withValues(List.of("vanilla", "rect", "none"))
+						.create(x, y, w, 18, Component.translatable("cakeui.element.slotBackground"), (b, v) -> set("slotBackground", v)));
+				y += ROW;
+				y = toggles(x, y);
+			}
 			case "image" -> {
 				List<String> files = images(imagesDir());
 				String src = str("src");
@@ -144,6 +189,10 @@ public final class HudElementScreen extends Screen {
 			}
 			default -> {
 			}
+		}
+		if (type.equals("crosshair")) {
+			addDoneCancel();
+			return;
 		}
 		// Advanced: when it shows
 		y += 6;
@@ -170,13 +219,17 @@ public final class HudElementScreen extends Screen {
 			picks.add(addRenderableWidget(b));
 		}
 		refreshPicks();
-		// Done / Cancel at the panel's top right, so the panel fits small windows
+		addDoneCancel();
+	}
+
+	/** Done / Cancel at the panel's top right, so the panel fits small windows. */
+	private void addDoneCancel() {
 		addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, b -> minecraft.setScreen(parent)).bounds(width / 2 + 100, 6, 54, 16).build());
 		addRenderableWidget(Button.builder(CommonComponents.GUI_CANCEL, b -> {
 			edit.element = before.deepCopy();
 			minecraft.setScreen(parent);
 		}).bounds(width / 2 + 44, 6, 54, 16).build());
-		problems = HudAdded.check(key, edit.element);
+		problems = type.equals("crosshair") ? List.of() : HudAdded.check(key, edit.element);
 	}
 
 	/** A text field for a property; returns the next row's y. */
@@ -187,6 +240,17 @@ public final class HudElementScreen extends Screen {
 		box.setResponder(s -> set(prop, s));
 		addRenderableWidget(box);
 		fields.add(new Field(prop, box, template, expression, true));
+		return y + ROW;
+	}
+
+	/** Count, durability and cooldown overlays on/off, side by side. */
+	private int toggles(int x, int y) {
+		String[] props = {"counts", "durability", "cooldown"};
+		for (int i = 0; i < 3; i++) {
+			String prop = props[i];
+			addRenderableWidget(CycleButton.onOffBuilder(!str(prop).equals("false"))
+					.create(x + i * 67, y, 65, 18, Component.translatable("cakeui.element." + prop), (b, v) -> set(prop, v)));
+		}
 		return y + ROW;
 	}
 
@@ -215,16 +279,20 @@ public final class HudElementScreen extends Screen {
 		change();
 		if (value.isEmpty() && !prop.equals("text") && !prop.equals("src")) {
 			edit.element.remove(prop);
+		} else if ((prop.equals("columns") || type.equals("crosshair")) && value.trim().matches("\\d+(\\.\\d+)?")) {
+			edit.element.addProperty(prop, Double.parseDouble(value.trim()));
+		} else if (prop.equals("columns") && value.trim().matches("\\d+")) {
+			edit.element.addProperty(prop, Integer.parseInt(value.trim()));
 		} else {
 			edit.element.addProperty(prop, value);
 		}
-		problems = HudAdded.check(key, edit.element);
+		problems = type.equals("crosshair") ? List.of() : HudAdded.check(key, edit.element);
 	}
 
 	private void set(String prop, boolean value) {
 		change();
 		edit.element.addProperty(prop, value);
-		problems = HudAdded.check(key, edit.element);
+		problems = type.equals("crosshair") ? List.of() : HudAdded.check(key, edit.element);
 	}
 
 	private void setVisible(String expr) {
@@ -317,14 +385,17 @@ public final class HudElementScreen extends Screen {
 	public void extractRenderState(GuiGraphicsExtractor g, int mouseX, int mouseY, float delta) {
 		super.extractRenderState(g, mouseX, mouseY, delta);
 		int left = width / 2 - 150;
-		g.text(font, Component.translatable("cakeui.element.title.type", Component.translatable("cakeui.editor.add." + type)), left, 10, 0xFFFFD000);
+		Component kind = type.equals("crosshair") ? Component.translatable("cakeui.hud.port.crosshair") : Component.translatable("cakeui.editor.add." + type);
+		g.text(font, Component.translatable("cakeui.element.title.type", kind), left, 10, 0xFFFFD000);
 		for (Field f : fields) {
 			if (f.labelled) {
 				g.text(font, f.box.getMessage(), left, f.box.getY() + 5, 0xFFE0E0E0);
 			}
 		}
-		g.text(font, Component.translatable("cakeui.element.visible.hint"), left, fields.get(fields.size() - 1).box.getY() - 10, 0xFF909090);
-		g.text(font, filter.getMessage(), left, filter.getY() + 5, 0xFFE0E0E0);
+		if (filter != null && !type.equals("crosshair")) {
+			g.text(font, Component.translatable("cakeui.element.visible.hint"), left, fields.get(fields.size() - 1).box.getY() - 10, 0xFF909090);
+			g.text(font, filter.getMessage(), left, filter.getY() + 5, 0xFFE0E0E0);
+		}
 		if (!problems.isEmpty()) {
 			String msg = problems.get(0).message();
 			g.text(font, Component.literal(font.plainSubstrByWidth(msg, 300)), left, 20, 0xFFFF6060);

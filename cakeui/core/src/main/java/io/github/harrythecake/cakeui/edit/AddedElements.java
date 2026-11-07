@@ -12,7 +12,7 @@ import java.util.UUID;
  * condition work as in a layout. Sizes are GUI pixels, as everywhere on the HUD.
  */
 public final class AddedElements {
-	public static final List<String> TYPES = List.of("text", "rect", "bar", "image");
+	public static final List<String> TYPES = List.of("text", "rect", "bar", "image", "item", "inventory");
 
 	private AddedElements() {
 	}
@@ -54,6 +54,17 @@ public final class AddedElements {
 				o.addProperty("height", "32px");
 				o.addProperty("src", imageFile == null ? "" : imageFile);
 			}
+			case "item" -> {
+				o.addProperty("item", "slot:offhand");
+				o.addProperty("width", "16px");
+				o.addProperty("height", "16px");
+			}
+			case "inventory" -> {
+				o.addProperty("slots", "armor");
+				o.addProperty("columns", 1);
+				o.addProperty("gap", "1px");
+				o.addProperty("slotBackground", "vanilla");
+			}
 			default -> throw new IllegalArgumentException(type);
 		}
 		return o;
@@ -65,6 +76,8 @@ public final class AddedElements {
 			case "text" -> new double[] {40, 9};
 			case "rect" -> new double[] {40, 20};
 			case "bar" -> new double[] {80, 5};
+			case "item" -> new double[] {16, 16};
+			case "inventory" -> new double[] {18, 75};
 			default -> new double[] {32, 32};
 		};
 	}

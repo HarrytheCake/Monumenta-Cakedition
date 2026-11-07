@@ -37,6 +37,8 @@ public final class HudPart {
 		Xform outer = Xform.IDENTITY;
 		/** The HUD editor's opacity also fades the port's own elements (the whole port, Q9). */
 		float elementAlpha = 1;
+		/** A style preset replaces this port: neither vanilla's piece nor the layout's elements for it are drawn. */
+		boolean styled;
 		public boolean hide;
 		double x;
 		double y;
@@ -128,6 +130,10 @@ public final class HudPart {
 			if (edit.opacity != null) {
 				p.opacity = edit.opacity;
 				p.elementAlpha = edit.opacity;
+			}
+			if (edit.style != null) {
+				p.styled = true;
+				p.hide = true;
 			}
 			if (edit.mode != null || edit.scale != null) {
 				p.outer = Placement.transform(edit, HudBounds.orDefault(e.getKey(), width, height), width, height);
@@ -302,7 +308,7 @@ public final class HudPart {
 	}
 
 	private static void drawPortElements(GuiGraphics ctx, Port p) {
-		if (!p.elementsDrawn && p.node != null && !p.node.children.isEmpty()) {
+		if (!p.elementsDrawn && !p.styled && p.node != null && !p.node.children.isEmpty()) {
 			p.elementsDrawn = true;
 			Ui.renderer().drawElements(ctx, p.node, p.elementAlpha);
 		}

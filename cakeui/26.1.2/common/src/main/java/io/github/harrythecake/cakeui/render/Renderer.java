@@ -172,6 +172,36 @@ public final class Renderer {
 		drawChildren(c, part, kids, screenW, screenH, null);
 	}
 
+	/**
+	 * A crosshair style (HUD editor, E4) centred on (cx, cy), in place of vanilla's crosshair sprite: dot, cross
+	 * and circle as rectangles, image as one of this renderer's images (assets). Inverting like vanilla when asked.
+	 */
+	public void drawCrosshair(GuiGraphicsExtractor dc, com.google.gson.JsonObject style, float cx, float cy) {
+		int color = io.github.harrythecake.cakeui.expr.Values.color(style.has("color") ? style.get("color").getAsString() : "#ffffff");
+		if ((color >>> 24) == 0) {
+			color |= 0xFF000000;
+		}
+		Paint.invert = !style.has("invert") || style.get("invert").getAsBoolean();
+		try {
+			org.joml.Matrix3x2f m = new org.joml.Matrix3x2f(dc.pose());
+			if (io.github.harrythecake.cakeui.edit.CrosshairStyles.shape(style).equals("image")) {
+				Textures.Tex t = textures.get(style.has("src") ? style.get("src").getAsString() : "", "hud.json5", 0);
+				if (t != null) {
+					float s = (float) io.github.harrythecake.cakeui.edit.CrosshairStyles.num(style, "size", 15) / 2;
+					Paint.Quads b = Paint.beginTextured(t.texture(), m, false);
+					Paint.texQuad(b, cx - s, cy - s, cx + s, cy + s, 0, 0, 1, 1, color);
+					Paint.end(dc, b);
+				}
+				return;
+			}
+			for (float[] r : io.github.harrythecake.cakeui.edit.CrosshairStyles.rects(style, cx, cy)) {
+				Paint.rect(dc, m, r[0], r[1], r[2], r[3], color, color, true);
+			}
+		} finally {
+			Paint.invert = false;
+		}
+	}
+
 	/** Draws some of a part's children over the whole screen (the HUD editor draws the HUD's elements one by one to move them). */
 	public void drawPartKids(GuiGraphicsExtractor dc, Node part, List<Node> kids, double alpha) {
 		Ctx c = rootCtx(dc, screenOwner, alpha);
@@ -450,6 +480,7 @@ public final class Renderer {
 				yield t == null ? 0 : (horizontal ? t.width() / (double) frames : t.width()) * env.rx;
 			}
 			case "item" -> 16 * env.rx;
+			case "inventory" -> inventorySize(n, true);
 			case "button" -> 200 * env.rx;
 			case "bar" -> 100 * env.rx;
 			default -> {
@@ -472,6 +503,7 @@ public final class Renderer {
 				yield t == null ? 0 : (horizontal ? t.height() : t.height() / (double) frames) * env.ry;
 			}
 			case "item" -> 16 * env.ry;
+			case "inventory" -> inventorySize(n, false);
 			case "button" -> 40 * env.ry;
 			case "bar" -> 8 * env.ry;
 			default -> {
@@ -674,6 +706,7 @@ public final class Renderer {
 			case "image" -> drawImage(c.dc, n, st, m, w, h, opacity);
 			case "bar" -> drawBar(c.dc, n, st, m, w, h, opacity);
 			case "item" -> drawItem(c, n, w, h);
+			case "inventory" -> drawInventory(c, n, w, h);
 			default -> {
 				if (n.has("background")) {
 					int bg = Paint.withAlpha(color(n, st, "background", 0), opacity);
@@ -1012,6 +1045,16 @@ public final class Renderer {
 
 	private void drawItem(Ctx c, Node n, double w, double h) {
 		String id = word(n, "item", "");
+		Integer slot = io.github.harrythecake.cakeui.model.InventorySlots.slot(id);
+		if (slot != null) {
+			// one of the player's own slots (E4): its stack with the chosen overlays
+			Matrix3x2fStack sm = c.dc.pose();
+			sm.pushMatrix();
+			sm.scale((float) (w / 16), (float) (h / 16));
+			ItemDraw.draw(c.dc, ItemDraw.stack(slot), 0, 0, bool(n, "counts", true), bool(n, "durability", true), bool(n, "cooldown", true));
+			sm.popMatrix();
+			return;
+		}
 		Identifier ident = Identifier.tryParse(id);
 		if (ident == null || !BuiltInRegistries.ITEM.containsKey(ident)) {
 			layout.problems.add(n.file, n.line, "unknown item '" + id + "'");
@@ -1026,8 +1069,48 @@ public final class Renderer {
 		m.pushMatrix();
 		m.scale((float) (w / 16), (float) (h / 16));
 		c.dc.item(stack, 0, 0);
-		if (stack.getCount() > 1) {
+		if (stack.getCount() > 1 && bool(n, "counts", true)) {
 			c.dc.itemDecorations(Minecraft.getInstance().font, stack, 0, 0);
+		}
+		m.popMatrix();
+	}
+
+
+	/** An inventory element's size along one axis: its slots (18 each) and gaps, before the element's own width/height. */
+	private double inventorySize(Node n, boolean horizontal) {
+		int count = io.github.harrythecake.cakeui.model.InventorySlots.parse(word(n, "slots", "hotbar")).size();
+		int cols = Math.max(1, (int) number(n, "columns", Math.min(9, Math.max(1, count))));
+		int cells = horizontal ? Math.min(cols, Math.max(1, count)) : Math.max(1, (count + cols - 1) / cols);
+		double gap = length(n, null, "gap", horizontal ? Env.AXIS_X : Env.AXIS_Y, screenW, screenH, 0);
+		return cells * 18 * (horizontal ? env.rx : env.ry) + (cells - 1) * gap;
+	}
+
+	/** The player's own slots in a grid (E4): backgrounds, items and the chosen overlays. Display only. */
+	private void drawInventory(Ctx c, Node n, double w, double h) {
+		List<Integer> slots = io.github.harrythecake.cakeui.model.InventorySlots.parse(word(n, "slots", "hotbar"));
+		if (slots.isEmpty()) {
+			layout.problems.add(n.file, n.line, "unknown slots '" + word(n, "slots", "") + "' (hotbar, main, armor, offhand, all, 9-17, 0,40)");
+			return;
+		}
+		int cols = Math.max(1, (int) number(n, "columns", Math.min(9, slots.size())));
+		int rows = (slots.size() + cols - 1) / cols;
+		double gap = length(n, null, "gap", Env.AXIS_X, screenW, screenH, 0) / env.rx;
+		double natW = Math.min(cols, slots.size()) * 18 + (Math.min(cols, slots.size()) - 1) * gap;
+		double natH = rows * 18 + (rows - 1) * gap;
+		String bg = word(n, "slotBackground", "vanilla");
+		NodeState st = state(c.owner, n);
+		int slotColor = color(n, st, "slotColor", 0x80000000);
+		boolean counts = bool(n, "counts", true);
+		boolean durability = bool(n, "durability", true);
+		boolean cooldown = bool(n, "cooldown", true);
+		Matrix3x2fStack m = c.dc.pose();
+		m.pushMatrix();
+		m.scale((float) (w / natW), (float) (h / natH));
+		for (int i = 0; i < slots.size(); i++) {
+			int x = (int) Math.round((i % cols) * (18 + gap));
+			int y = (int) Math.round((i / cols) * (18 + gap));
+			ItemDraw.slot(c.dc, x, y, bg, slotColor);
+			ItemDraw.draw(c.dc, ItemDraw.stack(slots.get(i)), x + 1, y + 1, counts, durability, cooldown);
 		}
 		m.popMatrix();
 	}

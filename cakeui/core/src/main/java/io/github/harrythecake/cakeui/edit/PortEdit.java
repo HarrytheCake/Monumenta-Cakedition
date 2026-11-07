@@ -29,6 +29,9 @@ public final class PortEdit {
 	 */
 	@Nullable
 	public com.google.gson.JsonObject element;
+	/** A port's style preset ({@link StylePresets}), e.g. "bar"; null = vanilla. */
+	@Nullable
+	public String style;
 
 	public enum Mode {
 		ANCHORED, PERCENT, FIXED;
@@ -59,12 +62,13 @@ public final class PortEdit {
 		e.opacity = opacity;
 		e.hide = hide;
 		e.element = element == null ? null : element.deepCopy();
+		e.style = style;
 		return e;
 	}
 
 	/** Nothing set: the port is as if never edited. */
 	public boolean isEmpty() {
-		return mode == null && scale == null && opacity == null && hide == null && element == null;
+		return mode == null && scale == null && opacity == null && hide == null && element == null && style == null;
 	}
 
 	public double scaleOr1() {
@@ -75,11 +79,11 @@ public final class PortEdit {
 	public boolean equals(Object o) {
 		return o instanceof PortEdit e && mode == e.mode && ax == e.ax && ay == e.ay && x == e.x && y == e.y
 				&& java.util.Objects.equals(scale, e.scale) && java.util.Objects.equals(opacity, e.opacity) && java.util.Objects.equals(hide, e.hide)
-				&& java.util.Objects.equals(element, e.element);
+				&& java.util.Objects.equals(element, e.element) && java.util.Objects.equals(style, e.style);
 	}
 
 	@Override
 	public int hashCode() {
-		return java.util.Objects.hash(mode, ax, ay, x, y, scale, opacity, hide, element);
+		return java.util.Objects.hash(mode, ax, ay, x, y, scale, opacity, hide, element, style);
 	}
 }

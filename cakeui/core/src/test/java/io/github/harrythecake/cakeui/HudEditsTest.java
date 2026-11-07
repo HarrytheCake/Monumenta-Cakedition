@@ -221,6 +221,43 @@ class HudEditsTest {
 	}
 
 	@Test
+	void everyStylePresetParses() {
+		for (String v : new String[] {"player.health", "player.maxHealth", "player.absorption", "player.food", "player.saturation", "player.armor",
+				"player.toughness", "player.air", "player.maxAir", "player.level", "player.xp", "mount.health", "mount.maxHealth"}) {
+			io.github.harrythecake.cakeui.model.GameValues.register(v, () -> 1.0);
+		}
+		io.github.harrythecake.cakeui.model.GameValues.register("player.survival", () -> true);
+		io.github.harrythecake.cakeui.model.Layout layout = new io.github.harrythecake.cakeui.model.Layout("personal", dir);
+		for (Map.Entry<String, List<String>> e : io.github.harrythecake.cakeui.edit.StylePresets.STYLES.entrySet()) {
+			for (String style : e.getValue().subList(1, e.getValue().size())) {
+				String json = io.github.harrythecake.cakeui.edit.StylePresets.element(e.getKey(), style).toString();
+				assertTrue(io.github.harrythecake.cakeui.model.Loader.element(layout, "+style-" + e.getKey(), json, "hud.json5") != null, e.getKey() + "/" + style);
+			}
+		}
+		assertTrue(layout.problems.isEmpty(), layout.problems.list().toString());
+		assertEquals("health", io.github.harrythecake.cakeui.edit.StylePresets.portOf("+style-health"));
+		assertNull(io.github.harrythecake.cakeui.edit.StylePresets.portOf("+text-1a2b"));
+	}
+
+	@Test
+	void inventorySlotsAndItemSlots() {
+		assertEquals(9, io.github.harrythecake.cakeui.model.InventorySlots.parse("hotbar").size());
+		assertEquals(List.of(39, 38, 37, 36), io.github.harrythecake.cakeui.model.InventorySlots.parse("armor"));
+		assertEquals(List.of(9, 10, 11, 40), io.github.harrythecake.cakeui.model.InventorySlots.parse("9-11, 40"));
+		assertEquals(36, io.github.harrythecake.cakeui.model.InventorySlots.parse("all").size());
+		assertTrue(io.github.harrythecake.cakeui.model.InventorySlots.parse("bag").isEmpty());
+		assertEquals(io.github.harrythecake.cakeui.model.InventorySlots.MAINHAND, io.github.harrythecake.cakeui.model.InventorySlots.slot("slot:mainhand"));
+		assertEquals(39, io.github.harrythecake.cakeui.model.InventorySlots.slot("slot:head"));
+		assertEquals(12, io.github.harrythecake.cakeui.model.InventorySlots.slot("slot:12"));
+		assertNull(io.github.harrythecake.cakeui.model.InventorySlots.slot("minecraft:diamond"));
+		assertNull(io.github.harrythecake.cakeui.model.InventorySlots.slot("slot:99"));
+		io.github.harrythecake.cakeui.model.Layout layout = new io.github.harrythecake.cakeui.model.Layout("personal", dir);
+		assertTrue(io.github.harrythecake.cakeui.model.Loader.element(layout, "+inventory-1", "{ type: 'inventory', slots: 'hotbar', columns: 9, gap: '1px', slotBackground: 'vanilla', counts: true, durability: true, cooldown: true }", "x") != null);
+		assertTrue(io.github.harrythecake.cakeui.model.Loader.element(layout, "+item-1", "{ type: 'item', item: 'slot:offhand', counts: false }", "x") != null);
+		assertTrue(layout.problems.isEmpty(), layout.problems.list().toString());
+	}
+
+	@Test
 	void brokenOrNewerFileGivesNoEdits() throws Exception {
 		Path file = dir.resolve("hud.json5");
 		Files.writeString(file, "{ format: 9, layouts: {} }");

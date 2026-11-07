@@ -243,6 +243,9 @@ public final class HudEdits {
 			if (p.element != null) {
 				m.element = p.element.deepCopy();
 			}
+			if (p.style != null) {
+				m.style = p.style;
+			}
 		}
 		return out;
 	}
@@ -269,6 +272,9 @@ public final class HudEdits {
 		}
 		if (o.has("element") && o.get("element").isJsonObject()) {
 			e.element = o.getAsJsonObject("element").deepCopy();
+		}
+		if (o.has("style")) {
+			e.style = o.get("style").getAsString();
 		}
 		return e;
 	}
@@ -313,6 +319,9 @@ public final class HudEdits {
 		}
 		if (e.element != null) {
 			o.add("element", e.element.deepCopy());
+		}
+		if (e.style != null) {
+			o.addProperty("style", e.style);
 		}
 		return o;
 	}

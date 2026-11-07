@@ -289,7 +289,9 @@ final class SelfTest {
 			xp.opacity = 0.5f;
 			edits.put("experience", xp);
 			PortEdit crosshair = new PortEdit();
-			crosshair.hide = true;
+			crosshair.element = io.github.harrythecake.cakeui.edit.CrosshairStyles.defaults("cross", null);
+			crosshair.element.addProperty("color", "#ff4040");
+			crosshair.element.addProperty("invert", false);
 			edits.put("crosshair", crosshair);
 			// E3: an added text (bottom-left) and a bar that never shows (its condition is false)
 			PortEdit text = new PortEdit();
@@ -301,6 +303,31 @@ final class SelfTest {
 			bar.element.addProperty("visible", "= false");
 			Placement.place(bar, PortEdit.Mode.ANCHORED, 4, h - 70, 80, 5, w, h);
 			edits.put("+bar-test", bar);
+			// E4: the hotbar as an inventory element (top right) and the held item
+			PortEdit inv = new PortEdit();
+			inv.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("inventory", null);
+			inv.element.addProperty("slots", "hotbar");
+			inv.element.addProperty("columns", 3);
+			Placement.place(inv, PortEdit.Mode.ANCHORED, w - 60, 60, 56, 56, w, h);
+			edits.put("+inventory-test", inv);
+			PortEdit held = new PortEdit();
+			held.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("item", null);
+			held.element.addProperty("item", "slot:mainhand");
+			held.scale = 2.0;
+			Placement.place(held, PortEdit.Mode.ANCHORED, w - 40, 130, 32, 32, w, h);
+			edits.put("+item-test", held);
+			// E4: health as "bar + number", XP as a slim bar (presets hide vanilla's piece and add one element)
+			for (String[] ps : new String[][] {{"health", "barNumber"}, {"experience", "slim"}}) {
+				PortEdit port = new PortEdit();
+				port.style = ps[1];
+				port.hide = true;
+				edits.put(ps[0], port);
+				PortEdit el = new PortEdit();
+				el.element = io.github.harrythecake.cakeui.edit.StylePresets.element(ps[0], ps[1]);
+				Box at = HudBounds.orDefault(ps[0], w, h);
+				Placement.place(el, PortEdit.Mode.ANCHORED, at.x(), at.y() - 12, at.w(), at.h(), w, h);
+				edits.put(io.github.harrythecake.cakeui.edit.StylePresets.key(ps[0]), el);
+			}
 		} else if (t == 40) {
 			if (client.screen instanceof HudEditorScreen editor) {
 				editor.openPanel("+text-test", HudEditor.editingMap().get("+text-test"));
@@ -330,11 +357,19 @@ final class SelfTest {
 			Map<String, PortEdit> saved = HudEdits.load(HudEditor.file()).set(HudEditor.layoutKey());
 			Box inner = HudBounds.box("hotbar");
 			Box shown = inner == null || !saved.containsKey("hotbar") ? null : Placement.transform(saved.get("hotbar"), inner, w, h).apply(inner);
-			boolean ok = saved.size() == 6 && shown != null && Math.abs(shown.x() - 4) <= 1 && Math.abs(shown.y() - 4) <= 1
+			boolean ok = saved.size() == 10 && shown != null && Math.abs(shown.x() - 4) <= 1 && Math.abs(shown.y() - 4) <= 1
 					&& Math.abs(inner.bottom() - h) <= 1;
 			Box textInner = HudBounds.box("+text-test");
 			Box textShown = textInner == null ? null : Placement.transform(saved.get("+text-test"), textInner, w, h).apply(textInner);
 			boolean textOk = textShown != null && HudBounds.live("+text-test") && Math.abs(textShown.x() - 4) <= 1 && Math.abs(textShown.y() - (h - 60)) <= 1;
+			boolean presets = HudBounds.live(io.github.harrythecake.cakeui.edit.StylePresets.key("health")) && !HudBounds.live("health");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: health preset drawn, vanilla health hidden ({})", presets ? "PASS" : "FAIL");
+			Box cross = HudBounds.box("crosshair");
+			boolean crossOk = cross != null && Math.abs(cross.cx() - w / 2.0) <= 1 && Math.abs(cross.cy() - h / 2.0) <= 1 && Math.abs(cross.w() - 12) <= 1;
+			CakeUI.LOGGER.info("CakeUI self-test: editor: cross crosshair drawn at {} (12 x 12 at the centre) ({})", cross, crossOk ? "PASS" : "FAIL");
+			Box invBox = HudBounds.box("+inventory-test");
+			boolean invOk = invBox != null && Math.abs(invBox.w() - 56) <= 4 && Math.abs(invBox.h() - 56) <= 4 && HudBounds.live("+item-test");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: inventory element {} (3 x 3 slots of 18 + 1 gap), held item drawn ({})", invBox, invOk ? "PASS" : "FAIL");
 			CakeUI.LOGGER.info("CakeUI self-test: editor: added text drawn at {}, the bar with a false condition {} ({})", textShown,
 					HudBounds.live("+bar-test") ? "drawn" : "not drawn", textOk && !HudBounds.live("+bar-test") ? "PASS" : "FAIL");
 			CakeUI.LOGGER.info("CakeUI self-test: editor: saved {} edit(s) for {}, hotbar inner {} shown {} ({})", saved.size(),

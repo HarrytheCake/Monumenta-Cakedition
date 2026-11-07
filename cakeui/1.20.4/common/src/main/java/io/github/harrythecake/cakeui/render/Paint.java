@@ -18,6 +18,19 @@ final class Paint {
 	private Paint() {
 	}
 
+	/** Draw inverting what is behind (vanilla's crosshair blend) instead of normally: the HUD editor's crosshair styles. */
+	static boolean invert;
+
+	private static void blend() {
+		if (invert) {
+			RenderSystem.blendFuncSeparate(com.mojang.blaze3d.platform.GlStateManager.SourceFactor.ONE_MINUS_DST_COLOR,
+					com.mojang.blaze3d.platform.GlStateManager.DestFactor.ONE_MINUS_SRC_COLOR,
+					com.mojang.blaze3d.platform.GlStateManager.SourceFactor.ONE, com.mojang.blaze3d.platform.GlStateManager.DestFactor.ZERO);
+		} else {
+			RenderSystem.defaultBlendFunc();
+		}
+	}
+
 	static int withAlpha(int argb, double opacity) {
 		int a = (int) Math.round(((argb >>> 24) & 255) * Math.max(0, Math.min(1, opacity)));
 		return (a << 24) | (argb & 0xFFFFFF);
@@ -36,7 +49,7 @@ final class Paint {
 			return;
 		}
 		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
+		blend();
 		RenderSystem.setShader(GameRenderer::getPositionColorShader);
 		BufferBuilder b = Tesselator.getInstance().getBuilder();
 		b.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
@@ -69,7 +82,7 @@ final class Paint {
 	/** Starts a batch of textured quads for one texture. */
 	static BufferBuilder beginTextured(ResourceLocation texture) {
 		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
+		blend();
 		RenderSystem.setShaderTexture(0, texture);
 		RenderSystem.setShader(GameRenderer::getPositionColorTexShader);
 		BufferBuilder b = Tesselator.getInstance().getBuilder();

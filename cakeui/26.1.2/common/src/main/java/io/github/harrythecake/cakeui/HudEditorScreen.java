@@ -5,6 +5,7 @@ import io.github.harrythecake.cakeui.edit.HudEdits;
 import io.github.harrythecake.cakeui.edit.Placement;
 import io.github.harrythecake.cakeui.edit.Placement.Box;
 import io.github.harrythecake.cakeui.edit.PortEdit;
+import io.github.harrythecake.cakeui.edit.StylePresets;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.input.MouseButtonEvent;
@@ -129,6 +130,10 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private boolean visible(String name) {
+		PortEdit styled = effective(name);
+		if (styled != null && styled.style != null && StylePresets.STYLES.containsKey(name)) {
+			return false;
+		}
 		if (name.startsWith(HudEdits.ELEMENT)) {
 			return HudBounds.box(name) != null; // the layout's elements: once they have been drawn
 		}
@@ -169,6 +174,11 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private static Component label(String name) {
+		if (StylePresets.portOf(name) != null) {
+			String port = StylePresets.portOf(name);
+			PortEdit pe = effective(port);
+			return label(port).copy().append(" (").append(Component.translatable("cakeui.editor.style." + (pe == null || pe.style == null ? "vanilla" : pe.style))).append(")");
+		}
 		if (name.startsWith(HudEdits.ADDED)) {
 			PortEdit e = effective(name);
 			com.google.gson.JsonObject def = e == null ? null : e.element;
@@ -430,6 +440,84 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private void openMenu(String name, double mx, double my) {
+		if (name.equals("crosshair")) {
+			openCrosshairMenu(mx, my);
+			return;
+		}
+		String stylePort = StylePresets.STYLES.containsKey(name) ? name : StylePresets.portOf(name);
+		if (stylePort != null) {
+			openStyleMenu(name, stylePort, mx, my);
+			return;
+		}
+		openPieceMenu(name, mx, my);
+	}
+
+	/** The crosshair: the usual items plus "Style: …" (vanilla, dot, cross, circle, image) and Edit… for a style. */
+	private void openCrosshairMenu(double mx, double my) {
+		openPieceMenu("crosshair", mx, my);
+		PortEdit pe = effective("crosshair");
+		String current = pe == null ? "vanilla" : io.github.harrythecake.cakeui.edit.CrosshairStyles.shape(pe.element);
+		List<String> shapes = io.github.harrythecake.cakeui.edit.CrosshairStyles.SHAPES;
+		String next = shapes.get((shapes.indexOf(current) + 1) % shapes.size());
+		menu.add(0, new MenuItem(Component.translatable("cakeui.editor.menu.style", Component.translatable("cakeui.editor.crosshair." + current)), () -> {
+			checkpoint();
+			PortEdit c = edit("crosshair");
+			c.element = next.equals("vanilla") ? null
+					: io.github.harrythecake.cakeui.edit.CrosshairStyles.defaults(next, next.equals("image") ? HudElementScreen.firstImage() : null);
+		}));
+		PortEdit own = edits.get("crosshair");
+		if (own != null && own.element != null) {
+			menu.add(1, new MenuItem(Component.translatable("cakeui.editor.menu.edit"), () -> openPanel("crosshair", own)));
+		}
+		menuY = Math.min(my, height - menu.size() * ITEM_H - 4);
+	}
+
+	/** A port with style presets (or its preset element): the usual items plus "Style: …". */
+	private void openStyleMenu(String name, String port, double mx, double my) {
+		openPieceMenu(name, mx, my);
+		PortEdit pe = effective(port);
+		String current = pe == null || pe.style == null ? "vanilla" : pe.style;
+		List<String> styles = StylePresets.STYLES.get(port);
+		String next = styles.get((styles.indexOf(current) + 1) % styles.size());
+		menu.add(0, new MenuItem(Component.translatable("cakeui.editor.menu.style", Component.translatable("cakeui.editor.style." + current)), () -> {
+			checkpoint();
+			applyStyle(port, next);
+		}));
+		menuY = Math.min(my, height - menu.size() * ITEM_H - 4);
+	}
+
+	/** Switches a port's look: a preset hides the vanilla piece and adds one element where it was. */
+	private void applyStyle(String port, String style) {
+		Box where = screenBox(port);
+		PortEdit pe = edit(port);
+		String key = StylePresets.key(port);
+		PortEdit old = edits.remove(key);
+		if (style.equals("vanilla")) {
+			pe.style = null;
+			pe.hide = null;
+			selected = port;
+			return;
+		}
+		pe.style = style;
+		pe.hide = Boolean.TRUE;
+		PortEdit el = new PortEdit();
+		el.element = StylePresets.element(port, style);
+		if (old != null && old.mode != null) {
+			// keep where the player had put the previous preset
+			el.mode = old.mode;
+			el.ax = old.ax;
+			el.ay = old.ay;
+			el.x = old.x;
+			el.y = old.y;
+			el.scale = old.scale;
+		} else {
+			Placement.place(el, PortEdit.Mode.ANCHORED, where.x(), where.y(), Math.max(1, where.w()), Math.max(1, where.h()), width, height);
+		}
+		edits.put(key, el);
+		selected = key;
+	}
+
+	private void openPieceMenu(String name, double mx, double my) {
 		PortEdit e = effective(name);
 		boolean hidden = e != null && Boolean.TRUE.equals(e.hide);
 		float opacity = e == null || e.opacity == null ? 1 : e.opacity;
@@ -457,7 +545,12 @@ public final class HudEditorScreen extends Screen {
 			items.add(0, new MenuItem(Component.translatable("cakeui.editor.menu.edit"), () -> openPanel(name, own)));
 			items.add(new MenuItem(Component.translatable("cakeui.editor.menu.delete"), () -> {
 				checkpoint();
-				edits.remove(name);
+				String port = StylePresets.portOf(name);
+				if (port != null) {
+					applyStyle(port, "vanilla"); // a preset's element: back to the vanilla piece
+				} else {
+					edits.remove(name);
+				}
 				selected = null;
 			}));
 		} else {
