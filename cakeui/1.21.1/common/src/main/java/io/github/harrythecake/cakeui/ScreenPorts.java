@@ -1,5 +1,8 @@
 package io.github.harrythecake.cakeui;
 
+import org.jetbrains.annotations.Nullable;
+import io.github.harrythecake.cakeui.edit.PortEdit;
+import io.github.harrythecake.cakeui.edit.Placement;
 import io.github.harrythecake.cakeui.expr.Env;
 import io.github.harrythecake.cakeui.model.Geometry;
 import io.github.harrythecake.cakeui.model.Node;
@@ -29,18 +32,78 @@ public final class ScreenPorts {
 	private static final Map<AbstractWidget, int[]> ORIGINAL = new WeakHashMap<>();
 
 	/** The pause menu: the HUD's built-in subwindow `pause` (only the full menu, not F3+Esc's "Game Paused"). */
-	public static final ScreenPorts PAUSE = new ScreenPorts(() -> Ui.builtin("hud", "pause"));
+	public static final ScreenPorts PAUSE = new ScreenPorts("pause", () -> Ui.builtin("hud", "pause"));
 
 	/** The player's inventory (survival; the creative inventory is a different screen). */
-	public static final ScreenPorts INVENTORY = new ScreenPorts(() -> Ui.builtin("hud", "inventory"));
+	public static final ScreenPorts INVENTORY = new ScreenPorts("inventory", () -> Ui.builtin("hud", "inventory"));
 
 	/** Connecting, loading terrain, preparing a world, and the like (LoadingPart.kind). */
-	public static final ScreenPorts LOADING = new ScreenPorts(() -> Ui.part("loading_screen"));
+	public static final ScreenPorts LOADING = new ScreenPorts("loading_screen", () -> Ui.part("loading_screen"));
 
 	private final Supplier<Node> node;
+	/** The part's id, the editor's key prefix: "main_menu", "pause", "inventory", "loading_screen", "game_launch". */
+	private final String part;
+	/** Where the layout (or vanilla) put each button, before the player's edits: the editor's inner box. */
+	private static final Map<AbstractWidget, int[]> LAYOUT_BOX = new WeakHashMap<>();
 
-	public ScreenPorts(Supplier<Node> node) {
+	public ScreenPorts(String part, Supplier<Node> node) {
+		this.part = part;
 		this.node = node;
+	}
+
+	public String part() {
+		return part;
+	}
+
+	// ---- the player's edits (the UI editor, ADR 0010 E6): keys "<part>/<piece>" in the HUD edit files ----
+
+	/** The edit key of a piece of this screen ("main_menu/logo", "pause/button:menu.returnToGame"). */
+	public String key(String piece) {
+		return part + "/" + piece;
+	}
+
+	@Nullable
+	PortEdit edit(String piece) {
+		Map<String, PortEdit> m = HudEditor.current();
+		return m.isEmpty() ? null : m.get(key(piece));
+	}
+
+	/** Any edit for this screen (or the editor open): pieces need the slower, edited path. */
+	boolean hasEdits() {
+		if (HudEditor.editing()) {
+			return true;
+		}
+		String prefix = part + "/";
+		for (String k : HudEditor.current().keySet()) {
+			if (k.startsWith(prefix)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/** A button's box before the player's edits (the layout's or vanilla's place): {x, y, w, h}. */
+	static int[] innerBox(AbstractWidget w) {
+		int[] b = LAYOUT_BOX.get(w);
+		if (b == null) {
+			b = ORIGINAL.get(w);
+		}
+		return b != null ? b : new int[] {w.getX(), w.getY(), w.getWidth(), w.getHeight()};
+	}
+
+	/** The edit key of a button: "button:<id>", or "button:#<index>" when the id is taken by an earlier one. */
+	static String buttonKey(Screen screen, AbstractWidget w) {
+		List<AbstractWidget> list = buttons(screen);
+		String id = id(w);
+		for (AbstractWidget o : list) {
+			if (o == w) {
+				break;
+			}
+			if (id(o).equals(id)) {
+				return "button:#" + list.indexOf(w);
+			}
+		}
+		return "button:" + id;
 	}
 
 	/** The ports for a vanilla screen CakeUI can redraw, or null for any other screen. */
@@ -156,25 +219,39 @@ public final class ScreenPorts {
 	/** Runs a vanilla draw call with the port's offset and scale; returns false when the port hides it. */
 	public boolean vanillaPiece(String name, GuiGraphics ctx, double pivotX, double pivotY, Runnable draw) {
 		Node p = port(name);
-		if (p == null) {
+		boolean edited = hasEdits();
+		if (p == null && !edited) {
 			draw.run();
 			return true;
 		}
+		PortEdit e = edited ? edit(name) : null;
 		Renderer r = Ui.renderer();
-		if (r.bool(p, "hide", false)) {
+		boolean layoutHides = p != null && r.bool(p, "hide", false);
+		if (e != null && e.hide != null ? e.hide : layoutHides) {
 			return false;
 		}
 		// the window's GUI size (= any screen's size; there is no screen under the launch overlay)
-		double w = Minecraft.getInstance().getWindow().getGuiScaledWidth();
-		double h = Minecraft.getInstance().getWindow().getGuiScaledHeight();
-		double x = r.length(p, null, "x", Env.AXIS_X, w, h, 0);
-		double y = r.length(p, null, "y", Env.AXIS_Y, w, h, 0);
-		double s = r.number(p, "scale", 1);
+		int w = Minecraft.getInstance().getWindow().getGuiScaledWidth();
+		int h = Minecraft.getInstance().getWindow().getGuiScaledHeight();
+		double x = p == null ? 0 : r.length(p, null, "x", Env.AXIS_X, w, h, 0);
+		double y = p == null ? 0 : r.length(p, null, "y", Env.AXIS_Y, w, h, 0);
+		double s = p == null ? 1 : r.number(p, "scale", 1);
+		Placement.Xform outer = e == null || (e.mode == null && e.scale == null) ? Placement.Xform.IDENTITY
+				: Placement.transform(e, HudBounds.orDefault(key(name), w, h), w, h);
+		ctx.pose().pushPose();
+		ctx.pose().translate(outer.tx(), outer.ty(), 0);
+		ctx.pose().scale((float) outer.s(), (float) outer.s(), 1);
+		String before = edited ? HudBounds.begin(key(name), outer) : null;
 		ctx.pose().pushPose();
 		ctx.pose().translate(x + pivotX, y + pivotY, 0);
 		ctx.pose().scale((float) s, (float) s, 1);
 		ctx.pose().translate(-pivotX, -pivotY, 0);
 		draw.run();
+		ctx.pose().popPose();
+		if (edited) {
+			HudBounds.hooked(key(name));
+			HudBounds.end(before);
+		}
 		ctx.pose().popPose();
 		return true;
 	}
@@ -225,8 +302,9 @@ public final class ScreenPorts {
 		SKINS.clear();
 		for (AbstractWidget w : buttons(screen)) {
 			ORIGINAL.put(w, new int[] {w.getX(), w.getY(), w.getWidth(), w.getHeight()});
+			LAYOUT_BOX.remove(w);
 		}
-		if (node() != null) {
+		if (node() != null || hasEdits()) {
 			applyButtons(screen);
 		}
 	}
@@ -241,16 +319,22 @@ public final class ScreenPorts {
 
 	/** Moves, resizes, hides, relabels and skins the buttons the layout names. Every frame (positions may move). */
 	public void applyButtons(Screen screen) {
-		Node port = port("buttons");
-		if (port == null) {
+		Node port = node() == null ? null : port("buttons");
+		boolean edited = hasEdits();
+		if (port == null && !edited) {
 			return;
 		}
 		Renderer r = Ui.renderer();
 		List<AbstractWidget> list = buttons(screen);
 		for (int i = 0; i < list.size(); i++) {
 			AbstractWidget w = list.get(i);
-			Node o = override(port.buttons, w, i);
+			Node o = port == null ? null : override(port.buttons, w, i);
 			if (o == null) {
+				if (edited) {
+					int[] orig = ORIGINAL.computeIfAbsent(w, k -> new int[] {k.getX(), k.getY(), k.getWidth(), k.getHeight()});
+					LAYOUT_BOX.put(w, orig);
+					applyEdit(screen, w, orig[0], orig[1], orig[2], orig[3], true);
+				}
 				continue;
 			}
 			int[] orig = ORIGINAL.computeIfAbsent(w, k -> new int[] {k.getX(), k.getY(), k.getWidth(), k.getHeight()});
@@ -268,11 +352,16 @@ public final class ScreenPorts {
 				bx = (int) Math.round(Geometry.place(sw, a[0], r.length(o, null, "x", Env.AXIS_X, sw, sh, 0), bw, org[0]));
 				by = (int) Math.round(Geometry.place(sh, a[1], r.length(o, null, "y", Env.AXIS_Y, sw, sh, 0), bh, org[1]));
 			}
-			if (w.getX() != bx || w.getY() != by) {
-				w.setPosition(bx, by);
-			}
-			if (w.getWidth() != bw || w.getHeight() != bh) {
-				w.setSize(bw, bh);
+			if (edited) {
+				LAYOUT_BOX.put(w, new int[] {bx, by, bw, bh});
+				applyEdit(screen, w, bx, by, bw, bh, w.visible);
+			} else {
+				if (w.getX() != bx || w.getY() != by) {
+					w.setPosition(bx, by);
+				}
+				if (w.getWidth() != bw || w.getHeight() != bh) {
+					w.setSize(bw, bh);
+				}
 			}
 			if (o.has("text")) {
 				String t = r.word(o, "text", "");
@@ -285,6 +374,26 @@ public final class ScreenPorts {
 			} else {
 				SKINS.remove(w);
 			}
+		}
+	}
+
+	/** A button at its layout/vanilla box (x, y, w, h), then the player's edit on top: moved, scaled, hidden. */
+	private void applyEdit(Screen screen, AbstractWidget w, int x, int y, int bw, int bh, boolean visible) {
+		PortEdit e = edit(buttonKey(screen, w));
+		boolean show = e != null && e.hide != null ? !e.hide : visible;
+		if (e != null && (e.mode != null || e.scale != null)) {
+			Placement.Box b = Placement.transform(e, new Placement.Box(x, y, bw, bh), screen.width, screen.height).apply(new Placement.Box(x, y, bw, bh));
+			x = (int) Math.round(b.x());
+			y = (int) Math.round(b.y());
+			bw = Math.max(1, (int) Math.round(b.w()));
+			bh = Math.max(1, (int) Math.round(b.h()));
+		}
+		w.visible = show;
+		if (w.getX() != x || w.getY() != y) {
+			w.setPosition(x, y);
+		}
+		if (w.getWidth() != bw || w.getHeight() != bh) {
+			w.setSize(bw, bh);
 		}
 	}
 

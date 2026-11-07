@@ -88,13 +88,18 @@ public final class CakeUIClient {
 
 	/** Before a screen draws. The loading screens (one has no render method of its own) start their frame here. */
 	public static void beforeScreenRender(Screen screen, GuiGraphicsExtractor context, int mouseX, int mouseY) {
-		if (ScreenPorts.of(screen) == ScreenPorts.LOADING) {
+		ScreenPorts ports = ScreenPorts.of(screen);
+		if (ports == ScreenPorts.LOADING) {
 			LoadingPart.beginFrame(screen, mouseX, mouseY);
+		}
+		if (ports != null && ports.hasEdits()) {
+			ports.applyButtons(screen); // the player's edits (the UI editor), live while it is open
 		}
 	}
 
 	/** After a screen drew (tooltips included). */
 	public static void afterScreenRender(Screen screen, GuiGraphicsExtractor context, int mouseX, int mouseY) {
+		HudBounds.endFrame();
 		if (ScreenPorts.of(screen) == ScreenPorts.LOADING) {
 			ScreenPorts.LOADING.drawElements(screen, context, "front", 1);
 			ScreenPorts.drawButtonIds(screen, context);
@@ -105,6 +110,11 @@ public final class CakeUIClient {
 
 	/** A key pressed while a screen is open: the reload and button-id keys work there too. */
 	public static void screenKeyPressed(net.minecraft.client.input.KeyEvent key) {
+		Screen screen = client().screen;
+		if (EDIT_HUD_KEY.matches(key) && screen != null && !(screen instanceof HudEditorScreen) && ScreenPorts.of(screen) != null) {
+			HudEditorScreen.openFor(screen); // edit the screen that is open (main menu, pause menu, inventory, loading screen)
+			return;
+		}
 		if (RELOAD_KEY.matches(key)) {
 			Ui.reload();
 		} else if (BUTTON_IDS_KEY.matches(key)) {

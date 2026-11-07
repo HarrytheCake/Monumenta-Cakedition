@@ -20,7 +20,7 @@
 	"cakeui.config.status.kept": "%1$s 有 %2$s 个问题，所以仍使用之前的版本。",
 	"cakeui.config.status.failed": "无法加载布局 %s（%s 个问题）。",
 	"cakeui.config.status.hint": "开发模式会在屏幕上列出问题；全部问题都在 logs/latest.log 中。",
-	"key.cakeui.editHud": "编辑 HUD",
+	"key.cakeui.editHud": "编辑 HUD（或当前界面）",
 	"cakeui.config.editHud": "编辑 HUD…",
 	"cakeui.config.editHud.noWorld": "进入世界后才能编辑 HUD。",
 	"cakeui.editor.title": "HUD 编辑器",
@@ -138,5 +138,16 @@
 	"cakeui.element.slots.offhand": "副手",
 	"cakeui.element.slots.custom": "自定义…",
 	"cakeui.element.slotsCustom": "哪些栏位",
-	"cakeui.element.scale": "缩放"
+	"cakeui.element.scale": "缩放",
+	"cakeui.editor.button": "按钮：%s",
+	"cakeui.screen.piece.logo": "标志",
+	"cakeui.screen.piece.splash": "闪烁标语",
+	"cakeui.screen.piece.version": "版本文字",
+	"cakeui.screen.piece.title": "标题",
+	"cakeui.screen.piece.text": "加载文字",
+	"cakeui.screen.piece.map": "加载地图",
+	"cakeui.config.editMainMenu": "主菜单…",
+	"cakeui.config.editPause": "暂停菜单…",
+	"cakeui.config.editInventory": "物品栏…",
+	"cakeui.config.editLoading": "加载画面…"
 }

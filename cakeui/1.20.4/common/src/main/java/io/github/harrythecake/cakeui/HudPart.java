@@ -127,7 +127,8 @@ public final class HudPart {
 			}
 		}
 		for (Map.Entry<String, PortEdit> e : edits.entrySet()) {
-			if (e.getKey().startsWith(HudEdits.ELEMENT) || e.getKey().startsWith(HudEdits.ADDED) || e.getKey().startsWith(HudMovables.PREFIX)) {
+			if (e.getKey().startsWith(HudEdits.ELEMENT) || e.getKey().startsWith(HudEdits.ADDED) || e.getKey().startsWith(HudMovables.PREFIX)
+					|| e.getKey().indexOf('/') >= 0) {
 				continue; // the layout's own elements and added ones: drawLayer
 			}
 			if (PluginHud.names().contains(e.getKey()) && !PluginHud.editableNames().contains(e.getKey())) {

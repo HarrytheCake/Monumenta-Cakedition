@@ -25,7 +25,7 @@ import net.minecraft.util.RandomSource;
 public final class TitleMenu {
 	private static final RandomSource RANDOM = RandomSource.create();
 	/** The main menu's ports, elements and buttons. */
-	public static final ScreenPorts PORTS = new ScreenPorts(() -> Ui.part("main_menu"));
+	public static final ScreenPorts PORTS = new ScreenPorts("main_menu", () -> Ui.part("main_menu"));
 	private static final Map<Node, Node> SPLASH_TEXT = new WeakHashMap<>();
 	private static String splash = "";
 	private static String version = "";

@@ -75,9 +75,33 @@ public final class HudEditorScreen extends Screen {
 	/** The properties panel is open on top: leaving for it doesn't close the editor. */
 	private boolean childOpen;
 
+	/** E6: the screen being edited (drawn live under the editor: main menu, pause menu, inventory, a loading screen), or null for the HUD. */
+	@Nullable
+	private final Screen target;
+	@Nullable
+	private final ScreenPorts ports;
+
+	/** The vanilla pieces (besides buttons) each screen's editor offers. */
+	private static final Map<String, List<String>> SCREEN_PIECES = Map.of(
+			"main_menu", List.of("logo", "splash", "version"),
+			"pause", List.of(),
+			"inventory", List.of("title"),
+			"loading_screen", List.of("text", "map"));
+
 	public HudEditorScreen(@Nullable Screen parent) {
+		this(parent, null);
+	}
+
+	/** Opens the editor on top of a screen CakeUI can redraw; Done or Cancel goes back to that screen. */
+	public static void openFor(Screen target) {
+		Minecraft.getInstance().setScreen(new HudEditorScreen(target, target));
+	}
+
+	private HudEditorScreen(@Nullable Screen parent, @Nullable Screen target) {
 		super(Component.translatable("cakeui.editor.title"));
 		this.parent = parent;
+		this.target = target;
+		this.ports = target == null ? null : ScreenPorts.of(target);
 		HudEditor.start();
 		this.edits = HudEditor.editingMap();
 		this.initial = HudEditor.snapshot();
@@ -121,12 +145,17 @@ public final class HudEditorScreen extends Screen {
 	@Override
 	protected void init() {
 		childOpen = false;
+		if (target != null) {
+			target.init(width, height); // the screen being edited, laid out at this size (its buttons are its own)
+		}
 		int y = barTop();
 		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.done"), b -> close(true)).bounds(BAR_X, y, BAR_W, 18).build());
 		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.cancel"), b -> close(false)).bounds(BAR_X, y + 20, BAR_W, 18).build());
 		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.resetAll"), b -> {
 			checkpoint();
-			edits.clear();
+			// only what this editor shows: the HUD's pieces, or this screen's
+			String prefix = ports == null ? null : ports.part() + "/";
+			edits.keySet().removeIf(k -> prefix == null ? k.indexOf('/') < 0 : k.startsWith(prefix));
 		}).bounds(BAR_X, y + 40, BAR_W, 18).build());
 		addRenderableWidget(CycleButton.onOffBuilder(previews)
 				.create(BAR_X, y + 60, BAR_W, 18, Component.translatable("cakeui.editor.previews"), (b, v) -> previews = v));
@@ -154,17 +183,54 @@ public final class HudEditorScreen extends Screen {
 		return HudEditor.current().get(name);
 	}
 
-	private static boolean hidden(String name) {
+	private boolean hidden(String name) {
+		var bw = button(name);
+		if (bw != null) {
+			return !bw.visible; // a screen's button: hidden by an edit or by the layout
+		}
 		PortEdit e = effective(name);
 		return e != null && Boolean.TRUE.equals(e.hide);
 	}
 
 	/** Another mod draws this vanilla piece itself (its CakeUI hook didn't run although it should be on screen). */
 	private boolean otherMod(String name) {
-		return System.currentTimeMillis() - openedAt > 700 && HudExpect.expected(name) && !HudBounds.hookedRecently(name);
+		return target == null && System.currentTimeMillis() - openedAt > 700 && HudExpect.expected(name) && !HudBounds.hookedRecently(name);
+	}
+
+	/** What this editor offers: the HUD's pieces, or the edited screen's buttons and vanilla pieces. */
+	private List<String> pieces() {
+		if (target == null) {
+			return HudEditor.pieces();
+		}
+		List<String> out = new ArrayList<>();
+		for (net.minecraft.client.gui.components.AbstractWidget w : ScreenPorts.buttons(target)) {
+			out.add(ports.key(ScreenPorts.buttonKey(target, w)));
+		}
+		for (String p : SCREEN_PIECES.getOrDefault(ports.part(), List.of())) {
+			out.add(ports.key(p));
+		}
+		return out;
+	}
+
+	/** A button of the edited screen, by its edit key; null if gone. */
+	@Nullable
+	private net.minecraft.client.gui.components.AbstractWidget button(String name) {
+		if (target == null || !name.contains("/button:")) {
+			return null;
+		}
+		for (net.minecraft.client.gui.components.AbstractWidget w : ScreenPorts.buttons(target)) {
+			if (ports.key(ScreenPorts.buttonKey(target, w)).equals(name)) {
+				return w;
+			}
+		}
+		return null;
 	}
 
 	private boolean visible(String name) {
+		if (target != null) {
+			// buttons always (hidden ones too, to show them again); vanilla pieces once drawn, or as previews
+			return button(name) != null || previews || HudBounds.live(name) || hidden(name);
+		}
 		if (isMovable(name)) {
 			var m = HudMovables.get(name);
 			return m != null && m.box(width, height) != null;
@@ -184,6 +250,12 @@ public final class HudEditorScreen extends Screen {
 
 	/** Where the piece is on screen now (its measured or default place, with the edits applied). */
 	private Box screenBox(String name) {
+		var bw = button(name);
+		if (bw != null) {
+			int[] in = ScreenPorts.innerBox(bw);
+			Box inner = new Box(in[0], in[1], in[2], in[3]);
+			return Placement.transform(effective(name), inner, width, height).apply(inner);
+		}
 		if (isMovable(name)) {
 			var m = HudMovables.get(name);
 			double[] b = m == null ? null : m.box(width, height);
@@ -203,7 +275,7 @@ public final class HudEditorScreen extends Screen {
 	private String pick(double mx, double my) {
 		String best = null;
 		double bestArea = Double.MAX_VALUE;
-		for (String name : HudEditor.pieces()) {
+		for (String name : pieces()) {
 			if (!visible(name) || otherMod(name)) {
 				continue;
 			}
@@ -217,7 +289,15 @@ public final class HudEditorScreen extends Screen {
 		return best;
 	}
 
-	private static Component label(String name) {
+	private Component label(String name) {
+		var bw = button(name);
+		if (bw != null) {
+			String text = bw.getMessage().getString();
+			return Component.translatable("cakeui.editor.button", text.isEmpty() ? name.substring(name.indexOf(':') + 1) : text);
+		}
+		if (name.indexOf('/') >= 0) {
+			return Component.translatable("cakeui.screen.piece." + name.substring(name.indexOf('/') + 1));
+		}
 		if (isMovable(name)) {
 			var m = HudMovables.get(name);
 			return m == null ? Component.literal(name) : m.label();
@@ -318,8 +398,14 @@ public final class HudEditorScreen extends Screen {
 
 	@Override
 	public void extractRenderState(GuiGraphicsExtractor g, int mouseX, int mouseY, float delta) {
+		if (target != null) {
+			CakeUIClient.beforeScreenRender(target, g, -10000, -10000);
+			target.extractBackground(g, -10000, -10000, delta);
+			target.extractRenderState(g, -10000, -10000, delta);
+			CakeUIClient.afterScreenRender(target, g, -10000, -10000);
+		}
 		String hovered = menu == null && dragging == null ? pick(mouseX, mouseY) : null;
-		for (String name : HudEditor.pieces()) {
+		for (String name : pieces()) {
 			if (!visible(name)) {
 				continue;
 			}
@@ -329,7 +415,9 @@ public final class HudEditorScreen extends Screen {
 			int x2 = (int) Math.ceil(b.right());
 			int y2 = (int) Math.ceil(b.bottom());
 			boolean hidden = hidden(name);
-			boolean live = HudBounds.live(name);
+			var screenButton = button(name);
+			// a screen's visible button draws its own text: outline only (its name shows on hover)
+			boolean live = HudBounds.live(name) || (screenButton != null && screenButton.visible);
 			if (otherMod(name)) {
 				g.fill(x1, y1, x2, y2, 0x60404040);
 				g.outline(x1 - 1, y1 - 1, x2 - x1 + 2, y2 - y1 + 2, 0x80808080);
@@ -437,7 +525,7 @@ public final class HudEditorScreen extends Screen {
 			openMenu(hit, mx, my);
 			return true;
 		}
-		if (button == GLFW.GLFW_MOUSE_BUTTON_RIGHT) {
+		if (button == GLFW.GLFW_MOUSE_BUTTON_RIGHT && target == null) {
 			openAddMenu(mx, my);
 			return true;
 		}
@@ -475,7 +563,7 @@ public final class HudEditorScreen extends Screen {
 		guides = List.of();
 		if (!minecraft.hasAltDown()) {
 			List<Box> others = new ArrayList<>();
-			for (String name : HudEditor.pieces()) {
+			for (String name : pieces()) {
 				if (!name.equals(dragging) && visible(name)) {
 					others.add(screenBox(name));
 				}
@@ -636,11 +724,13 @@ public final class HudEditorScreen extends Screen {
 			checkpoint();
 			edit(name).hide = hidden ? Boolean.FALSE : Boolean.TRUE; // "show" also undoes a hide the layout made
 		}));
-		items.add(new MenuItem(Component.translatable("cakeui.editor.menu.opacity", Math.round(opacity * 100)), () -> {
-			checkpoint();
-			float next = opacity > 0.8f ? 0.75f : opacity > 0.6f ? 0.5f : opacity > 0.3f ? 0.25f : 1f;
-			edit(name).opacity = next == 1f ? null : next;
-		}));
+		if (name.indexOf('/') < 0) {
+			items.add(new MenuItem(Component.translatable("cakeui.editor.menu.opacity", Math.round(opacity * 100)), () -> {
+				checkpoint();
+				float next = opacity > 0.8f ? 0.75f : opacity > 0.6f ? 0.5f : opacity > 0.3f ? 0.25f : 1f;
+				edit(name).opacity = next == 1f ? null : next;
+			}));
+		}
 		items.add(new MenuItem(Component.translatable("cakeui.editor.menu.mode",
 				Component.translatable("cakeui.editor.mode." + mode.id())), () -> {
 			checkpoint();
@@ -746,6 +836,12 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	// ---- closing ----
+
+	/** The screen being edited (self-test). */
+	@Nullable
+	Screen targetForTest() {
+		return target;
+	}
 
 	/** Done (also for the self-test). */
 	void done() {

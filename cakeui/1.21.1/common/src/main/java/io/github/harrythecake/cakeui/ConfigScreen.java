@@ -84,6 +84,23 @@ public final class ConfigScreen extends Screen {
 		if (!editHud.active) {
 			editHud.setTooltip(Tooltip.create(Component.translatable("cakeui.config.editHud.noWorld")));
 		}
+		// E6: the same editor on the other screens CakeUI redraws (pause menu and inventory need a world)
+		boolean inWorld = minecraft != null && minecraft.level != null && minecraft.player != null;
+		int w4 = (310 - 9) / 4;
+		addRenderableWidget(Button.builder(Component.translatable("cakeui.config.editMainMenu"), b -> HudEditorScreen.openFor(new net.minecraft.client.gui.screens.TitleScreen()))
+				.bounds(x, 136, w4, 20).build());
+		Button pause = addRenderableWidget(Button.builder(Component.translatable("cakeui.config.editPause"), b -> HudEditorScreen.openFor(new net.minecraft.client.gui.screens.PauseScreen(true)))
+				.bounds(x + w4 + 3, 136, w4, 20).build());
+		Button inv = addRenderableWidget(Button.builder(Component.translatable("cakeui.config.editInventory"),
+				b -> HudEditorScreen.openFor(new net.minecraft.client.gui.screens.inventory.InventoryScreen(minecraft.player))).bounds(x + 2 * (w4 + 3), 136, w4, 20).build());
+		addRenderableWidget(Button.builder(Component.translatable("cakeui.config.editLoading"), b -> HudEditorScreen.openFor(ScreenEditTargets.loadingPreview()))
+				.bounds(x + 3 * (w4 + 3), 136, w4, 20).build());
+		pause.active = inWorld;
+		inv.active = inWorld;
+		if (!inWorld) {
+			pause.setTooltip(Tooltip.create(Component.translatable("cakeui.config.editHud.noWorld")));
+			inv.setTooltip(Tooltip.create(Component.translatable("cakeui.config.editHud.noWorld")));
+		}
 		addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, b -> onClose()).bounds(width / 2 - 100, height - 27, 200, 20).build());
 	}
 
@@ -125,9 +142,9 @@ public final class ConfigScreen extends Screen {
 	public void render(GuiGraphics context, int mouseX, int mouseY, float delta) {
 		super.render(context, mouseX, mouseY, delta);
 		context.drawCenteredString(font, title, width / 2, 15, 0xFFFFFF);
-		context.drawCenteredString(font, status(), width / 2, 144, 0xFFFFFF);
+		context.drawCenteredString(font, status(), width / 2, 168, 0xFFFFFF);
 		if (!Ui.problems().isEmpty()) {
-			context.drawCenteredString(font, Component.translatable("cakeui.config.status.hint"), width / 2, 158, 0xA0A0A0);
+			context.drawCenteredString(font, Component.translatable("cakeui.config.status.hint"), width / 2, 182, 0xA0A0A0);
 		}
 	}
 

@@ -453,15 +453,106 @@ final class SelfTest {
 			HudEditor.setTarget(HudEditor.Target.PERSONAL);
 			HudEditor.editingMap().clear();
 			HudEditor.finish(true);
+		} else if (t == 92) {
+			// E6: the same editor on the main menu
+			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.TitleScreen());
+			HudEditor.setTarget(HudEditor.Target.PERSONAL); // the player's own edits (dev mode starts on the layout's)
+		} else if (t == 110) {
+			Map<String, PortEdit> edits = HudEditor.editingMap();
+			net.minecraft.client.gui.components.AbstractWidget sp = null;
+			if (client.screen instanceof HudEditorScreen ed && ed.targetForTest() != null) {
+				for (var b : ScreenPorts.buttons(ed.targetForTest())) {
+					if (ScreenPorts.id(b).equals("menu.singleplayer")) {
+						sp = b;
+					}
+				}
+			}
+			if (sp != null) {
+				PortEdit e = new PortEdit();
+				Placement.place(e, PortEdit.Mode.ANCHORED, 4, 4, sp.getWidth(), sp.getHeight(), w, h);
+				edits.put("main_menu/button:menu.singleplayer", e);
+			}
+			PortEdit logo = new PortEdit();
+			logo.hide = true;
+			edits.put("main_menu/logo", logo);
+			CakeUI.LOGGER.info("CakeUI self-test: editor: main menu open in the editor, singleplayer button found {} ({})", sp != null, sp != null ? "PASS" : "FAIL");
+		} else if (t == 125) {
+			SHOT.accept(client, "cakeui-selftest-uieditor-mainmenu.png");
+		} else if (t == 130) {
+			if (client.screen instanceof HudEditorScreen ed) {
+				ed.done();
+			}
+		} else if (t == 140) {
+			SHOT.accept(client, "cakeui-selftest-mainmenu-edited.png");
+			net.minecraft.client.gui.components.AbstractWidget sp = null;
+			if (client.screen != null) {
+				for (var b : ScreenPorts.buttons(client.screen)) {
+					if (ScreenPorts.id(b).equals("menu.singleplayer")) {
+						sp = b;
+					}
+				}
+			}
+			boolean ok = client.screen instanceof net.minecraft.client.gui.screens.TitleScreen && sp != null && sp.getX() == 4 && sp.getY() == 4
+					&& !HudBounds.live("main_menu/logo");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: main menu after Done: singleplayer at {} {}, logo drawn {} ({})", sp == null ? -1 : sp.getX(),
+					sp == null ? -1 : sp.getY(), HudBounds.live("main_menu/logo"), ok ? "PASS" : "FAIL");
+		} else if (t == 145) {
+			HudEditor.start();
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+			HudEditor.editingMap().keySet().removeIf(k -> k.startsWith("main_menu/"));
+			HudEditor.finish(true);
+			client.setScreen(null);
+		} else if (t == 150) {
+			// E6: the pause menu: "Back to Game" moved to the top-left corner
+			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.PauseScreen(true));
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+		} else if (t == 160) {
+			net.minecraft.client.gui.components.AbstractWidget back = null;
+			if (client.screen instanceof HudEditorScreen ed && ed.targetForTest() != null) {
+				for (var b : ScreenPorts.buttons(ed.targetForTest())) {
+					if (ScreenPorts.id(b).equals("menu.returnToGame")) {
+						back = b;
+					}
+				}
+			}
+			if (back != null) {
+				PortEdit e = new PortEdit();
+				Placement.place(e, PortEdit.Mode.ANCHORED, 4, 4, back.getWidth(), back.getHeight(), w, h);
+				HudEditor.editingMap().put("pause/button:menu.returnToGame", e);
+			}
+		} else if (t == 165) {
+			SHOT.accept(client, "cakeui-selftest-uieditor-pause.png");
+		} else if (t == 168) {
+			if (client.screen instanceof HudEditorScreen ed) {
+				ed.done();
+			}
+		} else if (t == 172) {
+			net.minecraft.client.gui.components.AbstractWidget back = null;
+			if (client.screen != null) {
+				for (var b : ScreenPorts.buttons(client.screen)) {
+					if (ScreenPorts.id(b).equals("menu.returnToGame")) {
+						back = b;
+					}
+				}
+			}
+			boolean ok = client.screen instanceof net.minecraft.client.gui.screens.PauseScreen && back != null && back.getX() == 4 && back.getY() == 4;
+			CakeUI.LOGGER.info("CakeUI self-test: editor: pause menu after Done: Back to Game at {} {} ({})", back == null ? -1 : back.getX(),
+					back == null ? -1 : back.getY(), ok ? "PASS" : "FAIL");
+			HudEditor.start();
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+			HudEditor.editingMap().keySet().removeIf(k -> k.startsWith("pause/"));
+			HudEditor.finish(true);
+			client.setScreen(null);
+		} else if (t == 180) {
 			if (!HudEditor.layoutTargetPossible() || HudPart.part() == null || HudPart.part().children.isEmpty()) {
 				client.options.pauseOnLostFocus = pauseOnLostFocus;
 				done(client);
 			}
-		} else if (t == 100) {
+		} else if (t == 190) {
 			client.setScreen(new HudEditorScreen(null));
 			CakeUI.LOGGER.info("CakeUI self-test: editor: dev mode starts on the layout's edits ({})",
 					HudEditor.target() == HudEditor.Target.LAYOUT ? "PASS" : "FAIL");
-		} else if (t == 130) {
+		} else if (t == 220) {
 			Map<String, PortEdit> edits = HudEditor.editingMap();
 			PortEdit hotbar = new PortEdit();
 			hotbar.scale = 0.75;
@@ -474,12 +565,12 @@ final class SelfTest {
 				edits.put(element, e);
 			}
 			CakeUI.LOGGER.info("CakeUI self-test: editor: layout element {} measured at {} ({})", element, ib, ib != null ? "PASS" : "FAIL");
-		} else if (t == 150) {
+		} else if (t == 240) {
 			SHOT.accept(client, "cakeui-selftest-hudeditor-layout.png");
-		} else if (t == 160) {
+		} else if (t == 250) {
 			HudEditor.finish(true);
 			client.setScreen(null);
-		} else if (t == 190) {
+		} else if (t == 280) {
 			SHOT.accept(client, "cakeui-selftest-hud-layout-edited.png");
 			java.nio.file.Path file = HudEditor.layoutEditsFile();
 			Map<String, PortEdit> saved = file == null ? Map.of() : HudEdits.loadLayoutEdits(file);
@@ -489,7 +580,7 @@ final class SelfTest {
 					: Placement.transform(HudEditor.current().get(element), inner, w, h).apply(inner);
 			boolean ok = saved.size() == 2 && shown != null && Math.abs(shown.right() - (w - 4)) <= 1 && Math.abs(shown.bottom() - (h - 4)) <= 1;
 			CakeUI.LOGGER.info("CakeUI self-test: editor: layout edits {} saved {}, {} shown {} ({})", file, saved.size(), element, shown, ok ? "PASS" : "FAIL");
-		} else if (t == 200) {
+		} else if (t == 290) {
 			try {
 				java.nio.file.Files.deleteIfExists(HudEditor.layoutEditsFile());
 			} catch (java.io.IOException e) {

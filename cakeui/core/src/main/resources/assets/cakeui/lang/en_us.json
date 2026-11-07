@@ -20,7 +20,7 @@
 	"cakeui.config.status.kept": "%2$s problem(s) in %1$s, so the previous version stays active.",
 	"cakeui.config.status.failed": "Layout %s could not be loaded (%s problem(s)).",
 	"cakeui.config.status.hint": "Dev mode lists problems on screen; all are in logs/latest.log.",
-	"key.cakeui.editHud": "Edit HUD",
+	"key.cakeui.editHud": "Edit HUD (or the open screen)",
 	"cakeui.config.editHud": "Edit HUD…",
 	"cakeui.config.editHud.noWorld": "Join a world to edit the HUD.",
 	"cakeui.editor.title": "HUD editor",
@@ -138,5 +138,16 @@
 	"cakeui.element.slots.offhand": "offhand",
 	"cakeui.element.slots.custom": "custom…",
 	"cakeui.element.slotsCustom": "Which slots",
-	"cakeui.element.scale": "Scale"
+	"cakeui.element.scale": "Scale",
+	"cakeui.editor.button": "Button: %s",
+	"cakeui.screen.piece.logo": "Logo",
+	"cakeui.screen.piece.splash": "Splash text",
+	"cakeui.screen.piece.version": "Version text",
+	"cakeui.screen.piece.title": "Title",
+	"cakeui.screen.piece.text": "Loading text",
+	"cakeui.screen.piece.map": "Loading map",
+	"cakeui.config.editMainMenu": "Main menu…",
+	"cakeui.config.editPause": "Pause menu…",
+	"cakeui.config.editInventory": "Inventory…",
+	"cakeui.config.editLoading": "Loading…"
 }

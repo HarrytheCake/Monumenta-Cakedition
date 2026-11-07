@@ -11,7 +11,7 @@ import net.minecraft.client.gui.GuiGraphicsExtractor;
  */
 public final class LaunchPart {
 	/** Ports and elements of the `game_launch` part. */
-	public static final ScreenPorts PORTS = new ScreenPorts(() -> Ui.part("game_launch"));
+	public static final ScreenPorts PORTS = new ScreenPorts("game_launch", () -> Ui.part("game_launch"));
 	private static double progress;
 	private static double fade = 1;
 	private static boolean reloading;

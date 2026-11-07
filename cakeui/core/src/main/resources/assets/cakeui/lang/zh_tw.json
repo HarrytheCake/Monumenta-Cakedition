@@ -20,7 +20,7 @@
 	"cakeui.config.status.kept": "%1$s 有 %2$s 個問題，所以仍使用之前的版本。",
 	"cakeui.config.status.failed": "無法載入佈局 %s（%s 個問題）。",
 	"cakeui.config.status.hint": "開發模式會在螢幕上列出問題；全部問題都在 logs/latest.log 中。",
-	"key.cakeui.editHud": "編輯 HUD",
+	"key.cakeui.editHud": "編輯 HUD（或目前畫面）",
 	"cakeui.config.editHud": "編輯 HUD…",
 	"cakeui.config.editHud.noWorld": "進入世界後才能編輯 HUD。",
 	"cakeui.editor.title": "HUD 編輯器",
@@ -138,5 +138,16 @@
 	"cakeui.element.slots.offhand": "副手",
 	"cakeui.element.slots.custom": "自訂…",
 	"cakeui.element.slotsCustom": "哪些欄位",
-	"cakeui.element.scale": "縮放"
+	"cakeui.element.scale": "縮放",
+	"cakeui.editor.button": "按鈕：%s",
+	"cakeui.screen.piece.logo": "標誌",
+	"cakeui.screen.piece.splash": "閃爍標語",
+	"cakeui.screen.piece.version": "版本文字",
+	"cakeui.screen.piece.title": "標題",
+	"cakeui.screen.piece.text": "載入文字",
+	"cakeui.screen.piece.map": "載入地圖",
+	"cakeui.config.editMainMenu": "主選單…",
+	"cakeui.config.editPause": "暫停選單…",
+	"cakeui.config.editInventory": "物品欄…",
+	"cakeui.config.editLoading": "載入畫面…"
 }
