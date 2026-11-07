@@ -22,13 +22,18 @@ import java.util.Locale;
  * Animated GIF and WebP images for image elements (E4, ADR 0010 Q36): decoded into whole frames (each
  * one composited the way the file says: offsets, blending, disposal) with each frame's time. GIF uses
  * Java's own reader; WebP's frames are cut out of the file and each decoded by TwelveMonkeys' WebP
- * reader (BSD-3, bundled). Big files are cut down ({@link #MAX_FRAMES}, {@link #MAX_PIXELS}). Pure Java.
+ * reader (BSD-3, bundled). Big files are made to fit, never refused: frames are scaled down (area average)
+ * until all of them together are at most {@link #MAX_PIXELS}, and beyond {@link #MAX_FRAMES} every n-th frame
+ * is kept (the dropped frames' time goes to the kept one). Pure Java.
  */
 public final class AnimatedImages {
 	public static final int MAX_FRAMES = 256;
-	/** Frames x width x height at most (64 MB of pixels). */
-	public static final long MAX_PIXELS = 16L * 1024 * 1024;
-	public static final int MAX_SIDE = 1024;
+	/** Frames x width x height after fitting, at most (32 MB of texture). */
+	public static final long MAX_PIXELS = 8L * 1024 * 1024;
+	/** A frame's side after fitting, at most. */
+	public static final int MAX_SIDE = 512;
+	/** Files bigger than this each way are refused (a broken or hostile file). */
+	public static final int MAX_SOURCE_SIDE = 8192;
 
 	/** Frames as ARGB pixels (row by row), each shown for {@code delaysMs[i]}. */
 	public record Anim(int width, int height, List<int[]> frames, int[] delaysMs) {
@@ -71,13 +76,97 @@ public final class AnimatedImages {
 		return ms <= 10 ? 100 : ms;
 	}
 
-	private static void check(int w, int h, int frames) throws IOException {
-		if (w <= 0 || h <= 0 || w > MAX_SIDE || h > MAX_SIDE) {
-			throw new IOException("image too big (" + w + " x " + h + ", at most " + MAX_SIDE + " each way)");
+	/** Tests: what the fitter makes of {@code count} solid frames of w x h, 100 ms each. */
+	static Anim fitForTest(int w, int h, int count) {
+		Sink s = new Sink(w, h, count);
+		int[] px = new int[w * h];
+		java.util.Arrays.fill(px, 0xFF336699);
+		for (int i = 0; i < count; i++) {
+			s.add(px, 100);
 		}
-		if ((long) w * h * frames > MAX_PIXELS) {
-			throw new IOException("too many frames for this size");
+		return s.anim();
+	}
+
+	private static void check(int w, int h) throws IOException {
+		if (w <= 0 || h <= 0 || w > MAX_SOURCE_SIDE || h > MAX_SOURCE_SIDE) {
+			throw new IOException("image too big (" + w + " x " + h + ")");
 		}
+	}
+
+	/** Collects frames: keeps every {@code stride}-th, scales each to (tw, th). */
+	private static final class Sink {
+		final int w;
+		final int h;
+		final int tw;
+		final int th;
+		final int stride;
+		final List<int[]> frames = new ArrayList<>();
+		final List<Integer> delays = new ArrayList<>();
+		int seen;
+
+		/** For a w x h canvas with {@code count} frames. */
+		Sink(int w, int h, int count) {
+			this.w = w;
+			this.h = h;
+			this.stride = Math.max(1, (count + MAX_FRAMES - 1) / MAX_FRAMES);
+			int kept = Math.max(1, (count + stride - 1) / stride);
+			double s = Math.min(1, Math.min(MAX_SIDE / (double) Math.max(w, h), Math.sqrt(MAX_PIXELS / ((double) w * h * kept))));
+			this.tw = Math.max(1, (int) Math.floor(w * s)); // down, so the budget holds
+			this.th = Math.max(1, (int) Math.floor(h * s));
+		}
+
+		void add(int[] canvas, int delayMs) {
+			if (seen++ % stride == 0) {
+				frames.add(tw == w && th == h ? canvas.clone() : scale(canvas, w, h, tw, th));
+				delays.add(delayMs);
+			} else {
+				delays.set(delays.size() - 1, delays.get(delays.size() - 1) + delayMs);
+			}
+		}
+
+		Anim anim() {
+			int[] d = new int[delays.size()];
+			for (int i = 0; i < d.length; i++) {
+				d[i] = delays.get(i);
+			}
+			return new Anim(tw, th, frames, d);
+		}
+	}
+
+	/** Area-average downscale of ARGB pixels (alpha-weighted, so transparent edges don't go dark). */
+	static int[] scale(int[] src, int w, int h, int tw, int th) {
+		int[] out = new int[tw * th];
+		double fx = w / (double) tw;
+		double fy = h / (double) th;
+		for (int y = 0; y < th; y++) {
+			int y0 = (int) Math.floor(y * fy);
+			int y1 = Math.max(y0 + 1, Math.min(h, (int) Math.ceil((y + 1) * fy)));
+			for (int x = 0; x < tw; x++) {
+				int x0 = (int) Math.floor(x * fx);
+				int x1 = Math.max(x0 + 1, Math.min(w, (int) Math.ceil((x + 1) * fx)));
+				long a = 0;
+				long r = 0;
+				long g = 0;
+				long b = 0;
+				int n = 0;
+				for (int sy = y0; sy < y1; sy++) {
+					for (int sx = x0; sx < x1; sx++) {
+						int c = src[sy * w + sx];
+						int ca = c >>> 24;
+						a += ca;
+						r += (long) ((c >> 16) & 255) * ca;
+						g += (long) ((c >> 8) & 255) * ca;
+						b += (long) (c & 255) * ca;
+						n++;
+					}
+				}
+				if (a == 0) {
+					continue;
+				}
+				out[y * tw + x] = (int) (a / n) << 24 | (int) (r / a) << 16 | (int) (g / a) << 8 | (int) (b / a);
+			}
+		}
+		return out;
 	}
 
 	// ---- GIF ----
@@ -90,7 +179,7 @@ public final class AnimatedImages {
 		ImageReader r = it.next();
 		try (ImageInputStream in = ImageIO.createImageInputStream(new ByteArrayInputStream(data))) {
 			r.setInput(in, false);
-			int count = Math.min(MAX_FRAMES, r.getNumImages(true));
+			int count = r.getNumImages(true);
 			int w = 0;
 			int h = 0;
 			IIOMetadata sm = r.getStreamMetadata();
@@ -105,10 +194,9 @@ public final class AnimatedImages {
 				w = r.getWidth(0);
 				h = r.getHeight(0);
 			}
-			check(w, h, count);
+			check(w, h);
 			int[] canvas = new int[w * h];
-			List<int[]> frames = new ArrayList<>();
-			int[] delays = new int[count];
+			Sink sink = new Sink(w, h, count);
 			for (int i = 0; i < count; i++) {
 				BufferedImage img = r.read(i);
 				Node root = r.getImageMetadata(i).getAsTree("javax_imageio_gif_image_1.0");
@@ -117,17 +205,17 @@ public final class AnimatedImages {
 				int fx = desc == null ? 0 : intAttr(desc, "imageLeftPosition", 0);
 				int fy = desc == null ? 0 : intAttr(desc, "imageTopPosition", 0);
 				String disposal = gce == null ? "none" : attr(gce, "disposalMethod", "none");
-				delays[i] = delay(gce == null ? 100 : intAttr(gce, "delayTime", 10) * 10);
+				int delayMs = delay(gce == null ? 100 : intAttr(gce, "delayTime", 10) * 10);
 				int[] before = disposal.equals("restoreToPrevious") ? canvas.clone() : null;
 				blend(canvas, w, h, img, fx, fy, true);
-				frames.add(canvas.clone());
+				sink.add(canvas, delayMs);
 				if (disposal.equals("restoreToBackgroundColor")) {
 					clear(canvas, w, h, fx, fy, img.getWidth(), img.getHeight());
 				} else if (before != null) {
 					canvas = before;
 				}
 			}
-			return new Anim(w, h, frames, delays);
+			return sink.anim();
 		} finally {
 			r.dispose();
 		}
@@ -165,11 +253,21 @@ public final class AnimatedImages {
 		int canvasW = 0;
 		int canvasH = 0;
 		boolean animated = false;
-		List<int[]> frames = new ArrayList<>();
-		List<Integer> delays = new ArrayList<>();
+		int count = 0;
+		for (int p = 12; p + 8 <= data.length; ) {
+			int sz = b.getInt(p + 4);
+			if (sz < 0 || p + 8 + sz > data.length) {
+				break;
+			}
+			if (tag(data, p).equals("ANMF")) {
+				count++;
+			}
+			p = p + 8 + sz + (sz & 1);
+		}
+		Sink sink = null;
 		int[] canvas = null;
 		int pos = 12;
-		while (pos + 8 <= data.length && frames.size() < MAX_FRAMES) {
+		while (pos + 8 <= data.length) {
 			String fourcc = tag(data, pos);
 			int size = b.getInt(pos + 4);
 			int body = pos + 8;
@@ -181,12 +279,13 @@ public final class AnimatedImages {
 					animated = (data[body] & 0x02) != 0;
 					canvasW = u24(data, body + 4) + 1;
 					canvasH = u24(data, body + 7) + 1;
-					check(canvasW, canvasH, 1);
+					check(canvasW, canvasH);
 				}
 				case "ANMF" -> {
 					if (canvas == null) {
-						check(canvasW, canvasH, 1);
+						check(canvasW, canvasH);
 						canvas = new int[canvasW * canvasH];
+						sink = new Sink(canvasW, canvasH, count);
 					}
 					int fx = u24(data, body) * 2;
 					int fy = u24(data, body + 3) * 2;
@@ -198,9 +297,7 @@ public final class AnimatedImages {
 					boolean dispose = (flags & 0x01) != 0;
 					BufferedImage img = still(frameFile(data, body + 16, size - 16, fw, fh));
 					blend(canvas, canvasW, canvasH, img, fx, fy, !noBlend);
-					frames.add(canvas.clone());
-					delays.add(delay(duration));
-					check(canvasW, canvasH, frames.size());
+					sink.add(canvas, delay(duration));
 					if (dispose) {
 						clear(canvas, canvasW, canvasH, fx, fy, fw, fh);
 					}
@@ -210,19 +307,17 @@ public final class AnimatedImages {
 			}
 			pos = body + size + (size & 1);
 		}
-		if (!animated || frames.isEmpty()) {
+		if (!animated || sink == null || sink.frames.isEmpty()) {
 			// a still WebP: one frame
 			BufferedImage img = still(data);
-			check(img.getWidth(), img.getHeight(), 1);
+			check(img.getWidth(), img.getHeight());
 			int[] px = new int[img.getWidth() * img.getHeight()];
 			blend(px, img.getWidth(), img.getHeight(), img, 0, 0, false);
-			return new Anim(img.getWidth(), img.getHeight(), List.of(px), new int[] {100});
+			Sink one = new Sink(img.getWidth(), img.getHeight(), 1);
+			one.add(px, 100);
+			return one.anim();
 		}
-		int[] d = new int[delays.size()];
-		for (int i = 0; i < d.length; i++) {
-			d[i] = delays.get(i);
-		}
-		return new Anim(canvasW, canvasH, frames, d);
+		return sink.anim();
 	}
 
 	/** One ANMF frame's chunks (ALPH + VP8, or VP8L) as a WebP file of its own. */

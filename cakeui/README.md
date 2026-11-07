@@ -218,7 +218,8 @@ In a world, open **Mod Menu → CakeUI → Edit HUD…** (or bind the "Edit HUD"
 - **Style** (right-click health, hunger, armor, air, mount health or XP): show it as a bar, a number or both (XP: a slim bar or just the level). The vanilla piece is replaced by an element you can move and edit; Delete brings vanilla's back.
 - **Crosshair** (right-click it → Style): dot, cross, circle or your own image, with size, gap, thickness, colour and "invert" (like vanilla: visible on any background). The attack-cooldown indicator always stays.
 - **Item** and **Inventory** elements show your own slots: the held item, your armor, the hotbar as a grid … with counts, durability and cooldown each on or off.
-- Images can be **animated GIF or WebP**; they play at the file's own speed.
+- Images can be **animated GIF or WebP**; they play at the file's own speed. Big animations are scaled down to fit (at most 512 px a side, 8 million pixels for all frames) and load in the background, so they appear a moment later.
+- Every added element has a **Scale** field in its panel (the same as scrolling over it).
 
 Your arrangement is saved in `config/cakeui/hud.json5`, separately for each layout ("vanilla" when no layout is active), and drawn on top of the layout. Pieces another mod draws itself are shown greyed out and can't be moved here.
 

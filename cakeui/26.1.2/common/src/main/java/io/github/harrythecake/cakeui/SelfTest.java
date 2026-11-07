@@ -354,7 +354,17 @@ final class SelfTest {
 			if (client.screen instanceof HudElementScreen panel) {
 				panel.onClose();
 			}
-		} else if (t == 54) {
+		} else if (t == 53) {
+			if (client.screen instanceof HudEditorScreen editor) {
+				editor.openPanel("+inventory-test", HudEditor.editingMap().get("+inventory-test"));
+			}
+		} else if (t == 56) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-inventory-panel.png");
+		} else if (t == 57) {
+			if (client.screen instanceof HudElementScreen panel) {
+				panel.onClose();
+			}
+		} else if (t == 59) {
 			SHOT.accept(client, "cakeui-selftest-hudeditor-edited.png");
 		} else if (t == 60) {
 			HudEditor.finish(true);

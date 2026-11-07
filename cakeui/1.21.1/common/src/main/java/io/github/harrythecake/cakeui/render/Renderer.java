@@ -189,7 +189,8 @@ public final class Renderer {
 					float s = (float) io.github.harrythecake.cakeui.edit.CrosshairStyles.num(style, "size", 15) / 2;
 					var b = Paint.beginTextured(t.id());
 					int fr = t.frameAt(System.currentTimeMillis());
-					Paint.texQuad(b, m, cx - s, cy - s, cx + s, cy + s, 0, fr / (float) t.frames(), 1, (fr + 1) / (float) t.frames(), color);
+					float[] uv = t.uv(fr);
+					Paint.texQuad(b, m, cx - s, cy - s, cx + s, cy + s, uv[0], uv[1], uv[2], uv[3], color);
 					Paint.end(b);
 				}
 				return;
@@ -200,6 +201,11 @@ public final class Renderer {
 		} finally {
 			Paint.invert = false;
 		}
+	}
+
+	/** The image plays its own frames (an animated GIF/WebP and no "frames" of the layout's). */
+	private static boolean fileFrames(Node n, Textures.Tex t) {
+		return t != null && t.frames() > 1 && t.delays() != null && !n.has("frames");
 	}
 
 	/** An image's frame count: "frames" when given (a sprite sheet), else the file's own (animated GIF/WebP), else 1. */
@@ -482,7 +488,7 @@ public final class Renderer {
 				Textures.Tex t = n.has("src") ? textures.get(word(n, "src", ""), n.file, n.line) : null;
 				int frames = frameCount(n, t);
 				boolean horizontal = word(n, "frameLayout", "vertical").equals("horizontal");
-				yield t == null ? 0 : (horizontal ? t.width() / (double) frames : t.width()) * env.rx;
+				yield t == null ? 0 : (fileFrames(n, t) ? t.frameW() : horizontal ? t.width() / (double) frames : t.width()) * env.rx;
 			}
 			case "item" -> 16 * env.rx;
 			case "inventory" -> inventorySize(n, true);
@@ -505,7 +511,7 @@ public final class Renderer {
 				Textures.Tex t = n.has("src") ? textures.get(word(n, "src", ""), n.file, n.line) : null;
 				int frames = frameCount(n, t);
 				boolean horizontal = word(n, "frameLayout", "vertical").equals("horizontal");
-				yield t == null ? 0 : (horizontal ? t.height() : t.height() / (double) frames) * env.ry;
+				yield t == null ? 0 : (fileFrames(n, t) ? t.frameH() : horizontal ? t.height() : t.height() / (double) frames) * env.ry;
 			}
 			case "item" -> 16 * env.ry;
 			case "inventory" -> inventorySize(n, false);
@@ -931,6 +937,13 @@ public final class Renderer {
 		float fu2 = horizontal ? (frame + 1) / (float) frames : 1;
 		float fv1 = horizontal ? 0 : frame / (float) frames;
 		float fv2 = horizontal ? 1 : (frame + 1) / (float) frames;
+		if (fileFrames(n, t)) {
+			float[] uv = t.uv(frame); // a GIF/WebP: its frames sit in a grid
+			fu1 = uv[0];
+			fv1 = uv[1];
+			fu2 = uv[2];
+			fv2 = uv[3];
+		}
 		double texW = t.width() * (fu2 - fu1);
 		double texH = t.height() * (fv2 - fv1);
 		BufferBuilder b = Paint.beginTextured(t.id());

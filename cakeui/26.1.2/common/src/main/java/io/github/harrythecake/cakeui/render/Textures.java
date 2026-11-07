@@ -2,9 +2,11 @@ package io.github.harrythecake.cakeui.render;
 
 import com.mojang.blaze3d.platform.NativeImage;
 import io.github.harrythecake.cakeui.model.Problems;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.concurrent.CompletableFuture;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Locale;
@@ -20,7 +22,24 @@ final class Textures {
 	 * A loaded image; an animated GIF/WebP is a vertical strip of {@code frames} frames, each shown for
 	 * {@code delays[i]} ms ({@code delays} is null for a PNG).
 	 */
-	record Tex(Identifier id, DynamicTexture texture, int width, int height, int frames, int[] delays) {
+	record Tex(Identifier id, DynamicTexture texture, int width, int height, int frames, int[] delays, int cols) {
+		/** One frame's size (the whole image for a PNG). */
+		int frameW() {
+			return width / Math.max(1, cols);
+		}
+
+		int frameH() {
+			return height / Math.max(1, (frames + cols - 1) / Math.max(1, cols));
+		}
+
+		/** A GIF/WebP frame's place in the texture: {u1, v1, u2, v2} (frames sit in a grid, row by row). */
+		float[] uv(int frame) {
+			int c = Math.max(1, cols);
+			int rows = Math.max(1, (frames + c - 1) / c);
+			int col = frame % c;
+			int row = frame / c;
+			return new float[] {col / (float) c, row / (float) rows, (col + 1) / (float) c, (row + 1) / (float) rows};
+		}
 		/** The frame shown {@code ms} after the start (looping), by the file's own frame times. */
 		int frameAt(long ms) {
 			if (delays == null || delays.length < 2) {
@@ -43,6 +62,16 @@ final class Textures {
 
 	private static int generation;
 	private final Path assets;
+	/** "assets/" or "images/": how problems name where an image was looked for. */
+	private final String folder;
+	/** GIF/WebP files being decoded. */
+	private final java.util.Map<String, CompletableFuture<AnimatedImages.Anim>> pending = new java.util.HashMap<>();
+	/** One background thread for decoding animations (daemon: never holds the game open). */
+	private static final java.util.concurrent.ExecutorService DECODER = java.util.concurrent.Executors.newSingleThreadExecutor(r -> {
+		Thread th = new Thread(r, "CakeUI image decoder");
+		th.setDaemon(true);
+		return th;
+	});
 	private final Problems problems;
 	private final String prefix;
 	private final Map<String, Tex> loaded = new HashMap<>();
@@ -51,6 +80,7 @@ final class Textures {
 	/** {@code assets}: where image paths start (a layout's assets/ folder, or config/cakeui/images for a player's own HUD elements). */
 	Textures(Path assets, Problems problems) {
 		this.assets = assets.normalize();
+		this.folder = (this.assets.getFileName() == null ? "assets" : this.assets.getFileName().toString()) + "/";
 		this.problems = problems;
 		this.prefix = "layout/" + (generation++) + "/";
 	}
@@ -64,31 +94,61 @@ final class Textures {
 		Path p = assets.resolve(path).normalize();
 		if (!p.startsWith(assets) || !Files.isRegularFile(p)) {
 			failed.add(path);
-			problems.add(file, line, "image not found: assets/" + path);
+			problems.add(file, line, "image not found: " + folder + path);
 			return null;
 		}
 		boolean animated = io.github.harrythecake.cakeui.render.AnimatedImages.handles(path);
 		if (!animated && !path.toLowerCase(Locale.ROOT).endsWith(".png")) {
 			failed.add(path);
-			problems.add(file, line, "images must be PNG, GIF or WebP: assets/" + path);
+			problems.add(file, line, "images must be PNG, GIF or WebP: " + folder + path);
 			return null;
+		}
+		AnimatedImages.Anim anim = null;
+		if (animated) {
+			// GIF/WebP: decoded in the background (a big one takes a moment); drawn from the frame it is ready
+			CompletableFuture<AnimatedImages.Anim> job = pending.get(path);
+			if (job == null) {
+				pending.put(path, CompletableFuture.supplyAsync(() -> {
+					try {
+						return AnimatedImages.decode(Files.readAllBytes(p), path);
+					} catch (IOException e) {
+						throw new java.io.UncheckedIOException(e);
+					}
+				}, DECODER));
+				return null;
+			}
+			if (!job.isDone()) {
+				return null;
+			}
+			pending.remove(path);
+			try {
+				anim = job.join();
+			} catch (RuntimeException e) {
+				failed.add(path);
+				Throwable cause = e.getCause() instanceof java.io.UncheckedIOException u ? u.getCause() : e.getCause() != null ? e.getCause() : e;
+				problems.add(file, line, "could not read " + folder + path + ": " + cause.getMessage());
+				return null;
+			}
 		}
 		try (InputStream in = Files.newInputStream(p)) {
 			NativeImage image;
 			int frames = 1;
 			int[] delays = null;
-			if (animated) {
-				AnimatedImages.Anim a = AnimatedImages.decode(in.readAllBytes(), path);
-				frames = a.frames().size();
-				delays = a.delaysMs();
-				image = new NativeImage(a.width(), a.height() * frames, true);
+			int cols = 1;
+			if (anim != null) {
+				frames = anim.frames().size();
+				delays = anim.delaysMs();
+				cols = (int) Math.ceil(Math.sqrt(frames));
+				int rows = (frames + cols - 1) / cols;
+				image = new NativeImage(anim.width() * cols, anim.height() * rows, true);
 				for (int f = 0; f < frames; f++) {
-					int[] px = a.frames().get(f);
-					int fy = f * a.height();
-					for (int y = 0; y < a.height(); y++) {
-						for (int x = 0; x < a.width(); x++) {
-							int c = px[y * a.width() + x];
-							image.setPixel(x, fy + y, c);
+					int[] px = anim.frames().get(f);
+					int gx = (f % cols) * anim.width();
+					int gy = (f / cols) * anim.height();
+					for (int y = 0; y < anim.height(); y++) {
+						for (int x = 0; x < anim.width(); x++) {
+							int c = px[y * anim.width() + x];
+							image.setPixel(gx + x, gy + y, c);
 						}
 					}
 				}
@@ -100,12 +160,12 @@ final class Textures {
 			String clean = path.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9/._-]", "_");
 			Identifier id = Identifier.fromNamespaceAndPath("cakeui", prefix + clean);
 			Minecraft.getInstance().getTextureManager().register(id, texture);
-			t = new Tex(id, texture, image.getWidth(), image.getHeight(), frames, delays);
+			t = new Tex(id, texture, image.getWidth(), image.getHeight(), frames, delays, cols);
 			loaded.put(path, t);
 			return t;
 		} catch (Exception e) {
 			failed.add(path);
-			problems.add(file, line, "could not read assets/" + path + ": " + e.getMessage());
+			problems.add(file, line, "could not read " + folder + path + ": " + e.getMessage());
 			return null;
 		}
 	}

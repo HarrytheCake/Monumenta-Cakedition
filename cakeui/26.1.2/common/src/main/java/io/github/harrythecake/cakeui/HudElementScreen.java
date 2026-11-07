@@ -103,6 +103,7 @@ public final class HudElementScreen extends Screen {
 		fields.clear();
 		picks.clear();
 		filter = null;
+		hint = null;
 		lastExpressionField = null;
 		int left = width / 2 - 150;
 		int x = left + 100;
@@ -112,6 +113,7 @@ public final class HudElementScreen extends Screen {
 			case "text" -> {
 				y = field("text", "cakeui.element.text", x, y, w, true, false);
 				y = field("size", "cakeui.element.size", x, y, 60, false, false);
+				y = scaleRow(x, y);
 				y = field("color", "cakeui.element.color", x, y, 80, false, false);
 				addRenderableWidget(CycleButton.onOffBuilder(!str("shadow").equals("false"))
 						.create(x, y, 80, 18, Component.translatable("cakeui.element.shadow"), (b, v) -> set("shadow", v)));
@@ -119,12 +121,14 @@ public final class HudElementScreen extends Screen {
 			}
 			case "rect" -> {
 				y = sizeRow(x, y);
+				y = scaleRow(x, y);
 				y = field("color", "cakeui.element.color", x, y, 80, false, false);
 				y = field("outline", "cakeui.element.outline", x, y, 80, false, false);
 			}
 			case "bar" -> {
 				y = field("value", "cakeui.element.value", x, y, w, false, true);
 				y = sizeRow(x, y);
+				y = scaleRow(x, y);
 				y = field("color", "cakeui.element.color", x, y, 80, false, false);
 				y = field("background", "cakeui.element.background", x, y, 80, false, false);
 			}
@@ -158,12 +162,38 @@ public final class HudElementScreen extends Screen {
 				y += ROW;
 			}
 			case "item" -> {
-				y = field("item", "cakeui.element.item", x, y, w, false, false);
-				y = sizeRow(x, y);
+				// what it shows: one of the player's slots, a slot number, or a fixed item id
+				String item = str("item");
+				String choice = ITEM_CHOICES.contains(item) ? item : item.startsWith("slot:") ? "slot:" : "id";
+				addRenderableWidget(CycleButton.<String>builder(c -> Component.translatable("cakeui.element.shows." + c.replace("slot:", "slot.").replace(".", "_")), choice)
+						.withValues(ITEM_CHOICES_ALL)
+						.create(x, y, w, 18, Component.translatable("cakeui.element.shows"), (b, c) -> {
+							set("item", c.equals("slot:") ? "slot:0" : c.equals("id") ? "minecraft:diamond" : c);
+							rebuildWidgets();
+						}));
+				y += ROW;
+				if (choice.equals("slot:") || choice.equals("id")) {
+					y = field("item", choice.equals("id") ? "cakeui.element.itemId" : "cakeui.element.slotNumber", x, y, w, false, false);
+					hint = Component.translatable(choice.equals("id") ? "cakeui.element.itemId.hint" : "cakeui.element.slots.hint");
+				}
+				y = scaleRow(x, y);
 				y = toggles(x, y);
 			}
 			case "inventory" -> {
-				y = field("slots", "cakeui.element.slots", x, y, w, false, false);
+				String slots = str("slots");
+				String choice = SLOT_CHOICES.contains(slots) ? slots : "custom";
+				addRenderableWidget(CycleButton.<String>builder(c -> Component.translatable("cakeui.element.slots." + c), choice)
+						.withValues(SLOT_CHOICES_ALL)
+						.create(x, y, w, 18, Component.translatable("cakeui.element.slots"), (b, c) -> {
+							set("slots", c.equals("custom") ? "9-17" : c);
+							rebuildWidgets();
+						}));
+				y += ROW;
+				if (choice.equals("custom")) {
+					y = field("slots", "cakeui.element.slotsCustom", x, y, w, false, false);
+					hint = Component.translatable("cakeui.element.slots.hint");
+				}
+				y = scaleRow(x, y);
 				y = field("columns", "cakeui.element.columns", x, y, 40, false, false);
 				y = field("gap", "cakeui.element.gap", x, y, 40, false, false);
 				addRenderableWidget(CycleButton.<String>builder(s -> Component.translatable("cakeui.element.slotBackground." + s), str("slotBackground").isEmpty() ? "vanilla" : str("slotBackground"))
@@ -211,7 +241,9 @@ public final class HudElementScreen extends Screen {
 		addRenderableWidget(Button.builder(Component.translatable("cakeui.element.allValues"),
 				b -> minecraft.setScreen(new HudValuesScreen(this, this::insertByProp))).bounds(x + w - 66, y, 66, 18).build());
 		y += ROW;
-		for (int i = 0; i < PICKS; i++) {
+		// quick buttons only where they fit (small windows keep All…)
+		int fit = Math.max(0, Math.min(PICKS / 2, (height - 4 - y) / 20)) * 2;
+		for (int i = 0; i < fit; i++) {
 			int col = i % 2;
 			int row = i / 2;
 			Button b = Button.builder(Component.empty(), btn -> insert(btn.getMessage().getString()))
@@ -240,6 +272,35 @@ public final class HudElementScreen extends Screen {
 		box.setResponder(s -> set(prop, s));
 		addRenderableWidget(box);
 		fields.add(new Field(prop, box, template, expression, true));
+		return y + ROW;
+	}
+
+	private static final List<String> ITEM_CHOICES = List.of("slot:mainhand", "slot:offhand", "slot:head", "slot:chest", "slot:legs", "slot:feet");
+	private static final List<String> ITEM_CHOICES_ALL = List.of("slot:mainhand", "slot:offhand", "slot:head", "slot:chest", "slot:legs", "slot:feet", "slot:", "id");
+	private static final List<String> SLOT_CHOICES = List.of("hotbar", "main", "all", "armor", "offhand");
+	private static final List<String> SLOT_CHOICES_ALL = List.of("hotbar", "main", "all", "armor", "offhand", "custom");
+	/** A line of help under the fields (slot numbers, item ids), or null. */
+	@Nullable
+	private Component hint;
+
+	/** The element's size as a factor (the same as scrolling over it in the editor). */
+	private int scaleRow(int x, int y) {
+		EditBox box = new EditBox(font, x, y, 50, 18, Component.translatable("cakeui.element.scale"));
+		box.setMaxLength(8);
+		box.setValue(edit.scale == null ? "1" : String.valueOf(edit.scale));
+		box.setResponder(s -> {
+			try {
+				double v = Double.parseDouble(s.trim());
+				if (v >= 0.1 && v <= 8) {
+					change();
+					edit.scale = v == 1 && edit.mode == null ? null : v;
+				}
+			} catch (NumberFormatException ignored) {
+				// typing
+			}
+		});
+		addRenderableWidget(box);
+		fields.add(new Field("$scale", box, false, false, true));
 		return y + ROW;
 	}
 
@@ -378,7 +439,7 @@ public final class HudElementScreen extends Screen {
 	@Override
 	public void extractBackground(GuiGraphicsExtractor g, int mouseX, int mouseY, float delta) {
 		// the live HUD stays visible; a dark panel behind the fields only
-		g.fill(width / 2 - 160, 2, width / 2 + 160, Math.min(height - 2, 222), 0xC0101010);
+		g.fill(width / 2 - 160, 2, width / 2 + 160, height - 2, 0xC0101010);
 	}
 
 	@Override
@@ -395,6 +456,9 @@ public final class HudElementScreen extends Screen {
 		if (filter != null && !type.equals("crosshair")) {
 			g.text(font, Component.translatable("cakeui.element.visible.hint"), left, fields.get(fields.size() - 1).box.getY() - 10, 0xFF909090);
 			g.text(font, filter.getMessage(), left, filter.getY() + 5, 0xFFE0E0E0);
+		}
+		if (hint != null) {
+			g.text(font, font.plainSubstrByWidth(hint.getString(), 300), left, 20, 0xFF90C0FF);
 		}
 		if (!problems.isEmpty()) {
 			String msg = problems.get(0).message();

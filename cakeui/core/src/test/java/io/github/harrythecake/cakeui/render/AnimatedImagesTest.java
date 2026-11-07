@@ -71,6 +71,46 @@ class AnimatedImagesTest {
 	}
 
 	@Test
+	void bigAnimationsAreFittedNotRefused() {
+		// 384 x 384 x 208 frames (the size that was refused before): scaled down to fit the budget
+		int w = 384;
+		int h = 384;
+		int count = 208;
+		AnimatedImages.Anim a = fit(w, h, count);
+		assertEquals(208, a.frames().size());
+		assertTrue((long) a.width() * a.height() * a.frames().size() <= AnimatedImages.MAX_PIXELS);
+		assertTrue(a.width() >= 190 && a.width() < 384, "width " + a.width());
+		// 600 frames: every third kept, the dropped frames' time added to the kept one
+		AnimatedImages.Anim many = fit(16, 16, 600);
+		assertEquals(200, many.frames().size());
+		assertEquals(300, many.delaysMs()[0]);
+	}
+
+	/** Runs the fitter as a decoder would: solid frames, 100 ms each. */
+	private static AnimatedImages.Anim fit(int w, int h, int count) {
+		return AnimatedImages.fitForTest(w, h, count);
+	}
+
+	@Test
+	void scaleAveragesWithAlpha() {
+		int[] src = {0xFFFF0000, 0x00000000, 0xFFFF0000, 0x00000000};
+		int[] out = AnimatedImages.scale(src, 2, 2, 1, 1);
+		assertEquals(0x7FFF0000, out[0]); // half covered, still pure red where covered
+	}
+
+	/** Local only: CAKEUI_ANIM_FILE=<a big GIF/WebP> decodes a real file and prints what came out. */
+	@Test
+	void realFileFromEnvironment() throws IOException {
+		String f = System.getenv("CAKEUI_ANIM_FILE");
+		org.junit.jupiter.api.Assumptions.assumeTrue(f != null && !f.isEmpty());
+		long t0 = System.nanoTime();
+		AnimatedImages.Anim a = AnimatedImages.decode(java.nio.file.Files.readAllBytes(java.nio.file.Path.of(f)), f);
+		System.out.printf("CAKEUI_ANIM_FILE: %d frames of %d x %d, %d ms total, decoded in %d ms%n",
+				a.frames().size(), a.width(), a.height(), a.totalMs(), (System.nanoTime() - t0) / 1_000_000);
+		assertTrue((long) a.width() * a.height() * a.frames().size() <= AnimatedImages.MAX_PIXELS);
+	}
+
+	@Test
 	void notAnImage() {
 		assertThrows(IOException.class, () -> AnimatedImages.decode(new byte[] {1, 2, 3}, "x.webp"));
 	}
