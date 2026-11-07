@@ -38,6 +38,8 @@ public final class ChatConfig {
 	 * so a stray drag can't move the chat; a missing field (files from before 0.3.1) reads as off, no migration needed.
 	 */
 	public boolean windowEditing = false;
+	/** With CakeUI (3+) installed: an "Edit HUD" button at the right end of the main window's tab row while chat is open. */
+	public boolean editHudButton = true;
 	/** The first window is the main one (where the delayed-message bar shows); there is always at least one. */
 	public List<Window> windows = new ArrayList<>(List.of(Window.main()));
 	/** The player's own chat channel per server address (see {@link Channels}), so All can join it again after a restart. */

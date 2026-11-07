@@ -37,6 +37,7 @@ public final class SettingsScreen {
 				.category(ConfigCategory.createBuilder()
 						.name(Component.translatable("cakechat.config.general"))
 						.option(bool("windowEditing", d.windowEditing, () -> c.windowEditing, v -> c.windowEditing = v))
+						.option(bool("editHudButton", d.editHudButton, () -> c.editHudButton, v -> c.editHudButton = v))
 						.build())
 				.category(ConfigCategory.createBuilder()
 						.name(Component.translatable("cakechat.config.history"))

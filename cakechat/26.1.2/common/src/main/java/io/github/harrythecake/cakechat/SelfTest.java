@@ -98,6 +98,31 @@ final class SelfTest {
 				CakeChat.LOGGER.info("cakechat self-test: settings screen {}", client.screen == null ? null : client.screen.getClass().getName());
 				shot(client, "settings");
 			}
+			case 165 -> {
+				// with CakeUI 3+ in the run (-Pcakeui_dir): the windows are movables; place one as the editor would
+				if (CakeUIBridge.available()) {
+					ChatView view = CakeChat.windows().views().get(0);
+					int w = client.getWindow().getGuiScaledWidth();
+					int h = client.getWindow().getGuiScaledHeight();
+					try {
+						Class<?> mv = Class.forName("io.github.harrythecake.cakeui.HudMovables");
+						java.lang.reflect.Method all = mv.getDeclaredMethod("all");
+						all.setAccessible(true);
+						java.util.Map<?, ?> movables = (java.util.Map<?, ?>) all.invoke(null);
+						Object m = movables.get("~cakechat:window1");
+						m.getClass().getMethod("place", double.class, double.class, double.class, double.class, int.class, int.class)
+								.invoke(m, 40.0, 30.0, 200.0, 80.0, w, h);
+						boolean ok = view.boxX() == 40 && view.boxWidth() == 200 && view.boxTop() == 30
+								&& CakeChat.config().windows.get(0).x == 40;
+						CakeChat.LOGGER.info("cakechat self-test: CakeUI movables {}, window 1 placed at {} {} {} ({})", movables.keySet(),
+								view.boxX(), view.boxTop(), view.boxWidth(), ok ? "PASS" : "FAIL");
+					} catch (ReflectiveOperationException | RuntimeException e) {
+						CakeChat.LOGGER.info("cakechat self-test: CakeUI movables FAIL {}", e.toString());
+					}
+				} else {
+					CakeChat.LOGGER.info("cakechat self-test: no CakeUI 3 in this run, movables not checked");
+				}
+			}
 			case 170 -> {
 				client.setScreen(null);
 				CakeChat.LOGGER.info("cakechat self-test done");

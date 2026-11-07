@@ -485,7 +485,31 @@ public final class ChatView {
 			}
 			left += w + 1;
 		}
+		int[] b = editHudButton();
+		if (b != null) {
+			int bx = b[0];
+			boolean hot = mouseX >= bx && mouseX < bx + b[2] && mouseY >= top && mouseY < top + TAB_BAR_HEIGHT;
+			String label = Component.translatable("cakechat.editHud").getString();
+			context.fill(bx, top, bx + b[2], top + TAB_BAR_HEIGHT, Math.min(255, background + (hot ? 48 : 0)) << 24);
+			context.drawString(client.font, label, bx + 3, top + 2, hot ? 0xFFD000 : 0xAAAAAA);
+		}
 		context.pose().popPose();
+	}
+
+	/** The "Edit HUD" button (CakeUI's HUD editor): {x, y, width} at the right end of the main window's tab row, or null. */
+	@Nullable
+	int[] editHudButton() {
+		if (index != 0 || !CakeChat.config().editHudButton || !CakeUIBridge.available()) {
+			return null;
+		}
+		int w = client.font.width(Component.translatable("cakechat.editHud").getString()) + 6;
+		int x = Math.max(boxX() + tabsWidth() + 2, boxX() + boxWidth() - w);
+		return new int[] {x, boxBottom() + 1, w};
+	}
+
+	boolean inEditHudButton(double x, double y) {
+		int[] b = editHudButton();
+		return b != null && x >= b[0] && x < b[0] + b[2] && y >= b[1] && y < b[1] + TAB_BAR_HEIGHT;
 	}
 
 	private void renderGrip(GuiGraphics context, int mouseX, int mouseY, boolean highlighted) {

@@ -101,5 +101,10 @@
 	"key.categories.cakechat": "CakeChat",
 	"key.category.cakechat.main": "CakeChat",
 	"key.cakechat.peek": "Peek at chat (hold)",
-	"key.cakechat.hide": "Hide/show chat"
+	"key.cakechat.hide": "Hide/show chat",
+	"cakechat.editHud": "Edit HUD",
+	"cakechat.movable.main": "Chat (main window)",
+	"cakechat.movable.window": "Chat window %s",
+	"cakechat.config.editHudButton": "\"Edit HUD\" button in the chat",
+	"cakechat.config.editHudButton.desc": "With CakeUI installed: a button at the right end of the main window's tabs that opens CakeUI's HUD editor, where chat windows can be moved and resized too."
 }

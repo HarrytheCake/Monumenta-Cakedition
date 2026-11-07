@@ -101,5 +101,10 @@
 	"key.categories.cakechat": "CakeChat",
 	"key.category.cakechat.main": "CakeChat",
 	"key.cakechat.peek": "查看聊天（按住）",
-	"key.cakechat.hide": "隱藏/顯示聊天"
+	"key.cakechat.hide": "隱藏/顯示聊天",
+	"cakechat.editHud": "編輯 HUD",
+	"cakechat.movable.main": "聊天（主視窗）",
+	"cakechat.movable.window": "聊天視窗 %s",
+	"cakechat.config.editHudButton": "聊天中的「編輯 HUD」按鈕",
+	"cakechat.config.editHudButton.desc": "安裝 CakeUI 時：主視窗分頁列右端的按鈕，開啟 CakeUI 的 HUD 編輯器，也可在其中移動與調整聊天視窗大小。"
 }

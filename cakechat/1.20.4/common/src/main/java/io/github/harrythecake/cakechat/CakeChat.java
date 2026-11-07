@@ -51,6 +51,7 @@ public final class CakeChat {
 
 	/** End of every client tick. */
 	public static void clientTick(Minecraft client) {
+		CakeUIBridge.init();
 		windows().setPeeking(PEEK.isDown() && client.screen == null);
 		while (HIDE.consumeClick()) {
 			windows().toggleHidden(HIDE.getTranslatedKeyMessage());

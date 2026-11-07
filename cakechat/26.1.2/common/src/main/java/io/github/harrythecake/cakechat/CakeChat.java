@@ -67,6 +67,7 @@ public final class CakeChat {
 
 	/** End of every client tick. */
 	public static void clientTick(Minecraft client) {
+		CakeUIBridge.init();
 		if (PEEK == null) {
 			return;
 		}

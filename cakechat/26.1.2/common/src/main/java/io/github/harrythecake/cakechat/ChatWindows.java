@@ -247,6 +247,11 @@ public final class ChatWindows {
 		if (button != 0) {
 			return false;
 		}
+		if (!views.isEmpty() && views.get(0).inEditHudButton(x, y)) {
+			client.setScreen(null);
+			CakeUIBridge.openEditor(null);
+			return true;
+		}
 		for (int i = views.size() - 1; i >= 0; i--) {
 			ChatView view = views.get(i);
 			if (view.inQueueBar(x, y)) {
