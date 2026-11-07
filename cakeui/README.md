@@ -209,7 +209,16 @@ In a world, open **Mod Menu → CakeUI → Edit HUD…** (or bind the "Edit HUD"
 - **Previews** shows boxes for pieces that aren't on screen right now (boss bars, titles, the tab list …) so you can place them too.
 - **Done** saves, **Cancel** (or Esc twice) throws the changes away, **Ctrl+Z / Ctrl+Y** undo and redo.
 
-Your arrangement is saved in `config/cakeui/hud.json5`, separately for each layout ("vanilla" when no layout is active), and drawn on top of the layout. Pieces drawn by other mods that replace a vanilla piece completely can't be moved here.
+- **Right-click empty space** to add your own **text, box, bar or image**. Right-click it and choose **Edit…** to change it:
+  - Text can show live game values: `{fps} fps`, `{fmt(player.x, 0)} {fmt(player.z, 0)}`. The **Game values** list inserts them for you.
+  - A bar's value is a number from 0 to 1, e.g. `player.health / player.maxHealth`.
+  - Images are PNG files in `config/cakeui/images/` (**Folder…** opens it).
+  - **Show only when** (advanced) hides the element unless a condition is true, e.g. `player.health < 10`.
+- The layout's own HUD elements appear as "Layout: name" and can be moved like the rest.
+
+Your arrangement is saved in `config/cakeui/hud.json5`, separately for each layout ("vanilla" when no layout is active), and drawn on top of the layout. Pieces another mod draws itself are shown greyed out and can't be moved here.
+
+**Layout makers:** in dev mode the editor starts on **Saving: layout** and writes the layout's `hud/edits.json5` (loaded after `layout.json5`; players' own edits go on top). Switch to **Saving: my HUD** for your own edits. Added elements saved into a layout take their images from its `assets/` folder.
 
 ## For mod developers
 

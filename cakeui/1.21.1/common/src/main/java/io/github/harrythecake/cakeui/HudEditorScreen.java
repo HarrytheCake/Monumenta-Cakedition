@@ -1,5 +1,6 @@
 package io.github.harrythecake.cakeui;
 
+import io.github.harrythecake.cakeui.edit.AddedElements;
 import io.github.harrythecake.cakeui.edit.HudEdits;
 import io.github.harrythecake.cakeui.edit.Placement;
 import io.github.harrythecake.cakeui.edit.Placement.Box;
@@ -60,6 +61,8 @@ public final class HudEditorScreen extends Screen {
 	private double menuY;
 	private long escAt;
 	private boolean finished;
+	/** The properties panel is open on top: leaving for it doesn't close the editor. */
+	private boolean childOpen;
 
 	public HudEditorScreen(@Nullable Screen parent) {
 		super(Component.translatable("cakeui.editor.title"));
@@ -79,6 +82,7 @@ public final class HudEditorScreen extends Screen {
 
 	@Override
 	protected void init() {
+		childOpen = false;
 		int y = barTop();
 		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.done"), b -> close(true)).bounds(BAR_X, y, BAR_W, 18).build());
 		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.cancel"), b -> close(false)).bounds(BAR_X, y + 20, BAR_W, 18).build());
@@ -127,12 +131,20 @@ public final class HudEditorScreen extends Screen {
 		if (name.startsWith(HudEdits.ELEMENT)) {
 			return HudBounds.box(name) != null; // the layout's elements: once they have been drawn
 		}
+		if (name.startsWith(HudEdits.ADDED)) {
+			return true;
+		}
 		return previews || HudBounds.live(name) || hidden(name) || otherMod(name);
 	}
 
 	/** Where the piece is on screen now (its measured or default place, with the edits applied). */
 	private Box screenBox(String name) {
 		Box inner = HudBounds.orDefault(name, width, height);
+		PortEdit shown = effective(name);
+		if (name.startsWith(HudEdits.ADDED) && HudBounds.box(name) == null && shown != null && shown.element != null) {
+			double[] s = AddedElements.guessSize(shown.element); // not drawn yet
+			inner = new Box(0, 0, s[0], s[1]);
+		}
 		return Placement.transform(effective(name), inner, width, height).apply(inner);
 	}
 
@@ -156,6 +168,22 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private static Component label(String name) {
+		if (name.startsWith(HudEdits.ADDED)) {
+			PortEdit e = effective(name);
+			com.google.gson.JsonObject def = e == null ? null : e.element;
+			String type = AddedElements.type(def);
+			String detail = switch (type) {
+				case "text" -> def.has("text") ? def.get("text").getAsString() : "";
+				case "bar" -> def.has("value") ? def.get("value").getAsString() : "";
+				case "image" -> def.has("src") ? def.get("src").getAsString() : "";
+				default -> "";
+			};
+			if (detail.length() > 18) {
+				detail = detail.substring(0, 17) + "…";
+			}
+			Component kind = Component.translatable("cakeui.editor.add." + (type.isEmpty() ? "text" : type));
+			return detail.isEmpty() ? kind : kind.copy().append(": " + detail);
+		}
 		if (name.startsWith(HudEdits.ELEMENT)) {
 			return Component.translatable("cakeui.editor.element", name.substring(HudEdits.ELEMENT.length()));
 		}
@@ -320,6 +348,10 @@ public final class HudEditorScreen extends Screen {
 			openMenu(hit, mx, my);
 			return true;
 		}
+		if (button == GLFW.GLFW_MOUSE_BUTTON_RIGHT) {
+			openAddMenu(mx, my);
+			return true;
+		}
 		return false;
 	}
 
@@ -413,13 +445,59 @@ public final class HudEditorScreen extends Screen {
 			Box b = screenBox(name);
 			Placement.place(edit(name), next, b.x(), b.y(), b.w(), b.h(), width, height);
 		}));
-		items.add(new MenuItem(Component.translatable(HudEditor.target() == HudEditor.Target.LAYOUT ? "cakeui.editor.menu.resetLayout" : "cakeui.editor.menu.reset"), () -> {
-			checkpoint();
-			edits.remove(name);
-		}));
+		PortEdit own = edits.get(name);
+		if (own != null && own.element != null) {
+			// an element added in this target: edit its content, or delete it
+			items.add(0, new MenuItem(Component.translatable("cakeui.editor.menu.edit"), () -> openPanel(name, own)));
+			items.add(new MenuItem(Component.translatable("cakeui.editor.menu.delete"), () -> {
+				checkpoint();
+				edits.remove(name);
+				selected = null;
+			}));
+		} else {
+			items.add(new MenuItem(Component.translatable(HudEditor.target() == HudEditor.Target.LAYOUT ? "cakeui.editor.menu.resetLayout" : "cakeui.editor.menu.reset"), () -> {
+				checkpoint();
+				edits.remove(name);
+			}));
+		}
 		menu = items;
 		menuX = Math.min(mx, width - MENU_W - 2);
 		menuY = Math.min(my, height - items.size() * ITEM_H - 4);
+	}
+
+	/** Right-click on empty space: add a text, box, bar or image there. */
+	private void openAddMenu(double mx, double my) {
+		List<MenuItem> items = new ArrayList<>();
+		for (String type : AddedElements.TYPES) {
+			items.add(new MenuItem(Component.translatable("cakeui.editor.menu.add", Component.translatable("cakeui.editor.add." + type)), () -> {
+				checkpoint();
+				com.google.gson.JsonObject def = AddedElements.defaults(type, type.equals("image") ? HudElementScreen.firstImage() : null);
+				String key = AddedElements.newKey(type, HudEditor.current());
+				PortEdit e = new PortEdit();
+				e.element = def;
+				double[] size = AddedElements.guessSize(def);
+				Placement.place(e, PortEdit.Mode.ANCHORED, mx, my, size[0], size[1], width, height);
+				edits.put(key, e);
+				selected = key;
+				if (type.equals("text") || type.equals("image")) {
+					openPanel(key, e);
+				}
+			}));
+		}
+		menu = items;
+		menuX = Math.min(mx, width - MENU_W - 2);
+		menuY = Math.min(my, height - items.size() * ITEM_H - 4);
+	}
+
+	/** Opens the properties panel of an added element (the editor stays open underneath). */
+	void openPanel(String key, PortEdit e) {
+		childOpen = true;
+		minecraft.setScreen(new HudElementScreen(this, key, e));
+	}
+
+	/** The properties panel changed an element: an undo step (called before the change). */
+	void beforeElementChange() {
+		checkpoint();
 	}
 
 	// ---- keys ----
@@ -473,7 +551,7 @@ public final class HudEditorScreen extends Screen {
 
 	@Override
 	public void removed() {
-		if (!finished) {
+		if (!finished && !childOpen) {
 			finished = true;
 			HudEditor.finish(false);
 		}

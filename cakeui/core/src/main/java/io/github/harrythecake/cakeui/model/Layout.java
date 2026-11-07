@@ -36,10 +36,19 @@ public final class Layout {
 	public final Map<String, Map<String, String>> lang = new LinkedHashMap<>();
 	public final Problems problems = new Problems();
 
+	/** Where image elements' files are: the layout's assets/ folder (a player's own HUD elements: config/cakeui/images). */
+	public Path assets;
+
 	public Layout(String name, Path root) {
+		this(name, root, new Scope(null, ""));
+	}
+
+	/** A layout that sees another one's declarations (to check an element in its scope, problems kept apart). */
+	public Layout(String name, Path root, Scope scope) {
 		this.name = name;
 		this.root = root;
-		this.scope = new Scope(null, "");
+		this.assets = root.resolve("assets");
+		this.scope = scope;
 	}
 
 	public Node part(String id) {

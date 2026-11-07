@@ -292,6 +292,26 @@ final class SelfTest {
 			PortEdit crosshair = new PortEdit();
 			crosshair.hide = true;
 			edits.put("crosshair", crosshair);
+			// E3: an added text (bottom-left) and a bar that never shows (its condition is false)
+			PortEdit text = new PortEdit();
+			text.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("text", null);
+			Placement.place(text, PortEdit.Mode.ANCHORED, 4, h - 60, 40, 9, w, h);
+			edits.put("+text-test", text);
+			PortEdit bar = new PortEdit();
+			bar.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("bar", null);
+			bar.element.addProperty("visible", "= false");
+			Placement.place(bar, PortEdit.Mode.ANCHORED, 4, h - 70, 80, 5, w, h);
+			edits.put("+bar-test", bar);
+		} else if (t == 40) {
+			if (client.screen instanceof HudEditorScreen editor) {
+				editor.openPanel("+text-test", HudEditor.editingMap().get("+text-test"));
+			}
+		} else if (t == 46) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-element.png");
+		} else if (t == 48) {
+			if (client.screen instanceof HudElementScreen panel) {
+				panel.onClose();
+			}
 		} else if (t == 50) {
 			SHOT.accept(client, "cakeui-selftest-hudeditor-edited.png");
 		} else if (t == 60) {
@@ -302,8 +322,13 @@ final class SelfTest {
 			Map<String, PortEdit> saved = HudEdits.load(HudEditor.file()).set(HudEditor.layoutKey());
 			Box inner = HudBounds.box("hotbar");
 			Box shown = inner == null || !saved.containsKey("hotbar") ? null : Placement.transform(saved.get("hotbar"), inner, w, h).apply(inner);
-			boolean ok = saved.size() == 4 && shown != null && Math.abs(shown.x() - 4) <= 1 && Math.abs(shown.y() - 4) <= 1
+			boolean ok = saved.size() == 6 && shown != null && Math.abs(shown.x() - 4) <= 1 && Math.abs(shown.y() - 4) <= 1
 					&& Math.abs(inner.bottom() - h) <= 1;
+			Box textInner = HudBounds.box("+text-test");
+			Box textShown = textInner == null ? null : Placement.transform(saved.get("+text-test"), textInner, w, h).apply(textInner);
+			boolean textOk = textShown != null && HudBounds.live("+text-test") && Math.abs(textShown.x() - 4) <= 1 && Math.abs(textShown.y() - (h - 60)) <= 1;
+			CakeUI.LOGGER.info("CakeUI self-test: editor: added text drawn at {}, the bar with a false condition {} ({})", textShown,
+					HudBounds.live("+bar-test") ? "drawn" : "not drawn", textOk && !HudBounds.live("+bar-test") ? "PASS" : "FAIL");
 			CakeUI.LOGGER.info("CakeUI self-test: editor: saved {} edit(s) for {}, hotbar inner {} shown {} ({})", saved.size(),
 					HudEditor.layoutKey(), inner, shown, ok ? "PASS" : "FAIL");
 		} else if (t == 90) {

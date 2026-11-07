@@ -107,6 +107,14 @@ public final class HudEditor {
 		saved = null;
 		layoutSaved = null;
 		merged = null;
+		HudAdded.reset();
+	}
+
+	/** An added element (or edit) that belongs to the layout's own edits, not the player's. */
+	static boolean fromLayout(String key) {
+		Map<String, PortEdit> layout = personalWorking != null ? layoutWorking : layoutEdits();
+		PortEdit e = layout.get(key);
+		return e != null && e.element != null;
 	}
 
 	/** Opens working copies; in dev mode the editor starts on the layout's edits. */
@@ -168,6 +176,11 @@ public final class HudEditor {
 		if (part != null) {
 			for (Node k : part.children) {
 				out.add(HudEdits.ELEMENT + k.name);
+			}
+		}
+		for (Map.Entry<String, PortEdit> e : current().entrySet()) {
+			if (e.getKey().startsWith(HudEdits.ADDED) && e.getValue().element != null) {
+				out.add(e.getKey());
 			}
 		}
 		return out;

@@ -61,7 +61,7 @@ public final class Renderer {
 
 	public Renderer(Layout layout) {
 		this.layout = layout;
-		this.textures = new Textures(layout.root, layout.problems);
+		this.textures = new Textures(layout.assets, layout.problems);
 		this.fonts = new Fonts(layout, layout.problems);
 		env.translator = this::translate;
 	}

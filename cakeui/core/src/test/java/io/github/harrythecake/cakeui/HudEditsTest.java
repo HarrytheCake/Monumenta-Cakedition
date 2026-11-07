@@ -176,6 +176,51 @@ class HudEditsTest {
 	}
 
 	@Test
+	void addedElementsRoundTripAndMerge() throws Exception {
+		PortEdit text = new PortEdit();
+		Placement.place(text, PortEdit.Mode.ANCHORED, 10, 10, 40, 9, W, H);
+		text.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("text", null);
+		String key = io.github.harrythecake.cakeui.edit.AddedElements.newKey("text", Map.of());
+		assertTrue(key.startsWith("+text-"));
+		HudEdits edits = new HudEdits();
+		edits.put(HudEdits.VANILLA, Map.of(key, text));
+		Path file = dir.resolve("hud.json5");
+		edits.save(file);
+		assertTrue(Files.readString(file).contains("\"added\""));
+		PortEdit back = HudEdits.load(file).set(HudEdits.VANILLA).get(key);
+		assertEquals(text, back);
+		assertEquals("{fps} fps", back.element.get("text").getAsString());
+
+		// a layout's added element: the player may hide it, its definition stays the layout's
+		PortEdit hide = new PortEdit();
+		hide.hide = true;
+		PortEdit merged = HudEdits.merge(Map.of(key, back), Map.of(key, hide)).get(key);
+		assertEquals(Boolean.TRUE, merged.hide);
+		assertEquals("text", merged.element.get("type").getAsString());
+
+		// a definition-less "added" entry is dropped (nothing to draw)
+		Path layoutFile = dir.resolve("edits.json5");
+		Files.writeString(layoutFile, "{ format: 1, added: { broken: { mode: 'fixed', x: 1, y: 2 } } }");
+		assertTrue(HudEdits.loadLayoutEdits(layoutFile).isEmpty());
+	}
+
+	@Test
+	void addedElementParsesLikeALayoutElement() {
+		// in game these come from McValues; a new element's defaults use them
+		io.github.harrythecake.cakeui.model.GameValues.register("fps", () -> 60);
+		io.github.harrythecake.cakeui.model.GameValues.register("player.health", () -> 20.0);
+		io.github.harrythecake.cakeui.model.GameValues.register("player.maxHealth", () -> 20.0);
+		io.github.harrythecake.cakeui.model.Layout layout = new io.github.harrythecake.cakeui.model.Layout("personal", dir);
+		for (String type : io.github.harrythecake.cakeui.edit.AddedElements.TYPES) {
+			String json = io.github.harrythecake.cakeui.edit.AddedElements.defaults(type, "x.png").toString();
+			assertTrue(io.github.harrythecake.cakeui.model.Loader.element(layout, "+" + type, json, "hud.json5") != null, type);
+		}
+		assertTrue(layout.problems.isEmpty(), layout.problems.list().toString());
+		assertNull(io.github.harrythecake.cakeui.model.Loader.element(layout, "+x", "{ type: 'nope' }", "hud.json5"));
+		assertTrue(!layout.problems.isEmpty());
+	}
+
+	@Test
 	void brokenOrNewerFileGivesNoEdits() throws Exception {
 		Path file = dir.resolve("hud.json5");
 		Files.writeString(file, "{ format: 9, layouts: {} }");

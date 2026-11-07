@@ -117,8 +117,8 @@ public final class HudPart {
 			}
 		}
 		for (Map.Entry<String, PortEdit> e : edits.entrySet()) {
-			if (e.getKey().startsWith(HudEdits.ELEMENT)) {
-				continue; // the layout's own elements: drawLayer
+			if (e.getKey().startsWith(HudEdits.ELEMENT) || e.getKey().startsWith(HudEdits.ADDED)) {
+				continue; // the layout's own elements and added ones: drawLayer
 			}
 			PortEdit edit = e.getValue();
 			Port p = PORTS.computeIfAbsent(e.getKey(), k -> new Port(null));
@@ -318,9 +318,18 @@ public final class HudPart {
 		}
 		Node part = part();
 		if (part == null) {
+			if (layer.equals("front")) {
+				HudAdded.draw(ctx, frameEdits, width, height);
+			}
 			return;
 		}
-		Renderer r = Ui.renderer();
+		drawElementsOfLayer(ctx, part, Ui.renderer(), layer);
+		if (layer.equals("front")) {
+			HudAdded.draw(ctx, frameEdits, width, height); // the editor's added elements: on top of the layout's
+		}
+	}
+
+	private static void drawElementsOfLayer(GuiGraphics ctx, Node part, Renderer r, String layer) {
 		if (!perElement) {
 			r.drawPart(ctx, part, layer, 1);
 			return;

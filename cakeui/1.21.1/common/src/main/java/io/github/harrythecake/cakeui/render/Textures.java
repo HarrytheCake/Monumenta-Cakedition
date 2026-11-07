@@ -26,8 +26,9 @@ final class Textures {
 	private final Map<String, Tex> loaded = new HashMap<>();
 	private final Set<String> failed = new HashSet<>();
 
-	Textures(Path layoutRoot, Problems problems) {
-		this.assets = layoutRoot.resolve("assets").normalize();
+	/** {@code assets}: where image paths start (a layout's assets/ folder, or config/cakeui/images for a player's own HUD elements). */
+	Textures(Path assets, Problems problems) {
+		this.assets = assets.normalize();
 		this.problems = problems;
 		this.prefix = "layout/" + (generation++) + "/";
 	}

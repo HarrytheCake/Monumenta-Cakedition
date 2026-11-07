@@ -30,6 +30,8 @@ public final class HudEdits {
 	public static final String VANILLA = "vanilla";
 	/** Key prefix of a layout's own HUD element in a set ("@info" = the element "info"). */
 	public static final String ELEMENT = "@";
+	/** Key prefix of an element the HUD editor added ("+text-3f9a"); in the files under "added". */
+	public static final String ADDED = "+";
 	static final int FORMAT = 1;
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
@@ -112,13 +114,17 @@ public final class HudEdits {
 	/** One set: "ports" and "elements" (elements get the {@link #ELEMENT} prefix). */
 	private static Map<String, PortEdit> readSet(JsonObject set) {
 		Map<String, PortEdit> out = new LinkedHashMap<>();
-		for (String group : new String[] {"ports", "elements"}) {
+		for (String group : new String[] {"ports", "elements", "added"}) {
 			if (!set.has(group) || !set.get(group).isJsonObject()) {
 				continue;
 			}
+			String prefix = group.equals("elements") ? ELEMENT : group.equals("added") ? ADDED : "";
 			for (Map.Entry<String, JsonElement> p : set.getAsJsonObject(group).entrySet()) {
 				if (p.getValue().isJsonObject()) {
-					out.put((group.equals("elements") ? ELEMENT : "") + p.getKey(), readPort(p.getValue().getAsJsonObject()));
+					PortEdit e = readPort(p.getValue().getAsJsonObject());
+					if (!prefix.equals(ADDED) || e.element != null) {
+						out.put(prefix + p.getKey(), e);
+					}
 				}
 			}
 		}
@@ -128,12 +134,17 @@ public final class HudEdits {
 	private static JsonObject writeSet(Map<String, PortEdit> edits) {
 		JsonObject ports = new JsonObject();
 		JsonObject elements = new JsonObject();
+		JsonObject added = new JsonObject();
 		for (Map.Entry<String, PortEdit> p : edits.entrySet()) {
 			if (p.getValue().isEmpty()) {
 				continue;
 			}
 			if (p.getKey().startsWith(ELEMENT)) {
 				elements.add(p.getKey().substring(ELEMENT.length()), writePort(p.getValue()));
+			} else if (p.getKey().startsWith(ADDED)) {
+				if (p.getValue().element != null) {
+					added.add(p.getKey().substring(ADDED.length()), writePort(p.getValue()));
+				}
 			} else {
 				ports.add(p.getKey(), writePort(p.getValue()));
 			}
@@ -142,6 +153,9 @@ public final class HudEdits {
 		set.add("ports", ports);
 		if (elements.size() > 0) {
 			set.add("elements", elements);
+		}
+		if (added.size() > 0) {
+			set.add("added", added);
 		}
 		return set;
 	}
@@ -226,6 +240,9 @@ public final class HudEdits {
 			if (p.hide != null) {
 				m.hide = p.hide;
 			}
+			if (p.element != null) {
+				m.element = p.element.deepCopy();
+			}
 		}
 		return out;
 	}
@@ -249,6 +266,9 @@ public final class HudEdits {
 		}
 		if (o.has("hide")) {
 			e.hide = o.get("hide").getAsBoolean();
+		}
+		if (o.has("element") && o.get("element").isJsonObject()) {
+			e.element = o.getAsJsonObject("element").deepCopy();
 		}
 		return e;
 	}
@@ -290,6 +310,9 @@ public final class HudEdits {
 		}
 		if (e.hide != null) {
 			o.addProperty("hide", e.hide);
+		}
+		if (e.element != null) {
+			o.add("element", e.element.deepCopy());
 		}
 		return o;
 	}
