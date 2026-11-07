@@ -53,7 +53,7 @@ The setting under which CakeUI reloads a layout when its files change and shows 
 _Avoid_: Debug mode, editor mode
 
 **HUD editor**:
-The in-game screen where a player or a layout maker arranges the HUD by dragging: move, scale, hide, fade, style and add elements.
+The in-game screen where a player or a layout maker arranges the HUD by dragging: move, scale, hide, fade, style and add elements; on the main menu, pause menu, inventory and loading screens the same editor moves, scales and hides buttons and vanilla pieces.
 _Avoid_: Editor mode (dev mode is not an editor), HUD designer
 
 **Personal edits**:
@@ -71,3 +71,7 @@ _Avoid_: Alignment, docking
 **Style preset**:
 A ready-made replacement look for a HUD port (for example health as a bar), made of ordinary elements the player can then edit.
 _Avoid_: Skin (that is a button's look), theme
+
+**Movable**:
+Something another mod places on the HUD itself (a chat window, a minimap) that the HUD editor moves and maybe resizes through that mod, which keeps storing its place.
+_Avoid_: Widget, draggable

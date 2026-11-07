@@ -223,7 +223,17 @@ In a world, open **Mod Menu → CakeUI → Edit HUD…** (or bind the "Edit HUD"
 
 Your arrangement is saved in `config/cakeui/hud.json5`, separately for each layout ("vanilla" when no layout is active), and drawn on top of the layout. Pieces another mod draws itself are shown greyed out and can't be moved here.
 
+**Other screens:** the same editor works on the **main menu**, the **pause menu**, the **inventory** and **loading screens**: press the Edit HUD key while the screen is open, or use **Main menu… / Pause menu… / Inventory… / Loading…** in CakeUI's settings. Every button can be moved, resized (scroll) and hidden, and so can the main menu's logo, splash and version text, the inventory title and the loading text and map. (The game-launching screen has no cursor, so only a layout can change it.)
+
+**Other mods' pieces:** mods can let the editor move what they place themselves: CakeChat's chat windows (move and resize; CakeChat also adds an "Edit HUD" button to the chat) and CakeMap's minimap (move, and resize with its corner handle). They keep storing the place in their own settings.
+
 **Layout makers:** in dev mode the editor starts on **Saving: layout** and writes the layout's `hud/edits.json5` (loaded after `layout.json5`; players' own edits go on top). Switch to **Saving: my HUD** for your own edits. Added elements saved into a layout take their images from its `assets/` folder.
+
+### API version 3: the HUD editor
+
+- `addMovables(owner, source)`: things your mod places itself (a chat window, a minimap) become movable in the HUD editor. Each `Movable` gives its `box`, takes `place` while the player drags (and resizes, if `resizable`), and `save`s on Done (on Cancel it is put back with `place` and told `cancel`). You keep storing the place.
+- `openHudEditor(parent)`: opens the editor (e.g. from a button of yours); false outside a world.
+- `HudPiece.editable()`: return false for a piece the editor must not offer (one covering the whole screen, or one you offer as a movable).
 
 ## Third-party code
 
