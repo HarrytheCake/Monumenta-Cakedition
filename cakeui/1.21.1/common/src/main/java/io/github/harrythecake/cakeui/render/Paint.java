@@ -30,6 +30,9 @@ final class Paint {
 
 	/** A filled rect; with c2 != c1 a gradient (vertical: c1 top → c2 bottom; else left → right). */
 	static void rect(Matrix4f m, float x1, float y1, float x2, float y2, int c1, int c2, boolean vertical) {
+		if (io.github.harrythecake.cakeui.HudBounds.recording()) {
+			io.github.harrythecake.cakeui.HudBounds.add(m, Math.min(x1, x2), Math.min(y1, y2), Math.max(x1, x2), Math.max(y1, y2));
+		}
 		if (((c1 >>> 24) | (c2 >>> 24)) == 0) {
 			return;
 		}
@@ -70,6 +73,9 @@ final class Paint {
 	}
 
 	static void texQuad(BufferBuilder b, Matrix4f m, float x1, float y1, float x2, float y2, float u1, float v1, float u2, float v2, int argb) {
+		if (io.github.harrythecake.cakeui.HudBounds.recording()) {
+			io.github.harrythecake.cakeui.HudBounds.add(m, Math.min(x1, x2), Math.min(y1, y2), Math.max(x1, x2), Math.max(y1, y2));
+		}
 		if (x2 <= x1 || y2 <= y1) {
 			return;
 		}

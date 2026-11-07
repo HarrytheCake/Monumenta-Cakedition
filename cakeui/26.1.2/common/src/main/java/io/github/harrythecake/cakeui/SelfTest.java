@@ -252,19 +252,33 @@ final class SelfTest {
 		}
 	}
 
-	/** The HUD editor (E1): open it, move/scale/hide pieces as a drag would, save, check the HUD follows, clean up. */
+	/** A screenshot from the self-test (no message). */
+	private static final java.util.function.BiConsumer<Minecraft, String> SHOT = (client, name) ->
+			Screenshot.grab(client.gameDirectory, name, client.getMainRenderTarget(), 1, text -> { });
+
+	/**
+	 * The HUD editor: personal edits (open, move/scale/fade/hide as a drag would, save, check the HUD
+	 * follows, clean up), then with a dev-mode layout its own edits (hud/edits.json5, the layout's first
+	 * HUD element moved to the bottom-right corner).
+	 */
 	private static void editorTick(Minecraft client) {
 		int t = screenTicks - 460;
 		int w = client.getWindow().getGuiScaledWidth();
 		int h = client.getWindow().getGuiScaledHeight();
 		if (t == 0) {
 			client.setScreen(new HudEditorScreen(null));
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
 		} else if (t == 30) {
-			Screenshot.grab(client.gameDirectory, "cakeui-selftest-hudeditor-open.png", client.getMainRenderTarget(), 1, text -> { });
-			Map<String, PortEdit> edits = HudEditor.current();
+			SHOT.accept(client, "cakeui-selftest-hudeditor-open.png");
+			Map<String, PortEdit> edits = HudEditor.editingMap();
 			Box hb = HudBounds.box("hotbar");
 			CakeUI.LOGGER.info("CakeUI self-test: editor: hotbar measured at {} (vanilla {}), {}", hb, HudDefaults.box("hotbar", w, h),
 					hb != null && Math.abs(hb.x() - (w / 2.0 - 91)) <= 2.5 && Math.abs(hb.bottom() - h) <= 1 ? "PASS" : "FAIL");
+			boolean greyed = false;
+			for (String name : HudEditor.pieces()) {
+				greyed |= HudExpect.expected(name) && !HudBounds.hookedRecently(name);
+			}
+			CakeUI.LOGGER.info("CakeUI self-test: editor: no vanilla piece taken for another mod's ({})", greyed ? "FAIL" : "PASS");
 			PortEdit hotbar = new PortEdit();
 			Placement.place(hotbar, PortEdit.Mode.ANCHORED, 4, 4, hb == null ? 182 : hb.w(), hb == null ? 22 : hb.h(), w, h);
 			edits.put("hotbar", hotbar);
@@ -278,12 +292,12 @@ final class SelfTest {
 			crosshair.hide = true;
 			edits.put("crosshair", crosshair);
 		} else if (t == 50) {
-			Screenshot.grab(client.gameDirectory, "cakeui-selftest-hudeditor-edited.png", client.getMainRenderTarget(), 1, text -> { });
+			SHOT.accept(client, "cakeui-selftest-hudeditor-edited.png");
 		} else if (t == 60) {
 			HudEditor.finish(true);
 			client.setScreen(null);
 		} else if (t == 80) {
-			Screenshot.grab(client.gameDirectory, "cakeui-selftest-hud-edited.png", client.getMainRenderTarget(), 1, text -> { });
+			SHOT.accept(client, "cakeui-selftest-hud-edited.png");
 			Map<String, PortEdit> saved = HudEdits.load(HudEditor.file()).set(HudEditor.layoutKey());
 			Box inner = HudBounds.box("hotbar");
 			Box shown = inner == null || !saved.containsKey("hotbar") ? null : Placement.transform(saved.get("hotbar"), inner, w, h).apply(inner);
@@ -292,9 +306,54 @@ final class SelfTest {
 			CakeUI.LOGGER.info("CakeUI self-test: editor: saved {} edit(s) for {}, hotbar inner {} shown {} ({})", saved.size(),
 					HudEditor.layoutKey(), inner, shown, ok ? "PASS" : "FAIL");
 		} else if (t == 90) {
-			// leave no edits behind
-			HudEditor.start().clear();
+			// leave no personal edits behind
+			HudEditor.start();
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+			HudEditor.editingMap().clear();
 			HudEditor.finish(true);
+			if (!HudEditor.layoutTargetPossible() || HudPart.part() == null || HudPart.part().children.isEmpty()) {
+				client.options.pauseOnLostFocus = pauseOnLostFocus;
+				done(client);
+			}
+		} else if (t == 100) {
+			client.setScreen(new HudEditorScreen(null));
+			CakeUI.LOGGER.info("CakeUI self-test: editor: dev mode starts on the layout's edits ({})",
+					HudEditor.target() == HudEditor.Target.LAYOUT ? "PASS" : "FAIL");
+		} else if (t == 130) {
+			Map<String, PortEdit> edits = HudEditor.editingMap();
+			PortEdit hotbar = new PortEdit();
+			hotbar.scale = 0.75;
+			edits.put("hotbar", hotbar);
+			String element = HudEdits.ELEMENT + HudPart.part().children.get(0).name;
+			Box ib = HudBounds.box(element);
+			if (ib != null) {
+				PortEdit e = new PortEdit();
+				Placement.place(e, PortEdit.Mode.ANCHORED, w - ib.w() - 4, h - ib.h() - 4, ib.w(), ib.h(), w, h);
+				edits.put(element, e);
+			}
+			CakeUI.LOGGER.info("CakeUI self-test: editor: layout element {} measured at {} ({})", element, ib, ib != null ? "PASS" : "FAIL");
+		} else if (t == 150) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-layout.png");
+		} else if (t == 160) {
+			HudEditor.finish(true);
+			client.setScreen(null);
+		} else if (t == 190) {
+			SHOT.accept(client, "cakeui-selftest-hud-layout-edited.png");
+			java.nio.file.Path file = HudEditor.layoutEditsFile();
+			Map<String, PortEdit> saved = file == null ? Map.of() : HudEdits.loadLayoutEdits(file);
+			String element = HudEdits.ELEMENT + HudPart.part().children.get(0).name;
+			Box inner = HudBounds.box(element);
+			Box shown = inner == null || !saved.containsKey(element) ? null
+					: Placement.transform(HudEditor.current().get(element), inner, w, h).apply(inner);
+			boolean ok = saved.size() == 2 && shown != null && Math.abs(shown.right() - (w - 4)) <= 1 && Math.abs(shown.bottom() - (h - 4)) <= 1;
+			CakeUI.LOGGER.info("CakeUI self-test: editor: layout edits {} saved {}, {} shown {} ({})", file, saved.size(), element, shown, ok ? "PASS" : "FAIL");
+		} else if (t == 200) {
+			try {
+				java.nio.file.Files.deleteIfExists(HudEditor.layoutEditsFile());
+			} catch (java.io.IOException e) {
+				CakeUI.LOGGER.warn("CakeUI self-test: could not remove the layout's edits", e);
+			}
+			HudEditor.reload();
 			client.options.pauseOnLostFocus = pauseOnLostFocus;
 			done(client);
 		}

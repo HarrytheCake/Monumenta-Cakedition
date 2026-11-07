@@ -53,5 +53,12 @@
 	"cakeui.hud.port.scoreboard": "计分板",
 	"cakeui.hud.port.tabList": "玩家列表",
 	"cakeui.hud.port.actionBar": "动作栏",
-	"cakeui.hud.port.title": "标题"
+	"cakeui.hud.port.title": "标题",
+	"cakeui.editor.element": "布局元素：%s",
+	"cakeui.editor.otherMod": "（由其他模组绘制：请在该模组的设置中移动）",
+	"cakeui.editor.target": "保存到",
+	"cakeui.editor.target.layout": "保存到：布局",
+	"cakeui.editor.target.personal": "保存到：我的 HUD",
+	"cakeui.editor.target.tooltip": "开发者模式：保存到布局中（hud/edits.json5，所有使用该布局的人都能看到），或保存为你自己的修改（config/cakeui/hud.json5）。保存到布局时，不会显示你自己的修改。",
+	"cakeui.editor.menu.resetLayout": "重置此项（布局）"
 }

@@ -23,6 +23,8 @@ public final class HudBounds {
 	private static final Map<String, Box> FRAME = new HashMap<>();
 	private static final Map<String, Box> LAST = new HashMap<>();
 	private static final Map<String, Long> SEEN = new HashMap<>();
+	/** When each piece's hook last ran (drawn, or hidden by an edit): a piece whose hook never runs is drawn by another mod. */
+	private static final Map<String, Long> HOOKED = new HashMap<>();
 
 	private HudBounds() {
 	}
@@ -77,6 +79,16 @@ public final class HudBounds {
 	@Nullable
 	public static Box box(String port) {
 		return LAST.get(port);
+	}
+
+	public static void hooked(String port) {
+		HOOKED.put(port, System.currentTimeMillis());
+	}
+
+	/** CakeUI's hook for the piece ran within the last moment. */
+	public static boolean hookedRecently(String port) {
+		Long t = HOOKED.get(port);
+		return t != null && System.currentTimeMillis() - t < LIVE_MS;
 	}
 
 	/** Drawn within the last moment. */

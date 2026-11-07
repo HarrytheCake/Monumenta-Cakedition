@@ -19,13 +19,17 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * A player's personal HUD edits ({@code config/cakeui/hud.json5}): one set of port edits per layout,
- * keyed by the layout's name, plus {@link #VANILLA} for when no layout is active. Written by the HUD
- * editor; plain JSON (valid JSON5), comments are allowed when read.
+ * HUD edits from the HUD editor. A player's personal edits ({@code config/cakeui/hud.json5}) hold one
+ * set per layout, keyed by the layout's name, plus {@link #VANILLA} for when no layout is active; a
+ * layout's own edits ({@code <layout>/hud/edits.json5}, written in dev mode) are one set. A set maps
+ * port names, and {@link #ELEMENT}{@code name} for the layout's own HUD elements, to edits; in the
+ * files they are under "ports" and "elements". Plain JSON (valid JSON5); comments are allowed when read.
  */
 public final class HudEdits {
 	/** The set used when no layout is active. */
 	public static final String VANILLA = "vanilla";
+	/** Key prefix of a layout's own HUD element in a set ("@info" = the element "info"). */
+	public static final String ELEMENT = "@";
 	static final int FORMAT = 1;
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
@@ -99,17 +103,131 @@ public final class HudEdits {
 			return;
 		}
 		for (Map.Entry<String, JsonElement> l : o.getAsJsonObject("layouts").entrySet()) {
-			if (!l.getValue().isJsonObject() || !l.getValue().getAsJsonObject().has("ports")) {
+			if (l.getValue().isJsonObject()) {
+				put(l.getKey(), readSet(l.getValue().getAsJsonObject()));
+			}
+		}
+	}
+
+	/** One set: "ports" and "elements" (elements get the {@link #ELEMENT} prefix). */
+	private static Map<String, PortEdit> readSet(JsonObject set) {
+		Map<String, PortEdit> out = new LinkedHashMap<>();
+		for (String group : new String[] {"ports", "elements"}) {
+			if (!set.has(group) || !set.get(group).isJsonObject()) {
 				continue;
 			}
-			Map<String, PortEdit> ports = new LinkedHashMap<>();
-			for (Map.Entry<String, JsonElement> p : l.getValue().getAsJsonObject().getAsJsonObject("ports").entrySet()) {
+			for (Map.Entry<String, JsonElement> p : set.getAsJsonObject(group).entrySet()) {
 				if (p.getValue().isJsonObject()) {
-					ports.put(p.getKey(), readPort(p.getValue().getAsJsonObject()));
+					out.put((group.equals("elements") ? ELEMENT : "") + p.getKey(), readPort(p.getValue().getAsJsonObject()));
 				}
 			}
-			put(l.getKey(), ports);
 		}
+		return out;
+	}
+
+	private static JsonObject writeSet(Map<String, PortEdit> edits) {
+		JsonObject ports = new JsonObject();
+		JsonObject elements = new JsonObject();
+		for (Map.Entry<String, PortEdit> p : edits.entrySet()) {
+			if (p.getValue().isEmpty()) {
+				continue;
+			}
+			if (p.getKey().startsWith(ELEMENT)) {
+				elements.add(p.getKey().substring(ELEMENT.length()), writePort(p.getValue()));
+			} else {
+				ports.add(p.getKey(), writePort(p.getValue()));
+			}
+		}
+		JsonObject set = new JsonObject();
+		set.add("ports", ports);
+		if (elements.size() > 0) {
+			set.add("elements", elements);
+		}
+		return set;
+	}
+
+	// ---- a layout's own edits (<layout>/hud/edits.json5) ----
+
+	/** A layout's edits; empty when the file is missing or unreadable (logged). */
+	public static Map<String, PortEdit> loadLayoutEdits(Path file) {
+		if (!Files.exists(file)) {
+			return new LinkedHashMap<>();
+		}
+		try {
+			return parseLayoutEdits(Files.readString(file, StandardCharsets.UTF_8));
+		} catch (IOException | JsonParseException | IllegalStateException | UnsupportedOperationException | NumberFormatException e) {
+			CakeUI.LOGGER.warn("CakeUI: unreadable {}, the layout's HUD edits are off: {}", file, e.toString());
+			return new LinkedHashMap<>();
+		}
+	}
+
+	static Map<String, PortEdit> parseLayoutEdits(String text) {
+		JsonReader reader = new JsonReader(new StringReader(text));
+		reader.setLenient(true);
+		JsonElement root = JsonParser.parseReader(reader);
+		if (!root.isJsonObject()) {
+			return new LinkedHashMap<>();
+		}
+		JsonObject o = root.getAsJsonObject();
+		if (o.has("format") && o.get("format").getAsInt() > FORMAT) {
+			throw new IllegalStateException("format " + o.get("format").getAsInt() + " is newer than this CakeUI understands");
+		}
+		return readSet(o);
+	}
+
+	/** Writes a layout's edits; with none left, the file is deleted. */
+	public static void saveLayoutEdits(Path file, Map<String, PortEdit> edits) throws IOException {
+		boolean any = edits.values().stream().anyMatch(e -> !e.isEmpty());
+		if (!any) {
+			Files.deleteIfExists(file);
+			return;
+		}
+		JsonObject root = new JsonObject();
+		root.addProperty("format", FORMAT);
+		JsonObject set = writeSet(edits);
+		for (Map.Entry<String, JsonElement> e : set.entrySet()) {
+			root.add(e.getKey(), e.getValue());
+		}
+		String text = "// This layout's HUD edits, written by CakeUI's HUD editor in dev mode (loaded after layout.json5;\n"
+				+ "// a player's own edits in config/cakeui/hud.json5 go on top).\n" + GSON.toJson(root) + "\n";
+		Path tmp = file.resolveSibling(file.getFileName() + ".tmp");
+		Files.writeString(tmp, text, StandardCharsets.UTF_8);
+		Files.move(tmp, file, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+	}
+
+	/**
+	 * The edits the HUD uses: the layout's edits, then the player's on top. A player's edit replaces each
+	 * property it sets (the position as one: mode and its numbers); what it doesn't set follows the layout.
+	 */
+	public static Map<String, PortEdit> merge(Map<String, PortEdit> layout, Map<String, PortEdit> personal) {
+		if (layout.isEmpty()) {
+			return personal;
+		}
+		if (personal.isEmpty()) {
+			return layout;
+		}
+		Map<String, PortEdit> out = copy(layout);
+		for (Map.Entry<String, PortEdit> e : personal.entrySet()) {
+			PortEdit p = e.getValue();
+			PortEdit m = out.computeIfAbsent(e.getKey(), k -> new PortEdit());
+			if (p.mode != null) {
+				m.mode = p.mode;
+				m.ax = p.ax;
+				m.ay = p.ay;
+				m.x = p.x;
+				m.y = p.y;
+			}
+			if (p.scale != null) {
+				m.scale = p.scale;
+			}
+			if (p.opacity != null) {
+				m.opacity = p.opacity;
+			}
+			if (p.hide != null) {
+				m.hide = p.hide;
+			}
+		}
+		return out;
 	}
 
 	private static PortEdit readPort(JsonObject o) {
@@ -145,13 +263,7 @@ public final class HudEdits {
 		root.addProperty("format", FORMAT);
 		JsonObject layouts = new JsonObject();
 		for (Map.Entry<String, Map<String, PortEdit>> l : sets.entrySet()) {
-			JsonObject ports = new JsonObject();
-			for (Map.Entry<String, PortEdit> p : l.getValue().entrySet()) {
-				ports.add(p.getKey(), writePort(p.getValue()));
-			}
-			JsonObject set = new JsonObject();
-			set.add("ports", ports);
-			layouts.add(l.getKey(), set);
+			layouts.add(l.getKey(), writeSet(l.getValue()));
 		}
 		root.add("layouts", layouts);
 		return "// CakeUI HUD edits, written by the HUD editor (one set per layout; \"vanilla\" = no layout).\n" + GSON.toJson(root) + "\n";

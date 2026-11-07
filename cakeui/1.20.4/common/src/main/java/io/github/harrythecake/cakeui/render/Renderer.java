@@ -171,6 +171,15 @@ public final class Renderer {
 		drawChildren(c, part, kids, screenW, screenH, null);
 	}
 
+	/** Draws some of a part's children over the whole screen (the HUD editor draws the HUD's elements one by one to move them). */
+	public void drawPartKids(GuiGraphics dc, Node part, List<Node> kids, double alpha) {
+		Ctx c = rootCtx(dc, screenOwner, alpha);
+		if (part.has("perspective")) {
+			c.d = length(part, null, "perspective", Env.AXIS_NONE, screenW, screenH, c.d);
+		}
+		drawChildren(c, part, kids, screenW, screenH, null);
+	}
+
 	/** Draws the elements of a port over the whole screen. */
 	public void drawElements(GuiGraphics dc, Node container, double alpha) {
 		if (container.children.isEmpty()) {

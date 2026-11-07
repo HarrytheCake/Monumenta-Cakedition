@@ -53,5 +53,12 @@
 	"cakeui.hud.port.scoreboard": "計分板",
 	"cakeui.hud.port.tabList": "玩家列表",
 	"cakeui.hud.port.actionBar": "動作列",
-	"cakeui.hud.port.title": "標題"
+	"cakeui.hud.port.title": "標題",
+	"cakeui.editor.element": "佈局元素：%s",
+	"cakeui.editor.otherMod": "（由其他模組繪製：請在該模組的設定中移動）",
+	"cakeui.editor.target": "儲存到",
+	"cakeui.editor.target.layout": "儲存到：佈局",
+	"cakeui.editor.target.personal": "儲存到：我的 HUD",
+	"cakeui.editor.target.tooltip": "開發者模式：儲存到佈局中（hud/edits.json5，所有使用該佈局的人都會看到），或儲存為你自己的修改（config/cakeui/hud.json5）。儲存到佈局時，不會顯示你自己的修改。",
+	"cakeui.editor.menu.resetLayout": "重設此項（佈局）"
 }

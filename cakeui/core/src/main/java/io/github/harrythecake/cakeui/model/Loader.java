@@ -520,7 +520,8 @@ public final class Loader {
 					} else {
 						problem(rel(p) + "/", 0, "unknown folder (subwindows are named subwindow_<name>)");
 					}
-				} else if (!n.equals("layout.json5") && !n.equals("declaration.json5") && !n.equals("splashes.txt") && !n.startsWith(".")) {
+				} else if (!n.equals("layout.json5") && !n.equals("declaration.json5") && !n.equals("splashes.txt") && !n.startsWith(".")
+						&& !(n.equals("edits.json5") && parent.type.equals("part") && parent.name.equals("hud"))) {
 					problem(rel(p), 0, "unexpected file (expected layout.json5, declaration.json5" + (parent.type.equals("part") ? ", splashes.txt" : "") + ")");
 				}
 			}

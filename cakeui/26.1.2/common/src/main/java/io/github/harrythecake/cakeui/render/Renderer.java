@@ -144,7 +144,11 @@ public final class Renderer {
 		c.dc = dc;
 		c.owner = owner;
 		c.alpha = alpha;
-		c.flat = new Geometry.Mat();
+		// 26.1: an element sets the GUI pose from c.flat, so the root starts from the current pose (the HUD
+		// editor's move/scale of a port or element); identity everywhere else
+		org.joml.Matrix3x2f p = dc.pose();
+		c.flat = p.m20() == 0 && p.m21() == 0 && p.m00() == 1 && p.m11() == 1 ? new Geometry.Mat()
+				: new Geometry.Mat().translate(p.m20(), p.m21(), 0).scale(p.m00(), p.m11());
 		c.mx = mouseX;
 		c.my = mouseY;
 		c.d = layout.perspective * env.rx;
@@ -164,6 +168,15 @@ public final class Renderer {
 			if (word(k, "layer", "back").equals(layer)) {
 				kids.add(k);
 			}
+		}
+		drawChildren(c, part, kids, screenW, screenH, null);
+	}
+
+	/** Draws some of a part's children over the whole screen (the HUD editor draws the HUD's elements one by one to move them). */
+	public void drawPartKids(GuiGraphicsExtractor dc, Node part, List<Node> kids, double alpha) {
+		Ctx c = rootCtx(dc, screenOwner, alpha);
+		if (part.has("perspective")) {
+			c.d = length(part, null, "perspective", Env.AXIS_NONE, screenW, screenH, c.d);
 		}
 		drawChildren(c, part, kids, screenW, screenH, null);
 	}

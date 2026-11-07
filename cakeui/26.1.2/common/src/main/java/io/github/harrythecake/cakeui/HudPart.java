@@ -1,5 +1,6 @@
 package io.github.harrythecake.cakeui;
 
+import io.github.harrythecake.cakeui.edit.HudEdits;
 import io.github.harrythecake.cakeui.edit.Placement;
 import io.github.harrythecake.cakeui.edit.Placement.Xform;
 import io.github.harrythecake.cakeui.edit.PortEdit;
@@ -59,6 +60,10 @@ public final class HudPart {
 	}
 
 	private static final Map<String, Port> PORTS = new HashMap<>();
+	/** The edits this frame uses (for the HUD's own elements in {@link #drawLayer}). */
+	private static Map<String, PortEdit> frameEdits = Map.of();
+	/** Draw the HUD's own elements one by one (some have edits, or the editor measures them). */
+	private static boolean perElement;
 	private static boolean active;
 	private static int width;
 	private static int height;
@@ -84,6 +89,8 @@ public final class HudPart {
 		boolean editing = !benchOff && HudEditor.editing();
 		active = part != null || !edits.isEmpty() || editing;
 		PORTS.clear();
+		frameEdits = edits;
+		perElement = part != null && (editing || edits.keySet().stream().anyMatch(k -> k.startsWith(HudEdits.ELEMENT)));
 		if (!active) {
 			return;
 		}
@@ -111,6 +118,9 @@ public final class HudPart {
 			}
 		}
 		for (Map.Entry<String, PortEdit> e : edits.entrySet()) {
+			if (e.getKey().startsWith(HudEdits.ELEMENT)) {
+				continue; // the layout's own elements: drawLayer
+			}
 			PortEdit edit = e.getValue();
 			Port p = PORTS.computeIfAbsent(e.getKey(), k -> new Port(null));
 			if (edit.hide != null) {
@@ -139,7 +149,7 @@ public final class HudPart {
 			return false;
 		}
 		ctx.pose().pushMatrix();
-		ctx.pose().translate((float) p.outer.tx(), (float) p.outer.ty());
+		ctx.pose().translate((float) (p.outer.tx()), (float) (p.outer.ty()));
 		ctx.pose().scale((float) p.outer.s(), (float) p.outer.s());
 		return true;
 	}
@@ -161,6 +171,7 @@ public final class HudPart {
 			return;
 		}
 		p.shown = true;
+		HudBounds.hooked(name);
 		boolean outer = pushOuter(ctx, p);
 		String before = HudBounds.begin(name, p.outer);
 		if (!p.hide) {
@@ -195,6 +206,7 @@ public final class HudPart {
 			return false;
 		}
 		p.shown = true;
+		HudBounds.hooked(name);
 		if (p.hide) {
 			boolean outer = pushOuter(ctx, p);
 			drawPortElements(ctx, p);
@@ -253,6 +265,7 @@ public final class HudPart {
 			return;
 		}
 		p.shown = true;
+		HudBounds.hooked(name);
 		if (!p.outer.identity()) {
 			matrices.translate((float) p.outer.tx(), (float) p.outer.ty());
 			matrices.scale((float) p.outer.s(), (float) p.outer.s());
@@ -284,14 +297,48 @@ public final class HudPart {
 		}
 	}
 
-	/** The HUD's own elements and subwindows of one layer (not with F1). */
+	/**
+	 * The HUD's own elements and subwindows of one layer (not with F1). With edits for them (or the
+	 * editor open), each element is drawn on its own: hidden, faded, or moved/scaled as a whole, and measured.
+	 */
 	public static void drawLayer(GuiGraphicsExtractor ctx, String layer) {
 		if (!active || Minecraft.getInstance().options.hideGui) {
 			return;
 		}
 		Node part = part();
-		if (part != null) {
-			Ui.renderer().drawPart(ctx, part, layer, 1);
+		if (part == null) {
+			return;
+		}
+		Renderer r = Ui.renderer();
+		if (!perElement) {
+			r.drawPart(ctx, part, layer, 1);
+			return;
+		}
+		for (Node k : part.children) {
+			if (!r.word(k, "layer", "back").equals(layer)) {
+				continue;
+			}
+			String key = HudEdits.ELEMENT + k.name;
+			PortEdit e = frameEdits.get(key);
+			if (e != null && Boolean.TRUE.equals(e.hide)) {
+				HudBounds.hooked(key);
+				continue;
+			}
+			Xform x = e == null || (e.mode == null && e.scale == null) ? Xform.IDENTITY
+					: Placement.transform(e, HudBounds.orDefault(key, width, height), width, height);
+			boolean pushed = !x.identity();
+			if (pushed) {
+				ctx.pose().pushMatrix();
+				ctx.pose().translate((float) (x.tx()), (float) (x.ty()));
+				ctx.pose().scale((float) x.s(), (float) x.s());
+			}
+			HudBounds.hooked(key);
+			String before = HudBounds.begin(key, x);
+			r.drawPartKids(ctx, part, java.util.List.of(k), e == null || e.opacity == null ? 1 : e.opacity);
+			HudBounds.end(before);
+			if (pushed) {
+				ctx.pose().popMatrix();
+			}
 		}
 	}
 

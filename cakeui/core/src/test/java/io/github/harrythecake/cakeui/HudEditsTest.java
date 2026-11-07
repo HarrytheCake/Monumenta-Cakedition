@@ -128,6 +128,54 @@ class HudEditsTest {
 	}
 
 	@Test
+	void layoutEditsFileWithElementsAndMerge() throws Exception {
+		PortEdit hotbar = new PortEdit();
+		hotbar.scale = 0.75;
+		Placement.place(hotbar, PortEdit.Mode.ANCHORED, 10, 10, 182, 22, W, H);
+		PortEdit info = new PortEdit();
+		info.hide = true;
+		Path file = dir.resolve("hud").resolve("edits.json5");
+		Files.createDirectories(file.getParent());
+		HudEdits.saveLayoutEdits(file, Map.of("hotbar", hotbar, HudEdits.ELEMENT + "info", info));
+		String text = Files.readString(file);
+		assertTrue(text.contains("\"elements\"") && text.contains("\"info\""));
+		Map<String, PortEdit> back = HudEdits.loadLayoutEdits(file);
+		assertEquals(hotbar, back.get("hotbar"));
+		assertEquals(Boolean.TRUE, back.get("@info").hide);
+
+		// the player's edit replaces what it sets; the rest follows the layout
+		PortEdit mine = new PortEdit();
+		mine.opacity = 0.5f;
+		Map<String, PortEdit> merged = HudEdits.merge(back, Map.of("hotbar", mine));
+		assertEquals(0.75, merged.get("hotbar").scale);
+		assertEquals(PortEdit.Mode.ANCHORED, merged.get("hotbar").mode);
+		assertEquals(0.5f, merged.get("hotbar").opacity);
+		assertEquals(Boolean.TRUE, merged.get("@info").hide);
+		assertNull(back.get("hotbar").opacity); // merge doesn't change the layout's edits
+		PortEdit moved = new PortEdit();
+		Placement.place(moved, PortEdit.Mode.FIXED, 50, 60, 182, 22, W, H);
+		assertEquals(PortEdit.Mode.FIXED, HudEdits.merge(back, Map.of("hotbar", moved)).get("hotbar").mode);
+
+		// nothing left: the file goes
+		HudEdits.saveLayoutEdits(file, Map.of("hotbar", new PortEdit()));
+		assertTrue(!Files.exists(file));
+		assertTrue(HudEdits.loadLayoutEdits(file).isEmpty());
+	}
+
+	@Test
+	void personalFileKeepsElementsApart() throws Exception {
+		HudEdits edits = new HudEdits();
+		PortEdit e = new PortEdit();
+		e.scale = 2.0;
+		edits.put("window_example", Map.of("@info", e, "hotbar", e));
+		Path file = dir.resolve("hud.json5");
+		edits.save(file);
+		HudEdits back = HudEdits.load(file);
+		assertEquals(2, back.set("window_example").size());
+		assertEquals(2.0, back.set("window_example").get("@info").scale);
+	}
+
+	@Test
 	void brokenOrNewerFileGivesNoEdits() throws Exception {
 		Path file = dir.resolve("hud.json5");
 		Files.writeString(file, "{ format: 9, layouts: {} }");

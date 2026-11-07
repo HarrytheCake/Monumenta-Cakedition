@@ -20,9 +20,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The HUD editor (ADR 0010, E1): drag HUD pieces to move them, scroll to resize, right-click for
- * hide/show, opacity, position mode and reset. Changes show on the live HUD at once; Done saves them
- * as the player's personal edits for the active layout, Cancel (or Esc twice) throws them away.
+ * The HUD editor (ADR 0010, E1 + E2): drag HUD pieces (vanilla's, mods' pieces and the layout's own HUD
+ * elements) to move them, scroll to resize, right-click for hide/show, opacity, position mode and reset.
+ * Changes show on the live HUD at once; Done saves them (as the player's personal edits, or in dev mode
+ * into the layout's hud/edits.json5), Cancel (or Esc twice) throws them away. Pieces another mod draws
+ * itself are greyed out.
  */
 public final class HudEditorScreen extends Screen {
 	private static final double SNAP = 4;
@@ -31,8 +33,10 @@ public final class HudEditorScreen extends Screen {
 
 	@Nullable
 	private final Screen parent;
-	private final Map<String, PortEdit> edits;
-	private final Map<String, PortEdit> initial;
+	/** The working copy of the target being edited (personal or the layout's). */
+	private Map<String, PortEdit> edits;
+	private final Map<String, PortEdit>[] initial;
+	private final long openedAt = System.currentTimeMillis();
 	private final Deque<Map<String, PortEdit>> undo = new ArrayDeque<>();
 	private final Deque<Map<String, PortEdit>> redo = new ArrayDeque<>();
 	private boolean previews = true;
@@ -60,8 +64,9 @@ public final class HudEditorScreen extends Screen {
 	public HudEditorScreen(@Nullable Screen parent) {
 		super(Component.translatable("cakeui.editor.title"));
 		this.parent = parent;
-		this.edits = HudEditor.start();
-		this.initial = HudEdits.copy(edits);
+		HudEditor.start();
+		this.edits = HudEditor.editingMap();
+		this.initial = HudEditor.snapshot();
 	}
 
 	/** The toolbar: a column on the left, half-way down (vanilla draws nothing there). */
@@ -83,19 +88,52 @@ public final class HudEditorScreen extends Screen {
 		}).bounds(BAR_X, y + 40, BAR_W, 18).build());
 		addRenderableWidget(CycleButton.onOffBuilder(previews)
 				.create(BAR_X, y + 60, BAR_W, 18, Component.translatable("cakeui.editor.previews"), (b, v) -> previews = v));
+		if (HudEditor.layoutTargetPossible()) {
+			// dev mode: save into the layout (what every player of it sees) or as my own edits
+			addRenderableWidget(CycleButton.<HudEditor.Target>builder(t -> Component.translatable("cakeui.editor.target." + t.name().toLowerCase(java.util.Locale.ROOT)))
+					.withValues(HudEditor.Target.values())
+					.withInitialValue(HudEditor.target())
+					.displayOnlyValue()
+					.withTooltip(t -> net.minecraft.client.gui.components.Tooltip.create(Component.translatable("cakeui.editor.target.tooltip")))
+					.create(BAR_X, y - 22, BAR_W, 18, Component.translatable("cakeui.editor.target"), (b, t) -> {
+						HudEditor.setTarget(t);
+						edits = HudEditor.editingMap();
+						undo.clear();
+						redo.clear();
+						selected = null;
+					}));
+		}
 	}
 
 	// ---- pieces on screen ----
 
+	/** The edit the HUD draws a piece with (the layout's and the player's together). */
+	@Nullable
+	private static PortEdit effective(String name) {
+		return HudEditor.current().get(name);
+	}
+
+	private static boolean hidden(String name) {
+		PortEdit e = effective(name);
+		return e != null && Boolean.TRUE.equals(e.hide);
+	}
+
+	/** Another mod draws this vanilla piece itself (its CakeUI hook didn't run although it should be on screen). */
+	private boolean otherMod(String name) {
+		return System.currentTimeMillis() - openedAt > 700 && HudExpect.expected(name) && !HudBounds.hookedRecently(name);
+	}
+
 	private boolean visible(String name) {
-		PortEdit e = edits.get(name);
-		return previews || HudBounds.live(name) || (e != null && Boolean.TRUE.equals(e.hide));
+		if (name.startsWith(HudEdits.ELEMENT)) {
+			return HudBounds.box(name) != null; // the layout's elements: once they have been drawn
+		}
+		return previews || HudBounds.live(name) || hidden(name) || otherMod(name);
 	}
 
 	/** Where the piece is on screen now (its measured or default place, with the edits applied). */
 	private Box screenBox(String name) {
 		Box inner = HudBounds.orDefault(name, width, height);
-		return Placement.transform(edits.get(name), inner, width, height).apply(inner);
+		return Placement.transform(effective(name), inner, width, height).apply(inner);
 	}
 
 	/** The smallest visible piece under the mouse (small pieces win over big ones they sit in). */
@@ -104,7 +142,7 @@ public final class HudEditorScreen extends Screen {
 		String best = null;
 		double bestArea = Double.MAX_VALUE;
 		for (String name : HudEditor.pieces()) {
-			if (!visible(name)) {
+			if (!visible(name) || otherMod(name)) {
 				continue;
 			}
 			Box b = screenBox(name);
@@ -118,10 +156,14 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private static Component label(String name) {
+		if (name.startsWith(HudEdits.ELEMENT)) {
+			return Component.translatable("cakeui.editor.element", name.substring(HudEdits.ELEMENT.length()));
+		}
 		String key = "cakeui.hud.port." + name;
 		return I18n.exists(key) ? Component.translatable(key) : Component.literal(name);
 	}
 
+	/** The target's edit of a piece, created on first change (starting from what is shown, so nothing jumps). */
 	private PortEdit edit(String name) {
 		return edits.computeIfAbsent(name, k -> new PortEdit());
 	}
@@ -147,7 +189,8 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private boolean dirty() {
-		return !normalized(edits).equals(normalized(initial));
+		Map<String, PortEdit>[] now = HudEditor.snapshot();
+		return !normalized(now[0]).equals(normalized(initial[0])) || !normalized(now[1]).equals(normalized(initial[1]));
 	}
 
 	private static Map<String, PortEdit> normalized(Map<String, PortEdit> m) {
@@ -179,9 +222,17 @@ public final class HudEditorScreen extends Screen {
 			int y1 = (int) Math.floor(b.y());
 			int x2 = (int) Math.ceil(b.right());
 			int y2 = (int) Math.ceil(b.bottom());
-			PortEdit e = edits.get(name);
-			boolean hidden = e != null && Boolean.TRUE.equals(e.hide);
+			boolean hidden = hidden(name);
 			boolean live = HudBounds.live(name);
+			if (otherMod(name)) {
+				g.fill(x1, y1, x2, y2, 0x60404040);
+				g.renderOutline(x1 - 1, y1 - 1, x2 - x1 + 2, y2 - y1 + 2, 0x80808080);
+				Component text = label(name).copy().append(" ").append(Component.translatable("cakeui.editor.otherMod"));
+				if (font.width(text) <= x2 - x1 + 40) {
+					g.drawCenteredString(font, text, (x1 + x2) / 2, y1 - 10, 0xFFA0A0A0);
+				}
+				continue;
+			}
 			if (!live || hidden) {
 				g.fill(x1, y1, x2, y2, hidden ? 0x30FF4040 : 0x30FFFFFF);
 				Component text = hidden ? label(name).copy().append(" ").append(Component.translatable("cakeui.editor.hidden")) : label(name);
@@ -195,7 +246,7 @@ public final class HudEditorScreen extends Screen {
 		String named = dragging != null ? dragging : hovered != null ? hovered : selected;
 		if (named != null && visible(named)) {
 			Box b = screenBox(named);
-			PortEdit e = edits.get(named);
+			PortEdit e = effective(named);
 			Component text = label(named);
 			if (e != null && e.scale != null) {
 				text = text.copy().append(String.format(java.util.Locale.ROOT, "  ×%.2f", e.scale));
@@ -322,7 +373,8 @@ public final class HudEditorScreen extends Screen {
 		selected = hit;
 		checkpoint();
 		PortEdit e = edit(hit);
-		double s = Math.round((e.scaleOr1() + Math.signum(scrollY) * 0.05) * 20) / 20.0;
+		PortEdit shown = effective(hit);
+		double s = Math.round(((shown == null ? 1 : shown.scaleOr1()) + Math.signum(scrollY) * 0.05) * 20) / 20.0;
 		s = Math.max(0.25, Math.min(4, s));
 		e.scale = s == 1 && e.mode == null ? null : s;
 		return true;
@@ -330,20 +382,24 @@ public final class HudEditorScreen extends Screen {
 
 	/** Puts a piece's on-screen top-left at (left, top), keeping its position mode (anchored by default). */
 	private void moveTo(String name, double left, double top) {
-		PortEdit e = edit(name);
 		Box b = screenBox(name);
-		Placement.place(e, e.mode == null ? PortEdit.Mode.ANCHORED : e.mode, left, top, b.w(), b.h(), width, height);
+		PortEdit shown = effective(name);
+		PortEdit e = edit(name);
+		Placement.place(e, shown != null && shown.mode != null ? shown.mode : PortEdit.Mode.ANCHORED, left, top, b.w(), b.h(), width, height);
+		if (e.scale == null && shown != null && shown.scale != null) {
+			e.scale = shown.scale; // the size it was dropped at
+		}
 	}
 
 	private void openMenu(String name, double mx, double my) {
-		PortEdit e = edits.get(name);
+		PortEdit e = effective(name);
 		boolean hidden = e != null && Boolean.TRUE.equals(e.hide);
 		float opacity = e == null || e.opacity == null ? 1 : e.opacity;
 		PortEdit.Mode mode = e == null || e.mode == null ? PortEdit.Mode.ANCHORED : e.mode;
 		List<MenuItem> items = new ArrayList<>();
 		items.add(new MenuItem(Component.translatable(hidden ? "cakeui.editor.menu.show" : "cakeui.editor.menu.hide"), () -> {
 			checkpoint();
-			edit(name).hide = hidden ? null : Boolean.TRUE;
+			edit(name).hide = hidden ? Boolean.FALSE : Boolean.TRUE; // "show" also undoes a hide the layout made
 		}));
 		items.add(new MenuItem(Component.translatable("cakeui.editor.menu.opacity", Math.round(opacity * 100)), () -> {
 			checkpoint();
@@ -357,7 +413,7 @@ public final class HudEditorScreen extends Screen {
 			Box b = screenBox(name);
 			Placement.place(edit(name), next, b.x(), b.y(), b.w(), b.h(), width, height);
 		}));
-		items.add(new MenuItem(Component.translatable("cakeui.editor.menu.reset"), () -> {
+		items.add(new MenuItem(Component.translatable(HudEditor.target() == HudEditor.Target.LAYOUT ? "cakeui.editor.menu.resetLayout" : "cakeui.editor.menu.reset"), () -> {
 			checkpoint();
 			edits.remove(name);
 		}));
