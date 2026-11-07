@@ -308,11 +308,20 @@ final class SelfTest {
 			}
 		} else if (t == 46) {
 			SHOT.accept(client, "cakeui-selftest-hudeditor-element.png");
-		} else if (t == 48) {
+		} else if (t == 47) {
+			if (client.screen instanceof HudElementScreen panel) {
+				client.setScreen(new HudValuesScreen(panel, v -> { }));
+			}
+		} else if (t == 49) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-values.png");
+		} else if (t == 52) {
+			if (client.screen instanceof HudValuesScreen list) {
+				list.onClose();
+			}
 			if (client.screen instanceof HudElementScreen panel) {
 				panel.onClose();
 			}
-		} else if (t == 50) {
+		} else if (t == 54) {
 			SHOT.accept(client, "cakeui-selftest-hudeditor-edited.png");
 		} else if (t == 60) {
 			HudEditor.finish(true);

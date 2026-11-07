@@ -44,6 +44,9 @@ public final class HudElementScreen extends Screen {
 	private final List<Field> fields = new ArrayList<>();
 	@Nullable
 	private EditBox lastExpressionField;
+	/** The property of the field last typed in (kept when the value list is open and the fields are rebuilt). */
+	@Nullable
+	private String lastProp;
 	private boolean lastIsTemplate;
 	private EditBox filter;
 	private final List<Button> picks = new ArrayList<>();
@@ -97,6 +100,7 @@ public final class HudElementScreen extends Screen {
 	protected void init() {
 		fields.clear();
 		picks.clear();
+		lastExpressionField = null;
 		int left = width / 2 - 150;
 		int x = left + 100;
 		int w = 200;
@@ -151,9 +155,11 @@ public final class HudElementScreen extends Screen {
 		fields.add(new Field("visible", visible, false, true, true));
 		y += ROW + 4;
 		// the game values picker: type to filter, click to insert into the last text/expression field
-		filter = new EditBox(font, x, y, w, 18, Component.translatable("cakeui.element.values"));
+		filter = new EditBox(font, x, y, w - 70, 18, Component.translatable("cakeui.element.values"));
 		filter.setResponder(s -> refreshPicks());
 		addRenderableWidget(filter);
+		addRenderableWidget(Button.builder(Component.translatable("cakeui.element.allValues"),
+				b -> minecraft.setScreen(new HudValuesScreen(this, this::insertByProp))).bounds(x + w - 66, y, 66, 18).build());
 		y += ROW;
 		for (int i = 0; i < PICKS; i++) {
 			int col = i % 2;
@@ -240,6 +246,24 @@ public final class HudElementScreen extends Screen {
 		}
 	}
 
+	/** From the value list (the fields were rebuilt meanwhile): adds the value to the end of the last field typed in. */
+	private void insertByProp(String name) {
+		String prop = lastProp;
+		boolean template = lastIsTemplate;
+		if (prop == null) {
+			prop = type.equals("text") ? "text" : type.equals("bar") ? "value" : "visible";
+			template = type.equals("text");
+		}
+		String piece = template ? "{" + name + "}" : name;
+		if (prop.equals("visible")) {
+			String v = str("visible");
+			String expr = v.startsWith("=") ? v.substring(1).trim() : v;
+			setVisible((expr.isEmpty() ? "" : expr + " ") + piece);
+		} else {
+			set(prop, str(prop) + piece);
+		}
+	}
+
 	/** Puts a game value into the field last typed in: {name} in a text, the bare name in an expression. */
 	private void insert(String name) {
 		EditBox target = lastExpressionField;
@@ -247,6 +271,7 @@ public final class HudElementScreen extends Screen {
 			for (Field f : fields) {
 				if (f.template || f.expression) {
 					target = f.box;
+					lastProp = f.prop;
 					lastIsTemplate = f.template;
 					break;
 				}
@@ -265,6 +290,7 @@ public final class HudElementScreen extends Screen {
 		for (Field f : fields) {
 			if (f.box == focused && (f.template || f.expression)) {
 				lastExpressionField = f.box;
+				lastProp = f.prop;
 				lastIsTemplate = f.template;
 			}
 		}

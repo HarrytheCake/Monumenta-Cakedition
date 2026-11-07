@@ -84,5 +84,8 @@
 	"cakeui.element.visible": "Show only when",
 	"cakeui.element.visible.hint": "Advanced: empty = always (e.g. player.health < 10)",
 	"cakeui.element.values": "Game values",
-	"cakeui.element.sizeWH": "Size (W × H)"
+	"cakeui.element.sizeWH": "Size (W × H)",
+	"cakeui.element.allValues": "All…",
+	"cakeui.values.title": "Game values",
+	"cakeui.values.filter": "Filter (e.g. player)"
 }

@@ -210,7 +210,7 @@ In a world, open **Mod Menu → CakeUI → Edit HUD…** (or bind the "Edit HUD"
 - **Done** saves, **Cancel** (or Esc twice) throws the changes away, **Ctrl+Z / Ctrl+Y** undo and redo.
 
 - **Right-click empty space** to add your own **text, box, bar or image**. Right-click it and choose **Edit…** to change it:
-  - Text can show live game values: `{fps} fps`, `{fmt(player.x, 0)} {fmt(player.z, 0)}`. The **Game values** list inserts them for you.
+  - Text can show live game values: `{fps} fps`, `{fmt(player.x, 0)} {fmt(player.z, 0)}`. The **Game values** field filters a few quick buttons; **All…** opens every value with its current reading.
   - A bar's value is a number from 0 to 1, e.g. `player.health / player.maxHealth`.
   - Images are PNG files in `config/cakeui/images/` (**Folder…** opens it).
   - **Show only when** (advanced) hides the element unless a condition is true, e.g. `player.health < 10`.

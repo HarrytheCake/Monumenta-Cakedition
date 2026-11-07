@@ -84,5 +84,8 @@
 	"cakeui.element.visible": "僅在…時顯示",
 	"cakeui.element.visible.hint": "進階：留空 = 一直顯示（例如 player.health < 10）",
 	"cakeui.element.values": "遊戲數值",
-	"cakeui.element.sizeWH": "尺寸（寬 × 高）"
+	"cakeui.element.sizeWH": "尺寸（寬 × 高）",
+	"cakeui.element.allValues": "全部…",
+	"cakeui.values.title": "遊戲數值",
+	"cakeui.values.filter": "篩選（例如 player）"
 }
