@@ -189,7 +189,8 @@ public final class Renderer {
 				if (t != null) {
 					float s = (float) io.github.harrythecake.cakeui.edit.CrosshairStyles.num(style, "size", 15) / 2;
 					Paint.Quads b = Paint.beginTextured(t.texture(), m, false);
-					Paint.texQuad(b, cx - s, cy - s, cx + s, cy + s, 0, 0, 1, 1, color);
+					int fr = t.frameAt(System.currentTimeMillis());
+					Paint.texQuad(b, cx - s, cy - s, cx + s, cy + s, 0, fr / (float) t.frames(), 1, (fr + 1) / (float) t.frames(), color);
 					Paint.end(dc, b);
 				}
 				return;
@@ -200,6 +201,11 @@ public final class Renderer {
 		} finally {
 			Paint.invert = false;
 		}
+	}
+
+	/** An image's frame count: "frames" when given (a sprite sheet), else the file's own (animated GIF/WebP), else 1. */
+	private int frameCount(Node n, Textures.Tex t) {
+		return n.has("frames") || t == null ? Math.max(1, (int) number(n, "frames", 1)) : Math.max(1, t.frames());
 	}
 
 	/** Draws some of a part's children over the whole screen (the HUD editor draws the HUD's elements one by one to move them). */
@@ -475,7 +481,7 @@ public final class Renderer {
 			case "text" -> tl == null ? 0 : tl.width;
 			case "image" -> {
 				Textures.Tex t = n.has("src") ? textures.get(word(n, "src", ""), n.file, n.line) : null;
-				int frames = Math.max(1, (int) number(n, "frames", 1));
+				int frames = frameCount(n, t);
 				boolean horizontal = word(n, "frameLayout", "vertical").equals("horizontal");
 				yield t == null ? 0 : (horizontal ? t.width() / (double) frames : t.width()) * env.rx;
 			}
@@ -498,7 +504,7 @@ public final class Renderer {
 			case "text" -> tl == null ? 0 : tl.height;
 			case "image" -> {
 				Textures.Tex t = n.has("src") ? textures.get(word(n, "src", ""), n.file, n.line) : null;
-				int frames = Math.max(1, (int) number(n, "frames", 1));
+				int frames = frameCount(n, t);
 				boolean horizontal = word(n, "frameLayout", "vertical").equals("horizontal");
 				yield t == null ? 0 : (horizontal ? t.height() : t.height() / (double) frames) * env.ry;
 			}
@@ -924,9 +930,11 @@ public final class Renderer {
 			return;
 		}
 		int tint = Paint.withAlpha(color(n, st, "tint", 0xFFFFFFFF), opacity);
-		int frames = Math.max(1, (int) number(n, "frames", 1));
+		int frames = frameCount(n, t);
 		boolean horizontal = word(n, "frameLayout", "vertical").equals("horizontal");
-		int frame = frames <= 1 ? 0 : (int) Math.floor(now * number(n, "fps", 10)) % frames;
+		int frame = frames <= 1 ? 0
+				: !n.has("frames") && t.delays() != null ? t.frameAt(Math.round(now * 1000)) // a GIF/WebP: its own frame times
+				: (int) Math.floor(now * number(n, "fps", 10)) % frames;
 		float fu1 = horizontal ? frame / (float) frames : 0;
 		float fu2 = horizontal ? (frame + 1) / (float) frames : 1;
 		float fv1 = horizontal ? 0 : frame / (float) frames;

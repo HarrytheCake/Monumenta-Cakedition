@@ -65,20 +65,20 @@ public final class HudElementScreen extends Screen {
 		this.type = AddedElements.type(edit.element);
 	}
 
-	/** The first PNG in config/cakeui/images (a new image element starts with it), or "". */
+	/** The first image in config/cakeui/images (a new image element starts with it), or "". */
 	static String firstImage() {
 		List<String> all = images(HudAdded.imagesDir());
 		return all.isEmpty() ? "" : all.get(0);
 	}
 
-	/** PNG files under a folder, as paths relative to it. */
+	/** PNG, GIF and WebP files under a folder, as paths relative to it. */
 	static List<String> images(Path dir) {
 		List<String> out = new ArrayList<>();
 		if (!Files.isDirectory(dir)) {
 			return out;
 		}
 		try (Stream<Path> files = Files.walk(dir, 4)) {
-			for (Path p : files.filter(f -> f.toString().toLowerCase(Locale.ROOT).endsWith(".png")).sorted().toList()) {
+			for (Path p : files.filter(f -> f.toString().toLowerCase(Locale.ROOT).matches(".*\\.(png|gif|webp)$")).sorted().toList()) {
 				out.add(dir.relativize(p).toString().replace('\\', '/'));
 			}
 		} catch (IOException e) {

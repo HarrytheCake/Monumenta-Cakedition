@@ -316,6 +316,13 @@ final class SelfTest {
 			held.scale = 2.0;
 			Placement.place(held, PortEdit.Mode.ANCHORED, w - 40, 130, 32, 32, w, h);
 			edits.put("+item-test", held);
+			// E4: an animated WebP from config/cakeui/images (the smoke run puts anim.webp there)
+			if (java.nio.file.Files.isRegularFile(HudAdded.imagesDir().resolve("anim.webp"))) {
+				PortEdit anim = new PortEdit();
+				anim.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("image", "anim.webp");
+				Placement.place(anim, PortEdit.Mode.ANCHORED, w - 40, 90, 32, 32, w, h);
+				edits.put("+image-test", anim);
+			}
 			// E4: health as "bar + number", XP as a slim bar (presets hide vanilla's piece and add one element)
 			for (String[] ps : new String[][] {{"health", "barNumber"}, {"experience", "slim"}}) {
 				PortEdit port = new PortEdit();
@@ -357,7 +364,13 @@ final class SelfTest {
 			Map<String, PortEdit> saved = HudEdits.load(HudEditor.file()).set(HudEditor.layoutKey());
 			Box inner = HudBounds.box("hotbar");
 			Box shown = inner == null || !saved.containsKey("hotbar") ? null : Placement.transform(saved.get("hotbar"), inner, w, h).apply(inner);
-			boolean ok = saved.size() == 10 && shown != null && Math.abs(shown.x() - 4) <= 1 && Math.abs(shown.y() - 4) <= 1
+			boolean animFile = java.nio.file.Files.isRegularFile(HudAdded.imagesDir().resolve("anim.webp"));
+			if (animFile) {
+				Box ab = HudBounds.box("+image-test");
+				boolean animOk = HudBounds.live("+image-test") && ab != null && Math.abs(ab.w() - 32) <= 1 && HudAdded.personalRenderer().layout.problems.isEmpty();
+				CakeUI.LOGGER.info("CakeUI self-test: editor: animated WebP drawn at {}, problems {} ({})", ab, HudAdded.personalRenderer().layout.problems.list(), animOk ? "PASS" : "FAIL");
+			}
+			boolean ok = saved.size() == (animFile ? 11 : 10) && shown != null && Math.abs(shown.x() - 4) <= 1 && Math.abs(shown.y() - 4) <= 1
 					&& Math.abs(inner.bottom() - h) <= 1;
 			Box textInner = HudBounds.box("+text-test");
 			Box textShown = textInner == null ? null : Placement.transform(saved.get("+text-test"), textInner, w, h).apply(textInner);

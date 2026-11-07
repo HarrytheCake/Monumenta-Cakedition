@@ -215,10 +215,18 @@ In a world, open **Mod Menu → CakeUI → Edit HUD…** (or bind the "Edit HUD"
   - Images are PNG files in `config/cakeui/images/` (**Folder…** opens it).
   - **Show only when** (advanced) hides the element unless a condition is true, e.g. `player.health < 10`.
 - The layout's own HUD elements appear as "Layout: name" and can be moved like the rest.
+- **Style** (right-click health, hunger, armor, air, mount health or XP): show it as a bar, a number or both (XP: a slim bar or just the level). The vanilla piece is replaced by an element you can move and edit; Delete brings vanilla's back.
+- **Crosshair** (right-click it → Style): dot, cross, circle or your own image, with size, gap, thickness, colour and "invert" (like vanilla: visible on any background). The attack-cooldown indicator always stays.
+- **Item** and **Inventory** elements show your own slots: the held item, your armor, the hotbar as a grid … with counts, durability and cooldown each on or off.
+- Images can be **animated GIF or WebP**; they play at the file's own speed.
 
 Your arrangement is saved in `config/cakeui/hud.json5`, separately for each layout ("vanilla" when no layout is active), and drawn on top of the layout. Pieces another mod draws itself are shown greyed out and can't be moved here.
 
 **Layout makers:** in dev mode the editor starts on **Saving: layout** and writes the layout's `hud/edits.json5` (loaded after `layout.json5`; players' own edits go on top). Switch to **Saving: my HUD** for your own edits. Added elements saved into a layout take their images from its `assets/` folder.
+
+## Third-party code
+
+CakeUI bundles the TwelveMonkeys ImageIO WebP reader and the parts it needs (imageio-webp, imageio-core, imageio-metadata, common-image, common-io, common-lang 3.12.0), © Harald Kuhr, BSD 3-Clause; the licence is in the jar at `META-INF/licenses/TwelveMonkeys-LICENSE.txt`.
 
 ## For mod developers
 

@@ -16,7 +16,29 @@ import net.minecraft.resources.Identifier;
 
 /** PNGs from a layout's assets folder, loaded on first use and freed when the layout goes away. */
 final class Textures {
-	record Tex(Identifier id, DynamicTexture texture, int width, int height) {
+	/**
+	 * A loaded image; an animated GIF/WebP is a vertical strip of {@code frames} frames, each shown for
+	 * {@code delays[i]} ms ({@code delays} is null for a PNG).
+	 */
+	record Tex(Identifier id, DynamicTexture texture, int width, int height, int frames, int[] delays) {
+		/** The frame shown {@code ms} after the start (looping), by the file's own frame times. */
+		int frameAt(long ms) {
+			if (delays == null || delays.length < 2) {
+				return 0;
+			}
+			int total = 0;
+			for (int d : delays) {
+				total += d;
+			}
+			long r = Math.floorMod(ms, (long) Math.max(1, total));
+			for (int i = 0; i < delays.length; i++) {
+				r -= delays[i];
+				if (r < 0) {
+					return i;
+				}
+			}
+			return delays.length - 1;
+		}
 	}
 
 	private static int generation;
@@ -45,19 +67,40 @@ final class Textures {
 			problems.add(file, line, "image not found: assets/" + path);
 			return null;
 		}
-		if (!path.toLowerCase(Locale.ROOT).endsWith(".png")) {
+		boolean animated = io.github.harrythecake.cakeui.render.AnimatedImages.handles(path);
+		if (!animated && !path.toLowerCase(Locale.ROOT).endsWith(".png")) {
 			failed.add(path);
-			problems.add(file, line, "images must be PNG: assets/" + path);
+			problems.add(file, line, "images must be PNG, GIF or WebP: assets/" + path);
 			return null;
 		}
 		try (InputStream in = Files.newInputStream(p)) {
-			NativeImage image = NativeImage.read(in);
+			NativeImage image;
+			int frames = 1;
+			int[] delays = null;
+			if (animated) {
+				AnimatedImages.Anim a = AnimatedImages.decode(in.readAllBytes(), path);
+				frames = a.frames().size();
+				delays = a.delaysMs();
+				image = new NativeImage(a.width(), a.height() * frames, true);
+				for (int f = 0; f < frames; f++) {
+					int[] px = a.frames().get(f);
+					int fy = f * a.height();
+					for (int y = 0; y < a.height(); y++) {
+						for (int x = 0; x < a.width(); x++) {
+							int c = px[y * a.width() + x];
+							image.setPixel(x, fy + y, c);
+						}
+					}
+				}
+			} else {
+				image = NativeImage.read(in);
+			}
 			String clean0 = path;
 			DynamicTexture texture = new DynamicTexture(() -> "cakeui layout image " + clean0, image);
 			String clean = path.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9/._-]", "_");
 			Identifier id = Identifier.fromNamespaceAndPath("cakeui", prefix + clean);
 			Minecraft.getInstance().getTextureManager().register(id, texture);
-			t = new Tex(id, texture, image.getWidth(), image.getHeight());
+			t = new Tex(id, texture, image.getWidth(), image.getHeight(), frames, delays);
 			loaded.put(path, t);
 			return t;
 		} catch (Exception e) {

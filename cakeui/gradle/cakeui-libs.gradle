@@ -1,0 +1,33 @@
+// CakeUI: libraries bundled in every jar (mod-specific, not part of the kit; apply_kit.py leaves it alone).
+// TwelveMonkeys ImageIO WebP reader (BSD-3) and what it needs: animated WebP images (HUD editor, E4).
+List<String> libs = ['imageio-webp', 'imageio-core', 'imageio-metadata'].collect { "com.twelvemonkeys.imageio:${it}:${rootProject.property('twelvemonkeys_version')}" } +
+		['common-image', 'common-io', 'common-lang'].collect { "com.twelvemonkeys.common:${it}:${rootProject.property('twelvemonkeys_version')}" }
+String part = project.name
+
+if (part == 'core') {
+	dependencies {
+		libs.each { compileOnly it; testImplementation it }
+	}
+} else if (part == 'common') {
+	dependencies {
+		libs.each { compileOnly it }
+	}
+} else if (part == 'fabric') {
+	dependencies {
+		libs.each {
+			implementation it
+			include it
+		}
+	}
+} else if (part == 'neoforge') {
+	dependencies {
+		libs.each {
+			implementation it
+			jarJar it
+			// not a mod: put it on the dev run's classpath too (26.1+ runs the plain classpath, no extra one)
+			if (project.findProperty('obfuscated').toString() == 'true') {
+				additionalRuntimeClasspath it
+			}
+		}
+	}
+}
