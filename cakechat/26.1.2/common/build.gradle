@@ -1,0 +1,8 @@
+plugins {
+	id 'cake-common'
+}
+
+// the settings screen's API; the NeoForge build has Mojang's names, like this vanilla compile
+dependencies {
+	compileOnly('dev.isxander:yet-another-config-lib:3.9.7+26.1-neoforge') { transitive = false }
+}

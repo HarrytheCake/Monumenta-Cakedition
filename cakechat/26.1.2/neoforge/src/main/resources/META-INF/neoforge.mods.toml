@@ -1,0 +1,46 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_range}"
+license = "MIT"
+issueTrackerURL = "https://github.com/HarrytheCake/CakeChat/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+logoFile = "assets/cakechat/icon.png"
+authors = "HarrytheCake"
+displayURL = "https://github.com/HarrytheCake/CakeChat"
+description = '''Chat windows and tabs with your own rules, unlimited history that survives server switches, compacted duplicate messages, regex search and timestamps. Cakedition Updater can import your ChatPlus setup into it.'''
+
+[[mixins]]
+config = "cakechat.mixins.json"
+
+[[dependencies.cakechat]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoforge_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.cakechat]]
+modId = "minecraft"
+type = "required"
+versionRange = "${neoforge_mc_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.cakechat]]
+modId = "yet_another_config_lib_v3"
+type = "required"
+versionRange = "[3.9.0,)"
+ordering = "AFTER"
+side = "CLIENT"
+
+# written from scratch; ChatPlus replaces the same chat drawing, so the two can't run together
+[[dependencies.cakechat]]
+modId = "chatplus"
+type = "incompatible"
+reason = "CakeChat replaces ChatPlus: remove ChatPlus (Cakedition Updater can import its setup)."
+versionRange = "[0,)"
+ordering = "NONE"
+side = "CLIENT"

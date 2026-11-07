@@ -1,0 +1,9 @@
+plugins {
+	id 'cake-neoforge'
+}
+
+// settings screen; a required dependency at runtime, not bundled. 3.6.2 is the newest YACL for 1.20.4 NeoForge
+// that loads on NeoForge 20.4.251 (3.6.4-3.6.6 have an empty loaderVersion: "Missing language javafml version")
+dependencies {
+	implementation('dev.isxander:yet-another-config-lib:3.6.2+1.20.4-neoforge') { transitive = false }
+}

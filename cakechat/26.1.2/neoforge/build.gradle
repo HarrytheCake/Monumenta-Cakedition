@@ -1,0 +1,8 @@
+plugins {
+	id 'cake-neoforge'
+}
+
+// settings screen; a required dependency at runtime, not bundled
+dependencies {
+	implementation('dev.isxander:yet-another-config-lib:3.9.7+26.1-neoforge') { transitive = false }
+}

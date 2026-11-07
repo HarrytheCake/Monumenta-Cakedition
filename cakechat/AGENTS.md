@@ -1,6 +1,6 @@
 # CakeChat — agent reference
 
-Client-only Fabric mod (`cakechat`, package `io.github.harrythecake.cakechat`) for Minecraft **1.20.4**. It replaces three mods in the Monumenta Cakedition pack:
+Client-only mod (`cakechat`, package `io.github.harrythecake.cakechat`) for **Fabric and NeoForge** on Minecraft **1.20.4, 1.21.1 and 26.1.2** (the pack ships Fabric 1.20.4). It replaces three mods in the Monumenta Cakedition pack:
 
 | Replaced | What we take over | Its license |
 |---|---|---|
@@ -14,46 +14,83 @@ The mod's standalone repo is `HarrytheCake/CakeChat` (remote `cakechat`, `git su
 
 **Releases:** v0.1.0 (2026-10-29), v0.2.0 (2026-10-29, M2–M4; in the pack since 2.4.0, replacing the three mods above), **v0.2.1** (2026-10-30, in the pack since 2.4.2): a left click just above the input line crashed the game (`NoSuchElementException` from `MessageHandler.process()`), because the delayed-message bar's hit area (`ChatView.inQueueBar`) was live while nothing was queued; it now answers only while the bar is drawn. Built and tested out of game; not yet tried in game.
 
-**Unreleased (local, on `main`, 2026-11-07; `mod_version` not bumped):** window moving/resizing locked by default (`windowEditing`, see Design → Windows), toggled in the settings (General) or with `/cakechat edit`. 48 tests. Not tried in game yet. **Not on the `multiloader-wip` branch:** carry it over when the port continues.
+**Unreleased (local, 2026-11-07; `mod_version` not bumped):** window moving/resizing locked by default (`windowEditing`, see Design → Windows), toggled in the settings (General) or with `/cakechat edit` (works in game: user, on the pre-port 1.20.4 build); the tab reset fix. **Multiloader port** (branch `cakechat-port`, 2026-11-07): Fabric + NeoForge on 1.20.4, 1.21.1 and 26.1.2, see "Multiloader status" at the end.
 
 ## Files
 
+Cake multiloader kit layout (`tools/multiloader/README.md` in the Monumenta-Cakedition repo). Mojang names everywhere (the Design notes below still say `ChatHud`/`InGameHud`/`Mouse`/`PlayerListHud`/`Text`/`MessageIndicator` in places: read `ChatComponent`/`Gui`/`MouseHandler`/`PlayerTabOverlay`/`Component`/`GuiMessageTag`).
+
 ```
 cakechat/
-├── build.gradle            # Fabric Loom 1.10.5; Java release 17; YACL modImplementation (required, not bundled), Mod Menu compileOnly
-├── gradle.properties       # MC 1.20.4, Yarn 1.20.4+build.3, Loader 0.16.9, Fabric API 0.97.3, YACL 3.6.6, mod_version
-├── settings.gradle, gradlew(.bat), gradle/wrapper/   # Gradle 8.14.3, copied from updater/
-├── .github/workflows/build.yml   # CI (active in the standalone repo): build + test, release v<mod_version> once per version
-└── src/
-    ├── main/resources/
-    │   ├── fabric.mod.json          # client; depends fabric-api + yet_another_config_lib_v3 >=3.6.0; conflicts chatplus
-    │   ├── cakechat.mixins.json     # ChatHudMixin, ChatScreenMixin, InGameHudMixin, MouseMixin
-    │   └── assets/cakechat/         # icon.png (placeholder, drawn by script), lang/{en_us,zh_cn,zh_tw}.json (same keys)
-    ├── main/java/io/github/harrythecake/cakechat/
-    │   ├── CakeChat.java        # entrypoint: loads config, /cakechat opens the settings, /cakechat edit (window editing on/off), /cakechat tablist, peek/hide keys
-    │   ├── ChatConfig.java      # config/cakechat/config.json (Gson, plain Java; temp-file save; broken file → .broken)
-    │   ├── Compactor.java       # duplicate matcher + counter text (plain Java)
-    │   ├── ChatEntry.java       # one message: content (replaceable), signature, indicator, tick, millis, compact key, count
-    │   ├── ChatStore.java       # history (oldest first), compacting, history limit, mirroring vanilla's in-place swaps, routing into tabs
-    │   ├── Channels.java        # tab → server channel: /join on a channel tab, /join of the player's own channel back on a tab without one (never /leave); hides replies to its own joins; remembers the own channel (plain Java)
-    │   ├── TabRules.java        # which tabs take a message (priority, skip others, always add); routing text (plain Java)
-    │   ├── ChatWindows.java     # all windows: views, rules, unread counts, mouse routing, move/resize/tab drags, send prefix
-    │   ├── Find.java            # find bar's search: plain/regex, match case, matches + ranges (plain Java)
-    │   ├── FindBar.java         # find bar UI in the open chat (Ctrl+F): field + Aa/.* toggles + count; filters every window while searching
-    │   ├── ChatCopy.java        # message → clipboard text: plain, § codes (hex as §x§R§R§G§G§B§B), JSON
-    │   ├── CopyMenu.java        # right-click menu on a message in the open chat: copy text / codes / JSON, "Copied" flash
-    │   ├── ChatView.java        # one window: its tab's wrapped lines, drawing (vanilla's layout + fade), tab bar, grip, queue bar, scroll, hover
-    │   ├── SettingsScreen.java  # YACL screen; labels cakechat.config.<key>, tooltips <key>.desc
-    │   ├── ModMenuEntry.java    # Mod Menu configure button → SettingsScreen
-    │   └── mixin/
-    │       ├── ChatHudMixin.java     # priority 500. addMessage HEAD → routing text, TAIL → store; refresh TAIL → swaps; clear HEAD; reset → re-wrap; render/scroll/resetScroll/getTextStyleAt/getIndicatorAt/getVisibleLineCount → windows; mouseClicked → false (queue bar is ours)
-    │       ├── InGameHudMixin.java   # @WrapWithCondition on InGameHud.clear → ChatHud.clear(true): skipped when keepOnDisconnect
-    │       ├── ChatScreenMixin.java  # mouseScrolled speed/invert; mouseClicked HEAD → windows; sendMessage: tab prefix around sendChatMessage; init TAIL → find bar widgets (input line focus unlocked); keyPressed HEAD → Ctrl+F, find field Enter/Esc/Up/Down, Esc closes the copy menu; render TAIL → find count + copy menu; removed HEAD → search and menu end
-    │       └── MouseMixin.java       # @WrapOperation on Screen.mouseDragged/mouseReleased in Mouse's lambdas (method_1602/method_1605): open chat → windows first
-    └── test/java/…/             # JUnit 5, run by `gradlew build`: ChatConfigTest, CompactorTest, TabRulesTest (incl. the shipped Monumenta tabs on made-up lines), ChannelsTest, GuildTagTest, FindTest, LangTest (same keys in all 3 languages)
+├── settings.gradle, build.gradle, buildSrc/, gradlew, gradle/   # the kit (apply_kit.py copies it; don't edit here)
+├── gradle.properties       # mod_id, mod_name, mod_version, mod_group (+ Gradle memory settings)
+├── .github/workflows/build.yml   # mirror CI: JDK 17+21+25, ./gradlew build, a push to main with an unreleased
+│                                 #   mod_version publishes v<version> with all 6 jars + cakechat-<version>.jar (= Fabric 1.20.4)
+├── core/                   # plain Java, no Minecraft imports; compiled into every jar
+│   ├── src/main/java/io/github/harrythecake/cakechat/
+│   │   ├── ChatConfig.java      # config/cakechat/config.json (Gson; temp-file save; broken file → .broken); Tab.copy/resetTarget
+│   │   ├── Compactor.java       # duplicate matcher + counter text
+│   │   ├── Channels.java        # tab → server channel: /join on a channel tab, /join of the player's own channel back on a tab
+│   │   │                        #   without one (never /leave); hides replies to its own joins; remembers the own channel
+│   │   ├── TabRules.java        # which tabs take a message (priority, skip others, always add); routing text
+│   │   ├── GuildTag.java        # the player's guild tag from the tab list lines ({guild} channel)
+│   │   ├── Find.java            # find bar's search: plain/regex, match case, matches + ranges
+│   │   └── platform/            # Platform (loader, configDir) + Services (ServiceLoader; META-INF/services in each loader part)
+│   ├── src/main/resources/assets/cakechat/   # icon.png (placeholder, drawn by script), lang/{en_us,zh_cn,zh_tw}.json (same keys;
+│   │                                         #   key.category.cakechat.main = 26.1's Controls category name)
+│   └── src/test/java/…/         # JUnit 5: ChatConfigTest, CompactorTest, TabRulesTest (incl. the shipped Monumenta tabs on made-up
+│                                #   lines), ChannelsTest, GuildTagTest, FindTest, LangTest (same keys in all 3 languages): 49 tests
+└── <mc>/ (1.20.4, 1.21.1, 26.1.2)
+    ├── version.properties   # from the kit
+    ├── common/              # Minecraft-facing code for both loaders (compiles against vanilla + YACL's NeoForge jar, Mojang names)
+    │   ├── src/main/java/io/github/harrythecake/cakechat/
+    │   │   ├── CakeChat.java        # shared mod class: init (config), keys, clientTick, joined, the /cakechat command tree
+    │   │   │                        #   (settings, edit, tablist) built for either loader's command source; config/windows/store
+    │   │   ├── ChatEntry.java       # one message: content (replaceable), signature, indicator, tick, millis, compact key, count
+    │   │   ├── ChatStore.java       # history (oldest first), compacting, limit, mirroring vanilla's in-place swaps, routing into tabs
+    │   │   ├── ChatWindows.java     # all windows: views, rules, unread counts, mouse routing, move/resize/tab drags (moves and
+    │   │   │                        #   resizes only with windowEditing on), toggleWindowEditing, send prefix
+    │   │   ├── ChatView.java        # one window: wrapped lines, drawing (vanilla's layout + fade), tab bar, grip (editing on),
+    │   │   │                        #   queue bar, scroll, hover
+    │   │   ├── FindBar.java         # find bar UI in the open chat (Ctrl+F): field + Aa/.* toggles + count
+    │   │   ├── ChatCopy.java        # message → clipboard text: plain, § codes (hex as §x§R§R§G§G§B§B), JSON
+    │   │   ├── CopyMenu.java        # right-click menu on a message: copy text / codes / JSON, "Copied" flash
+    │   │   ├── SettingsScreen.java  # YACL screen; labels cakechat.config.<key>, tooltips <key>.desc; General = windowEditing
+    │   │   ├── SelfTest.java        # dev only, -Dcakechat.selftest=true (see Build)
+    │   │   └── mixin/               # cakechat.mixins.json: ChatHudMixin (ChatComponent, priority 500), ChatScreenMixin,
+    │   │                            #   InGameHudMixin (Gui), PlayerListHudAccessor (PlayerTabOverlay.getPlayerInfos)
+    │   └── src/main/resources/cakechat.mixins.json
+    ├── fabric/              # CakeChatFabric (client entrypoint: keys, END_CLIENT_TICK, JOIN, ClientCommandRegistrationCallback),
+    │                        #   FabricPlatform, ModMenuEntry, fabric/mixin/MouseMixin (cakechat.fabric.mixins.json), fabric.mod.json
+    │                        #   (depends fabric-api + yet_another_config_lib_v3; conflicts chatplus)
+    └── neoforge/            # CakeChatNeoForge (@Mod: keys via RegisterKeyMappingsEvent, client tick, LoggingIn,
+                             #   RegisterClientCommandsEvent, ScreenEvent.MouseDragged/MouseButtonReleased.Pre in place of Fabric's
+                             #   MouseMixin, config screen extension point = Mods → Config), NeoForgePlatform,
+                             #   META-INF/mods.toml (1.20.4) / neoforge.mods.toml (YACL required, chatplus incompatible)
 ```
 
-Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakechat/`.
+## Build, run, test
+
+```
+JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build                          # all 6 jars → build/libs/
+JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build -Pcake.versions=26.1.2   # one version (+ core)
+```
+
+`build/libs/cakechat-<fabric|neoforge>-<mc>-0.3.0.jar`, plus `cakechat-0.3.0.jar` = the Fabric 1.20.4 jar (what the pack uses).
+YACL is a required runtime dependency, never bundled: 1.20.4 Fabric 3.6.6, 1.20.4 NeoForge 3.6.2 (3.6.4–3.6.6 have an empty
+`loaderVersion` and don't load on NeoForge 20.4.251), 1.21.1 3.8.1, 26.1.2 3.9.7 (the Fabric 26.1.2 dev client also gets
+MixinExtras 0.5.5, which YACL 3.9.7's mixins need; runtime only, not shipped).
+
+**Self-test** (dev client, `-Dcakechat.selftest=true`, needs a world): adds made-up chat lines (never real players'), opens the
+chat, logs the click event under the newest line, right-clicks a line (copy menu) and logs the three copy formats, checks the
+window-editing lock (`edit lock ok=true`: no grip by default; `/cakechat edit` sent through the client-command path turns it on
+and the grip answers; again turns it off), opens the find bar and the settings screen, takes screenshots
+(`<mc>/<loader>/run/screenshots/cakechat-selftest-{open,copymenu,edit,find,settings}.png`) and logs `cakechat self-test done`.
+Sends nothing to a server. With the kit's smoke script, from the repo root:
+
+```
+python tools/multiloader/smoke.py cakechat <mc> <fabric|neoforge> "--world=<smoke world>" --jvm=-Dcakechat.selftest=true "--done=cakechat self-test done"
+```
 
 ## Decisions (2026-10-28)
 
@@ -110,3 +147,34 @@ Status marks: `[x]` done, `[ ]` open.
 - `ChatConfig` stays plain Java (no Minecraft classes), so tests can load it.
 - Test data uses made-up names (`qwertfox`, `Mock_Pl4yer`, …).
 - A click area answers only while its element is drawn (the delayed-message bar: only with messages queued; vanilla's `process()` throws on an empty queue).
+
+## Multiloader status (2026-11-07)
+
+Ported 2026-11-05/07 from the Yarn 1.20.4 Fabric mod (migrateMappings + yarn2moj, files moved with `git mv`), the `windowEditing`
+lock and tab reset fix from `main`'s `010de51` carried over into `core/` (ChatConfig, lang, ChatConfigTest) and every
+`<mc>/common` (ChatView, ChatWindows, SettingsScreen, CakeChat's `/cakechat edit`). 1.20.4 Fabric behaves as before: same mod id,
+config file and field names, keys, lang keys, commands, mixin targets (Mojang names now).
+
+Every target: `./gradlew build` OK (49 core tests), smoke PASS on the title screen and with `--world` + `-Dcakechat.selftest=true`
+(click event under the newest line, copy menu + the three copy formats, `edit lock ok=true`, find bar `found=1`, YACL settings
+screen opens, `self-test done`, no error lines). Screenshots checked by eye (open/edit/copy menu/find/settings): no grip while
+locked, grip at the box's top-right after `/cakechat edit`, "General" category in the settings.
+
+Same on all targets: commands go to the server only from a tab click (`/join`, never `/leave`) or a tab prefix; `/cakechat`,
+`/cakechat edit` and `/cakechat tablist` are client commands (no clickable chat buttons run them, so NeoForge 1.20.4's
+`sendUnsignedCommand` gap doesn't matter here); ChatPlus is a declared conflict (Fabric `conflicts`, NeoForge `incompatible`);
+YACL settings on both loaders.
+
+| Target | Works | Differs / gaps (why) |
+|---|---|---|
+| 1.20.4 Fabric | everything, as before | none. |
+| 1.20.4 NeoForge | everything; settings from Mods → Config (`ConfigScreenHandler`), keys via `RegisterKeyMappingsEvent`, client command via `RegisterClientCommandsEvent` | drags/releases in the open chat come from `ScreenEvent.MouseDragged.Pre` / `MouseButtonReleased.Pre` instead of Fabric's `MouseMixin` (same place: before the screen gets them). YACL pinned to 3.6.2 (3.6.4–3.6.6 don't load on NeoForge 20.4.251). |
+| 1.21.1 Fabric | everything | `refreshTrimmedMessages` (renamed), `ChatComponent.render` has a `focused` flag; JSON copy uses `Component.Serializer.toJson(text, registries)` (the world's registries, else the built-in ones). |
+| 1.21.1 NeoForge | everything (as 1.20.4 NeoForge; `IConfigScreenFactory`, `ClientTickEvent.Post`, `@Mod(dist = CLIENT)`) | as 1.21.1 Fabric. |
+| 26.1.2 Fabric | everything | lines enter through the private `addMessage(Component, MessageSignature, GuiMessageSource, GuiMessageTag)` (all public add methods pass it). GUI is recorded render state (`GuiGraphicsExtractor`, no depth): lines first, then tab bar/grip/queue bar; the copy menu goes on the next stratum. Text hovers and the hand cursor come from `textRenderer(TOOLTIP_AND_CURSOR)`; clicks find their text through `captureClickableText` (CakeChat feeds every window's visible lines); the indicator tooltip is drawn by CakeChat (the chat screen no longer asks). JSON copy = `ComponentSerialization.CODEC` + registries. Keys in a registered category `cakechat:main` (lang `key.category.cakechat.main`; the old `key.categories.cakechat` stays for 1.20.4/1.21.1). Dev client only: MixinExtras 0.5.5 for YACL 3.9.7. |
+| 26.1.2 NeoForge | everything (as 26.1.2 Fabric; keys via `RegisterKeyMappingsEvent.registerCategory`) | as 26.1.2 Fabric. |
+
+Not tested on any target: real Monumenta chat (channels, `/join`, guild tab list), CakeText together with CakeChat, UMM's HUD
+drag in the open chat (UMM is Fabric 1.20.4 only), moving/resizing with a real mouse drag (the self-test checks the lock state
+and the grip hit test, not a drag). Known since before the port: the copy menu's "Copy with colour codes (§)" shows as
+"… (": the `§)` in the label is read as a formatting code.

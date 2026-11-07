@@ -1,0 +1,16 @@
+plugins {
+	id 'cake-fabric'
+}
+
+// settings screen; a required dependency at runtime, not bundled (the Cakedition pack ships YACL).
+// Its own libraries (quilt parsers, twelvemonkeys) come along for the dev client; Fabric's and Kotlin's don't.
+dependencies {
+	modDep('dev.isxander:yet-another-config-lib:3.9.7+26.1-fabric') {
+		exclude group: 'net.fabricmc'
+		exclude group: 'net.fabricmc.fabric-api'
+		exclude group: 'org.jetbrains.kotlin'
+	}
+	// dev client only: YACL 3.9.7's mixins need a newer MixinExtras than Fabric Loader 0.18.6 brings (0.5.3 throws
+	// "ArrayList cannot be cast to AnnotationNode" on its @Redirect with an array 'at'); MixinExtras picks the newest
+	modRuntimeOnlyDep('io.github.llamalad7:mixinextras-fabric:0.5.5')
+}

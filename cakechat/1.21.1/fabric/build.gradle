@@ -1,0 +1,13 @@
+plugins {
+	id 'cake-fabric'
+}
+
+// settings screen; a required dependency at runtime, not bundled (the Cakedition pack ships YACL).
+// Its own libraries (quilt parsers, twelvemonkeys) come along for the dev client; Fabric's and Kotlin's don't.
+dependencies {
+	modDep('dev.isxander:yet-another-config-lib:3.8.1+1.21.1-fabric') {
+		exclude group: 'net.fabricmc'
+		exclude group: 'net.fabricmc.fabric-api'
+		exclude group: 'org.jetbrains.kotlin'
+	}
+}

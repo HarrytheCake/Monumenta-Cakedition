@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "cakechat",
+	"version": "${version}",
+	"name": "CakeChat",
+	"description": "Chat windows and tabs with your own rules, unlimited history that survives server switches, compacted duplicate messages, regex search and timestamps. Cakedition Updater can import your ChatPlus setup into it.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"icon": "assets/cakechat/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeChat"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": ["io.github.harrythecake.cakechat.fabric.CakeChatFabric"],
+		"modmenu": ["io.github.harrythecake.cakechat.fabric.ModMenuEntry"]
+	},
+	"mixins": ["cakechat.mixins.json", "cakechat.fabric.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "${fabric_mc_dep}",
+		"java": ">=${java_version}",
+		"fabric-api": "*",
+		"yet_another_config_lib_v3": ">=3.8.0"
+	},
+	"conflicts": {
+		"chatplus": "*"
+	}
+}

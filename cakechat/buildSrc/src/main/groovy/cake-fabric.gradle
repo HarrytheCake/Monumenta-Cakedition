@@ -1,0 +1,64 @@
+// <mod>/<mc>/fabric: compiles core + common + fabric sources with Fabric Loom.
+// version.properties obfuscated=true (1.20.4, 1.21.1): Loom with remapping and Mojang's mappings.
+// obfuscated=false (26.1+): Minecraft ships unobfuscated, Loom without remapping.
+// Mod dependencies: use the helpers modDep(...) / modCompileOnlyDep(...) in <mc>/fabric/build.gradle,
+// they pick modImplementation or implementation as needed.
+plugins {
+	id 'cake-base'
+}
+
+boolean obf = (project.findProperty('obfuscated') ?: 'true').toString() == 'true'
+project.ext.set('cake_obf', obf)
+pluginManager.apply(obf ? 'net.fabricmc.fabric-loom-remap' : 'net.fabricmc.fabric-loom')
+
+File mc = project.property('mc_dir') as File
+sourceSets.main.java.srcDir(new File(mc, 'common/src/main/java'))
+sourceSets.main.resources.srcDir(new File(mc, 'common/src/main/resources'))
+
+project.ext.set('modDep', { notation, Closure cfg = null ->
+	def d = dependencies.add(obf ? 'modImplementation' : 'implementation', notation)
+	if (cfg != null) { cfg.delegate = d; cfg() }
+	d
+})
+project.ext.set('modCompileOnlyDep', { notation, Closure cfg = null ->
+	def d = dependencies.add(obf ? 'modCompileOnly' : 'compileOnly', notation)
+	if (cfg != null) { cfg.delegate = d; cfg() }
+	d
+})
+project.ext.set('modRuntimeOnlyDep', { notation, Closure cfg = null ->
+	def d = dependencies.add(obf ? 'modLocalRuntime' : 'localRuntime', notation)
+	if (cfg != null) { cfg.delegate = d; cfg() }
+	d
+})
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.property('minecraft_version')}"
+	if (obf) {
+		mappings loom.officialMojangMappings()
+	}
+	add(obf ? 'modImplementation' : 'implementation', "net.fabricmc:fabric-loader:${project.property('fabric_loader_version')}")
+	if ((project.findProperty('cake_fabric_api') ?: rootProject.findProperty('cake_fabric_api') ?: 'true').toString() == 'true') {
+		add(obf ? 'modImplementation' : 'implementation', "net.fabricmc.fabric-api:fabric-api:${project.property('fabric_api_version')}")
+	}
+	// only the config-screen API; Mod Menu stays optional at runtime
+	add(obf ? 'modCompileOnly' : 'compileOnly', "com.terraformersmc:modmenu:${project.property('modmenu_version')}") {
+		transitive = false
+	}
+}
+
+loom {
+	// no refmap: Loom remaps the mixin annotations inside the classes (no "refmap" key in mixin configs)
+	runs {
+		client {
+			client()
+			setConfigName("Fabric Client ${project.property('minecraft_version')}")
+			runDir('run')
+			// smoke.py / self-tests: -Pcake.runJvmArgs="-Dfoo=bar -Dbaz=1"
+			def extra = project.findProperty('cake.runJvmArgs')
+			if (extra) { vmArgs(*extra.toString().split(' ').findAll { it }) }
+			def extraArgs = project.findProperty('cake.runArgs')
+			if (extraArgs) { programArgs(*extraArgs.toString().split(' ').findAll { it }) }
+		}
+		remove server
+	}
+}
