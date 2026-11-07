@@ -89,7 +89,7 @@
 	"cakechat.find.case.desc": "Match case. Off: upper and lower case are the same.",
 	"cakechat.find.regex.desc": "Regular expression (Java). Off: plain text.",
 	"cakechat.copy.text": "Copy text",
-	"cakechat.copy.codes": "Copy with colour codes (§)",
+	"cakechat.copy.codes": "Copy with colour codes",
 	"cakechat.copy.json": "Copy as JSON",
 	"cakechat.copy.done": "Copied",
 	"cakechat.guild.unknown": "Couldn't find your guild in the tab list, so no channel was joined. /cakechat tablist shows what CakeChat sees.",

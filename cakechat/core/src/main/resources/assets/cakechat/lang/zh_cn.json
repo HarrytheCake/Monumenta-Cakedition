@@ -89,7 +89,7 @@
 	"cakechat.find.case.desc": "区分大小写。关闭时不区分大小写。",
 	"cakechat.find.regex.desc": "正则表达式（Java）。关闭时按普通文字查找。",
 	"cakechat.copy.text": "复制文字",
-	"cakechat.copy.codes": "复制（带颜色代码 §）",
+	"cakechat.copy.codes": "复制（带颜色代码）",
 	"cakechat.copy.json": "复制为 JSON",
 	"cakechat.copy.done": "已复制",
 	"cakechat.guild.unknown": "在 Tab 列表里没找到你的公会，未加入任何频道。/cakechat tablist 可查看 CakeChat 读到的内容。",
