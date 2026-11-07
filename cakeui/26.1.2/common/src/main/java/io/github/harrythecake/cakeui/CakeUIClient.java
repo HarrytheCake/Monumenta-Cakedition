@@ -22,6 +22,8 @@ public final class CakeUIClient {
 	public static final KeyMapping.Category CATEGORY = KeyMapping.Category.register(net.minecraft.resources.Identifier.fromNamespaceAndPath("cakeui", "main"));
 	public static final KeyMapping RELOAD_KEY = new KeyMapping("key.cakeui.reload", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
 	public static final KeyMapping BUTTON_IDS_KEY = new KeyMapping("key.cakeui.buttonIds", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
+	/** Opens the HUD editor (unbound by default). */
+	public static final KeyMapping EDIT_HUD_KEY = new KeyMapping("key.cakeui.editHud", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
 	/** The loader's mod list for the "modmenu" action (Mod Menu on Fabric, NeoForge's own list), or null. */
 	@Nullable
 	public static UnaryOperator<Screen> modsScreen;
@@ -60,6 +62,11 @@ public final class CakeUIClient {
 		}
 		while (BUTTON_IDS_KEY.consumeClick()) {
 			Ui.config().showButtonIds = !Ui.config().showButtonIds;
+		}
+		while (EDIT_HUD_KEY.consumeClick()) {
+			if (client.level != null && client.screen == null) {
+				client.setScreen(new HudEditorScreen(null));
+			}
 		}
 		Ui.tick();
 		WindowPart.tick(client);

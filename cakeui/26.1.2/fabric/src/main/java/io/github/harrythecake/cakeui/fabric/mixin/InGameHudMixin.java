@@ -35,6 +35,7 @@ public abstract class InGameHudMixin {
 		io.github.harrythecake.cakeui.PluginHud.drawAll(context, delta.getGameTimeDeltaPartialTick(false));
 		HudPart.drawLateElements(context, "actionBar", "title");
 		HudPart.drawLayer(context, "front");
+		HudPart.endFrame();
 		HudTiming.end();
 	}
 
@@ -68,7 +69,9 @@ public abstract class InGameHudMixin {
 			original.call(context, font, text, x, y, width, color);
 		} else if (!p.hide) {
 			int a = (color >>> 24) == 0 ? 255 : color >>> 24;
+			String before = HudPart.beginText(p, port);
 			original.call(context, font, text, x, y, width, (Math.round(a * p.opacity) << 24) | (color & 0xFFFFFF));
+			io.github.harrythecake.cakeui.HudBounds.end(before);
 		}
 	}
 }

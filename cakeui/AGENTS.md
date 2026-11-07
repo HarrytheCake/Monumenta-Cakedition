@@ -18,6 +18,8 @@ The standalone repo is `HarrytheCake/CakeUI` (remote `cakeui`, a `git subtree` m
 - **Performance:** zero work without a layout. Expressions are compiled once, and constants folded. Target under 0.5 ms/frame for a typical HUD on the low tier, to be checked with CakeBench in M4.
 - **Pack:** stays out of the pack until a Cakedition layout exists (separate grilling). It will then ship on by default, with `layoutPath` set through yosbr.
 
+- **HUD editor E1** (2026-11-07, ADR 0010, design in `docs/cakeui-design.md` "HUD editor"; local branch `hud-editor`): an in-game screen (`HudEditorScreen`; key `key.cakeui.editHud`, unbound; "Edit HUD…" on the settings screen, in a world only) where a player drags HUD pieces (vanilla's movable ports `HudDefaults.EDITABLE` + plugin pieces), scrolls to scale (0.05 steps, 0.25–4), right-clicks for hide/show, opacity (100/75/50/25), position mode (anchored / percent / fixed) and reset; snapping to screen edges/centre and other pieces (Alt = free), arrows nudge (Shift = 10), Ctrl+Z/Y, Done / Cancel / Reset all / Previews; Esc twice discards. **Personal edits** go to `config/cakeui/hud.json5` (`HudEdits`, core): one set per layout name, `vanilla` without a layout. **How they apply** (`HudPart.beginFrame`): the HUD part is active when the layout has a HUD, the active set has edits, or the editor is open; an edit's hide/opacity replace the layout's, and a move/scale is an **outer transform of the whole port** (vanilla piece + its elements; elements also take the edit's opacity) from `Placement.transform(edit, innerBox, w, h)`. The inner box is **measured**: `HudBounds` records every draw while a port's piece draws (1.20.4/1.21.1: `GuiGraphicsBoundsMixin` on `innerBlit`/`fill`/`drawString`/`renderItem` through the pose; 26.1.2: `GuiRenderStateBoundsMixin` on `GuiRenderState.add*`, using each state's `bounds()`), in coordinates without the editor's transform; unmeasured pieces use `HudDefaults.box` (also the previews). Anchored = nearest of 9 screen anchors + px offset; percent = fraction of the free space; fixed = top-left px. Not in E1: dev-mode target / `hud/edits.json5`, the layout's own elements, adding elements, presets, greyed other-mod pieces. **26.1.2:** edited opacity has no effect on vanilla pieces (no shader colour there, as for layouts).
+
 ## Files
 
 ```
@@ -35,7 +37,8 @@ cakeui/
 │   │   ├── platform/            # Platform (loader, configDir, gameDir, isModLoaded) + Services (ServiceLoader)
 │   │   ├── json/ expr/ model/   # Json5, expression language, Loader/Layout/Node/…; model/PluginNames = names of plugin actions
 │   │   │                        #   and HUD pieces, so the Loader checks layouts without Minecraft classes
-│   │   └── render/NodeState.java, render/Cjk.java (hasCjk)
+│   │   ├── render/NodeState.java, render/Cjk.java (hasCjk)
+│   │   └── edit/                # HUD editor model: PortEdit, HudEdits (hud.json5), Placement (transform, place, snap), HudDefaults
 │   ├── src/main/resources/assets/cakeui/   # icon, lang (en_us, zh_cn, zh_tw)
 │   └── src/test/java/          # Json5Test, ExprTest, LoaderTest, GeometryTest, SchemaTest, render/CjkTest (26 tests)
 └── <mc>/ (1.20.4, 1.21.1, 26.1.2)

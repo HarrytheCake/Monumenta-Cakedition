@@ -29,6 +29,7 @@ public final class CakeUINeoForge {
 		modBus.addListener(RegisterKeyMappingsEvent.class, e -> {
 			e.register(CakeUIClient.RELOAD_KEY);
 			e.register(CakeUIClient.BUTTON_IDS_KEY);
+			e.register(CakeUIClient.EDIT_HUD_KEY);
 		});
 		modBus.addListener(FMLClientSetupEvent.class, e -> e.enqueueWork(() -> {
 			CakeUIClient.start();

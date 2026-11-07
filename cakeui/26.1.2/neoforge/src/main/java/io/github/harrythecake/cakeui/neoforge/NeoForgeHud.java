@@ -70,6 +70,7 @@ final class NeoForgeHud {
 			GuiGraphicsExtractor g = e.getGuiGraphics();
 			PluginHud.drawAll(g, e.getPartialTick().getGameTimeDeltaPartialTick(false));
 			HudPart.drawLayer(g, "front");
+			HudPart.endFrame();
 			HudTiming.end();
 			CakeUIClient.afterHud(g);
 		});

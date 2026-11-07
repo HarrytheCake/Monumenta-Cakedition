@@ -33,6 +33,7 @@ public final class CakeUIFabric implements ClientModInitializer {
 		}
 		KeyMappingHelper.registerKeyMapping(CakeUIClient.RELOAD_KEY);
 		KeyMappingHelper.registerKeyMapping(CakeUIClient.BUTTON_IDS_KEY);
+		KeyMappingHelper.registerKeyMapping(CakeUIClient.EDIT_HUD_KEY);
 		if (FabricLoader.getInstance().isModLoaded("modmenu")) {
 			CakeUIClient.modsScreen = CakeUIFabric::modMenu;
 		}

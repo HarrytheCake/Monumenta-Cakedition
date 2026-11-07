@@ -8,6 +8,7 @@
 		"FontManagerAccessor",
 		"FontStorageAccessor",
 		"GameMenuScreenMixin",
+		"GuiRenderStateBoundsMixin",
 		"GuiCameraOverlaysMixin",
 		"GuiGraphicsAccessor",
 		"InGameHudAccessor",

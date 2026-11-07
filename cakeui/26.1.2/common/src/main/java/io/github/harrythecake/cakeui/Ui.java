@@ -80,6 +80,7 @@ public final class Ui {
 	/** Reads the config and loads the layout. Render thread. */
 	public static void reload() {
 		config = Config.load();
+		HudEditor.reload();
 		Path folder = config.layoutFolder();
 		rejected = null;
 		if (folder == null) {

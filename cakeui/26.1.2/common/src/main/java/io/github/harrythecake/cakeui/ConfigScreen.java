@@ -77,6 +77,12 @@ public final class ConfigScreen extends Screen {
 				.bounds(x, 88, 150, 20).build());
 		addRenderableWidget(Button.builder(Component.translatable("cakeui.config.openFolder"), b -> openFolder())
 				.bounds(x + 160, 88, 150, 20).build());
+		Button editHud = addRenderableWidget(Button.builder(Component.translatable("cakeui.config.editHud"),
+				b -> minecraft.setScreen(new HudEditorScreen(this))).bounds(x, 112, 310, 20).build());
+		editHud.active = minecraft != null && minecraft.level != null;
+		if (!editHud.active) {
+			editHud.setTooltip(Tooltip.create(Component.translatable("cakeui.config.editHud.noWorld")));
+		}
 		addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, b -> onClose()).bounds(width / 2 - 100, height - 27, 200, 20).build());
 	}
 
@@ -118,9 +124,9 @@ public final class ConfigScreen extends Screen {
 	public void extractRenderState(GuiGraphicsExtractor context, int mouseX, int mouseY, float delta) {
 		super.extractRenderState(context, mouseX, mouseY, delta);
 		context.centeredText(font, title, width / 2, 15, 0xFFFFFFFF);
-		context.centeredText(font, status(), width / 2, 120, 0xFFFFFFFF);
+		context.centeredText(font, status(), width / 2, 144, 0xFFFFFFFF);
 		if (!Ui.problems().isEmpty()) {
-			context.centeredText(font, Component.translatable("cakeui.config.status.hint"), width / 2, 134, 0xFFA0A0A0);
+			context.centeredText(font, Component.translatable("cakeui.config.status.hint"), width / 2, 158, 0xFFA0A0A0);
 		}
 	}
 

@@ -196,6 +196,21 @@ F3+Esc's "Game Paused" screen (no buttons) stays vanilla.
 
 **Inventory slots never move.** The `panel` port's elements (and the `title` port's) are drawn in the panel's box, 176×166 GUI pixels, and follow it when the recipe book pushes it aside, so give them sizes in `px` and `%`. With `panel: { "hide": true }` the slot frames go too (they are part of vanilla's texture), so draw your own. The creative inventory is a different screen and stays vanilla for now.
 
+## Moving your HUD (HUD editor)
+
+In a world, open **Mod Menu → CakeUI → Edit HUD…** (or bind the "Edit HUD" key under Controls → CakeUI). The HUD stays live behind the editor:
+
+- **Drag** a piece to move it; it snaps to the screen's edges and centre and to other pieces (hold **Alt** to place it freely). **Arrow keys** nudge the selected piece (Shift: 10 pixels).
+- **Scroll** over a piece to make it bigger or smaller.
+- **Right-click** a piece: hide or show it, opacity, position mode, reset.
+  - *Anchored* (default): it keeps its distance to the nearest edge or corner when the window or GUI scale changes.
+  - *Percent*: it keeps its place as a share of the screen.
+  - *Fixed*: it stays at exact pixels from the top-left corner.
+- **Previews** shows boxes for pieces that aren't on screen right now (boss bars, titles, the tab list …) so you can place them too.
+- **Done** saves, **Cancel** (or Esc twice) throws the changes away, **Ctrl+Z / Ctrl+Y** undo and redo.
+
+Your arrangement is saved in `config/cakeui/hud.json5`, separately for each layout ("vanilla" when no layout is active), and drawn on top of the layout. Pieces drawn by other mods that replace a vanilla piece completely can't be moved here.
+
 ## For mod developers
 
 Other mods can add game values, element types and button actions, and fill a background the active layout doesn't redraw. Register a `CakeUIPlugin` (a public no-argument constructor); CakeUI calls it before the first layout loads, so load order doesn't matter:
