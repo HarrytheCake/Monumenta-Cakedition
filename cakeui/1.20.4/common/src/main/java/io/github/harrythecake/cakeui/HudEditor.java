@@ -102,6 +102,49 @@ public final class HudEditor {
 		return personalWorking != null;
 	}
 
+	/**
+	 * Personal edits on a mod's HUD piece that the editor doesn't offer any more (the mod places it itself
+	 * now, API 3): once, the edit's place goes to the mod's movable of the same id (if any) and the edit is
+	 * dropped. Called at the start of a HUD frame (needs the screen size).
+	 */
+	static void migrate(int w, int h) {
+		if (personalWorking != null) {
+			return;
+		}
+		Map<String, PortEdit> set = saved().set(layoutKey());
+		List<String> stale = new ArrayList<>();
+		for (String key : set.keySet()) {
+			if (PluginHud.names().contains(key) && !PluginHud.editableNames().contains(key)) {
+				stale.add(key);
+			}
+		}
+		if (stale.isEmpty()) {
+			return;
+		}
+		Map<String, PortEdit> keep = HudEdits.copy(set);
+		for (String key : stale) {
+			PortEdit e = keep.remove(key);
+			String owner = PluginHud.owner(key);
+			io.github.harrythecake.cakeui.api.Movable m = owner == null ? null : HudMovables.get(HudMovables.PREFIX + owner + ":" + key);
+			double[] b = m == null ? null : m.box(w, h);
+			if (b != null && e != null && (e.mode != null || e.scale != null)) {
+				io.github.harrythecake.cakeui.edit.Placement.Box inner = new io.github.harrythecake.cakeui.edit.Placement.Box(b[0], b[1], b[2], b[3]);
+				io.github.harrythecake.cakeui.edit.Placement.Box shown = io.github.harrythecake.cakeui.edit.Placement.transform(e, inner, w, h).apply(inner);
+				m.place(shown.x(), shown.y(), m.resizable() ? shown.w() : b[2], m.resizable() ? shown.h() : b[3], w, h);
+				m.save();
+				CakeUI.LOGGER.info("CakeUI: {} is placed by {} now; moved your HUD edit there", key, owner);
+			}
+		}
+		HudEdits all = saved();
+		all.put(layoutKey(), keep);
+		try {
+			all.save(file());
+		} catch (IOException e) {
+			CakeUI.LOGGER.error("CakeUI: could not save {}", file(), e);
+		}
+		merged = null;
+	}
+
 	/** Re-reads the files (after a layout reload). */
 	public static void reload() {
 		saved = null;
@@ -171,7 +214,8 @@ public final class HudEditor {
 	/** Every piece the editor offers: vanilla's movable ports, the pieces mods added, the layout's own HUD elements. */
 	static List<String> pieces() {
 		List<String> out = new ArrayList<>(HudDefaults.EDITABLE);
-		out.addAll(PluginHud.names());
+		out.addAll(PluginHud.editableNames());
+		out.addAll(HudMovables.all().keySet()); // things mods place themselves (chat windows, the minimap)
 		Node part = HudPart.part();
 		if (part != null) {
 			for (Node k : part.children) {

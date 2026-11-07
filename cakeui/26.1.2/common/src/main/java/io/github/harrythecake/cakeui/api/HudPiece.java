@@ -15,6 +15,14 @@ public interface HudPiece {
 	 */
 	void draw(GuiGraphicsExtractor context, int screenWidth, int screenHeight, float tickDelta);
 
+	/**
+	 * False for a piece the HUD editor must not offer (API version 3): one that covers the whole screen
+	 * (markers in the world), or one you place yourself through {@link CakeUIApi#addMovables}.
+	 */
+	default boolean editable() {
+		return true;
+	}
+
 	/** The point a layout's "scale" grows the piece from (GUI pixels); its centre is a good choice. */
 	default double pivotX(int screenWidth) {
 		return screenWidth / 2.0;

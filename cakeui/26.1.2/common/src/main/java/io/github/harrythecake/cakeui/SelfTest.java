@@ -67,6 +67,10 @@ final class SelfTest {
 	private SelfTest() {
 	}
 
+	/** The self-test's stand-in movable (see init). */
+	static final double[] DEMO_BOX = {40, 150, 60, 20};
+	static boolean demoSaved;
+
 	static void init() {
 		String mode = System.getProperty("cakeui.selftest", "");
 		if (mode.isEmpty()) {
@@ -74,6 +78,41 @@ final class SelfTest {
 		}
 		worldMode = mode.equals("world");
 		enabled = true;
+		// a stand-in for a mod's own movable (API 3): it stores its box itself and says when it was saved
+		io.github.harrythecake.cakeui.api.CakeUIApi.get().addMovables("cakeui-selftest", () -> java.util.List.of(new io.github.harrythecake.cakeui.api.Movable() {
+			@Override
+			public String id() {
+				return "demo";
+			}
+
+			@Override
+			public net.minecraft.network.chat.Component label() {
+				return net.minecraft.network.chat.Component.literal("Self-test movable");
+			}
+
+			@Override
+			public double[] box(int w, int h) {
+				return worldMode ? DEMO_BOX.clone() : null;
+			}
+
+			@Override
+			public void place(double x, double y, double width, double height, int w, int h) {
+				DEMO_BOX[0] = Math.round(x);
+				DEMO_BOX[1] = Math.round(y);
+				DEMO_BOX[2] = Math.round(width);
+				DEMO_BOX[3] = Math.round(height);
+			}
+
+			@Override
+			public boolean resizable() {
+				return true;
+			}
+
+			@Override
+			public void save() {
+				demoSaved = true;
+			}
+		}));
 		CakeUI.LOGGER.info("CakeUI self-test: title screen{}, then quit", worldMode ? ", pause menu and inventory" : "");
 		if (Boolean.getBoolean("cakeui.selftest.fill")) {
 			// a stand-in plugin: gradients behind the main menu (purple) and loading screens (teal)
@@ -316,6 +355,11 @@ final class SelfTest {
 			held.scale = 2.0;
 			Placement.place(held, PortEdit.Mode.ANCHORED, w - 40, 130, 32, 32, w, h);
 			edits.put("+item-test", held);
+			// E5: a mod's own movable, moved as a drag would (the editor calls place; Done must make the mod save)
+			var demo = HudMovables.get("~cakeui-selftest:demo");
+			if (demo != null) {
+				demo.place(100, 160, 60, 20, w, h);
+			}
 			// E4: an animated WebP from config/cakeui/images (the smoke run puts anim.webp there)
 			if (java.nio.file.Files.isRegularFile(HudAdded.imagesDir().resolve("anim.webp"))) {
 				PortEdit anim = new PortEdit();
@@ -367,13 +411,19 @@ final class SelfTest {
 		} else if (t == 59) {
 			SHOT.accept(client, "cakeui-selftest-hudeditor-edited.png");
 		} else if (t == 60) {
-			HudEditor.finish(true);
-			client.setScreen(null);
+			if (client.screen instanceof HudEditorScreen editor) {
+				editor.done();
+			} else {
+				HudEditor.finish(true);
+				client.setScreen(null);
+			}
 		} else if (t == 80) {
 			SHOT.accept(client, "cakeui-selftest-hud-edited.png");
 			Map<String, PortEdit> saved = HudEdits.load(HudEditor.file()).set(HudEditor.layoutKey());
 			Box inner = HudBounds.box("hotbar");
 			Box shown = inner == null || !saved.containsKey("hotbar") ? null : Placement.transform(saved.get("hotbar"), inner, w, h).apply(inner);
+			CakeUI.LOGGER.info("CakeUI self-test: editor: movable placed by its mod at {} and saved on Done: {} ({})", java.util.Arrays.toString(DEMO_BOX),
+					demoSaved, demoSaved && DEMO_BOX[0] == 100 && DEMO_BOX[1] == 160 ? "PASS" : "FAIL");
 			boolean animFile = java.nio.file.Files.isRegularFile(HudAdded.imagesDir().resolve("anim.webp"));
 			if (animFile) {
 				Box ab = HudBounds.box("+image-test");

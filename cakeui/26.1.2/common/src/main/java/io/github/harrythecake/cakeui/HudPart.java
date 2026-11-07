@@ -62,6 +62,8 @@ public final class HudPart {
 	}
 
 	private static final Map<String, Port> PORTS = new HashMap<>();
+	/** Old edits on pieces mods now place themselves were moved (once per game). */
+	private static boolean migrated;
 	/** The edits this frame uses (for the HUD's own elements in {@link #drawLayer}). */
 	private static Map<String, PortEdit> frameEdits = Map.of();
 	/** Draw the HUD's own elements one by one (some have edits, or the editor measures them). */
@@ -86,6 +88,10 @@ public final class HudPart {
 
 	/** Start of InGameHud.render: reads every mentioned port once. */
 	public static void beginFrame(GuiGraphicsExtractor ctx) {
+		if (!benchOff && !migrated) {
+			migrated = true;
+			HudEditor.migrate(ctx.guiWidth(), ctx.guiHeight());
+		}
 		Node part = benchOff ? null : part();
 		Map<String, PortEdit> edits = benchOff ? Map.of() : HudEditor.current();
 		boolean editing = !benchOff && HudEditor.editing();
@@ -114,14 +120,19 @@ public final class HudPart {
 			}
 		}
 		if (editing) {
-			// every piece is measured while the editor is open
+			// every piece is measured while the editor is open (not movables: their mods place them)
 			for (String name : HudEditor.pieces()) {
-				PORTS.computeIfAbsent(name, k -> new Port(null));
+				if (!name.startsWith(HudMovables.PREFIX)) {
+					PORTS.computeIfAbsent(name, k -> new Port(null));
+				}
 			}
 		}
 		for (Map.Entry<String, PortEdit> e : edits.entrySet()) {
-			if (e.getKey().startsWith(HudEdits.ELEMENT) || e.getKey().startsWith(HudEdits.ADDED)) {
+			if (e.getKey().startsWith(HudEdits.ELEMENT) || e.getKey().startsWith(HudEdits.ADDED) || e.getKey().startsWith(HudMovables.PREFIX)) {
 				continue; // the layout's own elements and added ones: drawLayer
+			}
+			if (PluginHud.names().contains(e.getKey()) && !PluginHud.editableNames().contains(e.getKey())) {
+				continue; // a mod's piece the editor doesn't move (it places it itself)
 			}
 			PortEdit edit = e.getValue();
 			Port p = PORTS.computeIfAbsent(e.getKey(), k -> new Port(null));

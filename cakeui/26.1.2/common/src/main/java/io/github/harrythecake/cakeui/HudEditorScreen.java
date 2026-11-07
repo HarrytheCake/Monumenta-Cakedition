@@ -9,6 +9,7 @@ import io.github.harrythecake.cakeui.edit.StylePresets;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.input.MouseButtonEvent;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.CycleButton;
 import net.minecraft.client.gui.screens.Screen;
@@ -43,6 +44,13 @@ public final class HudEditorScreen extends Screen {
 	private final long openedAt = System.currentTimeMillis();
 	private final Deque<Map<String, PortEdit>> undo = new ArrayDeque<>();
 	private final Deque<Map<String, PortEdit>> redo = new ArrayDeque<>();
+	/** Movables' boxes with each undo/redo step (mods store those, not the edits). */
+	private final Deque<Map<String, double[]>> undoBoxes = new ArrayDeque<>();
+	private final Deque<Map<String, double[]>> redoBoxes = new ArrayDeque<>();
+	/** Movables' boxes when the editor opened (Cancel puts them back; Done saves the ones that changed). */
+	private final Map<String, double[]> movableStart;
+	/** Dragging the bottom-right handle of a resizable movable. */
+	private boolean resizing;
 	private boolean previews = true;
 
 	@Nullable
@@ -73,6 +81,33 @@ public final class HudEditorScreen extends Screen {
 		HudEditor.start();
 		this.edits = HudEditor.editingMap();
 		this.initial = HudEditor.snapshot();
+		var w = Minecraft.getInstance().getWindow();
+		this.movableStart = movableBoxes(w.getGuiScaledWidth(), w.getGuiScaledHeight());
+	}
+
+	/** Opens the editor from anywhere (API: openHudEditor); false when not in a world. */
+	public static boolean open(@Nullable Screen parent) {
+		Minecraft mc = Minecraft.getInstance();
+		if (mc.level == null || mc.player == null) {
+			return false;
+		}
+		mc.setScreen(new HudEditorScreen(parent));
+		return true;
+	}
+
+	private static Map<String, double[]> movableBoxes(int w, int h) {
+		Map<String, double[]> out = new java.util.LinkedHashMap<>();
+		HudMovables.all().forEach((k, m) -> {
+			double[] b = m.box(w, h);
+			if (b != null) {
+				out.put(k, b.clone());
+			}
+		});
+		return out;
+	}
+
+	private static boolean isMovable(String name) {
+		return name.startsWith(HudMovables.PREFIX);
 	}
 
 	/** The toolbar: a column on the left, half-way down (vanilla draws nothing there). */
@@ -130,6 +165,10 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private boolean visible(String name) {
+		if (isMovable(name)) {
+			var m = HudMovables.get(name);
+			return m != null && m.box(width, height) != null;
+		}
 		PortEdit styled = effective(name);
 		if (styled != null && styled.style != null && StylePresets.STYLES.containsKey(name)) {
 			return false;
@@ -145,6 +184,11 @@ public final class HudEditorScreen extends Screen {
 
 	/** Where the piece is on screen now (its measured or default place, with the edits applied). */
 	private Box screenBox(String name) {
+		if (isMovable(name)) {
+			var m = HudMovables.get(name);
+			double[] b = m == null ? null : m.box(width, height);
+			return b == null ? new Box(-1000, -1000, 0, 0) : new Box(b[0], b[1], b[2], b[3]);
+		}
 		Box inner = HudBounds.orDefault(name, width, height);
 		PortEdit shown = effective(name);
 		if (name.startsWith(HudEdits.ADDED) && HudBounds.box(name) == null && shown != null && shown.element != null) {
@@ -174,6 +218,10 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private static Component label(String name) {
+		if (isMovable(name)) {
+			var m = HudMovables.get(name);
+			return m == null ? Component.literal(name) : m.label();
+		}
 		if (StylePresets.portOf(name) != null) {
 			String port = StylePresets.portOf(name);
 			PortEdit pe = effective(port);
@@ -211,20 +259,39 @@ public final class HudEditorScreen extends Screen {
 
 	private void checkpoint() {
 		undo.push(HudEdits.copy(edits));
+		undoBoxes.push(movableBoxes(width, height));
 		if (undo.size() > 100) {
 			undo.removeLast();
+			undoBoxes.removeLast();
 		}
 		redo.clear();
+		redoBoxes.clear();
 	}
 
 	private void restore(Deque<Map<String, PortEdit>> from, Deque<Map<String, PortEdit>> to) {
 		if (from.isEmpty()) {
 			return;
 		}
+		boolean isUndo = from == undo;
+		Deque<Map<String, double[]>> boxesFrom = isUndo ? undoBoxes : redoBoxes;
+		Deque<Map<String, double[]>> boxesTo = isUndo ? redoBoxes : undoBoxes;
 		to.push(HudEdits.copy(edits));
+		boxesTo.push(movableBoxes(width, height));
 		Map<String, PortEdit> state = from.pop();
 		edits.clear();
 		edits.putAll(state);
+		placeAll(boxesFrom.isEmpty() ? Map.of() : boxesFrom.pop());
+	}
+
+	/** Puts movables back to these boxes. */
+	private void placeAll(Map<String, double[]> boxes) {
+		Map<String, io.github.harrythecake.cakeui.api.Movable> all = HudMovables.all();
+		boxes.forEach((k, b) -> {
+			var m = all.get(k);
+			if (m != null) {
+				m.place(b[0], b[1], b[2], b[3], width, height);
+			}
+		});
 	}
 
 	private boolean dirty() {
@@ -277,6 +344,12 @@ public final class HudEditorScreen extends Screen {
 				Component text = hidden ? label(name).copy().append(" ").append(Component.translatable("cakeui.editor.hidden")) : label(name);
 				if (y2 - y1 >= 10 && font.width(text) <= x2 - x1) {
 					g.centeredText(font, text, (x1 + x2) / 2, (y1 + y2) / 2 - 4, hidden ? 0xFFFF9090 : 0xFFD0D0D0);
+				}
+			}
+			if (isMovable(name)) {
+				var mv = HudMovables.get(name);
+				if (mv != null && mv.resizable()) {
+					g.fill(x2 - 4, y2 - 4, x2 + 1, y2 + 1, name.equals(hovered) || name.equals(selected) ? 0xFFFFD000 : 0xC0FFFFFF);
 				}
 			}
 			int color = name.equals(selected) ? 0xFFFFD000 : name.equals(hovered) ? 0xFFFFFFFF : hidden ? 0xFFE05050 : 0x90FFFFFF;
@@ -354,6 +427,8 @@ public final class HudEditorScreen extends Screen {
 				dragStartY = my;
 				dragStartBox = screenBox(hit);
 				dragMoved = false;
+				var m = isMovable(hit) ? HudMovables.get(hit) : null;
+				resizing = m != null && m.resizable() && mx >= dragStartBox.right() - 5 && my >= dragStartBox.bottom() - 5;
 			}
 			return true;
 		}
@@ -375,6 +450,18 @@ public final class HudEditorScreen extends Screen {
 		double my = event.y();
 		if (dragging == null || event.button() != GLFW.GLFW_MOUSE_BUTTON_LEFT) {
 			return super.mouseDragged(event, dx, dy);
+		}
+		if (resizing) {
+			if (!dragMoved) {
+				dragMoved = true;
+				checkpoint();
+			}
+			var m = HudMovables.get(dragging);
+			if (m != null) {
+				m.place(dragStartBox.x(), dragStartBox.y(), Math.max(16, dragStartBox.w() + (mx - dragStartX)),
+						Math.max(9, dragStartBox.h() + (my - dragStartY)), width, height);
+			}
+			return true;
 		}
 		double left = dragStartBox.x() + (mx - dragStartX);
 		double top = dragStartBox.y() + (my - dragStartY);
@@ -406,6 +493,7 @@ public final class HudEditorScreen extends Screen {
 	public boolean mouseReleased(MouseButtonEvent event) {
 		if (dragging != null && event.button() == GLFW.GLFW_MOUSE_BUTTON_LEFT) {
 			dragging = null;
+			resizing = false;
 			guides = List.of();
 			return true;
 		}
@@ -419,6 +507,16 @@ public final class HudEditorScreen extends Screen {
 			return super.mouseScrolled(mx, my, scrollX, scrollY);
 		}
 		selected = hit;
+		if (isMovable(hit)) {
+			var m = HudMovables.get(hit);
+			double[] b = m == null ? null : m.box(width, height);
+			if (b != null && m.resizable()) {
+				checkpoint();
+				double f = scrollY > 0 ? 1.05 : 1 / 1.05;
+				m.place(b[0], b[1], Math.max(16, b[2] * f), Math.max(9, b[3] * f), width, height);
+			}
+			return true;
+		}
 		checkpoint();
 		PortEdit e = edit(hit);
 		PortEdit shown = effective(hit);
@@ -430,6 +528,14 @@ public final class HudEditorScreen extends Screen {
 
 	/** Puts a piece's on-screen top-left at (left, top), keeping its position mode (anchored by default). */
 	private void moveTo(String name, double left, double top) {
+		if (isMovable(name)) {
+			var m = HudMovables.get(name);
+			double[] b = m == null ? null : m.box(width, height);
+			if (b != null) {
+				m.place(left, top, b[2], b[3], width, height);
+			}
+			return;
+		}
 		Box b = screenBox(name);
 		PortEdit shown = effective(name);
 		PortEdit e = edit(name);
@@ -440,6 +546,9 @@ public final class HudEditorScreen extends Screen {
 	}
 
 	private void openMenu(String name, double mx, double my) {
+		if (isMovable(name)) {
+			return; // a mod's own piece: drag it (and its corner handle); nothing else here
+		}
 		if (name.equals("crosshair")) {
 			openCrosshairMenu(mx, my);
 			return;
@@ -638,10 +747,37 @@ public final class HudEditorScreen extends Screen {
 
 	// ---- closing ----
 
+	/** Done (also for the self-test). */
+	void done() {
+		close(true);
+	}
+
 	private void close(boolean save) {
 		finished = true;
+		finishMovables(save);
 		HudEditor.finish(save);
 		minecraft.setScreen(parent);
+	}
+
+	/** Done: the movables that changed are saved by their mods. Cancel: all go back where they were. */
+	private void finishMovables(boolean save) {
+		Map<String, io.github.harrythecake.cakeui.api.Movable> all = HudMovables.all();
+		for (Map.Entry<String, io.github.harrythecake.cakeui.api.Movable> e : all.entrySet()) {
+			double[] start = movableStart.get(e.getKey());
+			double[] now = e.getValue().box(width, height);
+			try {
+				if (save) {
+					if (start == null || now == null || !java.util.Arrays.equals(start, now)) {
+						e.getValue().save();
+					}
+				} else if (start != null) {
+					e.getValue().place(start[0], start[1], start[2], start[3], width, height);
+					e.getValue().cancel();
+				}
+			} catch (RuntimeException ex) {
+				CakeUI.LOGGER.error("CakeUI: movable {} failed", e.getKey(), ex);
+			}
+		}
 	}
 
 	@Override
@@ -652,6 +788,7 @@ public final class HudEditorScreen extends Screen {
 	@Override
 	public void removed() {
 		if (!finished && !childOpen) {
+			finishMovables(false);
 			finished = true;
 			HudEditor.finish(false);
 		}
