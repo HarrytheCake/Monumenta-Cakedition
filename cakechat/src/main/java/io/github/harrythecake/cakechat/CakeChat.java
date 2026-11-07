@@ -24,7 +24,8 @@ import java.nio.file.Path;
 import java.util.List;
 
 /**
- * Client entrypoint: loads the config, registers {@code /cakechat} (settings) and {@code /cakechat tablist}, the peek key
+ * Client entrypoint: loads the config, registers {@code /cakechat} (settings), {@code /cakechat edit} (window moving and
+ * resizing on/off) and {@code /cakechat tablist}, the peek key
  * (Left Alt) and the hide key (unbound). A ChatPlus setup is imported by Cakedition Updater (1.7.0+), not here.
  */
 public final class CakeChat implements ClientModInitializer {
@@ -63,7 +64,13 @@ public final class CakeChat implements ClientModInitializer {
 					// next tick: the chat screen closes after this command returns
 					client.send(() -> client.setScreen(SettingsScreen.create(null)));
 					return 1;
-				}).then(ClientCommandManager.literal("tablist").executes(context -> {
+				}).then(ClientCommandManager.literal("edit").executes(context -> {
+					// client-side only: never sent to the server; the new state goes to the player's own chat
+					boolean on = windows().toggleWindowEditing();
+					context.getSource().sendFeedback(Text.translatable(on ? "cakechat.edit.on" : "cakechat.edit.off")
+							.formatted(on ? Formatting.GREEN : Formatting.YELLOW));
+					return 1;
+				})).then(ClientCommandManager.literal("tablist").executes(context -> {
 					// what CakeChat reads for the {guild} channel, shown only here (never logged or sent)
 					List<String> lines = windows().tabListLines();
 					MinecraftClient client = MinecraftClient.getInstance();

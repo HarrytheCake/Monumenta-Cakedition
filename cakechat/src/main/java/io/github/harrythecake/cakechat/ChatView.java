@@ -31,7 +31,7 @@ import java.util.Optional;
 public final class ChatView {
 	/** Height of the tab bar under the box, in GUI pixels. */
 	static final int TAB_BAR_HEIGHT = 12;
-	/** Size of the resize grip at the box's top-right corner. */
+	/** Size of the resize grip at the box's top-right corner (drawn only while window editing is on). */
 	static final int GRIP = 6;
 	private static final int MIN_WIDTH = 60;
 	private static final int MIN_HEIGHT = 20;
@@ -136,7 +136,11 @@ public final class ChatView {
 		return x >= boxX() && x < boxX() + boxWidth() && y >= boxTop() && y < boxBottom();
 	}
 
+	/** Only while window editing is on (the grip is drawn only then). */
 	boolean inGrip(double x, double y) {
+		if (!CakeChat.config().windowEditing) {
+			return false;
+		}
 		int right = boxX() + boxWidth();
 		return x >= right - GRIP && x < right + 2 && y >= boxTop() - 2 && y < boxTop() + GRIP;
 	}
@@ -379,7 +383,9 @@ public final class ChatView {
 		ensureWrapped();
 		if (open) {
 			renderTabBar(context, mouseX, mouseY);
-			renderGrip(context, mouseX, mouseY, highlighted);
+			if (CakeChat.config().windowEditing) {
+				renderGrip(context, mouseX, mouseY, highlighted);
+			}
 		}
 		if (index == 0) {
 			renderQueueBar(context);

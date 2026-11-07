@@ -26,6 +26,33 @@ class ChatConfigTest {
 	}
 
 	@Test
+	void resetTargetIsTheShippedTab() {
+		List<ChatConfig.Tab> shipped = ChatConfig.Window.main().tabs;
+		// a default tab the player edited: reset brings back its own pattern and channel, not a blank "All" tab
+		ChatConfig.Tab trade = shipped.get(3).copy();
+		trade.channel = "x";
+		trade.pattern = "changed";
+		ChatConfig.Tab target = trade.resetTarget();
+		assertEquals(shipped.get(3).name, target.name);
+		assertEquals("^<tr> ", target.pattern);
+		assertEquals("tr", target.channel);
+		assertEquals(shipped.get(3).server, target.server);
+		// renamed but pattern unchanged: still found
+		ChatConfig.Tab lfg = shipped.get(2).copy();
+		lfg.name = "Groups";
+		lfg.channel = "";
+		assertEquals("lfg", lfg.resetTarget().channel);
+		assertEquals(shipped.get(2).name, lfg.resetTarget().name);
+		// a tab the player added: reset keeps it as it is
+		ChatConfig.Tab own = ChatConfig.Tab.named("Mine", "^<mine> ");
+		own.channel = "mine";
+		ChatConfig.Tab ownTarget = own.resetTarget();
+		assertEquals("Mine", ownTarget.name);
+		assertEquals("^<mine> ", ownTarget.pattern);
+		assertEquals("mine", ownTarget.channel);
+	}
+
+	@Test
 	void roundTrip() throws IOException {
 		Path file = dir.resolve("cakechat").resolve("config.json");
 		ChatConfig config = new ChatConfig();
@@ -141,6 +168,33 @@ class ChatConfigTest {
 		assertTrue(config.compact.enabled);
 		assertTrue(Files.exists(dir.resolve("config.json.broken")));
 		assertFalse(Files.exists(file));
+	}
+
+	@Test
+	void windowEditingIsOffByDefault() {
+		assertFalse(new ChatConfig().windowEditing);
+		assertFalse(ChatConfig.load(dir.resolve("config.json")).windowEditing);
+	}
+
+	@Test
+	void olderFileWithoutWindowEditingLoadsLocked() throws IOException {
+		Path file = dir.resolve("config.json");
+		// a 0.3.0 file: current config version, moved main window, no windowEditing field
+		Files.writeString(file, "{\"configVersion\": 3, \"windows\": [{\"x\": 12, \"bottom\": 60, \"tabs\": [{\"name\": \"Mine\"}]}]}",
+				StandardCharsets.UTF_8);
+		ChatConfig config = ChatConfig.load(file);
+		assertFalse(config.windowEditing);
+		assertEquals(12, config.windows.get(0).x);
+		assertEquals(3, config.configVersion);
+	}
+
+	@Test
+	void windowEditingIsSaved() throws IOException {
+		Path file = dir.resolve("config.json");
+		ChatConfig config = new ChatConfig();
+		config.windowEditing = true;
+		config.save(file);
+		assertTrue(ChatConfig.load(file).windowEditing);
 	}
 
 	@Test

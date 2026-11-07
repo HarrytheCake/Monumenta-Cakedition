@@ -203,7 +203,11 @@ public final class ChatWindows {
 
 	// ---- mouse in the open chat (ChatScreen) ----
 
-	/** True when CakeChat used the click (copy menu, tab, tab bar, grip, delayed-message bar, right-click on a message). */
+	/**
+	 * True when CakeChat used the click (copy menu, tab, tab bar, grip, delayed-message bar, right-click on a message).
+	 * With {@link ChatConfig#windowEditing} off there is no grip and the tab bar doesn't move the window: a tab press
+	 * still selects the tab on release, and a press on the bar's empty part isn't claimed.
+	 */
 	public boolean mouseClicked(double x, double y, int button) {
 		rules();
 		if (copyMenu.isOpen()) {
@@ -243,6 +247,10 @@ public final class ChatWindows {
 				return true;
 			}
 			if (view.inTabBar(x, y)) {
+				if (!CakeChat.config().windowEditing) {
+					// locked: nothing to do on the bar itself; not claimed, so other mods' drags still get it
+					return false;
+				}
 				startDrag(Drag.MOVE, view, x, y);
 				return true;
 			}
@@ -260,7 +268,9 @@ public final class ChatWindows {
 		}
 		int dx = (int) Math.round(x - pressX);
 		int dy = (int) Math.round(y - pressY);
-		if (drag == Drag.TAB && (Math.abs(dx) >= DRAG_THRESHOLD || Math.abs(dy) >= DRAG_THRESHOLD)) {
+		// locked windows: a tab press stays a tab click however far the mouse goes
+		if (drag == Drag.TAB && CakeChat.config().windowEditing
+				&& (Math.abs(dx) >= DRAG_THRESHOLD || Math.abs(dy) >= DRAG_THRESHOLD)) {
 			drag = Drag.MOVE;
 		}
 		if (drag == Drag.MOVE) {
@@ -281,6 +291,18 @@ public final class ChatWindows {
 		drag = Drag.NONE;
 		CakeChat.saveConfigFile();
 		return true;
+	}
+
+	/** {@code /cakechat edit}: window moving and resizing on or off (saved); returns the new state. */
+	boolean toggleWindowEditing() {
+		ChatConfig config = CakeChat.config();
+		config.windowEditing = !config.windowEditing;
+		// switched off in the middle of a move or resize: that drag ends here (a tab click stays a click)
+		if (!config.windowEditing && (drag == Drag.MOVE || drag == Drag.RESIZE)) {
+			drag = Drag.NONE;
+		}
+		CakeChat.saveConfigFile();
+		return config.windowEditing;
 	}
 
 	private void startDrag(Drag kind, ChatView view, double x, double y) {

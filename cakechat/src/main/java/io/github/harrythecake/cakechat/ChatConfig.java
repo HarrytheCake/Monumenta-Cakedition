@@ -33,6 +33,11 @@ public final class ChatConfig {
 	public Timestamps timestamps = new Timestamps();
 	public Scroll scroll = new Scroll();
 	public FindOptions find = new FindOptions();
+	/**
+	 * Moving windows (dragging the tab bar or a tab) and resizing them (the corner grip) in the open chat. Off by default
+	 * so a stray drag can't move the chat; a missing field (files from before 0.3.1) reads as off, no migration needed.
+	 */
+	public boolean windowEditing = false;
 	/** The first window is the main one (where the delayed-message bar shows); there is always at least one. */
 	public List<Window> windows = new ArrayList<>(List.of(Window.main()));
 	/** The player's own chat channel per server address (see {@link Channels}), so All can join it again after a restart. */
@@ -173,6 +178,42 @@ public final class ChatConfig {
 			t.channel = channel;
 			t.server = MONUMENTA;
 			return t;
+		}
+
+		/** A field-by-field copy. */
+		public Tab copy() {
+			Tab t = new Tab();
+			t.name = name;
+			t.pattern = pattern;
+			t.priority = priority;
+			t.skipOthers = skipOthers;
+			t.alwaysAdd = alwaysAdd;
+			t.prefix = prefix;
+			t.channel = channel;
+			t.server = server;
+			return t;
+		}
+
+		/**
+		 * What the settings screen's reset brings this tab back to: the shipped default tab it came from (found by its
+		 * translation-key name, or, once renamed, by its unchanged pattern), else (a tab the player added) a copy of
+		 * itself as it is now, so a reset never turns it into a blank "All" tab.
+		 */
+		public Tab resetTarget() {
+			List<Tab> shipped = Window.main().tabs;
+			for (Tab d : shipped) {
+				if (d.name.equals(name)) {
+					return d;
+				}
+			}
+			if (!name.startsWith(KEY_PREFIX) && !pattern.isEmpty()) {
+				for (Tab d : shipped) {
+					if (d.pattern.equals(pattern)) {
+						return d;
+					}
+				}
+			}
+			return copy();
 		}
 	}
 

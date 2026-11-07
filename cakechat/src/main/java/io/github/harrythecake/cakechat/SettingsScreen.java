@@ -36,6 +36,10 @@ final class SettingsScreen {
 		}
 		return builder
 				.category(ConfigCategory.createBuilder()
+						.name(Text.translatable("cakechat.config.general"))
+						.option(bool("windowEditing", d.windowEditing, () -> c.windowEditing, v -> c.windowEditing = v))
+						.build())
+				.category(ConfigCategory.createBuilder()
 						.name(Text.translatable("cakechat.config.history"))
 						.option(Option.<Integer>createBuilder()
 								.name(Text.translatable("cakechat.config.history.maxMessages"))
@@ -118,9 +122,10 @@ final class SettingsScreen {
 		ConfigCategory.Builder category = ConfigCategory.createBuilder()
 				.name(Text.translatable(w == 0 ? "cakechat.config.window.main" : "cakechat.config.window", w + 1))
 				.tooltip(Text.translatable("cakechat.config.window.desc"));
-		ChatConfig.Tab defaults = new ChatConfig.Tab();
 		for (int t = 0; t < window.tabs.size(); t++) {
 			ChatConfig.Tab tab = window.tabs.get(t);
+			// reset = this tab's shipped default (or the tab as it is now, if the player added it), never a blank "All" tab
+			ChatConfig.Tab defaults = tab.resetTarget();
 			int tabIndex = t;
 			OptionGroup.Builder group = OptionGroup.createBuilder()
 					.name(Text.translatable("cakechat.config.tab", CakeChat.tabName(tab)))
@@ -130,7 +135,9 @@ final class SettingsScreen {
 							.description(desc("tab.name"))
 							// the default tabs keep their translation key until renamed
 							.binding(CakeChat.tabName(defaults), () -> CakeChat.tabName(tab),
-									v -> tab.name = v.isBlank() || v.equals(CakeChat.tabName(tab)) ? tab.name : v)
+									// a reset to a default tab's shown name gives back its translation key (it follows the language again)
+									v -> tab.name = v.isBlank() || v.equals(CakeChat.tabName(tab)) ? tab.name
+											: v.equals(CakeChat.tabName(defaults)) ? defaults.name : v)
 							.controller(StringControllerBuilder::create)
 							.build())
 					.option(Option.<String>createBuilder()
