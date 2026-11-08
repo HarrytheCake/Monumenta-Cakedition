@@ -132,12 +132,57 @@ public final class HudEditorScreen extends Screen {
 		return name.startsWith(HudMovables.PREFIX);
 	}
 
-	/** The toolbar: a column on the left, half-way down (vanilla draws nothing there). */
-	private static final int BAR_X = 4;
+	/**
+	 * The toolbar: a column on the left, half-way down (vanilla draws nothing there), unless pieces
+	 * sit there (a layout's pause menu, a chat window): then the first free place of right-middle,
+	 * the top corners and the bottom corners, else the one covering the least.
+	 */
 	private static final int BAR_W = 96;
+	private int barX = 4;
+	private int barY;
+	/** H hides the toolbar and the help (to reach pieces under them) and shows them again. */
+	private boolean barHidden;
 
 	private int barTop() {
-		return height / 2 - 50;
+		return barY;
+	}
+
+	/** Puts the toolbar (the target button above it, the help text below) where it covers no piece if it can. */
+	private void placeBar() {
+		int above = HudEditor.layoutTargetPossible() ? 22 : 0;
+		int helpH = font.split(Component.translatable("cakeui.editor.help"), BAR_W).size() * 9 + 3;
+		int colH = above + 82 + helpH;
+		int[] tops = {height / 2 - 50, 4 + above, height - 4 - colH + above};
+		int[] xs = {4, width - 4 - BAR_W};
+		double best = Double.MAX_VALUE;
+		for (int top : tops) {
+			for (int x : xs) {
+				double x1 = x - 2;
+				double y1 = top - above - 2;
+				double x2 = x + BAR_W + 2;
+				double y2 = y1 + colH + 4;
+				double covered = 0;
+				for (String name : pieces()) {
+					if (!visible(name)) {
+						continue;
+					}
+					Box b = screenBox(name);
+					double w = Math.min(x2, b.right()) - Math.max(x1, b.x());
+					double h = Math.min(y2, b.bottom()) - Math.max(y1, b.y());
+					if (w > 0 && h > 0) {
+						covered += w * h;
+					}
+				}
+				if (covered < best) {
+					best = covered;
+					barX = x;
+					barY = top;
+				}
+				if (covered == 0) {
+					return;
+				}
+			}
+		}
 	}
 
 	@Override
@@ -146,17 +191,18 @@ public final class HudEditorScreen extends Screen {
 		if (target != null) {
 			target.init(minecraft, width, height); // the screen being edited, laid out at this size (its buttons are its own)
 		}
+		placeBar();
 		int y = barTop();
-		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.done"), b -> close(true)).bounds(BAR_X, y, BAR_W, 18).build());
-		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.cancel"), b -> close(false)).bounds(BAR_X, y + 20, BAR_W, 18).build());
+		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.done"), b -> close(true)).bounds(barX, y, BAR_W, 18).build());
+		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.cancel"), b -> close(false)).bounds(barX, y + 20, BAR_W, 18).build());
 		addRenderableWidget(Button.builder(Component.translatable("cakeui.editor.resetAll"), b -> {
 			checkpoint();
 			// only what this editor shows: the HUD's pieces, or this screen's
 			String prefix = ports == null ? null : ports.part() + "/";
 			edits.keySet().removeIf(k -> prefix == null ? k.indexOf('/') < 0 : k.startsWith(prefix));
-		}).bounds(BAR_X, y + 40, BAR_W, 18).build());
+		}).bounds(barX, y + 40, BAR_W, 18).build());
 		addRenderableWidget(CycleButton.onOffBuilder(previews)
-				.create(BAR_X, y + 60, BAR_W, 18, Component.translatable("cakeui.editor.previews"), (b, v) -> previews = v));
+				.create(barX, y + 60, BAR_W, 18, Component.translatable("cakeui.editor.previews"), (b, v) -> previews = v));
 		if (HudEditor.layoutTargetPossible()) {
 			// dev mode: save into the layout (what every player of it sees) or as my own edits
 			addRenderableWidget(CycleButton.<HudEditor.Target>builder(t -> Component.translatable("cakeui.editor.target." + t.name().toLowerCase(java.util.Locale.ROOT)))
@@ -164,7 +210,7 @@ public final class HudEditorScreen extends Screen {
 					.withInitialValue(HudEditor.target())
 					.displayOnlyValue()
 					.withTooltip(t -> net.minecraft.client.gui.components.Tooltip.create(Component.translatable("cakeui.editor.target.tooltip")))
-					.create(BAR_X, y - 22, BAR_W, 18, Component.translatable("cakeui.editor.target"), (b, t) -> {
+					.create(barX, y - 22, BAR_W, 18, Component.translatable("cakeui.editor.target"), (b, t) -> {
 						HudEditor.setTarget(t);
 						edits = HudEditor.editingMap();
 						undo.clear();
@@ -463,12 +509,24 @@ public final class HudEditorScreen extends Screen {
 			}
 		}
 		boolean discard = escAt != 0 && System.currentTimeMillis() - escAt < 3000;
-		Component help = Component.translatable(discard ? "cakeui.editor.discard" : "cakeui.editor.help");
-		List<net.minecraft.util.FormattedCharSequence> lines = font.split(help, BAR_W);
-		int helpY = barTop() + 82;
-		g.fill(BAR_X - 2, helpY - 2, BAR_X + BAR_W + 2, helpY + lines.size() * 9 + 1, 0xA0000000);
-		for (int i = 0; i < lines.size(); i++) {
-			g.drawString(font, lines.get(i), BAR_X, helpY + i * 9, discard ? 0xFFFFD000 : 0xFFE0E0E0);
+		for (var c : children()) {
+			if (c instanceof net.minecraft.client.gui.components.AbstractWidget w) {
+				w.visible = !barHidden;
+			}
+		}
+		if (!barHidden) {
+			Component help = Component.translatable(discard ? "cakeui.editor.discard" : "cakeui.editor.help");
+			List<net.minecraft.util.FormattedCharSequence> lines = font.split(help, BAR_W);
+			int helpY = barTop() + 82;
+			g.fill(barX - 2, helpY - 2, barX + BAR_W + 2, helpY + lines.size() * 9 + 1, 0xA0000000);
+			for (int i = 0; i < lines.size(); i++) {
+				g.drawString(font, lines.get(i), barX, helpY + i * 9, discard ? 0xFFFFD000 : 0xFFE0E0E0);
+			}
+		} else {
+			net.minecraft.util.FormattedCharSequence hint = Component.translatable("cakeui.editor.showBar").getVisualOrderText();
+			int hw = font.width(hint);
+			g.fill(width / 2 - hw / 2 - 2, 2, width / 2 + hw / 2 + 2, 12, 0xA0000000);
+			g.drawString(font, hint, width / 2 - hw / 2, 3, 0xFFE0E0E0);
 		}
 		super.render(g, mouseX, mouseY, delta);
 		if (menu != null) {
@@ -803,6 +861,10 @@ public final class HudEditorScreen extends Screen {
 			} else {
 				close(false);
 			}
+			return true;
+		}
+		if (key == GLFW.GLFW_KEY_H && !hasControlDown()) {
+			barHidden = !barHidden;
 			return true;
 		}
 		if (hasControlDown() && key == GLFW.GLFW_KEY_Z) {

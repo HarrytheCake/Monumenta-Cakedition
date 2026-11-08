@@ -455,7 +455,12 @@ final class SelfTest {
 			HudEditor.editingMap().clear();
 			HudEditor.finish(true);
 		} else if (t == 92) {
-			// E6: the same editor on the main menu
+			// E6: the same editor on the main menu, as a player opens it (dev mode: saving into the layout)
+			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.TitleScreen());
+		} else if (t == 100) {
+			mouseDragStart(client, "menu.singleplayer");
+		} else if (t == 105) {
+			mouseDragCheck(client, "main_menu/button:menu.singleplayer");
 			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.TitleScreen());
 			HudEditor.setTarget(HudEditor.Target.PERSONAL); // the player's own edits (dev mode starts on the layout's)
 		} else if (t == 110) {
@@ -503,7 +508,14 @@ final class SelfTest {
 			HudEditor.editingMap().keySet().removeIf(k -> k.startsWith("main_menu/"));
 			HudEditor.finish(true);
 			client.setScreen(null);
-		} else if (t == 150) {
+		} else if (t == 146) {
+			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.PauseScreen(true));
+		} else if (t == 148) {
+			mouseDragStart(client, "menu.returnToGame");
+		} else if (t == 152) {
+			mouseDragCheck(client, "pause/button:menu.returnToGame");
+			client.setScreen(null);
+		} else if (t == 154) {
 			// E6: the pause menu: "Back to Game" moved to the top-left corner
 			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.PauseScreen(true));
 			HudEditor.setTarget(HudEditor.Target.PERSONAL);
@@ -627,5 +639,44 @@ final class SelfTest {
 	private static void done(Minecraft client) {
 		CakeUI.LOGGER.info("CakeUI self-test: done, {} problem(s): {}", Ui.problems().size(), Ui.problems());
 		client.stop();
+	}
+
+	// E6 mouse path: press on a button of the edited screen, drag it 30 px, release; a few frames later it must have moved
+	private static net.minecraft.client.gui.components.AbstractWidget dragged;
+	private static int draggedX;
+	private static int draggedY;
+
+	private static void mouseDragStart(Minecraft client, String id) {
+		dragged = null;
+		if (client.screen instanceof HudEditorScreen ed && ed.targetForTest() != null) {
+			for (var b : ScreenPorts.buttons(ed.targetForTest())) {
+				if (ScreenPorts.id(b).equals(id)) {
+					dragged = b;
+				}
+			}
+			if (dragged != null) {
+				draggedX = dragged.getX();
+				draggedY = dragged.getY();
+				double cx = draggedX + dragged.getWidth() / 2.0;
+				double cy = draggedY + dragged.getHeight() / 2.0;
+				ed.mouseClicked(cx, cy, 0);
+				ed.mouseDragged(cx + 15, cy + 15, 0, 15, 15);
+				ed.mouseDragged(cx + 30, cy + 30, 0, 15, 15);
+				ed.mouseReleased(cx + 30, cy + 30, 0);
+			}
+		}
+		CakeUI.LOGGER.info("CakeUI self-test: editor: {} found in the edited screen {}, visible {} at {} {}", id, dragged != null,
+				dragged != null && dragged.visible, draggedX, draggedY);
+	}
+
+	private static void mouseDragCheck(Minecraft client, String key) {
+		boolean edit = client.screen instanceof HudEditorScreen ed && ed.editsForTest().containsKey(key);
+		// about 30 px (snapping to a guide may take it a few px further)
+		boolean moved = dragged != null && Math.abs(dragged.getX() - draggedX - 30) <= 8 && Math.abs(dragged.getY() - draggedY - 30) <= 8;
+		CakeUI.LOGGER.info("CakeUI self-test: editor: {} dragged with the mouse: edit {}, now at {} {} ({})", key, edit,
+				dragged == null ? -1 : dragged.getX(), dragged == null ? -1 : dragged.getY(), edit && moved ? "PASS" : "FAIL");
+		if (client.screen instanceof HudEditorScreen ed) {
+			ed.onClose(); // Cancel
+		}
 	}
 }
