@@ -1,0 +1,14 @@
+# Gradle / Loom build output and IDE files
+.gradle/
+build/
+run/
+bin/
+.vscode/
+.settings/
+.project
+.classpath
+.idea/
+*.iml
+# logs and config the tests create
+/logs/
+/config/

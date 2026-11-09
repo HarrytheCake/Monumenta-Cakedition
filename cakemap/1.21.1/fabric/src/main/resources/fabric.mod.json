@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "cakemap",
+	"version": "${version}",
+	"name": "CakeMap",
+	"description": "A minimap and world map with waypoints, made for Monumenta. Two map modes: a pre-rendered map of each shard (from a resource pack) or one drawn from what you have seen. Imports Xaero's settings, waypoints and maps. Built on CakeUI.",
+	"authors": [
+		"HarrytheCake"
+	],
+	"license": "MIT",
+	"icon": "assets/cakemap/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeMap"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"io.github.harrythecake.cakemap.fabric.CakeMapFabric"
+		],
+		"cakeui": [
+			"io.github.harrythecake.cakemap.CakeMapPlugin"
+		],
+		"modmenu": [
+			"io.github.harrythecake.cakemap.fabric.ModMenuEntry"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "${fabric_mc_dep}",
+		"java": ">=${java_version}",
+		"fabric-api": "*",
+		"cakeui": ">=0.2.0"
+	},
+	"conflicts": {
+		"xaerominimap": "*",
+		"xaerominimapfair": "*",
+		"xaeroworldmap": "*"
+	},
+	"mixins": [
+		"cakemap.mixins.json"
+	]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- quest giver: light blue triangle, white "!" -->
+  <g fill="#101114" stroke="#101114" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M16 3 L30 28 H2 Z"/></g>
+  <path d="M16 3 L30 28 H2 Z" fill="#6cc4f5"/>
+  <path d="M16 6.5 L27.2 26.4 H4.8 Z" fill="#8fd6ff"/>
+  <rect x="14.1" y="10" width="3.8" height="10.5" rx="1.4" fill="#ffffff" stroke="#1d5f86" stroke-width="0.8"/>
+  <circle cx="16" cy="23.8" r="2.1" fill="#ffffff" stroke="#1d5f86" stroke-width="0.8"/>
+</svg>

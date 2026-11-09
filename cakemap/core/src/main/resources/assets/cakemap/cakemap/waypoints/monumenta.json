@@ -1,0 +1,4146 @@
+{
+	"_source": "monumenta.wiki.gg, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Built by tools/wiki_waypoints.py on 2026-11-04.",
+	"_license": "CC BY-SA 4.0: this file only; the rest of CakeMap is MIT.",
+	"monumenta:isles": [
+		{
+			"id": "wiki:npc/Equivalent Exchange Shrine",
+			"name": "Equivalent Exchange Shrine",
+			"kind": "charm_trader",
+			"x": -1295,
+			"y": 106,
+			"z": -5
+		},
+		{
+			"id": "wiki:npc/Sunlit Warlock",
+			"name": "Sunlit Warlock",
+			"kind": "charm_trader",
+			"x": -1373,
+			"y": 131,
+			"z": 585
+		},
+		{
+			"id": "wiki:dungeon/Grasp of Avarice",
+			"name": "Grasp of Avarice",
+			"kind": "dungeon",
+			"x": 596,
+			"y": 46,
+			"z": 1414
+		},
+		{
+			"id": "wiki:dungeon/Harmonic Arboretum",
+			"name": "Harmonic Arboretum",
+			"kind": "dungeon",
+			"x": -1098,
+			"y": 118,
+			"z": 681
+		},
+		{
+			"id": "wiki:dungeon/Salazar's Folly",
+			"name": "Salazar's Folly",
+			"kind": "dungeon",
+			"x": -515,
+			"y": 84,
+			"z": 680
+		},
+		{
+			"id": "wiki:dungeon/The Scourge of Lunacy",
+			"name": "The Scourge of Lunacy",
+			"kind": "dungeon",
+			"x": -78,
+			"y": 35,
+			"z": 191
+		},
+		{
+			"id": "wiki:poi/Abandoned Lab",
+			"name": "Abandoned Lab",
+			"kind": "poi",
+			"x": 25,
+			"y": 92,
+			"z": 652
+		},
+		{
+			"id": "wiki:poi/Abandoned Library",
+			"name": "Abandoned Library",
+			"kind": "poi",
+			"x": -44,
+			"y": 131,
+			"z": 577
+		},
+		{
+			"id": "wiki:poi/Abandoned Snowman Settlement",
+			"name": "Abandoned Snowman Settlement",
+			"kind": "poi",
+			"x": -1308,
+			"y": 101,
+			"z": 784
+		},
+		{
+			"id": "wiki:poi/Abandoned Winery",
+			"name": "Abandoned Winery",
+			"kind": "poi",
+			"x": -1790,
+			"y": 111,
+			"z": 859
+		},
+		{
+			"id": "wiki:poi/Abbey of Angels",
+			"name": "Abbey of Angels",
+			"kind": "poi",
+			"x": -171,
+			"y": 87,
+			"z": 658
+		},
+		{
+			"id": "wiki:poi/Antlion Pit",
+			"name": "Antlion Pit",
+			"kind": "poi",
+			"x": 431,
+			"y": 90,
+			"z": -94
+		},
+		{
+			"id": "wiki:poi/Aquamarine Monastery",
+			"name": "Aquamarine Monastery",
+			"kind": "poi",
+			"x": 272,
+			"y": 80,
+			"z": 641
+		},
+		{
+			"id": "wiki:poi/Arcane Spire",
+			"name": "Arcane Spire",
+			"kind": "poi",
+			"x": 209,
+			"y": 89,
+			"z": 780
+		},
+		{
+			"id": "wiki:poi/Archaeological Dig Site",
+			"name": "Archaeological Dig Site",
+			"kind": "poi",
+			"x": -1260,
+			"y": 77,
+			"z": 566
+		},
+		{
+			"id": "wiki:poi/Ashen Fortress",
+			"name": "Ashen Fortress",
+			"kind": "poi",
+			"x": 388,
+			"y": 137,
+			"z": 11
+		},
+		{
+			"id": "wiki:poi/Bandit Encampment",
+			"name": "Bandit Encampment",
+			"kind": "poi",
+			"x": -1591,
+			"y": 103,
+			"z": 599
+		},
+		{
+			"id": "wiki:poi/Bandit Hideaway Hill",
+			"name": "Bandit Hideaway Hill",
+			"kind": "poi",
+			"x": 555,
+			"y": 89,
+			"z": 373
+		},
+		{
+			"id": "wiki:poi/Bandits By The Sea",
+			"name": "Bandits By The Sea",
+			"kind": "poi",
+			"x": -1130,
+			"y": 106,
+			"z": 92
+		},
+		{
+			"id": "wiki:poi/Barracks at Sea",
+			"name": "Barracks at Sea",
+			"kind": "poi",
+			"x": -262,
+			"y": 86,
+			"z": 956
+		},
+		{
+			"id": "wiki:poi/Basanite Bore",
+			"name": "Basanite Bore",
+			"kind": "poi",
+			"x": 41,
+			"y": 117,
+			"z": 285
+		},
+		{
+			"id": "wiki:poi/Bastion at Sea",
+			"name": "Bastion at Sea",
+			"kind": "poi",
+			"x": -515,
+			"y": 84,
+			"z": 680
+		},
+		{
+			"id": "wiki:poi/Brewery",
+			"name": "Brewery",
+			"kind": "poi",
+			"x": -1372,
+			"y": 111,
+			"z": 204
+		},
+		{
+			"id": "wiki:poi/Canyon Bandit Camp",
+			"name": "Canyon Bandit Camp",
+			"kind": "poi",
+			"x": -21,
+			"y": 56,
+			"z": 639
+		},
+		{
+			"id": "wiki:poi/Cave Village",
+			"name": "Cave Village",
+			"kind": "poi",
+			"x": 78,
+			"y": 80,
+			"z": 877
+		},
+		{
+			"id": "wiki:poi/Cavern of Cinders",
+			"name": "Cavern of Cinders",
+			"kind": "poi",
+			"x": -73,
+			"y": 61,
+			"z": 497
+		},
+		{
+			"id": "wiki:poi/Charn",
+			"name": "Charn",
+			"kind": "poi",
+			"x": 303,
+			"y": 92,
+			"z": 265
+		},
+		{
+			"id": "wiki:poi/Charred Arcanery",
+			"name": "Charred Arcanery",
+			"kind": "poi",
+			"x": 59,
+			"y": 103,
+			"z": 934
+		},
+		{
+			"id": "wiki:poi/Church of Munk",
+			"name": "Church of Munk",
+			"kind": "poi",
+			"x": -1180,
+			"y": 108,
+			"z": 474
+		},
+		{
+			"id": "wiki:poi/Cinder's Roost",
+			"name": "Cinder's Roost",
+			"kind": "poi",
+			"x": 126,
+			"y": 131,
+			"z": 619
+		},
+		{
+			"id": "wiki:poi/City of Bones",
+			"name": "City of Bones",
+			"kind": "poi",
+			"x": -2049,
+			"y": 102,
+			"z": -494
+		},
+		{
+			"id": "wiki:poi/Cliffside Ruins",
+			"name": "Cliffside Ruins",
+			"kind": "poi",
+			"x": -1836,
+			"y": 121,
+			"z": 202
+		},
+		{
+			"id": "wiki:poi/Corrupted Fort",
+			"name": "Corrupted Fort",
+			"kind": "poi",
+			"x": 103,
+			"y": 135,
+			"z": -39
+		},
+		{
+			"id": "wiki:poi/Corsair's Claw",
+			"name": "Corsair's Claw",
+			"kind": "poi",
+			"x": 551,
+			"y": 81,
+			"z": 1407
+		},
+		{
+			"id": "wiki:poi/Crystal Crown",
+			"name": "Crystal Crown",
+			"kind": "poi",
+			"x": 354,
+			"y": 123,
+			"z": 124
+		},
+		{
+			"id": "wiki:poi/Crystal Forest Grove",
+			"name": "Crystal Forest Grove",
+			"kind": "poi",
+			"x": -1733,
+			"y": 110,
+			"z": 422
+		},
+		{
+			"id": "wiki:poi/Crystal Haven",
+			"name": "Crystal Haven",
+			"kind": "poi",
+			"x": 493,
+			"y": 100,
+			"z": 387
+		},
+		{
+			"id": "wiki:poi/Crystal Mines",
+			"name": "Crystal Mines",
+			"kind": "poi",
+			"x": -1581,
+			"y": 111,
+			"z": 296
+		},
+		{
+			"id": "wiki:poi/Crystal Outpost",
+			"name": "Crystal Outpost",
+			"kind": "poi",
+			"x": -1933,
+			"y": 83,
+			"z": 606
+		},
+		{
+			"id": "wiki:poi/Crystalline Vault",
+			"name": "Crystalline Vault",
+			"kind": "poi",
+			"x": -2149,
+			"y": 58,
+			"z": 596
+		},
+		{
+			"id": "wiki:poi/Dehydrated Oasis",
+			"name": "Dehydrated Oasis",
+			"kind": "poi",
+			"x": 24,
+			"y": 88,
+			"z": 749
+		},
+		{
+			"id": "wiki:poi/Dueling Fleets",
+			"name": "Dueling Fleets",
+			"kind": "poi",
+			"x": -1999,
+			"y": 89,
+			"z": 1079
+		},
+		{
+			"id": "wiki:poi/Emberborne Sanctuary",
+			"name": "Emberborne Sanctuary",
+			"kind": "poi",
+			"x": -122,
+			"y": 96,
+			"z": 345
+		},
+		{
+			"id": "wiki:poi/Fall Shrine",
+			"name": "Fall Shrine",
+			"kind": "poi",
+			"x": -1738,
+			"y": 97,
+			"z": 1008
+		},
+		{
+			"id": "wiki:poi/Feyrune Forest",
+			"name": "Feyrune Forest",
+			"kind": "poi",
+			"x": -909,
+			"y": 123,
+			"z": 1536
+		},
+		{
+			"id": "wiki:poi/Floating Fortress",
+			"name": "Floating Fortress",
+			"kind": "poi",
+			"x": 53,
+			"y": 152,
+			"z": -94
+		},
+		{
+			"id": "wiki:poi/Fortress of Bacon",
+			"name": "Fortress of Bacon",
+			"kind": "poi",
+			"x": -1477,
+			"y": 103,
+			"z": 497
+		},
+		{
+			"id": "wiki:poi/Frigid Laboratory",
+			"name": "Frigid Laboratory",
+			"kind": "poi",
+			"x": -1593,
+			"y": 102,
+			"z": -117
+		},
+		{
+			"id": "wiki:poi/Frostbitten Caves",
+			"name": "Frostbitten Caves",
+			"kind": "poi",
+			"x": -1044,
+			"y": 82,
+			"z": 796
+		},
+		{
+			"id": "wiki:poi/Frostgate Ruins",
+			"name": "Frostgate Ruins",
+			"kind": "poi",
+			"x": -1267,
+			"y": 87,
+			"z": 933
+		},
+		{
+			"id": "wiki:poi/Fungus Thorn Cave",
+			"name": "Fungus Thorn Cave",
+			"kind": "poi",
+			"x": -590,
+			"y": 106,
+			"z": 1269
+		},
+		{
+			"id": "wiki:poi/Garden at Sea",
+			"name": "Garden at Sea",
+			"kind": "poi",
+			"x": -805,
+			"y": 89,
+			"z": 924
+		},
+		{
+			"id": "wiki:poi/Guardian's Gate",
+			"name": "Guardian's Gate",
+			"kind": "poi",
+			"x": -1769,
+			"y": 81,
+			"z": 1325
+		},
+		{
+			"id": "wiki:poi/Hill Fortress",
+			"name": "Hill Fortress",
+			"kind": "poi",
+			"x": 66,
+			"y": 142,
+			"z": 61
+		},
+		{
+			"id": "wiki:poi/Hot Springs",
+			"name": "Hot Springs",
+			"kind": "poi",
+			"x": -1381,
+			"y": 134,
+			"z": 63
+		},
+		{
+			"id": "wiki:poi/Ice Boat",
+			"name": "Ice Boat",
+			"kind": "poi",
+			"x": -1259,
+			"y": 78,
+			"z": 1061
+		},
+		{
+			"id": "wiki:poi/Ice Castle",
+			"name": "Ice Castle",
+			"kind": "poi",
+			"x": -1282,
+			"y": 119,
+			"z": 678
+		},
+		{
+			"id": "wiki:poi/Ice Mine",
+			"name": "Ice Mine",
+			"kind": "poi",
+			"x": -1447,
+			"y": 88,
+			"z": 719
+		},
+		{
+			"id": "wiki:poi/Igloos and You",
+			"name": "Igloos and You",
+			"kind": "poi",
+			"x": -1704,
+			"y": 112,
+			"z": 552
+		},
+		{
+			"id": "wiki:poi/Irilyth",
+			"name": "Irilyth",
+			"kind": "poi",
+			"x": -1597,
+			"y": 109,
+			"z": 497
+		},
+		{
+			"id": "wiki:poi/Kreepa Kastle",
+			"name": "Kreepa Kastle",
+			"kind": "poi",
+			"x": -1629,
+			"y": 134,
+			"z": 165
+		},
+		{
+			"id": "wiki:poi/Lost Lava Labs",
+			"name": "Lost Lava Labs",
+			"kind": "poi",
+			"x": -88,
+			"y": 49,
+			"z": 599
+		},
+		{
+			"id": "wiki:poi/Lost Sands City",
+			"name": "Lost Sands City",
+			"kind": "poi",
+			"x": 224,
+			"y": 93,
+			"z": 481
+		},
+		{
+			"id": "wiki:poi/Madman's Redoubt",
+			"name": "Madman's Redoubt",
+			"kind": "poi",
+			"x": -2166,
+			"y": 82,
+			"z": -261
+		},
+		{
+			"id": "wiki:poi/Magmashroom Mine",
+			"name": "Magmashroom Mine",
+			"kind": "poi",
+			"x": -109,
+			"y": 103,
+			"z": 48
+		},
+		{
+			"id": "wiki:poi/Magmortic Atheneum",
+			"name": "Magmortic Atheneum",
+			"kind": "poi",
+			"x": 508,
+			"y": 28,
+			"z": -357
+		},
+		{
+			"id": "wiki:poi/Marble Mine",
+			"name": "Marble Mine",
+			"kind": "poi",
+			"x": -145,
+			"y": 74,
+			"z": 514
+		},
+		{
+			"id": "wiki:poi/Military Base",
+			"name": "Military Base",
+			"kind": "poi",
+			"x": -1174,
+			"y": 86,
+			"z": 947
+		},
+		{
+			"id": "wiki:poi/Mines of Duality",
+			"name": "Mines of Duality",
+			"kind": "poi",
+			"x": 491,
+			"y": 114,
+			"z": 258
+		},
+		{
+			"id": "wiki:poi/Mini Mining Camp",
+			"name": "Mini Mining Camp",
+			"kind": "poi",
+			"x": -1660,
+			"y": 112,
+			"z": 644
+		},
+		{
+			"id": "wiki:poi/Mini Oasis",
+			"name": "Mini Oasis",
+			"kind": "poi",
+			"x": 318,
+			"y": 88,
+			"z": 1027
+		},
+		{
+			"id": "wiki:poi/Moltaria Palace",
+			"name": "Moltaria Palace",
+			"kind": "poi",
+			"x": 110,
+			"y": 84,
+			"z": -549
+		},
+		{
+			"id": "wiki:poi/Mountain Market",
+			"name": "Mountain Market",
+			"kind": "poi",
+			"x": -1594,
+			"y": 133,
+			"z": 65
+		},
+		{
+			"id": "wiki:poi/Mountainside Hideaway",
+			"name": "Mountainside Hideaway",
+			"kind": "poi",
+			"x": -1367,
+			"y": 111,
+			"z": -97
+		},
+		{
+			"id": "wiki:poi/Mountaintop Bandits",
+			"name": "Mountaintop Bandits",
+			"kind": "poi",
+			"x": -1510,
+			"y": 133,
+			"z": 137
+		},
+		{
+			"id": "wiki:poi/Mr. Happy's Pineapple Plantation",
+			"name": "Mr. Happy's Pineapple Plantation",
+			"kind": "poi",
+			"x": -289,
+			"y": 86,
+			"z": 1297
+		},
+		{
+			"id": "wiki:poi/Mystical Tower",
+			"name": "Mystical Tower",
+			"kind": "poi",
+			"x": -2028,
+			"y": 84,
+			"z": 1258
+		},
+		{
+			"id": "wiki:poi/Oasis Town",
+			"name": "Oasis Town",
+			"kind": "poi",
+			"x": 226,
+			"y": 93,
+			"z": 941
+		},
+		{
+			"id": "wiki:poi/Palm Tree Paradise",
+			"name": "Palm Tree Paradise",
+			"kind": "poi",
+			"x": -35,
+			"y": 102,
+			"z": 915
+		},
+		{
+			"id": "wiki:poi/Raider Camp",
+			"name": "Raider Camp",
+			"kind": "poi",
+			"x": -1197,
+			"y": 87,
+			"z": 863
+		},
+		{
+			"id": "wiki:poi/Refuge of the Drowned",
+			"name": "Refuge of the Drowned",
+			"kind": "poi",
+			"x": 155,
+			"y": 83,
+			"z": 1042
+		},
+		{
+			"id": "wiki:poi/Riverbank Camp",
+			"name": "Riverbank Camp",
+			"kind": "poi",
+			"x": 354,
+			"y": 92,
+			"z": 542
+		},
+		{
+			"id": "wiki:poi/Riverbed Cavern",
+			"name": "Riverbed Cavern",
+			"kind": "poi",
+			"x": -1358,
+			"y": 91,
+			"z": 455
+		},
+		{
+			"id": "wiki:poi/Rockspider Cavern",
+			"name": "Rockspider Cavern",
+			"kind": "poi",
+			"x": 145,
+			"y": 61,
+			"z": 534
+		},
+		{
+			"id": "wiki:poi/Rogue's Fortress",
+			"name": "Rogue's Fortress",
+			"kind": "poi",
+			"x": -1121,
+			"y": 104,
+			"z": 369
+		},
+		{
+			"id": "wiki:poi/Rosebud Ruins",
+			"name": "Rosebud Ruins",
+			"kind": "poi",
+			"x": -761,
+			"y": 102,
+			"z": 217
+		},
+		{
+			"id": "wiki:poi/Sacrarium of Aeons",
+			"name": "Sacrarium of Aeons",
+			"kind": "poi",
+			"x": -809,
+			"y": 30,
+			"z": -455
+		},
+		{
+			"id": "wiki:poi/Scorch Valley",
+			"name": "Scorch Valley",
+			"kind": "poi",
+			"x": 525,
+			"y": 89,
+			"z": 103
+		},
+		{
+			"id": "wiki:poi/Sealed Descent",
+			"name": "Sealed Descent",
+			"kind": "poi",
+			"x": -1098,
+			"y": 118,
+			"z": 681
+		},
+		{
+			"id": "wiki:poi/Seigrit Mineshaft",
+			"name": "Seigrit Mineshaft",
+			"kind": "poi",
+			"x": -249,
+			"y": 89,
+			"z": 1548
+		},
+		{
+			"id": "wiki:poi/Ship Landing Zone",
+			"name": "Ship Landing Zone",
+			"kind": "poi",
+			"x": -1080,
+			"y": 96,
+			"z": 420
+		},
+		{
+			"id": "wiki:poi/Shroom Spires",
+			"name": "Shroom Spires",
+			"kind": "poi",
+			"x": -2019,
+			"y": 84,
+			"z": -54
+		},
+		{
+			"id": "wiki:poi/Silver Tower",
+			"name": "Silver Tower",
+			"kind": "poi",
+			"x": -1872,
+			"y": 89,
+			"z": 419
+		},
+		{
+			"id": "wiki:poi/Silverbrooke Outpost",
+			"name": "Silverbrooke Outpost",
+			"kind": "poi",
+			"x": 327,
+			"y": 96,
+			"z": 439
+		},
+		{
+			"id": "wiki:poi/Skull Island",
+			"name": "Skull Island",
+			"kind": "poi",
+			"x": -131,
+			"y": 84,
+			"z": 1468
+		},
+		{
+			"id": "wiki:poi/Smitten Library",
+			"name": "Smitten Library",
+			"kind": "poi",
+			"x": -1327,
+			"y": 151,
+			"z": 95
+		},
+		{
+			"id": "wiki:poi/Smuggler's Cabin",
+			"name": "Smuggler's Cabin",
+			"kind": "poi",
+			"x": -1565,
+			"y": 94,
+			"z": 753
+		},
+		{
+			"id": "wiki:poi/Spiral Island",
+			"name": "Spiral Island",
+			"kind": "poi",
+			"x": -772,
+			"y": 86,
+			"z": 1140
+		},
+		{
+			"id": "wiki:poi/Spring Shrine",
+			"name": "Spring Shrine",
+			"kind": "poi",
+			"x": 219,
+			"y": 100,
+			"z": 1276
+		},
+		{
+			"id": "wiki:poi/Stargazer's Hideaway",
+			"name": "Stargazer's Hideaway",
+			"kind": "poi",
+			"x": -1388,
+			"y": 129,
+			"z": -171
+		},
+		{
+			"id": "wiki:poi/Steelmeld Passage",
+			"name": "Steelmeld Passage",
+			"kind": "poi",
+			"x": -433,
+			"y": 14,
+			"z": -495
+		},
+		{
+			"id": "wiki:poi/Summer Shrine",
+			"name": "Summer Shrine",
+			"kind": "poi",
+			"x": -1346,
+			"y": 121,
+			"z": 1350
+		},
+		{
+			"id": "wiki:poi/Sunken Ship",
+			"name": "Sunken Ship",
+			"kind": "poi",
+			"x": -1123,
+			"y": 82,
+			"z": 1601
+		},
+		{
+			"id": "wiki:poi/Sunken Tomb",
+			"name": "Sunken Tomb",
+			"kind": "poi",
+			"x": -321,
+			"y": 83,
+			"z": 26
+		},
+		{
+			"id": "wiki:poi/Sunken Tower",
+			"name": "Sunken Tower",
+			"kind": "poi",
+			"x": -3,
+			"y": 88,
+			"z": 474
+		},
+		{
+			"id": "wiki:poi/Supply Fort",
+			"name": "Supply Fort",
+			"kind": "poi",
+			"x": -1727,
+			"y": 94,
+			"z": 834
+		},
+		{
+			"id": "wiki:poi/Tangled Cove",
+			"name": "Tangled Cove",
+			"kind": "poi",
+			"x": -696,
+			"y": 84,
+			"z": 1753
+		},
+		{
+			"id": "wiki:poi/Taproot Ruins",
+			"name": "Taproot Ruins",
+			"kind": "poi",
+			"x": -562,
+			"y": 141,
+			"z": 1424
+		},
+		{
+			"id": "wiki:poi/Terracotta Mining Town",
+			"name": "Terracotta Mining Town",
+			"kind": "poi",
+			"x": 142,
+			"y": 120,
+			"z": 343
+		},
+		{
+			"id": "wiki:poi/The Grim Towers",
+			"name": "The Grim Towers",
+			"kind": "poi",
+			"x": -1505,
+			"y": 99,
+			"z": -148
+		},
+		{
+			"id": "wiki:poi/The Watch",
+			"name": "The Watch",
+			"kind": "poi",
+			"x": -458,
+			"y": 86,
+			"z": 1092
+		},
+		{
+			"id": "wiki:poi/Tundra Lighthouse",
+			"name": "Tundra Lighthouse",
+			"kind": "poi",
+			"x": -1726,
+			"y": 104,
+			"z": 679
+		},
+		{
+			"id": "wiki:poi/Twilight Aqueduct",
+			"name": "Twilight Aqueduct",
+			"kind": "poi",
+			"x": 654,
+			"y": 88,
+			"z": 21
+		},
+		{
+			"id": "wiki:poi/Twilight Ruins",
+			"name": "Twilight Ruins",
+			"kind": "poi",
+			"x": 579,
+			"y": 94,
+			"z": -21
+		},
+		{
+			"id": "wiki:poi/Underground Settlement",
+			"name": "Underground Settlement",
+			"kind": "poi",
+			"x": -1290,
+			"y": 121,
+			"z": 116
+		},
+		{
+			"id": "wiki:poi/Vengeance of the Sea",
+			"name": "Vengeance of the Sea",
+			"kind": "poi",
+			"x": -1662,
+			"y": 80,
+			"z": -374
+		},
+		{
+			"id": "wiki:poi/Warehouse Compound",
+			"name": "Warehouse Compound",
+			"kind": "poi",
+			"x": 265,
+			"y": 98,
+			"z": 356
+		},
+		{
+			"id": "wiki:poi/Weathered Citadel",
+			"name": "Weathered Citadel",
+			"kind": "poi",
+			"x": -1219,
+			"y": 104,
+			"z": 236
+		},
+		{
+			"id": "wiki:poi/Weathered Tower",
+			"name": "Weathered Tower",
+			"kind": "poi",
+			"x": -1171,
+			"y": 113,
+			"z": 22
+		},
+		{
+			"id": "wiki:poi/Whitecliffe Citadel",
+			"name": "Whitecliffe Citadel",
+			"kind": "poi",
+			"x": -1611,
+			"y": 133,
+			"z": 5
+		},
+		{
+			"id": "wiki:poi/Winter Shrine",
+			"name": "Winter Shrine",
+			"kind": "poi",
+			"x": -1253,
+			"y": 143,
+			"z": 322
+		},
+		{
+			"id": "wiki:quest/Agricultural Engineer Nitreia/-639,-465",
+			"name": "Agricultural Engineer Nitreia: Pyre and Prejudice",
+			"kind": "quest",
+			"x": -639,
+			"y": 14,
+			"z": -465
+		},
+		{
+			"id": "wiki:quest/Akema/-1412,587",
+			"name": "Akema: Flock and Key",
+			"kind": "quest",
+			"x": -1412,
+			"y": 102,
+			"z": 587
+		},
+		{
+			"id": "wiki:quest/Amina/323,764",
+			"name": "Amina: A Lost Cause, Guilding Blocks",
+			"kind": "quest",
+			"x": 323,
+			"y": 47,
+			"z": 764
+		},
+		{
+			"id": "wiki:quest/Aquamarine/281,40",
+			"name": "Aquamarine: Woof!",
+			"kind": "quest",
+			"x": 281,
+			"y": 121,
+			"z": 40
+		},
+		{
+			"id": "wiki:quest/Archivist Saanavi/-1826,-83",
+			"name": "Archivist Saanavi: Overdoomed",
+			"kind": "quest",
+			"x": -1826,
+			"y": 127,
+			"z": -83
+		},
+		{
+			"id": "wiki:quest/Bethenny/-1489,923",
+			"name": "Bethenny: Bloody Banquet",
+			"kind": "quest",
+			"x": -1489,
+			"y": 101,
+			"z": 923
+		},
+		{
+			"id": "wiki:quest/Cropmaster Afondo/-715,1439",
+			"name": "Cropmaster Afondo: A Sunken Feeling",
+			"kind": "quest",
+			"x": -715,
+			"y": 95,
+			"z": 1439
+		},
+		{
+			"id": "wiki:quest/Dr. Qure/-758,1355",
+			"name": "Dr. Qure: Vital Needs",
+			"kind": "quest",
+			"x": -758,
+			"y": 86,
+			"z": 1355
+		},
+		{
+			"id": "wiki:quest/Ebonee/-1760,-51",
+			"name": "Ebonee: Out With A Bang",
+			"kind": "quest",
+			"x": -1760,
+			"y": 132,
+			"z": -51
+		},
+		{
+			"id": "wiki:quest/Guard Myra/402,687",
+			"name": "Guard Myra: Long Way Down",
+			"kind": "quest",
+			"x": 402,
+			"y": 75,
+			"z": 687
+		},
+		{
+			"id": "wiki:quest/Herriot the Loyal/-1531,997",
+			"name": "Herriot the Loyal: Fabled Destiny",
+			"kind": "quest",
+			"x": -1531,
+			"y": 101,
+			"z": 997
+		},
+		{
+			"id": "wiki:quest/James (Myriad)/-1722,-108",
+			"name": "James (Myriad): Ten Thousand Bets",
+			"kind": "quest",
+			"x": -1722,
+			"y": 140,
+			"z": -108
+		},
+		{
+			"id": "wiki:quest/Lieutenant Aulber/-142,467",
+			"name": "Lieutenant Aulber: Sabotage",
+			"kind": "quest",
+			"x": -142,
+			"y": 178,
+			"z": 467
+		},
+		{
+			"id": "wiki:quest/Lincoln/-798,1435",
+			"name": "Lincoln: Fishy Business",
+			"kind": "quest",
+			"x": -798,
+			"y": 87,
+			"z": 1435
+		},
+		{
+			"id": "wiki:quest/Listener/-1265,536",
+			"name": "Listener: Alric's Legacy",
+			"kind": "quest",
+			"x": -1265,
+			"y": 103,
+			"z": 536
+		},
+		{
+			"id": "wiki:quest/Miane/208,8",
+			"name": "Miane: Stablemaster's Request",
+			"kind": "quest",
+			"x": 208,
+			"y": 101,
+			"z": 8
+		},
+		{
+			"id": "wiki:quest/Professor Bermuda/-541,-476",
+			"name": "Professor Bermuda: Scientists of Steelmeld I, Scientists of Steelmeld II",
+			"kind": "quest",
+			"x": -541,
+			"y": 5,
+			"z": -476
+		},
+		{
+			"id": "wiki:quest/Reserve Clerk/-1301,484",
+			"name": "Reserve Clerk: The Rooster Crows at Midnight",
+			"kind": "quest",
+			"x": -1301,
+			"y": 129,
+			"z": 484
+		},
+		{
+			"id": "wiki:quest/Riaz/-98,459",
+			"name": "Riaz: A Merchant's Woe",
+			"kind": "quest",
+			"x": -98,
+			"y": 154,
+			"z": 459
+		},
+		{
+			"id": "wiki:quest/Safar/222,30",
+			"name": "Safar: Dealbreaker",
+			"kind": "quest",
+			"x": 222,
+			"y": 95,
+			"z": 30
+		},
+		{
+			"id": "wiki:quest/Sam Ludvic/-1599,1007",
+			"name": "Sam Ludvic: A Well Deserved Rest",
+			"kind": "quest",
+			"x": -1599,
+			"y": 106,
+			"z": 1007
+		},
+		{
+			"id": "wiki:quest/Tiffy/-817,1325",
+			"name": "Tiffy: An Unexpected Lesson",
+			"kind": "quest",
+			"x": -817,
+			"y": 82,
+			"z": 1325
+		},
+		{
+			"id": "wiki:quest/Zeroc/-1475,932",
+			"name": "Zeroc: Treasure for the Future",
+			"kind": "quest",
+			"x": -1475,
+			"y": 102,
+			"z": 932
+		},
+		{
+			"id": "wiki:quest/Zulumar/391,730",
+			"name": "Zulumar: Treasure of the Past",
+			"kind": "quest",
+			"x": 391,
+			"y": 57,
+			"z": 730
+		},
+		{
+			"id": "wiki:quest/Abandoned Library/-6,563",
+			"name": "Abandoned Library: Primeval Creations II",
+			"kind": "quest_main",
+			"x": -6,
+			"y": 139,
+			"z": 563
+		},
+		{
+			"id": "wiki:quest/Ancev/-740,-177",
+			"name": "Ancev: A GLich in the System",
+			"kind": "quest_main",
+			"x": -740,
+			"y": 4,
+			"z": -177
+		},
+		{
+			"id": "wiki:quest/Apothecary Voraga/-1609,1018",
+			"name": "Apothecary Voraga: The Doctor's Orders",
+			"kind": "quest_main",
+			"x": -1609,
+			"y": 112,
+			"z": 1018
+		},
+		{
+			"id": "wiki:quest/Artol/-1336,491",
+			"name": "Artol: Putrefaction and Purification",
+			"kind": "quest_main",
+			"x": -1336,
+			"y": 133,
+			"z": 491
+		},
+		{
+			"id": "wiki:quest/Atiuh/-1248,1306",
+			"name": "Atiuh: A Stroke of Genius",
+			"kind": "quest_main",
+			"x": -1248,
+			"y": 90,
+			"z": 1306
+		},
+		{
+			"id": "wiki:quest/Bero/-864,1778",
+			"name": "Bero: Life is of the Essence",
+			"kind": "quest_main",
+			"x": -864,
+			"y": 95,
+			"z": 1778
+		},
+		{
+			"id": "wiki:quest/Bhairavi/-543,-528",
+			"name": "Bhairavi: The Olive Branch",
+			"kind": "quest_main",
+			"x": -543,
+			"y": 6,
+			"z": -528
+		},
+		{
+			"id": "wiki:quest/C'Rondis/-753,1360",
+			"name": "C'Rondis: A Shaman's Lament",
+			"kind": "quest_main",
+			"x": -753,
+			"y": 86,
+			"z": 1360
+		},
+		{
+			"id": "wiki:quest/Captain Lamis/-746,1380",
+			"name": "Captain Lamis: Raiding Party",
+			"kind": "quest_main",
+			"x": -746,
+			"y": 84,
+			"z": 1380
+		},
+		{
+			"id": "wiki:quest/Drehal/129,725",
+			"name": "Drehal: A Towering Objective",
+			"kind": "quest_main",
+			"x": 129,
+			"y": 122,
+			"z": 725
+		},
+		{
+			"id": "wiki:quest/Drunken Sailor/-821,1367",
+			"name": "Drunken Sailor: The End Chimes",
+			"kind": "quest_main",
+			"x": -821,
+			"y": 93,
+			"z": 1367
+		},
+		{
+			"id": "wiki:quest/Ellen/-1510,656",
+			"name": "Ellen: Healthful Networking",
+			"kind": "quest_main",
+			"x": -1510,
+			"y": 94,
+			"z": 656
+		},
+		{
+			"id": "wiki:quest/Fred (Breachpoint)/-717,-169",
+			"name": "Fred (Breachpoint): Silver Skinned",
+			"kind": "quest_main",
+			"x": -717,
+			"y": 9,
+			"z": -169
+		},
+		{
+			"id": "wiki:quest/Fred/-442,-497",
+			"name": "Fred: Fred's Bizarre Adventure",
+			"kind": "quest_main",
+			"x": -442,
+			"y": 14,
+			"z": -497
+		},
+		{
+			"id": "wiki:quest/Fred/-480,-496",
+			"name": "Fred: The Stone Ocean",
+			"kind": "quest_main",
+			"x": -480,
+			"y": 10,
+			"z": -496
+		},
+		{
+			"id": "wiki:quest/Galablad/-1782,367",
+			"name": "Galablad: Guarding the Guarded",
+			"kind": "quest_main",
+			"x": -1782,
+			"y": 145,
+			"z": 367
+		},
+		{
+			"id": "wiki:quest/Ghostly Figure/202,509",
+			"name": "Ghostly Figure: Death's Swiftness",
+			"kind": "quest_main",
+			"x": 202,
+			"y": 68,
+			"z": 509
+		},
+		{
+			"id": "wiki:quest/Harmonious Spirit/-1560,952",
+			"name": "Harmonious Spirit: Harmonic Convergence",
+			"kind": "quest_main",
+			"x": -1560,
+			"y": 95,
+			"z": 952
+		},
+		{
+			"id": "wiki:quest/Hidgir/-1575,820",
+			"name": "Hidgir: Aiming For Success",
+			"kind": "quest_main",
+			"x": -1575,
+			"y": 112,
+			"z": 820
+		},
+		{
+			"id": "wiki:quest/Historian Rhodes/-757,1346",
+			"name": "Historian Rhodes: The Lost Empire",
+			"kind": "quest_main",
+			"x": -757,
+			"y": 84,
+			"z": 1346
+		},
+		{
+			"id": "wiki:quest/Hunter/0,880",
+			"name": "Hunter: An Otherworldly Hunt",
+			"kind": "quest_main",
+			"x": 0,
+			"y": 127,
+			"z": 880
+		},
+		{
+			"id": "wiki:quest/Issa/273,79",
+			"name": "Issa: Secrets Best Left Forgotten",
+			"kind": "quest_main",
+			"x": 273,
+			"y": 118,
+			"z": 79
+		},
+		{
+			"id": "wiki:quest/Izzy/-738,1334",
+			"name": "Izzy: Here There Be Dragons",
+			"kind": "quest_main",
+			"x": -738,
+			"y": 83,
+			"z": 1334
+		},
+		{
+			"id": "wiki:quest/Izzy/-739,1334",
+			"name": "Izzy: The Wizard's Apprentice, Xenophobia",
+			"kind": "quest_main",
+			"x": -739,
+			"y": 84,
+			"z": 1334
+		},
+		{
+			"id": "wiki:quest/Juste/-1105,904",
+			"name": "Juste: Unyielding Potential",
+			"kind": "quest_main",
+			"x": -1105,
+			"y": 94,
+			"z": 904
+		},
+		{
+			"id": "wiki:quest/Kard/323,728",
+			"name": "Kard: Lost in the Dark",
+			"kind": "quest_main",
+			"x": 323,
+			"y": 49,
+			"z": 728
+		},
+		{
+			"id": "wiki:quest/Luc/-1814,-34",
+			"name": "Luc: Mirrored Egos",
+			"kind": "quest_main",
+			"x": -1814,
+			"y": 161,
+			"z": -34
+		},
+		{
+			"id": "wiki:quest/Monk Gehri/202,1022",
+			"name": "Monk Gehri: What Lies Within",
+			"kind": "quest_main",
+			"x": 202,
+			"y": 86,
+			"z": 1022
+		},
+		{
+			"id": "wiki:quest/Mystical Tower/-2033,1284",
+			"name": "Mystical Tower: Primeval Creations IV",
+			"kind": "quest_main",
+			"x": -2033,
+			"y": 140,
+			"z": 1284
+		},
+		{
+			"id": "wiki:quest/Researcher Jennis/-820,1332",
+			"name": "Researcher Jennis: Ring Around the Rose",
+			"kind": "quest_main",
+			"x": -820,
+			"y": 97,
+			"z": 1332
+		},
+		{
+			"id": "wiki:quest/Rhygfar/-91,3328",
+			"name": "Rhygfar: Depths Charge",
+			"kind": "quest_main",
+			"x": -91,
+			"y": 96,
+			"z": 3328
+		},
+		{
+			"id": "wiki:quest/Salty Bartender/-829,1367",
+			"name": "Salty Bartender: An Alcoholic Accord",
+			"kind": "quest_main",
+			"x": -829,
+			"y": 88,
+			"z": 1367
+		},
+		{
+			"id": "wiki:quest/Shepor/-167,434",
+			"name": "Shepor: Older Magic",
+			"kind": "quest_main",
+			"x": -167,
+			"y": 163,
+			"z": 434
+		},
+		{
+			"id": "wiki:quest/Sierhaven Smith/340,720",
+			"name": "Sierhaven Smith: The Gem of Ishnir",
+			"kind": "quest_main",
+			"x": 340,
+			"y": 43,
+			"z": 720
+		},
+		{
+			"id": "wiki:quest/Smitten Library/-1311,92",
+			"name": "Smitten Library: Primeval Creations III",
+			"kind": "quest_main",
+			"x": -1311,
+			"y": 160,
+			"z": 92
+		},
+		{
+			"id": "wiki:quest/The Magmortic Atheneum POI/584,-408",
+			"name": "The Magmortic Atheneum POI: Primeval Creations VI",
+			"kind": "quest_main",
+			"x": 584,
+			"y": 11,
+			"z": -408
+		},
+		{
+			"id": "wiki:quest/The Shroom Spires POI/-2029,-82",
+			"name": "The Shroom Spires POI: Primeval Creations V",
+			"kind": "quest_main",
+			"x": -2029,
+			"y": 94,
+			"z": -82
+		},
+		{
+			"id": "wiki:quest/The Teacher/-1828,2431",
+			"name": "The Teacher: Master of One",
+			"kind": "quest_main",
+			"x": -1828,
+			"y": 129,
+			"z": 2431
+		},
+		{
+			"id": "wiki:quest/Thicker Than Blood Scraps/-757,1346",
+			"name": "Thicker Than Blood Scraps: Primeval Creations III.9, Rapacity",
+			"kind": "quest_main",
+			"x": -757,
+			"y": 83,
+			"z": 1346
+		},
+		{
+			"id": "wiki:quest/Tiffy/-817,1326",
+			"name": "Tiffy: An Unlikely Partnership",
+			"kind": "quest_main",
+			"x": -817,
+			"y": 81,
+			"z": 1326
+		},
+		{
+			"id": "wiki:quest/Torren/-150,417",
+			"name": "Torren: Kingdom of Lies",
+			"kind": "quest_main",
+			"x": -150,
+			"y": 167,
+			"z": 417
+		},
+		{
+			"id": "wiki:quest/Vargos/-740,1337",
+			"name": "Vargos: Borrowed Time, The Tomb of Time",
+			"kind": "quest_main",
+			"x": -740,
+			"y": 82,
+			"z": 1337
+		},
+		{
+			"id": "wiki:quest/Venen/-830,1396",
+			"name": "Venen: A Simple Favor",
+			"kind": "quest_main",
+			"x": -830,
+			"y": 115,
+			"z": 1396
+		},
+		{
+			"id": "wiki:quest/Wilhelm/-1295,467",
+			"name": "Wilhelm: Bleeding Proof, R is for Reprisal",
+			"kind": "quest_main",
+			"x": -1295,
+			"y": 130,
+			"z": 467
+		},
+		{
+			"id": "wiki:town/Alnera",
+			"name": "Alnera",
+			"kind": "town",
+			"x": 352,
+			"y": 88,
+			"z": 765
+		},
+		{
+			"id": "wiki:town/Frostgate",
+			"name": "Frostgate",
+			"kind": "town",
+			"x": -1519,
+			"y": 98,
+			"z": 968
+		},
+		{
+			"id": "wiki:town/Mistport",
+			"name": "Mistport",
+			"kind": "town",
+			"x": -764,
+			"y": 84,
+			"z": 1316
+		},
+		{
+			"id": "wiki:town/Molta",
+			"name": "Molta",
+			"kind": "town",
+			"x": 206,
+			"y": 103,
+			"z": 80
+		},
+		{
+			"id": "wiki:town/Nightroost",
+			"name": "Nightroost",
+			"kind": "town",
+			"x": -1315,
+			"y": 129,
+			"z": 513
+		},
+		{
+			"id": "wiki:town/Rakheri",
+			"name": "Rakheri",
+			"kind": "town",
+			"x": -121,
+			"y": 166,
+			"z": 449
+		},
+		{
+			"id": "wiki:town/Steelmeld",
+			"name": "Steelmeld",
+			"kind": "town",
+			"x": -584,
+			"y": 8,
+			"z": -474
+		},
+		{
+			"id": "wiki:town/Wispervale",
+			"name": "Wispervale",
+			"kind": "town",
+			"x": -1760,
+			"y": 132,
+			"z": -16
+		},
+		{
+			"id": "wiki:npc/Alnera Merchant",
+			"name": "Alnera Merchant",
+			"kind": "trader",
+			"x": -678,
+			"y": 82,
+			"z": 1311
+		},
+		{
+			"id": "wiki:npc/Andy",
+			"name": "Andy",
+			"kind": "trader",
+			"x": 256,
+			"y": 113,
+			"z": 45
+		},
+		{
+			"id": "wiki:npc/Angela",
+			"name": "Angela",
+			"kind": "trader",
+			"x": -543,
+			"y": 5,
+			"z": -471
+		},
+		{
+			"id": "wiki:npc/Anna",
+			"name": "Anna",
+			"kind": "trader",
+			"x": -676,
+			"y": 83,
+			"z": 1314
+		},
+		{
+			"id": "wiki:npc/Baldwin",
+			"name": "Baldwin",
+			"kind": "trader",
+			"x": -1386,
+			"y": 117,
+			"z": 12
+		},
+		{
+			"id": "wiki:npc/Barkeeper",
+			"name": "Barkeeper",
+			"kind": "trader",
+			"x": -1782,
+			"y": 133,
+			"z": -10
+		},
+		{
+			"id": "wiki:npc/Beekeeper Spéte",
+			"name": "Beekeeper Spéte",
+			"kind": "trader",
+			"x": -596,
+			"y": 1,
+			"z": -480
+		},
+		{
+			"id": "wiki:npc/C'Rondis",
+			"name": "C'Rondis",
+			"kind": "trader",
+			"x": -753,
+			"y": 86,
+			"z": 1360
+		},
+		{
+			"id": "wiki:npc/Cake Vendor",
+			"name": "Cake Vendor",
+			"kind": "trader",
+			"x": -830,
+			"y": 85,
+			"z": 1347
+		},
+		{
+			"id": "wiki:npc/Clipse",
+			"name": "Clipse",
+			"kind": "trader",
+			"x": -1308,
+			"y": 143,
+			"z": 476
+		},
+		{
+			"id": "wiki:npc/Clotilde",
+			"name": "Clotilde",
+			"kind": "trader",
+			"x": -816,
+			"y": 74,
+			"z": 1285
+		},
+		{
+			"id": "wiki:npc/Constanze",
+			"name": "Constanze",
+			"kind": "trader",
+			"x": -1275,
+			"y": 127,
+			"z": 212
+		},
+		{
+			"id": "wiki:npc/Enchanted Book",
+			"name": "Enchanted Book",
+			"kind": "trader",
+			"x": -650,
+			"y": 84,
+			"z": 1539
+		},
+		{
+			"id": "wiki:npc/Estranged Mage",
+			"name": "Estranged Mage",
+			"kind": "trader",
+			"x": -1585,
+			"y": 158,
+			"z": 176
+		},
+		{
+			"id": "wiki:npc/Farouk",
+			"name": "Farouk",
+			"kind": "trader",
+			"x": -842,
+			"y": 74,
+			"z": 1286
+		},
+		{
+			"id": "wiki:npc/Father Grigori",
+			"name": "Father Grigori",
+			"kind": "trader",
+			"x": -678,
+			"y": 82,
+			"z": 1311
+		},
+		{
+			"id": "wiki:npc/Fire Eagle",
+			"name": "Fire Eagle",
+			"kind": "trader",
+			"x": 165,
+			"y": 131,
+			"z": 172
+		},
+		{
+			"id": "wiki:npc/Fisherman Freya",
+			"name": "Fisherman Freya",
+			"kind": "trader",
+			"x": -822,
+			"y": 85,
+			"z": 1355
+		},
+		{
+			"id": "wiki:npc/Fountain Spirit",
+			"name": "Fountain Spirit",
+			"kind": "trader",
+			"x": -1848,
+			"y": 71,
+			"z": -94
+		},
+		{
+			"id": "wiki:npc/Herb Merchant",
+			"name": "Herb Merchant",
+			"kind": "trader",
+			"x": -677,
+			"y": 81,
+			"z": 1309
+		},
+		{
+			"id": "wiki:npc/Izzy",
+			"name": "Izzy",
+			"kind": "trader",
+			"x": 244,
+			"y": 220,
+			"z": 3419
+		},
+		{
+			"id": "wiki:npc/King Barbossa",
+			"name": "King Barbossa",
+			"kind": "trader",
+			"x": -832,
+			"y": 74,
+			"z": 1276
+		},
+		{
+			"id": "wiki:npc/Knight-Errant Reynart",
+			"name": "Knight-Errant Reynart",
+			"kind": "trader",
+			"x": -853,
+			"y": 89,
+			"z": 1356
+		},
+		{
+			"id": "wiki:npc/Lady Edmond",
+			"name": "Lady Edmond",
+			"kind": "trader",
+			"x": -732,
+			"y": 82,
+			"z": 1378
+		},
+		{
+			"id": "wiki:npc/Lightseeker",
+			"name": "Lightseeker",
+			"kind": "trader",
+			"x": -1468,
+			"y": 192,
+			"z": -47
+		},
+		{
+			"id": "wiki:npc/Listener",
+			"name": "Listener",
+			"kind": "trader",
+			"x": -1516,
+			"y": 134,
+			"z": 226
+		},
+		{
+			"id": "wiki:npc/Lothair",
+			"name": "Lothair",
+			"kind": "trader",
+			"x": -835,
+			"y": 66,
+			"z": 1276
+		},
+		{
+			"id": "wiki:npc/Luc",
+			"name": "Luc",
+			"kind": "trader",
+			"x": -1814,
+			"y": 161,
+			"z": -34
+		},
+		{
+			"id": "wiki:npc/Luna",
+			"name": "Luna",
+			"kind": "trader",
+			"x": -1599,
+			"y": 150,
+			"z": 998
+		},
+		{
+			"id": "wiki:npc/Master Tomesmith",
+			"name": "Master Tomesmith",
+			"kind": "trader",
+			"x": -1694,
+			"y": 141,
+			"z": -21
+		},
+		{
+			"id": "wiki:npc/Mellea",
+			"name": "Mellea",
+			"kind": "trader",
+			"x": -1803,
+			"y": 170,
+			"z": -73
+		},
+		{
+			"id": "wiki:npc/Melon Merchant",
+			"name": "Melon Merchant",
+			"kind": "trader",
+			"x": -831,
+			"y": 85,
+			"z": 1352
+		},
+		{
+			"id": "wiki:npc/Mittens",
+			"name": "Mittens",
+			"kind": "trader",
+			"x": -1414,
+			"y": 109,
+			"z": -1308
+		},
+		{
+			"id": "wiki:npc/Namtar",
+			"name": "Namtar",
+			"kind": "trader",
+			"x": 225,
+			"y": 37,
+			"z": 974
+		},
+		{
+			"id": "wiki:npc/Nicomachus",
+			"name": "Nicomachus",
+			"kind": "trader",
+			"x": 155,
+			"y": 82,
+			"z": 849
+		},
+		{
+			"id": "wiki:npc/Nirev",
+			"name": "Nirev",
+			"kind": "trader",
+			"x": -1818,
+			"y": 127,
+			"z": -83
+		},
+		{
+			"id": "wiki:npc/Quegon",
+			"name": "Quegon",
+			"kind": "trader",
+			"x": -1542,
+			"y": 82,
+			"z": 1067
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Lime",
+			"name": "Rare Trader - Lime",
+			"kind": "trader",
+			"x": -917,
+			"y": 21,
+			"z": 958
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Magenta",
+			"name": "Rare Trader - Magenta",
+			"kind": "trader",
+			"x": 465,
+			"y": 26,
+			"z": 50
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Pink",
+			"name": "Rare Trader - Pink",
+			"kind": "trader",
+			"x": -955,
+			"y": 21,
+			"z": 643
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Shifting City",
+			"name": "Rare Trader - Shifting City",
+			"kind": "trader",
+			"x": -494,
+			"y": 10,
+			"z": -396
+		},
+		{
+			"id": "wiki:npc/Sha'r",
+			"name": "Sha'r",
+			"kind": "trader",
+			"x": -822,
+			"y": 66,
+			"z": 1277
+		},
+		{
+			"id": "wiki:npc/Shipwreck Seeker",
+			"name": "Shipwreck Seeker",
+			"kind": "trader",
+			"x": -717,
+			"y": 81,
+			"z": 1311
+		},
+		{
+			"id": "wiki:npc/Solis",
+			"name": "Solis",
+			"kind": "trader",
+			"x": 121,
+			"y": 178,
+			"z": 82
+		},
+		{
+			"id": "wiki:npc/Spirit of the Pines",
+			"name": "Spirit of the Pines",
+			"kind": "trader",
+			"x": -1613,
+			"y": 115,
+			"z": 701
+		},
+		{
+			"id": "wiki:npc/Surya",
+			"name": "Surya",
+			"kind": "trader",
+			"x": -121,
+			"y": 172,
+			"z": 449
+		},
+		{
+			"id": "wiki:npc/Tempus",
+			"name": "Tempus",
+			"kind": "trader",
+			"x": -573,
+			"y": 137,
+			"z": 1395
+		},
+		{
+			"id": "wiki:npc/Trial Spirit",
+			"name": "Trial Spirit",
+			"kind": "trader",
+			"x": 494,
+			"y": 88,
+			"z": -543
+		},
+		{
+			"id": "wiki:npc/Varner",
+			"name": "Varner",
+			"kind": "trader",
+			"x": -761,
+			"y": 92,
+			"z": 1370
+		},
+		{
+			"id": "wiki:npc/Vigora",
+			"name": "Vigora",
+			"kind": "trader",
+			"x": -828,
+			"y": 96,
+			"z": 1379
+		}
+	],
+	"monumenta:ring": [
+		{
+			"id": "wiki:npc/Rare Trader - Aurora",
+			"name": "Rare Trader - Aurora",
+			"kind": "charm_trader",
+			"x": -3246,
+			"y": 179,
+			"z": 1493
+		},
+		{
+			"id": "wiki:npc/Rare Trader - EX White",
+			"name": "Rare Trader - EX White",
+			"kind": "charm_trader",
+			"x": -3039,
+			"y": 138,
+			"z": -1074
+		},
+		{
+			"id": "wiki:npc/Record-Keeper",
+			"name": "Record-Keeper",
+			"kind": "charm_trader",
+			"x": -23,
+			"y": 179,
+			"z": 845
+		},
+		{
+			"id": "wiki:poi/Amanita Colony",
+			"name": "Amanita Colony",
+			"kind": "poi",
+			"x": -270,
+			"y": 104,
+			"z": -292
+		},
+		{
+			"id": "wiki:poi/Arx Spirensis",
+			"name": "Arx Spirensis",
+			"kind": "poi",
+			"x": -487,
+			"y": 60,
+			"z": 15
+		},
+		{
+			"id": "wiki:poi/Bewitched Dominion",
+			"name": "Bewitched Dominion",
+			"kind": "poi",
+			"x": -681,
+			"y": 107,
+			"z": -220
+		},
+		{
+			"id": "wiki:poi/Boon of Knightly Prayer",
+			"name": "Boon of Knightly Prayer",
+			"kind": "poi",
+			"x": -421,
+			"y": 179,
+			"z": 233
+		},
+		{
+			"id": "wiki:poi/Boon of Silver Scales",
+			"name": "Boon of Silver Scales",
+			"kind": "poi",
+			"x": -279,
+			"y": 83,
+			"z": -486
+		},
+		{
+			"id": "wiki:poi/Boon of the Pit",
+			"name": "Boon of the Pit",
+			"kind": "poi",
+			"x": -618,
+			"y": 64,
+			"z": -408
+		},
+		{
+			"id": "wiki:poi/Celestial Rampart",
+			"name": "Celestial Rampart",
+			"kind": "poi",
+			"x": 29,
+			"y": 181,
+			"z": 905
+		},
+		{
+			"id": "wiki:poi/Chanterelle Village",
+			"name": "Chanterelle Village",
+			"kind": "poi",
+			"x": -300,
+			"y": 98,
+			"z": -390
+		},
+		{
+			"id": "wiki:poi/Chittering Gutters",
+			"name": "Chittering Gutters",
+			"kind": "poi",
+			"x": 189,
+			"y": 52,
+			"z": 764
+		},
+		{
+			"id": "wiki:poi/Constellation Tower",
+			"name": "Constellation Tower",
+			"kind": "poi",
+			"x": 135,
+			"y": 223,
+			"z": 625
+		},
+		{
+			"id": "wiki:poi/Coven Fortress",
+			"name": "Coven Fortress",
+			"kind": "poi",
+			"x": -547,
+			"y": 100,
+			"z": -320
+		},
+		{
+			"id": "wiki:poi/Crystalline Blessing",
+			"name": "Crystalline Blessing",
+			"kind": "poi",
+			"x": -260,
+			"y": 43,
+			"z": -366
+		},
+		{
+			"id": "wiki:poi/Curse of the Dark Soul",
+			"name": "Curse of the Dark Soul",
+			"kind": "poi",
+			"x": -513,
+			"y": 38,
+			"z": -85
+		},
+		{
+			"id": "wiki:poi/Deep God's Endowment",
+			"name": "Deep God's Endowment",
+			"kind": "poi",
+			"x": -389,
+			"y": 91,
+			"z": -294
+		},
+		{
+			"id": "wiki:poi/Doomed Encampment",
+			"name": "Doomed Encampment",
+			"kind": "poi",
+			"x": -506,
+			"y": 177,
+			"z": 65
+		},
+		{
+			"id": "wiki:poi/Forsaken Manor",
+			"name": "Forsaken Manor",
+			"kind": "poi",
+			"x": -462,
+			"y": 181,
+			"z": 139
+		},
+		{
+			"id": "wiki:poi/Grace of Star Communion",
+			"name": "Grace of Star Communion",
+			"kind": "poi",
+			"x": -399,
+			"y": 175,
+			"z": 502
+		},
+		{
+			"id": "wiki:poi/Harrakfar's Blessing",
+			"name": "Harrakfar's Blessing",
+			"kind": "poi",
+			"x": -339,
+			"y": 89,
+			"z": -719
+		},
+		{
+			"id": "wiki:poi/Locum Vernantia",
+			"name": "Locum Vernantia",
+			"kind": "poi",
+			"x": -631,
+			"y": 35,
+			"z": -576
+		},
+		{
+			"id": "wiki:poi/Pool of Purging",
+			"name": "Pool of Purging",
+			"kind": "poi",
+			"x": -430,
+			"y": 65,
+			"z": -549
+		},
+		{
+			"id": "wiki:poi/Quelled Convent",
+			"name": "Quelled Convent",
+			"kind": "poi",
+			"x": -365,
+			"y": 186,
+			"z": 35
+		},
+		{
+			"id": "wiki:poi/Shadowcast Bastille",
+			"name": "Shadowcast Bastille",
+			"kind": "poi",
+			"x": -202,
+			"y": 72,
+			"z": -503
+		},
+		{
+			"id": "wiki:poi/Silvic Quarry",
+			"name": "Silvic Quarry",
+			"kind": "poi",
+			"x": -543,
+			"y": 183,
+			"z": -58
+		},
+		{
+			"id": "wiki:poi/Starbound Sanctuary",
+			"name": "Starbound Sanctuary",
+			"kind": "poi",
+			"x": 66,
+			"y": 217,
+			"z": 1277
+		},
+		{
+			"id": "wiki:poi/Submerged Citadel",
+			"name": "Submerged Citadel",
+			"kind": "poi",
+			"x": -376,
+			"y": 102,
+			"z": 220
+		},
+		{
+			"id": "wiki:poi/The Nadir",
+			"name": "The Nadir",
+			"kind": "poi",
+			"x": -21,
+			"y": 42,
+			"z": 728
+		},
+		{
+			"id": "wiki:poi/The Tolumaeus",
+			"name": "The Tolumaeus",
+			"kind": "poi",
+			"x": 255,
+			"y": 44,
+			"z": 787
+		},
+		{
+			"id": "wiki:poi/Tuathan Blessing",
+			"name": "Tuathan Blessing",
+			"kind": "poi",
+			"x": -321,
+			"y": 177,
+			"z": 62
+		},
+		{
+			"id": "wiki:poi/Vibrant Hollow",
+			"name": "Vibrant Hollow",
+			"kind": "poi",
+			"x": -549,
+			"y": 42,
+			"z": -698
+		},
+		{
+			"id": "wiki:quest/Cadeus/-336,-719",
+			"name": "Cadeus: His Faithful Servant",
+			"kind": "quest",
+			"x": -336,
+			"y": 87,
+			"z": -719
+		},
+		{
+			"id": "wiki:quest/Casino Crier/-426,-831",
+			"name": "Casino Crier: Fighting Gold",
+			"kind": "quest",
+			"x": -426,
+			"y": 36,
+			"z": -831
+		},
+		{
+			"id": "wiki:quest/Miroku/-482,-816",
+			"name": "Miroku: A Charming Proposition",
+			"kind": "quest",
+			"x": -482,
+			"y": 39,
+			"z": -816
+		},
+		{
+			"id": "wiki:quest/Shade Hunter Titus/-511,-27",
+			"name": "Shade Hunter Titus: Centurem Lost",
+			"kind": "quest",
+			"x": -511,
+			"y": 216,
+			"z": -27
+		},
+		{
+			"id": "wiki:quest/Skrrka/13,833",
+			"name": "Skrrka: Norvigutouille",
+			"kind": "quest",
+			"x": 13,
+			"y": 171,
+			"z": 833
+		},
+		{
+			"id": "wiki:quest/The Professor/-369,-655",
+			"name": "The Professor: A New Class",
+			"kind": "quest",
+			"x": -369,
+			"y": 82,
+			"z": -655
+		},
+		{
+			"id": "wiki:quest/Bermuda/-229,-626",
+			"name": "Bermuda: Scientists of Steelmeld III",
+			"kind": "quest_main",
+			"x": -229,
+			"y": 44,
+			"z": -626
+		},
+		{
+			"id": "wiki:quest/Bhairavi/-279,-652",
+			"name": "Bhairavi: Unraveled",
+			"kind": "quest_main",
+			"x": -279,
+			"y": 87,
+			"z": -652
+		},
+		{
+			"id": "wiki:quest/Dockmaster Hromae/-471,-802",
+			"name": "Dockmaster Hromae: Into the Woods",
+			"kind": "quest_main",
+			"x": -471,
+			"y": 40,
+			"z": -802
+		},
+		{
+			"id": "wiki:quest/Dominus bell/3,821",
+			"name": "Dominus bell: For Whom the Bell Tolls",
+			"kind": "quest_main",
+			"x": 3,
+			"y": 173,
+			"z": 821
+		},
+		{
+			"id": "wiki:quest/Elder Lytania/-387,-206",
+			"name": "Elder Lytania: Bad Moon Rising, Silent Knight",
+			"kind": "quest_main",
+			"x": -387,
+			"y": 119,
+			"z": -206
+		},
+		{
+			"id": "wiki:quest/Ephesius/-410,-123",
+			"name": "Ephesius: Cure for Insomnia",
+			"kind": "quest_main",
+			"x": -410,
+			"y": 173,
+			"z": -123
+		},
+		{
+			"id": "wiki:quest/Exalted Knight Reynart/-3024,-1137",
+			"name": "Exalted Knight Reynart: A Union Cross",
+			"kind": "quest_main",
+			"x": -3024,
+			"y": 139,
+			"z": -1137
+		},
+		{
+			"id": "wiki:quest/Knight-Errant Reynart/-444,61",
+			"name": "Knight-Errant Reynart: Assisted Dreaming",
+			"kind": "quest_main",
+			"x": -444,
+			"y": 175,
+			"z": 61
+		},
+		{
+			"id": "wiki:quest/Machine God's Herald/-446,-86",
+			"name": "Machine God's Herald: Mechs Machina, Unconventional Methods",
+			"kind": "quest_main",
+			"x": -446,
+			"y": 181,
+			"z": -86
+		},
+		{
+			"id": "wiki:quest/Maywitch/-462,-105",
+			"name": "Maywitch: Behind the Starlit Shroud",
+			"kind": "quest_main",
+			"x": -462,
+			"y": 177,
+			"z": -105
+		},
+		{
+			"id": "wiki:quest/Namtar/7,823",
+			"name": "Namtar: As Below, So Above",
+			"kind": "quest_main",
+			"x": 7,
+			"y": 171,
+			"z": 823
+		},
+		{
+			"id": "wiki:quest/Primirium Conquort/-311,-663",
+			"name": "Primirium Conquort: A Wolf in Witch's Clothing",
+			"kind": "quest_main",
+			"x": -311,
+			"y": 181,
+			"z": -663
+		},
+		{
+			"id": "wiki:quest/Primirium Tybale/-316,-672",
+			"name": "Primirium Tybale: Sporetal Combat",
+			"kind": "quest_main",
+			"x": -316,
+			"y": 182,
+			"z": -672
+		},
+		{
+			"id": "wiki:quest/Primirium Verdanne/-317,-663",
+			"name": "Primirium Verdanne: Of Mushrooms and Magic",
+			"kind": "quest_main",
+			"x": -317,
+			"y": 181,
+			"z": -663
+		},
+		{
+			"id": "wiki:quest/Record-Keeper/-23,845",
+			"name": "Record-Keeper: Remnants of the Empire",
+			"kind": "quest_main",
+			"x": -23,
+			"y": 179,
+			"z": 845
+		},
+		{
+			"id": "wiki:quest/Silver Knight Tuulen/3,817",
+			"name": "Silver Knight Tuulen: A Sirius Problem",
+			"kind": "quest_main",
+			"x": 3,
+			"y": 184,
+			"z": 817
+		},
+		{
+			"id": "wiki:quest/Silver Knight Tuulen/279,999",
+			"name": "Silver Knight Tuulen: Holding Space, Starless Night",
+			"kind": "quest_main",
+			"x": 279,
+			"y": 36,
+			"z": 999
+		},
+		{
+			"id": "wiki:quest/Squire Firwold/-3026,-1128",
+			"name": "Squire Firwold: Sleeping Shadows",
+			"kind": "quest_main",
+			"x": -3026,
+			"y": 138,
+			"z": -1128
+		},
+		{
+			"id": "wiki:quest/The High Priest/-418,-129",
+			"name": "The High Priest: Keeper Agents",
+			"kind": "quest_main",
+			"x": -418,
+			"y": 174,
+			"z": -129
+		},
+		{
+			"id": "wiki:quest/The Praetor/-461,-64",
+			"name": "The Praetor: Praetorer Strike",
+			"kind": "quest_main",
+			"x": -461,
+			"y": 192,
+			"z": -64
+		},
+		{
+			"id": "wiki:town/Galengarde",
+			"name": "Galengarde",
+			"kind": "town",
+			"x": -275,
+			"y": 81,
+			"z": -653
+		},
+		{
+			"id": "wiki:town/Port Manteau",
+			"name": "Port Manteau",
+			"kind": "town",
+			"x": -458,
+			"y": 46,
+			"z": -916
+		},
+		{
+			"id": "wiki:npc/Bounty Official - Pelias' Keep",
+			"name": "Bounty Official - Pelias' Keep",
+			"kind": "trader",
+			"x": -443,
+			"y": 178,
+			"z": -104
+		},
+		{
+			"id": "wiki:npc/Bounty Official - Star Point",
+			"name": "Bounty Official - Star Point",
+			"kind": "trader",
+			"x": -15,
+			"y": 229,
+			"z": 945
+		},
+		{
+			"id": "wiki:npc/Bounty Official - Wolfswood",
+			"name": "Bounty Official - Wolfswood",
+			"kind": "trader",
+			"x": -322,
+			"y": 149,
+			"z": -654
+		},
+		{
+			"id": "wiki:npc/Breathing Rock",
+			"name": "Breathing Rock",
+			"kind": "trader",
+			"x": -392,
+			"y": 126,
+			"z": 394
+		},
+		{
+			"id": "wiki:npc/Busy Fishnessperson",
+			"name": "Busy Fishnessperson",
+			"kind": "trader",
+			"x": -384,
+			"y": 35,
+			"z": -851
+		},
+		{
+			"id": "wiki:npc/Exalted Knight Reynart",
+			"name": "Exalted Knight Reynart",
+			"kind": "trader",
+			"x": -3024,
+			"y": 139,
+			"z": -1137
+		},
+		{
+			"id": "wiki:npc/Gaviar",
+			"name": "Gaviar",
+			"kind": "trader",
+			"x": -359,
+			"y": 38,
+			"z": -847
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Pelias' Keep",
+			"name": "Rare Trader - Pelias' Keep",
+			"kind": "trader",
+			"x": -483,
+			"y": 182,
+			"z": -61
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Star Point",
+			"name": "Rare Trader - Star Point",
+			"kind": "trader",
+			"x": -10,
+			"y": 184,
+			"z": 815
+		},
+		{
+			"id": "wiki:npc/Trustworthy Patch",
+			"name": "Trustworthy Patch",
+			"kind": "trader",
+			"x": -334,
+			"y": 155,
+			"z": -649
+		}
+	],
+	"monumenta:valley": [
+		{
+			"id": "wiki:boss/Azacor",
+			"name": "Azacor",
+			"kind": "boss",
+			"x": 1479,
+			"y": 96,
+			"z": 168
+		},
+		{
+			"id": "wiki:npc/Rare Trader - White",
+			"name": "Rare Trader - White",
+			"kind": "charm_trader",
+			"x": 148,
+			"y": 67,
+			"z": -142
+		},
+		{
+			"id": "wiki:dungeon/Arcane Rivalry",
+			"name": "Arcane Rivalry",
+			"kind": "dungeon",
+			"x": 825,
+			"y": 122,
+			"z": -320
+		},
+		{
+			"id": "wiki:dungeon/Ephemeral Corridors",
+			"name": "Ephemeral Corridors",
+			"kind": "dungeon",
+			"x": 819,
+			"y": 110,
+			"z": 209
+		},
+		{
+			"id": "wiki:dungeon/Fallen Menagerie",
+			"name": "Fallen Menagerie",
+			"kind": "dungeon",
+			"x": 48,
+			"y": 108,
+			"z": 222
+		},
+		{
+			"id": "wiki:dungeon/Forsworn Sanctum",
+			"name": "Forsworn Sanctum",
+			"kind": "dungeon",
+			"x": 496,
+			"y": 73,
+			"z": 390
+		},
+		{
+			"id": "wiki:dungeon/Halls of Wind and Blood",
+			"name": "Halls of Wind and Blood",
+			"kind": "dungeon",
+			"x": 219,
+			"y": 122,
+			"z": -155
+		},
+		{
+			"id": "wiki:dungeon/Plagueroot Temple",
+			"name": "Plagueroot Temple",
+			"kind": "dungeon",
+			"x": 428,
+			"y": 36,
+			"z": 40
+		},
+		{
+			"id": "wiki:dungeon/The Black Willows",
+			"name": "The Black Willows",
+			"kind": "dungeon",
+			"x": 458,
+			"y": 74,
+			"z": -103
+		},
+		{
+			"id": "wiki:dungeon/Vernal Nightmare",
+			"name": "Vernal Nightmare",
+			"kind": "dungeon",
+			"x": 1199,
+			"y": 72,
+			"z": 106
+		},
+		{
+			"id": "wiki:poi/Abandoned Tunnels",
+			"name": "Abandoned Tunnels",
+			"kind": "poi",
+			"x": 109,
+			"y": 79,
+			"z": 143
+		},
+		{
+			"id": "wiki:poi/Air Shrine",
+			"name": "Air Shrine",
+			"kind": "poi",
+			"x": 446,
+			"y": 129,
+			"z": -43
+		},
+		{
+			"id": "wiki:poi/Altar of Evocation",
+			"name": "Altar of Evocation",
+			"kind": "poi",
+			"x": 216,
+			"y": 92,
+			"z": 144
+		},
+		{
+			"id": "wiki:poi/Ancient Ruin",
+			"name": "Ancient Ruin",
+			"kind": "poi",
+			"x": 359,
+			"y": 73,
+			"z": -55
+		},
+		{
+			"id": "wiki:poi/Anthill",
+			"name": "Anthill",
+			"kind": "poi",
+			"x": 819,
+			"y": 110,
+			"z": 209
+		},
+		{
+			"id": "wiki:poi/Aphelion Isle",
+			"name": "Aphelion Isle",
+			"kind": "poi",
+			"x": -1533,
+			"y": 94,
+			"z": 364
+		},
+		{
+			"id": "wiki:poi/Axtan Monastery",
+			"name": "Axtan Monastery",
+			"kind": "poi",
+			"x": 664,
+			"y": 121,
+			"z": -263
+		},
+		{
+			"id": "wiki:poi/Azacor's Mansion",
+			"name": "Azacor's Mansion",
+			"kind": "poi",
+			"x": 1308,
+			"y": 167,
+			"z": 299
+		},
+		{
+			"id": "wiki:poi/Bandit Camp",
+			"name": "Bandit Camp",
+			"kind": "poi",
+			"x": -397,
+			"y": 92,
+			"z": -376
+		},
+		{
+			"id": "wiki:poi/Bandit Stronghold",
+			"name": "Bandit Stronghold",
+			"kind": "poi",
+			"x": -829,
+			"y": 97,
+			"z": -392
+		},
+		{
+			"id": "wiki:poi/Bastion of Spires",
+			"name": "Bastion of Spires",
+			"kind": "poi",
+			"x": -1358,
+			"y": 92,
+			"z": -291
+		},
+		{
+			"id": "wiki:poi/C'Telsket's Memory",
+			"name": "C'Telsket's Memory",
+			"kind": "poi",
+			"x": -923,
+			"y": 86,
+			"z": -133
+		},
+		{
+			"id": "wiki:poi/Cathedral of the Deep",
+			"name": "Cathedral of the Deep",
+			"kind": "poi",
+			"x": -1596,
+			"y": 34,
+			"z": 355
+		},
+		{
+			"id": "wiki:poi/Cave of Bones",
+			"name": "Cave of Bones",
+			"kind": "poi",
+			"x": 1000,
+			"y": 102,
+			"z": -43
+		},
+		{
+			"id": "wiki:poi/Cave of Secrets",
+			"name": "Cave of Secrets",
+			"kind": "poi",
+			"x": 458,
+			"y": 74,
+			"z": -103
+		},
+		{
+			"id": "wiki:poi/Cloud Piercer",
+			"name": "Cloud Piercer",
+			"kind": "poi",
+			"x": -1473,
+			"y": 128,
+			"z": -265
+		},
+		{
+			"id": "wiki:poi/Collapsing Tower",
+			"name": "Collapsing Tower",
+			"kind": "poi",
+			"x": 860,
+			"y": 157,
+			"z": -314
+		},
+		{
+			"id": "wiki:poi/Consecrated Grounds",
+			"name": "Consecrated Grounds",
+			"kind": "poi",
+			"x": 1400,
+			"y": 165,
+			"z": 40
+		},
+		{
+			"id": "wiki:poi/Corrupted Caves",
+			"name": "Corrupted Caves",
+			"kind": "poi",
+			"x": 515,
+			"y": 71,
+			"z": 391
+		},
+		{
+			"id": "wiki:poi/Corrupted Island",
+			"name": "Corrupted Island",
+			"kind": "poi",
+			"x": 619,
+			"y": 73,
+			"z": 467
+		},
+		{
+			"id": "wiki:poi/Creeper Farm",
+			"name": "Creeper Farm",
+			"kind": "poi",
+			"x": 797,
+			"y": 174,
+			"z": -317
+		},
+		{
+			"id": "wiki:poi/Creeper Tower",
+			"name": "Creeper Tower",
+			"kind": "poi",
+			"x": 750,
+			"y": 83,
+			"z": 319
+		},
+		{
+			"id": "wiki:poi/Crossroad Ruins",
+			"name": "Crossroad Ruins",
+			"kind": "poi",
+			"x": 623,
+			"y": 71,
+			"z": -112
+		},
+		{
+			"id": "wiki:poi/Cursed Forest",
+			"name": "Cursed Forest",
+			"kind": "poi",
+			"x": 1100,
+			"y": 104,
+			"z": 60
+		},
+		{
+			"id": "wiki:poi/Earth Shrine",
+			"name": "Earth Shrine",
+			"kind": "poi",
+			"x": 250,
+			"y": 75,
+			"z": 152
+		},
+		{
+			"id": "wiki:poi/Eastern Mineshaft",
+			"name": "Eastern Mineshaft",
+			"kind": "poi",
+			"x": -334,
+			"y": 101,
+			"z": -159
+		},
+		{
+			"id": "wiki:poi/Eastern Pass",
+			"name": "Eastern Pass",
+			"kind": "poi",
+			"x": 853,
+			"y": 77,
+			"z": 322
+		},
+		{
+			"id": "wiki:poi/Fire Cave",
+			"name": "Fire Cave",
+			"kind": "poi",
+			"x": 570,
+			"y": 86,
+			"z": -194
+		},
+		{
+			"id": "wiki:poi/Fire Shrine",
+			"name": "Fire Shrine",
+			"kind": "poi",
+			"x": -240,
+			"y": 92,
+			"z": 84
+		},
+		{
+			"id": "wiki:poi/Fishing Huts",
+			"name": "Fishing Huts",
+			"kind": "poi",
+			"x": -369,
+			"y": 91,
+			"z": 5
+		},
+		{
+			"id": "wiki:poi/Flooded Foyer",
+			"name": "Flooded Foyer",
+			"kind": "poi",
+			"x": 1418,
+			"y": 96,
+			"z": 138
+		},
+		{
+			"id": "wiki:poi/Forsaken Watchtower",
+			"name": "Forsaken Watchtower",
+			"kind": "poi",
+			"x": -1416,
+			"y": 95,
+			"z": 333
+		},
+		{
+			"id": "wiki:poi/Grand Maw",
+			"name": "Grand Maw",
+			"kind": "poi",
+			"x": 350,
+			"y": 71,
+			"z": 82
+		},
+		{
+			"id": "wiki:poi/Graveyard",
+			"name": "Graveyard",
+			"kind": "poi",
+			"x": 1033,
+			"y": 124,
+			"z": -169
+		},
+		{
+			"id": "wiki:poi/Hallowed Hedges",
+			"name": "Hallowed Hedges",
+			"kind": "poi",
+			"x": 1237,
+			"y": 102,
+			"z": -18
+		},
+		{
+			"id": "wiki:poi/Hallowed Pond",
+			"name": "Hallowed Pond",
+			"kind": "poi",
+			"x": 454,
+			"y": 72,
+			"z": 247
+		},
+		{
+			"id": "wiki:poi/Haunted Mine",
+			"name": "Haunted Mine",
+			"kind": "poi",
+			"x": -652,
+			"y": 119,
+			"z": 537
+		},
+		{
+			"id": "wiki:poi/Hawk Fortress",
+			"name": "Hawk Fortress",
+			"kind": "poi",
+			"x": 454,
+			"y": 123,
+			"z": 106
+		},
+		{
+			"id": "wiki:poi/Hawk Village",
+			"name": "Hawk Village",
+			"kind": "poi",
+			"x": 137,
+			"y": 123,
+			"z": -114
+		},
+		{
+			"id": "wiki:poi/Igor's Laboratory",
+			"name": "Igor's Laboratory",
+			"kind": "poi",
+			"x": 1313,
+			"y": 130,
+			"z": 151
+		},
+		{
+			"id": "wiki:poi/Infested House",
+			"name": "Infested House",
+			"kind": "poi",
+			"x": 1017,
+			"y": 117,
+			"z": 77
+		},
+		{
+			"id": "wiki:poi/Jungle Mine",
+			"name": "Jungle Mine",
+			"kind": "poi",
+			"x": 565,
+			"y": 77,
+			"z": -69
+		},
+		{
+			"id": "wiki:poi/Lighthouse",
+			"name": "Lighthouse",
+			"kind": "poi",
+			"x": -822,
+			"y": 100,
+			"z": 427
+		},
+		{
+			"id": "wiki:poi/Lowland Temple",
+			"name": "Lowland Temple",
+			"kind": "poi",
+			"x": 480,
+			"y": 71,
+			"z": 154
+		},
+		{
+			"id": "wiki:poi/Mage Tower",
+			"name": "Mage Tower",
+			"kind": "poi",
+			"x": -523,
+			"y": 119,
+			"z": -518
+		},
+		{
+			"id": "wiki:poi/Mapleroot Town",
+			"name": "Mapleroot Town",
+			"kind": "poi",
+			"x": 1390,
+			"y": 117,
+			"z": 306
+		},
+		{
+			"id": "wiki:poi/Mercenary Fort",
+			"name": "Mercenary Fort",
+			"kind": "poi",
+			"x": -299,
+			"y": 93,
+			"z": -244
+		},
+		{
+			"id": "wiki:poi/Moist Ruins",
+			"name": "Moist Ruins",
+			"kind": "poi",
+			"x": 826,
+			"y": 74,
+			"z": -209
+		},
+		{
+			"id": "wiki:poi/Molten Chasm",
+			"name": "Molten Chasm",
+			"kind": "poi",
+			"x": 735,
+			"y": 71,
+			"z": 84
+		},
+		{
+			"id": "wiki:poi/Mountain Hideaway",
+			"name": "Mountain Hideaway",
+			"kind": "poi",
+			"x": 614,
+			"y": 146,
+			"z": -351
+		},
+		{
+			"id": "wiki:poi/Mountain Mineshaft",
+			"name": "Mountain Mineshaft",
+			"kind": "poi",
+			"x": 952,
+			"y": 147,
+			"z": -347
+		},
+		{
+			"id": "wiki:poi/Murky Maze",
+			"name": "Murky Maze",
+			"kind": "poi",
+			"x": -45,
+			"y": 70,
+			"z": -25
+		},
+		{
+			"id": "wiki:poi/Mysterious Cenote",
+			"name": "Mysterious Cenote",
+			"kind": "poi",
+			"x": 159,
+			"y": 123,
+			"z": -78
+		},
+		{
+			"id": "wiki:poi/Nameless Ruins",
+			"name": "Nameless Ruins",
+			"kind": "poi",
+			"x": 1216,
+			"y": 102,
+			"z": 3
+		},
+		{
+			"id": "wiki:poi/Northern Jaguar Village",
+			"name": "Northern Jaguar Village",
+			"kind": "poi",
+			"x": 268,
+			"y": 74,
+			"z": 6
+		},
+		{
+			"id": "wiki:poi/Northern Mineshaft",
+			"name": "Northern Mineshaft",
+			"kind": "poi",
+			"x": -806,
+			"y": 94,
+			"z": -370
+		},
+		{
+			"id": "wiki:poi/Overgrown Cave",
+			"name": "Overgrown Cave",
+			"kind": "poi",
+			"x": 194,
+			"y": 74,
+			"z": 31
+		},
+		{
+			"id": "wiki:poi/Rift of the Drowned",
+			"name": "Rift of the Drowned",
+			"kind": "poi",
+			"x": -479,
+			"y": 93,
+			"z": 309
+		},
+		{
+			"id": "wiki:poi/Ruined Docks",
+			"name": "Ruined Docks",
+			"kind": "poi",
+			"x": -401,
+			"y": 93,
+			"z": 208
+		},
+		{
+			"id": "wiki:poi/Ruined Mansion",
+			"name": "Ruined Mansion",
+			"kind": "poi",
+			"x": -7,
+			"y": 72,
+			"z": -165
+		},
+		{
+			"id": "wiki:poi/Sea Outpost",
+			"name": "Sea Outpost",
+			"kind": "poi",
+			"x": -1161,
+			"y": 92,
+			"z": -176
+		},
+		{
+			"id": "wiki:poi/Serpent Ruins",
+			"name": "Serpent Ruins",
+			"kind": "poi",
+			"x": 22,
+			"y": 127,
+			"z": 148
+		},
+		{
+			"id": "wiki:poi/Shroombound Grotto",
+			"name": "Shroombound Grotto",
+			"kind": "poi",
+			"x": -1079,
+			"y": 92,
+			"z": 359
+		},
+		{
+			"id": "wiki:poi/Southeastern Mineshaft",
+			"name": "Southeastern Mineshaft",
+			"kind": "poi",
+			"x": -352,
+			"y": 95,
+			"z": 275
+		},
+		{
+			"id": "wiki:poi/Southern Cenote",
+			"name": "Southern Cenote",
+			"kind": "poi",
+			"x": 551,
+			"y": 45,
+			"z": 325
+		},
+		{
+			"id": "wiki:poi/Southern Jaguar Village",
+			"name": "Southern Jaguar Village",
+			"kind": "poi",
+			"x": 107,
+			"y": 72,
+			"z": 95
+		},
+		{
+			"id": "wiki:poi/Southern Mineshaft",
+			"name": "Southern Mineshaft",
+			"kind": "poi",
+			"x": -536,
+			"y": 98,
+			"z": 461
+		},
+		{
+			"id": "wiki:poi/Southern Village",
+			"name": "Southern Village",
+			"kind": "poi",
+			"x": -642,
+			"y": 92,
+			"z": 428
+		},
+		{
+			"id": "wiki:poi/Submerged Gateway",
+			"name": "Submerged Gateway",
+			"kind": "poi",
+			"x": -1141,
+			"y": 90,
+			"z": 238
+		},
+		{
+			"id": "wiki:poi/Sunken City",
+			"name": "Sunken City",
+			"kind": "poi",
+			"x": -1362,
+			"y": 95,
+			"z": -147
+		},
+		{
+			"id": "wiki:poi/Suspicious Village",
+			"name": "Suspicious Village",
+			"kind": "poi",
+			"x": 748,
+			"y": 72,
+			"z": -88
+		},
+		{
+			"id": "wiki:poi/Swamp Sinkhole",
+			"name": "Swamp Sinkhole",
+			"kind": "poi",
+			"x": -669,
+			"y": 78,
+			"z": -348
+		},
+		{
+			"id": "wiki:poi/Temple to Kaul",
+			"name": "Temple to Kaul",
+			"kind": "poi",
+			"x": 773,
+			"y": 84,
+			"z": -24
+		},
+		{
+			"id": "wiki:poi/The Litterbox",
+			"name": "The Litterbox",
+			"kind": "poi",
+			"x": 890,
+			"y": 73,
+			"z": 42
+		},
+		{
+			"id": "wiki:poi/The Old Tower",
+			"name": "The Old Tower",
+			"kind": "poi",
+			"x": -441,
+			"y": 91,
+			"z": -163
+		},
+		{
+			"id": "wiki:poi/The Undergrowth",
+			"name": "The Undergrowth",
+			"kind": "poi",
+			"x": 1479,
+			"y": 96,
+			"z": 168
+		},
+		{
+			"id": "wiki:poi/Tiny Jungle Ruin",
+			"name": "Tiny Jungle Ruin",
+			"kind": "poi",
+			"x": 503,
+			"y": 80,
+			"z": -162
+		},
+		{
+			"id": "wiki:poi/Tlaxan Ziggurat",
+			"name": "Tlaxan Ziggurat",
+			"kind": "poi",
+			"x": 215,
+			"y": 125,
+			"z": -109
+		},
+		{
+			"id": "wiki:poi/Toxin Lab",
+			"name": "Toxin Lab",
+			"kind": "poi",
+			"x": -1223,
+			"y": 88,
+			"z": 93
+		},
+		{
+			"id": "wiki:poi/Verdant Fortress",
+			"name": "Verdant Fortress",
+			"kind": "poi",
+			"x": 916,
+			"y": 106,
+			"z": 182
+		},
+		{
+			"id": "wiki:poi/Volcano",
+			"name": "Volcano",
+			"kind": "poi",
+			"x": 936,
+			"y": 142,
+			"z": -144
+		},
+		{
+			"id": "wiki:poi/Water Cavern",
+			"name": "Water Cavern",
+			"kind": "poi",
+			"x": 90,
+			"y": 71,
+			"z": 29
+		},
+		{
+			"id": "wiki:poi/Water Shrine",
+			"name": "Water Shrine",
+			"kind": "poi",
+			"x": -317,
+			"y": 91,
+			"z": -55
+		},
+		{
+			"id": "wiki:poi/Waterfall Island",
+			"name": "Waterfall Island",
+			"kind": "poi",
+			"x": -667,
+			"y": 90,
+			"z": -408
+		},
+		{
+			"id": "wiki:poi/Weeping Wormwood",
+			"name": "Weeping Wormwood",
+			"kind": "poi",
+			"x": 1346,
+			"y": 128,
+			"z": 175
+		},
+		{
+			"id": "wiki:poi/Whispering Woods",
+			"name": "Whispering Woods",
+			"kind": "poi",
+			"x": 1443,
+			"y": 150,
+			"z": 312
+		},
+		{
+			"id": "wiki:poi/Witch Village",
+			"name": "Witch Village",
+			"kind": "poi",
+			"x": -387,
+			"y": 95,
+			"z": 401
+		},
+		{
+			"id": "wiki:poi/Withered Hideout",
+			"name": "Withered Hideout",
+			"kind": "poi",
+			"x": -1219,
+			"y": 93,
+			"z": 426
+		},
+		{
+			"id": "wiki:quest/Aimee/-760,22",
+			"name": "Aimee: A Crown of Majesty",
+			"kind": "quest",
+			"x": -760,
+			"y": 108,
+			"z": 22
+		},
+		{
+			"id": "wiki:quest/Antoine/-742,155",
+			"name": "Antoine: A Crown of Madness",
+			"kind": "quest",
+			"x": -742,
+			"y": 109,
+			"z": 155
+		},
+		{
+			"id": "wiki:quest/Barras/427,-363",
+			"name": "Barras: Time to Reflect",
+			"kind": "quest",
+			"x": 427,
+			"y": 197,
+			"z": -363
+		},
+		{
+			"id": "wiki:quest/Blackjack Stan/-103,-88",
+			"name": "Blackjack Stan: Buried Blade",
+			"kind": "quest",
+			"x": -103,
+			"y": 96,
+			"z": -88
+		},
+		{
+			"id": "wiki:quest/Buildmaster Jr./-778,20",
+			"name": "Buildmaster Jr.: Supply and Demand",
+			"kind": "quest",
+			"x": -778,
+			"y": 107,
+			"z": 20
+		},
+		{
+			"id": "wiki:quest/Carbocius/609,156",
+			"name": "Carbocius: Pyromania",
+			"kind": "quest",
+			"x": 609,
+			"y": 102,
+			"z": 156
+		},
+		{
+			"id": "wiki:quest/Claude/734,459",
+			"name": "Claude: A Dish to Die For",
+			"kind": "quest",
+			"x": 734,
+			"y": 74,
+			"z": 459
+		},
+		{
+			"id": "wiki:quest/Creeper Fanatic Boris/-822,28",
+			"name": "Creeper Fanatic Boris: Creeperjuice",
+			"kind": "quest",
+			"x": -822,
+			"y": 103,
+			"z": 28
+		},
+		{
+			"id": "wiki:quest/Dockmaster/691,458",
+			"name": "Dockmaster: The Salmon",
+			"kind": "quest",
+			"x": 691,
+			"y": 71,
+			"z": 458
+		},
+		{
+			"id": "wiki:quest/Dr. Laurie/-108,-114",
+			"name": "Dr. Laurie: The Plague",
+			"kind": "quest",
+			"x": -108,
+			"y": 95,
+			"z": -114
+		},
+		{
+			"id": "wiki:quest/Dr. Volkamph/-106,-56",
+			"name": "Dr. Volkamph: Lie of the Igor",
+			"kind": "quest",
+			"x": -106,
+			"y": 97,
+			"z": -56
+		},
+		{
+			"id": "wiki:quest/Drake/587,209",
+			"name": "Drake: Fountain of Miracles",
+			"kind": "quest",
+			"x": 587,
+			"y": 99,
+			"z": 209
+		},
+		{
+			"id": "wiki:quest/Erwen/602,112",
+			"name": "Erwen: A Beast of a Book",
+			"kind": "quest",
+			"x": 602,
+			"y": 99,
+			"z": 112
+		},
+		{
+			"id": "wiki:quest/Flashy/-797,27",
+			"name": "Flashy: Flash in the Pan",
+			"kind": "quest",
+			"x": -797,
+			"y": 101,
+			"z": 27
+		},
+		{
+			"id": "wiki:quest/Halid/469,-339",
+			"name": "Halid: Halid's Song",
+			"kind": "quest",
+			"x": 469,
+			"y": 181,
+			"z": -339
+		},
+		{
+			"id": "wiki:quest/Hermy the Hermit/-321,340",
+			"name": "Hermy the Hermit: Glooper Duper",
+			"kind": "quest",
+			"x": -321,
+			"y": 93,
+			"z": 340
+		},
+		{
+			"id": "wiki:quest/Leonard/616,112",
+			"name": "Leonard: Runaway Pet",
+			"kind": "quest",
+			"x": 616,
+			"y": 100,
+			"z": 112
+		},
+		{
+			"id": "wiki:quest/Levyn/-810,80",
+			"name": "Levyn: A Pirate's Life",
+			"kind": "quest",
+			"x": -810,
+			"y": 101,
+			"z": 80
+		},
+		{
+			"id": "wiki:quest/Master of Clucks/-106,-63",
+			"name": "Master of Clucks: Clucked Up",
+			"kind": "quest",
+			"x": -106,
+			"y": 97,
+			"z": -63
+		},
+		{
+			"id": "wiki:quest/Melinda/-634,-9",
+			"name": "Melinda: Casting for Help",
+			"kind": "quest",
+			"x": -634,
+			"y": 98,
+			"z": -9
+		},
+		{
+			"id": "wiki:quest/Nelfine/-775,-7",
+			"name": "Nelfine: Clear As Glass",
+			"kind": "quest",
+			"x": -775,
+			"y": 100,
+			"z": -7
+		},
+		{
+			"id": "wiki:quest/Octavius/-673,71",
+			"name": "Octavius: Bandit Troubles",
+			"kind": "quest",
+			"x": -673,
+			"y": 107,
+			"z": 71
+		},
+		{
+			"id": "wiki:quest/Postman/1154,-109",
+			"name": "Postman: A Vault of Glass",
+			"kind": "quest",
+			"x": 1154,
+			"y": 136,
+			"z": -109
+		},
+		{
+			"id": "wiki:quest/Psychie/-751,-26",
+			"name": "Psychie: Crazy, Cupid, Love",
+			"kind": "quest",
+			"x": -751,
+			"y": 106,
+			"z": -26
+		},
+		{
+			"id": "wiki:quest/Scout Laura/-733,-252",
+			"name": "Scout Laura: The Scout's Codex",
+			"kind": "quest",
+			"x": -733,
+			"y": 130,
+			"z": -252
+		},
+		{
+			"id": "wiki:quest/Selholly Sprignos/-849,79",
+			"name": "Selholly Sprignos: Snow Man Left Behind",
+			"kind": "quest",
+			"x": -849,
+			"y": 101,
+			"z": 79
+		},
+		{
+			"id": "wiki:quest/Sergeant Sigrun/-137,-96",
+			"name": "Sergeant Sigrun: Missing Soldiers",
+			"kind": "quest",
+			"x": -137,
+			"y": 100,
+			"z": -96
+		},
+		{
+			"id": "wiki:quest/Sergeant Velez/-1010,43",
+			"name": "Sergeant Velez: Port Panic",
+			"kind": "quest",
+			"x": -1010,
+			"y": 92,
+			"z": 43
+		},
+		{
+			"id": "wiki:quest/Stefan/-865,31",
+			"name": "Stefan: Bane of the Bakers",
+			"kind": "quest",
+			"x": -865,
+			"y": 103,
+			"z": 31
+		},
+		{
+			"id": "wiki:quest/Suri/-1580,134",
+			"name": "Suri: Burning Bright",
+			"kind": "quest",
+			"x": -1580,
+			"y": 133,
+			"z": 134
+		},
+		{
+			"id": "wiki:quest/Sybil/-743,110",
+			"name": "Sybil: The Alchemy Labs",
+			"kind": "quest",
+			"x": -743,
+			"y": 108,
+			"z": 110
+		},
+		{
+			"id": "wiki:quest/Taymian in the Sierhaven apartments./-826,39",
+			"name": "Taymian in the Sierhaven apartments.: Finished Business",
+			"kind": "quest",
+			"x": -826,
+			"y": 102,
+			"z": 39
+		},
+		{
+			"id": "wiki:quest/Walter Jr.}}Talk to Walter Jr. a few times until a different dialog pops up.\n<div class=\"mw-collapsible mw-collapsed\" data-expandtext=\"Walter Jr. Dialogue Options\" data-collapsetext=\"Walter Jr. Dialogue Options\">\nThese options may appear in any order when first interacting with Walter Jr.\n{/-747,160",
+			"name": "Walter Jr.}}Talk to Walter Jr. a few times until a different dialog pops up.\n<div class=\"mw-collapsible mw-collapsed\" data-expandtext=\"Walter Jr. Dialogue Options\" data-collapsetext=\"Walter Jr. Dialogue Options\">\nThese options may appear in any order when first interacting with Walter Jr.\n{: A Pigculiar Problem",
+			"kind": "quest",
+			"x": -747,
+			"y": 109,
+			"z": 160
+		},
+		{
+			"id": "wiki:quest/Alan/-1674,66",
+			"name": "Alan: All That Remains",
+			"kind": "quest_main",
+			"x": -1674,
+			"y": 136,
+			"z": 66
+		},
+		{
+			"id": "wiki:quest/Bhairavi/-113,-156",
+			"name": "Bhairavi: Beasts of Men, Roots of the Plague, Soul of the Forest, Winds of War",
+			"kind": "quest_main",
+			"x": -113,
+			"y": 104,
+			"z": -156
+		},
+		{
+			"id": "wiki:quest/Captain Argoun/625,559",
+			"name": "Captain Argoun: Voyage of Discovery",
+			"kind": "quest_main",
+			"x": 625,
+			"y": 119,
+			"z": 559
+		},
+		{
+			"id": "wiki:quest/Captain Tobias/564,115",
+			"name": "Captain Tobias: Sons of the Forest",
+			"kind": "quest_main",
+			"x": 564,
+			"y": 103,
+			"z": 115
+		},
+		{
+			"id": "wiki:quest/Cinevra/-759,75",
+			"name": "Cinevra: A Little Spark, Arclight and Royal Blue",
+			"kind": "quest_main",
+			"x": -759,
+			"y": 126,
+			"z": 75
+		},
+		{
+			"id": "wiki:quest/Commander Haynes/1202,-102",
+			"name": "Commander Haynes: Siege of Highwatch",
+			"kind": "quest_main",
+			"x": 1202,
+			"y": 147,
+			"z": -102
+		},
+		{
+			"id": "wiki:quest/Dimitri/-783,-42",
+			"name": "Dimitri: Scars of Magic, Words Upon Hushed Lips",
+			"kind": "quest_main",
+			"x": -783,
+			"y": 136,
+			"z": -42
+		},
+		{
+			"id": "wiki:quest/Eowen/606,186",
+			"name": "Eowen: Lost in My Mind",
+			"kind": "quest_main",
+			"x": 606,
+			"y": 98,
+			"z": 186
+		},
+		{
+			"id": "wiki:quest/Helring/724,523",
+			"name": "Helring: Outer Demons",
+			"kind": "quest_main",
+			"x": 724,
+			"y": 71,
+			"z": 523
+		},
+		{
+			"id": "wiki:quest/Jeremiah in the Memory Vault/-2194,442",
+			"name": "Jeremiah in the Memory Vault: A Study in Crimson Part One, A Study in Crimson Part Two",
+			"kind": "quest_main",
+			"x": -2194,
+			"y": 132,
+			"z": 442
+		},
+		{
+			"id": "wiki:quest/Jeremiah/-924,-104",
+			"name": "Jeremiah: Memories of Battle",
+			"kind": "quest_main",
+			"x": -924,
+			"y": 108,
+			"z": -104
+		},
+		{
+			"id": "wiki:quest/Josiah/1151,-100",
+			"name": "Josiah: Unveiled",
+			"kind": "quest_main",
+			"x": 1151,
+			"y": 142,
+			"z": -100
+		},
+		{
+			"id": "wiki:quest/Levyn/-803,69",
+			"name": "Levyn: A Crew to Remember",
+			"kind": "quest_main",
+			"x": -803,
+			"y": 102,
+			"z": 69
+		},
+		{
+			"id": "wiki:quest/Macuniloh/482,-348",
+			"name": "Macuniloh: The Crystal Connection",
+			"kind": "quest_main",
+			"x": 482,
+			"y": 192,
+			"z": -348
+		},
+		{
+			"id": "wiki:quest/Mayleen/-118,-12",
+			"name": "Mayleen: Starry Night",
+			"kind": "quest_main",
+			"x": -118,
+			"y": 111,
+			"z": -12
+		},
+		{
+			"id": "wiki:quest/Maywitch/-1630,-2",
+			"name": "Maywitch: Starriest Night",
+			"kind": "quest_main",
+			"x": -1630,
+			"y": 144,
+			"z": -2
+		},
+		{
+			"id": "wiki:quest/Montana/728,421",
+			"name": "Montana: Starrier Night",
+			"kind": "quest_main",
+			"x": 728,
+			"y": 107,
+			"z": 421
+		},
+		{
+			"id": "wiki:quest/Nai/508,581",
+			"name": "Nai: Crystal Visions",
+			"kind": "quest_main",
+			"x": 508,
+			"y": 23,
+			"z": 581
+		},
+		{
+			"id": "wiki:quest/Private Mattias/-135,-108",
+			"name": "Private Mattias: Of Monks and Magic",
+			"kind": "quest_main",
+			"x": -135,
+			"y": 100,
+			"z": -108
+		},
+		{
+			"id": "wiki:quest/Shurima/455,-382",
+			"name": "Shurima: Shurima's Big Day Off",
+			"kind": "quest_main",
+			"x": 455,
+			"y": 193,
+			"z": -382
+		},
+		{
+			"id": "wiki:quest/T'Lm/480,50",
+			"name": "T'Lm: Tlaxan Troubles",
+			"kind": "quest_main",
+			"x": 480,
+			"y": 27,
+			"z": 50
+		},
+		{
+			"id": "wiki:quest/T'Xoc/472,-355",
+			"name": "T'Xoc: The Elder's Scrolls",
+			"kind": "quest_main",
+			"x": 472,
+			"y": 197,
+			"z": -355
+		},
+		{
+			"id": "wiki:quest/Vargos/-735,102",
+			"name": "Vargos: Mage's Legacy",
+			"kind": "quest_main",
+			"x": -735,
+			"y": 109,
+			"z": 102
+		},
+		{
+			"id": "wiki:quest/Xenith/-1609,17",
+			"name": "Xenith: Into Thin Air",
+			"kind": "quest_main",
+			"x": -1609,
+			"y": 123,
+			"z": 17
+		},
+		{
+			"id": "wiki:town/Farr",
+			"name": "Farr",
+			"kind": "town",
+			"x": 605,
+			"y": 64,
+			"z": 163
+		},
+		{
+			"id": "wiki:town/Highwatch",
+			"name": "Highwatch",
+			"kind": "town",
+			"x": 1150,
+			"y": 125,
+			"z": -115
+		},
+		{
+			"id": "wiki:town/Lowtide",
+			"name": "Lowtide",
+			"kind": "town",
+			"x": 709,
+			"y": 64,
+			"z": 468
+		},
+		{
+			"id": "wiki:town/Nyr",
+			"name": "Nyr",
+			"kind": "town",
+			"x": -170,
+			"y": 93,
+			"z": -89
+		},
+		{
+			"id": "wiki:town/Oceangate",
+			"name": "Oceangate",
+			"kind": "town",
+			"x": -1623,
+			"y": 64,
+			"z": 73
+		},
+		{
+			"id": "wiki:town/Sierhaven",
+			"name": "Sierhaven",
+			"kind": "town",
+			"x": -734,
+			"y": 64,
+			"z": 50
+		},
+		{
+			"id": "wiki:town/Ta'Eldim",
+			"name": "Ta'Eldim",
+			"kind": "town",
+			"x": 463,
+			"y": 86,
+			"z": -232
+		},
+		{
+			"id": "wiki:town/Ta'Ksaav",
+			"name": "Ta'Ksaav",
+			"kind": "town",
+			"x": 442,
+			"y": 172,
+			"z": -704
+		},
+		{
+			"id": "wiki:npc/Alchemical Supplier",
+			"name": "Alchemical Supplier",
+			"kind": "trader",
+			"x": -775,
+			"y": 108,
+			"z": -34
+		},
+		{
+			"id": "wiki:npc/Alchemist (NPC)",
+			"name": "Alchemist (NPC)",
+			"kind": "trader",
+			"x": -785,
+			"y": 118,
+			"z": -58
+		},
+		{
+			"id": "wiki:npc/Ancev",
+			"name": "Ancev",
+			"kind": "trader",
+			"x": 107,
+			"y": 73,
+			"z": 43
+		},
+		{
+			"id": "wiki:npc/Arcane Emporium",
+			"name": "Arcane Emporium",
+			"kind": "trader",
+			"x": -792,
+			"y": 108,
+			"z": -49
+		},
+		{
+			"id": "wiki:npc/Barney",
+			"name": "Barney",
+			"kind": "trader",
+			"x": -737,
+			"y": 97,
+			"z": 128
+		},
+		{
+			"id": "wiki:npc/Chris",
+			"name": "Chris",
+			"kind": "trader",
+			"x": 769,
+			"y": 71,
+			"z": -5
+		},
+		{
+			"id": "wiki:npc/Chuck",
+			"name": "Chuck",
+			"kind": "trader",
+			"x": -863,
+			"y": 97,
+			"z": 126
+		},
+		{
+			"id": "wiki:npc/Corporal Rosie",
+			"name": "Corporal Rosie",
+			"kind": "trader",
+			"x": -98,
+			"y": 92,
+			"z": -150
+		},
+		{
+			"id": "wiki:npc/Creeper Fanatic Boris",
+			"name": "Creeper Fanatic Boris",
+			"kind": "trader",
+			"x": -822,
+			"y": 102,
+			"z": 28
+		},
+		{
+			"id": "wiki:npc/Dennis",
+			"name": "Dennis",
+			"kind": "trader",
+			"x": 1159,
+			"y": 97,
+			"z": 83
+		},
+		{
+			"id": "wiki:npc/Frod the Builder",
+			"name": "Frod the Builder",
+			"kind": "trader",
+			"x": -807,
+			"y": 87,
+			"z": -42
+		},
+		{
+			"id": "wiki:npc/Gravedigger Xin",
+			"name": "Gravedigger Xin",
+			"kind": "trader",
+			"x": 1084,
+			"y": 107,
+			"z": -224
+		},
+		{
+			"id": "wiki:npc/Head Baker",
+			"name": "Head Baker",
+			"kind": "trader",
+			"x": -810,
+			"y": 102,
+			"z": 85
+		},
+		{
+			"id": "wiki:npc/Josiah",
+			"name": "Josiah",
+			"kind": "trader",
+			"x": 1151,
+			"y": 142,
+			"z": -100
+		},
+		{
+			"id": "wiki:npc/Koal, Soul of the Jingle",
+			"name": "Koal, Soul of the Jingle",
+			"kind": "trader",
+			"x": 1159,
+			"y": 97,
+			"z": 83
+		},
+		{
+			"id": "wiki:npc/Lowtide Smuggler",
+			"name": "Lowtide Smuggler",
+			"kind": "trader",
+			"x": 676,
+			"y": 72,
+			"z": 466
+		},
+		{
+			"id": "wiki:npc/Master Alchemist",
+			"name": "Master Alchemist",
+			"kind": "trader",
+			"x": 1144,
+			"y": 135,
+			"z": -89
+		},
+		{
+			"id": "wiki:npc/Master Fuser",
+			"name": "Master Fuser",
+			"kind": "trader",
+			"x": 690,
+			"y": 71,
+			"z": 466
+		},
+		{
+			"id": "wiki:npc/Mastersmith Antonio",
+			"name": "Mastersmith Antonio",
+			"kind": "trader",
+			"x": 1172,
+			"y": 137,
+			"z": -130
+		},
+		{
+			"id": "wiki:npc/Mastersmith Sofia",
+			"name": "Mastersmith Sofia",
+			"kind": "trader",
+			"x": 1186,
+			"y": 124,
+			"z": -107
+		},
+		{
+			"id": "wiki:npc/Montana",
+			"name": "Montana",
+			"kind": "trader",
+			"x": 728,
+			"y": 106,
+			"z": 421
+		},
+		{
+			"id": "wiki:npc/Orson",
+			"name": "Orson",
+			"kind": "trader",
+			"x": -721,
+			"y": 108,
+			"z": 23
+		},
+		{
+			"id": "wiki:npc/R'Tsiv",
+			"name": "R'Tsiv",
+			"kind": "trader",
+			"x": 433,
+			"y": 167,
+			"z": -650
+		},
+		{
+			"id": "wiki:npc/Rangers (NPC)",
+			"name": "Rangers (NPC)",
+			"kind": "trader",
+			"x": -123,
+			"y": 96,
+			"z": -92
+		},
+		{
+			"id": "wiki:npc/Rare Trader - King's Valley",
+			"name": "Rare Trader - King's Valley",
+			"kind": "trader",
+			"x": -717,
+			"y": 108,
+			"z": 21
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Light Gray",
+			"name": "Rare Trader - Light Gray",
+			"kind": "trader",
+			"x": -1605,
+			"y": 22,
+			"z": -7
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Willows",
+			"name": "Rare Trader - Willows",
+			"kind": "trader",
+			"x": 307,
+			"y": 24,
+			"z": -119
+		},
+		{
+			"id": "wiki:npc/Rare Trader - Yellow",
+			"name": "Rare Trader - Yellow",
+			"kind": "trader",
+			"x": 1153,
+			"y": 53,
+			"z": 48
+		},
+		{
+			"id": "wiki:npc/Royal Spellbinder",
+			"name": "Royal Spellbinder",
+			"kind": "trader",
+			"x": -723,
+			"y": 106,
+			"z": 103
+		},
+		{
+			"id": "wiki:npc/Scout Laura",
+			"name": "Scout Laura",
+			"kind": "trader",
+			"x": -733,
+			"y": 129,
+			"z": -252
+		},
+		{
+			"id": "wiki:npc/Sorrell",
+			"name": "Sorrell",
+			"kind": "trader",
+			"x": 722,
+			"y": 69,
+			"z": -147
+		},
+		{
+			"id": "wiki:npc/Stefan",
+			"name": "Stefan",
+			"kind": "trader",
+			"x": -865,
+			"y": 104,
+			"z": 31
+		},
+		{
+			"id": "wiki:npc/Swamplands Witch",
+			"name": "Swamplands Witch",
+			"kind": "trader",
+			"x": -554,
+			"y": 94,
+			"z": -325
+		},
+		{
+			"id": "wiki:npc/The Bunny Baron",
+			"name": "The Bunny Baron",
+			"kind": "trader",
+			"x": -131,
+			"y": 90,
+			"z": -121
+		},
+		{
+			"id": "wiki:npc/Tondan",
+			"name": "Tondan",
+			"kind": "trader",
+			"x": -428,
+			"y": 106,
+			"z": -543
+		},
+		{
+			"id": "wiki:npc/Walter",
+			"name": "Walter",
+			"kind": "trader",
+			"x": 717,
+			"y": 75,
+			"z": 449
+		},
+		{
+			"id": "wiki:npc/Wrangler Sedol",
+			"name": "Wrangler Sedol",
+			"kind": "trader",
+			"x": 774,
+			"y": 165,
+			"z": -332
+		}
+	]
+}

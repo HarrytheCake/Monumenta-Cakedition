@@ -1,0 +1,56 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_range}"
+license = "MIT"
+issueTrackerURL = "https://github.com/HarrytheCake/CakeMap/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+logoFile = "assets/cakemap/icon.png"
+authors = "HarrytheCake"
+displayURL = "https://github.com/HarrytheCake/CakeMap"
+description = '''A minimap and world map with waypoints, made for Monumenta. Two map modes: a pre-rendered map of each shard (from a resource pack) or one drawn from what you have seen. Imports Xaero's settings, waypoints and maps. Built on CakeUI.'''
+
+[[mixins]]
+config = "cakemap.mixins.json"
+
+[[mixins]]
+config = "cakemap.neoforge.mixins.json"
+
+[[dependencies.cakemap]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoforge_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.cakemap]]
+modId = "minecraft"
+type = "required"
+versionRange = "${neoforge_mc_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.cakemap]]
+modId = "cakeui"
+type = "required"
+versionRange = "[0.2.0,)"
+ordering = "AFTER"
+side = "CLIENT"
+
+[[dependencies.cakemap]]
+modId = "xaerominimap"
+type = "incompatible"
+reason = "CakeMap replaces Xaero's Minimap"
+versionRange = "[0,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.cakemap]]
+modId = "xaeroworldmap"
+type = "incompatible"
+reason = "CakeMap replaces Xaero's World Map"
+versionRange = "[0,)"
+ordering = "NONE"
+side = "CLIENT"

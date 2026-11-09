@@ -1,0 +1,4 @@
+plugins {
+	id 'cake-common'
+}
+apply from: rootProject.file('gradle/cakemap.gradle')

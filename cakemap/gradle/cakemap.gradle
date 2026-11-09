@@ -1,0 +1,51 @@
+// CakeMap: shared lines of every <mc>/<part>/build.gradle (mod-specific, not part of the kit; apply_kit.py leaves it alone).
+// CakeUI (CakeMap is a CakeUI plugin) and JSVG (SVG waypoint icons, MIT).
+String mc = project.property('minecraft_version')
+String part = project.name
+String cakeuiVersion = rootProject.property('cakeui_version')
+String jsvg = "com.github.weisj:jsvg:${rootProject.property('jsvg_version')}"
+
+// CakeUI has no Maven repo: its GitHub release jars as Ivy artifacts (module = cakeui-<loader>-<mc>).
+repositories {
+	ivy {
+		name = 'CakeUI GitHub releases'
+		url = 'https://github.com/'
+		patternLayout {
+			artifact 'HarrytheCake/CakeUI/releases/download/v[revision]/[module]-[revision].[ext]'
+		}
+		metadataSources { artifact() }
+		content { includeGroup 'io.github.harrythecake.cakeui' }
+	}
+}
+
+// common compiles against vanilla with Mojang names: the NeoForge jar has the same API classes in Mojang names
+// (the Fabric jars of 1.20.4/1.21.1 are in intermediary names).
+String loader = part == 'fabric' ? 'fabric' : 'neoforge'
+def cakeuiDir = rootProject.findProperty('cakeui_dir')
+def cakeui = cakeuiDir
+		? files(new File(rootProject.file(cakeuiDir.toString()), "cakeui-${loader}-${mc}-${cakeuiVersion}.jar"))
+		: "io.github.harrythecake.cakeui:cakeui-${loader}-${mc}:${cakeuiVersion}"
+
+if (part == 'common') {
+	dependencies {
+		compileOnly cakeui
+		compileOnly jsvg
+	}
+} else if (part == 'fabric') {
+	dependencies {
+		project.modDep(cakeui)
+		implementation jsvg
+		include jsvg
+	}
+} else if (part == 'neoforge') {
+	dependencies {
+		// a mod jar on the classpath: NeoForge loads it as the cakeui mod in dev runs
+		implementation cakeui
+		implementation jsvg
+		jarJar jsvg
+		// not a mod: put it on the dev run's classpath too (26.1+ runs the plain classpath, no extra one)
+		if (project.findProperty('obfuscated').toString() == 'true') {
+			additionalRuntimeClasspath jsvg
+		}
+	}
+}

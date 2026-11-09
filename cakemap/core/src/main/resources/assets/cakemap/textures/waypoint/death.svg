@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- death: a gravestone with a cross -->
+  <g fill="#101114" stroke="#101114" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M7 26 V12 A9 9 0 0 1 25 12 V26 Z"/><rect x="3.5" y="25" width="25" height="4.5" rx="1"/></g>
+  <path d="M7 26 V12 A9 9 0 0 1 25 12 V26 Z" fill="#8a8f98"/>
+  <path d="M9 26 V12.5 A7 7 0 0 1 16 5.2 A7 7 0 0 1 23 12.5 V26 Z" fill="#b0b5be"/>
+  <path d="M14.5 9 H17.5 V13 H21 V16 H17.5 V22.5 H14.5 V16 H11 V13 H14.5 Z" fill="#585c64"/>
+  <rect x="3.5" y="25" width="25" height="4.5" rx="1" fill="#4c8a2a"/>
+  <rect x="3.5" y="25" width="25" height="1.6" rx="0.8" fill="#6cb43c"/>
+</svg>

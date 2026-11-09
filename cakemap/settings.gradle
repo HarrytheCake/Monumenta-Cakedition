@@ -1,0 +1,35 @@
+// Cake multiloader kit. Finds the Minecraft version folders (<mc>/version.properties) and their
+// common / fabric / neoforge parts. Build only some versions: ./gradlew build -Pcake.versions=1.21.1,26.1.2
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+		maven { url = 'https://maven.fabricmc.net/' }
+		maven { url = 'https://maven.neoforged.net/releases' }
+		mavenCentral()
+	}
+}
+
+plugins {
+	id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+Properties props = new Properties()
+file('gradle.properties').withInputStream { props.load(it) }
+rootProject.name = props.getProperty('mod_id')
+
+def only = (startParameter.projectProperties['cake.versions'] ?: '').split(',')*.trim().findAll { it }
+if (file('core').isDirectory()) {
+	include 'core'
+}
+rootDir.listFiles().findAll { it.isDirectory() && new File(it, 'version.properties').exists() }
+		.sort { it.name }
+		.each { dir ->
+			if (only && !only.contains(dir.name)) {
+				return
+			}
+			['common', 'fabric', 'neoforge'].each { part ->
+				if (new File(dir, part).isDirectory()) {
+					include ":${dir.name}:${part}"
+				}
+			}
+		}

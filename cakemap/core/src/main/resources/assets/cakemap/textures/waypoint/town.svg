@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- town: a house -->
+  <g fill="#101114" stroke="#101114" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 14 H26 V28 H6 Z"/><path d="M2.5 15.5 L16 3.5 L29.5 15.5 Z"/><path d="M21 5 H24.5 V11 H21 Z"/></g>
+  <path d="M6 14 H26 V28 H6 Z" fill="#e8d6a8"/>
+  <path d="M21 5 H24.5 V11 H21 Z" fill="#b2402c"/>
+  <path d="M2.5 15.5 L16 3.5 L29.5 15.5 Z" fill="#b2402c"/>
+  <path d="M6.5 15 L16 6.5 L16 15 Z" fill="#d65c3e"/>
+  <path d="M13.3 19 H18.7 V28 H13.3 Z" fill="#5c3a22"/>
+  <path d="M20.5 18 H24 V21.5 H20.5 Z" fill="#5a96d2"/>
+  <path d="M8 18 H11.5 V21.5 H8 Z" fill="#5a96d2"/>
+</svg>

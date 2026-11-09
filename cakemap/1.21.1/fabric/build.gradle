@@ -1,0 +1,4 @@
+plugins {
+	id 'cake-fabric'
+}
+apply from: rootProject.file('gradle/cakemap.gradle')

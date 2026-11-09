@@ -1,0 +1,4 @@
+plugins {
+	id 'cake-neoforge'
+}
+apply from: rootProject.file('gradle/cakemap.gradle')

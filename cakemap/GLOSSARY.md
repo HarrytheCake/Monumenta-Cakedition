@@ -1,0 +1,22 @@
+# CakeMap glossary
+
+- **Shard**: one Monumenta world, a Minecraft dimension such as `monumenta:valley` (King's Valley), `monumenta:isles`, `monumenta:ring`, or a dungeon's own world.
+- **Region**: 512 x 512 blocks, the unit CakeMap stores, draws and exports (`<rx>_<rz>`, rx = x >> 9).
+- **Dynamic map**: what this game has seen, built from the chunks the client receives (top block, biome, height, water) and kept in `cakemap/<server>/`.
+- **Static map**: a pre-rendered map of a shard from a resource pack (`cakemap/static/…`), one PNG per region.
+- **Map mode**: static (the static map where one applies, the dynamic map elsewhere) or dynamic (only the dynamic map).
+- **Reveal**: a shard's static map shows only after the player has entered that shard once; then all of it shows.
+- **Match check**: heights the player has seen are compared with the static map's samples; when most don't agree (an instance at other coordinates, a changed build), the dynamic map is shown instead.
+- **Waypoint kind**: what a waypoint marks; each has its SVG icon. Permanent: dungeon entrance, point of interest, town teleport, teleport, quest giver, main quest giver, charm trader, trader, my waypoint, world boss, death. Temporary: quest objective, temporary waypoint.
+- **Main quest giver**: a quest giver with a story, wool or major side quest (the coloured boxes of Monumenta's Quest Flowchart); light red triangle with three "!". Other quest givers: the book icon.
+- **Waypoint colour**: one of 8 swatches a player gives their own waypoint; it colours the pin, the name and the world-view text.
+- **Built-in waypoint**: one that comes with CakeMap or a resource pack (Monumenta's POIs, towns, NPCs …); it can be bookmarked or hidden, not edited.
+- **Death waypoint**: added where the player died; permanent, but only the newest 5 per server stay.
+- **Circle frame**: the round minimap's border: *thick ring* (a band with N on it, inside the minimap's box) or *thin line*.
+- **Temporary waypoint**: gone when reached (within 4 blocks) or when the player leaves the server; never saved.
+- **Bookmark**: a waypoint marked with a small gold star at its icon's top left; it stays at the minimap's edge when out of view and shows in the world view.
+- **Tracked waypoint**: the one waypoint the player follows ("Track this" on the world map or in the list); always in the world view with its name, at the minimap's edge, drawn above every other icon, a yellow ring on the world map. Saved per server.
+- **Layer**: the drawing order of icons, bottom to top: ordinary, bookmarked, temporary, quest compass target, tracked.
+- **Map choice** (of a waypoint): which map shows it: both, static only or dynamic only; chosen for imported Xaero waypoints and in the editor.
+- **Cave mode**: the minimap shows a cross-section at the player's height (walls dark) instead of the surface; automatic when there is a roof over the player.
+- **Xaero import**: reading Xaero's settings, keys, waypoints and world maps into CakeMap; Xaero's files are only read.

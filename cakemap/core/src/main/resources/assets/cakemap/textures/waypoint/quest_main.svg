@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- main quest (story, wool, major side quest): light red triangle, three white "!" -->
+  <g fill="#101114" stroke="#101114" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M16 3 L30 28 H2 Z"/></g>
+  <path d="M16 3 L30 28 H2 Z" fill="#e45a5a"/>
+  <path d="M16 6.5 L27.2 26.4 H4.8 Z" fill="#ff7b7b"/>
+  <g fill="#ffffff">
+    <rect x="14.4" y="10" width="3.2" height="10" rx="1.2"/>
+    <circle cx="16" cy="23.6" r="1.75"/>
+    <rect x="9.4" y="15.2" width="3" height="5.6" rx="1.1"/>
+    <circle cx="10.9" cy="23.9" r="1.6"/>
+    <rect x="19.6" y="15.2" width="3" height="5.6" rx="1.1"/>
+    <circle cx="21.1" cy="23.9" r="1.6"/>
+  </g>
+</svg>

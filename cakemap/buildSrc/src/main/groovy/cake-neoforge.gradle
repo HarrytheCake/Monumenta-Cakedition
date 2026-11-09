@@ -1,0 +1,30 @@
+// <mod>/<mc>/neoforge: compiles core + common + neoforge sources with ModDevGradle.
+// NeoForge runs on Mojang's names since 20.2, so nothing is remapped and no refmap is needed.
+plugins {
+	id 'cake-base'
+	id 'net.neoforged.moddev'
+}
+
+File mc = project.property('mc_dir') as File
+sourceSets.main.java.srcDir(new File(mc, 'common/src/main/java'))
+sourceSets.main.resources.srcDir(new File(mc, 'common/src/main/resources'))
+
+neoForge {
+	version = project.property('neoforge_version')
+	runs {
+		client {
+			client()
+			gameDirectory = project.file('run')
+			// smoke.py / self-tests: -Pcake.runJvmArgs="-Dfoo=bar -Dbaz=1"
+			def extra = project.findProperty('cake.runJvmArgs')
+			if (extra) { jvmArguments.addAll(extra.toString().split(' ').findAll { it }) }
+			def extraArgs = project.findProperty('cake.runArgs')
+			if (extraArgs) { programArguments.addAll(extraArgs.toString().split(' ').findAll { it }) }
+		}
+	}
+	mods {
+		"${rootProject.property('mod_id')}" {
+			sourceSet sourceSets.main
+		}
+	}
+}

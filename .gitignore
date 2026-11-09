@@ -12,6 +12,8 @@
 !/cakebook/
 !/cakeui/
 !/cakefixes/
+!/cakemap/
+!/cakecosmetic/
 !/.github/
 # docs/ and GLOSSARY-MAP.md (roadmap, glossary, ADRs, benchmark reports) stay local: never pushed (user's rule, 2026-10-28)
 __pycache__/
@@ -28,3 +30,5 @@ tools/bench/mod/.gradle/
 tools/bench/mod/build/
 tools/bench/mod/run/
 tools/bench/mod/bin/
+# Gradle caches anywhere (e.g. tools/multiloader/kit/.gradle/)
+.gradle/

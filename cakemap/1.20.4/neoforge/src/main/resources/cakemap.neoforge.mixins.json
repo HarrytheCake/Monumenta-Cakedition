@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.harrythecake.cakemap.neoforge.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"ClientPacketListenerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

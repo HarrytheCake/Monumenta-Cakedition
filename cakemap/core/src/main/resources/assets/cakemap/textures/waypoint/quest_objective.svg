@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- quest objective (compass target): an orange diamond -->
+  <g fill="#101114" stroke="#101114" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M16 2 L30 16 L16 30 L2 16 Z"/></g>
+  <path d="M16 2 L30 16 L16 30 L2 16 Z" fill="#d26400"/>
+  <path d="M16 5 L27 16 L16 27 L5 16 Z" fill="#ff9f1c"/>
+  <path d="M16 10.5 L21.5 16 L16 21.5 L10.5 16 Z" fill="#ffffff"/>
+</svg>

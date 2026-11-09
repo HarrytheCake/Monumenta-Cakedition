@@ -1,0 +1,17 @@
+// Cake multiloader kit (tools/multiloader/kit in the Cakedition repo; copied into each mod by apply_kit.py).
+// The convention plugins in src/main/groovy apply Fabric Loom and ModDevGradle, so their versions live here.
+plugins {
+	id 'groovy-gradle-plugin'
+}
+
+repositories {
+	gradlePluginPortal()
+	maven { url = 'https://maven.fabricmc.net/' }
+	maven { url = 'https://maven.neoforged.net/releases' }
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'net.fabricmc:fabric-loom:1.19.3'
+	implementation 'net.neoforged:moddev-gradle:2.0.148'
+}

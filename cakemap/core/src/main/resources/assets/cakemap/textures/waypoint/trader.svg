@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- trader: an emerald -->
+  <g fill="#101114" stroke="#101114" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"><path d="M16 2.5 L27 9 V23 L16 29.5 L5 23 V9 Z"/></g>
+  <path d="M16 2.5 L27 9 V23 L16 29.5 L5 23 V9 Z" fill="#0a6e28"/>
+  <path d="M16 5.8 L24 10.6 V21.4 L16 26.2 L8 21.4 V10.6 Z" fill="#1eb450"/>
+  <path d="M16 5.8 L24 10.6 L16 15.5 Z" fill="#5ae682"/>
+  <circle cx="12.4" cy="11.2" r="1.4" fill="#dcffe6"/>
+</svg>

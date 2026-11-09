@@ -1,0 +1,85 @@
+plugins {
+	id 'fabric-loom' version '1.10.5'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	maven {
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com/releases/'
+	}
+	// CakeUI has no Maven repo: its GitHub release jar, as an Ivy artifact
+	ivy {
+		name = 'CakeUI GitHub releases'
+		url = 'https://github.com/'
+		patternLayout {
+			artifact 'HarrytheCake/CakeUI/releases/download/v[revision]/[module]-[revision].[ext]'
+		}
+		metadataSources { artifact() }
+		content { includeGroup 'io.github.harrythecake.cakeui' }
+	}
+}
+
+loom {
+	runs {
+		client {
+			// ./gradlew runClient -Dcakecosmetic.selftest=1 (or =world): screenshots, then quit (see SelfTest)
+			property("cakecosmetic.selftest", System.getProperty("cakecosmetic.selftest", ""))
+			programArgs("--width", "1280", "--height", "720")
+		}
+	}
+}
+
+// In the Monumenta-Cakedition repo, a built ../cakeui jar of the same version wins over the
+// release, so CakeCosmetic can be built against CakeUI changes that aren't released yet.
+def localCakeUI = file("../cakeui/build/libs/cakeui-${project.cakeui_version}.jar")
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	if (localCakeUI.exists()) {
+		modImplementation files(localCakeUI)
+	} else {
+		modImplementation "io.github.harrythecake.cakeui:cakeui:${project.cakeui_version}"
+	}
+	// only the config-screen API; Mod Menu is optional at runtime
+	modCompileOnly("com.terraformersmc:modmenu:${project.modmenu_version}") {
+		transitive = false
+	}
+
+	testImplementation "org.junit.jupiter:junit-jupiter:5.10.2"
+	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+test {
+	useJUnitPlatform()
+}
+
+processResources {
+	inputs.property "version", project.version
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+jar {
+	from("LICENSE") { rename { "LICENSE_${project.archives_base_name}" } }
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 17
+	it.options.encoding = "UTF-8"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}

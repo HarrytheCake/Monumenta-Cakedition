@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.harrythecake.cakemap.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"ClientPlayNetworkHandlerMixin",
+		"SpriteContentsAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

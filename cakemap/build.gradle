@@ -1,0 +1,47 @@
+// Cake multiloader kit. Each part's build.gradle applies its convention plugin (buildSrc: cake-core,
+// cake-common, cake-fabric, cake-neoforge). This collects the shipped jars into build/libs/:
+//   build/libs/<mod_id>-<loader>-<mc>-<mod_version>.jar   every loader x Minecraft version
+//   build/libs/<mod_id>-<mod_version>.jar                 copy of the Fabric 1.20.4 jar (what the
+//                                                         Cakedition pack and the old release CI use)
+evaluationDependsOnChildren()
+
+def shipped = subprojects.findAll { it.name in ['fabric', 'neoforge'] }
+
+def collect = tasks.register('collectJars') {
+	group = 'build'
+	description = 'Copies every loader jar into build/libs.'
+	def outDir = layout.buildDirectory.dir('libs')
+	def jars = shipped.collect { p -> p.tasks.findByName('remapJar') ?: p.tasks.named('jar').get() }
+	dependsOn jars
+	// the jars are the inputs (without them Gradle would call this task up to date and skip it)
+	inputs.files(jars.collect { it.archiveFile })
+	outputs.dir(outDir)
+	doLast {
+		def out = outDir.get().asFile
+		out.mkdirs()
+		jars.each { t ->
+			File f = t.archiveFile.get().asFile
+			project.copy { from f; into out }
+		}
+		def packJar = shipped.find { it.name == 'fabric' && it.parent.name == '1.20.4' }
+		if (packJar != null) {
+			def t = packJar.tasks.findByName('remapJar') ?: packJar.tasks.named('jar').get()
+			project.copy {
+				from t.archiveFile.get().asFile
+				into out
+				rename { "${mod_id}-${mod_version}.jar" }
+			}
+		}
+	}
+}
+
+tasks.register('build') {
+	group = 'build'
+	description = 'Builds and tests every part, then collects the jars.'
+	dependsOn subprojects.collect { it.tasks.matching { t -> t.name == 'build' } }
+	dependsOn collect
+}
+
+tasks.register('clean', Delete) {
+	delete layout.buildDirectory
+}
