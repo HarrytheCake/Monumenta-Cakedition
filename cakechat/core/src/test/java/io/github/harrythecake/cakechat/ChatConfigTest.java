@@ -117,7 +117,7 @@ class ChatConfigTest {
 		old.save(file);
 
 		ChatConfig config = ChatConfig.load(file);
-		assertEquals(3, config.configVersion);
+		assertEquals(4, config.configVersion);
 		List<ChatConfig.Tab> tabs = config.windows.get(0).tabs;
 		assertEquals("cakechat.tab.trade", tabs.get(3).name);
 		assertEquals("cakechat.tab.zh", tabs.get(4).name);
@@ -134,7 +134,7 @@ class ChatConfigTest {
 		old.save(file);
 
 		ChatConfig config = ChatConfig.load(file);
-		assertEquals(3, config.configVersion);
+		assertEquals(4, config.configVersion);
 		assertEquals("cakechat.tab.guild", config.windows.get(0).tabs.get(5).name);
 		assertEquals(GuildTag.PLACEHOLDER, config.windows.get(0).tabs.get(5).channel);
 	}
@@ -148,6 +148,73 @@ class ChatConfigTest {
 		old.save(file);
 
 		assertEquals("XYZ", ChatConfig.load(file).windows.get(0).tabs.get(5).channel);
+	}
+
+	/** A version-3 file whose main window is the shipped one with tabs 1..n replaced by what the old reset wrote. */
+	private Path blankedFile(String shownAll, int... blanked) throws IOException {
+		Path file = dir.resolve("config.json");
+		ChatConfig old = new ChatConfig();
+		old.configVersion = 3;
+		for (int i : blanked) {
+			old.windows.get(0).tabs.set(i, ChatConfig.Tab.named(shownAll, ""));
+		}
+		old.save(file);
+		return file;
+	}
+
+	@Test
+	void version3RepairsTabsTheOldResetBlanked() throws IOException {
+		Path file = blankedFile("All", 1, 2, 3, 4, 5, 6);
+		ChatConfig config = ChatConfig.load(file);
+		assertEquals(4, config.configVersion);
+		List<ChatConfig.Tab> shipped = ChatConfig.Window.main().tabs;
+		List<ChatConfig.Tab> tabs = config.windows.get(0).tabs;
+		assertEquals(shipped.size(), tabs.size());
+		for (int i = 0; i < shipped.size(); i++) {
+			assertEquals(shipped.get(i).name, tabs.get(i).name);
+			assertEquals(shipped.get(i).pattern, tabs.get(i).pattern);
+			assertEquals(shipped.get(i).channel, tabs.get(i).channel);
+			assertEquals(shipped.get(i).server, tabs.get(i).server);
+		}
+		// and the repaired file stays repaired
+		config.save(file);
+		assertEquals("cakechat.tab.guild", ChatConfig.load(file).windows.get(0).tabs.get(5).name);
+	}
+
+	@Test
+	void version3RepairsChineseBlankedTabs() throws IOException {
+		List<ChatConfig.Tab> tabs = ChatConfig.load(blankedFile("全部", 2, 3)).windows.get(0).tabs;
+		assertEquals("cakechat.tab.global", tabs.get(1).name);
+		assertEquals("lfg", tabs.get(2).channel);
+		assertEquals("tr", tabs.get(3).channel);
+	}
+
+	@Test
+	void version3KeepsAllTabsThatAreNotTheOldResets() throws IOException {
+		Path file = dir.resolve("config.json");
+		// a ChatPlus import: its own "All" tab first, then an "All" tab the player kept on purpose
+		Files.writeString(file, "{\"configVersion\": 3, \"windows\": [{\"tabs\": [{\"name\": \"All\"}, {\"name\": \"All\"}]}]}",
+				StandardCharsets.UTF_8);
+		List<ChatConfig.Tab> imported = ChatConfig.load(file).windows.get(0).tabs;
+		assertEquals("All", imported.get(0).name);
+		assertEquals("All", imported.get(1).name);
+
+		// shipped first tab, but the "All" tab has a setting of its own, or its shipped tab is still there elsewhere
+		Files.writeString(file, "{\"configVersion\": 3, \"windows\": [{\"tabs\": [{\"name\": \"cakechat.tab.all\"},"
+				+ " {\"name\": \"All\", \"alwaysAdd\": true}, {\"name\": \"All\"}, {\"name\": \"cakechat.tab.lfg\", \"pattern\": \"^<lfg> \"}]}]}",
+				StandardCharsets.UTF_8);
+		List<ChatConfig.Tab> tabs = ChatConfig.load(file).windows.get(0).tabs;
+		assertEquals("All", tabs.get(1).name, "has a setting of its own");
+		assertEquals("All", tabs.get(2).name, "the LFG tab is already in the window");
+		assertEquals("cakechat.tab.lfg", tabs.get(3).name);
+	}
+
+	@Test
+	void currentVersionIsNotRepairedAgain() throws IOException {
+		Path file = dir.resolve("config.json");
+		Files.writeString(file, "{\"configVersion\": 4, \"windows\": [{\"tabs\": [{\"name\": \"cakechat.tab.all\"}, {\"name\": \"All\"}]}]}",
+				StandardCharsets.UTF_8);
+		assertEquals("All", ChatConfig.load(file).windows.get(0).tabs.get(1).name);
 	}
 
 	@Test
@@ -179,13 +246,13 @@ class ChatConfigTest {
 	@Test
 	void olderFileWithoutWindowEditingLoadsLocked() throws IOException {
 		Path file = dir.resolve("config.json");
-		// a 0.3.0 file: current config version, moved main window, no windowEditing field
+		// a 0.3.0 file: config version 3, moved main window, no windowEditing field
 		Files.writeString(file, "{\"configVersion\": 3, \"windows\": [{\"x\": 12, \"bottom\": 60, \"tabs\": [{\"name\": \"Mine\"}]}]}",
 				StandardCharsets.UTF_8);
 		ChatConfig config = ChatConfig.load(file);
 		assertFalse(config.windowEditing);
 		assertEquals(12, config.windows.get(0).x);
-		assertEquals(3, config.configVersion);
+		assertEquals(4, config.configVersion);
 	}
 
 	@Test

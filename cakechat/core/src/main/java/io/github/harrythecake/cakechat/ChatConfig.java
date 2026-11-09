@@ -15,9 +15,11 @@ import java.nio.file.StandardCopyOption;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * config/cakechat/config.json. Plain Java (no Minecraft classes), so tests can load it.
@@ -27,7 +29,7 @@ public final class ChatConfig {
 	static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
 	/** Bumped when a field changes meaning, so {@link #load} can migrate old files. */
-	public int configVersion = 3;
+	public int configVersion = 4;
 	public History history = new History();
 	public Compact compact = new Compact();
 	public Timestamps timestamps = new Timestamps();
@@ -250,7 +252,8 @@ public final class ChatConfig {
 
 	/**
 	 * Older files: 1 → 2 adds the Chinese channel tab after Trade in a main window that has the default tabs;
-	 * 2 → 3 gives the default Guild tab the guild channel, unless the player set a channel on it.
+	 * 2 → 3 gives the default Guild tab the guild channel, unless the player set a channel on it;
+	 * 3 → 4 repairs tabs the old settings reset blanked (see {@link #repairBlankedTabs}).
 	 */
 	private ChatConfig migrate() {
 		if (configVersion < 2) {
@@ -276,7 +279,51 @@ public final class ChatConfig {
 			}
 			configVersion = 3;
 		}
+		if (configVersion < 4) {
+			repairBlankedTabs(windows.get(0));
+			configVersion = 4;
+		}
 		return this;
+	}
+
+	/**
+	 * What the shown name of {@code cakechat.tab.all} was in each language CakeChat 0.3.0 shipped (en_us; zh_cn and
+	 * zh_tw). Other languages fall back to English.
+	 */
+	private static final Set<String> SHOWN_ALL_NAMES = Set.of("All", "全部");
+
+	/**
+	 * 3 → 4: before 0.3.0's reset fix, the settings screen's reset turned every default tab into a blank tab saved
+	 * with the shown name "All" (or "全部") as plain text, and the fixed reset can't trace such a tab back. Put the
+	 * shipped tab for that position back, when the main window still starts with the shipped "All" tab (as the old
+	 * reset left it; a ChatPlus import names its own "All" tab in plain text) and that shipped tab isn't in the
+	 * window already. A tab the player added is named "New tab", so it never looks like this.
+	 */
+	private static void repairBlankedTabs(Window main) {
+		List<Tab> tabs = main.tabs;
+		if (tabs.isEmpty() || !tabs.get(0).name.equals(Tab.KEY_PREFIX + "all")) {
+			return;
+		}
+		List<Tab> shipped = Window.main().tabs;
+		Set<String> present = new HashSet<>();
+		for (Tab t : tabs) {
+			present.add(t.name);
+		}
+		for (int i = 1; i < tabs.size() && i < shipped.size(); i++) {
+			Tab shippedTab = shipped.get(i);
+			if (isBlankedTab(tabs.get(i)) && !present.contains(shippedTab.name)) {
+				tabs.set(i, shippedTab.copy());
+				present.add(shippedTab.name);
+			}
+		}
+	}
+
+	/** Exactly what the old reset wrote: the shown "All" name and every other field at a new tab's value. */
+	private static boolean isBlankedTab(Tab t) {
+		Tab blank = new Tab();
+		return SHOWN_ALL_NAMES.contains(t.name) && t.pattern.equals(blank.pattern) && t.priority == blank.priority
+				&& t.skipOthers == blank.skipOthers && t.alwaysAdd == blank.alwaysAdd && t.prefix.equals(blank.prefix)
+				&& t.channel.equals(blank.channel) && t.server.equals(blank.server);
 	}
 
 	/** A section written as {@code null} (or an unknown enum name, which Gson reads as null) falls back to its default. */
