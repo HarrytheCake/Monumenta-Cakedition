@@ -16,17 +16,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Gradle 9.8 + Loom 1.19 (the Cake multiloader kit's, so CakeUI's release jars load) run on JDK 25;
+      # compiling, tests and runClient use the JDK 17 toolchain
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 21
+          java-version: |
+            17
+            25
 
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Build and test
         run: |
           chmod +x gradlew
-          ./gradlew build
+          ./gradlew build --no-daemon -Porg.gradle.java.installations.fromEnv=JAVA_HOME_17_X64,JAVA_HOME_25_X64
 
       - name: Read mod version
         id: version

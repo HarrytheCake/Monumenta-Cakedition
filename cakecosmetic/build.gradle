@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.10.5'
+	id 'fabric-loom' version '1.19.3'
 }
 
 version = project.mod_version
@@ -79,7 +79,8 @@ tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
 }
 
+// Gradle runs on JDK 25 (Gradle 9.8 + Loom 1.19, like the Cake multiloader kit); compiling, tests and
+// runClient use a JDK 17 toolchain (Minecraft 1.20.4's Mixin can't run on 25)
 java {
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	toolchain.languageVersion = JavaLanguageVersion.of(17)
 }

@@ -22,7 +22,7 @@ Full list in the local `docs/cakecosmetic-design.md`; the short version:
 
 ```
 cakecosmetic/
-├── build.gradle        # Loom 1.10.5; CakeUI from ../cakeui/build/libs/cakeui-<cakeui_version>.jar if built, else its GitHub release (Ivy);
+├── build.gradle        # Loom 1.19.3 (Gradle 9.8.2, JDK 17 toolchain); CakeUI from ../cakeui/build/libs/cakeui-<cakeui_version>.jar if built, else its GitHub release (Ivy);
 │                       #   runClient passes -Dcakecosmetic.selftest, 1280x720
 ├── gradle.properties   # MC 1.20.4, Yarn build.3, Loader 0.16.9, Fabric API 0.97.3, cakeui_version=0.2.0, mod_version
 ├── GLOSSARY.md
@@ -59,7 +59,7 @@ cakecosmetic/
 
 Tests (`./gradlew build`, 9): LogicTest (settings, rules round trip + newlyUnlocked, bad files, state files, pools, picks, image sizes, meta), LangTest (en_us, zh_cn, zh_tw have the same keys).
 
-Build: `JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` in `cakecosmetic/` (build `cakeui/` first while CakeUI 0.2.0 isn't released: its jar in `../cakeui/build/libs/` is used). CI in the standalone repo needs the CakeUI release named by `cakeui_version`.
+Build: `JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build` in `cakecosmetic/` (Gradle 9.8.2 + Loom 1.19.3 on JDK 25, like the multiloader kit; compiling, tests and `runClient` use the JDK 17 toolchain, since 1.20.4's Mixin can't run on 25). Loom must be at least the kit's: CakeUI's release jars are built with Loom 1.19.3, and an older Loom refuses them ("Mod was built with a newer version of Loom"; the first mirror CI run failed that way, 2026-11-09). A `../cakeui/build/libs/cakeui-<cakeui_version>.jar`, if present, wins over the release, so a stale local CakeUI jar can hide CI problems. CI in the standalone repo uses the CakeUI release named by `cakeui_version` (0.2.0, API 2 is enough; it runs with CakeUI 0.3.0 too). Not ported to the multiloader layout yet (Fabric 1.20.4 only).
 
 Dev client self-test: `./gradlew runClient -Dcakecosmetic.selftest=world` (about a minute with an existing world; a fresh world can take much longer). Needs in `run/` (ignored): `resourcepacks/cakecosmetic-paperbox-test.zip` (Paperbox 1.1.0's 7 images under `assets/paperbox/cakecosmetic/backgrounds/` with placeholder titles "Paperbox N"), `options.txt` with `onboardAccessibility:false`, `pauseOnLostFocus:false` and that pack in `resourcePacks`, `config/cakecosmetic/config.json5` with `devMode: true`, and `config/cakecosmetic/rules.json5` (image3 ← minecraft:story/root, image5 ← story/mine_stone, image7 ← end/root secret). It shoots title, gallery, preview, rule editor, loading screens, the unlock toast (a crafting table earns story/root) and the gallery/editor in the world, then quits.
 
