@@ -1,5 +1,11 @@
 package io.github.harrythecake.cakeui;
 
+import io.github.harrythecake.cakeui.edit.HudDefaults;
+import io.github.harrythecake.cakeui.edit.HudEdits;
+import io.github.harrythecake.cakeui.edit.Placement;
+import io.github.harrythecake.cakeui.edit.Placement.Box;
+import io.github.harrythecake.cakeui.edit.PortEdit;
+import java.util.Map;
 import io.github.harrythecake.cakeui.mixin.MouseInvoker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Screenshot;
@@ -61,6 +67,10 @@ final class SelfTest {
 	private SelfTest() {
 	}
 
+	/** The self-test's stand-in movable (see init). */
+	static final double[] DEMO_BOX = {40, 150, 60, 20};
+	static boolean demoSaved;
+
 	static void init() {
 		String mode = System.getProperty("cakeui.selftest", "");
 		if (mode.isEmpty()) {
@@ -68,6 +78,41 @@ final class SelfTest {
 		}
 		worldMode = mode.equals("world");
 		enabled = true;
+		// a stand-in for a mod's own movable (API 3): it stores its box itself and says when it was saved
+		io.github.harrythecake.cakeui.api.CakeUIApi.get().addMovables("cakeui-selftest", () -> java.util.List.of(new io.github.harrythecake.cakeui.api.Movable() {
+			@Override
+			public String id() {
+				return "demo";
+			}
+
+			@Override
+			public net.minecraft.network.chat.Component label() {
+				return net.minecraft.network.chat.Component.literal("Self-test movable");
+			}
+
+			@Override
+			public double[] box(int w, int h) {
+				return worldMode ? DEMO_BOX.clone() : null;
+			}
+
+			@Override
+			public void place(double x, double y, double width, double height, int w, int h) {
+				DEMO_BOX[0] = Math.round(x);
+				DEMO_BOX[1] = Math.round(y);
+				DEMO_BOX[2] = Math.round(width);
+				DEMO_BOX[3] = Math.round(height);
+			}
+
+			@Override
+			public boolean resizable() {
+				return true;
+			}
+
+			@Override
+			public void save() {
+				demoSaved = true;
+			}
+		}));
 		CakeUI.LOGGER.info("CakeUI self-test: title screen{}, then quit", worldMode ? ", pause menu and inventory" : "");
 		if (Boolean.getBoolean("cakeui.selftest.fill")) {
 			// a stand-in plugin: gradients behind the main menu (purple) and loading screens (teal)
@@ -241,6 +286,320 @@ final class SelfTest {
 			HudTiming.enabled = false;
 			CakeUI.LOGGER.info("CakeUI self-test: HUD bench: with the layout's HUD {} ms/frame ({} frames), without {} ms/frame ({} frames), CakeUI adds {} ms",
 					String.format("%.4f", hudOn[0]), (long) hudOn[1], String.format("%.4f", off[0]), (long) off[1], String.format("%.4f", hudOn[0] - off[0]));
+			editorTick(client);
+		} else if (screenTicks > 460) {
+			editorTick(client);
+		}
+	}
+
+	/** A screenshot from the self-test (no message). */
+	private static final java.util.function.BiConsumer<Minecraft, String> SHOT = (client, name) ->
+			Screenshot.grab(client.gameDirectory, name, client.getMainRenderTarget(), text -> { });
+
+	/**
+	 * The HUD editor: personal edits (open, move/scale/fade/hide as a drag would, save, check the HUD
+	 * follows, clean up), then with a dev-mode layout its own edits (hud/edits.json5, the layout's first
+	 * HUD element moved to the bottom-right corner).
+	 */
+	private static void editorTick(Minecraft client) {
+		int t = screenTicks - 460;
+		int w = client.getWindow().getGuiScaledWidth();
+		int h = client.getWindow().getGuiScaledHeight();
+		if (t == 0) {
+			client.setScreen(new HudEditorScreen(null));
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+		} else if (t == 30) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-open.png");
+			Map<String, PortEdit> edits = HudEditor.editingMap();
+			Box hb = HudBounds.box("hotbar");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: hotbar measured at {} (vanilla {}), {}", hb, HudDefaults.box("hotbar", w, h),
+					hb != null && Math.abs(hb.x() - (w / 2.0 - 91)) <= 2.5 && Math.abs(hb.bottom() - h) <= 1 ? "PASS" : "FAIL");
+			boolean greyed = false;
+			for (String name : HudEditor.pieces()) {
+				greyed |= HudExpect.expected(name) && !HudBounds.hookedRecently(name);
+			}
+			CakeUI.LOGGER.info("CakeUI self-test: editor: no vanilla piece taken for another mod's ({})", greyed ? "FAIL" : "PASS");
+			PortEdit hotbar = new PortEdit();
+			Placement.place(hotbar, PortEdit.Mode.ANCHORED, 4, 4, hb == null ? 182 : hb.w(), hb == null ? 22 : hb.h(), w, h);
+			edits.put("hotbar", hotbar);
+			PortEdit health = new PortEdit();
+			health.scale = 1.5;
+			edits.put("health", health);
+			PortEdit xp = new PortEdit();
+			xp.opacity = 0.5f;
+			edits.put("experience", xp);
+			PortEdit crosshair = new PortEdit();
+			crosshair.element = io.github.harrythecake.cakeui.edit.CrosshairStyles.defaults("cross", null);
+			crosshair.element.addProperty("color", "#ff4040");
+			crosshair.element.addProperty("invert", false);
+			edits.put("crosshair", crosshair);
+			// E3: an added text (bottom-left) and a bar that never shows (its condition is false)
+			PortEdit text = new PortEdit();
+			text.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("text", null);
+			Placement.place(text, PortEdit.Mode.ANCHORED, 4, h - 60, 40, 9, w, h);
+			edits.put("+text-test", text);
+			PortEdit bar = new PortEdit();
+			bar.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("bar", null);
+			bar.element.addProperty("visible", "= false");
+			Placement.place(bar, PortEdit.Mode.ANCHORED, 4, h - 70, 80, 5, w, h);
+			edits.put("+bar-test", bar);
+			// E4: the hotbar as an inventory element (top right) and the held item
+			PortEdit inv = new PortEdit();
+			inv.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("inventory", null);
+			inv.element.addProperty("slots", "hotbar");
+			inv.element.addProperty("columns", 3);
+			Placement.place(inv, PortEdit.Mode.ANCHORED, w - 60, 60, 56, 56, w, h);
+			edits.put("+inventory-test", inv);
+			PortEdit held = new PortEdit();
+			held.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("item", null);
+			held.element.addProperty("item", "slot:mainhand");
+			held.scale = 2.0;
+			Placement.place(held, PortEdit.Mode.ANCHORED, w - 40, 130, 32, 32, w, h);
+			edits.put("+item-test", held);
+			// E5: a mod's own movable, moved as a drag would (the editor calls place; Done must make the mod save)
+			var demo = HudMovables.get("~cakeui-selftest:demo");
+			if (demo != null) {
+				demo.place(100, 160, 60, 20, w, h);
+			}
+			// E4: an animated WebP from config/cakeui/images (the smoke run puts anim.webp there)
+			if (java.nio.file.Files.isRegularFile(HudAdded.imagesDir().resolve("anim.webp"))) {
+				PortEdit anim = new PortEdit();
+				anim.element = io.github.harrythecake.cakeui.edit.AddedElements.defaults("image", "anim.webp");
+				Placement.place(anim, PortEdit.Mode.ANCHORED, w - 40, 90, 32, 32, w, h);
+				edits.put("+image-test", anim);
+			}
+			// E4: health as "bar + number", XP as a slim bar (presets hide vanilla's piece and add one element)
+			for (String[] ps : new String[][] {{"health", "barNumber"}, {"experience", "slim"}}) {
+				PortEdit port = new PortEdit();
+				port.style = ps[1];
+				port.hide = true;
+				edits.put(ps[0], port);
+				PortEdit el = new PortEdit();
+				el.element = io.github.harrythecake.cakeui.edit.StylePresets.element(ps[0], ps[1]);
+				Box at = HudBounds.orDefault(ps[0], w, h);
+				Placement.place(el, PortEdit.Mode.ANCHORED, at.x(), at.y() - 12, at.w(), at.h(), w, h);
+				edits.put(io.github.harrythecake.cakeui.edit.StylePresets.key(ps[0]), el);
+			}
+		} else if (t == 40) {
+			if (client.screen instanceof HudEditorScreen editor) {
+				editor.openPanel("+text-test", HudEditor.editingMap().get("+text-test"));
+			}
+		} else if (t == 46) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-element.png");
+		} else if (t == 47) {
+			if (client.screen instanceof HudElementScreen panel) {
+				client.setScreen(new HudValuesScreen(panel, v -> { }));
+			}
+		} else if (t == 49) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-values.png");
+		} else if (t == 52) {
+			if (client.screen instanceof HudValuesScreen list) {
+				list.onClose();
+			}
+			if (client.screen instanceof HudElementScreen panel) {
+				panel.onClose();
+			}
+		} else if (t == 53) {
+			if (client.screen instanceof HudEditorScreen editor) {
+				editor.openPanel("+inventory-test", HudEditor.editingMap().get("+inventory-test"));
+			}
+		} else if (t == 56) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-inventory-panel.png");
+		} else if (t == 57) {
+			if (client.screen instanceof HudElementScreen panel) {
+				panel.onClose();
+			}
+		} else if (t == 59) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-edited.png");
+		} else if (t == 60) {
+			if (client.screen instanceof HudEditorScreen editor) {
+				editor.done();
+			} else {
+				HudEditor.finish(true);
+				client.setScreen(null);
+			}
+		} else if (t == 80) {
+			SHOT.accept(client, "cakeui-selftest-hud-edited.png");
+			Map<String, PortEdit> saved = HudEdits.load(HudEditor.file()).set(HudEditor.layoutKey());
+			Box inner = HudBounds.box("hotbar");
+			Box shown = inner == null || !saved.containsKey("hotbar") ? null : Placement.transform(saved.get("hotbar"), inner, w, h).apply(inner);
+			CakeUI.LOGGER.info("CakeUI self-test: editor: movable placed by its mod at {} and saved on Done: {} ({})", java.util.Arrays.toString(DEMO_BOX),
+					demoSaved, demoSaved && DEMO_BOX[0] == 100 && DEMO_BOX[1] == 160 ? "PASS" : "FAIL");
+			boolean animFile = java.nio.file.Files.isRegularFile(HudAdded.imagesDir().resolve("anim.webp"));
+			if (animFile) {
+				Box ab = HudBounds.box("+image-test");
+				boolean animOk = HudBounds.live("+image-test") && ab != null && Math.abs(ab.w() - 32) <= 1 && HudAdded.personalRenderer().layout.problems.isEmpty();
+				CakeUI.LOGGER.info("CakeUI self-test: editor: animated WebP drawn at {}, problems {} ({})", ab, HudAdded.personalRenderer().layout.problems.list(), animOk ? "PASS" : "FAIL");
+			}
+			boolean ok = saved.size() == (animFile ? 11 : 10) && shown != null && Math.abs(shown.x() - 4) <= 1 && Math.abs(shown.y() - 4) <= 1
+					&& Math.abs(inner.bottom() - h) <= 1;
+			Box textInner = HudBounds.box("+text-test");
+			Box textShown = textInner == null ? null : Placement.transform(saved.get("+text-test"), textInner, w, h).apply(textInner);
+			boolean textOk = textShown != null && HudBounds.live("+text-test") && Math.abs(textShown.x() - 4) <= 1 && Math.abs(textShown.y() - (h - 60)) <= 1;
+			boolean presets = HudBounds.live(io.github.harrythecake.cakeui.edit.StylePresets.key("health")) && !HudBounds.live("health");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: health preset drawn, vanilla health hidden ({})", presets ? "PASS" : "FAIL");
+			Box cross = HudBounds.box("crosshair");
+			boolean crossOk = cross != null && Math.abs(cross.cx() - w / 2.0) <= 1 && Math.abs(cross.cy() - h / 2.0) <= 1 && Math.abs(cross.w() - 12) <= 1;
+			CakeUI.LOGGER.info("CakeUI self-test: editor: cross crosshair drawn at {} (12 x 12 at the centre) ({})", cross, crossOk ? "PASS" : "FAIL");
+			Box invBox = HudBounds.box("+inventory-test");
+			boolean invOk = invBox != null && Math.abs(invBox.w() - 56) <= 4 && Math.abs(invBox.h() - 56) <= 4 && HudBounds.live("+item-test");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: inventory element {} (3 x 3 slots of 18 + 1 gap), held item drawn ({})", invBox, invOk ? "PASS" : "FAIL");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: added text drawn at {}, the bar with a false condition {} ({})", textShown,
+					HudBounds.live("+bar-test") ? "drawn" : "not drawn", textOk && !HudBounds.live("+bar-test") ? "PASS" : "FAIL");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: saved {} edit(s) for {}, hotbar inner {} shown {} ({})", saved.size(),
+					HudEditor.layoutKey(), inner, shown, ok ? "PASS" : "FAIL");
+		} else if (t == 90) {
+			// leave no personal edits behind
+			HudEditor.start();
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+			HudEditor.editingMap().clear();
+			HudEditor.finish(true);
+		} else if (t == 92) {
+			// E6: the same editor on the main menu, as a player opens it (dev mode: saving into the layout)
+			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.TitleScreen());
+		} else if (t == 100) {
+			mouseDragStart(client, "menu.singleplayer");
+		} else if (t == 105) {
+			mouseDragCheck(client, "main_menu/button:menu.singleplayer");
+			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.TitleScreen());
+			HudEditor.setTarget(HudEditor.Target.PERSONAL); // the player's own edits (dev mode starts on the layout's)
+		} else if (t == 110) {
+			Map<String, PortEdit> edits = HudEditor.editingMap();
+			net.minecraft.client.gui.components.AbstractWidget sp = null;
+			if (client.screen instanceof HudEditorScreen ed && ed.targetForTest() != null) {
+				for (var b : ScreenPorts.buttons(ed.targetForTest())) {
+					if (ScreenPorts.id(b).equals("menu.singleplayer")) {
+						sp = b;
+					}
+				}
+			}
+			if (sp != null) {
+				PortEdit e = new PortEdit();
+				Placement.place(e, PortEdit.Mode.ANCHORED, 4, 4, sp.getWidth(), sp.getHeight(), w, h);
+				edits.put("main_menu/button:menu.singleplayer", e);
+			}
+			PortEdit logo = new PortEdit();
+			logo.hide = true;
+			edits.put("main_menu/logo", logo);
+			CakeUI.LOGGER.info("CakeUI self-test: editor: main menu open in the editor, singleplayer button found {} ({})", sp != null, sp != null ? "PASS" : "FAIL");
+		} else if (t == 125) {
+			SHOT.accept(client, "cakeui-selftest-uieditor-mainmenu.png");
+		} else if (t == 130) {
+			if (client.screen instanceof HudEditorScreen ed) {
+				ed.done();
+			}
+		} else if (t == 140) {
+			SHOT.accept(client, "cakeui-selftest-mainmenu-edited.png");
+			net.minecraft.client.gui.components.AbstractWidget sp = null;
+			if (client.screen != null) {
+				for (var b : ScreenPorts.buttons(client.screen)) {
+					if (ScreenPorts.id(b).equals("menu.singleplayer")) {
+						sp = b;
+					}
+				}
+			}
+			boolean ok = client.screen instanceof net.minecraft.client.gui.screens.TitleScreen && sp != null && sp.getX() == 4 && sp.getY() == 4
+					&& !HudBounds.live("main_menu/logo");
+			CakeUI.LOGGER.info("CakeUI self-test: editor: main menu after Done: singleplayer at {} {}, logo drawn {} ({})", sp == null ? -1 : sp.getX(),
+					sp == null ? -1 : sp.getY(), HudBounds.live("main_menu/logo"), ok ? "PASS" : "FAIL");
+		} else if (t == 145) {
+			HudEditor.start();
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+			HudEditor.editingMap().keySet().removeIf(k -> k.startsWith("main_menu/"));
+			HudEditor.finish(true);
+			client.setScreen(null);
+		} else if (t == 146) {
+			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.PauseScreen(true));
+		} else if (t == 148) {
+			mouseDragStart(client, "menu.returnToGame");
+		} else if (t == 152) {
+			mouseDragCheck(client, "pause/button:menu.returnToGame");
+			client.setScreen(null);
+		} else if (t == 154) {
+			// E6: the pause menu: "Back to Game" moved to the top-left corner
+			HudEditorScreen.openFor(new net.minecraft.client.gui.screens.PauseScreen(true));
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+		} else if (t == 160) {
+			net.minecraft.client.gui.components.AbstractWidget back = null;
+			if (client.screen instanceof HudEditorScreen ed && ed.targetForTest() != null) {
+				for (var b : ScreenPorts.buttons(ed.targetForTest())) {
+					if (ScreenPorts.id(b).equals("menu.returnToGame")) {
+						back = b;
+					}
+				}
+			}
+			if (back != null) {
+				PortEdit e = new PortEdit();
+				Placement.place(e, PortEdit.Mode.ANCHORED, 4, 4, back.getWidth(), back.getHeight(), w, h);
+				HudEditor.editingMap().put("pause/button:menu.returnToGame", e);
+			}
+		} else if (t == 165) {
+			SHOT.accept(client, "cakeui-selftest-uieditor-pause.png");
+		} else if (t == 168) {
+			if (client.screen instanceof HudEditorScreen ed) {
+				ed.done();
+			}
+		} else if (t == 172) {
+			net.minecraft.client.gui.components.AbstractWidget back = null;
+			if (client.screen != null) {
+				for (var b : ScreenPorts.buttons(client.screen)) {
+					if (ScreenPorts.id(b).equals("menu.returnToGame")) {
+						back = b;
+					}
+				}
+			}
+			boolean ok = client.screen instanceof net.minecraft.client.gui.screens.PauseScreen && back != null && back.getX() == 4 && back.getY() == 4;
+			CakeUI.LOGGER.info("CakeUI self-test: editor: pause menu after Done: Back to Game at {} {} ({})", back == null ? -1 : back.getX(),
+					back == null ? -1 : back.getY(), ok ? "PASS" : "FAIL");
+			HudEditor.start();
+			HudEditor.setTarget(HudEditor.Target.PERSONAL);
+			HudEditor.editingMap().keySet().removeIf(k -> k.startsWith("pause/"));
+			HudEditor.finish(true);
+			client.setScreen(null);
+		} else if (t == 180) {
+			if (!HudEditor.layoutTargetPossible() || HudPart.part() == null || HudPart.part().children.isEmpty()) {
+				client.options.pauseOnLostFocus = pauseOnLostFocus;
+				done(client);
+			}
+		} else if (t == 190) {
+			client.setScreen(new HudEditorScreen(null));
+			CakeUI.LOGGER.info("CakeUI self-test: editor: dev mode starts on the layout's edits ({})",
+					HudEditor.target() == HudEditor.Target.LAYOUT ? "PASS" : "FAIL");
+		} else if (t == 220) {
+			Map<String, PortEdit> edits = HudEditor.editingMap();
+			PortEdit hotbar = new PortEdit();
+			hotbar.scale = 0.75;
+			edits.put("hotbar", hotbar);
+			String element = HudEdits.ELEMENT + HudPart.part().children.get(0).name;
+			Box ib = HudBounds.box(element);
+			if (ib != null) {
+				PortEdit e = new PortEdit();
+				Placement.place(e, PortEdit.Mode.ANCHORED, w - ib.w() - 4, h - ib.h() - 4, ib.w(), ib.h(), w, h);
+				edits.put(element, e);
+			}
+			CakeUI.LOGGER.info("CakeUI self-test: editor: layout element {} measured at {} ({})", element, ib, ib != null ? "PASS" : "FAIL");
+		} else if (t == 240) {
+			SHOT.accept(client, "cakeui-selftest-hudeditor-layout.png");
+		} else if (t == 250) {
+			HudEditor.finish(true);
+			client.setScreen(null);
+		} else if (t == 280) {
+			SHOT.accept(client, "cakeui-selftest-hud-layout-edited.png");
+			java.nio.file.Path file = HudEditor.layoutEditsFile();
+			Map<String, PortEdit> saved = file == null ? Map.of() : HudEdits.loadLayoutEdits(file);
+			String element = HudEdits.ELEMENT + HudPart.part().children.get(0).name;
+			Box inner = HudBounds.box(element);
+			Box shown = inner == null || !saved.containsKey(element) ? null
+					: Placement.transform(HudEditor.current().get(element), inner, w, h).apply(inner);
+			boolean ok = saved.size() == 2 && shown != null && Math.abs(shown.right() - (w - 4)) <= 1 && Math.abs(shown.bottom() - (h - 4)) <= 1;
+			CakeUI.LOGGER.info("CakeUI self-test: editor: layout edits {} saved {}, {} shown {} ({})", file, saved.size(), element, shown, ok ? "PASS" : "FAIL");
+		} else if (t == 290) {
+			try {
+				java.nio.file.Files.deleteIfExists(HudEditor.layoutEditsFile());
+			} catch (java.io.IOException e) {
+				CakeUI.LOGGER.warn("CakeUI self-test: could not remove the layout's edits", e);
+			}
+			HudEditor.reload();
 			client.options.pauseOnLostFocus = pauseOnLostFocus;
 			done(client);
 		}
@@ -280,5 +639,44 @@ final class SelfTest {
 	private static void done(Minecraft client) {
 		CakeUI.LOGGER.info("CakeUI self-test: done, {} problem(s): {}", Ui.problems().size(), Ui.problems());
 		client.stop();
+	}
+
+	// E6 mouse path: press on a button of the edited screen, drag it 30 px, release; a few frames later it must have moved
+	private static net.minecraft.client.gui.components.AbstractWidget dragged;
+	private static int draggedX;
+	private static int draggedY;
+
+	private static void mouseDragStart(Minecraft client, String id) {
+		dragged = null;
+		if (client.screen instanceof HudEditorScreen ed && ed.targetForTest() != null) {
+			for (var b : ScreenPorts.buttons(ed.targetForTest())) {
+				if (ScreenPorts.id(b).equals(id)) {
+					dragged = b;
+				}
+			}
+			if (dragged != null) {
+				draggedX = dragged.getX();
+				draggedY = dragged.getY();
+				double cx = draggedX + dragged.getWidth() / 2.0;
+				double cy = draggedY + dragged.getHeight() / 2.0;
+				ed.mouseClicked(cx, cy, 0);
+				ed.mouseDragged(cx + 15, cy + 15, 0, 15, 15);
+				ed.mouseDragged(cx + 30, cy + 30, 0, 15, 15);
+				ed.mouseReleased(cx + 30, cy + 30, 0);
+			}
+		}
+		CakeUI.LOGGER.info("CakeUI self-test: editor: {} found in the edited screen {}, visible {} at {} {}", id, dragged != null,
+				dragged != null && dragged.visible, draggedX, draggedY);
+	}
+
+	private static void mouseDragCheck(Minecraft client, String key) {
+		boolean edit = client.screen instanceof HudEditorScreen ed && ed.editsForTest().containsKey(key);
+		// about 30 px (snapping to a guide may take it a few px further)
+		boolean moved = dragged != null && Math.abs(dragged.getX() - draggedX - 30) <= 8 && Math.abs(dragged.getY() - draggedY - 30) <= 8;
+		CakeUI.LOGGER.info("CakeUI self-test: editor: {} dragged with the mouse: edit {}, now at {} {} ({})", key, edit,
+				dragged == null ? -1 : dragged.getX(), dragged == null ? -1 : dragged.getY(), edit && moved ? "PASS" : "FAIL");
+		if (client.screen instanceof HudEditorScreen ed) {
+			ed.onClose(); // Cancel
+		}
 	}
 }

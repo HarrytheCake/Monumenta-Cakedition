@@ -32,6 +32,7 @@ public final class CakeUIFabric implements ClientModInitializer {
 		}
 		KeyBindingHelper.registerKeyBinding(CakeUIClient.RELOAD_KEY);
 		KeyBindingHelper.registerKeyBinding(CakeUIClient.BUTTON_IDS_KEY);
+		KeyBindingHelper.registerKeyBinding(CakeUIClient.EDIT_HUD_KEY);
 		if (FabricLoader.getInstance().isModLoaded("modmenu")) {
 			CakeUIClient.modsScreen = CakeUIFabric::modMenu;
 		}

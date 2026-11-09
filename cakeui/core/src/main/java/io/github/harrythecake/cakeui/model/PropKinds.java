@@ -21,7 +21,7 @@ public final class PropKinds {
 		WORD
 	}
 
-	public static final List<String> ELEMENT_TYPES = List.of("text", "image", "rect", "bar", "item", "button", "group");
+	public static final List<String> ELEMENT_TYPES = List.of("text", "image", "rect", "bar", "item", "inventory", "button", "group");
 	public static final List<String> CONTAINERS = List.of("group", "button", "subwindow", "part");
 	public static final List<String> ANCHORS = List.of("top_left", "top", "top_right", "left", "center", "right", "bottom_left", "bottom", "bottom_right");
 	public static final List<String> EASINGS = List.of("linear", "ease", "ease_in", "ease_out", "ease_in_out", "back_out", "elastic_out", "bounce_out");
@@ -46,12 +46,12 @@ public final class PropKinds {
 		kind(Kind.LENGTH, "x", "y", "width", "height", "gap", "padding", "size", "outlineWidth", "transform.z", "parallax.move", "perspective", "lineHeight", "radius");
 		kind(Kind.NUMBER, "opacity", "order", "transform.rotateX", "transform.rotateY", "transform.rotateZ", "transform.scale",
 				"transform.scaleX", "transform.scaleY", "transform.skewX", "transform.skewY", "transform.pivotX", "transform.pivotY",
-				"parallax.tilt", "parallax.smoothing", "transition.duration", "fps", "frames", "sliceScale", "value", "count");
-		kind(Kind.COLOR, "color", "color2", "tint", "outline", "background");
-		kind(Kind.BOOL, "visible", "enabled", "shadow", "wrap", "pixelated", "readable");
+				"parallax.tilt", "parallax.smoothing", "transition.duration", "fps", "frames", "sliceScale", "value", "count", "columns");
+		kind(Kind.COLOR, "color", "color2", "tint", "outline", "background", "slotColor");
+		kind(Kind.BOOL, "visible", "enabled", "shadow", "wrap", "pixelated", "readable", "counts", "durability", "cooldown");
 		kind(Kind.TEXT, "text", "tooltip");
 		kind(Kind.WORD, "anchor", "origin", "arrange", "align", "font", "src", "fit", "frameLayout", "direction", "gradient", "item",
-				"transition.easing", "sounds.hover", "sounds.click", "layer", "image", "textAlign");
+				"transition.easing", "sounds.hover", "sounds.click", "layer", "image", "textAlign", "slots", "slotBackground");
 
 		COMMON.addAll(List.of("type", "anchor", "origin", "x", "y", "width", "height", "visible", "opacity", "order", "layer",
 				"enabled", "transform", "parallax", "states", "transition", "sounds", "tooltip"));
@@ -61,7 +61,10 @@ public final class PropKinds {
 		type("image", "src", "tint", "slice", "sliceScale", "fit", "frames", "fps", "frameLayout", "pixelated");
 		type("rect", "color", "color2", "gradient", "outline", "outlineWidth");
 		type("bar", "value", "color", "background", "direction", "image");
-		type("item", "item", "count");
+		// item: an id ("minecraft:diamond") or one of the player's slots ("slot:mainhand", "slot:head", "slot:12")
+		type("item", "item", "count", "counts", "durability", "cooldown");
+		// the player's own slots in a grid (display only): hotbar, main, armor, offhand, all, "9-17", "0,40"
+		type("inventory", "slots", "columns", "gap", "slotBackground", "slotColor", "counts", "durability", "cooldown");
 		type("group");
 		type("button", "action");
 		type("subwindow");

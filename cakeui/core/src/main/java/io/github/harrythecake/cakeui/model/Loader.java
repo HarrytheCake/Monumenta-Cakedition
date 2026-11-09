@@ -66,6 +66,25 @@ public final class Loader {
 		return layout;
 	}
 
+	/**
+	 * One element written outside a layout's files (an element the HUD editor added): parsed and checked
+	 * like a layout's, in the layout's scope; problems go to {@code layout.problems}. Null when unusable.
+	 */
+	public static Node element(Layout layout, String name, String json5, String file) {
+		Loader l = new Loader(layout);
+		try {
+			JValue v = io.github.harrythecake.cakeui.json.Json5.parse(json5, file);
+			if (!(v instanceof JValue.JObject o)) {
+				l.problem(file, 0, "an element must be an object { type: … }");
+				return null;
+			}
+			return l.element(name, o, layout.scope, file, 0);
+		} catch (RuntimeException e) {
+			l.problem(file, 0, String.valueOf(e.getMessage()));
+			return null;
+		}
+	}
+
 	private void problem(String file, int line, String message) {
 		layout.problems.add(file, line, message);
 	}
@@ -520,7 +539,8 @@ public final class Loader {
 					} else {
 						problem(rel(p) + "/", 0, "unknown folder (subwindows are named subwindow_<name>)");
 					}
-				} else if (!n.equals("layout.json5") && !n.equals("declaration.json5") && !n.equals("splashes.txt") && !n.startsWith(".")) {
+				} else if (!n.equals("layout.json5") && !n.equals("declaration.json5") && !n.equals("splashes.txt") && !n.startsWith(".")
+						&& !(n.equals("edits.json5") && parent.type.equals("part") && parent.name.equals("hud"))) {
 					problem(rel(p), 0, "unexpected file (expected layout.json5, declaration.json5" + (parent.type.equals("part") ? ", splashes.txt" : "") + ")");
 				}
 			}

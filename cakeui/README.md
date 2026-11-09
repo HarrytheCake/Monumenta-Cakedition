@@ -196,6 +196,49 @@ F3+Esc's "Game Paused" screen (no buttons) stays vanilla.
 
 **Inventory slots never move.** The `panel` port's elements (and the `title` port's) are drawn in the panel's box, 176×166 GUI pixels, and follow it when the recipe book pushes it aside, so give them sizes in `px` and `%`. With `panel: { "hide": true }` the slot frames go too (they are part of vanilla's texture), so draw your own. The creative inventory is a different screen and stays vanilla for now.
 
+## Moving your HUD (HUD editor)
+
+In a world, open **Mod Menu → CakeUI → Edit HUD…** (or bind the "Edit HUD" key under Controls → CakeUI). The HUD stays live behind the editor:
+
+- **Drag** a piece to move it; it snaps to the screen's edges and centre and to other pieces (hold **Alt** to place it freely). **Arrow keys** nudge the selected piece (Shift: 10 pixels).
+- **Scroll** over a piece to make it bigger or smaller.
+- **Right-click** a piece: hide or show it, opacity, position mode, reset.
+  - *Anchored* (default): it keeps its distance to the nearest edge or corner when the window or GUI scale changes.
+  - *Percent*: it keeps its place as a share of the screen.
+  - *Fixed*: it stays at exact pixels from the top-left corner.
+- **Previews** shows boxes for pieces that aren't on screen right now (boss bars, titles, the tab list …) so you can place them too.
+- **Done** saves, **Cancel** (or Esc twice) throws the changes away, **Ctrl+Z / Ctrl+Y** undo and redo.
+
+- **Right-click empty space** to add your own **text, box, bar or image**. Right-click it and choose **Edit…** to change it:
+  - Text can show live game values: `{fps} fps`, `{fmt(player.x, 0)} {fmt(player.z, 0)}`. The **Game values** field filters a few quick buttons; **All…** opens every value with its current reading.
+  - A bar's value is a number from 0 to 1, e.g. `player.health / player.maxHealth`.
+  - Images are PNG files in `config/cakeui/images/` (**Folder…** opens it).
+  - **Show only when** (advanced) hides the element unless a condition is true, e.g. `player.health < 10`.
+- The layout's own HUD elements appear as "Layout: name" and can be moved like the rest.
+- **Style** (right-click health, hunger, armor, air, mount health or XP): show it as a bar, a number or both (XP: a slim bar or just the level). The vanilla piece is replaced by an element you can move and edit; Delete brings vanilla's back.
+- **Crosshair** (right-click it → Style): dot, cross, circle or your own image, with size, gap, thickness, colour and "invert" (like vanilla: visible on any background). The attack-cooldown indicator always stays.
+- **Item** and **Inventory** elements show your own slots: the held item, your armor, the hotbar as a grid … with counts, durability and cooldown each on or off.
+- Images can be **animated GIF or WebP**; they play at the file's own speed. Big animations are scaled down to fit (at most 512 px a side, 8 million pixels for all frames) and load in the background, so they appear a moment later.
+- Every added element has a **Scale** field in its panel (the same as scrolling over it).
+
+Your arrangement is saved in `config/cakeui/hud.json5`, separately for each layout ("vanilla" when no layout is active), and drawn on top of the layout. Pieces another mod draws itself are shown greyed out and can't be moved here.
+
+**Other screens:** the same editor works on the **main menu**, the **pause menu**, the **inventory** and **loading screens**: press the Edit HUD key while the screen is open, or use **Main menu… / Pause menu… / Inventory… / Loading…** in CakeUI's settings. Every button can be moved, resized (scroll) and hidden, and so can the main menu's logo, splash and version text, the inventory title and the loading text and map. (The game-launching screen has no cursor, so only a layout can change it.)
+
+**Other mods' pieces:** mods can let the editor move what they place themselves: CakeChat's chat windows (move and resize; CakeChat also adds an "Edit HUD" button to the chat) and CakeMap's minimap (move, and resize with its corner handle). They keep storing the place in their own settings.
+
+**Layout makers:** in dev mode the editor starts on **Saving: layout** and writes the layout's `hud/edits.json5` (loaded after `layout.json5`; players' own edits go on top). Switch to **Saving: my HUD** for your own edits. Added elements saved into a layout take their images from its `assets/` folder.
+
+### API version 3: the HUD editor
+
+- `addMovables(owner, source)`: things your mod places itself (a chat window, a minimap) become movable in the HUD editor. Each `Movable` gives its `box`, takes `place` while the player drags (and resizes, if `resizable`), and `save`s on Done (on Cancel it is put back with `place` and told `cancel`). You keep storing the place.
+- `openHudEditor(parent)`: opens the editor (e.g. from a button of yours); false outside a world.
+- `HudPiece.editable()`: return false for a piece the editor must not offer (one covering the whole screen, or one you offer as a movable).
+
+## Third-party code
+
+CakeUI bundles the TwelveMonkeys ImageIO WebP reader and the parts it needs (imageio-webp, imageio-core, imageio-metadata, common-image, common-io, common-lang 3.12.0), © Harald Kuhr, BSD 3-Clause; the licence is in the jar at `META-INF/licenses/TwelveMonkeys-LICENSE.txt`.
+
 ## For mod developers
 
 Other mods can add game values, element types and button actions, and fill a background the active layout doesn't redraw. Register a `CakeUIPlugin` (a public no-argument constructor); CakeUI calls it before the first layout loads, so load order doesn't matter:

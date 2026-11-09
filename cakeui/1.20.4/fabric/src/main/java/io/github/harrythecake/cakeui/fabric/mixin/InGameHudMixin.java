@@ -55,6 +55,7 @@ public abstract class InGameHudMixin {
 		io.github.harrythecake.cakeui.PluginHud.drawAll(context, tickDelta);
 		HudPart.drawLateElements(context, "actionBar", "title");
 		HudPart.drawLayer(context, "front");
+		HudPart.endFrame();
 		HudTiming.end();
 	}
 
@@ -176,7 +177,9 @@ public abstract class InGameHudMixin {
 		if (p == null) {
 			original.call(self, context, tr, yOffset, width, color);
 		} else if (!p.hide) {
+			String before = HudPart.beginText(p, yOffset == -4 ? "actionBar" : "title");
 			original.call(self, context, tr, yOffset, width, cakeui$fade(color, p.opacity));
+			io.github.harrythecake.cakeui.HudBounds.end(before);
 		}
 	}
 
@@ -186,7 +189,13 @@ public abstract class InGameHudMixin {
 		if (p == null) {
 			return original.call(context, tr, text, x, y, color);
 		}
-		return p.hide ? 0 : original.call(context, tr, text, x, y, cakeui$fade(color, p.opacity));
+		if (p.hide) {
+			return 0;
+		}
+		String before = HudPart.beginText(p, y == -4 ? "actionBar" : "title");
+		int r = original.call(context, tr, text, x, y, cakeui$fade(color, p.opacity));
+		io.github.harrythecake.cakeui.HudBounds.end(before);
+		return r;
 	}
 
 	/** Vanilla draws the action bar at y -4, the title at -10 and the subtitle at 5 (in their own matrices). */

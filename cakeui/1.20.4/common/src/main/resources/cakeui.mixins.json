@@ -7,6 +7,8 @@
 		"ClickableWidgetMixin",
 		"FontStorageAccessor",
 		"GameMenuScreenMixin",
+		"GuiCrosshairMixin",
+		"GuiGraphicsBoundsMixin",
 		"HandledScreenMixin",
 		"InGameHudAccessor",
 		"InventoryScreenMixin",

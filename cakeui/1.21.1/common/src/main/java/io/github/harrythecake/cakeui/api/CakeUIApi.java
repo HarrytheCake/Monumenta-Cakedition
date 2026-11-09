@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  */
 public final class CakeUIApi {
 	/** Changes when the API changes in a way plugins must know about. 2: {@link #fillPort}, {@link #addHudPiece} (CakeUI 0.2.0). */
-	public static final int VERSION = 2;
+	public static final int VERSION = 3;
 	private static final CakeUIApi INSTANCE = new CakeUIApi();
 	private static final Pattern VALUE_NAME = Pattern.compile("[a-z0-9_]+(\\.[a-zA-Z0-9_]+)+");
 	private static final Pattern NAMESPACED = Pattern.compile("[a-z0-9_.-]+:[a-z0-9_/.-]+");
@@ -99,6 +99,24 @@ public final class CakeUIApi {
 		Objects.requireNonNull(owner, "owner");
 		io.github.harrythecake.cakeui.PluginHud.register(name, owner, Objects.requireNonNull(piece, "piece"));
 		return this;
+	}
+
+	/**
+	 * Things your mod places itself on the HUD (API version 3), so CakeUI's HUD editor can move and maybe
+	 * resize them while your mod keeps storing their place (see {@link Movable}). Asked again whenever the
+	 * editor needs them; one source per mod.
+	 */
+	public CakeUIApi addMovables(String owner, MovableSource source) {
+		io.github.harrythecake.cakeui.HudMovables.register(Objects.requireNonNull(owner, "owner"), Objects.requireNonNull(source, "source"));
+		return this;
+	}
+
+	/**
+	 * Opens CakeUI's HUD editor (API version 3), e.g. from an "Edit HUD" button of your own; Done or Cancel
+	 * goes back to {@code parent} (may be null). False when it can't open now (not in a world).
+	 */
+	public boolean openHudEditor(@Nullable net.minecraft.client.gui.screens.Screen parent) {
+		return io.github.harrythecake.cakeui.HudEditorScreen.open(parent);
 	}
 
 	/** Loads the active layout again (render thread), e.g. after registering something late. */

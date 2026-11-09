@@ -28,6 +28,9 @@ final class Paint {
 	private Paint() {
 	}
 
+	/** Draw inverting what is behind (vanilla's crosshair pipelines) instead of normally: the HUD editor's crosshair styles. */
+	static boolean invert;
+
 	static int withAlpha(int argb, double opacity) {
 		int a = (int) Math.round(((argb >>> 24) & 255) * Math.max(0, Math.min(1, opacity)));
 		return (a << 24) | (argb & 0xFFFFFF);
@@ -38,7 +41,7 @@ final class Paint {
 		if (((c1 >>> 24) | (c2 >>> 24)) == 0 || x2 <= x1 || y2 <= y1) {
 			return;
 		}
-		Quads q = new Quads(RenderPipelines.GUI, TextureSetup.noTexture(), m, false);
+		Quads q = new Quads(invert ? RenderPipelines.GUI_INVERT : RenderPipelines.GUI, TextureSetup.noTexture(), m, false);
 		q.add(x1, y1, x2, y2, 0, 0, 0, 0, c1, vertical ? c1 : c2, c2, vertical ? c2 : c1);
 		q.submit(g);
 	}
@@ -53,7 +56,7 @@ final class Paint {
 	/** Starts a batch of textured quads for one texture (linear or nearest sampling). */
 	static Quads beginTextured(AbstractTexture texture, Matrix3x2f m, boolean linear) {
 		var sampler = RenderSystem.getSamplerCache().getClampToEdge(linear ? FilterMode.LINEAR : FilterMode.NEAREST);
-		return new Quads(RenderPipelines.GUI_TEXTURED, TextureSetup.singleTexture(texture.getTextureView(), sampler), m, true);
+		return new Quads(invert ? RenderPipelines.CROSSHAIR : RenderPipelines.GUI_TEXTURED, TextureSetup.singleTexture(texture.getTextureView(), sampler), m, true);
 	}
 
 	static void texQuad(Quads b, float x1, float y1, float x2, float y2, float u1, float v1, float u2, float v2, int argb) {

@@ -2,6 +2,8 @@ plugins {
 	id 'cake-core'
 }
 
+apply from: rootProject.file('gradle/cakeui-libs.gradle')
+
 // the tests read examples/ and schema/ from the mod folder
 tasks.named('test', Test) {
 	workingDir = rootProject.projectDir

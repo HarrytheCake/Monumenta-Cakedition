@@ -411,7 +411,7 @@
         },
         "item": {
           "type": "string",
-          "description": "Item id, e.g. minecraft:diamond_sword"
+          "description": "Item id, e.g. minecraft:diamond_sword, or one of the player's slots: slot:mainhand, slot:offhand, slot:head, slot:chest, slot:legs, slot:feet, slot:<0-40>"
         },
         "count": {
           "$ref": "#/definitions/number"
@@ -426,6 +426,7 @@
             "rect",
             "bar",
             "item",
+            "inventory",
             "button",
             "group"
           ]
@@ -551,6 +552,38 @@
         "perspective": {
           "$ref": "#/definitions/length",
           "description": "Camera distance for 3D children."
+        },
+        "counts": {
+          "$ref": "#/definitions/boolean",
+          "description": "item/inventory: show stack counts"
+        },
+        "durability": {
+          "$ref": "#/definitions/boolean",
+          "description": "item/inventory: show durability bars"
+        },
+        "cooldown": {
+          "$ref": "#/definitions/boolean",
+          "description": "item/inventory: show the cooldown overlay"
+        },
+        "slots": {
+          "type": "string",
+          "description": "inventory: hotbar, main, armor, offhand, all, a range \"9-17\" or a list \"0,1,40\" (0-8 hotbar, 9-35 main, 36 feet … 39 head, 40 offhand)"
+        },
+        "columns": {
+          "$ref": "#/definitions/number",
+          "description": "inventory: slots per row"
+        },
+        "slotBackground": {
+          "enum": [
+            "none",
+            "vanilla",
+            "rect"
+          ],
+          "description": "inventory: what is drawn under each slot"
+        },
+        "slotColor": {
+          "$ref": "#/definitions/color",
+          "description": "inventory: the slot colour with slotBackground \"rect\""
         }
       },
       "description": "text, image, rect, bar, item, button or group. CakeUI checks which properties fit which type when it loads."

@@ -48,6 +48,26 @@ public final class GameValues {
 		};
 	}
 
+	/** A value's current reading as text, for showing it (the HUD editor's value list); "" when unknown or failing. */
+	public static String preview(String name) {
+		Supplier<Object> supplier = VALUES.get(name);
+		if (supplier == null) {
+			return "";
+		}
+		try {
+			Object v = supplier.get();
+			if (v instanceof Double d) {
+				return d == Math.rint(d) && Math.abs(d) < 1e15 ? String.valueOf(d.longValue()) : String.format(java.util.Locale.ROOT, "%.3f", d);
+			}
+			if (v instanceof Float f) {
+				return String.format(java.util.Locale.ROOT, "%.3f", f);
+			}
+			return v == null ? "" : String.valueOf(v);
+		} catch (RuntimeException e) {
+			return "";
+		}
+	}
+
 	public static Set<String> names() {
 		return Collections.unmodifiableSet(new TreeMap<>(VALUES).keySet());
 	}

@@ -23,7 +23,46 @@ class PluginPortsTest {
 
 	@Test
 	void apiVersionKnowsFillPort() {
-		assertEquals(2, CakeUIApi.VERSION);
+		// fillPort came with 2, movables and openHudEditor with 3
+		assertEquals(3, CakeUIApi.VERSION);
+	}
+
+	@Test
+	void movablesAreListedByOwnerAndId() {
+		HudMovables.clear();
+		io.github.harrythecake.cakeui.api.Movable m = new io.github.harrythecake.cakeui.api.Movable() {
+			double x = 10;
+
+			@Override
+			public String id() {
+				return "window1";
+			}
+
+			@Override
+			public net.minecraft.network.chat.Component label() {
+				return net.minecraft.network.chat.Component.literal("Window 1");
+			}
+
+			@Override
+			public double[] box(int w, int h) {
+				return new double[] {x, 20, 100, 50};
+			}
+
+			@Override
+			public void place(double nx, double y, double width, double height, int w, int h) {
+				x = nx;
+			}
+
+			@Override
+			public void save() {
+			}
+		};
+		CakeUIApi.get().addMovables("testmod", () -> java.util.List.of(m));
+		assertEquals(java.util.List.of("~testmod:window1"), java.util.List.copyOf(HudMovables.all().keySet()));
+		HudMovables.get("~testmod:window1").place(42, 20, 100, 50, 400, 300);
+		assertEquals(42, HudMovables.get("~testmod:window1").box(400, 300)[0]);
+		org.junit.jupiter.api.Assertions.assertThrows(IllegalStateException.class, () -> CakeUIApi.get().addMovables("testmod", java.util.List::of));
+		HudMovables.clear();
 	}
 
 	@Test

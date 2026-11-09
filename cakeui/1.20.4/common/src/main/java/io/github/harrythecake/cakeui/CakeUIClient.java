@@ -20,6 +20,8 @@ import java.util.function.UnaryOperator;
 public final class CakeUIClient {
 	public static final KeyMapping RELOAD_KEY = new KeyMapping("key.cakeui.reload", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, "key.categories.cakeui");
 	public static final KeyMapping BUTTON_IDS_KEY = new KeyMapping("key.cakeui.buttonIds", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, "key.categories.cakeui");
+	/** Opens the HUD editor (unbound by default). */
+	public static final KeyMapping EDIT_HUD_KEY = new KeyMapping("key.cakeui.editHud", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, "key.categories.cakeui");
 	/** The loader's mod list for the "modmenu" action (Mod Menu on Fabric, NeoForge's own list), or null. */
 	@Nullable
 	public static UnaryOperator<Screen> modsScreen;
@@ -59,6 +61,11 @@ public final class CakeUIClient {
 		while (BUTTON_IDS_KEY.consumeClick()) {
 			Ui.config().showButtonIds = !Ui.config().showButtonIds;
 		}
+		while (EDIT_HUD_KEY.consumeClick()) {
+			if (client.level != null && client.screen == null) {
+				client.setScreen(new HudEditorScreen(null));
+			}
+		}
 		Ui.tick();
 		WindowPart.tick(client);
 	}
@@ -79,13 +86,18 @@ public final class CakeUIClient {
 
 	/** Before a screen draws. The loading screens (one has no render method of its own) start their frame here. */
 	public static void beforeScreenRender(Screen screen, GuiGraphics context, int mouseX, int mouseY) {
-		if (ScreenPorts.of(screen) == ScreenPorts.LOADING) {
+		ScreenPorts ports = ScreenPorts.of(screen);
+		if (ports == ScreenPorts.LOADING) {
 			LoadingPart.beginFrame(screen, mouseX, mouseY);
+		}
+		if (ports != null && ports.hasEdits()) {
+			ports.applyButtons(screen); // the player's edits (the UI editor), live while it is open
 		}
 	}
 
 	/** After a screen drew (tooltips included). */
 	public static void afterScreenRender(Screen screen, GuiGraphics context, int mouseX, int mouseY) {
+		HudBounds.endFrame();
 		if (ScreenPorts.of(screen) == ScreenPorts.LOADING) {
 			ScreenPorts.LOADING.drawElements(screen, context, "front", 1);
 			ScreenPorts.drawButtonIds(screen, context);
@@ -96,6 +108,11 @@ public final class CakeUIClient {
 
 	/** A key pressed while a screen is open: the reload and button-id keys work there too. */
 	public static void screenKeyPressed(int key, int scancode) {
+		Screen screen = client().screen;
+		if (EDIT_HUD_KEY.matches(key, scancode) && screen != null && !(screen instanceof HudEditorScreen) && ScreenPorts.of(screen) != null) {
+			HudEditorScreen.openFor(screen); // edit the screen that is open (main menu, pause menu, inventory, loading screen)
+			return;
+		}
 		if (RELOAD_KEY.matches(key, scancode)) {
 			Ui.reload();
 		} else if (BUTTON_IDS_KEY.matches(key, scancode)) {

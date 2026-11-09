@@ -50,6 +50,17 @@ public final class PluginHud {
 		io.github.harrythecake.cakeui.model.PluginNames.addHudPiece(name);
 	}
 
+	/** Pieces the HUD editor offers: editable ones whose mod doesn't place them itself (as a movable). */
+	public static List<String> editableNames() {
+		List<String> out = new ArrayList<>();
+		for (Entry e : PIECES) {
+			if (e.piece.editable() && !HudMovables.ids(e.owner).contains(e.name)) {
+				out.add(e.name);
+			}
+		}
+		return out;
+	}
+
 	/** Names of every added piece (the "hud" part accepts them as ports). */
 	public static List<String> names() {
 		List<String> out = new ArrayList<>();

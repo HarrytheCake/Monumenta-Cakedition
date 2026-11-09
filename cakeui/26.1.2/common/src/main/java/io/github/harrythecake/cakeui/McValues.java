@@ -105,6 +105,11 @@ final class McValues {
 		player("player.sprinting", p -> p.isSprinting(), false);
 		player("player.sneaking", p -> p.isShiftKeyDown(), false);
 		player("player.onFire", p -> p.isOnFire(), false);
+		// for the HUD editor's style presets (E4): what vanilla's own pieces show
+		player("player.exhaustion", p -> ((io.github.harrythecake.cakeui.mixin.FoodDataAccessor) p.getFoodData()).cakeui$exhaustion(), 0.0); // the client's estimate: servers don't send it
+		reg("player.survival", () -> mc().player != null && mc().gameMode != null && mc().gameMode.canHurtPlayer());
+		player("mount.health", p -> p.getVehicle() instanceof net.minecraft.world.entity.LivingEntity m ? m.getHealth() : 0.0, 0.0);
+		player("mount.maxHealth", p -> p.getVehicle() instanceof net.minecraft.world.entity.LivingEntity m ? m.getMaxHealth() : 0.0, 0.0);
 	}
 
 	/** The Cakedition pack version written by Cakedition Updater, if any. */
