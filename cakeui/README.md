@@ -4,7 +4,7 @@ A client-only mod for **Fabric and NeoForge on Minecraft 1.20.4, 1.21.1 and 26.1
 
 With no layout chosen (the default), CakeUI changes nothing. It also leaves alone any piece of vanilla that the active layout doesn't mention, so other mods' buttons and screens keep working.
 
-**Status:** 0.2.0. The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work, with a settings screen (Mod Menu on Fabric, the mod list's Config button on NeoForge) and an API for other mods (milestones 1–5 of 5). Chests and other screens may come later. What differs between Minecraft versions and loaders is listed under [Versions](#versions).
+**Status:** 0.3.0. The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work, with a settings screen (Mod Menu on Fabric, the mod list's Config button on NeoForge) and an API for other mods (milestones 1–5 of 5) and an in-game HUD and screen editor ([Moving your HUD](#moving-your-hud-hud-editor)). Chests and other screens may come later. What differs between Minecraft versions and loaders is listed under [Versions](#versions).
 
 ## Using a layout
 

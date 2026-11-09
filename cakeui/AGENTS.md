@@ -2,7 +2,7 @@
 
 Client-only library mod (`cakeui`, package `io.github.harrythecake.cakeui`) for **Fabric and NeoForge on Minecraft 1.20.4, 1.21.1 and 26.1.2** (Cake multiloader layout, see `../tools/multiloader/README.md`; the Cakedition pack ships the Fabric 1.20.4 jar). Layout folders, written by pack developers with no Java, redraw the game window, launching screen, main menu, loading screens and HUD. Terms are in [`GLOSSARY.md`](GLOSSARY.md): layout, part, window, subwindow, element, port, declaration, game value, design pixel, skin, dev mode. The user-facing guide is [`README.md`](README.md); keep both files current.
 
-The standalone repo is `HarrytheCake/CakeUI` (remote `cakeui`, a `git subtree` mirror pushed by `tools/push_all`; MIT; public since 2026-11-04). The source of truth is this folder in the Monumenta-Cakedition repo; never commit in the standalone repo. **Not in the pack yet:** the next pack release ships the newest CakeUI (0.2.0, no layout) together with CakeCosmetic (user, 2026-11-04). **Release v0.2.0** (multiloader, all six jars) was published from the mirror CI on 2026-11-05 at the user's request, ahead of CakeCosmetic.
+The standalone repo is `HarrytheCake/CakeUI` (remote `cakeui`, a `git subtree` mirror pushed by `tools/push_all`; MIT; public since 2026-11-04). The source of truth is this folder in the Monumenta-Cakedition repo; never commit in the standalone repo. **Not in the pack yet:** the next pack release ships the newest CakeUI (0.2.0, no layout) together with CakeCosmetic (user, 2026-11-04). **Release v0.2.0** (multiloader, all six jars) was published from the mirror CI on 2026-11-05 at the user's request, ahead of CakeCosmetic. **Release v0.3.0** (API 3, HUD + screen editor E1-E6; `hud-editor` merged into `main`) on 2026-11-09, so CakeMap can build against it.
 
 ## Decisions (grilled with the user 2026-10-30, Q1–Q35)
 
@@ -77,7 +77,7 @@ JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build                    
 JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build -Pcake.versions=26.1.2   # one version (+ core)
 ```
 
-`build/libs/cakeui-<fabric|neoforge>-<mc>-0.2.0.jar`, plus `cakeui-0.2.0.jar` = the Fabric 1.20.4 jar (what the pack uses).
+`build/libs/cakeui-<fabric|neoforge>-<mc>-0.3.0.jar`, plus `cakeui-0.3.0.jar` = the Fabric 1.20.4 jar (what the pack uses).
 
 **Self-test** (dev client): `-Dcakeui.selftest=1` = title screen shots (mouse in three places), the settings screen, a resource reload (launch overlay shots), quit; `=world` also opens `run/saves/cakeui-selftest` (created as a demo world if missing), shoots each loading screen kind, the pause menu, the inventory and the HUD, times the HUD with and without the layout, and logs `CakeUI self-test: done, N problem(s)`. `-Dcakeui.selftest.fill=true` adds test fillers (purple main menu, teal loading screens). Needs `run/config/cakeui/config.json5` with a `layoutPath` (e.g. the example) and `devMode`. With the kit's smoke script:
 
@@ -89,13 +89,13 @@ Screenshots land in `<mc>/<loader>/run/screenshots/cakeui-selftest-*.png`.
 
 ## Plugins (API, for CakeMap, CakeCosmetic and other mods)
 
-API version 3 (HUD editor, 2026-11-07) adds `addMovables` / `Movable` / `MovableSource`, `openHudEditor(parent)` and `HudPiece.editable()`; see "HUD editor E5" above. Raise `mod_version` to 0.3.0 when releasing it (CakeMap needs it; CakeChat checks `VERSION >= 3` by reflection).
+API version 3 (HUD editor, 2026-11-07) adds `addMovables` / `Movable` / `MovableSource`, `openHudEditor(parent)` and `HudPiece.editable()`; see "HUD editor E5" above. Released as 0.3.0 (2026-11-09; CakeMap needs it; CakeChat checks `VERSION >= 3` by reflection).
 
 A plugin is a class implementing `io.github.harrythecake.cakeui.api.CakeUIPlugin` with a public no-argument constructor. CakeUI runs every plugin once, before the first layout loads.
 
 - **Fabric:** `"entrypoints": { "cakeui": ["com.example.MyCakeUIPlugin"] }` in `fabric.mod.json` (unchanged since 0.1.0). Run in CakeUI's client initializer.
 - **NeoForge:** a service file in the plugin's jar, `META-INF/services/io.github.harrythecake.cakeui.api.CakeUIPlugin`, containing the class name (one line). CakeUI reads it with `ServiceLoader.load(CakeUIPlugin.class, CakeUIPlugin.class.getClassLoader())` in `FMLClientSetupEvent.enqueueWork` (NeoForgePlugins); a broken entry is logged and skipped. A plugin mod that only *optionally* uses CakeUI can ship the file anyway: without CakeUI nobody reads it. Mark CakeUI `type = "optional"`, `ordering = "NONE"` in its `neoforge.mods.toml` / `mods.toml` if it wants it listed.
-- The API's package and class names (`CakeUIApi`, `CakeUIPlugin`, `ElementType`, `ElementContext`, `ButtonAction`, `PortFiller`, `HudPiece`, `PropKind`) are the same everywhere; Minecraft's types in their signatures follow the version: `GuiGraphics` (1.20.4, 1.21.1) or `GuiGraphicsExtractor` (26.1.2), `Screen`. So a plugin compiles per version against `build/libs/cakeui-<loader>-<mc>-0.2.0.jar` (compileOnly; the API classes are in the common part, identical on both loaders of one version). `CakeUIApi.VERSION` stays 2. The JSON5 reader (`io.github.harrythecake.cakeui.json`) is in every jar too.
+- The API's package and class names (`CakeUIApi`, `CakeUIPlugin`, `ElementType`, `ElementContext`, `ButtonAction`, `PortFiller`, `HudPiece`, `PropKind`) are the same everywhere; Minecraft's types in their signatures follow the version: `GuiGraphics` (1.20.4, 1.21.1) or `GuiGraphicsExtractor` (26.1.2), `Screen`. So a plugin compiles per version against `build/libs/cakeui-<loader>-<mc>-<version>.jar` (compileOnly; the API classes are in the common part, identical on both loaders of one version). `CakeUIApi.VERSION` is 3 since 0.3.0. The JSON5 reader (`io.github.harrythecake.cakeui.json`) is in every jar too.
 - On 26.1.2 a plugin draws into the frame's render state like vanilla (`GuiGraphicsExtractor.pose()` is a 3x2 matrix; no shader colour: apply `ElementContext.opacity()` to your colours).
 
 ## How drawing works
