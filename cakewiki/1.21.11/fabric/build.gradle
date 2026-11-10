@@ -1,0 +1,9 @@
+plugins {
+	id 'cake-fabric'
+}
+
+dependencies {
+	// HTML parser for the wiki's pages, bundled inside our jar (MIT)
+	implementation "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+	include "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+}

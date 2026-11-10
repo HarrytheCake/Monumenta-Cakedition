@@ -31,7 +31,7 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 
 ## Files
 
-Cake multiloader kit layout (`tools/multiloader/README.md` in the Monumenta-Cakedition repo), Mojang names (the notes below may still say `KeyBinding`/`HandledScreen`: read `KeyMapping`/`AbstractContainerScreen`). Built: **1.20.4 Fabric + NeoForge, 1.21.1 Fabric**; see "Multiloader status" at the end.
+Cake multiloader kit layout (`tools/multiloader/README.md` in the Monumenta-Cakedition repo), Mojang names (the notes below may still say `KeyBinding`/`HandledScreen`: read `KeyMapping`/`AbstractContainerScreen`). Built: **1.20.4 Fabric + NeoForge, 1.21.1 Fabric, 1.21.11 Fabric**; see "Multiloader status" at the end.
 
 ```
 cakewiki/
@@ -168,8 +168,13 @@ Ported from the Yarn 1.20.4 Fabric mod: the 2026-11-05 WIP (core split, 1.20.4 c
 | Fabric 1.20.4 | OK | self-test in a world PASS (4/4 pages shown, inventory return, `/wiki`, K; screenshot checked) |
 | NeoForge 1.20.4 | OK (from the WIP) | not run |
 | Fabric 1.21.1 | OK | not run (the user's rule: game runs only on Fabric 1.20.4) |
-| NeoForge 1.21.1, 26.1.2 (both) | not started | |
+| Fabric 1.21.11 | OK | not run; mixin names checked against the real 1.21.11 client + intermediary (for the user's Wynncraft instance) |
+| NeoForge 1.21.1, NeoForge 1.21.11, 26.1.2 (both) | not started | |
 
 1.21.1 changes from 1.20.4: item names through `DataComponents.CUSTOM_NAME` (DevShots), `ResourceLocation.fromNamespaceAndPath` (WikiImages). The screen keeps vanilla's background, so 1.21.1 shows the 1.21 blur behind the reader in a world.
+
+**1.21.11** (the user's request 2026-11-11, for Wynncraft; not one of ADR 0009's three targets; kit file `versions/1.21.11.properties`) changes from 1.21.1: `net.minecraft.util.Util`, `Identifier` (was `ResourceLocation`), key category `KeyMapping.Category.register(cakewiki:main)` (lang key `key.category.cakewiki.main`, in all three lang files), input as `KeyEvent`/`MouseButtonEvent` (screen + mixin: `KeyMapping.matches(KeyEvent)`), overlays above the page with `nextStratum()` instead of a z translate, `setComponentTooltipForNextFrame`, picture blit by corners with the blending GUI pipeline, `NativeImage.setPixel` takes ARGB, `DynamicTexture(label, image)`, `Screenshot.grab(…, 1, …)`. `Minecraft.tell` is gone and `execute` runs at once on the game thread, so `/wiki`'s `later` waits for the next client tick (a queue run in `onClientTick`).
+
+**Fabric Minecraft dependency is exact** (`fabric_mc_dep=1.21.1`, not `~1.21.1`: the tilde let a 1.21.1 jar load on 1.21.11 and crash on the mixin, 2026-11-11).
 
 Still to do: the other targets; the mirror CI (`.github/workflows/build.yml` still assumes JDK 21 + one jar; copy CakeUI's before the next mirror push).
