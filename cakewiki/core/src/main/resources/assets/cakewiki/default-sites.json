@@ -1,0 +1,21 @@
+{
+  // CakeWiki's site list. CakeWiki writes this file once, on first launch, and never changes it afterwards:
+  // edit it freely, then restart the game. Delete it to get this default back.
+  //
+  // The first site offered is the default (the first opening, the open key over an item).
+  // Switch sites with the ⇄ button in the reader, or /wiki <id>:<page> (/wiki <id>: opens its main page).
+  //
+  // "servers": the server addresses a site belongs to (each also covers its subdomains; the port doesn't matter).
+  // On such a server only its sites, plus sites without "servers", are offered; anywhere else (single-player,
+  // menus, other servers) every site is. A typed /wiki <id>:<page> always works.
+  //
+  // Other fields: "type" mediawiki (default) or vuepress; "mainPage"; "license" + "licenseUrl" (shown on every page).
+  "sites": [
+    {"id": "monumenta", "type": "mediawiki", "name": "Monumenta Wiki", "url": "https://monumenta.wiki.gg",
+     "mainPage": "Monumenta Wiki", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "servers": ["playmonumenta.com"]},
+    {"id": "wynn", "type": "vuepress", "name": "Wynncraft中文攻略", "url": "https://wynncraft.cn",
+     "license": "© EternityTQ", "licenseUrl": "https://github.com/EternityTQ/WynncraftCNguide",
+     "servers": ["play.wynncraft.com"]}
+  ]
+}

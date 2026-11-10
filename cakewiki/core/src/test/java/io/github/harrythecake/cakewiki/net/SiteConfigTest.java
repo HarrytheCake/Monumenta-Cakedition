@@ -13,10 +13,27 @@ class SiteConfigTest {
 	Path dir;
 
 	@Test
-	void noFileMeansTheMonumentaWiki() {
-		SiteConfig.Loaded l = SiteConfig.load(dir.resolve("sites.json"));
-		assertEquals(List.of(SiteConfig.MONUMENTA), l.sites());
-		assertTrue(l.problems().isEmpty());
+	void noFileWritesTheDefaultOnceAndUsesIt() throws Exception {
+		Path file = dir.resolve("cakewiki").resolve("sites.json");
+		SiteConfig.Loaded l = SiteConfig.load(file);
+		assertEquals(List.of(), l.problems());
+		assertEquals(List.of("monumenta", "wynn"), l.sites().stream().map(SiteConfig.Entry::id).toList());
+		assertEquals(SiteConfig.MONUMENTA, l.sites().get(0));
+		assertEquals(List.of("play.wynncraft.com"), l.sites().get(1).servers());
+		assertEquals(SiteConfig.defaultText(), java.nio.file.Files.readString(file), "written as in the jar, comments and all");
+
+		java.nio.file.Files.writeString(file, "{\"sites\": [{\"id\": \"mine\", \"url\": \"https://mine.test\"}]}");
+		assertEquals(List.of("mine"), SiteConfig.load(file).sites().stream().map(SiteConfig.Entry::id).toList(),
+				"an existing file is read, never replaced");
+	}
+
+	@Test
+	void unwritableFolderStillGivesTheDefault() throws Exception {
+		Path blocker = dir.resolve("not-a-folder");
+		java.nio.file.Files.writeString(blocker, "x"); // a file where the config folder should be
+		SiteConfig.Loaded l = SiteConfig.load(blocker.resolve("sites.json"));
+		assertEquals(2, l.sites().size());
+		assertEquals(1, l.problems().size(), l.problems().toString());
 	}
 
 	@Test

@@ -17,9 +17,10 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 /**
- * The sites the reader offers, from {@code config/cakewiki/sites.json} (comments allowed). Without the file, or when
- * nothing in it is usable, the list is just the Monumenta Wiki. The first site is the default: the reader opens on it
- * the first time, and item lookups go to it. The mod never writes this file.
+ * The sites the reader offers, from {@code config/cakewiki/sites.json} (comments allowed). When the file is missing
+ * (first launch, or the player deleted it), the jar's default list ({@link #DEFAULT_RESOURCE}) is written there once
+ * and used; the mod never changes an existing file. When nothing in it is usable, the list is just the Monumenta Wiki.
+ * The first site is the default: the reader opens on it the first time, and item lookups go to it.
  *
  * <p>A site can be tied to servers ({@code servers}): on a matching server only the tied sites that match plus the
  * untied ones are offered; anywhere else (single-player, the title screen, other servers) every site is.
@@ -60,8 +61,34 @@ public final class SiteConfig {
 
 	private SiteConfig() {}
 
+	/** The default site list in the jar, copied to {@code config/cakewiki/sites.json} when that is missing. */
+	public static final String DEFAULT_RESOURCE = "/assets/cakewiki/default-sites.json";
+
+	/** The jar's default site list (JSON with comments). */
+	public static String defaultText() {
+		try (java.io.InputStream in = SiteConfig.class.getResourceAsStream(DEFAULT_RESOURCE)) {
+			if (in == null) throw new IllegalStateException(DEFAULT_RESOURCE + " is missing from the jar");
+			return new String(in.readAllBytes(), StandardCharsets.UTF_8);
+		} catch (IOException e) {
+			throw new java.io.UncheckedIOException(e);
+		}
+	}
+
+	/** Reads {@code file}; when it's missing, first writes the jar's default there (if it can't, uses the default anyway). */
 	public static Loaded load(Path file) {
-		if (!Files.isRegularFile(file)) return new Loaded(List.of(MONUMENTA), List.of());
+		if (!Files.exists(file)) {
+			String text = defaultText();
+			List<String> problems = new ArrayList<>();
+			try {
+				Files.createDirectories(file.toAbsolutePath().getParent());
+				Files.writeString(file, text, StandardCharsets.UTF_8, java.nio.file.StandardOpenOption.CREATE_NEW);
+			} catch (IOException e) {
+				problems.add("couldn't write the default site list to " + file + ": " + e);
+			}
+			Loaded l = parse(text);
+			problems.addAll(l.problems());
+			return new Loaded(l.sites(), List.copyOf(problems));
+		}
 		try {
 			return parse(Files.readString(file, StandardCharsets.UTF_8));
 		} catch (IOException e) {
