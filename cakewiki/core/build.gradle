@@ -1,0 +1,15 @@
+plugins {
+	id 'cake-core'
+}
+
+dependencies {
+	// HTML parser (MIT); each loader jar bundles it (fabric: include, neoforge: jarJar)
+	compileOnly "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+	testImplementation "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+}
+
+tasks.named('test', Test) {
+	// opt-in tests: -Dcakewiki.liveTest=true talks to the real wiki (see AGENTS.md)
+	systemProperties System.getProperties().findAll { it.key.toString().startsWith('cakewiki.') }
+	testLogging { showStandardStreams = System.getProperty('cakewiki.liveTest') == 'true' }
+}

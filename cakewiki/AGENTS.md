@@ -31,8 +31,24 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 
 ## Files
 
+Cake multiloader kit layout (`tools/multiloader/README.md` in the Monumenta-Cakedition repo), Mojang names (the notes below may still say `KeyBinding`/`HandledScreen`: read `KeyMapping`/`AbstractContainerScreen`). Built: **1.20.4 Fabric + NeoForge, 1.21.1 Fabric**; see "Multiloader status" at the end.
+
 ```
-src/main/java/io/github/harrythecake/cakewiki/
+cakewiki/
+├── settings.gradle, build.gradle, buildSrc/, gradlew, gradle/   # the kit (apply_kit.py copies it; don't edit here)
+├── gradle.properties       # mod_id, mod_name, mod_version, mod_group, jsoup_version
+├── core/                   # plain Java, no Minecraft imports: Bookmarks, doc/, layout/, net/, translate/,
+│                           #   image/ImageDecoder, platform/ (Platform + Services, ServiceLoader); lang + icon; all unit tests
+├── <mc>/common/            # Minecraft-facing, both loaders: CakeWiki (shared init, key, /wiki builder, lookupItem), Reader,
+│                           #   WikiScreen, DevShots, ItemHover, image/WikiImages, mixin/HandledScreenMixin, cakewiki.mixins.json
+├── <mc>/fabric/            # CakeWikiFabric (entrypoint: key, client command, tick), FabricPlatform, fabric.mod.json
+└── <mc>/neoforge/          # CakeWikiNeoForge, NeoForgePlatform, META-INF/mods.toml (1.20.4 only so far)
+```
+
+Inside those folders (same package as before):
+
+```
+io/github/harrythecake/cakewiki/
 ├── CakeWiki.java           # entrypoint: K key (KeyBinding "key.cakewiki.open"), /wiki [page] with live suggestions, lookupItem
 ├── Reader.java             # one per game: Sources (Site + Pages + converter per site, current one), WikiImages, Bookmarks, back/forward history, last page
 ├── Bookmarks.java          # config/cakewiki/bookmarks.json, newest first; unreadable file → bookmarks.json.bad
@@ -98,7 +114,8 @@ src/main/java/io/github/harrythecake/cakewiki/
 ### Sites (0.2.0, the user's request 2026-11-03)
 
 - **Site list:** `config/cakewiki/sites.json`, `{"sites": [...]}`, comments allowed (Gson lenient). Entry: `id` (`[a-z0-9_-]`, for `/wiki <id>:<page>` and bookmarks), `type` (`mediawiki` default, or `vuepress`), `name` (attribution line), `url` (origin), `mainPage` (`Main Page` / `/`), `license` + `licenseUrl` (attribution; empty = not shown), `content` (VuePress: CSS selector of the text, default `#markdown-content`). Bad entries are skipped and logged; no file or nothing usable = just the Monumenta Wiki. The mod never writes the file and the pack ships none, so players see one site.
-- **The first site is the default:** first opening, item lookups (K over an item switches to it). Each page's links stay on its own site.
+- **Sites per server** (the user's request 2026-11-11): entry field `servers` (a list of addresses, or one string; stored lower case without port, `*.` or trailing dot; each also covers its subdomains). The **offered** sites (`SiteConfig.offered`, `Reader.offered()`) on the current server (`CakeWiki.serverHost()`: the server list entry's address; null in single-player and menus): when any site is tied to that host, the tied ones that match **plus every untied site**; otherwise (no server, or no site tied to it) **all sites**. The Monumenta Wiki entry (id `monumenta` + its URL) defaults to `servers: ["playmonumenta.com"]` unless the entry sets `servers` (`[]` = untied). The built-in single-site list is unaffected. Offered sites drive the ⇄ button (shown with 2+ offered; cycles through them), `/wiki` site-id suggestions, the first opening and item lookups; a typed `/wiki <id>:<page>` still opens any site (user's choice). Opening the reader resumes the last page if its site is offered here, else the last page of the first offered site (`Reader.resume`, per-site last page, this session), else that site's main page.
+- **The first offered site is the default:** first opening, item lookups (K over an item switches to it). Each page's links stay on its own site.
 - **Switching:** ⇄ button after ▶ (only with 2+ sites; tooltip names the current and next site) opens the next site's main page. `/wiki <id>:<page>` (`/wiki <id>:` = main page); suggestions complete site ids and that site's titles. A page's site is in history (`Visit.site`), `reader.last`, and bookmarks (`site` field; entries without one = `monumenta`). The ☰ list shows the current site's bookmarks.
 - **Cache:** the Monumenta Wiki keeps `cakewiki/cache/pages/`; other sites `cakewiki/cache/sites/<id>/pages/` and `index.json`.
 - **VuePress sites** (2.x, Theme Hope shapes): no API. Page = GET `<url><path>`; text = `content` (an empty one, as on a home layout, falls back to `<main>`); links and pictures made absolute before caching; SVG pictures dropped (not decodable); `.vp-hero-actions` buttons get ` · ` between them; title from `.vp-page-title h1`, else `<title>` before ` | `. HTTP 404 → `missingtitle`.
@@ -115,7 +132,7 @@ src/main/java/io/github/harrythecake/cakewiki/
 - **Not translated yet** → the original line (the same list object); CakeText queues it. `WikiScreen.ensureLayout` polls `changes()` and lays out again at most every 500 ms when it moved (`PageTranslator.refresh()` drops the memo). An answer that can't be mapped back (a kept index out of range, an empty part) shows the original.
 - **UI:** 文 button left of ☆, only with CakeText installed (gold = translated; tooltip says when CakeText has wiki pages off); per session in `Reader.translate`, default on. A muted header line says the page is translated and that linked names stay in English.
 - **Line breaking for Chinese** (`Layout.word`/`breakBetween`): a line may break between two CJK characters (Han, kana, Hangul, CJK punctuation, full-width forms), not before closing punctuation (`，。、；：！？）」』】》…％` and ASCII closers) or after opening punctuation. English still breaks only at spaces. This also helps Chinese text already on the wiki.
-- Not tried in game yet (needs CakeText 0.3.0 in the same instance).
+- Tried in game with CakeText in the same instance: OK (user, 2026-11-11).
 
 ### Measured on the live wiki (2026-10-28)
 
@@ -123,14 +140,15 @@ Fetch about 0.3 s per page. Conversion is under 50 ms for most pages, but some i
 
 ## Tests
 
-`JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build` runs the offline tests (hand-written HTML in the wiki's shapes, fake transport, temp-dir cache).
+`JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build` builds every jar and runs the offline tests in `core` (hand-written HTML in the wiki's shapes, fake transport, temp-dir cache). One version: `-Pcake.versions=1.21.1`. Jars: `build/libs/cakewiki-<fabric|neoforge>-<mc>-<version>.jar` + `cakewiki-<version>.jar` (= Fabric 1.20.4, the pack's name).
+
+Dev-client self-test (smoke.py from the Monumenta-Cakedition repo): `python tools/multiloader/smoke.py cakewiki 1.20.4 fabric --world=docs/multiloader/smoke-world --jvm=-Dcakewiki.selftest=world --done="cakewiki self-test done"` (main page, K over an item in the inventory and back, `/wiki Turtle Set`, K in the world; `-Dcakewiki.selftest=1` = the title-screen tour). Put `pauseOnLostFocus:false` in `<mc>/fabric/run/options.txt`: an unfocused window opens the pause menu and the K step then can't open the reader.
 
 Opt-in, against the real wiki (`LiveWikiTest`, skipped by default):
 - `./gradlew test --tests '*LiveWikiTest.convertsRealPages' -Dcakewiki.liveTest=true` converts known and random pages and prints sizes, block counts and timings.
 - `... --tests '*LiveWikiTest.dumpPage' -Dcakewiki.liveTest=true -Dcakewiki.dump="<title>"` prints a page as an outline (`DocumentDump`) for checking by eye.
 
-Screenshot tour in the dev client (opens a game window; `run/options.txt` presets GUI scale 3 and skips the accessibility screen):
-`./gradlew runClient -PdevShot="Monumenta Wiki|item:Snegovik Boots|Moonscarred Clockblade@380|Turtle Set!open" --args="--width 1600 --height 900"` → `run/screenshots/cakewiki-<n>.png`. `item:` = item lookup, `@y` = scroll, `!open` = open all top-level collapsibles, `!marks` = bookmark the page and open the list (writes `run/config/cakewiki/bookmarks.json`), `<site id>:<page>` = a page of another site in `run/config/cakewiki/sites.json` (`<site id>:` = its main page).
+Screenshot tour in the dev client: `./gradlew :1.20.4:fabric:runClient -Pcake.runJvmArgs="-Dcakewiki.devShot=Monumenta_Wiki|item:Snegovik_Boots|Moonscarred_Clockblade@380|Turtle_Set!open"` (`_` = space) → `<mc>/<loader>/run/screenshots/cakewiki-<n>.png`, then the game quits. `item:` = item lookup, `@y` = scroll, `!open` = open all top-level collapsibles, `!marks` = bookmark the page and open the list (writes `run/config/cakewiki/bookmarks.json`), `<site id>:<page>` = a page of another site in `run/config/cakewiki/sites.json` (`<site id>:` = its main page).
 
 VuePress sites, opt-in against a real site (nothing site-specific in the repo): `./gradlew test --tests '*LiveVuePressTest' -Dcakewiki.liveTest=true -Dcakewiki.vuepress=<url> [-Dcakewiki.pages=8 -Dcakewiki.from=0 | -Dcakewiki.dump=<title or /path> | -Dcakewiki.nav=<title or /path>]` (`nav` prints the contents tree) lists the pages and converts them. In Git Bash set `MSYS_NO_PATHCONV=1`, or `/paths` in `-D…`/`-P…` arguments become Windows paths.
 
@@ -140,3 +158,18 @@ VuePress sites, opt-in against a real site (nothing site-specific in the repo): 
 - Translation goes only through CakeText Translator (whose settings decide the engine); CakeWiki itself sends wiki text nowhere.
 - Every UI string in `en_us`, `zh_cn` and `zh_tw`, same keys.
 - JUnit tests for all logic outside the game. Test HTML is hand-written in the wiki's shapes: no real wiki text in the repo (the live tests fetch it at run time).
+
+## Multiloader status (2026-11-11)
+
+Ported from the Yarn 1.20.4 Fabric mod: the 2026-11-05 WIP (core split, 1.20.4 common/Fabric/NeoForge, commit `bcebf6a` on `multiloader-wip`) finished on branch `cakewiki-port` (worktree `F:/cake-worktrees/cakewiki-port`), with `main`'s sites-per-server change (2026-11-11) carried over. 1.20.4 Fabric behaves as before: same mod id, config files, key, lang keys, command, mixin target.
+
+| Target | Build + 95 core tests | Dev client |
+|---|---|---|
+| Fabric 1.20.4 | OK | self-test in a world PASS (4/4 pages shown, inventory return, `/wiki`, K; screenshot checked) |
+| NeoForge 1.20.4 | OK (from the WIP) | not run |
+| Fabric 1.21.1 | OK | not run (the user's rule: game runs only on Fabric 1.20.4) |
+| NeoForge 1.21.1, 26.1.2 (both) | not started | |
+
+1.21.1 changes from 1.20.4: item names through `DataComponents.CUSTOM_NAME` (DevShots), `ResourceLocation.fromNamespaceAndPath` (WikiImages). The screen keeps vanilla's background, so 1.21.1 shows the 1.21 blur behind the reader in a world.
+
+Still to do: the other targets; the mirror CI (`.github/workflows/build.yml` still assumes JDK 21 + one jar; copy CakeUI's before the next mirror push).

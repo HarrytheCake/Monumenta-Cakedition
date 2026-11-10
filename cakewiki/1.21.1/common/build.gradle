@@ -1,0 +1,7 @@
+plugins {
+	id 'cake-common'
+}
+
+dependencies {
+	compileOnly "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+}
