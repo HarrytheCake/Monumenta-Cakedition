@@ -141,7 +141,7 @@ final class DevShots {
 			ItemStack stack = new ItemStack(Items.PAPER);
 			stack.set(DataComponents.CUSTOM_NAME, Component.literal(step.substring(4)));
 			((ItemHover) inv).cakewiki$hover(new Slot(new SimpleContainer(stack), 0, 0, 0));
-			inv.keyPressed(GLFW.GLFW_KEY_K, GLFW.glfwGetKeyScancode(GLFW.GLFW_KEY_K), 0);
+			inv.keyPressed(GLFW.GLFW_KEY_Y, GLFW.glfwGetKeyScancode(GLFW.GLFW_KEY_Y), 0);
 			if (mc.screen instanceof WikiScreen w) {
 				screen = w;
 				backToInventory = true;

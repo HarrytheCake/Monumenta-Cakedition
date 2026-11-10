@@ -1,5 +1,9 @@
-# Builds and tests on every push and pull request. A push to main whose mod_version
-# has no release yet publishes the jar as release v<mod_version>; the modpack can download it from there.
+# Builds and tests on every push and pull request (Cake multiloader kit: Fabric 1.20.4, 1.21.1, 1.21.11 and
+# NeoForge 1.20.4 so far). A push to main whose mod_version has no release yet publishes release
+# v<mod_version> with every jar:
+#   cakewiki-<fabric|neoforge>-<mc>-<version>.jar   one per loader and Minecraft version
+#   cakewiki-<version>.jar                          the Fabric 1.20.4 jar under its old name (the Cakedition
+#                                                   modpack and tools/packwiz_sync.py download this one)
 name: Build
 
 on:
@@ -16,26 +20,42 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Gradle runs on JDK 25 (the last one = JAVA_HOME); 1.20.4 compiles with 17, 1.21.1 and 1.21.11 with 21
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 21
+          java-version: |
+            17
+            21
+            25
 
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Build and test
         run: |
           chmod +x gradlew
-          ./gradlew build
+          ./gradlew build --no-daemon \
+            -Porg.gradle.java.installations.fromEnv=JAVA_HOME_17_X64,JAVA_HOME_21_X64,JAVA_HOME_25_X64
 
       - name: Read mod version
         id: version
         run: echo "version=$(grep '^mod_version=' gradle.properties | cut -d= -f2)" >> "$GITHUB_OUTPUT"
 
+      - name: Check the jars
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          ls -l build/libs
+          for f in "cakewiki-$VERSION.jar" \
+                   cakewiki-fabric-{1.20.4,1.21.1,1.21.11}-"$VERSION".jar \
+                   cakewiki-neoforge-1.20.4-"$VERSION".jar; do
+            test -f "build/libs/$f" || { echo "missing build/libs/$f"; exit 1; }
+          done
+
       - uses: actions/upload-artifact@v4
         with:
           name: cakewiki-${{ steps.version.outputs.version }}
-          path: build/libs/cakewiki-${{ steps.version.outputs.version }}.jar
+          path: build/libs/cakewiki-*${{ steps.version.outputs.version }}.jar
           if-no-files-found: error
 
     outputs:
@@ -61,9 +81,14 @@ jobs:
             echo "v$VERSION is already released; bump mod_version for a new release."
             exit 0
           fi
+          SUMS=$(sha256sum cakewiki-*"$VERSION".jar)
+          NOTES=$(printf '%s\n\n%s\n\n%s\n\n**SHA-256**\n```\n%s\n```\n' \
+            "Fabric for Minecraft 1.20.4, 1.21.1 and 1.21.11, NeoForge for 1.20.4: pick \`cakewiki-<loader>-<minecraft>-$VERSION.jar\`." \
+            "\`cakewiki-$VERSION.jar\` is the Fabric 1.20.4 jar under its old name (used by the Monumenta Cakedition modpack)." \
+            "Tested in game: Fabric 1.20.4 and Fabric 1.21.11. Fabric 1.21.1 and NeoForge 1.20.4 are built and unit-tested only." \
+            "$SUMS")
           # --notes goes before the generated notes
-          SUMS=$(sha256sum "cakewiki-$VERSION.jar")
-          gh release create "v$VERSION" "cakewiki-$VERSION.jar" \
+          gh release create "v$VERSION" cakewiki-*"$VERSION".jar \
             --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
             --title "CakeWiki $VERSION" --generate-notes \
-            --notes "$(printf '**SHA-256**\n```\n%s\n```\n' "$SUMS")"
+            --notes "$NOTES"

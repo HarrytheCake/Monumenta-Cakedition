@@ -21,7 +21,7 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 
 ## Decisions (user, 2026-10-28)
 
-- Opened by a key (default **K**, the user's choice 2026-10-29; H was the first default) and `/wiki <page>`.
+- Opened by a key (default **Y** since 0.2.0, the user's choice 2026-11-11; K before (2026-10-29), H first; the Cakedition pack keeps shipping K in its yosbr `options.txt`, because Y is Xaero's Minimap / CakeMap settings there) and `/wiki <page>`.
 - The same key over an item in a container screen opens that item's page (`WikiClient.resolve`: exact title or redirect, else the top search hit).
 - Search box with suggestions as you type (`opensearch`).
 - Whole wiki for now; may later be cut to the pages players need.
@@ -49,13 +49,13 @@ Inside those folders (same package as before):
 
 ```
 io/github/harrythecake/cakewiki/
-├── CakeWiki.java           # entrypoint: K key (KeyBinding "key.cakewiki.open"), /wiki [page] with live suggestions, lookupItem
+├── CakeWiki.java           # entrypoint: open key Y (KeyBinding "key.cakewiki.open"), /wiki [page] with live suggestions, lookupItem
 ├── Reader.java             # one per game: Sources (Site + Pages + converter per site, current one), WikiImages, Bookmarks, back/forward history, last page
 ├── Bookmarks.java          # config/cakewiki/bookmarks.json, newest first; unreadable file → bookmarks.json.bad
 ├── WikiScreen.java         # the reader: bar (◀ ▶ search ⟳ ↗), page area, loading/error states, links, tooltips
 ├── DevShots.java           # dev only: screenshot tour (runClient -PdevShot=…), inert in a normal game
 │                           # (CakeWiki.target: "<site id>:<page>" for /wiki and the tour)
-├── mixin/HandledScreenMixin.java  # K over an item in a container → its page
+├── mixin/HandledScreenMixin.java  # the open key over an item in a container → its page
 ├── translate/              # CakeText Translator (optional); no Minecraft classes except the bridge
 │   ├── Translator.java     # parts + keep flags → Strings/Integers (kept-part index), or null; changes() counter
 │   ├── PageTranslator.java # a line of inlines → its translation; what's kept; per-line memo until refresh()
@@ -99,8 +99,8 @@ io/github/harrythecake/cakewiki/
 
 ### Reader behaviour
 
-- **Opening:** K in the world opens the last page read (the main page "Monumenta Wiki" the first time); `/wiki <page>` opens a page (suggestions come from `opensearch`, completed on the game thread). The screen is opened with `MinecraftClient.send` so the closing chat screen doesn't close it.
-- **Item lookup:** `HandledScreenMixin` injects at the first `KeyBinding.matchesKey` in `HandledScreen.keyPressed` (the inventory-key check). Vanilla reaches it only after `super.keyPressed` turned the key down, so text fields (anvil, creative search, recipe book) keep their K. The item's name (formatting stripped) goes through `WikiClient.resolve`. From the player's own inventory the reader returns to it on close; any other container is closed first with `closeHandledScreen()` (tells the server), and the reader returns to the game.
+- **Opening:** the open key in the world opens the last page read (the main page "Monumenta Wiki" the first time); `/wiki <page>` opens a page (suggestions come from `opensearch`, completed on the game thread). The screen is opened with `MinecraftClient.send` so the closing chat screen doesn't close it.
+- **Item lookup:** `HandledScreenMixin` injects at the first `KeyBinding.matchesKey` in `HandledScreen.keyPressed` (the inventory-key check). Vanilla reaches it only after `super.keyPressed` turned the key down, so text fields (anvil, creative search, recipe book) keep their letter. The item's name (formatting stripped) goes through `WikiClient.resolve`. From the player's own inventory the reader returns to it on close; any other container is closed first with `closeHandledScreen()` (tells the server), and the reader returns to the game.
 - **Loading:** `Pages.load` → convert on `Util.getMainWorkerExecutor()` → shown on the game thread if it's still the latest request. `missingtitle` → `resolve` (search) → that page, else "not found".
 - **Layout:** in GUI pixels, content at most 560 wide. Header = title (H1), "Monumenta Wiki ↗ · CC BY-SA 4.0 ↗" (attribution + licence, both links), a "saved copy" note when stale. Laid out again on resize, on a collapsible/tab click (same scroll), and when a picture of guessed size has loaded (`Laid.unknownSizes` + `WikiImages.version()`).
 - **Infobox float:** when the column is at least 2 × 220 + 20 wide, the infobox sits on the right; paragraphs, headings, lists, indents and rules flow beside it, anything else (tables, tabs, galleries, collapsibles, pictures) starts below it.
@@ -109,13 +109,13 @@ io/github/harrythecake/cakewiki/
 - **Pictures:** wiki px × 0.5 (`Layout.IMAGE_SCALE`); inline pictures up to 32 px tall are icons at text height. Colours that would be unreadable (contrast < 2) on their background fall back to ours.
 - **Links:** page → navigate (history); `#anchor` on this page → scroll; `Special:`/`Category:` and external → browser through `ConfirmLinkScreen`; missing → nothing, tooltip explains.
 - **Bookmarks:** stored in `config/` (not the cache), so CakeUpdater's config backups cover them; canonical titles (after redirects), matched with `Titles.normalize`. The ☰ dropdown is drawn above the page like the search suggestions, scrolls with the wheel, and closes on Esc or a click elsewhere.
-- **Keys in the reader:** K closes (unless typing), Ctrl+D bookmark, Ctrl+F search, Enter submits (exact suggestion, else `resolve`), Esc leaves the search box first, Backspace/mouse 4 back, mouse 5 forward, arrows/PgUp/PgDn/Space/Home/End scroll.
+- **Keys in the reader:** the open key closes (unless typing), Ctrl+D bookmark, Ctrl+F search, Enter submits (exact suggestion, else `resolve`), Esc leaves the search box first, Backspace/mouse 4 back, mouse 5 forward, arrows/PgUp/PgDn/Space/Home/End scroll.
 
 ### Sites (0.2.0, the user's request 2026-11-03)
 
 - **Site list:** `config/cakewiki/sites.json`, `{"sites": [...]}`, comments allowed (Gson lenient). Entry: `id` (`[a-z0-9_-]`, for `/wiki <id>:<page>` and bookmarks), `type` (`mediawiki` default, or `vuepress`), `name` (attribution line), `url` (origin), `mainPage` (`Main Page` / `/`), `license` + `licenseUrl` (attribution; empty = not shown), `content` (VuePress: CSS selector of the text, default `#markdown-content`). Bad entries are skipped and logged; nothing usable = just the Monumenta Wiki. **Default list in the jar** (the user, 2026-11-11): `core/src/main/resources/assets/cakewiki/default-sites.json` (commented; Monumenta Wiki tied to `playmonumenta.com` + wynncraft.cn tied to `play.wynncraft.com`, same in every jar). When `config/cakewiki/sites.json` is missing (first launch, or deleted), `SiteConfig.load` writes that text there once (`CREATE_NEW`) and uses it; if writing fails it uses the default anyway and logs why. An existing file is never changed. The pack ships no `sites.json`, so Cakedition players get the default on first launch. wynncraft.cn ships with its owner's permission (EternityTQ, on QQ, early November 2026; recorded 2026-11-11 in the Monumenta-Cakedition notes); every page shows "© EternityTQ" and links the guide's repo.
 - **Sites per server** (the user's request 2026-11-11): entry field `servers` (a list of addresses, or one string; stored lower case without port, `*.` or trailing dot; each also covers its subdomains). The **offered** sites (`SiteConfig.offered`, `Reader.offered()`) on the current server (`CakeWiki.serverHost()`: the server list entry's address; null in single-player and menus): when any site is tied to that host, the tied ones that match **plus every untied site**; otherwise (no server, or no site tied to it) **all sites**. The Monumenta Wiki entry (id `monumenta` + its URL) defaults to `servers: ["playmonumenta.com"]` unless the entry sets `servers` (`[]` = untied). The built-in single-site list is unaffected. Offered sites drive the ⇄ button (shown with 2+ offered; cycles through them), `/wiki` site-id suggestions, the first opening and item lookups; a typed `/wiki <id>:<page>` still opens any site (user's choice). Opening the reader resumes the last page if its site is offered here, else the last page of the first offered site (`Reader.resume`, per-site last page, this session), else that site's main page.
-- **The first offered site is the default:** first opening, item lookups (K over an item switches to it). Each page's links stay on its own site.
+- **The first offered site is the default:** first opening, item lookups (the open key over an item switches to it). Each page's links stay on its own site.
 - **Switching:** ⇄ button after ▶ (only with 2+ sites; tooltip names the current and next site) opens the next site's main page. `/wiki <id>:<page>` (`/wiki <id>:` = main page); suggestions complete site ids and that site's titles. A page's site is in history (`Visit.site`), `reader.last`, and bookmarks (`site` field; entries without one = `monumenta`). The ☰ list shows the current site's bookmarks.
 - **Cache:** the Monumenta Wiki keeps `cakewiki/cache/pages/`; other sites `cakewiki/cache/sites/<id>/pages/` and `index.json`.
 - **VuePress sites** (2.x, Theme Hope shapes): no API. Page = GET `<url><path>`; text = `content` (an empty one, as on a home layout, falls back to `<main>`); links and pictures made absolute before caching; SVG pictures dropped (not decodable); `.vp-hero-actions` buttons get ` · ` between them; title from `.vp-page-title h1`, else `<title>` before ` | `. HTTP 404 → `missingtitle`.
@@ -142,7 +142,7 @@ Fetch about 0.3 s per page. Conversion is under 50 ms for most pages, but some i
 
 `JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build` builds every jar and runs the offline tests in `core` (hand-written HTML in the wiki's shapes, fake transport, temp-dir cache). One version: `-Pcake.versions=1.21.1`. Jars: `build/libs/cakewiki-<fabric|neoforge>-<mc>-<version>.jar` + `cakewiki-<version>.jar` (= Fabric 1.20.4, the pack's name).
 
-Dev-client self-test (smoke.py from the Monumenta-Cakedition repo): `python tools/multiloader/smoke.py cakewiki 1.20.4 fabric --world=docs/multiloader/smoke-world --jvm=-Dcakewiki.selftest=world --done="cakewiki self-test done"` (main page, K over an item in the inventory and back, `/wiki Turtle Set`, K in the world; `-Dcakewiki.selftest=1` = the title-screen tour). Put `pauseOnLostFocus:false` in `<mc>/fabric/run/options.txt`: an unfocused window opens the pause menu and the K step then can't open the reader.
+Dev-client self-test (smoke.py from the Monumenta-Cakedition repo): `python tools/multiloader/smoke.py cakewiki 1.20.4 fabric --world=docs/multiloader/smoke-world --jvm=-Dcakewiki.selftest=world --done="cakewiki self-test done"` (main page, the open key over an item in the inventory and back, `/wiki Turtle Set`, the open key in the world; `-Dcakewiki.selftest=1` = the title-screen tour). Put `pauseOnLostFocus:false` in `<mc>/fabric/run/options.txt`: an unfocused window opens the pause menu and the key step then can't open the reader.
 
 Opt-in, against the real wiki (`LiveWikiTest`, skipped by default):
 - `./gradlew test --tests '*LiveWikiTest.convertsRealPages' -Dcakewiki.liveTest=true` converts known and random pages and prints sizes, block counts and timings.
@@ -165,10 +165,10 @@ Ported from the Yarn 1.20.4 Fabric mod: the 2026-11-05 WIP (core split, 1.20.4 c
 
 | Target | Build + 95 core tests | Dev client |
 |---|---|---|
-| Fabric 1.20.4 | OK | self-test in a world PASS (4/4 pages shown, inventory return, `/wiki`, K; screenshot checked) |
+| Fabric 1.20.4 | OK | self-test in a world PASS (4/4 pages shown, inventory return, `/wiki`, open key; screenshot checked); **user's game test on Monumenta OK** (2026-11-11: servers, first-launch sites.json) |
 | NeoForge 1.20.4 | OK (from the WIP) | not run |
 | Fabric 1.21.1 | OK | not run (the user's rule: game runs only on Fabric 1.20.4) |
-| Fabric 1.21.11 | OK | not run; mixin names checked against the real 1.21.11 client + intermediary (for the user's Wynncraft instance) |
+| Fabric 1.21.11 | OK | not run in a dev client; mixin names checked against the real 1.21.11 client + intermediary; **user's game test in a Wynncraft instance OK** (2026-11-11) |
 | NeoForge 1.21.1, NeoForge 1.21.11, 26.1.2 (both) | not started | |
 
 1.21.1 changes from 1.20.4: item names through `DataComponents.CUSTOM_NAME` (DevShots), `ResourceLocation.fromNamespaceAndPath` (WikiImages). The screen keeps vanilla's background, so 1.21.1 shows the 1.21 blur behind the reader in a world.

@@ -26,7 +26,7 @@ public final class CakeWiki {
 
 	/** Opens the reader; over an item in a container screen, opens that item's page. */
 	public static final KeyMapping openKey = new KeyMapping("key.cakewiki.open", InputConstants.Type.KEYSYM,
-			GLFW.GLFW_KEY_K, "key.categories.cakewiki");
+			GLFW.GLFW_KEY_Y, "key.categories.cakewiki"); // Y since 0.2.0 (K before; the Cakedition pack keeps K in its options.txt)
 	private static Reader reader;
 
 	private CakeWiki() {}

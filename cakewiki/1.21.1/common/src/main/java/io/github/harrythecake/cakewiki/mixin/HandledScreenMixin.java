@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 /**
  * The open key over an item opens its wiki page. Hooked at the inventory-key check, which vanilla reaches
  * only after the screen's own widgets (search boxes, the anvil's name field) turned the key down, so typing
- * a K never triggers it.
+ * the open key never triggers it.
  */
 @Mixin(AbstractContainerScreen.class)
 abstract class HandledScreenMixin implements ItemHover {

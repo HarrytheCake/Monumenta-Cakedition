@@ -29,7 +29,7 @@ public final class CakeWiki {
 	private static final KeyMapping.Category CATEGORY = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(MOD_ID, "main"));
 	/** Opens the reader; over an item in a container screen, opens that item's page. */
 	public static final KeyMapping openKey = new KeyMapping("key.cakewiki.open", InputConstants.Type.KEYSYM,
-			GLFW.GLFW_KEY_K, CATEGORY);
+			GLFW.GLFW_KEY_Y, CATEGORY); // Y since 0.2.0 (K before; the Cakedition pack keeps K in its options.txt)
 	/** Runs on the next client tick ({@link #later}). */
 	private static final java.util.List<Runnable> nextTick = new java.util.ArrayList<>();
 	private static Reader reader;
