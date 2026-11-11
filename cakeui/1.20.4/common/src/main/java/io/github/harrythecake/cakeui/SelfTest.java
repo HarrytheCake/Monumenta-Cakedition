@@ -20,6 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.levelgen.WorldOptions;
 import net.minecraft.world.level.levelgen.presets.WorldPresets;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Development only, off unless the JVM runs with -Dcakeui.selftest (Loom's runClient passes it on
@@ -70,6 +71,11 @@ final class SelfTest {
 	/** The self-test's stand-in movable (see init). */
 	static final double[] DEMO_BOX = {40, 150, 60, 20};
 	static boolean demoSaved;
+	/** UMM's ability bar (only with UMM's jar in run/mods): its fields before the test, and where it was put. */
+	@Nullable
+	private static double[] ummBefore;
+	@Nullable
+	private static double[] ummPlaced;
 
 	static void init() {
 		String mode = System.getProperty("cakeui.selftest", "");
@@ -306,6 +312,15 @@ final class SelfTest {
 		int w = client.getWindow().getGuiScaledWidth();
 		int h = client.getWindow().getGuiScaledHeight();
 		if (t == 0) {
+			UmmAbilities umm = UmmAbilities.forTest();
+			if (umm != null) {
+				try {
+					ummBefore = umm.stateForTest();
+					umm.addTestAbilities(); // before the editor opens, so it is in the editor's start boxes
+				} catch (ReflectiveOperationException e) {
+					CakeUI.LOGGER.error("CakeUI self-test: UMM test abilities failed (FAIL)", e);
+				}
+			}
 			client.setScreen(new HudEditorScreen(null));
 			HudEditor.setTarget(HudEditor.Target.PERSONAL);
 		} else if (t == 30) {
@@ -360,6 +375,18 @@ final class SelfTest {
 			var demo = HudMovables.get("~cakeui-selftest:demo");
 			if (demo != null) {
 				demo.place(100, 160, 60, 20, w, h);
+			}
+			// UMM's ability bar: one scroll up (x1.05) and dropped near the top-left, as the editor does it
+			UmmAbilities umm = UmmAbilities.forTest();
+			double[] ub = umm == null ? null : umm.box(w, h);
+			if (umm != null) {
+				CakeUI.LOGGER.info("CakeUI self-test: editor: UMM ability bar offered at {} ({})", java.util.Arrays.toString(ub), ub != null ? "PASS" : "FAIL");
+			}
+			if (ub != null) {
+				umm.place(ub[0], ub[1], ub[2] * 1.05, ub[3] * 1.05, w, h);
+				double[] scaled = umm.box(w, h);
+				umm.place(10, 40, scaled[2], scaled[3], w, h);
+				ummPlaced = umm.box(w, h);
 			}
 			// E4: an animated WebP from config/cakeui/images (the smoke run puts anim.webp there)
 			if (java.nio.file.Files.isRegularFile(HudAdded.imagesDir().resolve("anim.webp"))) {
@@ -448,7 +475,30 @@ final class SelfTest {
 					HudBounds.live("+bar-test") ? "drawn" : "not drawn", textOk && !HudBounds.live("+bar-test") ? "PASS" : "FAIL");
 			CakeUI.LOGGER.info("CakeUI self-test: editor: saved {} edit(s) for {}, hotbar inner {} shown {} ({})", saved.size(),
 					HudEditor.layoutKey(), inner, shown, ok ? "PASS" : "FAIL");
+			UmmAbilities umm = UmmAbilities.forTest();
+			if (umm != null && ummBefore != null) {
+				try {
+					double[] now = umm.box(w, h);
+					int icon = umm.iconSizeForTest();
+					String file = java.nio.file.Files.readString(client.gameDirectory.toPath().resolve("config/unofficial-monumenta-mod.json"));
+					boolean okUmm = ummPlaced != null && now != null && now[0] == 10 && now[1] == 40 && java.util.Arrays.equals(now, ummPlaced)
+							&& icon == io.github.harrythecake.cakeui.edit.UmmAbilityBar.iconSize((int) ummBefore[4], 1, 0, true, ummBefore[4] * 1.05, ummBefore[4] * 1.05) && file.replace(" ", "").contains("\"abilitiesDisplay_iconSize\":" + icon);
+					CakeUI.LOGGER.info("CakeUI self-test: editor: UMM ability bar moved to {}, icon size {} -> {}, saved in UMM's config ({})",
+							java.util.Arrays.toString(now), (int) ummBefore[4], icon, okUmm ? "PASS" : "FAIL");
+				} catch (Exception e) {
+					CakeUI.LOGGER.error("CakeUI self-test: UMM check failed (FAIL)", e);
+				}
+			}
 		} else if (t == 90) {
+			UmmAbilities umm = UmmAbilities.forTest();
+			if (umm != null && ummBefore != null) {
+				try {
+					umm.restoreForTest(ummBefore); // UMM's own place and size again
+					umm.clearTestAbilities();
+				} catch (ReflectiveOperationException e) {
+					CakeUI.LOGGER.error("CakeUI self-test: UMM clean-up failed", e);
+				}
+			}
 			// leave no personal edits behind
 			HudEditor.start();
 			HudEditor.setTarget(HudEditor.Target.PERSONAL);

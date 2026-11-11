@@ -150,5 +150,6 @@
 	"cakeui.config.editMainMenu": "主選單…",
 	"cakeui.config.editPause": "暫停選單…",
 	"cakeui.config.editInventory": "物品欄…",
-	"cakeui.config.editLoading": "載入畫面…"
+	"cakeui.config.editLoading": "載入畫面…",
+	"cakeui.movable.ummAbilities": "UMM 技能欄"
 }

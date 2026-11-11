@@ -150,5 +150,6 @@
 	"cakeui.config.editMainMenu": "Main menu…",
 	"cakeui.config.editPause": "Pause menu…",
 	"cakeui.config.editInventory": "Inventory…",
-	"cakeui.config.editLoading": "Loading…"
+	"cakeui.config.editLoading": "Loading…",
+	"cakeui.movable.ummAbilities": "UMM ability bar"
 }

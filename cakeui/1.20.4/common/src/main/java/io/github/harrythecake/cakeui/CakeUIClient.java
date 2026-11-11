@@ -46,6 +46,7 @@ public final class CakeUIClient {
 
 	/** After every plugin: the first layout load (render thread). */
 	public static void afterPlugins() {
+		UmmAbilities.register(); // the Unofficial Monumenta Mod's ability bar in the HUD editor (if installed)
 		Ui.reload();
 		SelfTest.init();
 	}
