@@ -1,0 +1,21 @@
+// CakeText: shared lines of every <mod>/<mc>/neoforge/build.gradle (mod-specific, not part of the kit).
+String mc = project.property('minecraft_version')
+
+// The Collector and the Translator bundle the core mod (Jar-in-Jar); NeoForge loads one copy when both are installed.
+if (project.property('mod_dir').name != 'core') {
+	def corePath = ":core:${mc}:neoforge"
+	evaluationDependsOn(corePath)
+	def core = project(corePath)
+	dependencies {
+		implementation core
+		jarJar core
+	}
+	// in dev runs the core mod's classes are a mod of their own
+	neoForge {
+		mods {
+			"${core.property('neoforge_mod_id')}" {
+				sourceSet core.sourceSets.main
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+// CakeText: shared lines of every <mod>/<mc>/fabric/build.gradle (mod-specific, not part of the kit).
+String mc = project.property('minecraft_version')
+boolean obf = project.property('cake_obf') as boolean
+
+// The Collector and the Translator bundle the core mod (jar-in-jar); Fabric loads one copy when both are installed.
+if (project.property('mod_dir').name != 'core') {
+	def core = ":core:${mc}:fabric"
+	dependencies {
+		implementation(obf ? project(path: core, configuration: 'namedElements') : project(core))
+		include project(core)
+	}
+}
+
+// Tests: core/src/test (plain Java) run in <mod>/core; common/src/test run here, inside Fabric's class loader
+// (fabric-loader-junit, client side), so the mixins are applied and can be checked.
+sourceSets.test.java.srcDir(new File(project.property('mc_dir') as File, 'common/src/test/java'))
+dependencies {
+	testImplementation "net.fabricmc:fabric-loader-junit:${project.property('fabric_loader_version')}"
+}
+tasks.named('test', Test) {
+	maxHeapSize = '3g'
+	// tests write config/ and logs/ into their working folder
+	workingDir = project.layout.buildDirectory.dir('test-run').get().asFile
+	doFirst { workingDir.mkdirs() }
+	// MachineTranslatorTest's real-model case: converted opus-mt files; skipped when empty
+	systemProperty 'caketext.workDir', System.getProperty('caketext.workDir', '')
+	// ModelInstallTest downloads 312 MB (playing the player); only with -Dcaketext.downloadTest=true
+	systemProperty 'caketext.downloadTest', System.getProperty('caketext.downloadTest', 'false')
+	// a real local LLM server for ServerEngineTest (e.g. Ollama with Hunyuan-MT-7B); skipped when empty
+	systemProperty 'caketext.serverUrl', System.getProperty('caketext.serverUrl', '')
+	systemProperty 'caketext.serverModel', System.getProperty('caketext.serverModel', '')
+	systemProperty 'caketext.serverProtocol', System.getProperty('caketext.serverProtocol', 'OLLAMA')
+	testLogging {
+		events 'passed', 'skipped', 'failed'
+		exceptionFormat = 'full'
+	}
+}

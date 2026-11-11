@@ -1,0 +1,14 @@
+plugins {
+	id 'cake-core'
+}
+
+// The two-way exchanger outside the game:
+//   ./gradlew :core:core:exchange --args="path/to/file.json path/to/file.po --out path/to/folder"
+// .json/.json.gz become Gettext PO (Crowdin), .po/.pot become our .json. Relative paths start at caketext/.
+tasks.register('exchange', JavaExec) {
+	group = 'caketext'
+	description = 'Converts strings files between our JSON and Gettext PO (Crowdin).'
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = 'io.github.harrythecake.caketext.core.strings.Exchanger'
+	workingDir = rootProject.projectDir
+}

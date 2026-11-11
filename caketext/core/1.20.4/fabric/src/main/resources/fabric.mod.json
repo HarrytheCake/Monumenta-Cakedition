@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "${mod_id}",
+	"version": "${version}",
+	"name": "${mod_name}",
+	"description": "Shared code for CakeText Collector and CakeText Translator: text templates, strings files, game context and modules.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeText"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"caketext": ["io.github.harrythecake.caketext.core.module.UmmModule"]
+	},
+	"custom": {
+		"modmenu": {
+			"badges": ["library"],
+			"parent": "caketext-translator"
+		}
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "${fabric_mc_dep}",
+		"java": ">=${java_version}",
+		"fabric-api": "*"
+	}
+}

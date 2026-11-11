@@ -1,0 +1,37 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_range}"
+license = "Apache-2.0"
+issueTrackerURL = "https://github.com/HarrytheCake/CakeText/issues"
+
+[[mods]]
+modId = "${neoforge_mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+logoFile = "assets/caketext_translator/icon.png"
+authors = "HarrytheCake"
+displayURL = "https://github.com/HarrytheCake/CakeText"
+description = '''Translates server text (chat, scoreboard, tooltips, titles, boss bars, nameplates) and other mods' pages (CakeWiki) from string files; strings not translated yet go to a local opus-mt model, a local LLM server or an online service with your own key. An icon shows where each translation came from.'''
+
+[[mixins]]
+config = "caketext-translator.mixins.json"
+
+[[dependencies.${neoforge_mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoforge_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${neoforge_mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${neoforge_mc_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${neoforge_mod_id}]]
+modId = "caketext_core"
+type = "required"
+versionRange = "[${version},)"
+ordering = "AFTER"
+side = "CLIENT"

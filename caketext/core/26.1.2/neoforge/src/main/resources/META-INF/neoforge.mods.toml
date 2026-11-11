@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_range}"
+license = "MIT"
+issueTrackerURL = "https://github.com/HarrytheCake/CakeText/issues"
+
+[[mods]]
+modId = "${neoforge_mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+authors = "HarrytheCake"
+displayURL = "https://github.com/HarrytheCake/CakeText"
+description = '''Shared code for CakeText Collector and CakeText Translator: text templates, strings files, game context and modules.'''
+
+[[dependencies.${neoforge_mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoforge_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${neoforge_mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${neoforge_mc_range}"
+ordering = "NONE"
+side = "CLIENT"

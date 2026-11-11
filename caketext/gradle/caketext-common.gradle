@@ -1,0 +1,12 @@
+// CakeText: shared lines of every <mod>/<mc>/common/build.gradle (mod-specific, not part of the kit).
+// The Collector and the Translator compile against the core mod's common code.
+String mc = project.property('minecraft_version')
+if (project.property('mod_dir').name != 'core') {
+	dependencies {
+		compileOnly project(":core:${mc}:common")
+	}
+}
+// The tests in common/src/test need a loader (mixins applied, Minecraft bootstrapped): they run in the
+// Fabric part (caketext-fabric.gradle), not against bare vanilla here.
+tasks.named('compileTestJava') { enabled = false }
+tasks.named('test') { enabled = false }

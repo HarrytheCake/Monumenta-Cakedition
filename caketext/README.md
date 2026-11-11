@@ -1,6 +1,6 @@
 # CakeText
 
-Two client-side Fabric mods for Minecraft **1.20.4** that translate what a server shows you: the chat, scoreboard, item tooltips, titles, boss bars, nameplates and menus. They were built for the [Monumenta](https://www.playmonumenta.com/) MMORPG and work on any server. Translations go from English into Simplified or Traditional Chinese.
+Two client-side mods for **Fabric and NeoForge** on Minecraft **1.20.4** and **26.1.2** that translate what a server shows you: the chat, scoreboard, item tooltips, titles, boss bars, nameplates and menus. They were built for the [Monumenta](https://www.playmonumenta.com/) MMORPG and work on any server. Translations go from English into Simplified or Traditional Chinese.
 
 | Mod | For | What it does |
 |---|---|---|
@@ -22,7 +22,7 @@ Each mod works on its own, and you can install both. They share a small core lib
 - **Alt in item tooltips:** by default tooltips are translated and holding **Alt** shows the original. Set "Alt in tooltips" to the other way round to keep tooltips in English and translate them only while Alt is held (nothing is sent to the engine until then), or turn it off.
 - **Other mods' pages:** [CakeWiki](https://github.com/HarrytheCake/CakeWiki) shows wiki pages translated, with linked names (items, places, bosses) kept in English. Other mods can do the same through `io.github.harrythecake.caketext.translator.api.TranslatorApi` (plain Java types, so it can be called by reflection).
 - Item names, signs, books and shulker boxes are left untranslated by default.
-- Settings are in Mod Menu or `/cttranslate`.
+- Settings are in Mod Menu (NeoForge: Mods → Config) or `/cttranslate`.
   - Commands: `/cttranslate status`, `reload`, `test <text>`, `cache clear`, `exchange`, `model folder`, `model install`, `model delete`.
 
 ## CakeText Collector
@@ -36,16 +36,18 @@ Each mod works on its own, and you can install both. They share a small core lib
   - Singleplayer worlds are skipped by default.
 - **Exports for Crowdin:** `exports/crowdin/<server>/en_us/<surface>.pot` plus a `crowdin.yml`. They're written by `/ctcollect export` and, by default, automatically every 10 minutes, on leaving a server and on quitting. Every export contains every string, so Crowdin never drops a translated one.
 - **Exchanger:** to convert between the JSON format and PO files, drop files into `config/caketext/exchange/` and run `/ctcollect exchange`.
-- Settings are in Mod Menu or `/ctcollect`.
+- Settings are in Mod Menu (NeoForge: Mods → Config) or `/ctcollect`.
   - Commands: `/ctcollect status`, `save`, `export`, `exchange`, `on`, `off`.
 
-Other mods can add context keys or text sources through the `caketext` entrypoint (see `CakeTextModule`).
+Other mods can add context keys or text sources through the `caketext` entrypoint on Fabric, or `META-INF/services/io.github.harrythecake.caketext.core.module.CakeTextModule` on NeoForge (see `CakeTextModule`).
 
 ## Requirements
 
-- Minecraft 1.20.4, Fabric Loader 0.15+, Java 17+
-- [Fabric API](https://modrinth.com/mod/fabric-api)
-- Optional: [Mod Menu](https://modrinth.com/mod/modmenu) for the settings screens
+- Minecraft 1.20.4 or 26.1.2, Java 17+ (26.1.2: Java 25+)
+- Fabric: Fabric Loader 0.15+ and [Fabric API](https://modrinth.com/mod/fabric-api); optional: [Mod Menu](https://modrinth.com/mod/modmenu) for the settings screens
+- or NeoForge (20.4 for 1.20.4, 26.1 for 26.1.2); the settings screens are under Mods → Config
+
+Tested in game: Fabric 1.20.4. The NeoForge and 26.1.2 jars are built and unit-tested only. There's no 1.21.1 version.
 
 All interface text is in English, Simplified Chinese and Traditional Chinese.
 
@@ -56,12 +58,13 @@ Get the jars from [Releases](https://github.com/HarrytheCake/CakeText/releases).
 ## Building
 
 ```bash
-./gradlew build     # needs JDK 21 to run Gradle; the jars target Java 17
+./gradlew build                          # needs JDK 25 to run Gradle; 1.20.4 compiles with Java 17, 26.1.2 with Java 25
+./gradlew build -Pcake.versions=1.20.4   # one Minecraft version only
 ```
 
-The jars are written to `collector/build/libs/` and `translator/build/libs/`. The build runs the tests. Tests that need the real model (they download it themselves) or a running LLM server are skipped unless given the `-Dcaketext.*` options described in [AGENTS.md](AGENTS.md), which also documents formats, hooks and invariants.
+The build makes every jar in `build/libs/`: `caketext-<collector|translator>-<fabric|neoforge>-<minecraft>-<version>.jar`, plus `caketext-collector-<version>.jar` and `caketext-translator-<version>.jar` (the Fabric 1.20.4 jars under their old names). The shared core is bundled inside each. The build runs the tests. Tests that need the real model (they download it themselves) or a running LLM server are skipped unless given the `-Dcaketext.*` options described in [AGENTS.md](AGENTS.md), which also documents the layout (`core/`, `collector/`, `translator/`, each with `core/` and one folder per Minecraft version), formats, hooks and invariants.
 
-GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with both jars and their SHA-256 in the release notes.
+GitHub Actions builds and tests every push. When `mod_version` in `gradle.properties` changes on `main`, it publishes release `v<version>` with all the jars and their SHA-256 in the release notes.
 
 This repository is a mirror of the [`caketext/` folder](https://github.com/HarrytheCake/Monumenta-Cakedition/tree/packwiz/caketext) of Monumenta-Cakedition, where development happens.
 

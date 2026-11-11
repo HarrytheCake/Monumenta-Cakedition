@@ -1,0 +1,37 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_range}"
+license = "MIT"
+issueTrackerURL = "https://github.com/HarrytheCake/CakeText/issues"
+
+[[mods]]
+modId = "${neoforge_mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+logoFile = "assets/caketext_collector/icon.png"
+authors = "HarrytheCake"
+displayURL = "https://github.com/HarrytheCake/CakeText"
+description = '''Collects the text a server shows (chat, scoreboard, tooltips, titles, boss bars, nameplates, menus) into local strings files for translators, with where it was seen. Player names and player chat are never stored, and nothing is uploaded.'''
+
+[[mixins]]
+config = "caketext-collector.mixins.json"
+
+[[dependencies.${neoforge_mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoforge_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${neoforge_mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${neoforge_mc_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.${neoforge_mod_id}]]
+modId = "caketext_core"
+type = "required"
+versionRange = "[${version},)"
+ordering = "AFTER"
+side = "CLIENT"

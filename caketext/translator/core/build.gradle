@@ -1,0 +1,19 @@
+plugins {
+	id 'cake-core'
+}
+
+dependencies {
+	implementation project(':core:core')
+}
+
+tasks.named('test', Test) {
+	maxHeapSize = '3g'
+	// OpusMtReferenceTest needs the Hugging Face model and reference outputs; skipped when these are empty
+	systemProperty 'caketext.hfModel', System.getProperty('caketext.hfModel', '')
+	systemProperty 'caketext.hfReference', System.getProperty('caketext.hfReference', '')
+	systemProperty 'caketext.workDir', System.getProperty('caketext.workDir', '')
+	testLogging {
+		events 'passed', 'skipped', 'failed'
+		exceptionFormat = 'full'
+	}
+}

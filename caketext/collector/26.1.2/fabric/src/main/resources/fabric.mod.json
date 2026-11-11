@@ -1,0 +1,26 @@
+{
+	"schemaVersion": 1,
+	"id": "${mod_id}",
+	"version": "${version}",
+	"name": "CakeText Collector",
+	"description": "Collects the text a server shows (chat, scoreboard, tooltips, titles, boss bars, nameplates, menus) into local strings files for translators, with where it was seen. Player names and player chat are never stored, and nothing is uploaded.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeText"
+	},
+	"icon": "assets/caketext_collector/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["io.github.harrythecake.caketext.collector.fabric.CollectorFabric"],
+		"modmenu": ["io.github.harrythecake.caketext.collector.fabric.ModMenuEntry"]
+	},
+	"mixins": ["caketext-collector.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "${fabric_mc_dep}",
+		"java": ">=${java_version}",
+		"fabric-api": "*",
+		"caketext-core": "*"
+	}
+}

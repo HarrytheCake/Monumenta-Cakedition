@@ -1,28 +1,67 @@
 # CakeText — agent reference
 
-Two client-only Fabric mods for Minecraft **1.20.4**, plus a shared library, in one Gradle build (`caketext/`, Fabric Loom 1.10.5, Yarn 1.20.4+build.3, Java 17 target):
+Two client-only mods, plus a shared library, for **Fabric and NeoForge** on Minecraft **1.20.4** and **26.1.2**, in one Gradle build (`caketext/`, the Cake multiloader kit with three mods in one build; Mojang names everywhere). 1.21.1 is **not built** (the user's choice, 2026-11-11). The Cakedition pack ships the Fabric 1.20.4 Translator.
 
-| Project | Mod id | Jar | What it does |
+| Mod folder | Mod id (Fabric / NeoForge) | Jars | What it does |
 |---|---|---|---|
-| `core` | `caketext-core` | bundled inside both mods (jar-in-jar) | text templates, strings files, game context, module API, settings screen base |
-| `collector` | `caketext-collector` | `caketext-collector-0.3.1.jar` | records the text a server shows, with where it was seen, into local strings files |
-| `translator` | `caketext-translator` | `caketext-translator-0.3.1.jar` | replaces server text with translations from strings files; strings no file has go to an engine (local opus-mt model, local LLM server, or an online service with the player's key) |
+| `core/` | `caketext-core` / `caketext_core` | bundled inside both mods (Fabric `include`, NeoForge Jar-in-Jar); never shipped alone (`cake_ship=false`) | text templates, strings files, game context, module API, settings screen base |
+| `collector/` | `caketext-collector` / `caketext_collector` | `caketext-collector-<loader>-<mc>-0.3.1.jar`; `caketext-collector-0.3.1.jar` = Fabric 1.20.4 | records the text a server shows, with where it was seen, into local strings files |
+| `translator/` | `caketext-translator` / `caketext_translator` | `caketext-translator-<loader>-<mc>-0.3.1.jar`; `caketext-translator-0.3.1.jar` = Fabric 1.20.4 | replaces server text with translations from strings files; strings no file has go to an engine (local opus-mt model, local LLM server, or an online service with the player's key) |
 
-Either mod works alone. With both installed, Fabric loads one copy of core.
+Either mod works alone. With both installed, the loader loads one copy of core. NeoForge mod ids can't contain `-`, hence `neoforge_mod_id` in each mod's `gradle.properties`; config files, lang keys, asset namespaces (`caketext_collector`, `caketext_translator`, `caketext_core`), commands and the Translator API are the same on every target.
 
-Package root: `io.github.harrythecake.caketext`. Licenses: `translator/` Apache-2.0 (`translator/LICENSE` + `NOTICE`), `core/` and `collector/` MIT (root `LICENSE`); each jar carries its file (`LICENSE_caketext-<module>`), and `fabric.mod.json` has a matching `license` field. Everything both mods write lives in `config/caketext/`.
+Package root: `io.github.harrythecake.caketext`. Licenses: `translator/` Apache-2.0 (`translator/LICENSE` + `NOTICE`), `core/` and `collector/` MIT (root `LICENSE`); each jar carries its file (`LICENSE_caketext-<module>`; the build takes the mod folder's own `LICENSE`/`NOTICE` first), and `fabric.mod.json` / `mods.toml` have a matching `license` field. Everything both mods write lives in `config/caketext/`.
+
+## Layout
+
+```
+caketext/
+├── settings.gradle, build.gradle, buildSrc/, gradlew, gradle/wrapper/   the kit, with its multi-mod extensions (below)
+├── gradle.properties        cake_mods=core,collector,translator; mod_version, mod_group
+├── gradle/caketext-{common,fabric,neoforge}.gradle   CakeText's own lines, applied by every part's build.gradle
+├── core/ | collector/ | translator/      one mod each, laid out like a one-mod kit build:
+│   ├── gradle.properties    mod_id, neoforge_mod_id, mod_name (core: cake_ship=false)
+│   ├── core/                plain Java, no Minecraft imports (strings files, PO, exchanger, opus-mt engine, configs, lang, icons)
+│   └── 1.20.4/, 26.1.2/     version.properties (from the kit) + common/ (Minecraft code, mixins, tests), fabric/, neoforge/
+└── .github/workflows/build.yml
+```
+
+- Multi-mod build: the kit's `settings.gradle` includes `<mod>/core` and `<mod>/<mc>/<part>` for each `cake_mods` folder (projects like `:translator:1.20.4:fabric`); `cake-base`/`cake-core` read the mod folder's `gradle.properties`, give each mod its own Maven group and package the mod folder's `LICENSE`/`NOTICE`; `cake-neoforge` uses `neoforge_mod_id`; the root `build.gradle` leaves `cake_ship=false` mods out of `build/libs`. These extensions are **not in the Cakedition repo's kit** yet: re-running `apply_kit.py` on this folder overwrites them. To pick up a kit change, copy `kit/versions/<mc>.properties` → `<mod>/<mc>/version.properties` (all three mods) and merge kit file changes by hand.
+- Collector and Translator `common` compile against `:core:<mc>:common`; their Fabric parts `include` `:core:<mc>:fabric`, their NeoForge parts `jarJar` `:core:<mc>:neoforge` (and run it as its own mod in dev).
+- Loader services: `core/core/.../platform/Platform` (config dir, mod loaded, entrypoints), implemented by `FabricPlatform` / `NeoForgePlatform` in `core/<mc>/<loader>` (`META-INF/services`).
+- Loader entry classes (`CollectorFabric`/`CollectorNeoForge`, `TranslatorFabric`/`TranslatorNeoForge`) pass their events to the loader-neutral `CollectorMod` / `TranslatorMod` (`init()`, `onGameMessage`, `onTooltip`, `onScreenInit`, `onTick`, `onJoin`, `onDisconnect`); commands register through `CollectorCommands`/`TranslatorCommands.register(dispatcher, feedback)` on both loaders.
 
 ## Build and test
 
 ```bash
 cd caketext
-JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build          # jars in */build/libs; runs the tests
-JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build -x test  # jars only
+JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build                          # all four targets + tests; jars in build/libs/
+JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build -Pcake.versions=1.20.4   # one Minecraft version (+ the core folders)
+JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew :translator:1.20.4:fabric:runClient -Pcake.versions=1.20.4   # dev client
 ```
 
-**CI and releases:** `.github/workflows/build.yml` (GitHub only runs it in the standalone `HarrytheCake/CakeText` repo, where this folder is the root) builds and tests every push and pull request on JDK 21. A push to `main` whose `mod_version` has no `v<mod_version>` release yet publishes one with `caketext-collector-<v>.jar` and `caketext-translator-<v>.jar` (core is inside both). No built jar is committed anywhere. To release: bump `mod_version`, commit, `git subtree push --prefix=caketext caketext main` from the repo root, wait for the release, then (for the pack, which ships only the Translator, optional and off) `python tools/packwiz_sync.py github mods HarrytheCake/CakeText v<v> caketext-translator`, commit, `tools/push_all.py`.
+Gradle 9.8 runs on JDK 25; 1.20.4 compiles with Java 17, 26.1.2 with Java 25 (toolchains). `build/libs/` gets ten jars: collector and translator × fabric/neoforge × 1.20.4/26.1.2, plus `caketext-collector-0.3.1.jar` and `caketext-translator-0.3.1.jar` (copies of the Fabric 1.20.4 jars under the old names the pack and `packwiz_sync.py` use).
 
-Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so mixins are applied. Model tests are skipped unless given files:
+**Smoke test / self-test (dev client; Fabric 1.20.4 only, by the user's rule):** the Cakedition repo's `tools/multiloader/smoke.py` expects `gradlew` in the mod folder, so for this multi-mod build it needs a small change (run Gradle from the parent folder, task `:<mod>:<mc>:<loader>:runClient`). Then e.g. `smoke.py caketext/translator 1.20.4 fabric --world=<smoke world> --jvm=-Dcaketext.selftest=1 "--done=caketext translator self-test done"`, and the same with `caketext/collector` and `"--done=caketext collector self-test done"`. The self-test (`-Dcaketext.selftest=1`; 1.20.4 `common`, so NeoForge 1.20.4 has it too; not on 26.1.2) starts after the first join:
+- Translator (`translator/SelfTest`): writes a made-up `translations/<lang>/selftest.json`, reloads, checks a dictionary hit, `TranslatorApi.translate` and that a chat line carries the translation; types `/cttranslate`, presses "Translation engine…" and "Where to translate…"; screenshots `caketext-selftest-{chat,translator,engine,surfaces}.png` in `run/screenshots/`; deletes its file; logs `caketext translator self-test done: N of 6 checks passed`.
+- Collector (`collector/SelfTest`): types `/ctcollect status` (lines in chat and the log) and `/ctcollect`, presses "What to collect…"; screenshots `caketext-selftest-{collector-status,collector,sources}.png`; logs `caketext collector self-test done: N of 2 checks passed`. Records nothing (singleplayer is off by default).
+- Helpers: `core/<mc>/common/.../core/dev/SelfTestKit` (nothing runs without the property).
+
+**CI and releases:** `.github/workflows/build.yml` (GitHub only runs it in the standalone `HarrytheCake/CakeText` repo, where this folder is the root) builds and tests every push and pull request (JDK 17 + 25, Gradle on 25) and checks that all ten jars exist. A push to `main` whose `mod_version` has no `v<mod_version>` release yet publishes one with all ten jars (core is inside each) and their SHA-256. No built jar is committed anywhere. To release: bump `mod_version`, commit, `git subtree push --prefix=caketext caketext main` from the repo root, wait for the release, then (for the pack, which ships only the Translator, optional and off) `python tools/packwiz_sync.py github mods HarrytheCake/CakeText v<v> caketext-translator`, commit, `tools/push_all.py`.
+
+## Multiloader status
+
+All features exist on all four targets. "Tested" = what was run on 2026-11-11.
+
+| Target | What works | Tested | Gaps / differences |
+|---|---|---|---|
+| Fabric 1.20.4 (the pack's) | everything; same mod ids, config files, keybinds (none), lang keys, commands, Mod Menu screens, `caketext` entrypoint and Translator API v1 as 0.3.1 | build; unit tests (core 2 + 14, collector 4, translator 47 with 3 opt-in skipped, opus-mt reference skipped without its files); smoke PASS on the title screen and in the smoke world with the self-test of both mods (translator 6/6, collector 2/2; screenshots: book icon on the chat line, settings, engine, surfaces, collector and sources screens as before) | `fabric.mod.json` requires `minecraft` exactly `1.20.4` (was `~1.20.4`; kit rule); no refmap (Loom remaps the mixin targets inside the classes) |
+| NeoForge 1.20.4 | everything: `ClientChatReceivedEvent.System` (HIGHEST for the collector so it sees the original, LOW for the action-bar translation), `ItemTooltipEvent` (translator LOWEST, after the collector), client commands, settings under Mods → Config (`ConfigScreenHandler`) | build only (no game runs off Fabric 1.20.4, the user's rule); mixin targets checked with javap on NeoForge 20.4.251, incl. the scoreboard row lambda `lambda$displayScoreboardSidebar$2` | no Mod Menu; modules (`CakeTextModule`) come from `META-INF/services/io.github.harrythecake.caketext.core.module.CakeTextModule` instead of the `caketext` entrypoint; UMM is Fabric-only, so no shard/area context. No chat buttons run client commands, so NeoForge 20.4's `sendUnsignedCommand` leak doesn't apply |
+| Fabric 26.1.2 | everything (GUI `GuiGraphicsExtractor`/`extractRenderState`; nameplates at `getNameTag` in `EntityRenderer.extractRenderState`; boss bars in `BossHealthOverlay.extractRenderState`; chat `addMessage(…, GuiMessageSource, GuiMessageTag)`; marker font via `FontDescription.Resource`; screens opened from commands with `client.schedule`) | build; unit tests (same counts as 1.20.4) | tests that make `ItemStack`s bind item components first (`TestGame.bootStrap`; since 1.21.2 items get components only when registries load); no self-test; not run in game |
+| NeoForge 26.1.2 | everything (`@Mod(dist = Dist.CLIENT)`, `IConfigScreenFactory`, `ClientTickEvent.Post`) | build only; mixin targets checked with javap on NeoForge 26.1.2.126 | as NeoForge 1.20.4; not run in game |
+| 1.21.1 (both loaders) | — | — | not built (the user's choice, 2026-11-11) |
+
+Plain tests (`<mod>/core/src/test`) run on plain JUnit. Tests in `<mod>/<mc>/common/src/test` run in that version's Fabric part, inside Fabric's class loader (`fabric-loader-junit`, client side), so mixins are applied; the `common` and `neoforge` parts run no tests. Model tests are skipped unless given files:
 
 | Test | Needs | Proves |
 |---|---|---|
@@ -46,10 +85,10 @@ Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so 
 
 ## Core
 
-- `template/TextTemplate`: a styled `Text` → template string, and a translated template → `Text` with the original styles and values.
+- `template/TextTemplate`: a styled `Component` → template string, and a translated template → `Component` with the original styles and values.
   - `{~}` number (`\d+([.,]\d+)*`), `{n}` player name (names come from `PlayerNames`, the tab list + own name, and from the text's style: a player `SHOW_ENTITY` hover, a name-shaped insertion, or a `/msg|tell|w|whisper|m|pm|dm <name>` click; `TextTemplate.styleName`), `{c1}`… the Nth distinct style (only when a line has more than one), `{{` `}}` literal braces. Translations may use `{~2}`, `{n1}` to reorder.
   - `hasWords()`: a letter outside placeholders; lines without one are never collected or translated.
-- `template/Translated`: weak identity set of `Text` the translator produced; the collector skips them.
+- `template/Translated`: weak identity set of `Component`s the translator produced; the collector skips them.
 - `template/PlayerChat.bodyStart(line)`: index where a player's message starts, or -1. Checks, in order: a tab-list name with a separator; the `»` form (Monumenta); the vanilla `<name> ` form; whispers. A tab-list name with only tags/one rank word/icons before it and a separator after (`:` `»` `>` `|` `whispers to you:`), or any name in the vanilla `<name> ` and `From/To name: ` forms. NPC lines like `[Quest] Aledar: …` are not matched (NPC names aren't in the tab list).
 - `TextTemplate` reads old-style `§` codes inside literal text as styles (a colour resets earlier § modifiers, `§r` returns to the component's style, unknown codes stay text). `itemStyles()` = styles with a SHOW_ITEM hover (chat item links).
 - `PlayerNames.refresh` always includes the session's own name; both mods also refresh on JOIN.
@@ -57,7 +96,7 @@ Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so 
 - `strings/StringsFile` + `StringEntry`: the one file format for both mods (below). `.json.gz` = same JSON gzipped; readers detect gzip by magic bytes.
 - `context/GameContext`: surface, server (host, no port; `singleplayer`), dimension, shard, area, block pos. `matches(scope)` for scoped translations; unknown scope keys never match.
 - `context/ContextRegistry`: extra context keys from modules (`shard`, `area`). A provider that throws is removed.
-- `module/CakeTextModule`: entrypoint `caketext` in any mod's `fabric.mod.json`. `registerContext()` (both mods) and `registerSources(TextSink)` (collector). `UmmModule` (built in): shard = `Locations.getShortShard()`, area = `UnofficialMonumentaModClient.locations.getLocation(x, z, shard)` of UMM 1.10, by reflection.
+- `module/CakeTextModule`: entrypoint `caketext` in any mod's `fabric.mod.json` (NeoForge: `META-INF/services/io.github.harrythecake.caketext.core.module.CakeTextModule`). `registerContext()` (both mods) and `registerSources(TextSink)` (collector). `UmmModule` (built in): shard = `Locations.getShortShard()`, area = `UnofficialMonumentaModClient.locations.getLocation(x, z, shard)` of UMM 1.10, by reflection.
 - `ui/OptionsScreen`: two-column settings screen with status lines, toggles, cycles and tooltips.
 
 ## Crowdin (Gettext PO) and the exchanger
@@ -72,7 +111,7 @@ Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so 
 - **The translator reads `.po`** in `translations/<lang>/` (as Crowdin returns them) next to `.json`/`.json.gz`.
 - **Exchanger, when needed:**
   - In game: drop files into `config/caketext/exchange/`, then run `/ctcollect exchange` or `/cttranslate exchange` (or the collector's button). Results go to `exchange/converted/`.
-  - Command line: `./gradlew :core:exchange --args="<files or folders> --out <folder>"`.
+  - Command line: `./gradlew :core:core:exchange --args="<files or folders> --out <folder>"`.
   - Direction: `.json`/`.json.gz` → `<name>/<surface>.po` (`.pot` if nothing is translated); `.po`/`.pot` → `<name>.json`.
 - The collector's own store (`collected/<server>.json.gz`) stays our JSON: it's the source everything is made from.
 
@@ -92,35 +131,35 @@ Tests run inside Fabric's class loader (`fabric-loader-junit`, client side), so 
 
 ## Collector
 
-- Sources: chat and action bar (`ALLOW_GAME`, sees the original before any mod changes it), titles/subtitles (mixin, priority 900), item tooltips (default phase), menu titles (non-translatable screen titles), and once a second: scoreboard sidebar (team slot first), boss bars, tab header/footer, nameplates + text displays within `nameplateRange`. Modules can add sources.
+- Sources: chat and action bar (Fabric `ALLOW_GAME`, NeoForge `ClientChatReceivedEvent.System` at HIGHEST: sees the original before any mod changes it), titles/subtitles (mixin, priority 900), item tooltips (default phase; NeoForge default priority), menu titles (non-translatable screen titles), and once a second: scoreboard sidebar (team slot first), boss bars, tab header/footer, nameplates + text displays within `nameplateRange`. Modules can add sources.
 - Privacy: signed player chat is never read (only game messages); player names become `{n}`; `PrivacyFilter` drops chat lines shaped like a player talking (template patterns plus `PlayerChat.bodyStart` on the original); singleplayer is off by default. Nothing is uploaded. Names of players not in the tab list are caught when the server marks them (entity hover, insertion, /msg click); plain unmarked names of such players still get through (known gap). Monumenta player chat looks like `<lfg> [AB] Name » text` (channel, guild tag, name, »); speakers are mostly not in the tab list, so `PlayerChat` also matches that shape by itself. Lines containing Chinese characters are skipped (not English source: vanilla text in a Chinese game, other mods' messages). On load, `Store` purges stored lines that fail these checks (`PrivacyFilter.rejectStored`). An older build collected ~900 such lines in the test instance; the purge removes them.
 - Auto-export (`autoExport`, default on): rewrites the Crowdin files in `exports/crowdin/<server>/` every `autoExportMinutes` (10), when leaving or switching servers and on quit, only if something new was recorded. Manual `/ctcollect export` writes the same files.
 - `Store`: one entry per template; a repeat on the same surface within 5 s doesn't count; contexts merge by surface/server/dimension/shard/area/16-block cell (exact block for nameplates). Saved every `saveSeconds` and on disconnect/exit to `collected/<server>.json.gz`, atomically.
 - Export (`/ctcollect export` or the button): the Crowdin layout in `exports/crowdin/<server>/` (see Crowdin above), every string, optionally without positions. Our JSON is available through the exchanger.
-- Settings `collector.json`; screen via Mod Menu or `/ctcollect`. Commands: `status`, `save`, `export`, `on`, `off`.
+- Settings `collector.json`; screen via Mod Menu (NeoForge: Mods → Config) or `/ctcollect`. Commands: `status`, `save`, `export`, `on`, `off`.
 
 ## Translator
 
 - `Dictionary`: every strings file under `translations/<lang>/` (recursive). Lookup: best matching scoped human entry → unscoped human → the same with whitespace collapsed → machine cache (`translations/<lang>/_machine/opus-mt-en-zh-int8.json.gz`).
 - Where text is replaced:
-  - chat: `ChatHudMixin` on the public `ChatHud.addMessage(Text, MessageSignatureData, MessageIndicator)`, which every chat line passes once (server text, player chat, signed or not; `refresh()` uses another overload). `TranslationService.chatLine` decides:
+  - chat: `ChatHudMixin` on `ChatComponent.addMessage(Component, MessageSignature, GuiMessageTag)` (26.1.2: `addMessage(Component, MessageSignature, GuiMessageSource, GuiMessageTag)`), which every chat line passes once (server text, player chat, signed or not; `refreshTrimmedMessage()` doesn't). `TranslationService.chatLine` decides:
     - player chat (`PlayerChat.bodyStart` ≥ 0, setting `playerChat`, default on): only the message part is translated (human dictionary, else the model); tags, rank and name are never sent. Results stay in memory (`MachineTranslator` chat cache, 1000 lines), never on disk. Display `playerChatDisplay`, default ORIGINAL.
     - a signed line that can't be split is left alone; everything else is server text, display `display`, default TRANSLATED.
     - Display modes in chat: TRANSLATED (hover the text → original), BOTH (translation, then the original in grey on the next line), ORIGINAL (hover → translation). The hover card names the source; it goes on every run without its own hover, and on the icon.
-  - action bar (`MODIFY_GAME`, overlay only)
-  - tooltips (a phase after default; BOTH/ORIGINAL add the other version as a grey line; plus a footer line naming the sources)
+  - action bar (Fabric `MODIFY_GAME`, NeoForge `ClientChatReceivedEvent.System` at LOW; overlay only)
+  - tooltips (Fabric: a phase after default; NeoForge: LOWEST priority; BOTH/ORIGINAL add the other version as a grey line; plus a footer line naming the sources)
   - titles/subtitles (`@ModifyVariable` on `setTitle`/`setSubtitle`)
-  - scoreboard (`getDisplayName()` in `renderScoreboardSidebar`, `Team.decorateName` in lambda `method_55439`)
-  - boss bars (`ClientBossBar.getName()` in `BossBarHud.render`, at draw time)
-  - nameplates (`renderLabelIfPresent`, players skipped)
-  - text displays (`getText()` in `getLerpedRenderState`)
-  - menu titles (`ScreenEvents.AFTER_INIT` + `@Mutable` title accessor)
+  - scoreboard (`Objective.getDisplayName()` in `Gui.displayScoreboardSidebar`, `PlayerTeam.formatNameForTeam` in the row lambda: `method_55439` on Fabric 1.20.4, `lambda$displayScoreboardSidebar$2` on NeoForge 1.20.4, `lambda$displayScoreboardSidebar$1` on 26.1.2)
+  - boss bars (`LerpingBossEvent.getName()` in `BossHealthOverlay.render`, 26.1.2 `extractRenderState`, at draw time)
+  - nameplates (`EntityRenderer.renderNameTag`; 26.1.2 `getNameTag` in `extractRenderState`; players skipped)
+  - text displays (`getText()` in `Display.TextDisplay.createInterpolatedTextRenderState`)
+  - menu titles (Fabric `ScreenEvents.AFTER_INIT` / NeoForge `ScreenEvent.Init.Post` + `@Mutable` title accessor)
 - Markers: a font `caketext_translator:icons` with `\uE100` (book = string translation) and `\uE101` (chip = model). Chat: icon in front. Other HUD text: icon after (no hover possible there). Setting `markers`: all / machine only / off; the hover on chat text stays either way. HUD text (scoreboard, titles, boss bars, nameplates, menus, action bar) shows the translation unless `display` is ORIGINAL.
-- A miss is queued for the model if it's installed, enabled and the line looks English (Latin letters, no Han). Chat lines are swapped in place when the model finishes (`ChatHud.messages` + `refresh()`); other surfaces re-render every frame, so they update by themselves; text displays only when re-created.
+- A miss is queued for the model if it's installed, enabled and the line looks English (Latin letters, no Han). Chat lines are swapped in place when the model finishes (`ChatComponent.allMessages` + `refreshTrimmedMessage()`); other surfaces re-render every frame, so they update by themselves; text displays only when re-created.
 - **Alt in tooltips** (`tooltipAlt`): `ORIGINAL_ON_ALT` (default: translated per `display`, Alt held = the untranslated tooltip), `TRANSLATION_ON_ALT` (untranslated; Alt held = translated as TRANSLATED; nothing is queued for the engine until Alt is held, which saves an online service's characters), `OFF`. A grey hint line says what Alt does (only with `tooltipFooter`, never while Alt is held). `translateTooltip(stack, lines, alt)` is the testable overload.
 - Item tooltips: the first line (item name) is not translated unless `translateItemNames` (default off). Items matching `ignoredItems` (`core/template/ItemFilter`, id globs, default `*sign`, `*book`, `*shulker_box`; edited in the Where-to-translate screen) are never translated. The collector still collects them (user's choice, 2026-10-27).
 - Display settings: `chatDisplay` (server text in chat, default ORIGINAL), `playerChatDisplay` (default ORIGINAL), `display` (tooltips and HUD, default TRANSLATED; HUD shows nothing translated when ORIGINAL).
-- Settings `translator.json` (language `zh_cn`/`zh_tw`, display, chat display, player chat on/off and its display, machine on/off, quality `best`/`fast`, markers, tooltip footer, per-surface). Screen via Mod Menu or `/cttranslate`. Commands: `status`, `reload`, `test <text>`, `cache clear`, `exchange`, `model folder`, `model install`, `model delete`.
+- Settings `translator.json` (language `zh_cn`/`zh_tw`, display, chat display, player chat on/off and its display, machine on/off, quality `best`/`fast`, markers, tooltip footer, per-surface). Screen via Mod Menu (NeoForge: Mods → Config) or `/cttranslate`. Commands: `status`, `reload`, `test <text>`, `cache clear`, `exchange`, `model folder`, `model install`, `model delete`.
 
 ### Engines (`TranslationEngine`)
 
@@ -161,7 +200,7 @@ Plain Java types only, so callers use reflection and don't depend on CakeText (C
 - The translator must never throw into the game: `TranslatorMod.translate` returns the original on any error.
 - The translator downloads nothing. Its network use is the LLM server the player configures (default `127.0.0.1`) and, only when the player picks it and enters their own key, an online translation service (0.3.0).
 - Player chat goes only to an engine whose `local()` is true (this PC or a private network), never to an online service.
-- Mixins only touch client classes; text displays check `world.isClient`.
+- Mixins only touch client classes; text displays check `level().isClientSide`.
 
 ## Status (2026-10-27)
 

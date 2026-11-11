@@ -1,5 +1,10 @@
-# Builds and tests on every push and pull request. A push to main whose mod_version
-# has no release yet publishes both mod jars as release v<mod_version> (core is bundled inside each).
+# Builds and tests on every push and pull request (Cake multiloader kit, three mods in one build: core, Collector,
+# Translator; Fabric + NeoForge for Minecraft 1.20.4 and 26.1.2). A push to main whose mod_version has no release yet
+# publishes release v<mod_version> with every jar of the two mods (core is bundled inside each):
+#   caketext-<collector|translator>-<fabric|neoforge>-<mc>-<version>.jar   one per mod, loader and Minecraft version
+#   caketext-<collector|translator>-<version>.jar                          the Fabric 1.20.4 jars under their old names
+#                                                                         (the Cakedition modpack and
+#                                                                         tools/packwiz_sync.py download these)
 name: Build
 
 on:
@@ -16,28 +21,40 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Gradle runs on JDK 25 (the last one = JAVA_HOME); 1.20.4 compiles with 17, 26.1.2 with 25
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 21
+          java-version: |
+            17
+            25
 
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Build and test
         run: |
           chmod +x gradlew
-          ./gradlew build
+          ./gradlew build --no-daemon \
+            -Porg.gradle.java.installations.fromEnv=JAVA_HOME_17_X64,JAVA_HOME_25_X64
 
       - name: Read mod version
         id: version
         run: echo "version=$(grep '^mod_version=' gradle.properties | cut -d= -f2)" >> "$GITHUB_OUTPUT"
 
+      - name: Check the jars
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          ls -l build/libs
+          for f in caketext-{collector,translator}-"$VERSION".jar \
+                   caketext-{collector,translator}-{fabric,neoforge}-{1.20.4,26.1.2}-"$VERSION".jar; do
+            test -f "build/libs/$f" || { echo "missing build/libs/$f"; exit 1; }
+          done
+
       - uses: actions/upload-artifact@v4
         with:
           name: caketext-${{ steps.version.outputs.version }}
-          path: |
-            collector/build/libs/caketext-collector-${{ steps.version.outputs.version }}.jar
-            translator/build/libs/caketext-translator-${{ steps.version.outputs.version }}.jar
+          path: build/libs/caketext-*${{ steps.version.outputs.version }}.jar
           if-no-files-found: error
 
     outputs:
@@ -63,12 +80,14 @@ jobs:
             echo "v$VERSION is already released; bump mod_version for a new release."
             exit 0
           fi
-          # --notes goes before the generated notes; file names without their build folders
-          SUMS=$( (cd collector/build/libs && sha256sum "caketext-collector-$VERSION.jar") && \
-                  (cd translator/build/libs && sha256sum "caketext-translator-$VERSION.jar") )
-          gh release create "v$VERSION" \
-            "collector/build/libs/caketext-collector-$VERSION.jar" \
-            "translator/build/libs/caketext-translator-$VERSION.jar" \
+          SUMS=$(sha256sum caketext-*"$VERSION".jar)
+          NOTES=$(printf '%s\n\n%s\n\n%s\n\n**SHA-256**\n```\n%s\n```\n' \
+            "Fabric and NeoForge for Minecraft 1.20.4 and 26.1.2: pick \`caketext-<collector|translator>-<loader>-<minecraft>-$VERSION.jar\` (the shared core is inside each)." \
+            "\`caketext-collector-$VERSION.jar\` and \`caketext-translator-$VERSION.jar\` are the Fabric 1.20.4 jars under their old names (used by the Monumenta Cakedition modpack)." \
+            "Tested in game: Fabric 1.20.4. The other jars are built and unit-tested only." \
+            "$SUMS")
+          # --notes goes before the generated notes
+          gh release create "v$VERSION" caketext-*"$VERSION".jar \
             --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
             --title "CakeText $VERSION" --generate-notes \
-            --notes "$(printf '**SHA-256**\n```\n%s\n```\n' "$SUMS")"
+            --notes "$NOTES"
