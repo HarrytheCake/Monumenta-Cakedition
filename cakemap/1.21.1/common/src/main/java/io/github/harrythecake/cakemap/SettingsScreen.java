@@ -14,7 +14,6 @@ import net.minecraft.network.chat.Component;
 
 /** Minimap and map settings (Y, or Mod Menu). Every click saves at once. */
 public final class SettingsScreen extends Screen {
-	private static final int[] SIZES = {64, 80, 96, 110, 128, 160, 192, 224, 256};
 	private static final double[] OPACITIES = {1, 0.9, 0.75, 0.6, 0.4};
 
 	private final Screen parent;
@@ -49,7 +48,7 @@ public final class SettingsScreen extends Screen {
 				new Option("minimap", () -> onOff(s.minimap), () -> s.minimap = !s.minimap),
 				new Option("shape", () -> Component.translatable("cakemap.settings.shape." + low(s.shape)), () -> s.shape = next(s.shape)),
 				new Option("frame", () -> Component.translatable("cakemap.settings.frame." + low(s.frame)), () -> s.frame = next(s.frame)),
-				new Option("size", () -> Component.literal(String.valueOf(s.size)), () -> s.size = nextInt(SIZES, s.size)),
+				new Option("size", () -> Component.literal(Minimap.sizeLabel()), () -> s.sizeShare = nextUp(MapSettings.SHARES, s.sizeShare)),
 				new Option("zoom", () -> Component.literal(trim(s.zoom) + "x"), () -> s.zoom = nextZoom(s.zoom)),
 				new Option("rotate", () -> Component.translatable(s.rotate ? "cakemap.settings.rotate.on" : "cakemap.settings.rotate.off"), () -> s.rotate = !s.rotate),
 				CakeMapPlugin.hudEditor
@@ -98,9 +97,10 @@ public final class SettingsScreen extends Screen {
 		return Component.translatable("cakemap.settings." + o.key).append(": ").append(o.value.get());
 	}
 
-	private static int nextInt(int[] steps, int v) {
-		for (int s : steps) {
-			if (s > v) {
+	/** The next bigger step (a size between steps, e.g. from an old config, goes to the one above), then the first. */
+	private static double nextUp(double[] steps, double v) {
+		for (double s : steps) {
+			if (s > v + 1e-6) {
 				return s;
 			}
 		}

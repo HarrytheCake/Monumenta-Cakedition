@@ -274,6 +274,38 @@ class CoreTest {
 	}
 
 	@Test
+	void minimapSizeFollowsTheWindow() throws IOException {
+		Path f = dir.resolve("size.json");
+		// new install: 20 % of the shorter side, on any window and GUI scale
+		MapSettings s = MapSettings.load(f);
+		assertEquals(108, s.sizePx(960, 540));
+		assertEquals(72, s.sizePx(640, 360));
+		assertEquals(72, s.sizePx(360, 640), "the shorter side counts");
+		assertTrue(!s.sizeConverted);
+		// an old (format 1) file: its pixel size becomes a share with the first window it is drawn on
+		Files.writeString(f, "{ \"format\": 1, \"size\": 128 }");
+		MapSettings old = MapSettings.load(f);
+		assertEquals(0, old.sizeShare);
+		assertEquals(128, old.sizePx(960, 540), "looks the same as before on the window it converts on");
+		assertTrue(old.sizeConverted);
+		assertEquals(0.237, old.sizeShare);
+		assertEquals(256, old.sizePx(1920, 1080), "then grows with the window");
+		old.save(f);
+		MapSettings again = MapSettings.load(f);
+		assertEquals(2, again.format);
+		assertEquals(0.237, again.sizeShare);
+		// the HUD editor's handle (GUI pixels), clamped
+		again.setSizePx(135, 960, 540);
+		assertEquals(0.25, again.sizeShare);
+		again.setSizePx(9999, 960, 540);
+		assertEquals(MapSettings.MAX_SHARE, again.sizeShare);
+		assertEquals(192, again.sizePx(400, 240));
+		assertEquals(30 - 8, again.sizePx(40, 30), "never bigger than the window");
+		Files.writeString(f, "{ \"format\": 2, \"sizeShare\": 3 }");
+		assertEquals(MapSettings.MAX_SHARE, MapSettings.load(f).sizeShare);
+	}
+
+	@Test
 	void deathWaypoints() throws IOException {
 		Path file = dir.resolve("death_server").resolve("waypoints.json");
 		WaypointStore s = new WaypointStore(file);

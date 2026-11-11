@@ -83,6 +83,7 @@ public final class XaeroSettings {
 				int size = Integer.parseInt(m.get("minimapSize"));
 				if (size > 0) {
 					s.size = Math.max(48, Math.min(256, size));
+					s.sizeShare = 0; // Xaero's size is in GUI pixels: becomes a share of the window on the first draw
 					changed.add("size");
 				}
 			} catch (NumberFormatException ignored) {

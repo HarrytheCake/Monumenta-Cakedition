@@ -233,7 +233,7 @@ final class SelfTest {
 					shot(client, "hud-square");
 					s.shape = MapSettings.Shape.CIRCLE;
 					s.rotate = true;
-					s.size = 140;
+					Minimap.setSizePxForTest(140);
 					client.player.setYRot(35);
 					next();
 				}
@@ -269,11 +269,11 @@ final class SelfTest {
 						MapSettings.Corner c0 = ms.corner;
 						int ox = ms.offsetX;
 						int oy = ms.offsetY;
-						int sz = ms.size;
+						double share = ms.sizeShare;
 						int sw = client.getWindow().getGuiScaledWidth();
 						int sh = client.getWindow().getGuiScaledHeight();
 						Minimap.MOVABLE.place(sw - 100 - 6, sh - 100 - (ms.coordinates ? 11 : 0) - 8, 100, 111, sw, sh);
-						boolean ok = ms.corner == MapSettings.Corner.BOTTOM_RIGHT && ms.offsetX == 6 && ms.offsetY == 8 && ms.size == 100;
+						boolean ok = ms.corner == MapSettings.Corner.BOTTOM_RIGHT && ms.offsetX == 6 && ms.offsetY == 8 && Math.abs(Minimap.box(sw, sh)[2] - 100) <= 1;
 						boolean listed = false;
 						try {
 							java.lang.reflect.Method all = Class.forName("io.github.harrythecake.cakeui.HudMovables").getDeclaredMethod("all");
@@ -287,7 +287,7 @@ final class SelfTest {
 						ms.corner = c0;
 						ms.offsetX = ox;
 						ms.offsetY = oy;
-						ms.size = sz;
+						ms.sizeShare = share;
 					}
 					session.waypoints.own().stream().filter(w -> w.kind() == WaypointKind.DEATH).findFirst()
 							.ifPresent(w -> CakeMap.LOG.info("CakeMap self-test: {} at {} {} {} in {}", w.name, w.x, w.y, w.z, w.dimension));
@@ -304,7 +304,7 @@ final class SelfTest {
 					s.cave = MapSettings.Cave.ON;
 					s.shape = MapSettings.Shape.SQUARE;
 					s.rotate = false;
-					s.size = 110;
+					Minimap.setSizePxForTest(110);
 					next();
 				}
 			}
@@ -385,6 +385,15 @@ final class SelfTest {
 			}
 			case 11 -> {
 				if (ticks > 20) {
+					if (client.screen instanceof WaypointListScreen list) {
+						// built-in waypoints start hidden: only the player's own (here: this dimension's) are listed
+						java.util.List<Waypoint> shown = list.rowsForTest();
+						long builtinShown = shown.stream().filter(q -> q.builtin).count();
+						long own = session.waypoints.all().stream().filter(q -> !q.builtin && q.dimension.equals(session.dimension())).count();
+						long builtinHere = session.waypoints.all().stream().filter(q -> q.builtin && q.dimension.equals(session.dimension())).count();
+						CakeMap.LOG.info("CakeMap self-test: waypoint list shows {} row(s), {} built-in (of {} here), {} own ({})", shown.size(), builtinShown,
+								builtinHere, own, builtinShown == 0 && shown.size() == own ? "PASS" : "FAIL");
+					}
 					shot(client, "waypoints");
 					client.setScreen(new WaypointEditScreen(null, session.waypoints.own().stream().filter(q -> q.name.equals("Red Pin")).findFirst()
 							.orElse(session.waypoints.own().get(0)), false));

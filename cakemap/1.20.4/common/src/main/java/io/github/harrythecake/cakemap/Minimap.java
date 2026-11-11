@@ -60,9 +60,8 @@ public final class Minimap {
 		public void place(double x, double y, double width, double height, int w, int h) {
 			MapSettings s = CakeMap.settings();
 			int textRoom = s.coordinates ? 11 : 0;
-			int size = (int) Math.max(48, Math.min(256, Math.round(width)));
-			s.size = size;
-			size = Math.min(size, Math.min(w, h) - 8);
+			s.setSizePx(width, w, h); // a share of the window from now on
+			int size = s.sizePx(w, h);
 			boolean left = x + size / 2.0 < w / 2.0;
 			boolean top = y + (size + textRoom) / 2.0 < h / 2.0;
 			s.corner = top ? (left ? MapSettings.Corner.TOP_LEFT : MapSettings.Corner.TOP_RIGHT)
@@ -87,10 +86,14 @@ public final class Minimap {
 		}
 	};
 
-	/** {x, y, size} of the HUD minimap on a screen of w x h GUI pixels. */
+	/** {x, y, size} of the HUD minimap on a screen of w x h GUI pixels (its size is a share of the window). */
 	public static int[] box(int w, int h) {
 		MapSettings s = CakeMap.settings();
-		int size = Math.min(s.size, Math.min(w, h) - 8);
+		int size = s.sizePx(w, h);
+		if (s.sizeConverted) {
+			s.sizeConverted = false;
+			CakeMap.saveSettings(); // an old pixel size became a share of the window: once
+		}
 		int textRoom = s.coordinates ? 11 : 0;
 		int x = switch (s.corner) {
 			case TOP_LEFT, BOTTOM_LEFT -> s.offsetX;
@@ -230,6 +233,20 @@ public final class Minimap {
 	/** For the settings screen and the HUD toast. */
 	public static Component describe() {
 		MapSettings s = CakeMap.settings();
-		return Component.translatable("cakemap.minimap.describe", s.size, s.zoom);
+		return Component.translatable("cakemap.minimap.describe", sizeLabel(), s.zoom);
+	}
+
+	/** Self-test: the size in GUI pixels on the current window (stored as a share). */
+	static void setSizePxForTest(int px) {
+		var win = Minecraft.getInstance().getWindow();
+		CakeMap.settings().setSizePx(px, win.getGuiScaledWidth(), win.getGuiScaledHeight());
+	}
+
+	/** The size as a percentage of the window ("20%"), for the settings and the HUD toast. */
+	static String sizeLabel() {
+		MapSettings s = CakeMap.settings();
+		var win = Minecraft.getInstance().getWindow();
+		s.sizePx(win.getGuiScaledWidth(), win.getGuiScaledHeight()); // converts an old pixel size first
+		return Math.round(s.sizeShare * 100) + "%";
 	}
 }

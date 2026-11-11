@@ -15,12 +15,14 @@ import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
 
 /**
- * Waypoints (U): this dimension's or all, nearest first. Select a row, then edit, delete,
+ * Waypoints (U): this dimension's or all, nearest first; the player's own only, until "Built-in" is switched on. Select a row, then edit, delete,
  * bookmark or hide it; "Kinds" hides whole kinds (all built-in POIs, say).
  */
 public final class WaypointListScreen extends Screen {
 	private static final int ROW = 16;
 	private static boolean allDimensions;
+	/** Built-in waypoints (the wiki's, in the jar) start hidden: the list shows the player's own (until the game restarts). */
+	private static boolean showBuiltin;
 
 	private final Screen parent;
 	private List<Waypoint> rows = new ArrayList<>();
@@ -85,11 +87,20 @@ public final class WaypointListScreen extends Screen {
 			b.setMessage(scopeLabel());
 			seenRevision = -1;
 		}).bounds(width - 154, 6, 150, 20).build());
+		addRenderableWidget(Button.builder(builtinLabel(), b -> {
+			showBuiltin = !showBuiltin;
+			b.setMessage(builtinLabel());
+			seenRevision = -1;
+		}).bounds(Math.max(70, width - 308), 6, 150, 20).build());
 		seenRevision = -1;
 	}
 
 	private static MapSession s0() {
 		return CakeMap.session();
+	}
+
+	private static Component builtinLabel() {
+		return Component.translatable(showBuiltin ? "cakemap.waypoints.builtin.shown" : "cakemap.waypoints.builtin.hidden");
 	}
 
 	private Component scopeLabel() {
@@ -109,7 +120,7 @@ public final class WaypointListScreen extends Screen {
 		LocalPlayer p = Minecraft.getInstance().player;
 		List<Waypoint> list = new ArrayList<>();
 		for (Waypoint w : s.waypoints.all()) {
-			if (allDimensions || w.dimension.equals(s.dimension())) {
+			if ((allDimensions || w.dimension.equals(s.dimension())) && (showBuiltin || !w.builtin)) {
 				list.add(w);
 			}
 		}
@@ -121,6 +132,12 @@ public final class WaypointListScreen extends Screen {
 		if (selected != null && !rows.contains(selected)) {
 			selected = null;
 		}
+	}
+
+	/** Self-test: the rows shown now. */
+	List<Waypoint> rowsForTest() {
+		refresh();
+		return rows;
 	}
 
 	private int listTop() {

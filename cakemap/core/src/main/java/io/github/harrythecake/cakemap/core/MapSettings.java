@@ -28,10 +28,19 @@ public final class MapSettings {
 
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
-	public int format = 1;
+	/** 2 since the minimap size is a share of the window (sizeShare); a format-1 file converts its pixel size once. */
+	public int format = 2;
 	public boolean minimap = true;
-	/** GUI pixels. */
+	/**
+	 * The minimap's size as a share of the game window's shorter side (0.05-0.8), so it keeps its look when the
+	 * window or the GUI scale changes. 0 = not known yet: taken from {@link #size} on the first draw (old configs,
+	 * Xaero's import).
+	 */
+	public double sizeShare = DEFAULT_SHARE;
+	/** The size in GUI pixels at the last draw (format 1 stored only this; older CakeMap versions still read it). */
 	public int size = 110;
+	/** Set when {@link #sizePx} converted {@link #size} into {@link #sizeShare}: the caller saves once. */
+	public transient boolean sizeConverted;
 	public Shape shape = Shape.SQUARE;
 	/** Only for the circle shape. */
 	public Frame frame = Frame.RING;
@@ -63,6 +72,37 @@ public final class MapSettings {
 	/** For pack makers: the export command, ids in lists, the static-map check on every server. */
 	public boolean devMode;
 
+	public static final double DEFAULT_SHARE = 0.2;
+	public static final double MIN_SHARE = 0.05;
+	public static final double MAX_SHARE = 0.8;
+	/** The settings screen's size steps. */
+	public static final double[] SHARES = {0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5};
+
+	/**
+	 * The minimap's size in GUI pixels on a w x h (GUI pixels) screen: {@link #sizeShare} of the shorter side, at
+	 * most that side minus 8. Converts an old pixel {@link #size} first (sets {@link #sizeConverted}).
+	 */
+	public int sizePx(int w, int h) {
+		int shorter = Math.max(1, Math.min(w, h));
+		if (sizeShare <= 0) {
+			sizeShare = clampShare((double) size / shorter);
+			sizeConverted = true;
+		}
+		int px = Math.max(16, Math.min(shorter - 8, (int) Math.round(sizeShare * shorter)));
+		size = px;
+		return px;
+	}
+
+	/** Sets the size from GUI pixels on a w x h screen (the HUD editor's handle). */
+	public void setSizePx(double px, int w, int h) {
+		sizeShare = clampShare(px / Math.max(1, Math.min(w, h)));
+		size = (int) Math.round(px);
+	}
+
+	public static double clampShare(double share) {
+		return Math.round(Math.max(MIN_SHARE, Math.min(MAX_SHARE, share)) * 1000) / 1000.0;
+	}
+
 	public static MapSettings load(Path file) {
 		if (!Files.exists(file)) {
 			return new MapSettings();
@@ -86,6 +126,12 @@ public final class MapSettings {
 	public MapSettings fix() {
 		MapSettings d = new MapSettings();
 		size = Math.max(48, Math.min(256, size));
+		if (format < 2) {
+			sizeShare = 0; // from the old pixel size, with the real window, on the first draw
+			format = 2;
+		} else if (sizeShare != 0) {
+			sizeShare = clampShare(sizeShare);
+		}
 		zoom = zoom > 0 ? Math.max(0.125, Math.min(8, zoom)) : 1;
 		opacity = Math.max(0.1, Math.min(1, opacity));
 		offsetX = Math.max(0, Math.min(400, offsetX));
