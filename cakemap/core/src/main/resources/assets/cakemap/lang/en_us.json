@@ -59,6 +59,7 @@
 	"cakemap.map.center": "Center",
 	"cakemap.map.hint": "Drag: move · Scroll: zoom · Click an icon: track / nearest town · Right-click: waypoints",
 	"cakemap.map.nearest_town": "Nearest town teleport",
+	"cakemap.map.nearby": "%s waypoints here",
 	"cakemap.map.no_town": "No town teleport on this map",
 	"cakemap.map.add_here": "New waypoint here",
 	"cakemap.map.add_temporary_here": "Temporary waypoint here",

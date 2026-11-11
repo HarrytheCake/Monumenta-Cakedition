@@ -59,6 +59,7 @@
 	"cakemap.map.center": "回到我",
 	"cakemap.map.hint": "拖动：移动 · 滚轮：缩放 · 点击图标：追踪 / 最近城镇 · 右键：路径点",
 	"cakemap.map.nearest_town": "最近的城镇传送点",
+	"cakemap.map.nearby": "此处有 %s 个路径点",
 	"cakemap.map.no_town": "这张地图上没有城镇传送点",
 	"cakemap.map.add_here": "在此新建路径点",
 	"cakemap.map.add_temporary_here": "在此设临时路径点",

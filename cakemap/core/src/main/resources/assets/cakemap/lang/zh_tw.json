@@ -59,6 +59,7 @@
 	"cakemap.map.center": "回到我",
 	"cakemap.map.hint": "拖曳：移動 · 滾輪：縮放 · 點擊圖示：追蹤 / 最近城鎮 · 右鍵：路徑點",
 	"cakemap.map.nearest_town": "最近的城鎮傳送點",
+	"cakemap.map.nearby": "此處有 %s 個路徑點",
 	"cakemap.map.no_town": "這張地圖上沒有城鎮傳送點",
 	"cakemap.map.add_here": "在此新增路徑點",
 	"cakemap.map.add_temporary_here": "在此設臨時路徑點",
