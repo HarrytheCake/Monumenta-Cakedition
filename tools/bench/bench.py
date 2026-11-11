@@ -263,7 +263,8 @@ def setup_instance(mrpack):
 
 
 def bench_jar():
-    return sorted((BENCH / "mod" / "build" / "libs").glob("cakebench-*.jar"))[-1]
+    # cakebench-<version>.jar = the Fabric 1.20.4 build (the multiloader build also writes cakebench-<loader>-<mc>-*.jar)
+    return sorted((BENCH / "mod" / "build" / "libs").glob("cakebench-[0-9]*.jar"))[-1]
 
 
 def cmd_setup(args):
