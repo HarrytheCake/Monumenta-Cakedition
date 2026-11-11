@@ -5,7 +5,9 @@ plugins {
 	id 'java-library'
 }
 
-group = rootProject.property('mod_group')
+// several mods in one build (<mod>/core): a group per mod, so Gradle doesn't take a:core and b:core for one module
+group = project.projectDir.parentFile == rootProject.projectDir ? rootProject.property('mod_group')
+		: "${rootProject.property('mod_group')}.${project.projectDir.parentFile.name}"
 version = rootProject.property('mod_version')
 
 java {

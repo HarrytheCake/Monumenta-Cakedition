@@ -98,7 +98,9 @@ def main():
     slot = take_slot()
     env = dict(os.environ)
     env['JAVA_HOME'] = env.get('CAKE_GRADLE_JAVA', JDK25)
-    cmd = [str(mod / 'gradlew.bat'), f':{mc}:{loader}:runClient', f'-Pcake.versions={mc}', '--console=plain']
+    # several mods in one build (cake_mods, e.g. caketext/translator): Gradle runs from the parent folder
+    root, prefix = (mod, '') if (mod / 'gradlew.bat').exists() else (mod.parent, f':{mod.name}')
+    cmd = [str(root / 'gradlew.bat'), f'{prefix}:{mc}:{loader}:runClient', f'-Pcake.versions={mc}', '--console=plain']
     if jvm:
         # read by the kit's run configs (cake-fabric / cake-neoforge): space-separated JVM args
         cmd.append('-Pcake.runJvmArgs=' + ' '.join(jvm))
@@ -106,7 +108,7 @@ def main():
         cmd.append('-Pcake.runArgs=' + ' '.join(prog))
     print('>>', ' '.join(cmd), flush=True)
     gradle_log = open(run_dir / 'smoke-gradle.log', 'w', encoding='utf-8', errors='replace')
-    p = subprocess.Popen(cmd, cwd=mod, env=env, stdout=gradle_log, stderr=subprocess.STDOUT,
+    p = subprocess.Popen(cmd, cwd=root, env=env, stdout=gradle_log, stderr=subprocess.STDOUT,
                          creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
     start = time.time()
     reached = None

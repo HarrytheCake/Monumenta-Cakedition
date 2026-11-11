@@ -3,9 +3,11 @@
 //   build/libs/<mod_id>-<loader>-<mc>-<mod_version>.jar   every loader x Minecraft version
 //   build/libs/<mod_id>-<mod_version>.jar                 copy of the Fabric 1.20.4 jar (what the
 //                                                         Cakedition pack and the old release CI use)
+// Several mods in one build (cake_mods): every mod's jars; a mod with cake_ship=false (a library bundled
+// inside the others) is left out.
 evaluationDependsOnChildren()
 
-def shipped = subprojects.findAll { it.name in ['fabric', 'neoforge'] }
+def shipped = subprojects.findAll { it.name in ['fabric', 'neoforge'] && (it.findProperty('cake_ship') ?: 'true').toString() == 'true' }
 
 def collect = tasks.register('collectJars') {
 	group = 'build'
@@ -23,13 +25,12 @@ def collect = tasks.register('collectJars') {
 			File f = t.archiveFile.get().asFile
 			project.copy { from f; into out }
 		}
-		def packJar = shipped.find { it.name == 'fabric' && it.parent.name == '1.20.4' }
-		if (packJar != null) {
+		shipped.findAll { it.name == 'fabric' && it.parent.name == '1.20.4' }.each { packJar ->
 			def t = packJar.tasks.findByName('remapJar') ?: packJar.tasks.named('jar').get()
 			project.copy {
 				from t.archiveFile.get().asFile
 				into out
-				rename { "${mod_id}-${mod_version}.jar" }
+				rename { "${packJar.property('mod_id')}-${mod_version}.jar" }
 			}
 		}
 	}

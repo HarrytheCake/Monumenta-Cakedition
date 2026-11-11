@@ -47,6 +47,12 @@ there; folder per version here).
 - Names: Mojang's everywhere (no Yarn). 1.20.4 and 1.21.1 are obfuscated, Loom remaps the Fabric jar
   (mixin targets are remapped inside the classes; no refmap). NeoForge runs on Mojang's names since 20.2.
   26.1+ ships unobfuscated (no remapping anywhere; Fabric's runtime names are Mojang's too).
+- Several mods in one build (CakeText: `cake_mods=core,collector,translator` in the build folder's
+  `gradle.properties`): each listed folder is laid out like a one-mod build (`core/` + `<mc>/<part>`, own
+  `gradle.properties` with `mod_id` etc.; own `LICENSE`/`NOTICE` if it has one); `cake_ship=false` = a library
+  bundled inside the others, no jars of its own. `apply_kit.py <build folder>` puts the version files into each
+  listed folder; `smoke.py <build folder>/<mod>` runs Gradle from the build folder. A version folder that still
+  exists (even only ignored build output) counts as a version for `apply_kit.py`: delete dropped versions entirely.
 
 ## Build, test, run
 

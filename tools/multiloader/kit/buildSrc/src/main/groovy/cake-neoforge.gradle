@@ -23,7 +23,8 @@ neoForge {
 		}
 	}
 	mods {
-		"${rootProject.property('mod_id')}" {
+		// NeoForge mod ids can't contain '-': neoforge_mod_id when mod_id has one
+		"${project.findProperty('neoforge_mod_id') ?: project.property('mod_id')}" {
 			sourceSet sourceSets.main
 		}
 	}
