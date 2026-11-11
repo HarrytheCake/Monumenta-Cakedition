@@ -67,6 +67,11 @@ public final class WikiScreen extends Screen {
 	private String searchText = "";
 	private Button backButton, forwardButton, bookmarkButton, bookmarksButton, refreshButton, browserButton, retryButton;
 	private Button translateButton, siteButton, contentsButton;
+	/** Cloudflare's check stopped the last request (else null): explained, with the browser and MCEF offered. */
+	private WikiException blocked;
+	private String blockedUrl;
+	private boolean mcefNotReady;
+	private Button pageButton, mcefButton;
 	/** The shown page's site contents (sidebar), or null when it has none. */
 	private Contents contents;
 	/** Scroll the contents panel to the shown page at the next drawing. */
@@ -221,14 +226,34 @@ public final class WikiScreen extends Screen {
 	}
 
 	private void showStatus(Phase p, Component message) {
+		blocked = null;
 		phase = p;
 		status = message;
 		updateButtons();
 	}
 
 	private void showError(String what, Throwable error) {
+		if (cause(error) instanceof WikiException w && w.blocked()) {
+			showBlocked(what, w);
+			return;
+		}
 		CakeWiki.LOG.info("Couldn't load wiki page {}: {}", what, error.toString());
 		showStatus(Phase.ERROR, Component.translatable("cakewiki.error", what, error.getMessage() != null ? error.getMessage() : error.toString()));
+	}
+
+	/** Cloudflare's "verify you are human" check (a VPN or game accelerator, usually): say so and offer the ways out. */
+	private void showBlocked(String what, WikiException w) {
+		CakeWiki.LOG.info("Wiki page {} blocked by Cloudflare's check at {} (ray {})", what, w.host(), w.ray().isEmpty() ? "-" : w.ray());
+		showStatus(Phase.ERROR, Component.translatable("cakewiki.blocked", w.host()));
+		blocked = w;
+		blockedUrl = reader.source().site().pageUrl(what);
+		mcefNotReady = false;
+		updateButtons();
+	}
+
+	private void verifyInGame() {
+		if (blockedUrl == null) return;
+		mcefNotReady = !Mcef.verify(this, blockedUrl, reader.router, () -> { if (retry != null) retry.run(); });
 	}
 
 	private static Throwable cause(Throwable t) {
@@ -297,6 +322,16 @@ public final class WikiScreen extends Screen {
 		addRenderableWidget(search);
 		retryButton = addRenderableWidget(Button.builder(Component.translatable("cakewiki.retry"), b -> { if (retry != null) retry.run(); })
 				.bounds(width / 2 - 40, BAR + 50, 80, 20).build());
+		Component pageLabel = Component.translatable("cakewiki.blocked.browser");
+		pageButton = addRenderableWidget(Button.builder(pageLabel, b -> { if (blockedUrl != null) openInBrowser(blockedUrl); })
+				.bounds(0, 0, font.width(pageLabel) + 20, 20).build());
+		boolean mcef = Mcef.present();
+		Component mcefLabel = Component.translatable(mcef ? "cakewiki.blocked.mcef" : "cakewiki.blocked.getMcef");
+		mcefButton = addRenderableWidget(Button.builder(mcefLabel, b -> {
+					if (mcef) verifyInGame();
+					else openInBrowser(Mcef.PAGE);
+				})
+				.bounds(0, 0, font.width(mcefLabel) + 20, 20).build());
 		laid = null; // width may have changed
 		updateButtons();
 	}
@@ -308,6 +343,7 @@ public final class WikiScreen extends Screen {
 		refreshButton.active = title != null && phase != Phase.LOADING;
 		browserButton.active = title != null;
 		retryButton.visible = phase == Phase.ERROR && retry != null;
+		pageButton.visible = mcefButton.visible = phase == Phase.ERROR && blocked != null;
 		boolean marked = title != null && reader.bookmarks.contains(shown.id(), title);
 		bookmarkButton.active = title != null && phase == Phase.READY;
 		bookmarkButton.setMessage(marked ? Component.literal("★").withStyle(ChatFormatting.GOLD) : Component.literal("☆"));
@@ -628,9 +664,24 @@ public final class WikiScreen extends Screen {
 				ctx.drawCenteredString(font, line, width / 2, y, phase == Phase.ERROR ? 0xFFFF8080 : 0xFFCCCCCC);
 				y += 11;
 			}
-			retryButton.setY(y + 8);
+			if (blocked != null) {
+				y = drawBlockedHelp(ctx, y + 4);
+				// Retry | Open page in browser | Verify in game browser (or: Get MCEF), centred in one row
+				int gap = 6;
+				int total = retryButton.getWidth() + pageButton.getWidth() + mcefButton.getWidth() + 2 * gap;
+				int x = width / 2 - total / 2;
+				retryButton.setPosition(x, y + 8);
+				pageButton.setPosition(x + retryButton.getWidth() + gap, y + 8);
+				mcefButton.setPosition(pageButton.getX() + pageButton.getWidth() + gap, y + 8);
+			} else {
+				retryButton.setPosition(width / 2 - 40, y + 8);
+			}
 		}
 		retryButton.render(ctx, mouseX, mouseY, delta); // drawn again so it sits above the page area
+		if (blocked != null && phase == Phase.ERROR) {
+			pageButton.render(ctx, mouseX, mouseY, delta);
+			mcefButton.render(ctx, mouseX, mouseY, delta);
+		}
 
 		contentsTooltip = null;
 		drawContents(ctx, mouseX, mouseY);
@@ -638,6 +689,37 @@ public final class WikiScreen extends Screen {
 		if (hovered != null) ctx.renderComponentTooltip(font, tooltip(hovered), mouseX, mouseY);
 		else if (contentsTooltip != null && !overSuggestions(mouseX, mouseY)) ctx.renderComponentTooltip(font, contentsTooltip, mouseX, mouseY);
 		drawBookmarks(ctx, mouseX, mouseY);
+	}
+
+	/** The ways out of Cloudflare's check, in grey under the message; returns the y below them. */
+	private int drawBlockedHelp(GuiGraphics ctx, int y) {
+		List<Component> help = new ArrayList<>();
+		help.add(Component.translatable("cakewiki.blocked.tips"));
+		if (!Mcef.present()) help.add(Component.translatable("cakewiki.blocked.mcefNote"));
+		if (mcefNotReady) help.add(Component.translatable("cakewiki.mcef.notReady").withStyle(ChatFormatting.YELLOW));
+		if (!blocked.ray().isEmpty()) help.add(Component.literal("Cloudflare ray: " + blocked.ray()));
+		for (Component c : help) {
+			for (FormattedCharSequence line : font.split(c, contentWidth() - 20)) {
+				ctx.drawCenteredString(font, line, width / 2, y, 0xFFB0B0B0);
+				y += 11;
+			}
+			y += 3;
+		}
+		return y;
+	}
+
+	// ---- development: the MCEF test (McefTest) ----
+
+	boolean blockedForTest() {
+		return blocked != null && phase == Phase.ERROR;
+	}
+
+	boolean readyForTest() {
+		return phase == Phase.READY;
+	}
+
+	void verifyForTest() {
+		verifyInGame();
 	}
 
 	private void drawPage(GuiGraphics ctx, int ox, int oy, int visibleTop, int visibleBottom, Link hovered) {

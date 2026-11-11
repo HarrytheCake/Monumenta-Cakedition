@@ -28,5 +28,14 @@
 	"cakewiki.translate.on": "Translated by CakeText Translator. Click for the original.",
 	"cakewiki.translate.off": "Original. Click to translate (CakeText Translator).",
 	"cakewiki.translate.off_in_cakeText": "Wiki pages are turned off in CakeText Translator (Where to translate).",
-	"cakewiki.translated": "Translated by CakeText Translator: string files first, then its engine. Linked names stay in English. 文 shows the original."
+	"cakewiki.translated": "Translated by CakeText Translator: string files first, then its engine. Linked names stay in English. 文 shows the original.",
+	"cakewiki.blocked": "%s asked to verify that you are human (Cloudflare). This usually happens when a VPN or game accelerator carries Minecraft's traffic: CakeWiki can't pass that check by itself.",
+	"cakewiki.blocked.tips": "Ways out: open the page in your browser; let monumenta.wiki.gg bypass the VPN (a \"direct\" rule) or switch node; or verify once in the in-game browser (MCEF).",
+	"cakewiki.blocked.browser": "Open page in browser",
+	"cakewiki.blocked.mcef": "Verify in game browser",
+	"cakewiki.blocked.getMcef": "Get MCEF (optional)",
+	"cakewiki.blocked.mcefNote": "MCEF is an optional mod you install yourself: a web browser inside Minecraft that can pass the check. Its first start downloads Chromium (100+ MB). Check that your server allows it.",
+	"cakewiki.mcef.title": "Pass the check on %s, then press Done",
+	"cakewiki.mcef.done": "Done",
+	"cakewiki.mcef.notReady": "MCEF is still setting up its browser (its first start downloads Chromium). Try again in a moment."
 }

@@ -28,5 +28,14 @@
 	"cakewiki.translate.on": "由 CakeText Translator 翻译。点击查看原文。",
 	"cakewiki.translate.off": "原文。点击翻译（CakeText Translator）。",
 	"cakewiki.translate.off_in_cakeText": "CakeText Translator 的“翻译范围”中关闭了维基页面。",
-	"cakewiki.translated": "由 CakeText Translator 翻译：优先使用字符串文件，其余由翻译引擎处理。带链接的名称保留英文。点击 文 查看原文。"
+	"cakewiki.translated": "由 CakeText Translator 翻译：优先使用字符串文件，其余由翻译引擎处理。带链接的名称保留英文。点击 文 查看原文。",
+	"cakewiki.blocked": "%s 要求验证你是真人（Cloudflare）。这通常是因为 VPN 或游戏加速器接管了 Minecraft 的网络：CakeWiki 自己无法通过这项验证。",
+	"cakewiki.blocked.tips": "解决办法：在浏览器中打开此页；让 monumenta.wiki.gg 绕过 VPN（\"直连\"规则）或换一个节点；或在游戏内浏览器（MCEF）中验证一次。",
+	"cakewiki.blocked.browser": "在浏览器中打开此页",
+	"cakewiki.blocked.mcef": "在游戏内浏览器中验证",
+	"cakewiki.blocked.getMcef": "获取 MCEF（可选）",
+	"cakewiki.blocked.mcefNote": "MCEF 是需要你自行安装的可选模组：Minecraft 里的网页浏览器，可以通过这项验证。首次启动会下载 Chromium（100 MB 以上）。请先确认你的服务器允许使用。",
+	"cakewiki.mcef.title": "请在 %s 上完成验证，然后点\"完成\"",
+	"cakewiki.mcef.done": "完成",
+	"cakewiki.mcef.notReady": "MCEF 还在准备浏览器（首次启动会下载 Chromium）。请稍后再试。"
 }

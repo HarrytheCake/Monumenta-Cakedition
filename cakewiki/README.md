@@ -35,6 +35,13 @@ Edit the file to add, remove or re-tie sites (MediaWiki sites, or static sites b
 
 `servers`: server addresses the site belongs to; each also covers its subdomains, the port doesn't matter. Leave it out to offer the site everywhere.
 
+## "Verify you are human" (Cloudflare)
+
+wiki.gg is behind Cloudflare, which sometimes asks a connection to prove it is a person, often when a VPN or game accelerator carries Minecraft's traffic. CakeWiki can't pass that check itself, so it says so and offers:
+
+- **Open page in browser**: your normal browser (usually not on the game's VPN) shows the page.
+- **Verify in game browser**: if you have installed the optional mod [MCEF](https://modrinth.com/mod/mcef) (a Chromium browser inside Minecraft; its first start downloads Chromium, 100+ MB; check that your server allows it), pass the check there once and CakeWiki loads that wiki through it. Without MCEF the button opens MCEF's page instead. Minecraft 1.20.4 for now.
+
 ## Translation
 
 With [CakeText Translator](https://github.com/HarrytheCake/CakeText) 0.3.0+ installed (optional), pages are shown in Simplified or Traditional Chinese: its string files first, then whichever engine it uses. Linked names (items, places, bosses, other pages) and short coloured names stay in English, the way they're written in game; the page title and the infobox title too. The 文 button in the bar switches between translation and original. Without CakeText the reader works the same, in English.

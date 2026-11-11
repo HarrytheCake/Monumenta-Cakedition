@@ -4,4 +4,6 @@ plugins {
 
 dependencies {
 	compileOnly "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+	// MCEF (optional, LGPL-2.1): the API only, never bundled; its NeoForge 1.20.4 jar (Mojang names, like this part)
+	compileOnly "maven.modrinth:mcef:eLk6rAXN"
 }

@@ -6,6 +6,8 @@ dependencies {
 	// HTML parser for the wiki's pages, bundled inside our jar (MIT)
 	implementation "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
 	jarJar "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+	// MCEF (optional, LGPL-2.1): the API only, never bundled (NeoForge 1.20.4 build 2.1.6)
+	compileOnly "maven.modrinth:mcef:eLk6rAXN"
 	// not a mod: put it on the dev run's classpath too
 	additionalRuntimeClasspath "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
 }

@@ -198,7 +198,12 @@ public final class WikiClient implements Site {
 		return uri -> client.sendAsync(HttpRequest.newBuilder(uri).timeout(Duration.ofSeconds(20))
 						.header("User-Agent", userAgent).header("Accept-Encoding", "identity").GET().build(),
 				HttpResponse.BodyHandlers.ofByteArray()).thenApply(response -> {
-			if (response.statusCode() != 200) throw WikiException.http(response.statusCode(), uri.getHost());
+			if (response.statusCode() != 200) {
+				if (Cloudflare.isChallenge(response.statusCode(), response.headers().map(), response.body())) {
+					throw WikiException.blocked(response.statusCode(), uri.getHost(), Cloudflare.ray(response.headers().map()));
+				}
+				throw WikiException.http(response.statusCode(), uri.getHost());
+			}
 			return response.body();
 		});
 	}

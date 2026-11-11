@@ -6,4 +6,6 @@ dependencies {
 	// HTML parser for the wiki's pages, bundled inside our jar (MIT)
 	implementation "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
 	include "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+	// MCEF (optional, LGPL-2.1): the API only, never bundled (Fabric 1.20.4 build 2.1.6)
+	modCompileOnly "maven.modrinth:mcef:3koDiBl0"
 }
