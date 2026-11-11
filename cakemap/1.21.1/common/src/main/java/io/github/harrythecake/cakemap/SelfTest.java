@@ -41,6 +41,9 @@ final class SelfTest {
 	private SelfTest() {
 	}
 
+	/** The crowded-icons picker was opened (step 10). */
+	private static boolean crowdOpened;
+
 	static void init() {
 		mode = System.getProperty("cakemap.selftest", "");
 		if (mode.isEmpty()) {
@@ -377,8 +380,20 @@ final class SelfTest {
 				}
 			}
 			case 10 -> {
-				if (ticks > 60) {
+				if (ticks > 60 && !crowdOpened) {
 					shot(client, "worldmap-zoomed-out");
+					crowdOpened = true;
+					if (client.screen instanceof WorldMapScreen w) {
+						// zoomed out, icons overlap: a click opens the picker on the left
+						int rows = w.openCrowdForTest();
+						CakeMap.LOG.info("CakeMap self-test: crowded icons: picker opened with {} waypoints ({})", rows, rows >= 2 ? "PASS" : "FAIL");
+					}
+				} else if (ticks > 90) {
+					shot(client, "worldmap-nearby");
+					if (client.screen instanceof WorldMapScreen w) {
+						boolean ok = w.pickForTest(0);
+						CakeMap.LOG.info("CakeMap self-test: picking a row opens that icon's popup: {} ({})", ok, ok ? "PASS" : "FAIL");
+					}
 					client.setScreen(new WaypointListScreen(null));
 					next();
 				}

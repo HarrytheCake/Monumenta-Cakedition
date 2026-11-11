@@ -41,10 +41,29 @@ public final class Icons {
 	public static final ResourceLocation ARROW = ResourceLocation.fromNamespaceAndPath(CakeMap.MOD_ID, "textures/gui/arrow.png");
 	public static final ResourceLocation ICON = ResourceLocation.fromNamespaceAndPath(CakeMap.MOD_ID, "icon.png");
 	public static final String STAR = "star";
+	/**
+	 * POI icons are Minecraft's own experience orb (user, 2026-11-11, on trial): the third size of
+	 * {@code textures/entity/experience_orb.png} (frames 16x16 in a 4x4 sheet; frame 2's art is the 12x12 at
+	 * 34,2), drawn straight from the player's installed game and resource packs. Nothing of Mojang's ships
+	 * with CakeMap. The texture is grey; the game tints orbs with a pulsing green, here held still at the
+	 * middle of that pulse.
+	 */
+	private static final ResourceLocation XP_ORB = ResourceLocation.withDefaultNamespace("textures/entity/experience_orb.png");
+	private static final String ORB_ICON = "poi";
+	private static final int ORB_U = 34;
+	private static final int ORB_V = 2;
+	private static final int ORB_ART = 12;
+	private static final float ORB_R = 128 / 255F;
+	private static final float ORB_G = 1F;
+	private static final float ORB_B = 26 / 255F;
+	/** The orb is drawn this much smaller than the other icons (user, 2026-11-11: "a bit too large", -25 %). */
+	private static final float ORB_SCALE = 0.75F;
 	private static final int MAX_TEXTURES = 400;
 
 	private static final Map<String, String> SOURCES = new HashMap<>();
 	private static final Map<String, SVGDocument> DOCUMENTS = new HashMap<>();
+	/** Pixel-art icons ({@code textures/waypoint/<icon>.png}, 32x32; user, 2026-11-11), by icon; empty = none (use the SVG). */
+	private static final Map<String, Optional<BufferedImage>> PNGS = new HashMap<>();
 	private static final LinkedHashMap<String, ResourceLocation> TEXTURES = new LinkedHashMap<>(64, 0.75F, true);
 
 	private Icons() {
@@ -58,6 +77,7 @@ public final class Icons {
 		}
 		TEXTURES.clear();
 		DOCUMENTS.clear();
+		PNGS.clear();
 		SOURCES.clear();
 	}
 
@@ -78,11 +98,21 @@ public final class Icons {
 
 	/** Draws one SVG icon centred on (x, y), {@code size} GUI pixels wide, snapped to whole screen pixels. */
 	public static void drawIcon(GuiGraphics ctx, String icon, int color, double x, double y, float size, float alpha) {
+		if (icon.equals(ORB_ICON)) {
+			drawOrb(ctx, x, y, size, alpha);
+			return;
+		}
 		Minecraft mc = Minecraft.getInstance();
 		double scale = mc.getWindow().getGuiScale();
 		Matrix4f m = ctx.pose().last().pose();
 		double ms = Math.abs(m.m00()) < 1e-6 ? 1 : m.m00(); // layouts may scale a HUD piece (uniformly)
 		int px = (int) Math.max(4, Math.min(256, Math.round(size * ms * scale)));
+		BufferedImage art = png(icon);
+		if (art != null && px > art.getWidth()) {
+			// pixel art bigger than drawn: a whole multiple of its pixels when one is within 15 %, so it stays even
+			int even = Math.round(px / (float) art.getWidth()) * art.getWidth();
+			px = Math.abs(even - px) <= px * 0.15 ? even : px;
+		}
 		ResourceLocation tex = texture(icon, color, px);
 		if (tex == null) {
 			return;
@@ -103,27 +133,62 @@ public final class Icons {
 		ctx.setColor(1, 1, 1, 1);
 	}
 
+	/**
+	 * The experience orb centred on (x, y), {@link #ORB_SCALE} of {@code size} GUI pixels wide, on whole screen
+	 * pixels: a whole multiple of its 12 art pixels when one is within 15 % (the pixel art stays even), else
+	 * that exact size (some art pixels a screen pixel wider than others).
+	 */
+	private static void drawOrb(GuiGraphics ctx, double x, double y, float size, float alpha) {
+		Minecraft mc = Minecraft.getInstance();
+		double scale = mc.getWindow().getGuiScale();
+		Matrix4f m = ctx.pose().last().pose();
+		double ms = Math.abs(m.m00()) < 1e-6 ? 1 : m.m00();
+		double want = Math.max(4, Math.min(256, size * ORB_SCALE * ms * scale));
+		int even = Math.max(1, (int) Math.round(want / ORB_ART)) * ORB_ART;
+		int px = Math.abs(even - want) <= want * 0.15 ? even : (int) Math.round(want);
+		double gx = (m.m00() * x + m.m30()) * scale - px / 2.0;
+		double gy = (m.m11() * y + m.m31()) * scale - px / 2.0;
+		double lx = (Math.round(gx) / scale - m.m30()) / ms;
+		double ly = (Math.round(gy) / scale - m.m31()) / ms;
+		float w = (float) (px / scale / ms);
+		RenderSystem.enableBlend();
+		ctx.setColor(ORB_R, ORB_G, ORB_B, alpha);
+		ctx.pose().pushPose();
+		ctx.pose().translate(lx, ly, 0);
+		ctx.pose().scale(w / px, w / px, 1);
+		// the 64x64 sheet's UVs: a higher-resolution resource pack orb lands on the same frame
+		ctx.blit(XP_ORB, 0, 0, px, px, ORB_U, ORB_V, ORB_ART, ORB_ART, 64, 64);
+		ctx.pose().popPose();
+		ctx.setColor(1, 1, 1, 1);
+	}
+
 	private static ResourceLocation texture(String icon, int color, int px) {
 		String key = icon + "_" + String.format(Locale.ROOT, "%06x", color & 0xFFFFFF) + "_" + px;
 		ResourceLocation id = TEXTURES.get(key);
 		if (id != null) {
 			return id;
 		}
-		SVGDocument doc = document(icon, color);
-		if (doc == null) {
-			return null;
-		}
-		BufferedImage img = new BufferedImage(px, px, BufferedImage.TYPE_INT_ARGB);
-		Graphics2D g = img.createGraphics();
-		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
-		g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-		try {
-			doc.render((Component) null, g, new ViewBox(0, 0, px, px));
-		} catch (RuntimeException e) {
-			CakeMap.LOG.warn("CakeMap: can't draw icon {}: {}", icon, e.toString());
-		} finally {
-			g.dispose();
+		BufferedImage art = png(icon);
+		BufferedImage img;
+		if (art != null) {
+			img = scaleArt(art, px);
+		} else {
+			SVGDocument doc = document(icon, color);
+			if (doc == null) {
+				return null;
+			}
+			img = new BufferedImage(px, px, BufferedImage.TYPE_INT_ARGB);
+			Graphics2D g = img.createGraphics();
+			g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+			g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
+			g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+			try {
+				doc.render((Component) null, g, new ViewBox(0, 0, px, px));
+			} catch (RuntimeException e) {
+				CakeMap.LOG.warn("CakeMap: can't draw icon {}: {}", icon, e.toString());
+			} finally {
+				g.dispose();
+			}
 		}
 		NativeImage n = new NativeImage(px, px, false);
 		for (int yy = 0; yy < px; yy++) {
@@ -143,6 +208,75 @@ public final class Icons {
 			it.remove();
 		}
 		return id;
+	}
+
+	/** The icon's pixel art, or null when it has only an SVG. */
+	private static BufferedImage png(String icon) {
+		return PNGS.computeIfAbsent(icon, i -> {
+			ResourceLocation id = ResourceLocation.fromNamespaceAndPath(CakeMap.MOD_ID, "textures/waypoint/" + i + ".png");
+			Optional<Resource> r = Minecraft.getInstance().getResourceManager().getResource(id);
+			if (r.isEmpty()) {
+				return Optional.empty();
+			}
+			try (InputStream in = r.get().open()) {
+				BufferedImage read = javax.imageio.ImageIO.read(in);
+				if (read == null) {
+					return Optional.empty();
+				}
+				BufferedImage argb = new BufferedImage(read.getWidth(), read.getHeight(), BufferedImage.TYPE_INT_ARGB);
+				Graphics2D g = argb.createGraphics();
+				g.drawImage(read, 0, 0, null);
+				g.dispose();
+				return Optional.of(argb);
+			} catch (java.io.IOException e) {
+				CakeMap.LOG.warn("CakeMap: can't read icon {}: {}", id, e.toString());
+				return Optional.empty();
+			}
+		}).orElse(null);
+	}
+
+	/**
+	 * Pixel art at px x px screen pixels: smaller = area-averaged (each screen pixel the mean of the art
+	 * pixels it covers, colours weighted by their opacity), bigger = nearest (sharp pixels).
+	 */
+	private static BufferedImage scaleArt(BufferedImage art, int px) {
+		int aw = art.getWidth();
+		int ah = art.getHeight();
+		BufferedImage out = new BufferedImage(px, px, BufferedImage.TYPE_INT_ARGB);
+		if (px >= aw) {
+			for (int y = 0; y < px; y++) {
+				for (int x = 0; x < px; x++) {
+					out.setRGB(x, y, art.getRGB(Math.min(aw - 1, x * aw / px), Math.min(ah - 1, y * ah / px)));
+				}
+			}
+			return out;
+		}
+		double fx = (double) aw / px;
+		double fy = (double) ah / px;
+		for (int y = 0; y < px; y++) {
+			for (int x = 0; x < px; x++) {
+				double x0 = x * fx, x1 = x0 + fx, y0 = y * fy, y1 = y0 + fy;
+				double a = 0, r = 0, g = 0, b = 0, area = 0;
+				for (int sy = (int) y0; sy < Math.ceil(y1) && sy < ah; sy++) {
+					double wy = Math.min(y1, sy + 1) - Math.max(y0, sy);
+					for (int sx = (int) x0; sx < Math.ceil(x1) && sx < aw; sx++) {
+						double w = wy * (Math.min(x1, sx + 1) - Math.max(x0, sx));
+						int c = art.getRGB(sx, sy);
+						double ca = (c >>> 24) / 255.0 * w;
+						a += ca;
+						r += ((c >> 16) & 0xFF) * ca;
+						g += ((c >> 8) & 0xFF) * ca;
+						b += (c & 0xFF) * ca;
+						area += w;
+					}
+				}
+				if (a > 0) {
+					int oa = (int) Math.round(a / area * 255);
+					out.setRGB(x, y, oa << 24 | (int) Math.round(r / a) << 16 | (int) Math.round(g / a) << 8 | (int) Math.round(b / a));
+				}
+			}
+		}
+		return out;
 	}
 
 	private static SVGDocument document(String icon, int color) {

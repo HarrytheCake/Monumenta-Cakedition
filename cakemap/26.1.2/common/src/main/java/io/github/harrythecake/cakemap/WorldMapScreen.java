@@ -46,6 +46,15 @@ public final class WorldMapScreen extends Screen {
 	private long messageUntil;
 	private Button modeButton;
 	private Button dimButton;
+	/**
+	 * Icons too close together under a left click (user, 2026-11-11): a picker on the left third of the window,
+	 * one button per waypoint, nearest to the click first; a pick opens that icon's popup. Null = closed.
+	 */
+	@Nullable
+	private List<Waypoint> crowd;
+	private int crowdScroll;
+	private static final int CROWD_ROW = 20;
+	private static final int CROWD_TOP = 22;
 
 	private record Item(Component label, Runnable action) {
 	}
@@ -146,7 +155,7 @@ public final class WorldMapScreen extends Screen {
 		if (s == null) {
 			return;
 		}
-		Waypoint hovered = menu == null ? hoveredWaypoint(mouseX, mouseY) : null;
+		Waypoint hovered = crowd != null ? crowdRowAt(mouseX, mouseY) : menu == null ? hoveredWaypoint(mouseX, mouseY) : null;
 		float size = iconSize();
 		boolean flashing = flash != null && System.currentTimeMillis() < flashUntil;
 		for (Waypoint w : s.shownWaypoints(dim)) {
@@ -160,7 +169,14 @@ public final class WorldMapScreen extends Screen {
 			drawWaypoint(ctx, flash, (float) (size * 1.3 * pulse));
 		}
 		if (hovered != null) {
-			drawWaypoint(ctx, hovered, size + 3);
+			if (crowd != null) {
+				// the picker's row under the mouse: its icon on the map, bigger and ringed
+				double[] hp = view.toScreen(hovered.x + 0.5, hovered.z + 0.5);
+				MapDraw.outline(ctx, MapDraw.circle(hp[0], hp[1], (size + 6) / 2.0 + 2.5, 24), 1.5, 0xFFFFFF, 1F);
+				drawWaypoint(ctx, hovered, size + 6);
+			} else {
+				drawWaypoint(ctx, hovered, size + 3);
+			}
 		}
 		LocalPlayer player = Minecraft.getInstance().player;
 		if (player != null && dim.equals(s.dimension())) {
@@ -206,16 +222,18 @@ public final class WorldMapScreen extends Screen {
 		int hintW = font.width(hint);
 		// next to the coordinates when it fits, else a line above them
 		int hintY = font.width(coords) + 8 + 12 + hintW <= width ? height - 11 : height - 25;
-		if (hintY != height - 11) {
+		if (hintY != height - 11 && crowd == null) {
 			ctx.fill(width - hintW - 8, hintY - 3, width, hintY + 11, 0x80000000);
 		}
-		ctx.text(font, hint, width - hintW - 4, hintY, 0xFFB0B0B0);
+		if (crowd == null) { // the picker covers the bottom left; its own title says what to do
+			ctx.text(font, hint, width - hintW - 4, hintY, 0xFFB0B0B0);
+		}
 		MapSession s = CakeMap.session();
 		if (s != null && StaticMaps.shard(s.server, dim) != null && !s.showStatic(dim) && CakeMap.settings().mode == MapSettings.Mode.STATIC) {
 			Component why = !s.revealed(dim) ? Component.translatable("cakemap.static.not_revealed") : Component.translatable("cakemap.static.mismatch");
 			ctx.centeredText(font, why, width / 2, 32, 0xFFFFD27F);
 		}
-		Waypoint hovered = menu == null ? hoveredWaypoint(mouseX, mouseY) : null;
+		Waypoint hovered = menu == null && crowd == null ? hoveredWaypoint(mouseX, mouseY) : null;
 		if (hovered != null) {
 			List<Component> lines = new ArrayList<>();
 			lines.add(Component.literal(hovered.name.isEmpty() ? Component.translatable(hovered.kind().translationKey()).getString() : hovered.name));
@@ -226,6 +244,9 @@ public final class WorldMapScreen extends Screen {
 				lines.add(Component.translatable("cakemap.waypoint.distance", Math.round(Math.sqrt(hovered.distanceSq(p.getX(), p.getY(), p.getZ())))));
 			}
 			ctx.setComponentTooltipForNextFrame(font, lines, mouseX, mouseY);
+		}
+		if (crowd != null) {
+			drawCrowd(ctx, mouseX, mouseY);
 		}
 		if (menu != null) {
 			drawMenu(ctx, mouseX, mouseY);
@@ -334,6 +355,128 @@ public final class WorldMapScreen extends Screen {
 		menu = m;
 	}
 
+	/** A left click on an icon: its popup, or the picker when other icons overlap it. */
+	private void clickIcon(Waypoint w) {
+		List<Waypoint> near = crowdNear(w);
+		if (near.size() < 2) {
+			openIconMenu(w);
+			return;
+		}
+		crowd = near;
+		crowdScroll = 0;
+		// keep the crowded spot visible: out from under the picker, into the middle of the free part
+		double[] p = view.toScreen(w.x + 0.5, w.z + 0.5);
+		int[] b = crowdBox();
+		if (p[0] < b[2] + iconSize()) {
+			double[] from = view.toWorld(p[0], p[1]);
+			double[] to = view.toWorld(b[2] + (width - b[2]) / 2.0, p[1]);
+			view.centerX += from[0] - to[0];
+			view.centerZ += from[1] - to[1];
+		}
+	}
+
+	/** The shown waypoints whose icons overlap {@code w}'s (centres closer than one icon): {@code w} first, then nearest. */
+	private List<Waypoint> crowdNear(Waypoint w) {
+		MapSession s = CakeMap.session();
+		List<Waypoint> out = new ArrayList<>();
+		if (s == null) {
+			return out;
+		}
+		double[] c = view.toScreen(w.x + 0.5, w.z + 0.5);
+		double r = iconSize();
+		java.util.Map<Waypoint, Double> dist = new java.util.IdentityHashMap<>();
+		for (Waypoint o : s.shownWaypoints(dim)) {
+			double[] p = view.toScreen(o.x + 0.5, o.z + 0.5);
+			double d = Math.hypot(p[0] - c[0], p[1] - c[1]);
+			if (o == w || d < r) {
+				out.add(o);
+				dist.put(o, o == w ? -1 : d);
+			}
+		}
+		out.sort(java.util.Comparator.comparingDouble(dist::get));
+		return out;
+	}
+
+	/** {left, top, right, bottom} of the picker: the left third of the window under the toolbar. */
+	private int[] crowdBox() {
+		return new int[] {0, 28, Math.max(150, width / 3), height - 15};
+	}
+
+	private int crowdRows() {
+		int[] b = crowdBox();
+		return Math.max(1, (b[3] - 4 - (b[1] + CROWD_TOP)) / CROWD_ROW);
+	}
+
+	@Nullable
+	private Waypoint crowdRowAt(double mx, double my) {
+		if (crowd == null) {
+			return null;
+		}
+		int[] b = crowdBox();
+		int top = b[1] + CROWD_TOP;
+		if (mx < b[0] + 4 || mx >= b[2] - 4 || my < top) {
+			return null;
+		}
+		int i = (int) ((my - top) / CROWD_ROW);
+		if (i >= crowdRows() || crowdScroll + i >= crowd.size()) {
+			return null;
+		}
+		return crowd.get(crowdScroll + i);
+	}
+
+	private boolean inCrowdBox(double mx, double my) {
+		int[] b = crowdBox();
+		return crowd != null && mx >= b[0] && mx < b[2] && my >= b[1] && my < b[3];
+	}
+
+	private void drawCrowd(GuiGraphicsExtractor ctx, int mx, int my) {
+		int[] b = crowdBox();
+		ctx.nextStratum(); // above the map, its icons and text
+		ctx.fill(b[0], b[1], b[2], b[3], 0xB0000000);
+		ctx.outline(b[0], b[1], b[2] - b[0], b[3] - b[1], 0xFFFFFFFF);
+		ctx.text(font, font.plainSubstrByWidth(Component.translatable("cakemap.map.nearby", crowd.size()).getString(), b[2] - b[0] - 12),
+				b[0] + 6, b[1] + 7, 0xFFFFFFFF);
+		int rows = crowdRows();
+		crowdScroll = Math.max(0, Math.min(crowdScroll, crowd.size() - rows));
+		int top = b[1] + CROWD_TOP;
+		LocalPlayer p = Minecraft.getInstance().player;
+		MapSession s = CakeMap.session();
+		Waypoint over = crowdRowAt(mx, my);
+		for (int i = 0; i < rows && crowdScroll + i < crowd.size(); i++) {
+			Waypoint w = crowd.get(crowdScroll + i);
+			int x0 = b[0] + 4;
+			int x1 = b[2] - (crowd.size() > rows ? 8 : 4);
+			int y0 = top + i * CROWD_ROW;
+			boolean hover = w == over;
+			ctx.fill(x0, y0 + 1, x1, y0 + CROWD_ROW - 1, hover ? 0xFF3C4658 : 0xFF262B34);
+			ctx.outline(x0, y0 + 1, x1 - x0, CROWD_ROW - 2, hover ? 0xFFFFFFFF : 0xFF6A7080);
+			Icons.draw(ctx, w, x0 + 11, y0 + CROWD_ROW / 2.0, 14, 1F);
+			String dist = "";
+			if (p != null && s != null && w.dimension.equals(s.dimension())) {
+				dist = Math.round(Math.sqrt(w.distanceSq(p.getX(), p.getY(), p.getZ()))) + "m";
+			}
+			int textX = x0 + 22;
+			int right = x1 - 6 - font.width(dist) - 6;
+			String name = font.plainSubstrByWidth(label(w), Math.max(0, right - textX));
+			int nameColor = hover ? 0xFFFFFF7F : (w.color != 0 ? 0xFF000000 | w.color : 0xFFFFFFFF);
+			ctx.text(font, name, textX, y0 + 6, nameColor);
+			int kindX = textX + font.width(name) + 6;
+			String kind = Component.translatable(w.kind().translationKey()).getString();
+			if (kindX + font.width(kind) <= right) { // the kind only when it fits whole
+				ctx.text(font, kind, kindX, y0 + 6, 0xFF9A9A9A);
+			}
+			ctx.text(font, dist, x1 - 5 - font.width(dist), y0 + 6, 0xFFC8C8C8);
+		}
+		if (crowd.size() > rows) {
+			// a thin scroll bar on the right
+			int trackH = rows * CROWD_ROW;
+			int barH = Math.max(8, trackH * rows / crowd.size());
+			int barY = top + (trackH - barH) * crowdScroll / Math.max(1, crowd.size() - rows);
+			ctx.fill(b[2] - 6, top, b[2] - 3, top + trackH, 0x40FFFFFF);
+			ctx.fill(b[2] - 6, barY, b[2] - 3, barY + barH, 0xFFFFFFFF);
+		}
+	}
+
 	/** Moves the map to the town nearest to {@code from} and puts the mouse cursor on it. */
 	private void nearestTown(MapSession s, Waypoint from) {
 		Waypoint town = s.waypoints.nearest(dim, WaypointKind.TOWN, from.x + 0.5, from.z + 0.5, from);
@@ -392,6 +535,19 @@ public final class WorldMapScreen extends Screen {
 		double mx = event.x();
 		double my = event.y();
 		int button = event.button();
+		if (crowd != null) {
+			// a row picks that waypoint (its popup); elsewhere in the picker nothing; outside it closes
+			if (inCrowdBox(mx, my)) {
+				Waypoint w = button == 0 ? crowdRowAt(mx, my) : null;
+				if (w != null) {
+					crowd = null;
+					openIconMenu(w);
+				}
+				return true;
+			}
+			crowd = null;
+			return true;
+		}
 		if (menu != null) {
 			int[] b = menuBox();
 			Menu m = menu;
@@ -426,7 +582,7 @@ public final class WorldMapScreen extends Screen {
 	public boolean mouseReleased(MouseButtonEvent event) {
 		int button = event.button();
 		if (button == 0 && dragging && pressed != null && pressedMoved < 4) {
-			openIconMenu(pressed);
+			clickIcon(pressed);
 		}
 		pressed = null;
 		dragging = false;
@@ -453,6 +609,10 @@ public final class WorldMapScreen extends Screen {
 
 	@Override
 	public boolean mouseScrolled(double mx, double my, double horizontal, double vertical) {
+		if (inCrowdBox(mx, my)) {
+			crowdScroll -= (int) Math.signum(vertical);
+			return true;
+		}
 		double[] before = view.toWorld(mx, my);
 		double next = view.scale * Math.pow(2, vertical * 0.5);
 		view.scale = Math.max(1 / 16.0, Math.min(16, next));
@@ -465,6 +625,10 @@ public final class WorldMapScreen extends Screen {
 
 	@Override
 	public boolean keyPressed(KeyEvent event) {
+		if (crowd != null && event.key() == org.lwjgl.glfw.GLFW.GLFW_KEY_ESCAPE) {
+			crowd = null; // Esc closes the picker first, then the map
+			return true;
+		}
 		if (CakeMap.KEYS.get("world_map").matches(event) && menu == null) {
 			onClose();
 			return true;
@@ -494,6 +658,38 @@ public final class WorldMapScreen extends Screen {
 	/** For the self-test: what a left click on {@code w} does. */
 	void openIconMenuForTest(Waypoint w) {
 		openIconMenu(w);
+	}
+
+	/** For the self-test: a left click on the waypoint with the most icons over it; the picker's rows (0 = none). */
+	int openCrowdForTest() {
+		MapSession s = CakeMap.session();
+		if (s == null) {
+			return 0;
+		}
+		Waypoint best = null;
+		int most = 0;
+		for (Waypoint w : s.shownWaypoints(dim)) {
+			int n = crowdNear(w).size();
+			if (n > most) {
+				most = n;
+				best = w;
+			}
+		}
+		if (best != null) {
+			clickIcon(best);
+		}
+		return crowd == null ? 0 : crowd.size();
+	}
+
+	/** For the self-test: picks row i of the picker; true when that icon's popup opened. */
+	boolean pickForTest(int i) {
+		if (crowd == null || i >= crowd.size()) {
+			return false;
+		}
+		Waypoint w = crowd.get(i);
+		crowd = null;
+		openIconMenu(w);
+		return menu != null && menu.buttons;
 	}
 
 	/** For the self-test: the popup's second button. */
