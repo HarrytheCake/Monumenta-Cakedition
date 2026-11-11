@@ -73,6 +73,21 @@ final class McValues {
 		reg("hud.actionbar", HudPart::actionBar);
 		reg("hud.title", HudPart::title);
 		reg("hud.subtitle", HudPart::subtitle);
+		// container screens (container/) aren't drawn on 26.1.2 yet: their values exist, so layouts written for
+		// 1.20.4 and 1.21.1 load here without problems, and read as "no container screen open"
+		for (String name : new String[] {"menu.id", "menu.title", "slot.item"}) {
+			reg(name, () -> "");
+		}
+		for (String name : new String[] {"menu.slotCount", "menu.dataCount", "menu.left", "menu.top", "menu.width", "menu.height", "slot.count"}) {
+			reg(name, () -> 0);
+		}
+		for (String name : new String[] {"menu.open", "menu.carried", "slot.player", "slot.hovered"}) {
+			reg(name, () -> false);
+		}
+		reg("menu.hoveredSlot", () -> -1);
+		reg("slot.index", () -> -1);
+		reg("slot.empty", () -> true);
+		GameValues.registerFamily("menu.data.", n -> 0);
 
 		reg("server.name", () -> {
 			ServerData s = mc().getCurrentServer();

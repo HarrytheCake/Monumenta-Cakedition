@@ -19,8 +19,12 @@ import java.util.regex.Pattern;
  * the next reload ({@link #reload()}).
  */
 public final class CakeUIApi {
-	/** Changes when the API changes in a way plugins must know about. 2: {@link #fillPort}, {@link #addHudPiece} (CakeUI 0.2.0). */
-	public static final int VERSION = 3;
+	/**
+	 * Changes when the API changes in a way plugins must know about. 2: {@link #fillPort}, {@link #addHudPiece} (CakeUI
+	 * 0.2.0). 3: {@link #addMovables}, {@link #openHudEditor} (0.3.0). 4: container screens: {@link #registerMenuValue},
+	 * {@link #addContainerLayouts}, {@link ElementContext#menu()}, {@link ElementType#tooltip}.
+	 */
+	public static final int VERSION = 4;
 	private static final CakeUIApi INSTANCE = new CakeUIApi();
 	private static final Pattern VALUE_NAME = Pattern.compile("[a-z0-9_]+(\\.[a-zA-Z0-9_]+)+");
 	private static final Pattern NAMESPACED = Pattern.compile("[a-z0-9_.-]+:[a-z0-9_/.-]+");
@@ -47,6 +51,40 @@ public final class CakeUIApi {
 		}
 		Objects.requireNonNull(value, "value");
 		GameValues.register(name, value::get);
+		return this;
+	}
+
+	/**
+	 * A value read from the open container screen's menu (API version 4), like "mymod.press.progress": while a screen
+	 * whose menu is a {@code menuClass} is open, {@code value} gets that menu (on the render thread, often every frame:
+	 * keep it cheap); otherwise the value is 0. Use it for numbers your menu syncs itself or keeps in more than one
+	 * data slot (vanilla syncs each data slot as a 16-bit number).
+	 */
+	public <M extends net.minecraft.world.inventory.AbstractContainerMenu> CakeUIApi registerMenuValue(String name, Class<M> menuClass,
+			java.util.function.Function<? super M, ?> value) {
+		return registerMenuValue(name, menuClass, value, 0.0);
+	}
+
+	/** {@link #registerMenuValue(String, Class, java.util.function.Function)} with the value to use while no such menu is open. */
+	public <M extends net.minecraft.world.inventory.AbstractContainerMenu> CakeUIApi registerMenuValue(String name, Class<M> menuClass,
+			java.util.function.Function<? super M, ?> value, Object whenClosed) {
+		if (!VALUE_NAME.matcher(name).matches()) {
+			throw new IllegalArgumentException("CakeUI value names look like 'mymod.value' (lowercase prefix, a dot): " + name);
+		}
+		Objects.requireNonNull(menuClass, "menuClass");
+		Objects.requireNonNull(value, "value");
+		GameValues.register(name, io.github.harrythecake.cakeui.ContainerPart.menuValue(menuClass, value, whenClosed));
+		return this;
+	}
+
+	/**
+	 * A folder of default container layouts (API version 4), laid out like a mod's {@code assets/<modid>/cakeui/}
+	 * (which CakeUI finds by itself): {@code container/<namespace>/<path>/layout.json5} for each menu, plus optional
+	 * window.json5, declaration.json5, assets/ and lang/. Used whenever the active layout doesn't mention a menu,
+	 * also with no layout chosen. Read at the next reload; {@code owner} is your mod id.
+	 */
+	public CakeUIApi addContainerLayouts(String owner, java.nio.file.Path folder) {
+		io.github.harrythecake.cakeui.ContainerPart.addFolder(Objects.requireNonNull(owner, "owner"), Objects.requireNonNull(folder, "folder"));
 		return this;
 	}
 

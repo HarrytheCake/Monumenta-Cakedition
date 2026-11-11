@@ -5,7 +5,6 @@ import io.github.harrythecake.cakeui.expr.Expr;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Supplier;
 
@@ -15,6 +14,10 @@ import java.util.function.Supplier;
  */
 public final class GameValues {
 	private static final Map<String, Supplier<Object>> VALUES = new ConcurrentHashMap<>();
+	/** Numbered families like `menu.data.<n>`: prefix (with its dot) → reader of entry n. */
+	private static final Map<String, java.util.function.IntFunction<Object>> FAMILIES = new ConcurrentHashMap<>();
+	/** The highest number a family entry may have (`menu.data.999`). */
+	public static final int FAMILY_MAX = 999;
 
 	private GameValues() {
 	}
@@ -24,8 +27,38 @@ public final class GameValues {
 		VALUES.put(name, supplier);
 	}
 
+	/**
+	 * A numbered family of values, `prefix` + a number from 0 to {@link #FAMILY_MAX} (`menu.data.` → `menu.data.0`,
+	 * `menu.data.1`, …). The reader gets the number; it runs on the render thread like any supplier.
+	 */
+	public static void registerFamily(String prefix, java.util.function.IntFunction<Object> reader) {
+		if (!prefix.endsWith(".")) {
+			throw new IllegalArgumentException("a family prefix ends with a dot: " + prefix);
+		}
+		FAMILIES.put(prefix, reader);
+	}
+
+	/** The supplier of a name: a plain value, or an entry of a numbered family; null when unknown. */
+	private static Supplier<Object> supplier(String name) {
+		Supplier<Object> s = VALUES.get(name);
+		if (s != null || FAMILIES.isEmpty()) {
+			return s;
+		}
+		int dot = name.lastIndexOf('.');
+		if (dot <= 0 || dot == name.length() - 1) {
+			return null;
+		}
+		java.util.function.IntFunction<Object> family = FAMILIES.get(name.substring(0, dot + 1));
+		String number = name.substring(dot + 1);
+		if (family == null || number.length() > 3 || !number.chars().allMatch(Character::isDigit)) {
+			return null;
+		}
+		int n = Integer.parseInt(number);
+		return () -> family.apply(n);
+	}
+
 	public static Expr resolve(String name) {
-		Supplier<Object> supplier = VALUES.get(name);
+		Supplier<Object> supplier = supplier(name);
 		if (supplier == null) {
 			return null;
 		}
@@ -50,7 +83,7 @@ public final class GameValues {
 
 	/** A value's current reading as text, for showing it (the HUD editor's value list); "" when unknown or failing. */
 	public static String preview(String name) {
-		Supplier<Object> supplier = VALUES.get(name);
+		Supplier<Object> supplier = supplier(name);
 		if (supplier == null) {
 			return "";
 		}
@@ -68,11 +101,16 @@ public final class GameValues {
 		}
 	}
 
+	/** Every value's name; a numbered family is listed by its first entry (`menu.data.0`). */
 	public static Set<String> names() {
-		return Collections.unmodifiableSet(new TreeMap<>(VALUES).keySet());
+		java.util.TreeSet<String> all = new java.util.TreeSet<>(VALUES.keySet());
+		for (String prefix : FAMILIES.keySet()) {
+			all.add(prefix + "0");
+		}
+		return Collections.unmodifiableSet(all);
 	}
 
 	public static boolean has(String name) {
-		return VALUES.containsKey(name);
+		return supplier(name) != null;
 	}
 }

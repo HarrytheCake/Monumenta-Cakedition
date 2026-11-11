@@ -8,7 +8,9 @@ import java.util.Map;
 /** A loaded layout folder (`window_<name>/`): the window settings and every part found. */
 public final class Layout {
 	public static final int FORMAT = 1;
-	public static final List<String> PARTS = List.of("game_launch", "main_menu", "loading_screen", "hud");
+	public static final List<String> PARTS = List.of("game_launch", "main_menu", "loading_screen", "hud", "container");
+	/** The part that holds container screens; each screen is one of its built-ins, keyed by its menu type id. */
+	public static final String CONTAINER = "container";
 
 	public enum ScaleMode {
 		FIT, FILL, STRETCH
@@ -38,6 +40,8 @@ public final class Layout {
 
 	/** Where image elements' files are: the layout's assets/ folder (a player's own HUD elements: config/cakeui/images). */
 	public Path assets;
+	/** The mod that ships this layout in its jar (a mod's default container layouts), or null for a pack's layout. */
+	public String owner;
 
 	public Layout(String name, Path root) {
 		this(name, root, new Scope(null, ""));
@@ -53,6 +57,12 @@ public final class Layout {
 
 	public Node part(String id) {
 		return parts.get(id);
+	}
+
+	/** The layout of a container screen, by its menu type id ("minecraft:furnace"), or null when this layout doesn't mention it. */
+	public Node container(String menuId) {
+		Node part = parts.get(CONTAINER);
+		return part == null ? null : part.builtins.get(menuId);
 	}
 
 	/** GUI pixels per design pixel on each axis for a screen of the given GUI size. */

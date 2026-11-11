@@ -1,0 +1,24 @@
+// CakeUI: JEI's API to compile the optional JEI plugin against (compat/CakeUIJeiPlugin: JEI keeps its lists clear of
+// what a container layout draws around the panel). Compile-only: CakeUI never needs JEI, and the plugin class is
+// only loaded by JEI itself. Applied from <mc>/{common,fabric,neoforge}/build.gradle of the versions that have it.
+Map<String, String> jeiVersions = ['1.20.4': '17.3.1.5', '1.21.1': '19.21.0.247']
+String mc = project.property('minecraft_version').toString()
+String jei = jeiVersions[mc]
+if (jei == null) {
+	return
+}
+repositories {
+	maven {
+		name = 'BlameJared (JEI)'
+		url = 'https://maven.blamejared.com/'
+		content { includeGroup 'mezz.jei' }
+	}
+}
+String part = project.name
+if (part == 'fabric') {
+	project.ext.get('modCompileOnlyDep').call("mezz.jei:jei-${mc}-fabric-api:${jei}")
+} else {
+	dependencies {
+		compileOnly "mezz.jei:jei-${mc}-common-api:${jei}"
+	}
+}

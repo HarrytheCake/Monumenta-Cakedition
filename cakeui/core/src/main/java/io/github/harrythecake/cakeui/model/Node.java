@@ -30,6 +30,10 @@ public final class Node {
 	public final Map<String, Node> builtins = new LinkedHashMap<>();
 	/** Button overrides of a `buttons` port, by button id. */
 	public final Map<String, Node> buttons = new LinkedHashMap<>();
+	/** Slot overrides of a container screen's `slots` port, by their key ("*", "player", "0", "3-5"), in file order. */
+	public final Map<String, Node> slots = new LinkedHashMap<>();
+	/** A slot override's selector (which slots it is for), else null. */
+	public SlotSelector selector;
 	/** Splash list of a `splash` port (null = vanilla's). */
 	public List<String> splashes;
 	/** True when the splash port is drawn by CakeUI rather than vanilla. */
@@ -64,13 +68,21 @@ public final class Node {
 		return type + " '" + name + "' (" + file + ":" + line + ")";
 	}
 
-	/** What a button does when clicked. Client-side only: never chat or commands. */
-	public record Action(String kind, String argument, List<Assign> assigns) {
+	/**
+	 * What a button does when clicked. Never chat or commands; `menuButton` sends vanilla's container-button
+	 * click (the packet an enchanting table's or stonecutter's buttons send) for the open container screen.
+	 * {@code value} is the compiled argument of actions that take an expression (`menuButton`), else null.
+	 */
+	public record Action(String kind, String argument, List<Assign> assigns, Expr value) {
 		public static final List<String> SCREENS = List.of("singleplayer", "multiplayer", "realms", "options", "language",
 				"accessibility", "modmenu", "quit", "back");
 
 		public Action {
 			assigns = assigns == null ? new ArrayList<>() : assigns;
+		}
+
+		public Action(String kind, String argument, List<Assign> assigns) {
+			this(kind, argument, assigns, null);
 		}
 	}
 

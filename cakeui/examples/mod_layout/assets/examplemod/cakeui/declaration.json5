@@ -1,0 +1,10 @@
+// A mod's default layout is laid out like a pack's layout folder, but only container/ is used. This one has no
+// window.json5, so plain numbers are GUI pixels, like the slot positions in the mod's menu code.
+// Seen by every screen in container/.
+{
+  "constants": {
+    "steel": "#3b4048",
+    "rim": "#9aa3ad",
+    "glow": "#7ad8ff",
+  },
+}

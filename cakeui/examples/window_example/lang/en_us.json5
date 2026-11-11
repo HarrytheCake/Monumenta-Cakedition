@@ -14,4 +14,6 @@
   "example.paused": "Paused",
   "example.inventory": "Craft",
   "example.level": "Level",
+  "example.furnace.cooking": "Cooking",
+  "example.furnace.fuel": "Fuel",
 }

@@ -73,6 +73,7 @@ final class McValues {
 		reg("hud.actionbar", HudPart::actionBar);
 		reg("hud.title", HudPart::title);
 		reg("hud.subtitle", HudPart::subtitle);
+		ContainerPart.registerValues(); // menu.* (the open container screen) and slot.* (a slot's skin)
 
 		reg("server.name", () -> {
 			ServerData s = mc().getCurrentServer();

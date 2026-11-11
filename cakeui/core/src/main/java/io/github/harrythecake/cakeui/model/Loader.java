@@ -37,7 +37,8 @@ public final class Loader {
 			"hud", List.of("hotbar", "crosshair", "bossBars", "health", "armor", "hunger", "air", "mountHealth", "experience", "heldItemName",
 					"statusEffects", "scoreboard", "tabList", "actionBar", "title", "vignette", "spyglass", "pumpkin"),
 			"hud/pause", List.of("background", "buttons"),
-			"hud/inventory", List.of("background", "panel", "player", "title", "buttons"));
+			"hud/inventory", List.of("background", "panel", "player", "title", "buttons"),
+			Layout.CONTAINER, List.of("background", "panel", "title", "inventoryTitle", "slots", "buttons"));
 	/** Subwindows that stand for a vanilla screen: part id → names. They cover the whole screen, have ports and are drawn only while that screen is open. */
 	public static final Map<String, List<String>> BUILTIN_SUBWINDOWS = Map.of("hud", List.of("pause", "inventory"));
 	private static final Set<String> PORT_KEYS = Set.of("hide", "x", "y", "scale", "opacity", "elements", "order");
@@ -45,10 +46,18 @@ public final class Loader {
 	private static final Set<String> BUTTON_KEYS = Set.of("anchor", "origin", "x", "y", "width", "height", "visible", "text",
 			"skin", "states", "transition", "sounds", "opacity");
 	private static final Set<String> WINDOW_KEYS = Set.of("format", "design", "scale", "fonts", "perspective", "icon", "title", "border", "$schema");
+	/** What a mod's layout may set in its window.json5 (it never owns the game window). */
+	private static final Set<String> MOD_WINDOW_KEYS = Set.of("format", "design", "scale", "fonts", "perspective", "$schema");
+	private static final Set<String> SLOT_KEYS = Set.of("x", "y", "skin", "highlight");
+	private static final java.util.regex.Pattern ID_PART = java.util.regex.Pattern.compile("[a-z0-9_.-]+");
 
 	private final Layout layout;
 	private final Path root;
 	public boolean fatal;
+	/** A mod's default layout (assets/<modid>/cakeui/ in its jar): window.json5 optional, only container/. */
+	private boolean mod;
+	/** The part being read ("main_menu", "container", …), for checks that depend on it. */
+	private String partId = "";
 
 	private Loader(Layout layout) {
 		this.layout = layout;
@@ -58,6 +67,20 @@ public final class Loader {
 	public static Loader load(Path folder) {
 		String name = folder.getFileName() == null ? folder.toString() : folder.getFileName().toString();
 		Loader loader = new Loader(new Layout(name, folder));
+		loader.run();
+		return loader;
+	}
+
+	/**
+	 * A mod's default layout: the same folder structure as a pack's layout, but only its `container/` part is used
+	 * (the screens of the mod's menus), window.json5 is optional (without a `design`, plain numbers are GUI pixels),
+	 * and it never changes the game window. {@code owner} is the mod's id.
+	 */
+	public static Loader loadMod(Path folder, String owner) {
+		Layout layout = new Layout(owner, folder);
+		layout.owner = owner;
+		Loader loader = new Loader(layout);
+		loader.mod = true;
 		loader.run();
 		return loader;
 	}
@@ -100,8 +123,10 @@ public final class Loader {
 			return;
 		}
 		Path windowFile = root.resolve("window.json5");
-		JValue.JObject window = readObject(windowFile, true);
-		if (window == null) {
+		JValue.JObject window = readObject(windowFile, !mod);
+		if (window == null && mod && !Files.exists(windowFile)) {
+			window = new JValue.JObject(new LinkedHashMap<>(), Map.of(), "window.json5", 0);
+		} else if (window == null) {
 			fatal = true;
 			return;
 		}
@@ -116,7 +141,9 @@ public final class Loader {
 			for (Path p : entries.sorted().toList()) {
 				String n = p.getFileName().toString();
 				if (Files.isDirectory(p)) {
-					if (Layout.PARTS.contains(n)) {
+					if (mod && Layout.PARTS.contains(n) && !n.equals(Layout.CONTAINER)) {
+						problem(n + "/", 0, "a mod's layout only holds container/ (the screens of its menus); " + n + "/ belongs in a pack's layout");
+					} else if (Layout.PARTS.contains(n)) {
 						readPart(n, p);
 					} else if (!n.equals("assets") && !n.equals("lang") && !n.startsWith(".")) {
 						problem(n + "/", 0, "unknown folder (parts are " + String.join(", ", Layout.PARTS) + ")" + PropKinds.suggest(n, Layout.PARTS));
@@ -129,6 +156,9 @@ public final class Loader {
 			}
 		} catch (IOException e) {
 			problem("", 0, "could not list the layout folder: " + e.getMessage());
+		}
+		if (mod && layout.part(Layout.CONTAINER) == null) {
+			problem("", 0, "nothing to use: a mod's layout puts its screens in container/<namespace>/<path>/layout.json5");
 		}
 	}
 
@@ -160,15 +190,18 @@ public final class Loader {
 		String file = "window.json5";
 		JValue format = w.get("format");
 		if (!(format instanceof JValue.JNumber n)) {
-			problem(file, w.line, "'format' is missing (write format: " + Layout.FORMAT + ")");
-			return false;
-		}
-		if (n.value > Layout.FORMAT) {
+			if (!mod) {
+				problem(file, w.line, "'format' is missing (write format: " + Layout.FORMAT + ")");
+				return false;
+			}
+		} else if (n.value > Layout.FORMAT) {
 			problem(file, n.line, "this layout needs a newer CakeUI (format " + (int) n.value + ", this CakeUI reads " + Layout.FORMAT + ")");
 			return false;
 		}
 		for (Map.Entry<String, JValue> e : w.map.entrySet()) {
-			if (!WINDOW_KEYS.contains(e.getKey())) {
+			if (mod && WINDOW_KEYS.contains(e.getKey()) && !MOD_WINDOW_KEYS.contains(e.getKey())) {
+				problem(file, w.keyLine(e.getKey()), "'" + e.getKey() + "' is the game window's: a mod's layout can't set it");
+			} else if (!WINDOW_KEYS.contains(e.getKey())) {
 				problem(file, w.keyLine(e.getKey()), "unknown key '" + e.getKey() + "'" + PropKinds.suggest(e.getKey(), WINDOW_KEYS));
 			}
 		}
@@ -486,6 +519,11 @@ public final class Loader {
 	// ---- parts, subwindows, elements ----
 
 	private void readPart(String id, Path dir) {
+		partId = id;
+		if (id.equals(Layout.CONTAINER)) {
+			readContainerPart(dir);
+			return;
+		}
 		Scope scope = new Scope(layout.scope, id);
 		readDeclaration(dir.resolve("declaration.json5"), scope);
 		Path file = dir.resolve("layout.json5");
@@ -503,6 +541,117 @@ public final class Loader {
 		}
 		readSubwindows(part, dir, scope);
 		layout.parts.put(id, part);
+	}
+
+	// ---- container screens: container/<namespace>/<path>/ ----
+
+	/**
+	 * The container part: a declaration shared by every container screen, then one folder per screen, named by its
+	 * menu type id (`container/minecraft/furnace/` = minecraft:furnace; a `/` in the id's path is a deeper folder).
+	 * Each screen is a built-in of the part, keyed by that id.
+	 */
+	private void readContainerPart(Path dir) {
+		Scope scope = new Scope(layout.scope, Layout.CONTAINER);
+		readDeclaration(dir.resolve("declaration.json5"), scope);
+		Node part = new Node(Layout.CONTAINER, "part", scope, Layout.CONTAINER + "/", 0);
+		try (Stream<Path> entries = Files.list(dir)) {
+			for (Path p : entries.sorted().toList()) {
+				String n = p.getFileName().toString();
+				if (n.startsWith(".")) {
+					continue;
+				}
+				if (Files.isDirectory(p)) {
+					if (ID_PART.matcher(n).matches()) {
+						readContainerFolder(part, p, n, "");
+					} else {
+						problem(rel(p) + "/", 0, "'" + n + "' isn't a namespace (lowercase letters, digits, _ - .): screens are container/<namespace>/<path>/");
+					}
+				} else if (n.equals("layout.json5")) {
+					problem(rel(p), 0, "container/ has no layout of its own: each screen has a folder named by its menu, e.g. container/minecraft/furnace/layout.json5");
+				} else if (!n.equals("declaration.json5") && !n.endsWith(".md") && !n.endsWith(".txt")) {
+					problem(rel(p), 0, "unexpected file (container/ holds declaration.json5 and one folder per namespace)");
+				}
+			}
+		} catch (IOException e) {
+			problem(rel(dir), 0, "could not list: " + e.getMessage());
+		}
+		layout.parts.put(Layout.CONTAINER, part);
+	}
+
+	/** The folders under container/<namespace>/<path so far>/: each is a screen or a deeper part of an id's path. */
+	private void readContainerFolder(Node part, Path dir, String namespace, String prefix) {
+		boolean any = false;
+		try (Stream<Path> entries = Files.list(dir)) {
+			for (Path p : entries.sorted().toList()) {
+				String n = p.getFileName().toString();
+				if (n.startsWith(".")) {
+					continue;
+				}
+				if (!Files.isDirectory(p)) {
+					problem(rel(p), 0, "unexpected file: a screen is a folder container/<namespace>/<path>/ holding layout.json5");
+					continue;
+				}
+				any = true;
+				readContainerEntry(part, p, namespace, prefix.isEmpty() ? n : prefix + "/" + n);
+			}
+		} catch (IOException e) {
+			problem(rel(dir), 0, "could not list: " + e.getMessage());
+		}
+		if (!any) {
+			problem(rel(dir) + "/", 0, "no screen here: a screen's folder holds layout.json5 (container/" + namespace + "/<path>/layout.json5)");
+		}
+	}
+
+	/** One folder of an id's path: a screen when it has a layout.json5 (or declaration.json5), else deeper folders. */
+	private void readContainerEntry(Node part, Path dir, String namespace, String path) {
+		String n = dir.getFileName().toString();
+		if (!ID_PART.matcher(n).matches()) {
+			problem(rel(dir) + "/", 0, "'" + n + "' can't be part of a menu id (lowercase letters, digits, _ - .)");
+		} else if (Files.isRegularFile(dir.resolve("layout.json5")) || Files.isRegularFile(dir.resolve("declaration.json5"))) {
+			readContainerScreen(part, dir, namespace, path);
+		} else {
+			readContainerFolder(part, dir, namespace, path);
+		}
+	}
+
+	/** One container screen: ports and elements like a built-in subwindow, its own subwindows, and maybe deeper screens. */
+	private void readContainerScreen(Node part, Path dir, String namespace, String path) {
+		String id = namespace + ":" + path;
+		Scope scope = new Scope(part.scope, rel(dir));
+		readDeclaration(dir.resolve("declaration.json5"), scope);
+		Path file = dir.resolve("layout.json5");
+		JValue.JObject o = readObject(file, false);
+		String r = rel(file);
+		Node node = new Node(id, "part", scope, r, o == null ? 0 : o.line);
+		if (o != null) {
+			fill(node, o, r);
+			JValue ports = o.get("ports");
+			if (ports instanceof JValue.JObject po) {
+				readPorts(node, Layout.CONTAINER, po, r);
+			} else if (ports != null) {
+				problem(r, ports.line, "'ports' must be an object");
+			}
+		}
+		part.builtins.put(id, node);
+		try (Stream<Path> entries = Files.list(dir)) {
+			for (Path p : entries.sorted().toList()) {
+				String n = p.getFileName().toString();
+				if (n.startsWith(".")) {
+					continue;
+				}
+				if (Files.isDirectory(p)) {
+					if (n.startsWith("subwindow_") && n.length() > 10) {
+						readSubwindow(node, p, scope, n.substring(10));
+					} else {
+						readContainerEntry(part, p, namespace, path + "/" + n); // a menu whose id goes on: pigtech:machine/press
+					}
+				} else if (!n.equals("layout.json5") && !n.equals("declaration.json5")) {
+					problem(rel(p), 0, "unexpected file (expected layout.json5, declaration.json5)");
+				}
+			}
+		} catch (IOException e) {
+			problem(rel(dir), 0, "could not list: " + e.getMessage());
+		}
 	}
 
 	/** `hud/subwindow_pause/` and friends: like a part (whole screen, ports), kept apart so the part never draws it as a child. */
@@ -840,7 +989,7 @@ public final class Loader {
 			return null;
 		}
 		if (!(v instanceof JValue.JObject o) || o.map.size() != 1) {
-			problem(file, v.line, "'action' must be a word like \"multiplayer\" or one of { connect: … }, { url: … }, { set: { … } }, { toggle: … }");
+			problem(file, v.line, "'action' must be a word like \"multiplayer\" or one of { connect: … }, { url: … }, { set: { … } }, { toggle: … }, { menuButton: 0 }");
 			return null;
 		}
 		Map.Entry<String, JValue> e = o.map.entrySet().iterator().next();
@@ -859,6 +1008,27 @@ public final class Loader {
 			return null;
 		}
 		switch (e.getKey()) {
+			case "menuButton" -> {
+				if (!partId.equals(Layout.CONTAINER)) {
+					problem(file, o.keyLine(e.getKey()), "'menuButton' works on container screens only (container/<namespace>/<path>/)");
+					return null;
+				}
+				JValue mv = e.getValue();
+				if (mv instanceof JValue.JNumber n && n.value >= 0 && n.value == Math.rint(n.value) && n.value <= Integer.MAX_VALUE) {
+					return new Node.Action("menuButton", Values.format(n.value), null, Expr.constant(n.value));
+				}
+				if (mv instanceof JValue.JString str) {
+					try {
+						Expr x = Parser.compile(str.value.startsWith("=") ? str.value.substring(1) : str.value, resolver(node.scope, true, false));
+						return new Node.Action("menuButton", str.value, null, x);
+					} catch (ExprException ex) {
+						problem(file, mv.line, "'menuButton': " + withSuggestion(ex, node.scope, true) + column(ex));
+						return null;
+					}
+				}
+				problem(file, mv.line, "'menuButton' needs the button's number (0 or more), as the menu's clickMenuButton reads it");
+				return null;
+			}
 			case "connect", "url" -> {
 				if (e.getValue() instanceof JValue.JString s && !s.value.isBlank()) {
 					if (e.getKey().equals("url") && !(s.value.startsWith("https://") || s.value.startsWith("http://"))) {
@@ -907,7 +1077,7 @@ public final class Loader {
 				return new Node.Action("set", null, assigns);
 			}
 			default -> {
-				problem(file, o.keyLine(e.getKey()), "unknown action '" + e.getKey() + "'" + PropKinds.suggest(e.getKey(), List.of("connect", "url", "set", "toggle")));
+				problem(file, o.keyLine(e.getKey()), "unknown action '" + e.getKey() + "'" + PropKinds.suggest(e.getKey(), List.of("connect", "url", "set", "toggle", "menuButton")));
 				return null;
 			}
 		}
@@ -932,6 +1102,7 @@ public final class Loader {
 	// ---- ports ----
 
 	private void readPorts(Node part, String partId, JValue.JObject o, String file) {
+		boolean containerScreen = partId.equals(Layout.CONTAINER);
 		List<String> known = PORTS.getOrDefault(partId, List.of());
 		if (partId.equals("hud")) {
 			List<String> withPlugins = new java.util.ArrayList<>(known);
@@ -952,6 +1123,8 @@ public final class Loader {
 			}
 			if (name.equals("buttons")) {
 				part.ports.put(name, readButtons(part, po, file, line));
+			} else if (containerScreen && name.equals("slots")) {
+				part.ports.put(name, readSlots(part, po, file, line));
 			} else {
 				part.ports.put(name, readPort(part, partId, name, po, file, line));
 			}
@@ -963,7 +1136,11 @@ public final class Loader {
 		boolean splash = name.equals("splash");
 		// ports of a vanilla text line: their own text and colour
 		// ports of one vanilla text line: their own text and colour
-		boolean version = name.equals("version") || (name.equals("title") && partId.equals("hud/inventory"));
+		boolean containerScreen = partId.equals(Layout.CONTAINER);
+		boolean version = name.equals("version") || (name.equals("title") && partId.equals("hud/inventory"))
+				|| (containerScreen && (name.equals("title") || name.equals("inventoryTitle")));
+		// a container screen's panel: its size and place are the screen's own (imageWidth/Height, leftPos/topPos), so slots follow
+		boolean panel = containerScreen && name.equals("panel");
 		// the loading screen's lines: their colour (several lines, so no single replacement text)
 		boolean colored = version || (name.equals("text") && partId.equals("loading_screen"));
 		for (Map.Entry<String, JValue> e : o.map.entrySet()) {
@@ -976,6 +1153,14 @@ public final class Loader {
 			}
 			if (splash && key.equals("mixVanilla")) {
 				setPortProp(port, key, PropKinds.Kind.BOOL, v, file, kl);
+				continue;
+			}
+			if (panel && (key.equals("width") || key.equals("height"))) {
+				setProp(port, key, v, file, kl);
+				continue;
+			}
+			if (panel && key.equals("scale")) {
+				problem(file, kl, "a container screen's panel can't be scaled (its slots wouldn't follow); set its width and height instead");
 				continue;
 			}
 			if ((splash && SPLASH_STYLE_KEYS.contains(key)) || (version && key.equals("text")) || (colored && key.equals("color"))) {
@@ -996,6 +1181,10 @@ public final class Loader {
 				}
 				if (colored) {
 					all.add("color");
+				}
+				if (panel) {
+					all.add("width");
+					all.add("height");
 				}
 				if (splash) {
 					all.addAll(SPLASH_STYLE_KEYS);
@@ -1054,6 +1243,47 @@ public final class Loader {
 		}
 		problem(file, v.line, "'list' must be [\"…\", \"…\"] or a file name like \"splashes.txt\"");
 		return list;
+	}
+
+	/**
+	 * A container screen's `slots` port: entries keyed by which slots they are for ("*", "player", "container", "0",
+	 * "3-5", "0,2"), each with x/y (the slot's place in the panel, GUI pixels like vanilla's), a skin drawn behind the
+	 * item and a highlight drawn instead of vanilla's when the mouse is over the slot.
+	 */
+	private Node readSlots(Node part, JValue.JObject o, String file, int line) {
+		Node port = new Node("slots", "port", part.scope, file, line);
+		for (Map.Entry<String, JValue> e : o.map.entrySet()) {
+			String key = e.getKey();
+			int kl = o.keyLine(key);
+			SlotSelector selector = SlotSelector.parse(key);
+			if (selector == null) {
+				problem(file, kl, "'" + key + "' isn't a slot: use a number (0), a range (3-5), a list (0,2,4-6), player, container or *");
+				continue;
+			}
+			if (!(e.getValue() instanceof JValue.JObject so)) {
+				problem(file, kl, "slot '" + key + "' must be an object { x, y, skin, highlight }");
+				continue;
+			}
+			Node s = new Node(key, "slot_override", part.scope, file, kl);
+			s.selector = selector;
+			for (Map.Entry<String, JValue> se : so.map.entrySet()) {
+				String k = se.getKey();
+				int sl = so.keyLine(k);
+				if (!SLOT_KEYS.contains(k)) {
+					problem(file, sl, "'" + k + "' isn't a slot setting (x, y, skin, highlight)" + PropKinds.suggest(k, SLOT_KEYS));
+					continue;
+				}
+				if (k.equals("skin") || k.equals("highlight")) {
+					Node g = new Node(k, "group", part.scope, file, sl);
+					readElements(g, se.getValue(), file);
+					s.ports.put(k, g);
+				} else {
+					setProp(s, k, se.getValue(), file, sl);
+				}
+			}
+			port.slots.put(key, s);
+		}
+		return port;
 	}
 
 	private Node readButtons(Node part, JValue.JObject o, String file, int line) {

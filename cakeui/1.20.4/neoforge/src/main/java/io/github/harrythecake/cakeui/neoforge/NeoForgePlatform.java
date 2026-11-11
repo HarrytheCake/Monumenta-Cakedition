@@ -26,4 +26,23 @@ public final class NeoForgePlatform implements Platform {
 	public boolean isModLoaded(String modId) {
 		return ModList.get() != null && ModList.get().isLoaded(modId);
 	}
+
+	@Override
+	public java.util.List<ModLayoutFolder> modLayoutFolders() {
+		java.util.List<ModLayoutFolder> out = new java.util.ArrayList<>();
+		if (ModList.get() == null) {
+			return out;
+		}
+		for (net.neoforged.neoforgespi.language.IModFileInfo file : ModList.get().getModFiles()) {
+			for (net.neoforged.neoforgespi.language.IModInfo mod : file.getMods()) {
+				String id = mod.getModId();
+				Path p = file.getFile().findResource("assets", id, "cakeui");
+				if (java.nio.file.Files.isDirectory(p)) {
+					out.add(new ModLayoutFolder(id, p));
+				}
+			}
+		}
+		out.sort(java.util.Comparator.comparing(ModLayoutFolder::modId));
+		return out;
+	}
 }

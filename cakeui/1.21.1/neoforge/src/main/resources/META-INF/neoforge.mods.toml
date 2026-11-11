@@ -15,6 +15,9 @@ description = '''Redraw Minecraft's main menu, loading screens, HUD and game win
 [[mixins]]
 config = "cakeui.mixins.json"
 
+[[mixins]]
+config = "cakeui-neoforge.mixins.json"
+
 [[dependencies.cakeui]]
 modId = "neoforge"
 type = "required"

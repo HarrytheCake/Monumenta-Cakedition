@@ -5,6 +5,9 @@
 	"compatibilityLevel": "JAVA_21",
 	"client": [
 		"ClickableWidgetMixin",
+		"ContainerMenuAccessor",
+		"ContainerScreenAccessor",
+		"ContainerScreenMixin",
 		"FontStorageAccessor",
 		"GameMenuScreenMixin",
 		"GuiCrosshairMixin",
@@ -21,6 +24,7 @@
 		"ProgressScreenAccessor",
 		"ScreenAccessor",
 		"ScreenMixin",
+		"SlotAccessor",
 		"SplashOverlayMixin",
 		"SplashTextRendererAccessor",
 		"SplashTextResourceSupplierAccessor",

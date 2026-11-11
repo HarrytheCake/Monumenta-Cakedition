@@ -84,6 +84,9 @@ final class SelfTest {
 		}
 		worldMode = mode.equals("world");
 		enabled = true;
+		if (worldMode) {
+			ContainerSelfTest.init(Minecraft.getInstance()); // a stand-in mod's default container layout (API 4)
+		}
 		// a stand-in for a mod's own movable (API 3): it stores its box itself and says when it was saved
 		io.github.harrythecake.cakeui.api.CakeUIApi.get().addMovables("cakeui-selftest", () -> java.util.List.of(new io.github.harrythecake.cakeui.api.Movable() {
 			@Override
@@ -243,6 +246,18 @@ final class SelfTest {
 			hudTick(client);
 			return;
 		}
+		if (phase == 3) {
+			// container screens (ContainerSelfTest), then the HUD
+			if (ContainerSelfTest.tick(client)) {
+				phase = 2;
+				screenTicks = 0;
+				// the dev window is often in the background: it must not pause itself while the HUD is measured
+				pauseOnLostFocus = client.options.pauseOnLostFocus;
+				client.options.pauseOnLostFocus = false;
+				client.setScreen(null);
+			}
+			return;
+		}
 		double[][] steps = phase == 0 ? PAUSE : INVENTORY;
 		String name = phase == 0 ? "pause" : "inventory";
 		screenTicks++;
@@ -258,11 +273,8 @@ final class SelfTest {
 				screenStep = 0;
 				client.setScreen(new InventoryScreen(client.player));
 			} else {
-				phase = 2;
+				phase = 3; // container screens next
 				screenTicks = 0;
-				// the dev window is often in the background: it must not pause itself while the HUD is measured
-				pauseOnLostFocus = client.options.pauseOnLostFocus;
-				client.options.pauseOnLostFocus = false;
 				client.setScreen(null);
 			}
 		}

@@ -251,7 +251,8 @@ public final class Parser {
 			char c = src.charAt(pos);
 			if (Character.isLetterOrDigit(c) || c == '_') {
 				pos++;
-			} else if (c == '.' && pos + 1 < src.length() && (Character.isLetter(src.charAt(pos + 1)) || src.charAt(pos + 1) == '_')) {
+			} else if (c == '.' && pos + 1 < src.length() && (Character.isLetterOrDigit(src.charAt(pos + 1)) || src.charAt(pos + 1) == '_')) {
+				// a dotted name; a part may be a number (menu.data.0)
 				pos++;
 			} else {
 				break;

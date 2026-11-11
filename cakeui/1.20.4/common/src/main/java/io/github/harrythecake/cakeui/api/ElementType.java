@@ -26,4 +26,14 @@ public interface ElementType {
 
 	/** Draws the element. Render thread, every frame it is visible: keep it cheap. */
 	void draw(ElementContext context);
+
+	/**
+	 * The tooltip while the mouse is over the element (API version 4), e.g. a tank's fluid and amount; null for none
+	 * (then the layout's own "tooltip" property, if it sets one). Container screens show it unless an item's tooltip
+	 * is showing. Render thread, every frame the element is hovered.
+	 */
+	@org.jetbrains.annotations.Nullable
+	default java.util.List<net.minecraft.network.chat.Component> tooltip(ElementContext context) {
+		return null;
+	}
 }

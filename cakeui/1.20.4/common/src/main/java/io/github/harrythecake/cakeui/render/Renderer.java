@@ -59,6 +59,10 @@ public final class Renderer {
 	private NodeState topButton;
 	private NodeState pressed;
 	private String language = "en_us";
+	/** The tooltip of the topmost hovered element with one this frame (a container screen shows it), or null. */
+	private List<Component> hoverTooltip;
+	/** While set, every drawn element's screen box {x1, y1, x2, y2} is added here (a container screen's areas for JEI). */
+	public List<double[]> recordBoxes;
 	/** Mod elements that threw once: listed once, then quietly skipped in the log. */
 	private final java.util.Set<Node> failedTypes = java.util.Collections.newSetFromMap(new java.util.IdentityHashMap<>());
 
@@ -98,6 +102,21 @@ public final class Renderer {
 		env.ry = s[1];
 		language = Minecraft.getInstance().getLanguageManager().getSelected();
 		topButton = null;
+		hoverTooltip = null;
+	}
+
+	/** Screen size and design scale only, outside a frame (a container screen's init reads the panel's size). */
+	public void prepare(double width, double height) {
+		screenW = width;
+		screenH = height;
+		double[] s = layout.designScale(width, height);
+		env.rx = s[0];
+		env.ry = s[1];
+	}
+
+	/** The tooltip of the topmost hovered element that has one, this frame; null when none. */
+	public List<Component> hoverTooltip() {
+		return hoverTooltip;
 	}
 
 	public double rx() {
@@ -242,6 +261,23 @@ public final class Renderer {
 		m.translate(x, y, 0);
 		c.flat = new Geometry.Mat().translate(x, y, 0);
 		drawChildren(c, container, container.children, w, h, null);
+		m.popPose();
+	}
+
+	/**
+	 * Some of a container's elements inside a box in GUI pixels; {@code owner} keeps their state (hover, transitions)
+	 * apart from other draws of the same elements (each slot's skin), null = this renderer's screen.
+	 */
+	public void drawElementsIn(GuiGraphics dc, Node container, List<Node> kids, Object owner, int x, int y, int w, int h, double alpha) {
+		if (kids.isEmpty()) {
+			return;
+		}
+		Ctx c = rootCtx(dc, owner == null ? screenOwner : owner, alpha);
+		PoseStack m = dc.pose();
+		m.pushPose();
+		m.translate(x, y, 0);
+		c.flat = new Geometry.Mat().translate(x, y, 0);
+		drawChildren(c, container, kids, w, h, null);
 		m.popPose();
 	}
 
@@ -619,6 +655,24 @@ public final class Renderer {
 			Paint.sound(word(n, "sounds.hover", ""));
 		}
 		st.wasHovered = st.hovered;
+		if (st.hovered && n.has("tooltip")) {
+			String tip = text(n, st, "tooltip");
+			if (!tip.isEmpty()) {
+				List<Component> lines = new ArrayList<>();
+				for (String line : tip.split("\n", -1)) {
+					lines.add(Component.literal(line));
+				}
+				hoverTooltip = lines;
+			}
+		}
+		if (recordBoxes != null) {
+			double[] p1 = combined.apply(0, 0, 0);
+			double[] p2 = combined.apply(w, 0, 0);
+			double[] p3 = combined.apply(0, h, 0);
+			double[] p4 = combined.apply(w, h, 0);
+			recordBoxes.add(new double[] {Math.min(Math.min(p1[0], p2[0]), Math.min(p3[0], p4[0])), Math.min(Math.min(p1[1], p2[1]), Math.min(p3[1], p4[1])),
+				Math.max(Math.max(p1[0], p2[0]), Math.max(p3[0], p4[0])), Math.max(Math.max(p1[1], p2[1]), Math.max(p3[1], p4[1]))});
+		}
 		if (!st.hovered && st.pressed && pressed != st) {
 			st.pressed = false;
 		}
@@ -788,9 +842,20 @@ public final class Renderer {
 			public String text(String key, String fallback) {
 				return word(n, key, fallback);
 			}
+
+			@Override
+			public net.minecraft.world.inventory.AbstractContainerMenu menu() {
+				return Minecraft.getInstance().screen instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> s ? s.getMenu() : null;
+			}
 		};
 		try {
 			type.draw(ec);
+			if (st.hovered) {
+				List<Component> tip = type.tooltip(ec);
+				if (tip != null && !tip.isEmpty()) {
+					hoverTooltip = tip;
+				}
+			}
 		} catch (RuntimeException e) {
 			if (!failedTypes.contains(n)) {
 				failedTypes.add(n);

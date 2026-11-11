@@ -3,3 +3,4 @@ plugins {
 }
 
 apply from: rootProject.file('gradle/cakeui-libs.gradle')
+apply from: rootProject.file('gradle/cakeui-jei.gradle')

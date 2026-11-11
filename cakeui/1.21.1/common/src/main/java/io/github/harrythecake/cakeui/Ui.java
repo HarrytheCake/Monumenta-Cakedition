@@ -81,11 +81,14 @@ public final class Ui {
 	public static void reload() {
 		config = Config.load();
 		HudEditor.reload();
+		ScreenPorts.clearSkins();
+		ContainerPart.reload(); // the mods' default container layouts (also with no layout chosen)
 		Path folder = config.layoutFolder();
 		rejected = null;
 		if (folder == null) {
 			swap(null);
 			stopWatcher();
+			reinitScreen();
 			return;
 		}
 		Loader loader = Loader.load(folder);

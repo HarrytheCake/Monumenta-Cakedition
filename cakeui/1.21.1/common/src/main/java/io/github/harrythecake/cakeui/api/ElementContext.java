@@ -32,4 +32,13 @@ public interface ElementContext {
 
 	/** A TEXT or WORD property, expressions filled in. */
 	String text(String key, String fallback);
+
+	/**
+	 * The menu of the open container screen while the element is drawn on one (API version 4), else null. Read your
+	 * machine's synced state from it (its ContainerData, your own fields), e.g. a tank's fluid and amount.
+	 */
+	@org.jetbrains.annotations.Nullable
+	default net.minecraft.world.inventory.AbstractContainerMenu menu() {
+		return null;
+	}
 }

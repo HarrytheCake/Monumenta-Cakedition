@@ -43,6 +43,14 @@ class ExprTest {
 	}
 
 	@Test
+	void dottedNamesMayHaveNumberParts() {
+		Parser.Resolver r = n -> n.equals("menu.data.0") ? Expr.constant(40.0) : n.equals("menu.data.12") ? Expr.constant(200.0) : null;
+		assertEquals(0.2, Parser.compile("menu.data.0 / menu.data.12", r).eval(new Env()));
+		assertEquals("40 of 200", Template.compile("{menu.data.0} of {menu.data.12}", r).eval(new Env()));
+		assertEquals(1.5, eval("1.5")); // a number with a decimal point is still a number
+	}
+
+	@Test
 	void functions() {
 		assertEquals(2.0, eval("mod(5, 3)"));
 		assertEquals(1.0, eval("mod(-2, 3)"));

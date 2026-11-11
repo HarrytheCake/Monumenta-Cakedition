@@ -1,10 +1,10 @@
 # CakeUI
 
-A client-only mod for **Fabric and NeoForge on Minecraft 1.20.4, 1.21.1 and 26.1.2** that lets modpacks redraw the game window, Mojang's launch screen, the main menu, the loading screens, the pause menu, the inventory and the in-game HUD from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
+A client-only mod for **Fabric and NeoForge on Minecraft 1.20.4, 1.21.1 and 26.1.2** that lets modpacks redraw the game window, Mojang's launch screen, the main menu, the loading screens, the pause menu, the inventory, container screens (furnaces, chests, modded machines) and the in-game HUD from **layout folders**: elements, variables, 3D tilt, mouse parallax and hot reload, no Java needed.
 
 With no layout chosen (the default), CakeUI changes nothing. It also leaves alone any piece of vanilla that the active layout doesn't mention, so other mods' buttons and screens keep working.
 
-**Status:** 0.3.0. The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work, with a settings screen (Mod Menu on Fabric, the mod list's Config button on NeoForge) and an API for other mods (milestones 1–5 of 5) and an in-game HUD and screen editor ([Moving your HUD](#moving-your-hud-hud-editor)). Chests and other screens may come later. What differs between Minecraft versions and loaders is listed under [Versions](#versions).
+**Status:** 0.3.0. The window, the game launching screen, the main menu, the loading screens, the pause menu, the player's inventory and the HUD work, with a settings screen (Mod Menu on Fabric, the mod list's Config button on NeoForge) and an API for other mods (milestones 1–5 of 5) and an in-game HUD and screen editor ([Moving your HUD](#moving-your-hud-hud-editor)). **Container screens** (any screen with slots: furnaces, chests, modded machines, see [Container screens](#container-screens)) are new after 0.3.0 (API version 4) and work on 1.20.4 and 1.21.1, not yet on 26.1.2. What differs between Minecraft versions and loaders is listed under [Versions](#versions).
 
 ## Using a layout
 
@@ -37,10 +37,13 @@ window_<name>/
 │   ├── declaration.json5 # constants and variables for the main menu
 │   ├── splashes.txt      # optional splash list
 │   └── subwindow_<name>/ # panels: layout.json5 + declaration.json5, nested as deep as you like
-└── hud/
-    ├── layout.json5          # HUD ports + elements
-    ├── subwindow_pause/      # built in: the pause menu (Esc)
-    └── subwindow_inventory/  # built in: the player's inventory (E, survival)
+├── hud/
+│   ├── layout.json5          # HUD ports + elements
+│   ├── subwindow_pause/      # built in: the pause menu (Esc)
+│   └── subwindow_inventory/  # built in: the player's inventory (E, survival)
+└── container/                # container screens, one folder per menu type
+    ├── declaration.json5     # constants for every container screen
+    └── minecraft/furnace/    # minecraft:furnace: layout.json5 + declaration.json5 + subwindow_<name>/
 ```
 
 Files are JSON5: comments, trailing commas and unquoted keys are fine. For autocomplete in VS Code, keep keys quoted, map `*.json5` to `jsonc` and add `"$schema": "…/schema/layout.schema.json"` (see [`schema/`](schema/)).
@@ -92,7 +95,7 @@ A folder sees its own names and its parents' names, never a sibling's. A child's
 
 Operators: `+ - * /`, `== != < <= > >=`, `&& || !`, `a ? b : c`. Functions: `sin cos tan rad deg abs sign sqrt pow floor ceil round mod min max clamp lerp smoothstep if fmt str num len upper lower contains rgb rgba alpha mix t`. There's no `%` operator, because `%` is the unit; use `mod(a, b)`.
 
-Game values include `time`, `mouse.x`/`mouse.y` (−1…1 from the centre), `screen.width`, `screen.height`, `fps`, `lang`, `mc.version`, `pack.version`, `inWorld`, `server.name`, `server.address`, `world.time`, `world.day`, `player.*` (`health`, `maxHealth`, `food`, `armor`, `level`, `xp`, `x`, `y`, `z`, …), `menu.splash`, `menu.version`, `menu.fade`. Inside an element: `self.hovered`, `self.pressed`, `self.active`, `self.width`, `self.height`, `self.text`, `self.id`.
+Game values include `time`, `mouse.x`/`mouse.y` (−1…1 from the centre), `screen.width`, `screen.height`, `fps`, `lang`, `mc.version`, `pack.version`, `inWorld`, `server.name`, `server.address`, `world.time`, `world.day`, `player.*` (`health`, `maxHealth`, `food`, `armor`, `level`, `xp`, `x`, `y`, `z`, …), `menu.splash`, `menu.version`, `menu.fade`, and on container screens `menu.*` and `slot.*` (see [Container screens](#container-screens)). Inside an element: `self.hovered`, `self.pressed`, `self.active`, `self.width`, `self.height`, `self.text`, `self.id`.
 
 ### Elements
 
@@ -114,7 +117,7 @@ Game values include `time`, `mouse.x`/`mouse.y` (−1…1 from the centre), `scr
 - **Small windows:** Minecraft's Chinese, Japanese and Korean glyphs are 16×16 pixel art and break up when drawn small, so text containing them is never drawn smaller than vanilla's GUI scale 2 (it may then be larger than in your design). For an icon that must stay inside its box, set `readable: false`. Layout TTF fonts are always drawn at the design size.
 - **3D and motion:** `transform` (`rotateX`, `rotateY`, `rotateZ`, `scale`, `skewX`, `z`, `pivotX`, …) with `perspective` on a container. `parallax: { move, tilt, smoothing }` follows the mouse. Clicks follow the tilt.
 - **States:** `states: { hover, pressed, disabled }` override any property, eased by `transition`. `sounds: { hover, click }` take sound ids.
-- **Button actions** (client-side only, never chat or commands): `singleplayer`, `multiplayer`, `realms`, `options`, `language`, `accessibility`, `modmenu`, `quit`, `back`, `{ connect: "address" }`, `{ url: "https://…" }` (vanilla asks first), `{ set: { name: value } }`, `{ toggle: "name" }`.
+- **Button actions** (client-side only, never chat or commands): `singleplayer`, `multiplayer`, `realms`, `options`, `language`, `accessibility`, `modmenu`, `quit`, `back`, `{ connect: "address" }`, `{ url: "https://…" }` (vanilla asks first), `{ set: { name: value } }`, `{ toggle: "name" }`. On container screens also `{ menuButton: 0 }`, which acts on the server (see [Container screens](#container-screens)).
 
 ### Main menu ports
 
@@ -195,6 +198,50 @@ F3+Esc's "Game Paused" screen (no buttons) stays vanilla.
 ```
 
 **Inventory slots never move.** The `panel` port's elements (and the `title` port's) are drawn in the panel's box, 176×166 GUI pixels, and follow it when the recipe book pushes it aside, so give them sizes in `px` and `%`. With `panel: { "hide": true }` the slot frames go too (they are part of vanilla's texture), so draw your own. The creative inventory is a different screen and stays vanilla for now.
+
+## Container screens
+
+Any screen with slots can be laid out: furnaces, chests, brewing stands, and other mods' machines. Each one is named by its **menu type id**, the id the game registers for that kind of screen (`minecraft:furnace`, `minecraft:generic_9x3` for a small chest, `pigtech:treadmill`), and has a folder `container/<namespace>/<path>/` in the layout, e.g. `container/minecraft/furnace/`. (A `/` in the id's path is a deeper folder.) In dev mode, **Show button ids** prints a container screen's menu id above its panel and the number of each slot, on every container screen, laid out or not.
+
+A container screen the layout doesn't mention stays exactly vanilla, as do the player's own inventory (that is `hud/subwindow_inventory/`) and the creative inventory. The screen always stays the real screen: slots, clicks, shift-click, dragging, the carried item, item tooltips, the recipe book and JEI work as before. CakeUI draws around and behind them.
+
+```json5
+// container/minecraft/furnace/layout.json5
+"ports": {
+  "background": { "opacity": 0.5 },                      // vanilla's dim
+  "panel": {
+    "hide": true,                                         // the screen's own texture, with its flame and arrow
+    "elements": {                                         // drawn in the panel's box (176×166 GUI pixels for a furnace)
+      "frame": { "type": "rect", "color": "#1b1f2a", "outline": "#ffb000" },
+      "arrow": { "type": "bar", "x": "79px", "y": "38px", "width": "24px", "height": "8px",
+                 "value": "menu.data.2 / max(1, menu.data.3)", "tooltip": "{fmt(menu.data.2 / max(1, menu.data.3) * 100, 0)}%" },
+    },
+  },
+  "title": { "color": "#ffffff" },                        // the screen's title line: text, color, hide, x, y, scale
+  "inventoryTitle": { "hide": true },                     // the "Inventory" line
+  "slots": {
+    "*": { "skin": { … elements … }, "highlight": { … } },
+    "2": { "x": "120px", "y": "35px" },                   // move a slot
+  },
+  "buttons": { "*": { "visible": false } },               // the screen's own buttons (recipe book, a mod's buttons)
+},
+"elements": { … },   // over the whole screen: layer back = behind the panel, front = over the slots, under the carried item
+```
+
+- **panel** is the screen's own background drawing (`renderBg`), including whatever it draws there (a furnace's flame and arrow, a mod's gauges). Its elements are drawn in the panel's box, so use `px` and `%`; `layer: "front"` draws one over the slots and items. `x` and `y` move the whole panel with its slots; `width` and `height` resize it (the screen's own size changes, so the panel stays centred and JEI knows its size). There is no `scale`.
+- **slots** entries are keyed by the slot's number (`"0"`), a range (`"3-5"`), a list (`"0,2,4-6"`), `"player"` (the player's inventory slots), `"container"` (every other slot) or `"*"`. Each setting comes from the most specific entry that sets it: a number, then a range or list, then `player`/`container`, then `*`.
+  - `x`, `y`: the slot's place in the panel, in GUI pixels like the menu's own numbers. The slot really moves (on this computer only; the server never sees slot places): hover, clicks, dragging and JEI follow it.
+  - `skin`: elements drawn behind the item, in an 18×18 box around it (the vanilla slot frame is part of the panel's texture, so a hidden panel needs skins).
+  - `highlight`: elements drawn instead of vanilla's white square while the mouse is over the slot (same box). `"highlight": {}` means no highlight.
+  - Inside a skin or highlight: `slot.index`, `slot.empty`, `slot.count`, `slot.item` (its id), `slot.player`, `slot.hovered`.
+- **buttons** works as on other screens, but `anchor`, `x`, `y` and `%` are the panel's, not the whole screen's.
+- **Values** while a container screen is open: `menu.data.0`, `menu.data.1`, … are the menu's synced numbers (its ContainerData, in the order the menu added them; vanilla sends each as a 16-bit number), `menu.dataCount`, `menu.id`, `menu.title`, `menu.slotCount`, `menu.carried` (an item on the cursor), `menu.hoveredSlot` (−1 for none), `menu.left`, `menu.top`, `menu.width`, `menu.height` (the panel's box), `menu.open`. A furnace's numbers are fuel left, fuel at the start, cooking progress and cooking time; other mods document theirs (or name them, see [For mod developers](#for-mod-developers)).
+- **Buttons that act on the server:** a `button` element with `"action": { "menuButton": 3 }` sends vanilla's container-button click (what the enchanting table's and the stonecutter's buttons send) for the open screen's menu; the server calls the menu's `clickMenuButton` with that number and ignores numbers the menu doesn't use. The number may be an expression (`"menuButton": "= selected"`). It works on container screens only and never sends chat or commands.
+- **Tooltips:** on container screens, an element with `"tooltip": "text"` (lines split by `\n`) shows it while the mouse is over it, unless an item's tooltip is showing.
+- **JEI:** the panel's box stays the screen's own, so JEI's lists, recipe areas and ghost dragging work. Elements of the panel port that reach outside the panel, and moved slots outside it, are reported to JEI (an optional plugin inside CakeUI), so its lists stay clear of them. Put side panels in the panel port for this; the part's own elements are treated as decoration.
+- The HUD editor doesn't edit container screens (yet); use the layout files.
+
+**Mods ship default layouts.** A mod can ship the look of its own machines in its jar, at `assets/<modid>/cakeui/container/<namespace>/<path>/layout.json5` (see [For mod developers](#for-mod-developers)). CakeUI uses such a layout whenever the active layout doesn't mention that menu, also with no layout chosen; a layout that mentions the menu always wins. Without CakeUI the mod shows its own screen.
 
 ## Moving your HUD (HUD editor)
 
@@ -290,11 +337,75 @@ public class MyCakeUIPlugin implements CakeUIPlugin {
 - CakeUI's own actions never send chat or commands; an action a mod registers is that mod's responsibility.
 - Make CakeUI an optional dependency: the plugin class is only loaded when CakeUI is installed. Registering later works too (`CakeUIApi.get()`), and is used from the next `reload()`.
 
+### API version 4: container screens
+
+A mod with machines (NeoForge 1.21.1 or any version and loader above with container screens) keeps its own screen class as the look without CakeUI and ships a default layout for CakeUI in its jar. Nothing in it needs Java:
+
+```
+src/main/resources/assets/pigtech/cakeui/
+├── window.json5           # optional; without "design", plain numbers are GUI pixels
+├── declaration.json5      # optional: constants for all your screens
+├── assets/                # optional: PNGs your layouts use
+├── lang/en_us.json5       # optional: {t:key} strings
+└── container/pigtech/treadmill/layout.json5   # one folder per menu type id (pigtech:treadmill)
+```
+
+```json5
+// container/pigtech/treadmill/layout.json5 (plain numbers are GUI pixels here)
+{
+  "ports": {
+    "panel": { "hide": true, "elements": {
+      "frame": { "type": "rect", "color": "#3b4048", "outline": "#9aa3ad" },
+      "power": { "type": "bar", "x": 152, "y": 8, "width": 12, "height": 62, "direction": "up",
+                 "value": "pigtech.treadmill.power / max(1, pigtech.treadmill.capacity)",
+                 "tooltip": "{pigtech.treadmill.power} / {pigtech.treadmill.capacity} FE" },
+      "tank": { "type": "pigtech:tank", "x": 8, "y": 8, "width": 16, "height": 62 },
+      "start": { "type": "button", "x": 62, "y": 56, "width": 52, "height": 14, "action": { "menuButton": 0 },
+                 "background": { "type": "rect", "color": "#2a5d34" } },
+    } },
+    "slots": { "*": { "skin": { "well": { "type": "rect", "color": "#00000050", "outline": "#ffffff28" } } } },
+  },
+}
+```
+
+CakeUI finds `assets/<modid>/cakeui/` in every loaded mod by itself. Its folder is read like a layout folder, but only `container/` is used, the game window is never touched, and the active layout wins for any menu it mentions. If two mods ship a layout for the same menu, the one whose mod id is the menu's namespace wins. In dev mode their problems are listed on screen after the active layout's (header "the container layouts of pigtech"); **Reload layout** reads them again.
+
+What needs Java goes in the plugin (only loaded with CakeUI installed):
+
+```java
+public class PigTechCakeUI implements CakeUIPlugin {
+    @Override
+    public void register(CakeUIApi api) {
+        // {pigtech.treadmill.power}: read from the open menu while a TreadmillMenu's screen is open, else 0
+        api.registerMenuValue("pigtech.treadmill.power", TreadmillMenu.class, TreadmillMenu::getPower);
+        api.registerMenuValue("pigtech.treadmill.capacity", TreadmillMenu.class, TreadmillMenu::getCapacity);
+        // { "type": "pigtech:tank" }: ElementContext.menu() is the open menu; tooltip() is shown while hovered
+        api.registerElement("pigtech:tank", new ElementType() {
+            public void draw(ElementContext c) {
+                if (c.menu() instanceof TankHolder m) {
+                    PigTechClient.drawFluid(c.drawContext(), m.fluid(), m.amount(), m.capacity(), (int) c.width(), (int) c.height());
+                }
+            }
+            public List<Component> tooltip(ElementContext c) {
+                return c.menu() instanceof TankHolder m ? PigTechClient.fluidTooltip(m.fluid(), m.amount(), m.capacity()) : null;
+            }
+        });
+    }
+}
+```
+
+- `registerMenuValue(name, menuClass, value)` (and with a 4th argument, the value while no such menu is open; default 0): for numbers that don't fit one data slot (vanilla syncs each as 16 bits) or that your menu syncs itself. `menu.data.<n>` works with no Java at all.
+- `ElementContext.menu()`: the open container screen's menu while an element is drawn on one, else null. `ElementType.tooltip(context)`: the element's own tooltip lines (null = none, then the layout's `tooltip`).
+- `addContainerLayouts(owner, folder)`: an extra folder laid out like `assets/<modid>/cakeui/` (generated, or kept elsewhere); read at the next reload.
+- **Server buttons** need no client code: the layout's `{ "menuButton": n }` calls your menu's `clickMenuButton(player, n)` on the server (override it in your menu; return true when it did something, and check the player may do it, as for any packet). Keep your own screen's buttons sending the same numbers, so both looks do the same.
+- Register your plugin as usual (the NeoForge service file above), and mark CakeUI optional in `neoforge.mods.toml`: `type = "optional"`. The layout files in your jar are only read by CakeUI, so they need no guard.
+
 ## Versions
 
 | | 1.20.4 | 1.21.1 | 26.1.2 |
 |---|---|---|---|
 | Everything above | Fabric, NeoForge | Fabric, NeoForge | Fabric, NeoForge |
+| Container screens (`container/`, mods' default layouts, API version 4) | Fabric, NeoForge | Fabric, NeoForge | not yet: a layout's `container/` loads but isn't drawn (the API there is version 3) |
 | 3D tilt (`rotateX`, `rotateY`, `z`) | true perspective | true perspective | drawn as the closest flat (affine) shape: it turns and shrinks, without foreshortening |
 | `opacity` on a vanilla piece's port | yes | yes | only where CakeUI passes the colour (text lines, the inventory panel, the launch logo); other vanilla pieces are shown or hidden |
 | `item` elements on the first main menu | yes | yes | appear once the game's data is loaded (after the first world) |

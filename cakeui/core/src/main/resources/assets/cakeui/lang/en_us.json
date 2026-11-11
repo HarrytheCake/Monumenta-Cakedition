@@ -6,6 +6,7 @@
 	"cakeui.overlay.header": "CakeUI: %2$s problem(s) in layout %1$s",
 	"cakeui.overlay.kept": "CakeUI: %2$s problem(s) in layout %1$s, so the previous version stays active",
 	"cakeui.overlay.more": "… and %s more (all are in logs/latest.log)",
+	"cakeui.overlay.mod": "CakeUI: %2$s problem(s) in the container layouts of %1$s",
 	"cakeui.config.title": "CakeUI",
 	"cakeui.config.layout": "Layout",
 	"cakeui.config.layout.none": "None (vanilla)",

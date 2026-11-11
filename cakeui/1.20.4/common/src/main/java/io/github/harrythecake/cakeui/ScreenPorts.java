@@ -28,7 +28,11 @@ import java.util.function.Supplier;
  * screen (ADR 0006).
  */
 public final class ScreenPorts {
-	private static final Map<AbstractWidget, Node> SKINS = new WeakHashMap<>();
+	/** A button's skin and the renderer of the layout it comes from (a container screen may use a mod's layout). */
+	public record Skin(Node node, Renderer renderer) {
+	}
+
+	private static final Map<AbstractWidget, Skin> SKINS = new WeakHashMap<>();
 	private static final Map<AbstractWidget, int[]> ORIGINAL = new WeakHashMap<>();
 
 	/** The pause menu: the HUD's built-in subwindow `pause` (only the full menu, not F3+Esc's "Game Paused"). */
@@ -41,14 +45,43 @@ public final class ScreenPorts {
 	public static final ScreenPorts LOADING = new ScreenPorts("loading_screen", () -> Ui.part("loading_screen"));
 
 	private final Supplier<Node> node;
+	/** The renderer that draws the node: the active layout's, or (container screens) a mod's default layout's. */
+	private final Supplier<Renderer> renderer;
+	/** The box the buttons port places buttons in, {x, y, w, h}; null = the whole screen (container screens: the panel). */
+	@Nullable
+	private final java.util.function.Function<Screen, int[]> frame;
+	/** Whether the HUD editor offers this screen (not container screens, for now). */
+	private final boolean editable;
 	/** The part's id, the editor's key prefix: "main_menu", "pause", "inventory", "loading_screen", "game_launch". */
 	private final String part;
 	/** Where the layout (or vanilla) put each button, before the player's edits: the editor's inner box. */
 	private static final Map<AbstractWidget, int[]> LAYOUT_BOX = new WeakHashMap<>();
 
 	public ScreenPorts(String part, Supplier<Node> node) {
+		this(part, node, Ui::renderer, null, true);
+	}
+
+	public ScreenPorts(String part, Supplier<Node> node, Supplier<Renderer> renderer, @Nullable java.util.function.Function<Screen, int[]> frame, boolean editable) {
 		this.part = part;
 		this.node = node;
+		this.renderer = renderer;
+		this.frame = frame;
+		this.editable = editable;
+	}
+
+	/** The renderer of the layout this screen's node comes from. */
+	public Renderer renderer() {
+		return renderer.get();
+	}
+
+	/** Whether the HUD editor can edit this screen. */
+	public boolean editable() {
+		return editable;
+	}
+
+	/** Drops every button skin (a reload: the next init sets them again from the new layout). */
+	static void clearSkins() {
+		SKINS.clear();
 	}
 
 	public String part() {
@@ -117,6 +150,9 @@ public final class ScreenPorts {
 		if (screen instanceof InventoryScreen) {
 			return INVENTORY;
 		}
+		if (screen instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> c) {
+			return ContainerPart.ports(c); // null when neither the layout nor a mod lays this menu out
+		}
 		if (LoadingPart.kind(screen) != null) {
 			return LOADING;
 		}
@@ -135,7 +171,7 @@ public final class ScreenPorts {
 
 	/** Start of the screen's render. */
 	public void beginFrame(Screen screen, int mouseX, int mouseY) {
-		Renderer r = Ui.renderer();
+		Renderer r = renderer();
 		if (r != null && node() != null) {
 			r.beginFrame(screen.width, screen.height, mouseX, mouseY, true);
 		}
@@ -146,18 +182,18 @@ public final class ScreenPorts {
 	/** True when vanilla should draw the piece of this port (no port, or the port doesn't hide it). */
 	public boolean vanilla(String name) {
 		Node p = port(name);
-		return p == null || !Ui.renderer().bool(p, "hide", false);
+		return p == null || !renderer().bool(p, "hide", false);
 	}
 
 	public float portOpacity(String name) {
 		Node p = port(name);
-		return p == null ? 1 : (float) Ui.renderer().number(p, "opacity", 1);
+		return p == null ? 1 : (float) renderer().number(p, "opacity", 1);
 	}
 
 	public void drawPortElements(String name, GuiGraphics ctx, float alpha) {
 		Node p = port(name);
 		if (p != null) {
-			Ui.renderer().drawElements(ctx, p, alpha);
+			renderer().drawElements(ctx, p, alpha);
 		}
 	}
 
@@ -181,7 +217,7 @@ public final class ScreenPorts {
 		if (p == null) {
 			return new double[] {0, 0, 1};
 		}
-		Renderer r = Ui.renderer();
+		Renderer r = renderer();
 		double w = Minecraft.getInstance().getWindow().getGuiScaledWidth();
 		double h = Minecraft.getInstance().getWindow().getGuiScaledHeight();
 		return new double[] {
@@ -193,7 +229,7 @@ public final class ScreenPorts {
 	/** A text line's port text: the port's own, or vanilla's. */
 	public String text(String name, String vanilla) {
 		Node p = port(name);
-		return p == null || !p.has("text") ? vanilla : Ui.renderer().word(p, "text", vanilla);
+		return p == null || !p.has("text") ? vanilla : renderer().word(p, "text", vanilla);
 	}
 
 	/** A text line's colour: the port's, its alpha times vanilla's (which carries fades); else vanilla's. */
@@ -202,7 +238,7 @@ public final class ScreenPorts {
 		if (p == null || !p.has("color")) {
 			return vanilla;
 		}
-		int c = Ui.renderer().colorValue(p, "color", vanilla | 0xFF000000);
+		int c = renderer().colorValue(p, "color", vanilla | 0xFF000000);
 		int vanillaAlpha = (vanilla >>> 24) == 0 ? 255 : vanilla >>> 24;
 		int a = Math.round((c >>> 24) * vanillaAlpha / 255.0F);
 		return (a << 24) | (c & 0xFFFFFF);
@@ -212,7 +248,7 @@ public final class ScreenPorts {
 	public void drawPortElementsIn(String name, GuiGraphics ctx, int x, int y, int w, int h) {
 		Node p = port(name);
 		if (p != null) {
-			Ui.renderer().drawElementsIn(ctx, p, x, y, w, h, 1);
+			renderer().drawElementsIn(ctx, p, x, y, w, h, 1);
 		}
 	}
 
@@ -225,7 +261,7 @@ public final class ScreenPorts {
 			return true;
 		}
 		PortEdit e = edited ? edit(name) : null;
-		Renderer r = Ui.renderer();
+		Renderer r = renderer();
 		boolean layoutHides = p != null && r.bool(p, "hide", false);
 		if (e != null && e.hide != null ? e.hide : layoutHides) {
 			return false;
@@ -267,11 +303,11 @@ public final class ScreenPorts {
 		if (layer.equals("back")) {
 			applyButtons(screen);
 		}
-		Ui.renderer().drawPart(ctx, n, layer, alpha);
+		renderer().drawPart(ctx, n, layer, alpha);
 	}
 
 	public boolean click(Screen screen, int button) {
-		Renderer r = Ui.renderer();
+		Renderer r = renderer();
 		return r != null && node() != null && r.mouseClicked(screen, button);
 	}
 
@@ -324,7 +360,8 @@ public final class ScreenPorts {
 		if (port == null && !edited) {
 			return;
 		}
-		Renderer r = Ui.renderer();
+		Renderer r = renderer();
+		int[] f = frame == null ? null : frame.apply(screen);
 		List<AbstractWidget> list = buttons(screen);
 		for (int i = 0; i < list.size(); i++) {
 			AbstractWidget w = list.get(i);
@@ -340,8 +377,8 @@ public final class ScreenPorts {
 			int[] orig = ORIGINAL.computeIfAbsent(w, k -> new int[] {k.getX(), k.getY(), k.getWidth(), k.getHeight()});
 			r.env.self = null;
 			w.visible = r.bool(o, "visible", true);
-			double sw = screen.width;
-			double sh = screen.height;
+			double sw = f == null ? screen.width : f[2];
+			double sh = f == null ? screen.height : f[3];
 			int bw = (int) Math.round(r.length(o, null, "width", Env.AXIS_X, sw, sh, orig[2]));
 			int bh = (int) Math.round(r.length(o, null, "height", Env.AXIS_Y, sw, sh, orig[3]));
 			int bx = orig[0];
@@ -349,8 +386,8 @@ public final class ScreenPorts {
 			if (o.has("anchor") || o.has("x") || o.has("y")) {
 				double[] a = Geometry.anchor(r.word(o, "anchor", "top_left"));
 				double[] org = o.has("origin") ? Geometry.anchor(r.word(o, "origin", "top_left")) : a;
-				bx = (int) Math.round(Geometry.place(sw, a[0], r.length(o, null, "x", Env.AXIS_X, sw, sh, 0), bw, org[0]));
-				by = (int) Math.round(Geometry.place(sh, a[1], r.length(o, null, "y", Env.AXIS_Y, sw, sh, 0), bh, org[1]));
+				bx = (f == null ? 0 : f[0]) + (int) Math.round(Geometry.place(sw, a[0], r.length(o, null, "x", Env.AXIS_X, sw, sh, 0), bw, org[0]));
+				by = (f == null ? 0 : f[1]) + (int) Math.round(Geometry.place(sh, a[1], r.length(o, null, "y", Env.AXIS_Y, sw, sh, 0), bh, org[1]));
 			}
 			if (edited) {
 				LAYOUT_BOX.put(w, new int[] {bx, by, bw, bh});
@@ -370,7 +407,7 @@ public final class ScreenPorts {
 				}
 			}
 			if (o.customStyle) {
-				SKINS.put(w, o);
+				SKINS.put(w, new Skin(o, r));
 			} else {
 				SKINS.remove(w);
 			}
@@ -398,8 +435,9 @@ public final class ScreenPorts {
 	}
 
 	/** The skin to draw instead of this button's vanilla look, or null. */
-	public static Node skin(AbstractWidget w) {
-		if (SKINS.isEmpty() || Ui.renderer() == null) {
+	@Nullable
+	public static Skin skin(AbstractWidget w) {
+		if (SKINS.isEmpty()) {
 			return null;
 		}
 		return SKINS.get(w);

@@ -1,0 +1,41 @@
+// examplemod:press: the default look of a made-up mod's machine, shipped in the mod's jar at
+// assets/examplemod/cakeui/container/examplemod/press/layout.json5. CakeUI uses it whenever the active layout
+// doesn't mention examplemod:press, also with no layout chosen; a pack that lays the press out wins. Without
+// CakeUI the mod's own screen shows as it is. The mod's plugin registers examplemod.press.energy/.capacity
+// (registerMenuValue) and the examplemod:tank element (registerElement); see README "Container screens".
+{
+  "$schema": "../../../../../../../../schema/layout.schema.json",
+  "ports": {
+    "panel": {
+      "hide": true, // the mod's own texture (its look without CakeUI)
+      "elements": {
+        "frame": { "type": "rect", "color": "steel", "outline": "rim", "outlineWidth": 1 },
+        // two of the menu's own synced numbers (its ContainerData): 0 = progress, 1 = time needed
+        "arrow": { "type": "bar", "x": 68, "y": 38, "width": 40, "height": 10, "value": "menu.data.0 / max(1, menu.data.1)",
+                   "color": "glow", "background": "#00000060", "tooltip": "{fmt(menu.data.0 / max(1, menu.data.1) * 100, 0)}%" },
+        // a value the mod's plugin reads from its menu (energy is bigger than one 16-bit data slot holds)
+        "energy": { "type": "bar", "x": 152, "y": 8, "width": 12, "height": 62, "direction": "up",
+                    "value": "examplemod.press.energy / max(1, examplemod.press.capacity)", "color": "#e04040", "background": "#00000060",
+                    "tooltip": "{examplemod.press.energy} / {examplemod.press.capacity} FE" },
+        // an element type the mod's plugin adds: it draws the tank and gives its own tooltip
+        "tank": { "type": "examplemod:tank", "x": 8, "y": 8, "width": 16, "height": 62 },
+        // acts on the server: the menu's clickMenuButton(player, 0), as vanilla's container buttons do
+        "start": { "type": "button", "x": 62, "y": 56, "width": 52, "height": 14, "action": { "menuButton": 0 },
+                   "background": { "type": "rect", "color": "#2a5d34", "outline": "rim", "outlineWidth": 1 },
+                   "states": { "hover": { "opacity": 0.85 } },
+                   "elements": {
+                     "label": { "type": "text", "text": "= menu.data.2 > 0 ? t('examplemod.press.stop') : t('examplemod.press.start')",
+                                "anchor": "center", "size": 9, "color": "#ffffff" },
+                   } },
+      },
+    },
+    "slots": {
+      "*": { "skin": { "well": { "type": "rect", "color": "#00000050", "outline": "#ffffff28", "outlineWidth": 1 } } },
+      // slot 1, the output: a bigger, glowing frame
+      "1": { "skin": { "well": { "type": "rect", "x": -2, "y": -2, "width": 22, "height": 22,
+                                 "color": "#00000050", "outline": "glow", "outlineWidth": 1 } } },
+    },
+    "title": { "color": "#ffffff" },
+    "inventoryTitle": { "color": "#c8c8c8" },
+  },
+}

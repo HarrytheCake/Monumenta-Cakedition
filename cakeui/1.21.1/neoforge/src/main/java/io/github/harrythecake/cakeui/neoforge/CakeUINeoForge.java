@@ -50,6 +50,11 @@ public final class CakeUINeoForge {
 				e.setCanceled(true);
 			}
 		});
+		NeoForge.EVENT_BUS.addListener(ScreenEvent.MouseButtonReleased.Pre.class, e -> {
+			if (CakeUIClient.screenMouseReleaseTaken(e.getScreen())) {
+				e.setCanceled(true);
+			}
+		});
 		NeoForge.EVENT_BUS.addListener(ScreenEvent.MouseButtonReleased.Post.class, e -> CakeUIClient.screenMouseReleased(e.getScreen()));
 	}
 }

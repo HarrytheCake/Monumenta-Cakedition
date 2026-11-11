@@ -19,7 +19,8 @@ final class Overlay {
 			return;
 		}
 		List<Problems.Problem> problems = Ui.problems();
-		if (problems.isEmpty()) {
+		java.util.Map<String, List<Problems.Problem>> mods = ContainerPart.modProblems();
+		if (problems.isEmpty() && mods.isEmpty()) {
 			return;
 		}
 		Font tr = Minecraft.getInstance().font;
@@ -27,15 +28,26 @@ final class Overlay {
 		ctx.pose().pushPose();
 		ctx.pose().translate(0, 0, 500);
 		int y = 4;
-		Component header = Component.translatable(Ui.keptPrevious() ? "cakeui.overlay.kept" : "cakeui.overlay.header", Ui.problemsLayoutName(), problems.size());
+		if (!problems.isEmpty()) {
+			Component header = Component.translatable(Ui.keptPrevious() ? "cakeui.overlay.kept" : "cakeui.overlay.header", Ui.problemsLayoutName(), problems.size());
+			y = block(ctx, tr, header, problems, y, maxWidth);
+		}
+		// a mod's default container layouts (assets/<modid>/cakeui/): for that mod's developers
+		for (java.util.Map.Entry<String, List<Problems.Problem>> e : mods.entrySet()) {
+			y = block(ctx, tr, Component.translatable("cakeui.overlay.mod", e.getKey(), e.getValue().size()), e.getValue(), y, maxWidth);
+		}
+		ctx.pose().popPose();
+	}
+
+	private static int block(GuiGraphics ctx, Font tr, Component header, List<Problems.Problem> problems, int y, int maxWidth) {
 		y = line(ctx, tr, header.getString(), y, 0xFFFFFF55, maxWidth);
 		for (int i = 0; i < Math.min(MAX_LINES, problems.size()); i++) {
 			y = line(ctx, tr, problems.get(i).toString(), y, 0xFFFF7070, maxWidth);
 		}
 		if (problems.size() > MAX_LINES) {
-			line(ctx, tr, Component.translatable("cakeui.overlay.more", problems.size() - MAX_LINES).getString(), y, 0xFFAAAAAA, maxWidth);
+			y = line(ctx, tr, Component.translatable("cakeui.overlay.more", problems.size() - MAX_LINES).getString(), y, 0xFFAAAAAA, maxWidth);
 		}
-		ctx.pose().popPose();
+		return y;
 	}
 
 	private static int line(GuiGraphics ctx, Font tr, String text, int y, int color, int maxWidth) {

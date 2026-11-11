@@ -166,7 +166,7 @@
       }
     },
     "action": {
-      "description": "What a button does (client-side only).",
+      "description": "What a button does (client-side, except menuButton, which sends vanilla's container-button click).",
       "anyOf": [
         {
           "enum": [
@@ -230,6 +230,22 @@
             "toggle": {
               "type": "string",
               "description": "A true/false variable of this folder."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "menuButton"
+          ],
+          "properties": {
+            "menuButton": {
+              "description": "Container screens: the menu's button number, sent to the server like vanilla's container buttons (clickMenuButton). A number or an expression.",
+              "type": [
+                "integer",
+                "string"
+              ]
             }
           }
         }
@@ -660,6 +676,32 @@
           }
         }
       }
+    },
+    "slots": {
+      "type": "object",
+      "description": "Container screens: slots by their number in the menu (dev mode's ids show them), a range \"3-5\", a list \"0,2,4-6\", \"player\" (the player's inventory), \"container\" (every other slot) or \"*\". Each setting comes from the most specific entry.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "x": {
+            "$ref": "#/definitions/length",
+            "description": "The slot's x in the panel (GUI pixels, like the menu's own numbers; use px)."
+          },
+          "y": {
+            "$ref": "#/definitions/length",
+            "description": "The slot's y in the panel."
+          },
+          "skin": {
+            "$ref": "#/definitions/elements",
+            "description": "Elements drawn behind the item, in an 18×18 box around it ({slot.index}, {slot.empty}, {slot.hovered}, …)."
+          },
+          "highlight": {
+            "$ref": "#/definitions/elements",
+            "description": "Elements drawn instead of vanilla's white highlight while the mouse is over the slot (18×18 box); {} = no highlight."
+          }
+        }
+      }
     }
   },
   "properties": {
@@ -808,7 +850,7 @@
     "ports": {
       "type": "object",
       "additionalProperties": false,
-      "description": "Vanilla pieces this part changes (main_menu: background, logo, splash, version, buttons; game_launch: background, bar, logo; loading_screen: background, text, map, buttons; hud/subwindow_pause: background, buttons; hud/subwindow_inventory: background, panel, player, title, buttons; hud: hotbar, crosshair, bossBars, health, armor, hunger, air, mountHealth, experience, heldItemName, statusEffects, scoreboard, tabList, actionBar, title, vignette, spyglass, pumpkin; plus pieces other mods add, like minimap).",
+      "description": "Vanilla pieces this part changes (main_menu: background, logo, splash, version, buttons; game_launch: background, bar, logo; loading_screen: background, text, map, buttons; hud/subwindow_pause: background, buttons; hud/subwindow_inventory: background, panel, player, title, buttons; container/<namespace>/<path>: background, panel, title, inventoryTitle, slots, buttons; hud: hotbar, crosshair, bossBars, health, armor, hunger, air, mountHealth, experience, heldItemName, statusEffects, scoreboard, tabList, actionBar, title, vignette, spyglass, pumpkin; plus pieces other mods add, like minimap).",
       "properties": {
         "background": {
           "type": "object",
@@ -1027,9 +1069,17 @@
             },
             "elements": {
               "$ref": "#/definitions/elements"
+            },
+            "width": {
+              "$ref": "#/definitions/length",
+              "description": "Container screens: the panel's width (the screen's imageWidth; JEI and slots follow). Use px."
+            },
+            "height": {
+              "$ref": "#/definitions/length",
+              "description": "Container screens: the panel's height (the screen's imageHeight). Use px."
             }
           },
-          "description": "Inventory: the panel texture. Its elements are drawn in the panel's box (176×166 GUI pixels) and follow it."
+          "description": "Inventory: the panel texture. Its elements are drawn in the panel's box (176×166 GUI pixels) and follow it. Container screens: the screen's own background (renderBg, with its progress arrows); x and y move the whole panel with its slots, width and height resize it (no scale); elements with layer \"front\" are drawn over the slots."
         },
         "player": {
           "type": "object",
@@ -1094,7 +1144,46 @@
               "$ref": "#/definitions/color"
             }
           },
-          "description": "Inventory: the title line (text, color). HUD: the title and subtitle ({hud.title}, {hud.subtitle}; hide, x, y, scale, opacity)."
+          "description": "Inventory and container screens: the title line (text, color). HUD: the title and subtitle ({hud.title}, {hud.subtitle}; hide, x, y, scale, opacity)."
+        },
+        "inventoryTitle": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hide": {
+              "$ref": "#/definitions/boolean",
+              "description": "Hide vanilla's piece."
+            },
+            "x": {
+              "$ref": "#/definitions/length"
+            },
+            "y": {
+              "$ref": "#/definitions/length"
+            },
+            "scale": {
+              "$ref": "#/definitions/number"
+            },
+            "opacity": {
+              "$ref": "#/definitions/number"
+            },
+            "order": {
+              "$ref": "#/definitions/number"
+            },
+            "elements": {
+              "$ref": "#/definitions/elements"
+            },
+            "text": {
+              "$ref": "#/definitions/text",
+              "description": "The line instead of vanilla's (\"Inventory\")."
+            },
+            "color": {
+              "$ref": "#/definitions/color"
+            }
+          },
+          "description": "Container screens: the \"Inventory\" line above the player's slots (text, color, hide, x, y, scale, opacity)."
+        },
+        "slots": {
+          "$ref": "#/definitions/slots"
         },
         "buttons": {
           "$ref": "#/definitions/buttons"

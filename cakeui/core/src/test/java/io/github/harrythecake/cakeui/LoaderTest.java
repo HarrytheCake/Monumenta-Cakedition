@@ -286,4 +286,115 @@ class LoaderTest {
 		assertTrue(hasProblem(l, "hud/layout.json5", 6, "unknown port 'chat' in hud"), problems(l));
 		assertEquals(2, l.problems.list().size(), problems(l));
 	}
+
+	@Test
+	void containerScreensAreKeyedByMenuId() throws IOException {
+		write("window.json5", "{ format: 1, design: [640, 360] }");
+		write("container/declaration.json5", "{ constants: { frame: '#3a2a1a' } }");
+		write("container/minecraft/furnace/layout.json5", """
+				{
+				  ports: {
+				    panel: { hide: true, width: "190px", height: "170px", elements: { bg: { type: "rect", color: "frame" } } },
+				    title: { text: "Oven", color: "#ffffff" },
+				    inventoryTitle: { hide: true },
+				    slots: {
+				      "*": { skin: { frame: { type: "rect", color: "#000" } }, highlight: {} },
+				      "0": { x: "56px", y: "17px" },
+				      "3-5": { skin: {} },
+				      "nine": { x: 1 },
+				    },
+				    buttons: { "*": { visible: false } },
+				  },
+				  elements: {
+				    arrow: { type: "bar", value: "menu.data.2 / max(1, menu.data.3)" },
+				    go: { type: "button", action: { menuButton: 1 } },
+				  },
+				}
+				""");
+		write("container/pigtech/machine/treadmill/layout.json5", "{ elements: { b: { type: 'button', action: { menuButton: 'menu.data.0 > 0 ? 2 : 3' } } } }");
+		write("container/pigtech/machine/treadmill/subwindow_side/layout.json5", "{ elements: { t: { type: 'text', text: 'side' } } }");
+		write("main_menu/layout.json5", "{ elements: { b: { type: 'button', action: { menuButton: 0 } } } }");
+		GameValues.registerFamily("menu.data.", n -> (double) n);
+		Layout l = Loader.load(dir).layout();
+
+		Node furnace = l.container("minecraft:furnace");
+		assertNotNull(furnace, problems(l));
+		assertEquals(List.of("panel", "title", "inventoryTitle", "slots", "buttons"), List.copyOf(furnace.ports.keySet()));
+		assertTrue(furnace.ports.get("panel").has("width"));
+		assertTrue(furnace.ports.get("title").has("text"));
+		Node slots = furnace.ports.get("slots");
+		assertEquals(3, slots.slots.size(), problems(l));
+		assertNotNull(slots.slots.get("*").ports.get("highlight"), "an empty highlight is kept: it hides vanilla's");
+		assertTrue(slots.slots.get("0").selector.matches(0, false));
+		assertEquals("menuButton", furnace.children.get(1).action.kind());
+		Node treadmill = l.container("pigtech:machine/treadmill");
+		assertNotNull(treadmill, "a / in the id's path is a deeper folder");
+		assertEquals(2, treadmill.children.size(), "its button and its subwindow");
+		assertTrue(hasProblem(l, "container/minecraft/furnace/layout.json5", 10, "'nine' isn't a slot"), problems(l));
+		assertTrue(hasProblem(l, "main_menu/layout.json5", 1, "'menuButton' works on container screens only"), problems(l));
+		assertEquals(2, l.problems.list().size(), problems(l));
+	}
+
+	@Test
+	void containerFolderProblems() throws IOException {
+		write("window.json5", "{ format: 1 }");
+		write("container/layout.json5", "{}");
+		write("container/Pig Tech/furnace/layout.json5", "{}");
+		write("container/minecraft/empty/.keep", "");
+		write("container/minecraft/smoker/layout.json5", "{ ports: { panel: { scale: 2 }, player: {} } }");
+		Layout l = Loader.load(dir).layout();
+		assertTrue(hasProblem(l, "container/layout.json5", 0, "container/ has no layout of its own"), problems(l));
+		assertTrue(hasProblem(l, "container/Pig Tech/", 0, "isn't a namespace"), problems(l));
+		assertTrue(hasProblem(l, "container/minecraft/empty/", 0, "no screen here"), problems(l));
+		assertTrue(hasProblem(l, "container/minecraft/smoker/layout.json5", 1, "can't be scaled"), problems(l));
+		assertTrue(hasProblem(l, "container/minecraft/smoker/layout.json5", 1, "unknown port 'player' in container"), problems(l));
+		assertEquals(5, l.problems.list().size(), problems(l));
+	}
+
+	@Test
+	void aModsLayoutHoldsOnlyContainerScreens() throws IOException {
+		// assets/<modid>/cakeui/ in a mod's jar: no window.json5 needed, plain numbers are GUI pixels
+		write("container/pigtech/treadmill/layout.json5", "{ ports: { panel: { elements: { bar: { type: 'bar', x: 10, width: 40 } } } } }");
+		write("hud/layout.json5", "{}");
+		write("assets/tank.png", "");
+		Loader loader = Loader.loadMod(dir, "pigtech");
+		Layout l = loader.layout();
+		assertFalse(loader.fatal);
+		assertEquals("pigtech", l.owner);
+		assertNotNull(l.container("pigtech:treadmill"));
+		assertEquals(1, l.designScale(1000, 500)[0], "without a design, 1 r is 1 GUI pixel");
+		assertTrue(hasProblem(l, "hud/", 0, "a mod's layout only holds container/"), problems(l));
+		assertEquals(1, l.problems.list().size(), problems(l));
+
+		write("window.json5", "{ design: [320, 240], title: 'no' }");
+		Layout withWindow = Loader.loadMod(dir, "pigtech").layout();
+		assertEquals(320, withWindow.designWidth);
+		assertTrue(hasProblem(withWindow, "window.json5", 1, "a mod's layout can't set it"), problems(withWindow));
+	}
+
+	@Test
+	void slotSelectors() {
+		var one = io.github.harrythecake.cakeui.model.SlotSelector.parse("4");
+		var set = io.github.harrythecake.cakeui.model.SlotSelector.parse("0, 2, 5-7");
+		var player = io.github.harrythecake.cakeui.model.SlotSelector.parse("player");
+		var any = io.github.harrythecake.cakeui.model.SlotSelector.parse("*");
+		assertTrue(one.matches(4, true) && !one.matches(5, false));
+		assertTrue(set.matches(2, false) && set.matches(6, false) && !set.matches(3, false));
+		assertTrue(player.matches(30, true) && !player.matches(0, false));
+		assertTrue(any.matches(99, false));
+		assertTrue(one.specificity() > set.specificity() && set.specificity() > player.specificity() && player.specificity() > any.specificity());
+		assertNull(io.github.harrythecake.cakeui.model.SlotSelector.parse("7-3"));
+		assertNull(io.github.harrythecake.cakeui.model.SlotSelector.parse("hotbar"));
+		assertNull(io.github.harrythecake.cakeui.model.SlotSelector.parse("1,,2"));
+	}
+
+	@Test
+	void numberedValueFamilies() {
+		GameValues.registerFamily("test.slot.", n -> n * 10.0);
+		assertTrue(GameValues.has("test.slot.3"));
+		assertFalse(GameValues.has("test.slot.x"));
+		assertFalse(GameValues.has("test.slot.1000"));
+		assertEquals(30.0, GameValues.resolve("test.slot.3").eval(new Env()));
+		assertTrue(GameValues.names().contains("test.slot.0"));
+	}
 }

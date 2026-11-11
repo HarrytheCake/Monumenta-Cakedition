@@ -13,7 +13,8 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": ["io.github.harrythecake.cakeui.fabric.CakeUIFabric"],
-		"modmenu": ["io.github.harrythecake.cakeui.fabric.ModMenuIntegration"]
+		"modmenu": ["io.github.harrythecake.cakeui.fabric.ModMenuIntegration"],
+		"jei_mod_plugin": ["io.github.harrythecake.cakeui.compat.CakeUIJeiPlugin"]
 	},
 	"mixins": ["cakeui.mixins.json", "cakeui-fabric.mixins.json"],
 	"depends": {

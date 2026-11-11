@@ -1,0 +1,46 @@
+// The furnace (menu type minecraft:furnace). A container screen keeps working as vanilla's: slots, clicks,
+// shift-click, dragging, the recipe book and JEI. This layout draws its own panel instead of the furnace texture,
+// binds the flame and the arrow to the menu's synced numbers, skins the slots and moves the result slot.
+// Panel elements are drawn in the panel's box (176×166 GUI pixels), so they use px and %, not design pixels.
+// The furnace's numbers: menu.data.0 = fuel left, .1 = fuel at the start, .2 = cooking progress, .3 = cooking time.
+{
+  "$schema": "../../../../../schema/layout.schema.json",
+  "ports": {
+    "panel": {
+      "hide": true, // vanilla's texture, with its flame and arrow: drawn below instead
+      "elements": {
+        "frame": { "type": "rect", "color": "ink", "outline": "accent", "outlineWidth": "1px" },
+        "line": { "type": "rect", "x": "7px", "y": "79px", "width": "162px", "height": "1px", "color": "#ffffff20" },
+        "fuel": { "type": "bar", "x": "56px", "y": "36px", "width": "14px", "height": "14px", "direction": "up",
+                  "value": "menu.data.0 / max(1, menu.data.1)", "color": "#ff7a1a", "background": "#ffffff14",
+                  "tooltip": "{t:example.furnace.fuel} {fmt(menu.data.0 / max(1, menu.data.1) * 100, 0)}%" },
+        "progress": { "type": "bar", "x": "79px", "y": "38px", "width": "24px", "height": "8px",
+                      "value": "menu.data.2 / max(1, menu.data.3)", "color": "accent", "background": "#ffffff14",
+                      "tooltip": "{t:example.furnace.cooking} {fmt(menu.data.2 / max(1, menu.data.3) * 100, 0)}%" },
+        // outside the panel: JEI keeps its item list clear of it
+        "card": { "type": "group", "x": "-72px", "y": "4px", "width": "66px", "height": "34px",
+                  "background": { "type": "rect", "color": "ink", "outline": "accent", "outlineWidth": "1px" },
+                  "elements": {
+                    "label": { "type": "text", "text": "{t:example.furnace.cooking}", "x": "5px", "y": "5px", "size": "9px", "color": "accent" },
+                    "value": { "type": "text", "text": "= menu.data.3 > 0 ? fmt(menu.data.2 / menu.data.3 * 100, 0) + '%' : '-'",
+                               "x": "5px", "y": "19px", "size": "9px", "color": "paper" },
+                  } },
+      },
+    },
+    "title": { "color": "paper" },
+    "inventoryTitle": { "color": "#c8c8c0" },
+    "slots": {
+      // every slot: a dark well behind the item, and an amber highlight instead of vanilla's white one
+      "*": {
+        "skin": { "well": { "type": "rect", "color": "#00000060", "outline": "#ffffff30", "outlineWidth": "1px" } },
+        "highlight": { "glow": { "type": "rect", "x": "1px", "y": "1px", "width": "16px", "height": "16px", "color": "#ffb00060" } },
+      },
+      // slot 2 (the result): 4 px further right, in a bigger frame. Clicks, hover and JEI follow it.
+      "2": {
+        "x": "120px",
+        "skin": { "well": { "type": "rect", "x": "-4px", "y": "-4px", "width": "26px", "height": "26px",
+                            "color": "#00000060", "outline": "accent", "outlineWidth": "1px" } },
+      },
+    },
+  },
+}

@@ -46,6 +46,7 @@ public final class CakeUIFabric implements ClientModInitializer {
 			ScreenEvents.afterRender(screen).register((s, context, mouseX, mouseY, delta) -> CakeUIClient.afterScreenRender(s, context, mouseX, mouseY));
 			ScreenKeyboardEvents.afterKeyPress(screen).register((s, key, scancode, modifiers) -> CakeUIClient.screenKeyPressed(key, scancode));
 			ScreenMouseEvents.allowMouseClick(screen).register((s, mouseX, mouseY, button) -> !CakeUIClient.screenMouseClicked(s, button));
+			ScreenMouseEvents.allowMouseRelease(screen).register((s, mouseX, mouseY, button) -> !CakeUIClient.screenMouseReleaseTaken(s));
 			ScreenMouseEvents.afterMouseRelease(screen).register((s, mouseX, mouseY, button) -> CakeUIClient.screenMouseReleased(s));
 		});
 	}

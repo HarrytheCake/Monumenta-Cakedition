@@ -14,4 +14,6 @@
   "example.paused": "已暂停",
   "example.inventory": "合成",
   "example.level": "等级",
+  "example.furnace.cooking": "烧炼",
+  "example.furnace.fuel": "燃料",
 }

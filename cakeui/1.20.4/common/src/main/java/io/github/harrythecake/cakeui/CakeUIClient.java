@@ -82,6 +82,7 @@ public final class CakeUIClient {
 		ScreenPorts ports = ScreenPorts.of(screen);
 		if (ports != null) {
 			ports.afterInit(screen);
+			ContainerPart.afterInit(screen);
 		}
 	}
 
@@ -90,6 +91,9 @@ public final class CakeUIClient {
 		ScreenPorts ports = ScreenPorts.of(screen);
 		if (ports == ScreenPorts.LOADING) {
 			LoadingPart.beginFrame(screen, mouseX, mouseY);
+		}
+		if (ports != null && !ports.editable()) {
+			ContainerPart.beginFrame(screen, mouseX, mouseY); // a container screen: its renderer's frame, slot places
 		}
 		if (ports != null && ports.hasEdits()) {
 			ports.applyButtons(screen); // the player's edits (the UI editor), live while it is open
@@ -103,6 +107,7 @@ public final class CakeUIClient {
 			ScreenPorts.LOADING.drawElements(screen, context, "front", 1);
 			ScreenPorts.drawButtonIds(screen, context);
 		}
+		ContainerPart.drawIds(screen, context);
 		Overlay.draw(context);
 		SelfTest.afterScreenRender(screen, context);
 	}
@@ -110,7 +115,8 @@ public final class CakeUIClient {
 	/** A key pressed while a screen is open: the reload and button-id keys work there too. */
 	public static void screenKeyPressed(int key, int scancode) {
 		Screen screen = client().screen;
-		if (EDIT_HUD_KEY.matches(key, scancode) && screen != null && !(screen instanceof HudEditorScreen) && ScreenPorts.of(screen) != null) {
+		ScreenPorts open = screen == null ? null : ScreenPorts.of(screen);
+		if (EDIT_HUD_KEY.matches(key, scancode) && screen != null && !(screen instanceof HudEditorScreen) && open != null && open.editable()) {
 			HudEditorScreen.openFor(screen); // edit the screen that is open (main menu, pause menu, inventory, loading screen)
 			return;
 		}
@@ -121,15 +127,31 @@ public final class CakeUIClient {
 		}
 	}
 
+	/** A CakeUI button took the last press: the screen must not see its release either (a container would drop the carried item). */
+	private static boolean pressTaken;
+
 	/** A mouse click on a screen: true when a CakeUI button took it (then the screen must not see it). */
 	public static boolean screenMouseClicked(Screen screen, int button) {
 		ScreenPorts ports = ScreenPorts.of(screen);
-		return ports != null && ports.click(screen, button);
+		boolean taken = ports != null && ports.click(screen, button);
+		pressTaken = taken;
+		return taken;
+	}
+
+	/** Before a screen sees a mouse release: true when it must not (CakeUI's button took the press). */
+	public static boolean screenMouseReleaseTaken(Screen screen) {
+		if (!pressTaken) {
+			return false;
+		}
+		pressTaken = false;
+		screenMouseReleased(screen); // the release event after it won't come
+		return true;
 	}
 
 	public static void screenMouseReleased(Screen screen) {
-		if (ScreenPorts.of(screen) != null && Ui.renderer() != null) {
-			Ui.renderer().mouseReleased();
+		ScreenPorts ports = ScreenPorts.of(screen);
+		if (ports != null && ports.renderer() != null) {
+			ports.renderer().mouseReleased();
 		}
 	}
 

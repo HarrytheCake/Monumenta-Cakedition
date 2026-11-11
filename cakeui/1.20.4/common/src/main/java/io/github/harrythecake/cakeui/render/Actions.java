@@ -22,8 +22,9 @@ import net.minecraft.client.multiplayer.resolver.ServerAddress;
 
 /**
  * What CakeUI buttons can do. Everything stays on this computer: open a screen, connect to a
- * server, open a link after vanilla's confirmation, quit, or set a layout variable. Never chat or
- * commands (ADR 0005).
+ * server, open a link after vanilla's confirmation, quit, or set a layout variable; on a container
+ * screen, `menuButton` also sends vanilla's container-button click for that screen's menu. Never chat
+ * or commands (ADR 0005).
  */
 final class Actions {
 	private Actions() {
@@ -56,6 +57,7 @@ final class Actions {
 					}
 				}
 				case "url" -> ConfirmLinkScreen.confirmLinkNow(screen, a.argument());
+				case "menuButton" -> menuButton(renderer, node, st, a, screen, client);
 				case "set" -> {
 					renderer.env.self = st;
 					for (Node.Assign set : a.assigns()) {
@@ -77,6 +79,25 @@ final class Actions {
 			CakeUI.LOGGER.warn("CakeUI: action {} of {} failed", a.kind(), node, e);
 			renderer.layout.problems.add(node.file, node.line, "action '" + a.kind() + "' failed: " + e);
 		}
+	}
+
+	/**
+	 * A container screen's button: vanilla's container-button click (what an enchanting table's or stonecutter's
+	 * buttons send) with the layout's number, for the screen's own menu. The server calls the menu's clickMenuButton
+	 * and ignores numbers the menu doesn't know. Nothing is sent on any other screen.
+	 */
+	private static void menuButton(Renderer renderer, Node node, NodeState st, Node.Action a, Screen screen, Minecraft client) {
+		if (!(screen instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> c) || client.gameMode == null || client.player == null
+				|| client.player.containerMenu != c.getMenu()) {
+			return;
+		}
+		renderer.env.self = st;
+		double id = a.value() == null ? -1 : Values.num(a.value().eval(renderer.env));
+		if (id < 0 || id != Math.rint(id) || id > Integer.MAX_VALUE) {
+			renderer.layout.problems.add(node.file, node.line, "menuButton: " + Values.format(id) + " isn't a button number (0 or more)");
+			return;
+		}
+		client.gameMode.handleInventoryButtonClick(c.getMenu().containerId, (int) id);
 	}
 
 	/** The loader's mod list: Mod Menu on Fabric (when installed), NeoForge's own list. */
