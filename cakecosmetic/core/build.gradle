@@ -1,0 +1,4 @@
+plugins {
+	id 'cake-core'
+}
+apply from: rootProject.file('gradle/cakecosmetic.gradle')

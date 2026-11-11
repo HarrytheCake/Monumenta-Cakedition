@@ -1,0 +1,55 @@
+// CakeCosmetic: shared lines of core/build.gradle and every <mc>/<part>/build.gradle (mod-specific, not part of
+// the kit; apply_kit.py leaves it alone). CakeCosmetic is a CakeUI plugin and reads JSON5 with CakeUI's reader.
+String part = project.name
+String cakeuiVersion = rootProject.property('cakeui_version')
+String cakeuiRunVersion = rootProject.findProperty('cakeui_run_version') ?: cakeuiVersion
+def cakeuiDir = rootProject.findProperty('cakeui_dir')
+
+// CakeUI has no Maven repo: its GitHub release jars as Ivy artifacts (module = cakeui-<loader>-<mc>).
+repositories {
+	ivy {
+		name = 'CakeUI GitHub releases'
+		url = 'https://github.com/'
+		patternLayout {
+			artifact 'HarrytheCake/CakeUI/releases/download/v[revision]/[module]-[revision].[ext]'
+		}
+		metadataSources { artifact() }
+		content { includeGroup 'io.github.harrythecake.cakeui' }
+	}
+}
+
+def cakeuiJar = { String loader, String mc, String version ->
+	cakeuiDir
+			? files(new File(rootProject.file(cakeuiDir.toString()), "cakeui-${loader}-${mc}-${cakeuiVersion}.jar"))
+			: "io.github.harrythecake.cakeui:cakeui-${loader}-${mc}:${version}"
+}
+
+if (part == 'core') {
+	// core uses only CakeUI's JSON5 reader (io.github.harrythecake.cakeui.json: plain Java 17, no Minecraft
+	// classes); any CakeUI jar has it, the NeoForge 1.20.4 one is in Mojang names and Java 17
+	dependencies {
+		compileOnly cakeuiJar('neoforge', '1.20.4', cakeuiVersion)
+		testImplementation cakeuiJar('neoforge', '1.20.4', cakeuiVersion)
+	}
+	return
+}
+
+String mc = project.property('minecraft_version')
+// common compiles against vanilla with Mojang names: the NeoForge jar has the same API classes in Mojang names
+// (the Fabric 1.20.4 jar is in intermediary names)
+if (part == 'common') {
+	dependencies {
+		compileOnly cakeuiJar('neoforge', mc, cakeuiVersion)
+	}
+} else if (part == 'fabric') {
+	dependencies {
+		project.modCompileOnlyDep(cakeuiJar('fabric', mc, cakeuiVersion))
+		project.modRuntimeOnlyDep(cakeuiJar('fabric', mc, cakeuiRunVersion))
+	}
+} else if (part == 'neoforge') {
+	dependencies {
+		compileOnly cakeuiJar('neoforge', mc, cakeuiVersion)
+		// a mod jar on the runtime classpath: NeoForge loads it as the cakeui mod in dev runs
+		runtimeOnly cakeuiJar('neoforge', mc, cakeuiRunVersion)
+	}
+}
