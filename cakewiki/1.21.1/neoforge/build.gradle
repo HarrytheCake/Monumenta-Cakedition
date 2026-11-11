@@ -1,0 +1,11 @@
+plugins {
+	id 'cake-neoforge'
+}
+
+dependencies {
+	// HTML parser for the wiki's pages, bundled inside our jar (MIT)
+	implementation "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+	jarJar "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+	// not a mod: put it on the dev run's classpath too
+	additionalRuntimeClasspath "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+}

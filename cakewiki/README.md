@@ -2,7 +2,7 @@
 
 A client-only mod that reads the [Monumenta Wiki](https://monumenta.wiki.gg/) and other wikis inside the game. Made for the Monumenta Cakedition modpack.
 
-**Builds:** Fabric for Minecraft 1.20.4, 1.21.1 and 1.21.11; NeoForge for 1.20.4. Pick `cakewiki-<loader>-<minecraft>-<version>.jar` from the [releases](https://github.com/HarrytheCake/CakeWiki/releases). Fabric needs Fabric API.
+**Builds:** Fabric and NeoForge for Minecraft 1.20.4, 1.21.1 and 26.1.2, plus Fabric for 1.21.11 (release v0.2.0 has Fabric 1.20.4, 1.21.1, 1.21.11 and NeoForge 1.20.4 only). Pick `cakewiki-<loader>-<minecraft>-<version>.jar` from the [releases](https://github.com/HarrytheCake/CakeWiki/releases). Fabric needs Fabric API.
 
 ## Use
 
@@ -49,7 +49,7 @@ Pages are fetched from each site when you open them and cached on your PC. The m
 ./gradlew build
 ```
 
-Gradle runs on JDK 25; each Minecraft version compiles with its own Java (17 for 1.20.4, 21 for 1.21.x), found by Gradle's toolchains. Jars land in `build/libs/`. One version only: `./gradlew build -Pcake.versions=1.21.11`.
+Gradle runs on JDK 25; each Minecraft version compiles with its own Java (17 for 1.20.4, 21 for 1.21.x, 25 for 26.1.2), found by Gradle's toolchains. Jars land in `build/libs/`. One version only: `./gradlew build -Pcake.versions=1.21.11`.
 
 ## License
 

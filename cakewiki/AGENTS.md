@@ -1,6 +1,6 @@
 # CakeWiki: reference for agents
 
-In-game reader for https://monumenta.wiki.gg/, plus any other MediaWiki or VuePress site the player lists in `config/cakewiki/sites.json` (client-only Fabric 1.20.4 mod, id `cakewiki`, MIT). This folder is the source of truth; the standalone repo `HarrytheCake/CakeWiki` is written only by `git subtree push` / `tools/push_all.py` from the Monumenta-Cakedition repo. Keep this file current when changing the mod.
+In-game reader for https://monumenta.wiki.gg/, plus any other MediaWiki or VuePress site the player lists in `config/cakewiki/sites.json` (client-only mod for Fabric + NeoForge on 1.20.4, 1.21.1 and 26.1.2, plus Fabric 1.21.11; the pack ships Fabric 1.20.4; id `cakewiki`, MIT). This folder is the source of truth; the standalone repo `HarrytheCake/CakeWiki` is written only by `git subtree push` / `tools/push_all.py` from the Monumenta-Cakedition repo. Keep this file current when changing the mod.
 
 ## Design
 
@@ -31,7 +31,7 @@ Why own rendering: no Fabric library renders HTML. Book mods (Patchouli, Lavende
 
 ## Files
 
-Cake multiloader kit layout (`tools/multiloader/README.md` in the Monumenta-Cakedition repo), Mojang names (the notes below may still say `KeyBinding`/`HandledScreen`: read `KeyMapping`/`AbstractContainerScreen`). Built: **1.20.4 Fabric + NeoForge, 1.21.1 Fabric, 1.21.11 Fabric**; see "Multiloader status" at the end.
+Cake multiloader kit layout (`tools/multiloader/README.md` in the Monumenta-Cakedition repo), Mojang names (the notes below may still say `KeyBinding`/`HandledScreen`: read `KeyMapping`/`AbstractContainerScreen`). Built: **Fabric + NeoForge on 1.20.4, 1.21.1 and 26.1.2, plus Fabric 1.21.11**; see "Multiloader status" at the end.
 
 ```
 cakewiki/
@@ -42,7 +42,7 @@ cakewiki/
 ├── <mc>/common/            # Minecraft-facing, both loaders: CakeWiki (shared init, key, /wiki builder, lookupItem), Reader,
 │                           #   WikiScreen, DevShots, ItemHover, image/WikiImages, mixin/HandledScreenMixin, cakewiki.mixins.json
 ├── <mc>/fabric/            # CakeWikiFabric (entrypoint: key, client command, tick), FabricPlatform, fabric.mod.json
-└── <mc>/neoforge/          # CakeWikiNeoForge, NeoForgePlatform, META-INF/mods.toml (1.20.4 only so far)
+└── <mc>/neoforge/          # CakeWikiNeoForge, NeoForgePlatform, META-INF/mods.toml (1.20.4) / neoforge.mods.toml (1.21.1+)
 ```
 
 Inside those folders (same package as before):
@@ -163,13 +163,16 @@ VuePress sites, opt-in against a real site (nothing site-specific in the repo): 
 
 Ported from the Yarn 1.20.4 Fabric mod: the 2026-11-05 WIP (core split, 1.20.4 common/Fabric/NeoForge, commit `bcebf6a` on `multiloader-wip`) finished on branch `cakewiki-port` (worktree `F:/cake-worktrees/cakewiki-port`), with `main`'s sites-per-server change (2026-11-11) carried over. 1.20.4 Fabric behaves as before: same mod id, config files, key, lang keys, command, mixin target.
 
-| Target | Build + 95 core tests | Dev client |
+| Target | Build + core tests (96: 93 pass, the 3 opt-in live tests skipped; 2026-11-11) | Dev client |
 |---|---|---|
 | Fabric 1.20.4 | OK | self-test in a world PASS (4/4 pages shown, inventory return, `/wiki`, open key; screenshot checked); **user's game test on Monumenta OK** (2026-11-11: servers, first-launch sites.json) |
 | NeoForge 1.20.4 | OK (from the WIP) | not run |
 | Fabric 1.21.1 | OK | not run (the user's rule: game runs only on Fabric 1.20.4) |
+| NeoForge 1.21.1 | OK (2026-11-11, branch `cakewiki-port2`) | not run (same rule) |
 | Fabric 1.21.11 | OK | not run in a dev client; mixin names checked against the real 1.21.11 client + intermediary; **user's game test in a Wynncraft instance OK** (2026-11-11) |
-| NeoForge 1.21.1, NeoForge 1.21.11, 26.1.2 (both) | not started | |
+| Fabric 26.1.2 | OK (2026-11-11, branch `cakewiki-port2`) | not run (same rule); mixin target checked against the 26.1.2 client's bytecode (`AbstractContainerScreen.keyPressed(KeyEvent)`, its first `KeyMapping.matches(KeyEvent)` is still the inventory key) |
+| NeoForge 26.1.2 | OK (2026-11-11, branch `cakewiki-port2`) | not run (same rule) |
+| NeoForge 1.21.11 | not planned | |
 
 1.21.1 changes from 1.20.4: item names through `DataComponents.CUSTOM_NAME` (DevShots), `ResourceLocation.fromNamespaceAndPath` (WikiImages). The screen keeps vanilla's background, so 1.21.1 shows the 1.21 blur behind the reader in a world.
 
@@ -177,4 +180,10 @@ Ported from the Yarn 1.20.4 Fabric mod: the 2026-11-05 WIP (core split, 1.20.4 c
 
 **Fabric Minecraft dependency is exact** (`fabric_mc_dep=1.21.1`, not `~1.21.1`: the tilde let a 1.21.1 jar load on 1.21.11 and crash on the mixin, 2026-11-11).
 
-Still to do: the other targets; the mirror CI (`.github/workflows/build.yml` still assumes JDK 21 + one jar; copy CakeUI's before the next mirror push).
+**NeoForge 1.21.1** (2026-11-11) changes from NeoForge 1.20.4: `@Mod(value = …, dist = Dist.CLIENT)` instead of the `FMLEnvironment.dist` check, `ClientTickEvent.Post` instead of `TickEvent.ClientTickEvent` + phase, metadata in `META-INF/neoforge.mods.toml`. Its common part is Fabric 1.21.1's, unchanged.
+
+**26.1.2** (2026-11-11; common copied from 1.21.11, so `Identifier`, `KeyEvent`/`MouseButtonEvent`, `nextStratum()`, the picture blit, ARGB `setPixel` and the next-tick queue for `/wiki` carry over) changes from 1.21.11: `GuiGraphics` → `GuiGraphicsExtractor` (`drawString` → `text`, `drawCenteredString` → `centeredText`; `fill`, `blit`, scissor and `setComponentTooltipForNextFrame` keep their names); the screen's `render` → `extractRenderState` (also for the retry button it draws again above the page). Key category: common holds only the id (`CakeWiki.KEY_CATEGORY` = `cakewiki:main`) and `createKey(category)`, which sets `openKey`; Fabric registers the category with `KeyMapping.Category.register` (and the key with `KeyMappingHelper`, Fabric API's new name for `KeyBindingHelper`), NeoForge with `RegisterKeyMappingsEvent.registerCategory` (NeoForge deprecates the vanilla static `register`), as CakeChat does. NeoForge 26.1 dev runs have no `additionalRuntimeClasspath` (jsoup is plain `implementation` + `jarJar`). Mixin `compatibilityLevel` `JAVA_25`.
+
+**Mirror CI** (`.github/workflows/build.yml`): JDK 17 + 21 + 25; checks and publishes all eight jars (Fabric + NeoForge for 1.20.4, 1.21.1 and 26.1.2, Fabric 1.21.11) plus `cakewiki-<version>.jar`.
+
+Not run in a dev client or game (build + core tests only, the user's rule): NeoForge 1.20.4, Fabric 1.21.1, NeoForge 1.21.1, Fabric 26.1.2, NeoForge 26.1.2.
