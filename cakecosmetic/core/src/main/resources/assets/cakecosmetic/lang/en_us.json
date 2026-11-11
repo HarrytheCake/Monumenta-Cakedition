@@ -2,6 +2,7 @@
   "modmenu.nameTranslation.cakecosmetic": "CakeCosmetic",
   "modmenu.descriptionTranslation.cakecosmetic": "Choose the pictures behind the main menu and loading screens from a gallery. On Monumenta, backgrounds unlock as you earn advancements.",
   "key.categories.cakecosmetic": "CakeCosmetic",
+  "key.category.cakecosmetic.main": "CakeCosmetic",
   "key.cakecosmetic.gallery": "Open background gallery",
   "cakecosmetic.gallery.title": "Background gallery",
   "cakecosmetic.gallery.place.menu": "Main menu",

@@ -2,6 +2,7 @@
   "modmenu.nameTranslation.cakecosmetic": "CakeCosmetic",
   "modmenu.descriptionTranslation.cakecosmetic": "從畫廊中選擇主選單和載入畫面的背景圖。在 Monumenta 中，取得進度即可解鎖更多背景。",
   "key.categories.cakecosmetic": "CakeCosmetic",
+  "key.category.cakecosmetic.main": "CakeCosmetic",
   "key.cakecosmetic.gallery": "開啟背景畫廊",
   "cakecosmetic.gallery.title": "背景畫廊",
   "cakecosmetic.gallery.place.menu": "主選單",

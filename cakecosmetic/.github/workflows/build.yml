@@ -1,5 +1,9 @@
-# Builds and tests on every push and pull request. A push to main whose mod_version
-# has no release yet publishes the jar as release v<mod_version>; the modpack downloads it from there.
+# Builds and tests on every push and pull request (Cake multiloader kit: Fabric 1.20.4, Fabric + NeoForge 26.1.2;
+# no 1.21.1 and no NeoForge 1.20.4). CakeUI comes from its GitHub release (cakeui_version in gradle.properties).
+# A push to main whose mod_version has no release yet publishes release v<mod_version> with every jar:
+#   cakecosmetic-<fabric|neoforge>-<mc>-<version>.jar   one per target
+#   cakecosmetic-<version>.jar                          the Fabric 1.20.4 jar under its old name (the Cakedition
+#                                                 modpack and tools/packwiz_sync.py download this one)
 name: Build
 
 on:
@@ -16,8 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Gradle 9.8 + Loom 1.19 (the Cake multiloader kit's, so CakeUI's release jars load) run on JDK 25;
-      # compiling, tests and runClient use the JDK 17 toolchain
+      # Gradle runs on JDK 25 (the last one = JAVA_HOME); 1.20.4 compiles with 17, 26.1.2 with 25
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -30,16 +33,27 @@ jobs:
       - name: Build and test
         run: |
           chmod +x gradlew
-          ./gradlew build --no-daemon -Porg.gradle.java.installations.fromEnv=JAVA_HOME_17_X64,JAVA_HOME_25_X64
+          ./gradlew build --no-daemon \
+            -Porg.gradle.java.installations.fromEnv=JAVA_HOME_17_X64,JAVA_HOME_25_X64
 
       - name: Read mod version
         id: version
         run: echo "version=$(grep '^mod_version=' gradle.properties | cut -d= -f2)" >> "$GITHUB_OUTPUT"
 
+      - name: Check the jars
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          ls -l build/libs
+          for f in "cakecosmetic-$VERSION.jar" "cakecosmetic-fabric-1.20.4-$VERSION.jar" \
+                   cakecosmetic-{fabric,neoforge}-26.1.2-"$VERSION".jar; do
+            test -f "build/libs/$f" || { echo "missing build/libs/$f"; exit 1; }
+          done
+
       - uses: actions/upload-artifact@v4
         with:
           name: cakecosmetic-${{ steps.version.outputs.version }}
-          path: build/libs/cakecosmetic-${{ steps.version.outputs.version }}.jar
+          path: build/libs/cakecosmetic-*${{ steps.version.outputs.version }}.jar
           if-no-files-found: error
 
     outputs:
@@ -65,9 +79,13 @@ jobs:
             echo "v$VERSION is already released; bump mod_version for a new release."
             exit 0
           fi
+          SUMS=$(sha256sum cakecosmetic-*"$VERSION".jar)
+          NOTES=$(printf '%s\n\n%s\n\n**SHA-256**\n```\n%s\n```\n' \
+            "Fabric for Minecraft 1.20.4, Fabric and NeoForge for 26.1.2: pick \`cakecosmetic-<loader>-<minecraft>-$VERSION.jar\`. Needs CakeUI 0.2.0 or newer." \
+            "\`cakecosmetic-$VERSION.jar\` is the Fabric 1.20.4 jar under its old name (used by the Monumenta Cakedition modpack)." \
+            "$SUMS")
           # --notes goes before the generated notes
-          SUMS=$(sha256sum "cakecosmetic-$VERSION.jar")
-          gh release create "v$VERSION" "cakecosmetic-$VERSION.jar" \
+          gh release create "v$VERSION" cakecosmetic-*"$VERSION".jar \
             --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
             --title "CakeCosmetic $VERSION" --generate-notes \
-            --notes "$(printf '**SHA-256**\n```\n%s\n```\n' "$SUMS")"
+            --notes "$NOTES"

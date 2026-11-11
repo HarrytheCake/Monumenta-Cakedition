@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "cakecosmetic",
+	"version": "${version}",
+	"name": "CakeCosmetic",
+	"description": "Choose the pictures behind Minecraft's main menu and loading screens from a gallery. On Monumenta, backgrounds unlock as you earn advancements. Pictures come from resource packs. Built on CakeUI.",
+	"authors": [
+		"HarrytheCake"
+	],
+	"license": "MIT",
+	"icon": "assets/cakecosmetic/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeCosmetic"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"io.github.harrythecake.cakecosmetic.fabric.CakeCosmeticFabric"
+		],
+		"cakeui": [
+			"io.github.harrythecake.cakecosmetic.CakeCosmeticPlugin"
+		],
+		"modmenu": [
+			"io.github.harrythecake.cakecosmetic.fabric.ModMenuEntry"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "${fabric_mc_dep}",
+		"java": ">=${java_version}",
+		"fabric-api": "*",
+		"cakeui": ">=0.2.0"
+	},
+	"mixins": [
+		"cakecosmetic.mixins.json"
+	]
+}
