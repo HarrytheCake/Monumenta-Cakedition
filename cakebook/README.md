@@ -1,6 +1,6 @@
 # CakeBook
 
-A client-side Fabric mod for Minecraft **1.20.4**: a guide book and small wiki you read in game.
+A client-side mod for **Fabric and NeoForge** on Minecraft **1.20.4, 1.21.1 and 26.1.2**: a guide book and small wiki you read in game.
 
 It was made for the [Monumenta Cakedition](https://github.com/HarrytheCake/Monumenta-Cakedition) modpack, and any modpack or resource pack can ship its own books.
 
@@ -47,11 +47,7 @@ CakeBook downloads nothing and sends nothing. It reads books from resource packs
 
 ## Building
 
-```
-./gradlew build
-```
-
-Needs JDK 21 to run Gradle; the mod targets Java 17. The jar is in `build/libs/`.
+One Gradle build makes all six jars (the Cake multiloader layout): `JAVA_HOME=<JDK 25> ./gradlew build` → `build/libs/cakebook-<fabric|neoforge>-<mc>-<version>.jar` (JUnit tests included), plus `cakebook-<version>.jar` = the Fabric 1.20.4 jar under its old name. One version only: `-Pcake.versions=1.21.1`. Dev client: `./gradlew :<mc>:<fabric|neoforge>:runClient`; with `-Pcake.runJvmArgs=-Dcakebook.selftest=help` it opens the book, the note editor, the inventory and the pause menu once a world is joined and logs what it found.
 
 ## License
 

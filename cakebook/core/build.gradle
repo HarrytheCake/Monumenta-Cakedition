@@ -1,0 +1,8 @@
+plugins {
+	id 'cake-core'
+}
+
+tasks.named('test', Test) {
+	// opt-in: ./gradlew :core:test -Dcakebook.checkBooks=<books folder> checks a pack's books
+	systemProperty 'cakebook.checkBooks', System.getProperty('cakebook.checkBooks', '')
+}

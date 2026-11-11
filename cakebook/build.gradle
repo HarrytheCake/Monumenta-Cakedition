@@ -1,58 +1,48 @@
-plugins {
-	id 'fabric-loom' version '1.10.5'
-}
+// Cake multiloader kit. Each part's build.gradle applies its convention plugin (buildSrc: cake-core,
+// cake-common, cake-fabric, cake-neoforge). This collects the shipped jars into build/libs/:
+//   build/libs/<mod_id>-<loader>-<mc>-<mod_version>.jar   every loader x Minecraft version
+//   build/libs/<mod_id>-<mod_version>.jar                 copy of the Fabric 1.20.4 jar (what the
+//                                                         Cakedition pack and the old release CI use)
+// Several mods in one build (cake_mods): every mod's jars; a mod with cake_ship=false (a library bundled
+// inside the others) is left out.
+evaluationDependsOnChildren()
 
-version = project.mod_version
-group = project.maven_group
+def shipped = subprojects.findAll { it.name in ['fabric', 'neoforge'] && (it.findProperty('cake_ship') ?: 'true').toString() == 'true' }
 
-base {
-	archivesName = project.archives_base_name
-}
-
-repositories {
-	maven {
-		name = 'TerraformersMC'
-		url = 'https://maven.terraformersmc.com/releases/'
+def collect = tasks.register('collectJars') {
+	group = 'build'
+	description = 'Copies every loader jar into build/libs.'
+	def outDir = layout.buildDirectory.dir('libs')
+	def jars = shipped.collect { p -> p.tasks.findByName('remapJar') ?: p.tasks.named('jar').get() }
+	dependsOn jars
+	// the jars are the inputs (without them Gradle would call this task up to date and skip it)
+	inputs.files(jars.collect { it.archiveFile })
+	outputs.dir(outDir)
+	doLast {
+		def out = outDir.get().asFile
+		out.mkdirs()
+		jars.each { t ->
+			File f = t.archiveFile.get().asFile
+			project.copy { from f; into out }
+		}
+		shipped.findAll { it.name == 'fabric' && it.parent.name == '1.20.4' }.each { packJar ->
+			def t = packJar.tasks.findByName('remapJar') ?: packJar.tasks.named('jar').get()
+			project.copy {
+				from t.archiveFile.get().asFile
+				into out
+				rename { "${packJar.property('mod_id')}-${mod_version}.jar" }
+			}
+		}
 	}
 }
 
-dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	// only the config-screen API; Mod Menu is optional at runtime
-	modCompileOnly("com.terraformersmc:modmenu:${project.modmenu_version}") {
-		transitive = false
-	}
-
-	testImplementation "org.junit.jupiter:junit-jupiter:5.10.2"
-	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+tasks.register('build') {
+	group = 'build'
+	description = 'Builds and tests every part, then collects the jars.'
+	dependsOn subprojects.collect { it.tasks.matching { t -> t.name == 'build' } }
+	dependsOn collect
 }
 
-test {
-	useJUnitPlatform()
-	// opt-in: ./gradlew test -Dcakebook.checkBooks=<books folder> checks a pack's books
-	systemProperty "cakebook.checkBooks", System.getProperty("cakebook.checkBooks", "")
-}
-
-processResources {
-	inputs.property "version", project.version
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-	}
-}
-
-jar {
-	from("LICENSE") { rename { "LICENSE_${project.archives_base_name}" } }
-}
-
-tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
-	it.options.encoding = "UTF-8"
-}
-
-java {
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+tasks.register('clean', Delete) {
+	delete layout.buildDirectory
 }

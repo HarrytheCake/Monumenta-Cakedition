@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "cakebook",
+	"version": "${version}",
+	"name": "CakeBook",
+	"description": "A guide book and small wiki you read in game: books written in Markdown, shipped by modpacks or resource packs, plus your own notes with links and locations. One search over all of it. Open it from the pause menu, the inventory, a key or /cakebook.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"icon": "assets/cakebook/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeBook"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": ["io.github.harrythecake.cakebook.fabric.CakeBookFabric"],
+		"modmenu": ["io.github.harrythecake.cakebook.fabric.ModMenuEntry"]
+	},
+	"mixins": ["cakebook.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "${fabric_mc_dep}",
+		"java": ">=${java_version}",
+		"fabric-api": "*"
+	}
+}

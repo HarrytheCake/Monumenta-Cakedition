@@ -1,12 +1,42 @@
+// Cake multiloader kit. Finds the Minecraft version folders (<mc>/version.properties) and their
+// common / fabric / neoforge parts. Build only some versions: ./gradlew build -Pcake.versions=1.21.1,26.1.2
+// Several mods in one build: gradle.properties cake_mods=a,b,c; each folder a/, b/, c/ is laid out like a
+// one-mod build (core/ + <mc>/<part>) and has its own gradle.properties (mod_id, mod_name, …).
 pluginManagement {
 	repositories {
-		maven {
-			name = 'Fabric'
-			url = 'https://maven.fabricmc.net/'
-		}
-		mavenCentral()
 		gradlePluginPortal()
+		maven { url = 'https://maven.fabricmc.net/' }
+		maven { url = 'https://maven.neoforged.net/releases' }
+		mavenCentral()
 	}
 }
 
-rootProject.name = 'cakebook'
+plugins {
+	id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+Properties props = new Properties()
+file('gradle.properties').withInputStream { props.load(it) }
+rootProject.name = props.getProperty('mod_id') ?: rootDir.name
+
+def only = (startParameter.projectProperties['cake.versions'] ?: '').split(',')*.trim().findAll { it }
+def mods = (props.getProperty('cake_mods') ?: '').split(',')*.trim().findAll { it }
+def modDirs = mods ? mods.collect { file(it) } : [rootDir]
+modDirs.each { File modDir ->
+	String prefix = modDir == rootDir ? '' : ":${modDir.name}"
+	if (new File(modDir, 'core').isDirectory()) {
+		include "${prefix}:core"
+	}
+	modDir.listFiles().findAll { it.isDirectory() && new File(it, 'version.properties').exists() }
+			.sort { it.name }
+			.each { dir ->
+				if (only && !only.contains(dir.name)) {
+					return
+				}
+				['common', 'fabric', 'neoforge'].each { part ->
+					if (new File(dir, part).isDirectory()) {
+						include "${prefix}:${dir.name}:${part}"
+					}
+				}
+			}
+}
