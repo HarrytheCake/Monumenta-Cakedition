@@ -2,6 +2,7 @@ package io.github.harrythecake.cakewiki;
 
 import io.github.harrythecake.cakewiki.doc.HtmlConverter;
 import io.github.harrythecake.cakewiki.image.WikiImages;
+import io.github.harrythecake.cakewiki.net.HostRouter;
 import io.github.harrythecake.cakewiki.net.PageCache;
 import io.github.harrythecake.cakewiki.net.Pages;
 import io.github.harrythecake.cakewiki.net.Site;
@@ -57,6 +58,9 @@ public final class Reader {
 	/** The site the reader is showing. */
 	private Source current;
 
+	/** Every request goes through it: direct, or through MCEF's browser for a host whose check the player passed. */
+	final HostRouter router;
+
 	final Deque<Visit> back = new ArrayDeque<>();
 	final Deque<Visit> forward = new ArrayDeque<>();
 	/** The page shown when the reader last closed, or null before the first page. */
@@ -68,7 +72,18 @@ public final class Reader {
 	Reader(String modVersion, Path cacheDir, Path configDir, Supplier<String> server) {
 		this.server = server;
 		this.bookmarks = new Bookmarks(configDir.resolve("bookmarks.json"));
-		WikiClient.Transport http = WikiClient.http(modVersion);
+		WikiClient.Transport direct = WikiClient.http(modVersion);
+		String forced = System.getProperty("cakewiki.forceBlocked", "");
+		if (!forced.isBlank()) {
+			// development only: answer as Cloudflare's check would for this host (tests the blocked screen and MCEF)
+			WikiClient.Transport real = direct;
+			direct = uri -> forced.equalsIgnoreCase(uri.getHost())
+					? java.util.concurrent.CompletableFuture.failedFuture(io.github.harrythecake.cakewiki.net.WikiException.blocked(403, uri.getHost(), "dev"))
+					: real.get(uri);
+			CakeWiki.LOG.warn("CakeWiki: -Dcakewiki.forceBlocked={}: that host answers as Cloudflare's check (development)", forced);
+		}
+		this.router = new HostRouter(direct);
+		WikiClient.Transport http = router;
 		SiteConfig.Loaded config = SiteConfig.load(configDir.resolve("sites.json"));
 		config.problems().forEach(p -> CakeWiki.LOG.warn("config/cakewiki/sites.json: {}", p));
 		List<Source> list = new ArrayList<>();

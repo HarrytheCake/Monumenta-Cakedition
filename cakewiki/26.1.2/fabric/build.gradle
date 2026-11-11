@@ -6,4 +6,8 @@ dependencies {
 	// HTML parser for the wiki's pages, bundled inside our jar (MIT)
 	implementation "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
 	include "org.jsoup:jsoup:${rootProject.property('jsoup_version')}"
+	// MCEF Modern (optional, LGPL-2.1, Fabric only): the API only, never bundled (0.3.3+mc26.1); its JCEF API is nested
+	// in its jar, so the same JCEF API comes from Maven Central for compiling (never bundled either)
+	modCompileOnlyDep "maven.modrinth:mcef-modern:KY2bRqq2"
+	compileOnly "me.friwi:jcef-api:jcef-d3de827+cef-146.0.10+g8219561+chromium-146.0.7680.179"
 }

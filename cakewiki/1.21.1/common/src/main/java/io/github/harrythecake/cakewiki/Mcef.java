@@ -1,0 +1,52 @@
+package io.github.harrythecake.cakewiki;
+
+import io.github.harrythecake.cakewiki.net.HostRouter;
+import io.github.harrythecake.cakewiki.platform.Services;
+import net.minecraft.client.gui.screens.Screen;
+
+/**
+ * MCEF (Minecraft Chromium Embedded Framework, LGPL-2.1, mod id {@code mcef}): an optional mod the player installs
+ * themselves; CakeWiki never ships or downloads it. When Cloudflare's "verify you are human" check blocks CakeWiki
+ * (a VPN or game accelerator carrying Minecraft's traffic), MCEF's in-game browser lets the player pass the check
+ * where CakeWiki's requests come from, and CakeWiki then loads that site through the same browser
+ * ({@link McefFetcher}). This class never touches MCEF's classes itself, so CakeWiki runs without MCEF.
+ * <p>
+ * 1.21.1: MCEF 2.1.6 exists for Fabric and NeoForge, with the same API as on 1.20.4.
+ */
+final class Mcef {
+	/** MCEF's page, offered when it isn't installed. */
+	static final String PAGE = "https://modrinth.com/mod/mcef";
+	/** The button and the note shown when MCEF isn't installed. */
+	static final String GET_KEY = "cakewiki.blocked.getMcef";
+	static final String NOTE_KEY = "cakewiki.blocked.mcefNote";
+
+	private Mcef() {
+	}
+
+	/** An MCEF build exists for this Minecraft version and loader, so the blocked screen offers the in-game browser. */
+	static boolean offered() {
+		return true;
+	}
+
+	static boolean present() {
+		return Services.PLATFORM.isModLoaded("mcef");
+	}
+
+	/** MCEF is installed and has set up its browser (its first start downloads Chromium). */
+	static boolean ready() {
+		return present() && McefVerifyScreen.ready();
+	}
+
+	/** MCEF gave up setting up its browser (this MCEF doesn't say; it stays "not ready"). */
+	static boolean failed() {
+		return false;
+	}
+
+	/**
+	 * Opens the in-game browser at {@code url} for the player to pass the check; on Done the host goes through that
+	 * browser and {@code after} runs (the reader retries). False when MCEF is missing or not ready yet.
+	 */
+	static boolean verify(Screen parent, String url, HostRouter router, Runnable after) {
+		return present() && McefVerifyScreen.open(parent, url, router, after);
+	}
+}

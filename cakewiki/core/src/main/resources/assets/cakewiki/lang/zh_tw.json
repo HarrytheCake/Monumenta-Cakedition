@@ -37,5 +37,9 @@
 	"cakewiki.blocked.mcefNote": "MCEF 是需要你自行安裝的選用模組：Minecraft 裡的網頁瀏覽器，可以通過這項驗證。首次啟動會下載 Chromium（100 MB 以上）。請先確認你的伺服器允許使用。",
 	"cakewiki.mcef.title": "請在 %s 上完成驗證，然後點「完成」",
 	"cakewiki.mcef.done": "完成",
-	"cakewiki.mcef.notReady": "MCEF 還在準備瀏覽器（首次啟動會下載 Chromium）。請稍後再試。"
+	"cakewiki.mcef.notReady": "MCEF 還在準備瀏覽器（首次啟動會下載 Chromium）。請稍後再試。",
+	"cakewiki.blocked.tipsNoMcef": "解決辦法：在瀏覽器中開啟此頁；或讓 monumenta.wiki.gg 繞過 VPN（「直連」規則）或換一個節點。",
+	"cakewiki.blocked.getMcefModern": "取得 MCEF Modern（選用）",
+	"cakewiki.blocked.mcefModernNote": "MCEF Modern 是需要你自行安裝的選用 Fabric 模組：Minecraft 裡的網頁瀏覽器，可以通過這項驗證。第一次驗證時會下載 Chromium（100 MB 以上）。請先確認你的伺服器允許使用。",
+	"cakewiki.mcef.failed": "MCEF 無法準備瀏覽器（詳見遊戲日誌）。"
 }

@@ -37,5 +37,9 @@
 	"cakewiki.blocked.mcefNote": "MCEF is an optional mod you install yourself: a web browser inside Minecraft that can pass the check. Its first start downloads Chromium (100+ MB). Check that your server allows it.",
 	"cakewiki.mcef.title": "Pass the check on %s, then press Done",
 	"cakewiki.mcef.done": "Done",
-	"cakewiki.mcef.notReady": "MCEF is still setting up its browser (its first start downloads Chromium). Try again in a moment."
+	"cakewiki.mcef.notReady": "MCEF is still setting up its browser (its first start downloads Chromium). Try again in a moment.",
+	"cakewiki.blocked.tipsNoMcef": "Ways out: open the page in your browser; or let monumenta.wiki.gg bypass the VPN (a \"direct\" rule) or switch node.",
+	"cakewiki.blocked.getMcefModern": "Get MCEF Modern (optional)",
+	"cakewiki.blocked.mcefModernNote": "MCEF Modern is an optional Fabric mod you install yourself: a web browser inside Minecraft that can pass the check. The first time you verify, it downloads Chromium (100+ MB). Check that your server allows it.",
+	"cakewiki.mcef.failed": "MCEF couldn't set up its browser (see the game log)."
 }

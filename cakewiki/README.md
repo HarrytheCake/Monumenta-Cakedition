@@ -40,7 +40,7 @@ Edit the file to add, remove or re-tie sites (MediaWiki sites, or static sites b
 wiki.gg is behind Cloudflare, which sometimes asks a connection to prove it is a person, often when a VPN or game accelerator carries Minecraft's traffic. CakeWiki can't pass that check itself, so it says so and offers:
 
 - **Open page in browser**: your normal browser (usually not on the game's VPN) shows the page.
-- **Verify in game browser**: if you have installed the optional mod [MCEF](https://modrinth.com/mod/mcef) (a Chromium browser inside Minecraft; its first start downloads Chromium, 100+ MB; check that your server allows it), pass the check there once and CakeWiki loads that wiki through it. Without MCEF the button opens MCEF's page instead. Minecraft 1.20.4 for now.
+- **Verify in game browser**: if you have installed the optional mod [MCEF](https://modrinth.com/mod/mcef) (a Chromium browser inside Minecraft; its first start downloads Chromium, 100+ MB; check that your server allows it), pass the check there once and CakeWiki loads that wiki through it. Without MCEF the button opens MCEF's page instead. MCEF exists for Minecraft 1.20.4 and 1.21.1 (Fabric and NeoForge). On 1.21.11 and 26.1.2 (Fabric) the button uses [MCEF Modern](https://modrinth.com/mod/mcef-modern) instead, which downloads Chromium the first time you press it. NeoForge 26.1.2 has no MCEF build, so there the screen offers only Retry and Open page in browser.
 
 ## Translation
 

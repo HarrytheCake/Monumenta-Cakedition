@@ -41,6 +41,7 @@ public final class CakeWiki {
 		reader = new Reader(version, Services.PLATFORM.gameDir().resolve("cakewiki").resolve("cache"),
 				Services.PLATFORM.configDir().resolve("cakewiki"), CakeWiki::serverHost);
 		DevShots.startIfAsked();
+		McefTest.startIfAsked();
 		LOG.info("CakeWiki loaded");
 	}
 
@@ -55,6 +56,7 @@ public final class CakeWiki {
 			if (client.screen == null) open(null);
 		}
 		DevShots.tick(client);
+		McefTest.tick(client);
 	}
 
 	/** {@code /wiki [page]} with live suggestions, for the loader's client-command dispatcher (source type {@code S}). */
