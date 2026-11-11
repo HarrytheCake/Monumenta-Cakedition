@@ -166,5 +166,5 @@ Plain Java types only, so callers use reflection and don't depend on CakeText (C
 ## Status (2026-10-27)
 
 - Proven out of game: everything in the test table, including a real install from Hugging Face.
-- **In-game test on Monumenta passed** (2026-10-27, test-plan steps 1–9: loading, Hunyuan, chat display/hover, UMM shard, Crowdin export, purge). It led to the privacy, § code, own-name, item-link and clean-up fixes now covered by the tests. Still to run in game: the exchanger and the machine cache without Ollama.
+- **In-game test on Monumenta passed** (2026-10-27, test-plan steps 1–9: loading, Hunyuan, chat display/hover, UMM shard, Crowdin export, purge). It led to the privacy, § code, own-name, item-link and clean-up fixes now covered by the tests. Steps 10–11 (the exchanger, the machine cache without Ollama) also passed in game (user, 2026-11-11).
 - Not built: remote sync of translation files (like the updater does for the pack), a shared translation repo. Other LLMs would work through the server engine with their own prompt/template.
