@@ -40,6 +40,10 @@ there; folder per version here).
   Client-only mods: `@Mod(value = ID, dist = Dist.CLIENT)` (1.21+), `FMLEnvironment.dist` check on 1.20.4;
   dependency `side = "CLIENT"`. Config screen: 1.20.4 `ConfigScreenHandler.ConfigScreenFactory`,
   1.21+ `container.registerExtensionPoint(IConfigScreenFactory.class, …)`.
+- `fabric_mc_dep` is the **exact** Minecraft version (`1.21.1`, never `~1.21.1`: Fabric reads the tilde as
+  "up to 1.22", so a 1.21.1 jar loaded on 1.21.11 and crashed on its mixin).
+- Extra version file `versions/1.21.11.properties` (2026-11-11, CakeWiki only, for Wynncraft; not one of ADR 0009's
+  three targets; its `neoforge_*` values are unverified).
 - Names: Mojang's everywhere (no Yarn). 1.20.4 and 1.21.1 are obfuscated, Loom remaps the Fabric jar
   (mixin targets are remapped inside the classes; no refmap). NeoForge runs on Mojang's names since 20.2.
   26.1+ ships unobfuscated (no remapping anywhere; Fabric's runtime names are Mojang's too).
