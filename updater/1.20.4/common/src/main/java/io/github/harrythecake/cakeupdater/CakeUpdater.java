@@ -20,6 +20,7 @@ import net.minecraft.network.chat.MutableComponent;
 import org.lwjgl.util.tinyfd.TinyFileDialogs;
 import org.slf4j.Logger;
 
+import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.builder.RequiredArgumentBuilder;
@@ -72,7 +73,8 @@ public final class CakeUpdater {
 	/** The folder window is open (it runs on its own thread). */
 	private static volatile boolean picking;
 	/** What the last picked folder has, waiting for [Import these]. */
-	private record Scan(Path old, List<MoveIn.Found> found, List<ServerData> newServers) {}
+	/** The last import list: {@code on[i]} = line i is imported (the last index is the server list). */
+	private record Scan(Path old, List<MoveIn.Found> found, List<ServerData> newServers, boolean[] on, boolean[] replaces) {}
 	private static Scan scanned;
 
 	private CakeUpdater() {}
@@ -180,6 +182,9 @@ public final class CakeUpdater {
 				.then(LiteralArgumentBuilder.<S>literal("resourcepacks").executes(ctx -> updateResourcePacks()))
 				.then(LiteralArgumentBuilder.<S>literal("import").executes(ctx -> pickFolder())
 						.then(LiteralArgumentBuilder.<S>literal("confirm").executes(ctx -> confirmImport()))
+						.then(LiteralArgumentBuilder.<S>literal("toggle")
+								.then(RequiredArgumentBuilder.<S, Integer>argument("item", IntegerArgumentType.integer(0, 99))
+										.executes(ctx -> toggleImport(IntegerArgumentType.getInteger(ctx, "item")))))
 						.then(LiteralArgumentBuilder.<S>literal("cancel").executes(ctx -> cancelImport()))
 						.then(LiteralArgumentBuilder.<S>literal("off").executes(ctx -> importOff())));
 	}
@@ -620,7 +625,7 @@ public final class CakeUpdater {
 		return 1;
 	}
 
-	private static void picked(Minecraft client, String chosen) {
+	static void picked(Minecraft client, String chosen) {
 		if (client.player == null) {
 			return;
 		}
@@ -643,24 +648,77 @@ public final class CakeUpdater {
 			client.player.displayClientMessage(prefix().append(Component.translatable("cakeupdater.import.nothing", label).withStyle(ChatFormatting.YELLOW)), false);
 			return;
 		}
-		scanned = new Scan(old, found, newServers);
-		client.player.displayClientMessage(prefix().append(Component.translatable("cakeupdater.import.found", label).withStyle(ChatFormatting.YELLOW)), false);
-		for (MoveIn.Found f : found) {
+		// ticked from the start: what can't replace anything of ours (new files, Xaero's merge, new servers)
+		boolean[] on = new boolean[found.size() + 1];
+		boolean[] replaces = new boolean[found.size() + 1];
+		for (int i = 0; i < found.size(); i++) {
+			replaces[i] = MoveIn.replaces(gameDir(), found.get(i));
+			on[i] = !replaces[i];
+		}
+		on[found.size()] = !newServers.isEmpty();
+		scanned = new Scan(old, found, newServers, on, replaces);
+		showScan(client, scanned);
+	}
+
+	/** The import list: one clickable line per thing found, [✔] = imported, [✘] = left out. */
+	private static void showScan(Minecraft client, Scan scan) {
+		if (client.player == null) {
+			return;
+		}
+		client.player.displayClientMessage(prefix().append(Component.translatable("cakeupdater.import.found", MoveIn.label(scan.old()))
+				.withStyle(ChatFormatting.YELLOW)).append(" ")
+				.append(Component.translatable("cakeupdater.import.found.choose").withStyle(ChatFormatting.GRAY)), false);
+		for (int i = 0; i < scan.found().size(); i++) {
+			MoveIn.Found f = scan.found().get(i);
 			Component item = switch (f.kind()) {
 				case XAERO -> Component.translatable("cakeupdater.import.item.xaero", f.path(), f.files(),
 						String.format(Locale.ROOT, "%.1f", f.bytes() / 1048576.0));
 				default -> Component.translatable("cakeupdater.import.item." + f.kind().name().toLowerCase(Locale.ROOT));
 			};
-			client.player.displayClientMessage(Component.literal("  • ").append(item).withStyle(ChatFormatting.WHITE), false);
+			client.player.displayClientMessage(scanLine(i, scan.on()[i], item, scan.replaces()[i]), false);
 		}
-		if (!newServers.isEmpty()) {
-			client.player.displayClientMessage(Component.literal("  • ").append(Component.translatable("cakeupdater.import.item.servers", newServers.size()))
-					.withStyle(ChatFormatting.WHITE), false);
+		if (!scan.newServers().isEmpty()) {
+			int i = scan.found().size();
+			client.player.displayClientMessage(scanLine(i, scan.on()[i],
+					Component.translatable("cakeupdater.import.item.servers", scan.newServers().size()), false), false);
 		}
 		client.player.displayClientMessage(Component.literal("  ")
 				.append(button("cakeupdater.import.confirm", "/cakeupdate import confirm", ChatFormatting.GREEN))
 				.append(" ")
 				.append(button("cakeupdater.import.cancel", "/cakeupdate import cancel", ChatFormatting.GRAY)), false);
+	}
+
+	private static Component scanLine(int index, boolean on, Component item, boolean replaces) {
+		MutableComponent box = Component.literal(on ? "[✔] " : "[✘] ").withStyle(style -> style
+				.withColor(on ? ChatFormatting.GREEN : ChatFormatting.GRAY)
+				.withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/cakeupdate import toggle " + index))
+				.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("cakeupdater.import.toggle.hover"))));
+		MutableComponent text = Component.empty().append(item).withStyle(style -> style
+				.withColor(on ? ChatFormatting.WHITE : ChatFormatting.GRAY)
+				.withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/cakeupdate import toggle " + index))
+				.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("cakeupdater.import.toggle.hover"))));
+		MutableComponent line = Component.literal("  ").append(box).append(text);
+		if (replaces) {
+			line.append(Component.literal(" "))
+					.append(Component.translatable("cakeupdater.import.replaces").withStyle(ChatFormatting.GOLD));
+		}
+		return line;
+	}
+
+	static int toggleImport(int index) {
+		Scan scan = scanned;
+		if (scan == null) {
+			feedback(prefix().append(Component.translatable("cakeupdater.import.choose_first").withStyle(ChatFormatting.GRAY))
+					.append(" ").append(button("cakeupdater.import.offer.pick", "/cakeupdate import", ChatFormatting.GREEN)));
+			return 1;
+		}
+		boolean server = index == scan.found().size() && !scan.newServers().isEmpty();
+		if (index < 0 || (index >= scan.found().size() && !server)) {
+			return 1;
+		}
+		scan.on()[index] = !scan.on()[index];
+		showScan(Minecraft.getInstance(), scan);
+		return 1;
 	}
 
 	/** The old server list's entries this one doesn't have (by address, ignoring case). */
@@ -693,19 +751,28 @@ public final class CakeUpdater {
 	}
 
 	/** Adds the new servers now, stages the rest for the close and turns the offer off. */
-	private static int confirmImport() {
+	static int confirmImport() {
 		Scan scan = scanned;
-		scanned = null;
 		Minecraft client = Minecraft.getInstance();
 		if (scan == null) {
 			feedback(prefix().append(Component.translatable("cakeupdater.import.choose_first").withStyle(ChatFormatting.GRAY))
 					.append(" ").append(button("cakeupdater.import.offer.pick", "/cakeupdate import", ChatFormatting.GREEN)));
 			return 1;
 		}
+		boolean serversOn = !scan.newServers().isEmpty() && scan.on()[scan.found().size()];
+		boolean anyOn = serversOn;
+		for (int i = 0; i < scan.found().size(); i++) {
+			anyOn |= scan.on()[i];
+		}
+		if (!anyOn) { // the list stays: tick something, or Cancel
+			feedback(prefix().append(Component.translatable("cakeupdater.import.none_ticked").withStyle(ChatFormatting.GRAY)));
+			return 1;
+		}
+		scanned = null;
 		try {
 			String label = MoveIn.label(scan.old());
 			String backup = backups.newImportBackup(label);
-			if (!scan.newServers().isEmpty()) {
+			if (serversOn) {
 				backups.saveBeforeReplace(backup, MoveIn.SERVERS);
 				ServerList ours = new ServerList(client);
 				ours.load();
@@ -719,7 +786,11 @@ public final class CakeUpdater {
 			List<String> copy = new ArrayList<>();
 			com.google.gson.JsonObject cakechat = null;
 			Map<String, String> keys = new LinkedHashMap<>();
-			for (MoveIn.Found f : scan.found()) {
+			for (int i = 0; i < scan.found().size(); i++) {
+				MoveIn.Found f = scan.found().get(i);
+				if (!scan.on()[i]) {
+					continue; // left out by the player
+				}
 				if (f.kind() == MoveIn.Kind.CHATPLUS) {
 					com.google.gson.JsonObject setup = ChatPlusImport.read(scan.old().resolve(f.path())).orElse(null);
 					if (setup != null) {
@@ -757,7 +828,7 @@ public final class CakeUpdater {
 		return 1;
 	}
 
-	private static int cancelImport() {
+	static int cancelImport() {
 		scanned = null;
 		try {
 			MoveIn.cancel(gameDir());

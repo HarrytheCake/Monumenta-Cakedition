@@ -95,7 +95,8 @@ class MoveInTest {
 		assertTrue(options.contains("key_key.jump:key.keyboard.space"), "the whole old options.txt");
 		assertTrue(options.contains("key_key.cakechat.peek:key.keyboard.o"), "ChatPlus's peek key for CakeChat");
 		assertEquals("{\"old\": true}", Files.readString(game.resolve("config/unofficial-monumenta-mod.json")));
-		assertEquals("waypoint:Home:H:1:2:3\n", Files.readString(game.resolve("XaeroWaypoints/Multiplayer_server.playmonumenta.com/mw$default_1.txt")));
+		// Xaero's waypoint list is merged: ours stays, theirs is added
+		assertEquals("ours\nwaypoint:Home:H:1:2:3\n", Files.readString(game.resolve("XaeroWaypoints/Multiplayer_server.playmonumenta.com/mw$default_1.txt")));
 		assertTrue(Files.exists(game.resolve("XaeroWorldMap/Multiplayer_server.playmonumenta.com/null/mw$default/0_0.zip")));
 		assertFalse(Files.exists(game.resolve("config/other-mod.json")), "only the listed things");
 		assertFalse(Files.exists(game.resolve("config/chatplus")), "ChatPlus's file isn't copied, only converted");
@@ -125,6 +126,75 @@ class MoveInTest {
 		backups.applyPendingConfigRestore(5);
 		assertEquals("version:3700\nkey_key.jump:key.keyboard.j\n", Files.readString(game.resolve("options.txt")));
 		assertEquals("ours\n", Files.readString(game.resolve("XaeroWaypoints/Multiplayer_server.playmonumenta.com/mw$default_1.txt")));
+	}
+
+	@Test
+	void waypointListsAreMergedNotReplaced() {
+		List<String> ours = List.of("#", "#waypoint:name:initials:x:y:z:color:disabled:type:set", "#",
+				"waypoint:Base:B:10:64:-20:5:false:0:gui.xaero_default:false:0:0:false",
+				"waypoint:Mine:M:100:12:300:2:false:0:gui.xaero_default:false:0:0:false");
+		List<String> theirs = List.of("#",
+				"waypoint:Base:B:10:64:-20:9:true:0:gui.xaero_default:false:0:0:false", // same name and place, other colour
+				"waypoint:Farm:F:-5:70:40:1:false:0:gui.xaero_default:false:0:0:false",
+				"waypoint:Mine:M:101:12:300:2:false:0:gui.xaero_default:false:0:0:false"); // same name, other place
+		List<String> merged = MoveIn.mergeWaypoints(ours, theirs);
+		assertEquals(ours, merged.subList(0, ours.size()), "every line of ours stays, in place and unchanged");
+		assertEquals(List.of("waypoint:Farm:F:-5:70:40:1:false:0:gui.xaero_default:false:0:0:false",
+				"waypoint:Mine:M:101:12:300:2:false:0:gui.xaero_default:false:0:0:false"), merged.subList(ours.size(), merged.size()));
+		assertEquals(ours, MoveIn.mergeWaypoints(ours, ours), "nothing new: unchanged");
+		assertEquals(theirs.subList(1, 4), MoveIn.mergeWaypoints(List.of(), theirs), "an empty list of ours takes all of theirs");
+	}
+
+	@Test
+	void olderSetsLineGetsTheirSetNames() {
+		List<String> ours = List.of("sets:gui.xaero_default:Home", "waypoint:A:A:1:2:3:0:false:0:Home");
+		List<String> theirs = List.of("sets:gui.xaero_default:Nether", "waypoint:B:B:4:5:6:0:false:0:Nether");
+		List<String> merged = MoveIn.mergeWaypoints(ours, theirs);
+		assertEquals("sets:gui.xaero_default:Home:Nether", merged.get(0));
+		assertEquals("waypoint:B:B:4:5:6:0:false:0:Nether", merged.get(2));
+	}
+
+	@Test
+	void xaeroFilesAreAddedNeverReplaced() throws IOException {
+		Path old = tmp.resolve("Old").resolve(".minecraft");
+		String wp = "xaero/minimap/Multiplayer_server.playmonumenta.com/dim%monumenta$valley/mw$default_1.txt";
+		String map = "xaero/world-map/Multiplayer_server.playmonumenta.com/null/mw$default/0_0.zip";
+		String newMap = "xaero/world-map/Multiplayer_server.playmonumenta.com/null/mw$default/1_0.zip";
+		String lock = "xaero/world-map/Multiplayer_server.playmonumenta.com/null/mw$default/0_0.lock";
+		String camp = "waypoint:Camp:C:7:8:9:0:false:0:gui.xaero_default:false:0:0:false";
+		String shrine = "waypoint:Shrine:S:1:2:3:0:false:0:gui.xaero_default:false:0:0:false";
+		write(old.resolve(wp), "#\n" + shrine + "\n");
+		write(old.resolve(map), "old map");
+		write(old.resolve(newMap), "old map 2");
+		write(old.resolve(lock), "");
+		Path game = tmp.resolve("New").resolve(".minecraft");
+		write(game.resolve(wp), "#\n" + camp + "\n");
+		write(game.resolve(map), "our newer map");
+		Backups backups = new Backups(game);
+		String backup = backups.newImportBackup("Old");
+		MoveIn.stage(game, new MoveIn.Pending(old.toString(), backup, List.of("xaero"), null, Map.of()));
+
+		assertEquals(2, MoveIn.apply(game, backups, 5), "the merged list and the missing map tile");
+		assertEquals("#\n" + camp + "\n" + shrine + "\n", Files.readString(game.resolve(wp)));
+		assertEquals("our newer map", Files.readString(game.resolve(map)), "our map tile stays");
+		assertEquals("old map 2", Files.readString(game.resolve(newMap)), "a tile we lacked is added");
+		assertFalse(Files.exists(game.resolve(lock)), "Xaero's lock files aren't copied");
+		Path saved = game.resolve(Backups.DIR).resolve(backup);
+		assertEquals("#\n" + camp + "\n", Files.readString(saved.resolve(wp)), "our list as it was, in the import backup");
+		assertFalse(Files.exists(saved.resolve(map)), "untouched files aren't backed up");
+	}
+
+	@Test
+	void replacesOnlyWhatWeAlreadyHave() throws IOException {
+		Path game = tmp.resolve("g");
+		write(game.resolve("options.txt"), "x");
+		assertTrue(MoveIn.replaces(game, new MoveIn.Found(MoveIn.Kind.OPTIONS, "options.txt", 1, 1)));
+		assertFalse(MoveIn.replaces(game, new MoveIn.Found(MoveIn.Kind.FMA, "config/fma.json", 1, 1)), "we have none");
+		assertFalse(MoveIn.replaces(game, new MoveIn.Found(MoveIn.Kind.XAERO, "xaero", 9, 9)), "merged, never replaced");
+		assertFalse(MoveIn.replaces(game, new MoveIn.Found(MoveIn.Kind.SERVERS, "servers.dat", 1, 1)), "only adds");
+		assertFalse(MoveIn.replaces(game, new MoveIn.Found(MoveIn.Kind.CHATPLUS, "config/chatplus/c.json", 1, 1)));
+		write(game.resolve("config/cakechat/config.json"), "{}");
+		assertTrue(MoveIn.replaces(game, new MoveIn.Found(MoveIn.Kind.CHATPLUS, "config/chatplus/c.json", 1, 1)), "CakeChat's tabs");
 	}
 
 	@Test

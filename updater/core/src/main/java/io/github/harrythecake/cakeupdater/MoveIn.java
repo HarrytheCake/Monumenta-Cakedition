@@ -151,6 +151,79 @@ final class MoveIn {
 		return found;
 	}
 
+	/**
+	 * Whether importing {@code f} would replace a file this install already has. Xaero's folders never do (waypoint
+	 * lists are merged, other files only added), nor does the server list (only new addresses are added).
+	 */
+	static boolean replaces(Path gameDir, Found f) {
+		return switch (f.kind()) {
+			case XAERO, SERVERS -> false;
+			case CHATPLUS -> Files.isRegularFile(gameDir.resolve(CAKECHAT_CONFIG));
+			default -> Files.isRegularFile(gameDir.resolve(f.path()));
+		};
+	}
+
+	// --- Xaero: merge, never replace ---
+
+	/** Inside one of Xaero's folders ({@link #XAERO_DIRS}). */
+	static boolean isXaero(String rel) {
+		String r = rel.replace('\\', '/');
+		return XAERO_DIRS.stream().anyMatch(d -> r.equals(d) || r.startsWith(d + "/"));
+	}
+
+	/** One of Xaero's waypoint lists: {@code mw<…>.txt} under {@code XaeroWaypoints/} or {@code xaero/minimap/}. */
+	static boolean isXaeroWaypoints(String rel) {
+		String r = rel.replace('\\', '/');
+		String name = r.substring(r.lastIndexOf('/') + 1);
+		return (r.startsWith("XaeroWaypoints/") || r.startsWith("xaero/minimap/")) && name.startsWith("mw") && name.endsWith(".txt");
+	}
+
+	/**
+	 * Our waypoint list plus the old install's waypoints we don't have (same name and x, y, z = the same waypoint).
+	 * Every line of ours stays as it is and in its place; theirs are added at the end. An older list's {@code sets:}
+	 * line gets the old install's set names too, so their waypoints show.
+	 */
+	static List<String> mergeWaypoints(List<String> ours, List<String> theirs) {
+		List<String> out = new ArrayList<>(ours);
+		java.util.Set<String> have = new java.util.HashSet<>();
+		for (String line : ours) {
+			if (line.startsWith("waypoint:")) {
+				have.add(waypointKey(line));
+			}
+		}
+		String theirSets = theirs.stream().filter(l -> l.startsWith("sets:")).findFirst().orElse(null);
+		if (theirSets != null) {
+			int i = 0;
+			while (i < out.size() && !out.get(i).startsWith("sets:")) {
+				i++;
+			}
+			if (i < out.size()) {
+				java.util.LinkedHashSet<String> names = new java.util.LinkedHashSet<>(List.of(out.get(i).substring(5).split(":", -1)));
+				names.addAll(List.of(theirSets.substring(5).split(":", -1)));
+				names.remove("");
+				out.set(i, "sets:" + String.join(":", names));
+			} else if (theirs.stream().anyMatch(l -> l.startsWith("waypoint:") && !have.contains(waypointKey(l)))) {
+				int at = 0;
+				while (at < out.size() && out.get(at).startsWith("#")) {
+					at++;
+				}
+				out.add(at, theirSets);
+			}
+		}
+		for (String line : theirs) {
+			if (line.startsWith("waypoint:") && have.add(waypointKey(line))) {
+				out.add(line);
+			}
+		}
+		return out;
+	}
+
+	/** {@code waypoint:name:initials:x:y:z:…} → name and coordinates; a line too short to read is its own key. */
+	private static String waypointKey(String line) {
+		String[] f = line.split(":", -1);
+		return f.length < 6 ? line : f[1] + ":" + f[3] + ":" + f[4] + ":" + f[5];
+	}
+
 	private static long size(Path file) {
 		try {
 			return Files.size(file);
@@ -256,9 +329,38 @@ final class MoveIn {
 		if (target == null) {
 			return 0;
 		}
+		if (isXaero(rel)) {
+			if (rel.endsWith(".lock")) {
+				return 0; // Xaero's own run-time locks
+			}
+			if (Files.exists(target)) {
+				return isXaeroWaypoints(rel) ? mergeWaypointFile(backups, backup, from, target, rel) : 0; // ours stays
+			}
+		}
 		backups.saveBeforeReplace(backup, rel);
 		Files.createDirectories(target.getParent());
 		Files.copy(from, target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
+		return 1;
+	}
+
+	/** Adds the old install's missing waypoints to ours; 1 when the file changed (saved in the backup first). */
+	private static int mergeWaypointFile(Backups backups, String backup, Path from, Path target, String rel) throws IOException {
+		List<String> ours;
+		List<String> theirs;
+		try {
+			ours = Files.readAllLines(target, StandardCharsets.UTF_8);
+			theirs = Files.readAllLines(from, StandardCharsets.UTF_8);
+		} catch (java.nio.charset.CharacterCodingException e) {
+			LOG.warn("Import: kept {} as it is (not UTF-8 text, can't merge)", rel);
+			return 0;
+		}
+		List<String> merged = mergeWaypoints(ours, theirs);
+		if (merged.equals(ours)) {
+			return 0;
+		}
+		backups.saveBeforeReplace(backup, rel);
+		Files.writeString(target, String.join("\n", merged) + "\n", StandardCharsets.UTF_8);
+		LOG.info("Import: added {} waypoint(s) to {}", merged.size() - ours.size(), rel);
 		return 1;
 	}
 

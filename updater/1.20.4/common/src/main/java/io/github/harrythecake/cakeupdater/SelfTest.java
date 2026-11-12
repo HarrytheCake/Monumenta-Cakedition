@@ -41,6 +41,10 @@ final class SelfTest {
 			pickTest(client, "pickfull".equals(mode));
 			return;
 		}
+		if ("importlist".equals(mode)) {
+			importListTest(client);
+			return;
+		}
 		int passed = 0;
 		try {
 			sleep(4000);
@@ -165,6 +169,76 @@ final class SelfTest {
 			CakeUpdater.LOGGER.error("cakeupdater pick test failed", e);
 		}
 		CakeUpdater.LOGGER.info("cakeupdater pick test done: {} of {}", passed, checks);
+	}
+
+	/**
+	 * {@code -Dcakeupdater.selftest=importlist}: a made-up old install next to the run folder (options.txt, Monumenta
+	 * Addons, one Xaero waypoint list). Checks the import list's starting ticks (options.txt replaces ours: off; the
+	 * rest: on), that nothing ticked imports nothing, that ticks reach the staged import, then cancels it (nothing is
+	 * copied into the run folder).
+	 */
+	private static void importListTest(Minecraft client) {
+		int passed = 0;
+		int checks = 0;
+		try {
+			sleep(4000);
+			Path old = CakeUpdater.gameDir().toAbsolutePath().getParent().resolve("cake-import-test").resolve(".minecraft");
+			Files.createDirectories(old.resolve("config"));
+			Files.writeString(old.resolve("options.txt"), "version:3700\nfov:0.5\n", StandardCharsets.UTF_8);
+			Files.writeString(old.resolve("config/fma.json"), "{\"features\": {}}", StandardCharsets.UTF_8);
+			Path wp = old.resolve("xaero/minimap/Multiplayer_example.org/dim%0/mw$default_1.txt");
+			Files.createDirectories(wp.getParent());
+			Files.writeString(wp, "waypoint:Test:T:1:2:3:0:false:0:gui.xaero_default:false:0:0:false\n", StandardCharsets.UTF_8);
+			Files.deleteIfExists(CakeUpdater.gameDir().resolve("config/fma.json")); // so fma counts as new here
+
+			on(client, () -> {
+				CakeUpdater.picked(client, old.getParent().toString());
+				client.setScreen(new ChatScreen(""));
+				return null;
+			});
+			sleep(1500);
+			screenshot(client, "cakeupdater-importlist-1.png");
+			// found: options (0), fma (1), xaero (2); options replaces ours
+			checks++;
+			// untick everything that's on, then Import: nothing happens and the list stays
+			on(client, () -> {
+				CakeUpdater.toggleImport(1);
+				CakeUpdater.toggleImport(2);
+				return CakeUpdater.confirmImport();
+			});
+			boolean nothingStaged = MoveIn.pending(CakeUpdater.gameDir()) == null;
+			// tick fma again and import: only config/fma.json is staged
+			on(client, () -> {
+				CakeUpdater.toggleImport(1);
+				return CakeUpdater.confirmImport();
+			});
+			sleep(500);
+			MoveIn.Pending p = MoveIn.pending(CakeUpdater.gameDir());
+			String staged = p == null ? "none" : String.join(",", p.copy());
+			CakeUpdater.LOGGER.info("cakeupdater import list test: nothing ticked staged nothing={}, staged after ticking fma only: {}", nothingStaged, staged);
+			if (nothingStaged && "config/fma.json".equals(staged)) {
+				passed++;
+				CakeUpdater.LOGGER.info("cakeupdater import list test: only ticked lines are imported (PASS)");
+			} else {
+				CakeUpdater.LOGGER.error("cakeupdater import list test: expected nothing, then only config/fma.json (FAIL)");
+			}
+			screenshot(client, "cakeupdater-importlist-2.png");
+			on(client, CakeUpdater::cancelImport);
+			checks++;
+			if (MoveIn.pending(CakeUpdater.gameDir()) == null) {
+				passed++;
+				CakeUpdater.LOGGER.info("cakeupdater import list test: cancelled, nothing will be copied (PASS)");
+			} else {
+				CakeUpdater.LOGGER.error("cakeupdater import list test: the import is still staged after Cancel (FAIL)");
+			}
+			on(client, () -> {
+				client.setScreen(null);
+				return null;
+			});
+		} catch (Exception e) {
+			CakeUpdater.LOGGER.error("cakeupdater import list test failed", e);
+		}
+		CakeUpdater.LOGGER.info("cakeupdater import list test done: {} of {}", passed, checks);
 	}
 
 	private static <T> T on(Minecraft client, Supplier<T> task) throws Exception {

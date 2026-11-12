@@ -174,6 +174,16 @@ JOIN (first of each start) → MoveIn.takeDone: "Imported N files from <old>. Wh
                            config/fma.json, XaeroWaypoints/ XaeroWorldMap/ xaero/, servers.dat, and (CakeChat loaded +
                            ChatPlusImport.worthImporting) the newest config/chatplus/chatplus-v*.json
                          → chat list + [Import these] [Cancel]  (servers: only addresses we don't have, ignoring case)
+                           1.20.4 (2026-11-12, not released): every line is a [✔]/[✘] toggle (/cakeupdate import toggle <n>);
+                           starts ticked unless MoveIn.replaces (a file we already have: options.txt, UMM, locked slots,
+                           fma, CakeChat's config for ChatPlus), which shows "(replaces yours)"; only ticked lines are
+                           imported; nothing ticked = nothing happens. Other targets: still the whole list.
+                         → Xaero (core, all targets since 2026-11-12): never replaced. mw*.txt waypoint lists under
+                           XaeroWaypoints/ or xaero/minimap/ are merged (MoveIn.mergeWaypoints: ours unchanged, theirs added
+                           when name + x,y,z is new, older sets: line gets their set names; ours saved in the import backup
+                           first); other Xaero files are copied only where we have none; *.lock never. Why: a player's
+                           waypoints were replaced by an old install's list (the import replaced whole files).
+                           Dev test: -Dcakeupdater.selftest=importlist (PASS 2026-11-12).
 /cakeupdate import confirm → Backups.newImportBackup(label) (kind=import, from = the old instance's folder name)
                            → servers: our servers.dat saved into it, new entries added now (ServerList + NbtIo)
                            → ChatPlus: ChatPlusImport.convert(setup, GUI height now) → patch + CakeChat keys
