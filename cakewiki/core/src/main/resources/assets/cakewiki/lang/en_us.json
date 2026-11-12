@@ -41,5 +41,7 @@
 	"cakewiki.blocked.tipsNoMcef": "Ways out: open the page in your browser; or let monumenta.wiki.gg bypass the VPN (a \"direct\" rule) or switch node.",
 	"cakewiki.blocked.getMcefModern": "Get MCEF Modern (optional)",
 	"cakewiki.blocked.mcefModernNote": "MCEF Modern is an optional Fabric mod you install yourself: a web browser inside Minecraft that can pass the check. The first time you verify, it downloads Chromium (100+ MB). Check that your server allows it.",
-	"cakewiki.mcef.failed": "MCEF couldn't set up its browser (see the game log)."
+	"cakewiki.mcef.failed": "MCEF couldn't set up its browser (see the game log).",
+	"cakewiki.mcef.working": "MCEF is downloading and setting up Chromium (%s%%). The in-game browser opens by itself when it's ready.",
+	"cakewiki.mcef.downloadFailed": "MCEF couldn't reach %s when the game started, so it has no browser until you restart. It needs that site at every start, and that site is behind Cloudflare too: let %s bypass the VPN or game accelerator as well (a \"direct\" rule) or switch node, then restart the game."
 }

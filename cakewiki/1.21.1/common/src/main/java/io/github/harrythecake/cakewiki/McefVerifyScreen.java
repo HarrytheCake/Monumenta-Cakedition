@@ -1,6 +1,7 @@
 package io.github.harrythecake.cakewiki;
 
 import com.cinemamod.mcef.MCEF;
+import com.cinemamod.mcef.internal.MCEFDownloadListener;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.BufferBuilder;
 import com.mojang.blaze3d.vertex.BufferUploader;
@@ -184,6 +185,25 @@ final class McefVerifyScreen extends Screen {
 
 	static boolean ready() {
 		return MCEF.isInitialized();
+	}
+
+	/**
+	 * MCEF's own setup state (its download listener and download site), for the blocked screen. Its listener is in an
+	 * {@code internal} package, so another MCEF version may not have it: then {@link McefSetup#UNKNOWN}.
+	 */
+	static McefSetup setup() {
+		try {
+			MCEFDownloadListener l = MCEFDownloadListener.INSTANCE;
+			String mirror = null;
+			try {
+				mirror = MCEF.getSettings().getDownloadMirror();
+			} catch (RuntimeException | LinkageError e) {
+				// keep the default host
+			}
+			return McefSetup.of(MCEF.isInitialized(), l.isDone(), l.isFailed(), l.getProgress(), mirror);
+		} catch (RuntimeException | LinkageError e) {
+			return MCEF.isInitialized() ? McefSetup.of(true, true, false, 1f, null) : McefSetup.UNKNOWN;
+		}
 	}
 
 	@Override

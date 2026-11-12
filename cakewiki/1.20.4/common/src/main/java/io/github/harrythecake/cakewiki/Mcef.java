@@ -27,6 +27,11 @@ final class Mcef {
 		return present() && McefVerifyScreen.ready();
 	}
 
+	/** Where MCEF is with setting up its browser; null when MCEF isn't installed. */
+	static McefSetup setup() {
+		return present() ? McefVerifyScreen.setup() : null;
+	}
+
 	/**
 	 * Opens the in-game browser at {@code url} for the player to pass the check; on Done the host goes through that
 	 * browser and {@code after} runs (the reader retries). False when MCEF is missing or not ready yet.

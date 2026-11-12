@@ -41,5 +41,7 @@
 	"cakewiki.blocked.tipsNoMcef": "解決辦法：在瀏覽器中開啟此頁；或讓 monumenta.wiki.gg 繞過 VPN（「直連」規則）或換一個節點。",
 	"cakewiki.blocked.getMcefModern": "取得 MCEF Modern（選用）",
 	"cakewiki.blocked.mcefModernNote": "MCEF Modern 是需要你自行安裝的選用 Fabric 模組：Minecraft 裡的網頁瀏覽器，可以通過這項驗證。第一次驗證時會下載 Chromium（100 MB 以上）。請先確認你的伺服器允許使用。",
-	"cakewiki.mcef.failed": "MCEF 無法準備瀏覽器（詳見遊戲日誌）。"
+	"cakewiki.mcef.failed": "MCEF 無法準備瀏覽器（詳見遊戲日誌）。",
+	"cakewiki.mcef.working": "MCEF 正在下載並準備 Chromium（%s%%）。準備好後會自動開啟遊戲內瀏覽器。",
+	"cakewiki.mcef.downloadFailed": "MCEF 在遊戲啟動時無法連線 %s，所以重新啟動遊戲前都沒有瀏覽器。它每次啟動都需要這個網站，而這個網站也在 Cloudflare 後面：請讓 %s 也繞過 VPN 或遊戲加速器（「直連」規則）或換一個節點，然後重新啟動遊戲。"
 }

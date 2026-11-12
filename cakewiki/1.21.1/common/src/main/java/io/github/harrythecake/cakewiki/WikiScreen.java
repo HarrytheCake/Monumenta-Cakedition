@@ -70,6 +70,7 @@ public final class WikiScreen extends Screen {
 	/** Cloudflare's check stopped the last request (else null): explained, with the browser and MCEF offered. */
 	private WikiException blocked;
 	private String blockedUrl;
+	/** "Verify in game browser" was pressed but MCEF had no browser yet: say why, and open it once MCEF is ready. */
 	private boolean mcefNotReady;
 	private Button pageButton, mcefButton;
 	/** The shown page's site contents (sidebar), or null when it has none. */
@@ -254,6 +255,14 @@ public final class WikiScreen extends Screen {
 	private void verifyInGame() {
 		if (blockedUrl == null) return;
 		mcefNotReady = !Mcef.verify(this, blockedUrl, reader.router, () -> { if (retry != null) retry.run(); });
+		if (mcefNotReady) CakeWiki.LOG.info("MCEF has no browser yet: {}", Mcef.setup());
+	}
+
+	/** MCEF got its browser ready while the blocked screen waited for it: open it now. */
+	private void openMcefWhenReady() {
+		if (!mcefNotReady || blocked == null || phase != Phase.ERROR || client().screen != this) return;
+		McefSetup s = Mcef.setup();
+		if (s != null && s.stage() == McefSetup.Stage.READY) verifyInGame();
 	}
 
 	private static Throwable cause(Throwable t) {
@@ -502,6 +511,7 @@ public final class WikiScreen extends Screen {
 
 	@Override
 	public void tick() {
+		openMcefWhenReady();
 		// ask for suggestions once typing pauses
 		String q = searchText.trim();
 		if (search != null && search.isFocused() && !q.equals(suggestedFor) && Util.getMillis() - typedAt > 250) {
@@ -701,7 +711,10 @@ public final class WikiScreen extends Screen {
 		List<Component> help = new ArrayList<>();
 		help.add(Component.translatable(Mcef.offered() ? "cakewiki.blocked.tips" : "cakewiki.blocked.tipsNoMcef"));
 		if (Mcef.offered() && !Mcef.present()) help.add(Component.translatable(Mcef.NOTE_KEY));
-		if (mcefNotReady) help.add(Component.translatable(Mcef.failed() ? "cakewiki.mcef.failed" : "cakewiki.mcef.notReady").withStyle(ChatFormatting.YELLOW));
+		if (mcefNotReady) {
+			McefSetup setup = Mcef.setup(); // live: the download percentage moves while the screen is open
+			if (setup != null && setup.messageKey() != null) help.add(Component.translatable(setup.messageKey(), setup.args()).withStyle(ChatFormatting.YELLOW));
+		}
 		if (!blocked.ray().isEmpty()) help.add(Component.literal("Cloudflare ray: " + blocked.ray()));
 		for (Component c : help) {
 			for (FormattedCharSequence line : font.split(c, contentWidth() - 20)) {
@@ -721,6 +734,11 @@ public final class WikiScreen extends Screen {
 
 	boolean readyForTest() {
 		return phase == Phase.READY;
+	}
+
+	/** Development: "Verify in game browser" was pressed and MCEF had no browser (the yellow line is shown). */
+	boolean mcefWaitingForTest() {
+		return mcefNotReady;
 	}
 
 	void verifyForTest() {

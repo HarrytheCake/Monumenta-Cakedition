@@ -37,9 +37,10 @@ final class Mcef {
 		return present() && McefVerifyScreen.ready();
 	}
 
-	/** MCEF gave up setting up its browser (this MCEF doesn't say; it stays "not ready"). */
-	static boolean failed() {
-		return false;
+
+	/** Where MCEF is with setting up its browser; null when MCEF isn't installed. */
+	static McefSetup setup() {
+		return present() ? McefVerifyScreen.setup() : null;
 	}
 
 	/**

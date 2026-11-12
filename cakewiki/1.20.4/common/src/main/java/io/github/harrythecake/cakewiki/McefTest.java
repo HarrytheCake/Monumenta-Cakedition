@@ -17,6 +17,10 @@ import java.util.stream.Stream;
  * reader (the forced block shows the blocked screen), opens MCEF's browser there, presses Done, and checks the page
  * then loads through the in-game browser. Logs PASS/FAIL and "cakewiki mcef test done"; screenshots
  * {@code cakewiki-mcef-<n>.png}. Does nothing in a normal game.
+ * <p>
+ * With {@code -Dcakewiki.mcefExpect=downloadFailed} (and MCEF's {@code download-mirror} pointed at a server that
+ * answers 403, as Cloudflare does for a challenged VPN): checks that pressing "Verify in game browser" explains the
+ * failed download instead of "try again in a moment".
  */
 final class McefTest {
 	private static boolean active;
@@ -24,6 +28,7 @@ final class McefTest {
 	private static int ticks;
 	private static int shot;
 	private static WikiScreen reader;
+	private static final boolean EXPECT_DOWNLOAD_FAILED = "downloadFailed".equals(System.getProperty("cakewiki.mcefExpect"));
 
 	private McefTest() {
 	}
@@ -51,7 +56,7 @@ final class McefTest {
 		ticks++;
 		switch (step) {
 			case 0 -> { // the title screen, and MCEF's browser set up (its first start downloads Chromium)
-				if (mc.screen instanceof TitleScreen && mc.getOverlay() == null && (Mcef.ready() || !Mcef.present()) && ticks > 40) {
+				if (mc.screen instanceof TitleScreen && mc.getOverlay() == null && (Mcef.ready() || !Mcef.present() || settled()) && ticks > 40) {
 					CakeWiki.open("Monumenta Wiki");
 					next();
 				} else if (ticks > 20 * 600) {
@@ -75,6 +80,18 @@ final class McefTest {
 					ticks = 0;
 				} else if (ticks == 10) {
 					reader.verifyForTest();
+				} else if (EXPECT_DOWNLOAD_FAILED && ticks == 40) {
+					McefSetup setup = Mcef.setup();
+					boolean ok = mc.screen == reader && reader.mcefWaitingForTest() && setup != null
+							&& setup.stage() == McefSetup.Stage.DOWNLOAD_FAILED && "cakewiki.mcef.downloadFailed".equals(setup.messageKey());
+					shot(mc);
+					if (ok) {
+						CakeWiki.LOG.info("cakewiki mcef test: failed MCEF download explained on the blocked screen ({}) (PASS)", setup);
+						step = 99;
+						ticks = 0;
+					} else {
+						fail("expected the failed-download line, got " + setup + " (screen " + mc.screen + ")");
+					}
 				} else if (mc.screen instanceof McefVerifyScreen v && v.onHostForTest() && ticks > 20 * 10) {
 					CakeWiki.LOG.info("cakewiki mcef test: in-game browser on the wiki (PASS)");
 					shot(mc);
@@ -100,6 +117,12 @@ final class McefTest {
 				}
 			}
 		}
+	}
+
+	/** The expected-failure run: MCEF has given up (no point waiting for it to get ready). */
+	private static boolean settled() {
+		McefSetup setup = Mcef.setup();
+		return EXPECT_DOWNLOAD_FAILED && setup != null && !setup.mayBecomeReady();
 	}
 
 	private static void next() {
