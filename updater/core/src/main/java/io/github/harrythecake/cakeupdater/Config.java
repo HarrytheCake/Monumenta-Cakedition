@@ -66,6 +66,9 @@ final class Config {
 	static final class BackupSettings {
 		boolean enabled = true;
 		int keep = 5;
+		/** An "auto" backup every so many minutes of play (in a world, not paused); 0 = off. */
+		int autoMinutes = 30;
+		int keepAuto = 6;
 	}
 
 	static final class MemorySettings {
@@ -115,7 +118,12 @@ final class Config {
 			  "backups": {
 			    "enabled": true,
 			    // How many backups to keep (the oldest are deleted).
-			    "keep": 5
+			    "keep": 5,
+			    // Also a backup every this many minutes of play (configs, options.txt, server list and your waypoint
+			    // lists; not maps). Skipped when nothing changed. 0 = off.
+			    "autoMinutes": 30,
+			    // How many of those to keep (counted apart from the backups before updates).
+			    "keepAuto": 6
 			  },
 
 			  // A chat warning when Minecraft's maximum memory (set in the launcher) is outside this range.

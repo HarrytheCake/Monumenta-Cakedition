@@ -83,6 +83,8 @@ public final class CakeUpdater {
 	public static void init() {
 		config = Config.load();
 		backups = new Backups(gameDir());
+		backups.setKeepAuto(config.backups.keepAuto);
+		playTicks = backups.savedPlayTicks();
 		if (config.backups.enabled) {
 			try {
 				updateBackup = backups.detectUpdate(UpdateCheck.installedIdentity(gameDir()),
@@ -91,6 +93,47 @@ public final class CakeUpdater {
 				LOGGER.error("Could not compare the modpack with the last start", e);
 			}
 		}
+	}
+
+	/** Ticks of play (in a world, not paused) towards the next auto backup; saved on close, so short sessions add up. */
+	private static int playTicks;
+	private static volatile boolean autoBackupRunning;
+
+	/** Every client tick (Fabric: END_CLIENT_TICK): an "auto" backup every {@code backups.autoMinutes} of play. */
+	public static void onClientTick(Minecraft client) {
+		if (config == null || !config.backups.enabled || config.backups.autoMinutes <= 0) {
+			return;
+		}
+		if (client.level == null || client.isPaused()) {
+			return;
+		}
+		if (++playTicks < config.backups.autoMinutes * 60 * 20) {
+			return;
+		}
+		playTicks = 0;
+		makeAutoBackup();
+	}
+
+	/** On a background thread: reading and copying the files must not stall a frame. */
+	static void makeAutoBackup() {
+		if (autoBackupRunning) {
+			return;
+		}
+		autoBackupRunning = true;
+		Util.ioPool().execute(() -> {
+			try {
+				Backups.Backup made = backups.autoBackup();
+				if (made != null) {
+					LOGGER.info("Auto backup {} (every {} minutes of play)", made.name(), config.backups.autoMinutes);
+				} else {
+					LOGGER.info("Auto backup skipped: nothing changed since the last one");
+				}
+			} catch (Exception e) {
+				LOGGER.error("Could not make the auto backup", e);
+			} finally {
+				autoBackupRunning = false;
+			}
+		});
 	}
 
 	/** The client has started (Fabric: CLIENT_STARTED). An urgent update is also shown before joining: a toast on the title screen. */
@@ -200,6 +243,11 @@ public final class CakeUpdater {
 				backups.snapshot();
 			} catch (Exception e) {
 				LOGGER.error("Could not save the server list and configs", e);
+			}
+			try {
+				backups.savePlayTicks(playTicks);
+			} catch (Exception e) {
+				LOGGER.warn("Could not save the play time towards the next auto backup: {}", e.toString());
 			}
 		}
 		if (updateOnClose) {

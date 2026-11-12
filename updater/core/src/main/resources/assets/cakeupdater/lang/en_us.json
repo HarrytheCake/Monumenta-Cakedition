@@ -45,6 +45,7 @@
   "cakeupdater.backups.none": "No backups yet. One is kept automatically before every modpack update.",
   "cakeupdater.backups.update": "%s · before update %s → %s",
   "cakeupdater.backups.restore": "%s · before a restore",
+  "cakeupdater.backups.auto": "%s · automatic, during play",
   "cakeupdater.backups.servers": "Server list",
   "cakeupdater.backups.servers.tip": "Restore this server list now (the current one is saved first)",
   "cakeupdater.backups.configs": "Configs",

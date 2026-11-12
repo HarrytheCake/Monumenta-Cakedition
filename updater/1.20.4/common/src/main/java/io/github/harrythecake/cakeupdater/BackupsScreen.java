@@ -103,6 +103,7 @@ public final class BackupsScreen extends Screen {
 			Component label = switch (b.kind()) {
 				case "update" -> Component.translatable("cakeupdater.backups.update", date(b.name()), b.from(), b.to());
 				case "import" -> Component.translatable("cakeupdater.backups.import", date(b.name()), b.from());
+				case "auto" -> Component.translatable("cakeupdater.backups.auto", date(b.name()));
 				default -> Component.translatable("cakeupdater.backups.restore", date(b.name()));
 			};
 			context.drawString(font, label, width / 2 - 234, y + 6, 0xFFFFFF);

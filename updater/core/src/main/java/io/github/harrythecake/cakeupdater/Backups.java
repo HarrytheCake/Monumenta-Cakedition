@@ -13,8 +13,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.stream.Stream;
 
 import org.slf4j.Logger;
@@ -48,17 +50,18 @@ final class Backups {
 	private static final long MAX_FILE = 4L << 20;
 	/** Pack-managed or regenerated files. Restoring pack-version.txt would bring the update notice back. */
 	private static final List<String> SKIP = List.of("yosbr/", "cakeupdater/pack-version.txt", "cakeupdater/defaults/",
-			"cakeupdater/adoption.json", "caketext/models/");
+			"cakeupdater/adoption.json", "caketext/models/", "caketext/exports/");
 	private static final DateTimeFormatter NAME = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
 
 	/**
-	 * A dated backup. {@code kind} is "update" (made before a modpack update), "restore" (made before a restore) or
+	 * A dated backup. {@code kind} is "update" (made before a modpack update), "restore" (made before a restore), "auto"
+	 * (every so many minutes of play, {@link #autoBackup}) or
 	 * "import" (made before an import from another install; {@code from} names that install). {@code hasFiles}: files
 	 * besides servers.dat, restored on close.
 	 */
 	record Backup(String name, String kind, String from, String to, boolean hasServers, boolean hasFiles) {}
 
-	static final List<String> KINDS = List.of("update", "restore", "import");
+	static final List<String> KINDS = List.of("update", "restore", "import", "auto");
 
 	private final Path gameDir;
 
@@ -109,7 +112,130 @@ final class Backups {
 	}
 
 	static boolean backedUp(String rel, long size) {
-		return size <= MAX_FILE && SKIP.stream().noneMatch(rel::startsWith);
+		return size <= MAX_FILE && SKIP.stream().noneMatch(rel::startsWith) && !rel.endsWith(".sparkprofile");
+	}
+
+	// --- Automatic backups (every so many minutes of play) ---
+
+	/** How many "auto" backups to keep; they're counted apart from the others. */
+	private int keepAuto = 6;
+
+	void setKeepAuto(int keepAuto) {
+		this.keepAuto = Math.max(1, keepAuto);
+	}
+
+	/**
+	 * Files an auto backup holds besides servers.dat and config/ (relative to the game folder): options.txt and the
+	 * player's own waypoint lists (Xaero's {@code mw*.txt}, CakeMap's {@code waypoints.json}); not maps, which are big.
+	 */
+	static boolean autoExtra(String rel) {
+		if (rel.equals("options.txt")) {
+			return true;
+		}
+		String name = rel.substring(rel.lastIndexOf('/') + 1);
+		if ((rel.startsWith("xaero/minimap/") || rel.startsWith("XaeroWaypoints/")) && name.startsWith("mw") && name.endsWith(".txt")) {
+			return true;
+		}
+		return rel.startsWith("cakemap/") && name.equals("waypoints.json");
+	}
+
+	/** What an auto backup would hold now: path in the backup (= relative to the game folder) → file. */
+	Map<String, Path> autoFiles() throws IOException {
+		Map<String, Path> files = new TreeMap<>();
+		if (Files.isRegularFile(gameDir.resolve(SERVERS))) {
+			files.put(SERVERS, gameDir.resolve(SERVERS));
+		}
+		Path config = configDir();
+		if (Files.isDirectory(config)) {
+			try (Stream<Path> walk = Files.walk(config)) {
+				for (Path file : (Iterable<Path>) walk.filter(Files::isRegularFile)::iterator) {
+					String rel = config.relativize(file).toString().replace('\\', '/');
+					if (backedUp(rel, Files.size(file))) {
+						files.put("config/" + rel, file);
+					}
+				}
+			}
+		}
+		if (Files.isRegularFile(gameDir.resolve("options.txt"))) {
+			files.put("options.txt", gameDir.resolve("options.txt"));
+		}
+		for (String dir : List.of("xaero/minimap", "XaeroWaypoints", "cakemap")) {
+			Path d = gameDir.resolve(dir);
+			if (!Files.isDirectory(d)) {
+				continue;
+			}
+			try (Stream<Path> walk = Files.walk(d)) {
+				for (Path file : (Iterable<Path>) walk.filter(Files::isRegularFile)::iterator) {
+					String rel = gameDir.relativize(file).toString().replace('\\', '/');
+					if (autoExtra(rel) && Files.size(file) <= MAX_FILE) {
+						files.put(rel, file);
+					}
+				}
+			}
+		}
+		return files;
+	}
+
+	/**
+	 * A dated "auto" backup of {@link #autoFiles()}, unless nothing changed since the newest one (then null). Files
+	 * that can't be read right now (a mod is writing them) are left out of this one. Keeps the newest
+	 * {@link #setKeepAuto} auto backups.
+	 */
+	Backup autoBackup() throws IOException {
+		Map<String, Path> files = autoFiles();
+		Backup newest = list().stream().filter(b -> b.kind().equals("auto")).findFirst().orElse(null);
+		if (newest != null && sameFiles(root().resolve(newest.name()), files)) {
+			return null;
+		}
+		Path dir = newBackupDir();
+		for (Map.Entry<String, Path> e : files.entrySet()) {
+			Path save = dir.resolve(e.getKey());
+			try {
+				Files.createDirectories(save.getParent());
+				Files.copy(e.getValue(), save, StandardCopyOption.COPY_ATTRIBUTES);
+			} catch (IOException ex) {
+				LOG.debug("Auto backup: skipped {}: {}", e.getKey(), ex.toString());
+			}
+		}
+		writeInfo(dir, "auto", "", ""); // last: a half-made backup has no info and isn't listed
+		pruneKind("auto", keepAuto);
+		return info(dir);
+	}
+
+	/** The backup holds exactly these files, byte for byte. */
+	private static boolean sameFiles(Path backup, Map<String, Path> files) {
+		try (Stream<Path> walk = Files.walk(backup)) {
+			List<String> have = walk.filter(Files::isRegularFile)
+					.map(f -> backup.relativize(f).toString().replace('\\', '/'))
+					.filter(rel -> !rel.equals(INFO)).sorted().toList();
+			if (!have.equals(new ArrayList<>(files.keySet()))) {
+				return false;
+			}
+			for (Map.Entry<String, Path> e : files.entrySet()) {
+				if (Files.mismatch(backup.resolve(e.getKey()), e.getValue()) != -1) {
+					return false;
+				}
+			}
+			return true;
+		} catch (IOException e) {
+			return false;
+		}
+	}
+
+	/** Play ticks counted towards the next auto backup, kept across starts. */
+	int savedPlayTicks() {
+		try {
+			return Integer.parseInt(read(root().resolve(STATE)).getProperty("autoTicks", "0"));
+		} catch (NumberFormatException e) {
+			return 0;
+		}
+	}
+
+	void savePlayTicks(int ticks) throws IOException {
+		Properties state = read(root().resolve(STATE));
+		state.setProperty("autoTicks", Integer.toString(Math.max(0, ticks)));
+		Files.createDirectories(root());
+		write(root().resolve(STATE), state);
 	}
 
 	/**
@@ -152,7 +278,7 @@ final class Backups {
 		} catch (IOException e) {
 			LOG.warn("Could not list backups: {}", e.toString());
 		}
-		backups.sort(Comparator.comparing(Backup::name).reversed());
+		backups.sort(Comparator.comparing(Backup::name, BY_AGE).reversed());
 		return backups;
 	}
 
@@ -327,15 +453,49 @@ final class Backups {
 		return dir;
 	}
 
-	/** A dated folder name that isn't taken yet (not created). */
+	/**
+	 * A dated folder name that isn't taken yet (not created). Within the same second the suffix is one more than any
+	 * name of that second still there, never a freed lower one: a reused lower suffix would sort as older and be
+	 * pruned at once.
+	 */
 	private Path freeBackupName() {
 		String base = LocalDateTime.now().format(NAME);
-		Path dir = root().resolve(base);
-		for (int i = 2; Files.exists(dir); i++) {
+		int highest = 0;
+		if (Files.isDirectory(root())) {
+			try (Stream<Path> dirs = Files.list(root())) {
+				for (Path d : (Iterable<Path>) dirs::iterator) {
+					String n = d.getFileName().toString();
+					if (n.equals(base) || n.startsWith(base + "_")) {
+						highest = Math.max(highest, suffix(n));
+					}
+				}
+			} catch (IOException e) {
+				LOG.warn("Could not list backups: {}", e.toString());
+			}
+		}
+		Path dir = root().resolve(highest == 0 ? base : base + "_" + (highest + 1));
+		for (int i = highest + 2; Files.exists(dir); i++) {
 			dir = root().resolve(base + "_" + i);
 		}
 		return dir;
 	}
+
+	/** "2026-11-12_18-00-00" → 1, "…_3" → 3. */
+	private static int suffix(String name) {
+		int at = name.lastIndexOf('_');
+		if (at > 0 && name.length() - at <= 4) {
+			try {
+				return Integer.parseInt(name.substring(at + 1));
+			} catch (NumberFormatException e) {
+				return 1;
+			}
+		}
+		return 1;
+	}
+
+	/** Oldest first: by the date part, then by the number after it (so "…_10" is newer than "…_9"). */
+	static final Comparator<String> BY_AGE = Comparator.<String, String>comparing(n -> suffix(n) > 1 ? n.substring(0, n.lastIndexOf('_')) : n)
+			.thenComparingInt(Backups::suffix);
 
 	/**
 	 * Keeps the newest {@code keep} backups of each kind, so restoring a few times never pushes out the backup
@@ -343,10 +503,14 @@ final class Backups {
 	 */
 	void prune(int keep) {
 		for (String kind : KINDS) {
-			List<Backup> ofKind = list().stream().filter(b -> b.kind().equals(kind)).toList();
-			for (Backup old : ofKind.subList(Math.min(Math.max(keep, 1), ofKind.size()), ofKind.size())) {
-				deleteTree(root().resolve(old.name()));
-			}
+			pruneKind(kind, kind.equals("auto") ? keepAuto : keep);
+		}
+	}
+
+	private void pruneKind(String kind, int keep) {
+		List<Backup> ofKind = list().stream().filter(b -> b.kind().equals(kind)).toList();
+		for (Backup old : ofKind.subList(Math.min(Math.max(keep, 1), ofKind.size()), ofKind.size())) {
+			deleteTree(root().resolve(old.name()));
 		}
 	}
 

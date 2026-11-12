@@ -126,7 +126,8 @@ So `tools/mrpack.py` ships `config/cakeupdater/adoption.json` = `{"files": {<ind
 CLIENT_STOPPING (every close, before the updater starts)
  └─ Backups.snapshot(): servers.dat + config/** → cakeupdater-backups/last-close/ (only changed files, by size + mtime;
     deleted files removed). Skipped: config/yosbr/, cakeupdater/pack-version.txt, cakeupdater/defaults/,
-    caketext/models/, and any file over 4 MB (caches such as mid/items.json).
+    caketext/models/, caketext/exports/ and *.sparkprofile (since 2026-11-12), and any file over 4 MB (caches such
+    as mid/items.json).
 onInitializeClient (every start)
  └─ Backups.detectUpdate(UpdateCheck.installedIdentity, pack-version.txt, keep)
      identity = "packwiz:<packwiz.json hash>" or "version:<pack-version.txt>"; kept in cakeupdater-backups/state.properties
@@ -142,6 +143,8 @@ CakeUpdaterPreLaunch                  → applies a restore the hook couldn't (c
 ```
 - Every restore first saves the files it replaces in a `kind=restore` backup. Restoring configs only overwrites files the backup has.
 - Pruning keeps the newest `backups.keep` of each kind, so restores never push out a pre-update backup.
+- **Auto backups** (2026-11-12, user: "every 30 minutes of play"; Fabric 1.20.4 only so far, other targets have the core code but no tick hook): `END_CLIENT_TICK` → `CakeUpdater.onClientTick` counts ticks while `client.level != null && !client.isPaused()`; every `backups.autoMinutes` (default 30, 0 = off) `Backups.autoBackup()` runs on `Util.ioPool()` and makes a `kind=auto` backup of `autoFiles()`: servers.dat, config/** (the snapshot rules), options.txt, Xaero waypoint lists (`xaero/minimap/**/mw*.txt`, `XaeroWaypoints/**/mw*.txt`) and CakeMap `cakemap/**/waypoints.json`; never map tiles. Skipped when byte-identical to the newest auto backup. `backups.keepAuto` (default 6) are kept, pruned apart from `keep`. The tick count is saved in `state.properties` (`autoTicks`) on close, so short sessions add up. Restored like any backup (servers now, the rest after close, so waypoints come back too). Measured 2026-11-12: dev instance about 0.3 MB per backup, the test instance under 1 MB once spark profiles and CakeText exports are skipped. Unit tests `AutoBackupTest`; dev run with `autoMinutes: 1` made one after a minute (PASS).
+- **Backup names** (fix 2026-11-12): within one second the suffix is above every name of that second still there (`freeBackupName`), and `list()` sorts with `BY_AGE` (`…_10` after `…_9`); before, a name freed by pruning was reused, sorted as older and pruned at once.
 - The `.mrpack` (`tools/mrpack.py`) ships `servers.dat` as `config/cakeupdater/defaults/servers.dat`, so a launcher's update never replaces the player's list. packwiz keeps it at the root with `preserve = true`.
 - The first start with 1.4.0 only records the pack; there's nothing to back up yet.
 

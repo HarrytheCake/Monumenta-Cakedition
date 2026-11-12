@@ -45,6 +45,7 @@
   "cakeupdater.backups.none": "還沒有備份。每次模組包更新前都會自動保留一份。",
   "cakeupdater.backups.update": "%s · 更新前 %s → %s",
   "cakeupdater.backups.restore": "%s · 還原前",
+  "cakeupdater.backups.auto": "%s · 遊玩中自動備份",
   "cakeupdater.backups.servers": "伺服器清單",
   "cakeupdater.backups.servers.tip": "立即還原此伺服器清單（會先儲存目前的清單）",
   "cakeupdater.backups.configs": "設定",

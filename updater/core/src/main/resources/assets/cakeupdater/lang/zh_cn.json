@@ -45,6 +45,7 @@
   "cakeupdater.backups.none": "还没有备份。每次整合包更新前都会自动保留一份。",
   "cakeupdater.backups.update": "%s · 更新前 %s → %s",
   "cakeupdater.backups.restore": "%s · 恢复前",
+  "cakeupdater.backups.auto": "%s · 游玩中自动备份",
   "cakeupdater.backups.servers": "服务器列表",
   "cakeupdater.backups.servers.tip": "立即恢复此服务器列表（会先保存当前列表）",
   "cakeupdater.backups.configs": "配置",
