@@ -172,7 +172,7 @@ final class SelfTest {
 	}
 
 	/**
-	 * {@code -Dcakeupdater.selftest=importlist}: a made-up old install next to the run folder (options.txt, Monumenta
+	 * {@code -Dcakeupdater.selftest=importlist}: a made-up old install in the run folder (options.txt, Monumenta
 	 * Addons, one Xaero waypoint list). Checks the import list's starting ticks (options.txt replaces ours: off; the
 	 * rest: on), that nothing ticked imports nothing, that ticks reach the staged import, then cancels it (nothing is
 	 * copied into the run folder).
@@ -182,7 +182,7 @@ final class SelfTest {
 		int checks = 0;
 		try {
 			sleep(4000);
-			Path old = CakeUpdater.gameDir().toAbsolutePath().getParent().resolve("cake-import-test").resolve(".minecraft");
+			Path old = CakeUpdater.gameDir().resolve("cake-import-test").resolve(".minecraft"); // inside the (ignored) run folder
 			Files.createDirectories(old.resolve("config"));
 			Files.writeString(old.resolve("options.txt"), "version:3700\nfov:0.5\n", StandardCharsets.UTF_8);
 			Files.writeString(old.resolve("config/fma.json"), "{\"features\": {}}", StandardCharsets.UTF_8);
