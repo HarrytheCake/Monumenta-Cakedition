@@ -587,21 +587,36 @@ public final class CakeUpdater {
 			start = start.getParent();
 		}
 		String startPath = start == null ? "" : start.toString() + java.io.File.separator;
-		Thread thread = new Thread(() -> {
-			String chosen = null;
-			try {
-				chosen = TinyFileDialogs.tinyfd_selectFolderDialog(title, startPath);
-			} catch (Throwable t) {
-				LOGGER.error("Could not open the folder window", t);
+		// Next frame: the chat screen that ran this command closes right after it, and would close our screen too.
+		// In play the game hides and locks the cursor and Windows keeps the game disabled while the folder window is
+		// open, so the player couldn't reach that window (nor Esc). A screen frees the cursor; fullscreen is left so
+		// the window can't hide behind the game, and comes back after.
+		client.tell(() -> {
+			boolean wasFullscreen = client.getWindow().isFullscreen();
+			if (wasFullscreen) {
+				client.getWindow().toggleFullScreen();
 			}
-			String result = chosen;
-			client.tell(() -> {
-				picking = false;
-				picked(client, result);
-			});
-		}, "CakeUpdater import folder");
-		thread.setDaemon(true);
-		thread.start();
+			client.setScreen(new ImportPickScreen());
+			Thread thread = new Thread(() -> {
+				String chosen = null;
+				try {
+					chosen = TinyFileDialogs.tinyfd_selectFolderDialog(title, startPath);
+				} catch (Throwable t) {
+					LOGGER.error("Could not open the folder window", t);
+				}
+				String result = chosen;
+				client.tell(() -> {
+					picking = false;
+					ImportPickScreen.finished(client);
+					if (wasFullscreen && !client.getWindow().isFullscreen()) {
+						client.getWindow().toggleFullScreen();
+					}
+					picked(client, result);
+				});
+			}, "CakeUpdater import folder");
+			thread.setDaemon(true);
+			thread.start();
+		});
 		return 1;
 	}
 

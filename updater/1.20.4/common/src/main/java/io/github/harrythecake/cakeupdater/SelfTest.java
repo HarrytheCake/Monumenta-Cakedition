@@ -36,6 +36,11 @@ final class SelfTest {
 	}
 
 	private static void run(Minecraft client) {
+		String mode = System.getProperty("cakeupdater.selftest");
+		if ("pick".equals(mode) || "pickfull".equals(mode)) {
+			pickTest(client, "pickfull".equals(mode));
+			return;
+		}
 		int passed = 0;
 		try {
 			sleep(4000);
@@ -96,6 +101,70 @@ final class SelfTest {
 			return null;
 		});
 		sleep(1000);
+	}
+
+	/**
+	 * {@code -Dcakeupdater.selftest=pick} (or {@code pickfull}: in fullscreen): types "/cakeupdate import" in the chat
+	 * screen and presses Enter, then checks that the folder window leaves the cursor free (our waiting screen is up,
+	 * the mouse isn't grabbed, fullscreen is left). Something outside the game closes the folder window (the
+	 * session's watcher script; or press Cancel); then checks the screen is gone and fullscreen is back.
+	 */
+	private static void pickTest(Minecraft client, boolean fullscreen) {
+		int passed = 0;
+		int checks = 0;
+		try {
+			sleep(4000);
+			if (fullscreen) {
+				on(client, () -> {
+					if (!client.getWindow().isFullscreen()) client.getWindow().toggleFullScreen();
+					return null;
+				});
+				sleep(2500);
+			}
+			on(client, () -> {
+				client.setScreen(new ChatScreen("/cakeupdate import"));
+				return null;
+			});
+			sleep(1000);
+			on(client, () -> client.screen.keyPressed(org.lwjgl.glfw.GLFW.GLFW_KEY_ENTER, 0, 0)); // as the player does
+			sleep(2500);
+			String during = on(client, () -> "screen=" + (client.screen == null ? "none" : client.screen.getClass().getSimpleName())
+					+ " mouseGrabbed=" + client.mouseHandler.isMouseGrabbed() + " fullscreen=" + client.getWindow().isFullscreen());
+			CakeUpdater.LOGGER.info("cakeupdater pick test: while the folder window is open: {}", during);
+			checks++;
+			if (during.equals("screen=ImportPickScreen mouseGrabbed=false fullscreen=false")) {
+				passed++;
+				CakeUpdater.LOGGER.info("cakeupdater pick test: cursor free, waiting screen up, not fullscreen (PASS)");
+			} else {
+				CakeUpdater.LOGGER.error("cakeupdater pick test: expected screen=ImportPickScreen mouseGrabbed=false fullscreen=false (FAIL)");
+			}
+			screenshot(client, "cakeupdater-picktest-waiting.png");
+			long until = System.currentTimeMillis() + 120_000;
+			while (System.currentTimeMillis() < until && on(client, () -> client.screen instanceof ImportPickScreen)) {
+				sleep(500);
+			}
+			sleep(1500);
+			String after = on(client, () -> "screen=" + (client.screen == null ? "none" : client.screen.getClass().getSimpleName())
+					+ " fullscreen=" + client.getWindow().isFullscreen());
+			CakeUpdater.LOGGER.info("cakeupdater pick test: after the folder window closed: {}", after);
+			checks++;
+			// the pause menu may open: the game lost focus to the folder window
+			if (after.equals("screen=none fullscreen=" + fullscreen) || after.equals("screen=PauseScreen fullscreen=" + fullscreen)) {
+				passed++;
+				CakeUpdater.LOGGER.info("cakeupdater pick test: back in play{} (PASS)", fullscreen ? ", fullscreen again" : "");
+			} else {
+				CakeUpdater.LOGGER.error("cakeupdater pick test: expected screen=none or PauseScreen, fullscreen={} (FAIL)", fullscreen);
+			}
+			if (fullscreen) {
+				on(client, () -> {
+					if (client.getWindow().isFullscreen()) client.getWindow().toggleFullScreen();
+					return null;
+				});
+			}
+		} catch (Exception e) {
+			CakeUpdater.LOGGER.error("cakeupdater pick test failed", e);
+		}
+		CakeUpdater.LOGGER.info("cakeupdater pick test done: {} of {}", passed, checks);
 	}
 
 	private static <T> T on(Minecraft client, Supplier<T> task) throws Exception {

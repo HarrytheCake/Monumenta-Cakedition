@@ -72,6 +72,7 @@
   "cakeupdater.import.picking": "Choose your old .minecraft folder (or the instance folder around it) in the window that opens. It can open behind the game.",
   "cakeupdater.import.picking.busy": "The folder window is already open (it can be behind the game).",
   "cakeupdater.import.picker.title": "Choose your old .minecraft folder",
+  "cakeupdater.import.picker.waiting": "Choose your old .minecraft folder (or the instance folder around it) in the folder window. If you can't see it, press Alt+Tab. The game waits here until you choose a folder or cancel.",
   "cakeupdater.import.nofolder": "No folder chosen.",
   "cakeupdater.import.self": "That's this game's own folder. Choose the .minecraft of your old pack or launcher.",
   "cakeupdater.import.nothing": "Nothing to import in %s (looked for options.txt, UMM, Monumenta Addons, ChatPlus, Xaero's maps and servers.dat).",

@@ -161,6 +161,14 @@ JOIN (first of each start) → MoveIn.takeDone: "Imported N files from <old>. Wh
                            "Coming from another pack or launcher? …"  [Import from my old .minecraft] [Don't show again]
 /cakeupdate import       → TinyFileDialogs.tinyfd_selectFolderDialog on its own daemon thread (LWJGL tinyfd ships with
                            Minecraft; starts in the launcher's instances folder; can open behind a fullscreen game)
+                           1.20.4 only so far (2026-11-12, not released): next frame (the chat screen closes after the
+                           command) ImportPickScreen opens (frees the cursor; no close button, Esc ignored; says Alt+Tab),
+                           fullscreen is left, then the window opens; when it returns the screen closes and fullscreen
+                           comes back. Why: in play the cursor was locked, and while the window is open Windows disables
+                           the game (it owns the window when the game was in front), so Esc did nothing (a player's report).
+                           Dev test: smoke.py --world + -Dcakeupdater.selftest=pick | pickfull (something outside closes
+                           the window: Cancel, or a WM_CLOSE script); PASS both 2026-11-12. After leaving fullscreen the
+                           window isn't in front (Alt+Tab, as the screen says).
                          → MoveIn.gameFolder: a picked instance folder → its .minecraft / minecraft; this install → refused
                          → MoveIn.scan: options.txt, config/unofficial-monumenta-mod.json, config/monumenta/lockedSlots.json,
                            config/fma.json, XaeroWaypoints/ XaeroWorldMap/ xaero/, servers.dat, and (CakeChat loaded +

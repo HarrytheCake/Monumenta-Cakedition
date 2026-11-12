@@ -72,6 +72,7 @@
   "cakeupdater.import.picking": "在弹出的窗口中选择你旧的 .minecraft 文件夹（或它所在的实例文件夹）。窗口可能出现在游戏后面。",
   "cakeupdater.import.picking.busy": "文件夹窗口已经打开了（可能在游戏后面）。",
   "cakeupdater.import.picker.title": "选择你旧的 .minecraft 文件夹",
+  "cakeupdater.import.picker.waiting": "请在文件夹窗口中选择你旧的 .minecraft 文件夹（或它所在的实例文件夹）。看不到窗口的话，请按 Alt+Tab。选好文件夹或取消之前，游戏会停在这里。",
   "cakeupdater.import.nofolder": "没有选择文件夹。",
   "cakeupdater.import.self": "这是本游戏自己的文件夹。请选择旧整合包或启动器的 .minecraft。",
   "cakeupdater.import.nothing": "%s 中没有可导入的内容（查找了 options.txt、UMM、Monumenta Addons、ChatPlus、Xaero 地图和 servers.dat）。",

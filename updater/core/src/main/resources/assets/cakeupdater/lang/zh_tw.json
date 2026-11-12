@@ -72,6 +72,7 @@
   "cakeupdater.import.picking": "在彈出的視窗中選擇你舊的 .minecraft 資料夾（或它所在的實例資料夾）。視窗可能出現在遊戲後面。",
   "cakeupdater.import.picking.busy": "資料夾視窗已經開啟了（可能在遊戲後面）。",
   "cakeupdater.import.picker.title": "選擇你舊的 .minecraft 資料夾",
+  "cakeupdater.import.picker.waiting": "請在資料夾視窗中選擇你舊的 .minecraft 資料夾（或它所在的實例資料夾）。看不到視窗的話，請按 Alt+Tab。選好資料夾或取消之前，遊戲會停在這裡。",
   "cakeupdater.import.nofolder": "沒有選擇資料夾。",
   "cakeupdater.import.self": "這是本遊戲自己的資料夾。請選擇舊模組包或啟動器的 .minecraft。",
   "cakeupdater.import.nothing": "%s 中沒有可匯入的內容（尋找了 options.txt、UMM、Monumenta Addons、ChatPlus、Xaero 地圖和 servers.dat）。",
