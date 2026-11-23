@@ -23,6 +23,6 @@
 		"fabric-api": "*"
 	},
 	"custom": {
-		"cakeui:reload": "io.github.harrythecake.cakebook.ConfigReload"
+		"cakeconfighub:reload": "io.github.harrythecake.cakebook.ConfigReload"
 	}
 }
