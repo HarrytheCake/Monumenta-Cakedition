@@ -155,6 +155,10 @@ final class SelfTest {
 		if (!enabled) {
 			return;
 		}
+		if (ConfigHubSelfTest.active()) {
+			ConfigHubSelfTest.tick(client);
+			return;
+		}
 		if (client.screen instanceof ConfigScreen) {
 			// the settings screen (Mod Menu's button opens it): one shot, then back to the title screen
 			if (++configTicks == 40) {
@@ -182,6 +186,10 @@ final class SelfTest {
 		} else if (seconds >= TITLE[TITLE.length - 1][0] + 2) {
 			if (configTicks == 0) {
 				client.setScreen(new ConfigScreen(client.screen));
+				return;
+			}
+			if (!ConfigHubSelfTest.finished()) {
+				ConfigHubSelfTest.start(client); // the config hub (ADR 0011)
 				return;
 			}
 			if (!reloaded) {

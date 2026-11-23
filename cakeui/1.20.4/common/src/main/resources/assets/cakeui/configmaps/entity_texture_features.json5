@@ -1,0 +1,33 @@
+// CakeUI's config map for Entity Texture Features (CakeUI ADR 0011), checked against entity_texture_features_1.20.4-fabric-7.0.13. Only in CakeUI's 1.20.4 jars.
+// hub: false = for the pack's pack defaults only (client-lag phase 2), not shown on the hub page.
+{
+  "format": 1,
+  "mod": "entity_texture_features",
+  "versions": ">=7.0 <7.1",
+  "file": "config/entity_texture_features.json",
+  "type": "json",
+  "hub": false,
+  "title": "Entity Texture Features",
+  "options": [
+    {
+      "key": "enableEmissiveBlockEntities",
+      "type": "bool",
+      "label": "enableEmissiveBlockEntities",
+      "default": false
+    },
+    {
+      "key": "enableBlinking",
+      "type": "bool",
+      "label": "enableBlinking",
+      "default": true
+    },
+    {
+      "key": "blinkFrequency",
+      "type": "int",
+      "label": "blinkFrequency",
+      "default": 150,
+      "min": 1,
+      "max": 1024
+    }
+  ]
+}

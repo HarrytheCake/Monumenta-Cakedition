@@ -24,6 +24,27 @@ public interface Platform {
 		return List.of();
 	}
 
+	/**
+	 * Every loaded mod's `assets/<modid>/<sub>/` folder (a path inside its jar), sorted by mod id; mods without one are
+	 * left out. Config maps use `configmaps` (CakeUI's own jar holds the maps for the pack's mods).
+	 */
+	default List<ModLayoutFolder> modAssetFolders(String sub) {
+		return List.of();
+	}
+
+	/** A loaded mod's version as its loader reports it ("minecraft" = the game version), or null. */
+	default String modVersion(String modId) {
+		return null;
+	}
+
+	/**
+	 * A text value from a loaded mod's own metadata (Fabric: fabric.mod.json's `custom` block; NeoForge: the mod's
+	 * `[modproperties.<modid>]`), or null. Used for `cakeui:reload` (the mod's config reload class).
+	 */
+	default String modMetadata(String modId, String key) {
+		return null;
+	}
+
 	/** A mod's `assets/<modid>/cakeui/` folder (a path inside its jar). */
 	record ModLayoutFolder(String modId, Path folder) {
 	}

@@ -22,9 +22,10 @@ public final class CakeUIApi {
 	/**
 	 * Changes when the API changes in a way plugins must know about. 2: {@link #fillPort}, {@link #addHudPiece} (CakeUI
 	 * 0.2.0). 3: {@link #addMovables}, {@link #openHudEditor} (0.3.0). 4: container screens: {@link #registerMenuValue},
-	 * {@link #addContainerLayouts}, {@link ElementContext#menu()}, {@link ElementType#tooltip}.
+	 * {@link #addContainerLayouts}, {@link ElementContext#menu()}, {@link ElementType#tooltip}. 5: {@link #registerConfigReload}
+	 * (config hub, ADR 0011).
 	 */
-	public static final int VERSION = 4;
+	public static final int VERSION = 5;
 	private static final CakeUIApi INSTANCE = new CakeUIApi();
 	private static final Pattern VALUE_NAME = Pattern.compile("[a-z0-9_]+(\\.[a-zA-Z0-9_]+)+");
 	private static final Pattern NAMESPACED = Pattern.compile("[a-z0-9_.-]+:[a-z0-9_/.-]+");
@@ -38,6 +39,20 @@ public final class CakeUIApi {
 
 	public static CakeUIApi get() {
 		return INSTANCE;
+	}
+
+	/**
+	 * Lets CakeUI's config hub ask your mod to read its config file again right after the hub wrote it (API version 5;
+	 * on 26.1.2, where the API version is still 3, the method exists too). Runs on the render thread. Without a reload
+	 * hook the hub tells the player the change takes effect after a restart. A mod that doesn't depend on CakeUI can
+	 * name a class instead: {@code "cakeui:reload": "com.example.MyConfig"} in fabric.mod.json's {@code custom} block
+	 * (NeoForge: {@code [modproperties.<modid>]}), with {@code public static void cakeuiReloadConfig()}.
+	 */
+	public CakeUIApi registerConfigReload(String modId, Runnable reload) {
+		Objects.requireNonNull(modId, "modId");
+		Objects.requireNonNull(reload, "reload");
+		io.github.harrythecake.cakeui.configmap.ConfigReloads.register(modId, reload);
+		return this;
 	}
 
 	/**

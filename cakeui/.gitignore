@@ -12,3 +12,4 @@ bin/
 # logs and config the tests create
 /logs/
 /config/
+.eclipse/

@@ -1,0 +1,101 @@
+// CakeUI's config map for LambDynamicLights (CakeUI ADR 0011), checked against lambdynamiclights-2.3.4+1.20.4. Only in CakeUI's 1.20.4 jars.
+// hub: false = for the pack's pack defaults only (client-lag phase 2), not shown on the hub page.
+{
+  "format": 1,
+  "mod": "lambdynlights",
+  "versions": ">=2.3 <2.4",
+  "file": "config/lambdynlights.toml",
+  "type": "toml",
+  "hub": false,
+  "title": "LambDynamicLights",
+  "options": [
+    {
+      "key": "mode",
+      "type": "enum",
+      "label": "mode",
+      "default": "fancy",
+      "values": [
+        {
+          "value": "off",
+          "label": "off"
+        },
+        {
+          "value": "fastest",
+          "label": "fastest"
+        },
+        {
+          "value": "fast",
+          "label": "fast"
+        },
+        {
+          "value": "fancy",
+          "label": "fancy"
+        }
+      ]
+    },
+    {
+      "key": "light_sources.entities",
+      "type": "bool",
+      "label": "entities",
+      "default": true
+    },
+    {
+      "key": "light_sources.self",
+      "type": "bool",
+      "label": "self",
+      "default": true
+    },
+    {
+      "key": "light_sources.block_entities",
+      "type": "bool",
+      "label": "block_entities",
+      "default": true
+    },
+    {
+      "key": "light_sources.water_sensitive_check",
+      "type": "bool",
+      "label": "water_sensitive_check",
+      "default": true
+    },
+    {
+      "key": "light_sources.creeper",
+      "type": "enum",
+      "label": "creeper",
+      "default": "simple",
+      "values": [
+        {
+          "value": "off",
+          "label": "off"
+        },
+        {
+          "value": "simple",
+          "label": "simple"
+        },
+        {
+          "value": "fancy",
+          "label": "fancy"
+        }
+      ]
+    },
+    {
+      "key": "light_sources.tnt",
+      "type": "enum",
+      "label": "tnt",
+      "default": "off",
+      "values": [
+        {
+          "value": "off",
+          "label": "off"
+        },
+        {
+          "value": "simple",
+          "label": "simple"
+        },
+        {
+          "value": "fancy",
+          "label": "fancy"
+        }
+      ]
+    }
+  ]
+}

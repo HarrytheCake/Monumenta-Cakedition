@@ -1,0 +1,157 @@
+// CakeUI's config map for Shulker Box Tooltip (CakeUI ADR 0011), checked against shulkerboxtooltip-fabric-4.1.0+1.20.4 (Configuration class). Only in CakeUI's 1.20.4 jars.
+// The file appears once a player saves Shulker Box Tooltip's own settings; until then the hub shows it greyed.
+{
+  "format": 1,
+  "mod": "shulkerboxtooltip",
+  "versions": ">=4.1 <4.2",
+  "file": "config/shulkerboxtooltip.json5",
+  "type": "json5",
+  "title": "Shulker Box Tooltip",
+  "sections": [
+    {
+      "title": "text.autoconfig.shulkerboxtooltip.category.preview",
+      "options": [
+        {
+          "key": "preview.enable",
+          "type": "bool",
+          "label": "text.autoconfig.shulkerboxtooltip.option.preview.enable",
+          "default": true
+        },
+        {
+          "key": "preview.swapModes",
+          "type": "bool",
+          "label": "text.autoconfig.shulkerboxtooltip.option.preview.swapModes",
+          "default": false
+        },
+        {
+          "key": "preview.alwaysOn",
+          "type": "bool",
+          "label": "text.autoconfig.shulkerboxtooltip.option.preview.alwaysOn",
+          "default": false
+        },
+        {
+          "key": "preview.defaultMaxRowSize",
+          "type": "int",
+          "label": "text.autoconfig.shulkerboxtooltip.option.preview.defaultMaxRowSize",
+          "default": 9,
+          "min": 1,
+          "max": 27
+        },
+        {
+          "key": "preview.theme",
+          "type": "enum",
+          "label": "text.autoconfig.shulkerboxtooltip.option.preview.theme",
+          "default": "SHULKERBOXTOOLTIP",
+          "values": [
+            {
+              "value": "SHULKERBOXTOOLTIP",
+              "label": "shulkerboxtooltip.theme.shulkerboxtooltip"
+            },
+            {
+              "value": "VANILLA",
+              "label": "shulkerboxtooltip.theme.vanilla"
+            }
+          ]
+        },
+        {
+          "key": "preview.position",
+          "type": "enum",
+          "label": "text.autoconfig.shulkerboxtooltip.option.preview.position",
+          "default": "INSIDE",
+          "values": [
+            {
+              "value": "INSIDE",
+              "label": "shulkerboxtooltip.preview_position.inside"
+            },
+            {
+              "value": "OUTSIDE",
+              "label": "shulkerboxtooltip.preview_position.outside"
+            },
+            {
+              "value": "OUTSIDE_TOP",
+              "label": "shulkerboxtooltip.preview_position.outside_top"
+            },
+            {
+              "value": "OUTSIDE_BOTTOM",
+              "label": "shulkerboxtooltip.preview_position.outside_bottom"
+            }
+          ]
+        },
+        {
+          "key": "preview.shortItemCounts",
+          "type": "bool",
+          "label": "text.autoconfig.shulkerboxtooltip.option.preview.shortItemCounts",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "text.autoconfig.shulkerboxtooltip.category.tooltip",
+      "options": [
+        {
+          "key": "tooltip.showKeyHints",
+          "type": "bool",
+          "label": "text.autoconfig.shulkerboxtooltip.option.tooltip.showKeyHints",
+          "default": true
+        },
+        {
+          "key": "tooltip.type",
+          "type": "enum",
+          "label": "text.autoconfig.shulkerboxtooltip.option.tooltip.type",
+          "default": "MOD",
+          "values": [
+            {
+              "value": "VANILLA",
+              "label": "shulkerboxtooltip.tooltipType.vanilla"
+            },
+            {
+              "value": "MOD",
+              "label": "shulkerboxtooltip.tooltipType.mod"
+            },
+            {
+              "value": "NONE",
+              "label": "shulkerboxtooltip.tooltipType.none"
+            }
+          ]
+        },
+        {
+          "key": "tooltip.lootTableInfoType",
+          "type": "enum",
+          "label": "text.autoconfig.shulkerboxtooltip.option.tooltip.lootTableInfoType",
+          "default": "SIMPLE",
+          "values": [
+            {
+              "value": "HIDE",
+              "label": "shulkerboxtooltip.lootTableInfoType.hide"
+            },
+            {
+              "value": "SIMPLE",
+              "label": "shulkerboxtooltip.lootTableInfoType.simple"
+            },
+            {
+              "value": "ADVANCED",
+              "label": "shulkerboxtooltip.lootTableInfoType.advanced"
+            }
+          ]
+        },
+        {
+          "key": "tooltip.hideShulkerBoxLore",
+          "type": "bool",
+          "label": "text.autoconfig.shulkerboxtooltip.option.tooltip.hideShulkerBoxLore",
+          "default": true
+        }
+      ]
+    },
+    {
+      "title": "text.autoconfig.shulkerboxtooltip.category.colors",
+      "options": [
+        {
+          "key": "colors.coloredPreview",
+          "type": "bool",
+          "label": "text.autoconfig.shulkerboxtooltip.option.colors.coloredPreview",
+          "default": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+// CakeUI's config map for BetterF3 (CakeUI ADR 0011), checked against BetterF3-9.0.2-Fabric-1.20.4 (ModConfigFile class). Only in CakeUI's 1.20.4 jars.
+// Its file appears once a player changes BetterF3's settings (config/betterf3.json; a player who switched it to TOML
+// sees it greyed). Checked against the class's key names only: compare with a real betterf3.json before relying on it.
+{
+  "format": 1,
+  "mod": "betterf3",
+  "versions": ">=9.0 <9.1",
+  "file": "config/betterf3.json",
+  "type": "json",
+  "title": "BetterF3",
+  "options": [
+    {
+      "key": "general.disable_mod",
+      "type": "bool",
+      "label": "config.betterf3.disable",
+      "default": false
+    },
+    {
+      "key": "general.auto_start",
+      "type": "bool",
+      "label": "config.betterf3.auto_start",
+      "default": false
+    },
+    {
+      "key": "general.shadow_text",
+      "type": "bool",
+      "label": "config.betterf3.shadow_text",
+      "default": true
+    },
+    {
+      "key": "general.animations",
+      "type": "bool",
+      "label": "config.betterf3.animations",
+      "default": true
+    },
+    {
+      "key": "general.hide_debug_crosshair",
+      "type": "bool",
+      "label": "config.betterf3.debug_crosshair",
+      "default": false
+    },
+    {
+      "key": "general.hide_sidebar",
+      "type": "bool",
+      "label": "config.betterf3.sidebar",
+      "default": true
+    },
+    {
+      "key": "general.hide_bossbar",
+      "type": "bool",
+      "label": "config.betterf3.bossbar",
+      "default": true
+    },
+    {
+      "key": "general.always_show_profiler",
+      "type": "bool",
+      "label": "config.betterf3.always_enable_profiler",
+      "default": false
+    },
+    {
+      "key": "general.always_show_tps",
+      "type": "bool",
+      "label": "config.betterf3.always_enable_tps_graph",
+      "default": false
+    },
+    {
+      "key": "general.always_show_ping",
+      "type": "bool",
+      "label": "config.betterf3.always_enable_ping_graph",
+      "default": false
+    }
+  ]
+}
