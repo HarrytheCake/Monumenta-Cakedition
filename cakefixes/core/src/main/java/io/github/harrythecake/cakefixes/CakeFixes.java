@@ -19,7 +19,7 @@ public final class CakeFixes {
 		return config;
 	}
 
-	/** Reads config/cakefixes/config.json5 again (/cakefixes reload, CakeUI's config hub). */
+	/** Reads config/cakefixes/config.json5 again (/cakefixes reload, CakeConfighub). */
 	public static synchronized void reloadConfig() {
 		config = Config.load();
 	}

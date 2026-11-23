@@ -1,4 +1,4 @@
-// CakeFixes' settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in CakeFixes' jar.
+// CakeFixes' settings on CakeConfighub (ADR 0013). Shipped in CakeFixes' jar.
 {
   format: 1, mod: "cakefixes", versions: "*", file: "config/cakefixes/config.json5", type: "json5",
   title: "cakefixes.config.title",

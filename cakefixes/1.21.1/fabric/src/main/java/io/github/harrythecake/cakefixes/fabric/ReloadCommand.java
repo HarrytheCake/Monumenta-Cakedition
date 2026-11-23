@@ -14,7 +14,7 @@ final class ReloadCommand {
 	static void register() {
 		ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> dispatcher.register(
 				LiteralArgumentBuilder.<FabricClientCommandSource>literal("cakefixes").then(LiteralArgumentBuilder.<FabricClientCommandSource>literal("reload").executes(ctx -> {
-					ConfigReload.cakeuiReloadConfig();
+					ConfigReload.cakeconfighubReloadConfig();
 					ctx.getSource().sendFeedback(Component.translatable("cakefixes.command.reloaded"));
 					return 1;
 				}))));

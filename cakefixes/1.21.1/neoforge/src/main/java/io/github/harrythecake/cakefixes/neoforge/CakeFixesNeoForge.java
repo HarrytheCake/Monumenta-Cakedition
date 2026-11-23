@@ -16,7 +16,7 @@ public final class CakeFixesNeoForge {
 		net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(net.neoforged.neoforge.client.event.RegisterClientCommandsEvent.class,
 				event -> event.getDispatcher().register(net.minecraft.commands.Commands.literal("cakefixes")
 						.then(net.minecraft.commands.Commands.literal("reload").executes(ctx -> {
-							io.github.harrythecake.cakefixes.ConfigReload.cakeuiReloadConfig();
+							io.github.harrythecake.cakefixes.ConfigReload.cakeconfighubReloadConfig();
 							ctx.getSource().sendSuccess(() -> net.minecraft.network.chat.Component.translatable("cakefixes.command.reloaded"), false);
 							return 1;
 						}))));

@@ -30,6 +30,6 @@
 		"java": ">=${java_version}"
 	},
 	"custom": {
-		"cakeui:reload": "io.github.harrythecake.cakefixes.ConfigReload"
+		"cakeconfighub:reload": "io.github.harrythecake.cakefixes.ConfigReload"
 	}
 }
