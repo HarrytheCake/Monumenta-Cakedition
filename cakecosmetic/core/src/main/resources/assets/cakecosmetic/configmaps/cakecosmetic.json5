@@ -1,0 +1,10 @@
+// CakeCosmetic's mode for CakeUI's pack defaults only (CakeUI ADR 0011). Shipped in CakeCosmetic's jar.
+// hub: false: the mode stays hidden from players (no UI toggle, docs/cakecosmetic-design.md); dev mode isn't mapped.
+// The gallery reads config.json5 again whenever it opens, so no reload hook is needed.
+{
+  format: 1, mod: "cakecosmetic", versions: "*", file: "config/cakecosmetic/config.json5", type: "json5",
+  hub: false, title: "CakeCosmetic",
+  options: [
+    { key: "mode", type: "enum", label: "mode", default: "advancement", values: ["advancement", "all"] },
+  ],
+}
