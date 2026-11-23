@@ -4,7 +4,7 @@
     python tools/packwiz_sync.py refresh         # rebuild pack/index.toml and the index hash in pack/pack.toml
     python tools/packwiz_sync.py modrinth <folder> <version-id>   # add/replace a Modrinth file (e.g. a resource pack)
     python tools/packwiz_sync.py github <folder> <owner/repo> <tag> [jar-prefix] [--optional="<description>"]
-        # point at a GitHub release jar (our own mods); the prefix picks one jar from a multi-jar release
+        # point at a GitHub release jar (our own mods); the prefix picks <prefix>-<version>.jar from a multi-jar release
 
 `refresh` does the same job as `packwiz refresh`, so either can be used.
 """
@@ -27,7 +27,8 @@ PRESERVE = {"servers.dat"}
 SKIP = {"pack.toml", "index.toml", ".packwizignore"}
 # Per-player state and caches in .minecraft/config/yosbr that must not ship (paths relative to yosbr/).
 YOSBR_EXCLUDE = ("config/mid", "config/spark/activity.json", "config/monumenta/persistent.json",
-                 "config/sodium-fingerprint.json")
+                 "config/sodium-fingerprint.json",
+                 "config/cakeui/hud.json5", "config/cakeui/images")  # CakeUI: the player's own HUD edits and images
 # Pack-owned configs (ADR 0007): background settings (performance, compatibility, libraries) the pack replaces on
 # every update, so changes reach existing players. Edited like the rest in .minecraft/config/yosbr, but shipped to
 # pack/<path> instead of pack/config/yosbr/<path>. Player preferences (keys, HUD, look) stay yosbr defaults. Taking
@@ -200,8 +201,10 @@ def github(folder, repo, tag, prefix=None, optional=None):
                                  headers={"User-Agent": "Monumenta-Cakedition packwiz_sync"})
     with urllib.request.urlopen(req) as r:
         release = json.load(r)
+    # With a prefix, only "<prefix>-<version>.jar": a multiloader release also has "<prefix>-<loader>-<mc>-<version>.jar"
+    # for every target, and the pack takes the plain one (= the Fabric 1.20.4 jar).
     jars = [a for a in release["assets"]
-            if a["name"].endswith(".jar") and (not prefix or a["name"].startswith(prefix + "-"))]
+            if a["name"].endswith(".jar") and (not prefix or re.match(re.escape(prefix) + r"-\d", a["name"]))]
     if len(jars) != 1:
         sys.exit(f"{repo} {tag}: expected one matching jar, found {[a['name'] for a in jars]}; pass a jar prefix")
     asset = jars[0]
