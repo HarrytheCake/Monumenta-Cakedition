@@ -3,13 +3,14 @@ order: 4
 ---
 # Cakedition 自制模组
 
-整合包里有七个模组是专门为 Cakedition 编写的，每个都有自己的页面：
+整合包里有八个模组是专门为 Cakedition 编写的，每个都有自己的页面：
 
 - [Cakedition Updater](updater.md)：让整合包和 Monumenta 资源包保持最新，备份你的设置，并把设置从别的整合包搬过来。
 - [CakeChat](chat.md)：聊天窗口，以及帮你切换 Monumenta 频道的标签页，聊天记录不限条数。
 - [CakeWiki](wiki.md)：在游戏里看 Monumenta Wiki（{key:key.cakewiki.open}）。
 - [CakeBook](book.md)：这本书，以及你自己的笔记。
 - [CakeFixes](fixes.md)：修复 Minecraft 和其他模组造成的卡顿与变慢。
+- [CakeUI](ui.md)：移动 HUD 的各个部件、调整大小和样式。
 - *可选：* [CakeText Translator](translator.md)：把游戏里的英文显示成中文。
 - *可选：* [CakeText Collector](collector.md)：收集游戏里的英文文本，供译者使用。
 

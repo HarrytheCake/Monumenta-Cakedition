@@ -1,0 +1,8 @@
+name = "CakeUI"
+filename = "cakeui-0.4.0.jar"
+side = "client"
+
+[download]
+url = "https://github.com/HarrytheCake/CakeUI/releases/download/v0.4.0/cakeui-0.4.0.jar"
+hash-format = "sha512"
+hash = "102472a47bd2d6f07c647b42bcb2d8af3ce80667fb7032ad287424a73822529e332565130ba384d65c59370a4b96eece2f116fe3fb546e52f7a8912ea6d847d9"

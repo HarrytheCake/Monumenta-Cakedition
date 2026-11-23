@@ -10,11 +10,11 @@ hash = "1ffaedbbc95f02c95abb711c10401de7415afc1f9822238022862b682184871e"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/cake/chat.md"
-hash = "33a76db81d7981ed2f239ab23cc64f53e2f3e82be57c3663c856f4b8168d19dd"
+hash = "e005ef766ed71e7e1538e346612b660cbe5c5696b6eac8e339d1d182c986e6cc"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/cake/collector.md"
-hash = "ef416b58f8d8f619903f1c9b5114c0a8836d6221bad0f5985a47e4be75bd786a"
+hash = "4b8ee8bed23fb45bee163941925e8eeda49166fc5ec1fd6e69b39f8e4d0b451d"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/cake/fixes.md"
@@ -22,19 +22,23 @@ hash = "5a75e30205794c39348bc2b132d30af2ad2355f5950f1239152d877f75fdd038"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/cake/index.md"
-hash = "30901622776f8a974619d2294d79f9d25186ac49776b4acea02990217b8d4970"
+hash = "40aee9725be669ceed0f0f17b2d3882587eb89159e703afc3ec0fb46ec58232e"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/cake/translator.md"
-hash = "d6f4f28b5c240d9c929bb2207ee83902ceac6d470dfd444759fa88c136d43928"
+hash = "9172ee1eea110fee625f165efb33ab2522190ed11da7c7fe06b3bde8e109779f"
+
+[[files]]
+file = "cakebook/books/cakedition/en_us/cake/ui.md"
+hash = "6a7f1845d2135dc9347cdb1fba84816f96895e154a2457cab56e0ef26eb70af8"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/cake/updater.md"
-hash = "bf4a7bef5bff3b600512875272bba5812fab9098dbe9c4af58b908e57e31be2c"
+hash = "2a1ce4d32d06fedc5a24b0576dbb35d9ae56d05adbdd8a151998b10a4efa9761"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/cake/wiki.md"
-hash = "5fea8d43a1c70a489dae07ca618e79697d82e4f448bb7647c78659c2b974f476"
+hash = "b5c4ed08f0d4d6e8ac94d7e8e05fd72e04ff76dddd6c9bab0c5874850b6052da"
 
 [[files]]
 file = "cakebook/books/cakedition/en_us/first-steps.md"
@@ -98,11 +102,11 @@ hash = "6dcf482afa97a44c77857b3f62b7d578c06df5c074c35e330b20c5d21ea582c2"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/cake/chat.md"
-hash = "ea99eca96114f73d81bce820284f7cf976ed2d994fe1aa6e039698688adc9753"
+hash = "d1192939879f85102d1d392c6bc01d7b754b313c3e664f303f7aef3178d20734"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/cake/collector.md"
-hash = "ccff8fd91e6835945ffe356f0732c8a8c79c2590a876bcac1c37974e5ef382a7"
+hash = "b659ce574dcb2e3676b1cf999be6530bbcbdbb7bf1755c98f15be965911e21c9"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/cake/fixes.md"
@@ -110,19 +114,23 @@ hash = "62a311ec6a79bcc3ee81de06afea5bce4c4ad3c913554fab38b9ea53ea26a851"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/cake/index.md"
-hash = "e7497b96aafb56bea879046a2a111cf93e2e1aec5494e027f342b32352ee3707"
+hash = "e6db0c28083b43af03fb1ffe0621456701ab0e53a9a07c948b637bad0a8312e9"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/cake/translator.md"
-hash = "0825e0f010789e6155e1b0061be6ebab3784123a7cec1881e253d5a9b7ba704c"
+hash = "e8cd8ba8088544a9539a9caf006572d9d4cea3affd1dd5ed5fc3ddda27baec40"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_cn/cake/ui.md"
+hash = "5597edd25826dea4854f238c5fd43c64e01b10ebf5f190dc6288c7c9e289c256"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/cake/updater.md"
-hash = "fba3eb85bece38790db0a865f2382955e85b55191472462c1232b9b750763808"
+hash = "be2c43a26eeee880286343369bfd7d092d64772b83ebc59cb03aa959161efd04"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/cake/wiki.md"
-hash = "b63ab6f926ab7ea4e8284ff1a32a95b3e5cfdc978b75464f1eb2f58485cb462b"
+hash = "7d850ea30fe829c3b8e92c586524315ef629f6928c3dd198af86114602ee85c9"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_cn/first-steps.md"
@@ -186,11 +194,11 @@ hash = "75092506baae739f4adabdd5e13d2362a43f64c2ca66caab1e78f7abd91cdc1b"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/cake/chat.md"
-hash = "d6ad36fdbfc92f3a1473693f54d9f64cf861af510a9d8f015b53059d9bc71cc9"
+hash = "5e736526d28619a2ce11e814770d8db88e6b4588912b3d0c9f6c350d9b32b219"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/cake/collector.md"
-hash = "e9b59ac2db8d2a508849980924d3d109f569e3384088eb19ae0b8b8e2475228b"
+hash = "6f09d2a4566c0d507771d76398334a9b71c3a9c5a6826c2809c80542e612836e"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/cake/fixes.md"
@@ -198,19 +206,23 @@ hash = "58e3b04dcacd0f2dda41a3766a2b156ab103cd223ed0c4dc1ca46cc4781e1aba"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/cake/index.md"
-hash = "123a7ef0b0c10a889de4bbe86fd73b5149b5a12f14bfaa2214bad03a35205688"
+hash = "7218075013778af22a4c13637eece6b749eed200b127b8fb383bdd97fffcdd53"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/cake/translator.md"
-hash = "6706c948c2d46a991235a985b36aa39f8d2da6cfdab0a525c2fded00f11bf3d9"
+hash = "c42669ae1584e32976de9d21968654721d4641b3e38bb3621787b277f0c89e9b"
+
+[[files]]
+file = "cakebook/books/cakedition/zh_tw/cake/ui.md"
+hash = "8182f08d265b80405a6b6997b66d1565b84837ba00c1170a72f42f2e4945fe0b"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/cake/updater.md"
-hash = "6c8bf536473cd66bf51d490fed6afd86bac63ebd8917aae10b40133b045cd927"
+hash = "c72065e14ccde848bac88d22865cce8696964dc42a8f96345b3bb19c4a12f39b"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/cake/wiki.md"
-hash = "7a825301f262faaa348de416dd0c2d3e2226207111ea2f02e31a5e991d857314"
+hash = "28b51deed675dfb1e8a21d58844fa6cfcead4c0c33315cf22ef041f5d95e9eab"
 
 [[files]]
 file = "cakebook/books/cakedition/zh_tw/first-steps.md"
@@ -569,8 +581,20 @@ file = "config/cakeupdater/changelog/2.6.0/zh_tw.md"
 hash = "7bd653377dffb3f7d0028e574266a7d029d49686f1d030a8bc44420db06b5d21"
 
 [[files]]
+file = "config/cakeupdater/changelog/2.7.0/en_us.md"
+hash = "4d89696a8a4e4b7f56ebf3b9695715c1c78dda89914638552e6f93109401f6f4"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.7.0/zh_cn.md"
+hash = "a5c75b1a17c6aef2460f3fff07c218ae3d6eb610c7c021c1bd2da15a6bc62932"
+
+[[files]]
+file = "config/cakeupdater/changelog/2.7.0/zh_tw.md"
+hash = "518fa977b83776af794ae03e4e5cb6897504766f9384b4c67d66ba2f65acd9b8"
+
+[[files]]
 file = "config/cakeupdater/pack-version.txt"
-hash = "6693435eadb673dda297a0652d241e293e361200bc40db949cf2501d18dd01ee"
+hash = "362148d7721ad4a1bb64981ff8d604ef7f4d22267ea8845042f54f90940f24fd"
 
 [[files]]
 file = "config/citresewn-defaults.json"
@@ -847,12 +871,12 @@ metafile = true
 
 [[files]]
 file = "mods/cakebook.pw.toml"
-hash = "229a0f261e7f1546b94f53fec258998f94feda71609a70b721fb53c278b4caa0"
+hash = "24cd4f46eb9a64acf283a14e0807c16cd967bacbd596dd06d4c435315959f4ee"
 metafile = true
 
 [[files]]
 file = "mods/cakechat.pw.toml"
-hash = "887bbbae4e54e29984e08f16b9c94c49df05c7a2f774bc2f93dcd520217e6599"
+hash = "24da3fd1501d1ae1bf2bc34714002f1589c80c77755c6cb6e0437c063d979516"
 metafile = true
 
 [[files]]
@@ -871,13 +895,18 @@ hash = "128ece3435bad9eb2e68b9798815f6c5c9dfa41addcd576639a88476bd6ee49f"
 metafile = true
 
 [[files]]
+file = "mods/cakeui.pw.toml"
+hash = "369ed3ba3b8e3772b9ebd871c1a86e329f758cc6379d376d4e810ae98b8f759d"
+metafile = true
+
+[[files]]
 file = "mods/cakeupdater.pw.toml"
-hash = "881a4a2ad2bbe18152169e602c7d2633702e1bd57e8ecad4eb3ee7168eea89a5"
+hash = "24dbfec64c9990ea31c54331cddb6742e033f99a7b73085acdb22f4f60af5e03"
 metafile = true
 
 [[files]]
 file = "mods/cakewiki.pw.toml"
-hash = "7e480e33964222b391e5d417527c33e95ef3eee698e55db6e8050a01ebf2be6f"
+hash = "c927deaeb7d4b273758736a671f8a3c0872f816840e323938c2f012e0f65da30"
 metafile = true
 
 [[files]]

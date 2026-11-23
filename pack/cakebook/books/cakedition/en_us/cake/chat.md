@@ -7,7 +7,11 @@ The pack's chat, made for Monumenta.
 
 ## Windows
 
-You can have more than one chat window. While the chat is open, drag a window by its tab bar and resize it from its top-right corner. Add windows and tabs in the settings.
+You can have more than one chat window. Add windows and tabs in the settings.
+
+Windows are locked, so you can't move them by accident. To move or resize one, type `/cakechat edit` (or turn on **Move and resize chat windows** in the settings), then, while the chat is open, drag a window by its tab bar and resize it from its top-right corner. `/cakechat edit` again locks them.
+
+With [CakeUI](ui.md), the **Edit HUD** button at the right end of the tabs opens the HUD editor, where you can move the chat windows together with the rest of your HUD.
 
 ## Tabs and channels
 

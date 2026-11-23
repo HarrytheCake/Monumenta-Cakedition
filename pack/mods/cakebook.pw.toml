@@ -1,8 +1,8 @@
 name = "CakeBook"
-filename = "cakebook-0.1.1.jar"
+filename = "cakebook-0.1.2.jar"
 side = "client"
 
 [download]
-url = "https://github.com/HarrytheCake/CakeBook/releases/download/v0.1.1/cakebook-0.1.1.jar"
+url = "https://github.com/HarrytheCake/CakeBook/releases/download/v0.1.2/cakebook-0.1.2.jar"
 hash-format = "sha512"
-hash = "a11596e58f9719135e17b7e284109e30936f2096a3aaf0f45011f8e0da727f7e868fd943b1f8d4ef4aba377c5cadbee225b015fd2864324b9e67940aba0734ee"
+hash = "963dd38ba56ba74e4d1fa6c902ab7745cfbeae65b2e7e70c2a7d1757546b0af7594173cea0b01a3edd86a4a4d2d73dd9a4a060adeddee411f80d10ab0f94461b"

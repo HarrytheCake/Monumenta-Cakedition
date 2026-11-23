@@ -3,13 +3,14 @@ order: 4
 ---
 # Cakedition's own mods
 
-Seven of the pack's mods were written for Cakedition. Each one has its own page:
+Eight of the pack's mods were written for Cakedition. Each one has its own page:
 
 - [Cakedition Updater](updater.md): keeps the pack and the Monumenta resource pack up to date, backs up your settings, and brings them over from another pack.
 - [CakeChat](chat.md): chat windows, and tabs that switch Monumenta's channels for you, with unlimited history.
 - [CakeWiki](wiki.md): the Monumenta Wiki inside the game ({key:key.cakewiki.open}).
 - [CakeBook](book.md): this book, and your own notes.
 - [CakeFixes](fixes.md): fixes for freezes and slowdowns in Minecraft and other mods.
+- [CakeUI](ui.md): move, resize and restyle the pieces of your HUD.
 - *Optional:* [CakeText Translator](translator.md): shows the game's English text in Chinese.
 - *Optional:* [CakeText Collector](collector.md): collects the game's English text for translators.
 
