@@ -57,10 +57,8 @@ TARGETS = [
         ("cakecosmetic", "https://github.com/HarrytheCake/CakeCosmetic.git")]),
     ("CakeMonu source", "cakemonu", "main", [
         ("cakemonu", "https://github.com/HarrytheCake/CakeMonu.git")]),
-    # enable after the first push (the user creates the repo; the first push releases v0.1.0): push_all refuses to
-    # run while a listed remote's repo doesn't exist
-    # ("CakeConfighub source", "cakeconfighub", "main", [
-    #     ("cakeconfighub", "https://github.com/HarrytheCake/CakeConfighub.git")]),
+    ("CakeConfighub source", "cakeconfighub", "main", [
+        ("cakeconfighub", "https://github.com/HarrytheCake/CakeConfighub.git")]),
 ]
 NOREPLY = re.compile(r"@(users\.noreply\.github\.com|anthropic\.com)$")
 
