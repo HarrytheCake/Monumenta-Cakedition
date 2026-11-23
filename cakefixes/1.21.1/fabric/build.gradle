@@ -1,3 +1,8 @@
 plugins {
 	id 'cake-fabric'
 }
+
+// /cakefixes reload uses Fabric API's client commands when they are installed; CakeFixes doesn't require Fabric API
+dependencies {
+	modCompileOnlyDep("net.fabricmc.fabric-api:fabric-api:${project.property('fabric_api_version')}")
+}

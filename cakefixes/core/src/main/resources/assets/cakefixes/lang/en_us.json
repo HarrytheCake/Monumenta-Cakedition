@@ -11,5 +11,6 @@
   "cakefixes.fix.bannerDrawDistance": "Banner draw distance",
   "cakefixes.fix.bannerDrawDistance.tooltip": "Banners are decoration but cost 3–4% of frame time in banner-heavy dungeons. Banners farther than this aren't drawn. Off: vanilla (up to 64 blocks). This changes what you see, so it's off by default.",
   "cakefixes.fix.bannerDrawDistance.count": "Banner draws skipped this session: %s",
-  "cakefixes.fix.bannerDrawDistance.value": "%s blocks"
+  "cakefixes.fix.bannerDrawDistance.value": "%s blocks",
+  "cakefixes.command.reloaded": "CakeFixes: settings read again."
 }

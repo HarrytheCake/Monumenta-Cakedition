@@ -1,0 +1,11 @@
+// CakeFixes' settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in CakeFixes' jar.
+{
+  format: 1, mod: "cakefixes", versions: "*", file: "config/cakefixes/config.json5", type: "json5",
+  title: "cakefixes.config.title",
+  options: [
+    { key: "teamRemovalFix", type: "bool", label: "cakefixes.fix.teamRemovalFix", default: true },
+    { key: "appleSkinBlendQueryFix", type: "bool", label: "cakefixes.fix.appleSkinBlendQueryFix", default: true },
+    { key: "bannerDrawDistance", type: "enum", label: "cakefixes.fix.bannerDrawDistance", default: 0,
+      values: [ { value: 0, label: "options.off" }, 16, 24, 32, 48 ] },
+  ],
+}

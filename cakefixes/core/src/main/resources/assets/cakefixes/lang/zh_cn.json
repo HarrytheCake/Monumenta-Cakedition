@@ -11,5 +11,6 @@
   "cakefixes.fix.bannerDrawDistance": "旗帜绘制距离",
   "cakefixes.fix.bannerDrawDistance.tooltip": "旗帜只是装饰，但在旗帜很多的地下城里会占用 3–4% 的帧时间。超出此距离的旗帜不会被绘制。关闭：与原版相同（最远 64 格）。这会改变你看到的画面，所以默认关闭。",
   "cakefixes.fix.bannerDrawDistance.count": "本次已跳过的旗帜绘制：%s 次",
-  "cakefixes.fix.bannerDrawDistance.value": "%s 格"
+  "cakefixes.fix.bannerDrawDistance.value": "%s 格",
+  "cakefixes.command.reloaded": "CakeFixes：已重新读取设置。"
 }

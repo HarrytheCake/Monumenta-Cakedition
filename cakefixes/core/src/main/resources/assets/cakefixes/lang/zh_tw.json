@@ -11,5 +11,6 @@
   "cakefixes.fix.bannerDrawDistance": "旗幟繪製距離",
   "cakefixes.fix.bannerDrawDistance.tooltip": "旗幟只是裝飾，但在旗幟很多的地城裡會占用 3–4% 的幀時間。超出此距離的旗幟不會被繪製。關閉：與原版相同（最遠 64 格）。這會改變你看到的畫面，所以預設關閉。",
   "cakefixes.fix.bannerDrawDistance.count": "本次已略過的旗幟繪製：%s 次",
-  "cakefixes.fix.bannerDrawDistance.value": "%s 格"
+  "cakefixes.fix.bannerDrawDistance.value": "%s 格",
+  "cakefixes.command.reloaded": "CakeFixes：已重新讀取設定。"
 }
