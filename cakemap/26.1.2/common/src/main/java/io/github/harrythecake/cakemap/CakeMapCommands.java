@@ -40,6 +40,11 @@ public final class CakeMapCommands {
 				.then(LiteralArgumentBuilder.<S>literal("waypoints").executes(c -> openLater(new WaypointListScreen(null))))
 				.then(LiteralArgumentBuilder.<S>literal("settings").executes(c -> openLater(new SettingsScreen(null))))
 				.then(LiteralArgumentBuilder.<S>literal("import").executes(c -> openLater(new ImportScreen(null))))
+				.then(LiteralArgumentBuilder.<S>literal("reload").executes(c -> {
+					CakeMap.reloadSettings();  // reads the settings file again (after a hand edit); client-side only
+					feedback.accept(c.getSource(), Component.translatable("cakemap.reloaded"));
+					return 1;
+				}))
 				.then(LiteralArgumentBuilder.<S>literal("export").executes(c -> export(c, feedback, error))
 						.then(RequiredArgumentBuilder.<S, String>argument("server", StringArgumentType.word()).executes(c -> export(c, feedback, error))));
 	}

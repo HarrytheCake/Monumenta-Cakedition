@@ -1,0 +1,33 @@
+// CakeMap's settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in CakeMap's jar.
+// The minimap's place on screen stays in CakeUI's HUD editor / CakeMap's own settings.
+{
+  format: 1, mod: "cakemap", versions: "*", file: "config/cakemap/config.json", type: "json",
+  title: "cakemap.settings.title",
+  sections: [
+    { title: "cakemap.settings.minimap", options: [
+      { key: "minimap", type: "bool", label: "cakemap.settings.minimap", default: true },
+      { key: "shape", type: "enum", label: "cakemap.settings.shape", default: "SQUARE", values: [ { value: "SQUARE", label: "cakemap.settings.shape.square" }, { value: "CIRCLE", label: "cakemap.settings.shape.circle" } ] },
+      { key: "frame", type: "enum", label: "cakemap.settings.frame", default: "RING", values: [ { value: "RING", label: "cakemap.settings.frame.ring" }, { value: "LINE", label: "cakemap.settings.frame.line" } ] },
+      { key: "sizeShare", type: "float", min: 0.05, max: 0.8, step: 0.05, label: "cakemap.settings.size", default: 0.2 },
+      { key: "zoom", type: "enum", label: "cakemap.settings.zoom", default: 1,
+        values: [ { value: 0.25, label: "0.25x" }, { value: 0.5, label: "0.5x" }, { value: 1, label: "1x" }, { value: 2, label: "2x" }, { value: 4, label: "4x" } ] },
+      { key: "rotate", type: "enum", label: "cakemap.settings.rotate", default: true,
+        values: [ { value: true, label: "cakemap.settings.rotate.on" }, { value: false, label: "cakemap.settings.rotate.off" } ] },
+      { key: "corner", type: "enum", label: "cakemap.settings.corner", default: "TOP_LEFT", values: [ { value: "TOP_LEFT", label: "cakemap.settings.corner.top_left" }, { value: "TOP_RIGHT", label: "cakemap.settings.corner.top_right" }, { value: "BOTTOM_LEFT", label: "cakemap.settings.corner.bottom_left" }, { value: "BOTTOM_RIGHT", label: "cakemap.settings.corner.bottom_right" } ] },
+      { key: "opacity", type: "float", min: 0.1, max: 1, step: 0.1, label: "cakemap.settings.opacity", default: 1 },
+      { key: "coordinates", type: "bool", label: "cakemap.settings.coordinates", default: true },
+      { key: "cave", type: "enum", label: "cakemap.settings.cave", default: "AUTO", values: [ { value: "OFF", label: "cakemap.settings.cave.off" }, { value: "AUTO", label: "cakemap.settings.cave.auto" }, { value: "ON", label: "cakemap.settings.cave.on" } ] },
+      { key: "mode", type: "enum", label: "cakemap.settings.mode", default: "STATIC", values: [ { value: "STATIC", label: "cakemap.settings.mode.static" }, { value: "DYNAMIC", label: "cakemap.settings.mode.dynamic" } ] },
+      { key: "marker", type: "enum", label: "cakemap.settings.marker", default: "ARROW", values: [ { value: "ARROW", label: "cakemap.settings.marker.arrow" }, { value: "HEAD", label: "cakemap.settings.marker.head" } ] },
+    ] },
+    { title: "cakemap.hub.waypoints", options: [
+      { key: "waypointsOnMinimap", type: "bool", label: "cakemap.settings.waypointsOnMinimap", default: true },
+      { key: "waypointsInWorld", type: "bool", label: "cakemap.settings.waypointsInWorld", default: true },
+      { key: "builtinInWorldOnlyBookmarked", type: "enum", label: "cakemap.settings.builtinInWorld", default: true,
+        values: [ { value: true, label: "cakemap.settings.builtinInWorld.bookmarked" }, { value: false, label: "cakemap.settings.builtinInWorld.all" } ] },
+      { key: "questCompass", type: "bool", label: "cakemap.settings.questCompass", default: true },
+      { key: "chatCoordinates", type: "bool", label: "cakemap.settings.chatCoordinates", default: true },
+      { key: "deathWaypoints", type: "bool", label: "cakemap.settings.deathWaypoints", default: true },
+    ] },
+  ],
+}

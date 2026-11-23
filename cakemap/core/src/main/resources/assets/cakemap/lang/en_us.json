@@ -149,5 +149,7 @@
 	"cakemap.movable.minimap": "Minimap",
 	"cakemap.settings.move": "Place on HUD",
 	"cakemap.settings.move.value": "open the HUD editor…",
-	"cakemap.settings.move.tip": "Drag the minimap anywhere in CakeUI's HUD editor; its corner handle (or scrolling) sets its size."
+	"cakemap.settings.move.tip": "Drag the minimap anywhere in CakeUI's HUD editor; its corner handle (or scrolling) sets its size.",
+	"cakemap.reloaded": "CakeMap: settings read again.",
+	"cakemap.hub.waypoints": "Waypoints"
 }

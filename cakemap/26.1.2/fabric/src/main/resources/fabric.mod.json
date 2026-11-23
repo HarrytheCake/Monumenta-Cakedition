@@ -38,5 +38,8 @@
 	},
 	"mixins": [
 		"cakemap.mixins.json"
-	]
+	],
+	"custom": {
+		"cakeui:reload": "io.github.harrythecake.cakemap.ConfigReload"
+	}
 }

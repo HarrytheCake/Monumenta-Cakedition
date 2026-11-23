@@ -149,5 +149,7 @@
 	"cakemap.movable.minimap": "小地圖",
 	"cakemap.settings.move": "在 HUD 上放置",
 	"cakemap.settings.move.value": "開啟 HUD 編輯器…",
-	"cakemap.settings.move.tip": "在 CakeUI 的 HUD 編輯器中把小地圖拖到任意位置；拖曳角落的控制點（或捲動滾輪）可調整大小。"
+	"cakemap.settings.move.tip": "在 CakeUI 的 HUD 編輯器中把小地圖拖到任意位置；拖曳角落的控制點（或捲動滾輪）可調整大小。",
+	"cakemap.reloaded": "CakeMap：已重新讀取設定。",
+	"cakemap.hub.waypoints": "路徑點"
 }

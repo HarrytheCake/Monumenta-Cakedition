@@ -82,6 +82,11 @@ public final class CakeMap {
 		return Services.PLATFORM.configDir().resolve("cakemap").resolve("config.json");
 	}
 
+	/** Reads config/cakemap/config.json again (/cakemap reload, CakeUI's config hub). */
+	public static void reloadSettings() {
+		settings = MapSettings.load(configFile());
+	}
+
 	public static void saveSettings() {
 		try {
 			settings.fix().save(configFile());

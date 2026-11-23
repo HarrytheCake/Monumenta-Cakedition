@@ -51,3 +51,7 @@ reason = "CakeMap replaces Xaero's World Map"
 versionRange = "[0,)"
 ordering = "NONE"
 side = "CLIENT"
+
+# CakeUI's config hub calls this class's cakeuiReloadConfig() after writing our config (ADR 0011)
+[modproperties.cakemap]
+"cakeui:reload" = "io.github.harrythecake.cakemap.ConfigReload"
