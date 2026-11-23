@@ -87,6 +87,11 @@ public final class CakeChat {
 			feedback.accept(context.getSource(), Component.translatable(on ? "cakechat.edit.on" : "cakechat.edit.off")
 					.withStyle(on ? ChatFormatting.GREEN : ChatFormatting.YELLOW));
 			return 1;
+		})).then(literal.apply("reload").executes(context -> {
+			// reads the config file again (after a hand edit); client-side only
+			reloadConfig();
+			feedback.accept(context.getSource(), Component.translatable("cakechat.reloaded").withStyle(ChatFormatting.GREEN));
+			return 1;
 		})).then(literal.apply("tablist").executes(context -> {
 			// what CakeChat reads for the {guild} channel, shown only here (never logged or sent)
 			List<String> lines = windows().tabListLines();
@@ -132,6 +137,17 @@ public final class CakeChat {
 	/** A tab's name as shown: the default tabs' names are translation keys. */
 	public static String tabName(ChatConfig.Tab tab) {
 		return tab.name.startsWith(ChatConfig.Tab.KEY_PREFIX) ? I18n.get(tab.name) : tab.name;
+	}
+
+	/** Reads config/cakechat/config.json again and rebuilds the windows (/cakechat reload, CakeUI's config hub). */
+	public static void reloadConfig() {
+		if (configFile == null) {
+			return;
+		}
+		config = ChatConfig.load(configFile);
+		if (windows != null) {
+			windows.rebuild();
+		}
 	}
 
 	/** The settings screen saved: windows, tabs and rules may have changed. */

@@ -25,5 +25,8 @@
 	},
 	"conflicts": {
 		"chatplus": "*"
+	},
+	"custom": {
+		"cakeui:reload": "io.github.harrythecake.cakechat.ConfigReload"
 	}
 }

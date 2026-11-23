@@ -106,5 +106,6 @@
 	"cakechat.movable.main": "聊天（主窗口）",
 	"cakechat.movable.window": "聊天窗口 %s",
 	"cakechat.config.editHudButton": "聊天中的“编辑 HUD”按钮",
-	"cakechat.config.editHudButton.desc": "安装 CakeUI 时：主窗口标签栏右端的按钮，打开 CakeUI 的 HUD 编辑器，也可在其中移动和调整聊天窗口大小。"
+	"cakechat.config.editHudButton.desc": "安装 CakeUI 时：主窗口标签栏右端的按钮，打开 CakeUI 的 HUD 编辑器，也可在其中移动和调整聊天窗口大小。",
+	"cakechat.reloaded": "CakeChat：已重新读取设置。"
 }

@@ -1,0 +1,36 @@
+// CakeChat's settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in CakeChat's jar.
+// Windows and tabs stay in CakeChat's own settings screen (/cakechat).
+{
+  format: 1, mod: "cakechat", versions: "*", file: "config/cakechat/config.json", type: "json",
+  title: "cakechat.config.title",
+  sections: [
+    { title: "", options: [
+      { key: "windowEditing", type: "bool", label: "cakechat.config.windowEditing", default: false },
+      { key: "editHudButton", type: "bool", label: "cakechat.config.editHudButton", default: true },
+    ] },
+    { title: "cakechat.config.history", options: [
+      { key: "history.maxMessages", type: "int", min: 0, label: "cakechat.config.history.maxMessages", default: 0 },
+      { key: "history.keepOnDisconnect", type: "bool", label: "cakechat.config.history.keepOnDisconnect", default: true },
+    ] },
+    { title: "cakechat.config.compact", options: [
+      { key: "compact.enabled", type: "bool", label: "cakechat.config.compact.enabled", default: true },
+      { key: "compact.format", type: "string", label: "cakechat.config.compact.format", default: " (x{count})" },
+      { key: "compact.mode", type: "enum", label: "cakechat.config.compact.mode", default: "LATEST",
+        values: [ { value: "LATEST", label: "cakechat.config.compact.mode.latest" }, { value: "WITHIN_SECONDS", label: "cakechat.config.compact.mode.within_seconds" } ] },
+      { key: "compact.searchLines", type: "int", min: 1, max: 20, label: "cakechat.config.compact.searchLines", default: 1 },
+      { key: "compact.seconds", type: "int", min: 1, max: 600, step: 5, label: "cakechat.config.compact.seconds", default: 60 },
+      { key: "compact.compareStyle", type: "bool", label: "cakechat.config.compact.compareStyle", default: false },
+    ] },
+    { title: "cakechat.config.timestamps", options: [
+      { key: "timestamps.enabled", type: "bool", label: "cakechat.config.timestamps.enabled", default: false },
+      { key: "timestamps.pattern", type: "string", label: "cakechat.config.timestamps.pattern", default: "HH:mm" },
+      { key: "timestamps.placement", type: "enum", label: "cakechat.config.timestamps.placement", default: "HOVER",
+        values: [ { value: "HOVER", label: "cakechat.config.timestamps.placement.hover" }, { value: "BEFORE", label: "cakechat.config.timestamps.placement.before" }, { value: "AFTER", label: "cakechat.config.timestamps.placement.after" } ] },
+    ] },
+    { title: "cakechat.config.scroll", options: [
+      { key: "scroll.linesPerNotch", type: "int", min: 1, max: 20, label: "cakechat.config.scroll.linesPerNotch", default: 7 },
+      { key: "scroll.invert", type: "bool", label: "cakechat.config.scroll.invert", default: false },
+      { key: "scroll.scrollbar", type: "bool", label: "cakechat.config.scroll.scrollbar", default: true },
+    ] },
+  ],
+}
