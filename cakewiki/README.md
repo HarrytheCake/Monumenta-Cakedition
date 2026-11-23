@@ -2,7 +2,7 @@
 
 A client-only mod that reads the [Monumenta Wiki](https://monumenta.wiki.gg/) and other wikis inside the game. Made for the Monumenta Cakedition modpack.
 
-**Builds:** Fabric and NeoForge for Minecraft 1.20.4, 1.21.1 and 26.1.2, plus Fabric for 1.21.11 (release v0.2.0 has Fabric 1.20.4, 1.21.1, 1.21.11 and NeoForge 1.20.4 only). Pick `cakewiki-<loader>-<minecraft>-<version>.jar` from the [releases](https://github.com/HarrytheCake/CakeWiki/releases). Fabric needs Fabric API.
+**Builds:** Fabric and NeoForge for Minecraft 1.20.4, 1.21.1 and 26.1.2, plus Fabric for 1.21.11 (from v0.3.0 on; v0.2.0 has Fabric 1.20.4, 1.21.1, 1.21.11 and NeoForge 1.20.4 only). Pick `cakewiki-<loader>-<minecraft>-<version>.jar` from the [releases](https://github.com/HarrytheCake/CakeWiki/releases). Fabric needs Fabric API.
 
 ## Use
 
