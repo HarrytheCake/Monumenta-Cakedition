@@ -1,4 +1,4 @@
-// CakeMap's settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in CakeMap's jar.
+// CakeMap's settings on CakeConfighub (ADR 0013). Shipped in CakeMap's jar.
 // The minimap's place on screen stays in CakeUI's HUD editor / CakeMap's own settings.
 {
   format: 1, mod: "cakemap", versions: "*", file: "config/cakemap/config.json", type: "json",

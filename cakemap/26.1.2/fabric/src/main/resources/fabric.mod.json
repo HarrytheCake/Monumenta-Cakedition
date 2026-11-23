@@ -40,6 +40,6 @@
 		"cakemap.mixins.json"
 	],
 	"custom": {
-		"cakeui:reload": "io.github.harrythecake.cakemap.ConfigReload"
+		"cakeconfighub:reload": "io.github.harrythecake.cakemap.ConfigReload"
 	}
 }
