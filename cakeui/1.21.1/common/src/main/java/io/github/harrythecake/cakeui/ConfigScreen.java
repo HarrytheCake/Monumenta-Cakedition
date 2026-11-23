@@ -101,9 +101,6 @@ public final class ConfigScreen extends Screen {
 			pause.setTooltip(Tooltip.create(Component.translatable("cakeui.config.editHud.noWorld")));
 			inv.setTooltip(Tooltip.create(Component.translatable("cakeui.config.editHud.noWorld")));
 		}
-		// the config hub (ADR 0011): other mods' UI/HUD options, written into their own files
-		addRenderableWidget(Button.builder(Component.translatable("cakeui.config.otherMods"), b -> minecraft.setScreen(new ConfigHubScreen(this)))
-				.bounds(x, 160, 310, 20).build());
 		addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, b -> onClose()).bounds(width / 2 - 100, height - 27, 200, 20).build());
 	}
 
@@ -145,9 +142,9 @@ public final class ConfigScreen extends Screen {
 	public void render(GuiGraphics context, int mouseX, int mouseY, float delta) {
 		super.render(context, mouseX, mouseY, delta);
 		context.drawCenteredString(font, title, width / 2, 15, 0xFFFFFF);
-		context.drawCenteredString(font, status(), width / 2, 192, 0xFFFFFF);
+		context.drawCenteredString(font, status(), width / 2, 168, 0xFFFFFF);
 		if (!Ui.problems().isEmpty()) {
-			context.drawCenteredString(font, Component.translatable("cakeui.config.status.hint"), width / 2, 206, 0xA0A0A0);
+			context.drawCenteredString(font, Component.translatable("cakeui.config.status.hint"), width / 2, 182, 0xA0A0A0);
 		}
 	}
 

@@ -24,7 +24,7 @@ class PluginPortsTest {
 	@Test
 	void apiVersionKnowsFillPort() {
 		// fillPort came with 2, movables and openHudEditor with 3, container screens with 4
-		assertEquals(5, CakeUIApi.VERSION);
+		assertEquals(4, CakeUIApi.VERSION);
 	}
 
 	@Test

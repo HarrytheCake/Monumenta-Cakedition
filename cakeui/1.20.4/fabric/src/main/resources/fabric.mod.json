@@ -12,7 +12,6 @@
 	},
 	"environment": "client",
 	"entrypoints": {
-		"preLaunch": ["io.github.harrythecake.cakeui.fabric.CakeUIPreLaunch"],
 		"client": ["io.github.harrythecake.cakeui.fabric.CakeUIFabric"],
 		"modmenu": ["io.github.harrythecake.cakeui.fabric.ModMenuIntegration"],
 		"jei_mod_plugin": ["io.github.harrythecake.cakeui.compat.CakeUIJeiPlugin"]

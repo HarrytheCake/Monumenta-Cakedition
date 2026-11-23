@@ -88,14 +88,4 @@ _Avoid_: Skin (that is a button's look), theme
 Something another mod places on the HUD itself (a chat window, a minimap) that the HUD editor moves and maybe resizes through that mod, which keeps storing its place.
 _Avoid_: Widget, draggable
 
-**Config map**:
-A data file describing one other mod's config file for CakeUI: where it is, its format, which options it holds (key path, type, range, label) and which versions of the mod it fits. CakeUI reads and writes that mod's options only through its map.
-_Avoid_: Adapter (no code per mod), schema (that is the layout's JSON schema)
-
-**Config hub**:
-The "Other mods" page of CakeUI's settings screen, where a player sets the UI/HUD options of every mod that has a config map; Save writes them into each mod's own file and asks the mod to reload.
-_Avoid_: Settings screen (that is CakeUI's whole screen), mod config menu
-
-**Pack default**:
-A value the pack wants for one option of another mod's config, listed in `config/cakeui/pack-defaults.json5` with its earlier values; CakeUI writes it at startup only while the option is untouched (still a value CakeUI or the pack put there), never over the player's own choice.
-_Avoid_: Shipped default (that is a whole file yosbr puts in place once), forced setting
+Config map, config hub, pack default: moved to CakeConfighub on 2026-11-24 (ADR 0013), see `../cakeconfighub/GLOSSARY.md`.

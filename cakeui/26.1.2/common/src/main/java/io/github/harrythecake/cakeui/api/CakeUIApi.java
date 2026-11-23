@@ -37,20 +37,6 @@ public final class CakeUIApi {
 	}
 
 	/**
-	 * Lets CakeUI's config hub ask your mod to read its config file again right after the hub wrote it (API version 5;
-	 * on 26.1.2, where the API version is still 3, the method exists too). Runs on the render thread. Without a reload
-	 * hook the hub tells the player the change takes effect after a restart. A mod that doesn't depend on CakeUI can
-	 * name a class instead: {@code "cakeui:reload": "com.example.MyConfig"} in fabric.mod.json's {@code custom} block
-	 * (NeoForge: {@code [modproperties.<modid>]}), with {@code public static void cakeuiReloadConfig()}.
-	 */
-	public CakeUIApi registerConfigReload(String modId, Runnable reload) {
-		Objects.requireNonNull(modId, "modId");
-		Objects.requireNonNull(reload, "reload");
-		io.github.harrythecake.cakeui.configmap.ConfigReloads.register(modId, reload);
-		return this;
-	}
-
-	/**
 	 * A read-only value for every expression, like "mymod.mana". The supplier runs on the render
 	 * thread, often every frame: keep it cheap. Numbers, booleans and strings work; anything else is
 	 * shown as text.
