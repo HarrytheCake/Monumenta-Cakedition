@@ -104,5 +104,13 @@
   "cakeupdater.guide.welcome": "Welcome to Monumenta Cakedition! The guide explains the pack's own mods, one page each.",
   "cakeupdater.guide.updated": "The pack was updated. The guide has a page for each of the pack's own mods.",
   "cakeupdater.guide.open": "[Open the guide]",
-  "cakeupdater.guide.open.hover": "Opens the pack guide at \"Cakedition's own mods\""
+  "cakeupdater.guide.open.hover": "Opens the pack guide at \"Cakedition's own mods\"",
+  "cakeupdater.reloaded": "Settings read again.",
+  "cakeupdater.hub.title": "Cakedition Updater",
+  "cakeupdater.hub.backups": "Backups",
+  "cakeupdater.hub.backups.enabled": "Back up configs and servers",
+  "cakeupdater.hub.backups.keep": "Backups kept",
+  "cakeupdater.hub.backups.autoMinutes": "Auto backup every (minutes, 0 = off)",
+  "cakeupdater.hub.backups.keepAuto": "Auto backups kept",
+  "cakeupdater.hub.memory.enabled": "Warn about the memory setting"
 }

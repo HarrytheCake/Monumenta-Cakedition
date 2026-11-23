@@ -1,0 +1,17 @@
+// Cakedition Updater's player settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in its jar.
+// The pack's update addresses are the pack maker's, not on the hub.
+{
+  format: 1, mod: "cakeupdater", versions: "*", file: "config/cakeupdater/config.json5", type: "json5",
+  title: "cakeupdater.hub.title",
+  sections: [
+    { title: "cakeupdater.hub.backups", options: [
+      { key: "backups.enabled", type: "bool", label: "cakeupdater.hub.backups.enabled", default: true },
+      { key: "backups.keep", type: "int", min: 1, max: 20, label: "cakeupdater.hub.backups.keep", default: 5 },
+      { key: "backups.autoMinutes", type: "int", min: 0, max: 240, step: 5, label: "cakeupdater.hub.backups.autoMinutes", default: 30 },
+      { key: "backups.keepAuto", type: "int", min: 1, max: 20, label: "cakeupdater.hub.backups.keepAuto", default: 6 },
+    ] },
+    { title: "", options: [
+      { key: "memory.enabled", type: "bool", label: "cakeupdater.hub.memory.enabled", default: true },
+    ] },
+  ],
+}

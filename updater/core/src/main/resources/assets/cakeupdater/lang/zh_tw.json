@@ -104,5 +104,13 @@
   "cakeupdater.guide.welcome": "歡迎使用 Monumenta Cakedition！指南裡為模組包的每個自製模組都寫了一頁說明。",
   "cakeupdater.guide.updated": "模組包已更新。指南裡為模組包的每個自製模組都寫了一頁說明。",
   "cakeupdater.guide.open": "[開啟指南]",
-  "cakeupdater.guide.open.hover": "開啟模組包指南的「Cakedition 自製模組」一章"
+  "cakeupdater.guide.open.hover": "開啟模組包指南的「Cakedition 自製模組」一章",
+  "cakeupdater.reloaded": "已重新讀取設定。",
+  "cakeupdater.hub.title": "Cakedition 更新器",
+  "cakeupdater.hub.backups": "備份",
+  "cakeupdater.hub.backups.enabled": "備份設定與伺服器清單",
+  "cakeupdater.hub.backups.keep": "保留的備份數",
+  "cakeupdater.hub.backups.autoMinutes": "自動備份間隔（分鐘，0 = 關閉）",
+  "cakeupdater.hub.backups.keepAuto": "保留的自動備份數",
+  "cakeupdater.hub.memory.enabled": "記憶體設定提醒"
 }

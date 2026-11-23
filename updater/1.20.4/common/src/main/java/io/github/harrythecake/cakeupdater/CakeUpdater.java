@@ -214,6 +214,7 @@ public final class CakeUpdater {
 				.then(LiteralArgumentBuilder.<S>literal("backups").executes(ctx -> openBackups()))
 				.then(LiteralArgumentBuilder.<S>literal("changelog").executes(ctx -> openChangelog()))
 				.then(LiteralArgumentBuilder.<S>literal("quit").executes(ctx -> quit()))
+				.then(LiteralArgumentBuilder.<S>literal("reload").executes(ctx -> reloadCommand()))
 				.then(LiteralArgumentBuilder.<S>literal("restore")
 						.then(LiteralArgumentBuilder.<S>literal("servers")
 								.then(RequiredArgumentBuilder.<S, String>argument("backup", StringArgumentType.word())
@@ -385,6 +386,20 @@ public final class CakeUpdater {
 				.append(Component.translatable("cakeupdater.pack.scheduled").withStyle(ChatFormatting.GREEN))
 				.append(" ")
 				.append(button("cakeupdater.cancel", "/cakeupdate cancel", ChatFormatting.GRAY)));
+		return 1;
+	}
+
+	/** Reads config/cakeupdater/config.json5 again (/cakeupdate reload, CakeUI's config hub); used from the next check or backup. */
+	public static void reloadConfig() {
+		config = Config.load();
+		if (backups != null) {
+			backups.setKeepAuto(config.backups.keepAuto);
+		}
+	}
+
+	private static int reloadCommand() {
+		reloadConfig();
+		feedback(prefix().append(Component.translatable("cakeupdater.reloaded").withStyle(ChatFormatting.GREEN)));
 		return 1;
 	}
 
