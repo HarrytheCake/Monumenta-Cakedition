@@ -1,0 +1,40 @@
+{
+ "measureSeconds": 30,
+ "interleave": true,
+ "sets": [
+  {
+   "name": "baseline",
+   "why": "our pack (pack/ on main, built with tools/mrpack.py) as shipped",
+   "repeats": 3
+  },
+  {
+   "name": "deepa-shipped",
+   "why": "Deepa's Monumenta Pack Lite 1.2.1 as shipped (its 5 bundled non-Modrinth jars off; FPS cap lifted as for every pack)",
+   "base": "Deepa Lite 1.2.1",
+   "repeats": 3
+  },
+  {
+   "name": "deepa-oursettings",
+   "why": "Deepa's pack with our shipped video settings (options.txt video keys + our Sodium / Sodium Extra files; same Sodium versions); its resource packs kept",
+   "base": "Deepa Lite 1.2.1",
+   "repeats": 3,
+   "copyFiles": {
+    "config/sodium-options.json": "pack/config/yosbr/config/sodium-options.json",
+    "config/sodium-extra-options.json": "pack/config/yosbr/config/sodium-extra-options.json"
+   },
+   "options": [
+    "renderDistance:12",
+    "simulationDistance:12",
+    "graphicsMode:0",
+    "particles:1",
+    "renderClouds:\"false\"",
+    "entityDistanceScaling:1.0",
+    "biomeBlendRadius:2",
+    "mipmapLevels:4",
+    "ao:true",
+    "entityShadows:true",
+    "prioritizeChunkUpdates:0"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "measureSeconds": 5,
+ "warmupSeconds": 3,
+ "interleave": true,
+ "sets": [
+  {
+   "name": "baseline",
+   "why": "check run only (short): our pack starts, joins and measures",
+   "repeats": 1
+  },
+  {
+   "name": "deepa-oursettings",
+   "why": "check run only (short): Deepa's base + copyFiles + options lines work",
+   "base": "Deepa Lite 1.2.1",
+   "repeats": 1,
+   "copyFiles": {
+    "config/sodium-options.json": "pack/config/yosbr/config/sodium-options.json",
+    "config/sodium-extra-options.json": "pack/config/yosbr/config/sodium-extra-options.json"
+   },
+   "options": [
+    "renderDistance:12",
+    "simulationDistance:12",
+    "graphicsMode:0",
+    "particles:1",
+    "renderClouds:\"false\""
+   ]
+  }
+ ]
+}

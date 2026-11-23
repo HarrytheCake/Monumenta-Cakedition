@@ -1,9 +1,12 @@
 """Unattended client-lag benchmarks for the pack (see docs/GLOSSARY.md: client lag, low tier, benchmark scene).
 
-    python tools/bench/bench.py setup                  # server + Carpet, bench JDK copy, "Cakedition Bench" instance
+    python tools/bench/bench.py setup [--mrpack F]     # server + Carpet, bench JDK copy, "Cakedition Bench" instance
+    python tools/bench/bench.py setup --mrpack F --instance NAME [--disable-override-mods]
+                                                       # another pack as a base of its own (a set picks it: "base")
     python tools/bench/bench.py gpu igpu|default       # Windows GPU preference for the bench JDK only
     python tools/bench/bench.py batch <sets.json> [--repeats N] [--name NAME] [--gpu-timers]
-                                                       # a set: add (Modrinth version ids), jars (local paths), remove, files, options
+                                                       # a set: base (instance), add (Modrinth version ids), jars (local
+                                                       # paths), remove, copyFiles (from the repo), files, options
     python tools/bench/bench.py report <batch name>    # docs/benchmarks/<batch name>.md
     python tools/bench/bench.py serve                  # the bench server alone, to look around by hand
     python tools/bench/bench.py play [folder]          # read a /cakebench start ... stop recording made while playing
@@ -41,10 +44,23 @@ JDK_SRC = pathlib.Path("C:/Program Files/Java/jdk-17")
 JDK = WORK / "jdk17"
 SERVER_JAVA = pathlib.Path("C:/Program Files/Java/jdk-21/bin/java.exe")
 PRISM = ROOT.parents[1] / "prismlauncher.exe"
-INSTANCE_NAME = "Cakedition Bench"
-INSTANCE = ROOT.parent / INSTANCE_NAME
-MC = INSTANCE / ".minecraft"
-STATE = WORK / "instance-state"  # the instance's mods/ + config/ + options.txt after priming
+INSTANCE_NAME = "Cakedition Bench"  # our pack; another pack gets its own instance (setup --instance, a set's "base")
+
+
+def instance_dir(name=INSTANCE_NAME):
+    return ROOT.parent / name
+
+
+def mc_dir(name=INSTANCE_NAME):
+    return instance_dir(name) / ".minecraft"
+
+
+def state_dir(name=INSTANCE_NAME):
+    """The instance's mods/ + config/ + options.txt after priming: every run of that base starts from it."""
+    if name == INSTANCE_NAME:
+        return WORK / "instance-state"
+    return WORK / ("instance-state-" + re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-"))
+
 PORT = 25599
 UA = {"User-Agent": "Monumenta-Cakedition bench (github.com/HarrytheCake/Monumenta-Cakedition)"}
 
@@ -247,19 +263,33 @@ def install_pack_file(mrpack, dest):
             p.write_bytes(z.read(n))
 
 
-def setup_instance(mrpack):
-    if INSTANCE.exists():
-        shutil.rmtree(INSTANCE)
-    MC.mkdir(parents=True)
-    install_pack_file(mrpack, MC)
-    shutil.copy(ROOT / "mmc-pack.json", INSTANCE / "mmc-pack.json")
+def setup_instance(mrpack, name=INSTANCE_NAME, disable_override_mods=False):
+    inst, mc = instance_dir(name), mc_dir(name)
+    if inst.exists():
+        shutil.rmtree(inst)
+    mc.mkdir(parents=True)
+    install_pack_file(mrpack, mc)
+    z = zipfile.ZipFile(mrpack)
+    if disable_override_mods:  # jars a pack bundles itself (not downloads): off, as a player could switch them off
+        for n in z.namelist():
+            if n.startswith("overrides/mods/") and n.endswith(".jar"):
+                jar = mc / "mods" / n.rsplit("/", 1)[1]
+                jar.replace(jar.with_name(jar.name + ".disabled"))
+                print(f"  disabled {jar.name}")
+    # the pack's own Fabric Loader version (ours is the dev instance's)
+    loader = json.loads(z.read("modrinth.index.json"))["dependencies"].get("fabric-loader")
+    components = json.loads((ROOT / "mmc-pack.json").read_text())
+    for c in components["components"]:
+        if c["uid"] == "net.fabricmc.fabric-loader" and loader:
+            c["version"] = c["cachedVersion"] = loader
+    (inst / "mmc-pack.json").write_text(json.dumps(components, indent=4))
     javaw = (JDK / "bin" / "javaw.exe").as_posix()
-    (INSTANCE / "instance.cfg").write_text("\n".join([
-        "[General]", "ConfigVersion=1.2", "InstanceType=OneSix", f"name={INSTANCE_NAME}", "iconKey=default",
+    (inst / "instance.cfg").write_text("\n".join([
+        "[General]", "ConfigVersion=1.2", "InstanceType=OneSix", f"name={name}", "iconKey=default",
         "OverrideJavaLocation=true", f"JavaPath={javaw}", "OverrideMemory=true", "MinMemAlloc=2048", "MaxMemAlloc=4096",
         "OverrideConsole=true", "ShowConsole=false", "ShowConsoleOnError=false", "AutoCloseConsole=true",
         "OverrideGameTime=true", "ShowGameTime=false", "RecordGameTime=false", ""]))  # CakeBench joins by itself
-    shutil.copy(bench_jar(), MC / "mods" / bench_jar().name)
+    shutil.copy(bench_jar(), mc / "mods" / bench_jar().name)
 
 
 def bench_jar():
@@ -274,23 +304,36 @@ def cmd_setup(args):
     if not JDK.exists():
         shutil.copytree(JDK_SRC, JDK)  # its own copy, so the GPU preference only hits the bench
     setup_server()
+    # ours: build the current pack/ first (python tools/mrpack.py) and pass mrpack/Monumenta-Cakedition-<version>.mrpack
     mrpack = pathlib.Path(args.mrpack) if args.mrpack else cached(
         "https://github.com/HarrytheCake/Monumenta-Cakedition/releases/download/v2.2.2/Monumenta-Cakedition-2.2.2.mrpack",
         "Monumenta-Cakedition-2.2.2.mrpack")
-    setup_instance(mrpack)
-    print(f"Instance '{INSTANCE_NAME}' ready; restart Prism if it is open so it lists the instance.")
+    name, mc, state = args.instance, mc_dir(args.instance), state_dir(args.instance)
+    setup_instance(mrpack, name, args.disable_override_mods)
+    print(f"Instance '{name}' ready; restart Prism if it is open so it lists the instance.")
     # priming run: yosbr copies the shipped defaults in, mods write their configs; that state is every run's start
     with Server() as server:
-        run_client(server, {"run": "prime", "scenes": []}, timeout=600)
-    if STATE.exists():
-        shutil.rmtree(STATE)
+        run_client(server, {"run": "prime" if name == INSTANCE_NAME else f"prime-{state.name}", "scenes": []},
+                   timeout=600, instance=name)
+    if state.exists():
+        shutil.rmtree(state)
     for part in ["mods", "config"]:
-        shutil.copytree(MC / part, STATE / part)
-    opts = (MC / "options.txt").read_text(encoding="utf-8")
-    # the only bench-specific option: don't open the pause menu when another window takes focus
-    opts = re.sub(r"^pauseOnLostFocus:.*$", "pauseOnLostFocus:false", opts, flags=re.M)
-    (STATE / "options.txt").write_text(opts, encoding="utf-8")
-    print("Primed; baseline state saved.")
+        shutil.copytree(mc / part, state / part)
+    opts = (mc / "options.txt").read_text(encoding="utf-8")
+    # bench-wide options, the same for every pack: don't open the pause menu when another window takes focus, and no
+    # FPS cap or vsync (a cap measures the cap, not the pack; ours ships 260 = unlimited, Deepa's pack ships 120)
+    for line in ["pauseOnLostFocus:false", "maxFps:260", "enableVsync:false"]:
+        opts = set_option(opts, line)
+    (state / "options.txt").write_text(opts, encoding="utf-8")
+    print(f"Primed; baseline state saved in {state}.")
+
+
+def set_option(opts, line):
+    """options.txt text with the line "key:value" set (replaced, or added if missing)."""
+    key = line.split(":", 1)[0]
+    if re.search(rf"^{re.escape(key)}:", opts, flags=re.M):
+        return re.sub(rf"^{re.escape(key)}:.*$", lambda _: line, opts, flags=re.M)
+    return opts.rstrip("\n") + "\n" + line + "\n"
 
 
 def set_gpu(mode):
@@ -466,52 +509,60 @@ class Server:
 # --- runs ------------------------------------------------------------------------------------------------------
 
 def reset_instance(mod_set):
-    """Pack mods and configs as primed, then the set's changes."""
+    """The set's base pack (its "base" instance, default ours) as primed, then the set's changes."""
+    mc, state = mc_dir(mod_set.get("base", INSTANCE_NAME)), state_dir(mod_set.get("base", INSTANCE_NAME))
+    if not state.exists():
+        sys.exit(f"set {mod_set['name']}: base '{mod_set.get('base', INSTANCE_NAME)}' isn't set up "
+                 f"(bench.py setup --mrpack <file> --instance <name>)")
     for part in ["mods", "config"]:
-        if (MC / part).exists():
-            shutil.rmtree(MC / part)
-        shutil.copytree(STATE / part, MC / part)
-    shutil.copy(STATE / "options.txt", MC / "options.txt")
-    for old in (MC / "mods").glob("cakebench-*.jar"):  # the newest CakeBench build, not the one primed with
+        if (mc / part).exists():
+            shutil.rmtree(mc / part)
+        shutil.copytree(state / part, mc / part)
+    shutil.copy(state / "options.txt", mc / "options.txt")
+    for old in (mc / "mods").glob("cakebench-*.jar"):  # the newest CakeBench build, not the one primed with
         old.unlink()
-    shutil.copy(bench_jar(), MC / "mods" / bench_jar().name)
+    shutil.copy(bench_jar(), mc / "mods" / bench_jar().name)
     for prefix in mod_set.get("remove", []):
-        hits = [p for p in (MC / "mods").glob("*.jar") if p.name.lower().startswith(prefix.lower())]
+        hits = [p for p in (mc / "mods").glob("*.jar") if p.name.lower().startswith(prefix.lower())]
         if not hits:
             sys.exit(f"set {mod_set['name']}: no jar starts with '{prefix}'")
         for p in hits:
             p.unlink()
     for version_id in mod_set.get("add", []):
         jar = modrinth_version(version_id)
-        shutil.copy(jar, MC / "mods" / jar.name)
+        shutil.copy(jar, mc / "mods" / jar.name)
     for rel in mod_set.get("jars", []):  # local builds (our mods before they are released), relative to the repo
         jar = ROOT / rel
         if not jar.is_file():
             sys.exit(f"set {mod_set['name']}: {rel} not found (build it first)")
-        shutil.copy(jar, MC / "mods" / jar.name)
+        shutil.copy(jar, mc / "mods" / jar.name)
+    for rel, src in mod_set.get("copyFiles", {}).items():  # files taken from the repo, e.g. our shipped Sodium options
+        p = mc / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(ROOT / src, p)
     for rel, content in mod_set.get("files", {}).items():
-        p = MC / rel
+        p = mc / rel
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(content if isinstance(content, str) else json.dumps(content, indent=2), encoding="utf-8")
+    opts = (mc / "options.txt").read_text(encoding="utf-8")
     for line in mod_set.get("options", []):  # options.txt lines, e.g. "renderDistance:8"
-        key = line.split(":", 1)[0]
-        opts = (MC / "options.txt").read_text(encoding="utf-8")
-        opts = re.sub(rf"^{re.escape(key)}:.*$", line, opts, flags=re.M)
-        (MC / "options.txt").write_text(opts, encoding="utf-8")
+        opts = set_option(opts, line)
+    (mc / "options.txt").write_text(opts, encoding="utf-8")
 
 
-def run_client(server, plan, timeout):
+def run_client(server, plan, timeout, instance=INSTANCE_NAME):
     out_dir = RESULTS / plan.get("batch", "setup")
     plan = {"out": str(out_dir), "server": f"127.0.0.1:{PORT}", "settleSeconds": 15, "warmupSeconds": 10, "measureSeconds": 30,
             "turnDegreesPerSecond": 6, **plan}
-    (MC / "config" / "cakebench").mkdir(parents=True, exist_ok=True)
-    (MC / "config" / "cakebench" / "plan.json").write_text(json.dumps(plan, indent=2))
+    mc = mc_dir(instance)
+    (mc / "config" / "cakebench").mkdir(parents=True, exist_ok=True)
+    (mc / "config" / "cakebench" / "plan.json").write_text(json.dumps(plan, indent=2))
     summary = out_dir / plan["run"] / "summary.json"
     if summary.exists():
         summary.unlink()
     if server:
         server.joined.clear()
-    subprocess.Popen([str(PRISM), "--launch", INSTANCE_NAME])
+    subprocess.Popen([str(PRISM), "--launch", instance])
     end, pinned = time.time() + timeout, set()
     while time.time() < end:
         if server and server.proc.poll() is not None:
@@ -544,23 +595,28 @@ def cmd_batch(args):
     repeats = {s["name"]: s.get("repeats", args.repeats) for s in all_sets}  # a set may ask for more
     total = sum(repeats.values()) * per_run
     print(f"Batch {batch}: {len(all_sets)} sets, {sum(repeats.values())} runs, about {total / 3600:.1f} h")
+    # "interleave": A B C A B C instead of A A A B B B, so a slow drift (heat, background load) hits every set alike
+    if sets.get("interleave"):
+        order = [(all_sets[0], 1)] + [(s, r) for r in range(1, max(repeats.values()) + 1)
+                                      for s in all_sets[1:] if r <= repeats[s["name"]]]
+    else:
+        order = [(s, r) for s in all_sets for r in range(1, repeats[s["name"]] + 1)]
     with Server() as server:
-        for s in all_sets:
-            for r in range(1, repeats[s["name"]] + 1):
-                run = f"{s['name']}#{r}"
-                if (RESULTS / batch / run / "summary.json").exists():
-                    continue  # resume a stopped batch
-                reset_instance(s)
-                power = power_state()
-                print(f"  {run} ({power}) ...", flush=True)
-                result = run_client(server, {"batch": batch, "run": run, "scenes": SCENES, "measureSeconds": measure,
-                                             "warmupSeconds": warmup, "gpuTimers": gpu_timers, "spark": spark,
-                                             "notes": {"set": s, "power": power, "gpuTimers": gpu_timers,
-                                                       "spark": spark}},
-                                    timeout=per_run + 300)
-                if result:
-                    print("   ", {k: v["avgFps"] for k, v in result["scenes"].items()},
-                          *(["FLAGGED: " + "; ".join(flags(result))] if flags(result) else []))
+        for s, r in order:
+            run = f"{s['name']}#{r}"
+            if (RESULTS / batch / run / "summary.json").exists():
+                continue  # resume a stopped batch
+            reset_instance(s)
+            power = power_state()
+            print(f"  {run} ({power}) ...", flush=True)
+            result = run_client(server, {"batch": batch, "run": run, "scenes": SCENES, "measureSeconds": measure,
+                                         "warmupSeconds": warmup, "gpuTimers": gpu_timers, "spark": spark,
+                                         "notes": {"set": s, "power": power, "gpuTimers": gpu_timers,
+                                                   "spark": spark}},
+                                timeout=per_run + 300, instance=s.get("base", INSTANCE_NAME))
+            if result:
+                print("   ", {k: v["avgFps"] for k, v in result["scenes"].items()},
+                      *(["FLAGGED: " + "; ".join(flags(result))] if flags(result) else []))
     print(f"Done. python tools/bench/bench.py report {batch}")
 
 
@@ -594,7 +650,7 @@ def cmd_live(args):
                                            "gpuTimers": args.gpu_timers, "spark": args.spark,
                                            "notes": {"set": s, "tier": tier, "power": power,
                                                      "gpuTimers": args.gpu_timers, "spark": args.spark}},
-                                    timeout=per_run + 300)
+                                    timeout=per_run + 300, instance=s.get("base", INSTANCE_NAME))
                 if result:
                     m = result["scenes"].get("market", {})
                     print(f"    {result['renderer']}: avg {m.get('avgFps')} FPS, 1% low {m.get('onePercentLowFps')}, "
@@ -797,6 +853,9 @@ def main():
     sub = p.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("setup")
     s.add_argument("--mrpack")
+    s.add_argument("--instance", default=INSTANCE_NAME, help="Prism instance to build (another pack: its own name)")
+    s.add_argument("--disable-override-mods", action="store_true",
+                   help="switch off the jars the pack file bundles in overrides/mods (not downloads)")
     g = sub.add_parser("gpu")
     g.add_argument("mode", choices=["igpu", "dgpu", "default"])
     b = sub.add_parser("batch")
