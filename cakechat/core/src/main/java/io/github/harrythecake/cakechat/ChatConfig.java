@@ -293,7 +293,7 @@ public final class ChatConfig {
 	private static final Set<String> SHOWN_ALL_NAMES = Set.of("All", "全部");
 
 	/**
-	 * 3 → 4: before 0.3.0's reset fix, the settings screen's reset turned every default tab into a blank tab saved
+	 * 3 → 4: before 0.4.0's reset fix, the settings screen's reset turned every default tab into a blank tab saved
 	 * with the shown name "All" (or "全部") as plain text, and the fixed reset can't trace such a tab back. Put the
 	 * shipped tab for that position back, when the main window still starts with the shipped "All" tab (as the old
 	 * reset left it; a ChatPlus import names its own "All" tab in plain text) and that shipped tab isn't in the

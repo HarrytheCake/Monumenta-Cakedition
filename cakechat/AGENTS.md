@@ -14,7 +14,7 @@ The mod's standalone repo is `HarrytheCake/CakeChat` (remote `cakechat`, `git su
 
 **Releases:** v0.1.0 (2026-10-29), v0.2.0 (2026-10-29, M2–M4; in the pack since 2.4.0, replacing the three mods above), **v0.2.1** (2026-10-30, in the pack since 2.4.2): a left click just above the input line crashed the game (`NoSuchElementException` from `MessageHandler.process()`), because the delayed-message bar's hit area (`ChatView.inQueueBar`) was live while nothing was queued; it now answers only while the bar is drawn. Built and tested out of game; not yet tried in game.
 
-**Unreleased (local, 2026-11-07; `mod_version` not bumped):** window moving/resizing locked by default (`windowEditing`, see Design → Windows), toggled in the settings (General) or with `/cakechat edit` (works in game: user, on the pre-port 1.20.4 build); the tab reset fix. **Multiloader port** (branch `cakechat-port`, 2026-11-07): Fabric + NeoForge on 1.20.4, 1.21.1 and 26.1.2, see "Multiloader status" at the end.
+**0.4.0** (2026-11-24, for pack 2.7.0; first release from the multiloader layout): window moving/resizing locked by default (`windowEditing`, see Design → Windows), toggled in the settings (General) or with `/cakechat edit` (works in game: user, on the pre-port 1.20.4 build); the tab reset fix. **Multiloader port** (branch `cakechat-port`, 2026-11-07): Fabric + NeoForge on 1.20.4, 1.21.1 and 26.1.2, see "Multiloader status" at the end.
 
 - **CakeUI HUD editor (2026-11-07, CakeUI API 3, optional):** `CakeUIBridge` (every version's common) reaches CakeUI only by reflection (no build or runtime dependency): at the first client tick, if `io.github.harrythecake.cakeui.api.CakeUIApi.VERSION >= 3`, it registers a `MovableSource` (java.lang.reflect.Proxy) whose `Movable`s are the chat windows (`~cakechat:window<n>`; box = `boxX/boxTop/boxWidth/boxHeight(true)`, place = `resize` then `move`, resizable, save = `saveConfigFile`), so CakeUI's editor moves and resizes them while `config.json` stays the only store. `config.editHudButton` (default true; General category) shows an "Edit HUD" button at the right end of the main window's tab row (only with CakeUI 3+); a click closes the chat and calls `openHudEditor(null)`. Self-test step 165 checks the bridge when CakeUI is in the run: copy `cakeui-fabric-1.20.4-<version>.jar` (a CakeUI 3+ build) into `1.20.4/fabric/run/mods/` (Fabric remaps it at runtime in dev; Gradle `modLocalRuntime`/`modRuntimeOnly` of the jar did not get it loaded). Fabric 1.20.4 checked in the dev client (PASS); other targets build + unit tests only.
 
@@ -78,7 +78,7 @@ JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build                    
 JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build -Pcake.versions=26.1.2   # one version (+ core)
 ```
 
-`build/libs/cakechat-<fabric|neoforge>-<mc>-0.3.0.jar`, plus `cakechat-0.3.0.jar` = the Fabric 1.20.4 jar (what the pack uses).
+`build/libs/cakechat-<fabric|neoforge>-<mc>-0.4.0.jar`, plus `cakechat-0.4.0.jar` = the Fabric 1.20.4 jar (what the pack uses).
 YACL is a required runtime dependency, never bundled: 1.20.4 Fabric 3.6.6, 1.20.4 NeoForge 3.6.2 (3.6.4–3.6.6 have an empty
 `loaderVersion` and don't load on NeoForge 20.4.251), 1.21.1 3.8.1, 26.1.2 3.9.7 (the Fabric 26.1.2 dev client also gets
 MixinExtras 0.5.5, which YACL 3.9.7's mixins need; runtime only, not shipped).
