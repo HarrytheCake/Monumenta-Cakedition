@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "cakemonu",
+	"version": "${version}",
+	"name": "CakeMonu",
+	"description": "Monumenta helpers that bridge other mods. Unofficial Monumenta Mod: give any ability icon its own place and size on the HUD (moved in CakeUI's HUD editor); UMM still draws it, cooldowns and all.",
+	"authors": [
+		"HarrytheCake"
+	],
+	"license": "GPL-3.0-or-later",
+	"icon": "assets/cakemonu/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeMonu"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"io.github.harrythecake.cakemonu.fabric.CakeMonuFabric"
+		],
+		"modmenu": [
+			"io.github.harrythecake.cakemonu.fabric.ModMenuEntry"
+		],
+		"cakeui": [
+			"io.github.harrythecake.cakemonu.CakeMonuPlugin"
+		]
+	},
+	"mixins": [
+		"cakemonu.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"fabric-api": "*",
+		"minecraft": "${fabric_mc_dep}",
+		"java": ">=${java_version}"
+	},
+	"suggests": {
+		"unofficial-monumenta-mod": "1.10",
+		"cakeui": ">=0.3.0"
+	},
+	"custom": {
+		"cakeui:reload": "io.github.harrythecake.cakemonu.ConfigReload"
+	}
+}

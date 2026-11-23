@@ -1,0 +1,17 @@
+{
+	"cakemonu.settings.title": "CakeMonu: UMM ability icons",
+	"cakemonu.settings.help": "Switch an ability on to give its icon its own place on the HUD. Move and resize it with Edit HUD (CakeUI). The rest stay in UMM's bar.",
+	"cakemonu.settings.ownPlace": "Own place",
+	"cakemonu.settings.editHud": "Edit HUD…",
+	"cakemonu.settings.editHud.tip": "Opens CakeUI's HUD editor: drag an icon to move it, drag its corner or scroll to resize it.",
+	"cakemonu.settings.editHud.noCakeUI": "Needs CakeUI 0.3.0 or newer. Without it, icons with their own place stay where CakeMonu put them (next to UMM's bar).",
+	"cakemonu.settings.editHud.noWorld": "Join a world first.",
+	"cakemonu.settings.allBack": "All back to the bar",
+	"cakemonu.settings.otherClass": "(another class)",
+	"cakemonu.settings.none": "No abilities yet: UMM learns them on Monumenta once you have a class.",
+	"cakemonu.settings.barOff": "UMM's ability display is switched off in UMM's settings, so no icons are shown.",
+	"cakemonu.settings.noUmm": "The Unofficial Monumenta Mod isn't installed.",
+	"cakemonu.settings.unsupported": "This Unofficial Monumenta Mod version (%s) isn't supported yet: CakeMonu leaves its ability bar as it is.",
+	"cakemonu.movable.ability": "Ability: %s",
+	"cakemonu.command.reloaded": "CakeMonu: ability icon places reloaded."
+}

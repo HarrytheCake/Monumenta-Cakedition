@@ -1,0 +1,40 @@
+// CakeMonu: shared lines of every <mc>/<part>/build.gradle (mod-specific, not part of the kit; apply_kit.py leaves it alone).
+// Both dependencies are compile-only: CakeUI is optional (HUD editor movables), and the Unofficial Monumenta
+// Mod (GPL-3.0) is what CakeMonu bridges; the player installs both.
+String mc = project.property('minecraft_version')
+String part = project.name
+String cakeuiVersion = rootProject.property('cakeui_version')
+
+// CakeUI has no Maven repo: its GitHub release jars as Ivy artifacts (module = cakeui-<loader>-<mc>).
+repositories {
+	ivy {
+		name = 'CakeUI GitHub releases'
+		url = 'https://github.com/'
+		patternLayout {
+			artifact 'HarrytheCake/CakeUI/releases/download/v[revision]/[module]-[revision].[ext]'
+		}
+		metadataSources { artifact() }
+		content { includeGroup 'io.github.harrythecake.cakeui' }
+	}
+}
+
+// common compiles against vanilla with Mojang names: the NeoForge jar has the same API classes in Mojang names.
+String loader = part == 'fabric' ? 'fabric' : 'neoforge'
+def cakeuiDir = rootProject.findProperty('cakeui_dir')
+def cakeui = cakeuiDir
+		? files(new File(rootProject.file(cakeuiDir.toString()), "cakeui-${loader}-${mc}-${cakeuiVersion}.jar"))
+		: "io.github.harrythecake.cakeui:cakeui-${loader}-${mc}:${cakeuiVersion}"
+
+if (part == 'common') {
+	dependencies {
+		compileOnly cakeui
+	}
+} else if (part == 'fabric') {
+	dependencies {
+		project.modCompileOnlyDep(cakeui)
+		// UMM exists for Fabric up to 1.20.4 only; the UMM bridge lives in the Fabric part
+		if (mc == '1.20.4') {
+			project.modCompileOnlyDep("maven.modrinth:unofficial-monumenta-mod:${rootProject.property('umm_version')}")
+		}
+	}
+}

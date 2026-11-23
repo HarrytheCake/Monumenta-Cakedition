@@ -1,0 +1,17 @@
+{
+	"cakemonu.settings.title": "CakeMonu：UMM 技能图标",
+	"cakemonu.settings.help": "打开某个技能，它的图标就能在 HUD 上单独摆放。用“编辑 HUD”（CakeUI）移动和缩放。其余技能留在 UMM 的技能栏里。",
+	"cakemonu.settings.ownPlace": "单独摆放",
+	"cakemonu.settings.editHud": "编辑 HUD…",
+	"cakemonu.settings.editHud.tip": "打开 CakeUI 的 HUD 编辑器：拖动图标来移动，拖动右下角或滚动滚轮来缩放。",
+	"cakemonu.settings.editHud.noCakeUI": "需要 CakeUI 0.3.0 或更新版本。没有它时，单独摆放的图标会停在 CakeMonu 放的位置（UMM 技能栏旁边）。",
+	"cakemonu.settings.editHud.noWorld": "请先进入世界。",
+	"cakemonu.settings.allBack": "全部放回技能栏",
+	"cakemonu.settings.otherClass": "（其他职业）",
+	"cakemonu.settings.none": "还没有技能：在 Monumenta 上选择职业后，UMM 才会知道你的技能。",
+	"cakemonu.settings.barOff": "UMM 设置中关闭了技能显示，所以不会显示图标。",
+	"cakemonu.settings.noUmm": "未安装 Unofficial Monumenta Mod。",
+	"cakemonu.settings.unsupported": "暂不支持这个版本的 Unofficial Monumenta Mod（%s）：CakeMonu 不会改动它的技能栏。",
+	"cakemonu.movable.ability": "技能：%s",
+	"cakemonu.command.reloaded": "CakeMonu：已重新读取技能图标位置。"
+}

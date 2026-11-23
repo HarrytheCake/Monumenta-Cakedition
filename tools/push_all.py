@@ -55,6 +55,8 @@ TARGETS = [
         ("cakemap", "https://github.com/HarrytheCake/CakeMap.git")]),
     ("CakeCosmetic source", "cakecosmetic", "main", [
         ("cakecosmetic", "https://github.com/HarrytheCake/CakeCosmetic.git")]),
+    ("CakeMonu source", "cakemonu", "main", [
+        ("cakemonu", "https://github.com/HarrytheCake/CakeMonu.git")]),
 ]
 NOREPLY = re.compile(r"@(users\.noreply\.github\.com|anthropic\.com)$")
 

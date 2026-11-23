@@ -1,0 +1,96 @@
+// Shared by the common, fabric and neoforge projects of one Minecraft version (<mod>/<mc>/<part>).
+// Reads <mod>/<mc>/version.properties into project properties, compiles <mod>/core/src with this
+// version's Java, and names the jar <mod_id>-<part>-<mc>-<mod_version>.jar.
+plugins {
+	id 'java-library'
+}
+
+File versionDir = project.projectDir.parentFile
+Properties vp = new Properties()
+new File(versionDir, 'version.properties').withInputStream { vp.load(it) }
+vp.each { k, v -> project.ext.set(k as String, (v as String).trim()) }
+project.ext.set('mc_dir', versionDir)
+
+// the mod's folder: the build root, or one of several mods in one build (cake_mods in the root
+// gradle.properties), which then has its own gradle.properties (mod_id, mod_name, …)
+File modDir = versionDir.parentFile
+Properties mp = new Properties()
+File modProps = new File(modDir, 'gradle.properties')
+if (modDir != rootProject.projectDir && modProps.exists()) {
+	modProps.withInputStream { mp.load(it) }
+	mp.each { k, v -> project.ext.set(k as String, (v as String).trim()) }
+}
+project.ext.set('mod_dir', modDir)
+
+// several mods in one build: a group per mod, or Gradle takes :a:1.20.4:fabric and :b:1.20.4:fabric
+// (same group, name and version) for the same module
+group = modDir == rootProject.projectDir ? rootProject.property('mod_group') : "${rootProject.property('mod_group')}.${modDir.name}"
+version = rootProject.property('mod_version')
+
+base {
+	archivesName = "${project.property('mod_id')}-${project.name}-${project.property('minecraft_version')}"
+}
+
+java {
+	toolchain.languageVersion = JavaLanguageVersion.of(project.property('java_version') as int)
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = 'UTF-8'
+	options.release = project.property('java_version') as int
+}
+
+// version-independent code and assets (no Minecraft imports): <mod>/core
+File core = new File(modDir, 'core')
+if (core.isDirectory()) {
+	sourceSets.main.java.srcDir(new File(core, 'src/main/java'))
+	sourceSets.main.resources.srcDir(new File(core, 'src/main/resources'))
+}
+
+repositories {
+	mavenCentral()
+	maven { name = 'TerraformersMC'; url = 'https://maven.terraformersmc.com/releases/' }
+	maven { name = 'isXander'; url = 'https://maven.isxander.dev/releases' }
+	maven { name = 'NeoForge'; url = 'https://maven.neoforged.net/releases' }
+	exclusiveContent {
+		forRepository { maven { name = 'Modrinth'; url = 'https://api.modrinth.com/maven' } }
+		filter { includeGroup 'maven.modrinth' }
+	}
+}
+
+// fabric.mod.json, mods.toml and mixin configs may use ${version}, ${mod_id}, ${minecraft_version}
+// and every key of version.properties.
+Map<String, String> expandProps = [
+		'version'  : project.version.toString(),
+		'mod_id'   : project.property('mod_id').toString(),
+		'mod_name' : project.property('mod_name').toString(),
+		'mod_group': rootProject.property('mod_group').toString(),
+]
+vp.each { k, v -> expandProps[k as String] = (v as String).trim() }
+mp.each { k, v -> expandProps[k as String] = (v as String).trim() }
+tasks.named('processResources', ProcessResources) {
+	inputs.properties(expandProps)
+	filesMatching(['fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json', 'pack.mcmeta']) {
+		expand expandProps
+	}
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.named('jar', Jar) {
+	// the mod folder's own LICENSE (and NOTICE) when it has one, else the build root's
+	File license = new File(modDir, 'LICENSE').exists() ? new File(modDir, 'LICENSE') : rootProject.file('LICENSE')
+	from(license) { rename { "LICENSE_${project.property('mod_id')}" } }
+	if (new File(modDir, 'NOTICE').exists()) {
+		from(new File(modDir, 'NOTICE')) { rename { "NOTICE_${project.property('mod_id')}" } }
+	}
+	manifest.attributes(['Built-On-Minecraft': project.property('minecraft_version')])
+}
+
+// tests that need Minecraft classes live in <mc>/common/src/test (plain ones in core/src/test)
+dependencies {
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+tasks.named('test', Test) {
+	useJUnitPlatform()
+}
