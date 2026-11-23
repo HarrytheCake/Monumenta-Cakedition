@@ -35,5 +35,8 @@
   "cakebook.empty.text": "No book is installed. Books come with modpacks and resource packs, or go in the cakebook/books folder of your game folder (/cakebook folder opens it). Your notes are on the left.",
   "cakebook.command.bad_page": "Not a page: %s",
   "cakebook.command.reloaded": "Books reloaded: %s found.",
-  "cakebook.command.folder_failed": "Could not create the books folder: %s"
+  "cakebook.command.folder_failed": "Could not create the books folder: %s",
+  "cakebook.hub.title": "CakeBook",
+  "cakebook.hub.pauseMenuButton": "Book button in the pause menu",
+  "cakebook.hub.inventoryButton": "Book button next to the inventory"
 }

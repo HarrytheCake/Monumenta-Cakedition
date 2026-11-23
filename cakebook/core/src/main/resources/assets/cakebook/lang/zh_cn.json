@@ -35,5 +35,8 @@
   "cakebook.empty.text": "尚未安装任何书。书籍随整合包和资源包提供，也可以放进游戏目录下的 cakebook/books 文件夹（/cakebook folder 可打开它）。你的笔记在左侧。",
   "cakebook.command.bad_page": "不是有效的页面：%s",
   "cakebook.command.reloaded": "已重新加载书籍：共 %s 本。",
-  "cakebook.command.folder_failed": "无法创建书籍文件夹：%s"
+  "cakebook.command.folder_failed": "无法创建书籍文件夹：%s",
+  "cakebook.hub.title": "CakeBook",
+  "cakebook.hub.pauseMenuButton": "暂停菜单中的书本按钮",
+  "cakebook.hub.inventoryButton": "物品栏旁的书本按钮"
 }

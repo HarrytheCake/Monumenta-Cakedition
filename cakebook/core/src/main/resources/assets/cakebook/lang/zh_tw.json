@@ -35,5 +35,8 @@
   "cakebook.empty.text": "尚未安裝任何書。書籍隨模組包和資源包提供，也可以放進遊戲資料夾下的 cakebook/books 資料夾（/cakebook folder 可開啟它）。你的筆記在左側。",
   "cakebook.command.bad_page": "不是有效的頁面：%s",
   "cakebook.command.reloaded": "已重新載入書籍：共 %s 本。",
-  "cakebook.command.folder_failed": "無法建立書籍資料夾：%s"
+  "cakebook.command.folder_failed": "無法建立書籍資料夾：%s",
+  "cakebook.hub.title": "CakeBook",
+  "cakebook.hub.pauseMenuButton": "暫停選單中的書本按鈕",
+  "cakebook.hub.inventoryButton": "物品欄旁的書本按鈕"
 }

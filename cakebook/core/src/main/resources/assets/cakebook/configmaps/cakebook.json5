@@ -1,0 +1,9 @@
+// CakeBook's settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in CakeBook's jar.
+{
+  format: 1, mod: "cakebook", versions: "*", file: "config/cakebook/config.json5", type: "json5",
+  title: "cakebook.hub.title",
+  options: [
+    { key: "pauseMenuButton", type: "bool", label: "cakebook.hub.pauseMenuButton", default: true },
+    { key: "inventoryButton", type: "bool", label: "cakebook.hub.inventoryButton", default: true },
+  ],
+}

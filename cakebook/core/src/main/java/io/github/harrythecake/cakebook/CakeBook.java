@@ -24,6 +24,11 @@ public final class CakeBook {
 		notes = new Notes(Services.PLATFORM.configDir().resolve(MOD_ID).resolve("notes"));
 	}
 
+	/** Reads config/cakebook/config.json5 again (/cakebook reload, CakeUI's config hub). */
+	public static void reloadConfig() {
+		config = Config.load();
+	}
+
 	static Config config() {
 		return config;
 	}

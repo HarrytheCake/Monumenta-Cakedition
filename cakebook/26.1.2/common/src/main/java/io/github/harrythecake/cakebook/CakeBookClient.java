@@ -156,6 +156,7 @@ public final class CakeBookClient {
 	}
 
 	private static <S> int reload(S source, BiConsumer<S, Component> feedback) {
+		CakeBook.reloadConfig();
 		loadBooks(Minecraft.getInstance().getResourceManager());
 		feedback.accept(source, Component.translatable("cakebook.command.reloaded", CakeBook.library().books().size()));
 		return 1;

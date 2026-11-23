@@ -28,3 +28,7 @@ type = "required"
 versionRange = "${neoforge_mc_range}"
 ordering = "NONE"
 side = "CLIENT"
+
+# CakeUI's config hub calls this class's cakeuiReloadConfig() after writing our config (ADR 0011)
+[modproperties.cakebook]
+"cakeui:reload" = "io.github.harrythecake.cakebook.ConfigReload"

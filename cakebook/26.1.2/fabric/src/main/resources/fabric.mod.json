@@ -21,5 +21,8 @@
 		"minecraft": "${fabric_mc_dep}",
 		"java": ">=${java_version}",
 		"fabric-api": "*"
+	},
+	"custom": {
+		"cakeui:reload": "io.github.harrythecake.cakebook.ConfigReload"
 	}
 }
