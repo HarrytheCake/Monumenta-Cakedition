@@ -139,7 +139,7 @@ public final class CakeChat {
 		return tab.name.startsWith(ChatConfig.Tab.KEY_PREFIX) ? I18n.get(tab.name) : tab.name;
 	}
 
-	/** Reads config/cakechat/config.json again and rebuilds the windows (/cakechat reload, CakeUI's config hub). */
+	/** Reads config/cakechat/config.json again and rebuilds the windows (/cakechat reload, CakeConfighub). */
 	public static void reloadConfig() {
 		if (configFile == null) {
 			return;

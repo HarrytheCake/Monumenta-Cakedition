@@ -1,4 +1,4 @@
-// CakeChat's settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in CakeChat's jar.
+// CakeChat's settings on CakeConfighub (ADR 0013). Shipped in CakeChat's jar.
 // Windows and tabs stay in CakeChat's own settings screen (/cakechat).
 {
   format: 1, mod: "cakechat", versions: "*", file: "config/cakechat/config.json", type: "json",

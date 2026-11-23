@@ -45,6 +45,6 @@ versionRange = "[0,)"
 ordering = "NONE"
 side = "CLIENT"
 
-# CakeUI's config hub calls this class's cakeuiReloadConfig() after writing our config (ADR 0011)
+# CakeConfighub calls this class's cakeconfighubReloadConfig() after writing our config (ADR 0013)
 [modproperties.cakechat]
-"cakeui:reload" = "io.github.harrythecake.cakechat.ConfigReload"
+"cakeconfighub:reload" = "io.github.harrythecake.cakechat.ConfigReload"
