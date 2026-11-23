@@ -1,4 +1,4 @@
-// Cakedition Updater's player settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in its jar.
+// Cakedition Updater's player settings on CakeConfighub (ADR 0013). Shipped in its jar.
 // The pack's update addresses are the pack maker's, not on the hub.
 {
   format: 1, mod: "cakeupdater", versions: "*", file: "config/cakeupdater/config.json5", type: "json5",

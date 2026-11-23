@@ -335,7 +335,7 @@ public final class CakeUpdater {
 		return 1;
 	}
 
-	/** Reads config/cakeupdater/config.json5 again (/cakeupdate reload, CakeUI's config hub); used from the next check or backup. */
+	/** Reads config/cakeupdater/config.json5 again (/cakeupdate reload, CakeConfighub); used from the next check or backup. */
 	public static void reloadConfig() {
 		config = Config.load();
 	}
