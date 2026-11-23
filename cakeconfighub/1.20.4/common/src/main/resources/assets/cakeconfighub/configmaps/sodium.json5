@@ -1,0 +1,117 @@
+// CakeConfighub's config map for Sodium, checked against sodium-fabric-0.5.8+mc1.20.4. Only in CakeConfighub's 1.20.4 jars.
+// hub: false = for the pack's pack defaults only (client-lag phase 2), not shown on the hub page.
+{
+  "format": 1,
+  "mod": "sodium",
+  "versions": ">=0.5 <0.6",
+  "file": "config/sodium-options.json",
+  "type": "json",
+  "hub": false,
+  "title": "Sodium",
+  "options": [
+    {
+      "key": "quality.weather_quality",
+      "type": "enum",
+      "label": "quality.weather_quality",
+      "default": "DEFAULT",
+      "values": [
+        {
+          "value": "DEFAULT",
+          "label": "DEFAULT"
+        },
+        {
+          "value": "FAST",
+          "label": "FAST"
+        },
+        {
+          "value": "FANCY",
+          "label": "FANCY"
+        }
+      ]
+    },
+    {
+      "key": "quality.leaves_quality",
+      "type": "enum",
+      "label": "quality.leaves_quality",
+      "default": "DEFAULT",
+      "values": [
+        {
+          "value": "DEFAULT",
+          "label": "DEFAULT"
+        },
+        {
+          "value": "FAST",
+          "label": "FAST"
+        },
+        {
+          "value": "FANCY",
+          "label": "FANCY"
+        }
+      ]
+    },
+    {
+      "key": "quality.enable_vignette",
+      "type": "bool",
+      "label": "quality.enable_vignette",
+      "default": true
+    },
+    {
+      "key": "advanced.cpu_render_ahead_limit",
+      "type": "int",
+      "label": "advanced.cpu_render_ahead_limit",
+      "default": 3,
+      "min": 0,
+      "max": 9
+    },
+    {
+      "key": "advanced.use_advanced_staging_buffers",
+      "type": "bool",
+      "label": "advanced.use_advanced_staging_buffers",
+      "default": true
+    },
+    {
+      "key": "performance.chunk_builder_threads",
+      "type": "int",
+      "label": "performance.chunk_builder_threads",
+      "default": 0,
+      "min": 0,
+      "max": 32
+    },
+    {
+      "key": "performance.always_defer_chunk_updates_v2",
+      "type": "bool",
+      "label": "performance.always_defer_chunk_updates_v2",
+      "default": true
+    },
+    {
+      "key": "performance.animate_only_visible_textures",
+      "type": "bool",
+      "label": "performance.animate_only_visible_textures",
+      "default": true
+    },
+    {
+      "key": "performance.use_entity_culling",
+      "type": "bool",
+      "label": "performance.use_entity_culling",
+      "default": true
+    },
+    {
+      "key": "performance.use_fog_occlusion",
+      "type": "bool",
+      "label": "performance.use_fog_occlusion",
+      "default": true
+    },
+    {
+      "key": "performance.use_block_face_culling",
+      "type": "bool",
+      "label": "performance.use_block_face_culling",
+      "default": true
+    },
+    {
+      "key": "performance.use_no_error_g_l_context",
+      "type": "bool",
+      "label": "performance.use_no_error_g_l_context",
+      "default": true
+    }
+  ]
+}

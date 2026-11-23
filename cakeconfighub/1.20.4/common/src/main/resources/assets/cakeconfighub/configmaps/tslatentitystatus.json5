@@ -1,0 +1,220 @@
+// CakeConfighub's config map for TslatEntityStatus, checked against TES-fabric-1.20.4-1.5.1. Only in CakeConfighub's 1.20.4 jars.
+{
+  "format": 1,
+  "mod": "tslatentitystatus",
+  "versions": ">=1.5 <1.6",
+  "file": "config/tslatentitystatus.json",
+  "type": "json",
+  "title": "TslatEntityStatus",
+  "sections": [
+    {
+      "title": "cakeconfighub.map.tes.hud",
+      "options": [
+        {
+          "key": "hudEnabled",
+          "type": "bool",
+          "label": "config.tes.hud.enabled",
+          "default": false
+        },
+        {
+          "key": "hudTargetDistance",
+          "type": "float",
+          "label": "config.tes.hud.targetDistance",
+          "default": 4.0,
+          "min": 1,
+          "max": 16,
+          "step": 1
+        },
+        {
+          "key": "hudEntityRender",
+          "type": "bool",
+          "label": "config.tes.hud.entityRender",
+          "default": false
+        },
+        {
+          "key": "hudEntityName",
+          "type": "bool",
+          "label": "config.tes.hud.entityName",
+          "default": true
+        },
+        {
+          "key": "hudHealthBarSegments",
+          "type": "bool",
+          "label": "config.tes.hud.healthBarSegments",
+          "default": true
+        },
+        {
+          "key": "hudHealthBarLength",
+          "type": "int",
+          "label": "config.tes.hud.healthBarLength",
+          "default": 100,
+          "min": 20,
+          "max": 200,
+          "step": 10
+        },
+        {
+          "key": "hudBossesEnabled",
+          "type": "bool",
+          "label": "config.tes.hud.bossesEnabled",
+          "default": true
+        },
+        {
+          "key": "hudArmour",
+          "type": "bool",
+          "label": "config.tes.hud.armour",
+          "default": true
+        },
+        {
+          "key": "hudEntityIcons",
+          "type": "bool",
+          "label": "config.tes.hud.entityIcons",
+          "default": true
+        },
+        {
+          "key": "hudPotionIcons",
+          "type": "bool",
+          "label": "config.tes.hud.potionIcons",
+          "default": true
+        },
+        {
+          "key": "hudOpacity",
+          "type": "float",
+          "label": "config.tes.hud.opacity",
+          "default": 1.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.05
+        }
+      ]
+    },
+    {
+      "title": "cakeconfighub.map.tes.inWorld",
+      "options": [
+        {
+          "key": "inWorldHudEnabled",
+          "type": "bool",
+          "label": "config.tes.inWorldHud.enabled",
+          "default": false
+        },
+        {
+          "key": "inWorldHudForSelf",
+          "type": "bool",
+          "label": "config.tes.inWorldHud.self",
+          "default": false
+        },
+        {
+          "key": "inWorldHudOpacity",
+          "type": "float",
+          "label": "config.tes.inWorldHud.opacity",
+          "default": 1.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "key": "inWorldBarsLength",
+          "type": "int",
+          "label": "config.tes.inWorldHud.barLength",
+          "default": 50,
+          "min": 10,
+          "max": 200,
+          "step": 10
+        },
+        {
+          "key": "inWorldBarsSegments",
+          "type": "bool",
+          "label": "config.tes.inWorldHud.barSegments",
+          "default": true
+        },
+        {
+          "key": "inWorldHudEntityName",
+          "type": "bool",
+          "label": "config.tes.inWorldHud.entityName",
+          "default": false
+        },
+        {
+          "key": "inWorldHudArmour",
+          "type": "bool",
+          "label": "config.tes.inWorldHud.armour",
+          "default": false
+        },
+        {
+          "key": "inWorldHudEntityIcons",
+          "type": "bool",
+          "label": "config.tes.inWorldHud.icons",
+          "default": false
+        },
+        {
+          "key": "inWorldHudPotionIcons",
+          "type": "bool",
+          "label": "config.tes.inWorldHud.potionIcons",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "cakeconfighub.map.tes.particles",
+      "options": [
+        {
+          "key": "particlesEnabled",
+          "type": "bool",
+          "label": "config.tes.particle.enabled",
+          "default": true
+        },
+        {
+          "key": "particleScale",
+          "type": "float",
+          "label": "config.tes.particle.scale",
+          "default": 1.0,
+          "min": 0.25,
+          "max": 3,
+          "step": 0.25
+        },
+        {
+          "key": "particleDecimalPoints",
+          "type": "int",
+          "label": "config.tes.particle.decimalPoints",
+          "default": 1,
+          "min": 0,
+          "max": 3
+        },
+        {
+          "key": "verbalHealthParticles",
+          "type": "bool",
+          "label": "config.tes.particle.verbal",
+          "default": true
+        },
+        {
+          "key": "damageParticleColour",
+          "type": "colour",
+          "colourAs": "int",
+          "alpha": true,
+          "label": "config.tes.particle.damageParticleColour",
+          "default": -65536
+        },
+        {
+          "key": "healParticleColour",
+          "type": "colour",
+          "colourAs": "int",
+          "alpha": true,
+          "label": "config.tes.particle.healParticleColour",
+          "default": -16711936
+        }
+      ]
+    },
+    {
+      "title": "",
+      "options": [
+        {
+          "key": "entityTrackingDistance",
+          "type": "float",
+          "label": "config.tes.general.entityTrackingDistance",
+          "default": 64.0,
+          "min": 16,
+          "max": 128,
+          "step": 8
+        }
+      ]
+    }
+  ]
+}

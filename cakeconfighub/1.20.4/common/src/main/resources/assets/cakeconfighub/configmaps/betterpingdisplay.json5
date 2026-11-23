@@ -1,0 +1,35 @@
+// CakeConfighub's config map for Better Ping Display, checked against BetterPingDisplay-Fabric-1.20.4-1.1.1. Only in CakeConfighub's 1.20.4 jars.
+{
+  "format": 1,
+  "mod": "betterpingdisplay",
+  "versions": ">=1.1 <1.2",
+  "file": "config/betterpingdisplay.json",
+  "type": "json",
+  "title": "Better Ping Display",
+  "options": [
+    {
+      "key": "autoColorPingText",
+      "type": "bool",
+      "label": "cakeconfighub.map.betterpingdisplay.autoColorPingText",
+      "default": true
+    },
+    {
+      "key": "renderPingBars",
+      "type": "bool",
+      "label": "cakeconfighub.map.betterpingdisplay.renderPingBars",
+      "default": false
+    },
+    {
+      "key": "pingTextColor",
+      "type": "colour",
+      "label": "cakeconfighub.map.betterpingdisplay.pingTextColor",
+      "default": "#A0A0A0"
+    },
+    {
+      "key": "pingTextFormatString",
+      "type": "string",
+      "label": "cakeconfighub.map.betterpingdisplay.pingTextFormatString",
+      "default": "%dms"
+    }
+  ]
+}

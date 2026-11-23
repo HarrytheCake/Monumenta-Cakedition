@@ -1,0 +1,10 @@
+plugins {
+	id 'cake-fabric'
+}
+
+// The key binding and /cakeconfighub use Fabric API when it is installed; CakeConfighub doesn't require it.
+// The dev client runs with it, so the self-test covers those parts too.
+dependencies {
+	modCompileOnlyDep("net.fabricmc.fabric-api:fabric-api:${project.property('fabric_api_version')}")
+	modRuntimeOnlyDep("net.fabricmc.fabric-api:fabric-api:${project.property('fabric_api_version')}")
+}

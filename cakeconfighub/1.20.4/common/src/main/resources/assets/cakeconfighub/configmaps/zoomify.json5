@@ -1,0 +1,102 @@
+// CakeConfighub's config map for Zoomify, checked against zoomify-2.15.2+1.20.4. Only in CakeConfighub's 1.20.4 jars.
+{
+  "format": 1,
+  "mod": "zoomify",
+  "versions": ">=2.15 <2.16",
+  "file": "config/zoomify.json",
+  "type": "json",
+  "title": "Zoomify",
+  "options": [
+    {
+      "key": "initialZoom",
+      "type": "int",
+      "label": "yacl3.config.zoomify.category.behaviour.group.basic.option.initialZoom",
+      "default": 4,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "key": "zoomInTime",
+      "type": "float",
+      "label": "yacl3.config.zoomify.category.behaviour.group.basic.option.zoomInTime",
+      "default": 1.0,
+      "min": 0,
+      "max": 5,
+      "step": 0.1
+    },
+    {
+      "key": "zoomOutTime",
+      "type": "float",
+      "label": "yacl3.config.zoomify.category.behaviour.group.basic.option.zoomOutTime",
+      "default": 0.5,
+      "min": 0,
+      "max": 5,
+      "step": 0.1
+    },
+    {
+      "key": "affectHandFov",
+      "type": "bool",
+      "label": "yacl3.config.zoomify.category.behaviour.group.basic.option.affectHandFov",
+      "default": true
+    },
+    {
+      "key": "zoomKeyBehaviour",
+      "type": "enum",
+      "label": "yacl3.config.zoomify.category.controls.root.option.zoomKeyBehaviour",
+      "default": "hold",
+      "values": [
+        {
+          "value": "hold",
+          "label": "zoomify.zoom_key_behaviour.hold"
+        },
+        {
+          "value": "toggle",
+          "label": "zoomify.zoom_key_behaviour.toggle"
+        }
+      ]
+    },
+    {
+      "key": "scrollZoom",
+      "type": "bool",
+      "label": "yacl3.config.zoomify.category.behaviour.group.scrolling.option.scrollZoom",
+      "default": true
+    },
+    {
+      "key": "scrollStepCount",
+      "type": "int",
+      "label": "yacl3.config.zoomify.category.behaviour.group.scrolling.option.scrollStepCount",
+      "default": 10,
+      "min": 1,
+      "max": 20
+    },
+    {
+      "key": "relativeSensitivity",
+      "type": "int",
+      "label": "yacl3.config.zoomify.category.controls.root.option.relativeSensitivity",
+      "default": 100,
+      "min": 0,
+      "max": 150,
+      "step": 10
+    },
+    {
+      "key": "relativeViewBobbing",
+      "type": "bool",
+      "label": "yacl3.config.zoomify.category.controls.root.option.relativeViewBobbing",
+      "default": true
+    },
+    {
+      "key": "secondaryZoomAmount",
+      "type": "int",
+      "label": "yacl3.config.zoomify.category.secondary.root.option.secondaryZoomAmount",
+      "default": 4,
+      "min": 2,
+      "max": 10
+    },
+    {
+      "key": "secondaryHideHUDOnZoom",
+      "type": "bool",
+      "label": "yacl3.config.zoomify.category.secondary.root.option.secondaryHideHUDOnZoom",
+      "default": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+// CakeConfighub's config map for Item Highlighter, checked against Highlighter-1.20.2-fabric-1.1.9. Only in CakeConfighub's 1.20.4 jars.
+{
+  "format": 1,
+  "mod": "highlighter",
+  "versions": ">=1.1 <1.2",
+  "file": "config/highlighter-common.toml",
+  "type": "toml",
+  "title": "Item Highlighter",
+  "options": [
+    {
+      "key": "client.options.show_on_hotbar",
+      "type": "bool",
+      "label": "cakeconfighub.map.highlighter.show_on_hotbar",
+      "default": true
+    },
+    {
+      "key": "client.options.icon_position",
+      "type": "enum",
+      "label": "cakeconfighub.map.highlighter.icon_position",
+      "default": "UpperLeft",
+      "values": [
+        {
+          "value": "UpperLeft",
+          "label": "cakeconfighub.map.highlighter.position.upperleft"
+        },
+        {
+          "value": "UpperRight",
+          "label": "cakeconfighub.map.highlighter.position.upperright"
+        },
+        {
+          "value": "LowerLeft",
+          "label": "cakeconfighub.map.highlighter.position.lowerleft"
+        },
+        {
+          "value": "LowerRight",
+          "label": "cakeconfighub.map.highlighter.position.lowerright"
+        }
+      ]
+    },
+    {
+      "key": "client.options.item_name_color",
+      "type": "bool",
+      "label": "cakeconfighub.map.highlighter.item_name_color",
+      "default": false
+    },
+    {
+      "key": "client.options.clear_on_close",
+      "type": "bool",
+      "label": "cakeconfighub.map.highlighter.clear_on_close",
+      "default": true
+    },
+    {
+      "key": "client.options.clear_on_hover",
+      "type": "bool",
+      "label": "cakeconfighub.map.highlighter.clear_on_hover",
+      "default": true
+    },
+    {
+      "key": "client.options.clear_on_select",
+      "type": "bool",
+      "label": "cakeconfighub.map.highlighter.clear_on_select",
+      "default": true
+    }
+  ]
+}

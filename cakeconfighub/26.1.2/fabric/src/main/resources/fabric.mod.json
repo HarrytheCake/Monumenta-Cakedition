@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "cakeconfighub",
+	"version": "${version}",
+	"name": "CakeConfighub",
+	"description": "One screen for the UI and HUD options of many mods, written straight into each mod's own config file (comments and other settings kept). Modpacks can ship their own default values, applied at startup only while the player hasn't changed them.",
+	"authors": ["HarrytheCake"],
+	"license": "MIT",
+	"icon": "assets/cakeconfighub/icon.png",
+	"contact": {
+		"sources": "https://github.com/HarrytheCake/CakeConfighub"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"preLaunch": ["io.github.harrythecake.cakeconfighub.fabric.CakeConfighubPreLaunch"],
+		"client": ["io.github.harrythecake.cakeconfighub.fabric.CakeConfighubFabric"],
+		"modmenu": ["io.github.harrythecake.cakeconfighub.fabric.ModMenuIntegration"]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "${fabric_mc_dep}",
+		"java": ">=${java_version}"
+	},
+	"suggests": {
+		"fabric-api": "*",
+		"modmenu": "*"
+	}
+}
