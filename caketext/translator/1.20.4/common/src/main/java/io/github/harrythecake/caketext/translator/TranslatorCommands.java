@@ -42,6 +42,7 @@ public final class TranslatorCommands {
 				.then(TranslatorCommands.<S>literal("status").executes(c -> status(line -> feedback.accept(c.getSource(), line))))
 				.then(TranslatorCommands.<S>literal("reload").executes(c -> {
 					TranslationService s = TranslatorMod.service();
+					s.setConfig(TranslatorConfig.load());  // the settings file too, after a hand edit
 					s.reload();
 					feedback.accept(c.getSource(), Component.translatable("caketext_translator.command.reloaded",
 							s.dictionary().humanCount(), s.dictionary().files()));

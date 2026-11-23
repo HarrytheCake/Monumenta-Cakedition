@@ -22,5 +22,8 @@
 		"java": ">=${java_version}",
 		"fabric-api": "*",
 		"caketext-core": "*"
+	},
+	"custom": {
+		"cakeui:reload": "io.github.harrythecake.caketext.translator.ConfigReload"
 	}
 }
