@@ -24,6 +24,6 @@
 		"caketext-core": "*"
 	},
 	"custom": {
-		"cakeui:reload": "io.github.harrythecake.caketext.translator.ConfigReload"
+		"cakeconfighub:reload": "io.github.harrythecake.caketext.translator.ConfigReload"
 	}
 }

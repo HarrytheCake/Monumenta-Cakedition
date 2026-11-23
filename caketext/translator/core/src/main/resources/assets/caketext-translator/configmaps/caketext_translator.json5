@@ -1,4 +1,4 @@
-// CakeText Translator's display settings on CakeUI's config hub (CakeUI ADR 0011). Shipped in its jar.
+// CakeText Translator's display settings on CakeConfighub (ADR 0013). Shipped in its jar.
 // Engine, keys and models stay in its own settings screen (/cttranslate).
 {
   format: 1, mod: ["caketext-translator", "caketext_translator"], versions: "*", file: "config/caketext/translator.json", type: "json",

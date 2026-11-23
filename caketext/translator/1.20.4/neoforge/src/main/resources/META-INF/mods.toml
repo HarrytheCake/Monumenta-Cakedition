@@ -36,6 +36,6 @@ versionRange = "[${version},)"
 ordering = "AFTER"
 side = "CLIENT"
 
-# CakeUI's config hub calls this class's cakeuiReloadConfig() after writing our config (ADR 0011)
+# CakeConfighub calls this class's cakeconfighubReloadConfig() after writing our config (ADR 0013)
 [modproperties.caketext_translator]
-"cakeui:reload" = "io.github.harrythecake.caketext.translator.ConfigReload"
+"cakeconfighub:reload" = "io.github.harrythecake.caketext.translator.ConfigReload"
