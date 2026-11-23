@@ -17,6 +17,8 @@ The mod ships inside the Monumenta Cakedition pack as `pack/mods/cakeupdater.pw.
 
 1.7.0 (user's request 2026-11-03; tested in game by the user the same day: import, icon, guide line): **import from another install** ("moving in", `MoveIn`): a join message offers it each start until turned off; the player picks their old `.minecraft` in the system's folder window and gets options.txt (whole), UMM's settings and locked slots, Monumenta Addons, Xaero's waypoints and map, new servers, and their ChatPlus setup converted for CakeChat (`ChatPlusImport`, moved here from CakeChat 0.3.0). Every replaced file goes into an "import" backup first. Also in 1.7.0: a **mod icon** (`assets/cakeupdater/icon.png`, 128 px pixel art: the family's layered cake on a brown tile with a green download badge) and the **guide line** (`GuideNotice`): on the first launch and once after every pack update, chat points to the pack guide's "Cakedition's own mods" chapter with [Open the guide] (`/cakebook open cakedition/cake/index`).
 
+1.8.0 (2026-11-24, for pack 2.7.0; the user's game test of the 1.20.4 items OK 2026-11-24): the import folder window frees the cursor (`ImportPickScreen`), the import list is [✔]/[✘] per line (lines that replace a file the player has start unticked), Xaero folders are merged instead of replaced, auto backups every 30 minutes of play (incl. Xaero/CakeMap waypoint lists) and the backup-name fix. Also in it: `/cakeupdate reload` and the CakeConfighub config map + `cakeconfighub:reload` hook (inert without CakeConfighub). Picker screen, toggles and the tick hook are Fabric 1.20.4 only; the other targets have the core changes.
+
 ## Files
 
 Cake multiloader layout (kit: `tools/multiloader/README.md` in the main repo; `settings.gradle`, `build.gradle`, `buildSrc/`, `gradlew*`, `gradle/` and `<mc>/version.properties` are the kit's: re-run `apply_kit.py`, don't edit them here). Mojang names everywhere.
@@ -164,7 +166,7 @@ JOIN (first of each start) → MoveIn.takeDone: "Imported N files from <old>. Wh
                            "Coming from another pack or launcher? …"  [Import from my old .minecraft] [Don't show again]
 /cakeupdate import       → TinyFileDialogs.tinyfd_selectFolderDialog on its own daemon thread (LWJGL tinyfd ships with
                            Minecraft; starts in the launcher's instances folder; can open behind a fullscreen game)
-                           1.20.4 only so far (2026-11-12, not released): next frame (the chat screen closes after the
+                           1.20.4 only so far (2026-11-12, 1.8.0): next frame (the chat screen closes after the
                            command) ImportPickScreen opens (frees the cursor; no close button, Esc ignored; says Alt+Tab),
                            fullscreen is left, then the window opens; when it returns the screen closes and fullscreen
                            comes back. Why: in play the cursor was locked, and while the window is open Windows disables
@@ -177,7 +179,7 @@ JOIN (first of each start) → MoveIn.takeDone: "Imported N files from <old>. Wh
                            config/fma.json, XaeroWaypoints/ XaeroWorldMap/ xaero/, servers.dat, and (CakeChat loaded +
                            ChatPlusImport.worthImporting) the newest config/chatplus/chatplus-v*.json
                          → chat list + [Import these] [Cancel]  (servers: only addresses we don't have, ignoring case)
-                           1.20.4 (2026-11-12, not released): every line is a [✔]/[✘] toggle (/cakeupdate import toggle <n>);
+                           1.20.4 (2026-11-12, 1.8.0): every line is a [✔]/[✘] toggle (/cakeupdate import toggle <n>);
                            starts ticked unless MoveIn.replaces (a file we already have: options.txt, UMM, locked slots,
                            fma, CakeChat's config for ChatPlus), which shows "(replaces yours)"; only ticked lines are
                            imported; nothing ticked = nothing happens. Other targets: still the whole list.
@@ -286,13 +288,13 @@ JAVA_HOME="C:/Program Files/Java/jdk-25.0.4" ./gradlew build -Pcake.versions=1.2
 ```
 Gradle runs on JDK 25; 1.20.4 compiles with Java 17, 1.21.1 with 21, 26.1.2 with 25. Jars in `build/libs/`: `cakeupdater-<fabric|neoforge>-<mc>-<mod_version>.jar` (6), plus `cakeupdater-<mod_version>.jar` = the Fabric 1.20.4 jar (the pack's file name). Dev client: `./gradlew :1.21.1:neoforge:runClient -Pcake.versions=1.21.1` (run folder `<mc>/<loader>/run/`).
 
-**CI** (`.github/workflows/build.yml`, GitHub only runs it in the standalone `HarrytheCake/CakeUpdater` repo, where this folder is the root): still the pre-multiloader workflow (JDK 21, `build/libs/cakeupdater-<mod_version>.jar`); it needs JDK 25 before the next release from this layout (the lead updates mirror CI). A push to `main` whose `mod_version` has no `v<mod_version>` release yet creates that release with `cakeupdater-<mod_version>.jar` attached and its SHA-256 at the top of the notes. Pushing again with the same version builds but releases nothing.
+**CI** (`.github/workflows/build.yml`, GitHub only runs it in the standalone `HarrytheCake/CakeUpdater` repo, where this folder is the root): the multiloader workflow since 1.8.0 (same as CakeUI's: JDK 17+21+25, Gradle on 25; checks all six jars + `cakeupdater-<mod_version>.jar`). A push to `main` whose `mod_version` has no `v<mod_version>` release yet creates that release with all seven jars attached and their SHA-256 in the notes. Pushing again with the same version builds but releases nothing.
 
 To release inside the pack:
 1. Bump `mod_version` and build/test locally.
 2. Commit, then push this folder: `git subtree push --prefix=updater updater main` (from the repo root).
 3. Wait for the CI release `v<mod_version>` (https://github.com/HarrytheCake/CakeUpdater/releases).
-4. From the repo root: `python tools/packwiz_sync.py github mods HarrytheCake/CakeUpdater v<mod_version>`. It downloads the release jar, writes `pack/mods/cakeupdater.pw.toml` with its sha512, and runs `refresh`.
+4. From the repo root: `python tools/packwiz_sync.py github mods HarrytheCake/CakeUpdater v<mod_version> cakeupdater` (the prefix picks `cakeupdater-<mod_version>.jar` from the seven jars). It downloads the release jar, writes `pack/mods/cakeupdater.pw.toml` with its sha512, and runs `refresh`.
 5. Commit and push the pack (`tools/push_all.py`). The local `main` publishes to the remote `packwiz` branch.
 
 The pack must only point at a release that already exists, which is why step 4 waits for CI.
