@@ -39,7 +39,7 @@ public final class CakeMonu {
 		return layout;
 	}
 
-	/** Reads the layout file again (startup, {@code /cakemonu reload}, CakeUI's config hub, the HUD editor's Cancel). */
+	/** Reads the layout file again (startup, {@code /cakemonu reload}, CakeConfighub, the HUD editor's Cancel). */
 	public static void load() {
 		layout = IconLayout.read(layoutFile());
 	}

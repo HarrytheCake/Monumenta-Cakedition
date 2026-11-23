@@ -38,6 +38,6 @@
 		"cakeui": ">=0.3.0"
 	},
 	"custom": {
-		"cakeui:reload": "io.github.harrythecake.cakemonu.ConfigReload"
+		"cakeconfighub:reload": "io.github.harrythecake.cakemonu.ConfigReload"
 	}
 }

@@ -33,7 +33,7 @@ public final class CakeMonuFabric implements ClientModInitializer {
 							return 1;
 						})
 						.then(ClientCommandManager.literal("reload").executes(ctx -> {
-							ConfigReload.cakeuiReloadConfig();
+							ConfigReload.cakeconfighubReloadConfig();
 							ctx.getSource().sendFeedback(Component.translatable("cakemonu.command.reloaded"));
 							return 1;
 						}))));
